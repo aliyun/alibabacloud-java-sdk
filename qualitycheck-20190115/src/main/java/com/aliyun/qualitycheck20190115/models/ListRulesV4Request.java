@@ -4,6 +4,9 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class ListRulesV4Request extends TeaModel {
+    @NameInMap("BaseMeAgentId")
+    public Long baseMeAgentId;
+
     @NameInMap("BusinessName")
     public String businessName;
 
@@ -82,6 +85,14 @@ public class ListRulesV4Request extends TeaModel {
     public static ListRulesV4Request build(java.util.Map<String, ?> map) throws Exception {
         ListRulesV4Request self = new ListRulesV4Request();
         return TeaModel.build(map, self);
+    }
+
+    public ListRulesV4Request setBaseMeAgentId(Long baseMeAgentId) {
+        this.baseMeAgentId = baseMeAgentId;
+        return this;
+    }
+    public Long getBaseMeAgentId() {
+        return this.baseMeAgentId;
     }
 
     public ListRulesV4Request setBusinessName(String businessName) {

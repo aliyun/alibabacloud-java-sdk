@@ -29,6 +29,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AddBusinessCategoryResponse addBusinessCategoryWithOptions(AddBusinessCategoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -58,6 +62,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AddRuleCategoryResponse addRuleCategoryWithOptions(AddRuleCategoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -86,6 +94,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public AddRuleV4Response addRuleV4WithOptions(AddRuleV4Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.isCopy)) {
             body.put("IsCopy", request.isCopy);
@@ -96,6 +109,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -120,6 +134,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AddThesaurusForApiResponse addThesaurusForApiWithOptions(AddThesaurusForApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -149,6 +167,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AssignReviewerResponse assignReviewerWithOptions(AssignReviewerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -178,6 +200,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AssignReviewerBySessionGroupResponse assignReviewerBySessionGroupWithOptions(AssignReviewerBySessionGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("jsonStr", request.jsonStr);
         }
@@ -207,6 +233,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public BatchSubmitReviewInfoResponse batchSubmitReviewInfoWithOptions(BatchSubmitReviewInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("jsonStr", request.jsonStr);
         }
@@ -236,6 +266,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateAsrVocabResponse createAsrVocabWithOptions(CreateAsrVocabRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -265,6 +299,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateCheckTypeToSchemeResponse createCheckTypeToSchemeWithOptions(CreateCheckTypeToSchemeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("jsonStr", request.jsonStr);
         }
@@ -294,6 +332,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateQualityCheckSchemeResponse createQualityCheckSchemeWithOptions(CreateQualityCheckSchemeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("jsonStr", request.jsonStr);
         }
@@ -323,6 +365,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateSchemeTaskConfigResponse createSchemeTaskConfigWithOptions(CreateSchemeTaskConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("jsonStr", request.jsonStr);
         }
@@ -352,6 +398,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateSkillGroupConfigResponse createSkillGroupConfigWithOptions(CreateSkillGroupConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -381,6 +431,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateTaskAssignRuleResponse createTaskAssignRuleWithOptions(CreateTaskAssignRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -410,6 +464,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateUserResponse createUserWithOptions(CreateUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -439,6 +497,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateWarningConfigResponse createWarningConfigWithOptions(CreateWarningConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -468,6 +530,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateWarningStrategyConfigResponse createWarningStrategyConfigWithOptions(CreateWarningStrategyConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -497,6 +563,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DelRuleCategoryResponse delRuleCategoryWithOptions(DelRuleCategoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -526,6 +596,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DelThesaurusForApiResponse delThesaurusForApiWithOptions(DelThesaurusForApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -555,6 +629,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteAsrVocabResponse deleteAsrVocabWithOptions(DeleteAsrVocabRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -584,6 +662,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteBusinessCategoryResponse deleteBusinessCategoryWithOptions(DeleteBusinessCategoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -613,6 +695,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteCustomizationConfigResponse deleteCustomizationConfigWithOptions(DeleteCustomizationConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -642,6 +728,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteDataSetResponse deleteDataSetWithOptions(DeleteDataSetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -671,6 +761,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeletePrecisionTaskResponse deletePrecisionTaskWithOptions(DeletePrecisionTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -700,6 +794,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteQualityCheckSchemeResponse deleteQualityCheckSchemeWithOptions(DeleteQualityCheckSchemeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("jsonStr", request.jsonStr);
         }
@@ -728,6 +826,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DeleteRuleResponse deleteRuleWithOptions(DeleteRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.forceDelete)) {
             body.put("ForceDelete", request.forceDelete);
@@ -742,6 +845,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -765,6 +869,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DeleteRuleV4Response deleteRuleV4WithOptions(DeleteRuleV4Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.forceDelete)) {
             body.put("ForceDelete", request.forceDelete);
@@ -775,6 +884,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -799,6 +909,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteSchemeTaskConfigResponse deleteSchemeTaskConfigWithOptions(DeleteSchemeTaskConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("jsonStr", request.jsonStr);
         }
@@ -828,6 +942,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteScoreForApiResponse deleteScoreForApiWithOptions(DeleteScoreForApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -857,6 +975,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteSkillGroupConfigResponse deleteSkillGroupConfigWithOptions(DeleteSkillGroupConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -886,6 +1008,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteSubScoreForApiResponse deleteSubScoreForApiWithOptions(DeleteSubScoreForApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -915,6 +1041,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteTaskAssignRuleResponse deleteTaskAssignRuleWithOptions(DeleteTaskAssignRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -944,6 +1074,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteUserResponse deleteUserWithOptions(DeleteUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -973,6 +1107,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteWarningConfigResponse deleteWarningConfigWithOptions(DeleteWarningConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -1002,6 +1140,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteWarningStrategyConfigResponse deleteWarningStrategyConfigWithOptions(DeleteWarningStrategyConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -1031,6 +1173,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public EditThesaurusForApiResponse editThesaurusForApiWithOptions(EditThesaurusForApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -1060,6 +1206,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetAsrVocabResponse getAsrVocabWithOptions(GetAsrVocabRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -1089,6 +1239,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetBusinessCategoryListResponse getBusinessCategoryListWithOptions(GetBusinessCategoryListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -1118,6 +1272,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetCustomizationConfigListResponse getCustomizationConfigListWithOptions(GetCustomizationConfigListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -1147,6 +1305,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetHitResultResponse getHitResultWithOptions(GetHitResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -1176,6 +1338,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetNextResultToVerifyResponse getNextResultToVerifyWithOptions(GetNextResultToVerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -1205,6 +1371,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetPrecisionTaskResponse getPrecisionTaskWithOptions(GetPrecisionTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -1234,6 +1404,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetQualityCheckSchemeResponse getQualityCheckSchemeWithOptions(GetQualityCheckSchemeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("jsonStr", request.jsonStr);
         }
@@ -1263,6 +1437,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetResultResponse getResultWithOptions(GetResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -1292,6 +1470,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetResultCallbackResponse getResultCallbackWithOptions(GetResultCallbackRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -1321,6 +1503,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetResultToReviewResponse getResultToReviewWithOptions(GetResultToReviewRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -1350,6 +1536,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetRuleResponse getRuleWithOptions(GetRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -1378,12 +1568,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GetRuleByIdResponse getRuleByIdWithOptions(GetRuleByIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.ruleId)) {
             body.put("RuleId", request.ruleId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -1408,6 +1604,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetRuleCategoryResponse getRuleCategoryWithOptions(GetRuleCategoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -1437,6 +1637,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetRuleDetailResponse getRuleDetailWithOptions(GetRuleDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -1494,6 +1698,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GetRulesCountListResponse getRulesCountListWithOptions(GetRulesCountListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.businessName)) {
             body.put("BusinessName", request.businessName);
@@ -1596,6 +1805,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -1620,6 +1830,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetScoreInfoResponse getScoreInfoWithOptions(GetScoreInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -1649,6 +1863,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetSkillGroupConfigResponse getSkillGroupConfigWithOptions(GetSkillGroupConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -1678,6 +1896,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetSyncResultResponse getSyncResultWithOptions(GetSyncResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -1707,6 +1929,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetThesaurusBySynonymForApiResponse getThesaurusBySynonymForApiWithOptions(GetThesaurusBySynonymForApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -1736,6 +1962,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetWarningStrategyConfigResponse getWarningStrategyConfigWithOptions(GetWarningStrategyConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -1765,6 +1995,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public HandleComplaintResponse handleComplaintWithOptions(HandleComplaintRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -1794,6 +2028,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public InsertScoreForApiResponse insertScoreForApiWithOptions(InsertScoreForApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -1823,6 +2061,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public InsertSubScoreForApiResponse insertSubScoreForApiWithOptions(InsertSubScoreForApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -1852,6 +2094,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public InvalidRuleResponse invalidRuleWithOptions(InvalidRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -1881,6 +2127,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListAsrVocabResponse listAsrVocabWithOptions(ListAsrVocabRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -1939,6 +2189,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListDataSetResponse listDataSetWithOptions(ListDataSetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -1968,6 +2222,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListHotWordsTasksResponse listHotWordsTasksWithOptions(ListHotWordsTasksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -1997,6 +2255,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListPrecisionTaskResponse listPrecisionTaskWithOptions(ListPrecisionTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -2026,6 +2288,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListQualityCheckSchemeResponse listQualityCheckSchemeWithOptions(ListQualityCheckSchemeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -2055,6 +2321,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListRolesResponse listRolesWithOptions(ListRolesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -2084,6 +2354,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListRulesResponse listRulesWithOptions(ListRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -2112,6 +2386,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ListRulesV4Response listRulesV4WithOptions(ListRulesV4Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.businessName)) {
             body.put("BusinessName", request.businessName);
@@ -2214,6 +2493,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -2238,6 +2518,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListSchemeTaskConfigResponse listSchemeTaskConfigWithOptions(ListSchemeTaskConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("jsonStr", request.jsonStr);
         }
@@ -2267,6 +2551,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListSessionGroupResponse listSessionGroupWithOptions(ListSessionGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("jsonStr", request.jsonStr);
         }
@@ -2296,6 +2584,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListSkillGroupConfigResponse listSkillGroupConfigWithOptions(ListSkillGroupConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -2325,6 +2617,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListTaskAssignRulesResponse listTaskAssignRulesWithOptions(ListTaskAssignRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -2354,6 +2650,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListUsersResponse listUsersWithOptions(ListUsersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -2383,6 +2683,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListWarningConfigResponse listWarningConfigWithOptions(ListWarningConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -2412,6 +2716,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListWarningStrategyConfigResponse listWarningStrategyConfigWithOptions(ListWarningStrategyConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -2441,6 +2749,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RestartAsrTaskResponse restartAsrTaskWithOptions(RestartAsrTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -2470,6 +2782,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RevertAssignedSessionResponse revertAssignedSessionWithOptions(RevertAssignedSessionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("jsonStr", request.jsonStr);
         }
@@ -2499,6 +2815,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RevertAssignedSessionGroupResponse revertAssignedSessionGroupWithOptions(RevertAssignedSessionGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("jsonStr", request.jsonStr);
         }
@@ -2528,6 +2848,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SaveConfigDataSetResponse saveConfigDataSetWithOptions(SaveConfigDataSetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -2557,6 +2881,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitComplaintResponse submitComplaintWithOptions(SubmitComplaintRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -2586,6 +2914,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitPrecisionTaskResponse submitPrecisionTaskWithOptions(SubmitPrecisionTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -2615,6 +2947,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitQualityCheckTaskResponse submitQualityCheckTaskWithOptions(SubmitQualityCheckTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -2644,6 +2980,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitReviewInfoResponse submitReviewInfoWithOptions(SubmitReviewInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -2673,6 +3013,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SyncQualityCheckResponse syncQualityCheckWithOptions(SyncQualityCheckRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -2735,6 +3079,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateAsrVocabResponse updateAsrVocabWithOptions(UpdateAsrVocabRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -2764,6 +3112,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateCheckTypeToSchemeResponse updateCheckTypeToSchemeWithOptions(UpdateCheckTypeToSchemeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("jsonStr", request.jsonStr);
         }
@@ -2793,6 +3145,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateQualityCheckDataResponse updateQualityCheckDataWithOptions(UpdateQualityCheckDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -2822,6 +3178,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateQualityCheckSchemeResponse updateQualityCheckSchemeWithOptions(UpdateQualityCheckSchemeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("jsonStr", request.jsonStr);
         }
@@ -2851,6 +3211,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateRuleResponse updateRuleWithOptions(UpdateRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -2879,6 +3243,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public UpdateRuleByIdResponse updateRuleByIdWithOptions(UpdateRuleByIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.isCopy)) {
             body.put("IsCopy", request.isCopy);
@@ -2897,6 +3266,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -2921,6 +3291,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateRuleToSchemeResponse updateRuleToSchemeWithOptions(UpdateRuleToSchemeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("jsonStr", request.jsonStr);
         }
@@ -2949,6 +3323,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public UpdateRuleV4Response updateRuleV4WithOptions(UpdateRuleV4Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStrForRule)) {
             body.put("JsonStrForRule", request.jsonStrForRule);
@@ -2959,6 +3338,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -2983,6 +3363,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateSchemeTaskConfigResponse updateSchemeTaskConfigWithOptions(UpdateSchemeTaskConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("jsonStr", request.jsonStr);
         }
@@ -3012,6 +3396,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateScoreForApiResponse updateScoreForApiWithOptions(UpdateScoreForApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -3041,6 +3429,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateSkillGroupConfigResponse updateSkillGroupConfigWithOptions(UpdateSkillGroupConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -3070,6 +3462,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateSubScoreForApiResponse updateSubScoreForApiWithOptions(UpdateSubScoreForApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -3096,9 +3492,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateSubScoreForApiWithOptions(request, runtime);
     }
 
+    /**
+      * ****。
+      *
+      * @param request UpdateSyncQualityCheckDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateSyncQualityCheckDataResponse
+     */
     public UpdateSyncQualityCheckDataResponse updateSyncQualityCheckDataWithOptions(UpdateSyncQualityCheckDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -3120,6 +3527,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSyncQualityCheckDataResponse());
     }
 
+    /**
+      * ****。
+      *
+      * @param request UpdateSyncQualityCheckDataRequest
+      * @return UpdateSyncQualityCheckDataResponse
+     */
     public UpdateSyncQualityCheckDataResponse updateSyncQualityCheckData(UpdateSyncQualityCheckDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateSyncQualityCheckDataWithOptions(request, runtime);
@@ -3128,6 +3541,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateTaskAssignRuleResponse updateTaskAssignRuleWithOptions(UpdateTaskAssignRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -3157,6 +3574,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateUserResponse updateUserWithOptions(UpdateUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -3186,6 +3607,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateUserConfigResponse updateUserConfigWithOptions(UpdateUserConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -3215,6 +3640,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateWarningConfigResponse updateWarningConfigWithOptions(UpdateWarningConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -3244,6 +3673,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateWarningStrategyConfigResponse updateWarningStrategyConfigWithOptions(UpdateWarningStrategyConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -3273,6 +3706,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UploadAudioDataResponse uploadAudioDataWithOptions(UploadAudioDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -3302,6 +3739,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UploadDataResponse uploadDataWithOptions(UploadDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -3331,6 +3772,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UploadDataSyncResponse uploadDataSyncWithOptions(UploadDataSyncRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -3360,6 +3805,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UploadRuleResponse uploadRuleWithOptions(UploadRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -3389,6 +3838,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public VerifyFileResponse verifyFileWithOptions(VerifyFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }
@@ -3418,6 +3871,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public VerifySentenceResponse verifySentenceWithOptions(VerifySentenceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
             query.put("JsonStr", request.jsonStr);
         }

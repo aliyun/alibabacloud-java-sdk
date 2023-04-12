@@ -113,6 +113,9 @@ public class ListBusinessSpacesResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>id。</p>
+         */
         @NameInMap("Id")
         public Long id;
 

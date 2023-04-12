@@ -242,6 +242,863 @@ public class GetResultResponseBody extends TeaModel {
 
     }
 
+    public static class GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRangeAnchor extends TeaModel {
+        @NameInMap("Cid")
+        public String cid;
+
+        @NameInMap("Hit_time")
+        public Integer hitTime;
+
+        @NameInMap("Location")
+        public String location;
+
+        public static GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRangeAnchor build(java.util.Map<String, ?> map) throws Exception {
+            GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRangeAnchor self = new GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRangeAnchor();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRangeAnchor setCid(String cid) {
+            this.cid = cid;
+            return this;
+        }
+        public String getCid() {
+            return this.cid;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRangeAnchor setHitTime(Integer hitTime) {
+            this.hitTime = hitTime;
+            return this;
+        }
+        public Integer getHitTime() {
+            return this.hitTime;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRangeAnchor setLocation(String location) {
+            this.location = location;
+            return this;
+        }
+        public String getLocation() {
+            return this.location;
+        }
+
+    }
+
+    public static class GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRangeRange extends TeaModel {
+        @NameInMap("From")
+        public Integer from;
+
+        @NameInMap("To")
+        public Integer to;
+
+        public static GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRangeRange build(java.util.Map<String, ?> map) throws Exception {
+            GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRangeRange self = new GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRangeRange();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRangeRange setFrom(Integer from) {
+            this.from = from;
+            return this;
+        }
+        public Integer getFrom() {
+            return this.from;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRangeRange setTo(Integer to) {
+            this.to = to;
+            return this;
+        }
+        public Integer getTo() {
+            return this.to;
+        }
+
+    }
+
+    public static class GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRangeTimeRange extends TeaModel {
+        @NameInMap("From")
+        public Long from;
+
+        @NameInMap("To")
+        public Long to;
+
+        public static GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRangeTimeRange build(java.util.Map<String, ?> map) throws Exception {
+            GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRangeTimeRange self = new GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRangeTimeRange();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRangeTimeRange setFrom(Long from) {
+            this.from = from;
+            return this;
+        }
+        public Long getFrom() {
+            return this.from;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRangeTimeRange setTo(Long to) {
+            this.to = to;
+            return this;
+        }
+        public Long getTo() {
+            return this.to;
+        }
+
+    }
+
+    public static class GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRange extends TeaModel {
+        @NameInMap("Absolute")
+        public Boolean absolute;
+
+        @NameInMap("AllSentencesSatisfy")
+        public Boolean allSentencesSatisfy;
+
+        @NameInMap("Anchor")
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRangeAnchor anchor;
+
+        @NameInMap("Range")
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRangeRange range;
+
+        @NameInMap("Role")
+        public String role;
+
+        @NameInMap("RoleId")
+        public Integer roleId;
+
+        @NameInMap("TimeRange")
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRangeTimeRange timeRange;
+
+        public static GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRange build(java.util.Map<String, ?> map) throws Exception {
+            GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRange self = new GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRange();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRange setAbsolute(Boolean absolute) {
+            this.absolute = absolute;
+            return this;
+        }
+        public Boolean getAbsolute() {
+            return this.absolute;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRange setAllSentencesSatisfy(Boolean allSentencesSatisfy) {
+            this.allSentencesSatisfy = allSentencesSatisfy;
+            return this;
+        }
+        public Boolean getAllSentencesSatisfy() {
+            return this.allSentencesSatisfy;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRange setAnchor(GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRangeAnchor anchor) {
+            this.anchor = anchor;
+            return this;
+        }
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRangeAnchor getAnchor() {
+            return this.anchor;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRange setRange(GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRangeRange range) {
+            this.range = range;
+            return this;
+        }
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRangeRange getRange() {
+            return this.range;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRange setRole(String role) {
+            this.role = role;
+            return this;
+        }
+        public String getRole() {
+            return this.role;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRange setRoleId(Integer roleId) {
+            this.roleId = roleId;
+            return this;
+        }
+        public Integer getRoleId() {
+            return this.roleId;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRange setTimeRange(GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRangeTimeRange timeRange) {
+            this.timeRange = timeRange;
+            return this;
+        }
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRangeTimeRange getTimeRange() {
+            return this.timeRange;
+        }
+
+    }
+
+    public static class GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamExcludes extends TeaModel {
+        @NameInMap("Exclude")
+        public java.util.List<String> exclude;
+
+        public static GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamExcludes build(java.util.Map<String, ?> map) throws Exception {
+            GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamExcludes self = new GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamExcludes();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamExcludes setExclude(java.util.List<String> exclude) {
+            this.exclude = exclude;
+            return this;
+        }
+        public java.util.List<String> getExclude() {
+            return this.exclude;
+        }
+
+    }
+
+    public static class GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamFlowNodePrerequisiteParam extends TeaModel {
+        @NameInMap("NodeId")
+        public Long nodeId;
+
+        @NameInMap("NodeMatchStatus")
+        public Integer nodeMatchStatus;
+
+        @NameInMap("NodeName")
+        public String nodeName;
+
+        public static GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamFlowNodePrerequisiteParam build(java.util.Map<String, ?> map) throws Exception {
+            GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamFlowNodePrerequisiteParam self = new GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamFlowNodePrerequisiteParam();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamFlowNodePrerequisiteParam setNodeId(Long nodeId) {
+            this.nodeId = nodeId;
+            return this;
+        }
+        public Long getNodeId() {
+            return this.nodeId;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamFlowNodePrerequisiteParam setNodeMatchStatus(Integer nodeMatchStatus) {
+            this.nodeMatchStatus = nodeMatchStatus;
+            return this;
+        }
+        public Integer getNodeMatchStatus() {
+            return this.nodeMatchStatus;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamFlowNodePrerequisiteParam setNodeName(String nodeName) {
+            this.nodeName = nodeName;
+            return this;
+        }
+        public String getNodeName() {
+            return this.nodeName;
+        }
+
+    }
+
+    public static class GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamIntentModelCheckParmIntentsIntent extends TeaModel {
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamIntentModelCheckParmIntentsIntent build(java.util.Map<String, ?> map) throws Exception {
+            GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamIntentModelCheckParmIntentsIntent self = new GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamIntentModelCheckParmIntentsIntent();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamIntentModelCheckParmIntentsIntent setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamIntentModelCheckParmIntentsIntent setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamIntentModelCheckParmIntents extends TeaModel {
+        @NameInMap("Intent")
+        public java.util.List<GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamIntentModelCheckParmIntentsIntent> intent;
+
+        public static GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamIntentModelCheckParmIntents build(java.util.Map<String, ?> map) throws Exception {
+            GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamIntentModelCheckParmIntents self = new GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamIntentModelCheckParmIntents();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamIntentModelCheckParmIntents setIntent(java.util.List<GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamIntentModelCheckParmIntentsIntent> intent) {
+            this.intent = intent;
+            return this;
+        }
+        public java.util.List<GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamIntentModelCheckParmIntentsIntent> getIntent() {
+            return this.intent;
+        }
+
+    }
+
+    public static class GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamIntentModelCheckParm extends TeaModel {
+        @NameInMap("Intents")
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamIntentModelCheckParmIntents intents;
+
+        @NameInMap("ModelScene")
+        public String modelScene;
+
+        public static GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamIntentModelCheckParm build(java.util.Map<String, ?> map) throws Exception {
+            GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamIntentModelCheckParm self = new GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamIntentModelCheckParm();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamIntentModelCheckParm setIntents(GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamIntentModelCheckParmIntents intents) {
+            this.intents = intents;
+            return this;
+        }
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamIntentModelCheckParmIntents getIntents() {
+            return this.intents;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamIntentModelCheckParm setModelScene(String modelScene) {
+            this.modelScene = modelScene;
+            return this;
+        }
+        public String getModelScene() {
+            return this.modelScene;
+        }
+
+    }
+
+    public static class GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamKeywords extends TeaModel {
+        @NameInMap("Keyword")
+        public java.util.List<String> keyword;
+
+        public static GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamKeywords build(java.util.Map<String, ?> map) throws Exception {
+            GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamKeywords self = new GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamKeywords();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamKeywords setKeyword(java.util.List<String> keyword) {
+            this.keyword = keyword;
+            return this;
+        }
+        public java.util.List<String> getKeyword() {
+            return this.keyword;
+        }
+
+    }
+
+    public static class GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam extends TeaModel {
+        @NameInMap("Average")
+        public Boolean average;
+
+        @NameInMap("BeginType")
+        public String beginType;
+
+        @NameInMap("Case_sensitive")
+        public Boolean caseSensitive;
+
+        @NameInMap("CheckFirstSentence")
+        public Boolean checkFirstSentence;
+
+        @NameInMap("CheckType")
+        public Integer checkType;
+
+        @NameInMap("CompareOperator")
+        public String compareOperator;
+
+        @NameInMap("ContextChatMatch")
+        public Boolean contextChatMatch;
+
+        @NameInMap("DelayTime")
+        public Integer delayTime;
+
+        @NameInMap("EndType")
+        public String endType;
+
+        @NameInMap("Excludes")
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamExcludes excludes;
+
+        @NameInMap("FlowNodePrerequisiteParam")
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamFlowNodePrerequisiteParam flowNodePrerequisiteParam;
+
+        @NameInMap("From")
+        public Integer from;
+
+        @NameInMap("From_end")
+        public Boolean fromEnd;
+
+        @NameInMap("Hit_time")
+        public Integer hitTime;
+
+        @NameInMap("In_sentence")
+        public Boolean inSentence;
+
+        @NameInMap("IntentModelCheckParm")
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamIntentModelCheckParm intentModelCheckParm;
+
+        @NameInMap("Interval")
+        public Integer interval;
+
+        @NameInMap("IntervalEnd")
+        public Integer intervalEnd;
+
+        @NameInMap("KeywordExtension")
+        public Integer keywordExtension;
+
+        @NameInMap("KeywordMatchSize")
+        public Integer keywordMatchSize;
+
+        @NameInMap("Keywords")
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamKeywords keywords;
+
+        @NameInMap("MaxEmotionChangeValue")
+        public Integer maxEmotionChangeValue;
+
+        @NameInMap("MinWordSize")
+        public Integer minWordSize;
+
+        @NameInMap("Near_dialogue")
+        public Boolean nearDialogue;
+
+        @NameInMap("NotRegex")
+        public String notRegex;
+
+        @NameInMap("Phrase")
+        public String phrase;
+
+        @NameInMap("Regex")
+        public String regex;
+
+        @NameInMap("Target")
+        public Integer target;
+
+        @NameInMap("Threshold")
+        public Float threshold;
+
+        public static GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam build(java.util.Map<String, ?> map) throws Exception {
+            GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam self = new GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam setAverage(Boolean average) {
+            this.average = average;
+            return this;
+        }
+        public Boolean getAverage() {
+            return this.average;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam setBeginType(String beginType) {
+            this.beginType = beginType;
+            return this;
+        }
+        public String getBeginType() {
+            return this.beginType;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam setCaseSensitive(Boolean caseSensitive) {
+            this.caseSensitive = caseSensitive;
+            return this;
+        }
+        public Boolean getCaseSensitive() {
+            return this.caseSensitive;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam setCheckFirstSentence(Boolean checkFirstSentence) {
+            this.checkFirstSentence = checkFirstSentence;
+            return this;
+        }
+        public Boolean getCheckFirstSentence() {
+            return this.checkFirstSentence;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam setCheckType(Integer checkType) {
+            this.checkType = checkType;
+            return this;
+        }
+        public Integer getCheckType() {
+            return this.checkType;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam setCompareOperator(String compareOperator) {
+            this.compareOperator = compareOperator;
+            return this;
+        }
+        public String getCompareOperator() {
+            return this.compareOperator;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam setContextChatMatch(Boolean contextChatMatch) {
+            this.contextChatMatch = contextChatMatch;
+            return this;
+        }
+        public Boolean getContextChatMatch() {
+            return this.contextChatMatch;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam setDelayTime(Integer delayTime) {
+            this.delayTime = delayTime;
+            return this;
+        }
+        public Integer getDelayTime() {
+            return this.delayTime;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam setEndType(String endType) {
+            this.endType = endType;
+            return this;
+        }
+        public String getEndType() {
+            return this.endType;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam setExcludes(GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamExcludes excludes) {
+            this.excludes = excludes;
+            return this;
+        }
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamExcludes getExcludes() {
+            return this.excludes;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam setFlowNodePrerequisiteParam(GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamFlowNodePrerequisiteParam flowNodePrerequisiteParam) {
+            this.flowNodePrerequisiteParam = flowNodePrerequisiteParam;
+            return this;
+        }
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamFlowNodePrerequisiteParam getFlowNodePrerequisiteParam() {
+            return this.flowNodePrerequisiteParam;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam setFrom(Integer from) {
+            this.from = from;
+            return this;
+        }
+        public Integer getFrom() {
+            return this.from;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam setFromEnd(Boolean fromEnd) {
+            this.fromEnd = fromEnd;
+            return this;
+        }
+        public Boolean getFromEnd() {
+            return this.fromEnd;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam setHitTime(Integer hitTime) {
+            this.hitTime = hitTime;
+            return this;
+        }
+        public Integer getHitTime() {
+            return this.hitTime;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam setInSentence(Boolean inSentence) {
+            this.inSentence = inSentence;
+            return this;
+        }
+        public Boolean getInSentence() {
+            return this.inSentence;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam setIntentModelCheckParm(GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamIntentModelCheckParm intentModelCheckParm) {
+            this.intentModelCheckParm = intentModelCheckParm;
+            return this;
+        }
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamIntentModelCheckParm getIntentModelCheckParm() {
+            return this.intentModelCheckParm;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam setInterval(Integer interval) {
+            this.interval = interval;
+            return this;
+        }
+        public Integer getInterval() {
+            return this.interval;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam setIntervalEnd(Integer intervalEnd) {
+            this.intervalEnd = intervalEnd;
+            return this;
+        }
+        public Integer getIntervalEnd() {
+            return this.intervalEnd;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam setKeywordExtension(Integer keywordExtension) {
+            this.keywordExtension = keywordExtension;
+            return this;
+        }
+        public Integer getKeywordExtension() {
+            return this.keywordExtension;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam setKeywordMatchSize(Integer keywordMatchSize) {
+            this.keywordMatchSize = keywordMatchSize;
+            return this;
+        }
+        public Integer getKeywordMatchSize() {
+            return this.keywordMatchSize;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam setKeywords(GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamKeywords keywords) {
+            this.keywords = keywords;
+            return this;
+        }
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamKeywords getKeywords() {
+            return this.keywords;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam setMaxEmotionChangeValue(Integer maxEmotionChangeValue) {
+            this.maxEmotionChangeValue = maxEmotionChangeValue;
+            return this;
+        }
+        public Integer getMaxEmotionChangeValue() {
+            return this.maxEmotionChangeValue;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam setMinWordSize(Integer minWordSize) {
+            this.minWordSize = minWordSize;
+            return this;
+        }
+        public Integer getMinWordSize() {
+            return this.minWordSize;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam setNearDialogue(Boolean nearDialogue) {
+            this.nearDialogue = nearDialogue;
+            return this;
+        }
+        public Boolean getNearDialogue() {
+            return this.nearDialogue;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam setNotRegex(String notRegex) {
+            this.notRegex = notRegex;
+            return this;
+        }
+        public String getNotRegex() {
+            return this.notRegex;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam setPhrase(String phrase) {
+            this.phrase = phrase;
+            return this;
+        }
+        public String getPhrase() {
+            return this.phrase;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam setRegex(String regex) {
+            this.regex = regex;
+            return this;
+        }
+        public String getRegex() {
+            return this.regex;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam setTarget(Integer target) {
+            this.target = target;
+            return this;
+        }
+        public Integer getTarget() {
+            return this.target;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam setThreshold(Float threshold) {
+            this.threshold = threshold;
+            return this;
+        }
+        public Float getThreshold() {
+            return this.threshold;
+        }
+
+    }
+
+    public static class GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperator extends TeaModel {
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Oid")
+        public String oid;
+
+        @NameInMap("Param")
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam param;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperator build(java.util.Map<String, ?> map) throws Exception {
+            GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperator self = new GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperator();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperator setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperator setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperator setOid(String oid) {
+            this.oid = oid;
+            return this;
+        }
+        public String getOid() {
+            return this.oid;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperator setParam(GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam param) {
+            this.param = param;
+            return this;
+        }
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam getParam() {
+            return this.param;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperator setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperators extends TeaModel {
+        @NameInMap("Operator")
+        public java.util.List<GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperator> operator;
+
+        public static GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperators build(java.util.Map<String, ?> map) throws Exception {
+            GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperators self = new GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperators();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperators setOperator(java.util.List<GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperator> operator) {
+            this.operator = operator;
+            return this;
+        }
+        public java.util.List<GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperator> getOperator() {
+            return this.operator;
+        }
+
+    }
+
+    public static class GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditions extends TeaModel {
+        @NameInMap("Check_range")
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRange checkRange;
+
+        @NameInMap("Cid")
+        public String cid;
+
+        @NameInMap("Exclusion")
+        public Integer exclusion;
+
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("Lambda")
+        public String lambda;
+
+        @NameInMap("Operators")
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperators operators;
+
+        @NameInMap("Rid")
+        public String rid;
+
+        public static GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditions build(java.util.Map<String, ?> map) throws Exception {
+            GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditions self = new GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditions();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditions setCheckRange(GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRange checkRange) {
+            this.checkRange = checkRange;
+            return this;
+        }
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRange getCheckRange() {
+            return this.checkRange;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditions setCid(String cid) {
+            this.cid = cid;
+            return this;
+        }
+        public String getCid() {
+            return this.cid;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditions setExclusion(Integer exclusion) {
+            this.exclusion = exclusion;
+            return this;
+        }
+        public Integer getExclusion() {
+            return this.exclusion;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditions setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditions setLambda(String lambda) {
+            this.lambda = lambda;
+            return this;
+        }
+        public String getLambda() {
+            return this.lambda;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditions setOperators(GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperators operators) {
+            this.operators = operators;
+            return this;
+        }
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperators getOperators() {
+            return this.operators;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditions setRid(String rid) {
+            this.rid = rid;
+            return this;
+        }
+        public String getRid() {
+            return this.rid;
+        }
+
+    }
+
+    public static class GetResultResponseBodyDataResultInfoHitResultHitResultConditions extends TeaModel {
+        @NameInMap("Conditions")
+        public java.util.List<GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditions> conditions;
+
+        public static GetResultResponseBodyDataResultInfoHitResultHitResultConditions build(java.util.Map<String, ?> map) throws Exception {
+            GetResultResponseBodyDataResultInfoHitResultHitResultConditions self = new GetResultResponseBodyDataResultInfoHitResultHitResultConditions();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditions setConditions(java.util.List<GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditions> conditions) {
+            this.conditions = conditions;
+            return this;
+        }
+        public java.util.List<GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditions> getConditions() {
+            return this.conditions;
+        }
+
+    }
+
     public static class GetResultResponseBodyDataResultInfoHitResultHitResultHitsHitCid extends TeaModel {
         @NameInMap("Cid")
         public java.util.List<String> cid;
@@ -456,6 +1313,9 @@ public class GetResultResponseBody extends TeaModel {
     }
 
     public static class GetResultResponseBodyDataResultInfoHitResultHitResult extends TeaModel {
+        @NameInMap("Conditions")
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditions conditions;
+
         @NameInMap("Hits")
         public GetResultResponseBodyDataResultInfoHitResultHitResultHits hits;
 
@@ -480,6 +1340,14 @@ public class GetResultResponseBody extends TeaModel {
         public static GetResultResponseBodyDataResultInfoHitResultHitResult build(java.util.Map<String, ?> map) throws Exception {
             GetResultResponseBodyDataResultInfoHitResultHitResult self = new GetResultResponseBodyDataResultInfoHitResultHitResult();
             return TeaModel.build(map, self);
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResult setConditions(GetResultResponseBodyDataResultInfoHitResultHitResultConditions conditions) {
+            this.conditions = conditions;
+            return this;
+        }
+        public GetResultResponseBodyDataResultInfoHitResultHitResultConditions getConditions() {
+            return this.conditions;
         }
 
         public GetResultResponseBodyDataResultInfoHitResultHitResult setHits(GetResultResponseBodyDataResultInfoHitResultHitResultHits hits) {
