@@ -4,6 +4,9 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class UpdateRuleByIdRequest extends TeaModel {
+    @NameInMap("BaseMeAgentId")
+    public Long baseMeAgentId;
+
     @NameInMap("IsCopy")
     public Boolean isCopy;
 
@@ -19,6 +22,14 @@ public class UpdateRuleByIdRequest extends TeaModel {
     public static UpdateRuleByIdRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateRuleByIdRequest self = new UpdateRuleByIdRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateRuleByIdRequest setBaseMeAgentId(Long baseMeAgentId) {
+        this.baseMeAgentId = baseMeAgentId;
+        return this;
+    }
+    public Long getBaseMeAgentId() {
+        return this.baseMeAgentId;
     }
 
     public UpdateRuleByIdRequest setIsCopy(Boolean isCopy) {

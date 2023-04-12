@@ -4,12 +4,23 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class SubmitReviewInfoRequest extends TeaModel {
+    @NameInMap("BaseMeAgentId")
+    public Long baseMeAgentId;
+
     @NameInMap("JsonStr")
     public String jsonStr;
 
     public static SubmitReviewInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitReviewInfoRequest self = new SubmitReviewInfoRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitReviewInfoRequest setBaseMeAgentId(Long baseMeAgentId) {
+        this.baseMeAgentId = baseMeAgentId;
+        return this;
+    }
+    public Long getBaseMeAgentId() {
+        return this.baseMeAgentId;
     }
 
     public SubmitReviewInfoRequest setJsonStr(String jsonStr) {

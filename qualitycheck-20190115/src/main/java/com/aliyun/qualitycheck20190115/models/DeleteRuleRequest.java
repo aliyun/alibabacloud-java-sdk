@@ -4,6 +4,9 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class DeleteRuleRequest extends TeaModel {
+    @NameInMap("BaseMeAgentId")
+    public Long baseMeAgentId;
+
     @NameInMap("ForceDelete")
     public Boolean forceDelete;
 
@@ -16,6 +19,14 @@ public class DeleteRuleRequest extends TeaModel {
     public static DeleteRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteRuleRequest self = new DeleteRuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteRuleRequest setBaseMeAgentId(Long baseMeAgentId) {
+        this.baseMeAgentId = baseMeAgentId;
+        return this;
+    }
+    public Long getBaseMeAgentId() {
+        return this.baseMeAgentId;
     }
 
     public DeleteRuleRequest setForceDelete(Boolean forceDelete) {

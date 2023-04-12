@@ -64,23 +64,4 @@ public class SubmitReviewInfoResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class BatchSubmitReviewInfoResponseBodyMessages extends TeaModel {
-        @NameInMap("Message")
-        public java.util.List<String> message;
-
-        public static BatchSubmitReviewInfoResponseBodyMessages build(java.util.Map<String, ?> map) throws Exception {
-            BatchSubmitReviewInfoResponseBodyMessages self = new BatchSubmitReviewInfoResponseBodyMessages();
-            return TeaModel.build(map, self);
-        }
-
-        public BatchSubmitReviewInfoResponseBodyMessages setMessage(java.util.List<String> message) {
-            this.message = message;
-            return this;
-        }
-        public java.util.List<String> getMessage() {
-            return this.message;
-        }
-
-    }
-
 }
