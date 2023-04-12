@@ -4,6 +4,9 @@ package com.aliyun.resourcedirectorymaster20220419.models;
 import com.aliyun.tea.*;
 
 public class DeleteFolderRequest extends TeaModel {
+    /**
+     * <p>The ID of the folder.</p>
+     */
     @NameInMap("FolderId")
     public String folderId;
 

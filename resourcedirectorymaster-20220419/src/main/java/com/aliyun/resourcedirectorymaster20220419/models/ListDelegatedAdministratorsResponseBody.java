@@ -4,18 +4,33 @@ package com.aliyun.resourcedirectorymaster20220419.models;
 import com.aliyun.tea.*;
 
 public class ListDelegatedAdministratorsResponseBody extends TeaModel {
+    /**
+     * <p>The information about the delegated administrator accounts.</p>
+     */
     @NameInMap("Accounts")
     public ListDelegatedAdministratorsResponseBodyAccounts accounts;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,18 +80,36 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
     }
 
     public static class ListDelegatedAdministratorsResponseBodyAccountsAccount extends TeaModel {
+        /**
+         * <p>The Alibaba Cloud account ID of the member.</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <p>The time when the member was specified as a delegated administrator account.</p>
+         */
         @NameInMap("DelegationEnabledTime")
         public String delegationEnabledTime;
 
+        /**
+         * <p>The display name of the member.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The way in which the member joins the resource directory. Valid values:</p>
+         * <br>
+         * <p>*   invited: The member is invited to join the resource directory.</p>
+         * <p>*   created: The member is directly created in the resource directory.</p>
+         */
         @NameInMap("JoinMethod")
         public String joinMethod;
 
+        /**
+         * <p>The identifier of the trusted service.</p>
+         */
         @NameInMap("ServicePrincipal")
         public String servicePrincipal;
 

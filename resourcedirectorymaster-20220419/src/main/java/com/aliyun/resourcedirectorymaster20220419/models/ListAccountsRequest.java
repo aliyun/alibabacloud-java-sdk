@@ -4,18 +4,41 @@ package com.aliyun.resourcedirectorymaster20220419.models;
 import com.aliyun.tea.*;
 
 public class ListAccountsRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to return the information of tags. Valid values:</p>
+     * <br>
+     * <p>false (default value) true</p>
+     */
     @NameInMap("IncludeTags")
     public Boolean includeTags;
 
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Valid values: 1 to 100. Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The keyword used for the query, such as the display name of a member.</p>
+     * <br>
+     * <p>Fuzzy match is supported.</p>
+     */
     @NameInMap("QueryKeyword")
     public String queryKeyword;
 
+    /**
+     * <p>The tags. This parameter specifies a filter condition.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListAccountsRequestTag> tag;
 
@@ -65,9 +88,15 @@ public class ListAccountsRequest extends TeaModel {
     }
 
     public static class ListAccountsRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 

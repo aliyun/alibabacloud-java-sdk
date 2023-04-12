@@ -4,9 +4,15 @@ package com.aliyun.resourcedirectorymaster20220419.models;
 import com.aliyun.tea.*;
 
 public class SendVerificationCodeForBindSecureMobilePhoneResponseBody extends TeaModel {
+    /**
+     * <p>The time when the verification code expires.</p>
+     */
     @NameInMap("ExpirationDate")
     public String expirationDate;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

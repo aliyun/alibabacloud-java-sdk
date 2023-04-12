@@ -4,9 +4,15 @@ package com.aliyun.resourcedirectorymaster20220419.models;
 import com.aliyun.tea.*;
 
 public class MoveAccountRequest extends TeaModel {
+    /**
+     * <p>The Alibaba Cloud account ID of the member that you want to move.</p>
+     */
     @NameInMap("AccountId")
     public String accountId;
 
+    /**
+     * <p>The ID of the destination folder.</p>
+     */
     @NameInMap("DestinationFolderId")
     public String destinationFolderId;
 

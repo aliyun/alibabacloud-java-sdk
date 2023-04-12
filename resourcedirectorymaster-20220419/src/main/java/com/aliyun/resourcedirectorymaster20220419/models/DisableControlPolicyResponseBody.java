@@ -4,9 +4,20 @@ package com.aliyun.resourcedirectorymaster20220419.models;
 import com.aliyun.tea.*;
 
 public class DisableControlPolicyResponseBody extends TeaModel {
+    /**
+     * <p>The status of the Control Policy feature. Valid values:</p>
+     * <br>
+     * <p>*   Enabled: The feature is enabled.</p>
+     * <p>*   PendingEnable: The feature is being enabled.</p>
+     * <p>*   Disabled: The feature is disabled.</p>
+     * <p>*   PendingDisable: The feature is being disabled.</p>
+     */
     @NameInMap("EnablementStatus")
     public String enablementStatus;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

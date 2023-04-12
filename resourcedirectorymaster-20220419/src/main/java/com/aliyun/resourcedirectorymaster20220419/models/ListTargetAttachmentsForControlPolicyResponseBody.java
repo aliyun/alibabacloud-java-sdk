@@ -4,18 +4,33 @@ package com.aliyun.resourcedirectorymaster20220419.models;
 import com.aliyun.tea.*;
 
 public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the objects to which the access control policy is attached.</p>
+     */
     @NameInMap("TargetAttachments")
     public ListTargetAttachmentsForControlPolicyResponseBodyTargetAttachments targetAttachments;
 
+    /**
+     * <p>The total number of objects to which the access control policy is attached.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,15 +80,31 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
     }
 
     public static class ListTargetAttachmentsForControlPolicyResponseBodyTargetAttachmentsTargetAttachment extends TeaModel {
+        /**
+         * <p>The time when the access control policy was attached to the object.</p>
+         */
         @NameInMap("AttachDate")
         public String attachDate;
 
+        /**
+         * <p>The ID of the object.</p>
+         */
         @NameInMap("TargetId")
         public String targetId;
 
+        /**
+         * <p>The name of the object.</p>
+         */
         @NameInMap("TargetName")
         public String targetName;
 
+        /**
+         * <p>The type of the object. Valid values:</p>
+         * <br>
+         * <p>*   Root: Root folder</p>
+         * <p>*   Folder: subfolder of the Root folder</p>
+         * <p>*   Account: member</p>
+         */
         @NameInMap("TargetType")
         public String targetType;
 

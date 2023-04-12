@@ -4,18 +4,33 @@ package com.aliyun.resourcedirectorymaster20220419.models;
 import com.aliyun.tea.*;
 
 public class ListAccountsResponseBody extends TeaModel {
+    /**
+     * <p>The members returned.</p>
+     */
     @NameInMap("Accounts")
     public ListAccountsResponseBodyAccounts accounts;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +80,15 @@ public class ListAccountsResponseBody extends TeaModel {
     }
 
     public static class ListAccountsResponseBodyAccountsAccountTagsTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -114,39 +135,89 @@ public class ListAccountsResponseBody extends TeaModel {
     }
 
     public static class ListAccountsResponseBodyAccountsAccount extends TeaModel {
+        /**
+         * <p>The Alibaba Cloud account ID of the member.</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <p>The Alibaba Cloud account name of the member.</p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <p>The display name of the member.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The ID of the folder.</p>
+         */
         @NameInMap("FolderId")
         public String folderId;
 
+        /**
+         * <p>The way in which the member joins the resource directory. Valid values:</p>
+         * <br>
+         * <p>*   invited: The member is invited to join the resource directory.</p>
+         * <p>*   created: The member is directly created in the resource directory.</p>
+         */
         @NameInMap("JoinMethod")
         public String joinMethod;
 
+        /**
+         * <p>The time when the member joined the resource directory. The time is displayed in UTC.</p>
+         */
         @NameInMap("JoinTime")
         public String joinTime;
 
+        /**
+         * <p>The time when the member was modified. The time is displayed in UTC.</p>
+         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        /**
+         * <p>The ID of the resource directory.</p>
+         */
         @NameInMap("ResourceDirectoryId")
         public String resourceDirectoryId;
 
+        /**
+         * <p>The path of the member in the resource directory.</p>
+         */
         @NameInMap("ResourceDirectoryPath")
         public String resourceDirectoryPath;
 
+        /**
+         * <p>The status of the member. Valid values:</p>
+         * <br>
+         * <p>*   CreateSuccess: The member is created.</p>
+         * <p>*   PromoteVerifying: The upgrade of the member is being confirmed.</p>
+         * <p>*   PromoteFailed: The upgrade of the member fails.</p>
+         * <p>*   PromoteExpired: The upgrade of the member expires.</p>
+         * <p>*   PromoteCancelled: The upgrade of the member is canceled.</p>
+         * <p>*   PromoteSuccess: The member is upgraded.</p>
+         * <p>*   InviteSuccess: The member accepts the invitation.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tags that are added to the member.</p>
+         */
         @NameInMap("Tags")
         public ListAccountsResponseBodyAccountsAccountTags tags;
 
+        /**
+         * <p>The type of the member. Valid values:</p>
+         * <br>
+         * <p>*   CloudAccount: cloud account</p>
+         * <p>*   ResourceAccount: resource account</p>
+         */
         @NameInMap("Type")
         public String type;
 
