@@ -4,12 +4,27 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeVServerGroupsRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to return information about the associated listeners. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false** (default): no</p>
+     */
     @NameInMap("IncludeListener")
     public Boolean includeListener;
 
+    /**
+     * <p>Specifies whether to return the forwarding rules associated with the vServer groups. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false** (default): no</p>
+     */
     @NameInMap("IncludeRule")
     public Boolean includeRule;
 
+    /**
+     * <p>The ID of the CLB instance.</p>
+     */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
@@ -19,6 +34,11 @@ public class DescribeVServerGroupsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the Classic Load Balancer (CLB) instance.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

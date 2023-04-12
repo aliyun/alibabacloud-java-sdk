@@ -4,9 +4,15 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class CreateRulesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of forwarding rules.</p>
+     */
     @NameInMap("Rules")
     public CreateRulesResponseBodyRules rules;
 
@@ -32,9 +38,15 @@ public class CreateRulesResponseBody extends TeaModel {
     }
 
     public static class CreateRulesResponseBodyRulesRule extends TeaModel {
+        /**
+         * <p>The ID of the forwarding rule.</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 
+        /**
+         * <p>The name of the forwarding rule.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 

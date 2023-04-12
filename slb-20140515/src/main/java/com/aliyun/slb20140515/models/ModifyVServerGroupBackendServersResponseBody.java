@@ -4,12 +4,21 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class ModifyVServerGroupBackendServersResponseBody extends TeaModel {
+    /**
+     * <p>The list of backend servers.</p>
+     */
     @NameInMap("BackendServers")
     public ModifyVServerGroupBackendServersResponseBodyBackendServers backendServers;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the vServer group.</p>
+     */
     @NameInMap("VServerGroupId")
     public String VServerGroupId;
 
@@ -43,18 +52,36 @@ public class ModifyVServerGroupBackendServersResponseBody extends TeaModel {
     }
 
     public static class ModifyVServerGroupBackendServersResponseBodyBackendServersBackendServer extends TeaModel {
+        /**
+         * <p>The description of the backend server.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The port that is used by the backend server.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The ID of the ECS instance or ENI.</p>
+         */
         @NameInMap("ServerId")
         public String serverId;
 
+        /**
+         * <p>The type of backend server. Valid values:</p>
+         * <br>
+         * <p>*   **ecs**: an ECS instance. This is the default value.</p>
+         * <p>*   **eni**: an ENI.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The weight of the backend server.</p>
+         */
         @NameInMap("Weight")
         public Integer weight;
 

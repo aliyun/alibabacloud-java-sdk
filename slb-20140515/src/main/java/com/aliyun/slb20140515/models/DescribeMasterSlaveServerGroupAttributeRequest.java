@@ -4,6 +4,9 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeMasterSlaveServerGroupAttributeRequest extends TeaModel {
+    /**
+     * <p>The ID of the primary/secondary server group.</p>
+     */
     @NameInMap("MasterSlaveServerGroupId")
     public String masterSlaveServerGroupId;
 
@@ -13,6 +16,9 @@ public class DescribeMasterSlaveServerGroupAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the Classic Load Balancer (CLB) instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,21 +4,39 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The time when the CLB instance was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The ID of the associated CLB instance.</p>
+     */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
+    /**
+     * <p>The list of backend servers in the primary/secondary server group.</p>
+     */
     @NameInMap("MasterSlaveBackendServers")
     public DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServers masterSlaveBackendServers;
 
+    /**
+     * <p>The ID of the primary/secondary server group.</p>
+     */
     @NameInMap("MasterSlaveServerGroupId")
     public String masterSlaveServerGroupId;
 
+    /**
+     * <p>The name of the primary/secondary server group.</p>
+     */
     @NameInMap("MasterSlaveServerGroupName")
     public String masterSlaveServerGroupName;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -76,21 +94,42 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
     }
 
     public static class DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServersMasterSlaveBackendServer extends TeaModel {
+        /**
+         * <p>The description of the primary/secondary server group.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The port used by the backend server.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The ID of the ECS instance or ENI.</p>
+         */
         @NameInMap("ServerId")
         public String serverId;
 
+        /**
+         * <p>The type of backend server. Valid values: **Master and Slave. Default value: Master.</p>
+         */
         @NameInMap("ServerType")
         public String serverType;
 
+        /**
+         * <p>The type of the backend server. Valid values:</p>
+         * <br>
+         * <p>*   **ecs** (default): an Elastic Compute Service (ECS) instance</p>
+         * <p>*   **eni**: an elastic network interface (ENI)</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The weight of the backend server.</p>
+         */
         @NameInMap("Weight")
         public Integer weight;
 

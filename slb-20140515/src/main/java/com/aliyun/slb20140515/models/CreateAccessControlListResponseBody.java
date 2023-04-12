@@ -4,9 +4,15 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class CreateAccessControlListResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the ACL.</p>
+     */
     @NameInMap("AclId")
     public String aclId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

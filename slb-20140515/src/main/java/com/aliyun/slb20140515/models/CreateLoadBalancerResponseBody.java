@@ -4,33 +4,66 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class CreateLoadBalancerResponseBody extends TeaModel {
+    /**
+     * <p>The IP address that is assigned to the CLB instance.</p>
+     */
     @NameInMap("Address")
     public String address;
 
+    /**
+     * <p>The IP version that is used by the CLB instance.</p>
+     */
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
 
+    /**
+     * <p>The ID of the CLB instance.</p>
+     */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
+    /**
+     * <p>The name of the CLB instance.</p>
+     */
     @NameInMap("LoadBalancerName")
     public String loadBalancerName;
 
+    /**
+     * <p>The network type of the CLB instance. Valid values:</p>
+     * <br>
+     * <p>*   **vpc:** VPC.</p>
+     * <p>*   **classic:** classic network.</p>
+     */
     @NameInMap("NetworkType")
     public String networkType;
 
+    /**
+     * <p>The order ID of the subscription CLB instance.</p>
+     */
     @NameInMap("OrderId")
     public Long orderId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The ID of the vSwitch to which the CLB instance belongs.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    /**
+     * <p>The ID of the VPC in which the CLB instance was deployed.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

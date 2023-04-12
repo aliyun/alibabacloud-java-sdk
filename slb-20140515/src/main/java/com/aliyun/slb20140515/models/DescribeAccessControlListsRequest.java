@@ -4,9 +4,18 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessControlListsRequest extends TeaModel {
+    /**
+     * <p>The name of the network ACL. The name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), hyphens (-), forward slashes (/), and underscores (\_). The name of the network ACL must be unique within each region. Fuzzy match is supported.</p>
+     */
     @NameInMap("AclName")
     public String aclName;
 
+    /**
+     * <p>The IP version of the CLB instance with which the network ACL is associated. Valid values:</p>
+     * <br>
+     * <p>*   **ipv4**</p>
+     * <p>*   **ipv6**</p>
+     */
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
 
@@ -16,15 +25,29 @@ public class DescribeAccessControlListsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region where the network ACL is created.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the IDs of regions.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

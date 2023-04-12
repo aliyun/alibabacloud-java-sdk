@@ -4,12 +4,31 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class ModifyLoadBalancerPayTypeRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable automatic payment. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false** (default): no</p>
+     * <br>
+     * <p>>  This parameter is valid only when the `PayType` parameter is set to **PrePay**. This parameter is valid only for pay-as-you-go instances.</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <p>The subscription duration.</p>
+     * <br>
+     * <p>*   If **PricingCycle** is set to **month**, the valid values are **1** to **9**.</p>
+     * <p>*   If **PricingCycle** is set to **year**, the valid values are **1** to **3**.</p>
+     * <br>
+     * <p>>  This parameter is valid only when the **PayType** parameter is set to **PrePay**. This parameter is valid only for pay-as-you-go instances.</p>
+     */
     @NameInMap("Duration")
     public Integer duration;
 
+    /**
+     * <p>The ID of the CLB instance.</p>
+     */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
@@ -19,12 +38,31 @@ public class ModifyLoadBalancerPayTypeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The billing method of the CLB instance. Valid values:</p>
+     * <br>
+     * <p>*   **PayOnDemand** (default): pay-as-you-go</p>
+     * <br>
+     * <p>To change the billing method of a pay-as-you-go CLB instance to subscription, you must set the parameter to **PrePay**. In addition, the previous billing method of the CLB instance must be **PayOnDemand**.</p>
+     */
     @NameInMap("PayType")
     public String payType;
 
+    /**
+     * <p>The billing cycle.</p>
+     * <br>
+     * <p>Valid values: **year** and **month**.</p>
+     * <br>
+     * <p>>  This parameter is valid only when the **PayType** parameter is set to **PrePay**. This parameter is valid only for pay-as-you-go instances.</p>
+     */
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
+    /**
+     * <p>The ID of the region where the CLB instance is deployed.</p>
+     * <br>
+     * <p>You can query the region ID from the [Regions and zones](~~40654~~) list or by calling the [DescribeRegions](~~25609~~) operation.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

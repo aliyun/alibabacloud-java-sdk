@@ -4,30 +4,76 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeLoadBalancersRequest extends TeaModel {
+    /**
+     * <p>The service address of the CLB instance.</p>
+     */
     @NameInMap("Address")
     public String address;
 
+    /**
+     * <p>The IP version. Valid values: **ipv4** and **ipv6**.</p>
+     */
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
 
+    /**
+     * <p>The network type of the CLB instance. Valid values:</p>
+     * <br>
+     * <p>*   **internet**: After an Internet-facing CLB instance is created, the system allocates a public IP address to the CLB instance. Then, the CLB instance can forward requests over the Internet.</p>
+     * <p>*   **intranet**: After an internal-facing CLB instance is created, the system allocates a private IP address to the CLB instance. Then, the CLB instance can forward only requests within the internal network.</p>
+     */
     @NameInMap("AddressType")
     public String addressType;
 
+    /**
+     * <p>The metering method of Internet data transfer. Valid values:</p>
+     * <br>
+     * <p>*   **paybybandwidth**: pay-by-bandwidth</p>
+     * <p>*   **paybytraffic**: pay-by-data-transfer</p>
+     */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
+    /**
+     * <p>The ID of the CLB instance.</p>
+     * <br>
+     * <p>You can specify up to 10 IDs. Separate multiple IDs with commas (,).</p>
+     */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
+    /**
+     * <p>The name of the CLB instance.</p>
+     * <br>
+     * <p>The name must be 1 to 80 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <br>
+     * <p>You can specify up to 10 names. Separate multiple names with commas (,).</p>
+     */
     @NameInMap("LoadBalancerName")
     public String loadBalancerName;
 
+    /**
+     * <p>The status of the CLB instance. Valid values:</p>
+     * <br>
+     * <p>*   **inactive**: The CLB instance is disabled. CLB instances in the inactive state do not forward traffic.</p>
+     * <p>*   **active**: The CLB instance is running as expected. Newly created CLB instances are in the **active** state by default.</p>
+     * <p>*   **locked**: The CLB instance is locked. When a CLB instance expires, it is locked for seven days. You cannot perform operations on a locked CLB instance. The CLB instance no longer forwards traffic, but the IP address and other settings are retained.</p>
+     */
     @NameInMap("LoadBalancerStatus")
     public String loadBalancerStatus;
 
+    /**
+     * <p>The ID of the primary zone to which the CLB instance belongs.</p>
+     */
     @NameInMap("MasterZoneId")
     public String masterZoneId;
 
+    /**
+     * <p>The network type of the internal-facing CLB instance. Valid values:</p>
+     * <br>
+     * <p>*   **vpc**: VPC</p>
+     * <p>*   **classic**: classic network</p>
+     */
     @NameInMap("NetworkType")
     public String networkType;
 
@@ -37,18 +83,41 @@ public class DescribeLoadBalancersRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return per page.</p>
+     * <br>
+     * <p>Valid values: **1** to **100**.</p>
+     * <br>
+     * <p>>  If you set **PageSize**, you must also set **PageNumber**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The billing method of the CLB instance.</p>
+     * <br>
+     * <p>*   Set the value to **PayOnDemand**, which specifies the pay-as-you-go billing method.</p>
+     */
     @NameInMap("PayType")
     public String payType;
 
+    /**
+     * <p>The region ID of the CLB instance.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -58,21 +127,45 @@ public class DescribeLoadBalancersRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the backend server that is added to the CLB instance.</p>
+     */
     @NameInMap("ServerId")
     public String serverId;
 
+    /**
+     * <p>The private IP address of the backend server that is added to the CLB instance.</p>
+     * <br>
+     * <p>You can specify multiple IP addresses. Separate multiple IP addresses with commas (,).</p>
+     */
     @NameInMap("ServerIntranetAddress")
     public String serverIntranetAddress;
 
+    /**
+     * <p>The ID of the secondary zone to which the CLB instance belongs.</p>
+     * <br>
+     * <p>CLB instances on Alibaba Finance Cloud do not support cross-zone deployment.</p>
+     */
     @NameInMap("SlaveZoneId")
     public String slaveZoneId;
 
+    /**
+     * <p>The tags that are added to the CLB instance. The tags must be key-value pairs that are contained in a JSON dictionary.</p>
+     * <br>
+     * <p>You can specify up to 10 tags in each call.</p>
+     */
     @NameInMap("Tags")
     public String tags;
 
+    /**
+     * <p>The ID of the vSwitch to which the CLB instance belongs.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    /**
+     * <p>The ID of the virtual private cloud (VPC) to which the CLB instance belongs.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

@@ -4,12 +4,25 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class CreateRulesRequest extends TeaModel {
+    /**
+     * <p>The frontend port that is used by the Server Load Balancer (SLB) instance.</p>
+     * <br>
+     * <p>Valid values: **1 to 65535**.</p>
+     */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
+    /**
+     * <p>The frontend protocol that is used by the SLB instance.</p>
+     * <br>
+     * <p>>  This parameter is required when listeners that use different protocols listen on the same port.</p>
+     */
     @NameInMap("ListenerProtocol")
     public String listenerProtocol;
 
+    /**
+     * <p>The ID of the SLB instance.</p>
+     */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
@@ -19,6 +32,11 @@ public class CreateRulesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the SLB instance is created.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](https://icms.alibaba-inc.com/content/slb/slbapi?l=1\&m=140\&n=4189) operation to query region IDs.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -28,6 +46,16 @@ public class CreateRulesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The forwarding rules to be created. A maximum of 10 forwarding rules can be specified in each request. Each forwarding rule contains the following parameters:</p>
+     * <br>
+     * <p>*   **RuleName**: Required. The value must be of the STRING type. The name of the forwarding rule. The name must be 1 to 40 characters in length, and can contain only letters, digits, hyphens (-), forward slashes (/), periods (.),and underscores (\_). Forwarding rule names must be unique within each listener.</p>
+     * <p>*   **Domain**: Optional. The value must be of the STRING type. The domain name to be associated with the forwarding rule. You must specify at least this parameter or **Url**.</p>
+     * <p>*   **Url**: Optional. The URL to be specified in the forwarding rule. The value must be of the STRING type. The URL must be 1 to 80 characters in length, and can contain only letters, digits, hyphens (-), forward slashes (/), periods (.), percent signs (%), question marks (?), number signs (#), and ampersands (&). The URL must not be a single forward slash (/). However, it must start with a forward slash (/). You must specify at least the URL or **Domain**.</p>
+     * <p>*   **VServerGroupId**: Required. The value must be of the STRING type. The ID of the vServer group to be specified in the forwarding rule.</p>
+     * <br>
+     * <p>>  You must specify at least `Domain` or `Url`. You can also specify both. The combination of `Domain` and `Url` must be unique within a listener.</p>
+     */
     @NameInMap("RuleList")
     public String ruleList;
 

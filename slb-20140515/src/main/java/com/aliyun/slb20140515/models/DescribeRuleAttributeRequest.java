@@ -10,6 +10,11 @@ public class DescribeRuleAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the Server Load Balancer (SLB) instance is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -19,6 +24,9 @@ public class DescribeRuleAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the forwarding rule.</p>
+     */
     @NameInMap("RuleId")
     public String ruleId;
 

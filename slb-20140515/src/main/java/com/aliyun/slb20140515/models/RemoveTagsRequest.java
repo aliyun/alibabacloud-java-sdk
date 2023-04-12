@@ -4,6 +4,9 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class RemoveTagsRequest extends TeaModel {
+    /**
+     * <p>The ID of the SLB instance.</p>
+     */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
@@ -13,6 +16,9 @@ public class RemoveTagsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region to which the SLB instance belongs.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -22,6 +28,9 @@ public class RemoveTagsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>A list of tags to be removed.</p>
+     */
     @NameInMap("Tags")
     public String tags;
 

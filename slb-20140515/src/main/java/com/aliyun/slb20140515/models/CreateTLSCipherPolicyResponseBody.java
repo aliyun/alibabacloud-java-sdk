@@ -4,9 +4,15 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class CreateTLSCipherPolicyResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the policy.</p>
+     */
     @NameInMap("TLSCipherPolicyId")
     public String TLSCipherPolicyId;
 

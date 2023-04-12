@@ -4,12 +4,25 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeHealthStatusRequest extends TeaModel {
+    /**
+     * <p>The frontend port that is used by the CLB instance.</p>
+     * <br>
+     * <p>Valid values: **1 to 65535**.</p>
+     * <br>
+     * <p>>  If you do not specify this parameter, the health status of all ports is returned.</p>
+     */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
+    /**
+     * <p>The frontend protocol that is used by the CLB instance.</p>
+     */
     @NameInMap("ListenerProtocol")
     public String listenerProtocol;
 
+    /**
+     * <p>The ID of the Classic Load Balancer (CLB) instance.</p>
+     */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
@@ -19,6 +32,9 @@ public class DescribeHealthStatusRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the CLB instance is deployed.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

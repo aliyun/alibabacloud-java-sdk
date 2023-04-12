@@ -4,12 +4,25 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DeleteLoadBalancerListenerRequest extends TeaModel {
+    /**
+     * <p>The frontend listening port used by the listener.</p>
+     * <br>
+     * <p>Value range: **1 to 65535**</p>
+     */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
+    /**
+     * <p>The frontend listening protocol used by the listener.</p>
+     * <br>
+     * <p>>  This parameter is required when listeners with different protocols use the same port.</p>
+     */
     @NameInMap("ListenerProtocol")
     public String listenerProtocol;
 
+    /**
+     * <p>The ID of the Server Load Balancer (SLB) instance to which the listener belongs.</p>
+     */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
@@ -19,6 +32,9 @@ public class DeleteLoadBalancerListenerRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region to which the SLB instance belongs.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

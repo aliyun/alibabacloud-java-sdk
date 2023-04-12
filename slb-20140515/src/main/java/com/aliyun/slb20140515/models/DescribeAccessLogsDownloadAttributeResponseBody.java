@@ -4,35 +4,39 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessLogsDownloadAttributeResponseBody extends TeaModel {
-    @NameInMap("Count")
-    public Integer count;
-
+    /**
+     * <p>The configuration of access logs.</p>
+     */
     @NameInMap("LogsDownloadAttributes")
     public DescribeAccessLogsDownloadAttributeResponseBodyLogsDownloadAttributes logsDownloadAttributes;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
     public static DescribeAccessLogsDownloadAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAccessLogsDownloadAttributeResponseBody self = new DescribeAccessLogsDownloadAttributeResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAccessLogsDownloadAttributeResponseBody setCount(Integer count) {
-        this.count = count;
-        return this;
-    }
-    public Integer getCount() {
-        return this.count;
     }
 
     public DescribeAccessLogsDownloadAttributeResponseBody setLogsDownloadAttributes(DescribeAccessLogsDownloadAttributeResponseBodyLogsDownloadAttributes logsDownloadAttributes) {
@@ -76,18 +80,33 @@ public class DescribeAccessLogsDownloadAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeAccessLogsDownloadAttributeResponseBodyLogsDownloadAttributesLogsDownloadAttribute extends TeaModel {
+        /**
+         * <p>The ID of the CLB instance.</p>
+         */
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
+        /**
+         * <p>The name of the project of Log Service.</p>
+         */
         @NameInMap("LogProject")
         public String logProject;
 
+        /**
+         * <p>The name of the Logstore of Log Service.</p>
+         */
         @NameInMap("LogStore")
         public String logStore;
 
+        /**
+         * <p>The type of access log. Only **layer7** is returned, which indicates Layer 7 access logs.</p>
+         */
         @NameInMap("LogType")
         public String logType;
 
+        /**
+         * <p>The ID of the region where the CLB instance is deployed.</p>
+         */
         @NameInMap("Region")
         public String region;
 

@@ -4,9 +4,17 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagsRequest extends TeaModel {
+    /**
+     * <p>Specifies whether the tag is DistinctKey.</p>
+     * <br>
+     * <p>Valid values: **true and false**.</p>
+     */
     @NameInMap("DistinctKey")
     public Boolean distinctKey;
 
+    /**
+     * <p>The ID of the SLB instance.</p>
+     */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
@@ -16,12 +24,21 @@ public class DescribeTagsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Minimum value: 1. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: 50. Maximum value: 100.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region where the Server Load Balancer (SLB) instance is deployed.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -31,6 +48,9 @@ public class DescribeTagsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tags that you want to query.</p>
+     */
     @NameInMap("Tags")
     public String tags;
 
