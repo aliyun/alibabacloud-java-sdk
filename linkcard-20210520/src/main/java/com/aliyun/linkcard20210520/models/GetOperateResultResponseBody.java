@@ -76,6 +76,9 @@ public class GetOperateResultResponseBody extends TeaModel {
     }
 
     public static class GetOperateResultResponseBodyData extends TeaModel {
+        @NameInMap("ExecuteResult")
+        public String executeResult;
+
         @NameInMap("OperateType")
         public String operateType;
 
@@ -88,6 +91,14 @@ public class GetOperateResultResponseBody extends TeaModel {
         public static GetOperateResultResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetOperateResultResponseBodyData self = new GetOperateResultResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetOperateResultResponseBodyData setExecuteResult(String executeResult) {
+            this.executeResult = executeResult;
+            return this;
+        }
+        public String getExecuteResult() {
+            return this.executeResult;
         }
 
         public GetOperateResultResponseBodyData setOperateType(String operateType) {
