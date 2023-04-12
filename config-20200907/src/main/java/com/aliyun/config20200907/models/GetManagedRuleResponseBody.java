@@ -4,9 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetManagedRuleResponseBody extends TeaModel {
+    /**
+     * <p>The details of the managed rule.</p>
+     */
     @NameInMap("ManagedRule")
     public GetManagedRuleResponseBodyManagedRule managedRule;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +38,9 @@ public class GetManagedRuleResponseBody extends TeaModel {
     }
 
     public static class GetManagedRuleResponseBodyManagedRuleScope extends TeaModel {
+        /**
+         * <p>The type of resource to which the managed rule applies.</p>
+         */
         @NameInMap("ComplianceResourceTypes")
         public java.util.List<String> complianceResourceTypes;
 
@@ -51,9 +60,24 @@ public class GetManagedRuleResponseBody extends TeaModel {
     }
 
     public static class GetManagedRuleResponseBodyManagedRuleSourceDetails extends TeaModel {
+        /**
+         * <p>The interval at which the managed rule is triggered. Valid values:</p>
+         * <br>
+         * <p>*   One_Hour: 1 hour.</p>
+         * <p>*   Three_Hours: 3 hours.</p>
+         * <p>*   Six_Hours: 6 hours.</p>
+         * <p>*   Twelve_Hours: 12 hours</p>
+         * <p>*   TwentyFour_Hours: 24 hours</p>
+         */
         @NameInMap("MaximumExecutionFrequency")
         public String maximumExecutionFrequency;
 
+        /**
+         * <p>The trigger type of the managed rule. Valid values:</p>
+         * <br>
+         * <p>*   ConfigurationItemChangeNotification: The managed rule is triggered by configuration changes.</p>
+         * <p>*   ScheduledNotification: The managed rule is periodically triggered.</p>
+         */
         @NameInMap("MessageType")
         public String messageType;
 
@@ -81,33 +105,67 @@ public class GetManagedRuleResponseBody extends TeaModel {
     }
 
     public static class GetManagedRuleResponseBodyManagedRule extends TeaModel {
+        /**
+         * <p>The settings of the required input parameters for the managed rule.</p>
+         */
         @NameInMap("CompulsoryInputParameterDetails")
         public java.util.Map<String, ?> compulsoryInputParameterDetails;
 
+        /**
+         * <p>The name of the managed rule.</p>
+         */
         @NameInMap("ConfigRuleName")
         public String configRuleName;
 
+        /**
+         * <p>The description of the managed rule.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The URL of the topic that provides guidance on remediation for the managed rule.</p>
+         */
         @NameInMap("HelpUrls")
         public String helpUrls;
 
+        /**
+         * <p>The identifier of the managed rule.</p>
+         */
         @NameInMap("Identifier")
         public String identifier;
 
+        /**
+         * <p>The tags of the managed rule.</p>
+         */
         @NameInMap("Labels")
         public java.util.List<String> labels;
 
+        /**
+         * <p>The settings of the optional input parameters for the managed rule.</p>
+         */
         @NameInMap("OptionalInputParameterDetails")
         public java.util.Map<String, ?> optionalInputParameterDetails;
 
+        /**
+         * <p>The risk level of the resources that are not compliant with the managed rule. Valid values:</p>
+         * <br>
+         * <p>*   1: high risk level</p>
+         * <p>*   2: medium risk level</p>
+         * <p>*   3: low risk level</p>
+         */
         @NameInMap("RiskLevel")
         public Integer riskLevel;
 
+        /**
+         * <p>The effective scope of the managed rule.</p>
+         */
         @NameInMap("Scope")
         public GetManagedRuleResponseBodyManagedRuleScope scope;
 
+        /**
+         * <p>The information about the trigger type of the managed rule.</p>
+         */
         @NameInMap("SourceDetails")
         public java.util.List<GetManagedRuleResponseBodyManagedRuleSourceDetails> sourceDetails;
 

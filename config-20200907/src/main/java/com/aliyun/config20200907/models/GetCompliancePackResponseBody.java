@@ -4,9 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetCompliancePackResponseBody extends TeaModel {
+    /**
+     * <p>The details of the compliance package.</p>
+     */
     @NameInMap("CompliancePack")
     public GetCompliancePackResponseBodyCompliancePack compliancePack;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,24 @@ public class GetCompliancePackResponseBody extends TeaModel {
     }
 
     public static class GetCompliancePackResponseBodyCompliancePackConfigRulesConfigRuleParameters extends TeaModel {
+        /**
+         * <p>The name of the input parameter.</p>
+         */
         @NameInMap("ParameterName")
         public String parameterName;
 
+        /**
+         * <p>The value of the input parameter.</p>
+         */
         @NameInMap("ParameterValue")
         public String parameterValue;
 
+        /**
+         * <p>Indicates whether the input parameter is required. Valid values:</p>
+         * <br>
+         * <p>*   true: required</p>
+         * <p>*   false: optional</p>
+         */
         @NameInMap("Required")
         public Boolean required;
 
@@ -73,21 +91,43 @@ public class GetCompliancePackResponseBody extends TeaModel {
     }
 
     public static class GetCompliancePackResponseBodyCompliancePackConfigRules extends TeaModel {
+        /**
+         * <p>The ID of the rule.</p>
+         */
         @NameInMap("ConfigRuleId")
         public String configRuleId;
 
+        /**
+         * <p>The name of the rule.</p>
+         */
         @NameInMap("ConfigRuleName")
         public String configRuleName;
 
+        /**
+         * <p>The input parameters of the rule.</p>
+         */
         @NameInMap("ConfigRuleParameters")
         public java.util.List<GetCompliancePackResponseBodyCompliancePackConfigRulesConfigRuleParameters> configRuleParameters;
 
+        /**
+         * <p>The description of the rule.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the managed rule.</p>
+         */
         @NameInMap("ManagedRuleIdentifier")
         public String managedRuleIdentifier;
 
+        /**
+         * <p>The risk level of the resources that are not compliant with the rule. Valid values:</p>
+         * <br>
+         * <p>*   1: high risk level</p>
+         * <p>*   2: medium risk level</p>
+         * <p>*   3: low risk level</p>
+         */
         @NameInMap("RiskLevel")
         public Integer riskLevel;
 
@@ -147,18 +187,33 @@ public class GetCompliancePackResponseBody extends TeaModel {
     }
 
     public static class GetCompliancePackResponseBodyCompliancePackScope extends TeaModel {
+        /**
+         * <p>The ID of the resource that is not evaluated by using the compliance package.</p>
+         */
         @NameInMap("ExcludeResourceIdsScope")
         public String excludeResourceIdsScope;
 
+        /**
+         * <p>The ID of the region whose resources are evaluated by using the compliance package.</p>
+         */
         @NameInMap("RegionIdsScope")
         public String regionIdsScope;
 
+        /**
+         * <p>The ID of the resource group whose resources are evaluated by using the compliance package.</p>
+         */
         @NameInMap("ResourceGroupIdsScope")
         public String resourceGroupIdsScope;
 
+        /**
+         * <p>The tag key of the resource that is evaluated by using the compliance package.</p>
+         */
         @NameInMap("TagKeyScope")
         public String tagKeyScope;
 
+        /**
+         * <p>The tag value of the resource that is evaluated by using the compliance package.</p>
+         */
         @NameInMap("TagValueScope")
         public String tagValueScope;
 
@@ -210,33 +265,70 @@ public class GetCompliancePackResponseBody extends TeaModel {
     }
 
     public static class GetCompliancePackResponseBodyCompliancePack extends TeaModel {
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the compliance package belongs.</p>
+         */
         @NameInMap("AccountId")
         public Long accountId;
 
+        /**
+         * <p>The ID of the compliance package.</p>
+         */
         @NameInMap("CompliancePackId")
         public String compliancePackId;
 
+        /**
+         * <p>The name of the compliance package.</p>
+         */
         @NameInMap("CompliancePackName")
         public String compliancePackName;
 
+        /**
+         * <p>The ID of the compliance package template.</p>
+         */
         @NameInMap("CompliancePackTemplateId")
         public String compliancePackTemplateId;
 
+        /**
+         * <p>The rules in the compliance package.</p>
+         */
         @NameInMap("ConfigRules")
         public java.util.List<GetCompliancePackResponseBodyCompliancePackConfigRules> configRules;
 
+        /**
+         * <p>The timestamp when the compliance package was created. Unit: milliseconds.</p>
+         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
+        /**
+         * <p>The description of the compliance package.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:</p>
+         * <br>
+         * <p>*   1: high risk level</p>
+         * <p>*   2: medium risk level</p>
+         * <p>*   3: low risk level</p>
+         */
         @NameInMap("RiskLevel")
         public Integer riskLevel;
 
+        /**
+         * <p>The resource group for which the compliance package takes effect.</p>
+         */
         @NameInMap("Scope")
         public GetCompliancePackResponseBodyCompliancePackScope scope;
 
+        /**
+         * <p>The status of the compliance package. Valid values:</p>
+         * <br>
+         * <p>*   ACTIVE: The compliance package is normal.</p>
+         * <p>*   CREATING: The compliance package is being created.</p>
+         */
         @NameInMap("Status")
         public String status;
 

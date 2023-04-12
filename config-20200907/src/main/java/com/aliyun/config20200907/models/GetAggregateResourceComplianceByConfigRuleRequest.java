@@ -4,16 +4,38 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetAggregateResourceComplianceByConfigRuleRequest extends TeaModel {
+    /**
+     * <p>The ID of the account group.</p>
+     * <br>
+     * <p>For more information about how to query the ID of an account group, see [ListAggregators](~~255797~~).</p>
+     */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
+    /**
+     * <p>The compliance evaluation result of the resources. Valid values:</p>
+     * <br>
+     * <p>*   COMPLIANT: The resources are evaluated as compliant.</p>
+     * <p>*   NON_COMPLIANT: The resources are evaluated as non-compliant.</p>
+     * <p>*   NOT_APPLICABLE: The rule does not apply to your resources.</p>
+     * <p>*   INSUFFICIENT_DATA: No resource data is available.</p>
+     */
     @NameInMap("ComplianceType")
     public String complianceType;
 
+    /**
+     * <p>The ID of the rule.</p>
+     * <br>
+     * <p>For more information about how to query the ID of a rule, see [ListAggregateConfigRules](~~264148~~).</p>
+     */
     @NameInMap("ConfigRuleId")
     public String configRuleId;
 
+    @NameInMap("ResourceAccountId")
+    public Long resourceAccountId;
+
     @NameInMap("ResourceOwnerId")
+    @Deprecated
     public Long resourceOwnerId;
 
     public static GetAggregateResourceComplianceByConfigRuleRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -43,6 +65,14 @@ public class GetAggregateResourceComplianceByConfigRuleRequest extends TeaModel 
     }
     public String getConfigRuleId() {
         return this.configRuleId;
+    }
+
+    public GetAggregateResourceComplianceByConfigRuleRequest setResourceAccountId(Long resourceAccountId) {
+        this.resourceAccountId = resourceAccountId;
+        return this;
+    }
+    public Long getResourceAccountId() {
+        return this.resourceAccountId;
     }
 
     public GetAggregateResourceComplianceByConfigRuleRequest setResourceOwnerId(Long resourceOwnerId) {

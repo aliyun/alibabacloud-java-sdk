@@ -4,9 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetResourceComplianceByConfigRuleResponseBody extends TeaModel {
+    /**
+     * <p>The compliance evaluation results returned.</p>
+     */
     @NameInMap("ComplianceResult")
     public GetResourceComplianceByConfigRuleResponseBodyComplianceResult complianceResult;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,20 @@ public class GetResourceComplianceByConfigRuleResponseBody extends TeaModel {
     }
 
     public static class GetResourceComplianceByConfigRuleResponseBodyComplianceResultCompliances extends TeaModel {
+        /**
+         * <p>The compliance evaluation result. Valid values:</p>
+         * <br>
+         * <p>*   COMPLIANT: The relevant resources are evaluated as compliant.</p>
+         * <p>*   NON_COMPLIANT: The relevant resources are evaluated as non-compliant.</p>
+         * <p>*   NOT_APPLICABLE: The rule does not apply to your resources.</p>
+         * <p>*   INSUFFICIENT_DATA: No resource data is available.</p>
+         */
         @NameInMap("ComplianceType")
         public String complianceType;
 
+        /**
+         * <p>The number of resources that have the compliance evaluation result. For example, if the value of the `ComplianceType` parameter is `COMPLIANT`, this parameter value indicates the number of compliant resources.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
@@ -62,9 +79,15 @@ public class GetResourceComplianceByConfigRuleResponseBody extends TeaModel {
     }
 
     public static class GetResourceComplianceByConfigRuleResponseBodyComplianceResult extends TeaModel {
+        /**
+         * <p>The information about the compliance evaluation.</p>
+         */
         @NameInMap("Compliances")
         public java.util.List<GetResourceComplianceByConfigRuleResponseBodyComplianceResultCompliances> compliances;
 
+        /**
+         * <p>The total number of evaluated resources.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 

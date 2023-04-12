@@ -4,9 +4,19 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class DeleteAggregateConfigRulesRequest extends TeaModel {
+    /**
+     * <p>The ID of the account group.</p>
+     * <br>
+     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).</p>
+     */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
+    /**
+     * <p>The ID of the rule. Separate multiple rule IDs with commas (,).</p>
+     * <br>
+     * <p>You can call the [ListAggregateConfigRules](~~264148~~) operation to obtain the rule ID.</p>
+     */
     @NameInMap("ConfigRuleIds")
     public String configRuleIds;
 

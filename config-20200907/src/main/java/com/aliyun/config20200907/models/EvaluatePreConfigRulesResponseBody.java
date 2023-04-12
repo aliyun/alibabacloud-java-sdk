@@ -4,9 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class EvaluatePreConfigRulesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of the compliance evaluation result.</p>
+     */
     @NameInMap("ResourceEvaluations")
     public java.util.List<EvaluatePreConfigRulesResponseBodyResourceEvaluations> resourceEvaluations;
 
@@ -32,15 +38,31 @@ public class EvaluatePreConfigRulesResponseBody extends TeaModel {
     }
 
     public static class EvaluatePreConfigRulesResponseBodyResourceEvaluationsRules extends TeaModel {
+        /**
+         * <p>The reason why the resource was evaluated as incompliant.</p>
+         */
         @NameInMap("Annotation")
         public String annotation;
 
+        /**
+         * <p>The compliance type of the resource that was evaluated by using the evaluation rule. Valid values:</p>
+         * <br>
+         * <p>*   COMPLIANT: The resource was evaluated as compliant.</p>
+         * <p>*   NON_COMPLIANT: The resource was evaluated as incompliant.</p>
+         * <p>*   NOT_APPLICABLE: The evaluation rule does not apply to the resource.</p>
+         */
         @NameInMap("ComplianceType")
         public String complianceType;
 
+        /**
+         * <p>The URL of the topic that describes how the managed rule remediates the incompliant configurations.</p>
+         */
         @NameInMap("HelpUrl")
         public String helpUrl;
 
+        /**
+         * <p>The identifier of the evaluation rule.</p>
+         */
         @NameInMap("Identifier")
         public String identifier;
 
@@ -84,12 +106,23 @@ public class EvaluatePreConfigRulesResponseBody extends TeaModel {
     }
 
     public static class EvaluatePreConfigRulesResponseBodyResourceEvaluations extends TeaModel {
+        /**
+         * <p>The logical ID of the resource.</p>
+         * <br>
+         * <p>>  If the ResourceLogicalId request parameter is left empty, the value of the ResourceLogicalId response parameter is generated based on the value of the `ResourceProperties` parameter.</p>
+         */
         @NameInMap("ResourceLogicalId")
         public String resourceLogicalId;
 
+        /**
+         * <p>The type of the resource.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The evaluation rules.</p>
+         */
         @NameInMap("Rules")
         public java.util.List<EvaluatePreConfigRulesResponseBodyResourceEvaluationsRules> rules;
 

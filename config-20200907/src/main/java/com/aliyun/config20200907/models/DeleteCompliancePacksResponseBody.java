@@ -4,9 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class DeleteCompliancePacksResponseBody extends TeaModel {
+    /**
+     * <p>The results of the delete operations.</p>
+     */
     @NameInMap("OperateCompliancePacksResult")
     public DeleteCompliancePacksResponseBodyOperateCompliancePacksResult operateCompliancePacksResult;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,27 @@ public class DeleteCompliancePacksResponseBody extends TeaModel {
     }
 
     public static class DeleteCompliancePacksResponseBodyOperateCompliancePacksResultOperateCompliancePacks extends TeaModel {
+        /**
+         * <p>The ID of the compliance package.</p>
+         */
         @NameInMap("CompliancePackId")
         public String compliancePackId;
 
+        /**
+         * <p>The error code.</p>
+         * <br>
+         * <p>*   If the compliance package is deleted, no error code is returned.</p>
+         * <p>*   If the compliance package fails to be deleted, an error code is returned. For more information about error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Config).</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <br>
+         * <p>*   true: The operation is successful.</p>
+         * <p>*   false: The operation fails.</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 
@@ -73,6 +94,9 @@ public class DeleteCompliancePacksResponseBody extends TeaModel {
     }
 
     public static class DeleteCompliancePacksResponseBodyOperateCompliancePacksResult extends TeaModel {
+        /**
+         * <p>The result of the delete operation.</p>
+         */
         @NameInMap("OperateCompliancePacks")
         public java.util.List<DeleteCompliancePacksResponseBodyOperateCompliancePacksResultOperateCompliancePacks> operateCompliancePacks;
 

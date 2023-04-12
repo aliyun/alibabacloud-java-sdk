@@ -4,18 +4,51 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class CreateAggregatorRequest extends TeaModel {
+    /**
+     * <p>The information about the member accounts in the account group. Example:</p>
+     * <br>
+     * <p>```</p>
+     * <br>
+     * <p>[{</p>
+     * <p>	"accountId": 171322098523****,</p>
+     * <p>	"accountType":"ResourceDirectory",</p>
+     * <p>                "accountName":"Alice"</p>
+     * <p>}, {</p>
+     * <p>	"accountId": 100532098349****,</p>
+     * <p>	"accountType":"ResourceDirectory",</p>
+     * <p>                "accountName":"Tom"</p>
+     * <p>}]</p>
+     * <p>```</p>
+     * <br>
+     * <p>>  If the `AggregatorType` parameter is set to `RD`, this parameter can be left empty because all accounts in the resource directory are automatically added to the global account group.</p>
+     */
     @NameInMap("AggregatorAccounts")
     public java.util.List<CreateAggregatorRequestAggregatorAccounts> aggregatorAccounts;
 
+    /**
+     * <p>The name of the account group.</p>
+     */
     @NameInMap("AggregatorName")
     public String aggregatorName;
 
+    /**
+     * <p>The type of the account group. Valid values:</p>
+     * <br>
+     * <p>*   RD: global account group.</p>
+     * <p>*   CUSTOM: custom account group. This is the default value.</p>
+     */
     @NameInMap("AggregatorType")
     public String aggregatorType;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The `ClientToken` value can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The description of the account group.</p>
+     */
     @NameInMap("Description")
     public String description;
 
@@ -65,12 +98,25 @@ public class CreateAggregatorRequest extends TeaModel {
     }
 
     public static class CreateAggregatorRequestAggregatorAccounts extends TeaModel {
+        /**
+         * <p>The ID of the member account.</p>
+         * <br>
+         * <p>For more information about how to obtain the ID of a member account, see [ListAccounts](~~160016~~).</p>
+         */
         @NameInMap("AccountId")
         public Long accountId;
 
+        /**
+         * <p>The name of the member account.</p>
+         * <br>
+         * <p>For more information about how to obtain the name of a member account, see [ListAccounts](~~160016~~).</p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <p>The affiliation of the member account. You can set this parameter only to ResourceDirectory.</p>
+         */
         @NameInMap("AccountType")
         public String accountType;
 

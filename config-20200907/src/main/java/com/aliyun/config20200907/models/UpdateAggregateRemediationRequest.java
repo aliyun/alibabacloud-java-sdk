@@ -4,24 +4,63 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class UpdateAggregateRemediationRequest extends TeaModel {
+    /**
+     * <p>The ID of the account group.</p>
+     * <br>
+     * <p>You can the [ListAggregators](~~255797~~) operation to obtain the ID of the account group.</p>
+     */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
+    /**
+     * <p>The execution mode of the remediation. Valid values:</p>
+     * <br>
+     * <p>*   NON_EXECUTION: The remediation is not executed.</p>
+     * <p>*   AUTO_EXECUTION: The remediation is automatically executed.</p>
+     * <p>*   MANUAL_EXECUTION: The remediation is manually executed.</p>
+     * <p>*   NOT_CONFIG: The execution mode is not specified.</p>
+     */
     @NameInMap("InvokeType")
     public String invokeType;
 
+    /**
+     * <p>The desired parameter values of the remediation setting.</p>
+     */
     @NameInMap("Params")
     public String params;
 
+    /**
+     * <p>The ID of the remediation setting.</p>
+     * <br>
+     * <p>You can call the [ListAggregateRemediations](~~270036~~) operation to obtain the ID of the remediation setting.</p>
+     */
     @NameInMap("RemediationId")
     public String remediationId;
 
+    /**
+     * <p>The ID of the remediation template.</p>
+     * <br>
+     * <p>You can call the [ListRemediationTemplates](~~270066~~) operation to obtain the ID of the remediation template.</p>
+     */
     @NameInMap("RemediationTemplateId")
     public String remediationTemplateId;
 
+    /**
+     * <p>The type of the remediation template. Valid values:</p>
+     * <br>
+     * <p>*   OOS: Operation Orchestration Service (OOS)</p>
+     * <p>*   FC: Function Compute. You can use Function Compute to configure custom remediation settings.</p>
+     */
     @NameInMap("RemediationType")
     public String remediationType;
 
+    /**
+     * <p>The type of the rule for which the remediation template is configured. Valid values:</p>
+     * <br>
+     * <p>*   ALIYUN: managed rule.</p>
+     * <p>*   CUSTOM: custom rule.</p>
+     * <p>*   NONE: The rule is not specified.</p>
+     */
     @NameInMap("SourceType")
     public String sourceType;
 

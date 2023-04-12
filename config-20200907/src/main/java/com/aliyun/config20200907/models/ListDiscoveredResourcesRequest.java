@@ -4,21 +4,42 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ListDiscoveredResourcesRequest extends TeaModel {
+    /**
+     * <p>The maximum number of entries to return in a request. Valid values: 1 to 100.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is used to initiate the subsequent request. If the response to the current request is truncated, this token is used to initiate another request and obtain the remaining entries.``</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the region where the resource resides. Separate multiple region IDs with commas (,).</p>
+     */
     @NameInMap("Regions")
     public String regions;
 
+    /**
+     * <p>The status of the resource. Valid values:</p>
+     * <br>
+     * <p>*   0: The resource is deleted.</p>
+     * <p>*   1 (default): The resource is retained.</p>
+     */
     @NameInMap("ResourceDeleted")
     public Integer resourceDeleted;
 
+    /**
+     * <p>The ID of the resource.</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
+    /**
+     * <p>The type of the resource. Separate multiple resource types with commas (,).</p>
+     */
     @NameInMap("ResourceTypes")
     public String resourceTypes;
 

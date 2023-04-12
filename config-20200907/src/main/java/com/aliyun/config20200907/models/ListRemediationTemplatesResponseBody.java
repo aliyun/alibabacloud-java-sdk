@@ -4,9 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ListRemediationTemplatesResponseBody extends TeaModel {
+    /**
+     * <p>The details of the remediation template.</p>
+     */
     @NameInMap("RemediationTemplates")
     public java.util.List<ListRemediationTemplatesResponseBodyRemediationTemplates> remediationTemplates;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,27 @@ public class ListRemediationTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListRemediationTemplatesResponseBodyRemediationTemplates extends TeaModel {
+        /**
+         * <p>The type of the remediation template. Valid value: OOS, which stands for Operation Orchestration Service.</p>
+         */
         @NameInMap("RemediationType")
         public String remediationType;
 
+        /**
+         * <p>The configuration of the remediation template.</p>
+         */
         @NameInMap("TemplateDefinition")
         public String templateDefinition;
 
+        /**
+         * <p>The identifier of the remediation template.</p>
+         */
         @NameInMap("TemplateIdentifier")
         public String templateIdentifier;
 
+        /**
+         * <p>The name of the remediation template.</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 

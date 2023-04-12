@@ -4,18 +4,41 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class UpdateAggregatorShrinkRequest extends TeaModel {
+    /**
+     * <p>The information about the member accounts in the account group.</p>
+     * <br>
+     * <p>>  When you modify the configurations of an account group, this parameter can be left empty. In this case, the member account list is not updated. If you want to update the member account list, you must set the `AccountId`, `AccountName` and `AccountType` parameters.</p>
+     */
     @NameInMap("AggregatorAccounts")
     public String aggregatorAccountsShrink;
 
+    /**
+     * <p>The ID of the account group.</p>
+     * <br>
+     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).</p>
+     */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
+    /**
+     * <p>The name of the account group.</p>
+     * <br>
+     * <p>For more information about how to obtain the name of an account group, see [ListAggregators](~~255797~~).</p>
+     */
     @NameInMap("AggregatorName")
     public String aggregatorName;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The description of the account group.</p>
+     * <br>
+     * <p>For more information about how to obtain the description of an account group, see [ListAggregators](~~255797~~).</p>
+     */
     @NameInMap("Description")
     public String description;
 

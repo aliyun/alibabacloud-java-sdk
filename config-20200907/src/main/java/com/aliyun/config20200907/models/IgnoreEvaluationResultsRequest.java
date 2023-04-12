@@ -4,15 +4,31 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class IgnoreEvaluationResultsRequest extends TeaModel {
+    /**
+     * <p>The ID of the rule.</p>
+     * <br>
+     * <p>For more information about how to obtain the ID of a rule, see [ListConfigRules](~~169607~~).</p>
+     */
     @NameInMap("ConfigRuleId")
     public String configRuleId;
 
+    /**
+     * <p>The date from which the system automatically re-evaluates the ignored incompliant resources.</p>
+     * <br>
+     * <p>>  If you leave this parameter empty, the system does not automatically re-evaluate the ignored incompliant resources. You must manually re-evaluate the ignored incompliant resources.</p>
+     */
     @NameInMap("IgnoreDate")
     public String ignoreDate;
 
+    /**
+     * <p>The reason why you want to ignore the resource.</p>
+     */
     @NameInMap("Reason")
     public String reason;
 
+    /**
+     * <p>The resources to be ignored.</p>
+     */
     @NameInMap("Resources")
     public java.util.List<IgnoreEvaluationResultsRequestResources> resources;
 
@@ -54,15 +70,33 @@ public class IgnoreEvaluationResultsRequest extends TeaModel {
     }
 
     public static class IgnoreEvaluationResultsRequestResources extends TeaModel {
+        /**
+         * <p>The ID of the region in which the resource resides.</p>
+         * <br>
+         * <p>For more information about how to obtain the ID of the region in which a resource resides, see [ListDiscoveredResources](~~169620~~).</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the resources belong.</p>
+         */
         @NameInMap("ResourceAccountId")
         public Long resourceAccountId;
 
+        /**
+         * <p>The ID of the resource.</p>
+         * <br>
+         * <p>For more information about how to obtain the ID of a resource, see [ListDiscoveredResources](~~169620~~).</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The type of the resource.</p>
+         * <br>
+         * <p>For more information about how to obtain the type of a resource, see [ListDiscoveredResources](~~169620~~).</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 

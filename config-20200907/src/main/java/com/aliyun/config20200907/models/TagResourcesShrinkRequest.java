@@ -4,15 +4,32 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesShrinkRequest extends TeaModel {
+    /**
+     * <p>The region ID of the tag.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    /**
+     * <p>The type of the resource. Valid values:</p>
+     * <br>
+     * <p>*   `ACS::Config::Rule`</p>
+     * <p>*   `ACS::Config::AggregateConfigRule`</p>
+     * <p>*   `ACS::Config::Aggregator`</p>
+     * <p>*   `ACS::Config::CompliancePack`</p>
+     * <p>*   `ACS::Config::AggregateCompliancePack`</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tags of the resource.</p>
+     * <br>
+     * <p>You can specify up to 20 tags.</p>
+     */
     @NameInMap("Tag")
     public String tagShrink;
 

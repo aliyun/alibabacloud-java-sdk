@@ -4,9 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetAggregateAccountComplianceByPackResponseBody extends TeaModel {
+    /**
+     * <p>The compliance evaluation results of member accounts monitored by the compliance package.</p>
+     */
     @NameInMap("AccountComplianceResult")
     public GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResult accountComplianceResult;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,26 @@ public class GetAggregateAccountComplianceByPackResponseBody extends TeaModel {
     }
 
     public static class GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResultAccountCompliances extends TeaModel {
+        /**
+         * <p>The ID of the member account in the account group.</p>
+         */
         @NameInMap("AccountId")
         public Long accountId;
 
+        /**
+         * <p>The name of the member account in the account group.</p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <p>The compliance evaluation result. Valid values:</p>
+         * <br>
+         * <p>*   COMPLIANT: The resources of the member accounts are evaluated as compliant.</p>
+         * <p>*   NON_COMPLIANT: The resources of the member account are evaluated as non-compliant.</p>
+         * <p>*   NOT_APPLICABLE: The rules do not apply to the resources of the member account.</p>
+         * <p>*   INSUFFICIENT_DATA: No resource data is available.</p>
+         */
         @NameInMap("ComplianceType")
         public String complianceType;
 
@@ -73,15 +93,27 @@ public class GetAggregateAccountComplianceByPackResponseBody extends TeaModel {
     }
 
     public static class GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResult extends TeaModel {
+        /**
+         * <p>The information about the compliance evaluation result of member account.</p>
+         */
         @NameInMap("AccountCompliances")
         public java.util.List<GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResultAccountCompliances> accountCompliances;
 
+        /**
+         * <p>The ID of the compliance package.</p>
+         */
         @NameInMap("CompliancePackId")
         public String compliancePackId;
 
+        /**
+         * <p>The number of non-compliant member accounts.</p>
+         */
         @NameInMap("NonCompliantCount")
         public Integer nonCompliantCount;
 
+        /**
+         * <p>The total number of monitored member accounts.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

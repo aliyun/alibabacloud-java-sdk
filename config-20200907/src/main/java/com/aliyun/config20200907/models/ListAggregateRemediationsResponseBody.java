@@ -4,9 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ListAggregateRemediationsResponseBody extends TeaModel {
+    /**
+     * <p>The remediation settings returned.</p>
+     */
     @NameInMap("Remediations")
     public java.util.List<ListAggregateRemediationsResponseBodyRemediations> remediations;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,39 +38,92 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
     }
 
     public static class ListAggregateRemediationsResponseBodyRemediations extends TeaModel {
+        /**
+         * <p>The ID of the Alibaba Cloud account involved.</p>
+         */
         @NameInMap("AccountId")
         public Long accountId;
 
+        /**
+         * <p>The ID of the account group.</p>
+         */
         @NameInMap("AggregatorId")
         public String aggregatorId;
 
+        /**
+         * <p>The ID of the rule.</p>
+         */
         @NameInMap("ConfigRuleId")
         public String configRuleId;
 
+        /**
+         * <p>The execution mode of the remediation template. Valid values:</p>
+         * <br>
+         * <p>*   NON_EXECUTION: no execution.</p>
+         * <p>*   AUTO_EXECUTION: automatic execution.</p>
+         * <p>*   MANUAL_EXECUTION: manual execution.</p>
+         * <p>*   NOT_CONFIG: not specified.</p>
+         */
         @NameInMap("InvokeType")
         public String invokeType;
 
+        /**
+         * <p>The ID of the last successful execution of the remediation template.</p>
+         */
         @NameInMap("LastSuccessfulInvocationId")
         public String lastSuccessfulInvocationId;
 
+        /**
+         * <p>The timestamp of the last successful execution of the remediation template Unit: milliseconds.</p>
+         */
         @NameInMap("LastSuccessfulInvocationTime")
         public Long lastSuccessfulInvocationTime;
 
+        /**
+         * <p>The mode of the last successful execution of the remediation template. Valid values:</p>
+         * <br>
+         * <p>*   NON_EXECUTION: no execution.</p>
+         * <p>*   AUTO_EXECUTION: automatic execution.</p>
+         * <p>*   MANUAL_EXECUTION: manual execution.</p>
+         * <p>*   NOT_CONFIG: not specified.</p>
+         */
         @NameInMap("LastSuccessfulInvocationType")
         public String lastSuccessfulInvocationType;
 
+        /**
+         * <p>The converted configuration of the remediation template. This parameter is returned only for an OOS remediation template.</p>
+         */
         @NameInMap("RemediaitonOriginParams")
         public String remediaitonOriginParams;
 
+        /**
+         * <p>The ID of the remediation setting.</p>
+         */
         @NameInMap("RemediationId")
         public String remediationId;
 
+        /**
+         * <p>The source of remediation. Valid values:</p>
+         * <br>
+         * <p>*   ALIYUN: official template.</p>
+         * <p>*   CUSTOM: custom template.</p>
+         * <p>*   NONE: none.</p>
+         */
         @NameInMap("RemediationSourceType")
         public String remediationSourceType;
 
+        /**
+         * <p>The identifier of the remediation template.</p>
+         */
         @NameInMap("RemediationTemplateId")
         public String remediationTemplateId;
 
+        /**
+         * <p>The type of remediation to perform. Valid values:</p>
+         * <br>
+         * <p>*   OOS: stands for Operation Orchestration Service and indicates official remediation.</p>
+         * <p>*   FC: stands for Function Compute and indicates custom remediation.</p>
+         */
         @NameInMap("RemediationType")
         public String remediationType;
 

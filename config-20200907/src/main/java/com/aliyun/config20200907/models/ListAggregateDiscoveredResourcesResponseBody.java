@@ -4,9 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The return result of the request.</p>
+     */
     @NameInMap("DiscoveredResourceProfiles")
     public ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfiles discoveredResourceProfiles;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,39 +38,81 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
     }
 
     public static class ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList extends TeaModel {
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         */
         @NameInMap("AccountId")
         public Long accountId;
 
+        /**
+         * <p>The ID of the zone where the resource resides.</p>
+         */
         @NameInMap("AvailabilityZone")
         public String availabilityZone;
 
+        /**
+         * <p>The region ID.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The timestamp when the resource was created. Unit: milliseconds.</p>
+         */
         @NameInMap("ResourceCreationTime")
         public Long resourceCreationTime;
 
+        /**
+         * <p>Indicates whether the resource is deleted. Valid values:</p>
+         * <br>
+         * <p>*   0: The resource is deleted.</p>
+         * <p>*   1: The resource is retained.</p>
+         */
         @NameInMap("ResourceDeleted")
         public Integer resourceDeleted;
 
+        /**
+         * <p>The ID of the resource.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The name of the resource.</p>
+         */
         @NameInMap("ResourceName")
         public String resourceName;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the resources belong.</p>
+         */
         @NameInMap("ResourceOwnerId")
         public Long resourceOwnerId;
 
+        /**
+         * <p>Indicates whether the resource is deleted. The value of this parameter varies based on the resource type and may be left empty. Example:</p>
+         * <br>
+         * <p>*   If the value of the ResourceType parameter is ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that is in a specific state. In this case, the valid values of this parameter are Running and Stopped.</p>
+         * <p>*   If the value of the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is left empty.</p>
+         */
         @NameInMap("ResourceStatus")
         public String resourceStatus;
 
+        /**
+         * <p>The type of the resource.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The tags of the resource.</p>
+         */
         @NameInMap("Tags")
         public String tags;
 
+        /**
+         * <p>The build version of the resource.</p>
+         */
         @NameInMap("Version")
         public Long version;
 
@@ -172,15 +220,27 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
     }
 
     public static class ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfiles extends TeaModel {
+        /**
+         * <p>The information about resources.</p>
+         */
         @NameInMap("DiscoveredResourceProfileList")
         public java.util.List<ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList> discoveredResourceProfileList;
 
+        /**
+         * <p>The maximum number of entries returned on each page.</p>
+         */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
+        /**
+         * <p>The token that was used to initiate the next request.</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 
+        /**
+         * <p>The total number of resources.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

@@ -4,16 +4,33 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetAggregateResourceCountsGroupByResourceTypeRequest extends TeaModel {
+    /**
+     * <p>The ID of the account group.</p>
+     * <br>
+     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).</p>
+     */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
+    /**
+     * <p>The ID of the folder in the resource directory.</p>
+     * <br>
+     * <p>For more information about how to obtain the ID of a folder, see [View the basic information of a folder](~~111223~~).</p>
+     */
     @NameInMap("FolderId")
     public String folderId;
 
+    /**
+     * <p>The ID of the region in which the resource resides.</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    @NameInMap("ResourceAccountId")
+    public Long resourceAccountId;
+
     @NameInMap("ResourceOwnerId")
+    @Deprecated
     public Long resourceOwnerId;
 
     public static GetAggregateResourceCountsGroupByResourceTypeRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -43,6 +60,14 @@ public class GetAggregateResourceCountsGroupByResourceTypeRequest extends TeaMod
     }
     public String getRegion() {
         return this.region;
+    }
+
+    public GetAggregateResourceCountsGroupByResourceTypeRequest setResourceAccountId(Long resourceAccountId) {
+        this.resourceAccountId = resourceAccountId;
+        return this;
+    }
+    public Long getResourceAccountId() {
+        return this.resourceAccountId;
     }
 
     public GetAggregateResourceCountsGroupByResourceTypeRequest setResourceOwnerId(Long resourceOwnerId) {

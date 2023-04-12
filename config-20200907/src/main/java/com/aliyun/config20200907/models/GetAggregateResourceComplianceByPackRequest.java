@@ -4,9 +4,19 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetAggregateResourceComplianceByPackRequest extends TeaModel {
+    /**
+     * <p>The ID of the account group.</p>
+     * <br>
+     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).</p>
+     */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
+    /**
+     * <p>The ID of the compliance package.</p>
+     * <br>
+     * <p>For more information about how to obtain the ID of a compliance package, see [ListAggregateCompliancePacks](~~262059~~).</p>
+     */
     @NameInMap("CompliancePackId")
     public String compliancePackId;
 

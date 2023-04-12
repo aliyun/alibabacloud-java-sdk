@@ -4,9 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class UpdateAggregateRemediationResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the remediation setting.</p>
+     */
     @NameInMap("RemediationId")
     public String remediationId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

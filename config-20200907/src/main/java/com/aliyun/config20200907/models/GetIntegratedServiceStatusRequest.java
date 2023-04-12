@@ -4,6 +4,11 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetIntegratedServiceStatusRequest extends TeaModel {
+    /**
+     * <p>The product code of the cloud product. Valid values:</p>
+     * <br>
+     * <p>cadt: Cloud Architecture Design Tool</p>
+     */
     @NameInMap("ServiceCode")
     public String serviceCode;
 

@@ -4,9 +4,18 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class StartAggregateConfigRuleEvaluationResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The operation is successful.</p>
+     * <p>*   false: The operation fails.</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 

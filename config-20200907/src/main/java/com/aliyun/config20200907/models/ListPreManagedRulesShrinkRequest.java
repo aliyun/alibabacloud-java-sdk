@@ -4,12 +4,25 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ListPreManagedRulesShrinkRequest extends TeaModel {
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The type of the resource.</p>
+     */
     @NameInMap("ResourceTypes")
     public String resourceTypesShrink;
 
