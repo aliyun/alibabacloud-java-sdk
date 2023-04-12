@@ -4,9 +4,27 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class SetLoadBalancerStatusRequest extends TeaModel {
+    /**
+     * <p>The ID of the CLB instance.</p>
+     */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
+    /**
+     * <p>The state of the CLB instance. Valid values: **active** and **inactive**.</p>
+     * <br>
+     * <p>*   **active** (default)</p>
+     * <br>
+     * <p>    If a CLB instance is in the **active** state, listeners of the CLB instance can forward traffic based on forwarding rules.</p>
+     * <br>
+     * <p>    By default, newly created CLB instances are in the **active** state.</p>
+     * <br>
+     * <p>*   **inactive**</p>
+     * <br>
+     * <p>    If a CLB instance is in the **inactive** state, listeners of the CLB instance do not forward traffic.</p>
+     * <br>
+     * <p>>  If all listeners of a CLB instance are deleted, the CLB instance automatically switches to the **inactive** state.</p>
+     */
     @NameInMap("LoadBalancerStatus")
     public String loadBalancerStatus;
 
@@ -16,6 +34,11 @@ public class SetLoadBalancerStatusRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the CLB instance is deployed.</p>
+     * <br>
+     * <p>You can query region IDs from the [Regions and zones](~~40654~~) list or by calling the [DescribeRegions](~~25609~~) operation.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

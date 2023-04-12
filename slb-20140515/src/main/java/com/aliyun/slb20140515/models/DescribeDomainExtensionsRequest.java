@@ -4,12 +4,21 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainExtensionsRequest extends TeaModel {
+    /**
+     * <p>The ID of the additional certificate.</p>
+     */
     @NameInMap("DomainExtensionId")
     public String domainExtensionId;
 
+    /**
+     * <p>The frontend port of the HTTPS listener that is configured for the Classic Load Balancer (CLB) instance. Valid values: **1 to 65535**.</p>
+     */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
+    /**
+     * <p>The ID of the CLB instance.</p>
+     */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
@@ -19,6 +28,9 @@ public class DescribeDomainExtensionsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the CLB instance is deployed.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

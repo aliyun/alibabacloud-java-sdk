@@ -4,6 +4,11 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to remove all tags from the specified one or more resources. This parameter takes effect only if the **TagKey.N** parameter is not set.</p>
+     * <br>
+     * <p>Valid values: **true** and **false**.</p>
+     */
     @NameInMap("All")
     public Boolean all;
 
@@ -13,9 +18,17 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the Server Load Balancer (SLB) instance is created.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource. Valid values of N: 1 to 20.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
@@ -25,9 +38,23 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The type of the resource. Valid values:</p>
+     * <br>
+     * <p>*   **instance**: an SLB instance</p>
+     * <p>*   **certificate**: a certificate</p>
+     * <p>*   **acl**: a network access control list (ACL)</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tag value. Valid values of N: **1** to **20**.</p>
+     * <br>
+     * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:` or `aliyun`.</p>
+     * <br>
+     * <p>>  If you do not set **TagKey**, all tags of the specified instance are removed.</p>
+     */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 

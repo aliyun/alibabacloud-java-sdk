@@ -4,21 +4,39 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessControlListsResponseBody extends TeaModel {
+    /**
+     * <p>The list of network ACLs.</p>
+     */
     @NameInMap("Acls")
     public DescribeAccessControlListsResponseBodyAcls acls;
 
+    /**
+     * <p>The number of network ACLs on the current page.</p>
+     */
     @NameInMap("Count")
     public Integer count;
 
+    /**
+     * <p>The number of the returned page. Pages start from page **1**. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned on each page. Maximum value: **50**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of network ACLs.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -76,18 +94,33 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
     }
 
     public static class DescribeAccessControlListsResponseBodyAclsAcl extends TeaModel {
+        /**
+         * <p>The ID of the network ACL.</p>
+         */
         @NameInMap("AclId")
         public String aclId;
 
+        /**
+         * <p>The name of the network ACL.</p>
+         */
         @NameInMap("AclName")
         public String aclName;
 
+        /**
+         * <p>The IP version that is used by the associated CLB instance.</p>
+         */
         @NameInMap("AddressIPVersion")
         public String addressIPVersion;
 
+        /**
+         * <p>The time when the CLB instance was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The ID of the resource group to which the CLB instance belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 

@@ -7,6 +7,9 @@ public class CreateTLSCipherPolicyRequest extends TeaModel {
     @NameInMap("Ciphers")
     public java.util.List<String> ciphers;
 
+    /**
+     * <p>The name of the TLS policy. The name must be 1 to 200 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-).</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -16,6 +19,11 @@ public class CreateTLSCipherPolicyRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the Classic Load Balancer (CLB) instance is created.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

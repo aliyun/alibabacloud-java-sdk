@@ -4,9 +4,15 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class UploadCACertificateRequest extends TeaModel {
+    /**
+     * <p>The content of the CA certificate to be uploaded.</p>
+     */
     @NameInMap("CACertificate")
     public String CACertificate;
 
+    /**
+     * <p>The name of the CA certificate.</p>
+     */
     @NameInMap("CACertificateName")
     public String CACertificateName;
 
@@ -16,9 +22,17 @@ public class UploadCACertificateRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region to which the CA certificate belongs.</p>
+     * <br>
+     * <p>To query the region ID, call [DescribeRegions](~~27584~~).</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the enterprise resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

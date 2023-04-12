@@ -4,6 +4,9 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DeleteAccessControlListRequest extends TeaModel {
+    /**
+     * <p>The ID of the access control list to be deleted.</p>
+     */
     @NameInMap("AclId")
     public String aclId;
 
@@ -13,6 +16,11 @@ public class DeleteAccessControlListRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region to which the access control list belongs.</p>
+     * <br>
+     * <p>To query the region ID, call [DescribeRegions](~~27584~~).</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

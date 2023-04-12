@@ -4,9 +4,18 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeMasterSlaveServerGroupsRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to return information about the associated listeners. Valid values:</p>
+     * <br>
+     * <p>*   **true**: returns information about the associated listeners.</p>
+     * <p>*   **false**: does not return information about the associated listeners.</p>
+     */
     @NameInMap("IncludeListener")
     public Boolean includeListener;
 
+    /**
+     * <p>The ID of the CLB instance.</p>
+     */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
@@ -16,6 +25,9 @@ public class DescribeMasterSlaveServerGroupsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the Classic Load Balancer (CLB) instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

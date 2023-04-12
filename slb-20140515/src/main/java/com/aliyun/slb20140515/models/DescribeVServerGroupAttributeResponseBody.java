@@ -4,21 +4,39 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The list of backend servers.</p>
+     */
     @NameInMap("BackendServers")
     public DescribeVServerGroupAttributeResponseBodyBackendServers backendServers;
 
+    /**
+     * <p>The time when the CLB instance was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The ID of the CLB instance.</p>
+     */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the vServer group.</p>
+     */
     @NameInMap("VServerGroupId")
     public String VServerGroupId;
 
+    /**
+     * <p>The name of the vServer group.</p>
+     */
     @NameInMap("VServerGroupName")
     public String VServerGroupName;
 
@@ -76,21 +94,43 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeVServerGroupAttributeResponseBodyBackendServersBackendServer extends TeaModel {
+        /**
+         * <p>The description of the vServer group.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The port used by the backend server.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The ID of the ECS instance, ENI, or elastic container instance.</p>
+         */
         @NameInMap("ServerId")
         public String serverId;
 
+        /**
+         * <p>The IP address of the ECS instance, ENI, or elastic container instance.</p>
+         */
         @NameInMap("ServerIp")
         public String serverIp;
 
+        /**
+         * <p>The type of the backend server. Valid values:</p>
+         * <br>
+         * <p>*   **ecs** (default): an Elastic Compute Service (ECS) instance</p>
+         * <p>*   **eni**: an elastic network interface (ENI)</p>
+         * <p>*   **eci**: an elastic container instance</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The weight of the backend server.</p>
+         */
         @NameInMap("Weight")
         public Integer weight;
 

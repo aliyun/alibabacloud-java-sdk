@@ -4,9 +4,15 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeServerCertificatesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of server certificates.</p>
+     */
     @NameInMap("ServerCertificates")
     public DescribeServerCertificatesResponseBodyServerCertificates serverCertificates;
 
@@ -51,45 +57,90 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
     }
 
     public static class DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate extends TeaModel {
+        /**
+         * <p>The ID of the server certificate from Alibaba Cloud Certificate Management Service.</p>
+         */
         @NameInMap("AliCloudCertificateId")
         public String aliCloudCertificateId;
 
+        /**
+         * <p>The name of the server certificate from Alibaba Cloud Certificate Management Service.</p>
+         */
         @NameInMap("AliCloudCertificateName")
         public String aliCloudCertificateName;
 
+        /**
+         * <p>The domain name of the certificate. The domain name is specified in the `CommonName` field.</p>
+         */
         @NameInMap("CommonName")
         public String commonName;
 
+        /**
+         * <p>The time when the server certificate is uploaded.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The timestamp generated when the server certificate is uploaded.</p>
+         */
         @NameInMap("CreateTimeStamp")
         public Long createTimeStamp;
 
+        /**
+         * <p>The expiration time.</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <p>The timestamp that indicates when the certificate expires.</p>
+         */
         @NameInMap("ExpireTimeStamp")
         public Long expireTimeStamp;
 
+        /**
+         * <p>The fingerprint of the server certificate.</p>
+         */
         @NameInMap("Fingerprint")
         public String fingerprint;
 
+        /**
+         * <p>Indicates whether the server certificate is from Alibaba Cloud Certificate Management Service. Valid values:</p>
+         * <br>
+         * <p>*   **1**: yes</p>
+         * <p>*   **0**: no</p>
+         */
         @NameInMap("IsAliCloudCertificate")
         public Integer isAliCloudCertificate;
 
+        /**
+         * <p>The ID of the region where the server certificate is created.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The ID of the server certificate.</p>
+         */
         @NameInMap("ServerCertificateId")
         public String serverCertificateId;
 
+        /**
+         * <p>The name of the server certificate.</p>
+         */
         @NameInMap("ServerCertificateName")
         public String serverCertificateName;
 
+        /**
+         * <p>The list of alternative domain names of the server certificate. The alternative domain names are specified in the `Subject Alternative Name` field of the server certificate.</p>
+         */
         @NameInMap("SubjectAlternativeNames")
         public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateSubjectAlternativeNames subjectAlternativeNames;
 

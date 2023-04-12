@@ -4,12 +4,25 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class UploadServerCertificateRequest extends TeaModel {
+    /**
+     * <p>The ID of the server certificate that is provided by Alibaba Cloud Certificate Management Service.</p>
+     * <br>
+     * <p>>  This parameter is required if you use a server certificate from Alibaba Cloud Certificate Management Service.</p>
+     */
     @NameInMap("AliCloudCertificateId")
     public String aliCloudCertificateId;
 
+    /**
+     * <p>The name of the server certificate that is provided by Alibaba Cloud Certificate Management Service.</p>
+     * <br>
+     * <p>>  This parameter is required if you use a server certificate from Alibaba Cloud Certificate Management Service.</p>
+     */
     @NameInMap("AliCloudCertificateName")
     public String aliCloudCertificateName;
 
+    /**
+     * <p>The ID of the region where the server certificate from Alibaba Cloud Certificate Management Service is created.</p>
+     */
     @NameInMap("AliCloudCertificateRegionId")
     public String aliCloudCertificateRegionId;
 
@@ -19,12 +32,25 @@ public class UploadServerCertificateRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The private key that you want to upload.</p>
+     * <br>
+     * <p>>  This parameter is required if you use a server certificate from a third-party service provider.</p>
+     */
     @NameInMap("PrivateKey")
     public String privateKey;
 
+    /**
+     * <p>The ID of the region where the server certificate is created.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -34,9 +60,17 @@ public class UploadServerCertificateRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The public key certificate that you want to upload.</p>
+     * <br>
+     * <p>>  This parameter is required if you use a server certificate from a third-party service provider.</p>
+     */
     @NameInMap("ServerCertificate")
     public String serverCertificate;
 
+    /**
+     * <p>The name of the server certificate that you want to upload. The name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.</p>
+     */
     @NameInMap("ServerCertificateName")
     public String serverCertificateName;
 

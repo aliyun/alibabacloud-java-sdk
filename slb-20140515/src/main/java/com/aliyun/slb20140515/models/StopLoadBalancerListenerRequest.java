@@ -4,12 +4,25 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class StopLoadBalancerListenerRequest extends TeaModel {
+    /**
+     * <p>The frontend listening port used by the listener.</p>
+     * <br>
+     * <p>Value range: **1 to 65535**</p>
+     */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
+    /**
+     * <p>The frontend listening protocol used by the SLB instance.</p>
+     * <br>
+     * <p>>  This parameter is required when listeners with different protocols use the same port.</p>
+     */
     @NameInMap("ListenerProtocol")
     public String listenerProtocol;
 
+    /**
+     * <p>The ID of the SLB instance to which the listener belongs.</p>
+     */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
@@ -19,6 +32,11 @@ public class StopLoadBalancerListenerRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region to which the SLB instance belongs.</p>
+     * <br>
+     * <p>To query the region ID, refer to the list of [regions and zones](~~40654~~) or call [DescribeRegions](~~25609~~).</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

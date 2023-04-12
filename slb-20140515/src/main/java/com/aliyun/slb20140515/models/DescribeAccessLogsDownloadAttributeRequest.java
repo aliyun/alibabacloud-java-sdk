@@ -4,9 +4,15 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessLogsDownloadAttributeRequest extends TeaModel {
+    /**
+     * <p>The ID of the CLB instance.</p>
+     */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
+    /**
+     * <p>The type of access log. Set the value to **layer7**, which specifies Layer 7 access logs.</p>
+     */
     @NameInMap("LogType")
     public String logType;
 
@@ -16,12 +22,23 @@ public class DescribeAccessLogsDownloadAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region where the CLB instance is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -31,6 +48,11 @@ public class DescribeAccessLogsDownloadAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tags that are added to the CLB instance. The tags must be key-value pairs that are contained in a JSON dictionary.</p>
+     * <br>
+     * <p>You can specify up to 10 tags in each call.</p>
+     */
     @NameInMap("Tags")
     public String tags;
 

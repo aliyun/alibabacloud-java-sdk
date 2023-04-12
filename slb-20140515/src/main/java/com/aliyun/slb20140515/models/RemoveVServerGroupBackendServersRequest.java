@@ -4,6 +4,28 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class RemoveVServerGroupBackendServersRequest extends TeaModel {
+    /**
+     * <p>The list of backend servers that you want to remove from the vServer group.</p>
+     * <br>
+     * <p>You can specify at most 20 backend servers for a vServer group in each call.</p>
+     * <br>
+     * <p>The value of this parameter is a JSON list of the STRING type. You can specify at most 20 elements in a list for each request.</p>
+     * <br>
+     * <p>*   **ServerId**: the ID of the Elastic Compute Service (ECS) instance or elastic network interface (ENI) that serves as a backend server.</p>
+     * <br>
+     * <p>*   **Port**: the port that is used by the backend server. Valid values: **1 to 65535**.</p>
+     * <br>
+     * <p>*   **Weight**: the weight of the backend server. Valid values: **0 to 100**.</p>
+     * <br>
+     * <p>*   **Description**: the description of the backend server. The description must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.),and underscores (\_).</p>
+     * <br>
+     * <p>*   **Type**: the type of backend server. Valid values:</p>
+     * <br>
+     * <p>    *   **ecs**: an ECS instance. This is the default value.</p>
+     * <p>    *   **eni**: an ENI.</p>
+     * <br>
+     * <p>*   **ServerIp**: the IP address of the ECS instance or ENI.</p>
+     */
     @NameInMap("BackendServers")
     public String backendServers;
 
@@ -13,6 +35,9 @@ public class RemoveVServerGroupBackendServersRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the Classic Load Balancer (CLB) instance is deployed.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -22,6 +47,9 @@ public class RemoveVServerGroupBackendServersRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the vServer group.</p>
+     */
     @NameInMap("VServerGroupId")
     public String VServerGroupId;
 

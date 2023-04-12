@@ -4,15 +4,37 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeLoadBalancerListenersRequest extends TeaModel {
+    /**
+     * <p>The protocol used by the listener. Valid values:</p>
+     * <br>
+     * <p>*   **tcp**</p>
+     * <p>*   **udp**</p>
+     * <p>*   **http**</p>
+     * <p>*   **https**</p>
+     */
     @NameInMap("ListenerProtocol")
     public String listenerProtocol;
 
+    /**
+     * <p>The ID of the CLB instance. You can specify at most 10 IDs.</p>
+     */
     @NameInMap("LoadBalancerId")
     public java.util.List<String> loadBalancerId;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Valid values: **1** to **100**. If you do not specify a value, the default value **20** is used.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <br>
+     * <p>*   If this is your first query and no subsequent queries are to be sent, ignore this parameter.</p>
+     * <p>*   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -22,6 +44,13 @@ public class DescribeLoadBalancerListenersRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the CLB instance is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <br>
+     * <p>>  If the endpoint of the selected region is slb.aliyuncs.com, the `RegionId` parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

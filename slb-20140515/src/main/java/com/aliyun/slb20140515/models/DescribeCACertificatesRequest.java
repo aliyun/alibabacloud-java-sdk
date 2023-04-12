@@ -4,6 +4,9 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeCACertificatesRequest extends TeaModel {
+    /**
+     * <p>The ID of the CA certificate.</p>
+     */
     @NameInMap("CACertificateId")
     public String CACertificateId;
 
@@ -13,9 +16,17 @@ public class DescribeCACertificatesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region where the CA certificates are created.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

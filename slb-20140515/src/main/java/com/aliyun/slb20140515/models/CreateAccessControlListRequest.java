@@ -4,9 +4,15 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class CreateAccessControlListRequest extends TeaModel {
+    /**
+     * <p>The name of the ACL. The name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), hyphens (-), forward slashes (/), and underscores (\_). The name of the ACL that you create must be unique within each region.</p>
+     */
     @NameInMap("AclName")
     public String aclName;
 
+    /**
+     * <p>The IP version. Valid values: **ipv4** and **ipv6**.</p>
+     */
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
 
@@ -16,9 +22,15 @@ public class CreateAccessControlListRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where you want to create the ACL.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the ACL belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

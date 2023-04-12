@@ -4,6 +4,9 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DeleteLoadBalancerRequest extends TeaModel {
+    /**
+     * <p>The ID of the SLB instance.</p>
+     */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
@@ -13,6 +16,11 @@ public class DeleteLoadBalancerRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the SLB instance is created.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~27584~~) operation to query region IDs.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

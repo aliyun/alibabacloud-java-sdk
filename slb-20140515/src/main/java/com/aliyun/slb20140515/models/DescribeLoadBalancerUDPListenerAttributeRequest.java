@@ -4,9 +4,17 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeLoadBalancerUDPListenerAttributeRequest extends TeaModel {
+    /**
+     * <p>The frontend port used by the CLB instance.</p>
+     * <br>
+     * <p>Valid values: **1** to **65535**.</p>
+     */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
+    /**
+     * <p>The ID of the CLB instance.</p>
+     */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
@@ -16,6 +24,9 @@ public class DescribeLoadBalancerUDPListenerAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the Classic Load Balancer (CLB) instance is deployed.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

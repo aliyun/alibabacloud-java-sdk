@@ -4,9 +4,15 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeVServerGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of backend servers.</p>
+     */
     @NameInMap("VServerGroups")
     public DescribeVServerGroupsResponseBodyVServerGroups VServerGroups;
 
@@ -32,9 +38,15 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsListenersListener extends TeaModel {
+        /**
+         * <p>The listening port.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The listening protocol. Valid values: **tcp**, **udp**, **http**, and **https**.</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
@@ -81,15 +93,27 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsRulesRule extends TeaModel {
+        /**
+         * <p>The requested domain name.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The ID of the forwarding rule.</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 
+        /**
+         * <p>The name of the forwarding rule.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The request path.</p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -152,9 +176,15 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjects extends TeaModel {
+        /**
+         * <p>The list of listeners.</p>
+         */
         @NameInMap("Listeners")
         public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsListeners listeners;
 
+        /**
+         * <p>The list of forwarding rules.</p>
+         */
         @NameInMap("Rules")
         public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsRules rules;
 
@@ -182,18 +212,35 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeVServerGroupsResponseBodyVServerGroupsVServerGroup extends TeaModel {
+        /**
+         * <p>The items associated with the server groups.</p>
+         */
         @NameInMap("AssociatedObjects")
         public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjects associatedObjects;
 
+        /**
+         * <p>The time when the CLB instance was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The number of servers. </p>
+         * <br>
+         * <p>>  The feature corresponding to this parameter is not available by default. If you want to use this feature, [submit a ticket](https://ticket-intl.console.aliyun.com/#/ticket/createIndex).</p>
+         */
         @NameInMap("ServerCount")
         public Long serverCount;
 
+        /**
+         * <p>The ID of the server group.</p>
+         */
         @NameInMap("VServerGroupId")
         public String VServerGroupId;
 
+        /**
+         * <p>The name of the server group.</p>
+         */
         @NameInMap("VServerGroupName")
         public String VServerGroupName;
 

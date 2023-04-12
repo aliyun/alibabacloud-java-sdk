@@ -4,9 +4,15 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeHealthStatusResponseBody extends TeaModel {
+    /**
+     * <p>The list of backend servers.</p>
+     */
     @NameInMap("BackendServers")
     public DescribeHealthStatusResponseBodyBackendServers backendServers;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,43 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeHealthStatusResponseBodyBackendServersBackendServer extends TeaModel {
+        /**
+         * <p>The frontend port that is used by the CLB instance.</p>
+         */
         @NameInMap("ListenerPort")
         public Integer listenerPort;
 
+        /**
+         * <p>The backend port that is used by the CLB instance.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The frontend protocol that is used by the CLB instance.</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <p>The health status of the backend server. Valid values:</p>
+         * <br>
+         * <p>*   **normal**: The backend server is healthy.</p>
+         * <p>*   **abnormal**: The backend server is unhealthy.</p>
+         * <p>*   **unavailable**: The health check is not complete.</p>
+         */
         @NameInMap("ServerHealthStatus")
         public String serverHealthStatus;
 
+        /**
+         * <p>The ID of the Elastic Compute Service (ECS) instance or elastic network interface (ENI).</p>
+         */
         @NameInMap("ServerId")
         public String serverId;
 
+        /**
+         * <p>The IP address of the ECS instance.</p>
+         */
         @NameInMap("ServerIp")
         public String serverIp;
 

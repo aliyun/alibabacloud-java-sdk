@@ -4,9 +4,15 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeCACertificatesResponseBody extends TeaModel {
+    /**
+     * <p>The information about the CA certificate.</p>
+     */
     @NameInMap("CACertificates")
     public DescribeCACertificatesResponseBodyCACertificates CACertificates;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,33 +38,67 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
     }
 
     public static class DescribeCACertificatesResponseBodyCACertificatesCACertificate extends TeaModel {
+        /**
+         * <p>The ID of the CA certificate.</p>
+         */
         @NameInMap("CACertificateId")
         public String CACertificateId;
 
+        /**
+         * <p>The name of the CA certificate.</p>
+         */
         @NameInMap("CACertificateName")
         public String CACertificateName;
 
+        /**
+         * <p>The domain name of the CA certificate.</p>
+         */
         @NameInMap("CommonName")
         public String commonName;
 
+        /**
+         * <p>The time when the CA certificate was created. The time is in the `YYYY-MM-DDThh:mm:ssZ` format.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The timestamp that indicates when the CA certificate was created. Unit: milliseconds.</p>
+         * <br>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("CreateTimeStamp")
         public Long createTimeStamp;
 
+        /**
+         * <p>The time when the CA certificate expires. The time is in the `YYYY-MM-DDThh:mm:ssZ` format.</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <p>The timestamp that indicates when the CA certificate expires. Unit: milliseconds.</p>
+         * <br>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("ExpireTimeStamp")
         public Long expireTimeStamp;
 
+        /**
+         * <p>The fingerprint of the CA certificate.</p>
+         */
         @NameInMap("Fingerprint")
         public String fingerprint;
 
+        /**
+         * <p>The region where the CA certificate is created.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 

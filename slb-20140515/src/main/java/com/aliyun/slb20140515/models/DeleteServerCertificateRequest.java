@@ -10,6 +10,11 @@ public class DeleteServerCertificateRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region where the Server Load Balancer (SLB) instance is created.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~27584~~) operation to query region IDs.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -19,6 +24,9 @@ public class DeleteServerCertificateRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the server certificate.</p>
+     */
     @NameInMap("ServerCertificateId")
     public String serverCertificateId;
 

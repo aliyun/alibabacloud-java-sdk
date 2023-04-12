@@ -4,6 +4,13 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
+    /**
+     * <p>The supported language. Valid values:</p>
+     * <br>
+     * <p>*   zh-CN: Chinese</p>
+     * <p>*   en-US: English</p>
+     * <p>*   ja: Japanese</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
@@ -13,6 +20,9 @@ public class DescribeRegionsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

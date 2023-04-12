@@ -4,9 +4,15 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableResourceResponseBody extends TeaModel {
+    /**
+     * <p>The zones and the supported resources.</p>
+     */
     @NameInMap("AvailableResources")
     public DescribeAvailableResourceResponseBodyAvailableResources availableResources;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,19 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResourceSupportResourcesSupportResource extends TeaModel {
+        /**
+         * <p>The type of IP address.</p>
+         * <br>
+         * <p>Valid values: **ipv4 and ipv6**.</p>
+         */
         @NameInMap("AddressIPVersion")
         public String addressIPVersion;
 
+        /**
+         * <p>The type of network.</p>
+         * <br>
+         * <p>Valid values: **vpc, classic-internet, and classic-intranet**.</p>
+         */
         @NameInMap("AddressType")
         public String addressType;
 
@@ -81,12 +97,21 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResource extends TeaModel {
+        /**
+         * <p>The primary zone.</p>
+         */
         @NameInMap("MasterZoneId")
         public String masterZoneId;
 
+        /**
+         * <p>The secondary zone.</p>
+         */
         @NameInMap("SlaveZoneId")
         public String slaveZoneId;
 
+        /**
+         * <p>The supported resources.</p>
+         */
         @NameInMap("SupportResources")
         public DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResourceSupportResources supportResources;
 

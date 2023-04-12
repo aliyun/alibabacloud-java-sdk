@@ -4,66 +4,190 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class SetLoadBalancerTCPListenerAttributeRequest extends TeaModel {
+    /**
+     * <p>The ID of the network access control list (ACL) that is associated with the listener.</p>
+     * <br>
+     * <p>If **AclStatus** is set to **on**, this parameter is required.</p>
+     */
     @NameInMap("AclId")
     public String aclId;
 
+    /**
+     * <p>Specifies whether to enable access control. Valid values:</p>
+     * <br>
+     * <p>*   **on**: yes</p>
+     * <p>*   **off**: no</p>
+     */
     @NameInMap("AclStatus")
     public String aclStatus;
 
+    /**
+     * <p>The type of the network ACL. Valid values:</p>
+     * <br>
+     * <p>*   **white**: a whitelist. Only requests from the IP addresses or CIDR blocks in the network ACL are forwarded. Whitelists apply to scenarios where you want to allow only specific IP addresses to access an application. Your service may be adversely affected if the allowlist is not properly configured. After a whitelist is configured, only requests from IP addresses that are added to the whitelist are forwarded by the listener.</p>
+     * <br>
+     * <p>    If you enable a whitelist but do not add an IP address to the ACL, the listener forwards all requests.</p>
+     * <br>
+     * <p>*   **black**: a blacklist. All requests from the IP addresses or CIDR blocks in the ACL are rejected. Blacklists apply to scenarios where you want to block access from specified IP addresses to an application.</p>
+     * <br>
+     * <p>    If a blacklist is configured for a listener but no IP address is added to the blacklist, the listener forwards all requests.</p>
+     * <br>
+     * <p>>  If **AclStatus** is set to **on**, this parameter is required.</p>
+     */
     @NameInMap("AclType")
     public String aclType;
 
+    /**
+     * <p>The maximum bandwidth of the listener. Unit: Mbit/s. Valid values: **-1** and **1** to **5120**.</p>
+     * <br>
+     * <p>*   **-1**: For a pay-by-data-transfer Internet-facing CLB instance, you can set this parameter to **-1**, which specifies unlimited bandwidth.</p>
+     * <p>*   **1** to **5120**: For a pay-by-bandwidth Internet-facing CLB instance, you can specify the maximum bandwidth of each listener. The sum of the maximum bandwidth values of all listeners cannot exceed the maximum bandwidth of the CLB instance.</p>
+     */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
+    /**
+     * <p>Specifies whether to enable connection draining. Valid values:</p>
+     * <br>
+     * <p>*   **on**: yes</p>
+     * <p>*   **off**: no</p>
+     */
     @NameInMap("ConnectionDrain")
     public String connectionDrain;
 
+    /**
+     * <p>The timeout period of connection draining. This parameter is required if **ConnectionDrain** is set to **on**. Unit: seconds.</p>
+     * <br>
+     * <p>Valid values: **10** to **900**.</p>
+     */
     @NameInMap("ConnectionDrainTimeout")
     public Integer connectionDrainTimeout;
 
+    /**
+     * <p>The name of the listener.</p>
+     * <br>
+     * <p>The name must be 1 to 256 characters in length and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_).</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The timeout period of a connection. Unit: seconds. Valid values: **10** to **900**.</p>
+     */
     @NameInMap("EstablishedTimeout")
     public Integer establishedTimeout;
 
+    /**
+     * <p>The port that is used for health checks. Valid values: **1** to **65535**.</p>
+     * <br>
+     * <p>If you do not set this parameter, the port specified by the **BackendServerPort** parameter is used.</p>
+     */
     @NameInMap("HealthCheckConnectPort")
     public Integer healthCheckConnectPort;
 
+    /**
+     * <p>The timeout period of a health check.</p>
+     * <br>
+     * <p>If a backend ECS instance does not return a health check response within the specified timeout period, the server fails the health check.</p>
+     * <br>
+     * <p>Valid values: **1** to **300**. Unit: seconds.</p>
+     * <br>
+     * <p>>  If the value of the **HealthCheckConnectTimeout** parameter is smaller than that of the **HealthCheckInterval** parameter, the timeout period specified by the **HCTimeout** parameter is ignored and the period of time specified by the **HealthCheckInterval** parameter is used as the timeout period.</p>
+     */
     @NameInMap("HealthCheckConnectTimeout")
     public Integer healthCheckConnectTimeout;
 
+    /**
+     * <p>The domain name that is used for health checks. You can set this parameter when the TCP listener requires HTTP health checks. If you do not set this parameter, TCP health checks are performed.</p>
+     * <br>
+     * <p>*   **$\_ip**: the private IP addresses of the backend servers.</p>
+     * <br>
+     * <p>    If you do not set the HealthCheckHost parameter or set the parameter to $SERVER_IP, the CLB instance uses the private IP addresses of backend servers for health checks.</p>
+     * <br>
+     * <p>*   **domain**: The domain name is 1 to 80 characters in length, and can contain letters, digits, periods (.), and hyphens (-).</p>
+     */
     @NameInMap("HealthCheckDomain")
     public String healthCheckDomain;
 
+    /**
+     * <p>The HTTP status code for a successful health check. Separate multiple HTTP status codes with commas (,).</p>
+     * <br>
+     * <p>Valid values: **http\_2xx**, **http\_3xx**, **http\_4xx**, and **http\_5xx**.</p>
+     */
     @NameInMap("HealthCheckHttpCode")
     public String healthCheckHttpCode;
 
+    /**
+     * <p>The interval between two consecutive health checks. Unit: seconds.</p>
+     * <br>
+     * <p>Valid values: **1** to **50**.</p>
+     */
     @NameInMap("HealthCheckInterval")
     public Integer healthCheckInterval;
 
+    /**
+     * <p>Specifies whether to enable the health check feature. Valid values:</p>
+     * <br>
+     * <p>*   **on**: yes</p>
+     * <p>*   **off**: no</p>
+     */
     @NameInMap("HealthCheckSwitch")
     public String healthCheckSwitch;
 
+    /**
+     * <p>The type of the health check. Valid values: **tcp** and **http**.</p>
+     */
     @NameInMap("HealthCheckType")
     public String healthCheckType;
 
+    /**
+     * <p>The URI that is used for health checks. The URI must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), percent signs (%), question marks (?), number signs (#), and ampersands (&). The URI must start with a forward slash (/) but cannot be a single forward slash (/).</p>
+     * <br>
+     * <p>You can set this parameter when the TCP listener requires HTTP health checks.</p>
+     * <br>
+     * <p>If you do not set this parameter, TCP health checks are performed.</p>
+     */
     @NameInMap("HealthCheckURI")
     public String healthCheckURI;
 
+    /**
+     * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from **fail** to **success**.</p>
+     * <br>
+     * <p>Valid values: **2** to **10**.</p>
+     */
     @NameInMap("HealthyThreshold")
     public Integer healthyThreshold;
 
+    /**
+     * <p>The frontend port used by the CLB instance.</p>
+     * <br>
+     * <p>Valid values: **1** to **65535**.</p>
+     */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
+    /**
+     * <p>The ID of the CLB instance.</p>
+     */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
+    /**
+     * <p>Specifies whether to use a primary/secondary server group. Valid values:</p>
+     * <br>
+     * <p>*   **on**: yes</p>
+     * <p>*   **off**: no</p>
+     * <br>
+     * <p>You cannot set both **VserverGroup** and **MasterSlaveServerGroup** to **on**.</p>
+     */
     @NameInMap("MasterSlaveServerGroup")
     public String masterSlaveServerGroup;
 
+    /**
+     * <p>The ID of the primary/secondary server group.</p>
+     * <br>
+     * <p>>  You can set only one of the VServerGroupId and MasterSlaveServerGroupId parameters.</p>
+     */
     @NameInMap("MasterSlaveServerGroupId")
     public String masterSlaveServerGroupId;
 
@@ -73,12 +197,28 @@ public class SetLoadBalancerTCPListenerAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The timeout period of session persistence. Valid values: **0** to **3600**. Unit: seconds.</p>
+     * <br>
+     * <p>Default value: **0**. If the default value is used, the system disables session persistence.</p>
+     */
     @NameInMap("PersistenceTimeout")
     public Integer persistenceTimeout;
 
+    /**
+     * <p>Specifies whether to use the Proxy protocol to pass client IP addresses to backend servers. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     */
     @NameInMap("ProxyProtocolV2Enabled")
     public Boolean proxyProtocolV2Enabled;
 
+    /**
+     * <p>The region ID of the CLB instance.</p>
+     * <br>
+     * <p>You can query the region ID from the [Regions and zones](~~40654~~) list or by calling the [DescribeRegions](~~25609~~) operation.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -88,18 +228,54 @@ public class SetLoadBalancerTCPListenerAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The scheduling algorithm. Valid values:</p>
+     * <br>
+     * <p>*   **wrr**: Backend servers that have higher weights receive more requests than backend servers that have lower weights.</p>
+     * <p>*   **rr**: Requests are distributed to backend servers in sequence.</p>
+     * <p>*   **sch**: specifies consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</p>
+     * <p>*   **tch**: specifies consistent hashing that is based on four factors: source IP address, destination IP address, source port, and destination port. Requests that contain the same information based on the four factors are distributed to the same backend server.</p>
+     * <br>
+     * <p>> </p>
+     * <p>*   Only high-performance CLB instances support the **sch** and **tch** algorithms.</p>
+     * <p>*   CLB does not support converting the **wrr** and **rr** algorithms to sch or tch. You cannot switch the hash algorithm from one to another.</p>
+     */
     @NameInMap("Scheduler")
     public String scheduler;
 
+    /**
+     * <p>Specifies whether to enable the SynProxy feature of CLB for protection. Valid values:</p>
+     * <br>
+     * <p>*   **enable**: yes</p>
+     * <p>*   **disable**: no</p>
+     * <br>
+     * <p>We recommend that you use the default value of this parameter.</p>
+     */
     @NameInMap("SynProxy")
     public String synProxy;
 
+    /**
+     * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from **success** to **fail**.</p>
+     * <br>
+     * <p>Valid values: **2** to **10**.</p>
+     */
     @NameInMap("UnhealthyThreshold")
     public Integer unhealthyThreshold;
 
+    /**
+     * <p>Specifies whether to use a vServer group. Valid values:</p>
+     * <br>
+     * <p>*   **on**: yes</p>
+     * <p>*   **off**: no</p>
+     * <br>
+     * <p>>  You cannot set both **VserverGroup** and **MasterSlaveServerGroup** to **on**.</p>
+     */
     @NameInMap("VServerGroup")
     public String VServerGroup;
 
+    /**
+     * <p>The ID of the vServer group.</p>
+     */
     @NameInMap("VServerGroupId")
     public String VServerGroupId;
 
