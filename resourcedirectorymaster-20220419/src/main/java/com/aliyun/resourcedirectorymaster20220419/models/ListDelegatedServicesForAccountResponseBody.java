@@ -4,9 +4,17 @@ package com.aliyun.resourcedirectorymaster20220419.models;
 import com.aliyun.tea.*;
 
 public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
+    /**
+     * <p>The information about the trusted services.</p>
+     * <br>
+     * <p>> If the value of this parameter is empty, the member is not specified as a delegated administrator account.</p>
+     */
     @NameInMap("DelegatedServices")
     public ListDelegatedServicesForAccountResponseBodyDelegatedServices delegatedServices;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +40,24 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
     }
 
     public static class ListDelegatedServicesForAccountResponseBodyDelegatedServicesDelegatedService extends TeaModel {
+        /**
+         * <p>The time when the member was specified as a delegated administrator account.</p>
+         */
         @NameInMap("DelegationEnabledTime")
         public String delegationEnabledTime;
 
+        /**
+         * <p>The identifier of the trusted service.</p>
+         */
         @NameInMap("ServicePrincipal")
         public String servicePrincipal;
 
+        /**
+         * <p>The status of the trusted service. Valid values:</p>
+         * <br>
+         * <p>*   ENABLED: enabled</p>
+         * <p>*   DISABLED: disabled</p>
+         */
         @NameInMap("Status")
         public String status;
 

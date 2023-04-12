@@ -4,9 +4,15 @@ package com.aliyun.resourcedirectorymaster20220419.models;
 import com.aliyun.tea.*;
 
 public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel {
+    /**
+     * <p>The information about the attached access control policies.</p>
+     */
     @NameInMap("ControlPolicyAttachments")
     public ListControlPolicyAttachmentsForTargetResponseBodyControlPolicyAttachments controlPolicyAttachments;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,45 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
     }
 
     public static class ListControlPolicyAttachmentsForTargetResponseBodyControlPolicyAttachmentsControlPolicyAttachment extends TeaModel {
+        /**
+         * <p>The time when the access control policy was attached.</p>
+         */
         @NameInMap("AttachDate")
         public String attachDate;
 
+        /**
+         * <p>The description of the access control policy.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The effective scope of the access control policy. Valid values:</p>
+         * <br>
+         * <p>*   All: The access control policy is in effect for Alibaba Cloud accounts, RAM users, and RAM roles.</p>
+         * <p>*   RAM: The access control policy is in effect only for RAM users and RAM roles.</p>
+         */
         @NameInMap("EffectScope")
         public String effectScope;
 
+        /**
+         * <p>The ID of the access control policy.</p>
+         */
         @NameInMap("PolicyId")
         public String policyId;
 
+        /**
+         * <p>The name of the access control policy.</p>
+         */
         @NameInMap("PolicyName")
         public String policyName;
 
+        /**
+         * <p>The type of the access control policy. Valid values:</p>
+         * <br>
+         * <p>*   System: system access control policy</p>
+         * <p>*   Custom: custom access control policy</p>
+         */
         @NameInMap("PolicyType")
         public String policyType;
 

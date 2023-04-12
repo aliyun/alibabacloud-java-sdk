@@ -4,21 +4,58 @@ package com.aliyun.resourcedirectorymaster20220419.models;
 import com.aliyun.tea.*;
 
 public class CreateResourceAccountRequest extends TeaModel {
+    /**
+     * <p>The prefix for the Alibaba Cloud account name of the member. If you leave this parameter empty, the system randomly generates a prefix.</p>
+     * <br>
+     * <p>The prefix must be 2 to 37 characters in length.</p>
+     * <br>
+     * <p>The prefix can contain letters, digits, and special characters but cannot contain consecutive special characters. The prefix must start with a letter or digit and end with a letter or digit. Valid special characters include underscores (`_`), periods (.), and hyphens (`-`).</p>
+     * <br>
+     * <p>The complete Alibaba Cloud account name of a member in a resource directory is in the @.aliyunid.com format, such as `alice@rd-3G****.aliyunid.com`.</p>
+     * <br>
+     * <p>Each name must be unique in the resource directory.</p>
+     */
     @NameInMap("AccountNamePrefix")
     public String accountNamePrefix;
 
+    /**
+     * <p>The display name of the member.</p>
+     * <br>
+     * <p>The name must be 2 to 50 characters in length.</p>
+     * <br>
+     * <p>The name can contain letters, digits, underscores (\_), periods (.), hyphens (-), and spaces.</p>
+     * <br>
+     * <p>The name must be unique in the resource directory.</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
+    /**
+     * <p>The ID of the parent folder.</p>
+     */
     @NameInMap("ParentFolderId")
     public String parentFolderId;
 
+    /**
+     * <p>The ID of the billing account. If you leave this parameter empty, the member is used as its own billing account.</p>
+     */
     @NameInMap("PayerAccountId")
     public String payerAccountId;
 
+    /**
+     * <p>The identity type of the member. Valid values:</p>
+     * <br>
+     * <p>*   resell: The member is an account for a reseller. This is the default value. A relationship is automatically established between the member and the reseller. The management account of the resource directory must be used as the billing account of the member.</p>
+     * <p>*   non_resell: The member is not an account for a reseller. The member is an account that is not associated with a reseller. You can directly use the account to purchase Alibaba Cloud resources. The member is used as its own billing account.</p>
+     * <br>
+     * <p>> This parameter is available only for resellers at the international site (alibabacloud.com).</p>
+     */
     @NameInMap("ResellAccountType")
     public String resellAccountType;
 
+    /**
+     * <p>The tag of the member.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateResourceAccountRequestTag> tag;
 
@@ -76,9 +113,15 @@ public class CreateResourceAccountRequest extends TeaModel {
     }
 
     public static class CreateResourceAccountRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 

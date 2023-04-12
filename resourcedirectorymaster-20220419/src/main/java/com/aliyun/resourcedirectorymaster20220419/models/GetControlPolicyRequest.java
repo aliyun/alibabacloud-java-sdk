@@ -4,9 +4,21 @@ package com.aliyun.resourcedirectorymaster20220419.models;
 import com.aliyun.tea.*;
 
 public class GetControlPolicyRequest extends TeaModel {
+    /**
+     * <p>The language in which you want to return the description of the access control policy. Valid values:</p>
+     * <br>
+     * <p>*   zh-CN (default value): Chinese</p>
+     * <p>*   en: English</p>
+     * <p>*   ja: Japanese</p>
+     * <br>
+     * <p>> This parameter is valid only for system access control policies.</p>
+     */
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <p>The ID of the access control policy.</p>
+     */
     @NameInMap("PolicyId")
     public String policyId;
 

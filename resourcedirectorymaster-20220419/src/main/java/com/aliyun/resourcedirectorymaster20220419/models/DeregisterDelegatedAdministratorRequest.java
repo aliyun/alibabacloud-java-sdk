@@ -4,9 +4,15 @@ package com.aliyun.resourcedirectorymaster20220419.models;
 import com.aliyun.tea.*;
 
 public class DeregisterDelegatedAdministratorRequest extends TeaModel {
+    /**
+     * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+     */
     @NameInMap("AccountId")
     public String accountId;
 
+    /**
+     * <p>The identifier of the trusted service.</p>
+     */
     @NameInMap("ServicePrincipal")
     public String servicePrincipal;
 
