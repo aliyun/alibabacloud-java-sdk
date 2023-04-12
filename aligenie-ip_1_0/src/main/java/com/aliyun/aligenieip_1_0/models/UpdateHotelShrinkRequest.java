@@ -3,7 +3,7 @@ package com.aliyun.aligenieip_1_0.models;
 
 import com.aliyun.tea.*;
 
-public class CreateHotelRequest extends TeaModel {
+public class UpdateHotelShrinkRequest extends TeaModel {
     @NameInMap("AppKey")
     public String appKey;
 
@@ -16,17 +16,17 @@ public class CreateHotelRequest extends TeaModel {
     @NameInMap("HotelEmail")
     public String hotelEmail;
 
+    @NameInMap("HotelId")
+    public String hotelId;
+
     @NameInMap("HotelName")
     public String hotelName;
 
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
-    @NameInMap("RelatedPk")
-    public String relatedPk;
-
     @NameInMap("RelatedPks")
-    public java.util.List<String> relatedPks;
+    public String relatedPksShrink;
 
     @NameInMap("Remark")
     public String remark;
@@ -37,12 +37,12 @@ public class CreateHotelRequest extends TeaModel {
     @NameInMap("TbOpenId")
     public String tbOpenId;
 
-    public static CreateHotelRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateHotelRequest self = new CreateHotelRequest();
+    public static UpdateHotelShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateHotelShrinkRequest self = new UpdateHotelShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateHotelRequest setAppKey(String appKey) {
+    public UpdateHotelShrinkRequest setAppKey(String appKey) {
         this.appKey = appKey;
         return this;
     }
@@ -50,7 +50,7 @@ public class CreateHotelRequest extends TeaModel {
         return this.appKey;
     }
 
-    public CreateHotelRequest setEstOpenTime(String estOpenTime) {
+    public UpdateHotelShrinkRequest setEstOpenTime(String estOpenTime) {
         this.estOpenTime = estOpenTime;
         return this;
     }
@@ -58,7 +58,7 @@ public class CreateHotelRequest extends TeaModel {
         return this.estOpenTime;
     }
 
-    public CreateHotelRequest setHotelAddress(String hotelAddress) {
+    public UpdateHotelShrinkRequest setHotelAddress(String hotelAddress) {
         this.hotelAddress = hotelAddress;
         return this;
     }
@@ -66,7 +66,7 @@ public class CreateHotelRequest extends TeaModel {
         return this.hotelAddress;
     }
 
-    public CreateHotelRequest setHotelEmail(String hotelEmail) {
+    public UpdateHotelShrinkRequest setHotelEmail(String hotelEmail) {
         this.hotelEmail = hotelEmail;
         return this;
     }
@@ -74,7 +74,15 @@ public class CreateHotelRequest extends TeaModel {
         return this.hotelEmail;
     }
 
-    public CreateHotelRequest setHotelName(String hotelName) {
+    public UpdateHotelShrinkRequest setHotelId(String hotelId) {
+        this.hotelId = hotelId;
+        return this;
+    }
+    public String getHotelId() {
+        return this.hotelId;
+    }
+
+    public UpdateHotelShrinkRequest setHotelName(String hotelName) {
         this.hotelName = hotelName;
         return this;
     }
@@ -82,7 +90,7 @@ public class CreateHotelRequest extends TeaModel {
         return this.hotelName;
     }
 
-    public CreateHotelRequest setPhoneNumber(String phoneNumber) {
+    public UpdateHotelShrinkRequest setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
@@ -90,23 +98,15 @@ public class CreateHotelRequest extends TeaModel {
         return this.phoneNumber;
     }
 
-    public CreateHotelRequest setRelatedPk(String relatedPk) {
-        this.relatedPk = relatedPk;
+    public UpdateHotelShrinkRequest setRelatedPksShrink(String relatedPksShrink) {
+        this.relatedPksShrink = relatedPksShrink;
         return this;
     }
-    public String getRelatedPk() {
-        return this.relatedPk;
+    public String getRelatedPksShrink() {
+        return this.relatedPksShrink;
     }
 
-    public CreateHotelRequest setRelatedPks(java.util.List<String> relatedPks) {
-        this.relatedPks = relatedPks;
-        return this;
-    }
-    public java.util.List<String> getRelatedPks() {
-        return this.relatedPks;
-    }
-
-    public CreateHotelRequest setRemark(String remark) {
+    public UpdateHotelShrinkRequest setRemark(String remark) {
         this.remark = remark;
         return this;
     }
@@ -114,7 +114,7 @@ public class CreateHotelRequest extends TeaModel {
         return this.remark;
     }
 
-    public CreateHotelRequest setRoomNum(Integer roomNum) {
+    public UpdateHotelShrinkRequest setRoomNum(Integer roomNum) {
         this.roomNum = roomNum;
         return this;
     }
@@ -122,7 +122,7 @@ public class CreateHotelRequest extends TeaModel {
         return this.roomNum;
     }
 
-    public CreateHotelRequest setTbOpenId(String tbOpenId) {
+    public UpdateHotelShrinkRequest setTbOpenId(String tbOpenId) {
         this.tbOpenId = tbOpenId;
         return this;
     }

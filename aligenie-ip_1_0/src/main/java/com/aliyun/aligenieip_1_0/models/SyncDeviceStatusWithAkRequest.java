@@ -31,6 +31,21 @@ public class SyncDeviceStatusWithAkRequest extends TeaModel {
     @NameInMap("Switch")
     public Integer _switch;
 
+    @NameInMap("fanSpeed")
+    public String fanSpeed;
+
+    @NameInMap("mode")
+    public String mode;
+
+    @NameInMap("roomTemperature")
+    public String roomTemperature;
+
+    @NameInMap("temperature")
+    public String temperature;
+
+    @NameInMap("value")
+    public Integer value;
+
     public static SyncDeviceStatusWithAkRequest build(java.util.Map<String, ?> map) throws Exception {
         SyncDeviceStatusWithAkRequest self = new SyncDeviceStatusWithAkRequest();
         return TeaModel.build(map, self);
@@ -106,6 +121,46 @@ public class SyncDeviceStatusWithAkRequest extends TeaModel {
     }
     public Integer get_switch() {
         return this._switch;
+    }
+
+    public SyncDeviceStatusWithAkRequest setFanSpeed(String fanSpeed) {
+        this.fanSpeed = fanSpeed;
+        return this;
+    }
+    public String getFanSpeed() {
+        return this.fanSpeed;
+    }
+
+    public SyncDeviceStatusWithAkRequest setMode(String mode) {
+        this.mode = mode;
+        return this;
+    }
+    public String getMode() {
+        return this.mode;
+    }
+
+    public SyncDeviceStatusWithAkRequest setRoomTemperature(String roomTemperature) {
+        this.roomTemperature = roomTemperature;
+        return this;
+    }
+    public String getRoomTemperature() {
+        return this.roomTemperature;
+    }
+
+    public SyncDeviceStatusWithAkRequest setTemperature(String temperature) {
+        this.temperature = temperature;
+        return this;
+    }
+    public String getTemperature() {
+        return this.temperature;
+    }
+
+    public SyncDeviceStatusWithAkRequest setValue(Integer value) {
+        this.value = value;
+        return this;
+    }
+    public Integer getValue() {
+        return this.value;
     }
 
 }

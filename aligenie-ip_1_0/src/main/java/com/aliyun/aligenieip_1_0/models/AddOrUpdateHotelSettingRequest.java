@@ -106,17 +106,17 @@ public class AddOrUpdateHotelSettingRequest extends TeaModel {
     }
 
     public static class AddOrUpdateHotelSettingRequestNightMode extends TeaModel {
+        @NameInMap("DefaultBright")
+        public String defaultBright;
+
+        @NameInMap("DefaultVolume")
+        public String defaultVolume;
+
         @NameInMap("Enable")
         public Boolean enable;
 
         @NameInMap("End")
         public String end;
-
-        @NameInMap("MaxBright")
-        public String maxBright;
-
-        @NameInMap("MaxVolume")
-        public String maxVolume;
 
         @NameInMap("StandbyAction")
         public String standbyAction;
@@ -127,6 +127,22 @@ public class AddOrUpdateHotelSettingRequest extends TeaModel {
         public static AddOrUpdateHotelSettingRequestNightMode build(java.util.Map<String, ?> map) throws Exception {
             AddOrUpdateHotelSettingRequestNightMode self = new AddOrUpdateHotelSettingRequestNightMode();
             return TeaModel.build(map, self);
+        }
+
+        public AddOrUpdateHotelSettingRequestNightMode setDefaultBright(String defaultBright) {
+            this.defaultBright = defaultBright;
+            return this;
+        }
+        public String getDefaultBright() {
+            return this.defaultBright;
+        }
+
+        public AddOrUpdateHotelSettingRequestNightMode setDefaultVolume(String defaultVolume) {
+            this.defaultVolume = defaultVolume;
+            return this;
+        }
+        public String getDefaultVolume() {
+            return this.defaultVolume;
         }
 
         public AddOrUpdateHotelSettingRequestNightMode setEnable(Boolean enable) {
@@ -143,22 +159,6 @@ public class AddOrUpdateHotelSettingRequest extends TeaModel {
         }
         public String getEnd() {
             return this.end;
-        }
-
-        public AddOrUpdateHotelSettingRequestNightMode setMaxBright(String maxBright) {
-            this.maxBright = maxBright;
-            return this;
-        }
-        public String getMaxBright() {
-            return this.maxBright;
-        }
-
-        public AddOrUpdateHotelSettingRequestNightMode setMaxVolume(String maxVolume) {
-            this.maxVolume = maxVolume;
-            return this;
-        }
-        public String getMaxVolume() {
-            return this.maxVolume;
         }
 
         public AddOrUpdateHotelSettingRequestNightMode setStandbyAction(String standbyAction) {
