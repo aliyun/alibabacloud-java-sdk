@@ -4,6 +4,9 @@ package com.aliyun.linkcard20210520.models;
 import com.aliyun.tea.*;
 
 public class ListOrderRequest extends TeaModel {
+    @NameInMap("CredentialNo")
+    public String credentialNo;
+
     @NameInMap("EndDate")
     public String endDate;
 
@@ -28,6 +31,14 @@ public class ListOrderRequest extends TeaModel {
     public static ListOrderRequest build(java.util.Map<String, ?> map) throws Exception {
         ListOrderRequest self = new ListOrderRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListOrderRequest setCredentialNo(String credentialNo) {
+        this.credentialNo = credentialNo;
+        return this;
+    }
+    public String getCredentialNo() {
+        return this.credentialNo;
     }
 
     public ListOrderRequest setEndDate(String endDate) {
