@@ -84,17 +84,17 @@ public class GetHotelSettingResponseBody extends TeaModel {
     }
 
     public static class GetHotelSettingResponseBodyResultNightMode extends TeaModel {
+        @NameInMap("DefaultBright")
+        public String defaultBright;
+
+        @NameInMap("DefaultVolume")
+        public String defaultVolume;
+
         @NameInMap("Enable")
         public Boolean enable;
 
         @NameInMap("End")
         public String end;
-
-        @NameInMap("MaxBright")
-        public String maxBright;
-
-        @NameInMap("MaxVolume")
-        public String maxVolume;
 
         @NameInMap("StandbyAction")
         public String standbyAction;
@@ -105,6 +105,22 @@ public class GetHotelSettingResponseBody extends TeaModel {
         public static GetHotelSettingResponseBodyResultNightMode build(java.util.Map<String, ?> map) throws Exception {
             GetHotelSettingResponseBodyResultNightMode self = new GetHotelSettingResponseBodyResultNightMode();
             return TeaModel.build(map, self);
+        }
+
+        public GetHotelSettingResponseBodyResultNightMode setDefaultBright(String defaultBright) {
+            this.defaultBright = defaultBright;
+            return this;
+        }
+        public String getDefaultBright() {
+            return this.defaultBright;
+        }
+
+        public GetHotelSettingResponseBodyResultNightMode setDefaultVolume(String defaultVolume) {
+            this.defaultVolume = defaultVolume;
+            return this;
+        }
+        public String getDefaultVolume() {
+            return this.defaultVolume;
         }
 
         public GetHotelSettingResponseBodyResultNightMode setEnable(Boolean enable) {
@@ -121,22 +137,6 @@ public class GetHotelSettingResponseBody extends TeaModel {
         }
         public String getEnd() {
             return this.end;
-        }
-
-        public GetHotelSettingResponseBodyResultNightMode setMaxBright(String maxBright) {
-            this.maxBright = maxBright;
-            return this;
-        }
-        public String getMaxBright() {
-            return this.maxBright;
-        }
-
-        public GetHotelSettingResponseBodyResultNightMode setMaxVolume(String maxVolume) {
-            this.maxVolume = maxVolume;
-            return this;
-        }
-        public String getMaxVolume() {
-            return this.maxVolume;
         }
 
         public GetHotelSettingResponseBodyResultNightMode setStandbyAction(String standbyAction) {

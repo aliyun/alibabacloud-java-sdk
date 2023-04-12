@@ -25,6 +25,9 @@ public class UpdateHotelRequest extends TeaModel {
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
+    @NameInMap("RelatedPks")
+    public java.util.List<String> relatedPks;
+
     @NameInMap("Remark")
     public String remark;
 
@@ -93,6 +96,14 @@ public class UpdateHotelRequest extends TeaModel {
     }
     public String getPhoneNumber() {
         return this.phoneNumber;
+    }
+
+    public UpdateHotelRequest setRelatedPks(java.util.List<String> relatedPks) {
+        this.relatedPks = relatedPks;
+        return this;
+    }
+    public java.util.List<String> getRelatedPks() {
+        return this.relatedPks;
     }
 
     public UpdateHotelRequest setRemark(String remark) {
