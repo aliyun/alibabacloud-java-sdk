@@ -1,3 +1,6 @@
+2023-04-13 Version: 1.0.5
+- Add new api.
+
 2023-04-07 Version: 1.0.4
 - Update Api check.
 
