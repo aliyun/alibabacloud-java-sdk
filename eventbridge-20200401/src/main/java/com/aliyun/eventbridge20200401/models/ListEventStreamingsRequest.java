@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEventStreamingsRequest extends TeaModel {
     @NameInMap("Limit")
-    public Long limit;
+    public Integer limit;
 
     @NameInMap("NamePrefix")
     public String namePrefix;
@@ -18,11 +18,11 @@ public class ListEventStreamingsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListEventStreamingsRequest setLimit(Long limit) {
+    public ListEventStreamingsRequest setLimit(Integer limit) {
         this.limit = limit;
         return this;
     }
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.limit;
     }
 
