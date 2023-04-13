@@ -364,6 +364,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CreateOption", request.createOption);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.createOptions)) {
+            query.put("CreateOptions", request.createOptions);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.deletionProtection)) {
             query.put("DeletionProtection", request.deletionProtection);
         }
@@ -3080,6 +3084,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListStacksResponse listStacksWithOptions(ListStacksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("PageNumber", request.pageNumber);
         }
@@ -3114,6 +3122,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.stackName)) {
             query.put("StackName", request.stackName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {

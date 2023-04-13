@@ -5,17 +5,14 @@ import com.aliyun.tea.*;
 
 public class MoveResourceGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the destination resource group.</p>
-     * <br>
-     * <p>For more information about resource groups, see [What is a resource group?](~~94475~~)</p>
+     * <p>The ID of the resource group to which you want to move the resource. For more information about resource groups, see the "Resource Group" section of the [What is Resource Management?](~~94475~~) topic.</p>
      */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
 
     /**
-     * <p>The region ID of the resource.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~131035~~) operation to query region IDs.</p>
+     * <p>The region ID of the resource.\</p>
+     * <p>You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -29,9 +26,9 @@ public class MoveResourceGroupRequest extends TeaModel {
     /**
      * <p>The type of the resource. Valid values:</p>
      * <br>
-     * <p>*   stack</p>
-     * <p>*   stackgroup</p>
-     * <p>*   template</p>
+     * <p>*   stack: stack</p>
+     * <p>*   stackgroup: stack group</p>
+     * <p>*   template: template</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

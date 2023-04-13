@@ -22,6 +22,9 @@ public class CreateStackRequest extends TeaModel {
     @NameInMap("CreateOption")
     public String createOption;
 
+    @NameInMap("CreateOptions")
+    public java.util.List<String> createOptions;
+
     /**
      * <p>Specifies whether to enable deletion protection for the stack. Default value: Disabled. Valid values:</p>
      * <br>
@@ -203,6 +206,14 @@ public class CreateStackRequest extends TeaModel {
     }
     public String getCreateOption() {
         return this.createOption;
+    }
+
+    public CreateStackRequest setCreateOptions(java.util.List<String> createOptions) {
+        this.createOptions = createOptions;
+        return this;
+    }
+    public java.util.List<String> getCreateOptions() {
+        return this.createOptions;
     }
 
     public CreateStackRequest setDeletionProtection(String deletionProtection) {

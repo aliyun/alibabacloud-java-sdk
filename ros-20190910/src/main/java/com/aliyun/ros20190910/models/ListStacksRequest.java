@@ -4,6 +4,9 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListStacksRequest extends TeaModel {
+    @NameInMap("EndTime")
+    public String endTime;
+
     /**
      * <p>The number of the page to return.</p>
      * <br>
@@ -74,6 +77,9 @@ public class ListStacksRequest extends TeaModel {
     @NameInMap("StackName")
     public java.util.List<String> stackName;
 
+    @NameInMap("StartTime")
+    public String startTime;
+
     /**
      * <p>The state N of the stack.</p>
      */
@@ -89,6 +95,14 @@ public class ListStacksRequest extends TeaModel {
     public static ListStacksRequest build(java.util.Map<String, ?> map) throws Exception {
         ListStacksRequest self = new ListStacksRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListStacksRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public ListStacksRequest setPageNumber(Long pageNumber) {
@@ -161,6 +175,14 @@ public class ListStacksRequest extends TeaModel {
     }
     public java.util.List<String> getStackName() {
         return this.stackName;
+    }
+
+    public ListStacksRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public ListStacksRequest setStatus(java.util.List<String> status) {
