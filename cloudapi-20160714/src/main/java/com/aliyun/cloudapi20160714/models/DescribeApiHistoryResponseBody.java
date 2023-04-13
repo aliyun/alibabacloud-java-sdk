@@ -43,13 +43,13 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
      * <br>
      * <p>*   **ANONYMOUS**: The API can be anonymously called. Take note of the following information:</p>
      * <br>
-     * <p>    *   All users who have the permissions to obtain the API information can call this API. API Gateway neither authenticates callers nor configures user-specific throttling policies. You must configure throttling policies for public APIs.</p>
+     * <p>    *   All users who have obtained the API service information can call this API. API Gateway neither authenticates callers nor sets user-specific throttling policies. If this API is a public one, you must set throttling policies for it.</p>
      */
     @NameInMap("AuthType")
     public String authType;
 
     /**
-     * <p>The backend configurations.</p>
+     * <p>The configuration items of the backend service.</p>
      */
     @NameInMap("BackendConfig")
     public DescribeApiHistoryResponseBodyBackendConfig backendConfig;
@@ -106,7 +106,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
     public String failResultSample;
 
     /**
-     * <p>*   Indicates whether to forcefully check X-Ca-Nonce. X-Ca-Nonce is the unique identifier of a request and is generally identified by UUID. If the **ForceNonceCheck** parameter is set to **true**, X-Ca-Nonce is forcefully checked. After API Gateway receives this parameter, API Gateway verifies the validity of this parameter. The same value can be used only once within 15 minutes. This helps prevent replay attacks.</p>
+     * <p>*   Indicates whether to forcefully check X-Ca-Nonce. X-Ca-Nonce is the unique identifier of a request and is generally identified by UUID. If the **ForceNonceCheck** parameter is set to **true**, X-Ca-Nonce is forcefully checked. After API Gateway receives this parameter, API Gateway verifies the validity of this parameter. The same value can be used only once within 15 minutes. This helps defend against replay attacks.</p>
      * <p>*   If the **ForceNonceCheck** parameter is set to **false**, X-Ca-Nonce is not checked. When you create an API, the default value of this parameter is false.</p>
      */
     @NameInMap("ForceNonceCheck")
@@ -177,7 +177,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
     public DescribeApiHistoryResponseBodyResultDescriptions resultDescriptions;
 
     /**
-     * <p>The sample response that is returned.</p>
+     * <p>The sample response.</p>
      */
     @NameInMap("ResultSample")
     public String resultSample;
@@ -214,7 +214,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
      * <p>The environment to which the API is published. Valid values:</p>
      * <br>
      * <p>*   **RELEASE**: production environment</p>
-     * <p>*   **PRE**: pre-release environment</p>
+     * <p>*   **PRE**: staging environment</p>
      * <p>*   **TEST**: test environment</p>
      */
     @NameInMap("StageName")
@@ -900,7 +900,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
 
     public static class DescribeApiHistoryResponseBodyRequestConfig extends TeaModel {
         /**
-         * <p>The format in which data was transmitted to the server for POST and PUT requests. Valid values: FORM and STREAM. FORM indicates that data was transmitted as forms that consist of key-value pairs. STREAM indicates that data was transmitted as byte streams. This parameter takes effect when the RequestMode parameter is set to MAPPING.</p>
+         * <p>The format in which data was transmitted to the server for a POST or PUT request. Valid values: FORM and STREAM. FORM indicates that data was transmitted as forms that consist of key-value pairs. STREAM indicates that data was transmitted as byte streams. This parameter takes effect when the RequestMode parameter is set to MAPPING.</p>
          */
         @NameInMap("BodyFormat")
         public String bodyFormat;
@@ -940,7 +940,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public String requestPath;
 
         /**
-         * <p>The type of the protocol that is supported by the API. Valid values: HTTP, HTTPS, and WebSocket. Separate values with commas (,). Example: "HTTP,HTTPS".</p>
+         * <p>The type of the protocol that is supported by the API. Valid values: HTTP, HTTPS, and WebSocket. Separate multiple values with commas (,). Example: "HTTP,HTTPS".</p>
          */
         @NameInMap("RequestProtocol")
         public String requestProtocol;
@@ -1022,7 +1022,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public String arrayItemsType;
 
         /**
-         * <p>The default value.</p>
+         * <p>The default value of the parameter.</p>
          */
         @NameInMap("DefaultValue")
         public String defaultValue;
@@ -1052,7 +1052,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public String docShow;
 
         /**
-         * <p>The hash values that are specified if the **ParameterType** parameter is set to Int, Long, Float, Double, or String. Separate hash values with commas (,). Examples: 1,2,3,4,9 and A,B,C,E,F.</p>
+         * <p>The hash values can be specified if the **ParameterType** parameter is set to Int, Long, Float, Double, or String. Separate multiple hash values with commas (,). Examples: 1,2,3,4,9 and A,B,C,E,F.</p>
          */
         @NameInMap("EnumValue")
         public String enumValue;
@@ -1281,7 +1281,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Indicates whether a child node exists.</p>
+         * <p>Indicates whether a subnode exists.</p>
          */
         @NameInMap("HasChild")
         public Boolean hasChild;
@@ -2176,7 +2176,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
 
     public static class DescribeApiHistoryResponseBodyServiceParametersMapServiceParameterMap extends TeaModel {
         /**
-         * <p>The name of the frontend parameter. The name must be included in RequestParametersObject and matches ApiParameterName in RequestParameters.</p>
+         * <p>The name of the frontend parameter. The name must be included in RequestParametersObject and match ApiParameterName in RequestParameters.</p>
          */
         @NameInMap("RequestParameterName")
         public String requestParameterName;
