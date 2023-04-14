@@ -103,6 +103,9 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         @NameInMap("department")
         public String department;
 
+        @NameInMap("id")
+        public String id;
+
         @NameInMap("invoice_title")
         public String invoiceTitle;
 
@@ -195,6 +198,14 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         }
         public String getDepartment() {
             return this.department;
+        }
+
+        public TrainTicketScanQueryResponseBodyModuleItems setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
         public TrainTicketScanQueryResponseBodyModuleItems setInvoiceTitle(String invoiceTitle) {
