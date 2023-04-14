@@ -81,6 +81,113 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         return this.traceId;
     }
 
+    public static class VatInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails extends TeaModel {
+        @NameInMap("amount")
+        public String amount;
+
+        @NameInMap("index")
+        public String index;
+
+        @NameInMap("item_name")
+        public String itemName;
+
+        @NameInMap("quantity")
+        public String quantity;
+
+        @NameInMap("specification")
+        public String specification;
+
+        @NameInMap("tax")
+        public String tax;
+
+        @NameInMap("tax_rate")
+        public String taxRate;
+
+        @NameInMap("unit")
+        public String unit;
+
+        @NameInMap("unit_price")
+        public String unitPrice;
+
+        public static VatInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails build(java.util.Map<String, ?> map) throws Exception {
+            VatInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails self = new VatInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails();
+            return TeaModel.build(map, self);
+        }
+
+        public VatInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails setAmount(String amount) {
+            this.amount = amount;
+            return this;
+        }
+        public String getAmount() {
+            return this.amount;
+        }
+
+        public VatInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails setIndex(String index) {
+            this.index = index;
+            return this;
+        }
+        public String getIndex() {
+            return this.index;
+        }
+
+        public VatInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails setItemName(String itemName) {
+            this.itemName = itemName;
+            return this;
+        }
+        public String getItemName() {
+            return this.itemName;
+        }
+
+        public VatInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails setQuantity(String quantity) {
+            this.quantity = quantity;
+            return this;
+        }
+        public String getQuantity() {
+            return this.quantity;
+        }
+
+        public VatInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails setSpecification(String specification) {
+            this.specification = specification;
+            return this;
+        }
+        public String getSpecification() {
+            return this.specification;
+        }
+
+        public VatInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails setTax(String tax) {
+            this.tax = tax;
+            return this;
+        }
+        public String getTax() {
+            return this.tax;
+        }
+
+        public VatInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails setTaxRate(String taxRate) {
+            this.taxRate = taxRate;
+            return this;
+        }
+        public String getTaxRate() {
+            return this.taxRate;
+        }
+
+        public VatInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails setUnit(String unit) {
+            this.unit = unit;
+            return this;
+        }
+        public String getUnit() {
+            return this.unit;
+        }
+
+        public VatInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails setUnitPrice(String unitPrice) {
+            this.unitPrice = unitPrice;
+            return this;
+        }
+        public String getUnitPrice() {
+            return this.unitPrice;
+        }
+
+    }
+
     public static class VatInvoiceScanQueryResponseBodyModuleItems extends TeaModel {
         @NameInMap("amount_with_tax")
         public String amountWithTax;
@@ -91,6 +198,15 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("bill_date")
         public String billDate;
 
+        @NameInMap("check_code")
+        public String checkCode;
+
+        @NameInMap("drawer")
+        public String drawer;
+
+        @NameInMap("id")
+        public String id;
+
         @NameInMap("invoice_code")
         public String invoiceCode;
 
@@ -99,6 +215,12 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
 
         @NameInMap("invoice_detail")
         public String invoiceDetail;
+
+        @NameInMap("invoice_details")
+        public java.util.List<VatInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails> invoiceDetails;
+
+        @NameInMap("invoice_location")
+        public String invoiceLocation;
 
         @NameInMap("invoice_no")
         public String invoiceNo;
@@ -115,11 +237,35 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("oss_url")
         public String ossUrl;
 
+        @NameInMap("password_area")
+        public String passwordArea;
+
+        @NameInMap("purchaser_bank_account_info")
+        public String purchaserBankAccountInfo;
+
+        @NameInMap("purchaser_contact_info")
+        public String purchaserContactInfo;
+
         @NameInMap("purchaser_name")
         public String purchaserName;
 
         @NameInMap("purchaser_tax_no")
         public String purchaserTaxNo;
+
+        @NameInMap("recipient")
+        public String recipient;
+
+        @NameInMap("remarks")
+        public String remarks;
+
+        @NameInMap("reviewer")
+        public String reviewer;
+
+        @NameInMap("seller_bank_account_info")
+        public String sellerBankAccountInfo;
+
+        @NameInMap("seller_contact_info")
+        public String sellerContactInfo;
 
         @NameInMap("seller_name")
         public String sellerName;
@@ -127,11 +273,17 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("seller_tax_no")
         public String sellerTaxNo;
 
+        @NameInMap("smart_check_code")
+        public String smartCheckCode;
+
         @NameInMap("tax_amount")
         public String taxAmount;
 
         @NameInMap("tax_rate")
         public String taxRate;
+
+        @NameInMap("total_amount_in_words")
+        public String totalAmountInWords;
 
         public static VatInvoiceScanQueryResponseBodyModuleItems build(java.util.Map<String, ?> map) throws Exception {
             VatInvoiceScanQueryResponseBodyModuleItems self = new VatInvoiceScanQueryResponseBodyModuleItems();
@@ -162,6 +314,30 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             return this.billDate;
         }
 
+        public VatInvoiceScanQueryResponseBodyModuleItems setCheckCode(String checkCode) {
+            this.checkCode = checkCode;
+            return this;
+        }
+        public String getCheckCode() {
+            return this.checkCode;
+        }
+
+        public VatInvoiceScanQueryResponseBodyModuleItems setDrawer(String drawer) {
+            this.drawer = drawer;
+            return this;
+        }
+        public String getDrawer() {
+            return this.drawer;
+        }
+
+        public VatInvoiceScanQueryResponseBodyModuleItems setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
         public VatInvoiceScanQueryResponseBodyModuleItems setInvoiceCode(String invoiceCode) {
             this.invoiceCode = invoiceCode;
             return this;
@@ -184,6 +360,22 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         }
         public String getInvoiceDetail() {
             return this.invoiceDetail;
+        }
+
+        public VatInvoiceScanQueryResponseBodyModuleItems setInvoiceDetails(java.util.List<VatInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails> invoiceDetails) {
+            this.invoiceDetails = invoiceDetails;
+            return this;
+        }
+        public java.util.List<VatInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails> getInvoiceDetails() {
+            return this.invoiceDetails;
+        }
+
+        public VatInvoiceScanQueryResponseBodyModuleItems setInvoiceLocation(String invoiceLocation) {
+            this.invoiceLocation = invoiceLocation;
+            return this;
+        }
+        public String getInvoiceLocation() {
+            return this.invoiceLocation;
         }
 
         public VatInvoiceScanQueryResponseBodyModuleItems setInvoiceNo(String invoiceNo) {
@@ -226,6 +418,30 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             return this.ossUrl;
         }
 
+        public VatInvoiceScanQueryResponseBodyModuleItems setPasswordArea(String passwordArea) {
+            this.passwordArea = passwordArea;
+            return this;
+        }
+        public String getPasswordArea() {
+            return this.passwordArea;
+        }
+
+        public VatInvoiceScanQueryResponseBodyModuleItems setPurchaserBankAccountInfo(String purchaserBankAccountInfo) {
+            this.purchaserBankAccountInfo = purchaserBankAccountInfo;
+            return this;
+        }
+        public String getPurchaserBankAccountInfo() {
+            return this.purchaserBankAccountInfo;
+        }
+
+        public VatInvoiceScanQueryResponseBodyModuleItems setPurchaserContactInfo(String purchaserContactInfo) {
+            this.purchaserContactInfo = purchaserContactInfo;
+            return this;
+        }
+        public String getPurchaserContactInfo() {
+            return this.purchaserContactInfo;
+        }
+
         public VatInvoiceScanQueryResponseBodyModuleItems setPurchaserName(String purchaserName) {
             this.purchaserName = purchaserName;
             return this;
@@ -240,6 +456,46 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         }
         public String getPurchaserTaxNo() {
             return this.purchaserTaxNo;
+        }
+
+        public VatInvoiceScanQueryResponseBodyModuleItems setRecipient(String recipient) {
+            this.recipient = recipient;
+            return this;
+        }
+        public String getRecipient() {
+            return this.recipient;
+        }
+
+        public VatInvoiceScanQueryResponseBodyModuleItems setRemarks(String remarks) {
+            this.remarks = remarks;
+            return this;
+        }
+        public String getRemarks() {
+            return this.remarks;
+        }
+
+        public VatInvoiceScanQueryResponseBodyModuleItems setReviewer(String reviewer) {
+            this.reviewer = reviewer;
+            return this;
+        }
+        public String getReviewer() {
+            return this.reviewer;
+        }
+
+        public VatInvoiceScanQueryResponseBodyModuleItems setSellerBankAccountInfo(String sellerBankAccountInfo) {
+            this.sellerBankAccountInfo = sellerBankAccountInfo;
+            return this;
+        }
+        public String getSellerBankAccountInfo() {
+            return this.sellerBankAccountInfo;
+        }
+
+        public VatInvoiceScanQueryResponseBodyModuleItems setSellerContactInfo(String sellerContactInfo) {
+            this.sellerContactInfo = sellerContactInfo;
+            return this;
+        }
+        public String getSellerContactInfo() {
+            return this.sellerContactInfo;
         }
 
         public VatInvoiceScanQueryResponseBodyModuleItems setSellerName(String sellerName) {
@@ -258,6 +514,14 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             return this.sellerTaxNo;
         }
 
+        public VatInvoiceScanQueryResponseBodyModuleItems setSmartCheckCode(String smartCheckCode) {
+            this.smartCheckCode = smartCheckCode;
+            return this;
+        }
+        public String getSmartCheckCode() {
+            return this.smartCheckCode;
+        }
+
         public VatInvoiceScanQueryResponseBodyModuleItems setTaxAmount(String taxAmount) {
             this.taxAmount = taxAmount;
             return this;
@@ -272,6 +536,14 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         }
         public String getTaxRate() {
             return this.taxRate;
+        }
+
+        public VatInvoiceScanQueryResponseBodyModuleItems setTotalAmountInWords(String totalAmountInWords) {
+            this.totalAmountInWords = totalAmountInWords;
+            return this;
+        }
+        public String getTotalAmountInWords() {
+            return this.totalAmountInWords;
         }
 
     }

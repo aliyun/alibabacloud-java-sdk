@@ -1744,6 +1744,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.costCenterSaveWithOptions(request, headers, runtime);
     }
 
+    public CreateSubCorpResponse createSubCorpWithOptions(CreateSubCorpRequest request, CreateSubCorpHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.outerCorpId)) {
+            body.put("outer_corp_id", request.outerCorpId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outerCorpName)) {
+            body.put("outer_corp_name", request.outerCorpName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("user_id", request.userId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSubCorp"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/sub_corps/v1/corps"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSubCorpResponse());
+    }
+
+    public CreateSubCorpResponse createSubCorp(CreateSubCorpRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        CreateSubCorpHeaders headers = new CreateSubCorpHeaders();
+        return this.createSubCorpWithOptions(request, headers, runtime);
+    }
+
     public DeleteInvoiceEntityResponse deleteInvoiceEntityWithOptions(DeleteInvoiceEntityRequest tmpReq, DeleteInvoiceEntityHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         DeleteInvoiceEntityShrinkRequest request = new DeleteInvoiceEntityShrinkRequest();
@@ -3082,6 +3130,142 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         FlightSearchListHeaders headers = new FlightSearchListHeaders();
         return this.flightSearchListWithOptions(request, headers, runtime);
+    }
+
+    public GroupDepartSaveResponse groupDepartSaveWithOptions(GroupDepartSaveRequest tmpReq, GroupDepartSaveHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GroupDepartSaveShrinkRequest request = new GroupDepartSaveShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.subCorpIdList)) {
+            request.subCorpIdListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.subCorpIdList, "sub_corp_id_list", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deptName)) {
+            body.put("dept_name", request.deptName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.managerIds)) {
+            body.put("manager_ids", request.managerIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outerDeptId)) {
+            body.put("outer_dept_id", request.outerDeptId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outerDeptPid)) {
+            body.put("outer_dept_pid", request.outerDeptPid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subCorpIdListShrink)) {
+            body.put("sub_corp_id_list", request.subCorpIdListShrink);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GroupDepartSave"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/sub_corps/v1/departs"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GroupDepartSaveResponse());
+    }
+
+    public GroupDepartSaveResponse groupDepartSave(GroupDepartSaveRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GroupDepartSaveHeaders headers = new GroupDepartSaveHeaders();
+        return this.groupDepartSaveWithOptions(request, headers, runtime);
+    }
+
+    public GroupUserSaveResponse groupUserSaveWithOptions(GroupUserSaveRequest tmpReq, GroupUserSaveHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GroupUserSaveShrinkRequest request = new GroupUserSaveShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.subCorpIdList)) {
+            request.subCorpIdListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.subCorpIdList, "sub_corp_id_list", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobNo)) {
+            body.put("job_no", request.jobNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.leaveStatus)) {
+            body.put("leave_status", request.leaveStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phone)) {
+            body.put("phone", request.phone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.realNameEn)) {
+            body.put("real_name_en", request.realNameEn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subCorpIdListShrink)) {
+            body.put("sub_corp_id_list", request.subCorpIdListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("user_id", request.userId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            body.put("user_name", request.userName);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GroupUserSave"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/sub_corps/v1/users"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GroupUserSaveResponse());
+    }
+
+    public GroupUserSaveResponse groupUserSave(GroupUserSaveRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GroupUserSaveHeaders headers = new GroupUserSaveHeaders();
+        return this.groupUserSaveWithOptions(request, headers, runtime);
     }
 
     public HotelBillSettlementQueryResponse hotelBillSettlementQueryWithOptions(HotelBillSettlementQueryRequest request, HotelBillSettlementQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {

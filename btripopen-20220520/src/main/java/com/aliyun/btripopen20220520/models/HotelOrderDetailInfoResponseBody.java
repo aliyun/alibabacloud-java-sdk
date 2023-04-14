@@ -868,9 +868,6 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         @NameInMap("check_out")
         public String checkOut;
 
-        @NameInMap("code")
-        public String code;
-
         @NameInMap("confirm_order_time")
         public String confirmOrderTime;
 
@@ -882,9 +879,6 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
 
         @NameInMap("create_order_time")
         public String createOrderTime;
-
-        @NameInMap("desc")
-        public String desc;
 
         @NameInMap("early_arrival_time")
         public String earlyArrivalTime;
@@ -1030,14 +1024,6 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             return this.checkOut;
         }
 
-        public HotelOrderDetailInfoResponseBodyModule setCode(String code) {
-            this.code = code;
-            return this;
-        }
-        public String getCode() {
-            return this.code;
-        }
-
         public HotelOrderDetailInfoResponseBodyModule setConfirmOrderTime(String confirmOrderTime) {
             this.confirmOrderTime = confirmOrderTime;
             return this;
@@ -1068,14 +1054,6 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         }
         public String getCreateOrderTime() {
             return this.createOrderTime;
-        }
-
-        public HotelOrderDetailInfoResponseBodyModule setDesc(String desc) {
-            this.desc = desc;
-            return this;
-        }
-        public String getDesc() {
-            return this.desc;
         }
 
         public HotelOrderDetailInfoResponseBodyModule setEarlyArrivalTime(String earlyArrivalTime) {

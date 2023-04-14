@@ -81,7 +81,150 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         return this.traceId;
     }
 
+    public static class FlightItineraryScanQueryResponseBodyModuleItemsFlights extends TeaModel {
+        @NameInMap("arrival_station")
+        public String arrivalStation;
+
+        @NameInMap("cabin_class")
+        public String cabinClass;
+
+        @NameInMap("carrier")
+        public String carrier;
+
+        @NameInMap("departure_station")
+        public String departureStation;
+
+        @NameInMap("flight_date")
+        public String flightDate;
+
+        @NameInMap("flight_number")
+        public String flightNumber;
+
+        @NameInMap("flight_time")
+        public String flightTime;
+
+        @NameInMap("free_baggage_allowance")
+        public String freeBaggageAllowance;
+
+        @NameInMap("index")
+        public String index;
+
+        @NameInMap("seat_class")
+        public String seatClass;
+
+        @NameInMap("valid_from_date")
+        public String validFromDate;
+
+        @NameInMap("valid_to_date")
+        public String validToDate;
+
+        public static FlightItineraryScanQueryResponseBodyModuleItemsFlights build(java.util.Map<String, ?> map) throws Exception {
+            FlightItineraryScanQueryResponseBodyModuleItemsFlights self = new FlightItineraryScanQueryResponseBodyModuleItemsFlights();
+            return TeaModel.build(map, self);
+        }
+
+        public FlightItineraryScanQueryResponseBodyModuleItemsFlights setArrivalStation(String arrivalStation) {
+            this.arrivalStation = arrivalStation;
+            return this;
+        }
+        public String getArrivalStation() {
+            return this.arrivalStation;
+        }
+
+        public FlightItineraryScanQueryResponseBodyModuleItemsFlights setCabinClass(String cabinClass) {
+            this.cabinClass = cabinClass;
+            return this;
+        }
+        public String getCabinClass() {
+            return this.cabinClass;
+        }
+
+        public FlightItineraryScanQueryResponseBodyModuleItemsFlights setCarrier(String carrier) {
+            this.carrier = carrier;
+            return this;
+        }
+        public String getCarrier() {
+            return this.carrier;
+        }
+
+        public FlightItineraryScanQueryResponseBodyModuleItemsFlights setDepartureStation(String departureStation) {
+            this.departureStation = departureStation;
+            return this;
+        }
+        public String getDepartureStation() {
+            return this.departureStation;
+        }
+
+        public FlightItineraryScanQueryResponseBodyModuleItemsFlights setFlightDate(String flightDate) {
+            this.flightDate = flightDate;
+            return this;
+        }
+        public String getFlightDate() {
+            return this.flightDate;
+        }
+
+        public FlightItineraryScanQueryResponseBodyModuleItemsFlights setFlightNumber(String flightNumber) {
+            this.flightNumber = flightNumber;
+            return this;
+        }
+        public String getFlightNumber() {
+            return this.flightNumber;
+        }
+
+        public FlightItineraryScanQueryResponseBodyModuleItemsFlights setFlightTime(String flightTime) {
+            this.flightTime = flightTime;
+            return this;
+        }
+        public String getFlightTime() {
+            return this.flightTime;
+        }
+
+        public FlightItineraryScanQueryResponseBodyModuleItemsFlights setFreeBaggageAllowance(String freeBaggageAllowance) {
+            this.freeBaggageAllowance = freeBaggageAllowance;
+            return this;
+        }
+        public String getFreeBaggageAllowance() {
+            return this.freeBaggageAllowance;
+        }
+
+        public FlightItineraryScanQueryResponseBodyModuleItemsFlights setIndex(String index) {
+            this.index = index;
+            return this;
+        }
+        public String getIndex() {
+            return this.index;
+        }
+
+        public FlightItineraryScanQueryResponseBodyModuleItemsFlights setSeatClass(String seatClass) {
+            this.seatClass = seatClass;
+            return this;
+        }
+        public String getSeatClass() {
+            return this.seatClass;
+        }
+
+        public FlightItineraryScanQueryResponseBodyModuleItemsFlights setValidFromDate(String validFromDate) {
+            this.validFromDate = validFromDate;
+            return this;
+        }
+        public String getValidFromDate() {
+            return this.validFromDate;
+        }
+
+        public FlightItineraryScanQueryResponseBodyModuleItemsFlights setValidToDate(String validToDate) {
+            this.validToDate = validToDate;
+            return this;
+        }
+        public String getValidToDate() {
+            return this.validToDate;
+        }
+
+    }
+
     public static class FlightItineraryScanQueryResponseBodyModuleItems extends TeaModel {
+        @NameInMap("agent_code")
+        public String agentCode;
+
         @NameInMap("bill_date")
         public String billDate;
 
@@ -94,14 +237,26 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         @NameInMap("department")
         public String department;
 
+        @NameInMap("flights")
+        public java.util.List<FlightItineraryScanQueryResponseBodyModuleItemsFlights> flights;
+
         @NameInMap("fuel_surcharge")
         public String fuelSurcharge;
+
+        @NameInMap("id")
+        public String id;
 
         @NameInMap("insurance")
         public String insurance;
 
         @NameInMap("invoice_title")
         public String invoiceTitle;
+
+        @NameInMap("issue_company")
+        public String issueCompany;
+
+        @NameInMap("issue_date")
+        public String issueDate;
 
         @NameInMap("itinerary_num")
         public String itineraryNum;
@@ -118,6 +273,9 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         @NameInMap("project")
         public String project;
 
+        @NameInMap("prompt_message")
+        public String promptMessage;
+
         @NameInMap("tax_amount")
         public String taxAmount;
 
@@ -133,9 +291,20 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         @NameInMap("total_price")
         public String totalPrice;
 
+        @NameInMap("validation_code")
+        public String validationCode;
+
         public static FlightItineraryScanQueryResponseBodyModuleItems build(java.util.Map<String, ?> map) throws Exception {
             FlightItineraryScanQueryResponseBodyModuleItems self = new FlightItineraryScanQueryResponseBodyModuleItems();
             return TeaModel.build(map, self);
+        }
+
+        public FlightItineraryScanQueryResponseBodyModuleItems setAgentCode(String agentCode) {
+            this.agentCode = agentCode;
+            return this;
+        }
+        public String getAgentCode() {
+            return this.agentCode;
         }
 
         public FlightItineraryScanQueryResponseBodyModuleItems setBillDate(String billDate) {
@@ -170,12 +339,28 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             return this.department;
         }
 
+        public FlightItineraryScanQueryResponseBodyModuleItems setFlights(java.util.List<FlightItineraryScanQueryResponseBodyModuleItemsFlights> flights) {
+            this.flights = flights;
+            return this;
+        }
+        public java.util.List<FlightItineraryScanQueryResponseBodyModuleItemsFlights> getFlights() {
+            return this.flights;
+        }
+
         public FlightItineraryScanQueryResponseBodyModuleItems setFuelSurcharge(String fuelSurcharge) {
             this.fuelSurcharge = fuelSurcharge;
             return this;
         }
         public String getFuelSurcharge() {
             return this.fuelSurcharge;
+        }
+
+        public FlightItineraryScanQueryResponseBodyModuleItems setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
         public FlightItineraryScanQueryResponseBodyModuleItems setInsurance(String insurance) {
@@ -192,6 +377,22 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         }
         public String getInvoiceTitle() {
             return this.invoiceTitle;
+        }
+
+        public FlightItineraryScanQueryResponseBodyModuleItems setIssueCompany(String issueCompany) {
+            this.issueCompany = issueCompany;
+            return this;
+        }
+        public String getIssueCompany() {
+            return this.issueCompany;
+        }
+
+        public FlightItineraryScanQueryResponseBodyModuleItems setIssueDate(String issueDate) {
+            this.issueDate = issueDate;
+            return this;
+        }
+        public String getIssueDate() {
+            return this.issueDate;
         }
 
         public FlightItineraryScanQueryResponseBodyModuleItems setItineraryNum(String itineraryNum) {
@@ -234,6 +435,14 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             return this.project;
         }
 
+        public FlightItineraryScanQueryResponseBodyModuleItems setPromptMessage(String promptMessage) {
+            this.promptMessage = promptMessage;
+            return this;
+        }
+        public String getPromptMessage() {
+            return this.promptMessage;
+        }
+
         public FlightItineraryScanQueryResponseBodyModuleItems setTaxAmount(String taxAmount) {
             this.taxAmount = taxAmount;
             return this;
@@ -272,6 +481,14 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         }
         public String getTotalPrice() {
             return this.totalPrice;
+        }
+
+        public FlightItineraryScanQueryResponseBodyModuleItems setValidationCode(String validationCode) {
+            this.validationCode = validationCode;
+            return this;
+        }
+        public String getValidationCode() {
+            return this.validationCode;
         }
 
     }
