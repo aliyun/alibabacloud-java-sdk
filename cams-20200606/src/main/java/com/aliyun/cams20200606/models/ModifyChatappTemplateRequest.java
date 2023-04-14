@@ -20,7 +20,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The ID of the WhatsApp Business account under the ISV account.</p>
+     * <p>The ID of the WhatsApp Business account under the independent software vendor (ISV) account.</p>
      */
     @NameInMap("CustWabaId")
     @Deprecated
@@ -33,7 +33,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
     public java.util.Map<String, String> example;
 
     /**
-     * <p>The ISV verification code, which is used to verify whether the user is authorized by ISV.</p>
+     * <p>The ISV verification code, which is used to verify whether the user is authorized by the ISV account.</p>
      */
     @NameInMap("IsvCode")
     public String isvCode;
@@ -138,7 +138,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         public String phoneNumber;
 
         /**
-         * <p>The text of the message that is sent.</p>
+         * <p>The text of the message to be sent.</p>
          */
         @NameInMap("Text")
         public String text;
@@ -146,9 +146,9 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         /**
          * <p>The type of the button.</p>
          * <br>
-         * <p>*   **PHONE_NUMBER**: the phone call button</p>
-         * <p>*   **URL**: the URL button</p>
-         * <p>*   **QUICK_REPLY**: the quick reply button</p>
+         * <p>*   **PHONE_NUMBER**: a phone number button</p>
+         * <p>*   **URL**: a URL button</p>
+         * <p>*   **QUICK_REPLY**: a quick reply button</p>
          */
         @NameInMap("Type")
         public String type;
@@ -162,8 +162,8 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         /**
          * <p>The type of the URL. Valid values:</p>
          * <br>
-         * <p>*   **static**: the static URL</p>
-         * <p>*   **dynamic**: the dynamic URL</p>
+         * <p>*   **static**: a static URL</p>
+         * <p>*   **dynamic**: a dynamic URL</p>
          */
         @NameInMap("UrlType")
         public String urlType;
@@ -217,7 +217,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
 
     public static class ModifyChatappTemplateRequestComponents extends TeaModel {
         /**
-         * <p>The list of buttons, which applies only to the **BUTTONS** component.</p>
+         * <p>The buttons. This parameter is applicable only to components of the **BUTTONS** type.</p>
          */
         @NameInMap("Buttons")
         public java.util.List<ModifyChatappTemplateRequestComponentsButtons> buttons;
@@ -225,7 +225,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         /**
          * <p>The description.</p>
          * <br>
-         * <p>>  When the Type parameter is set to **HEADER** and the Format parameter is set to **IMAGE/DOCUMENT/VIDEO**, you can specify the description.</p>
+         * <p>> When the Type parameter is set to **HEADER** and the Format parameter is set to **IMAGE, DOCUMENT, or VIDEO**, you can specify a description.</p>
          */
         @NameInMap("Caption")
         public String caption;
@@ -234,9 +234,9 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         public Integer duration;
 
         /**
-         * <p>The name of the file</p>
+         * <p>The name of the file.</p>
          * <br>
-         * <p>> : When the Type parameter is set to **HEADER** and the Format parameter is set to **DOCUMENT**, you can specify a name of the file.</p>
+         * <p>> When the Type parameter is set to **HEADER** and the Format parameter is set to **DOCUMENT**, you can specify a name for the file.</p>
          */
         @NameInMap("FileName")
         public String fileName;
@@ -256,7 +256,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         public String format;
 
         /**
-         * <p>The text of the message that is sent.</p>
+         * <p>The text of the message to be sent.</p>
          */
         @NameInMap("Text")
         public String text;
@@ -265,7 +265,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         public String thumbUrl;
 
         /**
-         * <p>The type of the component.</p>
+         * <p>The type of the component. Valid values:</p>
          * <br>
          * <p>*   **BODY**</p>
          * <p>*   **HEADER**</p>

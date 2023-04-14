@@ -70,7 +70,7 @@ public class CreateChatappMigrationInitiateResponseBody extends TeaModel {
 
     public static class CreateChatappMigrationInitiateResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the phone number.</p>
+         * <p>The ID of the number.</p>
          */
         @NameInMap("Id")
         public String id;

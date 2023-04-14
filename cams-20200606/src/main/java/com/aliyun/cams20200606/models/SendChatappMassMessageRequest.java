@@ -17,7 +17,7 @@ public class SendChatappMassMessageRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The ID of the WhatApp Business account of the ISV account.</p>
+     * <p>The ID of the WhatsApp Business account under the ISV account.</p>
      */
     @NameInMap("CustWabaId")
     @Deprecated
@@ -29,6 +29,9 @@ public class SendChatappMassMessageRequest extends TeaModel {
     @NameInMap("FallBackContent")
     public String fallBackContent;
 
+    @NameInMap("FallBackDuration")
+    public Integer fallBackDuration;
+
     /**
      * <p>The ID of the fallback strategy.</p>
      */
@@ -36,7 +39,7 @@ public class SendChatappMassMessageRequest extends TeaModel {
     public String fallBackId;
 
     /**
-     * <p>The message sender.</p>
+     * <p>The phone number of the message sender.</p>
      */
     @NameInMap("From")
     public String from;
@@ -48,7 +51,7 @@ public class SendChatappMassMessageRequest extends TeaModel {
     public String isvCode;
 
     /**
-     * <p>Viber消息类型，取值：pormotion或transation。</p>
+     * <p>The message type when the ChannelType parameter is set to viber. Valid values: promotion and transaction.</p>
      */
     @NameInMap("Label")
     public String label;
@@ -66,7 +69,7 @@ public class SendChatappMassMessageRequest extends TeaModel {
     public java.util.List<SendChatappMassMessageRequestSenderList> senderList;
 
     /**
-     * <p>Viber消息发送时tag信息。</p>
+     * <p>The tag information when the ChannelType parameter is set to viber.</p>
      */
     @NameInMap("Tag")
     public String tag;
@@ -78,13 +81,13 @@ public class SendChatappMassMessageRequest extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The code of the message template.</p>
+     * <p>The encoding of the message template.</p>
      */
     @NameInMap("TemplateCode")
     public String templateCode;
 
     /**
-     * <p>Viber消息发送超时时间，单位：秒，取值范围 30~1209600。</p>
+     * <p>The timeout period for sending messages when the ChannelType parameter is set to viber. Valid values: 30 to 1209600. Unit: seconds.</p>
      */
     @NameInMap("Ttl")
     public Long ttl;
@@ -124,6 +127,14 @@ public class SendChatappMassMessageRequest extends TeaModel {
     }
     public String getFallBackContent() {
         return this.fallBackContent;
+    }
+
+    public SendChatappMassMessageRequest setFallBackDuration(Integer fallBackDuration) {
+        this.fallBackDuration = fallBackDuration;
+        return this;
+    }
+    public Integer getFallBackDuration() {
+        return this.fallBackDuration;
     }
 
     public SendChatappMassMessageRequest setFallBackId(String fallBackId) {
@@ -208,7 +219,7 @@ public class SendChatappMassMessageRequest extends TeaModel {
 
     public static class SendChatappMassMessageRequestSenderList extends TeaModel {
         /**
-         * <p>The payload.</p>
+         * <p>payload</p>
          */
         @NameInMap("Payload")
         public java.util.List<String> payload;

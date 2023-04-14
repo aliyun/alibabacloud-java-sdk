@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>cams20200606</artifactId>
-  <version>1.0.19</version>
+  <version>1.0.20</version>
   <packaging>jar</packaging>
   <name>cams20200606</name>
   <description>Alibaba Cloud cams (20200606) SDK for Java
@@ -51,7 +51,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.2.0</version>
+      <version>0.2.1</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

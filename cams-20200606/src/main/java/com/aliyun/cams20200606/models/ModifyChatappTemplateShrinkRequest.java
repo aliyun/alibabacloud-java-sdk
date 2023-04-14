@@ -20,7 +20,7 @@ public class ModifyChatappTemplateShrinkRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The ID of the WhatsApp Business account under the ISV account.</p>
+     * <p>The ID of the WhatsApp Business account under the independent software vendor (ISV) account.</p>
      */
     @NameInMap("CustWabaId")
     @Deprecated
@@ -33,7 +33,7 @@ public class ModifyChatappTemplateShrinkRequest extends TeaModel {
     public String exampleShrink;
 
     /**
-     * <p>The ISV verification code, which is used to verify whether the user is authorized by ISV.</p>
+     * <p>The ISV verification code, which is used to verify whether the user is authorized by the ISV account.</p>
      */
     @NameInMap("IsvCode")
     public String isvCode;

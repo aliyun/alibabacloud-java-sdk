@@ -14,7 +14,7 @@ public class QueryWabaBusinessInfoResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The business information about the WhatsApp Business account.</p>
+     * <p>The business information about the WABA.</p>
      */
     @NameInMap("Data")
     public QueryWabaBusinessInfoResponseBodyData data;

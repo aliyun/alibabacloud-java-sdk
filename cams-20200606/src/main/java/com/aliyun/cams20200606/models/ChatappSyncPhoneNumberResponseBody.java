@@ -20,7 +20,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The list of phone numbers.</p>
+     * <p>Details of the phone numbers.</p>
      */
     @NameInMap("PhoneNumbers")
     public java.util.List<ChatappSyncPhoneNumberResponseBodyPhoneNumbers> phoneNumbers;
@@ -76,19 +76,19 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
         public String codeVerificationStatus;
 
         /**
-         * <p>The maximum number of messages that can be sent to users by using the phone number.</p>
+         * <p>The number of phone numbers to which messages can be sent in a day.</p>
          */
         @NameInMap("MessagingLimitTier")
         public String messagingLimitTier;
 
         /**
-         * <p>The review status of the business name.</p>
+         * <p>The review status of the business display name.</p>
          */
         @NameInMap("NameStatus")
         public String nameStatus;
 
         /**
-         * <p>The review status of the new business name.</p>
+         * <p>The review status of the new business display name.</p>
          */
         @NameInMap("NewNameStatus")
         public String newNameStatus;
@@ -136,7 +136,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
         public String upQueue;
 
         /**
-         * <p>The name of the business to which the phone number belongs.</p>
+         * <p>The display name of the business to which the phone number belongs.</p>
          */
         @NameInMap("VerifiedName")
         public String verifiedName;

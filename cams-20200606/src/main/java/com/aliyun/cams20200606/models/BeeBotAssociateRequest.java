@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BeeBotAssociateRequest extends TeaModel {
     /**
-     * <p>The ID of chatbot instance.</p>
+     * <p>The ID of a bot instance.</p>
      */
     @NameInMap("ChatBotInstanceId")
     public String chatBotInstanceId;
@@ -14,7 +14,7 @@ public class BeeBotAssociateRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>ISV verification code, which is used to verify whether the sub-account is authorized by ISV.</p>
+     * <p>The ISV verification code, which is used to verify whether the user is authorized by ISV.</p>
      */
     @NameInMap("IsvCode")
     public String isvCode;
@@ -26,13 +26,13 @@ public class BeeBotAssociateRequest extends TeaModel {
     public java.util.List<String> perspective;
 
     /**
-     * <p>The number of recommended questions, which ranges from 1 to 10.</p>
+     * <p>The number of recommended questions. The value ranges from 1 to 10.</p>
      */
     @NameInMap("RecommendNum")
     public Integer recommendNum;
 
     /**
-     * <p>The ID of the session, which identifies the session and context information of the visitor.</p>
+     * <p>The ID of the session, which is used to identify the session and store context information in the session.</p>
      */
     @NameInMap("SessionId")
     public String sessionId;

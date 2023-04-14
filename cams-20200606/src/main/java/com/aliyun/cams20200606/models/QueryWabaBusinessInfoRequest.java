@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class QueryWabaBusinessInfoRequest extends TeaModel {
     /**
-     * <p>The space ID of the user under the ISV account.</p>
+     * <p>The space ID of the user under the independent software vendor (ISV) account.</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
-     * <p>wabaId</p>
+     * <p>The ID of the WABA.</p>
      */
     @NameInMap("WabaId")
     public String wabaId;
