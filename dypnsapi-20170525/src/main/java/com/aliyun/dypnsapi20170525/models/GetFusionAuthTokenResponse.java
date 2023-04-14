@@ -3,7 +3,7 @@ package com.aliyun.dypnsapi20170525.models;
 
 import com.aliyun.tea.*;
 
-public class GetCertifyResultResponse extends TeaModel {
+public class GetFusionAuthTokenResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class GetCertifyResultResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetCertifyResultResponseBody body;
+    public GetFusionAuthTokenResponseBody body;
 
-    public static GetCertifyResultResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetCertifyResultResponse self = new GetCertifyResultResponse();
+    public static GetFusionAuthTokenResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetFusionAuthTokenResponse self = new GetFusionAuthTokenResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetCertifyResultResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetFusionAuthTokenResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class GetCertifyResultResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetCertifyResultResponse setStatusCode(Integer statusCode) {
+    public GetFusionAuthTokenResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class GetCertifyResultResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetCertifyResultResponse setBody(GetCertifyResultResponseBody body) {
+    public GetFusionAuthTokenResponse setBody(GetFusionAuthTokenResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetCertifyResultResponseBody getBody() {
+    public GetFusionAuthTokenResponseBody getBody() {
         return this.body;
     }
 

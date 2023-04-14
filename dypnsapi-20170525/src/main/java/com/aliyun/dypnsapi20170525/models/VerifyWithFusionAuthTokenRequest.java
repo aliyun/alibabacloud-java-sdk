@@ -3,7 +3,7 @@ package com.aliyun.dypnsapi20170525.models;
 
 import com.aliyun.tea.*;
 
-public class GetCertifyResultRequest extends TeaModel {
+public class VerifyWithFusionAuthTokenRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,15 +13,15 @@ public class GetCertifyResultRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("Token")
-    public String token;
+    @NameInMap("VerifyToken")
+    public String verifyToken;
 
-    public static GetCertifyResultRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetCertifyResultRequest self = new GetCertifyResultRequest();
+    public static VerifyWithFusionAuthTokenRequest build(java.util.Map<String, ?> map) throws Exception {
+        VerifyWithFusionAuthTokenRequest self = new VerifyWithFusionAuthTokenRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetCertifyResultRequest setOwnerId(Long ownerId) {
+    public VerifyWithFusionAuthTokenRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -29,7 +29,7 @@ public class GetCertifyResultRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public GetCertifyResultRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public VerifyWithFusionAuthTokenRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -37,7 +37,7 @@ public class GetCertifyResultRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public GetCertifyResultRequest setResourceOwnerId(Long resourceOwnerId) {
+    public VerifyWithFusionAuthTokenRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -45,12 +45,12 @@ public class GetCertifyResultRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public GetCertifyResultRequest setToken(String token) {
-        this.token = token;
+    public VerifyWithFusionAuthTokenRequest setVerifyToken(String verifyToken) {
+        this.verifyToken = verifyToken;
         return this;
     }
-    public String getToken() {
-        return this.token;
+    public String getVerifyToken() {
+        return this.verifyToken;
     }
 
 }
