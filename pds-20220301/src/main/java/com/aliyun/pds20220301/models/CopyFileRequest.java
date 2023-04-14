@@ -13,6 +13,12 @@ public class CopyFileRequest extends TeaModel {
     @NameInMap("file_id")
     public String fileId;
 
+    @NameInMap("share_id")
+    public String shareId;
+
+    @NameInMap("to_drive_id")
+    public String toDriveId;
+
     @NameInMap("to_parent_file_id")
     public String toParentFileId;
 
@@ -43,6 +49,22 @@ public class CopyFileRequest extends TeaModel {
     }
     public String getFileId() {
         return this.fileId;
+    }
+
+    public CopyFileRequest setShareId(String shareId) {
+        this.shareId = shareId;
+        return this;
+    }
+    public String getShareId() {
+        return this.shareId;
+    }
+
+    public CopyFileRequest setToDriveId(String toDriveId) {
+        this.toDriveId = toDriveId;
+        return this;
+    }
+    public String getToDriveId() {
+        return this.toDriveId;
     }
 
     public CopyFileRequest setToParentFileId(String toParentFileId) {

@@ -13,6 +13,9 @@ public class UpdateDriveRequest extends TeaModel {
     @NameInMap("drive_name")
     public String driveName;
 
+    @NameInMap("owner")
+    public String owner;
+
     @NameInMap("status")
     public String status;
 
@@ -46,6 +49,14 @@ public class UpdateDriveRequest extends TeaModel {
     }
     public String getDriveName() {
         return this.driveName;
+    }
+
+    public UpdateDriveRequest setOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    public String getOwner() {
+        return this.owner;
     }
 
     public UpdateDriveRequest setStatus(String status) {

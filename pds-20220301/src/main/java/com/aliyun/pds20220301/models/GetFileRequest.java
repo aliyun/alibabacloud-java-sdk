@@ -13,6 +13,9 @@ public class GetFileRequest extends TeaModel {
     @NameInMap("file_id")
     public String fileId;
 
+    @NameInMap("share_id")
+    public String shareId;
+
     @NameInMap("url_expire_sec")
     public Integer urlExpireSec;
 
@@ -43,6 +46,14 @@ public class GetFileRequest extends TeaModel {
     }
     public String getFileId() {
         return this.fileId;
+    }
+
+    public GetFileRequest setShareId(String shareId) {
+        this.shareId = shareId;
+        return this;
+    }
+    public String getShareId() {
+        return this.shareId;
     }
 
     public GetFileRequest setUrlExpireSec(Integer urlExpireSec) {

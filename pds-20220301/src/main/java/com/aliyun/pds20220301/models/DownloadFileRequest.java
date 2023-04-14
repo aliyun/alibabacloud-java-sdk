@@ -16,6 +16,9 @@ public class DownloadFileRequest extends TeaModel {
     @NameInMap("office_thumbnail_process")
     public String officeThumbnailProcess;
 
+    @NameInMap("share_id")
+    public String shareId;
+
     @NameInMap("video_thumbnail_process")
     public String videoThumbnailProcess;
 
@@ -54,6 +57,14 @@ public class DownloadFileRequest extends TeaModel {
     }
     public String getOfficeThumbnailProcess() {
         return this.officeThumbnailProcess;
+    }
+
+    public DownloadFileRequest setShareId(String shareId) {
+        this.shareId = shareId;
+        return this;
+    }
+    public String getShareId() {
+        return this.shareId;
     }
 
     public DownloadFileRequest setVideoThumbnailProcess(String videoThumbnailProcess) {

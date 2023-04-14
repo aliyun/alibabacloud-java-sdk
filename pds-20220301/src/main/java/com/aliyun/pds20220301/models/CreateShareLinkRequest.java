@@ -34,6 +34,9 @@ public class CreateShareLinkRequest extends TeaModel {
     @NameInMap("save_limit")
     public Long saveLimit;
 
+    @NameInMap("share_all_files")
+    public Boolean shareAllFiles;
+
     @NameInMap("share_name")
     public String shareName;
 
@@ -126,6 +129,14 @@ public class CreateShareLinkRequest extends TeaModel {
     }
     public Long getSaveLimit() {
         return this.saveLimit;
+    }
+
+    public CreateShareLinkRequest setShareAllFiles(Boolean shareAllFiles) {
+        this.shareAllFiles = shareAllFiles;
+        return this;
+    }
+    public Boolean getShareAllFiles() {
+        return this.shareAllFiles;
     }
 
     public CreateShareLinkRequest setShareName(String shareName) {
