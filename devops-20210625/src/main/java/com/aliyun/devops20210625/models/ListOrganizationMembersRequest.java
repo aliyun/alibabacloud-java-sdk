@@ -4,6 +4,9 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListOrganizationMembersRequest extends TeaModel {
+    @NameInMap("containsExternInfo")
+    public Boolean containsExternInfo;
+
     @NameInMap("externUid")
     public String externUid;
 
@@ -31,6 +34,14 @@ public class ListOrganizationMembersRequest extends TeaModel {
     public static ListOrganizationMembersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListOrganizationMembersRequest self = new ListOrganizationMembersRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListOrganizationMembersRequest setContainsExternInfo(Boolean containsExternInfo) {
+        this.containsExternInfo = containsExternInfo;
+        return this;
+    }
+    public Boolean getContainsExternInfo() {
+        return this.containsExternInfo;
     }
 
     public ListOrganizationMembersRequest setExternUid(String externUid) {
