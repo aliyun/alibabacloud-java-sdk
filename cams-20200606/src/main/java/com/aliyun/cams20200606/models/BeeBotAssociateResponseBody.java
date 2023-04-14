@@ -11,13 +11,13 @@ public class BeeBotAssociateResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public BeeBotAssociateResponseBodyData data;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message returned.</p>
      */
     @NameInMap("Message")
     public String message;

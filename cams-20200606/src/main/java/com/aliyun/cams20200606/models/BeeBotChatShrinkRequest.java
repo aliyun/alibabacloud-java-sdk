@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BeeBotChatShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of chatbot instance.</p>
+     * <p>The ID of the bot instance.</p>
      */
     @NameInMap("ChatBotInstanceId")
     public String chatBotInstanceId;
@@ -14,13 +14,13 @@ public class BeeBotChatShrinkRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The name of the intent in the dialog flow. When this parameter is specified, the bot will conduct a Q\&A according to the intent.</p>
+     * <p>The name of the intent in the dialog flow. When this parameter is specified, the bot conducts a Q\&A based on the intent.</p>
      */
     @NameInMap("IntentName")
     public String intentName;
 
     /**
-     * <p>ISV verification code, which is used to verify whether the sub-account is authorized by ISV.</p>
+     * <p>The ISV verification code, which is used to verify whether the user is authorized by the ISV account.</p>
      */
     @NameInMap("IsvCode")
     public String isvCode;
@@ -50,7 +50,7 @@ public class BeeBotChatShrinkRequest extends TeaModel {
     public String senderNick;
 
     /**
-     * <p>The ID of the session, which identifies the session and context information of the visitor.</p>
+     * <p>The ID of the session, which is used to identify the session and store context information of the session.</p>
      */
     @NameInMap("SessionId")
     public String sessionId;

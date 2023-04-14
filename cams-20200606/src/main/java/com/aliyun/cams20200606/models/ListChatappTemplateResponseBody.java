@@ -7,8 +7,8 @@ public class ListChatappTemplateResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
      * <br>
-     * <p>*   A code of OK indicates that the call is successful.</p>
-     * <p>*   Other codes indicate that the call fails. For more information, see [Error codes](~~196974~~).</p>
+     * <p>*   A value of OK indicates that the call is successful.</p>
+     * <p>*   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).</p>
      */
     @NameInMap("Code")
     public String code;
@@ -30,6 +30,12 @@ public class ListChatappTemplateResponseBody extends TeaModel {
      */
     @NameInMap("RequestId")
     public String requestId;
+
+    /**
+     * <p>总记录条数。</p>
+     */
+    @NameInMap("Total")
+    public Integer total;
 
     public static ListChatappTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListChatappTemplateResponseBody self = new ListChatappTemplateResponseBody();
@@ -68,6 +74,14 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public ListChatappTemplateResponseBody setTotal(Integer total) {
+        this.total = total;
+        return this;
+    }
+    public Integer getTotal() {
+        return this.total;
+    }
+
     public static class ListChatappTemplateResponseBodyListTemplate extends TeaModel {
         /**
          * <p>The review status of the message template. Valid values:</p>
@@ -83,23 +97,15 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         /**
          * <p>The category of the message template. Valid values:</p>
          * <br>
-         * <p>*   **ACCOUNT_UPDATE**: account update</p>
-         * <p>*   **PAYMENT_UPDATE**: payment update</p>
-         * <p>*   **PERSONAL_FINANCE\_UPDATE**: personal finance update</p>
-         * <p>*   **SHIPPING_UPDATE**: traffic update</p>
-         * <p>*   **RESERVATION_UPDATE**: reservation update</p>
-         * <p>*   **ISSUE_RESOLUTION**: issue resolution</p>
-         * <p>*   **APPOINTMENT_UPDATE**: appointment update</p>
-         * <p>*   **TRANSPORTATION_UPDATE**: logistics information update</p>
-         * <p>*   **TICKET_UPDATE**: ticket update</p>
-         * <p>*   **ALERT_UPDATE**: alert update</p>
-         * <p>*   **AUTO_REPLY**: auto reply</p>
+         * <p>*   **TRANSACTIONAL**: a transactional template</p>
+         * <p>*   **MARKETING**: a marketing template</p>
+         * <p>*   **OTP**: a one-time password template</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
-         * <p>The language that is used in the message template.</p>
+         * <p>The language that is used in the message template. For more information, see [Language codes](~~463420~~).</p>
          */
         @NameInMap("Language")
         public String language;
@@ -116,6 +122,9 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         @NameInMap("TemplateName")
         public String templateName;
 
+        /**
+         * <p>The type of the template. Valid values: WHATSAPP and VIBER.</p>
+         */
         @NameInMap("TemplateType")
         public String templateType;
 

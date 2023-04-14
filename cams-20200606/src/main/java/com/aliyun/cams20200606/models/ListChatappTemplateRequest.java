@@ -15,30 +15,33 @@ public class ListChatappTemplateRequest extends TeaModel {
     @NameInMap("AuditStatus")
     public String auditStatus;
 
+    /**
+     * <p>The space ID of the user under the ISV account.</p>
+     */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
-     * <p>The unique identifier of the WhatsApp account that you register.</p>
+     * <p>The ID of the WhatsApp account that you register.</p>
      */
     @NameInMap("CustWabaId")
     @Deprecated
     public String custWabaId;
 
     /**
-     * <p>Assigned by ISV for RAM user authentication and authorization.</p>
+     * <p>The independent software vendor (ISV) verification code, which is used to verify whether the user is authorized by the ISV account.</p>
      */
     @NameInMap("IsvCode")
     public String isvCode;
 
     /**
-     * <p>The language that is used in the message template.</p>
+     * <p>The language that is used in the message template. For more information, see [Language codes](~~463420~~).</p>
      */
     @NameInMap("Language")
     public String language;
 
     /**
-     * <p>The name of the message template.</p>
+     * <p>The name of the image template.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -49,6 +52,13 @@ public class ListChatappTemplateRequest extends TeaModel {
     @NameInMap("Page")
     public ListChatappTemplateRequestPage page;
 
+    /**
+     * <p>The type of the message template.</p>
+     * <br>
+     * <p>*   **WHATSAPP**</p>
+     * <p>*   **VIBER**</p>
+     * <p>*   LINE: the LINE message template. This type of message template will be released later.</p>
+     */
     @NameInMap("TemplateType")
     public String templateType;
 
@@ -123,7 +133,7 @@ public class ListChatappTemplateRequest extends TeaModel {
 
     public static class ListChatappTemplateRequestPage extends TeaModel {
         /**
-         * <p>The number of the page to return. Default value: 1.</p>
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
          */
         @NameInMap("Index")
         public Integer index;

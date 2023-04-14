@@ -70,13 +70,13 @@ public class GetPhoneNumberVerificationStatusResponseBody extends TeaModel {
 
     public static class GetPhoneNumberVerificationStatusResponseBodyData extends TeaModel {
         /**
-         * <p>The verification status of the phone number.</p>
+         * <p>The verification status.</p>
          */
         @NameInMap("CodeVerificationStatus")
         public String codeVerificationStatus;
 
         /**
-         * <p>The ID of the phone number.</p>
+         * <p>The ID of the number.</p>
          */
         @NameInMap("Id")
         public String id;

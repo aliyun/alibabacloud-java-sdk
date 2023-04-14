@@ -14,7 +14,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public QueryChatappBindWabaResponseBodyData data;
@@ -70,19 +70,19 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
 
     public static class QueryChatappBindWabaResponseBodyData extends TeaModel {
         /**
-         * <p>The audit status of the WhatApp Business account.</p>
+         * <p>The review status of the WhatsApp Business account.</p>
          */
         @NameInMap("AccountReviewStatus")
         public String accountReviewStatus;
 
         /**
-         * <p>Currency</p>
+         * <p>The currency.</p>
          */
         @NameInMap("Currency")
         public String currency;
 
         /**
-         * <p>WabaID</p>
+         * <p>The ID of the WhatsApp Business account.</p>
          */
         @NameInMap("Id")
         public String id;
@@ -94,7 +94,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         public String messageTemplateNamespace;
 
         /**
-         * <p>The name of the WhatApp Business account.</p>
+         * <p>The name of the WhatsApp Business account.</p>
          */
         @NameInMap("Name")
         public String name;

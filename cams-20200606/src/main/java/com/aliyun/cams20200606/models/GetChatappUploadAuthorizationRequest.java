@@ -4,6 +4,9 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetChatappUploadAuthorizationRequest extends TeaModel {
+    /**
+     * <p>The space ID of the user under the ISV account.</p>
+     */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 

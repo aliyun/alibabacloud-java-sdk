@@ -7,8 +7,8 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
      * <br>
-     * <p>*   A code of OK indicates that the call is successful.</p>
-     * <p>*   Other codes indicate that the call fails. For more information, see [Error codes](~~196974~~).</p>
+     * <p>*   A value of OK indicates that the call is successful.</p>
+     * <p>*   Other values indicate that the call fails. For more information, see [Error codes](https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes).</p>
      */
     @NameInMap("Code")
     public String code;

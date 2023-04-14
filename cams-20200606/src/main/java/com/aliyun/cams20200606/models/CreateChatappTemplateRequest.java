@@ -4,26 +4,33 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class CreateChatappTemplateRequest extends TeaModel {
+    @NameInMap("AllowCategoryChange")
+    public Boolean allowCategoryChange;
+
     /**
-     * <p>The category of the message template. Valid values:</p>
+     * <p>The category of the template when the TemplateType parameter is set to WHATSAPP. Valid values:</p>
      * <br>
-     * <p>*   **ACCOUNT_UPDATE**: account update</p>
-     * <p>*   **PAYMENT_UPDATE**: payment update</p>
-     * <p>*   **PERSONAL_FINANCE\_UPDATE**: personal finance update</p>
-     * <p>*   **SHIPPING_UPDATE**: traffic update</p>
-     * <p>*   **RESERVATION_UPDATE**: reservation update</p>
-     * <p>*   **ISSUE_RESOLUTION**: issue resolution</p>
-     * <p>*   **APPOINTMENT_UPDATE**: appointment update</p>
-     * <p>*   **TRANSPORTATION_UPDATE**: logistics information update</p>
-     * <p>*   **TICKET_UPDATE**: ticket update</p>
-     * <p>*   **ALERT_UPDATE**: alert update</p>
-     * <p>*   **AUTO_REPLY**: auto reply</p>
+     * <p>*   **TRANSACTIONAL**: a transactional template</p>
+     * <p>*   **MARKETING**: a marketing template</p>
+     * <p>*   **OTP**: a one-time password template</p>
+     * <br>
+     * <p>The category of the template when the TemplateType parameter is set to VIBER. Valid values:</p>
+     * <br>
+     * <p>*   **text**: a text message template</p>
+     * <p>*   **image**: an image message template</p>
+     * <p>*   **text_image_button**: a template that contains multiple media objects, including text, image, and button</p>
+     * <p>*   **text_button**: a template that contains the text and button media objects</p>
+     * <p>*   **document**: a document message template</p>
+     * <p>*   **video**: a video message template</p>
+     * <p>*   **text_video**: a template that contains the text and video media objects</p>
+     * <p>*   **text_video_button**: a template that contains multiple media objects, including text, video, and button</p>
+     * <p>*   **text_image**: a template that contains the text and image media objects</p>
      */
     @NameInMap("Category")
     public String category;
 
     /**
-     * <p>The components of the message template.</p>
+     * <p>The list of components of the message template.</p>
      */
     @NameInMap("Components")
     public java.util.List<CreateChatappTemplateRequestComponents> components;
@@ -32,7 +39,7 @@ public class CreateChatappTemplateRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The unique identifier of the WhatsApp account that you register.</p>
+     * <p>The ID of the WhatsApp account that you register.</p>
      */
     @NameInMap("CustWabaId")
     @Deprecated
@@ -45,13 +52,13 @@ public class CreateChatappTemplateRequest extends TeaModel {
     public java.util.Map<String, String> example;
 
     /**
-     * <p>Assigned by ISV for RAM user authentication and authorization.</p>
+     * <p>The ISV verification code, which is used to verify whether the user is authorized by the ISV account.</p>
      */
     @NameInMap("IsvCode")
     public String isvCode;
 
     /**
-     * <p>The language that is used in the message template.</p>
+     * <p>The language that is used in the message template. For more information, see [Language codes](~~463420~~).</p>
      */
     @NameInMap("Language")
     public String language;
@@ -63,11 +70,11 @@ public class CreateChatappTemplateRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The type of the message template. Valid values:</p>
+     * <p>The type of the message template.</p>
      * <br>
      * <p>*   **WHATSAPP**</p>
-     * <p>*   VIBER (under development)</p>
-     * <p>*   LINE (under development)</p>
+     * <p>*   **VIBER**</p>
+     * <p>*   LINE: the LINE message template. The LINE message template is under development.</p>
      */
     @NameInMap("TemplateType")
     public String templateType;
@@ -75,6 +82,14 @@ public class CreateChatappTemplateRequest extends TeaModel {
     public static CreateChatappTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateChatappTemplateRequest self = new CreateChatappTemplateRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateChatappTemplateRequest setAllowCategoryChange(Boolean allowCategoryChange) {
+        this.allowCategoryChange = allowCategoryChange;
+        return this;
+    }
+    public Boolean getAllowCategoryChange() {
+        return this.allowCategoryChange;
     }
 
     public CreateChatappTemplateRequest setCategory(String category) {
@@ -151,7 +166,7 @@ public class CreateChatappTemplateRequest extends TeaModel {
 
     public static class CreateChatappTemplateRequestComponentsButtons extends TeaModel {
         /**
-         * <p>The mobile phone number. This parameter is valid only if the Type parameter is set to **PHONE_NUMBER**.</p>
+         * <p>The phone number. This parameter is valid only if the Type parameter is set to **PHONE_NUMBER**.</p>
          */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
@@ -165,18 +180,23 @@ public class CreateChatappTemplateRequest extends TeaModel {
         /**
          * <p>The type of the button. Valid values:</p>
          * <br>
-         * <p>*   **PHONE_NUMBER**: a phone call button</p>
+         * <p>*   **PHONE_NUMBER**: a phone number button</p>
          * <p>*   **URL**: a URL button</p>
          * <p>*   **QUICK_REPLY**: a quick reply button</p>
          * <br>
-         * <p>> *   A quick reply button cannot coexist with a phone call button or a URL button in a message template.</p>
-         * <p>> *   You can add a combination of two URL buttons or a combination of a URL button and a phone call button to a message template.</p>
+         * <p>> </p>
+         * <br>
+         * <p>*   When the TemplateType parameter is set to WHATSAPP, if you have created a website link or a phone number link, you cannot create an quick reply button.</p>
+         * <br>
+         * <p>*   When the TemplateType parameter is set to WHATSAPP, you can add a combination of two URL buttons or a combination of a URL button and a phone number button to a message template.</p>
+         * <br>
+         * <p>*   When the TemplateType parameter is set to VIBER, you can add only one button and the button must be of the URL type.</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The URL to be accessed when you click the URL button.</p>
+         * <p>The URL to be accessed when users click the URL button.</p>
          */
         @NameInMap("Url")
         public String url;
@@ -239,7 +259,7 @@ public class CreateChatappTemplateRequest extends TeaModel {
 
     public static class CreateChatappTemplateRequestComponents extends TeaModel {
         /**
-         * <p>This parameter applies only to components of the **BUTTONS** type.</p>
+         * <p>The list of buttons, which applies only to the **BUTTONS** component.</p>
          */
         @NameInMap("Buttons")
         public java.util.List<CreateChatappTemplateRequestComponentsButtons> buttons;
@@ -250,6 +270,9 @@ public class CreateChatappTemplateRequest extends TeaModel {
         @NameInMap("Caption")
         public String caption;
 
+        /**
+         * <p>The duration of the video message when the TemplateType parameter is set to VIBER. Valid values: 0 to 600. Unit: seconds.</p>
+         */
         @NameInMap("Duration")
         public Integer duration;
 
@@ -259,14 +282,17 @@ public class CreateChatappTemplateRequest extends TeaModel {
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <p>The type of the file when the TemplateType parameter is set to VIBER.</p>
+         */
         @NameInMap("FileType")
         public String fileType;
 
         /**
-         * <p>The format of the message.</p>
+         * <p>The type of the media resources that are included in the message.</p>
          * <br>
          * <p>*   **TEXT**: text</p>
-         * <p>*   **IMGAGE**: image</p>
+         * <p>*   **IMAGE**: image</p>
          * <p>*   **DOCUMENT**: document</p>
          * <p>*   **VIDEO**: video</p>
          */
@@ -274,11 +300,14 @@ public class CreateChatappTemplateRequest extends TeaModel {
         public String format;
 
         /**
-         * <p>The text of the message to be sent.</p>
+         * <p>The text of the message that is sent.</p>
          */
         @NameInMap("Text")
         public String text;
 
+        /**
+         * <p>The thumbnail URL of the video message when the TemplateType parameter is set to VIBER.</p>
+         */
         @NameInMap("ThumbUrl")
         public String thumbUrl;
 
@@ -290,7 +319,11 @@ public class CreateChatappTemplateRequest extends TeaModel {
          * <p>*   **FOOTER**</p>
          * <p>*   **BUTTONS**</p>
          * <br>
-         * <p>> A component of the **BODY** type cannot exceed 1,024 characters in length. A component of the **HEADER** or **FOOTER** type cannot exceed 60 characters in length.</p>
+         * <p>> When the TemplateType parameter is set to WHATSAPP, the component of the **BODY** type cannot exceed 1,024 characters in length. The component of the **HEADER** or **FOOTER** type cannot exceed 60 characters in length.</p>
+         * <br>
+         * <p>> When the TemplateType parameter is set to VIBER, the **FOOTER** parameter is invalid.</p>
+         * <br>
+         * <p>> When the TemplateType parameter is set to VIBER, media objects including image, video, and text are placed in the **HEADER** component. A device displays that the image is placed below the text.</p>
          */
         @NameInMap("Type")
         public String type;

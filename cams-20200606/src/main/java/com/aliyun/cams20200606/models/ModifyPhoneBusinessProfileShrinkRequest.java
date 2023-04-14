@@ -11,7 +11,7 @@ public class ModifyPhoneBusinessProfileShrinkRequest extends TeaModel {
     public String address;
 
     /**
-     * <p>The space ID of the user under the ISV account.</p>
+     * <p>The space ID of the user under the independent software vendor (ISV) account.</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;

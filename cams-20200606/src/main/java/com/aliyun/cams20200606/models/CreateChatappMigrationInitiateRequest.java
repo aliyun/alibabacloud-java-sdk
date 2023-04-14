@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateChatappMigrationInitiateRequest extends TeaModel {
     /**
-     * <p>The country code of the phone number.</p>
+     * <p>The country code of a phone number.</p>
      */
     @NameInMap("CountryCode")
     public String countryCode;

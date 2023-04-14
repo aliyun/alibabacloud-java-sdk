@@ -11,13 +11,13 @@ public class BeeBotChatResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public BeeBotChatResponseBodyData data;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message returned.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -133,7 +133,7 @@ public class BeeBotChatResponseBody extends TeaModel {
         public String hitStatement;
 
         /**
-         * <p>The ID of the hit problem in the knowledge base.</p>
+         * <p>The ID of the hit question in the knowledge base.</p>
          */
         @NameInMap("Id")
         public String id;
@@ -249,7 +249,7 @@ public class BeeBotChatResponseBody extends TeaModel {
         public String knowledgeId;
 
         /**
-         * <p>The recommended content, which may be the entity in graph-based question answering, the standard knowledge in knowledge-based question answering, or the column value in table-based question answering.</p>
+         * <p>The title of the recommended knowledge. Valid values: the entity in graph-based question answering, the knowledge title in knowledge-based question answering, or the column value in table-based question answering.</p>
          */
         @NameInMap("Title")
         public String title;
@@ -293,7 +293,7 @@ public class BeeBotChatResponseBody extends TeaModel {
         public Boolean hit;
 
         /**
-         * <p>The name of the slot.</p>
+         * <p>The name.</p>
          */
         @NameInMap("Name")
         public String name;
@@ -369,7 +369,7 @@ public class BeeBotChatResponseBody extends TeaModel {
         public String contentType;
 
         /**
-         * <p>When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.</p>
+         * <p>The name of the dialog. When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.</p>
          */
         @NameInMap("DialogName")
         public String dialogName;
@@ -393,7 +393,7 @@ public class BeeBotChatResponseBody extends TeaModel {
         public String hitStatement;
 
         /**
-         * <p>When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.</p>
+         * <p>The name of the intent. When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.</p>
          */
         @NameInMap("IntentName")
         public String intentName;
@@ -405,13 +405,13 @@ public class BeeBotChatResponseBody extends TeaModel {
         public String metaData;
 
         /**
-         * <p>When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.</p>
+         * <p>The ID of the node. When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
-         * <p>When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.</p>
+         * <p>The name of the node. When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
@@ -541,13 +541,13 @@ public class BeeBotChatResponseBody extends TeaModel {
 
     public static class BeeBotChatResponseBodyDataMessages extends TeaModel {
         /**
-         * <p>If the AnswerType parameter is set to Recommend, this parameter indicates the source of the recommended answer.</p>
+         * <p>When the AnswerType parameter is set to Recommend, this parameter indicates the source of the recommended answer.</p>
          */
         @NameInMap("AnswerSource")
         public String answerSource;
 
         /**
-         * <p>The type of the message.</p>
+         * <p>The type of the answer.</p>
          */
         @NameInMap("AnswerType")
         public String answerType;
@@ -559,7 +559,7 @@ public class BeeBotChatResponseBody extends TeaModel {
         public BeeBotChatResponseBodyDataMessagesKnowledge knowledge;
 
         /**
-         * <p>When the AnswerType parameter is set to Recommend, this parameter contains a list of recommends returned by the bot.</p>
+         * <p>The list of recommended knowledge. When the AnswerType parameter is set to Recommend, this parameter is returned.</p>
          */
         @NameInMap("Recommends")
         public java.util.List<BeeBotChatResponseBodyDataMessagesRecommends> recommends;
@@ -625,7 +625,7 @@ public class BeeBotChatResponseBody extends TeaModel {
         public String messageId;
 
         /**
-         * <p>The list of the message.</p>
+         * <p>The list of messages.</p>
          */
         @NameInMap("Messages")
         public java.util.List<BeeBotChatResponseBodyDataMessages> messages;

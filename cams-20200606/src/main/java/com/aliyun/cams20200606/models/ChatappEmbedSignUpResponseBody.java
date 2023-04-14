@@ -26,7 +26,7 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of WhatsApp Business accounts.</p>
+     * <p>The list of the WhatsApp Business accounts.</p>
      */
     @NameInMap("Wabas")
     public java.util.List<ChatappEmbedSignUpResponseBodyWabas> wabas;
@@ -82,7 +82,7 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
         public String currency;
 
         /**
-         * <p>WabaId</p>
+         * <p>The ID of the WhatsApp Business account.</p>
          */
         @NameInMap("Id")
         public String id;
@@ -94,7 +94,7 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
         public String messageTemplateNamespace;
 
         /**
-         * <p>Waba Name</p>
+         * <p>The name of the WhatsApp Business account.</p>
          */
         @NameInMap("Name")
         public String name;

@@ -27,7 +27,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param tmpReq BeeBotAssociateRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -88,7 +88,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request BeeBotAssociateRequest
       * @return BeeBotAssociateResponse
@@ -99,7 +99,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param tmpReq BeeBotChatRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -180,7 +180,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request BeeBotChatRequest
       * @return BeeBotChatResponse
@@ -560,7 +560,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * ### QPS limit
-      * You can call this operation up to 5 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
+      * You can call this operation up to five times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param tmpReq CreateChatappTemplateRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -578,18 +578,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.exampleShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.example, "Example", "json");
         }
 
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.custSpaceId)) {
-            query.put("CustSpaceId", request.custSpaceId);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allowCategoryChange)) {
+            body.put("AllowCategoryChange", request.allowCategoryChange);
         }
 
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.category)) {
             body.put("Category", request.category);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.componentsShrink)) {
             body.put("Components", request.componentsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.custSpaceId)) {
+            body.put("CustSpaceId", request.custSpaceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.custWabaId)) {
@@ -617,7 +620,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -636,7 +638,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * ### QPS limit
-      * You can call this operation up to 5 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
+      * You can call this operation up to five times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request CreateChatappTemplateRequest
       * @return CreateChatappTemplateResponse
@@ -648,7 +650,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * ### QPS limit
-      * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * You can call this operation up to five times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request DeleteChatappTemplateRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -692,7 +694,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * ### QPS limit
-      * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * You can call this operation up to five times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request DeleteChatappTemplateRequest
       * @return DeleteChatappTemplateResponse
@@ -704,7 +706,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * ### QPS limit
-      * You can call this operation up to 5 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
+      * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request GetChatappTemplateDetailRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -756,7 +758,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * ### QPS limit
-      * You can call this operation up to 5 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
+      * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request GetChatappTemplateDetailRequest
       * @return GetChatappTemplateDetailResponse
@@ -766,6 +768,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getChatappTemplateDetailWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation up to five times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request GetChatappUploadAuthorizationRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetChatappUploadAuthorizationResponse
+     */
     public GetChatappUploadAuthorizationResponse getChatappUploadAuthorizationWithOptions(GetChatappUploadAuthorizationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -790,6 +799,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetChatappUploadAuthorizationResponse());
     }
 
+    /**
+      * You can call this operation up to five times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request GetChatappUploadAuthorizationRequest
+      * @return GetChatappUploadAuthorizationResponse
+     */
     public GetChatappUploadAuthorizationResponse getChatappUploadAuthorization(GetChatappUploadAuthorizationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getChatappUploadAuthorizationWithOptions(request, runtime);
@@ -993,7 +1008,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * ### QPS limit
-      * You can call this operation up to 5 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
+      * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param tmpReq ListChatappTemplateRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1059,7 +1074,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * ### QPS limit
-      * You can call this operation up to 5 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
+      * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request ListChatappTemplateRequest
       * @return ListChatappTemplateResponse
@@ -1232,7 +1247,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request QueryChatappBindWabaRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1267,7 +1282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request QueryChatappBindWabaRequest
       * @return QueryChatappBindWabaResponse
@@ -1278,7 +1293,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request QueryChatappPhoneNumbersRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1313,7 +1328,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request QueryChatappPhoneNumbersRequest
       * @return QueryChatappPhoneNumbersResponse
@@ -1416,7 +1431,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       * You can send messages to up to 1,000 phone numbers in a single request.
       *
       * @param tmpReq SendChatappMassMessageRequest
@@ -1446,6 +1461,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.fallBackContent)) {
             body.put("FallBackContent", request.fallBackContent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fallBackDuration)) {
+            body.put("FallBackDuration", request.fallBackDuration);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.fallBackId)) {
@@ -1506,7 +1525,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       * You can send messages to up to 1,000 phone numbers in a single request.
       *
       * @param request SendChatappMassMessageRequest
@@ -1518,7 +1537,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation up to 200 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * You can call this operation up to 200 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param tmpReq SendChatappMessageRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1564,6 +1583,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.fallBackContent)) {
             body.put("FallBackContent", request.fallBackContent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fallBackDuration)) {
+            body.put("FallBackDuration", request.fallBackDuration);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.fallBackId)) {
@@ -1641,7 +1664,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation up to 200 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * You can call this operation up to 200 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request SendChatappMessageRequest
       * @return SendChatappMessageResponse
@@ -1651,6 +1674,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.sendChatappMessageWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation up to five times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request SubmitIsvCustomerTermsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SubmitIsvCustomerTermsResponse
+     */
     public SubmitIsvCustomerTermsResponse submitIsvCustomerTermsWithOptions(SubmitIsvCustomerTermsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1699,6 +1729,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitIsvCustomerTermsResponse());
     }
 
+    /**
+      * You can call this operation up to five times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request SubmitIsvCustomerTermsRequest
+      * @return SubmitIsvCustomerTermsResponse
+     */
     public SubmitIsvCustomerTermsResponse submitIsvCustomerTerms(SubmitIsvCustomerTermsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitIsvCustomerTermsWithOptions(request, runtime);

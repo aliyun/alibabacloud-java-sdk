@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChatappBindWabaRequest extends TeaModel {
     /**
-     * <p>WabaId</p>
+     * <p>The ID of the WhatsApp Business account.</p>
      */
     @NameInMap("WabaId")
     public String wabaId;

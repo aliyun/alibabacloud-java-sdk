@@ -20,7 +20,7 @@ public class SendChatappMassMessageResponseBody extends TeaModel {
     public String groupMessageId;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message returned.</p>
      */
     @NameInMap("Message")
     public String message;
