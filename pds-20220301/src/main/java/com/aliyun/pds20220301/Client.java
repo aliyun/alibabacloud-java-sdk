@@ -270,6 +270,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("file_id", request.fileId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.shareId)) {
+            body.put("share_id", request.shareId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.toDriveId)) {
+            body.put("to_drive_id", request.toDriveId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.toParentFileId)) {
             body.put("to_parent_file_id", request.toParentFileId);
         }
@@ -609,6 +617,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("save_limit", request.saveLimit);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.shareAllFiles)) {
+            body.put("share_all_files", request.shareAllFiles);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.shareName)) {
             body.put("share_name", request.shareName);
         }
@@ -714,6 +726,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createUserWithOptions(request, headers, runtime);
+    }
+
+    public CsiGetFileInfoResponse csiGetFileInfoWithOptions(CsiGetFileInfoRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.driveId)) {
+            body.put("drive_id", request.driveId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileId)) {
+            body.put("file_id", request.fileId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.urlExpireSec)) {
+            body.put("url_expire_sec", request.urlExpireSec);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CsiGetFileInfo"),
+            new TeaPair("version", "2022-03-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/csi/get_file_info"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new CsiGetFileInfoResponse());
+    }
+
+    public CsiGetFileInfoResponse csiGetFileInfo(CsiGetFileInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.csiGetFileInfoWithOptions(request, headers, runtime);
     }
 
     public DeleteDomainResponse deleteDomainWithOptions(DeleteDomainRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -966,6 +1017,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.officeThumbnailProcess)) {
             body.put("office_thumbnail_process", request.officeThumbnailProcess);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shareId)) {
+            body.put("share_id", request.shareId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.videoThumbnailProcess)) {
@@ -1303,6 +1358,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("file_name", request.fileName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.shareId)) {
+            body.put("share_id", request.shareId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
@@ -1371,6 +1430,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.fileId)) {
             body.put("file_id", request.fileId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shareId)) {
+            body.put("share_id", request.shareId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.urlExpireSec)) {
@@ -1885,6 +1948,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.importUserWithOptions(request, headers, runtime);
     }
 
+    public InvestigateFileResponse investigateFileWithOptions(InvestigateFileRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.driveFileIds)) {
+            body.put("drive_file_ids", request.driveFileIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InvestigateFile"),
+            new TeaPair("version", "2022-03-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/csi/investigate_file"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new InvestigateFileResponse());
+    }
+
+    public InvestigateFileResponse investigateFile(InvestigateFileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.investigateFileWithOptions(request, headers, runtime);
+    }
+
     public LinkAccountResponse linkAccountWithOptions(LinkAccountRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2176,6 +2270,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.parentFileId)) {
             body.put("parent_file_id", request.parentFileId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shareId)) {
+            body.put("share_id", request.shareId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
@@ -3409,6 +3507,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.driveName)) {
             body.put("drive_name", request.driveName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.owner)) {
+            body.put("owner", request.owner);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {

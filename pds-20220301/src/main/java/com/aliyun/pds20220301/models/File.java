@@ -43,6 +43,9 @@ public class File extends TeaModel {
     @NameInMap("hidden")
     public Boolean hidden;
 
+    @NameInMap("investigation_info")
+    public FileInvestigationInfo investigationInfo;
+
     @NameInMap("labels")
     public String labels;
 
@@ -194,6 +197,14 @@ public class File extends TeaModel {
         return this.hidden;
     }
 
+    public File setInvestigationInfo(FileInvestigationInfo investigationInfo) {
+        this.investigationInfo = investigationInfo;
+        return this;
+    }
+    public FileInvestigationInfo getInvestigationInfo() {
+        return this.investigationInfo;
+    }
+
     public File setLabels(String labels) {
         this.labels = labels;
         return this;
@@ -304,6 +315,36 @@ public class File extends TeaModel {
     }
     public String getUploadId() {
         return this.uploadId;
+    }
+
+    public static class FileInvestigationInfo extends TeaModel {
+        @NameInMap("status")
+        public Long status;
+
+        @NameInMap("suggestion")
+        public String suggestion;
+
+        public static FileInvestigationInfo build(java.util.Map<String, ?> map) throws Exception {
+            FileInvestigationInfo self = new FileInvestigationInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public FileInvestigationInfo setStatus(Long status) {
+            this.status = status;
+            return this;
+        }
+        public Long getStatus() {
+            return this.status;
+        }
+
+        public FileInvestigationInfo setSuggestion(String suggestion) {
+            this.suggestion = suggestion;
+            return this;
+        }
+        public String getSuggestion() {
+            return this.suggestion;
+        }
+
     }
 
 }

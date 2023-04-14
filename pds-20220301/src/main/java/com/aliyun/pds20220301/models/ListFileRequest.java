@@ -28,6 +28,9 @@ public class ListFileRequest extends TeaModel {
     @NameInMap("parent_file_id")
     public String parentFileId;
 
+    @NameInMap("share_id")
+    public String shareId;
+
     @NameInMap("status")
     public String status;
 
@@ -101,6 +104,14 @@ public class ListFileRequest extends TeaModel {
     }
     public String getParentFileId() {
         return this.parentFileId;
+    }
+
+    public ListFileRequest setShareId(String shareId) {
+        this.shareId = shareId;
+        return this;
+    }
+    public String getShareId() {
+        return this.shareId;
     }
 
     public ListFileRequest setStatus(String status) {

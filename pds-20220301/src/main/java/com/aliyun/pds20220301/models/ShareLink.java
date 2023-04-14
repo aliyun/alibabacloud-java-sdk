@@ -41,7 +41,7 @@ public class ShareLink extends TeaModel {
     public Boolean expired;
 
     @NameInMap("file_id_list")
-    public String fileIdList;
+    public java.util.List<String> fileIdList;
 
     @NameInMap("preview_count")
     public Long previewCount;
@@ -57,6 +57,9 @@ public class ShareLink extends TeaModel {
 
     @NameInMap("save_limit")
     public Long saveLimit;
+
+    @NameInMap("share_all_files")
+    public Boolean shareAllFiles;
 
     @NameInMap("share_id")
     public String shareId;
@@ -177,11 +180,11 @@ public class ShareLink extends TeaModel {
         return this.expired;
     }
 
-    public ShareLink setFileIdList(String fileIdList) {
+    public ShareLink setFileIdList(java.util.List<String> fileIdList) {
         this.fileIdList = fileIdList;
         return this;
     }
-    public String getFileIdList() {
+    public java.util.List<String> getFileIdList() {
         return this.fileIdList;
     }
 
@@ -223,6 +226,14 @@ public class ShareLink extends TeaModel {
     }
     public Long getSaveLimit() {
         return this.saveLimit;
+    }
+
+    public ShareLink setShareAllFiles(Boolean shareAllFiles) {
+        this.shareAllFiles = shareAllFiles;
+        return this;
+    }
+    public Boolean getShareAllFiles() {
+        return this.shareAllFiles;
     }
 
     public ShareLink setShareId(String shareId) {
