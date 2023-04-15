@@ -3222,6 +3222,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Id", request.id);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
         }
@@ -5692,6 +5696,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.saleVersionCheckCode)) {
+            query.put("SaleVersionCheckCode", request.saleVersionCheckCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.vendor)) {
@@ -10188,17 +10196,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeSuspEventUserSettingWithOptions(request, runtime);
     }
 
-    /**
-      * The alert aggregation feature of Security Center analyzes the paths of alerts to aggregate multiple alerts generated on the intrusions that are launched from the same IP address or service, or on the same user.
-      * You can call the  [DescribeAlarmEventList](~~DescribeAlarmEventList~~) or [DescribeSuspEvents ](~~DescribeSuspEvents~~)  operation to query alert events.
-      * *   If your Security Center runs the Enterprise or Ultimate edition and you enabled the alert aggregation feature in the Security Center console, you can call the [DescribeAlarmEventList](~~DescribeAlarmEventList~~) operation to query alert events.
-      * *   If your Security Center runs the Enterprise or Ultimate edition but you did not enable the alert aggregation feature in the Security Center console, you can call the [DescribeSuspEvents ](~~DescribeSuspEvents~~) operation to query alert events.
-      * *   If your Security Center does not run the Enterprise or Ultimate edition, you can call the [DescribeSuspEvents ](~~DescribeSuspEvents~~) operation to query alert events.
-      *
-      * @param request DescribeSuspEventsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeSuspEventsResponse
-     */
     public DescribeSuspEventsResponse describeSuspEventsWithOptions(DescribeSuspEventsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -10345,16 +10342,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSuspEventsResponse());
     }
 
-    /**
-      * The alert aggregation feature of Security Center analyzes the paths of alerts to aggregate multiple alerts generated on the intrusions that are launched from the same IP address or service, or on the same user.
-      * You can call the  [DescribeAlarmEventList](~~DescribeAlarmEventList~~) or [DescribeSuspEvents ](~~DescribeSuspEvents~~)  operation to query alert events.
-      * *   If your Security Center runs the Enterprise or Ultimate edition and you enabled the alert aggregation feature in the Security Center console, you can call the [DescribeAlarmEventList](~~DescribeAlarmEventList~~) operation to query alert events.
-      * *   If your Security Center runs the Enterprise or Ultimate edition but you did not enable the alert aggregation feature in the Security Center console, you can call the [DescribeSuspEvents ](~~DescribeSuspEvents~~) operation to query alert events.
-      * *   If your Security Center does not run the Enterprise or Ultimate edition, you can call the [DescribeSuspEvents ](~~DescribeSuspEvents~~) operation to query alert events.
-      *
-      * @param request DescribeSuspEventsRequest
-      * @return DescribeSuspEventsResponse
-     */
     public DescribeSuspEventsResponse describeSuspEvents(DescribeSuspEventsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSuspEventsWithOptions(request, runtime);
@@ -14099,7 +14086,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  Before you call this operation, make sure that the Security Center agent on your servers is online and the servers can access Alibaba Cloud services.
+      * > Before you call this operation, make sure that the Security Center agent on your servers is online and the servers can access Alibaba Cloud services.
       *
       * @param request InstallCloudMonitorRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -14146,7 +14133,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  Before you call this operation, make sure that the Security Center agent on your servers is online and the servers can access Alibaba Cloud services.
+      * > Before you call this operation, make sure that the Security Center agent on your servers is online and the servers can access Alibaba Cloud services.
       *
       * @param request InstallCloudMonitorRequest
       * @return InstallCloudMonitorResponse

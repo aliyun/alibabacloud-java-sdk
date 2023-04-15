@@ -52,6 +52,9 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeBruteForceRecordsResponseBodyMachineList extends TeaModel {
+        @NameInMap("AliNetOnline")
+        public Boolean aliNetOnline;
+
         /**
          * <p>The timestamp when the block action on the IP address becomes invalid.</p>
          */
@@ -63,6 +66,9 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
          */
         @NameInMap("BlockIp")
         public String blockIp;
+
+        @NameInMap("BlockType")
+        public String blockType;
 
         /**
          * <p>The error code returned when the defense rule fails to block the IP address.</p>
@@ -136,6 +142,14 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeBruteForceRecordsResponseBodyMachineList setAliNetOnline(Boolean aliNetOnline) {
+            this.aliNetOnline = aliNetOnline;
+            return this;
+        }
+        public Boolean getAliNetOnline() {
+            return this.aliNetOnline;
+        }
+
         public DescribeBruteForceRecordsResponseBodyMachineList setBlockExpireDate(Long blockExpireDate) {
             this.blockExpireDate = blockExpireDate;
             return this;
@@ -150,6 +164,14 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
         }
         public String getBlockIp() {
             return this.blockIp;
+        }
+
+        public DescribeBruteForceRecordsResponseBodyMachineList setBlockType(String blockType) {
+            this.blockType = blockType;
+            return this;
+        }
+        public String getBlockType() {
+            return this.blockType;
         }
 
         public DescribeBruteForceRecordsResponseBodyMachineList setErrorCode(String errorCode) {

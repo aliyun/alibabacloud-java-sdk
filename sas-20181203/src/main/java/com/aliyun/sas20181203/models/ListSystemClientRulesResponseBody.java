@@ -17,7 +17,7 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array that consists of the rules.</p>
+     * <p>An array that consists of the system defense rules.</p>
      */
     @NameInMap("RuleList")
     public java.util.List<ListSystemClientRulesResponseBodyRuleList> ruleList;
@@ -139,19 +139,19 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
 
     public static class ListSystemClientRulesResponseBodyRuleList extends TeaModel {
         /**
-         * <p>The name of the aggregation type for the rule.</p>
+         * <p>The name of the aggregation type for the system defense rule.</p>
          */
         @NameInMap("AggregationName")
         public String aggregationName;
 
         /**
-         * <p>The description of the rule.</p>
+         * <p>The description of the system defense rule.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The type of the operating system. Valid values:</p>
+         * <p>The type of the OS. Valid values:</p>
          * <br>
          * <p>*   **windows**: Windows</p>
          * <p>*   **linux**: Linux</p>
@@ -161,25 +161,25 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
         public String platform;
 
         /**
-         * <p>An array that consists of the policies.</p>
+         * <p>An array that consists of policies.</p>
          */
         @NameInMap("Policies")
         public java.util.List<ListSystemClientRulesResponseBodyRuleListPolicies> policies;
 
         /**
-         * <p>The ID of the rule.</p>
+         * <p>The ID of the system defense rule.</p>
          */
         @NameInMap("RuleId")
         public Long ruleId;
 
         /**
-         * <p>The name of the rule.</p>
+         * <p>The name of the system defense rule.</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
-         * <p>The type of the rule. Valid values:</p>
+         * <p>The type of the system defense rule. Valid values:</p>
          * <br>
          * <p>*   **1**: alihips</p>
          * <p>*   **2**: alinet</p>
@@ -190,7 +190,7 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
         public Integer ruleType;
 
         /**
-         * <p>The status of the rule. Valid values:</p>
+         * <p>The status of the system defense rule. Valid values:</p>
          * <br>
          * <p>*   **online**: enabled</p>
          * <p>*   **offline**: disabled</p>
@@ -199,7 +199,7 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The switch ID of the rule.</p>
+         * <p>The switch ID of the system defense rule.</p>
          */
         @NameInMap("SwitchId")
         public String switchId;

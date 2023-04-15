@@ -7,7 +7,7 @@ public class DescribeSuspEventsRequest extends TeaModel {
     /**
      * <p>The ID of the alert event.</p>
      * <br>
-     * <p>>  To query the details about the exceptions of an alert event, you must specify the ID of the alert event. You can call the [DescribeAlarmEventList](~~DescribeAlarmEventList~~) operation to query the IDs of alert events.</p>
+     * <p>>  To query the details about the exceptions of an alert event, you must specify the ID of the alert event. You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the IDs of alert events.</p>
      */
     @NameInMap("AlarmUniqueInfo")
     public String alarmUniqueInfo;

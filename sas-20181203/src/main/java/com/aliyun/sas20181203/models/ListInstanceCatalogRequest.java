@@ -13,15 +13,30 @@ public class ListInstanceCatalogRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The ID of the region in which the asset resides. Valid values:</p>
+     * <br>
+     * <p>*   **cn-hangzhou**: International</p>
+     * <p>*   **ap-southeast-1**: Singapore</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The IDs of requirement items.</p>
+     */
     @NameInMap("RequirementIds")
     public java.util.List<Long> requirementIds;
 
+    /**
+     * <p>The IDs of standards.</p>
+     */
     @NameInMap("StandardIds")
     public java.util.List<Long> standardIds;
 
+    /**
+     * <p>The types of check standards.</p>
+     */
     @NameInMap("Types")
     public java.util.List<String> types;
 

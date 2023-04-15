@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeAffectedAssetsResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the affected servers.</p>
+     */
     @NameInMap("AssetList")
     public java.util.List<DescribeAffectedAssetsResponseBodyAssetList> assetList;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public DescribeAffectedAssetsResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,21 +52,39 @@ public class DescribeAffectedAssetsResponseBody extends TeaModel {
     }
 
     public static class DescribeAffectedAssetsResponseBodyAssetList extends TeaModel {
+        /**
+         * <p>The ID of the server.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the server.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The public IP address of the server.</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <p>The private IP address of the server.</p>
+         */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        /**
+         * <p>The number of viruses detected on the server.</p>
+         */
         @NameInMap("RiskNum")
         public Integer riskNum;
 
+        /**
+         * <p>The UUID of the server.</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 
@@ -117,15 +144,27 @@ public class DescribeAffectedAssetsResponseBody extends TeaModel {
     }
 
     public static class DescribeAffectedAssetsResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of entries returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

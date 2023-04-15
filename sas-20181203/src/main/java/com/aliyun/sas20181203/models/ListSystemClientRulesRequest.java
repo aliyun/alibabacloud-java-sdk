@@ -53,7 +53,7 @@ public class ListSystemClientRulesRequest extends TeaModel {
     public java.util.List<Integer> ruleTypes;
 
     /**
-     * <p>The type of the operating system. Valid values:</p>
+     * <p>The type of the OS. Valid values:</p>
      * <br>
      * <p>*   **2**: Windows</p>
      * <p>*   **1**: Linux</p>
