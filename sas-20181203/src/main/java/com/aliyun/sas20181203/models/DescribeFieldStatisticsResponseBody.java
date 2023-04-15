@@ -50,6 +50,9 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         @NameInMap("AwsInstanceCount")
         public Integer awsInstanceCount;
 
+        @NameInMap("AzureInstanceCount")
+        public Integer azureInstanceCount;
+
         /**
          * <p>The number of exposed servers.</p>
          */
@@ -201,6 +204,14 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         }
         public Integer getAwsInstanceCount() {
             return this.awsInstanceCount;
+        }
+
+        public DescribeFieldStatisticsResponseBodyGroupedFields setAzureInstanceCount(Integer azureInstanceCount) {
+            this.azureInstanceCount = azureInstanceCount;
+            return this;
+        }
+        public Integer getAzureInstanceCount() {
+            return this.azureInstanceCount;
         }
 
         public DescribeFieldStatisticsResponseBodyGroupedFields setExposedInstanceCount(Integer exposedInstanceCount) {

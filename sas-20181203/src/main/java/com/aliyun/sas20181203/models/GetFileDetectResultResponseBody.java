@@ -65,8 +65,8 @@ public class GetFileDetectResultResponseBody extends TeaModel {
         /**
          * <p>The file detection result. Valid values:</p>
          * <br>
-         * <p>*   **0**: normal file.</p>
-         * <p>*   **1**: suspicious file.</p>
+         * <p>*   **0**: The file is normal.</p>
+         * <p>*   **1**: The file is suspicious.</p>
          * <p>*   **3**: The detection is in progress.</p>
          */
         @NameInMap("Result")
@@ -75,13 +75,13 @@ public class GetFileDetectResultResponseBody extends TeaModel {
         /**
          * <p>The score of file detection result.</p>
          * <br>
-         * <p>>  A higher score indicates a more suspicious file.</p>
+         * <p>> A higher score indicates a more suspicious file.</p>
          */
         @NameInMap("Score")
         public Integer score;
 
         /**
-         * <p>The type of virus. Valid values:</p>
+         * <p>The type of the virus. Valid values:</p>
          * <br>
          * <p>*   **Trojan**: self-mutating trojan</p>
          * <p>*   **WebShell**: webshell</p>

@@ -10,6 +10,9 @@ public class GetCheckDetailResponseBody extends TeaModel {
     @NameInMap("AssistInfo")
     public GetCheckDetailResponseBodyAssistInfo assistInfo;
 
+    /**
+     * <p>The custom configuration items of the check item.</p>
+     */
     @NameInMap("CustomConfigs")
     public java.util.List<GetCheckDetailResponseBodyCustomConfigs> customConfigs;
 
@@ -130,18 +133,33 @@ public class GetCheckDetailResponseBody extends TeaModel {
     }
 
     public static class GetCheckDetailResponseBodyCustomConfigs extends TeaModel {
+        /**
+         * <p>The default value of the custom configuration item. The value is a string.</p>
+         */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
+        /**
+         * <p>The name of the custom configuration item. The name of a custom configuration item is unique in a check item.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The keyword that identifies the custom configuration item for internationalization.</p>
+         */
         @NameInMap("ShowName")
         public String showName;
 
+        /**
+         * <p>The type of the custom configuration item. The value is a JSON string.</p>
+         */
         @NameInMap("TypeDefine")
         public String typeDefine;
 
+        /**
+         * <p>The value of the custom configuration item. The value is a string.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -250,7 +268,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
         public String link;
 
         /**
-         * <p>The type of the solution to handle to the risk item. Valid values:</p>
+         * <p>The type of the solution to handle the risk item. Valid values:</p>
          * <br>
          * <p>*   **text**</p>
          * <p>*   **link**</p>

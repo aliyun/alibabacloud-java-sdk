@@ -99,7 +99,7 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
         /**
          * <p>The information about the destination container.</p>
          * <br>
-         * <p>>  This parameter is not supported.</p>
+         * <p>> This parameter is not supported.</p>
          */
         @NameInMap("DstContainer")
         public FindContainerNetworkConnectResponseBodyConnectsDstContainer dstContainer;
@@ -137,7 +137,7 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
         /**
          * <p>The information about the source container.</p>
          * <br>
-         * <p>>  This parameter is not supported.</p>
+         * <p>> This parameter is not supported.</p>
          */
         @NameInMap("SrcContainer")
         public FindContainerNetworkConnectResponseBodyConnectsSrcContainer srcContainer;

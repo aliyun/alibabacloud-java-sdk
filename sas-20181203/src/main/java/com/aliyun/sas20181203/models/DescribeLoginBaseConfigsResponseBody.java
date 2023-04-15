@@ -144,6 +144,9 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
         @NameInMap("Location")
         public String location;
 
+        @NameInMap("Remark")
+        public String remark;
+
         /**
          * <p>The start time of the common logon time range.</p>
          */
@@ -203,6 +206,14 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
         }
         public String getLocation() {
             return this.location;
+        }
+
+        public DescribeLoginBaseConfigsResponseBodyBaseConfigs setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
         }
 
         public DescribeLoginBaseConfigsResponseBodyBaseConfigs setStartTime(String startTime) {

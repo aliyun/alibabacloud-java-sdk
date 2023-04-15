@@ -33,7 +33,7 @@ public class FindContainerNetworkConnectRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
      * <br>
-     * <p>>  We recommend that you do not leave this parameter empty.</p>
+     * <p>> We recommend that you do not leave this parameter empty.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
@@ -121,7 +121,7 @@ public class FindContainerNetworkConnectRequest extends TeaModel {
         /**
          * <p>The ID of the container cluster.</p>
          * <br>
-         * <p>>  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.</p>
+         * <p>> You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
@@ -133,7 +133,7 @@ public class FindContainerNetworkConnectRequest extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The list of node IDs.</p>
+         * <p>The node IDs.</p>
          */
         @NameInMap("NodeIds")
         public java.util.List<String> nodeIds;
@@ -217,7 +217,7 @@ public class FindContainerNetworkConnectRequest extends TeaModel {
         /**
          * <p>The ID of the container cluster.</p>
          * <br>
-         * <p>>  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.</p>
+         * <p>> You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
@@ -229,7 +229,7 @@ public class FindContainerNetworkConnectRequest extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The list of node IDs.</p>
+         * <p>The node IDs.</p>
          */
         @NameInMap("NodeIds")
         public java.util.List<String> nodeIds;

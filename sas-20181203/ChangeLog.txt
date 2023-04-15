@@ -1,3 +1,24 @@
+2023-04-15 Version: 2.0.5
+- Change DescribeSoarStrategyTaskDetail Request.
+- Fix error code for fix vul.
+- Fixed bugs for TimeOut.
+- Add GetAssetDetailByUuid.
+- Add DescribeFieldStatistics.
+- Add ModifyCloudVendorAccountAK.
+- Add AddCloudVendorAccountAK.
+- Add DescribeCloudVendorAccountAKList.
+- Fix rate limit .
+- Add GetAssetDetailByUuid_route.
+- Support container web defense.
+- Support virusScan.
+- Fixed low version.
+- Supported get check type list.
+- Support virusScan.
+
+- DescribeImageRepoList set timeout 15s.
+- Fix bug For ListGroups.
+- Fix.
+
 2023-03-25 Version: 2.0.4
 - Support container info.
 - Support max item 1000.

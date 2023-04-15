@@ -58,6 +58,9 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
         @NameInMap("AsapVulInstanceCount")
         public Long asapVulInstanceCount;
 
+        @NameInMap("AuthVersionCheckCount")
+        public Integer authVersionCheckCount;
+
         /**
          * <p>The name of the server group.</p>
          */
@@ -104,6 +107,14 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
         }
         public Long getAsapVulInstanceCount() {
             return this.asapVulInstanceCount;
+        }
+
+        public DescribeGroupedInstancesResponseBodyInstances setAuthVersionCheckCount(Integer authVersionCheckCount) {
+            this.authVersionCheckCount = authVersionCheckCount;
+            return this;
+        }
+        public Integer getAuthVersionCheckCount() {
+            return this.authVersionCheckCount;
         }
 
         public DescribeGroupedInstancesResponseBodyInstances setFieldAliasName(String fieldAliasName) {

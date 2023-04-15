@@ -23,7 +23,7 @@ public class ListCheckResultRequest extends TeaModel {
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The asset types of cloud services. Valid values:</p>
+     * <p>The asset type of the cloud service. Valid values:</p>
      * <br>
      * <p>*   **ECS**: Elastic Compute Service (ECS)</p>
      * <p>*   **SLB**: Server Load Balancer (SLB)</p>
@@ -116,7 +116,7 @@ public class ListCheckResultRequest extends TeaModel {
     public java.util.List<String> types;
 
     /**
-     * <p>The cloud service providers. Valid values:</p>
+     * <p>The cloud service provider. Valid values:</p>
      * <br>
      * <p>*   **ALIYUN**: Alibaba Cloud</p>
      */

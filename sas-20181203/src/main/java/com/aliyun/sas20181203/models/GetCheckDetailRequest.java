@@ -19,6 +19,9 @@ public class GetCheckDetailRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The ID of the region in which the server resides.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

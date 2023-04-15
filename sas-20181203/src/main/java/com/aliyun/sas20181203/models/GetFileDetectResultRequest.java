@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetFileDetectResultRequest extends TeaModel {
     /**
-     * <p>An array that consists of the identifiers of files. Only MD5 hash values are supported.</p>
+     * <p>The identifiers of files. Only MD5 hash values are supported.</p>
      */
     @NameInMap("HashKeyList")
     public java.util.List<String> hashKeyList;
@@ -24,7 +24,7 @@ public class GetFileDetectResultRequest extends TeaModel {
      * <p>*   **2**: webshell file</p>
      * <p>*   **4**: script file</p>
      * <br>
-     * <p>>  If you do not know the type of the file, set this parameter to 0.</p>
+     * <p>> If you do not know the type of the file, set this parameter to 0.</p>
      */
     @NameInMap("Type")
     public Integer type;

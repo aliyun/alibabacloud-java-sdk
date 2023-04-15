@@ -4,6 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeSuspEventExportInfoRequest extends TeaModel {
+    /**
+     * <p>The ID of the export task.</p>
+     * <br>
+     * <p>> You can call the [ExportSuspEvents](~~ExportSuspEvents~~) operation to query the ID.</p>
+     */
     @NameInMap("ExportId")
     public Integer exportId;
 

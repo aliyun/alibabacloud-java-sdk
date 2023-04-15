@@ -15,6 +15,9 @@ public class DescribeAntiBruteForceRulesRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
+    @NameInMap("Name")
+    public String name;
+
     @NameInMap("PageSize")
     public String pageSize;
 
@@ -46,6 +49,14 @@ public class DescribeAntiBruteForceRulesRequest extends TeaModel {
     }
     public Long getId() {
         return this.id;
+    }
+
+    public DescribeAntiBruteForceRulesRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public DescribeAntiBruteForceRulesRequest setPageSize(String pageSize) {

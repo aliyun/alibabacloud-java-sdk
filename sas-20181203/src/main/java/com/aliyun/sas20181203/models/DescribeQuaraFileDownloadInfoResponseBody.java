@@ -4,24 +4,45 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeQuaraFileDownloadInfoResponseBody extends TeaModel {
+    /**
+     * <p>The URL that is used to download the file. The URL is valid for five minutes.</p>
+     */
     @NameInMap("DownloadUrl")
     public String downloadUrl;
 
+    /**
+     * <p>The MD5 hash value of the quarantined file.</p>
+     */
     @NameInMap("Md5")
     public String md5;
 
+    /**
+     * <p>The file path.</p>
+     */
     @NameInMap("Path")
     public String path;
 
+    /**
+     * <p>The ID of the quarantined file.</p>
+     */
     @NameInMap("QuaraFileId")
     public Integer quaraFileId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The tag that is added to the related alert.</p>
+     */
     @NameInMap("Tag")
     public String tag;
 
+    /**
+     * <p>The UUID of the server.</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 

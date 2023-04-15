@@ -7,7 +7,7 @@ public class DescribeAlarmEventDetailRequest extends TeaModel {
     /**
      * <p>The unique ID of the alert event.</p>
      * <br>
-     * <p>>  To query the details of an alert event, you must specify the unique ID of the alert event. You can call the [DescribeAlarmEventList](~~DescribeAlarmEventList~~) operation to query the unique IDs of alert events.</p>
+     * <p>>  To query the details of an alert event, you must specify the unique ID of the alert event. You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the unique IDs of alert events.</p>
      */
     @NameInMap("AlarmUniqueInfo")
     public String alarmUniqueInfo;

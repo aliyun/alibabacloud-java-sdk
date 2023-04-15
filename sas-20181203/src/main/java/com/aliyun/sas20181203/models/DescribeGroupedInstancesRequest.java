@@ -56,6 +56,9 @@ public class DescribeGroupedInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("SaleVersionCheckCode")
+    public String saleVersionCheckCode;
+
     /**
      * <p>The source of the server. Valid values:</p>
      * <br>
@@ -139,6 +142,14 @@ public class DescribeGroupedInstancesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeGroupedInstancesRequest setSaleVersionCheckCode(String saleVersionCheckCode) {
+        this.saleVersionCheckCode = saleVersionCheckCode;
+        return this;
+    }
+    public String getSaleVersionCheckCode() {
+        return this.saleVersionCheckCode;
     }
 
     public DescribeGroupedInstancesRequest setVendor(Integer vendor) {
