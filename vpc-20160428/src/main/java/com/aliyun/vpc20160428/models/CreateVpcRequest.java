@@ -49,6 +49,9 @@ public class CreateVpcRequest extends TeaModel {
     @NameInMap("EnableIpv6")
     public Boolean enableIpv6;
 
+    @NameInMap("Ipv4IpamPoolId")
+    public String ipv4IpamPoolId;
+
     /**
      * <p>The IPv6 CIDR blocks of the VPC.</p>
      */
@@ -155,6 +158,14 @@ public class CreateVpcRequest extends TeaModel {
     }
     public Boolean getEnableIpv6() {
         return this.enableIpv6;
+    }
+
+    public CreateVpcRequest setIpv4IpamPoolId(String ipv4IpamPoolId) {
+        this.ipv4IpamPoolId = ipv4IpamPoolId;
+        return this;
+    }
+    public String getIpv4IpamPoolId() {
+        return this.ipv4IpamPoolId;
     }
 
     public CreateVpcRequest setIpv6CidrBlock(String ipv6CidrBlock) {

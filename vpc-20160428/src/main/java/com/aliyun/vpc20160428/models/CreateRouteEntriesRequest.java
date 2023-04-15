@@ -81,13 +81,8 @@ public class CreateRouteEntriesRequest extends TeaModel {
     }
 
     public static class CreateRouteEntriesRequestRouteEntries extends TeaModel {
-        /**
-         * <p>The description of the custom route entry. You can specify up to 50 descriptions.</p>
-         * <br>
-         * <p>The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.</p>
-         */
-        @NameInMap("Describption")
-        public String describption;
+        @NameInMap("Description")
+        public String description;
 
         /**
          * <p>The destination CIDR block of the custom route entry. Both IPv4 and IPv6 CIDR blocks are supported. You can specify up to 50 destination CIDR blocks. Make sure that the destination CIDR block meets the following requirements:</p>
@@ -148,12 +143,12 @@ public class CreateRouteEntriesRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public CreateRouteEntriesRequestRouteEntries setDescribption(String describption) {
-            this.describption = describption;
+        public CreateRouteEntriesRequestRouteEntries setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getDescribption() {
-            return this.describption;
+        public String getDescription() {
+            return this.description;
         }
 
         public CreateRouteEntriesRequestRouteEntries setDstCidrBlock(String dstCidrBlock) {
