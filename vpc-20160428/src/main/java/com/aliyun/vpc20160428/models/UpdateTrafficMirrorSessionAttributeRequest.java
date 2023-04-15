@@ -38,6 +38,9 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("PacketLength")
+    public Integer packetLength;
+
     /**
      * <p>The priority of the traffic mirror session. Valid values: **1** to **32766**.</p>
      * <br>
@@ -152,6 +155,14 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public UpdateTrafficMirrorSessionAttributeRequest setPacketLength(Integer packetLength) {
+        this.packetLength = packetLength;
+        return this;
+    }
+    public Integer getPacketLength() {
+        return this.packetLength;
     }
 
     public UpdateTrafficMirrorSessionAttributeRequest setPriority(Integer priority) {

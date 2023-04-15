@@ -132,6 +132,9 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("Zone")
+        public String zone;
+
         public static DescribeEipSegmentResponseBodyEipSegmentsEipSegment build(java.util.Map<String, ?> map) throws Exception {
             DescribeEipSegmentResponseBodyEipSegmentsEipSegment self = new DescribeEipSegmentResponseBodyEipSegmentsEipSegment();
             return TeaModel.build(map, self);
@@ -199,6 +202,14 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeEipSegmentResponseBodyEipSegmentsEipSegment setZone(String zone) {
+            this.zone = zone;
+            return this;
+        }
+        public String getZone() {
+            return this.zone;
         }
 
     }

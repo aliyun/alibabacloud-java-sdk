@@ -21,6 +21,9 @@ public class AssociateVpcCidrBlockRequest extends TeaModel {
     @NameInMap("IpVersion")
     public String ipVersion;
 
+    @NameInMap("IpamPoolId")
+    public String ipamPoolId;
+
     /**
      * <p>The type of the IPv6 CIDR block. Valid values:</p>
      * <br>
@@ -95,6 +98,14 @@ public class AssociateVpcCidrBlockRequest extends TeaModel {
     }
     public String getIpVersion() {
         return this.ipVersion;
+    }
+
+    public AssociateVpcCidrBlockRequest setIpamPoolId(String ipamPoolId) {
+        this.ipamPoolId = ipamPoolId;
+        return this;
+    }
+    public String getIpamPoolId() {
+        return this.ipamPoolId;
     }
 
     public AssociateVpcCidrBlockRequest setIpv6Isp(String ipv6Isp) {
