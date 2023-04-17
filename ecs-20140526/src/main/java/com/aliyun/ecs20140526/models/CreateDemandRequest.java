@@ -11,7 +11,7 @@ public class CreateDemandRequest extends TeaModel {
     public Integer amount;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The `ClientToken` value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The value of `ClientToken` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -23,26 +23,26 @@ public class CreateDemandRequest extends TeaModel {
     public String demandDescription;
 
     /**
-     * <p>The name of the demand. The name must be 2 to 128 characters in length and start with a letter but cannot start with [http:// or https://](http://https://). It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).</p>
+     * <p>The name of the demand. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with [http:// or https://](http://https://). It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).</p>
      * <br>
-     * <p>The default value is the instance type.</p>
+     * <p>The default value is the instance type name.</p>
      */
     @NameInMap("DemandName")
     public String demandName;
 
     /**
-     * <p>The end time of the subscription period. Specify the time in the [ISO 8601](~~25696~~) standard and use the UTC time. The format is yyyy-MM-dd hh:mm:ss.</p>
+     * <p>The end time of the subscription period. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.</p>
      * <br>
-     * <p>If the value of seconds (ss) is not 00, the time is automatically set to the beginning of the specified minute (mm). The value of EndTime must be later than the value of Starttime. In most cases, the interval between the two times cannot be more than 10 days.</p>
+     * <p>If the value of seconds (ss) is not 00, the time is automatically set to the beginning of the specified minute (mm). The value of EndTime is later than the value of Starttime. In most cases, the interval between the two times cannot be more than 10 days.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The billing method of the instance. Default value: PostPaid. Valid values:</p>
+     * <p>The billing method of the instance. Valid values:</p>
      * <br>
-     * <p>*   PrePaid: subscription.</p>
-     * <p>*   PostPaid: pay-as-you-go.</p>
+     * <p>*   PrePaid: subscription</p>
+     * <p>*   PostPaid: pay-as-you-go. This is the default value.</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
@@ -62,25 +62,25 @@ public class CreateDemandRequest extends TeaModel {
     /**
      * <p>The subscription period of the resource. Valid values:</p>
      * <br>
-     * <p>*   When the value of PeriodUnit is Day, the valid values of Period are 1, 2, 3, 4, 5, and 6.</p>
-     * <p>*   When the value of PeriodUnit is Week, the valid values of Period are 1, 2, 3, and 4.</p>
-     * <p>*   When the value of PeriodUnit is Month, the valid values of Period are 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</p>
+     * <p>*   Valid values when the value of PeriodUnit is Day: 1, 2, 3, 4, 5, and 6.</p>
+     * <p>*   Valid values when the value of PeriodUnit is Week: 1, 2, 3, and 4.</p>
+     * <p>*   Valid values when the value of PeriodUnit is Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</p>
      */
     @NameInMap("Period")
     public Integer period;
 
     /**
-     * <p>The unit of the subscription period. Default value: Month. Valid values:</p>
+     * <p>The unit of the subscription period. Valid values:</p>
      * <br>
      * <p>*   Day</p>
      * <p>*   Week</p>
-     * <p>*   Month</p>
+     * <p>*   Month. This is the default value.</p>
      */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -92,7 +92,7 @@ public class CreateDemandRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The start time of the subscription period. Specify the time in the [ISO 8601](~~25696~~) standard and use the UTC time. The default format is yyyy-MM-dd HH:mm:ss.</p>
+     * <p>The start time of the subscription period. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.</p>
      * <br>
      * <p>If the value of seconds (ss) is not 00, the time is automatically set to the beginning of the specified minute (mm). The value of EndTime must be later than the value of Starttime. In most cases, the interval between the two times cannot be more than 10 days.</p>
      */
@@ -100,9 +100,9 @@ public class CreateDemandRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The zone ID of the instance. You can call the [DescribeZones](~~25610~~) operation to query the most recent list of zones.</p>
+     * <p>The zone ID of the instance. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.</p>
      * <br>
-     * <p>This parameter is empty by default, which indicates that the system randomly selects a zone.</p>
+     * <p>This parameter is empty by default. If you leave this parameter empty, the system randomly selects a zone.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

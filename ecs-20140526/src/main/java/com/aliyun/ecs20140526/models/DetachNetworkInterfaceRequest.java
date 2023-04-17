@@ -4,9 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DetachNetworkInterfaceRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the ENI.</p>
+     */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
@@ -16,6 +22,9 @@ public class DetachNetworkInterfaceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -25,6 +34,11 @@ public class DetachNetworkInterfaceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the trunk ENI.</p>
+     * <br>
+     * <p>>  This parameter is unavailable for use.</p>
+     */
     @NameInMap("TrunkNetworkInstanceId")
     public String trunkNetworkInstanceId;
 

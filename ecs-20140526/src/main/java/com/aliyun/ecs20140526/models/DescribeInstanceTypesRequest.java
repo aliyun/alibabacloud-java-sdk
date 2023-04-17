@@ -4,111 +4,304 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceTypesRequest extends TeaModel {
+    /**
+     * <p>The CPU architecture. Valid values:</p>
+     * <br>
+     * <p>*   X86</p>
+     * <p>*   ARM</p>
+     */
     @NameInMap("CpuArchitecture")
     public String cpuArchitecture;
 
+    /**
+     * <p>The GPU model.</p>
+     * <br>
+     * <p>> Fuzzy match is supported. For example, if an instance type provides NVIDIA V100 GPUs and you set this parameter to NVIDIA, information about the instance type is queried.</p>
+     */
     @NameInMap("GPUSpec")
     public String GPUSpec;
 
+    /**
+     * <p>The category of the instance type. Valid values:</p>
+     * <br>
+     * <p>*   General-purpose: general-purpose instance type</p>
+     * <p>*   Compute-optimized: compute-optimized instance type</p>
+     * <p>*   Memory-optimized: memory-optimized instance type</p>
+     * <p>*   Big data: big data instance type</p>
+     * <p>*   Local SSDs: instance type with local SSDs</p>
+     * <p>*   High Clock Speed: instance type with high clock speeds</p>
+     * <p>*   Enhanced: enhanced instance type</p>
+     * <p>*   Shared: shared instance type</p>
+     * <p>*   Compute-optimized with GPU: GPU-accelerated compute-optimized instance type</p>
+     * <p>*   Visual Compute-optimized: visual compute-optimized instance type</p>
+     * <p>*   Heterogeneous Service: heterogeneous service instance type</p>
+     * <p>*   Compute-optimized with FPGA: FPGA-accelerated compute-optimized instance type</p>
+     * <p>*   Compute-optimized with NPU: NPU-accelerated compute-optimized instance type</p>
+     * <p>*   ECS Bare Metal: ECS Bare Metal Instance type</p>
+     * <p>*   Super Computing Cluster: Super Computing Cluster (SCC) instance type</p>
+     */
     @NameInMap("InstanceCategory")
     public String instanceCategory;
 
+    /**
+     * <p>The level of the instance family. Valid values:</p>
+     * <br>
+     * <p>*   EntryLevel: entry level (shared)</p>
+     * <p>*   EnterpriseLevel: enterprise level</p>
+     * <p>*   CreditEntryLevel: credit-based entry level</p>
+     */
     @NameInMap("InstanceFamilyLevel")
     public String instanceFamilyLevel;
 
+    /**
+     * <p>The instance family to which the instance type belongs. For information about the valid values of this parameter, see [DescribeInstanceTypeFamilies](~~25621~~).</p>
+     * <br>
+     * <p>For more information about instance families, see [Instance families](~~25378~~).</p>
+     */
     @NameInMap("InstanceTypeFamily")
     public String instanceTypeFamily;
 
+    /**
+     * <p>Instance type N. Valid values of N: 1 to 10. If this parameter is empty, information about all instance types is queried.</p>
+     */
     @NameInMap("InstanceTypes")
     public java.util.List<String> instanceTypes;
 
+    /**
+     * <p>The category of local disks. For more information, see [Local disks](~~63138#section_n2w\_8yc\_5u1~~). Valid values:</p>
+     * <br>
+     * <p>*   local_hdd_pro: local Serial Advanced Technology Attachment (SATA) HDDs, which are used by d1ne or d1 instances</p>
+     * <p>*   local_ssd_pro: local Non-Volatile Memory Express (NVMe) SSDs, which are used by i2, i2g, i1, ga1, or gn5 instances</p>
+     */
     @NameInMap("LocalStorageCategory")
     public String localStorageCategory;
 
+    /**
+     * <p>The maximum number of entries to return on each page. Maximum value: 1600.</p>
+     * <br>
+     * <p>Default value: 1600.</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    /**
+     * <p>The maximum number of vCPUs. The value must be a positive integer.</p>
+     * <br>
+     * <p>> If an instance type has more vCPUs than the specified value, information about the instance type is not queried.</p>
+     */
     @NameInMap("MaximumCpuCoreCount")
     public Integer maximumCpuCoreCount;
 
+    /**
+     * <p>The maximum clock speed.</p>
+     * <br>
+     * <p>> If an instance type uses processors that have a higher clock speed than the specified value, information about the instance type is not queried.</p>
+     */
     @NameInMap("MaximumCpuSpeedFrequency")
     public Float maximumCpuSpeedFrequency;
 
+    /**
+     * <p>The maximum turbo frequency.</p>
+     * <br>
+     * <p>> If an instance type uses processors that deliver a higher turbo frequency than the specified value, information about the instance type is not queried.</p>
+     */
     @NameInMap("MaximumCpuTurboFrequency")
     public Float maximumCpuTurboFrequency;
 
+    /**
+     * <p>The maximum number of GPUs. The value must be a positive integer.</p>
+     * <br>
+     * <p>> If an instance type provides more GPUs than the specified value, information about the instance type is not queried.</p>
+     */
     @NameInMap("MaximumGPUAmount")
     public Integer maximumGPUAmount;
 
+    /**
+     * <p>The maximum memory size. Unit: GiB.</p>
+     * <br>
+     * <p>> If the memory size of an instance type is larger than the specified value, information about the instance type is not queried.</p>
+     */
     @NameInMap("MaximumMemorySize")
     public Float maximumMemorySize;
 
+    /**
+     * <p>The minimum baseline CPU performance (overall baseline performance of all vCPUs) per t5 or t6 burstable instance.</p>
+     * <br>
+     * <p>> If a t5 or t6 instance type provides baseline CPU performance that is lower than the specified value, information about the instance type is not queried.</p>
+     */
     @NameInMap("MinimumBaselineCredit")
     public Integer minimumBaselineCredit;
 
+    /**
+     * <p>The minimum number of vCPUs. The value must be a positive integer.</p>
+     * <br>
+     * <p>> If an instance type has fewer vCPUs than the specified value, information about the instance type is not queried.</p>
+     */
     @NameInMap("MinimumCpuCoreCount")
     public Integer minimumCpuCoreCount;
 
+    /**
+     * <p>The minimum clock speed.</p>
+     * <br>
+     * <p>> If an instance type uses processors that have a lower clock speed than the specified value, information about the instance type is not queried.</p>
+     */
     @NameInMap("MinimumCpuSpeedFrequency")
     public Float minimumCpuSpeedFrequency;
 
+    /**
+     * <p>The minimum turbo frequency.</p>
+     * <br>
+     * <p>> If an instance type uses processors that deliver a lower turbo frequency than the specified value, information about the instance type is not queried.</p>
+     */
     @NameInMap("MinimumCpuTurboFrequency")
     public Float minimumCpuTurboFrequency;
 
+    /**
+     * <p>The minimum number of cloud disks.</p>
+     * <br>
+     * <p>> If an instance type supports fewer cloud disks than the specified value, information about the instance type is not queried.</p>
+     */
     @NameInMap("MinimumDiskQuantity")
     public Integer minimumDiskQuantity;
 
+    /**
+     * <p>The minimum number of IPv6 addresses per ENI.</p>
+     * <br>
+     * <p>> If an instance type supports fewer IPv6 addresses per ENI than the specified value, information about the instance type is not queried.</p>
+     */
     @NameInMap("MinimumEniIpv6AddressQuantity")
     public Integer minimumEniIpv6AddressQuantity;
 
+    /**
+     * <p>The minimum number of IPv4 addresses per ENI.</p>
+     * <br>
+     * <p>> If an instance type supports fewer IPv4 addresses per ENI than the specified value, information about the instance type is not queried.</p>
+     */
     @NameInMap("MinimumEniPrivateIpAddressQuantity")
     public Integer minimumEniPrivateIpAddressQuantity;
 
+    /**
+     * <p>The minimum number of elastic network interfaces (ENIs).</p>
+     * <br>
+     * <p>> If an instance type supports fewer ENIs than the specified value, information about the instance type is not queried.</p>
+     */
     @NameInMap("MinimumEniQuantity")
     public Integer minimumEniQuantity;
 
+    /**
+     * <p>The minimum number of ERIs.</p>
+     * <br>
+     * <p>> If an instance type supports fewer ERIs than the specified value, information about the instance type is not queried.</p>
+     */
     @NameInMap("MinimumEriQuantity")
     public Integer minimumEriQuantity;
 
+    /**
+     * <p>The minimum number of GPUs. The value must be a positive integer.</p>
+     * <br>
+     * <p>> If an instance type provides fewer GPUs than the specified value, information about the instance type is not queried.</p>
+     */
     @NameInMap("MinimumGPUAmount")
     public Integer minimumGPUAmount;
 
+    /**
+     * <p>The minimum initial CPU credits per t5 or t6 burstable instance.</p>
+     * <br>
+     * <p>> If a t5 or t6 instance type provides less initial vCPU credits than the specified value, information about the instance type is not queried.</p>
+     */
     @NameInMap("MinimumInitialCredit")
     public Integer minimumInitialCredit;
 
+    /**
+     * <p>The minimum inbound internal bandwidth. Unit: Kbit/s.</p>
+     * <br>
+     * <p>> If an instance type provides an inbound internal bandwidth that is lower than the specified value, information about the instance type is not queried.</p>
+     */
     @NameInMap("MinimumInstanceBandwidthRx")
     public Integer minimumInstanceBandwidthRx;
 
+    /**
+     * <p>The minimum outbound internal bandwidth. Unit: Kbit/s.</p>
+     * <br>
+     * <p>> If an instance type provides an outbound internal bandwidth that is lower than the specified value, information about the instance type is not queried.</p>
+     */
     @NameInMap("MinimumInstanceBandwidthTx")
     public Integer minimumInstanceBandwidthTx;
 
+    /**
+     * <p>The minimum inbound packet forwarding rate over the internal network. Unit: pps.</p>
+     * <br>
+     * <p>> If an instance type provides an inbound packet forwarding rate over the internal network that is lower than the specified value, information about the instance type is not queried.</p>
+     */
     @NameInMap("MinimumInstancePpsRx")
     public Long minimumInstancePpsRx;
 
+    /**
+     * <p>The minimum outbound packet forwarding rate over the internal network. Unit: pps.</p>
+     * <br>
+     * <p>> If an instance type provides an outbound packet forwarding rate over the internal network that is lower than the specified value, information about the instance type is not queried.</p>
+     */
     @NameInMap("MinimumInstancePpsTx")
     public Long minimumInstancePpsTx;
 
+    /**
+     * <p>The minimum number of local disks.</p>
+     * <br>
+     * <p>> If an instance type supports fewer local disks than the specified value, information about the instance type is not queried.</p>
+     */
     @NameInMap("MinimumLocalStorageAmount")
     public Integer minimumLocalStorageAmount;
 
+    /**
+     * <p>The capacity of each local disk. Unit: GiB.</p>
+     */
     @NameInMap("MinimumLocalStorageCapacity")
     public Long minimumLocalStorageCapacity;
 
+    /**
+     * <p>The minimum memory size. Unit: GiB.</p>
+     * <br>
+     * <p>> If the memory size of an instance type is smaller than the specified value, information about the instance type is not queried.</p>
+     */
     @NameInMap("MinimumMemorySize")
     public Float minimumMemorySize;
 
+    /**
+     * <p>The minimum default number of queues per primary network interface controller (NIC).</p>
+     * <br>
+     * <p>> If an instance type supports fewer queues per primary NIC than the specified value, information about the instance type is not queried.</p>
+     */
     @NameInMap("MinimumPrimaryEniQueueNumber")
     public Integer minimumPrimaryEniQueueNumber;
 
+    /**
+     * <p>The minimum number of queue pair (QP) queues per elastic RDMA interface (ERI).</p>
+     * <br>
+     * <p>> If an instance type supports fewer QP queues per ERI than the specified value, information about the instance type is not queried.</p>
+     */
     @NameInMap("MinimumQueuePairNumber")
     public Integer minimumQueuePairNumber;
 
+    /**
+     * <p>The minimum default number of queues per secondary NIC.</p>
+     * <br>
+     * <p>> If an instance type supports fewer queues per secondary NIC than the specified value, information about the instance type is not queried.</p>
+     */
     @NameInMap("MinimumSecondaryEniQueueNumber")
     public Integer minimumSecondaryEniQueueNumber;
 
+    /**
+     * <p>The query token. Set the value to the NextToken value returned in the previous call to the DescribeInstanceTypes operation. Leave this parameter empty the first time you call this operation.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>Specifies whether cloud disks can be attached by using the NVMe protocol. Valid values:</p>
+     * <br>
+     * <p>*   required: Cloud disks can be attached by using the NVMe protocol.</p>
+     * <p>*   unsupported: Cloud disk cannot be attached by using the NVMe protocol.</p>
+     */
     @NameInMap("NvmeSupport")
     public String nvmeSupport;
 
@@ -118,6 +311,11 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The CPU model.</p>
+     * <br>
+     * <p>> Fuzzy match is supported. For example, if an instance type uses Intel Xeon (Ice Lake) Platinum 8369B processors and you set this parameter to Intel, information about the instance type is queried.</p>
+     */
     @NameInMap("PhysicalProcessorModel")
     public String physicalProcessorModel;
 

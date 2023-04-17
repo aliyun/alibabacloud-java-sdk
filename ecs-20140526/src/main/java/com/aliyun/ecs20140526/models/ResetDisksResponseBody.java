@@ -4,9 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ResetDisksResponseBody extends TeaModel {
+    /**
+     * <p>The information about the rollback operations on one or more disks.</p>
+     */
     @NameInMap("OperationProgressSet")
     public ResetDisksResponseBodyOperationProgressSet operationProgressSet;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class ResetDisksResponseBody extends TeaModel {
     }
 
     public static class ResetDisksResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem extends TeaModel {
+        /**
+         * <p>The name of the resource.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the resource.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -81,15 +93,31 @@ public class ResetDisksResponseBody extends TeaModel {
     }
 
     public static class ResetDisksResponseBodyOperationProgressSetOperationProgress extends TeaModel {
+        /**
+         * <p>The error code that is returned if the request failed. This parameter is empty if the operation is successful.</p>
+         * <br>
+         * <p>For information about error codes and error messages, see [Service error codes](https://error-center.alibabacloud.com/status/product/Ecs).</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The error message that is returned if the request failed. This parameter is empty if the operation is successful.</p>
+         * <br>
+         * <p>For information about error codes and error messages, see [Service error codes](https://error-center.alibabacloud.com/status/product/Ecs).</p>
+         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
+        /**
+         * <p>Indicates whether the operation is successful. If the operation is successful, Success is returned. If the operation failed, an error code and an error message are returned.</p>
+         */
         @NameInMap("OperationStatus")
         public String operationStatus;
 
+        /**
+         * <p>The information about the resources.</p>
+         */
         @NameInMap("RelatedItemSet")
         public ResetDisksResponseBodyOperationProgressSetOperationProgressRelatedItemSet relatedItemSet;
 

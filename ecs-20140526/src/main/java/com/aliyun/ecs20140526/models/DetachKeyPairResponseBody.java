@@ -4,18 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DetachKeyPairResponseBody extends TeaModel {
+    /**
+     * <p>The number of instances from which the SSH key pair failed to be unbound.</p>
+     */
     @NameInMap("FailCount")
     public String failCount;
 
+    /**
+     * <p>The names of the key pairs.</p>
+     */
     @NameInMap("KeyPairName")
     public String keyPairName;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The result set of the unbind operation.</p>
+     */
     @NameInMap("Results")
     public DetachKeyPairResponseBodyResults results;
 
+    /**
+     * <p>The total number of instances from which you attempted to unbind the SSH key pair.</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -65,15 +80,27 @@ public class DetachKeyPairResponseBody extends TeaModel {
     }
 
     public static class DetachKeyPairResponseBodyResultsResult extends TeaModel {
+        /**
+         * <p>The operation status code returned. 200 indicates that the operation was successful.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The result of the operation. For example, when the value of `Code` is 200, the value of `Message` is `successful`.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>Indicates whether the operation was successful.</p>
+         */
         @NameInMap("Success")
         public String success;
 

@@ -4,6 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyReservedInstanceAttributeRequest extends TeaModel {
+    /**
+     * <p>The new description of the reserved instance. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.</p>
+     * <br>
+     * <p>This parameter is empty by default.</p>
+     */
     @NameInMap("Description")
     public String description;
 
@@ -13,12 +18,21 @@ public class ModifyReservedInstanceAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the reserved instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the reserved instance.</p>
+     */
     @NameInMap("ReservedInstanceId")
     public String reservedInstanceId;
 
+    /**
+     * <p>The new name of the reserved instance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     */
     @NameInMap("ReservedInstanceName")
     public String reservedInstanceName;
 

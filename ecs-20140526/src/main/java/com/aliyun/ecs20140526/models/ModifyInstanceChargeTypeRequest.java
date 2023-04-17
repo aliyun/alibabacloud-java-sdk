@@ -4,24 +4,66 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceChargeTypeRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to automatically complete the payment. Valid values:</p>
+     * <br>
+     * <p>*   true: The payment is automatically completed. Make sure that the balance in your account is sufficient. Otherwise, your order becomes invalid and is canceled.</p>
+     * <p>*   false: An order is generated but no payment is made.</p>
+     * <br>
+     * <p>Default value: true.</p>
+     * <br>
+     * <p>> If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <br>
+     * <p>*   true: performs a dry run. The system checks the AccessKey pair, the permissions of the RAM user, and the required parameters. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   false: performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * <br>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>Specifies whether to change the billing method of all data disks attached to the instance from pay-as-you-go to subscription.</p>
+     * <br>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("IncludeDataDisks")
     public Boolean includeDataDisks;
 
+    /**
+     * <p>The new billing method. Valid values:</p>
+     * <br>
+     * <p>*   PrePaid: the subscription billing method</p>
+     * <p>*   PostPaid: the pay-as-you-go billing method</p>
+     * <br>
+     * <p>Default value: PrePaid.</p>
+     */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
+    /**
+     * <p>The ID of the instance. The value can be a JSON array that consists of up to 20 instance IDs. Separate the instance IDs with commas (,).</p>
+     */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
+    /**
+     * <p>Specifies whether to return cost details of the order after the billing method is changed from subscription to pay-as-you-go.</p>
+     * <br>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("IsDetailFee")
     public Boolean isDetailFee;
 
@@ -31,12 +73,27 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The renewal duration of the subscription instance. If the instance is hosted on a dedicated host, the renewal duration of the instance cannot exceed the subscription duration of the dedicated host. Valid values:</p>
+     * <br>
+     * <p>Valid values when the `PeriodUnit` parameter is set to Month: `1, 2, 3, 4, 5, 6, 7, 8, 9, and 12`.</p>
+     */
     @NameInMap("Period")
     public Integer period;
 
+    /**
+     * <p>The unit of the renewal duration specified by the `Period` parameter. Valid values:</p>
+     * <br>
+     * <p>Month</p>
+     * <br>
+     * <p>Default value: Month.</p>
+     */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

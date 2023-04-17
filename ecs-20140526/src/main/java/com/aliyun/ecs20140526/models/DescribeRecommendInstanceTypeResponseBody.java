@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
     /**
-     * <p>Details of recommended instance types.</p>
+     * <p>Details about the recommended instance types.</p>
      */
     @NameInMap("Data")
     public DescribeRecommendInstanceTypeResponseBodyData data;
@@ -150,13 +150,13 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
 
     public static class DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeZonesZone extends TeaModel {
         /**
-         * <p>Details of network types of the alternative instance types.</p>
+         * <p>Details about network types of instance types.</p>
          */
         @NameInMap("NetworkTypes")
         public DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeZonesZoneNetworkTypes networkTypes;
 
         /**
-         * <p>The zone ID of the specified instance type.</p>
+         * <p>The ID of the zone in which the instance type is available.</p>
          */
         @NameInMap("ZoneNo")
         public String zoneNo;
@@ -211,7 +211,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         public String commodityCode;
 
         /**
-         * <p>The billing method of the instances of the instance type.</p>
+         * <p>The billing method of the instance.</p>
          */
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
@@ -223,13 +223,13 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         public DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeInstanceType instanceType;
 
         /**
-         * <p>The network type of the ECS instance.</p>
+         * <p>The network type of the instance.</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
 
         /**
-         * <p>The sorting priority.</p>
+         * <p>The priority based on which the system sorts the instance types.</p>
          */
         @NameInMap("Priority")
         public Integer priority;
@@ -241,25 +241,25 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>Indicates the scenario in which the instance type was recommended.</p>
+         * <p>The scenarios in which the instance type is recommended.</p>
          */
         @NameInMap("Scene")
         public String scene;
 
         /**
-         * <p>The preemption policy for the preemptible instance.</p>
+         * <p>The bidding policy for the preemptible instance.</p>
          */
         @NameInMap("SpotStrategy")
         public String spotStrategy;
 
         /**
-         * <p>The zone ID of the instance type.</p>
+         * <p>The ID of the zone in which the instance type is available.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
 
         /**
-         * <p>Details of the zones where the alternative instance types are available.</p>
+         * <p>Details about zones where the instance types resides.</p>
          */
         @NameInMap("Zones")
         public DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeZones zones;

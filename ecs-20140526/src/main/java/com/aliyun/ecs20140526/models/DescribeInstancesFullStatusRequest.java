@@ -80,7 +80,7 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -94,9 +94,9 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     /**
      * <p>The lifecycle state of the instance. Valid values:</p>
      * <br>
-     * <p>*   Starting: The instance is being started.</p>
-     * <p>*   Running: The instance is running.</p>
-     * <p>*   Stopped: The instance is stopped.</p>
+     * <p>*   Starting</p>
+     * <p>*   Running</p>
+     * <p>*   Stopped</p>
      */
     @NameInMap("Status")
     public String status;

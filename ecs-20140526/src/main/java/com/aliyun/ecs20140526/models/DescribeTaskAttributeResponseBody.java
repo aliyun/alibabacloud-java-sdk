@@ -4,42 +4,84 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeTaskAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The time when the task was created.</p>
+     */
     @NameInMap("CreationTime")
     public String creationTime;
 
+    /**
+     * <p>The number of failed tasks.</p>
+     */
     @NameInMap("FailedCount")
     public Integer failedCount;
 
+    /**
+     * <p>The time when the task was complete.</p>
+     */
     @NameInMap("FinishedTime")
     public String finishedTime;
 
+    /**
+     * <p>An array consisting of OperationProgress data of each subtask.</p>
+     */
     @NameInMap("OperationProgressSet")
     public DescribeTaskAttributeResponseBodyOperationProgressSet operationProgressSet;
 
+    /**
+     * <p>The region ID of the task.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of completed tasks.</p>
+     */
     @NameInMap("SuccessCount")
     public Integer successCount;
 
+    /**
+     * <p>Indicates whether the task can be canceled ([CancelTask](https://www.alibabacloud.com/help/en/elastic-compute-service/latest/canceltask)). Valid values: </p>
+     * <br>
+     * <p>- true: The task can be canceled.</p>
+     * <p>- false: The task cannot be canceled.</p>
+     */
     @NameInMap("SupportCancel")
     public String supportCancel;
 
+    /**
+     * <p>The operation name of the task.</p>
+     */
     @NameInMap("TaskAction")
     public String taskAction;
 
+    /**
+     * <p>The ID of the task.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <p>The progress of the task.</p>
+     */
     @NameInMap("TaskProcess")
     public String taskProcess;
 
+    /**
+     * <p>The status of the task.</p>
+     */
     @NameInMap("TaskStatus")
     public String taskStatus;
 
+    /**
+     * <p>The total number of tasks.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -153,9 +195,15 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem extends TeaModel {
+        /**
+         * <p>The name of the related item.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The value of the related item.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -202,15 +250,27 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgress extends TeaModel {
+        /**
+         * <p>The error code.</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The error message.</p>
+         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
+        /**
+         * <p>The status of the operation.</p>
+         */
         @NameInMap("OperationStatus")
         public String operationStatus;
 
+        /**
+         * <p>An array consisting of RelatedItem data.</p>
+         */
         @NameInMap("RelatedItemSet")
         public DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgressRelatedItemSet relatedItemSet;
 
