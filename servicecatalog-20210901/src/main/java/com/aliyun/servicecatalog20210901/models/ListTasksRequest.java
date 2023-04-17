@@ -15,7 +15,7 @@ public class ListTasksRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page.</p>
      * <br>
-     * <p>Valid values: 1 to 100. Minimum value: 1. Default value: 10.</p>
+     * <p>Valid values: 1 to 100. Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -29,7 +29,7 @@ public class ListTasksRequest extends TeaModel {
     /**
      * <p>The field that is used to sort the queried data.</p>
      * <br>
-     * <p>The value is fixed as CreateTime, which specifies the creation time of tasks.</p>
+     * <p>Set the value to CreateTime, which specifies the time when the task was created.</p>
      */
     @NameInMap("SortBy")
     public String sortBy;

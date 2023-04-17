@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRegionsResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of regions.</p>
+     * <p>The details of regions.</p>
      */
     @NameInMap("Regions")
     public java.util.List<ListRegionsResponseBodyRegions> regions;

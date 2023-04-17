@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProductVersionsResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the product versions.</p>
+     * <p>The versions of the product.</p>
      */
     @NameInMap("ProductVersionDetails")
     public java.util.List<ListProductVersionsResponseBodyProductVersionDetails> productVersionDetails;
@@ -39,15 +39,15 @@ public class ListProductVersionsResponseBody extends TeaModel {
 
     public static class ListProductVersionsResponseBodyProductVersionDetails extends TeaModel {
         /**
-         * <p>Indicates whether the product version is visible to end users. Valid values:</p>
+         * <p>Indicates whether the product version is enabled. Valid values:</p>
          * <br>
-         * <p>true: The product version is visible to end users. This is the default value. false: The product version is invisible to end users.</p>
+         * <p>true: The product version is enabled. This is the default value. false: The product version is disabled.</p>
          */
         @NameInMap("Active")
         public Boolean active;
 
         /**
-         * <p>The time when the product version is created.</p>
+         * <p>The time when the product version was created.</p>
          * <br>
          * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
@@ -64,9 +64,9 @@ public class ListProductVersionsResponseBody extends TeaModel {
          * <p>The recommendation information. Valid values:</p>
          * <br>
          * <p>*   Default: No recommendation information is provided. This is the default value.</p>
-         * <p>*   Recommended: the recommendation version.</p>
+         * <p>*   Recommended: the recommended version.</p>
          * <p>*   Latest: the latest version.</p>
-         * <p>*   Deprecated: the version that is about to be deprecated.</p>
+         * <p>*   Deprecated: the version that is about to be discontinued.</p>
          */
         @NameInMap("Guidance")
         public String guidance;
@@ -92,7 +92,7 @@ public class ListProductVersionsResponseBody extends TeaModel {
         /**
          * <p>The type of the template.</p>
          * <br>
-         * <p>The value is fixed as RosTerraformTemplate, which indicates that the Terraform template is supported by Resource Orchestration Service (ROS).</p>
+         * <p>The value is fixed as RosTerraformTemplate, which indicates the Terraform template that is supported by Resource Orchestration Service (ROS).</p>
          */
         @NameInMap("TemplateType")
         public String templateType;

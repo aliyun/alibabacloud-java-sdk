@@ -11,7 +11,7 @@ public class GetTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details of the download task.</p>
+     * <p>The details of the task.</p>
      */
     @NameInMap("TaskDetail")
     public GetTaskResponseBodyTaskDetail taskDetail;
@@ -39,7 +39,7 @@ public class GetTaskResponseBody extends TeaModel {
 
     public static class GetTaskResponseBodyTaskDetailLogTerraformLogs extends TeaModel {
         /**
-         * <p>The name of the Terraform command. Valid values:</p>
+         * <p>The name of the Terraform command that is run. Valid values:</p>
          * <br>
          * <p>*   apply</p>
          * <p>*   plan</p>
@@ -52,7 +52,7 @@ public class GetTaskResponseBody extends TeaModel {
         public String command;
 
         /**
-         * <p>The content of the output stream that is returned after you run the command.</p>
+         * <p>The content of the output stream that is returned after the command is run.</p>
          */
         @NameInMap("Content")
         public String content;
@@ -99,7 +99,7 @@ public class GetTaskResponseBody extends TeaModel {
 
     public static class GetTaskResponseBodyTaskDetailLog extends TeaModel {
         /**
-         * <p>An array that consists of Terraform logs.</p>
+         * <p>The Terraform logs.</p>
          */
         @NameInMap("TerraformLogs")
         public java.util.List<GetTaskResponseBodyTaskDetailLogTerraformLogs> terraformLogs;
@@ -121,19 +121,19 @@ public class GetTaskResponseBody extends TeaModel {
 
     public static class GetTaskResponseBodyTaskDetailOutputs extends TeaModel {
         /**
-         * <p>The description of the parameter that is specified in the output of the template.</p>
+         * <p>The description of the output parameter for the template.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The name of the parameter that is specified in the output of the template.</p>
+         * <p>The name of the output parameter for the template.</p>
          */
         @NameInMap("OutputKey")
         public String outputKey;
 
         /**
-         * <p>The value of the parameter that is specified in the output of the template.</p>
+         * <p>The value of the output parameter for the template.</p>
          */
         @NameInMap("OutputValue")
         public String outputValue;
@@ -171,13 +171,13 @@ public class GetTaskResponseBody extends TeaModel {
 
     public static class GetTaskResponseBodyTaskDetailParameters extends TeaModel {
         /**
-         * <p>The name of the parameter in the template.</p>
+         * <p>The name of the input parameter for the template.</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
 
         /**
-         * <p>The value of the parameter in the template.</p>
+         * <p>The value of the input parameter for the template.</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
@@ -206,19 +206,9 @@ public class GetTaskResponseBody extends TeaModel {
     }
 
     public static class GetTaskResponseBodyTaskDetailTaskTags extends TeaModel {
-        /**
-         * <p>The tag key of the custom tag.</p>
-         * <br>
-         * <p>The tag key can be up to 128 characters in length, and cannot start with `acs:` or `aliyun`. The tag key cannot contain `http://` or `https://`.</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag value of the custom tag.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length, and cannot start with `acs:`. The tag value cannot contain `http://` or `https://`.</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -261,13 +251,13 @@ public class GetTaskResponseBody extends TeaModel {
         public GetTaskResponseBodyTaskDetailLog log;
 
         /**
-         * <p>An array that consists of the parameters specified in the output of the template.</p>
+         * <p>The output parameters of the template.</p>
          */
         @NameInMap("Outputs")
         public java.util.List<GetTaskResponseBodyTaskDetailOutputs> outputs;
 
         /**
-         * <p>An array that consists of the parameters in the template.</p>
+         * <p>The input parameters of the template.</p>
          */
         @NameInMap("Parameters")
         public java.util.List<GetTaskResponseBodyTaskDetailParameters> parameters;
@@ -297,7 +287,7 @@ public class GetTaskResponseBody extends TeaModel {
         public String productVersionId;
 
         /**
-         * <p>The name for the version of the product.</p>
+         * <p>The name of the product version.</p>
          */
         @NameInMap("ProductVersionName")
         public String productVersionName;
@@ -315,17 +305,17 @@ public class GetTaskResponseBody extends TeaModel {
         public String provisionedProductName;
 
         /**
-         * <p>The status of the task. Valid values:</p>
+         * <p>The state of the task. Valid values:</p>
          * <br>
          * <p>*   Succeeded: The task was successful.</p>
-         * <p>*   InProgress: The task is in progress.</p>
+         * <p>*   InProgress: The task was in progress.</p>
          * <p>*   Failed: The task failed.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The message that is returned for the state.</p>
+         * <p>The message that is returned for the status of the task.</p>
          * <br>
          * <p>> This parameter is returned only when Failed is returned for the Status parameter.</p>
          */
@@ -338,18 +328,15 @@ public class GetTaskResponseBody extends TeaModel {
         @NameInMap("TaskId")
         public String taskId;
 
-        /**
-         * <p>An array consisting of custom tags that are specified by the end user.</p>
-         */
         @NameInMap("TaskTags")
         public java.util.List<GetTaskResponseBodyTaskDetailTaskTags> taskTags;
 
         /**
          * <p>The type of the task. Valid values:</p>
          * <br>
-         * <p>*   LaunchProduct: launches the product.</p>
-         * <p>*   UpdateProvisionedProduct: updates the information about the product instance.</p>
-         * <p>*   TerminateProvisionedProduct: terminates the product instance.</p>
+         * <p>*   LaunchProduct: a task that launches the product.</p>
+         * <p>*   UpdateProvisionedProduct: a task that updates the information about the product instance.</p>
+         * <p>*   TerminateProvisionedProduct: a task that terminates the product instance.</p>
          */
         @NameInMap("TaskType")
         public String taskType;

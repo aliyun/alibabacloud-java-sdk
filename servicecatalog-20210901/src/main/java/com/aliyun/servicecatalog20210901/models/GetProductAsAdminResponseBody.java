@@ -16,6 +16,9 @@ public class GetProductAsAdminResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TagOptions")
+    public java.util.List<GetProductAsAdminResponseBodyTagOptions> tagOptions;
+
     public static GetProductAsAdminResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetProductAsAdminResponseBody self = new GetProductAsAdminResponseBody();
         return TeaModel.build(map, self);
@@ -35,6 +38,14 @@ public class GetProductAsAdminResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetProductAsAdminResponseBody setTagOptions(java.util.List<GetProductAsAdminResponseBodyTagOptions> tagOptions) {
+        this.tagOptions = tagOptions;
+        return this;
+    }
+    public java.util.List<GetProductAsAdminResponseBodyTagOptions> getTagOptions() {
+        return this.tagOptions;
     }
 
     public static class GetProductAsAdminResponseBodyProductDetail extends TeaModel {
@@ -143,6 +154,69 @@ public class GetProductAsAdminResponseBody extends TeaModel {
         }
         public String getProviderName() {
             return this.providerName;
+        }
+
+    }
+
+    public static class GetProductAsAdminResponseBodyTagOptions extends TeaModel {
+        @NameInMap("Active")
+        public Boolean active;
+
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Owner")
+        public String owner;
+
+        @NameInMap("TagOptionId")
+        public String tagOptionId;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetProductAsAdminResponseBodyTagOptions build(java.util.Map<String, ?> map) throws Exception {
+            GetProductAsAdminResponseBodyTagOptions self = new GetProductAsAdminResponseBodyTagOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public GetProductAsAdminResponseBodyTagOptions setActive(Boolean active) {
+            this.active = active;
+            return this;
+        }
+        public Boolean getActive() {
+            return this.active;
+        }
+
+        public GetProductAsAdminResponseBodyTagOptions setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetProductAsAdminResponseBodyTagOptions setOwner(String owner) {
+            this.owner = owner;
+            return this;
+        }
+        public String getOwner() {
+            return this.owner;
+        }
+
+        public GetProductAsAdminResponseBodyTagOptions setTagOptionId(String tagOptionId) {
+            this.tagOptionId = tagOptionId;
+            return this;
+        }
+        public String getTagOptionId() {
+            return this.tagOptionId;
+        }
+
+        public GetProductAsAdminResponseBodyTagOptions setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

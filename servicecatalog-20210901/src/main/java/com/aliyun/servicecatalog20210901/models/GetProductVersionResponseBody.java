@@ -48,9 +48,9 @@ public class GetProductVersionResponseBody extends TeaModel {
         public Boolean active;
 
         /**
-         * <p>The time when the product version is created.</p>
+         * <p>The time when the product version was created.</p>
          * <br>
-         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;

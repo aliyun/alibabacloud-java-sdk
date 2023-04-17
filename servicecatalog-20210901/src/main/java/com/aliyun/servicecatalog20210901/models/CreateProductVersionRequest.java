@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateProductVersionRequest extends TeaModel {
     /**
-     * <p>Specifies whether the product version is visible to end users. Valid values:</p>
+     * <p>Specifies whether the product version is active. Valid values:</p>
      * <br>
-     * <p>*   true: The product version is visible to end users. This is the default value.</p>
-     * <p>*   false: The product version is invisible to end users.</p>
+     * <p>*   true: The product version is active. This is the default value.</p>
+     * <p>*   false: The product version is inactive.</p>
      */
     @NameInMap("Active")
     public Boolean active;
@@ -27,7 +27,7 @@ public class CreateProductVersionRequest extends TeaModel {
      * <p>*   Default: No recommendation information is provided. This is the default value.</p>
      * <p>*   Recommended: the recommendation version.</p>
      * <p>*   Latest: the latest version.</p>
-     * <p>*   Deprecated: the version that is about to be deprecated.</p>
+     * <p>*   Deprecated: the version that is about to be discontinued.</p>
      */
     @NameInMap("Guidance")
     public String guidance;
@@ -49,7 +49,7 @@ public class CreateProductVersionRequest extends TeaModel {
     /**
      * <p>The type of the template.</p>
      * <br>
-     * <p>The value is fixed as RosTerraformTemplate, which specifies that the Terraform template is supported by Resource Orchestration Service (ROS).</p>
+     * <p>The value is fixed as RosTerraformTemplate, which specifies the Terraform template that is supported by Resource Orchestration Service (ROS).</p>
      */
     @NameInMap("TemplateType")
     public String templateType;

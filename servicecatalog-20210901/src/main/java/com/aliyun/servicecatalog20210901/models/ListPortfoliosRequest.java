@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPortfoliosRequest extends TeaModel {
     /**
-     * <p>The filter condition.</p>
+     * <p>The filter conditions.</p>
      */
     @NameInMap("Filters")
     public java.util.List<ListPortfoliosRequestFilters> filters;
@@ -21,7 +21,7 @@ public class ListPortfoliosRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page.</p>
      * <br>
-     * <p>Valid values: 1 to 100. Minimum value: 1. Default value: 10.</p>
+     * <p>Valid values: 1 to 100. Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -37,7 +37,7 @@ public class ListPortfoliosRequest extends TeaModel {
      * <br>
      * <p>*   Local: the product portfolios that are created by using the current account. This is the default value.</p>
      * <p>*   Import: the product portfolios that are imported from other accounts.</p>
-     * <p>*   All: All available product portfolios.</p>
+     * <p>*   All: all available product portfolios.</p>
      */
     @NameInMap("Scope")
     public String scope;
@@ -45,7 +45,7 @@ public class ListPortfoliosRequest extends TeaModel {
     /**
      * <p>The field that is used to sort the queried data.</p>
      * <br>
-     * <p>The value is fixed as CreateTime, which specifies the creation time of product portfolios.</p>
+     * <p>The value is fixed as CreateTime, which specifies the time when the product portfolio was created.</p>
      */
     @NameInMap("SortBy")
     public String sortBy;

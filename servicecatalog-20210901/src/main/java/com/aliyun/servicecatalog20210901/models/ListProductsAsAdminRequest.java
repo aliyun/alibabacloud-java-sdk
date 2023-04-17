@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProductsAsAdminRequest extends TeaModel {
     /**
-     * <p>An array that consists of filter conditions.</p>
+     * <p>The filter conditions.</p>
      */
     @NameInMap("Filters")
     public java.util.List<ListProductsAsAdminRequestFilters> filters;
@@ -19,9 +19,9 @@ public class ListProductsAsAdminRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries to return on each page.</p>
      * <br>
-     * <p>Valid values: 1 to 100. Pages start from page 1. Default value: 10.</p>
+     * <p>Valid values: 1 to 100. Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -43,15 +43,15 @@ public class ListProductsAsAdminRequest extends TeaModel {
     public String scope;
 
     /**
-     * <p>The information based on which you want to sort the products.</p>
+     * <p>The field that is used to sort the queried data.</p>
      * <br>
-     * <p>The value is fixed as CreateTime, which specifies the creation time of products.</p>
+     * <p>Set the value to CreateTime, which specifies the time when the product was created.</p>
      */
     @NameInMap("SortBy")
     public String sortBy;
 
     /**
-     * <p>The order in which you want to sort the query results. Valid values:</p>
+     * <p>The order in which you want to sort the queried data. Valid values:</p>
      * <br>
      * <p>*   Asc: the ascending order</p>
      * <p>*   Desc: the descending order</p>

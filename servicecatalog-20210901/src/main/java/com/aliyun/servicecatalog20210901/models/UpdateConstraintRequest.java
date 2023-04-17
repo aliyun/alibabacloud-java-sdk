@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateConstraintRequest extends TeaModel {
     /**
-     * <p>The configuration of the constraint.</p>
+     * <p>The configurations of the constraint.</p>
      * <br>
      * <p>Format: { "LocalRoleName": "\<role_name>" }.</p>
      */

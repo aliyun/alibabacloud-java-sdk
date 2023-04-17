@@ -17,7 +17,7 @@ public class ListProvisionedProductsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>An array that consists of product instances.</p>
+     * <p>The product instances.</p>
      */
     @NameInMap("ProvisionedProductDetails")
     public java.util.List<ListProvisionedProductsResponseBodyProvisionedProductDetails> provisionedProductDetails;
@@ -81,7 +81,7 @@ public class ListProvisionedProductsResponseBody extends TeaModel {
 
     public static class ListProvisionedProductsResponseBodyProvisionedProductDetails extends TeaModel {
         /**
-         * <p>The time when the product instance is created.</p>
+         * <p>The time when the product instance was created.</p>
          * <br>
          * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
@@ -89,31 +89,31 @@ public class ListProvisionedProductsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The ID of the task that is last run on the product instance.</p>
+         * <p>The ID of the task that was last run on the product instance.</p>
          * <br>
          * <p>The task can be one of the following types:</p>
          * <br>
-         * <p>*   LaunchProduct: launches the product.</p>
-         * <p>*   UpdateProvisionedProduct: updates the information about the product instance.</p>
-         * <p>*   TerminateProvisionedProduct: terminates the product instance.</p>
+         * <p>*   LaunchProduct: a task that launches the product.</p>
+         * <p>*   UpdateProvisionedProduct: a task that updates the information about the product instance.</p>
+         * <p>*   TerminateProvisionedProduct: a task that terminates the product instance.</p>
          */
         @NameInMap("LastProvisioningTaskId")
         public String lastProvisioningTaskId;
 
         /**
-         * <p>The ID of the last task successfully run on the product instance.</p>
+         * <p>The ID of the last task that was successfully run on the product instance.</p>
          * <br>
          * <p>The task can be one of the following types:</p>
          * <br>
-         * <p>*   LaunchProduct: launches the product.</p>
-         * <p>*   UpdateProvisionedProduct: updates the information about the product instance.</p>
-         * <p>*   TerminateProvisionedProduct: terminates the product instance.</p>
+         * <p>*   LaunchProduct: a task that launches the product.</p>
+         * <p>*   UpdateProvisionedProduct: a task that updates the information about the product instance.</p>
+         * <p>*   TerminateProvisionedProduct: a task that terminates the product instance.</p>
          */
         @NameInMap("LastSuccessfulProvisioningTaskId")
         public String lastSuccessfulProvisioningTaskId;
 
         /**
-         * <p>The ID of the task that is last run.</p>
+         * <p>The ID of the task that was last run.</p>
          */
         @NameInMap("LastTaskId")
         public String lastTaskId;
@@ -184,7 +184,7 @@ public class ListProvisionedProductsResponseBody extends TeaModel {
         /**
          * <p>The type of the product instance.</p>
          * <br>
-         * <p>The value is fixed as RosStack, which indicates a ROS stack.</p>
+         * <p>The value is fixed as RosStack, which indicates an ROS stack.</p>
          */
         @NameInMap("ProvisionedProductType")
         public String provisionedProductType;
@@ -204,17 +204,17 @@ public class ListProvisionedProductsResponseBody extends TeaModel {
         /**
          * <p>The state of the product instance. Valid values:</p>
          * <br>
-         * <p>*   Available: The product instance is available.</p>
-         * <p>*   UnderChange: The information about the product instance is being changed.</p>
+         * <p>*   Available: The product instance was available.</p>
+         * <p>*   UnderChange: The information about the product instance was being changed.</p>
          * <p>*   Error: An exception occurred on the product instance.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The description of the state.</p>
+         * <p>The message that is returned for the status of the product instance.</p>
          * <br>
-         * <p>>  This parameter is returned only when Error is returned for the Status parameter.</p>
+         * <p>> This parameter is returned only when Error is returned for the Status parameter.</p>
          */
         @NameInMap("StatusMessage")
         public String statusMessage;
