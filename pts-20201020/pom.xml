@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>pts20201020</artifactId>
-  <version>1.8.18</version>
+  <version>1.8.19</version>
   <packaging>jar</packaging>
   <name>pts20201020</name>
   <description>Alibaba Cloud Performance Testing (20201020) SDK for Java
