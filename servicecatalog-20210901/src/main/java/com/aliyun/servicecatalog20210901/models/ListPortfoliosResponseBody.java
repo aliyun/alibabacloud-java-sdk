@@ -17,7 +17,7 @@ public class ListPortfoliosResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>An array that consists of the product portfolios.</p>
+     * <p>The product portfolios.</p>
      */
     @NameInMap("PortfolioDetails")
     public java.util.List<ListPortfoliosResponseBodyPortfolioDetails> portfolioDetails;
@@ -81,7 +81,7 @@ public class ListPortfoliosResponseBody extends TeaModel {
 
     public static class ListPortfoliosResponseBodyPortfolioDetails extends TeaModel {
         /**
-         * <p>The time when the product portfolio is created.</p>
+         * <p>The time when the product portfolio was created.</p>
          * <br>
          * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */

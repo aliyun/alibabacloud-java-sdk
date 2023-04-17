@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProductsAsEndUserRequest extends TeaModel {
     /**
-     * <p>An array that consists of filter conditions.</p>
+     * <p>The filter conditions.</p>
      */
     @NameInMap("Filters")
     public java.util.List<ListProductsAsEndUserRequestFilters> filters;
@@ -21,7 +21,7 @@ public class ListProductsAsEndUserRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page.</p>
      * <br>
-     * <p>Valid values: 1 to 100. Minimum value: 1. Default value: 10.</p>
+     * <p>Valid values: 1 to 100. Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -29,7 +29,7 @@ public class ListProductsAsEndUserRequest extends TeaModel {
     /**
      * <p>The field that is used to sort the queried data.</p>
      * <br>
-     * <p>The value is fixed as CreateTime, which specifies the creation time of products.</p>
+     * <p>Set the value to CreateTime, which specifies the time when the product was created.</p>
      */
     @NameInMap("SortBy")
     public String sortBy;

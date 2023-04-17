@@ -23,7 +23,7 @@ public class CreateProductShrinkRequest extends TeaModel {
     /**
      * <p>The type of the product.</p>
      * <br>
-     * <p>The value is fixed as Ros, which specifies Resource Orchestration Service (ROS).</p>
+     * <p>Set the value to Ros, which specifies Resource Orchestration Service (ROS).</p>
      */
     @NameInMap("ProductType")
     public String productType;

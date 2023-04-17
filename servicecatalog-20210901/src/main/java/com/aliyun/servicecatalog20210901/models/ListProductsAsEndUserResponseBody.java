@@ -17,7 +17,7 @@ public class ListProductsAsEndUserResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>An array that consists of products.</p>
+     * <p>The products.</p>
      */
     @NameInMap("ProductSummaries")
     public java.util.List<ListProductsAsEndUserResponseBodyProductSummaries> productSummaries;
@@ -29,7 +29,7 @@ public class ListProductsAsEndUserResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned rows.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -81,7 +81,7 @@ public class ListProductsAsEndUserResponseBody extends TeaModel {
 
     public static class ListProductsAsEndUserResponseBodyProductSummaries extends TeaModel {
         /**
-         * <p>The time when the product is created.</p>
+         * <p>The time when the product was created.</p>
          * <br>
          * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
@@ -100,7 +100,7 @@ public class ListProductsAsEndUserResponseBody extends TeaModel {
          * <p>*   true: The default launch option exists. In this case, the PortfolioId parameter is not required when the product is launched or when the information about the product instance is updated.</p>
          * <p>*   false: The default launch option does not exist. In this case, the PortfolioId parameter is required when the product is launched or when the information about the product instance is updated. For more information about how to obtain the value of the PortfolioId parameter, see [ListLaunchOptions](~~ListLaunchOptions~~).</p>
          * <br>
-         * <p>>  If the product is added to only one product portfolio, the default launch option exists. If the product is added to multiple product portfolios, multiple launch options exist at the same time. However, no default launch options exist.</p>
+         * <p>> If the product is added to only one product portfolio, the default launch option exists. If the product is added to multiple product portfolios, multiple launch options exist at the same time. However, no default launch options exist.</p>
          */
         @NameInMap("HasDefaultLaunchOption")
         public Boolean hasDefaultLaunchOption;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProductsAsAdminResponseBody extends TeaModel {
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -17,7 +17,7 @@ public class ListProductsAsAdminResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>An array that consists of products.</p>
+     * <p>The products.</p>
      */
     @NameInMap("ProductDetails")
     public java.util.List<ListProductsAsAdminResponseBodyProductDetails> productDetails;
@@ -115,7 +115,7 @@ public class ListProductsAsAdminResponseBody extends TeaModel {
         /**
          * <p>The type of the product.</p>
          * <br>
-         * <p>The value is fixed as Ros, which specifies Resource Orchestration Service (ROS).</p>
+         * <p>The value is fixed as Ros, which indicates Resource Orchestration Service (ROS).</p>
          */
         @NameInMap("ProductType")
         public String productType;

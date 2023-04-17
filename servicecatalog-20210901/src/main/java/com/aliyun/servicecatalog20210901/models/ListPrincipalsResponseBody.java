@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPrincipalsResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of RAM entities.</p>
+     * <p>The RAM entities.</p>
      */
     @NameInMap("Principals")
     public java.util.List<ListPrincipalsResponseBodyPrincipals> principals;

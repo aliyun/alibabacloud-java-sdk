@@ -16,6 +16,9 @@ public class GetPortfolioResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TagOptions")
+    public java.util.List<GetPortfolioResponseBodyTagOptions> tagOptions;
+
     public static GetPortfolioResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetPortfolioResponseBody self = new GetPortfolioResponseBody();
         return TeaModel.build(map, self);
@@ -35,6 +38,14 @@ public class GetPortfolioResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetPortfolioResponseBody setTagOptions(java.util.List<GetPortfolioResponseBodyTagOptions> tagOptions) {
+        this.tagOptions = tagOptions;
+        return this;
+    }
+    public java.util.List<GetPortfolioResponseBodyTagOptions> getTagOptions() {
+        return this.tagOptions;
     }
 
     public static class GetPortfolioResponseBodyPortfolioDetail extends TeaModel {
@@ -127,6 +138,69 @@ public class GetPortfolioResponseBody extends TeaModel {
         }
         public String getProviderName() {
             return this.providerName;
+        }
+
+    }
+
+    public static class GetPortfolioResponseBodyTagOptions extends TeaModel {
+        @NameInMap("Active")
+        public Boolean active;
+
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Owner")
+        public String owner;
+
+        @NameInMap("TagOptionId")
+        public String tagOptionId;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetPortfolioResponseBodyTagOptions build(java.util.Map<String, ?> map) throws Exception {
+            GetPortfolioResponseBodyTagOptions self = new GetPortfolioResponseBodyTagOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public GetPortfolioResponseBodyTagOptions setActive(Boolean active) {
+            this.active = active;
+            return this;
+        }
+        public Boolean getActive() {
+            return this.active;
+        }
+
+        public GetPortfolioResponseBodyTagOptions setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetPortfolioResponseBodyTagOptions setOwner(String owner) {
+            this.owner = owner;
+            return this;
+        }
+        public String getOwner() {
+            return this.owner;
+        }
+
+        public GetPortfolioResponseBodyTagOptions setTagOptionId(String tagOptionId) {
+            this.tagOptionId = tagOptionId;
+            return this;
+        }
+        public String getTagOptionId() {
+            return this.tagOptionId;
+        }
+
+        public GetPortfolioResponseBodyTagOptions setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

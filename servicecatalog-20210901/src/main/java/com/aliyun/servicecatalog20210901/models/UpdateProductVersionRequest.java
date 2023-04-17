@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateProductVersionRequest extends TeaModel {
     /**
-     * <p>Specifies whether the product version is visible to end users. Valid values:</p>
+     * <p>Specifies whether to enable the product version. Valid values:</p>
      * <br>
-     * <p>*   true: The product version is visible to end users. This is the default value.</p>
-     * <p>*   false: The product version is invisible to end users.</p>
+     * <p>*   true: enables the product version. This is the default value.</p>
+     * <p>*   false: disables the product version.</p>
      */
     @NameInMap("Active")
     public Boolean active;
@@ -25,9 +25,9 @@ public class UpdateProductVersionRequest extends TeaModel {
      * <p>The recommendation information. Valid values:</p>
      * <br>
      * <p>*   Default: No recommendation information is provided. This is the default value.</p>
-     * <p>*   Recommended: the recommendation version.</p>
+     * <p>*   Recommended: the recommended version.</p>
      * <p>*   Latest: the latest version.</p>
-     * <p>*   Deprecated: the version that is about to be deprecated.</p>
+     * <p>*   Deprecated: the version that is about to be discontinued.</p>
      */
     @NameInMap("Guidance")
     public String guidance;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProductVersionsRequest extends TeaModel {
     /**
-     * <p>The ID of the product to which the product version belongs.</p>
+     * <p>The ID of the product.</p>
      */
     @NameInMap("ProductId")
     public String productId;

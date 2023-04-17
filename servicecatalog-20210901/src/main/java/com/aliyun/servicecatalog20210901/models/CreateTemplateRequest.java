@@ -15,11 +15,16 @@ public class CreateTemplateRequest extends TeaModel {
     /**
      * <p>The type of the template.</p>
      * <br>
-     * <p>The value is fixed as RosTerraformTemplate, which specifies that the Terraform template is supported by Resource Orchestration Service (ROS).</p>
+     * <p>Set the value to RosTerraformTemplate, which specifies the Terraform template that is supported by Resource Orchestration Service (ROS).</p>
      */
     @NameInMap("TemplateType")
     public String templateType;
 
+    /**
+     * <p>The variable settings of the Terraform template. You can configure the variables in a structured manner. Service Catalog applies the variable settings to the template.</p>
+     * <br>
+     * <p>> The variables must be defined in the Terraform template.</p>
+     */
     @NameInMap("TerraformVariables")
     public java.util.List<CreateTemplateRequestTerraformVariables> terraformVariables;
 
@@ -53,9 +58,17 @@ public class CreateTemplateRequest extends TeaModel {
     }
 
     public static class CreateTemplateRequestTerraformVariables extends TeaModel {
+        /**
+         * <p>The description of the variable.</p>
+         * <br>
+         * <p>For more information about the format of variable descriptions, see [Methods and suggestions for Terraform code development](~~322216~~).</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the variable.</p>
+         */
         @NameInMap("VariableName")
         public String variableName;
 
