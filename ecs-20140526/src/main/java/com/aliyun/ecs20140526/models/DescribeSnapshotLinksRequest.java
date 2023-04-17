@@ -4,9 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnapshotLinksRequest extends TeaModel {
+    /**
+     * <p>The IDs of disks. The value is a JSON array that consists of up to 100 disk IDs. Separate the disk IDs with commas (,).</p>
+     */
     @NameInMap("DiskIds")
     public String diskIds;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -16,12 +22,25 @@ public class DescribeSnapshotLinksRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Pages start from page 1.</p>
+     * <br>
+     * <p>Default value: 1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID of the disk. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -31,6 +50,9 @@ public class DescribeSnapshotLinksRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The IDs of snapshot chains. The value is a JSON array that consists of up to 100 snapshot chain IDs. Separate the snapshot chain IDs with commas (,).</p>
+     */
     @NameInMap("SnapshotLinkIds")
     public String snapshotLinkIds;
 

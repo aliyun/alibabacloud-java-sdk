@@ -10,18 +10,40 @@ public class ModifyReservedInstanceAutoRenewAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The auto-renewal term of the reserved instance. Valid values:</p>
+     * <br>
+     * <p>Valid values: 1 and 3.</p>
+     */
     @NameInMap("Period")
     public Integer period;
 
+    /**
+     * <p>The unit of the auto-renewal term.</p>
+     * <br>
+     * <p>Valid value: Year.</p>
+     */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    /**
+     * <p>The region ID of the reserved instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Specifies whether to automatically renew the reserved instance. Valid values:</p>
+     * <br>
+     * <p>*   AutoRenewal: automatically renew the reserved instance.</p>
+     * <p>*   Normal: manually renew the reserved instance.</p>
+     */
     @NameInMap("RenewalStatus")
     public String renewalStatus;
 
+    /**
+     * <p>The ID of reserved instance N.</p>
+     */
     @NameInMap("ReservedInstanceId")
     public java.util.List<String> reservedInstanceId;
 

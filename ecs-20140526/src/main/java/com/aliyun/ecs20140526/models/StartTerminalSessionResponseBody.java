@@ -4,15 +4,27 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class StartTerminalSessionResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The security token included in the WebSocket request header. The system uses this token to authenticate the request.</p>
+     */
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The ID of the session.</p>
+     */
     @NameInMap("SessionId")
     public String sessionId;
 
+    /**
+     * <p>The URL of the WebSocket session that is used to connect to the instance. The URL includes the session ID (`SessionId`) and the authentication token (`SecurityToken`).</p>
+     */
     @NameInMap("WebSocketUrl")
     public String webSocketUrl;
 

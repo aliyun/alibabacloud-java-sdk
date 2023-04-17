@@ -4,12 +4,21 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
+    /**
+     * <p>Details about the charges for the order.</p>
+     */
     @NameInMap("FeeOfInstances")
     public ModifyInstanceChargeTypeResponseBodyFeeOfInstances feeOfInstances;
 
+    /**
+     * <p>The ID of the order.</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,12 +52,25 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
     }
 
     public static class ModifyInstanceChargeTypeResponseBodyFeeOfInstancesFeeOfInstance extends TeaModel {
+        /**
+         * <p>The unit of currency used on the bill.</p>
+         * <br>
+         * <p>Alibaba Cloud China site (aliyun.com): CNY.</p>
+         * <br>
+         * <p>Alibaba Cloud International site (alibabacloud.com): USD.</p>
+         */
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <p>The cost value.</p>
+         */
         @NameInMap("Fee")
         public String fee;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 

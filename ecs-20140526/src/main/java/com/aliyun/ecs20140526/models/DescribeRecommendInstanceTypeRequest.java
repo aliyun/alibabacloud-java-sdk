@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     /**
-     * <p>The number of vCPUs of the instance.</p>
+     * <p>The number of vCPUs for the instance.</p>
      * <br>
-     * <p>>  If the `Cores` and `Memory` parameters are both specified, all instance types that offer the vCPUs and memory size specified by the parameters are matched.</p>
+     * <p>> If the `Cores` and `Memory` parameters are both specified, all instance types with the vCPUs and memory size specified by the parameters are queried.</p>
      */
     @NameInMap("Cores")
     public Integer cores;
 
     /**
-     * <p>The billing method of the instances of the instance type. For more information, see [Billing overview](~~25398~~). Valid values:</p>
+     * <p>The billing method of the instance. For more information, see [Billing overview](~~25398~~). Valid values:</p>
      * <br>
-     * <p>* PrePaid: subscription</p>
-     * <p>* PostPaid: pay-as-you-go</p>
+     * <p>*   PrePaid: subscription</p>
+     * <p>*   PostPaid: pay-as-you-go</p>
      * <br>
      * <p>Default value: PostPaid.</p>
      */
@@ -26,36 +26,36 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     /**
      * <p>The level of the instance family. Valid values:</p>
      * <br>
-     * <p>* EntryLevel</p>
-     * <p>* EnterpriseLevel.</p>
-     * <p>* CreditEntryLevel. For more information, see [Burstable instance families](~~59977~~).</p>
+     * <p>*   EntryLevel.</p>
+     * <p>*   EnterpriseLevel.</p>
+     * <p>*   CreditEntryLevel: credit-based entry level. For more information, see [Burstable instance families](~~59977~~).</p>
      */
     @NameInMap("InstanceFamilyLevel")
     public String instanceFamilyLevel;
 
     /**
-     * <p>The specified instance type. For more information, see [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent instance type list.</p>
+     * <p>The specified instance type. For more information, see [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent list of instance types.</p>
      * <br>
-     * <p>>  If the `InstanceType` parameter is specified, none of the `Cores` and `Memory` parameters can be specified.</p>
+     * <p>> If the `InstanceType` parameter is specified, the `Cores` and `Memory` are ignored.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
     /**
-     * <p>Instance families to be filtered out. You can specify up to 10 instance families.</p>
+     * <p>Specifies the instance families from which the alternative instance types are selected. You can specify up to 10 instance types.</p>
      */
     @NameInMap("InstanceTypeFamily")
     public java.util.List<String> instanceTypeFamily;
 
     /**
-     * <p>Specifies whether to match I/O optimized instances. The IoOptimized parameter cannot be specified when the instance is not I/O optimized. Valid values:</p>
+     * <p>Indicates whether the instance is an I/O optimized instance. The IoOptimized parameter cannot be specified when the instance is not I/O optimized. Valid values:</p>
      * <br>
-     * <p>* optimized: matches I/O optimized instances.</p>
-     * <p>* none: matches non-I/O optimized instances.</p>
+     * <p>*   optimized</p>
+     * <p>*   none</p>
      * <br>
      * <p>Default value: optimized.</p>
      * <br>
-     * <p>If you query alternative instance types for retired instance types, this parameter is set to none by default. Default value: none.</p>
+     * <p>If you query alternative instance types for retired instance types, this parameter is set to none by default.</p>
      */
     @NameInMap("IoOptimized")
     public String ioOptimized;
@@ -63,7 +63,7 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     /**
      * <p>The maximum hourly price for pay-as-you-go instances or preemptible instances.</p>
      * <br>
-     * <p>>  If this parameter is specified, the `SpotStrategy` parameter must be set to `SpotWithPriceLimit`.</p>
+     * <p>>  This parameter takes effect only when `SpotStrategy` is set to `SpotWithPriceLimit`.</p>
      */
     @NameInMap("MaxPrice")
     public Float maxPrice;
@@ -71,16 +71,16 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     /**
      * <p>The memory size of the instance. Unit: GiB.</p>
      * <br>
-     * <p>>  If the `Cores` and `Memory` parameters are both specified, all instance types that offer the vCPUs and memory size specified by the parameters are matched.</p>
+     * <p>> If the `Cores` and `Memory` parameters are both specified, all instance types with the vCPUs and memory size specified by the parameters are queried.</p>
      */
     @NameInMap("Memory")
     public Float memory;
 
     /**
-     * <p>The network type of the ECS instance. Valid values:</p>
+     * <p>The network type of the instance. Valid values:</p>
      * <br>
-     * <p>*   classic: classic network</p>
-     * <p>*   vpc: VPC</p>
+     * <p>*   classic</p>
+     * <p>*   vpc</p>
      * <br>
      * <p>Default value: vpc.</p>
      */
@@ -94,11 +94,11 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The policy for recommending instance types. Valid values:</p>
+     * <p>The policy based on which the system recommends the instance type. Valid values:</p>
      * <br>
-     * <p>* InventoryFirst: Instance types are recommended in descending order based on resource availability.</p>
-     * <p>* PriceFirst: Instance types are recommended in ascending order based on hourly price per vCPU.</p>
-     * <p>* NewProductFirst: The latest instance types are recommended first.</p>
+     * <p>*   InventoryFirst: Instance types are recommended in descending order based on resource availability.</p>
+     * <p>*   PriceFirst: Instance types are recommended in ascending order based on hourly price per vCPU.</p>
+     * <p>*   NewProductFirst: The latest instance types are recommended first.</p>
      * <br>
      * <p>Default value: InventoryFirst.</p>
      */
@@ -106,7 +106,7 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     public String priorityStrategy;
 
     /**
-     * <p>The region ID of the alternative instance types. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -118,10 +118,10 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies the scenario in which the instance type is recommended. Valid values:</p>
+     * <p>Specifies the scenarios in which the instance type is recommended. Valid values:</p>
      * <br>
-     * <p>* UPGRADE: instance type upgrade or downgrade</p>
-     * <p>* CREATE: instance creation</p>
+     * <p>*   UPGRADE: instance type upgrade or downgrade</p>
+     * <p>*   CREATE: instance creation</p>
      * <br>
      * <p>Default value: CREATE.</p>
      */
@@ -131,11 +131,11 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     /**
      * <p>The bidding policy of preemptible instances. Valid values:</p>
      * <br>
-     * <p>* NoSpot: applies to regular pay-as-you-go instances.</p>
-     * <p>* SpotWithPriceLimit: applies to preemptible instances that have user-defined maximum hourly prices.</p>
-     * <p>* SpotAsPriceGo: applies to preemptible instances that are of the market price at the time of purchase.</p>
+     * <p>*   NoSpot: The instance is created as a pay-as-you-go instance.</p>
+     * <p>*   SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.</p>
+     * <p>*   SpotAsPriceGo: The instance is a preemptible instance for which the market price is automatically used as the bid price. The market price can be as high as the pay-as-you-go price.</p>
      * <br>
-     * <p>> If the `SpotStrategy` parameter is specified, the `InstanceChargeType` parameter must be set to `PostPaid`.</p>
+     * <p>> The `SpotStrategy` parameter takes effect only when `InstanceChargeType` is set to `PostPaid`.</p>
      * <br>
      * <p>Default value: NoSpot.</p>
      */
@@ -143,12 +143,12 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     public String spotStrategy;
 
     /**
-     * <p>The category of the system disk. Valid values:</p>
+     * <p>The type of the system disk. Valid values:</p>
      * <br>
-     * <p>* cloud_efficiency: ultra disk</p>
-     * <p>* cloud_ssd: standard SSD</p>
-     * <p>* cloud_essd: enhanced SSD (ESSD)</p>
-     * <p>* cloud: basic disk</p>
+     * <p>*   cloud_efficiency: ultra disk</p>
+     * <p>*   cloud_ssd: SSD</p>
+     * <p>*   cloud_essd: enhanced SSD (ESSD)</p>
+     * <p>*   cloud: basic disk</p>
      * <br>
      * <p>For non-I/O optimized instances, the default value is cloud.</p>
      * <br>
@@ -158,20 +158,20 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     public String systemDiskCategory;
 
     /**
-     * <p>The zone ID of the alternative instance types. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.</p>
+     * <p>The ID of the zone for which to query resources. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.</p>
      * <br>
-     * <p>When you specify this parameter, we recommend that you set ZoneMatchMode to the default value Include. This value indicates that instance types in the zone specified by ZoneId are preferentially recommended, and instance types in other zones in the same region are also listed.</p>
+     * <p>We recommend that you set the value of ZoneMatchMode to Include, which is the default value. As a result, instance types within zones specified by ZoneId are recommended with priority. Instance types in other zones within the same region are also listed.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
 
     /**
-     * <p>Specifies which alternative instance types are recommended. Valid values:</p>
+     * <p>Specifies whether to recommend only instance types in the zone specified by ZoneId. Valid values:</p>
      * <br>
-     * <p>* Strict: recommends only alternative instance types in the zone specified by ZoneId.</p>
-     * <p>* Include: recommends all instance types in all the zones in the same region as the specified instance type.</p>
+     * <p>*   Strict: only instance types within zones specified by the ZoneId parameter are recommended.</p>
+     * <p>*   Include: instance types in other zones within the same region are also recommended.</p>
      * <br>
-     * <p>When `ZoneId` is specified, the default value of this parameter is Strict. This value indicates that only alternative instance types in the zone specified by ZoneId are recommended.</p>
+     * <p>If `ZoneId` is specified, the default value of this parameter is Strict. This value indicates that only alternative instance types in the zone specified by ZoneId are recommended.</p>
      */
     @NameInMap("ZoneMatchMode")
     public String zoneMatchMode;

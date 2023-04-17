@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceScreenshotRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -13,6 +16,9 @@ public class GetInstanceScreenshotRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -22,6 +28,11 @@ public class GetInstanceScreenshotRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>Specifies whether to wake up hibernating instances.</p>
+     * <br>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("WakeUp")
     public Boolean wakeUp;
 

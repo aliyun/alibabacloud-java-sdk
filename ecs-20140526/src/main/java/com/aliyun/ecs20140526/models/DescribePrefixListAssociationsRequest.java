@@ -4,9 +4,19 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribePrefixListAssociationsRequest extends TeaModel {
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Maximum value: 100.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The query token. Set the value to the `NextToken` value returned in the previous call to the DescribePrefixListAssociations operation. Leave this parameter empty the first time you call this operation.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -16,9 +26,15 @@ public class DescribePrefixListAssociationsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the prefix list.</p>
+     */
     @NameInMap("PrefixListId")
     public String prefixListId;
 
+    /**
+     * <p>The region ID of the prefix list. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

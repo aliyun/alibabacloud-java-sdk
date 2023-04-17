@@ -4,6 +4,14 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to remove all tags from the resource. This parameter is valid only when the TagKey.N parameter is not specified. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     * <br>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("All")
     public Boolean all;
 
@@ -13,9 +21,15 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource IDs.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
@@ -25,9 +39,31 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The type of the resource. Valid values:</p>
+     * <br>
+     * <p>*   instance: ECS instance</p>
+     * <p>*   disk: disk</p>
+     * <p>*   snapshot: snapshot</p>
+     * <p>*   image: image</p>
+     * <p>*   securitygroup: security group</p>
+     * <p>*   volume: storage volume</p>
+     * <p>*   eni: elastic network interface (ENI)</p>
+     * <p>*   ddh: dedicated host</p>
+     * <p>*   ddhcluster: dedicated host cluster</p>
+     * <p>*   keypair: SSH key pair</p>
+     * <p>*   launchtemplate: launch template</p>
+     * <p>*   reservedinstance: reserved instance</p>
+     * <p>*   snapshotpolicy: automatic snapshot policy</p>
+     * <p>*   elasticityassurance: elasticity assurance</p>
+     * <p>*   capacityreservation: capacity reservation</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tag keys of the resource.</p>
+     */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 

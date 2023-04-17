@@ -7,6 +7,9 @@ public class ModifyLaunchTemplateDefaultVersionResponseBody extends TeaModel {
     @NameInMap("LaunchTemplateId")
     public String launchTemplateId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

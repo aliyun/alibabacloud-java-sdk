@@ -4,12 +4,28 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class RenewReservedInstancesRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable auto-renewal for the reserved instance. Default value: false. Valid values:</p>
+     * <br>
+     * <p>*   true: enables auto-renewal for the reserved instance.</p>
+     * <p>*   false: does not enable auto-renewal for the reserved instance.</p>
+     * <br>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
+    /**
+     * <p>The auto-renewal term of the reserved instance. Unit: months. This parameter takes effect only when AutoRenew is set to true.</p>
+     * <br>
+     * <p>Valid values: 12 and 36. Default value: 12.</p>
+     */
     @NameInMap("AutoRenewPeriod")
     public Integer autoRenewPeriod;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -19,15 +35,35 @@ public class RenewReservedInstancesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The term of the reserved instance.</p>
+     * <br>
+     * <p>Valid values: 1 and 3.</p>
+     * <br>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("Period")
     public Integer period;
 
+    /**
+     * <p>The unit of the term of the reserved instance.</p>
+     * <br>
+     * <p>Valid value: Year.</p>
+     * <br>
+     * <p>Default value: Year.</p>
+     */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    /**
+     * <p>The region ID of the reserved instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The IDs of reserved instances.</p>
+     */
     @NameInMap("ReservedInstanceId")
     public java.util.List<String> reservedInstanceId;
 

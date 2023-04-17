@@ -7,6 +7,9 @@ public class ModifyInstanceAttachmentAttributesRequest extends TeaModel {
     @NameInMap("PrivatePoolOptions")
     public ModifyInstanceAttachmentAttributesRequestPrivatePoolOptions privatePoolOptions;
 
+    /**
+     * <p>The ID of the instance for which you want to modify the attributes of the private pool.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -16,6 +19,9 @@ public class ModifyInstanceAttachmentAttributesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the private pool. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -87,9 +93,22 @@ public class ModifyInstanceAttachmentAttributesRequest extends TeaModel {
     }
 
     public static class ModifyInstanceAttachmentAttributesRequestPrivatePoolOptions extends TeaModel {
+        /**
+         * <p>The ID of the private pool. Set the value to the ID of the elasticity assurance or capacity reservation that generates the private pool.</p>
+         * <br>
+         * <p>*   This parameter is required when `PrivatePoolOptions.MatchCriteria` is set to `Target`.</p>
+         * <p>*   This parameter must be empty when `PrivatePoolOptions.MatchCriteria` is set to `Open` or `None`.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The match mode of the private pool. Valid values:</p>
+         * <br>
+         * <p>*   Open: open private pool. The system matches the instance with open private pools.</p>
+         * <p>*   Target: specified private pool. You must use `PrivatePoolOptions.Id` to specify the ID of a private pool.</p>
+         * <p>*   None: no private pool. The instance starts normally without using private pools.</p>
+         */
         @NameInMap("MatchCriteria")
         public String matchCriteria;
 

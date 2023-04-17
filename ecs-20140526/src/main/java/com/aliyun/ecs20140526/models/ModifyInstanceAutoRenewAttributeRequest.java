@@ -15,15 +15,14 @@ public class ModifyInstanceAutoRenewAttributeRequest extends TeaModel {
     /**
      * <p>The auto-renewal period for the instance.</p>
      * <br>
-     * <p>*   Valid values of `Duration` when `PeriodUnit` is set to `Year` (year): 1, 2, 3, 4, and 5.</p>
-     * <p>*   Valid values of `Duration` when `PeriodUnit` is set to `Month` (month): 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
-     * <p>*   Valid values of `Duration` when `PeriodUnit` is set to `Week` (week): 1, 2, 3, and 4.</p>
+     * <p>*   Valid values of `Duration` when `PeriodUnit` is set to `Year`: 1, 2, 3, 4, and 5.</p>
+     * <p>*   Valid values of `Duration` when `PeriodUnit` is set to `Month` : 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
      */
     @NameInMap("Duration")
     public Integer duration;
 
     /**
-     * <p>The ID of the instance. You can specify IDs of up to 100 subscription instances. Separate the instance IDs with commas (,).</p>
+     * <p>The ID of the instance You can specify IDs of up to 100 subscription instances. Separate the instance IDs with commas (,).</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -37,7 +36,6 @@ public class ModifyInstanceAutoRenewAttributeRequest extends TeaModel {
     /**
      * <p>The unit of the renewal period (`Duration`). Default value: Month. Valid values:</p>
      * <br>
-     * <p>*   Week</p>
      * <p>*   Month</p>
      * <p>*   Year</p>
      */
@@ -45,7 +43,7 @@ public class ModifyInstanceAutoRenewAttributeRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

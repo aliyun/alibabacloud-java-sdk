@@ -4,9 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ReplaceSystemDiskResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the new system disk.</p>
+     */
     @NameInMap("DiskId")
     public String diskId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

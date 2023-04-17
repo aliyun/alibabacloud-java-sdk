@@ -4,9 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeRenewalPriceResponseBody extends TeaModel {
+    /**
+     * <p>Details about the prices and discount rules.</p>
+     */
     @NameInMap("PriceInfo")
     public DescribeRenewalPriceResponseBodyPriceInfo priceInfo;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRulesRule extends TeaModel {
+        /**
+         * <p>The description of the pricing rule.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the pricing rule.</p>
+         */
         @NameInMap("RuleId")
         public Long ruleId;
 
@@ -81,18 +93,33 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModel extends TeaModel {
+        /**
+         * <p>The discount.</p>
+         */
         @NameInMap("DiscountPrice")
         public Float discountPrice;
 
+        /**
+         * <p>The original price.</p>
+         */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
+        /**
+         * <p>The name of the resource that corresponds to the price.</p>
+         */
         @NameInMap("Resource")
         public String resource;
 
+        /**
+         * <p>Details about the pricing rules.</p>
+         */
         @NameInMap("SubRules")
         public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRules subRules;
 
+        /**
+         * <p>The transaction price.</p>
+         */
         @NameInMap("TradePrice")
         public Float tradePrice;
 
@@ -163,18 +190,37 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenewalPriceResponseBodyPriceInfoPrice extends TeaModel {
+        /**
+         * <p>The currency unit.</p>
+         * <br>
+         * <p>Alibaba Cloud China site (aliyun.com): CNY.</p>
+         * <br>
+         * <p>Alibaba Cloud International site (alibabacloud.com): USD.</p>
+         */
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <p>Details about the resource prices.</p>
+         */
         @NameInMap("DetailInfos")
         public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfos detailInfos;
 
+        /**
+         * <p>The discount.</p>
+         */
         @NameInMap("DiscountPrice")
         public Float discountPrice;
 
+        /**
+         * <p>The original price.</p>
+         */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
+        /**
+         * <p>The transaction price, which is equal to the original price minus the discount.</p>
+         */
         @NameInMap("TradePrice")
         public Float tradePrice;
 
@@ -226,9 +272,15 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenewalPriceResponseBodyPriceInfoRulesRule extends TeaModel {
+        /**
+         * <p>The description of the promotion rule.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the promotion rule.</p>
+         */
         @NameInMap("RuleId")
         public Long ruleId;
 
@@ -275,9 +327,15 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenewalPriceResponseBodyPriceInfo extends TeaModel {
+        /**
+         * <p>The price.</p>
+         */
         @NameInMap("Price")
         public DescribeRenewalPriceResponseBodyPriceInfoPrice price;
 
+        /**
+         * <p>Details about the promotion rules.</p>
+         */
         @NameInMap("Rules")
         public DescribeRenewalPriceResponseBodyPriceInfoRules rules;
 

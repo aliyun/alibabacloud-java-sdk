@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeResourcesModificationRequest extends TeaModel {
+    @NameInMap("Conditions")
+    public java.util.List<String> conditions;
+
     /**
      * <p>The number of vCPU cores of the instance type. For more information, see [Instance families](~~25378~~). This parameter is valid only when DestinationResource is set to InstanceType.</p>
      */
@@ -101,6 +104,14 @@ public class DescribeResourcesModificationRequest extends TeaModel {
     public static DescribeResourcesModificationRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeResourcesModificationRequest self = new DescribeResourcesModificationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeResourcesModificationRequest setConditions(java.util.List<String> conditions) {
+        this.conditions = conditions;
+        return this;
+    }
+    public java.util.List<String> getConditions() {
+        return this.conditions;
     }
 
     public DescribeResourcesModificationRequest setCores(Integer cores) {

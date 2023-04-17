@@ -4,9 +4,20 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ResetDiskRequest extends TeaModel {
+    /**
+     * <p>The ID of the disk that you want to roll back.</p>
+     */
     @NameInMap("DiskId")
     public String diskId;
 
+    /**
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <br>
+     * <p>*   true: performs a dry run. The system checks the required parameters, request format, and resource state limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   false: performs a dry run and sends the request. If the request passes the dry run, the operation is performed.</p>
+     * <br>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -22,6 +33,9 @@ public class ResetDiskRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the snapshot that you want to use to roll back the disk.</p>
+     */
     @NameInMap("SnapshotId")
     public String snapshotId;
 

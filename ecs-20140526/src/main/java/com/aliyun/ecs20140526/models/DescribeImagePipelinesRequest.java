@@ -4,15 +4,29 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImagePipelinesRequest extends TeaModel {
+    /**
+     * <p>The IDs of the image templates. You can specify at most 20 IDs.</p>
+     */
     @NameInMap("ImagePipelineId")
     public java.util.List<String> imagePipelineId;
 
+    /**
+     * <p>The maximum number of entries to return on each page. Valid values: 1 to 500.</p>
+     * <br>
+     * <p>Default value: 50.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The name of the image template.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The query token. Set the value to the `NextToken` value returned in the last call to the DescribeImagePipelines operation. Leave this parameter empty the first time you call this operation.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -22,9 +36,17 @@ public class DescribeImagePipelinesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the image template. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
+     * <br>
+     * <p>> Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -131,9 +153,15 @@ public class DescribeImagePipelinesRequest extends TeaModel {
     }
 
     public static class DescribeImagePipelinesRequestTag extends TeaModel {
+        /**
+         * <p>The key of tag N of the image template. Valid values of N: 1 to 20.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N of the image template. Valid values of N: 1 to 20.</p>
+         */
         @NameInMap("Value")
         public String value;
 

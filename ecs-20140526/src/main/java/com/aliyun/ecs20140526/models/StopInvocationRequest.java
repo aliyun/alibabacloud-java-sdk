@@ -4,9 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class StopInvocationRequest extends TeaModel {
+    /**
+     * <p>The IDs of instances on which to stop the process of the Cloud Assistant command. You can specify up to 50 instance IDs in each request. Valid values of N: 1 to 50.</p>
+     */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
+    /**
+     * <p>The ID of the command task. You can call the [DescribeInvocations](~~64840~~) operation to query the IDs of all command tasks.</p>
+     */
     @NameInMap("InvokeId")
     public String invokeId;
 
@@ -16,6 +22,9 @@ public class StopInvocationRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

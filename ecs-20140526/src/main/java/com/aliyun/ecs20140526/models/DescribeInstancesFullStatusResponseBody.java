@@ -348,7 +348,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
 
     public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventType extends TeaModel {
         /**
-         * <p>The state of the event. Valid values:</p>
+         * <p>The state of the event.</p>
          */
         @NameInMap("EventCycleStatus")
         public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeEventCycleStatus eventCycleStatus;

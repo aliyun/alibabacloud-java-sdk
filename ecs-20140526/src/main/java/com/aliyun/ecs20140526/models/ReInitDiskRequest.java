@@ -4,12 +4,25 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ReInitDiskRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to automatically start the instance after the disk is re-initialized.</p>
+     * <br>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("AutoStartInstance")
     public Boolean autoStartInstance;
 
+    /**
+     * <p>The ID of the disk.</p>
+     */
     @NameInMap("DiskId")
     public String diskId;
 
+    /**
+     * <p>The name of the key pair.</p>
+     * <br>
+     * <p>> The parameter is applicable only to Linux instances. You can bind an SSH key pair to an instance as the logon credential when you re-initialize the system disk of the instance. After the SSH key pair is bound, the username and password-based logon method is disabled for the instance.</p>
+     */
     @NameInMap("KeyPairName")
     public String keyPairName;
 
@@ -19,6 +32,15 @@ public class ReInitDiskRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>Specifies whether to reset the password of the instance when you re-initialize its system disk. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include:</p>
+     * <br>
+     * <p>    ()`~!@#$%^&*-_+=|{}[]:;\"<>,.?/</p>
+     * <br>
+     * <p>For Windows instances, passwords cannot start with a forward slash (/).</p>
+     * <br>
+     * <p>> If the `Password` parameter is specified, we recommend that you send requests over HTTPS to prevent password leaks.</p>
+     */
     @NameInMap("Password")
     public String password;
 
@@ -28,6 +50,14 @@ public class ReInitDiskRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>Specifies whether to use Security Center for free after the system disk is re-initialized. Valid values:</p>
+     * <br>
+     * <p>*   Active: uses Security Center for free after the system disk is re-initialized. This value is applicable only to public images.</p>
+     * <p>*   Deactive: does not use Security Center for free after the system disk is re-initialized. This value is applicable to all images.</p>
+     * <br>
+     * <p>Default value: Deactive.</p>
+     */
     @NameInMap("SecurityEnhancementStrategy")
     public String securityEnhancementStrategy;
 

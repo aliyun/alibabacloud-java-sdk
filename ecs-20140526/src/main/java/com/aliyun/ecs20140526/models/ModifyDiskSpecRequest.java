@@ -41,6 +41,9 @@ public class ModifyDiskSpecRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("PerformanceControlOptions")
+    public ModifyDiskSpecRequestPerformanceControlOptions performanceControlOptions;
+
     /**
      * <p>The new performance level of the ESSD. Valid values:</p>
      * <br>
@@ -115,6 +118,14 @@ public class ModifyDiskSpecRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public ModifyDiskSpecRequest setPerformanceControlOptions(ModifyDiskSpecRequestPerformanceControlOptions performanceControlOptions) {
+        this.performanceControlOptions = performanceControlOptions;
+        return this;
+    }
+    public ModifyDiskSpecRequestPerformanceControlOptions getPerformanceControlOptions() {
+        return this.performanceControlOptions;
+    }
+
     public ModifyDiskSpecRequest setPerformanceLevel(String performanceLevel) {
         this.performanceLevel = performanceLevel;
         return this;
@@ -145,6 +156,47 @@ public class ModifyDiskSpecRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public static class ModifyDiskSpecRequestPerformanceControlOptions extends TeaModel {
+        @NameInMap("IOPS")
+        public Integer IOPS;
+
+        @NameInMap("Recover")
+        public String recover;
+
+        @NameInMap("Throughput")
+        public Integer throughput;
+
+        public static ModifyDiskSpecRequestPerformanceControlOptions build(java.util.Map<String, ?> map) throws Exception {
+            ModifyDiskSpecRequestPerformanceControlOptions self = new ModifyDiskSpecRequestPerformanceControlOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyDiskSpecRequestPerformanceControlOptions setIOPS(Integer IOPS) {
+            this.IOPS = IOPS;
+            return this;
+        }
+        public Integer getIOPS() {
+            return this.IOPS;
+        }
+
+        public ModifyDiskSpecRequestPerformanceControlOptions setRecover(String recover) {
+            this.recover = recover;
+            return this;
+        }
+        public String getRecover() {
+            return this.recover;
+        }
+
+        public ModifyDiskSpecRequestPerformanceControlOptions setThroughput(Integer throughput) {
+            this.throughput = throughput;
+            return this;
+        }
+        public Integer getThroughput() {
+            return this.throughput;
+        }
+
     }
 
 }

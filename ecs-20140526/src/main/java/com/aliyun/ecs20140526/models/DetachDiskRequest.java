@@ -27,7 +27,7 @@ public class DetachDiskRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>The ID of the ECS instance from which the disk is to be detached.</p>
+     * <p>The ID of the ECS instance from which to detach the disk.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

@@ -4,15 +4,38 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyCommandRequest extends TeaModel {
+    /**
+     * <p>The content of the command. The command content can be plaintext or Base64-encoded. When you call this operation, take note of the following items:</p>
+     * <br>
+     * <p>*   The Base64-encoded command content cannot exceed 16 KB in size.</p>
+     * <br>
+     * <p>*   If the command content is Base64-encoded, set `ContentEncoding` to Base64.</p>
+     * <br>
+     * <p>*   When `EnableParameter` is set to true, the custom parameter feature is enabled and you can configure custom parameters based on the following rules:</p>
+     * <br>
+     * <p>    *   Define custom parameters in the `{{}}` format. Within `{{}}`, the spaces and line feeds before and after the parameter names are ignored.</p>
+     * <p>    *   The number of custom parameters cannot exceed 20.</p>
+     * <p>    *   A custom parameter name can contain only letters, digits, underscores (\_), and hyphens (-). The name is case-insensitive.</p>
+     * <p>    *   Each custom parameter name cannot exceed 64 bytes in length.</p>
+     */
     @NameInMap("CommandContent")
     public String commandContent;
 
+    /**
+     * <p>The ID of the command. You can call the [DescribeCommands](~~64843~~) operation to query all available command IDs.</p>
+     */
     @NameInMap("CommandId")
     public String commandId;
 
+    /**
+     * <p>The description of the command. The description supports all character sets and can be up to 512 characters in length.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The name of the command. The name supports all character sets and can be up to 128 characters in length.</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -22,6 +45,9 @@ public class ModifyCommandRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -31,9 +57,15 @@ public class ModifyCommandRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The maximum timeout period for command execution. Unit: seconds. When a command cannot run within the specified time range, the command times out. When a command execution times out, the Cloud Assistant client forcefully terminates the command process by canceling the process ID (PID) of the command.</p>
+     */
     @NameInMap("Timeout")
     public Long timeout;
 
+    /**
+     * <p>The working directory of the command on the Elastic Compute Service (ECS) instance.</p>
+     */
     @NameInMap("WorkingDir")
     public String workingDir;
 
