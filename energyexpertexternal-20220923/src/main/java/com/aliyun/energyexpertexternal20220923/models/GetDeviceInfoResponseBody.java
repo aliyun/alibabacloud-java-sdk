@@ -10,9 +10,6 @@ public class GetDeviceInfoResponseBody extends TeaModel {
     @NameInMap("data")
     public GetDeviceInfoResponseBodyData data;
 
-    @NameInMap("errorMessage")
-    public String errorMessage;
-
     @NameInMap("httpCode")
     public Integer httpCode;
 
@@ -44,14 +41,6 @@ public class GetDeviceInfoResponseBody extends TeaModel {
     }
     public GetDeviceInfoResponseBodyData getData() {
         return this.data;
-    }
-
-    public GetDeviceInfoResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
     }
 
     public GetDeviceInfoResponseBody setHttpCode(Integer httpCode) {

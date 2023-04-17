@@ -178,9 +178,6 @@ public class GetDeviceListResponseBody extends TeaModel {
         @NameInMap("deviceList")
         public java.util.List<GetDeviceListResponseBodyDataDeviceList> deviceList;
 
-        @NameInMap("errorMessage")
-        public String errorMessage;
-
         @NameInMap("factoryId")
         public String factoryId;
 
@@ -209,14 +206,6 @@ public class GetDeviceListResponseBody extends TeaModel {
         }
         public java.util.List<GetDeviceListResponseBodyDataDeviceList> getDeviceList() {
             return this.deviceList;
-        }
-
-        public GetDeviceListResponseBodyData setErrorMessage(String errorMessage) {
-            this.errorMessage = errorMessage;
-            return this;
-        }
-        public String getErrorMessage() {
-            return this.errorMessage;
         }
 
         public GetDeviceListResponseBodyData setFactoryId(String factoryId) {

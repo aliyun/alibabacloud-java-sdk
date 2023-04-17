@@ -13,9 +13,6 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
     @NameInMap("data")
     public java.util.List<GetOrgAndFactoryResponseBodyData> data;
 
-    @NameInMap("errorMessage")
-    public String errorMessage;
-
     @NameInMap("httpCode")
     public Integer httpCode;
 
@@ -47,14 +44,6 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
     }
     public java.util.List<GetOrgAndFactoryResponseBodyData> getData() {
         return this.data;
-    }
-
-    public GetOrgAndFactoryResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
     }
 
     public GetOrgAndFactoryResponseBody setHttpCode(Integer httpCode) {
