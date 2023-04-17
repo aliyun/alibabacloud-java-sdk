@@ -68,6 +68,9 @@ public class AddGatewayRequest extends TeaModel {
     @NameInMap("Replica")
     public Integer replica;
 
+    @NameInMap("RequestPars")
+    public String requestPars;
+
     /**
      * <p>The ID of the resource group.</p>
      */
@@ -203,6 +206,14 @@ public class AddGatewayRequest extends TeaModel {
     }
     public Integer getReplica() {
         return this.replica;
+    }
+
+    public AddGatewayRequest setRequestPars(String requestPars) {
+        this.requestPars = requestPars;
+        return this;
+    }
+    public String getRequestPars() {
+        return this.requestPars;
     }
 
     public AddGatewayRequest setResourceGroupId(String resourceGroupId) {
