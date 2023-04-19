@@ -4,18 +4,36 @@ package com.aliyun.nlb20220430.models;
 import com.aliyun.tea.*;
 
 public class ListServerGroupServersResponseBody extends TeaModel {
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <br>
+     * <p>*   If this is your first query or no next query is to be sent, ignore this parameter.</p>
+     * <p>*   If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>A list of backend servers.</p>
+     */
     @NameInMap("Servers")
     public java.util.List<ListServerGroupServersResponseBodyServers> servers;
 
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,30 +83,67 @@ public class ListServerGroupServersResponseBody extends TeaModel {
     }
 
     public static class ListServerGroupServersResponseBodyServers extends TeaModel {
+        /**
+         * <p>The description of the backend server.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The port used by the backend server. Valid values: **1** to **65535**.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The ID of the server group.</p>
+         */
         @NameInMap("ServerGroupId")
         public String serverGroupId;
 
+        /**
+         * <p>The ID of the server.</p>
+         */
         @NameInMap("ServerId")
         public String serverId;
 
+        /**
+         * <p>The IP address of the backend server.</p>
+         */
         @NameInMap("ServerIp")
         public String serverIp;
 
+        /**
+         * <p>The type of the backend server. Valid values:</p>
+         * <br>
+         * <p>*   **Ecs**: an Elastic Compute Service (ECS) instance</p>
+         * <p>*   **Eni**: an elastic network interface (ENI)</p>
+         * <p>*   **Eci**: an elastic container instance</p>
+         * <p>*   **Ip**: an IP address</p>
+         */
         @NameInMap("ServerType")
         public String serverType;
 
+        /**
+         * <p>Indicates the status of the backend server. Valid values:</p>
+         * <br>
+         * <p>*   **Adding**: The backend server is being added.</p>
+         * <p>*   **Available**: The backend server is added.</p>
+         * <p>*   **Configuring**: The backend server is being configured.</p>
+         * <p>*   **Removing**: The backend server is being removed.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The weight of the backend server.</p>
+         */
         @NameInMap("Weight")
         public Integer weight;
 
+        /**
+         * <p>The zone ID of the server.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

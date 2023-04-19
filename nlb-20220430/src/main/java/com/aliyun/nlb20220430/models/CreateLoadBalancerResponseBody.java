@@ -4,12 +4,21 @@ package com.aliyun.nlb20220430.models;
 import com.aliyun.tea.*;
 
 public class CreateLoadBalancerResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the NLB instance.</p>
+     */
     @NameInMap("LoadbalancerId")
     public String loadbalancerId;
 
+    /**
+     * <p>The ID of the order for the NLB instance.</p>
+     */
     @NameInMap("OrderId")
     public Long orderId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

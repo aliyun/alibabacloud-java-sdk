@@ -7,18 +7,35 @@ public class ListListenersRequest extends TeaModel {
     @NameInMap("ListenerIds")
     public java.util.List<String> listenerIds;
 
+    /**
+     * <p>The listening protocol. Valid values: **TCP**, **UDP**, and **TCPSSL**.</p>
+     */
     @NameInMap("ListenerProtocol")
     public String listenerProtocol;
 
     @NameInMap("LoadBalancerIds")
     public java.util.List<String> loadBalancerIds;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <br>
+     * <p>*   If this is your first query or no next query is to be sent, ignore this parameter.</p>
+     * <p>*   If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the region where the NLB instance is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~443657~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

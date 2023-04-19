@@ -4,15 +4,32 @@ package com.aliyun.nlb20220430.models;
 import com.aliyun.tea.*;
 
 public class ListSecurityPolicyRequest extends TeaModel {
+    /**
+     * <p>The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <br>
+     * <p>*   If this is your first query or no next query is to be sent, ignore this parameter.</p>
+     * <p>*   If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the region where the NLB instance is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~443657~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -87,9 +104,19 @@ public class ListSecurityPolicyRequest extends TeaModel {
     }
 
     public static class ListSecurityPolicyRequestTag extends TeaModel {
+        /**
+         * <p>The tag keys. You can specify up to 10 tag keys.</p>
+         * <br>
+         * <p>It can be at most 64 characters in length, and cannot contain `http://` or `https://`. It must not start with `aliyun` or `acs:`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag values. You can specify up to 10 tag values.</p>
+         * <br>
+         * <p>It can be at most 128 characters in length, and cannot contain `http://` or `https://`. It must not start with `aliyun` or `acs:`.</p>
+         */
         @NameInMap("Value")
         public String value;
 
