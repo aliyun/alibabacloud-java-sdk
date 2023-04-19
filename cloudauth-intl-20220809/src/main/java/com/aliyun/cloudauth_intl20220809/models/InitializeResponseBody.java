@@ -60,6 +60,9 @@ public class InitializeResponseBody extends TeaModel {
         @NameInMap("TransactionId")
         public String transactionId;
 
+        @NameInMap("TransactionUrl")
+        public String transactionUrl;
+
         public static InitializeResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             InitializeResponseBodyResult self = new InitializeResponseBodyResult();
             return TeaModel.build(map, self);
@@ -79,6 +82,14 @@ public class InitializeResponseBody extends TeaModel {
         }
         public String getTransactionId() {
             return this.transactionId;
+        }
+
+        public InitializeResponseBodyResult setTransactionUrl(String transactionUrl) {
+            this.transactionUrl = transactionUrl;
+            return this;
+        }
+        public String getTransactionUrl() {
+            return this.transactionUrl;
         }
 
     }
