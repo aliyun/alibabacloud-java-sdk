@@ -81,6 +81,113 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         return this.traceId;
     }
 
+    public static class InsInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails extends TeaModel {
+        @NameInMap("amount")
+        public String amount;
+
+        @NameInMap("index")
+        public String index;
+
+        @NameInMap("item_name")
+        public String itemName;
+
+        @NameInMap("quantity")
+        public String quantity;
+
+        @NameInMap("specification")
+        public String specification;
+
+        @NameInMap("tax")
+        public String tax;
+
+        @NameInMap("tax_rate")
+        public String taxRate;
+
+        @NameInMap("unit")
+        public String unit;
+
+        @NameInMap("unit_price")
+        public String unitPrice;
+
+        public static InsInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails build(java.util.Map<String, ?> map) throws Exception {
+            InsInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails self = new InsInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails();
+            return TeaModel.build(map, self);
+        }
+
+        public InsInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails setAmount(String amount) {
+            this.amount = amount;
+            return this;
+        }
+        public String getAmount() {
+            return this.amount;
+        }
+
+        public InsInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails setIndex(String index) {
+            this.index = index;
+            return this;
+        }
+        public String getIndex() {
+            return this.index;
+        }
+
+        public InsInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails setItemName(String itemName) {
+            this.itemName = itemName;
+            return this;
+        }
+        public String getItemName() {
+            return this.itemName;
+        }
+
+        public InsInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails setQuantity(String quantity) {
+            this.quantity = quantity;
+            return this;
+        }
+        public String getQuantity() {
+            return this.quantity;
+        }
+
+        public InsInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails setSpecification(String specification) {
+            this.specification = specification;
+            return this;
+        }
+        public String getSpecification() {
+            return this.specification;
+        }
+
+        public InsInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails setTax(String tax) {
+            this.tax = tax;
+            return this;
+        }
+        public String getTax() {
+            return this.tax;
+        }
+
+        public InsInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails setTaxRate(String taxRate) {
+            this.taxRate = taxRate;
+            return this;
+        }
+        public String getTaxRate() {
+            return this.taxRate;
+        }
+
+        public InsInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails setUnit(String unit) {
+            this.unit = unit;
+            return this;
+        }
+        public String getUnit() {
+            return this.unit;
+        }
+
+        public InsInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails setUnitPrice(String unitPrice) {
+            this.unitPrice = unitPrice;
+            return this;
+        }
+        public String getUnitPrice() {
+            return this.unitPrice;
+        }
+
+    }
+
     public static class InsInvoiceScanQueryResponseBodyModuleItems extends TeaModel {
         @NameInMap("amount_with_tax")
         public String amountWithTax;
@@ -91,11 +198,20 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("bill_date")
         public String billDate;
 
+        @NameInMap("check_code")
+        public String checkCode;
+
         @NameInMap("cost_center")
         public String costCenter;
 
         @NameInMap("department")
         public String department;
+
+        @NameInMap("drawer")
+        public String drawer;
+
+        @NameInMap("id")
+        public String id;
 
         @NameInMap("insurance_company")
         public String insuranceCompany;
@@ -112,8 +228,17 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("invoice_day")
         public String invoiceDay;
 
+        @NameInMap("invoice_details")
+        public java.util.List<InsInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails> invoiceDetails;
+
+        @NameInMap("invoice_location")
+        public String invoiceLocation;
+
         @NameInMap("invoice_no")
         public String invoiceNo;
+
+        @NameInMap("invoice_title")
+        public String invoiceTitle;
 
         @NameInMap("order_id")
         public Long orderId;
@@ -124,8 +249,17 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("passenger")
         public String passenger;
 
+        @NameInMap("password_area")
+        public String passwordArea;
+
         @NameInMap("project")
         public String project;
+
+        @NameInMap("purchaser_bank_account_info")
+        public String purchaserBankAccountInfo;
+
+        @NameInMap("purchaser_contact_info")
+        public String purchaserContactInfo;
 
         @NameInMap("purchaser_name")
         public String purchaserName;
@@ -133,8 +267,20 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("purchaser_tax_no")
         public String purchaserTaxNo;
 
-        @NameInMap("real_invoice_title")
-        public String realInvoiceTitle;
+        @NameInMap("recipient")
+        public String recipient;
+
+        @NameInMap("remarks")
+        public String remarks;
+
+        @NameInMap("reviewer")
+        public String reviewer;
+
+        @NameInMap("seller_bank_account_info")
+        public String sellerBankAccountInfo;
+
+        @NameInMap("seller_contact_info")
+        public String sellerContactInfo;
 
         @NameInMap("seller_name")
         public String sellerName;
@@ -142,11 +288,17 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("seller_tax_no")
         public String sellerTaxNo;
 
+        @NameInMap("smart_check_code")
+        public String smartCheckCode;
+
         @NameInMap("tax_amount")
         public String taxAmount;
 
         @NameInMap("tax_rate")
         public String taxRate;
+
+        @NameInMap("total_amount_in_words")
+        public String totalAmountInWords;
 
         public static InsInvoiceScanQueryResponseBodyModuleItems build(java.util.Map<String, ?> map) throws Exception {
             InsInvoiceScanQueryResponseBodyModuleItems self = new InsInvoiceScanQueryResponseBodyModuleItems();
@@ -177,6 +329,14 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             return this.billDate;
         }
 
+        public InsInvoiceScanQueryResponseBodyModuleItems setCheckCode(String checkCode) {
+            this.checkCode = checkCode;
+            return this;
+        }
+        public String getCheckCode() {
+            return this.checkCode;
+        }
+
         public InsInvoiceScanQueryResponseBodyModuleItems setCostCenter(String costCenter) {
             this.costCenter = costCenter;
             return this;
@@ -191,6 +351,22 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         }
         public String getDepartment() {
             return this.department;
+        }
+
+        public InsInvoiceScanQueryResponseBodyModuleItems setDrawer(String drawer) {
+            this.drawer = drawer;
+            return this;
+        }
+        public String getDrawer() {
+            return this.drawer;
+        }
+
+        public InsInvoiceScanQueryResponseBodyModuleItems setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
         public InsInvoiceScanQueryResponseBodyModuleItems setInsuranceCompany(String insuranceCompany) {
@@ -233,12 +409,36 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             return this.invoiceDay;
         }
 
+        public InsInvoiceScanQueryResponseBodyModuleItems setInvoiceDetails(java.util.List<InsInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails> invoiceDetails) {
+            this.invoiceDetails = invoiceDetails;
+            return this;
+        }
+        public java.util.List<InsInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails> getInvoiceDetails() {
+            return this.invoiceDetails;
+        }
+
+        public InsInvoiceScanQueryResponseBodyModuleItems setInvoiceLocation(String invoiceLocation) {
+            this.invoiceLocation = invoiceLocation;
+            return this;
+        }
+        public String getInvoiceLocation() {
+            return this.invoiceLocation;
+        }
+
         public InsInvoiceScanQueryResponseBodyModuleItems setInvoiceNo(String invoiceNo) {
             this.invoiceNo = invoiceNo;
             return this;
         }
         public String getInvoiceNo() {
             return this.invoiceNo;
+        }
+
+        public InsInvoiceScanQueryResponseBodyModuleItems setInvoiceTitle(String invoiceTitle) {
+            this.invoiceTitle = invoiceTitle;
+            return this;
+        }
+        public String getInvoiceTitle() {
+            return this.invoiceTitle;
         }
 
         public InsInvoiceScanQueryResponseBodyModuleItems setOrderId(Long orderId) {
@@ -265,12 +465,36 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             return this.passenger;
         }
 
+        public InsInvoiceScanQueryResponseBodyModuleItems setPasswordArea(String passwordArea) {
+            this.passwordArea = passwordArea;
+            return this;
+        }
+        public String getPasswordArea() {
+            return this.passwordArea;
+        }
+
         public InsInvoiceScanQueryResponseBodyModuleItems setProject(String project) {
             this.project = project;
             return this;
         }
         public String getProject() {
             return this.project;
+        }
+
+        public InsInvoiceScanQueryResponseBodyModuleItems setPurchaserBankAccountInfo(String purchaserBankAccountInfo) {
+            this.purchaserBankAccountInfo = purchaserBankAccountInfo;
+            return this;
+        }
+        public String getPurchaserBankAccountInfo() {
+            return this.purchaserBankAccountInfo;
+        }
+
+        public InsInvoiceScanQueryResponseBodyModuleItems setPurchaserContactInfo(String purchaserContactInfo) {
+            this.purchaserContactInfo = purchaserContactInfo;
+            return this;
+        }
+        public String getPurchaserContactInfo() {
+            return this.purchaserContactInfo;
         }
 
         public InsInvoiceScanQueryResponseBodyModuleItems setPurchaserName(String purchaserName) {
@@ -289,12 +513,44 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             return this.purchaserTaxNo;
         }
 
-        public InsInvoiceScanQueryResponseBodyModuleItems setRealInvoiceTitle(String realInvoiceTitle) {
-            this.realInvoiceTitle = realInvoiceTitle;
+        public InsInvoiceScanQueryResponseBodyModuleItems setRecipient(String recipient) {
+            this.recipient = recipient;
             return this;
         }
-        public String getRealInvoiceTitle() {
-            return this.realInvoiceTitle;
+        public String getRecipient() {
+            return this.recipient;
+        }
+
+        public InsInvoiceScanQueryResponseBodyModuleItems setRemarks(String remarks) {
+            this.remarks = remarks;
+            return this;
+        }
+        public String getRemarks() {
+            return this.remarks;
+        }
+
+        public InsInvoiceScanQueryResponseBodyModuleItems setReviewer(String reviewer) {
+            this.reviewer = reviewer;
+            return this;
+        }
+        public String getReviewer() {
+            return this.reviewer;
+        }
+
+        public InsInvoiceScanQueryResponseBodyModuleItems setSellerBankAccountInfo(String sellerBankAccountInfo) {
+            this.sellerBankAccountInfo = sellerBankAccountInfo;
+            return this;
+        }
+        public String getSellerBankAccountInfo() {
+            return this.sellerBankAccountInfo;
+        }
+
+        public InsInvoiceScanQueryResponseBodyModuleItems setSellerContactInfo(String sellerContactInfo) {
+            this.sellerContactInfo = sellerContactInfo;
+            return this;
+        }
+        public String getSellerContactInfo() {
+            return this.sellerContactInfo;
         }
 
         public InsInvoiceScanQueryResponseBodyModuleItems setSellerName(String sellerName) {
@@ -313,6 +569,14 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             return this.sellerTaxNo;
         }
 
+        public InsInvoiceScanQueryResponseBodyModuleItems setSmartCheckCode(String smartCheckCode) {
+            this.smartCheckCode = smartCheckCode;
+            return this;
+        }
+        public String getSmartCheckCode() {
+            return this.smartCheckCode;
+        }
+
         public InsInvoiceScanQueryResponseBodyModuleItems setTaxAmount(String taxAmount) {
             this.taxAmount = taxAmount;
             return this;
@@ -327,6 +591,14 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         }
         public String getTaxRate() {
             return this.taxRate;
+        }
+
+        public InsInvoiceScanQueryResponseBodyModuleItems setTotalAmountInWords(String totalAmountInWords) {
+            this.totalAmountInWords = totalAmountInWords;
+            return this;
+        }
+        public String getTotalAmountInWords() {
+            return this.totalAmountInWords;
         }
 
     }
