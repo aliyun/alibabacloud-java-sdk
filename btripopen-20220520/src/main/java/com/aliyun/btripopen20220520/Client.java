@@ -29,10 +29,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AccessTokenResponse accessTokenWithOptions(AccessTokenRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.appKey)) {
-            query.put("app_key", request.appKey);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.appSecret)) {
             query.put("app_secret", request.appSecret);
         }
@@ -116,6 +112,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.actionType)) {
             query.put("action_type", request.actionType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.carScenesCode)) {
+            query.put("car_scenes_code", request.carScenesCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.itineraryId)) {

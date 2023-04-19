@@ -7,6 +7,9 @@ public class AddressGetRequest extends TeaModel {
     @NameInMap("action_type")
     public Integer actionType;
 
+    @NameInMap("car_scenes_code")
+    public String carScenesCode;
+
     @NameInMap("itinerary_id")
     public String itineraryId;
 
@@ -33,6 +36,14 @@ public class AddressGetRequest extends TeaModel {
     }
     public Integer getActionType() {
         return this.actionType;
+    }
+
+    public AddressGetRequest setCarScenesCode(String carScenesCode) {
+        this.carScenesCode = carScenesCode;
+        return this;
+    }
+    public String getCarScenesCode() {
+        return this.carScenesCode;
     }
 
     public AddressGetRequest setItineraryId(String itineraryId) {

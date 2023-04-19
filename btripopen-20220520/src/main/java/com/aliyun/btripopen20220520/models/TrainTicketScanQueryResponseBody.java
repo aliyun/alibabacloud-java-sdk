@@ -139,6 +139,12 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         @NameInMap("tax_rate")
         public String taxRate;
 
+        @NameInMap("ticket_no")
+        public String ticketNo;
+
+        @NameInMap("train_no")
+        public String trainNo;
+
         public static TrainTicketScanQueryResponseBodyModuleItems build(java.util.Map<String, ?> map) throws Exception {
             TrainTicketScanQueryResponseBodyModuleItems self = new TrainTicketScanQueryResponseBodyModuleItems();
             return TeaModel.build(map, self);
@@ -294,6 +300,22 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         }
         public String getTaxRate() {
             return this.taxRate;
+        }
+
+        public TrainTicketScanQueryResponseBodyModuleItems setTicketNo(String ticketNo) {
+            this.ticketNo = ticketNo;
+            return this;
+        }
+        public String getTicketNo() {
+            return this.ticketNo;
+        }
+
+        public TrainTicketScanQueryResponseBodyModuleItems setTrainNo(String trainNo) {
+            this.trainNo = trainNo;
+            return this;
+        }
+        public String getTrainNo() {
+            return this.trainNo;
         }
 
     }
