@@ -4,69 +4,173 @@ package com.aliyun.nlb20220430.models;
 import com.aliyun.tea.*;
 
 public class GetListenerAttributeResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether Application-Layer Protocol Negotiation (ALPN) is enabled. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     */
     @NameInMap("AlpnEnabled")
     public Boolean alpnEnabled;
 
+    /**
+     * <p>The ALPN policy. Valid values:</p>
+     * <br>
+     * <p>*   **HTTP1Only**</p>
+     * <p>*   **HTTP2Only**</p>
+     * <p>*   **HTTP2Preferred**</p>
+     * <p>*   **HTTP2Optional**</p>
+     */
     @NameInMap("AlpnPolicy")
     public String alpnPolicy;
 
+    /**
+     * <p>The CA certificates. Only one CA certificate is supported.</p>
+     * <br>
+     * <p>>  This parameter takes effect only for listeners that use SSL over TCP.</p>
+     */
     @NameInMap("CaCertificateIds")
     public java.util.List<String> caCertificateIds;
 
+    /**
+     * <p>Indicates whether mutual authentication is enabled. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     */
     @NameInMap("CaEnabled")
     public Boolean caEnabled;
 
+    /**
+     * <p>The server certificates. Only one server certificate is supported.</p>
+     * <br>
+     * <p>>  This parameter takes effect only for listeners that use SSL over TCP.</p>
+     */
     @NameInMap("CertificateIds")
     public java.util.List<String> certificateIds;
 
+    /**
+     * <p>The maximum number of connections that can be created per second on the NLB instance. Valid values: **0** to **1000000**. **0** specifies that the number of connections is unlimited.</p>
+     */
     @NameInMap("Cps")
     public Integer cps;
 
+    /**
+     * <p>The last port in the listening port range. Valid values: **0** to **65535**. The number of the last port must be smaller than that of the first port.</p>
+     */
     @NameInMap("EndPort")
     public String endPort;
 
+    /**
+     * <p>The timeout period of an idle connection. Unit: seconds. Valid values: **1** to **900**.</p>
+     */
     @NameInMap("IdleTimeout")
     public Integer idleTimeout;
 
+    /**
+     * <p>The name of the listener.</p>
+     * <br>
+     * <p>The name must be 2 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (\_), and hyphens (-).</p>
+     */
     @NameInMap("ListenerDescription")
     public String listenerDescription;
 
+    /**
+     * <p>The ID of the listener.</p>
+     */
     @NameInMap("ListenerId")
     public String listenerId;
 
+    /**
+     * <p>The listening port. Valid values: **0** to **65535**. A value of **0** specifies all ports. If you set the value to **0**, you must also set the **StartPort** and **EndPort** parameters.</p>
+     */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
+    /**
+     * <p>The listening protocol. Valid values: **TCP**, **UDP**, and **TCPSSL**.</p>
+     */
     @NameInMap("ListenerProtocol")
     public String listenerProtocol;
 
+    /**
+     * <p>The status of the listener. Valid values:</p>
+     * <br>
+     * <p>*   **Provisioning**: The listener is being created.</p>
+     * <p>*   **Running**: The listener is running.</p>
+     * <p>*   **Configuring**: The listener is being configured.</p>
+     * <p>*   **Stopping**: The listener is being stopped.</p>
+     * <p>*   **Stopped**: The listener is stopped.</p>
+     * <p>*   **Starting**: The listener is being started.</p>
+     * <p>*   **Deleting**: The listener is being deleted.</p>
+     * <p>*   **Deleted**: The listener is deleted.</p>
+     */
     @NameInMap("ListenerStatus")
     public String listenerStatus;
 
+    /**
+     * <p>The ID of the NLB instance.</p>
+     */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
+    /**
+     * <p>The size of the largest TCP segment. Unit: bytes. Valid values: **0** to **1500**. **0** specifies that the maximum segment size remains unchanged.</p>
+     * <br>
+     * <p>>  This parameter is supported only by listeners that use SSL over TCP.</p>
+     */
     @NameInMap("Mss")
     public Integer mss;
 
+    /**
+     * <p>Indicates whether the Proxy protocol is used to pass client IP addresses to backend servers. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     */
     @NameInMap("ProxyProtocolEnabled")
     public Boolean proxyProtocolEnabled;
 
+    /**
+     * <p>The ID of the region where the NLB instance is deployed.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether fine-grained monitoring is enabled. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     */
     @NameInMap("SecSensorEnabled")
     public Boolean secSensorEnabled;
 
+    /**
+     * <p>The ID of the security policy. System security policies and custom security policies are supported.</p>
+     * <br>
+     * <p>Valid values: **tls_cipher_policy\_1\_0**, **tls_cipher_policy\_1\_1**, **tls_cipher_policy\_1\_2**, **tls_cipher_policy\_1\_2\_strict**, and **tls_cipher_policy\_1\_2\_strict_with\_1\_3**.</p>
+     * <br>
+     * <p>>  This parameter takes effect only for listeners that use SSL over TCP.</p>
+     */
     @NameInMap("SecurityPolicyId")
     public String securityPolicyId;
 
+    /**
+     * <p>The ID of the server group.</p>
+     */
     @NameInMap("ServerGroupId")
     public String serverGroupId;
 
+    /**
+     * <p>The first port in the listening port range. Valid values: **0** to **65535**.</p>
+     */
     @NameInMap("StartPort")
     public String startPort;
 

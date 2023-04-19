@@ -13,12 +13,6 @@ public class ListListenerCertificatesRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    @NameInMap("Page")
-    public Integer page;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
     @NameInMap("RegionId")
     public String regionId;
 
@@ -49,22 +43,6 @@ public class ListListenerCertificatesRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
-    }
-
-    public ListListenerCertificatesRequest setPage(Integer page) {
-        this.page = page;
-        return this;
-    }
-    public Integer getPage() {
-        return this.page;
-    }
-
-    public ListListenerCertificatesRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
     public ListListenerCertificatesRequest setRegionId(String regionId) {

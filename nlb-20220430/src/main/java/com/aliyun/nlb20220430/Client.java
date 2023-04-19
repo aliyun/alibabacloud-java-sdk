@@ -230,6 +230,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createListenerWithOptions(request, runtime);
     }
 
+    /**
+      * *   When you create an NLB instance, the service-linked role AliyunServiceRoleForNlb is automatically created and assigned to you.
+      * *   **CreateLoadBalancer** is an asynchronous operation. After you send a request, the system returns an instance ID and runs the task in the background. You can call [GetLoadBalancerAttribute](~~445873~~) to query the status of an NLB instance.
+      *     *   If an NLB instance is in the **Provisioning** state, the NLB instance is being created.
+      *     *   If an NLB instance is in the **Active** state, the NLB instance is created.
+      *
+      * @param request CreateLoadBalancerRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateLoadBalancerResponse
+     */
     public CreateLoadBalancerResponse createLoadBalancerWithOptions(CreateLoadBalancerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -311,6 +321,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateLoadBalancerResponse());
     }
 
+    /**
+      * *   When you create an NLB instance, the service-linked role AliyunServiceRoleForNlb is automatically created and assigned to you.
+      * *   **CreateLoadBalancer** is an asynchronous operation. After you send a request, the system returns an instance ID and runs the task in the background. You can call [GetLoadBalancerAttribute](~~445873~~) to query the status of an NLB instance.
+      *     *   If an NLB instance is in the **Provisioning** state, the NLB instance is being created.
+      *     *   If an NLB instance is in the **Active** state, the NLB instance is created.
+      *
+      * @param request CreateLoadBalancerRequest
+      * @return CreateLoadBalancerResponse
+     */
     public CreateLoadBalancerResponse createLoadBalancer(CreateLoadBalancerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createLoadBalancerWithOptions(request, runtime);
@@ -369,6 +388,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createSecurityPolicyWithOptions(request, runtime);
     }
 
+    /**
+      * *   **protocol** specifies the protocol used to forward requests to the backend servers.
+      * *   NLB instances support only backend server groups that use TCP, UDP, or SSL over TCP.
+      * *   **CreateServerGroup** is an asynchronous operation. After you send the request, the system returns a request ID even though the operation is still being performed in the background. You can call the [GetJobStatus](~~445904~~) operation to query the creation status of a server group.
+      *     *   If the task is in the **Succeeded** status, the server group is created.
+      *     *   If the task is in the **Processing** status, the server group is being created.
+      *
+      * @param request CreateServerGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateServerGroupResponse
+     */
     public CreateServerGroupResponse createServerGroupWithOptions(CreateServerGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -454,6 +484,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateServerGroupResponse());
     }
 
+    /**
+      * *   **protocol** specifies the protocol used to forward requests to the backend servers.
+      * *   NLB instances support only backend server groups that use TCP, UDP, or SSL over TCP.
+      * *   **CreateServerGroup** is an asynchronous operation. After you send the request, the system returns a request ID even though the operation is still being performed in the background. You can call the [GetJobStatus](~~445904~~) operation to query the creation status of a server group.
+      *     *   If the task is in the **Succeeded** status, the server group is created.
+      *     *   If the task is in the **Processing** status, the server group is being created.
+      *
+      * @param request CreateServerGroupRequest
+      * @return CreateServerGroupResponse
+     */
     public CreateServerGroupResponse createServerGroup(CreateServerGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createServerGroupWithOptions(request, runtime);
@@ -582,6 +622,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteSecurityPolicyWithOptions(request, runtime);
     }
 
+    /**
+      * You can delete server groups that are not associated with listeners.
+      *
+      * @param request DeleteServerGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteServerGroupResponse
+     */
     public DeleteServerGroupResponse deleteServerGroupWithOptions(DeleteServerGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -618,6 +665,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteServerGroupResponse());
     }
 
+    /**
+      * You can delete server groups that are not associated with listeners.
+      *
+      * @param request DeleteServerGroupRequest
+      * @return DeleteServerGroupResponse
+     */
     public DeleteServerGroupResponse deleteServerGroup(DeleteServerGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteServerGroupWithOptions(request, runtime);
@@ -999,14 +1052,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
             body.put("NextToken", request.nextToken);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
-            body.put("Page", request.page);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            body.put("PageSize", request.pageSize);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -1455,6 +1500,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listTagResourcesWithOptions(request, runtime);
     }
 
+    /**
+      * *   Make sure that you have created a security group. For more information about how to create a security group, see [CreateSecurityGroup](~~25553~~).
+      * *   An NLB instance can be associated with up to four security groups.
+      * *   You can query the security groups that are associated with an NLB instance by calling the [GetLoadBalancerAttribute](~~214362~~) operation.
+      * *   LoadBalancerJoinSecurityGroup is an asynchronous operation. After you call the operation, the system returns a request ID and runs the task in the background. You can call the [GetJobStatus](~~445904~~) operation to query the status of a task.
+      *     *   If the task is in the **Succeeded** state, the security group is associated.
+      *     *   If the task is in the **Processing** state, the security group is being associated. In this case, you can perform only query operations.
+      *
+      * @param request LoadBalancerJoinSecurityGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return LoadBalancerJoinSecurityGroupResponse
+     */
     public LoadBalancerJoinSecurityGroupResponse loadBalancerJoinSecurityGroupWithOptions(LoadBalancerJoinSecurityGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1495,11 +1552,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new LoadBalancerJoinSecurityGroupResponse());
     }
 
+    /**
+      * *   Make sure that you have created a security group. For more information about how to create a security group, see [CreateSecurityGroup](~~25553~~).
+      * *   An NLB instance can be associated with up to four security groups.
+      * *   You can query the security groups that are associated with an NLB instance by calling the [GetLoadBalancerAttribute](~~214362~~) operation.
+      * *   LoadBalancerJoinSecurityGroup is an asynchronous operation. After you call the operation, the system returns a request ID and runs the task in the background. You can call the [GetJobStatus](~~445904~~) operation to query the status of a task.
+      *     *   If the task is in the **Succeeded** state, the security group is associated.
+      *     *   If the task is in the **Processing** state, the security group is being associated. In this case, you can perform only query operations.
+      *
+      * @param request LoadBalancerJoinSecurityGroupRequest
+      * @return LoadBalancerJoinSecurityGroupResponse
+     */
     public LoadBalancerJoinSecurityGroupResponse loadBalancerJoinSecurityGroup(LoadBalancerJoinSecurityGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.loadBalancerJoinSecurityGroupWithOptions(request, runtime);
     }
 
+    /**
+      * LoadBalancerLeaveSecurityGroup is an asynchronous operation. After you call the operation, the system returns a request ID and runs the task in the background. You can call the [GetJobStatus](~~445904~~) operation to query the status of a task.
+      * *   If the task is in the **Succeeded** state, the security group is disassociated.
+      * *   If the task is in the **Processing** state, the security group is being disassociated. In this case, you can perform only query operations.
+      *
+      * @param request LoadBalancerLeaveSecurityGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return LoadBalancerLeaveSecurityGroupResponse
+     */
     public LoadBalancerLeaveSecurityGroupResponse loadBalancerLeaveSecurityGroupWithOptions(LoadBalancerLeaveSecurityGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1540,6 +1617,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new LoadBalancerLeaveSecurityGroupResponse());
     }
 
+    /**
+      * LoadBalancerLeaveSecurityGroup is an asynchronous operation. After you call the operation, the system returns a request ID and runs the task in the background. You can call the [GetJobStatus](~~445904~~) operation to query the status of a task.
+      * *   If the task is in the **Succeeded** state, the security group is disassociated.
+      * *   If the task is in the **Processing** state, the security group is being disassociated. In this case, you can perform only query operations.
+      *
+      * @param request LoadBalancerLeaveSecurityGroupRequest
+      * @return LoadBalancerLeaveSecurityGroupResponse
+     */
     public LoadBalancerLeaveSecurityGroupResponse loadBalancerLeaveSecurityGroup(LoadBalancerLeaveSecurityGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.loadBalancerLeaveSecurityGroupWithOptions(request, runtime);
@@ -1877,6 +1962,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateListenerAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * *   Make sure that an NLB instance is created. For more information, see [CreateLoadBalancer](~~445868~~).
+      * *   You can call the [GetLoadBalancerAttribute](~~445873~~) operation to query the **AddressType** value of an NLB instance after you change the network type.
+      * *   **UpdateLoadBalancerAddressTypeConfig** is an asynchronous operation. After you send a request, the request ID is returned but the operation is still being performed in the system background. You can call the [GetJobStatus](~~445904~~) operation to query the task status:
+      *     *   If the task is in the **Succeeded** state, the network type of the IPv4 address of the NLB instance is changed.
+      *     *   If the task is in the **Processing** state, the network type of the IPv4 address of the NLB instance is being changed. In this case, you can perform only query operations.
+      *
+      * @param request UpdateLoadBalancerAddressTypeConfigRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateLoadBalancerAddressTypeConfigResponse
+     */
     public UpdateLoadBalancerAddressTypeConfigResponse updateLoadBalancerAddressTypeConfigWithOptions(UpdateLoadBalancerAddressTypeConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1921,6 +2017,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateLoadBalancerAddressTypeConfigResponse());
     }
 
+    /**
+      * *   Make sure that an NLB instance is created. For more information, see [CreateLoadBalancer](~~445868~~).
+      * *   You can call the [GetLoadBalancerAttribute](~~445873~~) operation to query the **AddressType** value of an NLB instance after you change the network type.
+      * *   **UpdateLoadBalancerAddressTypeConfig** is an asynchronous operation. After you send a request, the request ID is returned but the operation is still being performed in the system background. You can call the [GetJobStatus](~~445904~~) operation to query the task status:
+      *     *   If the task is in the **Succeeded** state, the network type of the IPv4 address of the NLB instance is changed.
+      *     *   If the task is in the **Processing** state, the network type of the IPv4 address of the NLB instance is being changed. In this case, you can perform only query operations.
+      *
+      * @param request UpdateLoadBalancerAddressTypeConfigRequest
+      * @return UpdateLoadBalancerAddressTypeConfigResponse
+     */
     public UpdateLoadBalancerAddressTypeConfigResponse updateLoadBalancerAddressTypeConfig(UpdateLoadBalancerAddressTypeConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateLoadBalancerAddressTypeConfigWithOptions(request, runtime);
@@ -2036,6 +2142,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateLoadBalancerProtectionWithOptions(request, runtime);
     }
 
+    /**
+      * - Make sure that an NLB instance is created. For more information, see [CreateLoadBalancer](/help/en/server-load-balancer/latest/createloadbalancer).
+      * - You can call the [GetLoadBalancerAttribute](/help/en/server-load-balancer/latest/getloadbalancerattribute-nlb) operation to query the zones and zone attributes of an NLB instance.
+      * - **UpdateLoadBalancerZones** is an asynchronous operation. After you send a request, the request ID is returned but the operation is still being performed in the system background. You can call the [GetJobStatus](/help/en/server-load-balancer/latest/getjobstatus) operation to query the status of a task: 
+      *          - If the task is in the **Succeeded** state, the zones and zone attributes are modified.
+      *   - If the task is in the **Processing** state, the zones and zone attributes are being modified. In this case, you can perform only query operations.
+      * ## Precautions
+      * When you call this operation, make sure that you specify all the zones of the NLB instance, including the existing zones and new zones. If you do not specify the existing zones, the existing zones are removed.
+      *
+      * @param request UpdateLoadBalancerZonesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateLoadBalancerZonesResponse
+     */
     public UpdateLoadBalancerZonesResponse updateLoadBalancerZonesWithOptions(UpdateLoadBalancerZonesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2076,6 +2195,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateLoadBalancerZonesResponse());
     }
 
+    /**
+      * - Make sure that an NLB instance is created. For more information, see [CreateLoadBalancer](/help/en/server-load-balancer/latest/createloadbalancer).
+      * - You can call the [GetLoadBalancerAttribute](/help/en/server-load-balancer/latest/getloadbalancerattribute-nlb) operation to query the zones and zone attributes of an NLB instance.
+      * - **UpdateLoadBalancerZones** is an asynchronous operation. After you send a request, the request ID is returned but the operation is still being performed in the system background. You can call the [GetJobStatus](/help/en/server-load-balancer/latest/getjobstatus) operation to query the status of a task: 
+      *          - If the task is in the **Succeeded** state, the zones and zone attributes are modified.
+      *   - If the task is in the **Processing** state, the zones and zone attributes are being modified. In this case, you can perform only query operations.
+      * ## Precautions
+      * When you call this operation, make sure that you specify all the zones of the NLB instance, including the existing zones and new zones. If you do not specify the existing zones, the existing zones are removed.
+      *
+      * @param request UpdateLoadBalancerZonesRequest
+      * @return UpdateLoadBalancerZonesResponse
+     */
     public UpdateLoadBalancerZonesResponse updateLoadBalancerZones(UpdateLoadBalancerZonesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateLoadBalancerZonesWithOptions(request, runtime);
@@ -2204,6 +2335,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateServerGroupAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * The **UpdateServerGroupServersAttribute** operation is asynchronous. After you send a request, the system returns the request ID, but the operation is still being performed in the system background.
+      * 1\\. You can call [ListServerGroups](~~445895~~) to query the status of a server group.
+      * *   If a server group is in the **Configuring** state, it indicates that the server group is being modified.
+      * *   If a server group is in the **Available** state, it indicates that the server group is running.
+      * 2\\. You can call [ListServerGroupServers](~~445896~~) to query the status of a backend server.
+      * *   If a backend server is in the **Configuring** state, it indicates that the backend server is being modified.
+      * *   If a backend server is in the **Available** state, it indicates that the backend server is running.
+      *
+      * @param request UpdateServerGroupServersAttributeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateServerGroupServersAttributeResponse
+     */
     public UpdateServerGroupServersAttributeResponse updateServerGroupServersAttributeWithOptions(UpdateServerGroupServersAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2244,6 +2388,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateServerGroupServersAttributeResponse());
     }
 
+    /**
+      * The **UpdateServerGroupServersAttribute** operation is asynchronous. After you send a request, the system returns the request ID, but the operation is still being performed in the system background.
+      * 1\\. You can call [ListServerGroups](~~445895~~) to query the status of a server group.
+      * *   If a server group is in the **Configuring** state, it indicates that the server group is being modified.
+      * *   If a server group is in the **Available** state, it indicates that the server group is running.
+      * 2\\. You can call [ListServerGroupServers](~~445896~~) to query the status of a backend server.
+      * *   If a backend server is in the **Configuring** state, it indicates that the backend server is being modified.
+      * *   If a backend server is in the **Available** state, it indicates that the backend server is running.
+      *
+      * @param request UpdateServerGroupServersAttributeRequest
+      * @return UpdateServerGroupServersAttributeResponse
+     */
     public UpdateServerGroupServersAttributeResponse updateServerGroupServersAttribute(UpdateServerGroupServersAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateServerGroupServersAttributeWithOptions(request, runtime);
