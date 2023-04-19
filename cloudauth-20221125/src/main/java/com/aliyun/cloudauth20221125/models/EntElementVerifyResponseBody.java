@@ -10,7 +10,9 @@ public class EntElementVerifyResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -58,6 +60,9 @@ public class EntElementVerifyResponseBody extends TeaModel {
         @NameInMap("BizCode")
         public String bizCode;
 
+        @NameInMap("ReasonCode")
+        public String reasonCode;
+
         @NameInMap("Status")
         public String status;
 
@@ -72,6 +77,14 @@ public class EntElementVerifyResponseBody extends TeaModel {
         }
         public String getBizCode() {
             return this.bizCode;
+        }
+
+        public EntElementVerifyResponseBodyResult setReasonCode(String reasonCode) {
+            this.reasonCode = reasonCode;
+            return this;
+        }
+        public String getReasonCode() {
+            return this.reasonCode;
         }
 
         public EntElementVerifyResponseBodyResult setStatus(String status) {
