@@ -146,7 +146,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
          * <p>*   cloud: basic disk. The DeleteWithInstance parameter of a basic disk that is created together with the instance is set to true.</p>
          * <p>*   cloud_efficiency: ultra disk.</p>
          * <p>*   cloud_ssd: standard SSD.</p>
-         * <p>*   ephemeral_ssd: local SSD.</p>
+         * <p>*   ephemeral_ssd: local standard SSD.</p>
          * <p>*   cloud_essd: ESSD.</p>
          * <p>*   cloud_auto: ESSD AutoPL disk.</p>
          */
@@ -154,7 +154,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>Indicates whether the data disk is released when the instance to which the data disk is attached is released. Valid values:</p>
+         * <p>Indicates whether the data disk is released if the instance to which the data disk is attached is released. Valid values:</p>
          * <br>
          * <p>*   true</p>
          * <p>*   false</p>
@@ -186,7 +186,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
          * <p>*   true</p>
          * <p>*   false</p>
          * <br>
-         * <p>Default value: false</p>
+         * <p>Default value: false.</p>
          */
         @NameInMap("Encrypted")
         public String encrypted;
@@ -204,7 +204,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         public String performanceLevel;
 
         /**
-         * <p>The input/output operations per second (IOPS) metric that is preconfigured for the data disk.</p>
+         * <p>The provisioned input/output operations per second (IOPS) for the data disk.</p>
          * <br>
          * <p>> IOPS measures the number of read and write operations that an Elastic Block Storage (EBS) device can process per second.</p>
          */
@@ -372,7 +372,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         public String burstablePerformance;
 
         /**
-         * <p>The number of vCPUs that is allocated to the instance type.</p>
+         * <p>The number of vCPUs of the instance type.</p>
          */
         @NameInMap("Cores")
         public Integer cores;
@@ -389,7 +389,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         /**
          * <p>The level of the instance family.</p>
          * <br>
-         * <p>*   EntryLevel: shared instance types. Instances of this level are cost-effective, but do not provide stable computing performance. Instances of this level are suitable for scenarios in which the CPU utilization is low. For more information, see [Shared instance families](~~108489~~).</p>
+         * <p>*   EntryLevel: shared instance type. Instances of this level are cost-effective, but do not provide stable computing performance. Instances of this level are suitable for scenarios in which the CPU utilization is low. For more information, see [Shared instance families](~~108489~~).</p>
          * <p>*   EnterpriseLevel: Instances of this level provide stable performance and dedicated resources, and are suitable for scenarios in which high stability is required. For more information, see [Overview of instance families](~~25378~~).</p>
          * <p>*   CreditEntryLevel: This value is available only for burstable instances. CPU credits are used to ensure computing performance. Instances of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see [Overview](~~59977~~) of burstable instances</p>
          */
@@ -403,7 +403,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         public Float maxPrice;
 
         /**
-         * <p>The memory size that is allocated to the instance type. Unit: GiB.</p>
+         * <p>The memory size of the instance type. Unit: GiB.</p>
          */
         @NameInMap("Memory")
         public Float memory;
@@ -533,7 +533,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         /**
          * <p>The key of tag N. Valid values of N: 1 to 20.</p>
          * <br>
-         * <p>The tag key cannot be an empty string. The tag key must be 1 to 128 characters in length, and cannot start with `acs:` or `aliyun`. The tag key cannot contain `http://` or `https://`.</p>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 128 characters in length, and cannot start with `acs:` or `aliyun`. The tag key cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Key")
         public String key;
@@ -571,7 +571,6 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
 
     public static class DescribeScalingConfigurationsResponseBodyScalingConfigurations extends TeaModel {
         @NameInMap("PrivatePoolOptions")
-        @Validation(required = true)
         public DescribeScalingConfigurationsResponseBodyScalingConfigurationsPrivatePoolOptions privatePoolOptions;
 
         /**
@@ -641,7 +640,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         public String hpcClusterId;
 
         /**
-         * <p>The name of the image family. If this parameter is specified, the latest custom images that are available in the specified image family are returned. You can use the images to create instances. If the ImageId parameter is specified, you cannot specify the ImageFamily parameter.</p>
+         * <p>The name of the image family. If you specify this parameter, the latest custom images that are available in the specified image family are returned. You can use the images to create instances. If the ImageId parameter is specified, you cannot specify the ImageFamily parameter.</p>
          */
         @NameInMap("ImageFamily")
         public String imageFamily;
@@ -657,6 +656,9 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
          */
         @NameInMap("ImageName")
         public String imageName;
+
+        @NameInMap("ImageOptionsLoginAsNonRoot")
+        public Boolean imageOptionsLoginAsNonRoot;
 
         /**
          * <p>The source of the image. Valid values:</p>
@@ -806,7 +808,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         public String scalingConfigurationName;
 
         /**
-         * <p>The scaling group ID of the scaling configuration.</p>
+         * <p>The ID of the scaling group to which the scaling configuration belongs.</p>
          */
         @NameInMap("ScalingGroupId")
         public String scalingGroupId;
@@ -845,7 +847,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         public Integer spotDuration;
 
         /**
-         * <p>The interruption event of the preemptible instance.</p>
+         * <p>The interruption mode of the preemptible instance.</p>
          */
         @NameInMap("SpotInterruptionBehavior")
         public String spotInterruptionBehavior;
@@ -860,8 +862,8 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
          * <p>The preemption policy that is applied to pay-as-you-go instances and preemptible instances. Valid values:</p>
          * <br>
          * <p>*   NoSpot: The instance is created as a pay-as-you-go instance.</p>
-         * <p>*   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.</p>
-         * <p>*   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is used as the bid price.</p>
+         * <p>*   SpotWithPriceLimit: The instance is a preemptible instance that has a user-defined maximum hourly price.</p>
+         * <p>*   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.</p>
          */
         @NameInMap("SpotStrategy")
         public String spotStrategy;
@@ -900,7 +902,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
          * <p>*   cloud: basic disk</p>
          * <p>*   cloud_efficiency: ultra disk</p>
          * <p>*   cloud_ssd: standard SSD</p>
-         * <p>*   ephemeral_ssd: local SSD</p>
+         * <p>*   ephemeral_ssd: local standard SSD</p>
          * <p>*   cloud_essd: enhanced SSD (ESSD)</p>
          * <p>*   cloud_auto: ESSD AutoPL disk</p>
          */
@@ -950,7 +952,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         public String systemDiskPerformanceLevel;
 
         /**
-         * <p>The IOPS that is preconfigured for the system disk.</p>
+         * <p>The provisioned IOPS for the system disk.</p>
          * <br>
          * <p>> IOPS measures the number of read and write operations that an EBS device can process per second.</p>
          */
@@ -1105,6 +1107,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         }
         public String getImageName() {
             return this.imageName;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurations setImageOptionsLoginAsNonRoot(Boolean imageOptionsLoginAsNonRoot) {
+            this.imageOptionsLoginAsNonRoot = imageOptionsLoginAsNonRoot;
+            return this;
+        }
+        public Boolean getImageOptionsLoginAsNonRoot() {
+            return this.imageOptionsLoginAsNonRoot;
         }
 
         public DescribeScalingConfigurationsResponseBodyScalingConfigurations setImageOwnerAlias(String imageOwnerAlias) {

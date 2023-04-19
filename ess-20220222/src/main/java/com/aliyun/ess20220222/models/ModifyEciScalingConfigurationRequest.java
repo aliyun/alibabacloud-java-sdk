@@ -812,14 +812,12 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
 
     public static class ModifyEciScalingConfigurationRequestContainersLivenessProbe extends TeaModel {
         @NameInMap("Exec")
-        @Validation(required = true)
         public ModifyEciScalingConfigurationRequestContainersLivenessProbeExec exec;
 
         @NameInMap("FailureThreshold")
         public Integer failureThreshold;
 
         @NameInMap("HttpGet")
-        @Validation(required = true)
         public ModifyEciScalingConfigurationRequestContainersLivenessProbeHttpGet httpGet;
 
         @NameInMap("InitialDelaySeconds")
@@ -832,7 +830,6 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public Integer successThreshold;
 
         @NameInMap("TcpSocket")
-        @Validation(required = true)
         public ModifyEciScalingConfigurationRequestContainersLivenessProbeTcpSocket tcpSocket;
 
         @NameInMap("TimeoutSeconds")
@@ -990,14 +987,12 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
 
     public static class ModifyEciScalingConfigurationRequestContainersReadinessProbe extends TeaModel {
         @NameInMap("Exec")
-        @Validation(required = true)
         public ModifyEciScalingConfigurationRequestContainersReadinessProbeExec exec;
 
         @NameInMap("FailureThreshold")
         public Integer failureThreshold;
 
         @NameInMap("HttpGet")
-        @Validation(required = true)
         public ModifyEciScalingConfigurationRequestContainersReadinessProbeHttpGet httpGet;
 
         @NameInMap("InitialDelaySeconds")
@@ -1010,7 +1005,6 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public Integer successThreshold;
 
         @NameInMap("TcpSocket")
-        @Validation(required = true)
         public ModifyEciScalingConfigurationRequestContainersReadinessProbeTcpSocket tcpSocket;
 
         @NameInMap("TimeoutSeconds")
@@ -1108,7 +1102,6 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
 
     public static class ModifyEciScalingConfigurationRequestContainersSecurityContext extends TeaModel {
         @NameInMap("Capability")
-        @Validation(required = true)
         public ModifyEciScalingConfigurationRequestContainersSecurityContextCapability capability;
 
         @NameInMap("ReadOnlyRootFilesystem")
@@ -1169,7 +1162,6 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
 
     public static class ModifyEciScalingConfigurationRequestContainersEnvironmentVars extends TeaModel {
         @NameInMap("FieldRef")
-        @Validation(required = true)
         public ModifyEciScalingConfigurationRequestContainersEnvironmentVarsFieldRef fieldRef;
 
         /**
@@ -1342,15 +1334,12 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
 
     public static class ModifyEciScalingConfigurationRequestContainers extends TeaModel {
         @NameInMap("LivenessProbe")
-        @Validation(required = true)
         public ModifyEciScalingConfigurationRequestContainersLivenessProbe livenessProbe;
 
         @NameInMap("ReadinessProbe")
-        @Validation(required = true)
         public ModifyEciScalingConfigurationRequestContainersReadinessProbe readinessProbe;
 
         @NameInMap("SecurityContext")
-        @Validation(required = true)
         public ModifyEciScalingConfigurationRequestContainersSecurityContext securityContext;
 
         /**
@@ -1747,7 +1736,6 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
 
     public static class ModifyEciScalingConfigurationRequestInitContainersSecurityContext extends TeaModel {
         @NameInMap("Capability")
-        @Validation(required = true)
         public ModifyEciScalingConfigurationRequestInitContainersSecurityContextCapability capability;
 
         @NameInMap("ReadOnlyRootFilesystem")
@@ -1808,7 +1796,6 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
 
     public static class ModifyEciScalingConfigurationRequestInitContainersInitContainerEnvironmentVars extends TeaModel {
         @NameInMap("FieldRef")
-        @Validation(required = true)
         public ModifyEciScalingConfigurationRequestInitContainersInitContainerEnvironmentVarsFieldRef fieldRef;
 
         /**
@@ -1983,7 +1970,6 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
 
     public static class ModifyEciScalingConfigurationRequestInitContainers extends TeaModel {
         @NameInMap("SecurityContext")
-        @Validation(required = true)
         public ModifyEciScalingConfigurationRequestInitContainersSecurityContext securityContext;
 
         /**
@@ -2469,23 +2455,18 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
 
     public static class ModifyEciScalingConfigurationRequestVolumes extends TeaModel {
         @NameInMap("DiskVolume")
-        @Validation(required = true)
         public ModifyEciScalingConfigurationRequestVolumesDiskVolume diskVolume;
 
         @NameInMap("EmptyDirVolume")
-        @Validation(required = true)
         public ModifyEciScalingConfigurationRequestVolumesEmptyDirVolume emptyDirVolume;
 
         @NameInMap("FlexVolume")
-        @Validation(required = true)
         public ModifyEciScalingConfigurationRequestVolumesFlexVolume flexVolume;
 
         @NameInMap("HostPathVolume")
-        @Validation(required = true)
         public ModifyEciScalingConfigurationRequestVolumesHostPathVolume hostPathVolume;
 
         @NameInMap("NFSVolume")
-        @Validation(required = true)
         public ModifyEciScalingConfigurationRequestVolumesNFSVolume NFSVolume;
 
         /**

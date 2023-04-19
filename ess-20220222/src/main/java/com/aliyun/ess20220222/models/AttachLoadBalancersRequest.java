@@ -27,6 +27,9 @@ public class AttachLoadBalancersRequest extends TeaModel {
     @NameInMap("ForceAttach")
     public Boolean forceAttach;
 
+    @NameInMap("LoadBalancerConfigs")
+    public java.util.List<AttachLoadBalancersRequestLoadBalancerConfigs> loadBalancerConfigs;
+
     /**
      * <p>The IDs of the CLB instances.</p>
      */
@@ -79,6 +82,14 @@ public class AttachLoadBalancersRequest extends TeaModel {
         return this.forceAttach;
     }
 
+    public AttachLoadBalancersRequest setLoadBalancerConfigs(java.util.List<AttachLoadBalancersRequestLoadBalancerConfigs> loadBalancerConfigs) {
+        this.loadBalancerConfigs = loadBalancerConfigs;
+        return this;
+    }
+    public java.util.List<AttachLoadBalancersRequestLoadBalancerConfigs> getLoadBalancerConfigs() {
+        return this.loadBalancerConfigs;
+    }
+
     public AttachLoadBalancersRequest setLoadBalancers(java.util.List<String> loadBalancers) {
         this.loadBalancers = loadBalancers;
         return this;
@@ -109,6 +120,36 @@ public class AttachLoadBalancersRequest extends TeaModel {
     }
     public String getScalingGroupId() {
         return this.scalingGroupId;
+    }
+
+    public static class AttachLoadBalancersRequestLoadBalancerConfigs extends TeaModel {
+        @NameInMap("LoadBalancerId")
+        public String loadBalancerId;
+
+        @NameInMap("Weight")
+        public Integer weight;
+
+        public static AttachLoadBalancersRequestLoadBalancerConfigs build(java.util.Map<String, ?> map) throws Exception {
+            AttachLoadBalancersRequestLoadBalancerConfigs self = new AttachLoadBalancersRequestLoadBalancerConfigs();
+            return TeaModel.build(map, self);
+        }
+
+        public AttachLoadBalancersRequestLoadBalancerConfigs setLoadBalancerId(String loadBalancerId) {
+            this.loadBalancerId = loadBalancerId;
+            return this;
+        }
+        public String getLoadBalancerId() {
+            return this.loadBalancerId;
+        }
+
+        public AttachLoadBalancersRequestLoadBalancerConfigs setWeight(Integer weight) {
+            this.weight = weight;
+            return this;
+        }
+        public Integer getWeight() {
+            return this.weight;
+        }
+
     }
 
 }

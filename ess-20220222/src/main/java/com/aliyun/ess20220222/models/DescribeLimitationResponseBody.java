@@ -22,6 +22,9 @@ public class DescribeLimitationResponseBody extends TeaModel {
     @NameInMap("MaxNumberOfMinSize")
     public Integer maxNumberOfMinSize;
 
+    @NameInMap("MaxNumberOfNlbServerGroup")
+    public Integer maxNumberOfNlbServerGroup;
+
     @NameInMap("MaxNumberOfNotificationConfigurations")
     public Integer maxNumberOfNotificationConfigurations;
 
@@ -97,6 +100,14 @@ public class DescribeLimitationResponseBody extends TeaModel {
     }
     public Integer getMaxNumberOfMinSize() {
         return this.maxNumberOfMinSize;
+    }
+
+    public DescribeLimitationResponseBody setMaxNumberOfNlbServerGroup(Integer maxNumberOfNlbServerGroup) {
+        this.maxNumberOfNlbServerGroup = maxNumberOfNlbServerGroup;
+        return this;
+    }
+    public Integer getMaxNumberOfNlbServerGroup() {
+        return this.maxNumberOfNlbServerGroup;
     }
 
     public DescribeLimitationResponseBody setMaxNumberOfNotificationConfigurations(Integer maxNumberOfNotificationConfigurations) {

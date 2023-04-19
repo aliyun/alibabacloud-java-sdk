@@ -27,7 +27,7 @@ public class DescribeScalingConfigurationsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the scaling group whose scaling configurations you want to query.</p>
+     * <p>The region ID of the scaling group to which the scaling configuration that you want to query belongs.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
