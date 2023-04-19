@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeScalingGroupsRequest extends TeaModel {
     /**
-     * <p>The type of instances that are managed by the scaling group. Valid values:</p>
+     * <p>The type of the instances that are managed by the scaling group. Valid values:</p>
      * <br>
-     * <p>*   ECS: Elastic Compute Service (ECS) instances</p>
-     * <p>*   ECI: elastic container instances</p>
+     * <p>*   ECS: Elastic Compute Service (ECS) instances.</p>
+     * <p>*   ECI: elastic container instances.</p>
      * <br>
      * <p>Default value: ECS.</p>
      */
@@ -46,7 +46,7 @@ public class DescribeScalingGroupsRequest extends TeaModel {
     /**
      * <p>The ID of the resource group to which the scaling group you want to query belongs.</p>
      * <br>
-     * <p>> If the specified resource group contains no scaling groups, null is returned, and no error is reported.</p>
+     * <p>> If the specified resource group contains no scaling groups, null is returned.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -60,7 +60,7 @@ public class DescribeScalingGroupsRequest extends TeaModel {
     /**
      * <p>The IDs of the scaling groups that you want to query.</p>
      * <br>
-     * <p>The IDs of inactive scaling groups are not displayed in the query results, and no error is reported.</p>
+     * <p>The query result does not contain the IDs of inactive scaling groups, and no errors are returned.</p>
      */
     @NameInMap("ScalingGroupIds")
     public java.util.List<String> scalingGroupIds;
@@ -74,7 +74,7 @@ public class DescribeScalingGroupsRequest extends TeaModel {
     /**
      * <p>The names of the scaling groups that you want to query.</p>
      * <br>
-     * <p>The names of inactive scaling groups are not displayed in the query results, and no error is reported.</p>
+     * <p>The query result does not contain the names of inactive scaling groups, and no errors are returned.</p>
      */
     @NameInMap("ScalingGroupNames")
     public java.util.List<String> scalingGroupNames;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CompleteLifecycleActionRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
      * <br>
      * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25965~~).</p>
      */
@@ -13,17 +13,18 @@ public class CompleteLifecycleActionRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The action that you want Auto Scaling to perform after the lifecycle hook ends. Valid values:</p>
+     * <p>The action that you want Auto Scaling to perform after the lifecycle hook times out. Valid values:</p>
      * <br>
-     * <p>*   CONTINUE: Auto Scaling continues to add Elastic Compute Service (ECS) instances to the scaling group, or continues to remove ECS instances from the scaling group.</p>
-     * <p>*   ABANDON: Auto Scaling stops adding ECS instances to the scaling group and releases the ECS instances, or continues to respond to scale-in requests and remove ECS instances from the scaling group.</p>
+     * <p>*   CONTINUE: Auto Scaling continues to respond to a scale-in or scale-out request.</p>
+     * <p>*   ABANDON: Auto Scaling releases Elastic Compute Service (ECS) instances that are created during scale-out activities or removes ECS instances from the scaling group during scale-in activities.</p>
+     * <p>*   ROLLBACK: For scale-in activities, Auto Scaling rejects the requests to release ECS instances but rolls back ECS instances. For scale-out activities, the ROLLBACK setting has the same effect as the ABANDON setting.</p>
      * <br>
-     * <p>Default value: CONTINUE.</p>
+     * <p>If you do not specify this parameter, Auto Scaling performs the action that is specified by the `DefaultResult` parameter after the lifecycle hook times out.</p>
      * <br>
-     * <p>If multiple lifecycle hooks exist in a scaling group and are triggered at the same time, the following rules apply:</p>
+     * <p>If multiple lifecycle hooks exist in a scaling group and the lifecycle hooks are triggered at the same time, the following rules apply:</p>
      * <br>
-     * <p>*   If you set the LifecycleActionResult parameter to ABANDON for the lifecycle hook that is applied to a scale-in activity, Auto Scaling immediately removes ECS instances from the scaling group after the lifecycle hook ends, without the need to wait for the last lifecycle hook to end.</p>
-     * <p>*   If you set the LifecycleActionResult parameter to CONTINUE for the lifecycle hook that is applied to a scale-in or scale-out activity, Auto Scaling performs the next action until the last lifecycle hook in the scaling group ends. The action that Auto Scaling performs varies based on the value that you specify for the LifecycleActionResult parameter of the last lifecycle hook.</p>
+     * <p>*   For scale-in activities, when lifecycle hooks whose LifecycleActionResult parameter is set to ABANDON or ROLLBACK time out, other lifecycle hooks time out ahead of schedule.</p>
+     * <p>*   For scale-in and scale-out activities, if you set the LifecycleActionResult parameter for all lifecycle hooks to CONTINUE, Auto Scaling performs the next action only after the last lifecycle hook times out. The action that Auto Scaling performs varies based on the value that you specify for the LifecycleActionResult parameter of the lifecycle hook that last times out.</p>
      */
     @NameInMap("LifecycleActionResult")
     public String lifecycleActionResult;

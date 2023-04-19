@@ -4,9 +4,17 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DetachServerGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the scaling activity in which you detach the server group from the scaling group and Auto Scaling removes the ECS instances from the server group.</p>
+     * <br>
+     * <p>> This parameter is returned only if you set the ForceAttach parameter to true.</p>
+     */
     @NameInMap("ScalingActivityId")
     public String scalingActivityId;
 

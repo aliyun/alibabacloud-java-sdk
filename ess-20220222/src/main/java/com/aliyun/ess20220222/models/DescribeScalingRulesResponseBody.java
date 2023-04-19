@@ -79,6 +79,36 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeScalingRulesResponseBodyScalingRulesAlarmDimensions extends TeaModel {
+        @NameInMap("DimensionKey")
+        public String dimensionKey;
+
+        @NameInMap("DimensionValue")
+        public String dimensionValue;
+
+        public static DescribeScalingRulesResponseBodyScalingRulesAlarmDimensions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeScalingRulesResponseBodyScalingRulesAlarmDimensions self = new DescribeScalingRulesResponseBodyScalingRulesAlarmDimensions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeScalingRulesResponseBodyScalingRulesAlarmDimensions setDimensionKey(String dimensionKey) {
+            this.dimensionKey = dimensionKey;
+            return this;
+        }
+        public String getDimensionKey() {
+            return this.dimensionKey;
+        }
+
+        public DescribeScalingRulesResponseBodyScalingRulesAlarmDimensions setDimensionValue(String dimensionValue) {
+            this.dimensionValue = dimensionValue;
+            return this;
+        }
+        public String getDimensionValue() {
+            return this.dimensionValue;
+        }
+
+    }
+
     public static class DescribeScalingRulesResponseBodyScalingRulesAlarmsDimensions extends TeaModel {
         /**
          * <p>The value of the dimension that is associated with the metric.</p>
@@ -324,6 +354,9 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         @NameInMap("AdjustmentValue")
         public Integer adjustmentValue;
 
+        @NameInMap("AlarmDimensions")
+        public java.util.List<DescribeScalingRulesResponseBodyScalingRulesAlarmDimensions> alarmDimensions;
+
         /**
          * <p>The event-triggered tasks that are associated with the scaling rule. Event-triggered tasks that are associated with the scaling rule are returned only if you set the ShowAlarmRules parameter to true. Otherwise, an empty list is returned.</p>
          */
@@ -494,6 +527,14 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         }
         public Integer getAdjustmentValue() {
             return this.adjustmentValue;
+        }
+
+        public DescribeScalingRulesResponseBodyScalingRules setAlarmDimensions(java.util.List<DescribeScalingRulesResponseBodyScalingRulesAlarmDimensions> alarmDimensions) {
+            this.alarmDimensions = alarmDimensions;
+            return this;
+        }
+        public java.util.List<DescribeScalingRulesResponseBodyScalingRulesAlarmDimensions> getAlarmDimensions() {
+            return this.alarmDimensions;
         }
 
         public DescribeScalingRulesResponseBodyScalingRules setAlarms(java.util.List<DescribeScalingRulesResponseBodyScalingRulesAlarms> alarms) {

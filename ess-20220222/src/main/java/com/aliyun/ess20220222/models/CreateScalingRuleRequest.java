@@ -27,6 +27,9 @@ public class CreateScalingRuleRequest extends TeaModel {
     @NameInMap("AdjustmentValue")
     public Integer adjustmentValue;
 
+    @NameInMap("AlarmDimensions")
+    public java.util.List<CreateScalingRuleRequestAlarmDimensions> alarmDimensions;
+
     /**
      * <p>The minimum number of instances that must be scaled when the AdjustmentType parameter is set to PercentChangeInCapacity. This parameter takes effect only if you set the ScalingRuleType parameter to SimpleScalingRule or StepScalingRule.</p>
      */
@@ -218,6 +221,14 @@ public class CreateScalingRuleRequest extends TeaModel {
         return this.adjustmentValue;
     }
 
+    public CreateScalingRuleRequest setAlarmDimensions(java.util.List<CreateScalingRuleRequestAlarmDimensions> alarmDimensions) {
+        this.alarmDimensions = alarmDimensions;
+        return this;
+    }
+    public java.util.List<CreateScalingRuleRequestAlarmDimensions> getAlarmDimensions() {
+        return this.alarmDimensions;
+    }
+
     public CreateScalingRuleRequest setCooldown(Integer cooldown) {
         this.cooldown = cooldown;
         return this;
@@ -384,6 +395,36 @@ public class CreateScalingRuleRequest extends TeaModel {
     }
     public Float getTargetValue() {
         return this.targetValue;
+    }
+
+    public static class CreateScalingRuleRequestAlarmDimensions extends TeaModel {
+        @NameInMap("DimensionKey")
+        public String dimensionKey;
+
+        @NameInMap("DimensionValue")
+        public String dimensionValue;
+
+        public static CreateScalingRuleRequestAlarmDimensions build(java.util.Map<String, ?> map) throws Exception {
+            CreateScalingRuleRequestAlarmDimensions self = new CreateScalingRuleRequestAlarmDimensions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateScalingRuleRequestAlarmDimensions setDimensionKey(String dimensionKey) {
+            this.dimensionKey = dimensionKey;
+            return this;
+        }
+        public String getDimensionKey() {
+            return this.dimensionKey;
+        }
+
+        public CreateScalingRuleRequestAlarmDimensions setDimensionValue(String dimensionValue) {
+            this.dimensionValue = dimensionValue;
+            return this;
+        }
+        public String getDimensionValue() {
+            return this.dimensionValue;
+        }
+
     }
 
     public static class CreateScalingRuleRequestStepAdjustments extends TeaModel {

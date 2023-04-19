@@ -15,12 +15,12 @@ public class EnableScalingGroupRequest extends TeaModel {
      * <br>
      * <p>The ECS instances must meet the following requirements:</p>
      * <br>
-     * <p>*   The instances and the scaling group must reside in the same region.</p>
-     * <p>*   The instances must be in the Running state.</p>
-     * <p>*   The instances are not added to other scaling groups.</p>
-     * <p>*   The instances must use the subscription or pay-as-you-go billing method or be preemptible instances.</p>
-     * <p>*   If you specify the VswitchID parameter for the scaling group, the instances must reside in the same virtual private cloud (VPC) as the specified vSwitch. You cannot add instances that reside in the classic network or other VPCs to the scaling group.</p>
-     * <p>*   If you do not specify the VswitchID parameter for the scaling group, you cannot add instances that reside in VPCs to the scaling group.</p>
+     * <p>*   The ECS instances and the scaling group must reside in the same region.</p>
+     * <p>*   The ECS instances must be in the Running state.</p>
+     * <p>*   The ECS instances are not added to other scaling groups.</p>
+     * <p>*   The billing method of the ECS instances must be subscription or pay-as-you-go, or the ECS instances must be preemptible instances.</p>
+     * <p>*   If you specify the VswitchID parameter for the scaling group, the ECS instances must reside in the same virtual private cloud (VPC) as the specified vSwitch. You cannot add the ECS instances that reside in the classic network or other VPCs to the scaling group.</p>
+     * <p>*   If you do not specify the VswitchID parameter for the scaling group, you cannot add ECS instances that reside in VPCs to the scaling group.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
@@ -32,7 +32,7 @@ public class EnableScalingGroupRequest extends TeaModel {
     public String launchTemplateId;
 
     /**
-     * <p>Details of the instance types that are specified in the extended configurations of the launch template.</p>
+     * <p>Details of the instance types that you specify by using the Extended Configurations feature of the launch template.</p>
      */
     @NameInMap("LaunchTemplateOverrides")
     public java.util.List<EnableScalingGroupRequestLaunchTemplateOverrides> launchTemplateOverrides;
@@ -41,14 +41,14 @@ public class EnableScalingGroupRequest extends TeaModel {
      * <p>The version number of the launch template. Valid values:</p>
      * <br>
      * <p>*   A fixed template version number.</p>
-     * <p>*   Default: The default template version is always used.</p>
-     * <p>*   Latest: The latest template version is always used.</p>
+     * <p>*   Default: the default template version.</p>
+     * <p>*   Latest: the latest template version.</p>
      */
     @NameInMap("LaunchTemplateVersion")
     public String launchTemplateVersion;
 
     /**
-     * <p>The weight of an ECS instance as a backend server in the associated vServer group.</p>
+     * <p>The weight of an ECS instance as a backend server in the backend vServer group.</p>
      * <br>
      * <p>Default value: 50.</p>
      */
@@ -182,19 +182,19 @@ public class EnableScalingGroupRequest extends TeaModel {
 
     public static class EnableScalingGroupRequestLaunchTemplateOverrides extends TeaModel {
         /**
-         * <p>The instance type. The instance type that you specify by using the InstanceType parameter overwrites the instance type that is specified in the launch template.</p>
+         * <p>The instance type that you want to use to override the instance type that is specified in the launch template.</p>
          * <br>
-         * <p>If you want Auto Scaling to scale instances in the scaling group based on the instance type weight, you must specify both the InstanceType parameter and the WeightedCapacity parameter.</p>
+         * <p>If you want to scale instances based on the weighted capacities of the instances, you must specify both the InstanceType and WeightedCapacity parameters.</p>
          * <br>
-         * <p>> This parameter takes effect only after you specify the LaunchTemplateId parameter.</p>
+         * <p>> This parameter is supported only if you specify the LaunchTemplateId parameter.</p>
          * <br>
-         * <p>You can use the InstanceType parameter to specify only instance types that are available for purchase.</p>
+         * <p>You can specify an instance type that is available for purchase as the value of the InstanceType parameter.</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
-         * <p>The weight of the instance type. The weight specifies the capacity of a single instance of the specified instance type in the scaling group. If you want Auto Scaling to scale instances in the scaling group based on the weighted capacity of instances, you must specify the WeightedCapacity parameter after you specify the InstanceType parameter.</p>
+         * <p>The weight of the instance type. The weight specifies the capacity of a single instance of the specified instance type in the scaling group. If you want to scale instances based on the weighted capacities of the instances, you must specify the WeightedCapacity parameter after you specify the InstanceType parameter.</p>
          * <br>
          * <p>A higher weight specifies that a smaller number of instances of the specified instance type are required to meet the expected capacity requirement.</p>
          * <br>

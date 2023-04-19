@@ -19,7 +19,7 @@ public class DescribeScalingActivitiesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 50.</p>
+     * <p>The number of entries to return on each page. Maximum value: 50.</p>
      * <br>
      * <p>Default value: 10.</p>
      */
