@@ -1,3 +1,6 @@
+2023-04-19 Version: 1.8.21
+- Support adjust pts scene speed.
+
 2023-04-17 Version: 1.8.19
  - Supported synthetic task API.
 
