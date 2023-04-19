@@ -119,6 +119,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public InitializeResponse initializeWithOptions(InitializeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.crop)) {
+            query.put("Crop", request.crop);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.docType)) {
             query.put("DocType", request.docType);
         }
@@ -135,6 +139,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("FlowType", request.flowType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.idFaceQuality)) {
+            query.put("IdFaceQuality", request.idFaceQuality);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idSpoof)) {
+            query.put("IdSpoof", request.idSpoof);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.merchantBizId)) {
             query.put("MerchantBizId", request.merchantBizId);
         }
@@ -145,6 +157,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.metaInfo)) {
             query.put("MetaInfo", request.metaInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ocr)) {
+            query.put("Ocr", request.ocr);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.operationMode)) {
@@ -161,6 +177,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.productConfig)) {
             query.put("ProductConfig", request.productConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.returnUrl)) {
+            query.put("ReturnUrl", request.returnUrl);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sceneCode)) {

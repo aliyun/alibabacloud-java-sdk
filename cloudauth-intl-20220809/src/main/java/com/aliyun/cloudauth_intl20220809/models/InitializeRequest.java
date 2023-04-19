@@ -4,6 +4,9 @@ package com.aliyun.cloudauth_intl20220809.models;
 import com.aliyun.tea.*;
 
 public class InitializeRequest extends TeaModel {
+    @NameInMap("Crop")
+    public String crop;
+
     @NameInMap("DocType")
     public String docType;
 
@@ -16,6 +19,12 @@ public class InitializeRequest extends TeaModel {
     @NameInMap("FlowType")
     public String flowType;
 
+    @NameInMap("IdFaceQuality")
+    public String idFaceQuality;
+
+    @NameInMap("IdSpoof")
+    public String idSpoof;
+
     @NameInMap("MerchantBizId")
     public String merchantBizId;
 
@@ -24,6 +33,9 @@ public class InitializeRequest extends TeaModel {
 
     @NameInMap("MetaInfo")
     public String metaInfo;
+
+    @NameInMap("Ocr")
+    public String ocr;
 
     @NameInMap("OperationMode")
     public String operationMode;
@@ -37,6 +49,9 @@ public class InitializeRequest extends TeaModel {
     @NameInMap("ProductConfig")
     public String productConfig;
 
+    @NameInMap("ReturnUrl")
+    public String returnUrl;
+
     @NameInMap("SceneCode")
     public String sceneCode;
 
@@ -46,6 +61,14 @@ public class InitializeRequest extends TeaModel {
     public static InitializeRequest build(java.util.Map<String, ?> map) throws Exception {
         InitializeRequest self = new InitializeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public InitializeRequest setCrop(String crop) {
+        this.crop = crop;
+        return this;
+    }
+    public String getCrop() {
+        return this.crop;
     }
 
     public InitializeRequest setDocType(String docType) {
@@ -80,6 +103,22 @@ public class InitializeRequest extends TeaModel {
         return this.flowType;
     }
 
+    public InitializeRequest setIdFaceQuality(String idFaceQuality) {
+        this.idFaceQuality = idFaceQuality;
+        return this;
+    }
+    public String getIdFaceQuality() {
+        return this.idFaceQuality;
+    }
+
+    public InitializeRequest setIdSpoof(String idSpoof) {
+        this.idSpoof = idSpoof;
+        return this;
+    }
+    public String getIdSpoof() {
+        return this.idSpoof;
+    }
+
     public InitializeRequest setMerchantBizId(String merchantBizId) {
         this.merchantBizId = merchantBizId;
         return this;
@@ -102,6 +141,14 @@ public class InitializeRequest extends TeaModel {
     }
     public String getMetaInfo() {
         return this.metaInfo;
+    }
+
+    public InitializeRequest setOcr(String ocr) {
+        this.ocr = ocr;
+        return this;
+    }
+    public String getOcr() {
+        return this.ocr;
     }
 
     public InitializeRequest setOperationMode(String operationMode) {
@@ -134,6 +181,14 @@ public class InitializeRequest extends TeaModel {
     }
     public String getProductConfig() {
         return this.productConfig;
+    }
+
+    public InitializeRequest setReturnUrl(String returnUrl) {
+        this.returnUrl = returnUrl;
+        return this;
+    }
+    public String getReturnUrl() {
+        return this.returnUrl;
     }
 
     public InitializeRequest setSceneCode(String sceneCode) {
