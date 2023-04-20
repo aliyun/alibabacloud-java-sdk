@@ -4,36 +4,69 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class FilterUsersRequest extends TeaModel {
+    /**
+     * <p>The IDs of excluded users.</p>
+     */
     @NameInMap("ExcludeEndUserIds")
     public java.util.List<String> excludeEndUserIds;
 
+    /**
+     * <p>The string that you enter for a fuzzy search. You can enter a string to match the username or email address.</p>
+     */
     @NameInMap("Filter")
     public String filter;
 
+    /**
+     * <p>Specifies whether to return information about cloud desktops that are assigned to the convenience user.</p>
+     */
     @NameInMap("IncludeDesktopCount")
     public Boolean includeDesktopCount;
 
+    /**
+     * <p>Specifies whether to return the number of desktop groups that are assigned to the user.</p>
+     */
     @NameInMap("IncludeDesktopGroupCount")
     public Boolean includeDesktopGroupCount;
 
+    /**
+     * <p>The number of entries to return on each page. If you set this parameter to a value greater than 100, the system resets the value to 100.</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    /**
+     * <p>The token that determines the start point of the query. You do not need to configure this parameter if you call this operation for the first time. If not all results are returned in a query, a value is returned for the NextToken parameter. In this case, you can use the returned NextToken value to perform the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The parameter that is supported to sort query results.</p>
+     */
     @NameInMap("OrderParam")
     public FilterUsersRequestOrderParam orderParam;
 
+    /**
+     * <p>The ID of the organization.</p>
+     */
     @NameInMap("OrgId")
     public String orgId;
 
+    /**
+     * <p>The type of the account ownership.</p>
+     */
     @NameInMap("OwnerType")
     public String ownerType;
 
+    /**
+     * <p>Details of the user property that you want to perform fuzzy search.</p>
+     */
     @NameInMap("PropertyFilterParam")
     public java.util.List<FilterUsersRequestPropertyFilterParam> propertyFilterParam;
 
+    /**
+     * <p>Details of the properties and property values.</p>
+     */
     @NameInMap("PropertyKeyValueFilterParam")
     public java.util.List<FilterUsersRequestPropertyKeyValueFilterParam> propertyKeyValueFilterParam;
 
@@ -131,9 +164,15 @@ public class FilterUsersRequest extends TeaModel {
     }
 
     public static class FilterUsersRequestOrderParam extends TeaModel {
+        /**
+         * <p>The method that you want to use to sort query results.</p>
+         */
         @NameInMap("OrderField")
         public String orderField;
 
+        /**
+         * <p>Specifies whether to sort query results in ascending or descending order.</p>
+         */
         @NameInMap("OrderType")
         public String orderType;
 
@@ -161,9 +200,15 @@ public class FilterUsersRequest extends TeaModel {
     }
 
     public static class FilterUsersRequestPropertyFilterParam extends TeaModel {
+        /**
+         * <p>The ID of the property.</p>
+         */
         @NameInMap("PropertyId")
         public Long propertyId;
 
+        /**
+         * <p>The IDs of the property values.</p>
+         */
         @NameInMap("PropertyValueIds")
         public String propertyValueIds;
 
@@ -191,9 +236,15 @@ public class FilterUsersRequest extends TeaModel {
     }
 
     public static class FilterUsersRequestPropertyKeyValueFilterParam extends TeaModel {
+        /**
+         * <p>The name of the property.</p>
+         */
         @NameInMap("PropertyKey")
         public String propertyKey;
 
+        /**
+         * <p>The values of the property.</p>
+         */
         @NameInMap("PropertyValues")
         public String propertyValues;
 

@@ -4,9 +4,15 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class CheckUsedPropertyResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of convenience users that are associated with the property.</p>
+     */
     @NameInMap("UseCount")
     public Long useCount;
 
