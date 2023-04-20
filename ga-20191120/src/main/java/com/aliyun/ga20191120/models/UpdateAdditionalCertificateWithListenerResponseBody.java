@@ -11,7 +11,7 @@ public class UpdateAdditionalCertificateWithListenerResponseBody extends TeaMode
     public String listenerId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

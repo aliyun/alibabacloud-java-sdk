@@ -483,8 +483,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Usage notes
-      * The **ChangeResourceGroup** operation cannot be repeatedly called for the same GA instance within a specific period of time.
+      * You cannot call the **ChangeResourceGroup** operation again on the same GA instance before the previous operation is complete.
       *
       * @param request ChangeResourceGroupRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -531,8 +530,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Usage notes
-      * The **ChangeResourceGroup** operation cannot be repeatedly called for the same GA instance within a specific period of time.
+      * You cannot call the **ChangeResourceGroup** operation again on the same GA instance before the previous operation is complete.
       *
       * @param request ChangeResourceGroupRequest
       * @return ChangeResourceGroupResponse
@@ -619,8 +617,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * **CreateAccelerator** is an asynchronous operation. After you send a request, the system returns the ID of a GA instance, but the operation is still being performed in the system background. You can call the [DescribeAccelerator](~~153235~~) operation to query the status of a GA instance.
-      * *   If the GA instance is in the **init** state, it indicates that the GA instance is being created. In this case, you can perform only query operations.
+      * **CreateAccelerator** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeAccelerator](~~153235~~) operation to query the status of a GA instance.
+      * *   If the GA instance is in the **init** state, it indicates that the GA instance is being created. In this case, you can continue to perform query operations on the GA instance.
       * *   If the GA instance is in the **active** state, it indicates that the GA instance is created.
       *
       * @param request CreateAcceleratorRequest
@@ -708,8 +706,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * **CreateAccelerator** is an asynchronous operation. After you send a request, the system returns the ID of a GA instance, but the operation is still being performed in the system background. You can call the [DescribeAccelerator](~~153235~~) operation to query the status of a GA instance.
-      * *   If the GA instance is in the **init** state, it indicates that the GA instance is being created. In this case, you can perform only query operations.
+      * **CreateAccelerator** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeAccelerator](~~153235~~) operation to query the status of a GA instance.
+      * *   If the GA instance is in the **init** state, it indicates that the GA instance is being created. In this case, you can continue to perform query operations on the GA instance.
       * *   If the GA instance is in the **active** state, it indicates that the GA instance is created.
       *
       * @param request CreateAcceleratorRequest
@@ -1266,6 +1264,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
             query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -7136,11 +7138,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The UpdateAdditionalCertificateWithListener operation is used to replace an additional certificate. You can call this operation when you want to replace an expired additional certificate with a new additional certificate without changing the associated domain name.
-      * *   **UpdateAdditionalCertificateWithListener** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [ListListenerCertificates](~~307743~~) operation to query the state of the additional certificate that is associated with an HTTP listener:
-      *     *   If the certificate that you want to replace is in the **updating** state, it indicates that the additional certificate is being replaced for the HTTP listener. In this case, you can perform only query operations.
+      * The UpdateAdditionalCertificateWithListener operation is used to replace an additional certificate. You can use this operation when you want to replace an expired additional certificate with a new additional certificate without changing the associated domain name.
+      * *   **UpdateAdditionalCertificateWithListener** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can use the [ListListenerCertificates](~~307743~~) operation to query the state of the additional certificate that is associated with an HTTP listener:
+      *     *   If the certificate that you want to replace is in the **updating** state, it is being replaced for the HTTP listener. In this case, you can perform only query operations.
       *     *   If the replacement certificate is in the **active** state, it indicates that the replacement operation is complete and the replacement certificate is associated with the HTTP listener.
-      * *   The **UpdateAdditionalCertificateWithListener** operation cannot be called repeatedly for the same Global Accelerator (GA) instance within a specific period of time.
+      * *   You cannot perform the **UpdateAdditionalCertificateWithListener** operation again on the same Global Accelerator (GA) instance before the previous operation is complete.
       *
       * @param request UpdateAdditionalCertificateWithListenerRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -7195,11 +7197,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The UpdateAdditionalCertificateWithListener operation is used to replace an additional certificate. You can call this operation when you want to replace an expired additional certificate with a new additional certificate without changing the associated domain name.
-      * *   **UpdateAdditionalCertificateWithListener** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [ListListenerCertificates](~~307743~~) operation to query the state of the additional certificate that is associated with an HTTP listener:
-      *     *   If the certificate that you want to replace is in the **updating** state, it indicates that the additional certificate is being replaced for the HTTP listener. In this case, you can perform only query operations.
+      * The UpdateAdditionalCertificateWithListener operation is used to replace an additional certificate. You can use this operation when you want to replace an expired additional certificate with a new additional certificate without changing the associated domain name.
+      * *   **UpdateAdditionalCertificateWithListener** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can use the [ListListenerCertificates](~~307743~~) operation to query the state of the additional certificate that is associated with an HTTP listener:
+      *     *   If the certificate that you want to replace is in the **updating** state, it is being replaced for the HTTP listener. In this case, you can perform only query operations.
       *     *   If the replacement certificate is in the **active** state, it indicates that the replacement operation is complete and the replacement certificate is associated with the HTTP listener.
-      * *   The **UpdateAdditionalCertificateWithListener** operation cannot be called repeatedly for the same Global Accelerator (GA) instance within a specific period of time.
+      * *   You cannot perform the **UpdateAdditionalCertificateWithListener** operation again on the same Global Accelerator (GA) instance before the previous operation is complete.
       *
       * @param request UpdateAdditionalCertificateWithListenerRequest
       * @return UpdateAdditionalCertificateWithListenerResponse

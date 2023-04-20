@@ -7,15 +7,15 @@ public class ChangeResourceGroupRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate a value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.****</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. **The client token can contain only ASCII characters.**</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     * <p>>  If you do not set this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The value of **RequestId** may be different for each API request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The ID of the new resource group.</p>
+     * <p>The ID of the resource group that you want to use to replace the previous resource group.</p>
      */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
@@ -29,10 +29,10 @@ public class ChangeResourceGroupRequest extends TeaModel {
     /**
      * <p>The ID of the GA resource.</p>
      * <br>
-     * <p>*   If **ResourceType** is set to **accelerator**, set the value of ResourceId to the ID of a standard GA instance.</p>
-     * <p>*   If **ResourceType** is set to **basicaccelerator**, set the value of ResourceId to the ID of a basic GA instance.</p>
-     * <p>*   If **ResourceType** is set to**bandwidthpackage**, set the value of ResourceId to the ID of a bandwidth plan.</p>
-     * <p>*   If **ResourceType** is set to **acl**, set the value of ResourceId to the ID of a network ACL.</p>
+     * <p>*   If you set the **ResourceType** parameter to **accelerator**, set the value of ResourceId to the ID of a standard GA instance.</p>
+     * <p>*   If you set the **ResourceType** parameter to **basicaccelerator**, set the value of ResourceId to the ID of a basic GA instance.</p>
+     * <p>*   If you set the **ResourceType** parameter to **bandwidthpackage**, set the value of ResourceId to the ID of a bandwidth plan.</p>
+     * <p>*   If you set the **ResourceType** parameter to **acl**, set the value of ResourceId to the ID of an access control list (ACL).</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
@@ -40,10 +40,10 @@ public class ChangeResourceGroupRequest extends TeaModel {
     /**
      * <p>The type of the GA resource. Valid values:</p>
      * <br>
-     * <p>*   **accelerator**: a standard GA instance.</p>
-     * <p>*   **basicaccelerator**: a basic GA instance.</p>
-     * <p>*   **bandwidthpackage**: a bandwidth plan.</p>
-     * <p>*   **acl**: a network ACL.</p>
+     * <p>*   **accelerator:** a standard GA instance.</p>
+     * <p>*   **basicaccelerator:** a basic GA instance.</p>
+     * <p>*   **bandwidthpackage:** a bandwidth plan.</p>
+     * <p>*   **acl:** an ACL.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
