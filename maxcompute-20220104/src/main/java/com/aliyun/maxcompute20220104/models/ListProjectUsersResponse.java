@@ -3,7 +3,7 @@ package com.aliyun.maxcompute20220104.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateSubQuotasResponse extends TeaModel {
+public class ListProjectUsersResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class UpdateSubQuotasResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public String body;
+    public ListProjectUsersResponseBody body;
 
-    public static UpdateSubQuotasResponse build(java.util.Map<String, ?> map) throws Exception {
-        UpdateSubQuotasResponse self = new UpdateSubQuotasResponse();
+    public static ListProjectUsersResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListProjectUsersResponse self = new ListProjectUsersResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateSubQuotasResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListProjectUsersResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class UpdateSubQuotasResponse extends TeaModel {
         return this.headers;
     }
 
-    public UpdateSubQuotasResponse setStatusCode(Integer statusCode) {
+    public ListProjectUsersResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class UpdateSubQuotasResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public UpdateSubQuotasResponse setBody(String body) {
+    public ListProjectUsersResponse setBody(ListProjectUsersResponseBody body) {
         this.body = body;
         return this;
     }
-    public String getBody() {
+    public ListProjectUsersResponseBody getBody() {
         return this.body;
     }
 

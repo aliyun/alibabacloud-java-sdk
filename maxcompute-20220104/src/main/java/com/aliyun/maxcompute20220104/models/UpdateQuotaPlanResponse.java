@@ -3,7 +3,7 @@ package com.aliyun.maxcompute20220104.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteQuotaResponse extends TeaModel {
+public class UpdateQuotaPlanResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DeleteQuotaResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DeleteQuotaResponseBody body;
+    public UpdateQuotaPlanResponseBody body;
 
-    public static DeleteQuotaResponse build(java.util.Map<String, ?> map) throws Exception {
-        DeleteQuotaResponse self = new DeleteQuotaResponse();
+    public static UpdateQuotaPlanResponse build(java.util.Map<String, ?> map) throws Exception {
+        UpdateQuotaPlanResponse self = new UpdateQuotaPlanResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteQuotaResponse setHeaders(java.util.Map<String, String> headers) {
+    public UpdateQuotaPlanResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DeleteQuotaResponse extends TeaModel {
         return this.headers;
     }
 
-    public DeleteQuotaResponse setStatusCode(Integer statusCode) {
+    public UpdateQuotaPlanResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DeleteQuotaResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DeleteQuotaResponse setBody(DeleteQuotaResponseBody body) {
+    public UpdateQuotaPlanResponse setBody(UpdateQuotaPlanResponseBody body) {
         this.body = body;
         return this;
     }
-    public DeleteQuotaResponseBody getBody() {
+    public UpdateQuotaPlanResponseBody getBody() {
         return this.body;
     }
 

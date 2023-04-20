@@ -4,6 +4,9 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class GetQuotaRequest extends TeaModel {
+    @NameInMap("AkProven")
+    public String akProven;
+
     @NameInMap("mock")
     public Boolean mock;
 
@@ -16,6 +19,14 @@ public class GetQuotaRequest extends TeaModel {
     public static GetQuotaRequest build(java.util.Map<String, ?> map) throws Exception {
         GetQuotaRequest self = new GetQuotaRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetQuotaRequest setAkProven(String akProven) {
+        this.akProven = akProven;
+        return this;
+    }
+    public String getAkProven() {
+        return this.akProven;
     }
 
     public GetQuotaRequest setMock(Boolean mock) {

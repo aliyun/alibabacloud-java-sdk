@@ -3,7 +3,7 @@ package com.aliyun.maxcompute20220104.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateQuotaResponse extends TeaModel {
+public class UpdateProjectIpWhiteListResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class UpdateQuotaResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public UpdateQuotaResponseBody body;
+    public UpdateProjectIpWhiteListResponseBody body;
 
-    public static UpdateQuotaResponse build(java.util.Map<String, ?> map) throws Exception {
-        UpdateQuotaResponse self = new UpdateQuotaResponse();
+    public static UpdateProjectIpWhiteListResponse build(java.util.Map<String, ?> map) throws Exception {
+        UpdateProjectIpWhiteListResponse self = new UpdateProjectIpWhiteListResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateQuotaResponse setHeaders(java.util.Map<String, String> headers) {
+    public UpdateProjectIpWhiteListResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class UpdateQuotaResponse extends TeaModel {
         return this.headers;
     }
 
-    public UpdateQuotaResponse setStatusCode(Integer statusCode) {
+    public UpdateProjectIpWhiteListResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class UpdateQuotaResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public UpdateQuotaResponse setBody(UpdateQuotaResponseBody body) {
+    public UpdateProjectIpWhiteListResponse setBody(UpdateProjectIpWhiteListResponseBody body) {
         this.body = body;
         return this;
     }
-    public UpdateQuotaResponseBody getBody() {
+    public UpdateProjectIpWhiteListResponseBody getBody() {
         return this.body;
     }
 

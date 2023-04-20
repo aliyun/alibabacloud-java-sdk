@@ -3,19 +3,19 @@ package com.aliyun.maxcompute20220104.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteQuotaRequest extends TeaModel {
+public class GetQuotaScheduleRequest extends TeaModel {
     @NameInMap("region")
     public String region;
 
     @NameInMap("tenantId")
     public String tenantId;
 
-    public static DeleteQuotaRequest build(java.util.Map<String, ?> map) throws Exception {
-        DeleteQuotaRequest self = new DeleteQuotaRequest();
+    public static GetQuotaScheduleRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetQuotaScheduleRequest self = new GetQuotaScheduleRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteQuotaRequest setRegion(String region) {
+    public GetQuotaScheduleRequest setRegion(String region) {
         this.region = region;
         return this;
     }
@@ -23,7 +23,7 @@ public class DeleteQuotaRequest extends TeaModel {
         return this.region;
     }
 
-    public DeleteQuotaRequest setTenantId(String tenantId) {
+    public GetQuotaScheduleRequest setTenantId(String tenantId) {
         this.tenantId = tenantId;
         return this;
     }
