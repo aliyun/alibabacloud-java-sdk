@@ -7,7 +7,7 @@ public class CreateAcceleratorRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <br>
-     * <p>*   **false:** disables automatic payment. If you select this option, you must go to the Order Center to complete the payment after an order is generated. This is the default value.</p>
+     * <p>*   **false:** disables automatic payment. This is the default value. If you select this option, you must go to the Order Center to complete the payment after an order is generated.</p>
      * <p>*   **true:** enables automatic payment. Payments are automatically completed.</p>
      */
     @NameInMap("AutoPay")
@@ -27,28 +27,28 @@ public class CreateAcceleratorRequest extends TeaModel {
      * <br>
      * <p>Valid values: **1** to **12**. Default value: **1**.</p>
      * <br>
-     * <p>>  This parameter takes effect only if **AutoRenew** is set to **true**.</p>
+     * <p>>  This parameter takes effect only when the **AutoPay** parameter is set to **true**.</p>
      */
     @NameInMap("AutoRenewDuration")
     public Integer autoRenewDuration;
 
     /**
-     * <p>Specifies whether to automatically pay bills by using coupons. Valid values:</p>
+     * <p>Specifies whether to automatically apply coupons to your bills. Valid values:</p>
      * <br>
-     * <p>*   **true:** automatically pays bills by using coupons.</p>
-     * <p>*   **false:** does not automatically pay bills by using coupons. This is the default value.</p>
+     * <p>*   **true:** automatically applies coupons to your bills.</p>
+     * <p>*   **false:** does not automatically apply coupons to your bills. This is the default value.</p>
      * <br>
-     * <p>>  This parameter takes effect only if **AutoPay** is set to **true**.</p>
+     * <p>>  This parameter takes effect only when the **AutoPay** parameter is set to **true**.</p>
      */
     @NameInMap("AutoUseCoupon")
     public String autoUseCoupon;
 
     /**
-     * <p>The bandwidth billing method.</p>
+     * <p>The bandwidth billing method. Valid values:</p>
      * <br>
      * <p>*   **BandwidthPackage:** billed based on bandwidth plans.</p>
      * <p>*   **CDT:** billed based on data transfer.</p>
-     * <p>*   **CDT95:** billed based on the 95th percentile bandwidth. The billing is managed by Cloud Data Transfer (CDT). This bandwidth billing method is available only for users that are included in the whitelist.</p>
+     * <p>*   **CDT95:** billed based on the 95th percentile bandwidth. The bills are managed by using Cloud Data Transfer (CDT). This bandwidth billing method is not available by default. Contact your Alibaba Cloud account manager for more information.</p>
      */
     @NameInMap("BandwidthBillingType")
     public String bandwidthBillingType;
@@ -56,9 +56,9 @@ public class CreateAcceleratorRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <br>
-     * <p>> If you do not specify this parameter, the system automatically uses the value of **RequestId**as the value of **ClientToken**. The value of **RequestId** for each API request may be different.</p>
+     * <p>>  If you do not set this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The value of **RequestId** may be different for each API request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -66,8 +66,8 @@ public class CreateAcceleratorRequest extends TeaModel {
     /**
      * <p>The subscription duration of the GA instance.</p>
      * <br>
-     * <p>*   If the **PricingCycle** parameter is set to **Month**, the valid values for the **Duration** parameter are **1** to **9**.</p>
-     * <p>*   If the **PricingCycle** parameter is set to **Year**, the valid values for the **Duration** parameter are **1** to **3**.</p>
+     * <p>*   If you set the **PricingCycle** parameter to **Month**, the valid values for the **Duration** parameter are **1** to **9**.</p>
+     * <p>*   If you set the **PricingCycle** parameter to **Year**, the valid values for the **Duration** parameter are **1** to **3**.</p>
      */
     @NameInMap("Duration")
     public Integer duration;
@@ -89,22 +89,22 @@ public class CreateAcceleratorRequest extends TeaModel {
     /**
      * <p>The billing cycle of the GA instance. Valid values:</p>
      * <br>
-     * <p>*   **Month**: billed on a monthly basis.</p>
-     * <p>*   **Year**: billed on an annual basis.</p>
+     * <p>*   **Month:** billed on a monthly basis.</p>
+     * <p>*   **Year:** billed on an annual basis.</p>
      */
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
     /**
-     * <p>The coupon code.</p>
+     * <p>The code of the coupon.</p>
      * <br>
-     * <p>>  This parameter is available only on the Alibaba International Site (alibabacloud.com).</p>
+     * <p>>  This parameter takes effect only for accounts registered on the international site (alibabacloud.com).</p>
      */
     @NameInMap("PromotionOptionNo")
     public String promotionOptionNo;
 
     /**
-     * <p>The ID of the region where you want to create the GA instance. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -135,9 +135,9 @@ public class CreateAcceleratorRequest extends TeaModel {
      * <p>*   **100:** Super Large Ⅰ</p>
      * <p>*   **200:** Super Large Ⅱ</p>
      * <br>
-     * <p>>  The Large Ⅲ specification and higher specifications are available only for accounts that are added to the whitelist. To use these specifications, contact your Alibaba Cloud account manager.</p>
+     * <p>>  GA instances Large III and above are not available by default. To use these specifications, contact your Alibaba Cloud account manager.</p>
      * <br>
-     * <p>Different specifications provide different capabilities. For more information, see [Instance specifications](~~153127~~).</p>
+     * <p>Each instance specification provides different capabilities. For more information, see [Instance specifications](~~153127~~).</p>
      */
     @NameInMap("Spec")
     public String spec;

@@ -116,6 +116,9 @@ public class CreateBasicAcceleratorRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateBasicAcceleratorRequestTag> tag;
+
     public static CreateBasicAcceleratorRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateBasicAcceleratorRequest self = new CreateBasicAcceleratorRequest();
         return TeaModel.build(map, self);
@@ -223,6 +226,44 @@ public class CreateBasicAcceleratorRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public CreateBasicAcceleratorRequest setTag(java.util.List<CreateBasicAcceleratorRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateBasicAcceleratorRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class CreateBasicAcceleratorRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateBasicAcceleratorRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateBasicAcceleratorRequestTag self = new CreateBasicAcceleratorRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateBasicAcceleratorRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateBasicAcceleratorRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

@@ -13,7 +13,7 @@ public class CreateAcceleratorResponseBody extends TeaModel {
     /**
      * <p>The ID of the order.</p>
      * <br>
-     * <p>If bills are not automatically paid, you must go to the [Order Center](https://usercenter2-intl.aliyun.com/order/list) to complete the payments.</p>
+     * <p>If you did not configure automatic payment, you must go to the [Order Center](https://usercenter2-intl.aliyun.com/order/list) to complete the payments.</p>
      */
     @NameInMap("OrderId")
     public String orderId;
