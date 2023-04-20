@@ -4,12 +4,21 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class DescribeUsersResponseBody extends TeaModel {
+    /**
+     * <p>The token that is used to query the next page. If this parameter is empty, all results are returned.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Details of the convenience users.</p>
+     */
     @NameInMap("Users")
     public java.util.List<DescribeUsersResponseBodyUsers> users;
 
@@ -43,33 +52,63 @@ public class DescribeUsersResponseBody extends TeaModel {
     }
 
     public static class DescribeUsersResponseBodyUsers extends TeaModel {
+        /**
+         * <p>The email address of the user.</p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <p>The name of the user.</p>
+         */
         @NameInMap("EndUserId")
         public String endUserId;
 
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>Indicates whether the user is a tenant administrator.</p>
+         */
         @NameInMap("IsTenantManager")
         public Boolean isTenantManager;
 
+        /**
+         * <p>The ID of the organization to which the user belongs.</p>
+         */
         @NameInMap("OrgId")
         public String orgId;
 
+        /**
+         * <p>The type of the convenience account. Convenience accounts are classified into the following types: administrator-activated and user-activated users. For an administrator-activated convenience user, the administrator configures the username and password. Notifications for password reset are sent to the email address of the administrator. For a user-activated convenience user, the administrator specifies the username and email address or mobile number of the user. Notifications for the EDS activation that contains the initial password are sent to the email address or mobile number.</p>
+         */
         @NameInMap("OwnerType")
         public String ownerType;
 
+        /**
+         * <p>The mobile number of the user. If you leave this parameter empty, the value of this parameter is not returned.</p>
+         */
         @NameInMap("Phone")
         public String phone;
 
+        /**
+         * <p>The remarks of the user.</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <p>The status of the user.</p>
+         */
         @NameInMap("Status")
         public Long status;
 
+        /**
+         * <p>The user ID that is globally unique.</p>
+         */
         @NameInMap("WyId")
         public String wyId;
 

@@ -4,9 +4,15 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class CreateUsersResponseBody extends TeaModel {
+    /**
+     * <p>The result of user creation.</p>
+     */
     @NameInMap("CreateResult")
     public CreateUsersResponseBodyCreateResult createResult;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,27 @@ public class CreateUsersResponseBody extends TeaModel {
     }
 
     public static class CreateUsersResponseBodyCreateResultCreatedUsers extends TeaModel {
+        /**
+         * <p>The email address of the end user.</p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <p>The name of the end user.</p>
+         */
         @NameInMap("EndUserId")
         public String endUserId;
 
+        /**
+         * <p>The mobile number of the end user.</p>
+         */
         @NameInMap("Phone")
         public String phone;
 
+        /**
+         * <p>The remarks of the end user.</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
@@ -84,18 +102,33 @@ public class CreateUsersResponseBody extends TeaModel {
     }
 
     public static class CreateUsersResponseBodyCreateResultFailedUsers extends TeaModel {
+        /**
+         * <p>The email address of the end user.</p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <p>The name of the end user.</p>
+         */
         @NameInMap("EndUserId")
         public String endUserId;
 
+        /**
+         * <p>The error code returned if the request failed.</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The error message returned.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The mobile number of the end user.</p>
+         */
         @NameInMap("Phone")
         public String phone;
 
@@ -147,9 +180,15 @@ public class CreateUsersResponseBody extends TeaModel {
     }
 
     public static class CreateUsersResponseBodyCreateResult extends TeaModel {
+        /**
+         * <p>Details of the created convenience users.</p>
+         */
         @NameInMap("CreatedUsers")
         public java.util.List<CreateUsersResponseBodyCreateResultCreatedUsers> createdUsers;
 
+        /**
+         * <p>Details of the convenience users that failed to be created.</p>
+         */
         @NameInMap("FailedUsers")
         public java.util.List<CreateUsersResponseBodyCreateResultFailedUsers> failedUsers;
 

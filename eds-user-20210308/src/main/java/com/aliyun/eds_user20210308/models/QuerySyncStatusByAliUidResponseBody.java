@@ -4,21 +4,39 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
+    /**
+     * <p>The system status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public QuerySyncStatusByAliUidResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The message indicating that the synchronization failed.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,30 +94,57 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
     }
 
     public static class QuerySyncStatusByAliUidResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the Alibaba Cloud account.</p>
+         */
         @NameInMap("AliUid")
         public Long aliUid;
 
+        /**
+         * <p>The ID of the enterprise.</p>
+         */
         @NameInMap("CorpId")
         public String corpId;
 
+        /**
+         * <p>The time when the synchronization was created.</p>
+         */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
+        /**
+         * <p>The time when the synchronization was modified.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The auto-increment ID.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The last time when the synchronization started.</p>
+         */
         @NameInMap("LatestBeginTime")
         public String latestBeginTime;
 
+        /**
+         * <p>The last time when the synchronization ended.</p>
+         */
         @NameInMap("LatestEndTime")
         public String latestEndTime;
 
+        /**
+         * <p>The last time when the synchronization succeeded.</p>
+         */
         @NameInMap("LatestSuccessTime")
         public String latestSuccessTime;
 
+        /**
+         * <p>The state of the synchronization.</p>
+         */
         @NameInMap("Status")
         public String status;
 

@@ -4,12 +4,21 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class FilterUsersResponseBody extends TeaModel {
+    /**
+     * <p>The token that is used to query the next page. If not all results are returned in a query, a value is returned for the NextToken parameter. In this case, you can use the returned NextToken value to perform the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Details of the convenience users.</p>
+     */
     @NameInMap("Users")
     public java.util.List<FilterUsersResponseBodyUsers> users;
 
@@ -43,9 +52,15 @@ public class FilterUsersResponseBody extends TeaModel {
     }
 
     public static class FilterUsersResponseBodyUsersExternalInfo extends TeaModel {
+        /**
+         * <p>The name of the external system account to which the user is connected.</p>
+         */
         @NameInMap("ExternalName")
         public String externalName;
 
+        /**
+         * <p>The student ID or employee ID of the external system account that is connected to the user.</p>
+         */
         @NameInMap("JobNumber")
         public String jobNumber;
 
@@ -73,9 +88,15 @@ public class FilterUsersResponseBody extends TeaModel {
     }
 
     public static class FilterUsersResponseBodyUsersUserSetPropertiesModelsPropertyValues extends TeaModel {
+        /**
+         * <p>The property value.</p>
+         */
         @NameInMap("PropertyValue")
         public String propertyValue;
 
+        /**
+         * <p>The ID of the property value.</p>
+         */
         @NameInMap("PropertyValueId")
         public Long propertyValueId;
 
@@ -103,21 +124,39 @@ public class FilterUsersResponseBody extends TeaModel {
     }
 
     public static class FilterUsersResponseBodyUsersUserSetPropertiesModels extends TeaModel {
+        /**
+         * <p>The ID of the property.</p>
+         */
         @NameInMap("PropertyId")
         public Long propertyId;
 
+        /**
+         * <p>The name of the property.</p>
+         */
         @NameInMap("PropertyKey")
         public String propertyKey;
 
+        /**
+         * <p>The ID of property.</p>
+         */
         @NameInMap("PropertyType")
         public Integer propertyType;
 
+        /**
+         * <p>Details of the property value.</p>
+         */
         @NameInMap("PropertyValues")
         public java.util.List<FilterUsersResponseBodyUsersUserSetPropertiesModelsPropertyValues> propertyValues;
 
+        /**
+         * <p>The ID of the user that is bound to the property.</p>
+         */
         @NameInMap("UserId")
         public Long userId;
 
+        /**
+         * <p>The name of the user that is bound to the property.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
@@ -177,39 +216,78 @@ public class FilterUsersResponseBody extends TeaModel {
     }
 
     public static class FilterUsersResponseBodyUsers extends TeaModel {
+        /**
+         * <p>The number of cloud desktops that are assigned to the user.</p>
+         */
         @NameInMap("DesktopCount")
         public Long desktopCount;
 
+        /**
+         * <p>The number of authorized desktop groups that are owned by the user. This value is returned if you set `IncludeDesktopGroupCount` to `true`.</p>
+         */
         @NameInMap("DesktopGroupCount")
         public Long desktopGroupCount;
 
+        /**
+         * <p>The email address of the user.</p>
+         */
         @NameInMap("Email")
         public String email;
 
+        @NameInMap("EnableAdminAccess")
+        public Boolean enableAdminAccess;
+
+        /**
+         * <p>The name of the user.</p>
+         */
         @NameInMap("EndUserId")
         public String endUserId;
 
+        /**
+         * <p>The additional information about the user.</p>
+         */
         @NameInMap("ExternalInfo")
         public FilterUsersResponseBodyUsersExternalInfo externalInfo;
 
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>Specifies whether the user is a tenant administrator.</p>
+         */
         @NameInMap("IsTenantManager")
         public Boolean isTenantManager;
 
+        /**
+         * <p>The type of the account ownership.</p>
+         */
         @NameInMap("OwnerType")
         public String ownerType;
 
+        /**
+         * <p>The mobile number of the user.</p>
+         */
         @NameInMap("Phone")
         public String phone;
 
+        /**
+         * <p>The remarks of the user.</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <p>The status of the user.</p>
+         */
         @NameInMap("Status")
         public Long status;
 
+        /**
+         * <p>Details of the user properties.</p>
+         */
         @NameInMap("UserSetPropertiesModels")
         public java.util.List<FilterUsersResponseBodyUsersUserSetPropertiesModels> userSetPropertiesModels;
 
@@ -240,6 +318,14 @@ public class FilterUsersResponseBody extends TeaModel {
         }
         public String getEmail() {
             return this.email;
+        }
+
+        public FilterUsersResponseBodyUsers setEnableAdminAccess(Boolean enableAdminAccess) {
+            this.enableAdminAccess = enableAdminAccess;
+            return this;
+        }
+        public Boolean getEnableAdminAccess() {
+            return this.enableAdminAccess;
         }
 
         public FilterUsersResponseBodyUsers setEndUserId(String endUserId) {

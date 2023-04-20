@@ -4,6 +4,9 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class RemoveUsersRequest extends TeaModel {
+    /**
+     * <p>The usernames of the convenience users that you want to remove.</p>
+     */
     @NameInMap("Users")
     public java.util.List<String> users;
 

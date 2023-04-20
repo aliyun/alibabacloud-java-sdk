@@ -4,15 +4,29 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class DescribeMfaDevicesRequest extends TeaModel {
+    /**
+     * <p>The list of username of convenience users.</p>
+     */
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
 
+    /**
+     * <p>The maximum number of entries to return. Valid values: 1 to 500.</p>
+     * <br>
+     * <p>Default value: 100.</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    /**
+     * <p>The query token. Set the value to the NextToken value returned in the last call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The serial numbers of the virtual MFA devices.</p>
+     */
     @NameInMap("SerialNumbers")
     public java.util.List<String> serialNumbers;
 

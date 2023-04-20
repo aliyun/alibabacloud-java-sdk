@@ -55,6 +55,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.checkUsedPropertyWithOptions(request, runtime);
     }
 
+    /**
+      * Before you call the operation, you can call the [ListProperty](~~410890~~) operation to query the existing user properties and their IDs (PropertyId) and values (PropertyValueId).
+      *
+      * @param request CheckUsedPropertyValueRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CheckUsedPropertyValueResponse
+     */
     public CheckUsedPropertyValueResponse checkUsedPropertyValueWithOptions(CheckUsedPropertyValueRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -83,11 +90,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CheckUsedPropertyValueResponse());
     }
 
+    /**
+      * Before you call the operation, you can call the [ListProperty](~~410890~~) operation to query the existing user properties and their IDs (PropertyId) and values (PropertyValueId).
+      *
+      * @param request CheckUsedPropertyValueRequest
+      * @return CheckUsedPropertyValueResponse
+     */
     public CheckUsedPropertyValueResponse checkUsedPropertyValue(CheckUsedPropertyValueRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.checkUsedPropertyValueWithOptions(request, runtime);
     }
 
+    /**
+      * *   You can create up to 10 user properties within an Alibaba Cloud account. Each user property supports one property name (PropertyKey) and multiple property values (PropertyValue).
+      * *   Each property supports up to 50 different property values.
+      *
+      * @param request CreatePropertyRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreatePropertyResponse
+     */
     public CreatePropertyResponse createPropertyWithOptions(CreatePropertyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -116,11 +137,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePropertyResponse());
     }
 
+    /**
+      * *   You can create up to 10 user properties within an Alibaba Cloud account. Each user property supports one property name (PropertyKey) and multiple property values (PropertyValue).
+      * *   Each property supports up to 50 different property values.
+      *
+      * @param request CreatePropertyRequest
+      * @return CreatePropertyResponse
+     */
     public CreatePropertyResponse createProperty(CreatePropertyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createPropertyWithOptions(request, runtime);
     }
 
+    /**
+      * Convenience users are dedicated Elastic Desktop Service (EDS) user accounts and are suitable for scenarios in which you do not need to connect to enterprise Active Directory (AD) systems. The information about a convenience user includes the username, email address, and mobile number. You must specify the username or email address.
+      *
+      * @param request CreateUsersRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateUsersResponse
+     */
     public CreateUsersResponse createUsersWithOptions(CreateUsersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -149,11 +184,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateUsersResponse());
     }
 
+    /**
+      * Convenience users are dedicated Elastic Desktop Service (EDS) user accounts and are suitable for scenarios in which you do not need to connect to enterprise Active Directory (AD) systems. The information about a convenience user includes the username, email address, and mobile number. You must specify the username or email address.
+      *
+      * @param request CreateUsersRequest
+      * @return CreateUsersResponse
+     */
     public CreateUsersResponse createUsers(CreateUsersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createUsersWithOptions(request, runtime);
     }
 
+    /**
+      * Before you call this operation, you can call the FilterUsers operation to query users that are associated with the user property.
+      *
+      * @param request DeleteUserPropertyValueRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteUserPropertyValueResponse
+     */
     public DeleteUserPropertyValueResponse deleteUserPropertyValueWithOptions(DeleteUserPropertyValueRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -186,6 +234,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteUserPropertyValueResponse());
     }
 
+    /**
+      * Before you call this operation, you can call the FilterUsers operation to query users that are associated with the user property.
+      *
+      * @param request DeleteUserPropertyValueRequest
+      * @return DeleteUserPropertyValueResponse
+     */
     public DeleteUserPropertyValueResponse deleteUserPropertyValue(DeleteUserPropertyValueRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteUserPropertyValueWithOptions(request, runtime);
@@ -287,8 +341,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         FilterUsersShrinkRequest request = new FilterUsersShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.orderParam))) {
-            request.orderParamShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.orderParam), "OrderParam", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.orderParam)) {
+            request.orderParamShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.orderParam, "OrderParam", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -408,6 +462,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listPropertyValueWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * After a virtual MFA device is locked, the status of the virtual MFA device changes to LOCKED. The convenience user to which the MFA device is bound cannot log on to the cloud desktop that resides in the workspace with the MFA feature enabled because the convenience user will fail authentication based on the virtual MFA device. You can call the UnlockMfaDevice operation to unlock the virtual MFA device.
+      *
+      * @param request LockMfaDeviceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return LockMfaDeviceResponse
+     */
     public LockMfaDeviceResponse lockMfaDeviceWithOptions(LockMfaDeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -432,11 +494,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new LockMfaDeviceResponse());
     }
 
+    /**
+      * ## Description
+      * After a virtual MFA device is locked, the status of the virtual MFA device changes to LOCKED. The convenience user to which the MFA device is bound cannot log on to the cloud desktop that resides in the workspace with the MFA feature enabled because the convenience user will fail authentication based on the virtual MFA device. You can call the UnlockMfaDevice operation to unlock the virtual MFA device.
+      *
+      * @param request LockMfaDeviceRequest
+      * @return LockMfaDeviceResponse
+     */
     public LockMfaDeviceResponse lockMfaDevice(LockMfaDeviceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.lockMfaDeviceWithOptions(request, runtime);
     }
 
+    /**
+      * For security reasons, you can lock convenience users. Convenience users that are locked cannot log on to clients and connect to cloud desktops.
+      * > : You can call the [DescribeUsers](~~283609~~) operation to query the information about convenience users. If the return value of `Status` is 0, the user is not locked. If the return value of `Status` is 9, the user is locked.
+      *
+      * @param request LockUsersRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return LockUsersResponse
+     */
     public LockUsersResponse lockUsersWithOptions(LockUsersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -461,6 +538,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new LockUsersResponse());
     }
 
+    /**
+      * For security reasons, you can lock convenience users. Convenience users that are locked cannot log on to clients and connect to cloud desktops.
+      * > : You can call the [DescribeUsers](~~283609~~) operation to query the information about convenience users. If the return value of `Status` is 0, the user is not locked. If the return value of `Status` is 9, the user is locked.
+      *
+      * @param request LockUsersRequest
+      * @return LockUsersResponse
+     */
     public LockUsersResponse lockUsers(LockUsersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.lockUsersWithOptions(request, runtime);
@@ -644,6 +728,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.resetUserPasswordWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * Before you call this operation, you can call the [DescribeUsers](~~283609~~) operation to query the information about users and the [ListProperty](~~410890~~) operation to query user properties.
+      *
+      * @param request SetUserPropertyValueRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SetUserPropertyValueResponse
+     */
     public SetUserPropertyValueResponse setUserPropertyValueWithOptions(SetUserPropertyValueRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -680,6 +772,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SetUserPropertyValueResponse());
     }
 
+    /**
+      * ## Description
+      * Before you call this operation, you can call the [DescribeUsers](~~283609~~) operation to query the information about users and the [ListProperty](~~410890~~) operation to query user properties.
+      *
+      * @param request SetUserPropertyValueRequest
+      * @return SetUserPropertyValueResponse
+     */
     public SetUserPropertyValueResponse setUserPropertyValue(SetUserPropertyValueRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setUserPropertyValueWithOptions(request, runtime);
@@ -735,6 +834,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.unlockMfaDeviceWithOptions(request, runtime);
     }
 
+    /**
+      * Before the locked convenience users can log on to clients and connect to cloud desktops, you must unlock the users.
+      * > : You can call the [DescribeUsers](~~283609~~) operation to query the information about convenience users. If the return value of `Status` is 0, the user is not locked. If the return value of `Status` is 9, the user is locked.
+      *
+      * @param request UnlockUsersRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UnlockUsersResponse
+     */
     public UnlockUsersResponse unlockUsersWithOptions(UnlockUsersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -759,6 +866,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UnlockUsersResponse());
     }
 
+    /**
+      * Before the locked convenience users can log on to clients and connect to cloud desktops, you must unlock the users.
+      * > : You can call the [DescribeUsers](~~283609~~) operation to query the information about convenience users. If the return value of `Status` is 0, the user is not locked. If the return value of `Status` is 9, the user is locked.
+      *
+      * @param request UnlockUsersRequest
+      * @return UnlockUsersResponse
+     */
     public UnlockUsersResponse unlockUsers(UnlockUsersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.unlockUsersWithOptions(request, runtime);
