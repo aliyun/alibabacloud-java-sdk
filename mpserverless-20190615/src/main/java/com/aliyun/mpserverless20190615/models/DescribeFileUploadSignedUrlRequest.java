@@ -7,6 +7,9 @@ public class DescribeFileUploadSignedUrlRequest extends TeaModel {
     @NameInMap("ContentType")
     public String contentType;
 
+    @NameInMap("FileId")
+    public String fileId;
+
     @NameInMap("Filename")
     public String filename;
 
@@ -27,6 +30,14 @@ public class DescribeFileUploadSignedUrlRequest extends TeaModel {
     }
     public String getContentType() {
         return this.contentType;
+    }
+
+    public DescribeFileUploadSignedUrlRequest setFileId(String fileId) {
+        this.fileId = fileId;
+        return this;
+    }
+    public String getFileId() {
+        return this.fileId;
     }
 
     public DescribeFileUploadSignedUrlRequest setFilename(String filename) {

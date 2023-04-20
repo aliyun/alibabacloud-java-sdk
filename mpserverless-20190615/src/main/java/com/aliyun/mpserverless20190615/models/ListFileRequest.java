@@ -10,11 +10,17 @@ public class ListFileRequest extends TeaModel {
     @NameInMap("Keyword")
     public String keyword;
 
+    @NameInMap("Mode")
+    public String mode;
+
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("Prefix")
+    public String prefix;
 
     @NameInMap("SpaceId")
     public String spaceId;
@@ -40,6 +46,14 @@ public class ListFileRequest extends TeaModel {
         return this.keyword;
     }
 
+    public ListFileRequest setMode(String mode) {
+        this.mode = mode;
+        return this;
+    }
+    public String getMode() {
+        return this.mode;
+    }
+
     public ListFileRequest setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -54,6 +68,14 @@ public class ListFileRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListFileRequest setPrefix(String prefix) {
+        this.prefix = prefix;
+        return this;
+    }
+    public String getPrefix() {
+        return this.prefix;
     }
 
     public ListFileRequest setSpaceId(String spaceId) {

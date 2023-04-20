@@ -235,6 +235,9 @@ public class QuerySpaceUsageResponseBody extends TeaModel {
         @NameInMap("DbUsage")
         public QuerySpaceUsageResponseBodySpaceUsageDataListDbUsage dbUsage;
 
+        @NameInMap("EffectiveBillFlag")
+        public Boolean effectiveBillFlag;
+
         @NameInMap("FcUsage")
         public QuerySpaceUsageResponseBodySpaceUsageDataListFcUsage fcUsage;
 
@@ -263,6 +266,14 @@ public class QuerySpaceUsageResponseBody extends TeaModel {
         }
         public QuerySpaceUsageResponseBodySpaceUsageDataListDbUsage getDbUsage() {
             return this.dbUsage;
+        }
+
+        public QuerySpaceUsageResponseBodySpaceUsageDataList setEffectiveBillFlag(Boolean effectiveBillFlag) {
+            this.effectiveBillFlag = effectiveBillFlag;
+            return this;
+        }
+        public Boolean getEffectiveBillFlag() {
+            return this.effectiveBillFlag;
         }
 
         public QuerySpaceUsageResponseBodySpaceUsageDataList setFcUsage(QuerySpaceUsageResponseBodySpaceUsageDataListFcUsage fcUsage) {
