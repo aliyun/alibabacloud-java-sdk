@@ -19,6 +19,9 @@ public class ListQuotasRequest extends TeaModel {
     @NameInMap("region")
     public String region;
 
+    @NameInMap("saleTags")
+    public String saleTags;
+
     @NameInMap("tenantId")
     public String tenantId;
 
@@ -65,6 +68,14 @@ public class ListQuotasRequest extends TeaModel {
     }
     public String getRegion() {
         return this.region;
+    }
+
+    public ListQuotasRequest setSaleTags(String saleTags) {
+        this.saleTags = saleTags;
+        return this;
+    }
+    public String getSaleTags() {
+        return this.saleTags;
     }
 
     public ListQuotasRequest setTenantId(String tenantId) {

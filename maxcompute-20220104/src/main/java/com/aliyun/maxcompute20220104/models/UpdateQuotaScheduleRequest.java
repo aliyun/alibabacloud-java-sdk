@@ -3,7 +3,7 @@ package com.aliyun.maxcompute20220104.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateSubQuotasRequest extends TeaModel {
+public class UpdateQuotaScheduleRequest extends TeaModel {
     @NameInMap("body")
     public String body;
 
@@ -13,12 +13,12 @@ public class UpdateSubQuotasRequest extends TeaModel {
     @NameInMap("tenantId")
     public String tenantId;
 
-    public static UpdateSubQuotasRequest build(java.util.Map<String, ?> map) throws Exception {
-        UpdateSubQuotasRequest self = new UpdateSubQuotasRequest();
+    public static UpdateQuotaScheduleRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateQuotaScheduleRequest self = new UpdateQuotaScheduleRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateSubQuotasRequest setBody(String body) {
+    public UpdateQuotaScheduleRequest setBody(String body) {
         this.body = body;
         return this;
     }
@@ -26,7 +26,7 @@ public class UpdateSubQuotasRequest extends TeaModel {
         return this.body;
     }
 
-    public UpdateSubQuotasRequest setRegion(String region) {
+    public UpdateQuotaScheduleRequest setRegion(String region) {
         this.region = region;
         return this;
     }
@@ -34,7 +34,7 @@ public class UpdateSubQuotasRequest extends TeaModel {
         return this.region;
     }
 
-    public UpdateSubQuotasRequest setTenantId(String tenantId) {
+    public UpdateQuotaScheduleRequest setTenantId(String tenantId) {
         this.tenantId = tenantId;
         return this;
     }

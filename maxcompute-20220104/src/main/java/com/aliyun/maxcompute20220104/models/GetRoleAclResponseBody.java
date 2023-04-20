@@ -1,0 +1,291 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.maxcompute20220104.models;
+
+import com.aliyun.tea.*;
+
+public class GetRoleAclResponseBody extends TeaModel {
+    @NameInMap("data")
+    public GetRoleAclResponseBodyData data;
+
+    @NameInMap("requestId")
+    public String requestId;
+
+    public static GetRoleAclResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetRoleAclResponseBody self = new GetRoleAclResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public GetRoleAclResponseBody setData(GetRoleAclResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetRoleAclResponseBodyData getData() {
+        return this.data;
+    }
+
+    public GetRoleAclResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static class GetRoleAclResponseBodyDataFunction extends TeaModel {
+        @NameInMap("actions")
+        public java.util.List<String> actions;
+
+        @NameInMap("name")
+        public String name;
+
+        public static GetRoleAclResponseBodyDataFunction build(java.util.Map<String, ?> map) throws Exception {
+            GetRoleAclResponseBodyDataFunction self = new GetRoleAclResponseBodyDataFunction();
+            return TeaModel.build(map, self);
+        }
+
+        public GetRoleAclResponseBodyDataFunction setActions(java.util.List<String> actions) {
+            this.actions = actions;
+            return this;
+        }
+        public java.util.List<String> getActions() {
+            return this.actions;
+        }
+
+        public GetRoleAclResponseBodyDataFunction setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class GetRoleAclResponseBodyDataInstance extends TeaModel {
+        @NameInMap("actions")
+        public java.util.List<String> actions;
+
+        @NameInMap("name")
+        public String name;
+
+        public static GetRoleAclResponseBodyDataInstance build(java.util.Map<String, ?> map) throws Exception {
+            GetRoleAclResponseBodyDataInstance self = new GetRoleAclResponseBodyDataInstance();
+            return TeaModel.build(map, self);
+        }
+
+        public GetRoleAclResponseBodyDataInstance setActions(java.util.List<String> actions) {
+            this.actions = actions;
+            return this;
+        }
+        public java.util.List<String> getActions() {
+            return this.actions;
+        }
+
+        public GetRoleAclResponseBodyDataInstance setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class GetRoleAclResponseBodyDataPackage extends TeaModel {
+        @NameInMap("actions")
+        public java.util.List<String> actions;
+
+        @NameInMap("name")
+        public String name;
+
+        public static GetRoleAclResponseBodyDataPackage build(java.util.Map<String, ?> map) throws Exception {
+            GetRoleAclResponseBodyDataPackage self = new GetRoleAclResponseBodyDataPackage();
+            return TeaModel.build(map, self);
+        }
+
+        public GetRoleAclResponseBodyDataPackage setActions(java.util.List<String> actions) {
+            this.actions = actions;
+            return this;
+        }
+        public java.util.List<String> getActions() {
+            return this.actions;
+        }
+
+        public GetRoleAclResponseBodyDataPackage setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class GetRoleAclResponseBodyDataProject extends TeaModel {
+        @NameInMap("actions")
+        public java.util.List<String> actions;
+
+        @NameInMap("name")
+        public String name;
+
+        public static GetRoleAclResponseBodyDataProject build(java.util.Map<String, ?> map) throws Exception {
+            GetRoleAclResponseBodyDataProject self = new GetRoleAclResponseBodyDataProject();
+            return TeaModel.build(map, self);
+        }
+
+        public GetRoleAclResponseBodyDataProject setActions(java.util.List<String> actions) {
+            this.actions = actions;
+            return this;
+        }
+        public java.util.List<String> getActions() {
+            return this.actions;
+        }
+
+        public GetRoleAclResponseBodyDataProject setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class GetRoleAclResponseBodyDataResource extends TeaModel {
+        @NameInMap("actions")
+        public java.util.List<String> actions;
+
+        @NameInMap("name")
+        public String name;
+
+        public static GetRoleAclResponseBodyDataResource build(java.util.Map<String, ?> map) throws Exception {
+            GetRoleAclResponseBodyDataResource self = new GetRoleAclResponseBodyDataResource();
+            return TeaModel.build(map, self);
+        }
+
+        public GetRoleAclResponseBodyDataResource setActions(java.util.List<String> actions) {
+            this.actions = actions;
+            return this;
+        }
+        public java.util.List<String> getActions() {
+            return this.actions;
+        }
+
+        public GetRoleAclResponseBodyDataResource setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class GetRoleAclResponseBodyDataTable extends TeaModel {
+        @NameInMap("actions")
+        public java.util.List<String> actions;
+
+        @NameInMap("name")
+        public String name;
+
+        public static GetRoleAclResponseBodyDataTable build(java.util.Map<String, ?> map) throws Exception {
+            GetRoleAclResponseBodyDataTable self = new GetRoleAclResponseBodyDataTable();
+            return TeaModel.build(map, self);
+        }
+
+        public GetRoleAclResponseBodyDataTable setActions(java.util.List<String> actions) {
+            this.actions = actions;
+            return this;
+        }
+        public java.util.List<String> getActions() {
+            return this.actions;
+        }
+
+        public GetRoleAclResponseBodyDataTable setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class GetRoleAclResponseBodyData extends TeaModel {
+        @NameInMap("function")
+        public java.util.List<GetRoleAclResponseBodyDataFunction> function;
+
+        @NameInMap("instance")
+        public java.util.List<GetRoleAclResponseBodyDataInstance> instance;
+
+        /**
+         * <p>Package</p>
+         */
+        @NameInMap("package")
+        public java.util.List<GetRoleAclResponseBodyDataPackage> _package;
+
+        @NameInMap("project")
+        public java.util.List<GetRoleAclResponseBodyDataProject> project;
+
+        @NameInMap("resource")
+        public java.util.List<GetRoleAclResponseBodyDataResource> resource;
+
+        @NameInMap("table")
+        public java.util.List<GetRoleAclResponseBodyDataTable> table;
+
+        public static GetRoleAclResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            GetRoleAclResponseBodyData self = new GetRoleAclResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public GetRoleAclResponseBodyData setFunction(java.util.List<GetRoleAclResponseBodyDataFunction> function) {
+            this.function = function;
+            return this;
+        }
+        public java.util.List<GetRoleAclResponseBodyDataFunction> getFunction() {
+            return this.function;
+        }
+
+        public GetRoleAclResponseBodyData setInstance(java.util.List<GetRoleAclResponseBodyDataInstance> instance) {
+            this.instance = instance;
+            return this;
+        }
+        public java.util.List<GetRoleAclResponseBodyDataInstance> getInstance() {
+            return this.instance;
+        }
+
+        public GetRoleAclResponseBodyData set_package(java.util.List<GetRoleAclResponseBodyDataPackage> _package) {
+            this._package = _package;
+            return this;
+        }
+        public java.util.List<GetRoleAclResponseBodyDataPackage> get_package() {
+            return this._package;
+        }
+
+        public GetRoleAclResponseBodyData setProject(java.util.List<GetRoleAclResponseBodyDataProject> project) {
+            this.project = project;
+            return this;
+        }
+        public java.util.List<GetRoleAclResponseBodyDataProject> getProject() {
+            return this.project;
+        }
+
+        public GetRoleAclResponseBodyData setResource(java.util.List<GetRoleAclResponseBodyDataResource> resource) {
+            this.resource = resource;
+            return this;
+        }
+        public java.util.List<GetRoleAclResponseBodyDataResource> getResource() {
+            return this.resource;
+        }
+
+        public GetRoleAclResponseBodyData setTable(java.util.List<GetRoleAclResponseBodyDataTable> table) {
+            this.table = table;
+            return this;
+        }
+        public java.util.List<GetRoleAclResponseBodyDataTable> getTable() {
+            return this.table;
+        }
+
+    }
+
+}
