@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSnapshotResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

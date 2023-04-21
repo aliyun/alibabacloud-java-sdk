@@ -28,6 +28,9 @@ public class CreateDesktopGroupRequest extends TeaModel {
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <p>是否自动续费。</p>
+     */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
@@ -109,6 +112,9 @@ public class CreateDesktopGroupRequest extends TeaModel {
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
+    /**
+     * <p>桌面组版本。</p>
+     */
     @NameInMap("GroupVersion")
     public Integer groupVersion;
 

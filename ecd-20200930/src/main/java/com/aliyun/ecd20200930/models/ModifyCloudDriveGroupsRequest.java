@@ -11,22 +11,24 @@ public class ModifyCloudDriveGroupsRequest extends TeaModel {
     public String cdsId;
 
     /**
-     * <p>The ID of the team.</p>
+     * <p>The IDs of the teams.</p>
      */
     @NameInMap("GroupId")
     public java.util.List<String> groupId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The status of the team space. Default value: enabled. Valid values:</p>
+     * <p>The status of the team space. Valid values:</p>
      * <br>
      * <p>*   enabled</p>
      * <p>*   disabled</p>
+     * <br>
+     * <p>Default value: enabled.</p>
      */
     @NameInMap("Status")
     public String status;
