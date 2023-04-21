@@ -165,6 +165,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.sourceHttpEventParametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sourceHttpEventParameters, "SourceHttpEventParameters", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sourceKafkaParameters)) {
+            request.sourceKafkaParametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sourceKafkaParameters, "SourceKafkaParameters", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.sourceMNSParameters)) {
             request.sourceMNSParametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sourceMNSParameters, "SourceMNSParameters", "json");
         }
@@ -179,6 +183,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.sourceSLSParameters)) {
             request.sourceSLSParametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sourceSLSParameters, "SourceSLSParameters", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sourceScheduledEventParameters)) {
+            request.sourceScheduledEventParametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sourceScheduledEventParameters, "SourceScheduledEventParameters", "json");
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -198,6 +206,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("SourceHttpEventParameters", request.sourceHttpEventParametersShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceKafkaParametersShrink)) {
+            body.put("SourceKafkaParameters", request.sourceKafkaParametersShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sourceMNSParametersShrink)) {
             body.put("SourceMNSParameters", request.sourceMNSParametersShrink);
         }
@@ -212,6 +224,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceSLSParametersShrink)) {
             body.put("SourceSLSParameters", request.sourceSLSParametersShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceScheduledEventParametersShrink)) {
+            body.put("SourceScheduledEventParameters", request.sourceScheduledEventParametersShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1530,6 +1546,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.sourceHttpEventParametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sourceHttpEventParameters, "SourceHttpEventParameters", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sourceKafkaParameters)) {
+            request.sourceKafkaParametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sourceKafkaParameters, "SourceKafkaParameters", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.sourceMNSParameters)) {
             request.sourceMNSParametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sourceMNSParameters, "SourceMNSParameters", "json");
         }
@@ -1544,6 +1564,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.sourceSLSParameters)) {
             request.sourceSLSParametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sourceSLSParameters, "SourceSLSParameters", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sourceScheduledEventParameters)) {
+            request.sourceScheduledEventParametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sourceScheduledEventParameters, "SourceScheduledEventParameters", "json");
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1563,6 +1587,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("SourceHttpEventParameters", request.sourceHttpEventParametersShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceKafkaParametersShrink)) {
+            body.put("SourceKafkaParameters", request.sourceKafkaParametersShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sourceMNSParametersShrink)) {
             body.put("SourceMNSParameters", request.sourceMNSParametersShrink);
         }
@@ -1577,6 +1605,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceSLSParametersShrink)) {
             body.put("SourceSLSParameters", request.sourceSLSParametersShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceScheduledEventParametersShrink)) {
+            body.put("SourceScheduledEventParameters", request.sourceScheduledEventParametersShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

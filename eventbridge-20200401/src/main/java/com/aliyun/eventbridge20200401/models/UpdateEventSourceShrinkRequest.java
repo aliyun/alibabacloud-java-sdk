@@ -8,7 +8,7 @@ public class UpdateEventSourceShrinkRequest extends TeaModel {
      * <p>事件源描述详情</p>
      */
     @NameInMap("Description")
-    public byte[] description;
+    public String description;
 
     @NameInMap("EventBusName")
     public byte[] eventBusName;
@@ -17,10 +17,13 @@ public class UpdateEventSourceShrinkRequest extends TeaModel {
      * <p>事件源英文Code</p>
      */
     @NameInMap("EventSourceName")
-    public byte[] eventSourceName;
+    public String eventSourceName;
 
     @NameInMap("SourceHttpEventParameters")
     public String sourceHttpEventParametersShrink;
+
+    @NameInMap("SourceKafkaParameters")
+    public String sourceKafkaParametersShrink;
 
     @NameInMap("SourceMNSParameters")
     public String sourceMNSParametersShrink;
@@ -37,16 +40,19 @@ public class UpdateEventSourceShrinkRequest extends TeaModel {
     @NameInMap("SourceSLSParameters")
     public String sourceSLSParametersShrink;
 
+    @NameInMap("SourceScheduledEventParameters")
+    public String sourceScheduledEventParametersShrink;
+
     public static UpdateEventSourceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateEventSourceShrinkRequest self = new UpdateEventSourceShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateEventSourceShrinkRequest setDescription(byte[] description) {
+    public UpdateEventSourceShrinkRequest setDescription(String description) {
         this.description = description;
         return this;
     }
-    public byte[] getDescription() {
+    public String getDescription() {
         return this.description;
     }
 
@@ -58,11 +64,11 @@ public class UpdateEventSourceShrinkRequest extends TeaModel {
         return this.eventBusName;
     }
 
-    public UpdateEventSourceShrinkRequest setEventSourceName(byte[] eventSourceName) {
+    public UpdateEventSourceShrinkRequest setEventSourceName(String eventSourceName) {
         this.eventSourceName = eventSourceName;
         return this;
     }
-    public byte[] getEventSourceName() {
+    public String getEventSourceName() {
         return this.eventSourceName;
     }
 
@@ -72,6 +78,14 @@ public class UpdateEventSourceShrinkRequest extends TeaModel {
     }
     public String getSourceHttpEventParametersShrink() {
         return this.sourceHttpEventParametersShrink;
+    }
+
+    public UpdateEventSourceShrinkRequest setSourceKafkaParametersShrink(String sourceKafkaParametersShrink) {
+        this.sourceKafkaParametersShrink = sourceKafkaParametersShrink;
+        return this;
+    }
+    public String getSourceKafkaParametersShrink() {
+        return this.sourceKafkaParametersShrink;
     }
 
     public UpdateEventSourceShrinkRequest setSourceMNSParametersShrink(String sourceMNSParametersShrink) {
@@ -104,6 +118,14 @@ public class UpdateEventSourceShrinkRequest extends TeaModel {
     }
     public String getSourceSLSParametersShrink() {
         return this.sourceSLSParametersShrink;
+    }
+
+    public UpdateEventSourceShrinkRequest setSourceScheduledEventParametersShrink(String sourceScheduledEventParametersShrink) {
+        this.sourceScheduledEventParametersShrink = sourceScheduledEventParametersShrink;
+        return this;
+    }
+    public String getSourceScheduledEventParametersShrink() {
+        return this.sourceScheduledEventParametersShrink;
     }
 
 }
