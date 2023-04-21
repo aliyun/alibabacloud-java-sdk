@@ -31,9 +31,94 @@ public class QueryFaceImageTemplateResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class QueryFaceImageTemplateResponseBodyDataElementsFaceInfosFaceRect extends TeaModel {
+        @NameInMap("Height")
+        public String height;
+
+        @NameInMap("Width")
+        public String width;
+
+        @NameInMap("X")
+        public String x;
+
+        @NameInMap("Y")
+        public String y;
+
+        public static QueryFaceImageTemplateResponseBodyDataElementsFaceInfosFaceRect build(java.util.Map<String, ?> map) throws Exception {
+            QueryFaceImageTemplateResponseBodyDataElementsFaceInfosFaceRect self = new QueryFaceImageTemplateResponseBodyDataElementsFaceInfosFaceRect();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryFaceImageTemplateResponseBodyDataElementsFaceInfosFaceRect setHeight(String height) {
+            this.height = height;
+            return this;
+        }
+        public String getHeight() {
+            return this.height;
+        }
+
+        public QueryFaceImageTemplateResponseBodyDataElementsFaceInfosFaceRect setWidth(String width) {
+            this.width = width;
+            return this;
+        }
+        public String getWidth() {
+            return this.width;
+        }
+
+        public QueryFaceImageTemplateResponseBodyDataElementsFaceInfosFaceRect setX(String x) {
+            this.x = x;
+            return this;
+        }
+        public String getX() {
+            return this.x;
+        }
+
+        public QueryFaceImageTemplateResponseBodyDataElementsFaceInfosFaceRect setY(String y) {
+            this.y = y;
+            return this;
+        }
+        public String getY() {
+            return this.y;
+        }
+
+    }
+
+    public static class QueryFaceImageTemplateResponseBodyDataElementsFaceInfos extends TeaModel {
+        @NameInMap("FaceRect")
+        public QueryFaceImageTemplateResponseBodyDataElementsFaceInfosFaceRect faceRect;
+
+        @NameInMap("TemplateFaceID")
+        public String templateFaceID;
+
+        public static QueryFaceImageTemplateResponseBodyDataElementsFaceInfos build(java.util.Map<String, ?> map) throws Exception {
+            QueryFaceImageTemplateResponseBodyDataElementsFaceInfos self = new QueryFaceImageTemplateResponseBodyDataElementsFaceInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryFaceImageTemplateResponseBodyDataElementsFaceInfos setFaceRect(QueryFaceImageTemplateResponseBodyDataElementsFaceInfosFaceRect faceRect) {
+            this.faceRect = faceRect;
+            return this;
+        }
+        public QueryFaceImageTemplateResponseBodyDataElementsFaceInfosFaceRect getFaceRect() {
+            return this.faceRect;
+        }
+
+        public QueryFaceImageTemplateResponseBodyDataElementsFaceInfos setTemplateFaceID(String templateFaceID) {
+            this.templateFaceID = templateFaceID;
+            return this;
+        }
+        public String getTemplateFaceID() {
+            return this.templateFaceID;
+        }
+
+    }
+
     public static class QueryFaceImageTemplateResponseBodyDataElements extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
+
+        @NameInMap("FaceInfos")
+        public java.util.List<QueryFaceImageTemplateResponseBodyDataElementsFaceInfos> faceInfos;
 
         @NameInMap("TemplateId")
         public String templateId;
@@ -58,6 +143,14 @@ public class QueryFaceImageTemplateResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public QueryFaceImageTemplateResponseBodyDataElements setFaceInfos(java.util.List<QueryFaceImageTemplateResponseBodyDataElementsFaceInfos> faceInfos) {
+            this.faceInfos = faceInfos;
+            return this;
+        }
+        public java.util.List<QueryFaceImageTemplateResponseBodyDataElementsFaceInfos> getFaceInfos() {
+            return this.faceInfos;
         }
 
         public QueryFaceImageTemplateResponseBodyDataElements setTemplateId(String templateId) {
