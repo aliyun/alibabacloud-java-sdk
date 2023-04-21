@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>sls20201230</artifactId>
-  <version>1.5.5</version>
+  <version>1.5.6</version>
   <packaging>jar</packaging>
   <name>sls20201230</name>
   <description>Alibaba Cloud Log Service (20201230) SDK for Java

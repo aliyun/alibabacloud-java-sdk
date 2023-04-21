@@ -7,26 +7,26 @@ public class Project extends TeaModel {
     @NameInMap("createTime")
     public String createTime;
 
+    @NameInMap("description")
+    public String description;
+
     @NameInMap("lastModifyTime")
     public String lastModifyTime;
 
-    @NameInMap("projectDesc")
-    public String projectDesc;
+    @NameInMap("owner")
+    public String owner;
 
     @NameInMap("projectName")
     public String projectName;
-
-    @NameInMap("projectOwner")
-    public String projectOwner;
-
-    @NameInMap("projectStatus")
-    public String projectStatus;
 
     @NameInMap("region")
     public String region;
 
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
+
+    @NameInMap("status")
+    public String status;
 
     public static Project build(java.util.Map<String, ?> map) throws Exception {
         Project self = new Project();
@@ -41,6 +41,14 @@ public class Project extends TeaModel {
         return this.createTime;
     }
 
+    public Project setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
     public Project setLastModifyTime(String lastModifyTime) {
         this.lastModifyTime = lastModifyTime;
         return this;
@@ -49,12 +57,12 @@ public class Project extends TeaModel {
         return this.lastModifyTime;
     }
 
-    public Project setProjectDesc(String projectDesc) {
-        this.projectDesc = projectDesc;
+    public Project setOwner(String owner) {
+        this.owner = owner;
         return this;
     }
-    public String getProjectDesc() {
-        return this.projectDesc;
+    public String getOwner() {
+        return this.owner;
     }
 
     public Project setProjectName(String projectName) {
@@ -63,22 +71,6 @@ public class Project extends TeaModel {
     }
     public String getProjectName() {
         return this.projectName;
-    }
-
-    public Project setProjectOwner(String projectOwner) {
-        this.projectOwner = projectOwner;
-        return this;
-    }
-    public String getProjectOwner() {
-        return this.projectOwner;
-    }
-
-    public Project setProjectStatus(String projectStatus) {
-        this.projectStatus = projectStatus;
-        return this;
-    }
-    public String getProjectStatus() {
-        return this.projectStatus;
     }
 
     public Project setRegion(String region) {
@@ -95,6 +87,14 @@ public class Project extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public Project setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
 }
