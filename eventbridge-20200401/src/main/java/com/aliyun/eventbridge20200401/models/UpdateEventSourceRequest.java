@@ -8,7 +8,7 @@ public class UpdateEventSourceRequest extends TeaModel {
      * <p>事件源描述详情</p>
      */
     @NameInMap("Description")
-    public byte[] description;
+    public String description;
 
     @NameInMap("EventBusName")
     public byte[] eventBusName;
@@ -17,10 +17,13 @@ public class UpdateEventSourceRequest extends TeaModel {
      * <p>事件源英文Code</p>
      */
     @NameInMap("EventSourceName")
-    public byte[] eventSourceName;
+    public String eventSourceName;
 
     @NameInMap("SourceHttpEventParameters")
     public UpdateEventSourceRequestSourceHttpEventParameters sourceHttpEventParameters;
+
+    @NameInMap("SourceKafkaParameters")
+    public UpdateEventSourceRequestSourceKafkaParameters sourceKafkaParameters;
 
     @NameInMap("SourceMNSParameters")
     public UpdateEventSourceRequestSourceMNSParameters sourceMNSParameters;
@@ -37,16 +40,19 @@ public class UpdateEventSourceRequest extends TeaModel {
     @NameInMap("SourceSLSParameters")
     public UpdateEventSourceRequestSourceSLSParameters sourceSLSParameters;
 
+    @NameInMap("SourceScheduledEventParameters")
+    public UpdateEventSourceRequestSourceScheduledEventParameters sourceScheduledEventParameters;
+
     public static UpdateEventSourceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateEventSourceRequest self = new UpdateEventSourceRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateEventSourceRequest setDescription(byte[] description) {
+    public UpdateEventSourceRequest setDescription(String description) {
         this.description = description;
         return this;
     }
-    public byte[] getDescription() {
+    public String getDescription() {
         return this.description;
     }
 
@@ -58,11 +64,11 @@ public class UpdateEventSourceRequest extends TeaModel {
         return this.eventBusName;
     }
 
-    public UpdateEventSourceRequest setEventSourceName(byte[] eventSourceName) {
+    public UpdateEventSourceRequest setEventSourceName(String eventSourceName) {
         this.eventSourceName = eventSourceName;
         return this;
     }
-    public byte[] getEventSourceName() {
+    public String getEventSourceName() {
         return this.eventSourceName;
     }
 
@@ -72,6 +78,14 @@ public class UpdateEventSourceRequest extends TeaModel {
     }
     public UpdateEventSourceRequestSourceHttpEventParameters getSourceHttpEventParameters() {
         return this.sourceHttpEventParameters;
+    }
+
+    public UpdateEventSourceRequest setSourceKafkaParameters(UpdateEventSourceRequestSourceKafkaParameters sourceKafkaParameters) {
+        this.sourceKafkaParameters = sourceKafkaParameters;
+        return this;
+    }
+    public UpdateEventSourceRequestSourceKafkaParameters getSourceKafkaParameters() {
+        return this.sourceKafkaParameters;
     }
 
     public UpdateEventSourceRequest setSourceMNSParameters(UpdateEventSourceRequestSourceMNSParameters sourceMNSParameters) {
@@ -104,6 +118,14 @@ public class UpdateEventSourceRequest extends TeaModel {
     }
     public UpdateEventSourceRequestSourceSLSParameters getSourceSLSParameters() {
         return this.sourceSLSParameters;
+    }
+
+    public UpdateEventSourceRequest setSourceScheduledEventParameters(UpdateEventSourceRequestSourceScheduledEventParameters sourceScheduledEventParameters) {
+        this.sourceScheduledEventParameters = sourceScheduledEventParameters;
+        return this;
+    }
+    public UpdateEventSourceRequestSourceScheduledEventParameters getSourceScheduledEventParameters() {
+        return this.sourceScheduledEventParameters;
     }
 
     public static class UpdateEventSourceRequestSourceHttpEventParameters extends TeaModel {
@@ -165,6 +187,124 @@ public class UpdateEventSourceRequest extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+    }
+
+    public static class UpdateEventSourceRequestSourceKafkaParameters extends TeaModel {
+        @NameInMap("ConsumerGroup")
+        public String consumerGroup;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("MaximumTasks")
+        public Integer maximumTasks;
+
+        @NameInMap("Network")
+        public String network;
+
+        @NameInMap("OffsetReset")
+        public String offsetReset;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
+        @NameInMap("Topic")
+        public String topic;
+
+        @NameInMap("VSwitchIds")
+        public String vSwitchIds;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        public static UpdateEventSourceRequestSourceKafkaParameters build(java.util.Map<String, ?> map) throws Exception {
+            UpdateEventSourceRequestSourceKafkaParameters self = new UpdateEventSourceRequestSourceKafkaParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateEventSourceRequestSourceKafkaParameters setConsumerGroup(String consumerGroup) {
+            this.consumerGroup = consumerGroup;
+            return this;
+        }
+        public String getConsumerGroup() {
+            return this.consumerGroup;
+        }
+
+        public UpdateEventSourceRequestSourceKafkaParameters setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public UpdateEventSourceRequestSourceKafkaParameters setMaximumTasks(Integer maximumTasks) {
+            this.maximumTasks = maximumTasks;
+            return this;
+        }
+        public Integer getMaximumTasks() {
+            return this.maximumTasks;
+        }
+
+        public UpdateEventSourceRequestSourceKafkaParameters setNetwork(String network) {
+            this.network = network;
+            return this;
+        }
+        public String getNetwork() {
+            return this.network;
+        }
+
+        public UpdateEventSourceRequestSourceKafkaParameters setOffsetReset(String offsetReset) {
+            this.offsetReset = offsetReset;
+            return this;
+        }
+        public String getOffsetReset() {
+            return this.offsetReset;
+        }
+
+        public UpdateEventSourceRequestSourceKafkaParameters setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public UpdateEventSourceRequestSourceKafkaParameters setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public UpdateEventSourceRequestSourceKafkaParameters setTopic(String topic) {
+            this.topic = topic;
+            return this;
+        }
+        public String getTopic() {
+            return this.topic;
+        }
+
+        public UpdateEventSourceRequestSourceKafkaParameters setVSwitchIds(String vSwitchIds) {
+            this.vSwitchIds = vSwitchIds;
+            return this;
+        }
+        public String getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        public UpdateEventSourceRequestSourceKafkaParameters setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }
@@ -450,6 +590,36 @@ public class UpdateEventSourceRequest extends TeaModel {
         }
         public String getRoleName() {
             return this.roleName;
+        }
+
+    }
+
+    public static class UpdateEventSourceRequestSourceScheduledEventParameters extends TeaModel {
+        @NameInMap("Schedule")
+        public String schedule;
+
+        @NameInMap("TimeZone")
+        public String timeZone;
+
+        public static UpdateEventSourceRequestSourceScheduledEventParameters build(java.util.Map<String, ?> map) throws Exception {
+            UpdateEventSourceRequestSourceScheduledEventParameters self = new UpdateEventSourceRequestSourceScheduledEventParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateEventSourceRequestSourceScheduledEventParameters setSchedule(String schedule) {
+            this.schedule = schedule;
+            return this;
+        }
+        public String getSchedule() {
+            return this.schedule;
+        }
+
+        public UpdateEventSourceRequestSourceScheduledEventParameters setTimeZone(String timeZone) {
+            this.timeZone = timeZone;
+            return this;
+        }
+        public String getTimeZone() {
+            return this.timeZone;
         }
 
     }

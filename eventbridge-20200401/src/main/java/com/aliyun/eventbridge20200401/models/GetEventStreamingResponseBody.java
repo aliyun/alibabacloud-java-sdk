@@ -258,6 +258,47 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
     }
 
+    public static class GetEventStreamingResponseBodyDataSinkSinkFcParametersConcurrency extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetEventStreamingResponseBodyDataSinkSinkFcParametersConcurrency build(java.util.Map<String, ?> map) throws Exception {
+            GetEventStreamingResponseBodyDataSinkSinkFcParametersConcurrency self = new GetEventStreamingResponseBodyDataSinkSinkFcParametersConcurrency();
+            return TeaModel.build(map, self);
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkFcParametersConcurrency setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkFcParametersConcurrency setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkFcParametersConcurrency setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class GetEventStreamingResponseBodyDataSinkSinkFcParametersFunctionName extends TeaModel {
         @NameInMap("Form")
         public String form;
@@ -426,6 +467,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @NameInMap("Body")
         public GetEventStreamingResponseBodyDataSinkSinkFcParametersBody body;
 
+        @NameInMap("Concurrency")
+        public GetEventStreamingResponseBodyDataSinkSinkFcParametersConcurrency concurrency;
+
         @NameInMap("FunctionName")
         public GetEventStreamingResponseBodyDataSinkSinkFcParametersFunctionName functionName;
 
@@ -449,6 +493,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
         public GetEventStreamingResponseBodyDataSinkSinkFcParametersBody getBody() {
             return this.body;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkFcParameters setConcurrency(GetEventStreamingResponseBodyDataSinkSinkFcParametersConcurrency concurrency) {
+            this.concurrency = concurrency;
+            return this;
+        }
+        public GetEventStreamingResponseBodyDataSinkSinkFcParametersConcurrency getConcurrency() {
+            return this.concurrency;
         }
 
         public GetEventStreamingResponseBodyDataSinkSinkFcParameters setFunctionName(GetEventStreamingResponseBodyDataSinkSinkFcParametersFunctionName functionName) {

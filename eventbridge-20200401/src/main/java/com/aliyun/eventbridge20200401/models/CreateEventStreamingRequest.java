@@ -589,6 +589,47 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     }
 
+    public static class CreateEventStreamingRequestSinkSinkFcParametersConcurrency extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateEventStreamingRequestSinkSinkFcParametersConcurrency build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSinkSinkFcParametersConcurrency self = new CreateEventStreamingRequestSinkSinkFcParametersConcurrency();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestSinkSinkFcParametersConcurrency setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public CreateEventStreamingRequestSinkSinkFcParametersConcurrency setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public CreateEventStreamingRequestSinkSinkFcParametersConcurrency setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class CreateEventStreamingRequestSinkSinkFcParametersFunctionName extends TeaModel {
         @NameInMap("Form")
         public String form;
@@ -757,6 +798,9 @@ public class CreateEventStreamingRequest extends TeaModel {
         @NameInMap("Body")
         public CreateEventStreamingRequestSinkSinkFcParametersBody body;
 
+        @NameInMap("Concurrency")
+        public CreateEventStreamingRequestSinkSinkFcParametersConcurrency concurrency;
+
         @NameInMap("FunctionName")
         public CreateEventStreamingRequestSinkSinkFcParametersFunctionName functionName;
 
@@ -780,6 +824,14 @@ public class CreateEventStreamingRequest extends TeaModel {
         }
         public CreateEventStreamingRequestSinkSinkFcParametersBody getBody() {
             return this.body;
+        }
+
+        public CreateEventStreamingRequestSinkSinkFcParameters setConcurrency(CreateEventStreamingRequestSinkSinkFcParametersConcurrency concurrency) {
+            this.concurrency = concurrency;
+            return this;
+        }
+        public CreateEventStreamingRequestSinkSinkFcParametersConcurrency getConcurrency() {
+            return this.concurrency;
         }
 
         public CreateEventStreamingRequestSinkSinkFcParameters setFunctionName(CreateEventStreamingRequestSinkSinkFcParametersFunctionName functionName) {
