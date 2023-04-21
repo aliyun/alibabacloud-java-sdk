@@ -1,3 +1,6 @@
+2023-04-21 Version: 3.0.8
+- Release MergeImageFace.
+
 2023-02-03 Version: 3.0.7
 - Release CompareFaceWithMask DetectInfraredLivingFace.
 

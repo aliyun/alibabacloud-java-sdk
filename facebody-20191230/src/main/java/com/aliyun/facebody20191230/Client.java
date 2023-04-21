@@ -3816,8 +3816,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public MergeImageFaceResponse mergeImageFaceWithOptions(MergeImageFaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addWatermark)) {
+            body.put("AddWatermark", request.addWatermark);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.imageURL)) {
             body.put("ImageURL", request.imageURL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mergeInfos)) {
+            body.put("MergeInfos", request.mergeInfos);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelVersion)) {
+            body.put("ModelVersion", request.modelVersion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
