@@ -17,20 +17,20 @@ public class CreateSnapshotRequest extends TeaModel {
     public String desktopId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The name of the snapshot. The name must be 2 to 128 characters in length.\</p>
-     * <p>It cannot start with auto because snapshots whose names start with auto are recognized as automatic snapshots.</p>
+     * <p>The name cannot start with auto because snapshots whose names start with auto are recognized as automatic snapshots.</p>
      */
     @NameInMap("SnapshotName")
     public String snapshotName;
 
     /**
-     * <p>The type of the disk for which you want to create a snapshot. Valid values:</p>
+     * <p>The type of the disk for which to create a snapshot. Valid values:</p>
      * <br>
      * <p>*   system: system disk</p>
      * <p>*   data: data disk</p>

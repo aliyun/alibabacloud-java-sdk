@@ -429,33 +429,11 @@ public class CreatePolicyGroupRequest extends TeaModel {
      * <br>
      * <p>*   2</p>
      * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
      * <p>*   5</p>
      * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <p>*  10</p>
      * <br>
      * <p>*   15</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
      */
     @NameInMap("RecordingFps")
     public Long recordingFps;

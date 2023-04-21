@@ -10,6 +10,9 @@ public class ConfigADConnectorTrustRequest extends TeaModel {
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
+    @NameInMap("RdsLicenseDomain")
+    public Boolean rdsLicenseDomain;
+
     /**
      * <p>The region ID.</p>
      */
@@ -33,6 +36,14 @@ public class ConfigADConnectorTrustRequest extends TeaModel {
     }
     public String getOfficeSiteId() {
         return this.officeSiteId;
+    }
+
+    public ConfigADConnectorTrustRequest setRdsLicenseDomain(Boolean rdsLicenseDomain) {
+        this.rdsLicenseDomain = rdsLicenseDomain;
+        return this;
+    }
+    public Boolean getRdsLicenseDomain() {
+        return this.rdsLicenseDomain;
     }
 
     public ConfigADConnectorTrustRequest setRegionId(String regionId) {

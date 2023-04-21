@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDesktopsInGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the desktop group.</p>
+     * <p>The desktop group ID.</p>
      */
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
@@ -17,13 +17,13 @@ public class DescribeDesktopsInGroupRequest extends TeaModel {
     public Boolean ignoreDeleted;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
+     * <p>The number of entries to return on each page. Valid values: 1 to 100. Default value: 10.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the next query. If you do not specify this parameter, null is returned.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. If the NextToken parameter is empty, no next page exists.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -35,7 +35,7 @@ public class DescribeDesktopsInGroupRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

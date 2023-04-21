@@ -17,7 +17,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public String policyName;
 
     /**
-     * <p>The ID of the region where the automatic snapshot policy is created. You can call the [DescribeRegions](~~25609~~) operation to query the latest region list.</p>
+     * <p>The ID of the region where the automatic snapshot policy is created. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

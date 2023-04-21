@@ -17,7 +17,7 @@ public class ModifyAutoSnapshotPolicyRequest extends TeaModel {
     public String policyId;
 
     /**
-     * <p>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter but cannot start with [http:// or https://. Default value: null.](http://https://。、（:）、（\_）（-）。：。)</p>
+     * <p>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter but cannot start with [http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-). Default value: null.](http://https://。、（:）、（\_）（-）。：。)</p>
      */
     @NameInMap("PolicyName")
     public String policyName;
@@ -29,9 +29,9 @@ public class ModifyAutoSnapshotPolicyRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The retention period of automatic snapshots. Unit: days. Default value: 1. Valid values:</p>
+     * <p>The retention period of automatic snapshots. Unit: days. Valid values:</p>
      * <br>
-     * <p>*   1: The automatic snapshots are permanently retained.</p>
+     * <p>*   1 (default): The automatic snapshots are permanently retained.</p>
      * <p>*   1 to 65536: The automatic snapshots are retained for the specified number of days.</p>
      */
     @NameInMap("RetentionDays")

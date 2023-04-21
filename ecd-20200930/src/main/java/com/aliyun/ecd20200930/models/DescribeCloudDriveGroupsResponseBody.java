@@ -11,7 +11,7 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
     public java.util.List<DescribeCloudDriveGroupsResponseBodyCloudDriveGroups> cloudDriveGroups;
 
     /**
-     * <p>The total number of team spaces that are returned.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("Count")
     public Long count;
@@ -23,13 +23,13 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;

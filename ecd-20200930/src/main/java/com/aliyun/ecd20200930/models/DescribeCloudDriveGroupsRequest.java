@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudDriveGroupsRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud disk.</p>
+     * <p>The ID of the cloud disk in Cloud Drive Service.</p>
      */
     @NameInMap("CdsId")
     public String cdsId;
@@ -34,12 +34,12 @@ public class DescribeCloudDriveGroupsRequest extends TeaModel {
     public String driveStatus;
 
     /**
-     * <p>The type of the space.</p>
+     * <p>Specifies whether space is increased.</p>
      * <br>
-     * <p>*   binding: bound space</p>
-     * <p>*   unbound: unbound space</p>
+     * <p>*   binding: Space is increased.</p>
+     * <p>*   unbound: Space is not increased.</p>
      * <br>
-     * <p>By default, this parameter is left empty. All spaces are queried.</p>
+     * <p>Default value: null. This value indicates that all results are queried.</p>
      */
     @NameInMap("DriveType")
     public String driveType;
@@ -51,7 +51,7 @@ public class DescribeCloudDriveGroupsRequest extends TeaModel {
     public java.util.List<String> groupId;
 
     /**
-     * <p>The team name that can be used for fuzzy search.</p>
+     * <p>The name of the team for fuzzy search.</p>
      */
     @NameInMap("GroupName")
     public String groupName;
@@ -62,7 +62,7 @@ public class DescribeCloudDriveGroupsRequest extends TeaModel {
      * <p>*   org: organizational structure</p>
      * <p>*   directory: workspace</p>
      * <br>
-     * <p>By default, this parameter is left empty. All types of teams are queried.</p>
+     * <p>Default value: null. This value indicates that all results are queried.</p>
      */
     @NameInMap("GroupType")
     public String groupType;
@@ -70,28 +70,26 @@ public class DescribeCloudDriveGroupsRequest extends TeaModel {
     /**
      * <p>The maximum number of entries to return on each page.</p>
      * <br>
-     * <p>*   Maximum value: 100.</p>
-     * <p>*   Default value: 20.</p>
+     * <p>*   Valid values: 1 to 100</p>
+     * <p>*   Default value: 20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the parent node. If you specify a parent node ID, the subnode list is queried. If you set this parameter to root, the parent node list is queried.</p>
-     * <br>
-     * <p>By default, this parameter is left empty. In this case, all nodes are queried.</p>
+     * <p>The ID of the parent ID. If a parent node ID is specified, the subnode list is queried. If you set the value of this parameter to root, the root nodes are queried. Default value: null. This value indicates that all results are queried.</p>
      */
     @NameInMap("ParentGroupId")
     public String parentGroupId;
 
     /**
-     * <p>The region ID of the team.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

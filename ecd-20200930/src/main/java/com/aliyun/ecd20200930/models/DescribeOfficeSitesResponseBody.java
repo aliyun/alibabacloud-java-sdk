@@ -390,6 +390,15 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @NameInMap("ProtocolType")
         public String protocolType;
 
+        @NameInMap("RdsLicenseAddress")
+        public String rdsLicenseAddress;
+
+        @NameInMap("RdsLicenseDomainName")
+        public String rdsLicenseDomainName;
+
+        @NameInMap("RdsLicenseStatus")
+        public String rdsLicenseStatus;
+
         /**
          * <p>Indicates whether single sign-on (SSO) is enabled.</p>
          */
@@ -687,6 +696,30 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
         public String getProtocolType() {
             return this.protocolType;
+        }
+
+        public DescribeOfficeSitesResponseBodyOfficeSites setRdsLicenseAddress(String rdsLicenseAddress) {
+            this.rdsLicenseAddress = rdsLicenseAddress;
+            return this;
+        }
+        public String getRdsLicenseAddress() {
+            return this.rdsLicenseAddress;
+        }
+
+        public DescribeOfficeSitesResponseBodyOfficeSites setRdsLicenseDomainName(String rdsLicenseDomainName) {
+            this.rdsLicenseDomainName = rdsLicenseDomainName;
+            return this;
+        }
+        public String getRdsLicenseDomainName() {
+            return this.rdsLicenseDomainName;
+        }
+
+        public DescribeOfficeSitesResponseBodyOfficeSites setRdsLicenseStatus(String rdsLicenseStatus) {
+            this.rdsLicenseStatus = rdsLicenseStatus;
+            return this;
+        }
+        public String getRdsLicenseStatus() {
+            return this.rdsLicenseStatus;
         }
 
         public DescribeOfficeSitesResponseBodyOfficeSites setSsoEnabled(Boolean ssoEnabled) {

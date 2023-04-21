@@ -11,13 +11,13 @@ public class DeleteCloudDriveGroupsRequest extends TeaModel {
     public String cdsId;
 
     /**
-     * <p>The IDs of the teams that you want to delete.</p>
+     * <p>The IDs of the teams that you want to delete. You can delete multiple teams at a time.</p>
      */
     @NameInMap("GroupId")
     public java.util.List<String> groupId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
