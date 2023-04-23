@@ -339,6 +339,9 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
         @NameInMap("depart_name")
         public String departName;
 
+        @NameInMap("extend_field")
+        public String extendField;
+
         @NameInMap("gmt_create")
         public String gmtCreate;
 
@@ -502,6 +505,14 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
         }
         public String getDepartName() {
             return this.departName;
+        }
+
+        public HotelOrderListQueryResponseBodyModule setExtendField(String extendField) {
+            this.extendField = extendField;
+            return this;
+        }
+        public String getExtendField() {
+            return this.extendField;
         }
 
         public HotelOrderListQueryResponseBodyModule setGmtCreate(String gmtCreate) {
