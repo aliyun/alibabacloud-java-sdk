@@ -8,10 +8,8 @@ public class GetTableTopologyRequest extends TeaModel {
      * <p>The GUID of the table in Data Management (DMS).</p>
      * <br>
      * <p>> </p>
-     * <br>
-     * <p>*   You can call the [ListLogicTables](~~141875~~) operation with ReturnGuid set to true to query the GUIDs of logical tables in a specific logical database.</p>
-     * <br>
-     * <p>*   You can call the [ListTables](~~141878~~) operation with ReturnGuid set to true to query the GUIDs of tables in a specific physical database.</p>
+     * <p>> - You can call the [ListLogicTables](~~141875~~) operation with ReturnGuid set to true to query the GUIDs of logical tables in a specific logical database.</p>
+     * <p>> - You can call the [ListTables](~~141878~~) operation with ReturnGuid set to true to query the GUIDs of tables in a specific physical database.</p>
      */
     @NameInMap("TableGuid")
     public String tableGuid;
