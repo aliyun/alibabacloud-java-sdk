@@ -306,6 +306,9 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
         @NameInMap("AuditStatus")
         public String auditStatus;
 
+        @NameInMap("Comment")
+        public String comment;
+
         /**
          * <p>The ID of the user who creates the ticket. You can obtain the user ID by calling the [GetUser](~~147098~~) operation and querying the value of the UserId parameter. The value is not the unique ID (UID) of the Alibaba Cloud account.</p>
          */
@@ -389,6 +392,14 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
         }
         public String getAuditStatus() {
             return this.auditStatus;
+        }
+
+        public ListDDLPublishRecordsResponseBodyDDLPublishRecordList setComment(String comment) {
+            this.comment = comment;
+            return this;
+        }
+        public String getComment() {
+            return this.comment;
         }
 
         public ListDDLPublishRecordsResponseBodyDDLPublishRecordList setCreatorId(Long creatorId) {

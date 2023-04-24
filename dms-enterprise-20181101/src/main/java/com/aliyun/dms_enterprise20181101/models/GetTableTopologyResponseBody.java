@@ -151,7 +151,7 @@ public class GetTableTopologyResponseBody extends TeaModel {
          * <br>
          * <p>**</p>
          * <br>
-         * <p>**Description**This parameter is not returned for physical tables.</p>
+         * <p>**Description** This parameter is not returned for physical tables.</p>
          */
         @NameInMap("TableNameExpr")
         public String tableNameExpr;
