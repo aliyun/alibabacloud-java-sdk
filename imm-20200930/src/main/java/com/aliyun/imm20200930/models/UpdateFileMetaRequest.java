@@ -8,7 +8,7 @@ public class UpdateFileMetaRequest extends TeaModel {
     public String datasetName;
 
     @NameInMap("File")
-    public FileForReq file;
+    public InputFile file;
 
     @NameInMap("ProjectName")
     public String projectName;
@@ -26,11 +26,11 @@ public class UpdateFileMetaRequest extends TeaModel {
         return this.datasetName;
     }
 
-    public UpdateFileMetaRequest setFile(FileForReq file) {
+    public UpdateFileMetaRequest setFile(InputFile file) {
         this.file = file;
         return this;
     }
-    public FileForReq getFile() {
+    public InputFile getFile() {
         return this.file;
     }
 

@@ -8,7 +8,7 @@ public class BatchUpdateFileMetaRequest extends TeaModel {
     public String datasetName;
 
     @NameInMap("Files")
-    public java.util.List<FileForReq> files;
+    public java.util.List<InputFile> files;
 
     @NameInMap("ProjectName")
     public String projectName;
@@ -26,11 +26,11 @@ public class BatchUpdateFileMetaRequest extends TeaModel {
         return this.datasetName;
     }
 
-    public BatchUpdateFileMetaRequest setFiles(java.util.List<FileForReq> files) {
+    public BatchUpdateFileMetaRequest setFiles(java.util.List<InputFile> files) {
         this.files = files;
         return this;
     }
-    public java.util.List<FileForReq> getFiles() {
+    public java.util.List<InputFile> getFiles() {
         return this.files;
     }
 
