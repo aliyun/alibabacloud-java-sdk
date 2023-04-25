@@ -4,18 +4,33 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class GetConsumerProgressResponseBody extends TeaModel {
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The time when the last message consumed by the consumer group was generated.</p>
+     */
     @NameInMap("ConsumerProgress")
     public GetConsumerProgressResponseBodyConsumerProgress consumerProgress;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The consumption status of the consumer group.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,15 +80,27 @@ public class GetConsumerProgressResponseBody extends TeaModel {
     }
 
     public static class GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetListOffsetList extends TeaModel {
+        /**
+         * <p>The consumer offset in the partition of the topic.</p>
+         */
         @NameInMap("BrokerOffset")
         public Long brokerOffset;
 
+        /**
+         * <p>The time when the last consumed message in the partition was generated.</p>
+         */
         @NameInMap("ConsumerOffset")
         public Long consumerOffset;
 
+        /**
+         * <p>Queries the consumption status of a specified consumer group.</p>
+         */
         @NameInMap("LastTimestamp")
         public Long lastTimestamp;
 
+        /**
+         * <p>The latest offset in the partition of the topic.</p>
+         */
         @NameInMap("Partition")
         public Integer partition;
 
@@ -136,15 +163,27 @@ public class GetConsumerProgressResponseBody extends TeaModel {
     }
 
     public static class GetConsumerProgressResponseBodyConsumerProgressTopicListTopicList extends TeaModel {
+        /**
+         * <p>The name of the topic.</p>
+         */
         @NameInMap("LastTimestamp")
         public Long lastTimestamp;
 
+        /**
+         * <p>The ID of the partition.</p>
+         */
         @NameInMap("OffsetList")
         public GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetList offsetList;
 
+        /**
+         * <p>The information about offsets in the topic.</p>
+         */
         @NameInMap("Topic")
         public String topic;
 
+        /**
+         * <p>The time when the last consumed message in the topic was generated.</p>
+         */
         @NameInMap("TotalDiff")
         public Long totalDiff;
 
@@ -207,12 +246,21 @@ public class GetConsumerProgressResponseBody extends TeaModel {
     }
 
     public static class GetConsumerProgressResponseBodyConsumerProgress extends TeaModel {
+        /**
+         * <p>The number of messages that were not consumed in all topics. This is also known as the number of accumulated messages in all topics.</p>
+         */
         @NameInMap("LastTimestamp")
         public Long lastTimestamp;
 
+        /**
+         * <p>The number of messages that were not consumed in the topic. This is also known as the number of accumulated messages in the topic.</p>
+         */
         @NameInMap("TopicList")
         public GetConsumerProgressResponseBodyConsumerProgressTopicList topicList;
 
+        /**
+         * <p>The consumption progress of each topic to which the consumer group is subscribed.</p>
+         */
         @NameInMap("TotalDiff")
         public Long totalDiff;
 

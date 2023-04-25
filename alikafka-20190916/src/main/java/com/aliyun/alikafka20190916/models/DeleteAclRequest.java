@@ -4,24 +4,57 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class DeleteAclRequest extends TeaModel {
+    /**
+     * <p>The type of operation allowed by the ACL. Valid values:</p>
+     * <br>
+     * <p>*   **Write**</p>
+     * <p>*   **Read**</p>
+     */
     @NameInMap("AclOperationType")
     public String aclOperationType;
 
+    /**
+     * <p>The name of the resource.</p>
+     * <br>
+     * <p>*   The value can be the name of a topic or consumer group.</p>
+     * <p>*   You can use an asterisk (\*) to indicate the names of all topics or consumer groups.</p>
+     */
     @NameInMap("AclResourceName")
     public String aclResourceName;
 
+    /**
+     * <p>The mode that is used to match resources. Valid values:</p>
+     * <br>
+     * <p>*   **LITERAL:** full match</p>
+     * <p>*   **PREFIXED**: prefix match</p>
+     */
     @NameInMap("AclResourcePatternType")
     public String aclResourcePatternType;
 
+    /**
+     * <p>The type of the resource.</p>
+     * <br>
+     * <p>*   **Topic**</p>
+     * <p>*   **Group**</p>
+     */
     @NameInMap("AclResourceType")
     public String aclResourceType;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The name of the user.</p>
+     */
     @NameInMap("Username")
     public String username;
 

@@ -4,15 +4,32 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class DeleteSaslUserRequest extends TeaModel {
+    /**
+     * <p>The name of the user.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>The SASL mechanism. Valid values:</p>
+     * <br>
+     * <p>*   **plain**: a simple mechanism that uses usernames and passwords to verify user identities. Message Queue for Apache Kafka provides an optimized PLAIN mechanism that allows you to dynamically create SASL users for an instance without the need to restart the instance.</p>
+     * <p>*   **scram**: a mechanism that uses usernames and passwords to verify user identities. This mechanism provides better security protection than the PLAIN mechanism. Message Queue for Apache Kafka uses SCRAM-SHA-256.</p>
+     * <br>
+     * <p>Default value: **plain**.</p>
+     */
     @NameInMap("Username")
     public String username;
 

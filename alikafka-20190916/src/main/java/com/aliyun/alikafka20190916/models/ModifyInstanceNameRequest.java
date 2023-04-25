@@ -4,12 +4,24 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceNameRequest extends TeaModel {
+    /**
+     * <p>The region ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>The name of the instance. Valid values:</p>
+     * <br>
+     * <p>*   The name can contain only letters, digits, hyphens (-), and underscores (\_).</p>
+     * <p>*   The name must be 3 to 64 characters in length. If the name that you specify contains more than 64 characters, the system automatically truncates the name to 64 characters.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

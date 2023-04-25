@@ -4,12 +4,21 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class UpdateInstanceConfigRequest extends TeaModel {
+    /**
+     * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+     */
     @NameInMap("Config")
     public String config;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

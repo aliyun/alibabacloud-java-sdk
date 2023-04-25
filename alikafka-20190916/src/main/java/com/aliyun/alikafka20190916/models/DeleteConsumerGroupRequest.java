@@ -4,12 +4,21 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class DeleteConsumerGroupRequest extends TeaModel {
+    /**
+     * <p>The name of the consumer group.</p>
+     */
     @NameInMap("ConsumerId")
     public String consumerId;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

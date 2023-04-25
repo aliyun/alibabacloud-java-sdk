@@ -4,12 +4,21 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class GetConsumerListRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("ConsumerId")
     public String consumerId;
 
+    /**
+     * <p>The tags of the topic.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the consumer group. If you do not configure this parameter, all consumer groups are queried.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

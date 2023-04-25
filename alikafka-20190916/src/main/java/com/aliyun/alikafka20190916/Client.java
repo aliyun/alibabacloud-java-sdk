@@ -271,6 +271,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createPostPayOrderWithOptions(request, runtime);
     }
 
+    /**
+      * The maximum traffic for the instance. We recommend that you do not configure this parameter.
+      * *   You must configure at least one of the **IoMax** and **IoMaxSpec** parameters. If both parameters are configured, the value of the **IoMaxSpec** parameter takes effect. We recommend that you configure only the **IoMaxSpec** parameter.
+      * *   For more information about the valid values, see [Billing](~~84737~~).
+      *
+      * @param request CreatePrePayOrderRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreatePrePayOrderResponse
+     */
     public CreatePrePayOrderResponse createPrePayOrderWithOptions(CreatePrePayOrderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -339,6 +348,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePrePayOrderResponse());
     }
 
+    /**
+      * The maximum traffic for the instance. We recommend that you do not configure this parameter.
+      * *   You must configure at least one of the **IoMax** and **IoMaxSpec** parameters. If both parameters are configured, the value of the **IoMaxSpec** parameter takes effect. We recommend that you configure only the **IoMaxSpec** parameter.
+      * *   For more information about the valid values, see [Billing](~~84737~~).
+      *
+      * @param request CreatePrePayOrderRequest
+      * @return CreatePrePayOrderResponse
+     */
     public CreatePrePayOrderResponse createPrePayOrder(CreatePrePayOrderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createPrePayOrderWithOptions(request, runtime);
@@ -389,21 +406,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createSaslUserWithOptions(request, runtime);
     }
 
-    public CreateTopicResponse createTopicWithOptions(CreateTopicRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        CreateTopicShrinkRequest request = new CreateTopicShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.config)) {
-            request.configShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.config, "Config", "json");
-        }
-
+    /**
+      * The description of the topic.
+      * *   The description can contain only letters, digits, hyphens (-), and underscores (\\_).
+      * *   The description must be 3 to 64 characters in length.
+      *
+      * @param request CreateTopicRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateTopicResponse
+     */
+    public CreateTopicResponse createTopicWithOptions(CreateTopicRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.compactTopic)) {
             query.put("CompactTopic", request.compactTopic);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.configShrink)) {
-            query.put("Config", request.configShrink);
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            query.put("Config", request.config);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
@@ -459,6 +479,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTopicResponse());
     }
 
+    /**
+      * The description of the topic.
+      * *   The description can contain only letters, digits, hyphens (-), and underscores (\\_).
+      * *   The description must be 3 to 64 characters in length.
+      *
+      * @param request CreateTopicRequest
+      * @return CreateTopicResponse
+     */
     public CreateTopicResponse createTopic(CreateTopicRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createTopicWithOptions(request, runtime);
@@ -1207,6 +1235,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyTopicRemarkWithOptions(request, runtime);
     }
 
+    /**
+      * The region ID of the instance.
+      *
+      * @param request ReleaseInstanceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ReleaseInstanceResponse
+     */
     public ReleaseInstanceResponse releaseInstanceWithOptions(ReleaseInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1239,6 +1274,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ReleaseInstanceResponse());
     }
 
+    /**
+      * The region ID of the instance.
+      *
+      * @param request ReleaseInstanceRequest
+      * @return ReleaseInstanceResponse
+     */
     public ReleaseInstanceResponse releaseInstance(ReleaseInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.releaseInstanceWithOptions(request, runtime);
@@ -1488,6 +1529,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateAllowedIpWithOptions(request, runtime);
     }
 
+    public UpdateConsumerOffsetResponse updateConsumerOffsetWithOptions(UpdateConsumerOffsetRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateConsumerOffsetShrinkRequest request = new UpdateConsumerOffsetShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.offsets)) {
+            request.offsetsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.offsets, "Offsets", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.consumerId)) {
+            query.put("ConsumerId", request.consumerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.offsetsShrink)) {
+            query.put("Offsets", request.offsetsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resetType)) {
+            query.put("ResetType", request.resetType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.time)) {
+            query.put("Time", request.time);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topic)) {
+            query.put("Topic", request.topic);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateConsumerOffset"),
+            new TeaPair("version", "2019-09-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateConsumerOffsetResponse());
+    }
+
+    public UpdateConsumerOffsetResponse updateConsumerOffset(UpdateConsumerOffsetRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateConsumerOffsetWithOptions(request, runtime);
+    }
+
+    /**
+      * The region ID of the instance.
+      *
+      * @param request UpdateInstanceConfigRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateInstanceConfigResponse
+     */
     public UpdateInstanceConfigResponse updateInstanceConfigWithOptions(UpdateInstanceConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1520,11 +1627,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateInstanceConfigResponse());
     }
 
+    /**
+      * The region ID of the instance.
+      *
+      * @param request UpdateInstanceConfigRequest
+      * @return UpdateInstanceConfigResponse
+     */
     public UpdateInstanceConfigResponse updateInstanceConfig(UpdateInstanceConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateInstanceConfigWithOptions(request, runtime);
     }
 
+    /**
+      * ## **Permissions**
+      * A RAM user must be granted the required permissions before the RAM user call the **UpgradeInstanceVersion** operation. For information about how to grant permissions, see [RAM policies](~~185815~~).
+      * |API|Action|Resource|
+      * |---|---|---|
+      * |UpgradeInstanceVersion|UpdateInstance|acs:alikafka:*:*:{instanceId}|
+      * ## **QPS limits**
+      * You can send a maximum of two queries per second (QPS).
+      *
+      * @param request UpgradeInstanceVersionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpgradeInstanceVersionResponse
+     */
     public UpgradeInstanceVersionResponse upgradeInstanceVersionWithOptions(UpgradeInstanceVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1557,11 +1683,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpgradeInstanceVersionResponse());
     }
 
+    /**
+      * ## **Permissions**
+      * A RAM user must be granted the required permissions before the RAM user call the **UpgradeInstanceVersion** operation. For information about how to grant permissions, see [RAM policies](~~185815~~).
+      * |API|Action|Resource|
+      * |---|---|---|
+      * |UpgradeInstanceVersion|UpdateInstance|acs:alikafka:*:*:{instanceId}|
+      * ## **QPS limits**
+      * You can send a maximum of two queries per second (QPS).
+      *
+      * @param request UpgradeInstanceVersionRequest
+      * @return UpgradeInstanceVersionResponse
+     */
     public UpgradeInstanceVersionResponse upgradeInstanceVersion(UpgradeInstanceVersionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.upgradeInstanceVersionWithOptions(request, runtime);
     }
 
+    /**
+      * Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see [Billing](~~84737~~).
+      *
+      * @param request UpgradePostPayOrderRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpgradePostPayOrderResponse
+     */
     public UpgradePostPayOrderResponse upgradePostPayOrderWithOptions(UpgradePostPayOrderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1622,11 +1767,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpgradePostPayOrderResponse());
     }
 
+    /**
+      * Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see [Billing](~~84737~~).
+      *
+      * @param request UpgradePostPayOrderRequest
+      * @return UpgradePostPayOrderResponse
+     */
     public UpgradePostPayOrderResponse upgradePostPayOrder(UpgradePostPayOrderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.upgradePostPayOrderWithOptions(request, runtime);
     }
 
+    /**
+      * The size of the disk.
+      * *   The disk size that you specify must be greater than or equal to the current disk size of the instance.
+      * *   For more information about the valid values, see [Billing overview](~~84737~~).
+      *
+      * @param request UpgradePrePayOrderRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpgradePrePayOrderResponse
+     */
     public UpgradePrePayOrderResponse upgradePrePayOrderWithOptions(UpgradePrePayOrderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1687,6 +1847,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpgradePrePayOrderResponse());
     }
 
+    /**
+      * The size of the disk.
+      * *   The disk size that you specify must be greater than or equal to the current disk size of the instance.
+      * *   For more information about the valid values, see [Billing overview](~~84737~~).
+      *
+      * @param request UpgradePrePayOrderRequest
+      * @return UpgradePrePayOrderResponse
+     */
     public UpgradePrePayOrderResponse upgradePrePayOrder(UpgradePrePayOrderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.upgradePrePayOrderWithOptions(request, runtime);

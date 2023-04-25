@@ -4,18 +4,33 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class GetTopicListRequest extends TeaModel {
+    /**
+     * <p>The name of the topic that you want to query.</p>
+     */
     @NameInMap("CurrentPage")
     public String currentPage;
 
+    /**
+     * <p>The region ID of the instance whose topics you want to query.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The number of the returned page.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     */
     @NameInMap("Topic")
     public String topic;
 

@@ -4,12 +4,21 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class DeleteTopicRequest extends TeaModel {
+    /**
+     * <p>The name of the topic.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     */
     @NameInMap("Topic")
     public String topic;
 

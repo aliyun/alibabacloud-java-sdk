@@ -4,9 +4,15 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class UpgradePrePayOrderResponseBody extends TeaModel {
+    /**
+     * <p>Upgrades a Message Queue for Apache Kafka instance that uses the subscription billing method.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>261860</p>
+     */
     @NameInMap("Message")
     public String message;
 
