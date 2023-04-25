@@ -95,6 +95,12 @@ public class DescribePortFlowListResponseBody extends TeaModel {
         @NameInMap("Region")
         public String region;
 
+        @NameInMap("SlaBps")
+        public Long slaBps;
+
+        @NameInMap("SlaPps")
+        public Long slaPps;
+
         /**
          * <p>The time when the data was collected. The value is a UNIX timestamp. Unit: seconds.</p>
          */
@@ -168,6 +174,22 @@ public class DescribePortFlowListResponseBody extends TeaModel {
         }
         public String getRegion() {
             return this.region;
+        }
+
+        public DescribePortFlowListResponseBodyPortFlowList setSlaBps(Long slaBps) {
+            this.slaBps = slaBps;
+            return this;
+        }
+        public Long getSlaBps() {
+            return this.slaBps;
+        }
+
+        public DescribePortFlowListResponseBodyPortFlowList setSlaPps(Long slaPps) {
+            this.slaPps = slaPps;
+            return this;
+        }
+        public Long getSlaPps() {
+            return this.slaPps;
         }
 
         public DescribePortFlowListResponseBodyPortFlowList setTime(Long time) {
