@@ -10,6 +10,9 @@ public class ModifyUserRequest extends TeaModel {
     @NameInMap("DisplayName")
     public String displayName;
 
+    @NameInMap("Force")
+    public Boolean force;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -44,6 +47,14 @@ public class ModifyUserRequest extends TeaModel {
     }
     public String getDisplayName() {
         return this.displayName;
+    }
+
+    public ModifyUserRequest setForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
+    public Boolean getForce() {
+        return this.force;
     }
 
     public ModifyUserRequest setInstanceId(String instanceId) {

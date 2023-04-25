@@ -77,7 +77,7 @@ public class BridgeRtcCallResponseBody extends TeaModel {
 
     public static class BridgeRtcCallResponseBodyData extends TeaModel {
         @NameInMap("InstanceId")
-        public Long instanceId;
+        public String instanceId;
 
         @NameInMap("JobId")
         public String jobId;
@@ -90,11 +90,11 @@ public class BridgeRtcCallResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public BridgeRtcCallResponseBodyData setInstanceId(Long instanceId) {
+        public BridgeRtcCallResponseBodyData setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
-        public Long getInstanceId() {
+        public String getInstanceId() {
             return this.instanceId;
         }
 

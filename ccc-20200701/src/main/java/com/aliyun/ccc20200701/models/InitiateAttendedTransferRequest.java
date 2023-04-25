@@ -4,6 +4,9 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class InitiateAttendedTransferRequest extends TeaModel {
+    @NameInMap("CallPriority")
+    public Integer callPriority;
+
     @NameInMap("DeviceId")
     public String deviceId;
 
@@ -12,6 +15,12 @@ public class InitiateAttendedTransferRequest extends TeaModel {
 
     @NameInMap("JobId")
     public String jobId;
+
+    @NameInMap("StrategyName")
+    public String strategyName;
+
+    @NameInMap("StrategyParams")
+    public String strategyParams;
 
     @NameInMap("TimeoutSeconds")
     public Integer timeoutSeconds;
@@ -28,6 +37,14 @@ public class InitiateAttendedTransferRequest extends TeaModel {
     public static InitiateAttendedTransferRequest build(java.util.Map<String, ?> map) throws Exception {
         InitiateAttendedTransferRequest self = new InitiateAttendedTransferRequest();
         return TeaModel.build(map, self);
+    }
+
+    public InitiateAttendedTransferRequest setCallPriority(Integer callPriority) {
+        this.callPriority = callPriority;
+        return this;
+    }
+    public Integer getCallPriority() {
+        return this.callPriority;
     }
 
     public InitiateAttendedTransferRequest setDeviceId(String deviceId) {
@@ -52,6 +69,22 @@ public class InitiateAttendedTransferRequest extends TeaModel {
     }
     public String getJobId() {
         return this.jobId;
+    }
+
+    public InitiateAttendedTransferRequest setStrategyName(String strategyName) {
+        this.strategyName = strategyName;
+        return this;
+    }
+    public String getStrategyName() {
+        return this.strategyName;
+    }
+
+    public InitiateAttendedTransferRequest setStrategyParams(String strategyParams) {
+        this.strategyParams = strategyParams;
+        return this;
+    }
+    public String getStrategyParams() {
+        return this.strategyParams;
     }
 
     public InitiateAttendedTransferRequest setTimeoutSeconds(Integer timeoutSeconds) {

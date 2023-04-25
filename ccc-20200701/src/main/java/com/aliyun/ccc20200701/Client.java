@@ -397,6 +397,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.answerCallWithOptions(request, runtime);
     }
 
+    public AppendCasesResponse appendCasesWithOptions(AppendCasesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AppendCasesShrinkRequest request = new AppendCasesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.campaignId)) {
+            query.put("CampaignId", request.campaignId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AppendCases"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AppendCasesResponse());
+    }
+
+    public AppendCasesResponse appendCases(AppendCasesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.appendCasesWithOptions(request, runtime);
+    }
+
     public AssignUsersResponse assignUsersWithOptions(AssignUsersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -494,6 +539,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public BlindTransferResponse blindTransferWithOptions(BlindTransferRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.callPriority)) {
+            query.put("CallPriority", request.callPriority);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.deviceId)) {
             query.put("DeviceId", request.deviceId);
         }
@@ -504,6 +553,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
             query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.strategyName)) {
+            query.put("StrategyName", request.strategyName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.strategyParams)) {
+            query.put("StrategyParams", request.strategyParams);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.timeoutSeconds)) {
@@ -2608,6 +2665,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public InitiateAttendedTransferResponse initiateAttendedTransferWithOptions(InitiateAttendedTransferRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.callPriority)) {
+            query.put("CallPriority", request.callPriority);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.deviceId)) {
             query.put("DeviceId", request.deviceId);
         }
@@ -2618,6 +2679,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
             query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.strategyName)) {
+            query.put("StrategyName", request.strategyName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.strategyParams)) {
+            query.put("StrategyParams", request.strategyParams);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.timeoutSeconds)) {
@@ -5152,6 +5221,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DisplayName", request.displayName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.force)) {
+            query.put("Force", request.force);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -5915,6 +5988,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RemoveUsersResponse removeUsersWithOptions(RemoveUsersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.force)) {
+            query.put("Force", request.force);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
