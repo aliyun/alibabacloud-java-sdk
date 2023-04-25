@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class AssociateWebCertRequest extends TeaModel {
     /**
-     * <p>The public key of the certificate that you want to associate. This parameter must be used together with the **CertName** and **Key** parameters.</p>
+     * <p>The public key of the certificate that you want to associate. This parameter must be used together with **CertName** and **Key**.</p>
      * <br>
-     * <p>> If you specify a value for the **CertName**, **Cert**, and **Key** parameters, you do not need to specify a value for the **CertId** parameter.</p>
+     * <p>> If you specify **CertName**, **Cert**, and **Key**, you do not need to specify **CertId**.</p>
      */
     @NameInMap("Cert")
     public String cert;
@@ -37,9 +37,9 @@ public class AssociateWebCertRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>The private key of the certificate that you want to associate. This parameter must be used together with the **CertName** and **Cert** parameters.</p>
+     * <p>The private key of the certificate that you want to associate. This parameter must be used together with **CertName** and **Cert**.</p>
      * <br>
-     * <p>> If you specify a value for the **CertName**, **Cert**, and **Key** parameters, you do not need to specify a value for the **CertId** parameter.</p>
+     * <p>> If you specify **CertName**, **Cert**, and **Key**, you do not need to specify **CertId**.</p>
      */
     @NameInMap("Key")
     public String key;
