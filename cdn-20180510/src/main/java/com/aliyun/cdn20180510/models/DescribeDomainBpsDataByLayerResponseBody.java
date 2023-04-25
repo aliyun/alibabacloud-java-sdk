@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainBpsDataByLayerResponseBody extends TeaModel {
     /**
-     * <p>The number of bytes per second collected at each time interval.</p>
+     * <p>The data returned at each time interval.</p>
      */
     @NameInMap("BpsDataInterval")
     public DescribeDomainBpsDataByLayerResponseBodyBpsDataInterval bpsDataInterval;
@@ -53,7 +53,7 @@ public class DescribeDomainBpsDataByLayerResponseBody extends TeaModel {
 
     public static class DescribeDomainBpsDataByLayerResponseBodyBpsDataIntervalDataModule extends TeaModel {
         /**
-         * <p>The timestamp of the data returned.</p>
+         * <p>The timestamp of the returned data.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

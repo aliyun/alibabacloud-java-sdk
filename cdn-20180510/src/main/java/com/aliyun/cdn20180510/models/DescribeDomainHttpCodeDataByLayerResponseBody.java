@@ -11,7 +11,7 @@ public class DescribeDomainHttpCodeDataByLayerResponseBody extends TeaModel {
     public String dataInterval;
 
     /**
-     * <p>The number of HTTP status codes returned at each time interval.</p>
+     * <p>The statistics of HTTP status codes returned at each time interval.</p>
      */
     @NameInMap("HttpCodeDataInterval")
     public DescribeDomainHttpCodeDataByLayerResponseBodyHttpCodeDataInterval httpCodeDataInterval;
@@ -59,7 +59,7 @@ public class DescribeDomainHttpCodeDataByLayerResponseBody extends TeaModel {
         public String timeStamp;
 
         /**
-         * <p>The total number of times that HTTP status codes were returned at each time interval.</p>
+         * <p>The total number of times that HTTP status codes were returned.</p>
          */
         @NameInMap("TotalValue")
         public String totalValue;

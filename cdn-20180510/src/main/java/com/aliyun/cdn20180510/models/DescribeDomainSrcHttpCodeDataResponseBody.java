@@ -17,7 +17,7 @@ public class DescribeDomainSrcHttpCodeDataResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range that was queried.</p>
+     * <p>The end of the time range during which data was queried.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -35,7 +35,7 @@ public class DescribeDomainSrcHttpCodeDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range that was queried.</p>
+     * <p>The start of the time range during which data was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -95,13 +95,13 @@ public class DescribeDomainSrcHttpCodeDataResponseBody extends TeaModel {
 
     public static class DescribeDomainSrcHttpCodeDataResponseBodyHttpCodeDataUsageDataValueCodeProportionData extends TeaModel {
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The HTTP status code returned.</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
-         * <p>The total number of HTTP status codes returned.</p>
+         * <p>The total number of entries.</p>
          */
         @NameInMap("Count")
         public String count;
@@ -164,13 +164,13 @@ public class DescribeDomainSrcHttpCodeDataResponseBody extends TeaModel {
 
     public static class DescribeDomainSrcHttpCodeDataResponseBodyHttpCodeDataUsageData extends TeaModel {
         /**
-         * <p>The timestamp of the data returned.</p>
+         * <p>The timestamp of the returned data.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         /**
-         * <p>The proportions of HTTP status codes.</p>
+         * <p>The proportions of the HTTP status codes.</p>
          */
         @NameInMap("Value")
         public DescribeDomainSrcHttpCodeDataResponseBodyHttpCodeDataUsageDataValue value;

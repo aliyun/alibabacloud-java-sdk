@@ -8,7 +8,7 @@ public class RefreshObjectCachesRequest extends TeaModel {
     public String objectPath;
 
     /**
-     * <p>The type of the object that you want to refresh. Valid values:</p>
+     * <p>The type of the object that you want to refresh. Default value: File. Valid values:</p>
      * <br>
      * <p>*   **File**: refreshes one or more files.</p>
      * <p>*   **Directory**: refreshes the files in one or more directories.</p>

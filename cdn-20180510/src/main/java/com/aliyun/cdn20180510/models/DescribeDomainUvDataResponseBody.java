@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainUvDataResponseBody extends TeaModel {
     /**
-     * <p>The time interval between the data entries. Unit: seconds.</p>
+     * <p>The time interval. Unit: seconds.</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;

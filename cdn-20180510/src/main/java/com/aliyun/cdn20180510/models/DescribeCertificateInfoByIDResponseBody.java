@@ -39,7 +39,7 @@ public class DescribeCertificateInfoByIDResponseBody extends TeaModel {
 
     public static class DescribeCertificateInfoByIDResponseBodyCertInfosCertInfo extends TeaModel {
         /**
-         * <p>The expiration time of the certificate.</p>
+         * <p>The time at which the certificate expires.</p>
          */
         @NameInMap("CertExpireTime")
         public String certExpireTime;
@@ -59,9 +59,9 @@ public class DescribeCertificateInfoByIDResponseBody extends TeaModel {
         /**
          * <p>The type of the certificate.</p>
          * <br>
-         * <p>*   free: a free certificate.</p>
-         * <p>*   cas: a certificate purchased by using Certificate Management Service.</p>
-         * <p>*   upload: a user-uploaded certificate.</p>
+         * <p>*   free: a free certificate</p>
+         * <p>*   cas: a certificate purchased by using Certificate Management Service</p>
+         * <p>*   upload: a user-uploaded certificate</p>
          */
         @NameInMap("CertType")
         public String certType;
@@ -73,7 +73,7 @@ public class DescribeCertificateInfoByIDResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>A list of domain names that use the certificate.</p>
+         * <p>The domain names that use the certificate.</p>
          */
         @NameInMap("DomainList")
         public String domainList;

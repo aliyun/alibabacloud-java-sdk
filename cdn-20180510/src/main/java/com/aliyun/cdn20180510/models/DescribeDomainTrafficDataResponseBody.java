@@ -17,7 +17,7 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range that was queried.</p>
+     * <p>The end of the time range during which data was queried.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -29,7 +29,7 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range that was queried.</p>
+     * <p>The start of the time range during which data was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -101,19 +101,19 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
         public String domesticValue;
 
         /**
-         * <p>The amount of HTTPS network traffic on L1 edge nodes in the Chinese mainland.</p>
+         * <p>The amount of HTTPS traffic on points of presence (POPs) in the Chinese mainland.</p>
          */
         @NameInMap("HttpsDomesticValue")
         public String httpsDomesticValue;
 
         /**
-         * <p>The amount of HTTPS network traffic on L1 edge nodes outside the Chinese mainland.</p>
+         * <p>The amount of HTTPS traffic on POPs outside the Chinese mainland.</p>
          */
         @NameInMap("HttpsOverseasValue")
         public String httpsOverseasValue;
 
         /**
-         * <p>The total amount of HTTPS network traffic on L1 edge nodes.</p>
+         * <p>The total amount of HTTPS traffic on POPs.</p>
          */
         @NameInMap("HttpsValue")
         public String httpsValue;
@@ -125,13 +125,13 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
         public String overseasValue;
 
         /**
-         * <p>The timestamp of the data returned.</p>
+         * <p>The timestamp of the returned data.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         /**
-         * <p>The total amount of network traffic.</p>
+         * <p>The total volume of traffic.</p>
          */
         @NameInMap("Value")
         public String value;

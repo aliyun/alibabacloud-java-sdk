@@ -7,7 +7,7 @@ public class DescribeDomainRealTimeTrafficDataResponseBody extends TeaModel {
     /**
      * <p>The time interval between the data entries returned. Unit: seconds.</p>
      * <br>
-     * <p>The time granularity varies with the time range to query. Supported values: 60 (1 minute), 300 (5 minutes), and 3600(1 hour). For more information, see the usage notes.</p>
+     * <p>Depending on the maximum time range per query, the value is 60 (1 minute), 300 (5 minutes), or 3600 (1 hour). For more information, see the "Time granularity" section in Usage notes.</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
@@ -19,13 +19,13 @@ public class DescribeDomainRealTimeTrafficDataResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range that was queried.</p>
+     * <p>The end of the time range during which data was queried.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The amount of network traffic at each time interval. Unit: bytes.</p>
+     * <p>The network traffic returned at each time interval. Unit: bytes.</p>
      */
     @NameInMap("RealTimeTrafficDataPerInterval")
     public DescribeDomainRealTimeTrafficDataResponseBodyRealTimeTrafficDataPerInterval realTimeTrafficDataPerInterval;
@@ -37,7 +37,7 @@ public class DescribeDomainRealTimeTrafficDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range that was queried.</p>
+     * <p>The start of the time range during which data was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -97,13 +97,13 @@ public class DescribeDomainRealTimeTrafficDataResponseBody extends TeaModel {
 
     public static class DescribeDomainRealTimeTrafficDataResponseBodyRealTimeTrafficDataPerIntervalDataModule extends TeaModel {
         /**
-         * <p>The timestamp of the data returned.</p>
+         * <p>The timestamp of the returned data.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         /**
-         * <p>The amount of network traffic.</p>
+         * <p>The traffic value at each time interval.</p>
          */
         @NameInMap("Value")
         public String value;

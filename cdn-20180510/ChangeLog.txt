@@ -1,3 +1,6 @@
+2023-04-25 Version: 1.2.3
+- Add CheckCdnDomainExist.
+
 2023-03-29 Version: 1.2.2
 - Delete DescribeConfigOfVersion.
 

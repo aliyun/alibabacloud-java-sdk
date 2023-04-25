@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainUsageDataRequest extends TeaModel {
     /**
-     * <p>The ID of the billable region. Valid values:</p>
+     * <p>The billable region. Default value: CN. Valid values:</p>
      * <br>
-     * <p>*   **CN** (default): the Chinese mainland</p>
+     * <p>*   **CN**: Chinese mainland</p>
      * <p>*   **OverSeas**: outside the Chinese mainland</p>
      * <p>*   **AP1**: Asia Pacific 1</p>
      * <p>*   **AP2**: Asia Pacific 2</p>
@@ -16,28 +16,26 @@ public class DescribeDomainUsageDataRequest extends TeaModel {
      * <p>*   **SA**: South America</p>
      * <p>*   **EU**: Europe</p>
      * <p>*   **MEAA**: Middle East and Africa</p>
-     * <p>*   **all**: all billable regions</p>
-     * <br>
-     * <p>>  For more information about billable regions, see [Billable regions](~~142221~~).</p>
+     * <p>*   **all**: all the preceding billable regions</p>
      */
     @NameInMap("Area")
     public String area;
 
     /**
-     * <p>The protocol by which the data is queried. Valid values:</p>
+     * <p>The protocol of the data that you want to query. Default value: all. Valid values:</p>
      * <br>
      * <p>*   **http**: HTTP</p>
      * <p>*   **https**: HTTPS</p>
      * <p>*   **quic**: QUIC</p>
-     * <p>*   **all** (default): HTTP, HTTPS, and QUIC</p>
+     * <p>*   **all**: HTTP, HTTPS, and QUIC</p>
      */
     @NameInMap("DataProtocol")
     public String dataProtocol;
 
     /**
-     * <p>The accelerated domain name. You can query the resource usage data for a maximum of 100 domain names in each call. Separate domain names with commas (,).</p>
+     * <p>The accelerated domain name. You can specify up to 100 domain names in each request. Separate multiple domain names with commas (,).</p>
      * <br>
-     * <p>>  If you do not set this parameter, the usage data of all accelerated domain names within your Alibaba Cloud account is returned.</p>
+     * <p>> If you leave this parameter empty, the usage data of all accelerated domain names in your Alibaba Cloud account is returned.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -47,27 +45,29 @@ public class DescribeDomainUsageDataRequest extends TeaModel {
      * <br>
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
-     * <p>>  The end time must be later than the start time. The maximum time range that can be queried is 31 days.</p>
+     * <p>> The end time must be later than the start time. The maximum time range that can be specified is 31 days.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The type of data to be queried. Valid values:</p>
+     * <p>The type of data that you want to query. Valid values:</p>
      * <br>
      * <p>*   **bps**: bandwidth</p>
-     * <p>*   **traf**: network traffic</p>
+     * <p>*   **traf**: traffic</p>
      * <p>*   **acc**: requests</p>
      * <br>
-     * <p>>  **acc** does not support the **Area** parameter.</p>
+     * <p>> If you set this parameter to **acc**, the **Area** parameter is not supported.</p>
      */
     @NameInMap("Field")
     public String field;
 
     /**
-     * <p>The time interval between the data entries. Unit: seconds.</p>
+     * <p>The time interval between the data entries to return. Unit: seconds. Valid values: **300** (5 minutes), **3600** (1 hour), and **86400** (1 day).</p>
      * <br>
-     * <p>The time granularity varies with the time range to query. Supported values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see **Usage notes**.</p>
+     * <p>*   If **Interval** is set to **300**, you can query usage data in the last six months. The maximum time range per query that can be specified is three days.</p>
+     * <p>*   If **Interval** is set to **3600** or **86400**, you can query usage data of the previous year.</p>
+     * <p>*   If you do not set the **Interval** parameter, the maximum time range that you can query is one month. If you specify a time range of 1 to 3 days, the time interval between the entries that are returned is 1 hour. If you specify a time range of at least 4 days, the time interval between the entries that are returned is 1 day.</p>
      */
     @NameInMap("Interval")
     public String interval;
@@ -77,17 +77,17 @@ public class DescribeDomainUsageDataRequest extends TeaModel {
      * <br>
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
-     * <p>>  The data is collected every 5 minutes.</p>
+     * <p>> Data is collected every 5 minutes.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The type of content based on which the data is queried. Valid values:</p>
+     * <p>The type of content that you want to query. Default value: all. Valid values:</p>
      * <br>
      * <p>*   **static**: static content</p>
      * <p>*   **dynamic**: dynamic content</p>
-     * <p>*   **all** (default): both static and dynamic content</p>
+     * <p>*   **all**: both static and dynamic content</p>
      */
     @NameInMap("Type")
     public String type;

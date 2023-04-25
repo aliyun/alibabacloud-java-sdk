@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateUsageDetailDataExportTaskResponseBody extends TeaModel {
     /**
-     * <p>The end of the time range that was queried.</p>
+     * <p>The end of the time range for which the data was queried.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -17,7 +17,7 @@ public class CreateUsageDetailDataExportTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range that was queried.</p>
+     * <p>The beginning of the time range for which the data was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

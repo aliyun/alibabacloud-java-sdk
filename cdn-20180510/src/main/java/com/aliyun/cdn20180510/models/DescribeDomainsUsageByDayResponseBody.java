@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
     /**
-     * <p>The time interval between the data entries. Unit: seconds.</p>
+     * <p>The time interval between the data entries returned. Unit: seconds.</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
 
     /**
-     * <p>The information about the accelerated domain name.</p>
+     * <p>The accelerated domain name.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The end of the time range that was queried.</p>
+     * <p>The end of the time range during which data was queried.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -29,7 +29,7 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The start of the time range that was queried.</p>
+     * <p>The start of the time range during which data was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -109,7 +109,7 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
 
     public static class DescribeDomainsUsageByDayResponseBodyUsageByDaysUsageByDay extends TeaModel {
         /**
-         * <p>The cache hit ratio that is calculated based on bytes. The cache hit ratio is measured in percentage.</p>
+         * <p>The byte hit ratio. The byte hit ratio is measured in percentage.</p>
          */
         @NameInMap("BytesHitRate")
         public String bytesHitRate;
@@ -276,7 +276,7 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
 
     public static class DescribeDomainsUsageByDayResponseBodyUsageTotal extends TeaModel {
         /**
-         * <p>The cache hit ratio that is calculated based on bytes. The cache hit ratio is measured in percentage.</p>
+         * <p>The byte hit ratio. The byte hit ratio is measured in percentage.</p>
          */
         @NameInMap("BytesHitRate")
         public String bytesHitRate;
@@ -312,7 +312,7 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
         public String requestHitRate;
 
         /**
-         * <p>The total number of requests.</p>
+         * <p>The total amount of requests.</p>
          */
         @NameInMap("TotalAccess")
         public String totalAccess;

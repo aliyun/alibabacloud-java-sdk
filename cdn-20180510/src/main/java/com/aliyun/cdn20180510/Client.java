@@ -527,10 +527,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - After an accelerated domain name is disabled, Alibaba Cloud Content Delivery Network (CDN) retains the information about the accelerated domain name and automatically redirects requests to the origin server.
-      * *   If you need to temporary disable CDN acceleration for a domain name, we recommend that you call the StopDomain operation.
-      * *   The maximum number of domain names configured at a time is 50.
-      * *   The maximum number of times that each user can call this operation per second is 30.
+      * *   After an accelerated domain name is disabled, Alibaba Cloud CDN retains its information and reroutes all the requests that are destined for the accelerated domain name to the origin.
+      * *   If you need to temporarily disable CDN acceleration for a domain name, we recommend that you call the StopDomain operation.
+      * *   You can call this operation up to 30 times per second per account.
+      * *   You can specify up to 50 domain names in each request.
       *
       * @param request BatchStopCdnDomainRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -569,10 +569,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - After an accelerated domain name is disabled, Alibaba Cloud Content Delivery Network (CDN) retains the information about the accelerated domain name and automatically redirects requests to the origin server.
-      * *   If you need to temporary disable CDN acceleration for a domain name, we recommend that you call the StopDomain operation.
-      * *   The maximum number of domain names configured at a time is 50.
-      * *   The maximum number of times that each user can call this operation per second is 30.
+      * *   After an accelerated domain name is disabled, Alibaba Cloud CDN retains its information and reroutes all the requests that are destined for the accelerated domain name to the origin.
+      * *   If you need to temporarily disable CDN acceleration for a domain name, we recommend that you call the StopDomain operation.
+      * *   You can call this operation up to 30 times per second per account.
+      * *   You can specify up to 50 domain names in each request.
       *
       * @param request BatchStopCdnDomainRequest
       * @return BatchStopCdnDomainResponse
@@ -775,8 +775,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > - This operation allows you to customize an operations report for a specific domain name. You can view the statistics about the domain name in the report.
-      * - You can call this API operation up to three times per second per account.
+      * *   This operation allows you to create a custom operations report for a specific domain name. You can view the statistics about the domain name in the report.
+      * *   You can call this operation up to three times per second per account.
       *
       * @param request CreateCdnSubTaskRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -811,8 +811,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > - This operation allows you to customize an operations report for a specific domain name. You can view the statistics about the domain name in the report.
-      * - You can call this API operation up to three times per second per account.
+      * *   This operation allows you to create a custom operations report for a specific domain name. You can view the statistics about the domain name in the report.
+      * *   You can call this operation up to three times per second per account.
       *
       * @param request CreateCdnSubTaskRequest
       * @return CreateCdnSubTaskResponse
@@ -911,8 +911,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - You can create a task that queries data of up to the last year. The maximum time range that can be queried is one month.
-      * - The maximum number of times that each Alibaba Cloud account can call this operation per second is 100.
+      * *   You can create a task to query data in the last year. The maximum time range that can be queried is one month.
+      * *   You can call this operation up to 100 times per second per account.
       *
       * @param request CreateUsageDetailDataExportTaskRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -967,8 +967,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - You can create a task that queries data of up to the last year. The maximum time range that can be queried is one month.
-      * - The maximum number of times that each Alibaba Cloud account can call this operation per second is 100.
+      * *   You can create a task to query data in the last year. The maximum time range that can be queried is one month.
+      * *   You can call this operation up to 100 times per second per account.
       *
       * @param request CreateUsageDetailDataExportTaskRequest
       * @return CreateUsageDetailDataExportTaskResponse
@@ -979,8 +979,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > *   You can create a task that queries data of up to the last one year. The maximum time range that can be queried is one month.
-      * > *   The maximum number of times that each user can call this operation per second is 100.
+      * *   You can create a task to query data in the last year. The maximum time range that can be queried is one month.
+      * *   You can call this operation up to 100 times per second per account.
       *
       * @param request CreateUserUsageDataExportTaskRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1023,8 +1023,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > *   You can create a task that queries data of up to the last one year. The maximum time range that can be queried is one month.
-      * > *   The maximum number of times that each user can call this operation per second is 100.
+      * *   You can create a task to query data in the last year. The maximum time range that can be queried is one month.
+      * *   You can call this operation up to 100 times per second per account.
       *
       * @param request CreateUserUsageDataExportTaskRequest
       * @return CreateUserUsageDataExportTaskResponse
@@ -1645,7 +1645,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  You can call this operation up to three times per second.
+      * > You can call this operation up to 3 times per second per account.
       *
       * @param request DescribeCdnDeliverListRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1676,7 +1676,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  You can call this operation up to three times per second.
+      * > You can call this operation up to 3 times per second per account.
       *
       * @param request DescribeCdnDeliverListRequest
       * @return DescribeCdnDeliverListResponse
@@ -1687,7 +1687,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  The maximum number of times that each user can call this operation per second is 100.
+      * > You can call this operation up to 100 times per second per account.
       *
       * @param request DescribeCdnDomainByCertificateRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1722,7 +1722,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  The maximum number of times that each user can call this operation per second is 100.
+      * > You can call this operation up to 100 times per second per account.
       *
       * @param request DescribeCdnDomainByCertificateRequest
       * @return DescribeCdnDomainByCertificateResponse
@@ -1841,9 +1841,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > *   If you do not set **StartTime** or **EndTime**, data collected within the last 24 hours is queried. If you set both **StartTime** and **EndTime**, data collected within the specified time range is queried.
-      * *   The log data was collected at an interval of 1 hour.
-      * *   The maximum number of times that each user can call this operation per second is 100.
+      * *   If you do not set **StartTime** or **EndTime**, the request returns the data collected in the last 24 hours. If you set both **StartTime** and **EndTime**, the request returns the data collected within the specified time range.
+      * *   The log data is collected every hour.
+      * *   You can call this operation up to 100 times per second per account.
+      * *   You can query only logs in the last month. The start time and the current time cannot exceed 31 days.
       *
       * @param request DescribeCdnDomainLogsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1890,9 +1891,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > *   If you do not set **StartTime** or **EndTime**, data collected within the last 24 hours is queried. If you set both **StartTime** and **EndTime**, data collected within the specified time range is queried.
-      * *   The log data was collected at an interval of 1 hour.
-      * *   The maximum number of times that each user can call this operation per second is 100.
+      * *   If you do not set **StartTime** or **EndTime**, the request returns the data collected in the last 24 hours. If you set both **StartTime** and **EndTime**, the request returns the data collected within the specified time range.
+      * *   The log data is collected every hour.
+      * *   You can call this operation up to 100 times per second per account.
+      * *   You can query only logs in the last month. The start time and the current time cannot exceed 31 days.
       *
       * @param request DescribeCdnDomainLogsRequest
       * @return DescribeCdnDomainLogsResponse
@@ -1949,7 +1951,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  The maximum number of times that each user can call this operation per second is 100.
+      * > You can call this operation up to 100 times per second per account.
       *
       * @param request DescribeCdnHttpsDomainListRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1988,7 +1990,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  The maximum number of times that each user can call this operation per second is 100.
+      * > You can call this operation up to 100 times per second per account.
       *
       * @param request DescribeCdnHttpsDomainListRequest
       * @return DescribeCdnHttpsDomainListResponse
@@ -2084,7 +2086,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  You can call this operation up to three times per second per account.
+      * > You can call this operation up to three times per second per account.
       *
       * @param request DescribeCdnReportRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2139,7 +2141,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  You can call this operation up to three times per second per account.
+      * > You can call this operation up to three times per second per account.
       *
       * @param request DescribeCdnReportRequest
       * @return DescribeCdnReportResponse
@@ -2375,8 +2377,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 100.
-      * - You can query billing history up to the last one month.
+      * *   You can query billing history up to the last one month.
+      * *   You can call this operation up to 100 times per second per account.
       *
       * @param request DescribeCdnUserBillHistoryRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2411,8 +2413,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 100.
-      * - You can query billing history up to the last one month.
+      * *   You can query billing history up to the last one month.
+      * *   You can call this operation up to 100 times per second per account.
       *
       * @param request DescribeCdnUserBillHistoryRequest
       * @return DescribeCdnUserBillHistoryResponse
@@ -2488,6 +2490,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeCdnUserBillPredictionWithOptions(request, runtime);
     }
 
+    /**
+      * *   You can call this operation up to 100 times per second per account.
+      *
+      * @param request DescribeCdnUserBillTypeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeCdnUserBillTypeResponse
+     */
     public DescribeCdnUserBillTypeResponse describeCdnUserBillTypeWithOptions(DescribeCdnUserBillTypeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2516,6 +2525,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCdnUserBillTypeResponse());
     }
 
+    /**
+      * *   You can call this operation up to 100 times per second per account.
+      *
+      * @param request DescribeCdnUserBillTypeRequest
+      * @return DescribeCdnUserBillTypeResponse
+     */
     public DescribeCdnUserBillTypeResponse describeCdnUserBillType(DescribeCdnUserBillTypeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeCdnUserBillTypeWithOptions(request, runtime);
@@ -2751,8 +2766,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > - The maximum number of times that each user can call this operation per second is 100.
-      * - If a certificate is associated with a domain name but not enabled, the result of this operation shows that the certificate does not exist.
+      * *   You can call this operation up to 100 times per second per account.
+      * *   If a certificate is associated with a domain name but the certificate is not enabled, the result of this operation shows that the certificate does not exist.
       *
       * @param request DescribeCertificateInfoByIDRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2779,8 +2794,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > - The maximum number of times that each user can call this operation per second is 100.
-      * - If a certificate is associated with a domain name but not enabled, the result of this operation shows that the certificate does not exist.
+      * *   You can call this operation up to 100 times per second per account.
+      * *   If a certificate is associated with a domain name but the certificate is not enabled, the result of this operation shows that the certificate does not exist.
       *
       * @param request DescribeCertificateInfoByIDRequest
       * @return DescribeCertificateInfoByIDResponse
@@ -2905,15 +2920,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 150.
-      * - If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
+      * * You can call this operation up to 150 times per second per account.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
       * **Time granularity**
-      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table. 
-      * | Time granularity | Time range to query | Historical data available | Data delay |
-      * | ---------------- | ------------------- | ------------------------- | ---------- |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
-      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
       *
       * @param request DescribeDomainBpsDataRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2964,15 +2979,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 150.
-      * - If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
+      * * You can call this operation up to 150 times per second per account.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
       * **Time granularity**
-      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table. 
-      * | Time granularity | Time range to query | Historical data available | Data delay |
-      * | ---------------- | ------------------- | ------------------------- | ---------- |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
-      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
       *
       * @param request DescribeDomainBpsDataRequest
       * @return DescribeDomainBpsDataResponse
@@ -2983,15 +2998,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The number of times that each user can call this operation per second is 20.
-      * - If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
+      * * You can call this operation up to 20 times per second per account.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
       * **Time granularity**
-      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table. 
-      * | Time granularity | Time range to query | Historical data available | Data delay |
-      * | ---------------- | ------------------- | ------------------------- | ---------- |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
-      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
       *
       * @param request DescribeDomainBpsDataByLayerRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3046,15 +3061,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The number of times that each user can call this operation per second is 20.
-      * - If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
+      * * You can call this operation up to 20 times per second per account.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
       * **Time granularity**
-      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table. 
-      * | Time granularity | Time range to query | Historical data available | Data delay |
-      * | ---------------- | ------------------- | ------------------------- | ---------- |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
-      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
       *
       * @param request DescribeDomainBpsDataByLayerRequest
       * @return DescribeDomainBpsDataByLayerResponse
@@ -3066,9 +3081,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * *   The bandwidth is measured in bit/s.
-      * *   You can specify only one domain name in each query.
-      * *   The data is collected at an interval of five minutes.
-      * *   The maximum number of times that each user can call this operation per second is 20.
+      * *   You can specify only one accelerated domain name in each request.
+      * *   The data is collected every 5 minutes.
+      * *   You can call this operation up to 20 times per second per account.
       *
       * @param request DescribeDomainBpsDataByTimeStampRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3112,9 +3127,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * *   The bandwidth is measured in bit/s.
-      * *   You can specify only one domain name in each query.
-      * *   The data is collected at an interval of five minutes.
-      * *   The maximum number of times that each user can call this operation per second is 20.
+      * *   You can specify only one accelerated domain name in each request.
+      * *   The data is collected every 5 minutes.
+      * *   You can call this operation up to 20 times per second per account.
       *
       * @param request DescribeDomainBpsDataByTimeStampRequest
       * @return DescribeDomainBpsDataByTimeStampResponse
@@ -3364,15 +3379,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 100.
-      * - If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
+      * * You can call this operation up to 100 times per second per account.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
       * **Time granularity**
-      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table. 
-      * | Time granularity | Time range to query | Historical data available | Data delay |
-      * | ---------------- | ------------------- | ------------------------- | ---------- |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
-      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
       *
       * @param request DescribeDomainHitRateDataRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3415,15 +3430,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 100.
-      * - If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
+      * * You can call this operation up to 100 times per second per account.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
       * **Time granularity**
-      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table. 
-      * | Time granularity | Time range to query | Historical data available | Data delay |
-      * | ---------------- | ------------------- | ------------------------- | ---------- |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
-      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
       *
       * @param request DescribeDomainHitRateDataRequest
       * @return DescribeDomainHitRateDataResponse
@@ -3512,15 +3527,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - You can call this operation up to 20 times per second.
-      * - If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
-      * **Time granularity**
-      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table. 
-      * | Time granularity | Time range to query | Historical data available | Data delay |
-      * | ---------------- | ------------------- | ------------------------- | ---------- |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
-      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      * * You can call this operation up to 20 times per second per account.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+      * ### Time granularity
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
       *
       * @param request DescribeDomainHttpCodeDataByLayerRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3575,15 +3590,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - You can call this operation up to 20 times per second.
-      * - If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
-      * **Time granularity**
-      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table. 
-      * | Time granularity | Time range to query | Historical data available | Data delay |
-      * | ---------------- | ------------------- | ------------------------- | ---------- |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
-      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      * * You can call this operation up to 20 times per second per account.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+      * ### Time granularity
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
       *
       * @param request DescribeDomainHttpCodeDataByLayerRequest
       * @return DescribeDomainHttpCodeDataByLayerResponse
@@ -3649,6 +3664,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDomainISPDataWithOptions(request, runtime);
     }
 
+    /**
+      * *   The unit of the bandwidth is bit/s.
+      * *   The time granularity of the queried data is 5 minutes.
+      * *   You can query data in the last 90 days.
+      * *   You can specify the StartTime and EndTime parameters, or the TimePoint and Cycle parameters to query the 95th percentile bandwidth data. If you specify the StartTime and EndTime parameters and the time range that is specified by these parameters is less than or equal to 24 hours, the 95th percentile bandwidth data on the day of the start time is returned. If the time range that is specified by these parameters is more than 24 hours, the 95th percentile bandwidth data in the month of the start time is returned. If you specify the TimePoint and Cycle parameters, the 95th percentile bandwidth data of the cycle is returned. If you do not specify parameters as previously mentioned, the 95th percentile bandwidth data in the last 24 hours is returned.
+      * *   You can call this operation up to 100 times per second per account.
+      *
+      * @param request DescribeDomainMax95BpsDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDomainMax95BpsDataResponse
+     */
     public DescribeDomainMax95BpsDataResponse describeDomainMax95BpsDataWithOptions(DescribeDomainMax95BpsDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3689,6 +3715,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDomainMax95BpsDataResponse());
     }
 
+    /**
+      * *   The unit of the bandwidth is bit/s.
+      * *   The time granularity of the queried data is 5 minutes.
+      * *   You can query data in the last 90 days.
+      * *   You can specify the StartTime and EndTime parameters, or the TimePoint and Cycle parameters to query the 95th percentile bandwidth data. If you specify the StartTime and EndTime parameters and the time range that is specified by these parameters is less than or equal to 24 hours, the 95th percentile bandwidth data on the day of the start time is returned. If the time range that is specified by these parameters is more than 24 hours, the 95th percentile bandwidth data in the month of the start time is returned. If you specify the TimePoint and Cycle parameters, the 95th percentile bandwidth data of the cycle is returned. If you do not specify parameters as previously mentioned, the 95th percentile bandwidth data in the last 24 hours is returned.
+      * *   You can call this operation up to 100 times per second per account.
+      *
+      * @param request DescribeDomainMax95BpsDataRequest
+      * @return DescribeDomainMax95BpsDataResponse
+     */
     public DescribeDomainMax95BpsDataResponse describeDomainMax95BpsData(DescribeDomainMax95BpsDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDomainMax95BpsDataWithOptions(request, runtime);
@@ -3754,7 +3790,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * *   This operation is available only to users that are on the whitelist. If the daily peak bandwidth value of your workloads reaches 10 Gbit/s, you can [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex) to apply to be included in the whitelist.
-      * *   The maximum number of times that each user can call this operation per second is 6,000.
+      * *   You can call this API operation up to 6,000 times per second per account.
       * *   Data collection by directory is available only to specified domain names within your Alibaba Cloud account. It cannot be enabled for all domain names within your Alibaba Cloud account.
       * *   The average size of the files that belong to the domain name must be larger than 1 MB.
       * *   The number of directories specified for a single domain name cannot exceed 100. If the number of directories exceeds 100, the data accuracy reduces.
@@ -3787,7 +3823,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * *   This operation is available only to users that are on the whitelist. If the daily peak bandwidth value of your workloads reaches 10 Gbit/s, you can [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex) to apply to be included in the whitelist.
-      * *   The maximum number of times that each user can call this operation per second is 6,000.
+      * *   You can call this API operation up to 6,000 times per second per account.
       * *   Data collection by directory is available only to specified domain names within your Alibaba Cloud account. It cannot be enabled for all domain names within your Alibaba Cloud account.
       * *   The average size of the files that belong to the domain name must be larger than 1 MB.
       * *   The number of directories specified for a single domain name cannot exceed 100. If the number of directories exceeds 100, the data accuracy reduces.
@@ -3857,15 +3893,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 100.
-      * - If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
+      * * You can call this operation up to 100 times per second per account.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
       * **Time granularity**
-      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table. 
-      * | Time granularity | Time range to query | Historical data available | Data delay |
-      * | ---------------- | ------------------- | ------------------------- | ---------- |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
-      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
       *
       * @param request DescribeDomainQpsDataRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3916,15 +3952,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 100.
-      * - If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
+      * * You can call this operation up to 100 times per second per account.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
       * **Time granularity**
-      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table. 
-      * | Time granularity | Time range to query | Historical data available | Data delay |
-      * | ---------------- | ------------------- | ------------------------- | ---------- |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
-      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
       *
       * @param request DescribeDomainQpsDataRequest
       * @return DescribeDomainQpsDataResponse
@@ -3935,15 +3971,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 20.
-      * - If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
+      * * You can call this operation up to 20 times per second per user.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
       * **Time granularity**
-      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table. 
-      * | Time granularity | Time range to query | Historical data available | Data delay |
-      * | ---------------- | ------------------- | ------------------------- | ---------- |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
-      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      * The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
       *
       * @param request DescribeDomainQpsDataByLayerRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3998,15 +4034,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 20.
-      * - If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
+      * * You can call this operation up to 20 times per second per user.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
       * **Time granularity**
-      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table. 
-      * | Time granularity | Time range to query | Historical data available | Data delay |
-      * | ---------------- | ------------------- | ------------------------- | ---------- |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
-      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      * The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
       *
       * @param request DescribeDomainQpsDataByLayerRequest
       * @return DescribeDomainQpsDataByLayerResponse
@@ -4017,15 +4053,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 100.
-      * - If you do not set StartTime or EndTime, data collected within the last hour is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
-      * **Time granularity**
-      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. 
-      * | Time granularity | Time range to query | Historical data available | Data delay |
-      * | ---------------- | ------------------- | ------------------------- | ---------- |
-      * | 1 minute | 1 hour | 7 days | 5 minutes |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
+      * * You can call this operation up to 100 times per second per account.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
+      * **Time granularity** The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 minute|1 hour|7 days|5 minutes|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
       *
       * @param request DescribeDomainRealTimeBpsDataRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4052,15 +4087,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 100.
-      * - If you do not set StartTime or EndTime, data collected within the last hour is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
-      * **Time granularity**
-      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. 
-      * | Time granularity | Time range to query | Historical data available | Data delay |
-      * | ---------------- | ------------------- | ------------------------- | ---------- |
-      * | 1 minute | 1 hour | 7 days | 5 minutes |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
+      * * You can call this operation up to 100 times per second per account.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
+      * **Time granularity** The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 minute|1 hour|7 days|5 minutes|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
       *
       * @param request DescribeDomainRealTimeBpsDataRequest
       * @return DescribeDomainRealTimeBpsDataResponse
@@ -4071,16 +4105,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 10.
-      * - If you do not set StartTime or EndTime, data collected within the last hour is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
-      * - The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the byte hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
+      * * You can call this operation up to 10 times per second per account.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+      * * The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the byte hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
       * **Time granularity**
-      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. 
-      * | Time granularity | Time range to query | Historical data available | Data delay |
-      * | ---------------- | ------------------- | ------------------------- | ---------- |
-      * | 1 minute | 1 hour | 7 days | 5 minutes |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
+      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 minute|1 hour|7 days|5 minutes|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
       *
       * @param request DescribeDomainRealTimeByteHitRateDataRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4107,16 +4141,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 10.
-      * - If you do not set StartTime or EndTime, data collected within the last hour is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
-      * - The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the byte hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
+      * * You can call this operation up to 10 times per second per account.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+      * * The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the byte hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
       * **Time granularity**
-      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. 
-      * | Time granularity | Time range to query | Historical data available | Data delay |
-      * | ---------------- | ------------------- | ------------------------- | ---------- |
-      * | 1 minute | 1 hour | 7 days | 5 minutes |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
+      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 minute|1 hour|7 days|5 minutes|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
       *
       * @param request DescribeDomainRealTimeByteHitRateDataRequest
       * @return DescribeDomainRealTimeByteHitRateDataResponse
@@ -4167,15 +4201,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 10.
-      * - If you do not set StartTime or EndTime, data collected within the last hour is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
+      * * You can call this operation up to 10 times per second per account.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
       * **Time granularity**
-      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. 
-      * | Time granularity | Historical data available | Time range to query | Data delay |
-      * | ---------------- | ------------------------- | ------------------- | ---------- |
-      * | 1 minute | 1 hour | 7 days | 5 minutes |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
+      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 minute|1 hour|7 days|5 minutes|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
       *
       * @param request DescribeDomainRealTimeHttpCodeDataRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4222,15 +4256,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 10.
-      * - If you do not set StartTime or EndTime, data collected within the last hour is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
+      * * You can call this operation up to 10 times per second per account.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
       * **Time granularity**
-      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. 
-      * | Time granularity | Historical data available | Time range to query | Data delay |
-      * | ---------------- | ------------------------- | ------------------- | ---------- |
-      * | 1 minute | 1 hour | 7 days | 5 minutes |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
+      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 minute|1 hour|7 days|5 minutes|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
       *
       * @param request DescribeDomainRealTimeHttpCodeDataRequest
       * @return DescribeDomainRealTimeHttpCodeDataResponse
@@ -4241,15 +4275,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 10.
-      * - If you do not set StartTime or EndTime, data collected within the last hour is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
+      * * You can call this operation up to 10 times per second per account.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
       * **Time granularity**
-      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. 
-      * | Time granularity | Time range to query | Historical data available | Data delay |
-      * | ---------------- | ------------------- | ------------------------- | ---------- |
-      * | 1 minute | 1 hour | 7 days | 5 minutes |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
+      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 minute|1 hour|7 days|5 minutes|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
       *
       * @param request DescribeDomainRealTimeQpsDataRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4276,15 +4310,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 10.
-      * - If you do not set StartTime or EndTime, data collected within the last hour is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
+      * * You can call this operation up to 10 times per second per account.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
       * **Time granularity**
-      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. 
-      * | Time granularity | Time range to query | Historical data available | Data delay |
-      * | ---------------- | ------------------- | ------------------------- | ---------- |
-      * | 1 minute | 1 hour | 7 days | 5 minutes |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
+      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 minute|1 hour|7 days|5 minutes|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
       *
       * @param request DescribeDomainRealTimeQpsDataRequest
       * @return DescribeDomainRealTimeQpsDataResponse
@@ -4353,15 +4387,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 10.
-      * - If you do not set StartTime or EndTime, data collected within the last hour is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
+      * * You can call this operation up to 10 times per second per account.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
       * **Time granularity**
-      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. 
-      * | Time granularity | Time range to query | Historical data available | Data delay |
-      * | ---------------- | ------------------- | ------------------------- | ---------- |
-      * | 1 minute | 1 hour | 7 days | 5 minutes |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
+      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 minute|1 hour|7 days|5 minutes|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
       *
       * @param request DescribeDomainRealTimeSrcBpsDataRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4400,15 +4434,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 10.
-      * - If you do not set StartTime or EndTime, data collected within the last hour is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
+      * * You can call this operation up to 10 times per second per account.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
       * **Time granularity**
-      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. 
-      * | Time granularity | Time range to query | Historical data available | Data delay |
-      * | ---------------- | ------------------- | ------------------------- | ---------- |
-      * | 1 minute | 1 hour | 7 days | 5 minutes |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
+      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 minute|1 hour|7 days|5 minutes|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
       *
       * @param request DescribeDomainRealTimeSrcBpsDataRequest
       * @return DescribeDomainRealTimeSrcBpsDataResponse
@@ -4419,15 +4453,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 10.
-      * - If you do not set StartTime or EndTime, data collected within the last hour is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
+      * * You can call this operation up to 10 times per second per account.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
       * **Time granularity**
-      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. 
-      * | Time granularity | Historical data available | Time range to query | Data delay |
-      * | ---------------- | ------------------------- | ------------------- | ---------- |
-      * | 1 minute | 1 hour | 7 days | 5 minutes |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
+      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 minute|1 hour|7 days|5 minutes|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
       *
       * @param request DescribeDomainRealTimeSrcHttpCodeDataRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4474,15 +4508,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 10.
-      * - If you do not set StartTime or EndTime, data collected within the last hour is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
+      * * You can call this operation up to 10 times per second per account.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
       * **Time granularity**
-      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. 
-      * | Time granularity | Historical data available | Time range to query | Data delay |
-      * | ---------------- | ------------------------- | ------------------- | ---------- |
-      * | 1 minute | 1 hour | 7 days | 5 minutes |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
+      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 minute|1 hour|7 days|5 minutes|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
       *
       * @param request DescribeDomainRealTimeSrcHttpCodeDataRequest
       * @return DescribeDomainRealTimeSrcHttpCodeDataResponse
@@ -4493,15 +4527,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 10.
-      * - If you do not set StartTime or EndTime, data collected within the last hour is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
+      * * You can call this operation up to 10 times per second per account.
+      * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last hour by default. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
       * **Time granularity**
-      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. 
-      * | Time granularity | Historical data available | Time range to query | Data delay |
-      * | ---------------- | ------------------------- | ------------------- | ---------- |
-      * | 1 minute | 1 hour | 7 days | 5 minutes |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
+      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 minute|1 hour|7 days|5 minutes|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
       *
       * @param request DescribeDomainRealTimeSrcTrafficDataRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4540,15 +4574,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 10.
-      * - If you do not set StartTime or EndTime, data collected within the last hour is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
+      * * You can call this operation up to 10 times per second per account.
+      * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last hour by default. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
       * **Time granularity**
-      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. 
-      * | Time granularity | Historical data available | Time range to query | Data delay |
-      * | ---------------- | ------------------------- | ------------------- | ---------- |
-      * | 1 minute | 1 hour | 7 days | 5 minutes |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
+      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 minute|1 hour|7 days|5 minutes|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
       *
       * @param request DescribeDomainRealTimeSrcTrafficDataRequest
       * @return DescribeDomainRealTimeSrcTrafficDataResponse
@@ -4559,15 +4593,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 50.
-      * - If you do not set StartTime or EndTime, data collected within the last hour is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
+      * * You can call this operation up to 50 times per second per account.
+      * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
       * **Time granularity**
-      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. 
-      * | Time granularity | Time range to query | Historical data available | Data delay |
-      * | ---------------- | ------------------- | ------------------------- | ---------- |
-      * | 1 minute | 1 hour | 7 days | 5 minutes |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
+      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 minute|1 hour|7 days|5 minutes|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
       *
       * @param request DescribeDomainRealTimeTrafficDataRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4614,15 +4648,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 50.
-      * - If you do not set StartTime or EndTime, data collected within the last hour is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
+      * * You can call this operation up to 50 times per second per account.
+      * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
       * **Time granularity**
-      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. 
-      * | Time granularity | Time range to query | Historical data available | Data delay |
-      * | ---------------- | ------------------- | ------------------------- | ---------- |
-      * | 1 minute | 1 hour | 7 days | 5 minutes |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
+      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 minute|1 hour|7 days|5 minutes|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
       *
       * @param request DescribeDomainRealTimeTrafficDataRequest
       * @return DescribeDomainRealTimeTrafficDataResponse
@@ -4727,15 +4761,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 100.
-      * - If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
+      * * You can call this operation up to 100 times per second per account.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
       * **Time granularity**
-      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table. 
-      * | Time granularity | Time range to query | Historical data available | Data delay |
-      * | ---------------- | ------------------- | ------------------------- | ---------- |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
-      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
       *
       * @param request DescribeDomainReqHitRateDataRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4778,15 +4812,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 100.
-      * - If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
+      * * You can call this operation up to 100 times per second per account.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
       * **Time granularity**
-      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table. 
-      * | Time granularity | Time range to query | Historical data available | Data delay |
-      * | ---------------- | ------------------- | ------------------------- | ---------- |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
-      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
       *
       * @param request DescribeDomainReqHitRateDataRequest
       * @return DescribeDomainReqHitRateDataResponse
@@ -4797,15 +4831,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 100.
-      * - If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
+      * * You can call this operation up to 100 times per second per account.
+      * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
       * **Time granularity**
-      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table. 
-      * | Time granularity | Time range to query | Historical data available | Data delay |
-      * | ---------------- | ------------------- | ------------------------- | ---------- |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
-      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
       *
       * @param request DescribeDomainSrcBpsDataRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4848,15 +4882,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 100.
-      * - If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
+      * * You can call this operation up to 100 times per second per account.
+      * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
       * **Time granularity**
-      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table. 
-      * | Time granularity | Time range to query | Historical data available | Data delay |
-      * | ---------------- | ------------------- | ------------------------- | ---------- |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
-      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
       *
       * @param request DescribeDomainSrcBpsDataRequest
       * @return DescribeDomainSrcBpsDataResponse
@@ -4867,15 +4901,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 100.
-      * - If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
+      * * You can call this operation up to 100 times per second per account.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
       * **Time granularity**
-      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table. 
-      * | Time granularity | Time range to query | Historical data available | Data delay |
-      * | ---------------- | ------------------- | ------------------------- | ---------- |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
-      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      * The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
       *
       * @param request DescribeDomainSrcHttpCodeDataRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4918,15 +4952,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 100.
-      * - If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
+      * * You can call this operation up to 100 times per second per account.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
       * **Time granularity**
-      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table. 
-      * | Time granularity | Time range to query | Historical data available | Data delay |
-      * | ---------------- | ------------------- | ------------------------- | ---------- |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
-      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      * The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
       *
       * @param request DescribeDomainSrcHttpCodeDataRequest
       * @return DescribeDomainSrcHttpCodeDataResponse
@@ -4937,15 +4971,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 100.
-      * - If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
-      * **Time granularity**
-      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table. 
-      * | Time granularity | Time range to query | Historical data available | Data delay |
-      * | ---------------- | ------------------- | ------------------------- | ---------- |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
-      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      * * You can call this operation up to 100 times per second per account.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+      * ### Time granularity
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
       *
       * @param request DescribeDomainSrcQpsDataRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4988,15 +5022,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 100.
-      * - If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
-      * **Time granularity**
-      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table. 
-      * | Time granularity | Time range to query | Historical data available | Data delay |
-      * | ---------------- | ------------------- | ------------------------- | ---------- |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
-      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      * * You can call this operation up to 100 times per second per account.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+      * ### Time granularity
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
       *
       * @param request DescribeDomainSrcQpsDataRequest
       * @return DescribeDomainSrcQpsDataResponse
@@ -5065,15 +5099,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 100.
-      * - If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
+      * * You can call this operation up to 100 times per second per account.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
       * **Time granularity**
-      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table. 
-      * | Time granularity | Time range to query | Historical data available | Data delay |
-      * | ---------------- | ------------------- | ------------------------- | ---------- |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
-      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
       *
       * @param request DescribeDomainSrcTrafficDataRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5116,15 +5150,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 100.
-      * - If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
+      * * You can call this operation up to 100 times per second per account.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
       * **Time granularity**
-      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table. 
-      * | Time granularity | Time range to query | Historical data available | Data delay |
-      * | ---------------- | ------------------- | ------------------------- | ---------- |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
-      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
       *
       * @param request DescribeDomainSrcTrafficDataRequest
       * @return DescribeDomainSrcTrafficDataResponse
@@ -5263,10 +5297,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > - If you do not set StartTime or EndTime, data within the last 24 hours is queried. If you set both StartTime and EndTime, data within the specified time range is queried.
-      * - You can query data collected within the last 90 days.
-      * - You can specify only one domain name in each call.
-      * - You can call this operation up to 10 times per second per account.
+      * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature for data analysis.
+      * > 
+      * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+      * *   You can query data collected in the last 90 days.
+      * *   You can specify only one domain name in each call.
+      * *   You can call this operation up to 10 times per second per account.
       *
       * @param request DescribeDomainTopUrlVisitRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5309,10 +5345,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > - If you do not set StartTime or EndTime, data within the last 24 hours is queried. If you set both StartTime and EndTime, data within the specified time range is queried.
-      * - You can query data collected within the last 90 days.
-      * - You can specify only one domain name in each call.
-      * - You can call this operation up to 10 times per second per account.
+      * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature for data analysis.
+      * > 
+      * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+      * *   You can query data collected in the last 90 days.
+      * *   You can specify only one domain name in each call.
+      * *   You can call this operation up to 10 times per second per account.
       *
       * @param request DescribeDomainTopUrlVisitRequest
       * @return DescribeDomainTopUrlVisitResponse
@@ -5323,15 +5361,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 100.
-      * - If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
+      * * You can call this operation up to 100 times per second per account.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
       * **Time granularity**
-      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table. 
-      * | Time granularity | Time range to query | Historical data available | Data delay |
-      * | ---------------- | ------------------- | ------------------------- | ---------- |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
-      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366|04:00 on the next day|
       *
       * @param request DescribeDomainTrafficDataRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5382,15 +5420,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - The maximum number of times that each user can call this operation per second is 100.
-      * - If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
+      * * You can call this operation up to 100 times per second per account.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
       * **Time granularity**
-      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table. 
-      * | Time granularity | Time range to query | Historical data available | Data delay |
-      * | ---------------- | ------------------- | ------------------------- | ---------- |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
-      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366|04:00 on the next day|
       *
       * @param request DescribeDomainTrafficDataRequest
       * @return DescribeDomainTrafficDataResponse
@@ -5401,15 +5439,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The maximum number of times that each user can call this operation per second is 10. 
-      *  
-      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table. 
-      *  
-      * | Time granularity | Time range to query | Historical data available | Data delay |
-      * | ---------------- | ------------------- | ------------------------- | ---------- |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
-      * | 1 day | 90 days | 366 days | 04:00 on the next day |
+      * * You can call this operation up to 10 times per second per account.
+      * * The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|90 days|366 days|04:00 on the next day|
       *
       * @param request DescribeDomainUsageDataRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5468,15 +5504,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The maximum number of times that each user can call this operation per second is 10. 
-      *  
-      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table. 
-      *  
-      * | Time granularity | Time range to query | Historical data available | Data delay |
-      * | ---------------- | ------------------- | ------------------------- | ---------- |
-      * | 5 minutes | 3 days | 93 days | 15 minutes |
-      * | 1 hour | 31 days | 186 days | 4 hours |
-      * | 1 day | 90 days | 366 days | 04:00 on the next day |
+      * * You can call this operation up to 10 times per second per account.
+      * * The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|90 days|366 days|04:00 on the next day|
       *
       * @param request DescribeDomainUsageDataRequest
       * @return DescribeDomainUsageDataResponse
@@ -5487,10 +5521,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://www.alibabacloud.com/help/en/alibaba-cloud-cdn/latest/customize-an-operations-report-template-and-create-a-tracking-task) feature to for data analysis.  
-      * > - If you do not set StartTime or EndTime, monitoring data within the last 24 hours is queried. If you set both StartTime and EndTime, monitoring data within the specified time range is queried.
-      * - You can specify only one accelerated domain name or all accelerated domain names under your Alibaba Cloud account.
-      * - You can call this operation up to 100 times per second per account.
+      * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature for data analysis.
+      * > 
+      * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+      * *   You can specify only one accelerated domain name or all accelerated domain names in your Alibaba Cloud account.
+      * *   You can call this operation up to 100 times per second per account.
       *
       * @param request DescribeDomainUvDataRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5529,10 +5564,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://www.alibabacloud.com/help/en/alibaba-cloud-cdn/latest/customize-an-operations-report-template-and-create-a-tracking-task) feature to for data analysis.  
-      * > - If you do not set StartTime or EndTime, monitoring data within the last 24 hours is queried. If you set both StartTime and EndTime, monitoring data within the specified time range is queried.
-      * - You can specify only one accelerated domain name or all accelerated domain names under your Alibaba Cloud account.
-      * - You can call this operation up to 100 times per second per account.
+      * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature for data analysis.
+      * > 
+      * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+      * *   You can specify only one accelerated domain name or all accelerated domain names in your Alibaba Cloud account.
+      * *   You can call this operation up to 100 times per second per account.
       *
       * @param request DescribeDomainUvDataRequest
       * @return DescribeDomainUvDataResponse
@@ -5593,8 +5629,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > - If you do not set StartTime or EndTime, data within the last 24 hours is queried. If you set both StartTime and EndTime, data within the specified time range is queried.
-      * > - You can query the monitoring data of a specific accelerated domain name or all accelerated domain names that belong to your Alibaba Cloud account.
+      * *   You can call this operation up to 10 times per second per account.
+      * *   If you do not set StartTime or EndTime, data within the last 24 hours is queried. If you set both StartTime and EndTime, data within the specified time range is queried.
+      * *   You can query the monitoring data of a specific accelerated domain name or all accelerated domain names that belong to your Alibaba Cloud account.
       *
       * @param request DescribeDomainsUsageByDayRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5633,8 +5670,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > - If you do not set StartTime or EndTime, data within the last 24 hours is queried. If you set both StartTime and EndTime, data within the specified time range is queried.
-      * > - You can query the monitoring data of a specific accelerated domain name or all accelerated domain names that belong to your Alibaba Cloud account.
+      * *   You can call this operation up to 10 times per second per account.
+      * *   If you do not set StartTime or EndTime, data within the last 24 hours is queried. If you set both StartTime and EndTime, data within the specified time range is queried.
+      * *   You can query the monitoring data of a specific accelerated domain name or all accelerated domain names that belong to your Alibaba Cloud account.
       *
       * @param request DescribeDomainsUsageByDayRequest
       * @return DescribeDomainsUsageByDayResponse
@@ -5976,7 +6014,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * *   The data is collected every 5 minutes.
-      * *   The maximum number of times that each user can call this operation per second is 20.
+      * *   You can call this operation up to 20 times per second per account.
       *
       * @param request DescribeRangeDataByLocateAndIspServiceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6024,7 +6062,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * *   The data is collected every 5 minutes.
-      * *   The maximum number of times that each user can call this operation per second is 20.
+      * *   You can call this operation up to 20 times per second per account.
       *
       * @param request DescribeRangeDataByLocateAndIspServiceRequest
       * @return DescribeRangeDataByLocateAndIspServiceResponse
@@ -7306,15 +7344,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * *   Alibaba Cloud CDN supports POST requests in which parameters are sent as a form.
       * *   You can call the [RefreshObjectCaches](~~91164~~) operation to refresh content and call the [PushObjectCache](~~91161~~) operation to prefetch content.
-      * *   Each Alibaba Cloud account can submit at most 1,000 URLs per day. If your daily peak bandwidth exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to increase the upper limit. Alibaba Cloud will review your application and then increase the quota accordingly.
-      * *   Each Alibaba Cloud account can submit up to 100 URLs at a time.
+      * *   By default, each Alibaba Cloud account can submit up to 1,000 URLs per day. If the daily peak bandwidth value of your workloads exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to increase your daily quota. Alibaba Cloud reviews your application and then increases the quota accordingly.
+      * *   You can specify at most 100 URLs in each prefetch request.
       * *   For each Alibaba Cloud account, the prefetch queue can contain up to 50,000 URLs. Content is prefetched based on the time when the URLs are submitted. The URL that is submitted the earliest has the highest priority. If the number of URLs in the queue reaches 50,000, you cannot submit more URLs until the number drops below 50,000.
       * *   You can call this operation up to 50 times per second per account.
-      * *   For more information about how to automate refresh or prefetch tasks, see [Prefetch and refresh task scripts](~~151829~~).
+      * *   For more information about how to automate refresh or prefetch tasks, see [Run scripts to refresh and prefetch content](~~151829~~).
       * ## Precautions
-      * - After a refresh task is submitted and completed, the POPs immediately start to retrieve resources from the origin server. Therefore, a large number of refresh tasks cause a large number of concurrent download tasks. This increases the number of requests that are redirected to the origin server. The back-to-origin routing process consumes more bandwidth resources and the origin server may be overwhelmed.
-      * - The time required for a prefetch task to complete is proportional to the size of the prefetched file. In actual practice, most prefetch tasks take 5 to 30 minutes to complete. A task with a smaller average file size takes less time.
-      * - To allow Resource Access Management (RAM) users to perform this operation, you must first grant them the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](~~260300~~).
+      * *   After a prefetch task is submitted and completed, the POPs immediately start to retrieve resources from the origin server. Therefore, a large number of refresh tasks cause a large number of concurrent download tasks. This increases the number of requests that are redirected to the origin server. The back-to-origin routing process consumes more bandwidth resources and the origin server may be overwhelmed.
+      * *   The time required for a prefetch task to complete is proportional to the size of the prefetched file. In actual practice, most prefetch tasks require 5 to 30 minutes to complete. A task with a smaller average file size requires less time.
+      * *   To allow RAM users to perform this operation, you must first grant them the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](~~260300~~).
       *
       * @param request PushObjectCacheRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -7367,15 +7405,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * *   Alibaba Cloud CDN supports POST requests in which parameters are sent as a form.
       * *   You can call the [RefreshObjectCaches](~~91164~~) operation to refresh content and call the [PushObjectCache](~~91161~~) operation to prefetch content.
-      * *   Each Alibaba Cloud account can submit at most 1,000 URLs per day. If your daily peak bandwidth exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to increase the upper limit. Alibaba Cloud will review your application and then increase the quota accordingly.
-      * *   Each Alibaba Cloud account can submit up to 100 URLs at a time.
+      * *   By default, each Alibaba Cloud account can submit up to 1,000 URLs per day. If the daily peak bandwidth value of your workloads exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to increase your daily quota. Alibaba Cloud reviews your application and then increases the quota accordingly.
+      * *   You can specify at most 100 URLs in each prefetch request.
       * *   For each Alibaba Cloud account, the prefetch queue can contain up to 50,000 URLs. Content is prefetched based on the time when the URLs are submitted. The URL that is submitted the earliest has the highest priority. If the number of URLs in the queue reaches 50,000, you cannot submit more URLs until the number drops below 50,000.
       * *   You can call this operation up to 50 times per second per account.
-      * *   For more information about how to automate refresh or prefetch tasks, see [Prefetch and refresh task scripts](~~151829~~).
+      * *   For more information about how to automate refresh or prefetch tasks, see [Run scripts to refresh and prefetch content](~~151829~~).
       * ## Precautions
-      * - After a refresh task is submitted and completed, the POPs immediately start to retrieve resources from the origin server. Therefore, a large number of refresh tasks cause a large number of concurrent download tasks. This increases the number of requests that are redirected to the origin server. The back-to-origin routing process consumes more bandwidth resources and the origin server may be overwhelmed.
-      * - The time required for a prefetch task to complete is proportional to the size of the prefetched file. In actual practice, most prefetch tasks take 5 to 30 minutes to complete. A task with a smaller average file size takes less time.
-      * - To allow Resource Access Management (RAM) users to perform this operation, you must first grant them the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](~~260300~~).
+      * *   After a prefetch task is submitted and completed, the POPs immediately start to retrieve resources from the origin server. Therefore, a large number of refresh tasks cause a large number of concurrent download tasks. This increases the number of requests that are redirected to the origin server. The back-to-origin routing process consumes more bandwidth resources and the origin server may be overwhelmed.
+      * *   The time required for a prefetch task to complete is proportional to the size of the prefetched file. In actual practice, most prefetch tasks require 5 to 30 minutes to complete. A task with a smaller average file size requires less time.
+      * *   To allow RAM users to perform this operation, you must first grant them the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](~~260300~~).
       *
       * @param request PushObjectCacheRequest
       * @return PushObjectCacheResponse
@@ -7388,16 +7426,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * *   Alibaba Cloud CDN supports POST requests in which parameters are sent as a form.
       * *   You can call the [RefreshObjectCaches](~~91164~~) operation to refresh content and call the [PushObjectCache](~~91161~~) operation to prefetch content.
-      * *   You can call this operation up to 50 times per second per account.
-      * *   For more information about how to automate refresh or prefetch tasks, see [Prefetch and refresh task scripts](~~151829~~).
-      * ## Precautions
-      * - After a refresh task is submitted and completed, specific resources are removed from POPs. When a POP receives a request for the removed resources, the POP forwards the request to the origin server to retrieve the resources. The retrieved resources are returned to the client and cached on the POP. Multiple refresh tasks may cause a large number of resources to be removed from the POPs. This increases the number of requests that are forwarded to the origin server. The back-to-origin routing process consumes more bandwidth resources and the origin server may be overwhelmed.
-      * - A refresh task takes approximately five to six minutes to take effect. If the cache expiration time that you specified for the resources cached on POPs is less than five minutes, you do not need to perform the refresh operation. Wait until the cache expiration time ends.
-      * - If you want to use RAM users to refresh or prefetch resources, you must grant the RAM users the permissions to prefetch and refresh resources. For more information, see [Authorize a RAM user to prefetch and refresh resources](~~260300~~).
-      * **Refresh quota**- By default, each Alibaba Cloud account can refresh content from up to 10,000 URLs and 100 directories per day. The directories include subdirectories. If the daily peak bandwidth of your Alibaba Cloud account exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to request a quota increase. Alibaba Cloud reviews your request and then increases the quota based on your request.
-      * - By default, each Alibaba Cloud account can submit up to 20 refresh rules that contain regular expressions per day. If the daily peak bandwidth of your Alibaba Cloud account exceeds 10 Gbit/s, you can [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex) to request a quota increase.
-      * - You can specify up to 1,000 URL refresh rules, 100 directory refresh rules, or 1 refresh rule that contains regular expressions in each call.
-      * - You can refresh up to 1,000 URLs per minute for each domain name.
+      * *   You can call the RefreshObjectCaches operation up to 50 times per second per account.
+      * *   For more information about how to automatically refresh or prefetch tasks, see [Run scripts to refresh and prefetch content](~~151829~~).
+      * ## Usage notes
+      * *   After a refresh task is submitted and completed, specific resources are removed from POPs. When a POP receives a request for the removed resources, the POP forwards the request to the origin server to retrieve the resources. The retrieved resources are returned to the client and cached on the POP. Multiple refresh tasks may cause a large number of resources to be removed from the POPs. This increases the number of requests that are forwarded to the origin server. The back-to-origin routing process consumes more bandwidth resources and the origin server may be overwhelmed.
+      * *   A refresh task takes effect 5 to 6 minutes after being submitted. If the TTL for the resources you want to refresh is less than 5 minutes, you can wait until the TTL expires instead of performing the refresh operation.
+      * *   If you want to use RAM users to refresh or prefetch resources, you must obtain the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](~~260300~~).
+      * ### Refresh quota
+      * *   By default, each Alibaba Cloud account can refresh content from up to 10,000 URLs and 100 directories per day. The directories include subdirectories. If the daily peak bandwidth value exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to request a quota increase. Alibaba Cloud CDN evaluates your application based on your workloads.
+      * *   By default, each Alibaba Cloud account can submit up to 20 refresh rules that contain regular expressions per day. If the daily peak bandwidth of your Alibaba Cloud account exceeds 10 Gbit/s, you can [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex) to request a quota increase.
+      * *   You can specify up to 1,000 URL refresh rules, 100 directory refresh rules, or 1 refresh rule that contains regular expressions in each call.
+      * *   You can refresh up to 1,000 URLs per minute for each domain name.
       *
       * @param request RefreshObjectCachesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -7442,16 +7481,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * *   Alibaba Cloud CDN supports POST requests in which parameters are sent as a form.
       * *   You can call the [RefreshObjectCaches](~~91164~~) operation to refresh content and call the [PushObjectCache](~~91161~~) operation to prefetch content.
-      * *   You can call this operation up to 50 times per second per account.
-      * *   For more information about how to automate refresh or prefetch tasks, see [Prefetch and refresh task scripts](~~151829~~).
-      * ## Precautions
-      * - After a refresh task is submitted and completed, specific resources are removed from POPs. When a POP receives a request for the removed resources, the POP forwards the request to the origin server to retrieve the resources. The retrieved resources are returned to the client and cached on the POP. Multiple refresh tasks may cause a large number of resources to be removed from the POPs. This increases the number of requests that are forwarded to the origin server. The back-to-origin routing process consumes more bandwidth resources and the origin server may be overwhelmed.
-      * - A refresh task takes approximately five to six minutes to take effect. If the cache expiration time that you specified for the resources cached on POPs is less than five minutes, you do not need to perform the refresh operation. Wait until the cache expiration time ends.
-      * - If you want to use RAM users to refresh or prefetch resources, you must grant the RAM users the permissions to prefetch and refresh resources. For more information, see [Authorize a RAM user to prefetch and refresh resources](~~260300~~).
-      * **Refresh quota**- By default, each Alibaba Cloud account can refresh content from up to 10,000 URLs and 100 directories per day. The directories include subdirectories. If the daily peak bandwidth of your Alibaba Cloud account exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to request a quota increase. Alibaba Cloud reviews your request and then increases the quota based on your request.
-      * - By default, each Alibaba Cloud account can submit up to 20 refresh rules that contain regular expressions per day. If the daily peak bandwidth of your Alibaba Cloud account exceeds 10 Gbit/s, you can [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex) to request a quota increase.
-      * - You can specify up to 1,000 URL refresh rules, 100 directory refresh rules, or 1 refresh rule that contains regular expressions in each call.
-      * - You can refresh up to 1,000 URLs per minute for each domain name.
+      * *   You can call the RefreshObjectCaches operation up to 50 times per second per account.
+      * *   For more information about how to automatically refresh or prefetch tasks, see [Run scripts to refresh and prefetch content](~~151829~~).
+      * ## Usage notes
+      * *   After a refresh task is submitted and completed, specific resources are removed from POPs. When a POP receives a request for the removed resources, the POP forwards the request to the origin server to retrieve the resources. The retrieved resources are returned to the client and cached on the POP. Multiple refresh tasks may cause a large number of resources to be removed from the POPs. This increases the number of requests that are forwarded to the origin server. The back-to-origin routing process consumes more bandwidth resources and the origin server may be overwhelmed.
+      * *   A refresh task takes effect 5 to 6 minutes after being submitted. If the TTL for the resources you want to refresh is less than 5 minutes, you can wait until the TTL expires instead of performing the refresh operation.
+      * *   If you want to use RAM users to refresh or prefetch resources, you must obtain the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](~~260300~~).
+      * ### Refresh quota
+      * *   By default, each Alibaba Cloud account can refresh content from up to 10,000 URLs and 100 directories per day. The directories include subdirectories. If the daily peak bandwidth value exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to request a quota increase. Alibaba Cloud CDN evaluates your application based on your workloads.
+      * *   By default, each Alibaba Cloud account can submit up to 20 refresh rules that contain regular expressions per day. If the daily peak bandwidth of your Alibaba Cloud account exceeds 10 Gbit/s, you can [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex) to request a quota increase.
+      * *   You can specify up to 1,000 URL refresh rules, 100 directory refresh rules, or 1 refresh rule that contains regular expressions in each call.
+      * *   You can refresh up to 1,000 URLs per minute for each domain name.
       *
       * @param request RefreshObjectCachesRequest
       * @return RefreshObjectCachesResponse

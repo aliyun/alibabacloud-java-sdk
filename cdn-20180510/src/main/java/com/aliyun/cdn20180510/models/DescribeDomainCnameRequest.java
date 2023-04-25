@@ -4,6 +4,9 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainCnameRequest extends TeaModel {
+    /**
+     * <p>The accelerated domain name that you want to query. Separate multiple domain names with commas (,). This parameter cannot be left empty.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 

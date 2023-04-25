@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainRealTimeQpsDataRequest extends TeaModel {
     /**
-     * <p>The accelerated domain names. You can specify multiple accelerated domain names and separate them with commas (,).</p>
+     * <p>The accelerated domain name. Separate multiple accelerated domain names with commas (,).</p>
      * <br>
-     * <p>>  You can specify at most 500 accelerated domain names in each call.</p>
+     * <p>> You can specify up to 500 domain names in each request.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -17,15 +17,15 @@ public class DescribeDomainRealTimeQpsDataRequest extends TeaModel {
      * <br>
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
-     * <p>>  The end time must be later than the start time.</p>
+     * <p>> The end time must be later than the start time.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The name of the Internet service provider (ISP) for your Alibaba Cloud CDN service.</p>
+     * <p>The name of the Internet service provider (ISP).</p>
      * <br>
-     * <p>If you do not set this parameter, all ISPs are queried. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query ISP names.</p>
+     * <p>If you do not set this parameter, data of all ISPs is queried. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query ISP names.</p>
      */
     @NameInMap("IspNameEn")
     public String ispNameEn;
@@ -33,7 +33,7 @@ public class DescribeDomainRealTimeQpsDataRequest extends TeaModel {
     /**
      * <p>The name of the region.</p>
      * <br>
-     * <p>If you do not set this parameter, all regions are queried. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query the most recent region list.</p>
+     * <p>If you do not set this parameter, data in all regions is queried. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions.</p>
      */
     @NameInMap("LocationNameEn")
     public String locationNameEn;

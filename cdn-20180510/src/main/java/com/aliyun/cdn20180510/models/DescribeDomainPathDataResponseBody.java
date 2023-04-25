@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainPathDataResponseBody extends TeaModel {
     /**
-     * <p>The time interval between the data entries. Unit: seconds.</p>
+     * <p>The time interval. Unit: seconds.</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
@@ -17,7 +17,7 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range that was queried.</p>
+     * <p>The end of the time range during which data was queried.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -29,7 +29,7 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -41,13 +41,13 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
     public DescribeDomainPathDataResponseBodyPathDataPerInterval pathDataPerInterval;
 
     /**
-     * <p>The start of the time range that was queried.</p>
+     * <p>The start of the time range during which data was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The total count.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -123,7 +123,7 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
 
     public static class DescribeDomainPathDataResponseBodyPathDataPerIntervalUsageData extends TeaModel {
         /**
-         * <p>The number of visits to the specified path.</p>
+         * <p>The number of visits to the URL.</p>
          */
         @NameInMap("Acc")
         public Integer acc;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainUsageDataResponseBody extends TeaModel {
     /**
-     * <p>The billable region where the usage information was collected.</p>
+     * <p>The billable region where the data was collected.</p>
      */
     @NameInMap("Area")
     public String area;
 
     /**
-     * <p>The time interval between the data entries. Unit: seconds.</p>
+     * <p>The time interval between the data entries returned. Unit: seconds.</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
@@ -23,7 +23,7 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range that was queried.</p>
+     * <p>The end of the time range during which data was queried.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -35,19 +35,19 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range that was queried.</p>
+     * <p>The start of the time range during which data was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The type of content based on which the usage information was collected.</p>
+     * <p>The type of content.</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
-     * <p>The network traffic that was collected at each interval.</p>
+     * <p>The resource usage that was collected at each interval.</p>
      */
     @NameInMap("UsageDataPerInterval")
     public DescribeDomainUsageDataResponseBodyUsageDataPerInterval usageDataPerInterval;
@@ -123,7 +123,7 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
 
     public static class DescribeDomainUsageDataResponseBodyUsageDataPerIntervalDataModule extends TeaModel {
         /**
-         * <p>If the **Field** parameter in the request is set to **bps**, this parameter returns the time of the peak bandwidth value. Otherwise, this parameter returns the same value as the **TimeStamp** parameter.</p>
+         * <p>The time of the peak bandwidth value if the **Field** parameter in the request is set to **bps**. Otherwise, this parameter returns the same value as the **TimeStamp** parameter.</p>
          */
         @NameInMap("PeakTime")
         public String peakTime;
@@ -131,7 +131,7 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
         /**
          * <p>The data usage in a specific scenario.</p>
          * <br>
-         * <p>>  Indicates the data usage in a specific scenario. If no special billable item is specified, ignore this parameter.</p>
+         * <p>> SpecialValue indicates the data usage in a specific scenario. If no special billable item is specified, ignore this parameter.</p>
          */
         @NameInMap("SpecialValue")
         public String specialValue;
@@ -139,15 +139,13 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
         /**
          * <p>The timestamp of the data returned.</p>
          * <br>
-         * <p>>  The **TimeStamp** parameter may return multiple values.</p>
+         * <p>> **TimeStamp** indicates the timestamp of the returned data at each interval.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         /**
-         * <p>The usage.</p>
-         * <br>
-         * <p>>  Usage data includes network traffic (measured in bytes), bandwidth values (measured in bits/s), and the number of requests.</p>
+         * <p>The amount of resource usage.</p>
          */
         @NameInMap("Value")
         public String value;

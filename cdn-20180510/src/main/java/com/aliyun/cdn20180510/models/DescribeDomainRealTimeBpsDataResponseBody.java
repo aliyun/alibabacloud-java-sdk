@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainRealTimeBpsDataResponseBody extends TeaModel {
     /**
-     * <p>The response parameters.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public DescribeDomainRealTimeBpsDataResponseBodyData data;
@@ -45,7 +45,7 @@ public class DescribeDomainRealTimeBpsDataResponseBody extends TeaModel {
         public Float bps;
 
         /**
-         * <p>The timestamp of the data entry. The time follows the ISO 8601 standard. The time is displayed in UTC.</p>
+         * <p>The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

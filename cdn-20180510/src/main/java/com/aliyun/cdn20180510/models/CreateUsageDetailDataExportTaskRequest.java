@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateUsageDetailDataExportTaskRequest extends TeaModel {
     /**
-     * <p>The accelerated domain names based on which the resource usage details are generated. If you do not specify a domain name group, resource usage details are exported based on this parameter.</p>
+     * <p>The domain names. If you do not specify the Group parameter, resource usage details of these domain names are exported.</p>
      * <br>
-     * <p>If you do not set this parameter, resource usage details are exported based on user accounts.</p>
+     * <p>If you do not specify this parameter, resource usage details are exported based on accounts.</p>
      */
     @NameInMap("DomainNames")
     public String domainNames;
@@ -15,21 +15,21 @@ public class CreateUsageDetailDataExportTaskRequest extends TeaModel {
     /**
      * <p>The end of the time range to query.</p>
      * <br>
-     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
-     * <p>>  The end time must be later than the start time.</p>
+     * <p>> The end time must be later than the start time.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The group of accelerated domain names based on which the resource usage details are generated. If you set this parameter, ignore the **DomainNames** parameter.</p>
+     * <p>The domain name group. If you specify this parameter, the **DomainNames** parameter is ignored.</p>
      */
     @NameInMap("Group")
     public String group;
 
     /**
-     * <p>The language of the exported file. Valid values:</p>
+     * <p>The language in which you want to export the file. Valid values:</p>
      * <br>
      * <p>*   **zh-cn**: Chinese. This is the default value.</p>
      * <p>*   **en-us**: English</p>
@@ -40,7 +40,7 @@ public class CreateUsageDetailDataExportTaskRequest extends TeaModel {
     /**
      * <p>The beginning of the time range to query.</p>
      * <br>
-     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -52,9 +52,9 @@ public class CreateUsageDetailDataExportTaskRequest extends TeaModel {
     public String taskName;
 
     /**
-     * <p>The type of content based on which the data is generated. Valid values:</p>
+     * <p>The type of resource usage data to query. Valid values:</p>
      * <br>
-     * <p>*   **flow**: network traffic and bandwidth</p>
+     * <p>*   **flow**: traffic and bandwidth</p>
      * <p>*   **vas**: requests</p>
      */
     @NameInMap("Type")

@@ -7,7 +7,7 @@ public class DescribeDomainPathDataRequest extends TeaModel {
     /**
      * <p>The accelerated domain name.</p>
      * <br>
-     * <p>>  You can specify only one domain name in each call.</p>
+     * <p>> You can specify only one domain name in each call.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -25,9 +25,7 @@ public class DescribeDomainPathDataRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
-     * <br>
-     * <p>Valid values: integers from **1** to **1000**.</p>
+     * <p>The number of entries to return on each page. Valid values: integers from **1** to **1000**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -35,15 +33,13 @@ public class DescribeDomainPathDataRequest extends TeaModel {
     /**
      * <p>The paths that you want to query. Separate paths with forward slashes (/). If you do not set this parameter, all paths are queried. If you set the value to a directory, it must end with a forward slash (/).</p>
      * <br>
-     * <p>>  Fuzzy match is not supported. If you want data to be collected based on a directory, you can specify a specific directory, for example, directory/path/. In this case, bandwidth data is collected based on directory/path/.</p>
+     * <p>> Fuzzy match is not supported. If you want data to be collected based on a directory, you can specify a specific directory, for example, directory/path/. In this case, bandwidth data is collected based on directory/path/.</p>
      */
     @NameInMap("Path")
     public String path;
 
     /**
-     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     * <br>
-     * <p>Example: 2016-10-20T04:00:00Z.</p>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2016-10-20T04:00:00Z.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
