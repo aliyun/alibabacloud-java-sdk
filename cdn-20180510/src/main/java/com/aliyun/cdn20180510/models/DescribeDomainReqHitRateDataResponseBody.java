@@ -17,13 +17,13 @@ public class DescribeDomainReqHitRateDataResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range that was queried.</p>
+     * <p>The end of the time range during which data was queried.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The request hit ratio at each time interval. The hit ratio is measured in percentage.</p>
+     * <p>The request hit ratio data at each time interval. The hit ratio is measured in percentage.</p>
      */
     @NameInMap("ReqHitRateInterval")
     public DescribeDomainReqHitRateDataResponseBodyReqHitRateInterval reqHitRateInterval;
@@ -35,7 +35,7 @@ public class DescribeDomainReqHitRateDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range that was queried.</p>
+     * <p>The start of the time range during which data was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -101,13 +101,13 @@ public class DescribeDomainReqHitRateDataResponseBody extends TeaModel {
         public String httpsValue;
 
         /**
-         * <p>The timestamp of the data returned.</p>
+         * <p>The timestamp of the returned data.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         /**
-         * <p>The byte hit ratio.</p>
+         * <p>The request hit ratio.</p>
          */
         @NameInMap("Value")
         public String value;

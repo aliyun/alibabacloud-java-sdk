@@ -17,13 +17,13 @@ public class DescribeDomainQpsDataResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range that was queried.</p>
+     * <p>The end of the time range during which data was queried.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The number of queries per second at each time interval.</p>
+     * <p>The list of QPS records at each interval.</p>
      */
     @NameInMap("QpsDataInterval")
     public DescribeDomainQpsDataResponseBodyQpsDataInterval qpsDataInterval;
@@ -35,7 +35,7 @@ public class DescribeDomainQpsDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range that was queried.</p>
+     * <p>The start of the time range during which data was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -119,37 +119,37 @@ public class DescribeDomainQpsDataResponseBody extends TeaModel {
         public String domesticValue;
 
         /**
-         * <p>The number of HTTPS requests sent to L1 edge nodes in the Chinese mainland.</p>
+         * <p>The number of HTTPS requests sent to POPs in the Chinese mainland.</p>
          */
         @NameInMap("HttpsAccDomesticValue")
         public String httpsAccDomesticValue;
 
         /**
-         * <p>The number of HTTPS requests sent to L1 edge nodes outside the Chinese mainland.</p>
+         * <p>The number of HTTPS requests sent to POPs outside the Chinese mainland.</p>
          */
         @NameInMap("HttpsAccOverseasValue")
         public String httpsAccOverseasValue;
 
         /**
-         * <p>The total number of HTTPS requests sent to L1 edge nodes.</p>
+         * <p>The number of HTTPS requests sent to POPs.</p>
          */
         @NameInMap("HttpsAccValue")
         public String httpsAccValue;
 
         /**
-         * <p>The number of queries per second that is calculated based on the HTTPS requests sent to L1 edge nodes in the Chinese mainland.</p>
+         * <p>The number of queries per second that is calculated based on the HTTPS requests sent to POPs in the Chinese mainland.</p>
          */
         @NameInMap("HttpsDomesticValue")
         public String httpsDomesticValue;
 
         /**
-         * <p>The number of queries per second that is calculated based on the HTTPS requests sent to L1 edge nodes outside the Chinese mainland.</p>
+         * <p>The number of queries per second that is calculated based on the HTTPS requests sent to POPs outside the Chinese mainland.</p>
          */
         @NameInMap("HttpsOverseasValue")
         public String httpsOverseasValue;
 
         /**
-         * <p>The number of queries per second that is calculated based on the HTTPS requests sent to L1 edge nodes.</p>
+         * <p>The number of queries per second that is calculated based on the HTTPS requests sent to points of presence (POPs).</p>
          */
         @NameInMap("HttpsValue")
         public String httpsValue;
@@ -167,7 +167,7 @@ public class DescribeDomainQpsDataResponseBody extends TeaModel {
         public String timeStamp;
 
         /**
-         * <p>The total number of queries per second.</p>
+         * <p>The total QPS.</p>
          */
         @NameInMap("Value")
         public String value;

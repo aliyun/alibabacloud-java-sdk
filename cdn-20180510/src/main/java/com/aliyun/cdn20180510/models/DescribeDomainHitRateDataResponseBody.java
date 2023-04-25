@@ -17,7 +17,7 @@ public class DescribeDomainHitRateDataResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range that was queried.</p>
+     * <p>The end of the time range during which data was queried.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -35,7 +35,7 @@ public class DescribeDomainHitRateDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range that was queried.</p>
+     * <p>The start of the time range during which data was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

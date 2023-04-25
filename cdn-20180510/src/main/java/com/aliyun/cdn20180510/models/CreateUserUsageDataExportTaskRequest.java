@@ -7,24 +7,24 @@ public class CreateUserUsageDataExportTaskRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. The end time must be later than the start time.</p>
      * <br>
-     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The language of the exported file.</p>
+     * <p>The language in which you want to export the file. Default value: zh-cn. Valid values:</p>
      * <br>
-     * <p>*   **zh-cn**: Chinese. This is the default value.</p>
-     * <p>*   **en-us**: English.</p>
+     * <p>*   **zh-cn**: Chinese</p>
+     * <p>*   **en-us**: English</p>
      */
     @NameInMap("Language")
     public String language;
 
     /**
-     * <p>The start of the time range to query. The time interval at which the specified data is collected is five minutes.</p>
+     * <p>The start of the time range to query. The data is collected every 5 minutes.</p>
      * <br>
-     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

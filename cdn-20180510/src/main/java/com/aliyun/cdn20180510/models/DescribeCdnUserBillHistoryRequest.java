@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeCdnUserBillHistoryRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
-     * <p>The end of the time range to query. The end time must be later than the start time.</p>
+     * <p>The end time must be later than the start time.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
-     * <p>The minimum data collection interval is 5 minutes.</p>
+     * <p>The minimum data granularity is 5 minutes.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

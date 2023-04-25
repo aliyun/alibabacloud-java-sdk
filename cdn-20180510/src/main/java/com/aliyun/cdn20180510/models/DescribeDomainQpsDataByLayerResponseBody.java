@@ -17,7 +17,7 @@ public class DescribeDomainQpsDataByLayerResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range that was queried.</p>
+     * <p>The end of the time range during which data was queried.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -29,7 +29,7 @@ public class DescribeDomainQpsDataByLayerResponseBody extends TeaModel {
     public String layer;
 
     /**
-     * <p>The number of queries per second at each time interval.</p>
+     * <p>The number of queries per second at each interval.</p>
      */
     @NameInMap("QpsDataInterval")
     public DescribeDomainQpsDataByLayerResponseBodyQpsDataInterval qpsDataInterval;
@@ -41,7 +41,7 @@ public class DescribeDomainQpsDataByLayerResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range that was queried.</p>
+     * <p>The start of the time range during which data was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -115,7 +115,7 @@ public class DescribeDomainQpsDataByLayerResponseBody extends TeaModel {
         public String accDomesticValue;
 
         /**
-         * <p>The number of requests in the Chinese mainland.</p>
+         * <p>The number of requests outside the Chinese mainland.</p>
          */
         @NameInMap("AccOverseasValue")
         public String accOverseasValue;
@@ -139,13 +139,13 @@ public class DescribeDomainQpsDataByLayerResponseBody extends TeaModel {
         public String overseasValue;
 
         /**
-         * <p>The timestamp of the data returned.</p>
+         * <p>The timestamp of the returned data.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         /**
-         * <p>The total number of queries per second in all regions.</p>
+         * <p>The total number of queries per second.</p>
          */
         @NameInMap("Value")
         public String value;

@@ -7,7 +7,7 @@ public class DescribeDomainRealTimeSrcBpsDataResponseBody extends TeaModel {
     /**
      * <p>The time interval between the data entries returned. Unit: seconds.</p>
      * <br>
-     * <p>The time granularity varies with the time range to query. Supported values: 60 (1 minute), 300 (5 minutes), and 3600(1 hour). For more information, see **Usage notes**.</p>
+     * <p>The time granularity varies with the maximum time range per query. Valid values: 60 (1 minute), 300 (5 minutes), and 3600(1 hour). For more information, see **Usage notes**.</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
@@ -19,13 +19,13 @@ public class DescribeDomainRealTimeSrcBpsDataResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range to query.</p>
+     * <p>The end of the time range during which data was queried.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The back-to-origin bandwidth information at each interval.</p>
+     * <p>The origin bandwidth data at each interval.</p>
      */
     @NameInMap("RealTimeSrcBpsDataPerInterval")
     public DescribeDomainRealTimeSrcBpsDataResponseBodyRealTimeSrcBpsDataPerInterval realTimeSrcBpsDataPerInterval;
@@ -37,7 +37,7 @@ public class DescribeDomainRealTimeSrcBpsDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range to query.</p>
+     * <p>The start of the time range during which data was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -97,7 +97,7 @@ public class DescribeDomainRealTimeSrcBpsDataResponseBody extends TeaModel {
 
     public static class DescribeDomainRealTimeSrcBpsDataResponseBodyRealTimeSrcBpsDataPerIntervalDataModule extends TeaModel {
         /**
-         * <p>The timestamp of the data returned.</p>
+         * <p>The timestamp of the returned data.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

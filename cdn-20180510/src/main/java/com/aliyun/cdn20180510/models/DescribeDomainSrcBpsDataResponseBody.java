@@ -17,7 +17,7 @@ public class DescribeDomainSrcBpsDataResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range that was queried.</p>
+     * <p>The end of the time range during which data was queried.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -29,13 +29,13 @@ public class DescribeDomainSrcBpsDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The bandwidth value at each time interval. Unit: bit/s.</p>
+     * <p>The origin bandwidth data at each time interval. Unit: bit/s.</p>
      */
     @NameInMap("SrcBpsDataPerInterval")
     public DescribeDomainSrcBpsDataResponseBodySrcBpsDataPerInterval srcBpsDataPerInterval;
 
     /**
-     * <p>The beginning of the time range that was queried.</p>
+     * <p>The start of the time range during which data was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -95,19 +95,19 @@ public class DescribeDomainSrcBpsDataResponseBody extends TeaModel {
 
     public static class DescribeDomainSrcBpsDataResponseBodySrcBpsDataPerIntervalDataModule extends TeaModel {
         /**
-         * <p>The bandwidth values of HTTPS requests.</p>
+         * <p>The bandwidth values of origin HTTPS requests.</p>
          */
         @NameInMap("HttpsValue")
         public String httpsValue;
 
         /**
-         * <p>The timestamp of the data returned.</p>
+         * <p>The timestamp of the returned data.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         /**
-         * <p>The bandwidth value.</p>
+         * <p>The traffic value at each time interval.</p>
          */
         @NameInMap("Value")
         public String value;

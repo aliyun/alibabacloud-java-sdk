@@ -17,7 +17,7 @@ public class DescribeDomainSrcQpsDataResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range that was queried.</p>
+     * <p>The end of the time range during which data was queried.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -35,7 +35,7 @@ public class DescribeDomainSrcQpsDataResponseBody extends TeaModel {
     public DescribeDomainSrcQpsDataResponseBodySrcQpsDataPerInterval srcQpsDataPerInterval;
 
     /**
-     * <p>The beginning of the time range that was queried.</p>
+     * <p>The start of the time range during which data was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -101,7 +101,7 @@ public class DescribeDomainSrcQpsDataResponseBody extends TeaModel {
         public String timeStamp;
 
         /**
-         * <p>The number of back-to-origin requests per second.</p>
+         * <p>The QPS value.</p>
          */
         @NameInMap("Value")
         public String value;

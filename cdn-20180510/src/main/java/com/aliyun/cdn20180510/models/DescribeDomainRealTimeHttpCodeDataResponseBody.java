@@ -7,7 +7,7 @@ public class DescribeDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
     /**
      * <p>The time interval between the data entries returned. Unit: seconds.</p>
      * <br>
-     * <p>The time granularity varies with the time range to query. Supported values: 60 (1 minute), 300 (5 minutes), and 3600(1 hour). For more information, see the usage notes.</p>
+     * <p>Depending on the maximum time range per query, the value is 60 (1 minute), 300 (5 minutes), or 3600 (1 hour). For more information, see the "Time granularity" section in Usage notes.</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
@@ -19,7 +19,7 @@ public class DescribeDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range that was queried.</p>
+     * <p>The end of the time range during which data was queried.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -37,7 +37,7 @@ public class DescribeDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range that was queried.</p>
+     * <p>The start of the time range during which data was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -97,13 +97,13 @@ public class DescribeDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
 
     public static class DescribeDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageDataValueRealTimeCodeProportionData extends TeaModel {
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The HTTP status code returned.</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
-         * <p>The total number of HTTP status codes returned.</p>
+         * <p>The total number of entries.</p>
          */
         @NameInMap("Count")
         public String count;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCdnDomainLogsResponseBody extends TeaModel {
     /**
-     * <p>The detailed log information, which is indicated by the DomainLogDetail parameter.</p>
+     * <p>A set of DomainLogDetail data.</p>
      */
     @NameInMap("DomainLogDetails")
     public DescribeCdnDomainLogsResponseBodyDomainLogDetails domainLogDetails;
@@ -39,7 +39,7 @@ public class DescribeCdnDomainLogsResponseBody extends TeaModel {
 
     public static class DescribeCdnDomainLogsResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail extends TeaModel {
         /**
-         * <p>The end of the time range where the QPS data was queried.</p>
+         * <p>The end of the time range during which data was queried.</p>
          */
         @NameInMap("EndTime")
         public String endTime;
@@ -63,7 +63,7 @@ public class DescribeCdnDomainLogsResponseBody extends TeaModel {
         public Long logSize;
 
         /**
-         * <p>The start of the time range that was queried.</p>
+         * <p>The start of the time range during which data was queried.</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -198,13 +198,13 @@ public class DescribeCdnDomainLogsResponseBody extends TeaModel {
         public Long logCount;
 
         /**
-         * <p>The detailed log information, which is indicated by the LogInfoDetail parameter.</p>
+         * <p>A set of LogInfoDetail data.</p>
          */
         @NameInMap("LogInfos")
         public DescribeCdnDomainLogsResponseBodyDomainLogDetailsDomainLogDetailLogInfos logInfos;
 
         /**
-         * <p>The detailed log information, which is indicated by the PageInfoDetail parameter.</p>
+         * <p>A set of PageInfoDetail data.</p>
          */
         @NameInMap("PageInfos")
         public DescribeCdnDomainLogsResponseBodyDomainLogDetailsDomainLogDetailPageInfos pageInfos;

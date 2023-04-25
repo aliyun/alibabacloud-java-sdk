@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateUserUsageDataExportTaskResponseBody extends TeaModel {
     /**
-     * <p>The end of the time range where the QPS data was queried.</p>
+     * <p>The end of the time range during which data was queried.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -17,7 +17,7 @@ public class CreateUserUsageDataExportTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range that was queried.</p>
+     * <p>The start of the time range during which data was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

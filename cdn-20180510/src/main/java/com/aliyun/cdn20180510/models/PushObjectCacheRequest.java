@@ -7,14 +7,14 @@ public class PushObjectCacheRequest extends TeaModel {
     /**
      * <p>The accelerated region where content is to be prefetched. Valid values:</p>
      * <br>
-     * <p>*   **domestic**: **Chinese Mainland Only**</p>
-     * <p>*   **overseas**: **Global (Excluding the Chinese Mainland)**</p>
+     * <p>*   **domestic****: Chinese mainland**</p>
+     * <p>*   **overseas****: regions outside the Chinese mainland**</p>
      * <br>
-     * <p>If you do not set this parameter, content in the accelerated region of the domain name is prefetched. Content is prefetched based on the following rules:</p>
+     * <p>If you do not set this parameter, content in the accelerated region of the domain name is prefetched.</p>
      * <br>
-     * <p>*   If the accelerated region is set to ****Chinese Mainland Only****, content in regions in the Chinese mainland is prefetched.</p>
+     * <p>*   If the accelerated region is set to **Mainland China Only**, content in regions in the Chinese mainland is prefetched.</p>
      * <p>*   If the accelerated region is set to **Global**, content in all regions is prefetched.</p>
-     * <p>*   If the accelerated region is set to **Global (Excluding the Chinese Mainland)**, content in regions outside the Chinese mainland is prefetched.</p>
+     * <p>*   If the accelerated region is set to **Global (Excluding Mainland China)**, content in regions outside the Chinese mainland is prefetched.</p>
      */
     @NameInMap("Area")
     public String area;
@@ -22,8 +22,8 @@ public class PushObjectCacheRequest extends TeaModel {
     /**
      * <p>Specifies whether to prefetch content to POPs. Valid values:</p>
      * <br>
-     * <p>*   **true**: prefetch content to L2 edge nodes.</p>
-     * <p>*   **false**: prefetch content to regular edge nodes. Regular edge nodes can be L2 edge nodes or L3 edge nodes. Default value: **false**.</p>
+     * <p>*   **true**: prefetches content to POPs.</p>
+     * <p>*   **false**: prefetches content to regular POPs. Regular POPs can be L2 POPs or L3 POPs. Default value: **false**.</p>
      */
     @NameInMap("L2Preload")
     public Boolean l2Preload;
@@ -31,7 +31,7 @@ public class PushObjectCacheRequest extends TeaModel {
     /**
      * <p>The URLs based on which content is prefetched. Format: **accelerated domain name/files to be prefetched**.</p>
      * <br>
-     * <p>>  Separate URLs with line feeds (\n or \r\n). Each object path can be up to 1,024 characters in length.</p>
+     * <p>> Separate URLs with line feeds (\n or \r\n). Each object path can be up to 1,024 characters in length.</p>
      */
     @NameInMap("ObjectPath")
     public String objectPath;
@@ -42,6 +42,9 @@ public class PushObjectCacheRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The custom header for prefetch in the JSON format.</p>
+     */
     @NameInMap("WithHeader")
     public String withHeader;
 

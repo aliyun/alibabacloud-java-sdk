@@ -47,8 +47,8 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
         /**
          * <p>The billable region. Valid values:</p>
          * <br>
-         * <p>*   **CN**: mainland China</p>
-         * <p>*   **OverSeas**: regions outside mainland China</p>
+         * <p>*   **CN**: Chinese mainland</p>
+         * <p>*   **OverSeas**: outside the Chinese mainland</p>
          * <p>*   **AP1**: Asia Pacific 1</p>
          * <p>*   **AP2**: Asia Pacific 2</p>
          * <p>*   **AP3**: Asia Pacific 3</p>
@@ -61,7 +61,7 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
         public String cdnRegion;
 
         /**
-         * <p>The billable item. Valid values:</p>
+         * <p>The billing method. Valid values:</p>
          * <br>
          * <p>*   **StaticHttp**: static HTTP requests</p>
          * <p>*   **DynamicHttp**: dynamic HTTP requests</p>
@@ -156,7 +156,7 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
         public String billTime;
 
         /**
-         * <p>The billing method.</p>
+         * <p>The metering method.</p>
          */
         @NameInMap("BillType")
         public String billType;

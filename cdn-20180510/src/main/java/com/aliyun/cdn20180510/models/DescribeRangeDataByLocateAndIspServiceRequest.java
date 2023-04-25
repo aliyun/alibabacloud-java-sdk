@@ -13,9 +13,9 @@ public class DescribeRangeDataByLocateAndIspServiceRequest extends TeaModel {
     /**
      * <p>The end of the time range to query.</p>
      * <br>
-     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
-     * <p>>  The end time must be later than the start time. The interval between the end time and the start time cannot exceed 1 hour.</p>
+     * <p>> The end time must be later than the start time. The maximum time range that can be specified is 1 hour.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -29,7 +29,7 @@ public class DescribeRangeDataByLocateAndIspServiceRequest extends TeaModel {
     public String ispNames;
 
     /**
-     * <p>The names of the regions. Separate regions with commas (,).</p>
+     * <p>The names of the regions. Separate multiple region names with commas (,).</p>
      * <br>
      * <p>You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query the most recent region list.</p>
      */
@@ -39,7 +39,7 @@ public class DescribeRangeDataByLocateAndIspServiceRequest extends TeaModel {
     /**
      * <p>The beginning of the time range to query.</p>
      * <br>
-     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainBpsDataResponseBody extends TeaModel {
     /**
-     * <p>The bandwidth values collected at each interval.</p>
+     * <p>The list of bandwidth data entries returned at each interval.</p>
      */
     @NameInMap("BpsDataPerInterval")
     public DescribeDomainBpsDataResponseBodyBpsDataPerInterval bpsDataPerInterval;
 
     /**
-     * <p>The time interval between the returned entries. Unit: seconds.</p>
+     * <p>The time interval between the data entries returned. Unit: seconds.</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
@@ -23,13 +23,13 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range that was queried.</p>
+     * <p>The end of the time range during which data was queried.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The name of the ISP for your Alibaba Cloud CDN service.</p>
+     * <p>The name of the ISP.</p>
      */
     @NameInMap("IspNameEn")
     public String ispNameEn;
@@ -47,7 +47,7 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range that was queried.</p>
+     * <p>The start of the time range during which data was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -123,31 +123,31 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
 
     public static class DescribeDomainBpsDataResponseBodyBpsDataPerIntervalDataModule extends TeaModel {
         /**
-         * <p>The bandwidth values in the Chinese mainland. When the bandwidth data is queried by ISP, no value is returned.</p>
+         * <p>The bandwidth value in the Chinese mainland. When the bandwidth data is queried by ISP, this parameter is empty.</p>
          */
         @NameInMap("DomesticValue")
         public String domesticValue;
 
         /**
-         * <p>The bandwidth values for HTTPS requests in the Chinese mainland. When the bandwidth data is queried by ISP, no value is returned.</p>
+         * <p>The bandwidth data for HTTPS requests in the Chinese mainland. When the bandwidth data is queried by ISP, this parameter is empty.</p>
          */
         @NameInMap("HttpsDomesticValue")
         public String httpsDomesticValue;
 
         /**
-         * <p>The bandwidth values for HTTPS requests in regions outside the Chinese mainland. When the bandwidth data is queried by ISP, no value is returned.</p>
+         * <p>The bandwidth data for HTTPS requests in regions outside the Chinese mainland. When the bandwidth data is queried by ISP, this parameter is empty.</p>
          */
         @NameInMap("HttpsOverseasValue")
         public String httpsOverseasValue;
 
         /**
-         * <p>The bandwidth values for HTTPS requests. Unit: bit/s.</p>
+         * <p>The bandwidth value for HTTPS requests. Unit: bit/s.</p>
          */
         @NameInMap("HttpsValue")
         public String httpsValue;
 
         /**
-         * <p>The bandwidth values in regions outside the Chinese mainland. When the bandwidth data is queried by ISP, no value is returned.</p>
+         * <p>The bandwidth data in regions outside the Chinese mainland. When the bandwidth data is queried by ISP, this parameter is empty.</p>
          */
         @NameInMap("OverseasValue")
         public String overseasValue;
@@ -159,7 +159,7 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
         public String timeStamp;
 
         /**
-         * <p>The bandwidth value. Unit: bit/s.</p>
+         * <p>The bandwidth. Unit: bit/s.</p>
          */
         @NameInMap("Value")
         public String value;

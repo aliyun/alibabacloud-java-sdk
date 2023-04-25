@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainSrcBpsDataRequest extends TeaModel {
     /**
-     * <p>You can specify multiple domain names and separate them with commas (,). You can specify at most 500 domain names in each call.</p>
+     * <p>The accelerated domain name. You can specify up to 500 domain names in each call. Separate multiple domain names with commas (,).</p>
      * <br>
-     * <p>By default, this operation queries the bandwidth values during back-to-origin routing for all accelerated domain names that belong to your Alibaba Cloud account.</p>
+     * <p>By default, this operation queries the geographic distribution of users for all accelerated domain names.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -17,7 +17,7 @@ public class DescribeDomainSrcBpsDataRequest extends TeaModel {
      * <br>
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
-     * <p>>  The end time must be later than the start time.</p>
+     * <p>> The end time must be later than the start time.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -25,13 +25,13 @@ public class DescribeDomainSrcBpsDataRequest extends TeaModel {
     /**
      * <p>The time interval between the data entries. Unit: seconds.</p>
      * <br>
-     * <p>The time granularity varies with the time range to query. Supported values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see **Usage notes**.</p>
+     * <p>The time granularity varies with the maximum time range per query. Valid values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see **Description**.</p>
      */
     @NameInMap("Interval")
     public String interval;
 
     /**
-     * <p>The start of the time range to query.</p>
+     * <p>The beginning of the time range to query.</p>
      * <br>
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      */
