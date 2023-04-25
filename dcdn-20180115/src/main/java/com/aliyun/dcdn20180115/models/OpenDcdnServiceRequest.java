@@ -20,7 +20,7 @@ public class OpenDcdnServiceRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The metering method of WebSocket. Default value: off. Valid values:</p>
+     * <p>The metering method of WebSocket. Valid values:</p>
      * <br>
      * <p>*   **websockettraffic**: pay-by-data-transfer</p>
      * <p>*   **websocketbps**: pay-by-bandwidth</p>
