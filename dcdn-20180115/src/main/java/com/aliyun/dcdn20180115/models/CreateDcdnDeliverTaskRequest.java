@@ -13,7 +13,7 @@ public class CreateDcdnDeliverTaskRequest extends TeaModel {
     /**
      * <p>The domain names to be tracked. Separate multiple domain names with commas (,). You can specify up to 500 domain names. If you want to specify more than 500 domain names, [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex).</p>
      * <br>
-     * <p>>  If you do not specify a domain name, the custom operations reports are created for all domain names that belong to your Alibaba Cloud account.</p>
+     * <p>> If you do not specify a domain name, the tracking task is created for all domain names that belong to your Alibaba Cloud account.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -31,7 +31,7 @@ public class CreateDcdnDeliverTaskRequest extends TeaModel {
     public String reports;
 
     /**
-     * <p>The parameters of the tracking task. The settings must be escaped in JSON.</p>
+     * <p>The parameters that specify the time interval at which the tracking task sends operations reports. The settings must be escaped in JSON.</p>
      */
     @NameInMap("Schedule")
     public String schedule;

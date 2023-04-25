@@ -17,7 +17,7 @@ public class DescribeDcdnBgpTrafficDataRequest extends TeaModel {
     public String interval;
 
     /**
-     * <p>The ISPs. If you need to specify multiple ISPs, separate them with commas (,). If you specify multiple ISPs, the data for the ISPs is aggregated. If you do not specify this parameter, the operation returns the data for all the ISPs.</p>
+     * <p>The ISP. Separate multiple ISPs with commas (,). If you specify multiple ISPs, the data for the ISPs is aggregated. If you do not specify this parameter, the operation returns the data for all the ISPs.</p>
      * <br>
      * <p>Valid values:</p>
      * <br>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnBgpTrafficDataResponseBody extends TeaModel {
     /**
-     * <p>The BGP traffic data that is collected for each interval.</p>
+     * <p>The BGP traffic at each time interval.</p>
      */
     @NameInMap("BgpDataInterval")
     public java.util.List<DescribeDcdnBgpTrafficDataResponseBodyBgpDataInterval> bgpDataInterval;
@@ -79,7 +79,7 @@ public class DescribeDcdnBgpTrafficDataResponseBody extends TeaModel {
         public Long out;
 
         /**
-         * <p>The timestamp of the returned data.</p>
+         * <p>The timestamp of the data returned.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

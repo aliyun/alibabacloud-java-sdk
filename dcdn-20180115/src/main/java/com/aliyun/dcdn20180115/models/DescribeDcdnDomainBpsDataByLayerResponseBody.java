@@ -52,6 +52,18 @@ public class DescribeDcdnDomainBpsDataByLayerResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainBpsDataByLayerResponseBodyBpsDataIntervalDataModule extends TeaModel {
+        @NameInMap("DynamicTrafficValue")
+        public String dynamicTrafficValue;
+
+        @NameInMap("DynamicValue")
+        public String dynamicValue;
+
+        @NameInMap("StaticTrafficValue")
+        public String staticTrafficValue;
+
+        @NameInMap("StaticValue")
+        public String staticValue;
+
         /**
          * <p>The timestamp of the data returned.</p>
          */
@@ -73,6 +85,38 @@ public class DescribeDcdnDomainBpsDataByLayerResponseBody extends TeaModel {
         public static DescribeDcdnDomainBpsDataByLayerResponseBodyBpsDataIntervalDataModule build(java.util.Map<String, ?> map) throws Exception {
             DescribeDcdnDomainBpsDataByLayerResponseBodyBpsDataIntervalDataModule self = new DescribeDcdnDomainBpsDataByLayerResponseBodyBpsDataIntervalDataModule();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDcdnDomainBpsDataByLayerResponseBodyBpsDataIntervalDataModule setDynamicTrafficValue(String dynamicTrafficValue) {
+            this.dynamicTrafficValue = dynamicTrafficValue;
+            return this;
+        }
+        public String getDynamicTrafficValue() {
+            return this.dynamicTrafficValue;
+        }
+
+        public DescribeDcdnDomainBpsDataByLayerResponseBodyBpsDataIntervalDataModule setDynamicValue(String dynamicValue) {
+            this.dynamicValue = dynamicValue;
+            return this;
+        }
+        public String getDynamicValue() {
+            return this.dynamicValue;
+        }
+
+        public DescribeDcdnDomainBpsDataByLayerResponseBodyBpsDataIntervalDataModule setStaticTrafficValue(String staticTrafficValue) {
+            this.staticTrafficValue = staticTrafficValue;
+            return this;
+        }
+        public String getStaticTrafficValue() {
+            return this.staticTrafficValue;
+        }
+
+        public DescribeDcdnDomainBpsDataByLayerResponseBodyBpsDataIntervalDataModule setStaticValue(String staticValue) {
+            this.staticValue = staticValue;
+            return this;
+        }
+        public String getStaticValue() {
+            return this.staticValue;
         }
 
         public DescribeDcdnDomainBpsDataByLayerResponseBodyBpsDataIntervalDataModule setTimeStamp(String timeStamp) {
