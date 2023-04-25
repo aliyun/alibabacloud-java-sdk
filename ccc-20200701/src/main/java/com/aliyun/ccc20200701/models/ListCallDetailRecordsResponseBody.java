@@ -158,6 +158,9 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         @NameInMap("StartTime")
         public Long startTime;
 
+        @NameInMap("TalkTime")
+        public Long talkTime;
+
         @NameInMap("WaitTime")
         public Long waitTime;
 
@@ -412,6 +415,14 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         }
         public Long getStartTime() {
             return this.startTime;
+        }
+
+        public ListCallDetailRecordsResponseBodyDataList setTalkTime(Long talkTime) {
+            this.talkTime = talkTime;
+            return this;
+        }
+        public Long getTalkTime() {
+            return this.talkTime;
         }
 
         public ListCallDetailRecordsResponseBodyDataList setWaitTime(Long waitTime) {

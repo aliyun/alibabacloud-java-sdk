@@ -4,6 +4,9 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class BlindTransferRequest extends TeaModel {
+    @NameInMap("CallPriority")
+    public Integer callPriority;
+
     @NameInMap("DeviceId")
     public String deviceId;
 
@@ -12,6 +15,12 @@ public class BlindTransferRequest extends TeaModel {
 
     @NameInMap("JobId")
     public String jobId;
+
+    @NameInMap("StrategyName")
+    public String strategyName;
+
+    @NameInMap("StrategyParams")
+    public String strategyParams;
 
     @NameInMap("TimeoutSeconds")
     public Integer timeoutSeconds;
@@ -28,6 +37,14 @@ public class BlindTransferRequest extends TeaModel {
     public static BlindTransferRequest build(java.util.Map<String, ?> map) throws Exception {
         BlindTransferRequest self = new BlindTransferRequest();
         return TeaModel.build(map, self);
+    }
+
+    public BlindTransferRequest setCallPriority(Integer callPriority) {
+        this.callPriority = callPriority;
+        return this;
+    }
+    public Integer getCallPriority() {
+        return this.callPriority;
     }
 
     public BlindTransferRequest setDeviceId(String deviceId) {
@@ -52,6 +69,22 @@ public class BlindTransferRequest extends TeaModel {
     }
     public String getJobId() {
         return this.jobId;
+    }
+
+    public BlindTransferRequest setStrategyName(String strategyName) {
+        this.strategyName = strategyName;
+        return this;
+    }
+    public String getStrategyName() {
+        return this.strategyName;
+    }
+
+    public BlindTransferRequest setStrategyParams(String strategyParams) {
+        this.strategyParams = strategyParams;
+        return this;
+    }
+    public String getStrategyParams() {
+        return this.strategyParams;
     }
 
     public BlindTransferRequest setTimeoutSeconds(Integer timeoutSeconds) {
