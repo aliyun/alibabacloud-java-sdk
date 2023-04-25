@@ -4,18 +4,33 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class GetConsumerListResponseBody extends TeaModel {
+    /**
+     * <p>The name of the consumer group.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("ConsumerList")
     public GetConsumerListResponseBodyConsumerList consumerList;
 
+    /**
+     * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The key of the tag.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the consumer groups.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -114,24 +129,53 @@ public class GetConsumerListResponseBody extends TeaModel {
     }
 
     public static class GetConsumerListResponseBodyConsumerListConsumerVO extends TeaModel {
+        /**
+         * <p>自动创建的Group</p>
+         */
+        @NameInMap("AutomaticallyCreatedGroup")
+        public Boolean automaticallyCreatedGroup;
+
+        /**
+         * <p>The ID of the instance to which the consumer group belongs.</p>
+         */
         @NameInMap("ConsumerId")
         public String consumerId;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The description of the consumer group.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the request.</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <p>Queries one or more consumer groups in a specified Message Queue for Apache Kafka instance.</p>
+         */
         @NameInMap("Tags")
         public GetConsumerListResponseBodyConsumerListConsumerVOTags tags;
 
         public static GetConsumerListResponseBodyConsumerListConsumerVO build(java.util.Map<String, ?> map) throws Exception {
             GetConsumerListResponseBodyConsumerListConsumerVO self = new GetConsumerListResponseBodyConsumerListConsumerVO();
             return TeaModel.build(map, self);
+        }
+
+        public GetConsumerListResponseBodyConsumerListConsumerVO setAutomaticallyCreatedGroup(Boolean automaticallyCreatedGroup) {
+            this.automaticallyCreatedGroup = automaticallyCreatedGroup;
+            return this;
+        }
+        public Boolean getAutomaticallyCreatedGroup() {
+            return this.automaticallyCreatedGroup;
         }
 
         public GetConsumerListResponseBodyConsumerListConsumerVO setConsumerId(String consumerId) {

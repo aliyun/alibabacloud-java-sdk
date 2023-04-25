@@ -4,15 +4,27 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class ModifyTopicRemarkRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The description of the topic.</p>
+     */
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <p>The name of the topic.</p>
+     */
     @NameInMap("Topic")
     public String topic;
 

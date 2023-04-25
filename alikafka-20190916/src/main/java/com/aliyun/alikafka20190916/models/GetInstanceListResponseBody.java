@@ -4,18 +4,33 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceListResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned. The HTTP status code 200 indicates that the call is successful.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The details of the instances.</p>
+     */
     @NameInMap("InstanceList")
     public GetInstanceListResponseBodyInstanceList instanceList;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +80,15 @@ public class GetInstanceListResponseBody extends TeaModel {
     }
 
     public static class GetInstanceListResponseBodyInstanceListInstanceVOTagsTagVO extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -114,6 +135,9 @@ public class GetInstanceListResponseBody extends TeaModel {
     }
 
     public static class GetInstanceListResponseBodyInstanceListInstanceVOUpgradeServiceDetailInfo extends TeaModel {
+        /**
+         * <p>The open source Apache Kafka version that corresponds to the instance.</p>
+         */
         @NameInMap("Current2OpenSourceVersion")
         public String current2OpenSourceVersion;
 
@@ -133,102 +157,240 @@ public class GetInstanceListResponseBody extends TeaModel {
     }
 
     public static class GetInstanceListResponseBodyInstanceListInstanceVO extends TeaModel {
+        /**
+         * <p>The configurations of the instance.</p>
+         */
         @NameInMap("AllConfig")
         public String allConfig;
 
+        /**
+         * <p>The time when the instance was created. Unit: milliseconds.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The type of the network in which the instance is deployed. Valid values:</p>
+         * <br>
+         * <p>*   **4**: the Internet and virtual private clouds (VPCs).</p>
+         * <p>*   **5**: VPCs.</p>
+         */
         @NameInMap("DeployType")
         public Integer deployType;
 
+        /**
+         * <p>The size of the disk.</p>
+         */
         @NameInMap("DiskSize")
         public Integer diskSize;
 
+        /**
+         * <p>The type of the disk. Unit: GB. Valid values:</p>
+         * <br>
+         * <p>*   **0**: ultra disk</p>
+         * <p>*   **1**: standard SSD</p>
+         */
         @NameInMap("DiskType")
         public Integer diskType;
 
+        /**
+         * <p>The default endpoint of the instance in domain name mode. The default endpoint of an instance can be in domain name mode or IP address mode.</p>
+         * <br>
+         * <p>*   Domain name mode: A default endpoint in this mode consists of a domain name of the instance and a port number. The format of a default endpoint in this mode is `{Instance domain name}:{Port number}`.</p>
+         * <p>*   IP address mode: A default endpoint in this mode consists of the IP address of a broker and a port number. The format of a default endpoint in this mode is `{Broker IP address}:{Port number}`.</p>
+         */
         @NameInMap("DomainEndpoint")
         public String domainEndpoint;
 
+        /**
+         * <p>The peak public traffic allowed for the instance.</p>
+         */
         @NameInMap("EipMax")
         public Integer eipMax;
 
+        /**
+         * <p>The default endpoint of the instance in IP address mode. The default endpoint of an instance can be in domain name mode or IP address mode.</p>
+         * <br>
+         * <p>*   Domain name mode: A default endpoint in this mode consists of a domain name of the instance and a port number. The format of a default endpoint in this mode is `{Instance domain name}:{Port number}`.</p>
+         * <p>*   IP address mode: A default endpoint in this mode consists of the IP address of a broker and a port number. The format of a default endpoint in this mode is `{Broker IP address}:{Port number}`.</p>
+         */
         @NameInMap("EndPoint")
         public String endPoint;
 
+        /**
+         * <p>The expiration time. Unit: milliseconds.</p>
+         */
         @NameInMap("ExpiredTime")
         public Long expiredTime;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The peak traffic allowed for the instance.</p>
+         */
         @NameInMap("IoMax")
         public Integer ioMax;
 
+        @NameInMap("IoMaxSpec")
+        public String ioMaxSpec;
+
+        /**
+         * <p>The ID of the key that is used for disk encryption in the region where the instance resides.</p>
+         */
         @NameInMap("KmsKeyId")
         public String kmsKeyId;
 
+        /**
+         * <p>The retention period of messages on the instance. Unit: hours.</p>
+         */
         @NameInMap("MsgRetain")
         public Integer msgRetain;
 
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The billing method of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **0**: the subscription billing method</p>
+         * <p>*   **1**: the pay-as-you-go billing method</p>
+         */
         @NameInMap("PaidType")
         public Integer paidType;
 
+        /**
+         * <p>The ID of the region where the instance resides.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The Simple Authentication and Security Layer (SASL) endpoint of the instance in domain name mode. The SASL endpoint of an instance can be in domain name mode or IP address mode.</p>
+         * <br>
+         * <p>*   Domain name mode: An SASL endpoint in this mode consists of a domain name of the instance and a port number. The format of an SASL endpoint in this mode is `{Instance domain name}:{Port number}`.</p>
+         * <p>*   IP address mode: An SASL endpoint in this mode consists of the IP address of the broker and a port number. The format of an SASL endpoint in this mode is `{Broker IP address}:{Port number}`.</p>
+         */
         @NameInMap("SaslDomainEndpoint")
         public String saslDomainEndpoint;
 
+        /**
+         * <p>The security group of the instance.</p>
+         * <br>
+         * <p>*   If the instance is deployed in the Message Queue for Apache Kafka console or by calling the [StartInstance](~~157786~~) operation without configuring a security group, no value is returned for this parameter.</p>
+         * <p>*   If the instance is deployed by calling the [StartInstance](~~157786~~) operation and a security group is configured, the return value is the configured security group.</p>
+         */
         @NameInMap("SecurityGroup")
         public String securityGroup;
 
+        /**
+         * <p>The status of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **0**: pending</p>
+         * <p>*   **1**: deploying</p>
+         * <p>*   **5**: running</p>
+         * <p>*   **15**: expired</p>
+         */
         @NameInMap("ServiceStatus")
         public Integer serviceStatus;
 
+        /**
+         * <p>The edition of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **professional**: Professional Edition (High Write)</p>
+         * <p>*   **professionalForHighRead**: Professional Edition (High Read)</p>
+         * <p>*   **normal**: Standard Edition</p>
+         */
         @NameInMap("SpecType")
         public String specType;
 
+        /**
+         * <p>The SSL endpoint of the instance in domain name mode. The SSL endpoint of an instance can be in domain name mode or IP address mode.</p>
+         * <br>
+         * <p>*   Domain name mode: An SSL endpoint in this mode consists of a domain name of the instance and a port number. The format of an SSL endpoint in this mode is `{Instance domain name}:{Port number}`.</p>
+         * <p>*   IP address mode: An SSL endpoint in this mode consists of the IP address of the broker and a port number. The format of an SSL endpoint in this mode is `{Broker IP address}:{Port number}`.</p>
+         */
         @NameInMap("SslDomainEndpoint")
         public String sslDomainEndpoint;
 
+        /**
+         * <p>The Secure Sockets Layer (SSL) endpoint of the instance in IP address mode. The SSL endpoint of an instance can be in domain name mode or IP address mode.</p>
+         * <br>
+         * <p>*   Domain name mode: An SSL endpoint in this mode consists of a domain name of the instance and a port number. The format of an SSL endpoint in this mode is `{Instance domain name}:{Port number}`.</p>
+         * <p>*   IP address mode: An SSL endpoint in this mode consists of the IP address of the broker and a port number. The format of an SSL endpoint in this mode is `{Broker IP address}:{Port number}`.</p>
+         */
         @NameInMap("SslEndPoint")
         public String sslEndPoint;
 
+        /**
+         * <p>The ID of the zone.</p>
+         */
         @NameInMap("StandardZoneId")
         public String standardZoneId;
 
+        /**
+         * <p>The tags that are attached to the instance.</p>
+         */
         @NameInMap("Tags")
         public GetInstanceListResponseBodyInstanceListInstanceVOTags tags;
 
+        /**
+         * <p>The maximum number of topics that can be created on the instance.</p>
+         */
         @NameInMap("TopicNumLimit")
         public Integer topicNumLimit;
 
+        /**
+         * <p>The upgrade information about the instance.</p>
+         */
         @NameInMap("UpgradeServiceDetailInfo")
         public GetInstanceListResponseBodyInstanceListInstanceVOUpgradeServiceDetailInfo upgradeServiceDetailInfo;
 
+        /**
+         * <p>The number of used groups.</p>
+         */
         @NameInMap("UsedGroupCount")
         public Integer usedGroupCount;
 
+        /**
+         * <p>The number of used partitions.</p>
+         */
         @NameInMap("UsedPartitionCount")
         public Integer usedPartitionCount;
 
+        /**
+         * <p>The number of used topics.</p>
+         */
         @NameInMap("UsedTopicCount")
         public Integer usedTopicCount;
 
+        /**
+         * <p>The ID of the vSwitch.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The ID of the VPC.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The ID of the zone.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -323,6 +485,14 @@ public class GetInstanceListResponseBody extends TeaModel {
         }
         public Integer getIoMax() {
             return this.ioMax;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVO setIoMaxSpec(String ioMaxSpec) {
+            this.ioMaxSpec = ioMaxSpec;
+            return this;
+        }
+        public String getIoMaxSpec() {
+            return this.ioMaxSpec;
         }
 
         public GetInstanceListResponseBodyInstanceListInstanceVO setKmsKeyId(String kmsKeyId) {

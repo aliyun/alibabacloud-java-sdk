@@ -4,12 +4,21 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class GetConsumerProgressRequest extends TeaModel {
+    /**
+     * <p>The region ID of the instance.</p>
+     */
     @NameInMap("ConsumerId")
     public String consumerId;
 
+    /**
+     * <p>The name of the consumer group.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

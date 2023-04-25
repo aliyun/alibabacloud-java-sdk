@@ -4,27 +4,58 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class GetTopicListResponseBody extends TeaModel {
+    /**
+     * <p>The number of topics.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The HTTP status code returned. The HTTP status code 200 indicates that the call is successful.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The information about the topic.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The status of the topic. Valid values:</p>
+     * <br>
+     * <p>**0:** indicates that the topic is running.</p>
+     * <br>
+     * <p>If the topic is deleted, this parameter is not returned.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of entries returned on each page.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The description. Valid values:</p>
+     * <br>
+     * <p>*   The description contains only letters, digits, hyphens (-), and underscores (\_).</p>
+     * <p>*   The description is 3 to 64 characters in length.</p>
+     */
     @NameInMap("TopicList")
     public GetTopicListResponseBodyTopicList topicList;
 
+    /**
+     * <p>The number of partitions in the topic.</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -147,42 +178,96 @@ public class GetTopicListResponseBody extends TeaModel {
     }
 
     public static class GetTopicListResponseBodyTopicListTopicVO extends TeaModel {
+        @NameInMap("AutoCreate")
+        public Boolean autoCreate;
+
+        /**
+         * <p>The region ID of the instance whose topics were queried.</p>
+         */
         @NameInMap("CompactTopic")
         public Boolean compactTopic;
 
+        /**
+         * <p>Running</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("LocalTopic")
         public Boolean localTopic;
 
+        /**
+         * <p>The name of the topic. Valid values:</p>
+         * <br>
+         * <p>*   The name contains only letters, digits, hyphens (-), and underscores (\_).</p>
+         * <p>*   The name is 3 to 64 characters in length. If the name that you specified contains more than 64 characters, the returned name is automatically truncated.</p>
+         */
         @NameInMap("PartitionNum")
         public Integer partitionNum;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The status of the topic. Valid values:</p>
+         * <br>
+         * <p>**Running**</p>
+         * <br>
+         * <p>If the topic is deleted, this parameter is not returned.</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <p>The timestamp that indicates when the topic was created. Unit: milliseconds.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The ID of the instance</p>
+         */
         @NameInMap("StatusName")
         public String statusName;
 
+        /**
+         * <p>Indicates whether the topic was automatically created.</p>
+         */
         @NameInMap("Tags")
         public GetTopicListResponseBodyTopicListTopicVOTags tags;
 
+        /**
+         * <p>The log cleanup policy that is used for the topic. This parameter is returned when the **LocalTopic** parameter is set to **true**. Valid values:</p>
+         * <br>
+         * <p>*   false: The topic uses the delete policy.</p>
+         * <p>*   true: The topic uses the compact policy.</p>
+         */
         @NameInMap("Topic")
         public String topic;
 
         public static GetTopicListResponseBodyTopicListTopicVO build(java.util.Map<String, ?> map) throws Exception {
             GetTopicListResponseBodyTopicListTopicVO self = new GetTopicListResponseBodyTopicListTopicVO();
             return TeaModel.build(map, self);
+        }
+
+        public GetTopicListResponseBodyTopicListTopicVO setAutoCreate(Boolean autoCreate) {
+            this.autoCreate = autoCreate;
+            return this;
+        }
+        public Boolean getAutoCreate() {
+            return this.autoCreate;
         }
 
         public GetTopicListResponseBodyTopicListTopicVO setCompactTopic(Boolean compactTopic) {

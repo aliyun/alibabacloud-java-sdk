@@ -4,18 +4,33 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class GetAllowedIpListResponseBody extends TeaModel {
+    /**
+     * <p>The IP address whitelist of the instance.</p>
+     */
     @NameInMap("AllowedList")
     public GetAllowedIpListResponseBodyAllowedList allowedList;
 
+    /**
+     * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +80,20 @@ public class GetAllowedIpListResponseBody extends TeaModel {
     }
 
     public static class GetAllowedIpListResponseBodyAllowedListInternetList extends TeaModel {
+        /**
+         * <p>The IP address whitelist group.</p>
+         */
         @NameInMap("AllowedIpGroup")
         public java.util.Map<String, String> allowedIpGroup;
 
         @NameInMap("AllowedIpList")
         public java.util.List<String> allowedIpList;
 
+        /**
+         * <p>The port range. Valid values:</p>
+         * <br>
+         * <p>**9093/9093**.</p>
+         */
         @NameInMap("PortRange")
         public String portRange;
 
@@ -112,6 +135,11 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         @NameInMap("AllowedIpList")
         public java.util.List<String> allowedIpList;
 
+        /**
+         * <p>The port range. Valid values:</p>
+         * <br>
+         * <p>**9092/9092**.</p>
+         */
         @NameInMap("PortRange")
         public String portRange;
 
@@ -147,12 +175,26 @@ public class GetAllowedIpListResponseBody extends TeaModel {
     }
 
     public static class GetAllowedIpListResponseBodyAllowedList extends TeaModel {
+        /**
+         * <p>The deployment mode of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **4**: allows access from the Internet and a virtual private cloud (VPC).</p>
+         * <p>*   **5**: allows access from a VPC.</p>
+         * <br>
+         * <p>>  Only integrators need to concern themselves with the value of this parameter.</p>
+         */
         @NameInMap("DeployType")
         public Integer deployType;
 
+        /**
+         * <p>The whitelist for access from the Internet.</p>
+         */
         @NameInMap("InternetList")
         public java.util.List<GetAllowedIpListResponseBodyAllowedListInternetList> internetList;
 
+        /**
+         * <p>The whitelist for access from a VPC.</p>
+         */
         @NameInMap("VpcList")
         public java.util.List<GetAllowedIpListResponseBodyAllowedListVpcList> vpcList;
 

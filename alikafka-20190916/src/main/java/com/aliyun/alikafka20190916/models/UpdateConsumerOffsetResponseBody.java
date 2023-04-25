@@ -3,37 +3,25 @@ package com.aliyun.alikafka20190916.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyInstanceNameResponseBody extends TeaModel {
-    /**
-     * <p>The returned message.</p>
-     */
+public class UpdateConsumerOffsetResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>Indicates whether the request is successful.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Changes the name of a Message Queue for Apache Kafka instance.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
-    public static ModifyInstanceNameResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ModifyInstanceNameResponseBody self = new ModifyInstanceNameResponseBody();
+    public static UpdateConsumerOffsetResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateConsumerOffsetResponseBody self = new UpdateConsumerOffsetResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ModifyInstanceNameResponseBody setCode(Integer code) {
+    public UpdateConsumerOffsetResponseBody setCode(Integer code) {
         this.code = code;
         return this;
     }
@@ -41,7 +29,7 @@ public class ModifyInstanceNameResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ModifyInstanceNameResponseBody setMessage(String message) {
+    public UpdateConsumerOffsetResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -49,7 +37,7 @@ public class ModifyInstanceNameResponseBody extends TeaModel {
         return this.message;
     }
 
-    public ModifyInstanceNameResponseBody setRequestId(String requestId) {
+    public UpdateConsumerOffsetResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -57,7 +45,7 @@ public class ModifyInstanceNameResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ModifyInstanceNameResponseBody setSuccess(Boolean success) {
+    public UpdateConsumerOffsetResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

@@ -3,7 +3,7 @@ package com.aliyun.alikafka20190916.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeNodeStatusResponse extends TeaModel {
+public class UpdateConsumerOffsetResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DescribeNodeStatusResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeNodeStatusResponseBody body;
+    public UpdateConsumerOffsetResponseBody body;
 
-    public static DescribeNodeStatusResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeNodeStatusResponse self = new DescribeNodeStatusResponse();
+    public static UpdateConsumerOffsetResponse build(java.util.Map<String, ?> map) throws Exception {
+        UpdateConsumerOffsetResponse self = new UpdateConsumerOffsetResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeNodeStatusResponse setHeaders(java.util.Map<String, String> headers) {
+    public UpdateConsumerOffsetResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DescribeNodeStatusResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeNodeStatusResponse setStatusCode(Integer statusCode) {
+    public UpdateConsumerOffsetResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DescribeNodeStatusResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeNodeStatusResponse setBody(DescribeNodeStatusResponseBody body) {
+    public UpdateConsumerOffsetResponse setBody(UpdateConsumerOffsetResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeNodeStatusResponseBody getBody() {
+    public UpdateConsumerOffsetResponseBody getBody() {
         return this.body;
     }
 

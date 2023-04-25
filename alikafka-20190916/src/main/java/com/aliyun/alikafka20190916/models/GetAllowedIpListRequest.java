@@ -4,9 +4,15 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class GetAllowedIpListRequest extends TeaModel {
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
