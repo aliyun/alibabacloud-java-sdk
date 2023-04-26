@@ -5,22 +5,10 @@ import com.aliyun.tea.*;
 
 public class SearchMediaRequest extends TeaModel {
     /**
-     * <p>The level of the category.</p>
+     * <p>Details about media assets.</p>
      */
     @NameInMap("Fields")
     public String fields;
-
-    /**
-     * <p>The operation that you want to perform. Set the value to **SearchMedia**.</p>
-     */
-    @NameInMap("Match")
-    public String match;
-
-    /**
-     * <p>Details about media assets.</p>
-     */
-    @NameInMap("PageNo")
-    public Integer pageNo;
 
     /**
      * <p>The preprocessing status. Only preprocessed videos can be used for live streaming in the production studio. Valid values:</p>
@@ -30,23 +18,42 @@ public class SearchMediaRequest extends TeaModel {
      * <p>*   **PreprocessSucceed**</p>
      * <p>*   **PreprocessFailed**</p>
      */
+    @NameInMap("Match")
+    public String match;
+
+    /**
+     * <p>The ID of the media asset.</p>
+     */
+    @NameInMap("PageNo")
+    public Integer pageNo;
+
+    /**
+     * <p>The type of the media asset that you want to query. Default value: video. Valid values:</p>
+     * <br>
+     * <p>*   **video**</p>
+     * <p>*   **audio**</p>
+     * <p>*   **image**</p>
+     * <p>*   **attached**</p>
+     * <br>
+     * <p>> If this parameter is set to **video** or **audio** and you want to traverse all data that meets the filter criteria, you must set the ScrollToken parameter.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The size of the video file.</p>
+     * <p>The tags of the image file.</p>
      */
     @NameInMap("ScrollToken")
     public String scrollToken;
 
     /**
-     * <p>The ID of the parent category.</p>
+     * <p>The list of sprite snapshots.</p>
      */
     @NameInMap("SearchType")
     public String searchType;
 
     /**
-     * <p>The list of sprite snapshots.</p>
+     * <p>The size of the video file.</p>
      */
     @NameInMap("SortBy")
     public String sortBy;

@@ -5,29 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeVodDomainBpsDataRequest extends TeaModel {
     /**
-     * <p>The domain name to be queried. If you do not specify this parameter, the merged data of all your domain names for CDN is returned. You can specify multiple domain names. Separate them with commas (,).</p>
+     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <p>The name of the Internet service provider (ISP). If you do not specify this parameter, the data of all ISPs is returned.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The query interval. Unit: seconds. Valid values: **300**, **3600**, and **86400**.</p>
-     * <br>
-     * <p>*   If the time range to query is less than 3 days, valid values are **300**, **3600**, and **86400**. The default value is 300.</p>
-     * <p>*   If the time range to query is from 3 to less than 31 days, valid values are **3600** and **86400**. The default value is 3600.</p>
-     * <p>*   If the time range to query is from 31 to 90 days, the valid value is **86400**.</p>
+     * <p>The bandwidth in mainland China. Unit: bit/s. When the bandwidth data is queried by ISP, no value is returned.</p>
      */
     @NameInMap("Interval")
     public String interval;
 
     /**
-     * <p>The name of the Internet service provider (ISP). If you do not specify this parameter, the data of all ISPs is returned.</p>
+     * <p>The end of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
      */
     @NameInMap("IspNameEn")
     public String ispNameEn;
@@ -42,9 +38,7 @@ public class DescribeVodDomainBpsDataRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
-     * <br>
-     * <p>> The minimum query interval is 5 minutes. If you do not specify this parameter, the data in the last 24 hours is queried.</p>
+     * <p>The operation that you want to perform. Set the value to **DescribeVodDomainBpsData**.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

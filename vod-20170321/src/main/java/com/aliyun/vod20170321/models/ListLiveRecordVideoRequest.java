@@ -5,51 +5,60 @@ import com.aliyun.tea.*;
 
 public class ListLiveRecordVideoRequest extends TeaModel {
     /**
-     * <p>The name of the application that was used to record the live stream.</p>
+     * <p>The sorting rule of results. Valid values:</p>
+     * <br>
+     * <p>*   **CreationTime:Desc**: sorts the results based on the creation time in descending order. This is the default value.</p>
+     * <p>*   **CreationTime:Asc**: sorts the results based on the creation time in ascending order.</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
-     * <p>The domain name of the recorded live stream.</p>
+     * <p>The operation that you want to perform. Set the value to **ListLiveRecordVideo**.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. The query is performed based on the time range during which the required live streams were recorded. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <p>CreationTime:Desc</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The name of the recorded live stream.</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: **100**. Default value: **10**.</p>
+     * <p>The ID of the transcoding template group.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The sorting rule of results. Valid values:</p>
-     * <p>*   **CreationTime:Desc**: sorts the results based on the creation time in descending order. This is the default value.</p>
-     * <p>*   **CreationTime:Asc**: sorts the results based on the creation time in ascending order.</p>
+     * <p>The duration of the video. Unit: seconds.</p>
      */
     @NameInMap("SortBy")
     public String sortBy;
 
     /**
-     * <p>The beginning of the time range to query. The query is performed based on the time range during which the required live streams were recorded. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <p>The name of the video category.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The name of the recorded live stream.</p>
+     * <p>The status of the video. Valid values:</p>
+     * <br>
+     * <p>*   **Uploading:**: indicates that the video is being uploaded.</p>
+     * <p>*   **UploadFail**: indicates that the video failed to be uploaded.</p>
+     * <p>*   **UploadSucces**: indicates that the video was uploaded.</p>
+     * <p>*   **Transcoding**: indicates that the video is being transcoded.</p>
+     * <p>*   **TranscodeFail**: indicates that the video failed to be transcoded.</p>
+     * <p>*   **Blocked**: indicates that the video is blocked.</p>
+     * <p>*   **Normal**: indicates that the video is in a normal state.</p>
      */
     @NameInMap("StreamName")
     public String streamName;

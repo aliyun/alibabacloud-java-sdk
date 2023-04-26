@@ -34,6 +34,13 @@ public class DescribeVodDomainUsageDataRequest extends TeaModel {
     @NameInMap("Field")
     public String field;
 
+    /**
+     * <p>The time interval between the data entries to return. Unit: seconds. Valid values: **300** (5 minutes), **3600** (1 hour), and **86400** (1 day).</p>
+     * <br>
+     * <p>*   If **Interval** is set to **300**, you can query usage data in the last six months. The maximum time range per query that can be specified is three days.</p>
+     * <p>*   If **Interval** is set to **3600** or **86400**, you can query usage data of the previous year.</p>
+     * <p>*   If you do not set the **Interval** parameter, the maximum time range that you can query is one month. If you specify a time range of 1 to 3 days, the time interval between the entries that are returned is 1 hour. If you specify a time range of at least 4 days, the time interval between the entries that are returned is 1 day.</p>
+     */
     @NameInMap("Interval")
     public String interval;
 
@@ -50,7 +57,7 @@ public class DescribeVodDomainUsageDataRequest extends TeaModel {
      * <p>The type of content that you want to query. Valid values:</p>
      * <br>
      * <p>*   **static**: static content</p>
-     * <p>*   **dynamic**: dynamic content</p>
+     * <p>*   **dynamic**: dynamic requests</p>
      * <p>*   **all**: all content</p>
      */
     @NameInMap("Type")

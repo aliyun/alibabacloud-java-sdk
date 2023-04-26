@@ -5,18 +5,13 @@ import com.aliyun.tea.*;
 
 public class CancelUrlUploadJobsRequest extends TeaModel {
     /**
-     * <p>The IDs of the upload jobs. You can obtain the job IDs in the response parameter PlayInfo of the [GetPlayInfo](~~56124~~) operation.</p>
-     * <p>*   You can specify a maximum of 10 IDs.</p>
-     * <p>*   Separate multiple IDs with commas (,).</p>
-     * <p>> You must set one of the JobIds and the UploadUrls parameters. If you set both the JobIds and UploadUrls parameters, only the value of the JobIds parameter takes effect.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("JobIds")
     public String jobIds;
 
     /**
-     * <p>The upload URLs of source files. Separate multiple URLs with commas (,). You can specify a maximum of 10 URLs.</p>
-     * <p>> *   You must encode the URLs before you use the URLs.</p>
-     * <p>> *   You must set one of the JobIds and the UploadUrls parameters. If you set both the JobIds and UploadUrls parameters, only the value of the JobIds parameter takes effect.</p>
+     * <p>The operation that you want to perform. Set the value to **CancelUrlUploadJobs**.</p>
      */
     @NameInMap("UploadUrls")
     public String uploadUrls;

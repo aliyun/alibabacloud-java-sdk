@@ -5,55 +5,49 @@ import com.aliyun.tea.*;
 
 public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of Object Storage Service (OSS) buckets that can be refreshed each day.</p>
+     * <p>The remaining number of directories of files that can be refreshed on the current day.</p>
      */
     @NameInMap("BlockQuota")
     public String blockQuota;
 
     /**
-     * <p>The maximum number of directories of files that can be refreshed each day.</p>
+     * <p>Queries the maximum number and remaining number of requests to refresh or prefetch files on the current day. You can prefetch files based on URLs and refresh files based on URLs or directories.</p>
      */
     @NameInMap("DirQuota")
     public String dirQuota;
 
     /**
-     * <p>The remaining number of directories of files that can be refreshed on the current day.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("DirRemain")
     public String dirRemain;
 
-    /**
-     * <p>The maximum number of URLs of files that can be prefetched each day.</p>
-     */
     @NameInMap("PreloadQuota")
     public String preloadQuota;
 
     /**
-     * <p>The remaining number of URLs of files that can be prefetched on the current day.</p>
+     * <p>The remaining number of OSS buckets that can be refreshed on the current day.</p>
      */
     @NameInMap("PreloadRemain")
     public String preloadRemain;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The maximum number of directories of files that can be refreshed each day.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The maximum number of URLs of files that can be refreshed each day.</p>
-     */
     @NameInMap("UrlQuota")
     public String urlQuota;
 
     /**
-     * <p>The remaining number of URLs of files that can be refreshed on the current day.</p>
+     * <p>The operation that you want to perform. Set the value to **DescribeVodRefreshQuota**.</p>
      */
     @NameInMap("UrlRemain")
     public String urlRemain;
 
     /**
-     * <p>The remaining number of OSS buckets that can be refreshed on the current day.</p>
+     * <p>The maximum number of URLs of files that can be prefetched each day.</p>
      */
     @NameInMap("blockRemain")
     public String blockRemain;

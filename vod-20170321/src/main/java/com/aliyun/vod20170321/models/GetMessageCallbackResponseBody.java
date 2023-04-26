@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetMessageCallbackResponseBody extends TeaModel {
     /**
-     * <p>The configuration of the event notification.</p>
+     * <p>The cryptographic key. This parameter is returned only for HTTP callbacks.</p>
      */
     @NameInMap("MessageCallback")
     public GetMessageCallbackResponseBodyMessageCallback messageCallback;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The name of the MNS queue. This parameter is returned only for MNS callbacks.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,16 +39,19 @@ public class GetMessageCallbackResponseBody extends TeaModel {
 
     public static class GetMessageCallbackResponseBodyMessageCallback extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The operation that you want to perform. Set the value to **GetMessageCallback**.</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
-         * <p>The cryptographic key. This parameter is returned only for HTTP callbacks.</p>
+         * <p>Queries the callback method, callback URL, and event type of an event notification.</p>
          */
         @NameInMap("AuthKey")
         public String authKey;
+
+        @NameInMap("AuthSwitch")
+        public String authSwitch;
 
         /**
          * <p>Indicates whether callback authentication is enabled. This parameter is returned only for HTTP callbacks. Valid values:</p>
@@ -56,38 +59,26 @@ public class GetMessageCallbackResponseBody extends TeaModel {
          * <p>*   **on**: indicates that authentication is enabled.</p>
          * <p>*   **off**: indicates that authentication is disabled.</p>
          */
-        @NameInMap("AuthSwitch")
-        public String authSwitch;
-
-        /**
-         * <p>The callback method. Valid values:</p>
-         * <br>
-         * <p>*   **HTTP**</p>
-         * <p>*   **MNS**</p>
-         */
         @NameInMap("CallbackType")
         public String callbackType;
 
         /**
-         * <p>The callback URL. This parameter is returned only for HTTP callbacks.</p>
+         * <p>The ID of the application.</p>
          */
         @NameInMap("CallbackURL")
         public String callbackURL;
 
         /**
-         * <p>The type of the callback event.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("EventTypeList")
         public String eventTypeList;
 
-        /**
-         * <p>The public endpoint of Message Service (MNS). This parameter is returned only for MNS callbacks.</p>
-         */
         @NameInMap("MnsEndpoint")
         public String mnsEndpoint;
 
         /**
-         * <p>The name of the MNS queue. This parameter is returned only for MNS callbacks.</p>
+         * <p>The callback URL. This parameter is returned only for HTTP callbacks.</p>
          */
         @NameInMap("MnsQueueName")
         public String mnsQueueName;
