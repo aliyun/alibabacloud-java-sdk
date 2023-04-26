@@ -12,6 +12,12 @@ public class ListRemediationTemplatesRequest extends TeaModel {
     @NameInMap("ManagedRuleIdentifier")
     public String managedRuleIdentifier;
 
+    @NameInMap("PageNumber")
+    public Long pageNumber;
+
+    @NameInMap("PageSize")
+    public Long pageSize;
+
     /**
      * <p>The type of the remediation template. Valid value: OOS, which stands for Operation Orchestration Service.</p>
      */
@@ -29,6 +35,22 @@ public class ListRemediationTemplatesRequest extends TeaModel {
     }
     public String getManagedRuleIdentifier() {
         return this.managedRuleIdentifier;
+    }
+
+    public ListRemediationTemplatesRequest setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListRemediationTemplatesRequest setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
     }
 
     public ListRemediationTemplatesRequest setRemediationType(String remediationType) {

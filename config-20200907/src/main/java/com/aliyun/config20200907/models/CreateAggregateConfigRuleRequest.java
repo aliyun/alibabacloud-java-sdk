@@ -5,81 +5,21 @@ import com.aliyun.tea.*;
 
 public class CreateAggregateConfigRuleRequest extends TeaModel {
     /**
-     * <p>The ID of the account group.</p>
+     * <p>The way in which the rule is to be created. Valid values:</p>
      * <br>
-     * <p>For more information about how to query the ID of an account group, see [ListAggregators](~~255797~~).</p>
+     * <p>*   ALIYUN: The rule is to be created based on a managed rule of Alibaba Cloud.</p>
+     * <p>*   CUSTOM_FC: The rule is a custom rule.</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The ID of the resource group to which the rule applies. Separate multiple resource group IDs with commas (,).</p>
+     * <br>
+     * <p>>  This parameter applies only to a managed rule.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
-
-    /**
-     * <p>The name of the rule.</p>
-     */
-    @NameInMap("ConfigRuleName")
-    public String configRuleName;
-
-    /**
-     * <p>The trigger type of the rule. Valid values:</p>
-     * <br>
-     * <p>*   ConfigurationItemChangeNotification: The rule is triggered by configuration changes.</p>
-     * <p>*   ScheduledNotification: The rule is periodically triggered.</p>
-     */
-    @NameInMap("ConfigRuleTriggerTypes")
-    public String configRuleTriggerTypes;
-
-    /**
-     * <p>The description of the rule.</p>
-     */
-    @NameInMap("Description")
-    public String description;
-
-    /**
-     * <p>The ID of the member account to which the rule does not apply, which means that the resources within the member account are not evaluated based on the rule. Separate multiple member account IDs with commas (,).</p>
-     * <br>
-     * <p>>  This parameter applies only to a managed rule.</p>
-     */
-    @NameInMap("ExcludeAccountIdsScope")
-    public String excludeAccountIdsScope;
-
-    /**
-     * <p>The ID of the resource directory to which the rule does not apply, which means that the resources within member accounts in the resource directory are not evaluated based on the rule. Separate multiple resource directory IDs with commas (,).</p>
-     * <br>
-     * <p>> </p>
-     * <p>*   This parameter applies only to a rule of a global account group.</p>
-     * <p>*   This parameter applies only to a managed rule.</p>
-     */
-    @NameInMap("ExcludeFolderIdsScope")
-    public String excludeFolderIdsScope;
-
-    /**
-     * <p>The ID of the resource to be excluded from the compliance evaluations performed by the rule. Separate multiple resource IDs with commas (,).</p>
-     * <br>
-     * <p>>  This parameter applies only to a managed rule.</p>
-     */
-    @NameInMap("ExcludeResourceIdsScope")
-    public String excludeResourceIdsScope;
-
-    /**
-     * <p>The ID of the resource directory to which the rule applies, which means that the resources within member accounts in the resource directory are evaluated based on the rule.</p>
-     * <br>
-     * <p>> </p>
-     * <p>*   This parameter applies only to a rule of a global account group.</p>
-     * <p>*   This parameter applies only to a managed rule.</p>
-     */
-    @NameInMap("FolderIdsScope")
-    public String folderIdsScope;
-
-    /**
-     * <p>The input parameters of the rule.</p>
-     */
-    @NameInMap("InputParameters")
-    public java.util.Map<String, ?> inputParameters;
 
     /**
      * <p>The intervals at which the rule is triggered. Valid values:</p>
@@ -92,30 +32,40 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
      * <br>
      * <p>>  This parameter is required if the `ConfigRuleTriggerTypes` parameter is set to `ScheduledNotification`.</p>
      */
-    @NameInMap("MaximumExecutionFrequency")
-    public String maximumExecutionFrequency;
+    @NameInMap("ConfigRuleName")
+    public String configRuleName;
 
     /**
-     * <p>The ID of the region to which the rule applies. Separate multiple region IDs with commas (,).</p>
-     * <br>
-     * <p>>  This parameter applies only to a managed rule.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
-    @NameInMap("RegionIdsScope")
-    public String regionIdsScope;
-
-    /**
-     * <p>The ID of the resource group to which the rule applies. Separate multiple resource group IDs with commas (,).</p>
-     * <br>
-     * <p>>  This parameter applies only to a managed rule.</p>
-     */
-    @NameInMap("ResourceGroupIdsScope")
-    public String resourceGroupIdsScope;
+    @NameInMap("ConfigRuleTriggerTypes")
+    public String configRuleTriggerTypes;
 
     /**
      * <p>The type of the resource to be evaluated by the rule. Separate multiple resource types with commas (,).</p>
      */
-    @NameInMap("ResourceTypesScope")
-    public java.util.List<String> resourceTypesScope;
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("ExcludeAccountIdsScope")
+    public String excludeAccountIdsScope;
+
+    @NameInMap("ExcludeFolderIdsScope")
+    public String excludeFolderIdsScope;
+
+    /**
+     * <p>The tag value used to filter resources. The rule applies only to the resources with the specified tag value.</p>
+     * <br>
+     * <p>>  This parameter applies only to a managed rule. You must set the `TagKeyScope` and `TagValueScope` parameters at the same time.</p>
+     */
+    @NameInMap("ExcludeResourceIdsScope")
+    public String excludeResourceIdsScope;
+
+    /**
+     * <p>The ID of the request.</p>
+     */
+    @NameInMap("FolderIdsScope")
+    public String folderIdsScope;
 
     /**
      * <p>The risk level of the resources that are not compliant with the rule. Valid values:</p>
@@ -124,8 +74,24 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
      * <p>*   2: medium risk level</p>
      * <p>*   3: low risk level</p>
      */
-    @NameInMap("RiskLevel")
-    public Integer riskLevel;
+    @NameInMap("InputParameters")
+    public java.util.Map<String, ?> inputParameters;
+
+    /**
+     * <p>The ID of the region to which the rule applies. Separate multiple region IDs with commas (,).</p>
+     * <br>
+     * <p>>  This parameter applies only to a managed rule.</p>
+     */
+    @NameInMap("MaximumExecutionFrequency")
+    public String maximumExecutionFrequency;
+
+    /**
+     * <p>The tag key used to filter resources. The rule applies only to the resources with the specified tag key. Separate multiple parameter values with commas (,).</p>
+     * <br>
+     * <p>>  This parameter applies only to a managed rule. You must set the `TagKeyScope` and `TagValueScope` parameters at the same time.</p>
+     */
+    @NameInMap("RegionIdsScope")
+    public String regionIdsScope;
 
     /**
      * <p>The identifier of the rule.</p>
@@ -135,17 +101,48 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
      * <br>
      * <p>For more information about how to query the name of a managed rule, see [Managed rules](~~127404~~).</p>
      */
+    @NameInMap("ResourceGroupIdsScope")
+    public String resourceGroupIdsScope;
+
+    /**
+     * <p>The ID of the resource to be excluded from the compliance evaluations performed by the rule. Separate multiple resource IDs with commas (,).</p>
+     * <br>
+     * <p>>  This parameter applies only to a managed rule.</p>
+     */
+    @NameInMap("ResourceTypesScope")
+    public java.util.List<String> resourceTypesScope;
+
+    /**
+     * <p>The ID of the account group.</p>
+     * <br>
+     * <p>For more information about how to query the ID of an account group, see [ListAggregators](~~255797~~).</p>
+     */
+    @NameInMap("RiskLevel")
+    public Integer riskLevel;
+
+    /**
+     * <p>The ID of the member account to which the rule does not apply, which means that the resources within the member account are not evaluated based on the rule. Separate multiple member account IDs with commas (,).</p>
+     * <br>
+     * <p>>  This parameter applies only to a managed rule.</p>
+     */
     @NameInMap("SourceIdentifier")
     public String sourceIdentifier;
 
     /**
-     * <p>The way in which the rule is to be created. Valid values:</p>
+     * <p>The ID of the resource directory to which the rule does not apply, which means that the resources within member accounts in the resource directory are not evaluated based on the rule. Separate multiple resource directory IDs with commas (,).</p>
      * <br>
-     * <p>*   ALIYUN: The rule is to be created based on a managed rule of Alibaba Cloud.</p>
-     * <p>*   CUSTOM_FC: The rule is a custom rule.</p>
+     * <p>> </p>
+     * <p>*   This parameter applies only to a rule of a global account group.</p>
+     * <p>*   This parameter applies only to a managed rule.</p>
      */
     @NameInMap("SourceOwner")
     public String sourceOwner;
+
+    /**
+     * <p>The ID of the rule.</p>
+     */
+    @NameInMap("TagKeyLogicScope")
+    public String tagKeyLogicScope;
 
     /**
      * <p>The logical relationship among the tag keys if you specify multiple tag keys by using the `TagKeyScope` parameter. For example, if you set the `TagKeyScope` parameter to `ECS,OSS` and set the TagKeyLogicScope parameter to `AND`, the rule applies to resources with both the `ECS` and `OSS` tag keys. Valid values:</p>
@@ -153,21 +150,15 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
      * <p>*   AND: the logical relationship of AND</p>
      * <p>*   OR: the logical relationship of OR</p>
      */
-    @NameInMap("TagKeyLogicScope")
-    public String tagKeyLogicScope;
-
-    /**
-     * <p>The tag key used to filter resources. The rule applies only to the resources with the specified tag key. Separate multiple parameter values with commas (,).</p>
-     * <br>
-     * <p>>  This parameter applies only to a managed rule. You must set the `TagKeyScope` and `TagValueScope` parameters at the same time.</p>
-     */
     @NameInMap("TagKeyScope")
     public String tagKeyScope;
 
     /**
-     * <p>The tag value used to filter resources. The rule applies only to the resources with the specified tag value.</p>
+     * <p>The ID of the resource directory to which the rule applies, which means that the resources within member accounts in the resource directory are evaluated based on the rule.</p>
      * <br>
-     * <p>>  This parameter applies only to a managed rule. You must set the `TagKeyScope` and `TagValueScope` parameters at the same time.</p>
+     * <p>> </p>
+     * <p>*   This parameter applies only to a rule of a global account group.</p>
+     * <p>*   This parameter applies only to a managed rule.</p>
      */
     @NameInMap("TagValueScope")
     public String tagValueScope;

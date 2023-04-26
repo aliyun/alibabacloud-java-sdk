@@ -4,6 +4,12 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ListRemediationsResponseBody extends TeaModel {
+    @NameInMap("PageNumber")
+    public Long pageNumber;
+
+    @NameInMap("PageSize")
+    public Long pageSize;
+
     /**
      * <p>The remediation settings returned.</p>
      */
@@ -16,9 +22,28 @@ public class ListRemediationsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TotalCount")
+    public String totalCount;
+
     public static ListRemediationsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListRemediationsResponseBody self = new ListRemediationsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListRemediationsResponseBody setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListRemediationsResponseBody setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
     }
 
     public ListRemediationsResponseBody setRemediations(java.util.List<ListRemediationsResponseBodyRemediations> remediations) {
@@ -35,6 +60,14 @@ public class ListRemediationsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListRemediationsResponseBody setTotalCount(String totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public String getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ListRemediationsResponseBodyRemediations extends TeaModel {

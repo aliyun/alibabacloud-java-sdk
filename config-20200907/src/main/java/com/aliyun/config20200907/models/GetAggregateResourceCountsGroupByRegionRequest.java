@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class GetAggregateResourceCountsGroupByRegionRequest extends TeaModel {
     /**
-     * <p>The ID of the account group.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).</p>
+     * <p>The total number of resources in the region.</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
     /**
-     * <p>The ID of the folder in the resource directory. For more information about how to obtain the ID of a folder, see [View the basic information of a folder](~~111223~~).</p>
+     * <p>The dimension by which statistics are collected.</p>
+     * <br>
+     * <p>>  In most cases, the `Region` parameter is returned instead of the GroupName parameter.</p>
      */
     @NameInMap("FolderId")
     public String folderId;
@@ -26,9 +26,7 @@ public class GetAggregateResourceCountsGroupByRegionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource.</p>
-     * <br>
-     * <p>For more information about how to obtain the type of a resource, see [ListAggregateDiscoveredResources](~~265983~~).</p>
+     * <p>The statistics on resources.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

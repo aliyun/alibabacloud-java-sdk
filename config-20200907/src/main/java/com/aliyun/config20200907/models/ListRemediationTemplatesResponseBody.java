@@ -4,6 +4,12 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ListRemediationTemplatesResponseBody extends TeaModel {
+    @NameInMap("PageNumber")
+    public Long pageNumber;
+
+    @NameInMap("PageSize")
+    public Long pageSize;
+
     /**
      * <p>The details of the remediation template.</p>
      */
@@ -16,9 +22,28 @@ public class ListRemediationTemplatesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TotalCount")
+    public String totalCount;
+
     public static ListRemediationTemplatesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListRemediationTemplatesResponseBody self = new ListRemediationTemplatesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListRemediationTemplatesResponseBody setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListRemediationTemplatesResponseBody setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
     }
 
     public ListRemediationTemplatesResponseBody setRemediationTemplates(java.util.List<ListRemediationTemplatesResponseBodyRemediationTemplates> remediationTemplates) {
@@ -37,6 +62,14 @@ public class ListRemediationTemplatesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public ListRemediationTemplatesResponseBody setTotalCount(String totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public String getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class ListRemediationTemplatesResponseBodyRemediationTemplates extends TeaModel {
         /**
          * <p>The type of the remediation template. Valid value: OOS, which stands for Operation Orchestration Service.</p>
@@ -49,6 +82,9 @@ public class ListRemediationTemplatesResponseBody extends TeaModel {
          */
         @NameInMap("TemplateDefinition")
         public String templateDefinition;
+
+        @NameInMap("TemplateDescription")
+        public String templateDescription;
 
         /**
          * <p>The identifier of the remediation template.</p>
@@ -81,6 +117,14 @@ public class ListRemediationTemplatesResponseBody extends TeaModel {
         }
         public String getTemplateDefinition() {
             return this.templateDefinition;
+        }
+
+        public ListRemediationTemplatesResponseBodyRemediationTemplates setTemplateDescription(String templateDescription) {
+            this.templateDescription = templateDescription;
+            return this;
+        }
+        public String getTemplateDescription() {
+            return this.templateDescription;
         }
 
         public ListRemediationTemplatesResponseBodyRemediationTemplates setTemplateIdentifier(String templateIdentifier) {
