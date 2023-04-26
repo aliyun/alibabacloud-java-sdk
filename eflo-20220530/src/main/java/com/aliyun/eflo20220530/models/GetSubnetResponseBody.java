@@ -145,9 +145,6 @@ public class GetSubnetResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
-        @NameInMap("Description")
-        public String description;
-
         @NameInMap("GmtModified")
         public String gmtModified;
 
@@ -220,14 +217,6 @@ public class GetSubnetResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
-        }
-
-        public GetSubnetResponseBodyContent setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
         }
 
         public GetSubnetResponseBodyContent setGmtModified(String gmtModified) {

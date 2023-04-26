@@ -120,14 +120,14 @@ public class ListNetworkInterfacesResponseBody extends TeaModel {
         @NameInMap("Cidr")
         public String cidr;
 
-        @NameInMap("GmtCreate")
-        public String gmtCreate;
-
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("CreateTime")
+        public String createTime;
 
         @NameInMap("SubnetId")
         public String subnetId;
+
+        @NameInMap("SubnetName")
+        public String subnetName;
 
         public static ListNetworkInterfacesResponseBodyContentDataSubnetBaseInfo build(java.util.Map<String, ?> map) throws Exception {
             ListNetworkInterfacesResponseBodyContentDataSubnetBaseInfo self = new ListNetworkInterfacesResponseBodyContentDataSubnetBaseInfo();
@@ -142,20 +142,12 @@ public class ListNetworkInterfacesResponseBody extends TeaModel {
             return this.cidr;
         }
 
-        public ListNetworkInterfacesResponseBodyContentDataSubnetBaseInfo setGmtCreate(String gmtCreate) {
-            this.gmtCreate = gmtCreate;
+        public ListNetworkInterfacesResponseBodyContentDataSubnetBaseInfo setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getGmtCreate() {
-            return this.gmtCreate;
-        }
-
-        public ListNetworkInterfacesResponseBodyContentDataSubnetBaseInfo setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public ListNetworkInterfacesResponseBodyContentDataSubnetBaseInfo setSubnetId(String subnetId) {
@@ -164,6 +156,14 @@ public class ListNetworkInterfacesResponseBody extends TeaModel {
         }
         public String getSubnetId() {
             return this.subnetId;
+        }
+
+        public ListNetworkInterfacesResponseBodyContentDataSubnetBaseInfo setSubnetName(String subnetName) {
+            this.subnetName = subnetName;
+            return this;
+        }
+        public String getSubnetName() {
+            return this.subnetName;
         }
 
     }
@@ -238,6 +238,9 @@ public class ListNetworkInterfacesResponseBody extends TeaModel {
 
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
+
+        @NameInMap("NetworkInterfaceName")
+        public String networkInterfaceName;
 
         @NameInMap("NodeId")
         public String nodeId;
@@ -320,6 +323,14 @@ public class ListNetworkInterfacesResponseBody extends TeaModel {
         }
         public String getNetworkInterfaceId() {
             return this.networkInterfaceId;
+        }
+
+        public ListNetworkInterfacesResponseBodyContentData setNetworkInterfaceName(String networkInterfaceName) {
+            this.networkInterfaceName = networkInterfaceName;
+            return this;
+        }
+        public String getNetworkInterfaceName() {
+            return this.networkInterfaceName;
         }
 
         public ListNetworkInterfacesResponseBodyContentData setNodeId(String nodeId) {

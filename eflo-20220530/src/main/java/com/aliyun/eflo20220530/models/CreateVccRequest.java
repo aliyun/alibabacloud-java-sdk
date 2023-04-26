@@ -7,6 +7,9 @@ public class CreateVccRequest extends TeaModel {
     @NameInMap("AccessCouldService")
     public Boolean accessCouldService;
 
+    @NameInMap("Bandwidth")
+    public Integer bandwidth;
+
     @NameInMap("BgpCidr")
     public String bgpCidr;
 
@@ -57,6 +60,14 @@ public class CreateVccRequest extends TeaModel {
     }
     public Boolean getAccessCouldService() {
         return this.accessCouldService;
+    }
+
+    public CreateVccRequest setBandwidth(Integer bandwidth) {
+        this.bandwidth = bandwidth;
+        return this;
+    }
+    public Integer getBandwidth() {
+        return this.bandwidth;
     }
 
     public CreateVccRequest setBgpCidr(String bgpCidr) {

@@ -4,9 +4,6 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class UnAssignPrivateIpAddressRequest extends TeaModel {
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     @NameInMap("IpName")
     public String ipName;
 
@@ -25,14 +22,6 @@ public class UnAssignPrivateIpAddressRequest extends TeaModel {
     public static UnAssignPrivateIpAddressRequest build(java.util.Map<String, ?> map) throws Exception {
         UnAssignPrivateIpAddressRequest self = new UnAssignPrivateIpAddressRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UnAssignPrivateIpAddressRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     public UnAssignPrivateIpAddressRequest setIpName(String ipName) {

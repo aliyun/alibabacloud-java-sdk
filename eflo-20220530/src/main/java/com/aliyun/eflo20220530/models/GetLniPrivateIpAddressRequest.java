@@ -4,9 +4,6 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class GetLniPrivateIpAddressRequest extends TeaModel {
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     @NameInMap("IpName")
     public String ipName;
 
@@ -19,14 +16,6 @@ public class GetLniPrivateIpAddressRequest extends TeaModel {
     public static GetLniPrivateIpAddressRequest build(java.util.Map<String, ?> map) throws Exception {
         GetLniPrivateIpAddressRequest self = new GetLniPrivateIpAddressRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetLniPrivateIpAddressRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     public GetLniPrivateIpAddressRequest setIpName(String ipName) {

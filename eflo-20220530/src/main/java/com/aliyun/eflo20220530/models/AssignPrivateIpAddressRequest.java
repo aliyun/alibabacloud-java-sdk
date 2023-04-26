@@ -7,9 +7,6 @@ public class AssignPrivateIpAddressRequest extends TeaModel {
     @NameInMap("AssignMac")
     public Boolean assignMac;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
@@ -18,6 +15,9 @@ public class AssignPrivateIpAddressRequest extends TeaModel {
 
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("SkipConfig")
+    public Boolean skipConfig;
 
     @NameInMap("SubnetId")
     public String subnetId;
@@ -33,14 +33,6 @@ public class AssignPrivateIpAddressRequest extends TeaModel {
     }
     public Boolean getAssignMac() {
         return this.assignMac;
-    }
-
-    public AssignPrivateIpAddressRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     public AssignPrivateIpAddressRequest setNetworkInterfaceId(String networkInterfaceId) {
@@ -65,6 +57,14 @@ public class AssignPrivateIpAddressRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public AssignPrivateIpAddressRequest setSkipConfig(Boolean skipConfig) {
+        this.skipConfig = skipConfig;
+        return this;
+    }
+    public Boolean getSkipConfig() {
+        return this.skipConfig;
     }
 
     public AssignPrivateIpAddressRequest setSubnetId(String subnetId) {

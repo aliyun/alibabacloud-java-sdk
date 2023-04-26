@@ -7,9 +7,6 @@ public class CreateSubnetRequest extends TeaModel {
     @NameInMap("Cidr")
     public String cidr;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     @NameInMap("RegionId")
     public String regionId;
 
@@ -39,14 +36,6 @@ public class CreateSubnetRequest extends TeaModel {
     }
     public String getCidr() {
         return this.cidr;
-    }
-
-    public CreateSubnetRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     public CreateSubnetRequest setRegionId(String regionId) {
