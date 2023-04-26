@@ -4,9 +4,6 @@ package com.aliyun.hologram20220601.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
@@ -16,14 +13,6 @@ public class ListInstancesRequest extends TeaModel {
     public static ListInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstancesRequest self = new ListInstancesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListInstancesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ListInstancesRequest setResourceGroupId(String resourceGroupId) {
