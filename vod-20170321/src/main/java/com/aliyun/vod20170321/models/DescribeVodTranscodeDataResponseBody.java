@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVodTranscodeDataResponseBody extends TeaModel {
     /**
-     * <p>The time granularity at which the data was queried. Valid values:</p>
+     * <p>The interval at which the data was queried. Valid values:</p>
      * <br>
      * <p>*   **hour**</p>
      * <p>*   **day**</p>
@@ -20,7 +20,7 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The statistics on transcoding.</p>
+     * <p>The transcoding statistics returned.</p>
      */
     @NameInMap("TranscodeData")
     public DescribeVodTranscodeDataResponseBodyTranscodeData transcodeData;
@@ -60,13 +60,13 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
          * <br>
          * <p>*   **Audio**: audio transcoding</p>
          * <p>*   **Segmentation**: container format conversion</p>
-         * <p>*   H.264 and H.265-related video transcoding specifications, such as **H264.LD, H264.SD, H264.HD, H264.2K, and H264.4K**</p>
+         * <p>*   **H264.LD, H264.SD, H264.HD, H264.2K, H264.4K, and more**</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The transcoding length. Unit: seconds.</p>
+         * <p>The transcoding duration. Unit: seconds.</p>
          */
         @NameInMap("Value")
         public String value;

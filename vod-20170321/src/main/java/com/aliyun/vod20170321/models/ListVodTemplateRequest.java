@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListVodTemplateRequest extends TeaModel {
     /**
-     * <p>The ID of the application. Set the value to **app-1000000**. For more information, see [Overview](~~113600~~).</p>
+     * <p>The snapshot templates.</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>The type of the template. Set the value to **Snapshot**.</p>
+     * <p>Indicates whether the template is the default one. Valid values:</p>
+     * <br>
+     * <p>*   **Default**: The template is the default one.</p>
+     * <p>*   **NotDefault**: The template is not the default one.</p>
      */
     @NameInMap("TemplateType")
     public String templateType;

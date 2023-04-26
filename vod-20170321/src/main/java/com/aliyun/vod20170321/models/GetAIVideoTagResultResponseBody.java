@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetAIVideoTagResultResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The location tag of the video.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The tag string.</p>
      */
     @NameInMap("VideoTagResult")
     public GetAIVideoTagResultResponseBodyVideoTagResult videoTagResult;
@@ -39,7 +39,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
 
     public static class GetAIVideoTagResultResponseBodyVideoTagResultCategory extends TeaModel {
         /**
-         * <p>The tag string.</p>
+         * <p>John</p>
          */
         @NameInMap("Tag")
         public String tag;
@@ -61,14 +61,13 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
 
     public static class GetAIVideoTagResultResponseBodyVideoTagResultKeyword extends TeaModel {
         /**
-         * <p>The tag string.</p>
+         * <p>The URL of the profile photo.</p>
+         * <br>
+         * <p>> This parameter is returned only when a figure tag was used.</p>
          */
         @NameInMap("Tag")
         public String tag;
 
-        /**
-         * <p>The points in time when the tags are displayed. Unit: milliseconds.</p>
-         */
         @NameInMap("Times")
         public java.util.List<String> times;
 
@@ -97,13 +96,13 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
 
     public static class GetAIVideoTagResultResponseBodyVideoTagResultLocation extends TeaModel {
         /**
-         * <p>The tag string.</p>
+         * <p>The figure tag of the video.</p>
          */
         @NameInMap("Tag")
         public String tag;
 
         /**
-         * <p>The points in time when the tags are displayed. Unit: milliseconds.</p>
+         * <p>The returned result.</p>
          */
         @NameInMap("Times")
         public java.util.List<String> times;
@@ -133,15 +132,13 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
 
     public static class GetAIVideoTagResultResponseBodyVideoTagResultPerson extends TeaModel {
         /**
-         * <p>The URL of the profile photo.</p>
-         * <br>
-         * <p>> This parameter is returned only when a figure tag was used.</p>
+         * <p>Retouching</p>
          */
         @NameInMap("FaceUrl")
         public String faceUrl;
 
         /**
-         * <p>The tag string.</p>
+         * <p>The keyword tags.</p>
          */
         @NameInMap("Tag")
         public String tag;
@@ -185,13 +182,13 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
 
     public static class GetAIVideoTagResultResponseBodyVideoTagResultTime extends TeaModel {
         /**
-         * <p>The tag string.</p>
+         * <p>Cushion</p>
          */
         @NameInMap("Tag")
         public String tag;
 
         /**
-         * <p>The points in time when the tags are displayed. Unit: milliseconds.</p>
+         * <p>The tag string.</p>
          */
         @NameInMap("Times")
         public java.util.List<String> times;
@@ -221,31 +218,35 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
 
     public static class GetAIVideoTagResultResponseBodyVideoTagResult extends TeaModel {
         /**
-         * <p>The video categories.</p>
+         * <p>The location tags.</p>
          */
         @NameInMap("Category")
         public java.util.List<GetAIVideoTagResultResponseBodyVideoTagResultCategory> category;
 
         /**
-         * <p>The keyword tags.</p>
+         * <p>The video categories.</p>
          */
         @NameInMap("Keyword")
         public java.util.List<GetAIVideoTagResultResponseBodyVideoTagResultKeyword> keyword;
 
         /**
-         * <p>The location tags.</p>
+         * <p>The point in time when the location tag is displayed. Unit: milliseconds.</p>
          */
         @NameInMap("Location")
         public java.util.List<GetAIVideoTagResultResponseBodyVideoTagResultLocation> location;
 
         /**
-         * <p>The figure tags.</p>
+         * <p>The tag string.</p>
          */
         @NameInMap("Person")
         public java.util.List<GetAIVideoTagResultResponseBodyVideoTagResultPerson> person;
 
         /**
-         * <p>The time tags.</p>
+         * <p>The ID of the media file. You can use one of the following methods to obtain the ID:</p>
+         * <br>
+         * <p>*   Log on to the [ApsaraVideo VOD](https://vod.console.aliyun.com) console. In the left-side navigation pane, choose **Media Files** > **Audio/Video**. On the Video and Audio page, view the ID of the audio or video file. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.</p>
+         * <p>*   Obtain the value of VideoId from the response to the [CreateUploadVideo](~~55407~~) operation that you call to upload media files.</p>
+         * <p>*   Obtain the value of VideoId from the response to the [SearchMedia](~~86044~~) operation after you upload media files.</p>
          */
         @NameInMap("Time")
         public java.util.List<GetAIVideoTagResultResponseBodyVideoTagResultTime> time;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDynamicImageRequest extends TeaModel {
     /**
-     * <p>The ID of the video.</p>
+     * <p>The size of the animated sticker file. Unit: byte.</p>
      */
     @NameInMap("VideoId")
     public String videoId;

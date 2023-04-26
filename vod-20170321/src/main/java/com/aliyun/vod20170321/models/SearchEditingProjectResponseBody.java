@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class SearchEditingProjectResponseBody extends TeaModel {
     /**
-     * <p>The list of online editing projects.</p>
+     * <p>The number of entries to return on each page. Default value: **10**. Maximum value: **100**.</p>
      */
     @NameInMap("ProjectList")
     public SearchEditingProjectResponseBodyProjectList projectList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The operation that you want to perform. Set the value to **SearchEditingProject**.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of online editing projects returned.</p>
+     * <p>The time when the online editing project was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -53,68 +53,58 @@ public class SearchEditingProjectResponseBody extends TeaModel {
 
     public static class SearchEditingProjectResponseBodyProjectListProject extends TeaModel {
         /**
-         * <p>The thumbnail URL of the online editing project.</p>
+         * <p>The ID of the online editing project.</p>
          */
         @NameInMap("CoverURL")
         public String coverURL;
 
         /**
-         * <p>The time when the online editing project was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The end of the time range to query. The query is performed based on the time range during which the required online editing projects were created. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The description of the online editing project.</p>
+         * <p>The thumbnail URL of the online editing project.</p>
          */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The duration of the online editing project, which must be consistent with the duration of the timeline.</p>
-         * <p>> The Timeline parameter is not included in response parameters.</p>
-         */
         @NameInMap("Duration")
         public Float duration;
 
         /**
-         * <p>The last time when the online editing project was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The number of the page to return. Default value: **1**.</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
         /**
-         * <p>The ID of the online editing project.</p>
+         * <p>Queries online editing projects.</p>
          */
         @NameInMap("ProjectId")
         public String projectId;
 
-        /**
-         * <p>The region where the online editing project was created.</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The status of the online editing project. Separate multiple states with commas (,). By default, all online editing projects were queried. Valid values:</p>
-         * <p>*   **Normal**: indicates that the online editing project is in draft.</p>
-         * <p>*   **Producing**: indicates that the video is being produced.</p>
-         * <p>*   **Produced**: indicates that the video was produced.</p>
-         * <p>*   **ProduceFailed**: indicates that the video failed to be produced.</p>
+         * <p>The sorting rule of results. Valid values:</p>
+         * <br>
+         * <p>*   **CreationTime:Desc**: sorts the results based on the creation time in descending order. This is the default value.</p>
+         * <p>*   **CreationTime:Asc**: sorts the results based on the creation time in ascending order.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The path of the Object Storage Service (OSS) bucket where the produced video is stored.</p>
+         * <br>
          * <p>> To view the path of the OSS bucket, log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.15.6948257eaZ4m54#/vod/settings/censored), and choose **Configuration Management** > **Media Management** > **Storage**. On the Storage page, you can view the path of the OSS bucket.</p>
          */
         @NameInMap("StorageLocation")
         public String storageLocation;
 
-        /**
-         * <p>The title of the online editing project.</p>
-         */
         @NameInMap("Title")
         public String title;
 

@@ -17,7 +17,7 @@ public class DescribeVodRefreshTasksRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The object URL based on which the query is performed. The URL is used as a condition for an exact match.</p>
+     * <p>The path of the object. The path is used as a condition for exact matching.</p>
      */
     @NameInMap("ObjectPath")
     public String objectPath;
@@ -26,10 +26,10 @@ public class DescribeVodRefreshTasksRequest extends TeaModel {
      * <p>The type of the task. Valid values:</p>
      * <br>
      * <p>*   **file**: refreshes one or more files.</p>
-     * <p>*   **directory**: refreshes the files under one or more directories.</p>
+     * <p>*   **directory**: refreshes files in the specified directories.</p>
      * <p>*   **preload**: prefetches one or more files.</p>
      * <br>
-     * <p>> If you specify the DomainName or TaskStatus parameter, you must also specify the ObjectType parameter.</p>
+     * <p>> If you specify the DomainName or Status parameter, you must also specify the ObjectType parameter.</p>
      */
     @NameInMap("ObjectType")
     public String objectType;
@@ -63,15 +63,15 @@ public class DescribeVodRefreshTasksRequest extends TeaModel {
     /**
      * <p>The status of the task. Valid values:</p>
      * <br>
-     * <p>*   **Complete**: indicates that the task is complete.</p>
-     * <p>*   **Refreshing**: indicates that the task is in progress.</p>
-     * <p>*   **Failed**: indicates that the task failed.</p>
+     * <p>*   **Complete**: The task is complete.</p>
+     * <p>*   **Refreshing**: The task is in progress.</p>
+     * <p>*   **Failed**: The task failed.</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>The task ID based on which the query is performed.</p>
+     * <p>The ID of the task that you want to query.</p>
      */
     @NameInMap("TaskId")
     public String taskId;

@@ -4,15 +4,9 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class RefreshVodObjectCachesResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the refresh task. Separate multiple task IDs with commas (,).</p>
-     */
     @NameInMap("RefreshTaskId")
     public String refreshTaskId;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

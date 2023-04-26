@@ -4,15 +4,9 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetVideoInfoResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The information about the media file.</p>
-     */
     @NameInMap("Video")
     public GetVideoInfoResponseBodyVideo video;
 
@@ -57,130 +51,69 @@ public class GetVideoInfoResponseBody extends TeaModel {
     }
 
     public static class GetVideoInfoResponseBodyVideo extends TeaModel {
-        /**
-         * <p>The ID of the application.</p>
-         */
         @NameInMap("AppId")
         public String appId;
 
-        /**
-         * <p>The review status of the video. Valid values:</p>
-         * <br>
-         * <p>*   **Normal**: pass</p>
-         * <p>*   **Blocked**: failed</p>
-         */
         @NameInMap("AuditStatus")
         public String auditStatus;
 
-        /**
-         * <p>The category ID of the media file.</p>
-         */
         @NameInMap("CateId")
         public Long cateId;
 
-        /**
-         * <p>The name of the category.</p>
-         */
         @NameInMap("CateName")
         public String cateName;
 
-        /**
-         * <p>The thumbnail URL of the media file.</p>
-         */
         @NameInMap("CoverURL")
         public String coverURL;
 
-        /**
-         * <p>The time when the media file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        /**
-         * <p>The custom information about the media file.</p>
-         * <br>
-         * <p>> This parameter has been deprecated. This parameter is no longer returned after you call the operation.</p>
-         */
         @NameInMap("CustomMediaInfo")
         public String customMediaInfo;
 
-        /**
-         * <p>The description of the media file.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The duration of the media file. Unit: seconds.</p>
-         */
         @NameInMap("Duration")
         public Float duration;
 
-        /**
-         * <p>The time when the media file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
-         */
         @NameInMap("ModificationTime")
         public String modificationTime;
 
-        /**
-         * <p>The region where the media file is stored.</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The size of the source file. Unit: bytes.</p>
-         */
+        @NameInMap("RestoreExpiration")
+        public String restoreExpiration;
+
+        @NameInMap("RestoreStatus")
+        public String restoreStatus;
+
         @NameInMap("Size")
         public Long size;
 
-        /**
-         * <p>The video snapshot URLs.</p>
-         */
         @NameInMap("Snapshots")
         public GetVideoInfoResponseBodyVideoSnapshots snapshots;
 
-        /**
-         * <p>The status of the video. For information about the operations that can be performed on videos in different statuses and limits, see the Status: the status of a video section of the [Basic data types](~~52839~~) topic. Valid values:</p>
-         * <br>
-         * <p>*   **Uploading**: The video is being uploaded.</p>
-         * <p>*   **UploadFail**: The video failed to be uploaded.</p>
-         * <p>*   **UploadSucc**: The video has been uploaded.</p>
-         * <p>*   **Transcoding**: The video is being transcoded.</p>
-         * <p>*   **TranscodeFail**: The video failed to be transcoded.</p>
-         * <p>*   **Blocked**: The video is blocked.</p>
-         * <p>*   **Normal**: The video is normal.</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The storage address of the media file.</p>
-         */
+        @NameInMap("StorageClass")
+        public String storageClass;
+
         @NameInMap("StorageLocation")
         public String storageLocation;
 
-        /**
-         * <p>The tags of the media file. Multiple tags are separated by commas (,).</p>
-         */
         @NameInMap("Tags")
         public String tags;
 
-        /**
-         * <p>The ID of the transcoding template group.</p>
-         */
         @NameInMap("TemplateGroupId")
         public String templateGroupId;
 
-        /**
-         * <p>The title of the media file.</p>
-         */
         @NameInMap("Title")
         public String title;
 
-        /**
-         * <p>The ID of the media file.</p>
-         */
         @NameInMap("VideoId")
         public String videoId;
 
@@ -277,6 +210,22 @@ public class GetVideoInfoResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public GetVideoInfoResponseBodyVideo setRestoreExpiration(String restoreExpiration) {
+            this.restoreExpiration = restoreExpiration;
+            return this;
+        }
+        public String getRestoreExpiration() {
+            return this.restoreExpiration;
+        }
+
+        public GetVideoInfoResponseBodyVideo setRestoreStatus(String restoreStatus) {
+            this.restoreStatus = restoreStatus;
+            return this;
+        }
+        public String getRestoreStatus() {
+            return this.restoreStatus;
+        }
+
         public GetVideoInfoResponseBodyVideo setSize(Long size) {
             this.size = size;
             return this;
@@ -299,6 +248,14 @@ public class GetVideoInfoResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetVideoInfoResponseBodyVideo setStorageClass(String storageClass) {
+            this.storageClass = storageClass;
+            return this;
+        }
+        public String getStorageClass() {
+            return this.storageClass;
         }
 
         public GetVideoInfoResponseBodyVideo setStorageLocation(String storageLocation) {

@@ -4,13 +4,6 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class CreateAuditRequest extends TeaModel {
-    /**
-     * <p>The array of the review content.</p>
-     * <br>
-     * <p>You can specify a maximum of **20** videos to be reviewed. The array must be converted into a string as the value of this parameter.</p>
-     * <br>
-     * <p>For more information about the parameters in AuditContent, see the **AuditContent** section of this topic.</p>
-     */
     @NameInMap("AuditContent")
     public String auditContent;
 

@@ -11,10 +11,10 @@ public class DescribeVodTranscodeDataRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The time granularity at which the data is queried. Valid values:</p>
+     * <p>The interval at which you want to query data. Valid values:</p>
      * <br>
-     * <p>*   **day**</p>
-     * <p>*   **hour**</p>
+     * <p>*   **day**: days</p>
+     * <p>*   **hour**: hours</p>
      */
     @NameInMap("Interval")
     public String interval;
@@ -23,7 +23,7 @@ public class DescribeVodTranscodeDataRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region where the transcoded file is stored. If you do not set this parameter, the data in all regions is returned. You can specify multiple regions. Separate them with commas (,). Valid values:</p>
+     * <p>The region in which you want to query data. If you leave this parameter empty, data in all regions is returned. Separate multiple regions with commas (,). Valid values:</p>
      * <br>
      * <p>*   **cn-shanghai**: China (Shanghai)</p>
      * <p>*   **cn-beijing**: China (Beijing)</p>
@@ -34,11 +34,11 @@ public class DescribeVodTranscodeDataRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The transcoding specification. If you do not set this parameter, the data of all transcoding specifications is returned. You can specify multiple transcoding specifications. Separate them with commas (,). Valid values:</p>
+     * <p>The transcoding specification. If you leave this parameter empty, data of all transcoding specifications is returned. Separate multiple transcoding specifications with commas (,). Valid values:</p>
      * <br>
      * <p>*   **Audio**: audio transcoding</p>
      * <p>*   **Segmentation**: container format conversion</p>
-     * <p>*   H.264 and H.265-related video transcoding specifications, such as **H264.LD**, **H264.SD**, **H264.HD**, **H264.2K**, and **H264.4K**</p>
+     * <p>*   **H264.LD**, **H264.SD**, **H264.HD**, **H264.2K**, **H264.4K**, and more</p>
      */
     @NameInMap("Specification")
     public String specification;
@@ -50,7 +50,7 @@ public class DescribeVodTranscodeDataRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The name of the Object Storage Service (OSS) bucket. If you do not set this parameter, the data of all buckets is returned. You can specify multiple buckets. Separate them with commas (,).</p>
+     * <p>The name of the Object Storage Service (OSS) bucket. If you leave this parameter empty, data of all buckets is returned. Separate multiple bucket names with commas (,).</p>
      */
     @NameInMap("Storage")
     public String storage;

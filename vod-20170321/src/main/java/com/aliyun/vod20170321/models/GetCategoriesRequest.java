@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetCategoriesRequest extends TeaModel {
     /**
-     * <p>The ID of the category. Default value: **-1**, which indicates the parent category ID of a level 1 category.</p>
+     * <p>The number of the page where the subcategories to be returned are listed. Default value: **1**.</p>
      */
     @NameInMap("CateId")
     public Long cateId;
 
     /**
-     * <p>The number of the page where the subcategories to be returned are listed. Default value: **1**.</p>
+     * <p>The type of the category. Valid values:</p>
+     * <br>
+     * <p>*   **default** (default): default category</p>
+     * <p>*   **material**: material category</p>
      */
     @NameInMap("PageNo")
     public Long pageNo;
@@ -23,19 +26,13 @@ public class GetCategoriesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The method for sorting the results. Valid values:</p>
-     * <br>
-     * <p>*   **CreationTime:Desc** (default): The results are sorted in reverse chronological order based on the creation time.</p>
-     * <p>*   **CreationTime:Asc**: The results are sorted in chronological order based on the creation time.</p>
+     * <p>The list of subcategories.</p>
      */
     @NameInMap("SortBy")
     public String sortBy;
 
     /**
-     * <p>The type of the category. Valid values:</p>
-     * <br>
-     * <p>*   **default** (default): default category</p>
-     * <p>*   **material**: material category</p>
+     * <p>The total number of subcategories.</p>
      */
     @NameInMap("Type")
     public String type;

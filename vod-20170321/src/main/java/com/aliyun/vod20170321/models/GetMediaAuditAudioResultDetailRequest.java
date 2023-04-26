@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMediaAuditAudioResultDetailRequest extends TeaModel {
     /**
-     * <p>The ID of the video. You can query the video ID by using the ApsaraVideo VOD console or calling the [SearchMedia](~~86044~~) operation.</p>
+     * <p>The end time of the audio that failed the review. Unit: seconds.</p>
      */
     @NameInMap("MediaId")
     public String mediaId;
@@ -17,7 +17,7 @@ public class GetMediaAuditAudioResultDetailRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The number of the page to return. This parameter is optional. If you do not specify this parameter, all results are returned without pagination.</p>
+     * <p>Details of review results.</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;

@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class ListAppInfoRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. By default, pages start from page 1.</p>
+     * <p>The operation that you want to perform. Set the value to **ListAppInfo**.</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**. Maximum value: **100**.</p>
+     * <p>The type of the application. Valid values:</p>
+     * <br>
+     * <p>*   **System**</p>
+     * <p>*   **Custom**</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The status of the application. After an application is created, it enters the **Normal** state. Valid values:</p>
-     * <br>
-     * <p>*   **Normal**</p>
-     * <p>*   **Disable**</p>
+     * <p>The details of each application.</p>
      */
     @NameInMap("Status")
     public String status;

@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class RefreshVodObjectCachesRequest extends TeaModel {
     /**
-     * <p>The path of the resource to be refreshed. Separate multiple paths with line breaks (\n or \r\n).</p>
+     * <p>The granularity of the resources to be refreshed. Valid values:</p>
+     * <br>
+     * <p>*   **File**: refreshes one or more files. This is the default value.</p>
+     * <p>*   **Directory**: refreshes the files under one or more directories.</p>
      */
     @NameInMap("ObjectPath")
     public String objectPath;
 
     /**
-     * <p>The granularity of the resources to be refreshed. Valid values:</p>
-     * <br>
-     * <p>*   **File**: refreshes one or more files. This is the default value.</p>
-     * <p>*   **Directory**: refreshes the files under one or more directories.</p>
+     * <p>Refreshes files on Alibaba Cloud CDN nodes. You can refresh multiple files at a time based on URLs.</p>
      */
     @NameInMap("ObjectType")
     public String objectType;

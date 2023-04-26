@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeVodDomainConfigsRequest extends TeaModel {
     /**
-     * <p>The domain name for CDN.</p>
+     * <p>The name of the feature. Separate multiple names with commas (,). For more information, see the **Feature description** section.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The name of the feature. Separate multiple names with commas (,). For more information, see the **Feature description** section.</p>
+     * <p>The parameters of each feature.</p>
      */
     @NameInMap("FunctionNames")
     public String functionNames;

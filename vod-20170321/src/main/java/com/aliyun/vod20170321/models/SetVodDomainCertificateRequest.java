@@ -26,7 +26,7 @@ public class SetVodDomainCertificateRequest extends TeaModel {
     public String SSLPri;
 
     /**
-     * <p>Specifies whether to enable the SSL certificate. Valid values:</p>
+     * <p>Specifies whether to enable the SSL certificate. Default value: off. Valid values:</p>
      * <br>
      * <p>*   **on**</p>
      * <p>*   **off**</p>

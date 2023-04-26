@@ -4,40 +4,18 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodDomainSrcBpsDataRequest extends TeaModel {
-    /**
-     * <p>The accelerated domain name. You can specify a maximum of 500 domain names in a request. Separate multiple domain names with commas (,). If you specify multiple domain names in a request, aggregation results are returned.</p>
-     * <br>
-     * <p>If you leave this parameter empty, the origin bandwidth data for all accelerated domain names is queried by default.</p>
-     */
     @NameInMap("DomainName")
     public String domainName;
 
-    /**
-     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     */
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <p>The time interval between the data entries to return. Unit: seconds. Valid values:</p>
-     * <br>
-     * <p>*   **300**: 5 minutes</p>
-     * <p>*   **3600**: 1 hour</p>
-     * <p>*   **86400**: 1 day</p>
-     * <br>
-     * <p>> The time granularity supported by the Interval parameter varies based on the time range per query specified by using `StartTime` and `EndTime`. For more information, see the **Time granularity** section of this topic.</p>
-     */
     @NameInMap("Interval")
     public String interval;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     * <br>
-     * <p>If you leave this parameter empty, the origin bandwidth data that is generated in the last 24 hours is queried by default.</p>
-     */
     @NameInMap("StartTime")
     public String startTime;
 

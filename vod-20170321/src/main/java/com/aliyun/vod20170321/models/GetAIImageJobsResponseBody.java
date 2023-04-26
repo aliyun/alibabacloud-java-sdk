@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetAIImageJobsResponseBody extends TeaModel {
     /**
-     * <p>The image AI processing jobs.</p>
+     * <p>The time when the image AI processing job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
      */
     @NameInMap("AIImageJobList")
     public java.util.List<GetAIImageJobsResponseBodyAIImageJobList> AIImageJobList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The information about the image AI processing job.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -47,13 +47,22 @@ public class GetAIImageJobsResponseBody extends TeaModel {
         public String AIImageResult;
 
         /**
-         * <p>The error code.</p>
+         * <p>The user data.</p>
+         * <br>
+         * <p>*   The value must be a JSON string.</p>
+         * <p>*   The MessageCallback or Extend parameter is returned.</p>
+         * <p>*   The value contains a maximum of 512 bytes.</p>
+         * <br>
+         * <p>For more information, see the "UserData: specifies the custom configurations for media upload" section of the [Request parameters](~~86952~~) topic.</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
-         * <p>The time when the image AI processing job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The ID of the image AI processing job. You can obtain the value of JobId from the response to the [SubmitAIImageJob](~~186922~~) operation.</p>
+         * <br>
+         * <p>*   You can specify a maximum of 10 IDs.</p>
+         * <p>*   Separate multiple IDs with commas (,).</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -65,46 +74,31 @@ public class GetAIImageJobsResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The error message.</p>
+         * <p>Queries jobs of image AI processing.</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The status of the job. Valid values:</p>
-         * <br>
-         * <p>*   **success**</p>
-         * <p>*   **fail**</p>
+         * <p>The error code.</p>
          */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The configurations of the AI template that was used to submit the job.</p>
-         */
         @NameInMap("TemplateConfig")
         public String templateConfig;
 
-        /**
-         * <p>The ID of the AI template.</p>
-         */
         @NameInMap("TemplateId")
         public String templateId;
 
         /**
-         * <p>The user data.</p>
-         * <br>
-         * <p>*   The value must be a JSON string.</p>
-         * <p>*   The MessageCallback or Extend parameter is returned.</p>
-         * <p>*   The value contains a maximum of 512 bytes.</p>
-         * <br>
-         * <p>For more information, see the "UserData: specifies the custom configurations for media upload" section of the [Request parameters](~~86952~~) topic.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("UserData")
         public String userData;
 
         /**
-         * <p>The ID of the video.</p>
+         * <p>The configurations of the AI template that was used to submit the job.</p>
          */
         @NameInMap("VideoId")
         public String videoId;

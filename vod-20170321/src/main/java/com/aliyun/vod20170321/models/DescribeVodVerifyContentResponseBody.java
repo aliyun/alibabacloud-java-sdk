@@ -4,15 +4,9 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodVerifyContentResponseBody extends TeaModel {
-    /**
-     * <p>The verification content.</p>
-     */
     @NameInMap("Content")
     public String content;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

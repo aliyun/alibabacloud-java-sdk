@@ -5,20 +5,19 @@ import com.aliyun.tea.*;
 
 public class SubmitTranscodeJobsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the transcoding job that was submitted.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The transcoding jobs.</p>
-     * <p>> This parameter is not returned for HLS packaging tasks. You must asynchronously receive the transcoding result.</p>
+     * <p>Submits a transcoding job and starts asynchronous transcoding.</p>
      */
     @NameInMap("TranscodeJobs")
     public SubmitTranscodeJobsResponseBodyTranscodeJobs transcodeJobs;
 
     /**
-     * <p>The ID of the transcoding job that was submitted.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("TranscodeTaskId")
     public String transcodeTaskId;
@@ -53,9 +52,6 @@ public class SubmitTranscodeJobsResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobsResponseBodyTranscodeJobsTranscodeJob extends TeaModel {
-        /**
-         * <p>The ID of the job.</p>
-         */
         @NameInMap("JobId")
         public String jobId;
 

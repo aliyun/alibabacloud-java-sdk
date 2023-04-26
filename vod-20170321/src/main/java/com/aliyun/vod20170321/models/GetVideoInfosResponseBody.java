@@ -5,19 +5,27 @@ import com.aliyun.tea.*;
 
 public class GetVideoInfosResponseBody extends TeaModel {
     /**
-     * <p>The IDs of the videos that do not exist.</p>
+     * <p>The status of the video. By default, videos in all states are returned. Multiple states are separated by commas (,). Valid values:</p>
+     * <br>
+     * <p>*   **Uploading**: The video is being uploaded.</p>
+     * <p>*   **UploadFail**: The video fails to be uploaded.</p>
+     * <p>*   **UploadSucc**: The video is uploaded.</p>
+     * <p>*   **Transcoding**: The video is being transcoded.</p>
+     * <p>*   **TranscodeFail**: The video fails to be transcoded.</p>
+     * <p>*   **Blocked**: The video is blocked.</p>
+     * <p>*   **Normal**: The video can be played.</p>
      */
     @NameInMap("NonExistVideoIds")
     public java.util.List<String> nonExistVideoIds;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The title of the video.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The information about the video.</p>
+     * <p>The description of the video.</p>
      */
     @NameInMap("VideoList")
     public java.util.List<GetVideoInfosResponseBodyVideoList> videoList;
@@ -52,14 +60,11 @@ public class GetVideoInfosResponseBody extends TeaModel {
     }
 
     public static class GetVideoInfosResponseBodyVideoList extends TeaModel {
-        /**
-         * <p>The ID of the application.</p>
-         */
         @NameInMap("AppId")
         public String appId;
 
         /**
-         * <p>The ID of the video category.</p>
+         * <p>The Object Storage Service (OSS) bucket where the video file is stored.</p>
          */
         @NameInMap("CateId")
         public Long cateId;
@@ -70,9 +75,6 @@ public class GetVideoInfosResponseBody extends TeaModel {
         @NameInMap("CateName")
         public String cateName;
 
-        /**
-         * <p>The URL of the video thumbnail.</p>
-         */
         @NameInMap("CoverURL")
         public String coverURL;
 
@@ -83,75 +85,61 @@ public class GetVideoInfosResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The description of the video.</p>
+         * <p>Queries the information about multiple videos at a time.</p>
          */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The duration of the video. Unit: seconds.</p>
-         */
         @NameInMap("Duration")
         public Float duration;
 
         /**
-         * <p>The time when the video file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The URL array of video snapshots.</p>
          */
         @NameInMap("ModificationTime")
         public String modificationTime;
 
-        /**
-         * <p>The size of the video mezzanine file. Unit: byte.</p>
-         */
+        @NameInMap("RestoreExpiration")
+        public String restoreExpiration;
+
+        @NameInMap("RestoreStatus")
+        public String restoreStatus;
+
         @NameInMap("Size")
         public Long size;
 
-        /**
-         * <p>The URL array of video snapshots.</p>
-         */
         @NameInMap("Snapshots")
         public java.util.List<String> snapshots;
 
         /**
-         * <p>The status of the video. By default, videos in all states are returned. Multiple states are separated by commas (,). Valid values:</p>
-         * <br>
-         * <p>*   **Uploading**: The video is being uploaded.</p>
-         * <p>*   **UploadFail**: The video fails to be uploaded.</p>
-         * <p>*   **UploadSucc**: The video is uploaded.</p>
-         * <p>*   **Transcoding**: The video is being transcoded.</p>
-         * <p>*   **TranscodeFail**: The video fails to be transcoded.</p>
-         * <p>*   **Blocked**: The video is blocked.</p>
-         * <p>*   **Normal**: The video can be played.</p>
+         * <p>The URL of the video thumbnail.</p>
          */
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("StorageClass")
+        public String storageClass;
+
         /**
-         * <p>The Object Storage Service (OSS) bucket where the video file is stored.</p>
+         * <p>The information about the video.</p>
          */
         @NameInMap("StorageLocation")
         public String storageLocation;
 
         /**
-         * <p>The tags of the video. Multiple tags are separated by commas (,).</p>
+         * <p>The ID of the video category.</p>
          */
         @NameInMap("Tags")
         public String tags;
 
-        /**
-         * <p>The ID of the template group that was used to transcode the video.</p>
-         */
         @NameInMap("TemplateGroupId")
         public String templateGroupId;
 
-        /**
-         * <p>The title of the video.</p>
-         */
         @NameInMap("Title")
         public String title;
 
         /**
-         * <p>The ID of the video.</p>
+         * <p>The list of video IDs. Separate multiple IDs with commas (,). A maximum of 20 IDs can be specified.</p>
          */
         @NameInMap("VideoId")
         public String videoId;
@@ -225,6 +213,22 @@ public class GetVideoInfosResponseBody extends TeaModel {
             return this.modificationTime;
         }
 
+        public GetVideoInfosResponseBodyVideoList setRestoreExpiration(String restoreExpiration) {
+            this.restoreExpiration = restoreExpiration;
+            return this;
+        }
+        public String getRestoreExpiration() {
+            return this.restoreExpiration;
+        }
+
+        public GetVideoInfosResponseBodyVideoList setRestoreStatus(String restoreStatus) {
+            this.restoreStatus = restoreStatus;
+            return this;
+        }
+        public String getRestoreStatus() {
+            return this.restoreStatus;
+        }
+
         public GetVideoInfosResponseBodyVideoList setSize(Long size) {
             this.size = size;
             return this;
@@ -247,6 +251,14 @@ public class GetVideoInfosResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetVideoInfosResponseBodyVideoList setStorageClass(String storageClass) {
+            this.storageClass = storageClass;
+            return this;
+        }
+        public String getStorageClass() {
+            return this.storageClass;
         }
 
         public GetVideoInfosResponseBodyVideoList setStorageLocation(String storageLocation) {

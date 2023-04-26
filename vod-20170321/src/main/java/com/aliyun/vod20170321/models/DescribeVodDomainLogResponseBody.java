@@ -11,7 +11,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
     public DescribeVodDomainLogResponseBodyDomainLogDetails domainLogDetails;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,31 +39,28 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
 
     public static class DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail extends TeaModel {
         /**
-         * <p>The end of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The total number of entries returned.</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
-         * <p>The name of the log file.</p>
+         * <p>Queries the information about the raw access logs for a specific domain name, including the log path.</p>
          */
         @NameInMap("LogName")
         public String logName;
 
-        /**
-         * <p>The path of the log file.</p>
-         */
         @NameInMap("LogPath")
         public String logPath;
 
         /**
-         * <p>The size of the log file.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("LogSize")
         public Long logSize;
 
         /**
-         * <p>The beginning of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The pagination settings of Alibaba Cloud CDN logs.</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -135,21 +132,12 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
     }
 
     public static class DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailPageInfos extends TeaModel {
-        /**
-         * <p>The page number of the returned page.</p>
-         */
         @NameInMap("PageNumber")
         public Long pageNumber;
 
-        /**
-         * <p>The number of entries returned per page.</p>
-         */
         @NameInMap("PageSize")
         public Long pageSize;
 
-        /**
-         * <p>The total number of entries returned.</p>
-         */
         @NameInMap("Total")
         public Long total;
 
@@ -192,20 +180,17 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
         public String domainName;
 
         /**
-         * <p>The total number of entries returned on the current page.</p>
+         * <p>The detailed information about Alibaba Cloud CDN logs.</p>
          */
         @NameInMap("LogCount")
         public Long logCount;
 
         /**
-         * <p>The detailed information about Alibaba Cloud CDN logs.</p>
+         * <p>The path of the log file.</p>
          */
         @NameInMap("LogInfos")
         public DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfos logInfos;
 
-        /**
-         * <p>The pagination settings of Alibaba Cloud CDN logs.</p>
-         */
         @NameInMap("PageInfos")
         public DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailPageInfos pageInfos;
 

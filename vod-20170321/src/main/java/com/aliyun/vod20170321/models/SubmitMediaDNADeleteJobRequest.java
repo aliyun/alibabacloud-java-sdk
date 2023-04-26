@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitMediaDNADeleteJobRequest extends TeaModel {
     /**
-     * <p>The ID of the video.</p>
+     * <p>Deletes a video fingerprinting job.</p>
      */
     @NameInMap("MediaId")
     public String mediaId;

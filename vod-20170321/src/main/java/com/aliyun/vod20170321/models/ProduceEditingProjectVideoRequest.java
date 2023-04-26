@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ProduceEditingProjectVideoRequest extends TeaModel {
     /**
-     * <p>The thumbnail URL of the online editing project.</p>
+     * <p>>ApsaraVideo VOD sends a FileUploadComplete event notification after video production is complete, which is similar to the action that is performed after video upload. After the produced video is transcoded, ApsaraVideo VOD sends the StreamTranscodeComplete and TranscodeComplete event notifications.</p>
      */
     @NameInMap("CoverURL")
     public String coverURL;
@@ -17,7 +17,7 @@ public class ProduceEditingProjectVideoRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The metadata of the produced video, in JSON format. For more information about the structure, see [MediaMetadata](~~52839~~).</p>
+     * <p>Produces a video from one or more mezzanine files. You can directly submit mezzanine files by specifying the Timeline parameter. Alternatively, you can submit mezzanine files after you create an online editing project.</p>
      */
     @NameInMap("MediaMetadata")
     public String mediaMetadata;
@@ -26,13 +26,13 @@ public class ProduceEditingProjectVideoRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The configuration of video production, in JSON format. For more information about the structure, see [ProduceConfig](~~52839~~).</p>
+     * <p>朴灵</p>
      */
     @NameInMap("ProduceConfig")
     public String produceConfig;
 
     /**
-     * <p>The ID of the online editing project.</p>
+     * <p>The thumbnail URL of the online editing project.</p>
      */
     @NameInMap("ProjectId")
     public String projectId;
@@ -44,22 +44,20 @@ public class ProduceEditingProjectVideoRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The timeline of the online editing project, in JSON format. For more information about the structure, see [Timeline](~~52839~~).</p>
+     * <p>The ID of the produced video.</p>
+     * <br>
+     * <p>> *   This operation returns the ID of the produced video in synchronous mode.</p>
+     * <p>> *   If this operation returns the MediaId parameter, the video production task is being asynchronously processed.</p>
      */
     @NameInMap("Timeline")
     public String timeline;
 
     /**
-     * <p>The title of the online editing project.</p>
+     * <p>The metadata of the produced video, in JSON format. For more information about the structure, see [MediaMetadata](~~52839~~).</p>
      */
     @NameInMap("Title")
     public String title;
 
-    /**
-     * <p>The custom configuration, such as the callback configuration. The value is a JSON-formatted string. For more information about the structure, see [UserData](~~86952~~).</p>
-     * <br>
-     * <p>> To use the MessageCallback parameter, you must set an HTTP callback URL and select a callback event type in the ApsaraVideo VOD console. Otherwise, the callback configuration does not take effect.</p>
-     */
     @NameInMap("UserData")
     public String userData;
 

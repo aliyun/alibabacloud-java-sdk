@@ -20,7 +20,7 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The detailed usage of storage-related resources.</p>
+     * <p>The storage usage data returned.</p>
      */
     @NameInMap("StorageData")
     public DescribeVodStorageDataResponseBodyStorageData storageData;
@@ -56,13 +56,13 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
 
     public static class DescribeVodStorageDataResponseBodyStorageDataStorageDataItem extends TeaModel {
         /**
-         * <p>The outbound traffic. Unit: byte. The outbound traffic is generated when videos are directly downloaded or played from OSS buckets without Alibaba Cloud CDN acceleration.</p>
+         * <p>The outbound traffic. Unit: bytes. The outbound traffic is generated when videos are directly downloaded or played from OSS buckets without Alibaba Cloud CDN acceleration.</p>
          */
         @NameInMap("NetworkOut")
         public String networkOut;
 
         /**
-         * <p>The storage volume. Unit: byte.</p>
+         * <p>The detailed usage data of storage-related resources. Unit: bytes.</p>
          */
         @NameInMap("StorageUtilization")
         public String storageUtilization;
