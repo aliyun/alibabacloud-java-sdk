@@ -434,6 +434,25 @@ public class GetConfigRuleResponseBody extends TeaModel {
 
     }
 
+    public static class GetConfigRuleResponseBodyConfigRuleScope extends TeaModel {
+        @NameInMap("ComplianceResourceTypes")
+        public java.util.List<String> complianceResourceTypes;
+
+        public static GetConfigRuleResponseBodyConfigRuleScope build(java.util.Map<String, ?> map) throws Exception {
+            GetConfigRuleResponseBodyConfigRuleScope self = new GetConfigRuleResponseBodyConfigRuleScope();
+            return TeaModel.build(map, self);
+        }
+
+        public GetConfigRuleResponseBodyConfigRuleScope setComplianceResourceTypes(java.util.List<String> complianceResourceTypes) {
+            this.complianceResourceTypes = complianceResourceTypes;
+            return this;
+        }
+        public java.util.List<String> getComplianceResourceTypes() {
+            return this.complianceResourceTypes;
+        }
+
+    }
+
     public static class GetConfigRuleResponseBodyConfigRuleSourceSourceDetails extends TeaModel {
         /**
          * <p>The event source of the managed rule.</p>
@@ -694,6 +713,9 @@ public class GetConfigRuleResponseBody extends TeaModel {
         @NameInMap("RiskLevel")
         public Integer riskLevel;
 
+        @NameInMap("Scope")
+        public GetConfigRuleResponseBodyConfigRuleScope scope;
+
         /**
          * <p>The information about how the rule was created.</p>
          */
@@ -887,6 +909,14 @@ public class GetConfigRuleResponseBody extends TeaModel {
         }
         public Integer getRiskLevel() {
             return this.riskLevel;
+        }
+
+        public GetConfigRuleResponseBodyConfigRule setScope(GetConfigRuleResponseBodyConfigRuleScope scope) {
+            this.scope = scope;
+            return this;
+        }
+        public GetConfigRuleResponseBodyConfigRuleScope getScope() {
+            return this.scope;
         }
 
         public GetConfigRuleResponseBodyConfigRule setSource(GetConfigRuleResponseBodyConfigRuleSource source) {

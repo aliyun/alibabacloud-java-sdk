@@ -31,7 +31,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The sample request in this topic shows you how to enable the `cr-5772ba41209e007b****` rule in the `ca-a4e5626622af0079****` account group.
+      * The ID of the rule. Separate multiple rule IDs with commas (,).
+      * For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
       *
       * @param request ActiveAggregateConfigRulesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -66,7 +67,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The sample request in this topic shows you how to enable the `cr-5772ba41209e007b****` rule in the `ca-a4e5626622af0079****` account group.
+      * The ID of the rule. Separate multiple rule IDs with commas (,).
+      * For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
       *
       * @param request ActiveAggregateConfigRulesRequest
       * @return ActiveAggregateConfigRulesResponse
@@ -431,9 +433,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The sample request in this topic shows you how to create a rule based on the required-tags managed rule in the `ca-a4e5626622af0079****` account group. The return result shows that the rule is created and its ID is `cr-4e3d626622af0080****`.  
-      * ## Limits
-      * A management account can contain up to 200 rules.
+      * The description of the rule.
       *
       * @param tmpReq CreateAggregateConfigRuleRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -550,9 +550,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The sample request in this topic shows you how to create a rule based on the required-tags managed rule in the `ca-a4e5626622af0079****` account group. The return result shows that the rule is created and its ID is `cr-4e3d626622af0080****`.  
-      * ## Limits
-      * A management account can contain up to 200 rules.
+      * The description of the rule.
       *
       * @param request CreateAggregateConfigRuleRequest
       * @return CreateAggregateConfigRuleResponse
@@ -1153,7 +1151,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The sample request in this topic shows you how to disable the `cr-5772ba41209e007b****` rule in the `ca-04b3fd170e340007****` account group.
+      * The ID of the rule. Separate multiple rule IDs with commas (,).
+      * For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
       *
       * @param request DeactiveAggregateConfigRulesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1188,7 +1187,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The sample request in this topic shows you how to disable the `cr-5772ba41209e007b****` rule in the `ca-04b3fd170e340007****` account group.
+      * The ID of the rule. Separate multiple rule IDs with commas (,).
+      * For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
       *
       * @param request DeactiveAggregateConfigRulesRequest
       * @return DeactiveAggregateConfigRulesResponse
@@ -1437,7 +1437,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In the example of this topic, a request is sent to delete the account group whose ID is `ca-9190626622af00a9****`.
+      * The operation that you want to perform. Set the value to **DeleteAggregators**.
       *
       * @param request DeleteAggregatorsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1472,7 +1472,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In the example of this topic, a request is sent to delete the account group whose ID is `ca-9190626622af00a9****`.
+      * The operation that you want to perform. Set the value to **DeleteAggregators**.
       *
       * @param request DeleteAggregatorsRequest
       * @return DeleteAggregatorsResponse
@@ -2279,7 +2279,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The sample request in this topic shows you how to query the `new-bucket` resource in the `ca-5885626622af0008****` account group.
+      * The type of the resource.
+      * For more information about how to query the type of a resource, see [ListAggregateDiscoveredResources](~~411691~~).
       *
       * @param request GetAggregateDiscoveredResourceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2306,7 +2307,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The sample request in this topic shows you how to query the `new-bucket` resource in the `ca-5885626622af0008****` account group.
+      * The type of the resource.
+      * For more information about how to query the type of a resource, see [ListAggregateDiscoveredResources](~~411691~~).
       *
       * @param request GetAggregateDiscoveredResourceRequest
       * @return GetAggregateDiscoveredResourceResponse
@@ -2317,7 +2319,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The sample request in this topic shows you how to query the compliance evaluation results based on the `cr-d369626622af008e****` rule in the `ca-a4e5626622af0079****` account group. The return result shows that a total of 10 resources are evaluated by the rule and five of them are evaluated as compliant.
+      * The ID of the rule.
+      * For more information about how to query the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
       *
       * @param request GetAggregateResourceComplianceByConfigRuleRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2364,7 +2367,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The sample request in this topic shows you how to query the compliance evaluation results based on the `cr-d369626622af008e****` rule in the `ca-a4e5626622af0079****` account group. The return result shows that a total of 10 resources are evaluated by the rule and five of them are evaluated as compliant.
+      * The ID of the rule.
+      * For more information about how to query the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
       *
       * @param request GetAggregateResourceComplianceByConfigRuleRequest
       * @return GetAggregateResourceComplianceByConfigRuleResponse
@@ -2479,7 +2483,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The sample request in this topic shows you how to query the compliance timeline of the `new-bucket` resource that resides in the `cn-hangzhou` region within the `100931896542****` member account of the `ca-5885626622af0008****` account group. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows the following two timestamps on the compliance timeline: `1625200295276` and `1625200228510`. The first timestamp indicates 12:31:35 on July 2, 2021 (UTC+8), and the second timestamp indicates 12:30:28 on July 2, 2021 (UTC+8).
+      * The operation that you want to perform. Set the value to **GetAggregateResourceComplianceTimeline**.
       *
       * @param request GetAggregateResourceComplianceTimelineRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2506,7 +2510,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The sample request in this topic shows you how to query the compliance timeline of the `new-bucket` resource that resides in the `cn-hangzhou` region within the `100931896542****` member account of the `ca-5885626622af0008****` account group. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows the following two timestamps on the compliance timeline: `1625200295276` and `1625200228510`. The first timestamp indicates 12:31:35 on July 2, 2021 (UTC+8), and the second timestamp indicates 12:30:28 on July 2, 2021 (UTC+8).
+      * The operation that you want to perform. Set the value to **GetAggregateResourceComplianceTimeline**.
       *
       * @param request GetAggregateResourceComplianceTimelineRequest
       * @return GetAggregateResourceComplianceTimelineResponse
@@ -2517,7 +2521,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The sample request in this topic shows you how to query the configuration timeline of the `new-bucket` resource that resides in the `cn-hangzhou` region within the `100931896542****` member account of the `ca-5885626622af0008****` account group. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows that the timestamp when the resource configuration changes is `1624961112000`. The timestamp indicates 18:05:12 on June 29, 2021 (UTC+8).
+      * The ID of the resource.
+      * For more information about how to obtain the ID of a resource, see [ListAggregateDiscoveredResources](~~265983~~).
       *
       * @param request GetAggregateResourceConfigurationTimelineRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2544,7 +2549,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The sample request in this topic shows you how to query the configuration timeline of the `new-bucket` resource that resides in the `cn-hangzhou` region within the `100931896542****` member account of the `ca-5885626622af0008****` account group. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows that the timestamp when the resource configuration changes is `1624961112000`. The timestamp indicates 18:05:12 on June 29, 2021 (UTC+8).
+      * The ID of the resource.
+      * For more information about how to obtain the ID of a resource, see [ListAggregateDiscoveredResources](~~265983~~).
       *
       * @param request GetAggregateResourceConfigurationTimelineRequest
       * @return GetAggregateResourceConfigurationTimelineResponse
@@ -2555,7 +2561,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to query the statistics on the resources in an account group named `ca-a260626622af0005****` by region. The returned result shows that a total of `10` resources exist in the `cn-hangzhou` region.
+      * The ID of the account group.
+      * For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).
       *
       * @param request GetAggregateResourceCountsGroupByRegionRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2602,7 +2609,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to query the statistics on the resources in an account group named `ca-a260626622af0005****` by region. The returned result shows that a total of `10` resources exist in the `cn-hangzhou` region.
+      * The ID of the account group.
+      * For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).
       *
       * @param request GetAggregateResourceCountsGroupByRegionRequest
       * @return GetAggregateResourceCountsGroupByRegionResponse
@@ -3338,7 +3346,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The sample request in this topic shows you how to query the configuration timeline of the `new-bucket` resource that resides in the `cn-hangzhou` region. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows that the timestamp when the resource configuration changes is `1624961112000`. The timestamp indicates 18:05:12 on June 29, 2021 (UTC+8).
+      * The timestamp that specifies the beginning of the time range to query. By default, Cloud Config retrieves the configuration changes in the last 30 days for the specified resource. Unit: milliseconds.
       *
       * @param request GetResourceConfigurationTimelineRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3365,7 +3373,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The sample request in this topic shows you how to query the configuration timeline of the `new-bucket` resource that resides in the `cn-hangzhou` region. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows that the timestamp when the resource configuration changes is `1624961112000`. The timestamp indicates 18:05:12 on June 29, 2021 (UTC+8).
+      * The timestamp that specifies the beginning of the time range to query. By default, Cloud Config retrieves the configuration changes in the last 30 days for the specified resource. Unit: milliseconds.
       *
       * @param request GetResourceConfigurationTimelineRequest
       * @return GetResourceConfigurationTimelineResponse
@@ -3747,7 +3755,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This example shows how to query the resources in the `ca-c560626622af0005****` account group. The response shows that the account group contains eight resources.
+      * The token that you want to use to initiate the current request. If the response of the previous request is truncated, you can use this token to initiate another request and obtain the remaining entries.``
       *
       * @param request ListAggregateDiscoveredResourcesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3810,7 +3818,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This example shows how to query the resources in the `ca-c560626622af0005****` account group. The response shows that the account group contains eight resources.
+      * The token that you want to use to initiate the current request. If the response of the previous request is truncated, you can use this token to initiate another request and obtain the remaining entries.``
       *
       * @param request ListAggregateDiscoveredResourcesRequest
       * @return ListAggregateDiscoveredResourcesResponse
@@ -3930,6 +3938,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListAggregateResourceEvaluationResultsResponse listAggregateResourceEvaluationResults(ListAggregateResourceEvaluationResultsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listAggregateResourceEvaluationResultsWithOptions(request, runtime);
+    }
+
+    public ListAggregateResourceRelationsResponse listAggregateResourceRelationsWithOptions(ListAggregateResourceRelationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aggregatorId)) {
+            query.put("AggregatorId", request.aggregatorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            query.put("Region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.relationType)) {
+            query.put("RelationType", request.relationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceAccountId)) {
+            query.put("ResourceAccountId", request.resourceAccountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            query.put("ResourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetResourceId)) {
+            query.put("TargetResourceId", request.targetResourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetResourceType)) {
+            query.put("TargetResourceType", request.targetResourceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAggregateResourceRelations"),
+            new TeaPair("version", "2020-09-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAggregateResourceRelationsResponse());
+    }
+
+    public ListAggregateResourceRelationsResponse listAggregateResourceRelations(ListAggregateResourceRelationsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAggregateResourceRelationsWithOptions(request, runtime);
     }
 
     /**
@@ -4383,6 +4456,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ManagedRuleIdentifier", request.managedRuleIdentifier);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.remediationType)) {
             query.put("RemediationType", request.remediationType);
         }
@@ -4427,6 +4508,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.configRuleIds)) {
             query.put("ConfigRuleIds", request.configRuleIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -4517,6 +4606,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListResourceEvaluationResultsResponse listResourceEvaluationResults(ListResourceEvaluationResultsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listResourceEvaluationResultsWithOptions(request, runtime);
+    }
+
+    public ListResourceRelationsResponse listResourceRelationsWithOptions(ListResourceRelationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            query.put("Region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.relationType)) {
+            query.put("RelationType", request.relationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            query.put("ResourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetResourceId)) {
+            query.put("TargetResourceId", request.targetResourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetResourceType)) {
+            query.put("TargetResourceType", request.targetResourceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListResourceRelations"),
+            new TeaPair("version", "2020-09-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListResourceRelationsResponse());
+    }
+
+    public ListResourceRelationsResponse listResourceRelations(ListResourceRelationsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listResourceRelationsWithOptions(request, runtime);
     }
 
     public ListTagResourcesResponse listTagResourcesWithOptions(ListTagResourcesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -5663,7 +5809,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated : UpdateDeliveryChannel is deprecated, please use Config::2020-09-07::UpdateConfigDeliveryChannel,Config::2020-09-07::UpdateAggregateConfigDeliveryChannel instead.
-      * In this example, the status of the delivery channel whose ID is `cdc-8e45ff4e06a3a8****` is changed to 0, which indicates that the delivery channel is disabled. After the delivery channel is disabled, Cloud Config retains the last delivery configuration and stops resource data delivery.
+      * The operation that you want to perform. Set the value to **UpdateDeliveryChannel**.
       *
       * @param request UpdateDeliveryChannelRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5740,7 +5886,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated : UpdateDeliveryChannel is deprecated, please use Config::2020-09-07::UpdateConfigDeliveryChannel,Config::2020-09-07::UpdateAggregateConfigDeliveryChannel instead.
-      * In this example, the status of the delivery channel whose ID is `cdc-8e45ff4e06a3a8****` is changed to 0, which indicates that the delivery channel is disabled. After the delivery channel is disabled, Cloud Config retains the last delivery configuration and stops resource data delivery.
+      * The operation that you want to perform. Set the value to **UpdateDeliveryChannel**.
       *
       * @param request UpdateDeliveryChannelRequest
       * @return UpdateDeliveryChannelResponse

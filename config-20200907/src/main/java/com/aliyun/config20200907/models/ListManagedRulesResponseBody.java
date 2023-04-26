@@ -87,6 +87,12 @@ public class ListManagedRulesResponseBody extends TeaModel {
         @NameInMap("Labels")
         public java.util.List<String> labels;
 
+        @NameInMap("RemediationTemplateIdentifier")
+        public String remediationTemplateIdentifier;
+
+        @NameInMap("RemediationTemplateName")
+        public String remediationTemplateName;
+
         /**
          * <p>The risk level of the resources that do not comply with the managed rule. Valid values:</p>
          * <br>
@@ -99,6 +105,9 @@ public class ListManagedRulesResponseBody extends TeaModel {
 
         @NameInMap("Scope")
         public ListManagedRulesResponseBodyManagedRulesManagedRuleListScope scope;
+
+        @NameInMap("SupportPreviewManagedRule")
+        public Boolean supportPreviewManagedRule;
 
         public static ListManagedRulesResponseBodyManagedRulesManagedRuleList build(java.util.Map<String, ?> map) throws Exception {
             ListManagedRulesResponseBodyManagedRulesManagedRuleList self = new ListManagedRulesResponseBodyManagedRulesManagedRuleList();
@@ -145,6 +154,22 @@ public class ListManagedRulesResponseBody extends TeaModel {
             return this.labels;
         }
 
+        public ListManagedRulesResponseBodyManagedRulesManagedRuleList setRemediationTemplateIdentifier(String remediationTemplateIdentifier) {
+            this.remediationTemplateIdentifier = remediationTemplateIdentifier;
+            return this;
+        }
+        public String getRemediationTemplateIdentifier() {
+            return this.remediationTemplateIdentifier;
+        }
+
+        public ListManagedRulesResponseBodyManagedRulesManagedRuleList setRemediationTemplateName(String remediationTemplateName) {
+            this.remediationTemplateName = remediationTemplateName;
+            return this;
+        }
+        public String getRemediationTemplateName() {
+            return this.remediationTemplateName;
+        }
+
         public ListManagedRulesResponseBodyManagedRulesManagedRuleList setRiskLevel(Integer riskLevel) {
             this.riskLevel = riskLevel;
             return this;
@@ -159,6 +184,14 @@ public class ListManagedRulesResponseBody extends TeaModel {
         }
         public ListManagedRulesResponseBodyManagedRulesManagedRuleListScope getScope() {
             return this.scope;
+        }
+
+        public ListManagedRulesResponseBodyManagedRulesManagedRuleList setSupportPreviewManagedRule(Boolean supportPreviewManagedRule) {
+            this.supportPreviewManagedRule = supportPreviewManagedRule;
+            return this;
+        }
+        public Boolean getSupportPreviewManagedRule() {
+            return this.supportPreviewManagedRule;
         }
 
     }
