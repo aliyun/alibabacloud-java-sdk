@@ -4,9 +4,6 @@ package com.aliyun.hologram20220601.models;
 import com.aliyun.tea.*;
 
 public class UpdateInstanceNetworkTypeRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("anyTunnelToSingleTunnel")
     public String anyTunnelToSingleTunnel;
 
@@ -34,14 +31,6 @@ public class UpdateInstanceNetworkTypeRequest extends TeaModel {
     public static UpdateInstanceNetworkTypeRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateInstanceNetworkTypeRequest self = new UpdateInstanceNetworkTypeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateInstanceNetworkTypeRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public UpdateInstanceNetworkTypeRequest setAnyTunnelToSingleTunnel(String anyTunnelToSingleTunnel) {
