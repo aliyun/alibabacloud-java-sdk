@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetMessageCallbackRequest extends TeaModel {
     /**
-     * <p>The ID of the application. If you do not set this parameter, the default value **app-1000000** is used.</p>
+     * <p>The callback method. Valid values:</p>
+     * <br>
+     * <p>*   **HTTP**</p>
+     * <p>*   **MNS**</p>
      */
     @NameInMap("AppId")
     public String appId;

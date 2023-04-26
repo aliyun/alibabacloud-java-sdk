@@ -4,23 +4,12 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class CancelUrlUploadJobsResponseBody extends TeaModel {
-    /**
-     * <p>The IDs of canceled jobs.</p>
-     */
     @NameInMap("CanceledJobs")
     public java.util.List<String> canceledJobs;
 
-    /**
-     * <p>The job IDs or upload URLs that do not exist.</p>
-     * <br>
-     * <p>If you set the request parameter JobIds, the job IDs that do not exist are returned. If you set the request parameter UploadUrls, the upload URLs that do not exist are returned.</p>
-     */
     @NameInMap("NonExists")
     public java.util.List<String> nonExists;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

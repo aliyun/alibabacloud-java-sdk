@@ -5,29 +5,26 @@ import com.aliyun.tea.*;
 
 public class DescribeVodUserDomainsRequest extends TeaModel {
     /**
-     * <p>The domain name. The value of this parameter is used as a filter condition for a fuzzy match.</p>
-     */
-    @NameInMap("DomainName")
-    public String domainName;
-
-    /**
      * <p>The search method. Valid values:</p>
+     * <br>
      * <p>*   **fuzzy_match**: fuzzy match. This is the default value.</p>
      * <p>*   **pre_match**: prefix match.</p>
      * <p>*   **suf_match**: suffix match.</p>
      * <p>*   **full_match**: exact match.</p>
      */
+    @NameInMap("DomainName")
+    public String domainName;
+
+    /**
+     * <p>The remarks.</p>
+     */
     @NameInMap("DomainSearchType")
     public String domainSearchType;
 
     /**
-     * <p>The status of the domain name. The value of this parameter is used as a condition to filter domain names. Value values:</p>
-     * <p>*   **online**: indicates that the domain name is enabled.</p>
-     * <p>*   **offline**: indicates that the domain name is disabled.</p>
-     * <p>*   **configuring**: indicates that the domain name is being configured.</p>
-     * <p>*   **configure_failed**: indicates that the domain name failed to be configured.</p>
-     * <p>*   **checking**: indicates that the domain name is under review.</p>
-     * <p>*   **check_failed**: indicates that the domain name failed the review.</p>
+     * <p>The value of tag N. Valid values of N: **1** to **20**.</p>
+     * <br>
+     * <p>If you do not specify this parameter, all tag values are queried.</p>
      */
     @NameInMap("DomainStatus")
     public String domainStatus;
@@ -36,13 +33,13 @@ public class DescribeVodUserDomainsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The detailed information about each domain name for CDN. The returned information is displayed in the format that is specified by the PageData parameter.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **20**. Maximum value: **50**. Valid values: integers in the range of **1** to **50**.</p>
+     * <p>The operation that you want to perform. Set the value to **DescribeVodUserDomains**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -51,7 +48,7 @@ public class DescribeVodUserDomainsRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>Tag.</p>
+     * <p>The number of entries to return on each page. Default value: **20**. Maximum value: **50**. Valid values: integers in the range of **1** to **50**.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeVodUserDomainsRequestTag> tag;
@@ -127,17 +124,20 @@ public class DescribeVodUserDomainsRequest extends TeaModel {
 
     public static class DescribeVodUserDomainsRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N. Valid values of N: **1** to **20**.</p>
+         * <p>The status of the domain name for CDN. Valid values:</p>
          * <br>
-         * <p>If you do not specify this parameter, all tag keys are queried.</p>
+         * <p>*   **online**: indicates that the domain name is enabled.</p>
+         * <p>*   **offline**: indicates that the domain name is disabled.</p>
+         * <p>*   **configuring**: indicates that the domain name is being configured.</p>
+         * <p>*   **configure_failed**: indicates that the domain name failed to be configured.</p>
+         * <p>*   **checking**: indicates that the domain name is under review.</p>
+         * <p>*   **check_failed**: indicates that the domain name failed the review.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N. Valid values of N: **1** to **20**.</p>
-         * <br>
-         * <p>If you do not specify this parameter, all tag values are queried.</p>
+         * <p>The canonical domain name that is assigned to the domain name for CDN.</p>
          */
         @NameInMap("Value")
         public String value;

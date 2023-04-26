@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListSnapshotsResponseBody extends TeaModel {
     /**
-     * <p>The snapshot data of the media.</p>
+     * <p>The URL of the snapshot.</p>
      */
     @NameInMap("MediaSnapshot")
     public ListSnapshotsResponseBodyMediaSnapshot mediaSnapshot;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The snapshot data of the media.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,15 +38,9 @@ public class ListSnapshotsResponseBody extends TeaModel {
     }
 
     public static class ListSnapshotsResponseBodyMediaSnapshotSnapshotsSnapshot extends TeaModel {
-        /**
-         * <p>The index of the snapshot.</p>
-         */
         @NameInMap("Index")
         public Long index;
 
-        /**
-         * <p>The URL of the snapshot.</p>
-         */
         @NameInMap("Url")
         public String url;
 
@@ -94,26 +88,23 @@ public class ListSnapshotsResponseBody extends TeaModel {
 
     public static class ListSnapshotsResponseBodyMediaSnapshot extends TeaModel {
         /**
-         * <p>The time when the snapshot job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The ID of the snapshot job.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The ID of the snapshot job.</p>
+         * <p>Queries the snapshots that are captured from the specified media.</p>
          */
         @NameInMap("JobId")
         public String jobId;
 
         /**
-         * <p>The rule for generating snapshot URLs.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("Regular")
         public String regular;
 
-        /**
-         * <p>The snapshot data.</p>
-         */
         @NameInMap("Snapshots")
         public ListSnapshotsResponseBodyMediaSnapshotSnapshots snapshots;
 

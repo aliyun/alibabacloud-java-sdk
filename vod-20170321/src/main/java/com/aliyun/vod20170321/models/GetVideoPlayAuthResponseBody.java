@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class GetVideoPlayAuthResponseBody extends TeaModel {
     /**
-     * <p>The credential for video or audio playback.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("PlayAuth")
     public String playAuth;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The operation that you want to perform. Set the value to **GetVideoPlayAuth**.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The metadata of the audio or video file.</p>
+     * <p>Queries the credential required for media playback.</p>
      */
     @NameInMap("VideoMeta")
     public GetVideoPlayAuthResponseBodyVideoMeta videoMeta;
@@ -52,33 +52,18 @@ public class GetVideoPlayAuthResponseBody extends TeaModel {
     }
 
     public static class GetVideoPlayAuthResponseBodyVideoMeta extends TeaModel {
-        /**
-         * <p>The thumbnail URL of the audio or video file.</p>
-         */
         @NameInMap("CoverURL")
         public String coverURL;
 
-        /**
-         * <p>The duration of the audio or video file. Unit: seconds.</p>
-         */
         @NameInMap("Duration")
         public Float duration;
 
-        /**
-         * <p>The status of the audio or video file. For more information about the value range and description, see the [Status](~~52839~~) table.</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The title of the audio or video file.</p>
-         */
         @NameInMap("Title")
         public String title;
 
-        /**
-         * <p>The ID of the audio or video file.</p>
-         */
         @NameInMap("VideoId")
         public String videoId;
 

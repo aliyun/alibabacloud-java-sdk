@@ -5,36 +5,30 @@ import com.aliyun.tea.*;
 
 public class SearchMediaResponseBody extends TeaModel {
     /**
-     * <p>The tags of the audio file.</p>
+     * <p>The status of the audio file. Valid values:</p>
+     * <br>
+     * <p>*   **Uploading**</p>
+     * <p>*   **Normal**</p>
+     * <p>*   **UploadFail**</p>
+     * <p>*   **Deleted**</p>
      */
     @NameInMap("MediaList")
     public java.util.List<SearchMediaResponseBodyMediaList> mediaList;
 
     /**
-     * <p>The type of the media asset that you want to query. Default value: video. Valid values:</p>
-     * <br>
-     * <p>*   **video**</p>
-     * <p>*   **audio**</p>
-     * <p>*   **image**</p>
-     * <p>*   **attached**</p>
-     * <br>
-     * <p>> If this parameter is set to **video** or **audio** and you want to traverse all data that meets the filter criteria, you must set the ScrollToken parameter.</p>
+     * <p>The tags of the audio file.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The transcoding mode. Default value: FastTranscode. Valid values:</p>
-     * <br>
-     * <p>*   **FastTranscode**: The video file is immediately transcoded after it is uploaded. You cannot play the file before it is transcoded.</p>
-     * <p>*   **NoTranscode**: The video file can be played without being transcoded. You can immediately play the file after it is uploaded.</p>
-     * <p>*   **AsyncTranscode**: The video file can be immediately played and asynchronously transcoded after it is uploaded.</p>
+     * <p>The title of the auxiliary media asset.</p>
      */
     @NameInMap("ScrollToken")
     public String scrollToken;
 
     /**
-     * <p>The tags of the image file.</p>
+     * <p>[Details about image files](~~86991~~).</p>
      */
     @NameInMap("Total")
     public Long total;
@@ -402,9 +396,6 @@ public class SearchMediaResponseBody extends TeaModel {
         @NameInMap("Categories")
         public java.util.List<SearchMediaResponseBodyMediaListAttachedMediaCategories> categories;
 
-        /**
-         * <p>The ID of the request.</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
@@ -417,15 +408,9 @@ public class SearchMediaResponseBody extends TeaModel {
         @NameInMap("ModificationTime")
         public String modificationTime;
 
-        /**
-         * <p>The endpoint of the OSS bucket in which the audio file is stored.</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>Queries the information about media assets such as video, audio, and image files, and auxiliary media assets.</p>
-         */
         @NameInMap("StorageLocation")
         public String storageLocation;
 
@@ -543,24 +528,28 @@ public class SearchMediaResponseBody extends TeaModel {
 
     public static class SearchMediaResponseBodyMediaListAudio extends TeaModel {
         /**
-         * <p>The number of the page to return. Default value: **1**.</p>
-         * <br>
-         * <p>> If the value of this parameter exceeds **200**, we recommend that you set the ScrollToken parameter as well.</p>
+         * <p>The number of entries to return on each page. Default value: **10**. Maximum value: **100**.</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
-         * <p>The name of the category.</p>
+         * <p>The time when the auxiliary media asset was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("AudioId")
         public String audioId;
 
         /**
-         * <p>The size of the audio file.</p>
+         * <p>The URL of the auxiliary media asset.</p>
          */
         @NameInMap("CateId")
         public Long cateId;
+
+        /**
+         * <p>The name of the category.</p>
+         */
+        @NameInMap("CateName")
+        public String cateName;
 
         /**
          * <p>The status of the auxiliary media asset. Valid values:</p>
@@ -569,8 +558,19 @@ public class SearchMediaResponseBody extends TeaModel {
          * <p>*   **Normal**: The auxiliary media asset is uploaded.</p>
          * <p>*   **UploadFail**: The auxiliary media asset fails to be uploaded.</p>
          */
-        @NameInMap("CateName")
-        public String cateName;
+        @NameInMap("CoverURL")
+        public String coverURL;
+
+        /**
+         * <p>The source. Valid values:</p>
+         * <br>
+         * <p>*   **general**: The video file is uploaded by using ApsaraVideo VOD.</p>
+         * <p>*   **short_video**: The video file is uploaded by using the short video SDK.</p>
+         * <p>*   **editing**: The video file is produced after online editing.</p>
+         * <p>*   **live**: The video stream is recorded and uploaded as a file.</p>
+         */
+        @NameInMap("CreationTime")
+        public String creationTime;
 
         /**
          * <p>The type of the auxiliary media asset. Valid values:</p>
@@ -579,54 +579,37 @@ public class SearchMediaResponseBody extends TeaModel {
          * <p>*   **subtitle**</p>
          * <p>*   **material**</p>
          */
-        @NameInMap("CoverURL")
-        public String coverURL;
-
-        /**
-         * <p>The sort field and order. Separate multiple values with commas (,). Default value: CreationTime:Desc. Valid values:</p>
-         * <br>
-         * <p>*   **CreationTime:Desc**: The results are sorted in reverse chronological order based on the creation time.</p>
-         * <p>*   **CreationTime:Asc**: The results are sorted in chronological order based on the creation time.</p>
-         * <br>
-         * <p>> * For more information about the sort field, see "Sort field" in the [Search for media asset information](~~99179~~) topic.</p>
-         * <p>> * To obtain the first 5,000 data records that meet the specified filter criteria, you can specify a maximum of three sort fields.</p>
-         * <p>> * To obtain all the data records that meet the specified filter criteria, you can specify only one sort field.</p>
-         */
-        @NameInMap("CreationTime")
-        public String creationTime;
-
-        /**
-         * <p>The tags of the video file.</p>
-         */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The number of entries to return on each page. Default value: **10**. Maximum value: **100**.</p>
+         * <p>The ID of the auxiliary media asset.</p>
          */
         @NameInMap("DownloadSwitch")
         public String downloadSwitch;
 
         /**
-         * <p>The time when the audio file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the image file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("Duration")
         public Float duration;
 
         /**
-         * <p>The URL of the auxiliary media asset.</p>
+         * <p>The number of the page to return. Default value: **1**.</p>
+         * <br>
+         * <p>> If the value of this parameter exceeds **200**, we recommend that you set the ScrollToken parameter as well.</p>
          */
         @NameInMap("MediaSource")
         public String mediaSource;
 
         /**
-         * <p>The duration of the audio file.</p>
+         * <p>The pagination identifier.</p>
          */
         @NameInMap("ModificationTime")
         public String modificationTime;
 
         /**
-         * <p>The ID of the auxiliary media asset.</p>
+         * <p>The total number of data records that meet the specified filter criteria.</p>
          */
         @NameInMap("PreprocessStatus")
         public String preprocessStatus;
@@ -638,25 +621,29 @@ public class SearchMediaResponseBody extends TeaModel {
         public String restoreStatus;
 
         /**
-         * <p>The name of the category.</p>
+         * <p>The title of the video file.</p>
          */
         @NameInMap("Size")
         public Long size;
 
         /**
-         * <p>[Details about audio files](~~86991~~).</p>
+         * <p>The ID of the video file.</p>
          */
         @NameInMap("Snapshots")
         public java.util.List<String> snapshots;
 
         /**
-         * <p>The time when the image file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The status of the image file.</p>
+         * <br>
+         * <p>*   **Uploading**: The image file is being uploaded. This is the initial status.</p>
+         * <p>*   **Normal**: The image file is uploaded.</p>
+         * <p>*   **UploadFail**: The image file fails to be uploaded.</p>
          */
         @NameInMap("SpriteSnapshots")
         public java.util.List<String> spriteSnapshots;
 
         /**
-         * <p>The endpoint of the OSS bucket in which the auxiliary media asset is stored.</p>
+         * <p>The size of the audio file.</p>
          */
         @NameInMap("Status")
         public String status;
@@ -665,30 +652,29 @@ public class SearchMediaResponseBody extends TeaModel {
         public String storageClass;
 
         /**
-         * <p>The name of the category.</p>
+         * <p>The duration of the audio file.</p>
          */
         @NameInMap("StorageLocation")
         public String storageLocation;
 
         /**
-         * <p>The source. Valid values:</p>
-         * <br>
-         * <p>*   **general**: The video file is uploaded by using ApsaraVideo VOD.</p>
-         * <p>*   **short_video**: The video file is uploaded by using the short video SDK.</p>
-         * <p>*   **editing**: The video file is produced after online editing.</p>
-         * <p>*   **live**: The video stream is recorded and uploaded as a file.</p>
+         * <p>The tags of the video file.</p>
          */
         @NameInMap("Tags")
         public String tags;
 
         /**
-         * <p>The total number of data records that meet the specified filter criteria.</p>
+         * <p>The transcoding mode. Default value: FastTranscode. Valid values:</p>
+         * <br>
+         * <p>*   **FastTranscode**: The audio file is immediately transcoded after it is uploaded. You cannot play the file before it is transcoded.</p>
+         * <p>*   **NoTranscode**: The audio file can be played without being transcoded. You can immediately play the file after it is uploaded.</p>
+         * <p>*   **AsyncTranscode**: The audio file can be immediately played and asynchronously transcoded after it is uploaded.</p>
          */
         @NameInMap("Title")
         public String title;
 
         /**
-         * <p>The time when the auxiliary media asset was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the audio file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("TranscodeMode")
         public String transcodeMode;
@@ -886,40 +872,46 @@ public class SearchMediaResponseBody extends TeaModel {
 
     public static class SearchMediaResponseBodyMediaListImage extends TeaModel {
         /**
-         * <p>The ID of the image file.</p>
+         * <p>The ID of the audio file.</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The duration of the video file. Unit: seconds.</p>
          */
         @NameInMap("CateId")
         public Long cateId;
 
         /**
-         * <p>The duration of the video file. Unit: seconds.</p>
+         * <p>The tags of the auxiliary media asset.</p>
          */
         @NameInMap("CateName")
         public String cateName;
 
         /**
-         * <p>The category ID of the image file.</p>
+         * <p>[Details about auxiliary media assets](~~86991~~).</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The URL of the thumbnail.</p>
+         * <p>The ID of the application.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The ID of the audio file.</p>
+         * <p>The endpoint of the OSS bucket in which the audio file is stored.</p>
          */
         @NameInMap("ImageId")
         public String imageId;
+
+        /**
+         * <p>The URL of the thumbnail.</p>
+         */
+        @NameInMap("ModificationTime")
+        public String modificationTime;
 
         /**
          * <p>The type of the media asset. Valid values:</p>
@@ -929,35 +921,29 @@ public class SearchMediaResponseBody extends TeaModel {
          * <p>*   **image**</p>
          * <p>*   **attached**</p>
          */
-        @NameInMap("ModificationTime")
-        public String modificationTime;
-
-        /**
-         * <p>The time when the video file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
-         */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The ID of the video file.</p>
+         * <p>The ID of the application.</p>
          */
         @NameInMap("StorageLocation")
         public String storageLocation;
 
         /**
-         * <p>[Details about auxiliary media assets](~~86991~~).</p>
+         * <p>The list of automatic snapshots.</p>
          */
         @NameInMap("Tags")
         public String tags;
 
         /**
-         * <p>The category ID of the video file.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("Title")
         public String title;
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The URL of the thumbnail.</p>
          */
         @NameInMap("URL")
         public String URL;
@@ -1067,55 +1053,13 @@ public class SearchMediaResponseBody extends TeaModel {
 
     public static class SearchMediaResponseBodyMediaListVideo extends TeaModel {
         /**
-         * <p>[Details about video files](~~86991~~).</p>
-         */
-        @NameInMap("AppId")
-        public String appId;
-
-        /**
-         * <p>The ID of the application.</p>
-         */
-        @NameInMap("CateId")
-        public Long cateId;
-
-        /**
-         * <p>The filter condition. For more information about the syntax, see [Protocol for media asset search](~~86991~~).</p>
-         */
-        @NameInMap("CateName")
-        public String cateName;
-
-        /**
-         * <p>The endpoint of the OSS bucket in which the image file is stored.</p>
-         */
-        @NameInMap("CoverURL")
-        public String coverURL;
-
-        /**
-         * <p>The time when the media asset was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
-         */
-        @NameInMap("CreationTime")
-        public String creationTime;
-
-        /**
-         * <p>The title of the image file.</p>
-         */
-        @NameInMap("Description")
-        public String description;
-
-        /**
          * <p>The download switch. The audio file can be downloaded offline only when the download switch is turned on. Valid values:</p>
          * <br>
          * <p>*   **on**</p>
          * <p>*   **off**</p>
          */
-        @NameInMap("DownloadSwitch")
-        public String downloadSwitch;
-
-        /**
-         * <p>The category ID of the audio file.</p>
-         */
-        @NameInMap("Duration")
-        public Float duration;
+        @NameInMap("AppId")
+        public String appId;
 
         /**
          * <p>The status of the video file. Valid values:</p>
@@ -1128,17 +1072,59 @@ public class SearchMediaResponseBody extends TeaModel {
          * <p>*   **Blocked**</p>
          * <p>*   **Normal**</p>
          */
+        @NameInMap("CateId")
+        public Long cateId;
+
+        /**
+         * <p>The name of the category.</p>
+         */
+        @NameInMap("CateName")
+        public String cateName;
+
+        /**
+         * <p>The filter condition. For more information about the syntax, see [Protocol for media asset search](~~86991~~).</p>
+         */
+        @NameInMap("CoverURL")
+        public String coverURL;
+
+        /**
+         * <p>The category ID of the auxiliary media asset.</p>
+         */
+        @NameInMap("CreationTime")
+        public String creationTime;
+
+        /**
+         * <p>The endpoint of the OSS bucket in which the image file is stored.</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
+         * <p>The ID of the application.</p>
+         */
+        @NameInMap("DownloadSwitch")
+        public String downloadSwitch;
+
+        /**
+         * <p>The description of the auxiliary media asset.</p>
+         */
+        @NameInMap("Duration")
+        public Float duration;
+
+        /**
+         * <p>[Details about video files](~~86991~~).</p>
+         */
         @NameInMap("MediaSource")
         public String mediaSource;
 
         /**
-         * <p>The time when the audio file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The description of the audio file.</p>
          */
         @NameInMap("ModificationTime")
         public String modificationTime;
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The URL of the image file.</p>
          */
         @NameInMap("PreprocessStatus")
         public String preprocessStatus;
@@ -1150,25 +1136,25 @@ public class SearchMediaResponseBody extends TeaModel {
         public String restoreStatus;
 
         /**
-         * <p>The name of the category.</p>
+         * <p>The time when the image file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("Size")
         public Long size;
 
         /**
-         * <p>The title of the audio file.</p>
+         * <p>The endpoint of the OSS bucket in which the auxiliary media asset is stored.</p>
          */
         @NameInMap("Snapshots")
         public java.util.List<String> snapshots;
 
         /**
-         * <p>The time when the image file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The list of automatic snapshots.</p>
          */
         @NameInMap("SpriteSnapshots")
         public java.util.List<String> spriteSnapshots;
 
         /**
-         * <p>The description of the image file.</p>
+         * <p>The ID of the application.</p>
          */
         @NameInMap("Status")
         public String status;
@@ -1177,36 +1163,31 @@ public class SearchMediaResponseBody extends TeaModel {
         public String storageClass;
 
         /**
-         * <p>The download switch. The video file can be downloaded offline only when the download switch is turned on. Valid values:</p>
-         * <br>
-         * <p>*   **on**</p>
-         * <p>*   **off**</p>
+         * <p>The time when the audio file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("StorageLocation")
         public String storageLocation;
 
         /**
-         * <p>The category ID of the auxiliary media asset.</p>
+         * <p>The title of the image file.</p>
          */
         @NameInMap("Tags")
         public String tags;
 
         /**
-         * <p>The URL of the image file.</p>
+         * <p>The title of the audio file.</p>
          */
         @NameInMap("Title")
         public String title;
 
         /**
-         * <p>The time when the video file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The category ID of the audio file.</p>
          */
         @NameInMap("TranscodeMode")
         public String transcodeMode;
 
         /**
-         * <p>The media asset fields to return in the query results.</p>
-         * <br>
-         * <p>By default, only the basic media asset fields are returned. You can specify additional media asset fields that need to be returned in the request. For more information, see the "API examples" section of the [Search for media asset information](~~99179~~) topic.</p>
+         * <p>The time when the video file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("VideoId")
         public String videoId;
@@ -1416,53 +1397,46 @@ public class SearchMediaResponseBody extends TeaModel {
         public SearchMediaResponseBodyMediaListAiRoughData aiRoughData;
 
         /**
-         * <p>The URL of the thumbnail.</p>
+         * <p>Queries the information about media assets such as video, audio, and image files, and auxiliary media assets.</p>
          */
         @NameInMap("AttachedMedia")
         public SearchMediaResponseBodyMediaListAttachedMedia attachedMedia;
 
         /**
-         * <p>The time when the auxiliary media asset was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The name of the category.</p>
          */
         @NameInMap("Audio")
         public SearchMediaResponseBodyMediaListAudio audio;
 
         /**
-         * <p>The title of the auxiliary media asset.</p>
+         * <p>The list of category IDs.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The pagination identifier. The identifier can be up to 32 characters in length.</p>
-         * <br>
-         * <p>The first time you call this operation for each new search, you do not need to specify this parameter. The value of this parameter is returned each time data records that meet the specified filter criteria are found. The value is used to record the current position of queried data. Record the returned parameter value and set this parameter according to the following requirements during the next search:</p>
-         * <br>
-         * <p>*   If SearchType is set to **video** or **audio** and you need to traverse all data that meets the filter criteria, you must set the ScrollToken parameter.</p>
-         * <p>*   If the value of the PageNo parameter exceeds **200**, we recommend that you set this parameter to optimize search performance.</p>
+         * <p>The time when the video file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("Image")
         public SearchMediaResponseBodyMediaListImage image;
 
         /**
-         * <p>The description of the video file.</p>
+         * <p>The time when the media asset was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("MediaId")
         public String mediaId;
 
         /**
-         * <p>The status of the audio file. Valid values:</p>
-         * <br>
-         * <p>*   **Uploading**</p>
-         * <p>*   **Normal**</p>
-         * <p>*   **UploadFail**</p>
-         * <p>*   **Deleted**</p>
+         * <p>The description of the image file.</p>
          */
         @NameInMap("MediaType")
         public String mediaType;
 
         /**
-         * <p>The list of category IDs.</p>
+         * <p>The download switch. The video file can be downloaded offline only when the download switch is turned on. Valid values:</p>
+         * <br>
+         * <p>*   **on**</p>
+         * <p>*   **off**</p>
          */
         @NameInMap("Video")
         public SearchMediaResponseBodyMediaListVideo video;

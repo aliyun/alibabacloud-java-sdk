@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetVideoListRequest extends TeaModel {
     /**
-     * <p>The ID of the video category.</p>
+     * <p>The category ID. You can use one of the following methods to obtain the category ID:</p>
+     * <br>
+     * <p>*   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Management** > **Categories** to view the category ID.</p>
+     * <p>*   Obtain the value of CateId from the response to the [AddCategory](~~56401~~) operation.</p>
+     * <p>*   Obtain the value of CateId from the response to the [GetCategories](~~56406~~) operation.</p>
      */
     @NameInMap("CateId")
     public Long cateId;
 
     /**
-     * <p>The end of the time range for querying videos based on their creation time. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -23,13 +27,13 @@ public class GetVideoListRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>Optional. The number of entries to return on each page. Default value: **10**. Maximum value: **100**.</p>
+     * <p>The number of entries to return on each page. Default value: **10**. Maximum value: **100**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The method for sorting the results. Valid values:</p>
+     * <p>The sorting method of the results. Valid values:</p>
      * <br>
      * <p>*   **CreationTime:Desc** (default): The results are sorted in reverse chronological order based on the creation time.</p>
      * <p>*   **CreationTime:Asc**: The results are sorted in chronological order based on the creation time.</p>
@@ -38,27 +42,31 @@ public class GetVideoListRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The beginning of the time range for querying videos based on their creation time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The status of the video. By default, you can obtain videos in all states. Separate multiple states with commas (,). Valid values:</p>
+     * <p>The video status. You can specify multiple video statuses and separate them with commas (,). Valid values:</p>
      * <br>
      * <p>*   **Uploading**: The video is being uploaded.</p>
-     * <p>*   **UploadFail**: The video fails to be uploaded.</p>
-     * <p>*   **UploadSucc**: The video is uploaded.</p>
+     * <p>*   **UploadFail**: The video failed to be uploaded.</p>
+     * <p>*   **UploadSucc**: The video has been uploaded.</p>
      * <p>*   **Transcoding**: The video is being transcoded.</p>
-     * <p>*   **TranscodeFail**: The video fails to be transcoded.</p>
+     * <p>*   **TranscodeFail**: The video failed to be transcoded.</p>
+     * <p>*   **checking**: The video is being reviewed.</p>
      * <p>*   **Blocked**: The video is blocked.</p>
-     * <p>*   **Normal**: The video can be played.</p>
+     * <p>*   **Normal**: The video is normal.</p>
+     * <p>*   **ProduceFail**: The video failed to be produced.</p>
+     * <br>
+     * <p>For more information about each video status, see the "Status: the status of a video" section of the [Basic data types](~~52839#section-p7c-jgy-070~~) topic.</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>The Object Storage Service (OSS) bucket where the video file is stored.</p>
+     * <p>The storage address of the media file.</p>
      */
     @NameInMap("StorageLocation")
     public String storageLocation;

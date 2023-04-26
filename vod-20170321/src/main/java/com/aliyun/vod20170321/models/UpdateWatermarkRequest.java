@@ -5,22 +5,21 @@ import com.aliyun.tea.*;
 
 public class UpdateWatermarkRequest extends TeaModel {
     /**
-     * <p>The name of the watermark. Only letters and digits are supported.</p>
-     * <p>*   The name can be up to 128 bytes in length.</p>
-     * <p>*   The value must be encoded in UTF-8.</p>
+     * <p>The ID of the watermark.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The configurations such as the position and effect of the text watermark or image watermark. The value is a JSON-formatted string.</p>
-     * <p>> The value of this parameter varies with the watermark type. For more information about the data structure, see the "WatermarkConfig" section of the [Media processing parameters](~~98618~~) topic.</p>
+     * <p>The name of the watermark.</p>
      */
     @NameInMap("WatermarkConfig")
     public String watermarkConfig;
 
     /**
-     * <p>The ID of the watermark.</p>
+     * <p>The configurations such as the position and effect of the text watermark or image watermark. The value is a JSON-formatted string.</p>
+     * <br>
+     * <p>> The value of this parameter varies with the watermark type. For more information about the data structure, see the "WatermarkConfig" section of the [Media processing parameters](~~98618~~) topic.</p>
      */
     @NameInMap("WatermarkId")
     public String watermarkId;

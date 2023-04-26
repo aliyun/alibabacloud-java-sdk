@@ -5,41 +5,31 @@ import com.aliyun.tea.*;
 
 public class ListSnapshotsRequest extends TeaModel {
     /**
-     * <p>The validity period of the snapshot URL. Unit: seconds. Default value: **3600**. Minimum value: **3600**.</p>
-     * <br>
-     * <p>*   This parameter only takes effect when [URL authentication](~~57007~~) is enabled.</p>
-     * <p>*   If the specified validity period is less than **3600** seconds, the default value is **3600**.</p>
-     * <p>*   If an Object Storage Service (OSS) URL is returned, the maximum validity period is limited to **2592000** seconds (30 days) to reduce security risks of the origin.</p>
+     * <p>The index of the snapshot.</p>
      */
     @NameInMap("AuthTimeout")
     public String authTimeout;
 
     /**
-     * <p>The number of the page to turn. Default value: **1**.</p>
+     * <p>The number of entries to return on each page. Default value: **20**. Maximum value: **100**.</p>
      */
     @NameInMap("PageNo")
     public String pageNo;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **20**. Maximum value: **100**.</p>
+     * <p>The ID of the video.</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
-     * <p>The type of snapshots that are returned. Valid values:</p>
-     * <br>
-     * <p>*   **CoverSnapshot**: thumbnail snapshot</p>
-     * <p>*   **NormalSnapshot**: normal snapshot</p>
-     * <p>*   **SpriteSnapshot**: sprite snapshot</p>
-     * <p>*   **SpriteOriginSnapshot**: sprite source snapshot</p>
-     * <p>*   **WebVttSnapshot**: WebVTT snapshot</p>
+     * <p>The number of the page to turn. Default value: **1**.</p>
      */
     @NameInMap("SnapshotType")
     public String snapshotType;
 
     /**
-     * <p>The ID of the video.</p>
+     * <p>The operation that you want to perform. Set the value to **ListSnapshots**.</p>
      */
     @NameInMap("VideoId")
     public String videoId;

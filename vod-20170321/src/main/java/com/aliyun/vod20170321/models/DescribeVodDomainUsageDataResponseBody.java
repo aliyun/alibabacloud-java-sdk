@@ -35,7 +35,7 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range during which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+     * <p>The start of the time range during which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -44,7 +44,7 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
      * <p>The type of content returned. Valid values:</p>
      * <br>
      * <p>*   **static**: static content</p>
-     * <p>*   **dynamic**: dynamic content</p>
+     * <p>*   **dynamic**: dynamic requests</p>
      * <p>*   **all**: all content</p>
      */
     @NameInMap("Type")
@@ -127,7 +127,7 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
 
     public static class DescribeVodDomainUsageDataResponseBodyUsageDataPerIntervalDataModule extends TeaModel {
         /**
-         * <p>The timestamp of the returned data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The timestamp of the data returned. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
