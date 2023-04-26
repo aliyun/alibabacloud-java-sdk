@@ -13,6 +13,10 @@ public class UpdateDriveRequest extends TeaModel {
     @NameInMap("drive_name")
     public String driveName;
 
+    /**
+     * <p>归属者</p>
+     * <p>注意，当前只允许通过 ak 来修改个人 drive 的所有者。</p>
+     */
     @NameInMap("owner")
     public String owner;
 

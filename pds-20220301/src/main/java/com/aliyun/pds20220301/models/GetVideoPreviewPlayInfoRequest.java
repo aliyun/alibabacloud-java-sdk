@@ -22,6 +22,10 @@ public class GetVideoPreviewPlayInfoRequest extends TeaModel {
     @NameInMap("template_id")
     public String templateId;
 
+    /**
+     * <p>url超时时间，单位：秒。</p>
+     * <p>默认15分钟，最大4小时。</p>
+     */
     @NameInMap("url_expire_sec")
     public Long urlExpireSec;
 

@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>pds20220301</artifactId>
-  <version>1.0.4</version>
+  <version>1.0.5</version>
   <packaging>jar</packaging>
   <name>pds20220301</name>
   <description>Alibaba Cloud pds (20220301) SDK for Java
@@ -51,7 +51,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>alibabacloud-gateway-pds</artifactId>
-      <version>0.0.5</version>
+      <version>0.0.6</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
