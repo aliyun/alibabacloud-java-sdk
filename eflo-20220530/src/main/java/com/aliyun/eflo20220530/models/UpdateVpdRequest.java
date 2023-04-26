@@ -4,9 +4,6 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class UpdateVpdRequest extends TeaModel {
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     @NameInMap("RegionId")
     public String regionId;
 
@@ -19,14 +16,6 @@ public class UpdateVpdRequest extends TeaModel {
     public static UpdateVpdRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateVpdRequest self = new UpdateVpdRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateVpdRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     public UpdateVpdRequest setRegionId(String regionId) {

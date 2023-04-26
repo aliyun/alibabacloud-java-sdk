@@ -4,9 +4,6 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class UpdateSubnetRequest extends TeaModel {
-    @NameInMap("Description")
-    public String description;
-
     @NameInMap("RegionId")
     public String regionId;
 
@@ -25,14 +22,6 @@ public class UpdateSubnetRequest extends TeaModel {
     public static UpdateSubnetRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateSubnetRequest self = new UpdateSubnetRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateSubnetRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
     }
 
     public UpdateSubnetRequest setRegionId(String regionId) {

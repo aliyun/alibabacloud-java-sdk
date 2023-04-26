@@ -4,9 +4,6 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class ListVpdsRequest extends TeaModel {
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     @NameInMap("EnablePage")
     public Boolean enablePage;
 
@@ -49,14 +46,6 @@ public class ListVpdsRequest extends TeaModel {
     public static ListVpdsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListVpdsRequest self = new ListVpdsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListVpdsRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     public ListVpdsRequest setEnablePage(Boolean enablePage) {
