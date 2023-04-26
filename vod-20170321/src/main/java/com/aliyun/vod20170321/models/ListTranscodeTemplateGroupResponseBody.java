@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the transcoding template group.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The transcoding template groups.</p>
+     * <p>The lock status of the transcoding template group. Valid values:</p>
+     * <br>
+     * <p>*   **Disabled**: The template group is not locked.</p>
+     * <p>*   **Enabled**: The template group is locked.</p>
      */
     @NameInMap("TranscodeTemplateGroupList")
     public java.util.List<ListTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupList> transcodeTemplateGroupList;
@@ -39,49 +42,37 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
 
     public static class ListTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupList extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The operation that you want to perform. Set the value to **ListTranscodeTemplateGroup**.</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
-         * <p>The time when the template group was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the template group was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>Indicates whether the template group is the default one. Valid values:</p>
-         * <br>
-         * <p>*   **Default**: The template group is the default one.</p>
-         * <p>*   **NotDefault**: The template group is not the default one.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("IsDefault")
         public String isDefault;
 
-        /**
-         * <p>The lock status of the transcoding template group. Valid values:</p>
-         * <br>
-         * <p>*   **Disabled**: The template group is not locked.</p>
-         * <p>*   **Enabled**: The template group is locked.</p>
-         */
         @NameInMap("Locked")
         public String locked;
 
-        /**
-         * <p>The time when the template group was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
-         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
         /**
-         * <p>The name of the template group.</p>
+         * <p>Queries transcoding template groups.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The ID of the transcoding template group.</p>
+         * <p>The ID of the application.</p>
          */
         @NameInMap("TranscodeTemplateGroupId")
         public String transcodeTemplateGroupId;

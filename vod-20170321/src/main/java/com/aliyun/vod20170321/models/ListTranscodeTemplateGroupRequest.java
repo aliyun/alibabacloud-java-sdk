@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTranscodeTemplateGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).</p>
+     * <p>The name of the template group.</p>
      */
     @NameInMap("AppId")
     public String appId;

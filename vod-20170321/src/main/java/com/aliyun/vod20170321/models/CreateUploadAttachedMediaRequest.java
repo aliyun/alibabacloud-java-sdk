@@ -11,10 +11,7 @@ public class CreateUploadAttachedMediaRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The type of the media asset. Valid values:</p>
-     * <p>*   **watermark**</p>
-     * <p>*   **subtitle**</p>
-     * <p>*   **material**</p>
+     * <p>The name of the source file.</p>
      */
     @NameInMap("BusinessType")
     public String businessType;
@@ -36,23 +33,14 @@ public class CreateUploadAttachedMediaRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <p>The name of the source file.</p>
-     */
     @NameInMap("FileName")
     public String fileName;
 
-    /**
-     * <p>The size of the auxiliary media asset. Unit: byte.</p>
-     */
     @NameInMap("FileSize")
     public String fileSize;
 
     /**
-     * <p>The file name extension. Valid values:</p>
-     * <p>*   Valid values for watermarks: **png, gif, apng, and mov**</p>
-     * <p>*   Valid values for subtitles: **srt, ass, stl, ttml, and vtt**</p>
-     * <p>*   Valid values for materials: **jpg, gif, png, mp4, mat, and zip**</p>
+     * <p>The size of the auxiliary media asset. Unit: byte.</p>
      */
     @NameInMap("MediaExt")
     public String mediaExt;
@@ -77,9 +65,10 @@ public class CreateUploadAttachedMediaRequest extends TeaModel {
     public String tags;
 
     /**
-     * <p>The title of the media asset. Take note of the following items:</p>
-     * <p>*   The title can be up to 128 bytes in length.</p>
-     * <p>*   The value must be encoded in UTF-8.</p>
+     * <p>The file name extension. Valid values:</p>
+     * <p>*   Valid values for watermarks: **png, gif, apng, and mov**</p>
+     * <p>*   Valid values for subtitles: **srt, ass, stl, ttml, and vtt**</p>
+     * <p>*   Valid values for materials: **jpg, gif, png, mp4, mat, and zip**</p>
      */
     @NameInMap("Title")
     public String title;

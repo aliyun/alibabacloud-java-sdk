@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListTranscodeTaskResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the transcoding template group.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Details about transcoding tasks.</p>
+     * <p>The ID of the transcoding task.</p>
      */
     @NameInMap("TranscodeTaskList")
     public java.util.List<ListTranscodeTaskResponseBodyTranscodeTaskList> transcodeTaskList;
@@ -39,50 +39,47 @@ public class ListTranscodeTaskResponseBody extends TeaModel {
 
     public static class ListTranscodeTaskResponseBodyTranscodeTaskList extends TeaModel {
         /**
-         * <p>The time when the transcoding task was complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>Queries transcoding tasks based on the media ID. This operation does not return specific job information.</p>
          */
         @NameInMap("CompleteTime")
         public String completeTime;
 
         /**
-         * <p>The time when the transcoding task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The ID of the audio or video file. You can use one of the following methods to obtain the ID of the file:</p>
+         * <br>
+         * <p>*   Log on to the [ApsaraVideo VOD](https://vod.console.aliyun.com) console. In the left-side navigation pane, choose **Media Files** > **Audio/Video**. On the Video and Audio page, view the ID of the audio or video file. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.</p>
+         * <p>*   Obtain the value of VideoId from the response to the [CreateUploadVideo](~~55407~~) operation that you call to obtain the upload URL and credential.</p>
+         * <p>*   Obtain the value of VideoId by calling the [SearchMedia](~~86044~~) operation. This method is applicable to files that have been uploaded.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
+         * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+         */
+        @NameInMap("TaskStatus")
+        public String taskStatus;
+
+        @NameInMap("TranscodeTaskId")
+        public String transcodeTaskId;
+
+        @NameInMap("TranscodeTemplateGroupId")
+        public String transcodeTemplateGroupId;
+
+        /**
          * <p>The status of the transcoding task. Valid values:</p>
+         * <br>
          * <p>*   **Processing**: In progress.</p>
          * <p>*   **Partial**: Some transcoding jobs were complete.</p>
          * <p>*   **CompleteAllSucc**: All transcoding jobs were successful.</p>
          * <p>*   **CompleteAllFail**: All transcoding jobs failed. If an exception occurs in the source file, no transcoding job is initiated and the transcoding task fails.</p>
          * <p>*   **CompletePartialSucc**: All transcoding jobs were complete but only some were successful.</p>
          */
-        @NameInMap("TaskStatus")
-        public String taskStatus;
-
-        /**
-         * <p>The ID of the transcoding task.</p>
-         */
-        @NameInMap("TranscodeTaskId")
-        public String transcodeTaskId;
-
-        /**
-         * <p>The ID of the transcoding template group.</p>
-         */
-        @NameInMap("TranscodeTemplateGroupId")
-        public String transcodeTemplateGroupId;
-
-        /**
-         * <p>The mode in which the transcoding task is triggered. Valid values:</p>
-         * <p>*   **Auto**: The transcoding task is automatically triggered when the video is uploaded.</p>
-         * <p>*   **Manual**: The transcoding task is triggered by calling the SubmitTranscodeJobs operation.</p>
-         */
         @NameInMap("Trigger")
         public String trigger;
 
         /**
-         * <p>The ID of the audio or video file.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("VideoId")
         public String videoId;

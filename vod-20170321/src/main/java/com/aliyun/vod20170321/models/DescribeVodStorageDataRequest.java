@@ -14,7 +14,7 @@ public class DescribeVodStorageDataRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region where media assets are stored. If you do not set this parameter, the data in all regions is returned. You can specify multiple regions. Separate them with commas (,). Valid values:</p>
+     * <p>The region in which you want to query storage data. If you leave this parameter empty, data in all regions is returned. Separate multiple regions with commas (,). Valid values:</p>
      * <br>
      * <p>*   **cn-shanghai**: China (Shanghai)</p>
      * <p>*   **cn-beijing**: China (Beijing)</p>
@@ -31,7 +31,7 @@ public class DescribeVodStorageDataRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The name of the Object Storage Service (OSS) bucket. If you do not set this parameter, the data of all buckets is returned. You can specify multiple buckets. Separate them with commas (,).</p>
+     * <p>The name of the Object Storage Service (OSS) bucket. If you leave this parameter empty, data of all buckets is returned. Separate multiple bucket names with commas (,).</p>
      */
     @NameInMap("Storage")
     public String storage;

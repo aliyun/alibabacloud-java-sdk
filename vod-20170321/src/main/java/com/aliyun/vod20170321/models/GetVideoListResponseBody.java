@@ -119,6 +119,12 @@ public class GetVideoListResponseBody extends TeaModel {
         @NameInMap("ModificationTime")
         public String modificationTime;
 
+        @NameInMap("RestoreExpiration")
+        public String restoreExpiration;
+
+        @NameInMap("RestoreStatus")
+        public String restoreStatus;
+
         /**
          * <p>The size of the video mezzanine file. Unit: byte.</p>
          */
@@ -144,6 +150,9 @@ public class GetVideoListResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("StorageClass")
+        public String storageClass;
 
         /**
          * <p>The OSS bucket where the video file is stored.</p>
@@ -238,6 +247,22 @@ public class GetVideoListResponseBody extends TeaModel {
             return this.modificationTime;
         }
 
+        public GetVideoListResponseBodyVideoListVideo setRestoreExpiration(String restoreExpiration) {
+            this.restoreExpiration = restoreExpiration;
+            return this;
+        }
+        public String getRestoreExpiration() {
+            return this.restoreExpiration;
+        }
+
+        public GetVideoListResponseBodyVideoListVideo setRestoreStatus(String restoreStatus) {
+            this.restoreStatus = restoreStatus;
+            return this;
+        }
+        public String getRestoreStatus() {
+            return this.restoreStatus;
+        }
+
         public GetVideoListResponseBodyVideoListVideo setSize(Long size) {
             this.size = size;
             return this;
@@ -260,6 +285,14 @@ public class GetVideoListResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetVideoListResponseBodyVideoListVideo setStorageClass(String storageClass) {
+            this.storageClass = storageClass;
+            return this;
+        }
+        public String getStorageClass() {
+            return this.storageClass;
         }
 
         public GetVideoListResponseBodyVideoListVideo setStorageLocation(String storageLocation) {

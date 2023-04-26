@@ -87,33 +87,33 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The type of the error that was returned when the refresh or prefetch task failed. Valid values:</p>
+         * <p>The type of error returned when the refresh or prefetch task failed. Valid values: Valid values:</p>
          * <br>
-         * <p>*   **Internal Error**: indicates that an internal error occurred.</p>
-         * <p>*   **Origin Timeout**: indicates that the response from the origin server timed out.</p>
-         * <p>*   **Origin Return StatusCode 5XX**: indicates that the origin server returned a 5XX error.</p>
+         * <p>*   **Internal Error**: An internal error occurred.</p>
+         * <p>*   **Origin Timeout**: The response from the origin server timed out.</p>
+         * <p>*   **Origin Return StatusCode 5XX**: The origin server returned an HTTP status code 5xx.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The URL of the object to which the refresh or prefetch task is applied.</p>
+         * <p>The URL of the object refreshed.</p>
          */
         @NameInMap("ObjectPath")
         public String objectPath;
 
         /**
-         * <p>The type of the task. Valid values:</p>
+         * <p>The type of the task. Default value: file. Valid values:</p>
          * <br>
-         * <p>*   **file**: refreshes one or more files. This is the default value.</p>
-         * <p>*   **directory**: refreshes the files under one or more directories.</p>
+         * <p>*   **file**: refreshes one or more files.</p>
+         * <p>*   **directory**: refreshes files in the specified directory.</p>
          * <p>*   **preload**: prefetches one or more files.</p>
          */
         @NameInMap("ObjectType")
         public String objectType;
 
         /**
-         * <p>The progress of the task, in percentage.</p>
+         * <p>The progress of the task in percentage.</p>
          */
         @NameInMap("Process")
         public String process;
@@ -121,10 +121,10 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
         /**
          * <p>The status of the task. Valid values:</p>
          * <br>
-         * <p>*   **Complete**: indicates that the task is complete.</p>
-         * <p>*   **Refreshing**: indicates that the task is in progress.</p>
-         * <p>*   **Failed**: indicates that the task failed.</p>
-         * <p>*   **Pending**: indicates that the task is pending.</p>
+         * <p>*   **Complete**: The task is complete.</p>
+         * <p>*   **Refreshing**: The task is in progress.</p>
+         * <p>*   **Failed**: The task failed.</p>
+         * <p>*   **Pending**: The task is pending.</p>
          */
         @NameInMap("Status")
         public String status;

@@ -4,15 +4,9 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class PreloadVodObjectCachesResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the prefetch task. Separate multiple task IDs with commas (,).</p>
-     */
     @NameInMap("PreloadTaskId")
     public String preloadTaskId;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

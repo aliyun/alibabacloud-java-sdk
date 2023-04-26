@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateVodDomainRequest extends TeaModel {
     /**
-     * <p>The domain name for CDN.</p>
+     * <p>The accelerated domain name.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -17,13 +17,13 @@ public class UpdateVodDomainRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The information about the address of the origin server.</p>
+     * <p>The information about the addresses of origin servers.</p>
      */
     @NameInMap("Sources")
     public String sources;
 
     /**
-     * <p>The top-level domain name.</p>
+     * <p>The top-level domain.</p>
      */
     @NameInMap("TopLevelDomain")
     public String topLevelDomain;

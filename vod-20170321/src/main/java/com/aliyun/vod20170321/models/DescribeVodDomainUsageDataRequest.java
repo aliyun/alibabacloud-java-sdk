@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeVodDomainUsageDataRequest extends TeaModel {
     /**
-     * <p>The region where the data is queried. The default value is CN, which indicates mainland China. Valid values:</p>
+     * <p>The region where you want to query data. Default value: CN. Valid values:</p>
      * <br>
-     * <p>*   **CN**: mainland China.</p>
-     * <p>*   **OverSeas**: outside mainland China.</p>
+     * <p>*   **CN**: Chinese mainland</p>
+     * <p>*   **OverSeas**: outside the Chinese mainland</p>
      */
     @NameInMap("Area")
     public String area;
 
     /**
-     * <p>The domain name for CDN. If you do not specify this parameter, the merged data of all your domain names for CDN is returned. You can specify multiple domain names. Separate them with commas (,).</p>
+     * <p>The accelerated domain name. If you leave this parameter empty, the merged data of all your accelerated domain names is returned. Separate multiple accelerated domain names with commas (,).</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -26,10 +26,10 @@ public class DescribeVodDomainUsageDataRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The type of the data to be queried. Valid values:</p>
+     * <p>The type of the data to return. Valid values:</p>
      * <br>
-     * <p>*   **bps**: bandwidth.</p>
-     * <p>*   **traf**: traffic.</p>
+     * <p>*   **bps**: bandwidth</p>
+     * <p>*   **traf**: traffic</p>
      */
     @NameInMap("Field")
     public String field;
@@ -47,11 +47,11 @@ public class DescribeVodDomainUsageDataRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The type of the content based on which the data is generated. Valid values:</p>
+     * <p>The type of content that you want to query. Valid values:</p>
      * <br>
-     * <p>*   **static**</p>
-     * <p>*   **dynamic**</p>
-     * <p>*   **all**</p>
+     * <p>*   **static**: static content</p>
+     * <p>*   **dynamic**: dynamic content</p>
+     * <p>*   **all**: all content</p>
      */
     @NameInMap("Type")
     public String type;

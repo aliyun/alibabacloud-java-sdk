@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeVodDomainDetailResponseBody extends TeaModel {
     /**
-     * <p>The basic information about the domain name for CDN.</p>
+     * <p>The priority of the origin server.</p>
      */
     @NameInMap("DomainDetail")
     public DescribeVodDomainDetailResponseBodyDomainDetail domainDetail;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The operation that you want to perform. Set the value to **DescribeVodDomainDetail**.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,37 +38,20 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeVodDomainDetailResponseBodyDomainDetailSourcesSource extends TeaModel {
-        /**
-         * <p>The address of the origin server.</p>
-         */
         @NameInMap("Content")
         public String content;
 
-        /**
-         * <p>The status of the origin server. Valid values:</p>
-         * <p>*   **online**: indicates that the origin server is enabled.</p>
-         * <p>*   **offline**: indicates that the origin server is disabled.</p>
-         */
         @NameInMap("Enabled")
         public String enabled;
 
-        /**
-         * <p>The port number. Valid values: 443 and 80.</p>
-         */
         @NameInMap("Port")
         public Integer port;
 
-        /**
-         * <p>The priority of the origin server.</p>
-         */
         @NameInMap("Priority")
         public String priority;
 
         /**
-         * <p>The type of the origin server. Valid values:</p>
-         * <p>*   **ipaddr**: a server that you can access by using an IP address.</p>
-         * <p>*   **domain**: a server that you can access by using a domain name.</p>
-         * <p>*   **oss**: the URL of an Object Storage Service (OSS) bucket.</p>
+         * <p>Queries the basic information about a specified domain name for CDN.</p>
          */
         @NameInMap("Type")
         public String type;
@@ -141,31 +124,14 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
 
     public static class DescribeVodDomainDetailResponseBodyDomainDetail extends TeaModel {
         /**
-         * <p>The name of the certificate. The value of this parameter is returned if HTTPS is enabled.</p>
+         * <p>The time when the domain name for CDN was added. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CertName")
         public String certName;
 
         /**
-         * <p>The CNAME that is assigned to the domain name for CDN. You must add a CNAME record in the system of your Domain Name System (DNS) service provider to map the domain name for CDN to the CNAME.</p>
-         */
-        @NameInMap("Cname")
-        public String cname;
-
-        /**
-         * <p>The description of the domain name for CDN.</p>
-         */
-        @NameInMap("Description")
-        public String description;
-
-        /**
-         * <p>The domain name for CDN.</p>
-         */
-        @NameInMap("DomainName")
-        public String domainName;
-
-        /**
          * <p>The status of the domain name for CDN. Value values:</p>
+         * <br>
          * <p>*   **online**: indicates that the domain name is enabled.</p>
          * <p>*   **offline**: indicates that the domain name is disabled.</p>
          * <p>*   **configuring**: indicates that the domain name is being configured.</p>
@@ -173,52 +139,72 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
          * <p>*   **checking**: indicates that the domain name is under review.</p>
          * <p>*   **check_failed**: indicates that the domain name failed the review.</p>
          */
+        @NameInMap("Cname")
+        public String cname;
+
+        /**
+         * <p>The name of the certificate. The value of this parameter is returned if HTTPS is enabled.</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
+         * <p>The port number. Valid values: 443 and 80.</p>
+         */
+        @NameInMap("DomainName")
+        public String domainName;
+
+        /**
+         * <p>The address of the origin server.</p>
+         */
         @NameInMap("DomainStatus")
         public String domainStatus;
 
         /**
-         * <p>The time when the domain name for CDN was added. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The last time when the domain name for CDN was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
         /**
-         * <p>The last time when the domain name for CDN was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>Indicates whether the Secure Sockets Layer (SSL) certificate is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **on**: indicates that the SSL certificate is enabled.</p>
+         * <p>*   **off**: indicates that the SSL certificate is disabled.</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
-         * <p>Indicates whether the Secure Sockets Layer (SSL) certificate is enabled. Valid values:</p>
-         * <p>*   **on**: indicates that the SSL certificate is enabled.</p>
-         * <p>*   **off**: indicates that the SSL certificate is disabled.</p>
+         * <p>This parameter is applicable to users of level 3 or higher in mainland China and users outside mainland China. Valid values:</p>
+         * <br>
+         * <p>*   **domestic**: mainland China. This is the default value.</p>
+         * <p>*   **overseas**: outside mainland China.</p>
+         * <p>*   **global**: regions in and outside mainland China.</p>
          */
         @NameInMap("SSLProtocol")
         public String SSLProtocol;
 
         /**
-         * <p>The public key of the certificate. The value of this parameter is returned if HTTPS is enabled.</p>
+         * <p>The domain name for CDN.</p>
          */
         @NameInMap("SSLPub")
         public String SSLPub;
 
         /**
-         * <p>This parameter is applicable to users of level 3 or higher in mainland China and users outside mainland China. Valid values:</p>
-         * <p>*   **domestic**: mainland China. This is the default value.</p>
-         * <p>*   **overseas**: outside mainland China.</p>
-         * <p>*   **global**: regions in and outside mainland China.</p>
+         * <p>The weight of the origin server.</p>
          */
         @NameInMap("Scope")
         public String scope;
 
         /**
-         * <p>The information about the origin server.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("Sources")
         public DescribeVodDomainDetailResponseBodyDomainDetailSources sources;
 
         /**
-         * <p>The weight of the origin server.</p>
+         * <p>The CNAME that is assigned to the domain name for CDN. You must add a CNAME record in the system of your Domain Name System (DNS) service provider to map the domain name for CDN to the CNAME.</p>
          */
         @NameInMap("Weight")
         public String weight;

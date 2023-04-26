@@ -5,15 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeVodDomainLogRequest extends TeaModel {
     /**
-     * <p>The domain name.</p>
-     * <br>
-     * <p>> You can specify only one domain name in each query.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. The time range that is specified by the StartTime and EndTime parameters cannot exceed one year. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <p>The operation that you want to perform. Set the value to **DescribeVodDomainLog**.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -22,22 +20,19 @@ public class DescribeVodDomainLogRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The name of the log file.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
-     * <br>
-     * <p>*   Default value: **300.**</p>
-     * <p>*   Maximum value: **1000.**</p>
+     * <p>The number of the page to return. Default value: **1**.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The start of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <p>The beginning of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

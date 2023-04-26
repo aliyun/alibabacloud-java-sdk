@@ -4,9 +4,6 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DeleteWatermarkRequest extends TeaModel {
-    /**
-     * <p>The ID of the watermark.</p>
-     */
     @NameInMap("WatermarkId")
     public String watermarkId;
 

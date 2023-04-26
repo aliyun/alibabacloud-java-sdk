@@ -4,9 +4,6 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DeleteAppInfoRequest extends TeaModel {
-    /**
-     * <p>The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).</p>
-     */
     @NameInMap("AppId")
     public String appId;
 

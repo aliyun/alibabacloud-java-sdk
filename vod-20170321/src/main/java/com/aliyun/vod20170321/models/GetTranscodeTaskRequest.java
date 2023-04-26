@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTranscodeTaskRequest extends TeaModel {
     /**
-     * <p>The ID of the transcoding task. You can use one of the following methods to obtain the ID:</p>
-     * <br>
-     * <p>*   Obtain the value of TranscodeTaskId from the response to the [SubmitTranscodeJobs](~~68570~~) operation.</p>
-     * <p>*   Obtain the value of TranscodeTaskId from the response to the [ListTranscodeTask](~~109120~~) operation.</p>
+     * <p>The OSS URL of the output file.</p>
      */
     @NameInMap("TranscodeTaskId")
     public String transcodeTaskId;

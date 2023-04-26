@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class SubmitSnapshotJobResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Submits a snapshot job for a video and starts asynchronous snapshot processing.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The information about the snapshot job.</p>
-     */
     @NameInMap("SnapshotJob")
     public SubmitSnapshotJobResponseBodySnapshotJob snapshotJob;
 
@@ -38,9 +35,6 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
     }
 
     public static class SubmitSnapshotJobResponseBodySnapshotJob extends TeaModel {
-        /**
-         * <p>The ID of the snapshot job.</p>
-         */
         @NameInMap("JobId")
         public String jobId;
 

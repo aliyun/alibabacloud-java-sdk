@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAttachedMediaInfosRequest extends TeaModel {
     /**
-     * <p>The new information about auxiliary media assets. You can modify the information about up to 20 auxiliary media assets at a time. For more information, see the **UpdateContent** section of this topic.</p>
+     * <p>Modifies the information about multiple auxiliary media assets at a time.</p>
      */
     @NameInMap("UpdateContent")
     public String updateContent;

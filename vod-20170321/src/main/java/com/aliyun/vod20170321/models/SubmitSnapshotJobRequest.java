@@ -5,47 +5,16 @@ import com.aliyun.tea.*;
 
 public class SubmitSnapshotJobRequest extends TeaModel {
     /**
-     * <p>The maximum number of snapshots. Default value: **1**.</p>
+     * <p>The snapshot interval. The value must be **greater than or equal to 0**. Unit: seconds. If you set this parameter to **0**, snapshots are taken at even intervals based on the video duration divided by the value of the Count parameter. Default value: **1**.</p>
      */
     @NameInMap("Count")
     public Long count;
 
     /**
-     * <p>The height of each snapshot. Valid values: `[8,4096]`. By default, the height of the video mezzanine file is used. Unit: pixel.</p>
+     * <p>The ID of the snapshot job.</p>
      */
     @NameInMap("Height")
     public String height;
-
-    /**
-     * <p>The snapshot interval. The value must be **greater than or equal to 0**. Unit: seconds. If you set this parameter to **0**, snapshots are taken at even intervals based on the video duration divided by the value of the Count parameter. Default value: **1**.</p>
-     */
-    @NameInMap("Interval")
-    public Long interval;
-
-    /**
-     * <p>The ID of the snapshot template.</p>
-     * <br>
-     * <p>*   We recommend that you create a snapshot template before you specify the ID of the snapshot template.</p>
-     * <p>*   If you set the SnapshotTemplateId parameter, all the other request parameters except the Action and VideoId parameters are ignored.</p>
-     * <p>*   For more information about how to create a snapshot template, see [AddVodTemplate](~~99406~~).</p>
-     */
-    @NameInMap("SnapshotTemplateId")
-    public String snapshotTemplateId;
-
-    /**
-     * <p>The start time of the specified snapshot time period.</p>
-     * <br>
-     * <p>*   Unit: milliseconds.</p>
-     * <p>*   Default value: **0**.</p>
-     */
-    @NameInMap("SpecifiedOffsetTime")
-    public Long specifiedOffsetTime;
-
-    /**
-     * <p>The sprite snapshot configuration. If you set this parameter, sprite snapshots are generated. For more information, see [SpriteSnapshotConfig](~~86952~~).</p>
-     */
-    @NameInMap("SpriteSnapshotConfig")
-    public String spriteSnapshotConfig;
 
     /**
      * <p>The custom configurations, including the configuration of transparent data transmission and callback configurations. The value is a JSON-formatted string. For more information, see [UserData](~~86952~~).</p>
@@ -54,17 +23,41 @@ public class SubmitSnapshotJobRequest extends TeaModel {
      * <br>
      * <p>**Note** The callback configurations take effect only when you specify the HTTP callback URL and select the specific callback events in the ApsaraVideo VOD console.</p>
      */
+    @NameInMap("Interval")
+    public Long interval;
+
+    /**
+     * <p>The height of each snapshot. Valid values: `[8,4096]`. By default, the height of the video mezzanine file is used. Unit: pixel.</p>
+     */
+    @NameInMap("SnapshotTemplateId")
+    public String snapshotTemplateId;
+
+    /**
+     * <p>The operation that you want to perform. Set the value to **SubmitSnapshotJob**.</p>
+     */
+    @NameInMap("SpecifiedOffsetTime")
+    public Long specifiedOffsetTime;
+
+    /**
+     * <p>The ID of the video.</p>
+     */
+    @NameInMap("SpriteSnapshotConfig")
+    public String spriteSnapshotConfig;
+
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("UserData")
     public String userData;
 
     /**
-     * <p>The ID of the video.</p>
+     * <p>The sprite snapshot configuration. If you set this parameter, sprite snapshots are generated. For more information, see [SpriteSnapshotConfig](~~86952~~).</p>
      */
     @NameInMap("VideoId")
     public String videoId;
 
     /**
-     * <p>The width of each snapshot. Valid values: `[8,4096]`. By default, the width of the video mezzanine file is used. Unit: pixel.</p>
+     * <p>The maximum number of snapshots. Default value: **1**.</p>
      */
     @NameInMap("Width")
     public String width;

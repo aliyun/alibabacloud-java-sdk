@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetVideoInfosRequest extends TeaModel {
     /**
-     * <p>The list of video IDs. Separate multiple IDs with commas (,). A maximum of 20 IDs can be specified.</p>
+     * <p>The tags of the video. Multiple tags are separated by commas (,).</p>
      */
     @NameInMap("VideoIds")
     public String videoIds;

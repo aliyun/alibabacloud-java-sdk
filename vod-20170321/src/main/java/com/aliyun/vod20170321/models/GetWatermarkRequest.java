@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetWatermarkRequest extends TeaModel {
     /**
-     * <p>The ID of the watermark.</p>
+     * <p>The information about the watermark.</p>
      */
     @NameInMap("WatermarkId")
     public String watermarkId;

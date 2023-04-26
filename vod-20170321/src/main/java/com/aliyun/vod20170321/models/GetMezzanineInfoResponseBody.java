@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetMezzanineInfoResponseBody extends TeaModel {
     /**
-     * <p>The information about the mezzanine file.</p>
+     * <p>The time base.</p>
      */
     @NameInMap("Mezzanine")
     public GetMezzanineInfoResponseBodyMezzanine mezzanine;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The codec time base.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,100 +39,102 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
 
     public static class GetMezzanineInfoResponseBodyMezzanineAudioStreamList extends TeaModel {
         /**
-         * <p>The bitrate.</p>
+         * <p>The information about the video stream.</p>
          */
         @NameInMap("Bitrate")
         public String bitrate;
 
         /**
-         * <p>The output layout of the sound channels. Valid values:</p>
-         * <br>
-         * <p>*   **mono**: mono sound channel</p>
-         * <p>*   **stereo**: two sound channels</p>
+         * <p>The target frame rate.</p>
          */
         @NameInMap("ChannelLayout")
         public String channelLayout;
 
         /**
-         * <p>The number of sound channels.</p>
+         * <p>The width of the video resolution.</p>
          */
         @NameInMap("Channels")
         public String channels;
 
         /**
-         * <p>The full name of the codec format.</p>
+         * <p>The time when the file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CodecLongName")
         public String codecLongName;
 
         /**
-         * <p>The short name of the codec format.</p>
+         * <p>The duration of the video stream.</p>
          */
         @NameInMap("CodecName")
         public String codecName;
 
         /**
-         * <p>The tag of the codec format.</p>
+         * <p>The sequence number of the audio stream, which specifies the position of the audio stream in all audio streams.</p>
          */
         @NameInMap("CodecTag")
         public String codecTag;
 
         /**
-         * <p>The tag string of the codec format.</p>
+         * <p>The tag of the codec format.</p>
          */
         @NameInMap("CodecTagString")
         public String codecTagString;
 
         /**
-         * <p>The codec time base.</p>
+         * <p>The full name of the codec format.</p>
          */
         @NameInMap("CodecTimeBase")
         public String codecTimeBase;
 
         /**
-         * <p>The duration of the audio stream.</p>
+         * <p>The name of the file.</p>
          */
         @NameInMap("Duration")
         public String duration;
 
         /**
-         * <p>The sequence number of the audio stream, which specifies the position of the audio stream in all audio streams.</p>
+         * <p>The short name of the codec format.</p>
          */
         @NameInMap("Index")
         public String index;
 
         /**
-         * <p>The language.</p>
+         * <p>The bitrate of the file. Unit: Kbit/s.</p>
          */
         @NameInMap("Lang")
         public String lang;
 
         /**
-         * <p>The total number of frames.</p>
+         * <p>The codec profile.</p>
          */
         @NameInMap("NumFrames")
         public String numFrames;
 
         /**
-         * <p>The sampling format.</p>
+         * <p>The status of the file. Valid values:</p>
+         * <br>
+         * <p>*   **Uploading**: The file is being uploaded. This is the initial status.</p>
+         * <p>*   **Normal**: The file is uploaded.</p>
+         * <p>*   **UploadFail**: The file fails to be uploaded.</p>
+         * <p>*   **Deleted**: The file is deleted.</p>
          */
         @NameInMap("SampleFmt")
         public String sampleFmt;
 
         /**
-         * <p>The sample rate.</p>
+         * <p>The size of the file. Unit: byte.</p>
          */
         @NameInMap("SampleRate")
         public String sampleRate;
 
         /**
-         * <p>The beginning of the time range that was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The sample rate.</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
-         * <p>The time base.</p>
+         * <p>The ID of the video.</p>
          */
         @NameInMap("Timebase")
         public String timebase;
@@ -274,32 +276,26 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
 
     public static class GetMezzanineInfoResponseBodyMezzanineVideoStreamList extends TeaModel {
         /**
-         * <p>The average frame rate.</p>
+         * <p>The beginning of the time range that was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("AvgFPS")
         public String avgFPS;
 
         /**
-         * <p>The bitrate of the file. Unit: Kbit/s.</p>
+         * <p>The URL of the file.</p>
          */
         @NameInMap("Bitrate")
         public String bitrate;
 
         /**
-         * <p>The full name of the codec format.</p>
+         * <p>The codec time base.</p>
          */
         @NameInMap("CodecLongName")
         public String codecLongName;
 
-        /**
-         * <p>The short name of the codec format.</p>
-         */
         @NameInMap("CodecName")
         public String codecName;
 
-        /**
-         * <p>The tag of the codec format.</p>
-         */
         @NameInMap("CodecTag")
         public String codecTag;
 
@@ -309,44 +305,32 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         @NameInMap("CodecTagString")
         public String codecTagString;
 
-        /**
-         * <p>The codec time base.</p>
-         */
         @NameInMap("CodecTimeBase")
         public String codecTimeBase;
 
         /**
-         * <p>The display aspect ratio.</p>
+         * <p>Queries the information about the mezzanine file of an audio or video. The information includes the mezzanine file URL, resolution, and bitrate of the audio or video.</p>
          */
         @NameInMap("Dar")
         public String dar;
 
-        /**
-         * <p>The duration of the video stream.</p>
-         */
         @NameInMap("Duration")
         public String duration;
 
-        /**
-         * <p>The target frame rate.</p>
-         */
         @NameInMap("Fps")
         public String fps;
 
-        /**
-         * <p>The HDR type.</p>
-         */
         @NameInMap("HDRType")
         public String HDRType;
 
         /**
-         * <p>Indicates whether the video stream contains bidirectional frames (B-frames).</p>
+         * <p>The rotation angle of the video. Valid values: **\[0, 360)**.</p>
          */
         @NameInMap("HasBFrames")
         public String hasBFrames;
 
         /**
-         * <p>The height of the video resolution.</p>
+         * <p>The number of sound channels.</p>
          */
         @NameInMap("Height")
         public String height;
@@ -358,62 +342,56 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         public String index;
 
         /**
-         * <p>The language.</p>
+         * <p>The information about the audio stream.</p>
          */
         @NameInMap("Lang")
         public String lang;
 
-        /**
-         * <p>The codec level.</p>
-         */
         @NameInMap("Level")
         public String level;
 
         /**
-         * <p>The total number of frames.</p>
+         * <p>The time base.</p>
          */
         @NameInMap("NumFrames")
         public String numFrames;
 
         /**
-         * <p>The pixel format.</p>
+         * <p>The short name of the codec format.</p>
          */
         @NameInMap("PixFmt")
         public String pixFmt;
 
         /**
-         * <p>The codec profile.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("Profile")
         public String profile;
 
         /**
-         * <p>The rotation angle of the video. Valid values: **\[0, 360)**.</p>
+         * <p>The duration of the audio stream.</p>
          */
         @NameInMap("Rotate")
         public String rotate;
 
         /**
-         * <p>The sample aspect ratio.</p>
+         * <p>The width of the file. Unit: pixel.</p>
          */
         @NameInMap("Sar")
         public String sar;
 
         /**
-         * <p>The beginning of the time range that was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The height of the file. Unit: pixel.</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
-         * <p>The time base.</p>
+         * <p>The pixel format.</p>
          */
         @NameInMap("Timebase")
         public String timebase;
 
-        /**
-         * <p>The width of the video resolution.</p>
-         */
         @NameInMap("Width")
         public String width;
 
@@ -618,95 +596,121 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
 
     public static class GetMezzanineInfoResponseBodyMezzanine extends TeaModel {
         /**
-         * <p>The information about the audio stream.</p>
+         * <p>The language.</p>
          */
         @NameInMap("AudioStreamList")
         public java.util.List<GetMezzanineInfoResponseBodyMezzanineAudioStreamList> audioStreamList;
 
         /**
-         * <p>The bitrate of the file. Unit: Kbit/s.</p>
+         * <p>The type of the mezzanine file URL. Valid values:</p>
+         * <br>
+         * <p>- **oss**: OSS URL</p>
+         * <p>- **cdn** (default): Content Delivery Network (CDN) URL</p>
+         * <br>
+         * <p>> If the mezzanine file is stored in a bucket of the in type, only an OSS URL is returned.</p>
          */
         @NameInMap("Bitrate")
         public String bitrate;
 
         /**
-         * <p>The time when the file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The information about the mezzanine file.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The duration of the file. Unit: seconds.</p>
+         * <p>The type of additional information. Separate multiple values with commas (,). By default, only the basic information is returned. Valid values:</p>
+         * <br>
+         * <p>*   **video**: video stream information</p>
+         * <p>*   **audio**: audio stream information</p>
          */
         @NameInMap("Duration")
         public String duration;
 
         /**
-         * <p>The name of the file.</p>
+         * <p>The language.</p>
          */
         @NameInMap("FileName")
         public String fileName;
 
         /**
-         * <p>The URL of the file.</p>
+         * <p>The beginning of the time range that was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("FileURL")
         public String fileURL;
 
         /**
-         * <p>The frame rate of the file. Unit: frames per second.</p>
+         * <p>The sample aspect ratio.</p>
          */
         @NameInMap("Fps")
         public String fps;
 
         /**
-         * <p>The height of the file. Unit: pixel.</p>
+         * <p>The height of the video resolution.</p>
          */
         @NameInMap("Height")
         public Long height;
 
         /**
-         * <p>The type of the mezzanine file URL. Valid values:</p>
-         * <br>
-         * <p>- **oss**: OSS URL</p>
-         * <p>- **cdn** (default): CDN URL</p>
-         * <br>
-         * <p>> If you specify an OSS URL for the video stream, the video stream must be in the MP4 format.</p>
+         * <p>The total number of frames.</p>
          */
         @NameInMap("OutputType")
         public String outputType;
 
+        @NameInMap("RestoreExpiration")
+        public String restoreExpiration;
+
+        @NameInMap("RestoreStatus")
+        public String restoreStatus;
+
         /**
-         * <p>The size of the file. Unit: byte.</p>
+         * <p>The duration of the file. Unit: seconds.</p>
          */
         @NameInMap("Size")
         public Long size;
 
         /**
-         * <p>The status of the file. Valid values:</p>
+         * <p>The validity period of the mezzanine file URL. Unit: seconds. Default value: **1800**. Minimum value: **1**.</p>
          * <br>
-         * <p>*   **Uploading**: The file is being uploaded. This is the initial status.</p>
-         * <p>*   **Normal**: The file is uploaded.</p>
-         * <p>*   **UploadFail**: The file fails to be uploaded.</p>
-         * <p>*   **Deleted**: The file is deleted.</p>
+         * <p>*   If the OutputType parameter is set to **cdn**:</p>
+         * <br>
+         * <p>    *   The mezzanine file URL has a validity period only if URL signing is enabled. Otherwise, the mezzanine file URL is permanently valid.</p>
+         * <p>    *   Minimum value: **1**.</p>
+         * <p>    *   Maximum Value: unlimited.</p>
+         * <p>    *   Default value: If you do not set this parameter, the default validity period that is specified in URL signing is used.</p>
+         * <br>
+         * <p><!----></p>
+         * <br>
+         * <p>*   If the OutputType parameter is set to **oss**:</p>
+         * <br>
+         * <p>    *   The mezzanine file URL has a validity period only if the permissions on the Object Storage Service (OSS) bucket are private. Otherwise, the mezzanine file URL is permanently valid.</p>
+         * <p>    *   Minimum value: **1**.</p>
+         * <p>    *   Maximum value: **2592000** (30 days). The maximum value is limited to reduce security risks of the origin.</p>
+         * <p>    *   Default value: If you do not set this parameter, the default value is **3600**.</p>
          */
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("StorageClass")
+        public String storageClass;
+
         /**
-         * <p>The ID of the video.</p>
+         * <p>The average frame rate.</p>
          */
         @NameInMap("VideoId")
         public String videoId;
 
         /**
-         * <p>The information about the video stream.</p>
+         * <p>The output layout of the sound channels. Valid values:</p>
+         * <br>
+         * <p>*   **mono**: mono sound channel</p>
+         * <p>*   **stereo**: two sound channels</p>
          */
         @NameInMap("VideoStreamList")
         public java.util.List<GetMezzanineInfoResponseBodyMezzanineVideoStreamList> videoStreamList;
 
         /**
-         * <p>The width of the file. Unit: pixel.</p>
+         * <p>The tag of the codec format.</p>
          */
         @NameInMap("Width")
         public Long width;
@@ -788,6 +792,22 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             return this.outputType;
         }
 
+        public GetMezzanineInfoResponseBodyMezzanine setRestoreExpiration(String restoreExpiration) {
+            this.restoreExpiration = restoreExpiration;
+            return this;
+        }
+        public String getRestoreExpiration() {
+            return this.restoreExpiration;
+        }
+
+        public GetMezzanineInfoResponseBodyMezzanine setRestoreStatus(String restoreStatus) {
+            this.restoreStatus = restoreStatus;
+            return this;
+        }
+        public String getRestoreStatus() {
+            return this.restoreStatus;
+        }
+
         public GetMezzanineInfoResponseBodyMezzanine setSize(Long size) {
             this.size = size;
             return this;
@@ -802,6 +822,14 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetMezzanineInfoResponseBodyMezzanine setStorageClass(String storageClass) {
+            this.storageClass = storageClass;
+            return this;
+        }
+        public String getStorageClass() {
+            return this.storageClass;
         }
 
         public GetMezzanineInfoResponseBodyMezzanine setVideoId(String videoId) {

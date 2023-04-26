@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeVodDomainDetailRequest extends TeaModel {
     /**
-     * <p>The domain name for CDN.</p>
+     * <p>The status of the origin server. Valid values:</p>
+     * <br>
+     * <p>*   **online**: indicates that the origin server is enabled.</p>
+     * <p>*   **offline**: indicates that the origin server is disabled.</p>
      */
     @NameInMap("DomainName")
     public String domainName;

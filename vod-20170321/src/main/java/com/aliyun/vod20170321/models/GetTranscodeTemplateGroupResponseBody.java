@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the transcoding template.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The information about the transcoding template group.</p>
+     * <p>The format of the container used to encapsulate audio and video streams. The value is a JSON-formatted string.</p>
      */
     @NameInMap("TranscodeTemplateGroup")
     public GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroup transcodeTemplateGroup;
@@ -39,102 +39,66 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
 
     public static class GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupTranscodeTemplateList extends TeaModel {
         /**
-         * <p>The transcoding configurations of the audio stream. The value is a JSON-formatted string.</p>
+         * <p>The encryption configuration used for transcoding.</p>
          */
         @NameInMap("Audio")
         public String audio;
 
         /**
-         * <p>The clipping configurations of the video. The value is a JSON-formatted string. For example, you can set this parameter if you want to extract 5 seconds of content from a video to generate a new video.</p>
+         * <p>The ID of the associated watermark.</p>
          */
         @NameInMap("Clip")
         public String clip;
 
         /**
-         * <p>The format of the container used to encapsulate audio and video streams. The value is a JSON-formatted string.</p>
+         * <p>The subtitle configurations. The value is a JSON-formatted string.</p>
          */
         @NameInMap("Container")
         public String container;
 
         /**
-         * <p>Valid values for the definition of a common transcoding template:</p>
-         * <p>*   **LD**: low definition.</p>
-         * <p>*   **SD**: standard definition.</p>
-         * <p>*   **HD**: high definition.</p>
-         * <p>*   **FHD**: ultra high definition.</p>
-         * <p>*   **OD**: original quality.</p>
-         * <p>*   **2K**</p>
-         * <p>*   **4K**</p>
-         * <p>*   **SQ**: standard sound quality.</p>
-         * <p>*   **HQ**: high sound quality.</p>
-         * <br>
-         * <p>Valid values for the definition of a Narrowband HD™ 1.0 transcoding template:</p>
-         * <p>*   **LD-NBV1**: low definition.</p>
-         * <p>*   **SD-NBV1**: standard definition.</p>
-         * <p>*   **HD-NBV1**: high definition.</p>
-         * <p>*   **FHD-NBV1**: ultra high definition.</p>
-         * <p>*   **2K-NBV1**</p>
-         * <p>*   **4K-NBV1**</p>
-         * <p>>*   You cannot modify the definition of transcoding templates.</p>
-         * <p>>*   You cannot modify the system parameters, such as the video resolution, audio resolution, and bitrate, of Narrowband HD™ 1.0 transcoding templates.</p>
-         * <p>>*   You can create only Narrowband HD™ 1.0 transcoding templates that support the FLV, M3U8 (HLS), and MP4 output formats.</p>
+         * <p>The transcoding configurations of the audio stream. The value is a JSON-formatted string.</p>
          */
         @NameInMap("Definition")
         public String definition;
 
         /**
-         * <p>The encryption configuration used for transcoding.</p>
+         * <p>The conditional transcoding configurations. This parameter can be used if you want to determine the basic logic based on the bitrate and resolution of the mezzanine file before the video is transcoded. The value is a JSON-formatted string.</p>
          */
         @NameInMap("EncryptSetting")
         public String encryptSetting;
 
         /**
-         * <p>The transcoding segment configurations. This parameter must be returned if HTTP-Live-Streaming (HLS) encryption is used. The value is a JSON-formatted string.</p>
+         * <p>Queries the details of a transcoding template group based on the ID of the transcoding template group.</p>
          */
         @NameInMap("MuxConfig")
         public String muxConfig;
 
         /**
-         * <p>The packaging configurations. Only HLS packaging and DASH packaging are supported. The value is a JSON-formatted string.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("PackageSetting")
         public String packageSetting;
 
         /**
-         * <p>The video rotation identifier. It is used to control the image rotation angle. For example, if you set this parameter to 180, the video image is turned upside down. Valid values: `0 to 360`.</p>
+         * <p>The ID of the application.</p>
          */
         @NameInMap("Rotate")
         public String rotate;
 
         /**
-         * <p>The subtitle configurations. The value is a JSON-formatted string.</p>
+         * <p>The ID of the associated watermark.</p>
          */
         @NameInMap("SubtitleList")
         public String subtitleList;
 
         /**
-         * <p>The name of the transcoding template.</p>
+         * <p>Indicates whether the template group is locked. Valid values:</p>
+         * <p>*   **Disabled**: The template group is not locked.</p>
+         * <p>*   **Enabled**: The template group is locked.</p>
          */
         @NameInMap("TemplateName")
         public String templateName;
-
-        /**
-         * <p>The conditional transcoding configurations. This parameter can be used if you want to determine the basic logic based on the bitrate and resolution of the mezzanine file before the video is transcoded. The value is a JSON-formatted string.</p>
-         */
-        @NameInMap("TransConfig")
-        public String transConfig;
-
-        /**
-         * <p>The custom output path of transcoded files.</p>
-         */
-        @NameInMap("TranscodeFileRegular")
-        public String transcodeFileRegular;
-
-        /**
-         * <p>The ID of the transcoding template.</p>
-         */
-        @NameInMap("TranscodeTemplateId")
-        public String transcodeTemplateId;
 
         /**
          * <p>The type of the template. Valid values:</p>
@@ -142,18 +106,33 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
          * <p>*   **VideoPackage**: a video stream package template. If this type of template is used, ApsaraVideo VOD transcodes a video into video streams in different bitrates and packages these video streams with a file. The PackageSetting parameter must be set for this type of template.</p>
          * <p>*   **SubtitlePackage**: a subtitle package template. If this type of template is used, ApsaraVideo VOD adds the subtitle information to the output file generated by packaging the multi-bitrate video streams of the corresponding video. You must set the PackageSetting parameter for a subtitle package template and associate the subtitle package template with a video stream package template. A template group can contain only one subtitle package template.</p>
          */
+        @NameInMap("TransConfig")
+        public String transConfig;
+
+        /**
+         * <p>The clipping configurations of the video. The value is a JSON-formatted string. For example, you can set this parameter if you want to extract 5 seconds of content from a video to generate a new video.</p>
+         */
+        @NameInMap("TranscodeFileRegular")
+        public String transcodeFileRegular;
+
+        /**
+         * <p>The time when the template group was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
+        @NameInMap("TranscodeTemplateId")
+        public String transcodeTemplateId;
+
+        /**
+         * <p>The ID of the transcoding template group.</p>
+         */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The transcoding configurations of the video stream. The value is a JSON-formatted string.</p>
+         * <p>The time when the template group was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("Video")
         public String video;
 
-        /**
-         * <p>The ID of the associated watermark.</p>
-         */
         @NameInMap("WatermarkIds")
         public java.util.List<String> watermarkIds;
 
@@ -294,41 +273,37 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
 
     public static class GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroup extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The configurations of the transcoding templates.</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
-         * <p>The time when the template group was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The video rotation identifier. It is used to control the image rotation angle. For example, if you set this parameter to 180, the video image is turned upside down. Valid values: `0 to 360`.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>Indicates whether the template group is the default one. Valid values:</p>
-         * <p>*   **Default**: The template group is the default one.</p>
-         * <p>*   **NotDefault**: The template group is not the default one.</p>
+         * <p>The operation that you want to perform. Set the value to **GetTranscodeTemplateGroup**.</p>
          */
         @NameInMap("IsDefault")
         public String isDefault;
 
         /**
-         * <p>Indicates whether the template group is locked. Valid values:</p>
-         * <p>*   **Disabled**: The template group is not locked.</p>
-         * <p>*   **Enabled**: The template group is locked.</p>
+         * <p>The packaging configurations. Only HLS packaging and DASH packaging are supported. The value is a JSON-formatted string.</p>
          */
         @NameInMap("Locked")
         public String locked;
 
         /**
-         * <p>The time when the template group was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The information about the transcoding template group.</p>
          */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
         /**
-         * <p>The name of the template group.</p>
+         * <p>The transcoding segment configurations. This parameter must be returned if HTTP-Live-Streaming (HLS) encryption is used. The value is a JSON-formatted string.</p>
          */
         @NameInMap("Name")
         public String name;
@@ -340,7 +315,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
         public String transcodeTemplateGroupId;
 
         /**
-         * <p>The configurations of the transcoding templates.</p>
+         * <p>The name of the transcoding template.</p>
          */
         @NameInMap("TranscodeTemplateList")
         public java.util.List<GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupTranscodeTemplateList> transcodeTemplateList;

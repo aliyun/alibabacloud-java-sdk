@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
     /**
-     * <p>Details of review results.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("MediaAuditAudioResultDetail")
     public GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetail mediaAuditAudioResultDetail;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The number of the page to return. This parameter is optional. If you do not specify this parameter, all results are returned without pagination.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,33 +39,20 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
 
     public static class GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetailList extends TeaModel {
         /**
-         * <p>The end time of the audio that failed the review. Unit: seconds.</p>
+         * <p>The list of results.</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
-        /**
-         * <p>The review results. Valid values:</p>
-         * <p>*   **spam**</p>
-         * <p>*   **ad**</p>
-         * <p>*   **abuse**</p>
-         * <p>*   **flood**</p>
-         * <p>*   **contraband**</p>
-         * <p>*   **meaningless**</p>
-         * <p>*   **normal**</p>
-         */
         @NameInMap("Label")
         public String label;
 
         /**
-         * <p>The start time of the audio that failed the review. Unit: seconds.</p>
+         * <p>Queries the details of audio review results.</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
-        /**
-         * <p>The text that corresponds to the audio.</p>
-         */
         @NameInMap("Text")
         public String text;
 
@@ -110,19 +97,19 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
 
     public static class GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetail extends TeaModel {
         /**
-         * <p>The list of results.</p>
+         * <p>The text that corresponds to the audio.</p>
          */
         @NameInMap("List")
         public java.util.List<GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetailList> list;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The operation that you want to perform. Set the value to **GetMediaAuditAudioResultDetail**.</p>
          */
         @NameInMap("PageTotal")
         public Integer pageTotal;
 
         /**
-         * <p>The total number of pages returned.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("Total")
         public Integer total;

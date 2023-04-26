@@ -5,25 +5,31 @@ import com.aliyun.tea.*;
 
 public class RefreshMediaPlayUrlsRequest extends TeaModel {
     /**
-     * <p>Specifies the resolutions of the media streams you want to refresh or prefetch. You can specify multiple resolutions. Separate multiple resolutions with commas (,). If you leave this parameter empty, media streams in all resolutions are refreshed or prefetched by default.</p>
+     * <p>Specifies the type of the refresh or prefetch operation. Default value: Single. Valid values:</p>
      * <br>
-     * <p>>  The value must be supported in the **Definition** section in [Parameters for media assets](~~124671~~).</p>
+     * <p>*   **Single**: Only one latest transcoded stream is refreshed or prefetched for each resolution and format.</p>
+     * <p>*   **Multiple**: All transcoded streams are refreshed or prefetched for each resolution and format.</p>
      */
     @NameInMap("Definitions")
     public String definitions;
 
     /**
-     * <p>The formats of the media streams you want to refresh or prefetch. You can specify multiple formats. Separate multiple formats with commas (,). If you leave this parameter empty, media streams in all formats are refreshed or prefetched by default. Valid values:</p>
+     * <p>Specifies the types of media streams you want to refresh or prefetch. You can specify multiple types. Separate multiple types with commas (,). If you leave this parameter empty, media streams in all types are refreshed or prefetched by default. Valid values:</p>
      * <br>
-     * <p>*   **mp4**</p>
-     * <p>*   **m3u8**</p>
-     * <p>*   **mp3**</p>
-     * <p>*   **flv**</p>
-     * <p>*   **webm**</p>
-     * <p>*   **ts**</p>
+     * <p>*   **video**</p>
+     * <p>*   **audio**</p>
      */
     @NameInMap("Formats")
     public String formats;
+
+    /**
+     * <p>Specifies whether to refresh or prefetch the playback URLs of the TS files of the M3U8 media stream. Default value: false. Valid values:</p>
+     * <br>
+     * <p>*   **false**</p>
+     * <p>*   **true**</p>
+     */
+    @NameInMap("MediaIds")
+    public String mediaIds;
 
     /**
      * <p>The IDs of the media files that you want to refresh or prefetch. You can specify a maximum of 20 IDs. Separate multiple IDs with commas (,). You can use one of the following methods to obtain the ID:</p>
@@ -32,56 +38,40 @@ public class RefreshMediaPlayUrlsRequest extends TeaModel {
      * <p>*   Obtain the value of VideoId from the response to the [CreateUploadVideo](~~55407~~) operation that you call to upload media files.</p>
      * <p>*   Obtain the value of VideoId from the response to the [SearchMedia](~~86044~~) operation that you call to query the media ID after the media file is uploaded.</p>
      */
-    @NameInMap("MediaIds")
-    public String mediaIds;
-
-    /**
-     * <p>Specifies the type of the refresh or prefetch operation. Default value: Single. Valid values:</p>
-     * <br>
-     * <p>*   **Single**: Only one latest transcoded stream is refreshed or prefetched for each resolution and format.</p>
-     * <p>*   **Multiple**: All transcoded streams are refreshed or prefetched for each resolution and format.</p>
-     */
     @NameInMap("ResultType")
     public String resultType;
 
     /**
-     * <p>Specifies the number of the playback URLs of the TS files for the M3U8 media stream you want to refresh or prefetch. After you set this parameter, only the playback URLs of the first N TS files will be refreshed or prefetched. Valid values: 1 to 20. Default value: 5.</p>
+     * <p>The IDs of the media files that cannot be operated on. In most cases, media files cannot be operated on because you are not authorized to perform the operations. For more information, see [Overview](~~113600~~).</p>
      */
     @NameInMap("SliceCount")
     public Integer sliceCount;
 
     /**
-     * <p>Specifies whether to refresh or prefetch the playback URLs of the TS files of the M3U8 media stream. Default value: false. Valid values:</p>
-     * <br>
-     * <p>*   **false**</p>
-     * <p>*   **true**</p>
+     * <p>The ID of the refresh or prefetch task.</p>
      */
     @NameInMap("SliceFlag")
     public Boolean sliceFlag;
-
-    /**
-     * <p>Specifies the types of media streams you want to refresh or prefetch. You can specify multiple types. Separate multiple types with commas (,). If you leave this parameter empty, media streams in all types are refreshed or prefetched by default. Valid values:</p>
-     * <br>
-     * <p>*   **video**</p>
-     * <p>*   **audio**</p>
-     */
-    @NameInMap("StreamType")
-    public String streamType;
-
-    /**
-     * <p>The type of the task that you want to create. Valid values:</p>
-     * <br>
-     * <p>*   **Refresh**</p>
-     * <p>*   **Preload**</p>
-     */
-    @NameInMap("TaskType")
-    public String taskType;
 
     /**
      * <p>The custom configurations such as callback configurations and upload acceleration configurations. The value is a JSON string. For more information, see [Request parameter](~~86952~~).</p>
      * <p>> </p>
      * <p>- The callback configurations take effect only after you specify the HTTP callback URL and select specific callback events in the ApsaraVideo VOD console. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see [Configure callback settings](~~86071~~).</p>
      * <p>- You must submit a ticket to enable the upload acceleration feature. For more information, see [Overview](~~55396~~).</p>
+     */
+    @NameInMap("StreamType")
+    public String streamType;
+
+    /**
+     * <p>The IDs of the media files that do not exist.</p>
+     */
+    @NameInMap("TaskType")
+    public String taskType;
+
+    /**
+     * <p>Specifies the resolutions of the media streams you want to refresh or prefetch. You can specify multiple resolutions. Separate multiple resolutions with commas (,). If you leave this parameter empty, media streams in all resolutions are refreshed or prefetched by default.</p>
+     * <br>
+     * <p>>  The value must be supported in the **Definition** section in [Parameters for media assets](~~124671~~).</p>
      */
     @NameInMap("UserData")
     public String userData;

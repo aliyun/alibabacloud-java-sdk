@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTranscodeTemplateGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the transcoding template group.</p>
+     * <p>The transcoding configurations of the video stream. The value is a JSON-formatted string.</p>
      */
     @NameInMap("TranscodeTemplateGroupId")
     public String transcodeTemplateGroupId;

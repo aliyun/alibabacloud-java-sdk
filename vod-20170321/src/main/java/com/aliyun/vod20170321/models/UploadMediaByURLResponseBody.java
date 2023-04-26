@@ -4,15 +4,9 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class UploadMediaByURLResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The information about one or more upload jobs.</p>
-     */
     @NameInMap("UploadJobs")
     public java.util.List<UploadMediaByURLResponseBodyUploadJobs> uploadJobs;
 
@@ -38,15 +32,9 @@ public class UploadMediaByURLResponseBody extends TeaModel {
     }
 
     public static class UploadMediaByURLResponseBodyUploadJobs extends TeaModel {
-        /**
-         * <p>The ID of the upload job.</p>
-         */
         @NameInMap("JobId")
         public String jobId;
 
-        /**
-         * <p>The URL of the source file that is uploaded in the upload job.</p>
-         */
         @NameInMap("SourceURL")
         public String sourceURL;
 

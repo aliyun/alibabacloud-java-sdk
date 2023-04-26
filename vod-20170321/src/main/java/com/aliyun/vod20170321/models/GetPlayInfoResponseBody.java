@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class GetPlayInfoResponseBody extends TeaModel {
     /**
-     * <p>The information about the audio or video stream.</p>
+     * <p>The height of the media stream. Unit: pixels.</p>
      */
     @NameInMap("PlayInfoList")
     public GetPlayInfoResponseBodyPlayInfoList playInfoList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The information about the audio or video stream.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The basic information about the audio or video file.</p>
+     * <p>The width of the media stream. Unit: pixels.</p>
      */
     @NameInMap("VideoBase")
     public GetPlayInfoResponseBodyVideoBase videoBase;
@@ -52,26 +52,160 @@ public class GetPlayInfoResponseBody extends TeaModel {
     }
 
     public static class GetPlayInfoResponseBodyPlayInfoListPlayInfo extends TeaModel {
-        /**
-         * <p>The color depth. This value must be an integer.</p>
-         */
         @NameInMap("BitDepth")
         public Integer bitDepth;
 
         /**
-         * <p>The bitrate of the media stream. Unit: Kbit/s.</p>
+         * <p>The format of the media stream. Separate multiple formats with commas (,). Valid values:</p>
+         * <br>
+         * <p>*   **mp4**</p>
+         * <p>*   **m3u8**</p>
+         * <p>*   **mp3**</p>
+         * <p>*   **mpd**</p>
+         * <br>
+         * <p>> By default, ApsaraVideo VOD returns video streams in all the preceding formats. However, video streams in the MPD format are returned only if the MPD container format is specified in the transcoding template. For more information, see the [Container parameter in the TranscodeTemplate](~~52839~~) table.</p>
          */
         @NameInMap("Bitrate")
         public String bitrate;
 
         /**
-         * <p>The time when the audio or video file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The status of the media stream. Valid values:</p>
+         * <br>
+         * <p>*   **Normal**</p>
+         * <p>*   **Invisible**</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The quality of the video stream. Valid values:</p>
+         * <p>The color depth. This value must be an integer.</p>
+         */
+        @NameInMap("Definition")
+        public String definition;
+
+        /**
+         * <p>The encryption type of the media stream. Valid values:</p>
+         * <br>
+         * <p>*   **AliyunVoDEncryption**: Alibaba Cloud proprietary cryptography</p>
+         * <p>*   **HLSEncryption**: HTTP Live Streaming (HLS) encryption</p>
+         * <br>
+         * <p>> If the encryption type is**AliyunVoDEncryption**, only ApsaraVideo Player SDK can be used to play videos.</p>
+         */
+        @NameInMap("Duration")
+        public String duration;
+
+        /**
+         * <p>The status of the audio or video file. For more information about the value range and description, see the [Status](~~52839~~) table.</p>
+         */
+        @NameInMap("Encrypt")
+        public Long encrypt;
+
+        /**
+         * <p>The title of the audio or video file.</p>
+         */
+        @NameInMap("EncryptType")
+        public String encryptType;
+
+        /**
+         * <p>Queries the playback URL of a video or audio file by its ID.</p>
+         */
+        @NameInMap("Format")
+        public String format;
+
+        /**
+         * <p>The type of the output URL. Default value: oss. Valid values:</p>
+         * <br>
+         * <p>*   **oss**</p>
+         * <p>*   **cdn**</p>
+         */
+        @NameInMap("Fps")
+        public String fps;
+
+        @NameInMap("HDRType")
+        public String HDRType;
+
+        /**
+         * <p>The returned result.</p>
+         */
+        @NameInMap("Height")
+        public Long height;
+
+        /**
+         * <p>The type of the media file. Valid values:</p>
+         * <br>
+         * <p>*   **video**</p>
+         * <p>*   **audio**</p>
+         */
+        @NameInMap("JobId")
+        public String jobId;
+
+        /**
+         * <p>The validity period of the playback URL. Unit: seconds.</p>
+         * <br>
+         * <p>*   If the OutputType parameter is set to **cdn**:</p>
+         * <br>
+         * <p>    *   This parameter takes effect only if URL authentication is enabled. Otherwise, the playback URL does not expire.</p>
+         * <p>    *   Minimum value: **1**.</p>
+         * <p>    *   Maximum value: unlimited.</p>
+         * <p>    *   Default value: The default validity period that is specified in URL authentication is used.</p>
+         * <br>
+         * <p>*   If the OutputType parameter is set to **oss**:</p>
+         * <br>
+         * <p>    *   This parameter takes effect only when the ACL of the Object Storage Service (OSS) bucket is private. Otherwise, the playback URL does not expire.</p>
+         * <p>    *   Minimum value: **1**.</p>
+         * <p>    *   Maximum value: **2592000** (30 days). This limit is imposed to reduce security risks of the origin server.</p>
+         * <p>    *   Default value: **3600**.</p>
+         */
+        @NameInMap("ModificationTime")
+        public String modificationTime;
+
+        /**
+         * <p>The type of the data to return. Default value: Single. Valid values:</p>
+         * <br>
+         * <p>*   **Single**: Only one latest transcoded stream is returned for each quality and format.</p>
+         * <p>*   **Multiple**: All transcoded streams are returned for each quality and format.</p>
+         */
+        @NameInMap("NarrowBandType")
+        public String narrowBandType;
+
+        /**
+         * <p>The ID of the request.</p>
+         */
+        @NameInMap("PlayURL")
+        public String playURL;
+
+        /**
+         * <p>The custom playback configuration. The value is a JSON string. For more information, see [PlayConfig](~~86952~~).</p>
+         * <br>
+         * <p>> </p>
+         * <br>
+         * <p>*   If you do not specify PlayConfig or `PlayDomain` in PlayConfig, the default domain name configured in ApsaraVideo VOD is used in this operation. If no default domain name is configured, the domain names are queried in reverse chronological order based on the time when the domain names were modified. The domain name that was last modified is used as the streaming domain name. To prevent domain name issues, we recommend that you specify the default streaming domain name. You can log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com) and choose **Configuration Management** > **Media Management** > **Storage** > **Manage** > **Origin Domain Name** to set the default streaming domain name.</p>
+         * <br>
+         * <p>*   If the `EncryptType` parameter in PlayConfig is set to `AliyunVoDEncryption`, the playback URL of the stream encrypted by using proprietary cryptography is not returned to ensure video security. If you want to return such URL, you must set the `ResultType` parameter to `Multiple`.</p>
+         */
+        @NameInMap("Size")
+        public Long size;
+
+        /**
+         * <p>The size of the media stream. Unit: bytes.</p>
+         */
+        @NameInMap("Specification")
+        public String specification;
+
+        /**
+         * <p>The specifications of transcoded audio and video streams. For more information about the valid values, see [Output specifications](~~124671~~).</p>
+         */
+        @NameInMap("Status")
+        public String status;
+
+        /**
+         * <p>The bitrate of the media stream. Unit: Kbit/s.</p>
+         */
+        @NameInMap("StreamType")
+        public String streamType;
+
+        /**
+         * <p>The quality of the video stream. Separate multiple qualities with commas (,). Valid values:</p>
          * <br>
          * <p>*   **FD**: low definition</p>
          * <p>*   **LD**: standard definition</p>
@@ -83,135 +217,17 @@ public class GetPlayInfoResponseBody extends TeaModel {
          * <p>*   **SQ**: standard sound quality</p>
          * <p>*   **HQ**: high sound quality</p>
          * <p>*   **AUTO**: adaptive bitrate</p>
+         * <br>
+         * <p>> By default, ApsaraVideo VOD returns video streams in all preceding qualities. However, video streams for adaptive bitrate streaming are returned only if the PackageSetting parameter is specified in the transcoding template. For more information, see the [PackageSetting parameter in the TranscodeTemplate](~~52839~~) table.</p>
          */
-        @NameInMap("Definition")
-        public String definition;
-
-        /**
-         * <p>The duration of the media stream. Unit: seconds.</p>
-         */
-        @NameInMap("Duration")
-        public String duration;
+        @NameInMap("WatermarkId")
+        public String watermarkId;
 
         /**
          * <p>Indicates whether the video stream was encrypted. Valid values:</p>
          * <br>
          * <p>*   **0**: no</p>
          * <p>*   **1**: yes</p>
-         */
-        @NameInMap("Encrypt")
-        public Long encrypt;
-
-        /**
-         * <p>The encryption type of the media stream. Valid values:</p>
-         * <br>
-         * <p>*   **AliyunVoDEncryption**: Alibaba Cloud proprietary cryptography</p>
-         * <p>*   **HLSEncryption**: HTTP Live Streaming (HLS) encryption</p>
-         * <br>
-         * <p>> If the encryption type is **AliyunVoDEncryption**, only ApsaraVideo Player SDK can be used to play videos.</p>
-         */
-        @NameInMap("EncryptType")
-        public String encryptType;
-
-        /**
-         * <p>The format of the media stream.</p>
-         * <br>
-         * <p>*   If the media file is a video file, the valid values are **mp4** and **m3u8**.</p>
-         * <p>*   If the media file is an audio-only file, the value is **mp3**.</p>
-         */
-        @NameInMap("Format")
-        public String format;
-
-        /**
-         * <p>The frame rate of the media stream. Unit: frames per second.</p>
-         */
-        @NameInMap("Fps")
-        public String fps;
-
-        /**
-         * <p>The HDR type of the media stream. Valid values:</p>
-         * <br>
-         * <p>*   HDR</p>
-         * <p>*   HDR10</p>
-         * <p>*   HLG</p>
-         * <p>*   DolbyVision</p>
-         * <p>*   HDRVivid</p>
-         * <p>*   SDR+</p>
-         */
-        @NameInMap("HDRType")
-        public String HDRType;
-
-        /**
-         * <p>The height of the media stream. Unit: pixels.</p>
-         */
-        @NameInMap("Height")
-        public Long height;
-
-        /**
-         * <p>The ID of the media transcoding job. This ID uniquely identifies a media stream.</p>
-         */
-        @NameInMap("JobId")
-        public String jobId;
-
-        /**
-         * <p>The update time. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
-         */
-        @NameInMap("ModificationTime")
-        public String modificationTime;
-
-        /**
-         * <p>The type of Narrowband HD transcoding. Valid values:</p>
-         * <br>
-         * <p>*   **0**: regular</p>
-         * <p>*   **1.0**: Narrowband HD 1.0</p>
-         * <p>*   **2.0**: Narrowband HD 2.0</p>
-         * <br>
-         * <p>This parameter is returned only when a quality that is available in the built-in Narrowband HD 1.0 transcoding template is specified. For more information, see the [Definition parameter in the TranscodeTemplate](~~52839~~) table.</p>
-         */
-        @NameInMap("NarrowBandType")
-        public String narrowBandType;
-
-        /**
-         * <p>The playback URL of the video stream.</p>
-         */
-        @NameInMap("PlayURL")
-        public String playURL;
-
-        /**
-         * <p>The size of the media stream. Unit: bytes.</p>
-         */
-        @NameInMap("Size")
-        public Long size;
-
-        /**
-         * <p>The specifications of transcoded audio and video streams. For more information about the valid values, see [Output specifications](~~124671~~).</p>
-         */
-        @NameInMap("Specification")
-        public String specification;
-
-        /**
-         * <p>The status of the media stream. Valid values:</p>
-         * <br>
-         * <p>*   **Normal**</p>
-         * <p>*   **Invisible**</p>
-         */
-        @NameInMap("Status")
-        public String status;
-
-        /**
-         * <p>The type of the media stream. If the media stream is a video stream, the value is **video**. If the media stream is an audio-only stream, the value is **audio**.</p>
-         */
-        @NameInMap("StreamType")
-        public String streamType;
-
-        /**
-         * <p>The ID of the watermark that is associated with the media stream.</p>
-         */
-        @NameInMap("WatermarkId")
-        public String watermarkId;
-
-        /**
-         * <p>The width of the media stream. Unit: pixels.</p>
          */
         @NameInMap("Width")
         public Long width;
@@ -412,52 +428,61 @@ public class GetPlayInfoResponseBody extends TeaModel {
 
     public static class GetPlayInfoResponseBodyVideoBase extends TeaModel {
         /**
-         * <p>The thumbnail URL of the audio or video file.</p>
+         * <p>ApsaraVideo VOD</p>
          */
         @NameInMap("CoverURL")
         public String coverURL;
 
         /**
-         * <p>The time when the audio or video file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The type of the media stream. Separate multiple types with commas (,). Valid values:</p>
+         * <br>
+         * <p>*   **video**</p>
+         * <p>*   **audio**</p>
+         * <br>
+         * <p>By default, video and audio streams are returned.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The URL of the masked live comment data.</p>
+         * <p>The time when the audio or video file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("DanMuURL")
         public String danMuURL;
 
         /**
-         * <p>The duration of the audio or video file. Unit: seconds.</p>
+         * <p>The ID of the watermark that is associated with the media stream.</p>
          */
         @NameInMap("Duration")
         public String duration;
 
         /**
-         * <p>The type of the media file. Valid values:</p>
+         * <p>The ID of the audio or video file. You can use one of the following methods to obtain the ID of the file:</p>
          * <br>
-         * <p>*   **video**</p>
-         * <p>*   **audio**</p>
+         * <p>*   Log on to the [ApsaraVideo VOD](https://vod.console.aliyun.com) console. In the left-side navigation pane, choose **Media Files** > **Audio/Video**. On the Video and Audio page, you can view the ID of the audio or video file. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.</p>
+         * <p>*   Obtain the value of the VideoId parameter when you call the [CreateUploadVideo](~~55407~~) operation to upload files.</p>
+         * <p>*   Obtain the value of the VideoId parameter by calling the [SearchMedia](~~86044~~) operation. This method is applicable to files that have been uploaded.</p>
          */
         @NameInMap("MediaType")
         public String mediaType;
 
         /**
-         * <p>The status of the audio or video file. For more information about the value range and description, see the [Status](~~52839~~) table.</p>
+         * <p>The thumbnail URL of the audio or video file.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The title of the audio or video file.</p>
+         * <p>The format of the media stream.</p>
+         * <br>
+         * <p>*   If the media file is a video file, the valid values are **mp4** and **m3u8**.</p>
+         * <p>*   If the media file is an audio-only file, the value is **mp3**.</p>
          */
         @NameInMap("Title")
         public String title;
 
         /**
-         * <p>The ID of the media file.</p>
+         * <p>The type of the media stream. If the media stream is a video stream, the value is **video**. If the media stream is an audio-only stream, the value is **audio**.</p>
          */
         @NameInMap("VideoId")
         public String videoId;

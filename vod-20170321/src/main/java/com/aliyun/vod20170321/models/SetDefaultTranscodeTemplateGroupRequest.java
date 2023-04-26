@@ -4,9 +4,6 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SetDefaultTranscodeTemplateGroupRequest extends TeaModel {
-    /**
-     * <p>The ID of the transcoding template group.</p>
-     */
     @NameInMap("TranscodeTemplateGroupId")
     public String transcodeTemplateGroupId;
 

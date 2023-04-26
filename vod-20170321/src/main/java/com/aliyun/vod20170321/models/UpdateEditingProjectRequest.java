@@ -4,15 +4,9 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class UpdateEditingProjectRequest extends TeaModel {
-    /**
-     * <p>The thumbnail URL of the online editing project.</p>
-     */
     @NameInMap("CoverURL")
     public String coverURL;
 
-    /**
-     * <p>The description of the online editing project.</p>
-     */
     @NameInMap("Description")
     public String description;
 
@@ -23,7 +17,7 @@ public class UpdateEditingProjectRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The ID of the online editing project.</p>
+     * <p>Modifies an online editing project.</p>
      */
     @NameInMap("ProjectId")
     public String projectId;
@@ -34,15 +28,9 @@ public class UpdateEditingProjectRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public String resourceOwnerId;
 
-    /**
-     * <p>The timeline of the online editing project. For more information about the structure, see [Timeline](~~52839~~).</p>
-     */
     @NameInMap("Timeline")
     public String timeline;
 
-    /**
-     * <p>The title of the online editing project.</p>
-     */
     @NameInMap("Title")
     public String title;
 

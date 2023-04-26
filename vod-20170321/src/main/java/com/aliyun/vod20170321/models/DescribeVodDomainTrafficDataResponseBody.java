@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
     /**
-     * <p>The time interval between the returned entries. Unit: seconds.</p>
+     * <p>The time interval between the entries returned. Unit: seconds.</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
 
     /**
-     * <p>The domain name for CDN.</p>
+     * <p>The accelerated domain name.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The end of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+     * <p>The end of the time range during which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -29,19 +29,19 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+     * <p>The beginning of the time range during which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The total traffic.</p>
+     * <p>The total amount of network traffic.</p>
      */
     @NameInMap("TotalTraffic")
     public String totalTraffic;
 
     /**
-     * <p>The network traffic data that is collected for each interval.</p>
+     * <p>The network traffic that was collected at each interval.</p>
      */
     @NameInMap("TrafficDataPerInterval")
     public DescribeVodDomainTrafficDataResponseBodyTrafficDataPerInterval trafficDataPerInterval;
@@ -109,31 +109,31 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
 
     public static class DescribeVodDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule extends TeaModel {
         /**
-         * <p>The volume of the network traffic in mainland China. Unit: byte.</p>
+         * <p>The amount of network traffic in the Chinese mainland. Unit: bytes.</p>
          */
         @NameInMap("DomesticValue")
         public String domesticValue;
 
         /**
-         * <p>The volume of the HTTPS network traffic on L1 nodes in mainland China. Unit: byte.</p>
+         * <p>The amount of HTTPS network traffic on points of presence (POPs) in the Chinese mainland. Unit: bytes.</p>
          */
         @NameInMap("HttpsDomesticValue")
         public String httpsDomesticValue;
 
         /**
-         * <p>The volume of the HTTPS network traffic on L1 nodes outside mainland China. Unit: byte.</p>
+         * <p>The amount of HTTPS network traffic on POPs outside the Chinese mainland. Unit: bytes.</p>
          */
         @NameInMap("HttpsOverseasValue")
         public String httpsOverseasValue;
 
         /**
-         * <p>The total volume of the HTTPS network traffic on L1 nodes. Unit: byte.</p>
+         * <p>The total amount of HTTPS network traffic on POPs. Unit: bytes.</p>
          */
         @NameInMap("HttpsValue")
         public String httpsValue;
 
         /**
-         * <p>The volume of the network traffic outside mainland China. Unit: byte.</p>
+         * <p>The amount of network traffic outside the Chinese mainland. Unit: bytes.</p>
          */
         @NameInMap("OverseasValue")
         public String overseasValue;
@@ -145,7 +145,7 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
         public String timeStamp;
 
         /**
-         * <p>The total volume of the network traffic. Unit: byte.</p>
+         * <p>The total amount of network traffic. Unit: bytes.</p>
          */
         @NameInMap("Value")
         public String value;
