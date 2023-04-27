@@ -6221,6 +6221,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EditingProduceConfig", request.editingProduceConfig);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaMetadata)) {
+            query.put("MediaMetadata", request.mediaMetadata);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.outputMediaConfig)) {
             query.put("OutputMediaConfig", request.outputMediaConfig);
         }

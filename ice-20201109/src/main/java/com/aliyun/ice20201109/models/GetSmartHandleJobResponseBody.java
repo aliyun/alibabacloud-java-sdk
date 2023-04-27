@@ -87,9 +87,15 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
     }
 
     public static class GetSmartHandleJobResponseBodyJobResult extends TeaModel {
+        /**
+         * <p>智能分析结果</p>
+         */
         @NameInMap("AiResult")
         public String aiResult;
 
+        /**
+         * <p>媒资Id</p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 

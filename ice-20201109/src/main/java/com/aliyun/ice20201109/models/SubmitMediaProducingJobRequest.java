@@ -13,6 +13,9 @@ public class SubmitMediaProducingJobRequest extends TeaModel {
     @NameInMap("EditingProduceConfig")
     public String editingProduceConfig;
 
+    @NameInMap("MediaMetadata")
+    public String mediaMetadata;
+
     @NameInMap("OutputMediaConfig")
     public String outputMediaConfig;
 
@@ -64,6 +67,14 @@ public class SubmitMediaProducingJobRequest extends TeaModel {
     }
     public String getEditingProduceConfig() {
         return this.editingProduceConfig;
+    }
+
+    public SubmitMediaProducingJobRequest setMediaMetadata(String mediaMetadata) {
+        this.mediaMetadata = mediaMetadata;
+        return this;
+    }
+    public String getMediaMetadata() {
+        return this.mediaMetadata;
     }
 
     public SubmitMediaProducingJobRequest setOutputMediaConfig(String outputMediaConfig) {

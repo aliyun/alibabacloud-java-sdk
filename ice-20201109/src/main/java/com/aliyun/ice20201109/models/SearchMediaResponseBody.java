@@ -476,6 +476,9 @@ public class SearchMediaResponseBody extends TeaModel {
     }
 
     public static class SearchMediaResponseBodyMediaInfoListAiRoughData extends TeaModel {
+        /**
+         * <p>电视剧</p>
+         */
         @NameInMap("AiCategory")
         public String aiCategory;
 
