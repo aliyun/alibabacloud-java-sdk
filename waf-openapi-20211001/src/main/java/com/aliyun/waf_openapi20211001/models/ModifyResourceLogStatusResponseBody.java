@@ -4,9 +4,18 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class ModifyResourceLogStatusResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the log collection feature is enabled for the protected object. Valid values:</p>
+     * <br>
+     * <p>*   **true:** The log collection feature is enabled.</p>
+     * <p>*   **false:** The log collection feature is disabled.</p>
+     */
     @NameInMap("Status")
     public Boolean status;
 

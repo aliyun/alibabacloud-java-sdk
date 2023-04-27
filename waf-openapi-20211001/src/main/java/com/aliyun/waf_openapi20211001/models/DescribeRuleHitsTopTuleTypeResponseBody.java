@@ -4,9 +4,15 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DescribeRuleHitsTopTuleTypeResponseBody extends TeaModel {
+    /**
+     * <p>The number of requests that match the rules of the protection module.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The type of rules. For details, see the description of **RuleType** in [DescribeRuleHitsTopRuleId](~~DescribeRuleHitsTopRuleId~~).</p>
+     */
     @NameInMap("RuleHitsTopTuleType")
     public java.util.List<DescribeRuleHitsTopTuleTypeResponseBodyRuleHitsTopTuleType> ruleHitsTopTuleType;
 

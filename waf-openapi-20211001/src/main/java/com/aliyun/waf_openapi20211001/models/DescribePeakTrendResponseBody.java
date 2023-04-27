@@ -4,9 +4,15 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DescribePeakTrendResponseBody extends TeaModel {
+    /**
+     * <p>An array of the QPS statistics of the WAF instance.</p>
+     */
     @NameInMap("FlowChart")
     public java.util.List<DescribePeakTrendResponseBodyFlowChart> flowChart;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,39 @@ public class DescribePeakTrendResponseBody extends TeaModel {
     }
 
     public static class DescribePeakTrendResponseBodyFlowChart extends TeaModel {
+        /**
+         * <p>The number of requests that are monitored or blocked by the custom rule (access control) module.</p>
+         */
         @NameInMap("AclSum")
         public Long aclSum;
 
+        /**
+         * <p>The number of requests that are monitored or blocked by the scan protection module.</p>
+         */
         @NameInMap("AntiScanSum")
         public Long antiScanSum;
 
+        /**
+         * <p>The number of requests that are monitored or blocked by the HTTP flood protection module.</p>
+         */
         @NameInMap("CcSum")
         public Long ccSum;
 
+        /**
+         * <p>The total number of requests.</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The serial number of the time interval. The serial numbers are arranged in chronological order.</p>
+         */
         @NameInMap("Index")
         public Long index;
 
+        /**
+         * <p>The number of requests that are monitored or blocked by the regular expression protection engine.</p>
+         */
         @NameInMap("WafSum")
         public Long wafSum;
 

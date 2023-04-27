@@ -4,9 +4,15 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class CreateDefenseTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the protection rule template.</p>
+     */
     @NameInMap("TemplateId")
     public Long templateId;
 

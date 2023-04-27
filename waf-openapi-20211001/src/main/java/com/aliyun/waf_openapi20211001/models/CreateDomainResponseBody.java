@@ -4,9 +4,15 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class CreateDomainResponseBody extends TeaModel {
+    /**
+     * <p>$.parameters[3].schema.example</p>
+     */
     @NameInMap("DomainInfo")
     public CreateDomainResponseBodyDomainInfo domainInfo;
 
+    /**
+     * <p>$.parameters[3].schema.description</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class CreateDomainResponseBody extends TeaModel {
     }
 
     public static class CreateDomainResponseBodyDomainInfo extends TeaModel {
+        /**
+         * <p>$.parameters[3].schema.enumValueTitles</p>
+         */
         @NameInMap("Cname")
         public String cname;
 
+        /**
+         * <p>$.parameters[4].schema.properties.Backends.items.description</p>
+         */
         @NameInMap("Domain")
         public String domain;
 

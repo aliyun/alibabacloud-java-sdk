@@ -4,12 +4,21 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
+    /**
+     * <p>An array of IP addresses in the IP address blacklist.</p>
+     */
     @NameInMap("IpList")
     public java.util.List<DescribeMajorProtectionBlackIpsResponseBodyIpList> ipList;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of IP addresses in the blacklist.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,21 +52,41 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
     }
 
     public static class DescribeMajorProtectionBlackIpsResponseBodyIpList extends TeaModel {
+        /**
+         * <p>The description of the IP address in the blacklist.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The time after which the IP address blacklist becomes invalid. Unit: seconds.</p>
+         * <br>
+         * <p>>  If the value of this parameter is **0**, the blacklist is permanently valid.</p>
+         */
         @NameInMap("ExpiredTime")
         public Long expiredTime;
 
+        /**
+         * <p>The most recent time when the IP address blacklist was modified.</p>
+         */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>The IP address in the IP address blacklist.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The ID of the IP address blacklist rule for major event protection.</p>
+         */
         @NameInMap("RuleId")
         public Long ruleId;
 
+        /**
+         * <p>The ID of the rule template for major event protection.</p>
+         */
         @NameInMap("TemplateId")
         public Long templateId;
 

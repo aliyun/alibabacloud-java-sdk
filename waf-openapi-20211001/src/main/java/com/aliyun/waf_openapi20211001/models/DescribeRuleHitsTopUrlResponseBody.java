@@ -4,9 +4,15 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DescribeRuleHitsTopUrlResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The array of the top 10 URLs that trigger protection rules.</p>
+     */
     @NameInMap("RuleHitsTopUrl")
     public java.util.List<DescribeRuleHitsTopUrlResponseBodyRuleHitsTopUrl> ruleHitsTopUrl;
 
@@ -32,9 +38,15 @@ public class DescribeRuleHitsTopUrlResponseBody extends TeaModel {
     }
 
     public static class DescribeRuleHitsTopUrlResponseBodyRuleHitsTopUrl extends TeaModel {
+        /**
+         * <p>The number of requests from the URL that match protection rules.</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The request URL.</p>
+         */
         @NameInMap("Url")
         public String url;
 

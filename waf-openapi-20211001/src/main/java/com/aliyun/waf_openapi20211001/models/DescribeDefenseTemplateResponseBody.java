@@ -4,9 +4,15 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DescribeDefenseTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the protection rule template.</p>
+     */
     @NameInMap("Template")
     public DescribeDefenseTemplateResponseBodyTemplate template;
 
@@ -32,27 +38,57 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
     }
 
     public static class DescribeDefenseTemplateResponseBodyTemplate extends TeaModel {
+        /**
+         * <p>The scenario in which the protection rule template is used. For more information, see the description of the **DefenseScene** parameter in the [CreateDefenseRule](~~ID~~) topic.</p>
+         */
         @NameInMap("DefenseScene")
         public String defenseScene;
 
+        /**
+         * <p>The description of the protection rule template.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The most recent time when the protection rule template was modified.</p>
+         */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>The ID of the protection rule template.</p>
+         */
         @NameInMap("TemplateId")
         public Long templateId;
 
+        /**
+         * <p>The name of the protection rule template.</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 
+        /**
+         * <p>The origin of the protection rule template. If the value of this parameter is custom, the protection rule template is created by the user.</p>
+         */
         @NameInMap("TemplateOrigin")
         public String templateOrigin;
 
+        /**
+         * <p>The status of the protection rule template. Valid values:</p>
+         * <br>
+         * <p>*   **0:** disabled.</p>
+         * <p>*   **1:** enabled.</p>
+         */
         @NameInMap("TemplateStatus")
         public Integer templateStatus;
 
+        /**
+         * <p>The type of the protection rule template. Valid values:</p>
+         * <br>
+         * <p>*   **user_default:** default template.</p>
+         * <p>*   **user_custom:** custom template.</p>
+         */
         @NameInMap("TemplateType")
         public String templateType;
 

@@ -4,9 +4,15 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DescribeFlowTopResourceResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The array of the top 10 protected objects that receive requests.</p>
+     */
     @NameInMap("RuleHitsTopResource")
     public java.util.List<DescribeFlowTopResourceResponseBodyRuleHitsTopResource> ruleHitsTopResource;
 
@@ -32,9 +38,15 @@ public class DescribeFlowTopResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeFlowTopResourceResponseBodyRuleHitsTopResource extends TeaModel {
+        /**
+         * <p>The total number of requests received by the protected object in a specified time range.</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The protected object.</p>
+         */
         @NameInMap("Resource")
         public String resource;
 

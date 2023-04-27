@@ -4,6 +4,9 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainDetailResponseBody extends TeaModel {
+    @NameInMap("CertDetail")
+    public DescribeDomainDetailResponseBodyCertDetail certDetail;
+
     @NameInMap("Cname")
     public String cname;
 
@@ -19,12 +22,26 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ResourceManagerResourceGroupId")
+    public String resourceManagerResourceGroupId;
+
+    @NameInMap("SM2CertDetail")
+    public DescribeDomainDetailResponseBodySM2CertDetail SM2CertDetail;
+
     @NameInMap("Status")
     public Long status;
 
     public static DescribeDomainDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainDetailResponseBody self = new DescribeDomainDetailResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDomainDetailResponseBody setCertDetail(DescribeDomainDetailResponseBodyCertDetail certDetail) {
+        this.certDetail = certDetail;
+        return this;
+    }
+    public DescribeDomainDetailResponseBodyCertDetail getCertDetail() {
+        return this.certDetail;
     }
 
     public DescribeDomainDetailResponseBody setCname(String cname) {
@@ -67,12 +84,102 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeDomainDetailResponseBody setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+        this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+        return this;
+    }
+    public String getResourceManagerResourceGroupId() {
+        return this.resourceManagerResourceGroupId;
+    }
+
+    public DescribeDomainDetailResponseBody setSM2CertDetail(DescribeDomainDetailResponseBodySM2CertDetail SM2CertDetail) {
+        this.SM2CertDetail = SM2CertDetail;
+        return this;
+    }
+    public DescribeDomainDetailResponseBodySM2CertDetail getSM2CertDetail() {
+        return this.SM2CertDetail;
+    }
+
     public DescribeDomainDetailResponseBody setStatus(Long status) {
         this.status = status;
         return this;
     }
     public Long getStatus() {
         return this.status;
+    }
+
+    public static class DescribeDomainDetailResponseBodyCertDetail extends TeaModel {
+        @NameInMap("CommonName")
+        public String commonName;
+
+        @NameInMap("EndTime")
+        public Long endTime;
+
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Sans")
+        public java.util.List<String> sans;
+
+        @NameInMap("StartTime")
+        public Long startTime;
+
+        public static DescribeDomainDetailResponseBodyCertDetail build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDomainDetailResponseBodyCertDetail self = new DescribeDomainDetailResponseBodyCertDetail();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDomainDetailResponseBodyCertDetail setCommonName(String commonName) {
+            this.commonName = commonName;
+            return this;
+        }
+        public String getCommonName() {
+            return this.commonName;
+        }
+
+        public DescribeDomainDetailResponseBodyCertDetail setEndTime(Long endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        public DescribeDomainDetailResponseBodyCertDetail setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public DescribeDomainDetailResponseBodyCertDetail setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeDomainDetailResponseBodyCertDetail setSans(java.util.List<String> sans) {
+            this.sans = sans;
+            return this;
+        }
+        public java.util.List<String> getSans() {
+            return this.sans;
+        }
+
+        public DescribeDomainDetailResponseBodyCertDetail setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
     }
 
     public static class DescribeDomainDetailResponseBodyListen extends TeaModel {
@@ -108,6 +215,15 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
 
         @NameInMap("ProtectionResource")
         public String protectionResource;
+
+        @NameInMap("SM2AccessOnly")
+        public Boolean SM2AccessOnly;
+
+        @NameInMap("SM2CertId")
+        public Boolean SM2CertId;
+
+        @NameInMap("SM2Enabled")
+        public Boolean SM2Enabled;
 
         @NameInMap("TLSVersion")
         public String TLSVersion;
@@ -209,6 +325,30 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
         public String getProtectionResource() {
             return this.protectionResource;
+        }
+
+        public DescribeDomainDetailResponseBodyListen setSM2AccessOnly(Boolean SM2AccessOnly) {
+            this.SM2AccessOnly = SM2AccessOnly;
+            return this;
+        }
+        public Boolean getSM2AccessOnly() {
+            return this.SM2AccessOnly;
+        }
+
+        public DescribeDomainDetailResponseBodyListen setSM2CertId(Boolean SM2CertId) {
+            this.SM2CertId = SM2CertId;
+            return this;
+        }
+        public Boolean getSM2CertId() {
+            return this.SM2CertId;
+        }
+
+        public DescribeDomainDetailResponseBodyListen setSM2Enabled(Boolean SM2Enabled) {
+            this.SM2Enabled = SM2Enabled;
+            return this;
+        }
+        public Boolean getSM2Enabled() {
+            return this.SM2Enabled;
         }
 
         public DescribeDomainDetailResponseBodyListen setTLSVersion(String TLSVersion) {
@@ -433,6 +573,80 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
         public Integer getWriteTimeout() {
             return this.writeTimeout;
+        }
+
+    }
+
+    public static class DescribeDomainDetailResponseBodySM2CertDetail extends TeaModel {
+        @NameInMap("CommonName")
+        public String commonName;
+
+        @NameInMap("EndTime")
+        public Long endTime;
+
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Sans")
+        public java.util.List<String> sans;
+
+        @NameInMap("StartTime")
+        public Long startTime;
+
+        public static DescribeDomainDetailResponseBodySM2CertDetail build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDomainDetailResponseBodySM2CertDetail self = new DescribeDomainDetailResponseBodySM2CertDetail();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDomainDetailResponseBodySM2CertDetail setCommonName(String commonName) {
+            this.commonName = commonName;
+            return this;
+        }
+        public String getCommonName() {
+            return this.commonName;
+        }
+
+        public DescribeDomainDetailResponseBodySM2CertDetail setEndTime(Long endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        public DescribeDomainDetailResponseBodySM2CertDetail setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public DescribeDomainDetailResponseBodySM2CertDetail setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeDomainDetailResponseBodySM2CertDetail setSans(java.util.List<String> sans) {
+            this.sans = sans;
+            return this;
+        }
+        public java.util.List<String> getSans() {
+            return this.sans;
+        }
+
+        public DescribeDomainDetailResponseBodySM2CertDetail setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
         }
 
     }

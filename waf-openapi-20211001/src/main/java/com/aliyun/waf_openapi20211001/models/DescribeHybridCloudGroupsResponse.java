@@ -3,7 +3,7 @@ package com.aliyun.waf_openapi20211001.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeInstanceExtendResponse extends TeaModel {
+public class DescribeHybridCloudGroupsResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DescribeInstanceExtendResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeInstanceExtendResponseBody body;
+    public DescribeHybridCloudGroupsResponseBody body;
 
-    public static DescribeInstanceExtendResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeInstanceExtendResponse self = new DescribeInstanceExtendResponse();
+    public static DescribeHybridCloudGroupsResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeHybridCloudGroupsResponse self = new DescribeHybridCloudGroupsResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeInstanceExtendResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeHybridCloudGroupsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DescribeInstanceExtendResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeInstanceExtendResponse setStatusCode(Integer statusCode) {
+    public DescribeHybridCloudGroupsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DescribeInstanceExtendResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeInstanceExtendResponse setBody(DescribeInstanceExtendResponseBody body) {
+    public DescribeHybridCloudGroupsResponse setBody(DescribeHybridCloudGroupsResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeInstanceExtendResponseBody getBody() {
+    public DescribeHybridCloudGroupsResponseBody getBody() {
         return this.body;
     }
 

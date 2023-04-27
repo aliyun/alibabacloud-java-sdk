@@ -4,9 +4,15 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DescribeResourceLogStatusResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public java.util.List<DescribeResourceLogStatusResponseBodyResult> result;
 
@@ -32,9 +38,18 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeResourceLogStatusResponseBodyResult extends TeaModel {
+        /**
+         * <p>The protected object.</p>
+         */
         @NameInMap("Resource")
         public String resource;
 
+        /**
+         * <p>Indicates whether the log collection feature is enabled for the protected object. Valid values:</p>
+         * <br>
+         * <p>*   **true:** The log collection feature is enabled.</p>
+         * <p>*   **false:** The log collection feature is disabled.</p>
+         */
         @NameInMap("Status")
         public Boolean status;
 

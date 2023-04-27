@@ -153,6 +153,12 @@ public class DescribeDomainsResponseBody extends TeaModel {
         @NameInMap("ListenPorts")
         public DescribeDomainsResponseBodyDomainsListenPorts listenPorts;
 
+        /**
+         * <p>阿里云资源组ID。</p>
+         */
+        @NameInMap("ResourceManagerResourceGroupId")
+        public String resourceManagerResourceGroupId;
+
         @NameInMap("Status")
         public Integer status;
 
@@ -191,6 +197,14 @@ public class DescribeDomainsResponseBody extends TeaModel {
         }
         public DescribeDomainsResponseBodyDomainsListenPorts getListenPorts() {
             return this.listenPorts;
+        }
+
+        public DescribeDomainsResponseBodyDomains setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+            this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+            return this;
+        }
+        public String getResourceManagerResourceGroupId() {
+            return this.resourceManagerResourceGroupId;
         }
 
         public DescribeDomainsResponseBodyDomains setStatus(Integer status) {

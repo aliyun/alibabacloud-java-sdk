@@ -4,12 +4,21 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DescribeDefenseResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array of protected objects.</p>
+     */
     @NameInMap("Resources")
     public java.util.List<DescribeDefenseResourcesResponseBodyResources> resources;
 
+    /**
+     * <p>The total number of entries that are returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,36 +52,75 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeDefenseResourcesResponseBodyResources extends TeaModel {
+        /**
+         * <p>An array of custom XFF headers that are used to identify the originating IP addresses of clients. If the value of the XffStatus parameter is 1 and the CustomHeaders field is left empty, the first IP address in the XFF header is the originating IP address of the client.</p>
+         */
         @NameInMap("CustomHeaders")
         public java.util.List<String> customHeaders;
 
+        /**
+         * <p>The description of the protected object.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The description of the protected object. Different key-value pairs in a map indicate different properties of the protected object.</p>
+         */
         @NameInMap("Detail")
         public java.util.Map<String, ?> detail;
 
+        /**
+         * <p>The creation time of the protected object. Unit: seconds.</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>The most recent modification time of the protected object. Unit: seconds.</p>
+         */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>The protection pattern.</p>
+         */
         @NameInMap("Pattern")
         public String pattern;
 
+        /**
+         * <p>The name of the cloud service.</p>
+         */
         @NameInMap("Product")
         public String product;
 
+        /**
+         * <p>The name of the protected object.</p>
+         */
         @NameInMap("Resource")
         public String resource;
 
+        /**
+         * <p>The name of the protected object group to which the protected object belongs.</p>
+         */
         @NameInMap("ResourceGroup")
         public String resourceGroup;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
+        @NameInMap("ResourceManagerResourceGroupId")
+        public String resourceManagerResourceGroupId;
+
+        /**
+         * <p>The origin of the protected object.</p>
+         */
         @NameInMap("ResourceOrigin")
         public String resourceOrigin;
 
+        /**
+         * <p>Indicates whether the X-Forwarded-For (XFF) header is used.</p>
+         */
         @NameInMap("XffStatus")
         public Integer xffStatus;
 
@@ -151,6 +199,14 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
         }
         public String getResourceGroup() {
             return this.resourceGroup;
+        }
+
+        public DescribeDefenseResourcesResponseBodyResources setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+            this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+            return this;
+        }
+        public String getResourceManagerResourceGroupId() {
+            return this.resourceManagerResourceGroupId;
         }
 
         public DescribeDefenseResourcesResponseBodyResources setResourceOrigin(String resourceOrigin) {

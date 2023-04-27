@@ -3,7 +3,7 @@ package com.aliyun.waf_openapi20211001.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeInstanceCompatibleResponse extends TeaModel {
+public class DescribeHybridCloudResourcesResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DescribeInstanceCompatibleResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeInstanceCompatibleResponseBody body;
+    public DescribeHybridCloudResourcesResponseBody body;
 
-    public static DescribeInstanceCompatibleResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeInstanceCompatibleResponse self = new DescribeInstanceCompatibleResponse();
+    public static DescribeHybridCloudResourcesResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeHybridCloudResourcesResponse self = new DescribeHybridCloudResourcesResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeInstanceCompatibleResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeHybridCloudResourcesResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DescribeInstanceCompatibleResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeInstanceCompatibleResponse setStatusCode(Integer statusCode) {
+    public DescribeHybridCloudResourcesResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DescribeInstanceCompatibleResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeInstanceCompatibleResponse setBody(DescribeInstanceCompatibleResponseBody body) {
+    public DescribeHybridCloudResourcesResponse setBody(DescribeHybridCloudResourcesResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeInstanceCompatibleResponseBody getBody() {
+    public DescribeHybridCloudResourcesResponseBody getBody() {
         return this.body;
     }
 
