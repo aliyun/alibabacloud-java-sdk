@@ -4,11 +4,20 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceRequest extends TeaModel {
+    /**
+     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <br>
+     * <p>*   **cn-hangzhou:** the Chinese mainland</p>
+     * <p>*   **ap-southeast-1:** outside the Chinese mainland.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
+    /**
+     * <p>The ID of the resource group.</p>
+     */
+    @NameInMap("ResourceManagerResourceGroupId")
+    public String resourceManagerResourceGroupId;
 
     public static DescribeInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceRequest self = new DescribeInstanceRequest();
@@ -23,12 +32,12 @@ public class DescribeInstanceRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DescribeInstanceRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
+    public DescribeInstanceRequest setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+        this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
         return this;
     }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
+    public String getResourceManagerResourceGroupId() {
+        return this.resourceManagerResourceGroupId;
     }
 
 }

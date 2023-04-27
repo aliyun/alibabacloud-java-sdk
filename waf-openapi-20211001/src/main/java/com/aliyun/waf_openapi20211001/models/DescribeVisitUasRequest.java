@@ -10,6 +10,9 @@ public class DescribeVisitUasRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Resource")
     public String resource;
 
@@ -35,6 +38,14 @@ public class DescribeVisitUasRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeVisitUasRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeVisitUasRequest setResource(String resource) {

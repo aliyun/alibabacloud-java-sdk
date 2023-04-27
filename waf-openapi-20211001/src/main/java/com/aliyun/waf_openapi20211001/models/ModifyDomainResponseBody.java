@@ -4,9 +4,15 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class ModifyDomainResponseBody extends TeaModel {
+    /**
+     * <p>The information about the domain name.</p>
+     */
     @NameInMap("DomainInfo")
     public ModifyDomainResponseBodyDomainInfo domainInfo;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,11 +38,23 @@ public class ModifyDomainResponseBody extends TeaModel {
     }
 
     public static class ModifyDomainResponseBodyDomainInfo extends TeaModel {
+        /**
+         * <p>The CNAME that is assigned by WAF to the domain name.</p>
+         */
         @NameInMap("Cname")
         public String cname;
 
+        /**
+         * <p>The domain name whose access configurations you modified.</p>
+         */
         @NameInMap("Domain")
         public String domain;
+
+        /**
+         * <p>The ID of the domain name.</p>
+         */
+        @NameInMap("DomainId")
+        public String domainId;
 
         public static ModifyDomainResponseBodyDomainInfo build(java.util.Map<String, ?> map) throws Exception {
             ModifyDomainResponseBodyDomainInfo self = new ModifyDomainResponseBodyDomainInfo();
@@ -57,6 +75,14 @@ public class ModifyDomainResponseBody extends TeaModel {
         }
         public String getDomain() {
             return this.domain;
+        }
+
+        public ModifyDomainResponseBodyDomainInfo setDomainId(String domainId) {
+            this.domainId = domainId;
+            return this;
+        }
+        public String getDomainId() {
+            return this.domainId;
         }
 
     }

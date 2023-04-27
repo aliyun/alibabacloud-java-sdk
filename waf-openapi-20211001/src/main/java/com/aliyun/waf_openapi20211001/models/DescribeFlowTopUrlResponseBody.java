@@ -4,9 +4,15 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DescribeFlowTopUrlResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The array of the top 10 URLs that are used to initiate requests.</p>
+     */
     @NameInMap("RuleHitsTopUrl")
     public java.util.List<DescribeFlowTopUrlResponseBodyRuleHitsTopUrl> ruleHitsTopUrl;
 
@@ -32,9 +38,15 @@ public class DescribeFlowTopUrlResponseBody extends TeaModel {
     }
 
     public static class DescribeFlowTopUrlResponseBodyRuleHitsTopUrl extends TeaModel {
+        /**
+         * <p>The total number of requests that are initiated by using the URL.</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The URL that is used to initiate requests.</p>
+         */
         @NameInMap("Url")
         public String url;
 

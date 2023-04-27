@@ -4,9 +4,15 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The array of the statistics of the error codes.</p>
+     */
     @NameInMap("ResponseCodes")
     public java.util.List<DescribeResponseCodeTrendGraphResponseBodyResponseCodes> responseCodes;
 
@@ -32,18 +38,33 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
     }
 
     public static class DescribeResponseCodeTrendGraphResponseBodyResponseCodes extends TeaModel {
+        /**
+         * <p>The number of 302 error codes that are returned.</p>
+         */
         @NameInMap("302Pv")
         public Long code302Pv;
 
+        /**
+         * <p>The number of 405 error codes that are returned.</p>
+         */
         @NameInMap("405Pv")
         public Long code405Pv;
 
+        /**
+         * <p>The number of 499 error codes that are returned.</p>
+         */
         @NameInMap("499Pv")
         public Long code499Pv;
 
+        /**
+         * <p>The number of 5xx error codes that are returned.</p>
+         */
         @NameInMap("5xxPv")
         public Long code5xxPv;
 
+        /**
+         * <p>The serial number of the time interval. The serial numbers are arranged in chronological order.</p>
+         */
         @NameInMap("Index")
         public Long index;
 

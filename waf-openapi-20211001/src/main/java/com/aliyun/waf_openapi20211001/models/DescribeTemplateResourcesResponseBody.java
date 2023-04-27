@@ -4,9 +4,15 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DescribeTemplateResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array of protected objects or protected object groups that are associated to the protection rule template.</p>
+     */
     @NameInMap("Resources")
     public java.util.List<String> resources;
 

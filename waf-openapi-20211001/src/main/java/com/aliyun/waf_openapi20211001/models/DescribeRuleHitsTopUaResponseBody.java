@@ -4,9 +4,15 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DescribeRuleHitsTopUaResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The array of the top 10 user agents that are used to initiate attacks.</p>
+     */
     @NameInMap("RuleHitsTopUa")
     public java.util.List<DescribeRuleHitsTopUaResponseBodyRuleHitsTopUa> ruleHitsTopUa;
 
@@ -32,9 +38,15 @@ public class DescribeRuleHitsTopUaResponseBody extends TeaModel {
     }
 
     public static class DescribeRuleHitsTopUaResponseBodyRuleHitsTopUa extends TeaModel {
+        /**
+         * <p>The number of attacks that are initiated from the IP address.</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The user agent.</p>
+         */
         @NameInMap("Ua")
         public String ua;
 

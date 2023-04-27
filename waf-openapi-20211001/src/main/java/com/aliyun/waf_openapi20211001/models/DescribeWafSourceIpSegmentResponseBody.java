@@ -4,9 +4,15 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DescribeWafSourceIpSegmentResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The back-to-origin CIDR blocks that are used by the protection cluster.</p>
+     */
     @NameInMap("WafSourceIp")
     public DescribeWafSourceIpSegmentResponseBodyWafSourceIp wafSourceIp;
 
@@ -32,9 +38,15 @@ public class DescribeWafSourceIpSegmentResponseBody extends TeaModel {
     }
 
     public static class DescribeWafSourceIpSegmentResponseBodyWafSourceIp extends TeaModel {
+        /**
+         * <p>An array of back-to-origin IPv4 CIDR blocks.</p>
+         */
         @NameInMap("IPv4")
         public java.util.List<String> IPv4;
 
+        /**
+         * <p>An array of back-to-origin IPv6 CIDR blocks.</p>
+         */
         @NameInMap("IPv6")
         public java.util.List<String> IPv6;
 

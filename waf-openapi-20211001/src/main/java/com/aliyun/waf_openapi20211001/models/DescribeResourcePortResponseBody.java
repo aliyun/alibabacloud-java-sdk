@@ -4,9 +4,15 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DescribeResourcePortResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array of HTTP and HTTPS listener ports that are added to the WAF instance.</p>
+     */
     @NameInMap("ResourcePorts")
     public java.util.List<String> resourcePorts;
 

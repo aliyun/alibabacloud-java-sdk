@@ -4,12 +4,21 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DescribeRuleGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array of regular expression rule groups.</p>
+     */
     @NameInMap("RuleGroups")
     public java.util.List<DescribeRuleGroupsResponseBodyRuleGroups> ruleGroups;
 
+    /**
+     * <p>The total number of entries that are returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,15 +52,47 @@ public class DescribeRuleGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeRuleGroupsResponseBodyRuleGroups extends TeaModel {
+        /**
+         * <p>The most recent time when the rule group was modified.</p>
+         */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>Indicates whether the automatic update feature is enabled for the rule group.</p>
+         * <br>
+         * <p>*   1: The automatic update feature is enabled for the rule group.</p>
+         * <p>*   2: The automatic update feature is disabled for the rule group.</p>
+         */
+        @NameInMap("IsSubscribe")
+        public Integer isSubscribe;
+
+        /**
+         * <p>The ID of the rule group.</p>
+         * <br>
+         * <p>*   0: The rule group is created from scratch.</p>
+         * <p>*   1011: The rule group is a strict rule group.</p>
+         * <p>*   1012: The rule group is a medium rule group.</p>
+         * <p>*   1013: The rue group is a loose rule group.</p>
+         */
+        @NameInMap("ParentRuleGroupId")
+        public Long parentRuleGroupId;
+
+        /**
+         * <p>The ID of the regular expression rule group.</p>
+         */
         @NameInMap("RuleGroupId")
         public Long ruleGroupId;
 
+        /**
+         * <p>The name of the rule group.</p>
+         */
         @NameInMap("RuleGroupName")
         public String ruleGroupName;
 
+        /**
+         * <p>The number of built-in rules in the rule group.</p>
+         */
         @NameInMap("RuleTotalCount")
         public Integer ruleTotalCount;
 
@@ -66,6 +107,22 @@ public class DescribeRuleGroupsResponseBody extends TeaModel {
         }
         public Long getGmtModified() {
             return this.gmtModified;
+        }
+
+        public DescribeRuleGroupsResponseBodyRuleGroups setIsSubscribe(Integer isSubscribe) {
+            this.isSubscribe = isSubscribe;
+            return this;
+        }
+        public Integer getIsSubscribe() {
+            return this.isSubscribe;
+        }
+
+        public DescribeRuleGroupsResponseBodyRuleGroups setParentRuleGroupId(Long parentRuleGroupId) {
+            this.parentRuleGroupId = parentRuleGroupId;
+            return this;
+        }
+        public Long getParentRuleGroupId() {
+            return this.parentRuleGroupId;
         }
 
         public DescribeRuleGroupsResponseBodyRuleGroups setRuleGroupId(Long ruleGroupId) {

@@ -4,23 +4,54 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class ModifyDomainRequest extends TeaModel {
+    /**
+     * <p>The mode in which you want to add the domain name to WAF. Set the value to share.</p>
+     * <br>
+     * <p>*   **share:** adds the domain name to WAF in CNAME record mode. This is the default value.</p>
+     */
     @NameInMap("AccessType")
     public String accessType;
 
+    /**
+     * <p>The domain name whose access configurations you want to modify.</p>
+     */
     @NameInMap("Domain")
     public String domain;
 
+    /**
+     * <p>The ID of the WAF instance.</p>
+     * <br>
+     * <p>>  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The configurations of the listeners.</p>
+     */
     @NameInMap("Listen")
     public ModifyDomainRequestListen listen;
 
+    /**
+     * <p>The configurations of the forwarding rule.</p>
+     */
     @NameInMap("Redirect")
     public ModifyDomainRequestRedirect redirect;
 
+    /**
+     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <br>
+     * <p>*   **cn-hangzhou:** the Chinese mainland.</p>
+     * <p>*   **ap-southeast-1:** outside the Chinese mainland.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
+
+    /**
+     * <p>The source IP address of the request. The value of this parameter is specified by the system.</p>
+     */
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     public static ModifyDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDomainRequest self = new ModifyDomainRequest();
@@ -75,46 +106,137 @@ public class ModifyDomainRequest extends TeaModel {
         return this.regionId;
     }
 
+    public ModifyDomainRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
+    }
+
     public static class ModifyDomainRequestListen extends TeaModel {
+        /**
+         * <p>The ID of the certificate that you want to add.</p>
+         */
         @NameInMap("CertId")
         public String certId;
 
+        /**
+         * <p>The type of cipher suite that you want to add. This parameter is available only when you specify the **HttpsPorts** parameter. Valid values:</p>
+         * <br>
+         * <p>*   **1:** all cipher suites.</p>
+         * <p>*   **2:** strong cipher suites. You can select this value only when you set the **TLSVersion** parameter to **tlsv1.2**.</p>
+         * <p>*   **99:** custom cipher suites.</p>
+         */
         @NameInMap("CipherSuite")
         public Integer cipherSuite;
 
+        /**
+         * <p>The custom cipher suites that you want to add. This parameter is available only when you set the **CipherSuite** parameter to **99**.</p>
+         */
         @NameInMap("CustomCiphers")
         public java.util.List<String> customCiphers;
 
+        /**
+         * <p>Specifies whether to support TLS 1.3. This parameter is available only when you specify the **HttpsPorts** parameter. Valid values:</p>
+         * <br>
+         * <p>*   **true:** supports TLS 1.3.</p>
+         * <p>*   **false:** does not support TLS 1.3.</p>
+         */
         @NameInMap("EnableTLSv3")
         public Boolean enableTLSv3;
 
+        /**
+         * <p>Specifies whether to enable an exclusive IP address for the domain name. This parameter is available only when you set the **IPv6Enabled** parameter to false and the **ProtectionResource** parameter to **share**. Valid values:</p>
+         * <br>
+         * <p>*   **true:** enables an exclusive IP address for the domain name.</p>
+         * <p>*   **false:** does not enable an exclusive IP address for the domain name. This is the default value.</p>
+         */
         @NameInMap("ExclusiveIp")
         public Boolean exclusiveIp;
 
+        /**
+         * <p>Specifies whether to enable HTTP to HTTPS redirection for the domain name. This parameter is available only when you specify the **HttpsPorts** parameter and leave the **HttpPorts** parameter empty. Valid values:</p>
+         * <br>
+         * <p>*   **true:** enables HTTP to HTTPS redirection.</p>
+         * <p>*   **false:** disables HTTP to HTTPS redirection.</p>
+         */
         @NameInMap("FocusHttps")
         public Boolean focusHttps;
 
+        /**
+         * <p>Specifies whether to enable HTTP/2. This parameter is available only when you specify the **HttpsPorts** parameter. Valid values:</p>
+         * <br>
+         * <p>*   **true:** enables HTTP/2.</p>
+         * <p>*   **false:** disables HTTP/2. This is the default value.</p>
+         */
         @NameInMap("Http2Enabled")
         public Boolean http2Enabled;
 
+        /**
+         * <p>An array of HTTP listener ports. Specify the value of this parameter in the \[port1,port2,...] format.</p>
+         */
         @NameInMap("HttpPorts")
         public java.util.List<Integer> httpPorts;
 
+        /**
+         * <p>An array of HTTPS listener ports. Specify the value of this parameter in the \[port1,port2,...] format.</p>
+         */
         @NameInMap("HttpsPorts")
         public java.util.List<Integer> httpsPorts;
 
+        /**
+         * <p>Specifies whether to enable IPv6. Valid values:</p>
+         * <br>
+         * <p>*   **true:** enables IPv6.</p>
+         * <p>*   **false:** disables IPv6. This is the default value.</p>
+         */
         @NameInMap("IPv6Enabled")
         public Boolean IPv6Enabled;
 
+        /**
+         * <p>The type of the protection resource that you want to use. Valid values:</p>
+         * <br>
+         * <p>*   **share:** shared cluster. This is the default value.</p>
+         * <p>*   **gslb:** shared cluster-based intelligent load balancing.</p>
+         */
         @NameInMap("ProtectionResource")
         public String protectionResource;
 
+        @NameInMap("SM2AccessOnly")
+        public Boolean SM2AccessOnly;
+
+        @NameInMap("SM2CertId")
+        public String SM2CertId;
+
+        @NameInMap("SM2Enabled")
+        public Boolean SM2Enabled;
+
+        /**
+         * <p>The version of the Transport Layer Security (TLS) protocol. This parameter is available only when you specify the **HttpsPorts** parameter. Valid values:</p>
+         * <br>
+         * <p>*   **tlsv1**</p>
+         * <p>*   **tlsv1.1**</p>
+         * <p>*   **tlsv1.2**</p>
+         */
         @NameInMap("TLSVersion")
         public String TLSVersion;
 
+        /**
+         * <p>The method that you want WAF to use to obtain the actual IP address of a client. Valid values:</p>
+         * <br>
+         * <p>*   **0:** No Layer 7 proxies are deployed in front of WAF. This is the default value.</p>
+         * <p>*   **1:** WAF reads the first value of the X-Forwarded-For (XFF) header field as the actual IP address of the client.</p>
+         * <p>*   **2:** WAF reads the value of a custom header field as the actual IP address of the client.</p>
+         */
         @NameInMap("XffHeaderMode")
         public Integer xffHeaderMode;
 
+        /**
+         * <p>The custom header fields that you want to use to obtain the actual IP address of a client. Specify the value of this parameter in the \["header1","header2",...] format.</p>
+         * <br>
+         * <p>>  If you set the **XffHeaderMode** parameter to 2, this parameter is required.</p>
+         */
         @NameInMap("XffHeaders")
         public java.util.List<String> xffHeaders;
 
@@ -211,6 +333,30 @@ public class ModifyDomainRequest extends TeaModel {
             return this.protectionResource;
         }
 
+        public ModifyDomainRequestListen setSM2AccessOnly(Boolean SM2AccessOnly) {
+            this.SM2AccessOnly = SM2AccessOnly;
+            return this;
+        }
+        public Boolean getSM2AccessOnly() {
+            return this.SM2AccessOnly;
+        }
+
+        public ModifyDomainRequestListen setSM2CertId(String SM2CertId) {
+            this.SM2CertId = SM2CertId;
+            return this;
+        }
+        public String getSM2CertId() {
+            return this.SM2CertId;
+        }
+
+        public ModifyDomainRequestListen setSM2Enabled(Boolean SM2Enabled) {
+            this.SM2Enabled = SM2Enabled;
+            return this;
+        }
+        public Boolean getSM2Enabled() {
+            return this.SM2Enabled;
+        }
+
         public ModifyDomainRequestListen setTLSVersion(String TLSVersion) {
             this.TLSVersion = TLSVersion;
             return this;
@@ -238,9 +384,15 @@ public class ModifyDomainRequest extends TeaModel {
     }
 
     public static class ModifyDomainRequestRedirectRequestHeaders extends TeaModel {
+        /**
+         * <p>The key of the custom header field.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the custom header field.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -268,42 +420,129 @@ public class ModifyDomainRequest extends TeaModel {
     }
 
     public static class ModifyDomainRequestRedirect extends TeaModel {
+        /**
+         * <p>An array of the IP addresses or domain names of the origin servers. You can specify only one type of address. If you use the domain name type, only IPv4 is supported.</p>
+         * <br>
+         * <p>*   If you use the IP address type, specify the value of this parameter in the \["ip1","ip2",...] format. You can add up to 20 IP addresses.</p>
+         * <p>*   If you use the domain name type, specify the value of this parameter in the \["domain"] format. You can add up to 20 domain names.</p>
+         */
         @NameInMap("Backends")
         public java.util.List<String> backends;
 
+        /**
+         * <p>是否开启公共云容灾。取值：</p>
+         * <br>
+         * <p>- **true**：表示开启公共云容灾。</p>
+         * <br>
+         * <p>- **false**（默认）：表示不开启公共云容灾。</p>
+         */
+        @NameInMap("CnameEnabled")
+        public Boolean cnameEnabled;
+
+        /**
+         * <p>The connection timeout period. Unit: seconds. Valid values: 1 to 3600.</p>
+         */
         @NameInMap("ConnectTimeout")
         public Integer connectTimeout;
 
+        /**
+         * <p>Specifies whether to enable HTTPS to HTTP redirection for back-to-origin requests of the domain name. This parameter is available only when you specify the **HttpsPorts** parameter. Valid values:</p>
+         * <br>
+         * <p>*   **true:** enables HTTPS to HTTP redirection for back-to-origin requests of the domain name.</p>
+         * <p>*   **false:** disables HTTPS to HTTP redirection for back-to-origin requests of the domain name.</p>
+         */
         @NameInMap("FocusHttpBackend")
         public Boolean focusHttpBackend;
 
+        /**
+         * <p>Specifies whether to enable the persistent connection feature. Valid values:</p>
+         * <br>
+         * <p>*   **true:** enables the persistent connection feature. This is the default value.</p>
+         * <p>*   **false:** disables the persistent connection feature.</p>
+         */
         @NameInMap("Keepalive")
         public Boolean keepalive;
 
+        /**
+         * <p>The number of reused persistent connections. Valid values: 60 to 1000.</p>
+         * <br>
+         * <p>>  This parameter specifies the number of reused persistent connections when you enable the persistent connection feature.</p>
+         */
         @NameInMap("KeepaliveRequests")
         public Integer keepaliveRequests;
 
+        /**
+         * <p>The timeout period of persistent connections that are in the Idle state. Unit: seconds. Valid values: 1 to 60. Default value: 15.</p>
+         * <br>
+         * <p>>  This parameter specifies the period of time during which a reused persistent connection is allowed to remain in the Idle state before the persistent connection is released.</p>
+         */
         @NameInMap("KeepaliveTimeout")
         public Integer keepaliveTimeout;
 
+        /**
+         * <p>The load balancing algorithm that you want to use when WAF forwards requests to the origin server. Valid values:</p>
+         * <br>
+         * <p>*   **ip_hash:** the IP hash algorithm.</p>
+         * <p>*   **roundRobin:** the round-robin algorithm.</p>
+         * <p>*   **leastTime:** the least response time algorithm. You can select this value only when you set the **ProtectionResource** parameter to **gslb**.</p>
+         */
         @NameInMap("Loadbalance")
         public String loadbalance;
 
+        /**
+         * <p>The read timeout period. Unit: seconds. Valid values: 1 to 3600.</p>
+         */
         @NameInMap("ReadTimeout")
         public Integer readTimeout;
 
+        /**
+         * <p>The key-value pairs that you want to use to mark the requests that pass through the WAF instance.</p>
+         * <br>
+         * <p>WAF automatically adds the key-value pairs to the request headers to identify the requests that pass through WAF.</p>
+         */
         @NameInMap("RequestHeaders")
         public java.util.List<ModifyDomainRequestRedirectRequestHeaders> requestHeaders;
 
+        /**
+         * <p>Specifies whether WAF retries to forward requests when requests fail to be forwarded to the origin server. Valid values:</p>
+         * <br>
+         * <p>*   **true:** WAF retries to forward requests. This is the default value.</p>
+         * <p>*   **false:** WAF does not retry to forward requests.</p>
+         */
         @NameInMap("Retry")
         public Boolean retry;
 
+        /**
+         * <p>混合云转发规则。使用JSON数组转化的字符串格式表示。JSON数组中的每个元素是一个结构体，包含以下字段：</p>
+         * <p>- **rs**：Array类型 | 表示回源IP地址或者回源CNAME列表</p>
+         * <br>
+         * <p>- **location**：String类型 | 表示防护节点名称</p>
+         * <br>
+         * <p>- **locationId**：Long类型 | 表示防护节点ID</p>
+         */
+        @NameInMap("RoutingRules")
+        public String routingRules;
+
+        /**
+         * <p>Specifies whether to enable origin Server Name Indication (SNI). This parameter is available only when you specify the **HttpsPorts** parameter. Valid values:</p>
+         * <br>
+         * <p>*   **true:** enables origin SNI.</p>
+         * <p>*   **false:** disables origin SNI. This is the default value.</p>
+         */
         @NameInMap("SniEnabled")
         public Boolean sniEnabled;
 
+        /**
+         * <p>The value of the custom SNI field. If you do not specify this parameter, the value of the **Host** field in the request header is automatically used. If you want WAF to use an SNI field value that is different from the value of the Host field in back-to-origin requests, you can specify a custom value for the SNI field.</p>
+         * <br>
+         * <p>>  If you set the **SniEnabled** parameter to true, this parameter is required.</p>
+         */
         @NameInMap("SniHost")
         public String sniHost;
 
+        /**
+         * <p>The write timeout period. Unit: seconds. Valid values: 1 to 3600.</p>
+         */
         @NameInMap("WriteTimeout")
         public Integer writeTimeout;
 
@@ -318,6 +557,14 @@ public class ModifyDomainRequest extends TeaModel {
         }
         public java.util.List<String> getBackends() {
             return this.backends;
+        }
+
+        public ModifyDomainRequestRedirect setCnameEnabled(Boolean cnameEnabled) {
+            this.cnameEnabled = cnameEnabled;
+            return this;
+        }
+        public Boolean getCnameEnabled() {
+            return this.cnameEnabled;
         }
 
         public ModifyDomainRequestRedirect setConnectTimeout(Integer connectTimeout) {
@@ -390,6 +637,14 @@ public class ModifyDomainRequest extends TeaModel {
         }
         public Boolean getRetry() {
             return this.retry;
+        }
+
+        public ModifyDomainRequestRedirect setRoutingRules(String routingRules) {
+            this.routingRules = routingRules;
+            return this;
+        }
+        public String getRoutingRules() {
+            return this.routingRules;
         }
 
         public ModifyDomainRequestRedirect setSniEnabled(Boolean sniEnabled) {

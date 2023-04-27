@@ -4,9 +4,15 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DescribeDefenseResourceGroupResponseBody extends TeaModel {
+    /**
+     * <p>The information about the protected object group.</p>
+     */
     @NameInMap("Group")
     public DescribeDefenseResourceGroupResponseBodyGroup group;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +38,33 @@ public class DescribeDefenseResourceGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeDefenseResourceGroupResponseBodyGroup extends TeaModel {
+        /**
+         * <p>The description of the protected object group.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The time when the protected object group was created.</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>The most recent time when the protected object group was modified.</p>
+         */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>The name of the protected object group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The protected objects in the protected object group. The protected objects are separated with commas (,).</p>
+         */
         @NameInMap("ResourceList")
         public String resourceList;
 

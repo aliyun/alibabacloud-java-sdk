@@ -4,15 +4,36 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DescribeRuleHitsTopTuleTypeRequest extends TeaModel {
+    /**
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("EndTimestamp")
     public String endTimestamp;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The array of the top 10 protection modules that are matched.</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
+
+    /**
+     * <p>The result of the request.</p>
+     */
     @NameInMap("Resource")
     public String resource;
 
+    /**
+     * <p>The ID of the region where the WAF instance resides. Valid values:</p>
+     * <br>
+     * <p>*   **cn-hangzhou**: the Chinese mainland.</p>
+     * <p>*   **ap-southeast-1**: outside the Chinese mainland.</p>
+     */
     @NameInMap("StartTimestamp")
     public String startTimestamp;
 
@@ -35,6 +56,14 @@ public class DescribeRuleHitsTopTuleTypeRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeRuleHitsTopTuleTypeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeRuleHitsTopTuleTypeRequest setResource(String resource) {

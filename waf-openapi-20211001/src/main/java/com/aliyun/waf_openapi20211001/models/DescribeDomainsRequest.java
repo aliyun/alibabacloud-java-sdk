@@ -4,20 +4,53 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainsRequest extends TeaModel {
+    /**
+     * <p>An array of HTTPS listener ports.</p>
+     */
     @NameInMap("Backend")
     public String backend;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Domain")
     public String domain;
 
+    /**
+     * <p>The page number of the page to return. Default value: 1.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The HTTPS address of the origin server.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>Queries the list of a domain name that is added to Web Application Firewall (WAF).</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceManagerResourceGroupId")
+    public String resourceManagerResourceGroupId;
+
+    /**
+     * <p>请求源IP。无需填写，系统自动获取。</p>
+     */
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
+    /**
+     * <p>资源的标签，最多支持20个子项。</p>
+     */
+    @NameInMap("Tag")
+    public java.util.List<DescribeDomainsRequestTag> tag;
 
     public static DescribeDomainsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainsRequest self = new DescribeDomainsRequest();
@@ -62,6 +95,74 @@ public class DescribeDomainsRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeDomainsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeDomainsRequest setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+        this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+        return this;
+    }
+    public String getResourceManagerResourceGroupId() {
+        return this.resourceManagerResourceGroupId;
+    }
+
+    public DescribeDomainsRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
+    }
+
+    public DescribeDomainsRequest setTag(java.util.List<DescribeDomainsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeDomainsRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class DescribeDomainsRequestTag extends TeaModel {
+        /**
+         * <p>标签键。</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <p>标签值</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeDomainsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDomainsRequestTag self = new DescribeDomainsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDomainsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeDomainsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

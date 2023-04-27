@@ -4,23 +4,50 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class CreateDomainRequest extends TeaModel {
+    /**
+     * <p>$.parameters[3].schema.properties.ExclusiveIp.description</p>
+     */
     @NameInMap("AccessType")
     public String accessType;
 
+    /**
+     * <p>$.parameters[3].schema.properties.Http2Enabled.description</p>
+     */
     @NameInMap("Domain")
     public String domain;
 
+    /**
+     * <p>$.parameters[3].schema.properties.HttpPorts.enumValueTitles</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>$.parameters[3].schema.properties.Http2Enabled.example</p>
+     */
     @NameInMap("Listen")
     public CreateDomainRequestListen listen;
 
+    /**
+     * <p>$.parameters[3].schema.properties.CustomCiphers.enumValueTitles</p>
+     */
     @NameInMap("Redirect")
     public CreateDomainRequestRedirect redirect;
 
+    /**
+     * <p>$.parameters[3].schema.properties.ProtectionResource.enumValueTitles</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("ResourceManagerResourceGroupId")
+    public String resourceManagerResourceGroupId;
+
+    /**
+     * <p>$.parameters[3].schema.properties.ExclusiveIp.example</p>
+     */
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     public static CreateDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDomainRequest self = new CreateDomainRequest();
@@ -75,46 +102,113 @@ public class CreateDomainRequest extends TeaModel {
         return this.regionId;
     }
 
+    public CreateDomainRequest setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+        this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+        return this;
+    }
+    public String getResourceManagerResourceGroupId() {
+        return this.resourceManagerResourceGroupId;
+    }
+
+    public CreateDomainRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
+    }
+
     public static class CreateDomainRequestListen extends TeaModel {
+        /**
+         * <p>$.parameters[3].schema.properties.TLSVersion.example</p>
+         */
         @NameInMap("CertId")
         public String certId;
 
+        /**
+         * <p>$.parameters[3].schema.properties.EnableTLSv3.example</p>
+         */
         @NameInMap("CipherSuite")
         public Integer cipherSuite;
 
+        /**
+         * <p>$.parameters[3].schema.properties.EnableTLSv3.enumValueTitles</p>
+         */
         @NameInMap("CustomCiphers")
         public java.util.List<String> customCiphers;
 
+        /**
+         * <p>$.parameters[3].schema.properties.EnableTLSv3.description</p>
+         */
         @NameInMap("EnableTLSv3")
         public Boolean enableTLSv3;
 
+        /**
+         * <p>$.parameters[3].schema.properties.CustomCiphers.example</p>
+         */
         @NameInMap("ExclusiveIp")
         public Boolean exclusiveIp;
 
+        /**
+         * <p>$.parameters[3].schema.properties.CipherSuite.example</p>
+         */
         @NameInMap("FocusHttps")
         public Boolean focusHttps;
 
+        /**
+         * <p>$.parameters[3].schema.properties.TLSVersion.description</p>
+         */
         @NameInMap("Http2Enabled")
         public Boolean http2Enabled;
 
+        /**
+         * <p>$.parameters[3].schema.properties.CertId.example</p>
+         */
         @NameInMap("HttpPorts")
         public java.util.List<Integer> httpPorts;
 
+        /**
+         * <p>$.parameters[3].schema.properties.Http2Enabled.enumValueTitles</p>
+         */
         @NameInMap("HttpsPorts")
         public java.util.List<Integer> httpsPorts;
 
+        /**
+         * <p>$.parameters[3].schema.properties.CustomCiphers.items.enumValueTitles</p>
+         */
         @NameInMap("IPv6Enabled")
         public Boolean IPv6Enabled;
 
+        /**
+         * <p>$.parameters[3].schema.properties.CustomCiphers.description</p>
+         */
         @NameInMap("ProtectionResource")
         public String protectionResource;
 
+        @NameInMap("SM2AccessOnly")
+        public Boolean SM2AccessOnly;
+
+        @NameInMap("SM2CertId")
+        public String SM2CertId;
+
+        @NameInMap("SM2Enabled")
+        public Boolean SM2Enabled;
+
+        /**
+         * <p>$.parameters[3].schema.properties.TLSVersion.enumValueTitles</p>
+         */
         @NameInMap("TLSVersion")
         public String TLSVersion;
 
+        /**
+         * <p>$.parameters[3].schema.properties.CipherSuite.enumValueTitles</p>
+         */
         @NameInMap("XffHeaderMode")
         public Integer xffHeaderMode;
 
+        /**
+         * <p>$.parameters[3].schema.properties.CustomCiphers.items.description</p>
+         */
         @NameInMap("XffHeaders")
         public java.util.List<String> xffHeaders;
 
@@ -211,6 +305,30 @@ public class CreateDomainRequest extends TeaModel {
             return this.protectionResource;
         }
 
+        public CreateDomainRequestListen setSM2AccessOnly(Boolean SM2AccessOnly) {
+            this.SM2AccessOnly = SM2AccessOnly;
+            return this;
+        }
+        public Boolean getSM2AccessOnly() {
+            return this.SM2AccessOnly;
+        }
+
+        public CreateDomainRequestListen setSM2CertId(String SM2CertId) {
+            this.SM2CertId = SM2CertId;
+            return this;
+        }
+        public String getSM2CertId() {
+            return this.SM2CertId;
+        }
+
+        public CreateDomainRequestListen setSM2Enabled(Boolean SM2Enabled) {
+            this.SM2Enabled = SM2Enabled;
+            return this;
+        }
+        public Boolean getSM2Enabled() {
+            return this.SM2Enabled;
+        }
+
         public CreateDomainRequestListen setTLSVersion(String TLSVersion) {
             this.TLSVersion = TLSVersion;
             return this;
@@ -238,9 +356,15 @@ public class CreateDomainRequest extends TeaModel {
     }
 
     public static class CreateDomainRequestRedirectRequestHeaders extends TeaModel {
+        /**
+         * <p>$.parameters[3].schema.properties.XffHeaders.items.enumValueTitles</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>$.parameters[3].schema.properties.XffHeaders.description</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -268,48 +392,102 @@ public class CreateDomainRequest extends TeaModel {
     }
 
     public static class CreateDomainRequestRedirect extends TeaModel {
+        /**
+         * <p>$.parameters[3].schema.properties.FocusHttps.description</p>
+         */
         @NameInMap("Backends")
         public java.util.List<String> backends;
 
+        /**
+         * <p>是否开启公共云容灾。取值：</p>
+         * <br>
+         * <p>- **true**：表示开启公共云容灾。</p>
+         * <br>
+         * <p>- **false**（默认）：表示不开启公共云容灾。</p>
+         */
         @NameInMap("CnameEnabled")
         public Boolean cnameEnabled;
 
+        /**
+         * <p>$.parameters[3].schema.properties.XffHeaders.example</p>
+         */
         @NameInMap("ConnectTimeout")
         public Integer connectTimeout;
 
+        /**
+         * <p>$.parameters[3].schema.properties.XffHeaderMode.description</p>
+         */
         @NameInMap("FocusHttpBackend")
         public Boolean focusHttpBackend;
 
+        /**
+         * <p>$.parameters[3].schema.properties.IPv6Enabled.example</p>
+         */
         @NameInMap("Keepalive")
         public Boolean keepalive;
 
+        /**
+         * <p>$.parameters[3].schema.properties.ProtectionResource.description</p>
+         */
         @NameInMap("KeepaliveRequests")
         public Integer keepaliveRequests;
 
+        /**
+         * <p>$.parameters[3].schema.properties.ProtectionResource.example</p>
+         */
         @NameInMap("KeepaliveTimeout")
         public Integer keepaliveTimeout;
 
+        /**
+         * <p>$.parameters[3].schema.properties.FocusHttps.enumValueTitles</p>
+         */
         @NameInMap("Loadbalance")
         public String loadbalance;
 
+        /**
+         * <p>$.parameters[3].schema.properties.XffHeaders.enumValueTitles</p>
+         */
         @NameInMap("ReadTimeout")
         public Integer readTimeout;
 
+        /**
+         * <p>$.parameters[3].schema.properties.XffHeaders.items.description</p>
+         */
         @NameInMap("RequestHeaders")
         public java.util.List<CreateDomainRequestRedirectRequestHeaders> requestHeaders;
 
+        /**
+         * <p>$.parameters[3].schema.properties.IPv6Enabled.enumValueTitles</p>
+         */
         @NameInMap("Retry")
         public Boolean retry;
 
+        /**
+         * <p>混合云转发规则。使用JSON数组转化的字符串格式表示。JSON数组中的每个元素是一个结构体，包含以下字段：</p>
+         * <p>- **rs**：Array类型 | 表示回源IP地址或者回源CNAME列表</p>
+         * <br>
+         * <p>- **location**：String类型 | 表示防护节点名称</p>
+         * <br>
+         * <p>- **locationId**：Long类型 | 表示防护节点ID</p>
+         */
         @NameInMap("RoutingRules")
         public String routingRules;
 
+        /**
+         * <p>$.parameters[3].schema.properties.XffHeaderMode.example</p>
+         */
         @NameInMap("SniEnabled")
         public Boolean sniEnabled;
 
+        /**
+         * <p>$.parameters[3].schema.properties.XffHeaderMode.enumValueTitles</p>
+         */
         @NameInMap("SniHost")
         public String sniHost;
 
+        /**
+         * <p>$.parameters[3].schema.properties.IPv6Enabled.description</p>
+         */
         @NameInMap("WriteTimeout")
         public Integer writeTimeout;
 
