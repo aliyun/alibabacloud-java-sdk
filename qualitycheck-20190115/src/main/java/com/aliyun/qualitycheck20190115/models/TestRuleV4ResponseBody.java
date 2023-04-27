@@ -544,9 +544,6 @@ public class TestRuleV4ResponseBody extends TeaModel {
         @NameInMap("Lambda")
         public String lambda;
 
-        /**
-         * <p>true</p>
-         */
         @NameInMap("Matched")
         public Boolean matched;
 

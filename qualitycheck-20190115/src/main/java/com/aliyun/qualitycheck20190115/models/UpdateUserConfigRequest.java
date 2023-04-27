@@ -4,6 +4,9 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class UpdateUserConfigRequest extends TeaModel {
+    /**
+     * <p>baseMeAgentId</p>
+     */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 

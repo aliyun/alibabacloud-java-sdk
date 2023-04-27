@@ -243,12 +243,21 @@ public class GetResultResponseBody extends TeaModel {
     }
 
     public static class GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRangeAnchor extends TeaModel {
+        /**
+         * <p>条件ID</p>
+         */
         @NameInMap("Cid")
         public String cid;
 
+        /**
+         * <p>命中次数</p>
+         */
         @NameInMap("Hit_time")
         public Integer hitTime;
 
+        /**
+         * <p>位置</p>
+         */
         @NameInMap("Location")
         public String location;
 
@@ -284,9 +293,15 @@ public class GetResultResponseBody extends TeaModel {
     }
 
     public static class GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRangeRange extends TeaModel {
+        /**
+         * <p>对话开始索引</p>
+         */
         @NameInMap("From")
         public Integer from;
 
+        /**
+         * <p>对话结束索引</p>
+         */
         @NameInMap("To")
         public Integer to;
 
@@ -344,21 +359,39 @@ public class GetResultResponseBody extends TeaModel {
     }
 
     public static class GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRange extends TeaModel {
+        /**
+         * <p>false: 相对位置; 会结合anchor以及角色来决定句子位置</p>
+         */
         @NameInMap("Absolute")
         public Boolean absolute;
 
+        /**
+         * <p>true: 每句话都必须满足条件；</p>
+         */
         @NameInMap("AllSentencesSatisfy")
         public Boolean allSentencesSatisfy;
 
+        /**
+         * <p>前置后置条件</p>
+         */
         @NameInMap("Anchor")
         public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRangeAnchor anchor;
 
+        /**
+         * <p>相对范围</p>
+         */
         @NameInMap("Range")
         public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRangeRange range;
 
+        /**
+         * <p>对应 RoleType.type</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <p>对应 RoleType.id</p>
+         */
         @NameInMap("RoleId")
         public Integer roleId;
 
@@ -448,12 +481,21 @@ public class GetResultResponseBody extends TeaModel {
     }
 
     public static class GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamFlowNodePrerequisiteParam extends TeaModel {
+        /**
+         * <p>节点id</p>
+         */
         @NameInMap("NodeId")
         public Long nodeId;
 
+        /**
+         * <p>节点匹配状态。</p>
+         */
         @NameInMap("NodeMatchStatus")
         public Integer nodeMatchStatus;
 
+        /**
+         * <p>冗余的节点名称</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
@@ -489,9 +531,15 @@ public class GetResultResponseBody extends TeaModel {
     }
 
     public static class GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamIntentModelCheckParmIntentsIntent extends TeaModel {
+        /**
+         * <p>意图模型ID</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>意图模型名称</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -538,9 +586,15 @@ public class GetResultResponseBody extends TeaModel {
     }
 
     public static class GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamIntentModelCheckParm extends TeaModel {
+        /**
+         * <p>引用的意图模型</p>
+         */
         @NameInMap("Intents")
         public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamIntentModelCheckParmIntents intents;
 
+        /**
+         * <p>模型应用的场景 AGENT:客户场景、CUSTOMER:客服场景 (CUSTOMER: 客户场景, AGENT: 坐席场景)</p>
+         */
         @NameInMap("ModelScene")
         public String modelScene;
 
@@ -587,90 +641,177 @@ public class GetResultResponseBody extends TeaModel {
     }
 
     public static class GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam extends TeaModel {
+        /**
+         * <p>语速检测，是否计算整个对话平均语速，默认false</p>
+         */
         @NameInMap("Average")
         public Boolean average;
 
+        /**
+         * <p>时长算子，时长计算开始类型，录音开始，还是某句对话开始</p>
+         */
         @NameInMap("BeginType")
         public String beginType;
 
+        /**
+         * <p>区分大小写</p>
+         */
         @NameInMap("Case_sensitive")
         public Boolean caseSensitive;
 
+        /**
+         * <p>静音检测：要不要检测第一句话</p>
+         */
         @NameInMap("CheckFirstSentence")
         public Boolean checkFirstSentence;
 
+        /**
+         * <p>检测方式，1 相邻句能量波动 2 最大能量跨度 默认1</p>
+         */
         @NameInMap("CheckType")
         public Integer checkType;
 
+        /**
+         * <p>大于，还是小于，gt/lt</p>
+         */
         @NameInMap("CompareOperator")
         public String compareOperator;
 
+        /**
+         * <p>是否单句话匹配；</p>
+         */
         @NameInMap("ContextChatMatch")
         public Boolean contextChatMatch;
 
+        /**
+         * <p>抢话算子 延时时长</p>
+         */
         @NameInMap("DelayTime")
         public Integer delayTime;
 
+        /**
+         * <p>时长算子，时长计算结束类型，录音结束，还是某句对话结束</p>
+         */
         @NameInMap("EndType")
         public String endType;
 
+        /**
+         * <p>上下文重复算子：排除掉某些对话</p>
+         */
         @NameInMap("Excludes")
         public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamExcludes excludes;
 
+        /**
+         * <p>流程节点前置条件参数</p>
+         */
         @NameInMap("FlowNodePrerequisiteParam")
         public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamFlowNodePrerequisiteParam flowNodePrerequisiteParam;
 
+        /**
+         * <p>上下文重复算子：检测当前句的前from句是否有重复；0表示前面的所有句</p>
+         */
         @NameInMap("From")
         public Integer from;
 
+        /**
+         * <p>from_end</p>
+         */
         @NameInMap("From_end")
         public Boolean fromEnd;
 
+        /**
+         * <p>上下文重复算子：重复几次</p>
+         */
         @NameInMap("Hit_time")
         public Integer hitTime;
 
+        /**
+         * <p>生效句子， true单个句子，false多个句子</p>
+         */
         @NameInMap("In_sentence")
         public Boolean inSentence;
 
+        /**
+         * <p>意图模型检查参数</p>
+         */
         @NameInMap("IntentModelCheckParm")
         public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamIntentModelCheckParm intentModelCheckParm;
 
+        /**
+         * <p>interval代表区间范围开始</p>
+         */
         @NameInMap("Interval")
         public Integer interval;
 
+        /**
+         * <p>intervalEnd 代表区间范围结束</p>
+         */
         @NameInMap("IntervalEnd")
         public Integer intervalEnd;
 
+        /**
+         * <p>关键字扩展</p>
+         */
         @NameInMap("KeywordExtension")
         public Integer keywordExtension;
 
+        /**
+         * <p>匹配到的关键字数量</p>
+         */
         @NameInMap("KeywordMatchSize")
         public Integer keywordMatchSize;
 
+        /**
+         * <p>关键词</p>
+         */
         @NameInMap("Keywords")
         public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParamKeywords keywords;
 
+        /**
+         * <p>能量值变化，默认3, 1~9</p>
+         */
         @NameInMap("MaxEmotionChangeValue")
         public Integer maxEmotionChangeValue;
 
+        /**
+         * <p>句子中最少字数，小于此字数的句子不检查</p>
+         */
         @NameInMap("MinWordSize")
         public Integer minWordSize;
 
+        /**
+         * <p>true表示取不同角色相邻的两句话，false表示取不同角色的第一句话比较响应时间（默认）</p>
+         */
         @NameInMap("Near_dialogue")
         public Boolean nearDialogue;
 
+        /**
+         * <p>排除的正则表达式</p>
+         */
         @NameInMap("NotRegex")
         public String notRegex;
 
+        /**
+         * <p>语句</p>
+         */
         @NameInMap("Phrase")
         public String phrase;
 
+        /**
+         * <p>正则表达式</p>
+         */
         @NameInMap("Regex")
         public String regex;
 
+        /**
+         * <p>target</p>
+         */
         @NameInMap("Target")
         public Integer target;
 
+        /**
+         * <p>阈值</p>
+         */
         @NameInMap("Threshold")
         public Float threshold;
 
@@ -914,18 +1055,33 @@ public class GetResultResponseBody extends TeaModel {
     }
 
     public static class GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperator extends TeaModel {
+        /**
+         * <p>主键id</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>算子名</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>可能是主键id，也可能是前端生成的id</p>
+         */
         @NameInMap("Oid")
         public String oid;
 
+        /**
+         * <p>算子参数</p>
+         */
         @NameInMap("Param")
         public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperatorsOperatorParam param;
 
+        /**
+         * <p>算子类别</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -996,24 +1152,45 @@ public class GetResultResponseBody extends TeaModel {
     }
 
     public static class GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditions extends TeaModel {
+        /**
+         * <p>检测范围</p>
+         */
         @NameInMap("Check_range")
         public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsCheckRange checkRange;
 
+        /**
+         * <p>条件id，可能是db中的主键，也可能是转换成的a, b, c</p>
+         */
         @NameInMap("Cid")
         public String cid;
 
+        /**
+         * <p>排除</p>
+         */
         @NameInMap("Exclusion")
         public Integer exclusion;
 
+        /**
+         * <p>在db中的主键</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>Lambda表达式：例如:a&&b</p>
+         */
         @NameInMap("Lambda")
         public String lambda;
 
+        /**
+         * <p>算子列表</p>
+         */
         @NameInMap("Operators")
         public GetResultResponseBodyDataResultInfoHitResultHitResultConditionsConditionsOperators operators;
 
+        /**
+         * <p>条件所属的规则id</p>
+         */
         @NameInMap("Rid")
         public String rid;
 

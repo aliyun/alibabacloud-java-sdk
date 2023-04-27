@@ -3,22 +3,19 @@ package com.aliyun.qualitycheck20190115.models;
 
 import com.aliyun.tea.*;
 
-public class GetSkillGroupConfigRequest extends TeaModel {
-    /**
-     * <p>baseMeAgentId</p>
-     */
+public class UploadDataV4Request extends TeaModel {
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
     @NameInMap("JsonStr")
     public String jsonStr;
 
-    public static GetSkillGroupConfigRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetSkillGroupConfigRequest self = new GetSkillGroupConfigRequest();
+    public static UploadDataV4Request build(java.util.Map<String, ?> map) throws Exception {
+        UploadDataV4Request self = new UploadDataV4Request();
         return TeaModel.build(map, self);
     }
 
-    public GetSkillGroupConfigRequest setBaseMeAgentId(Long baseMeAgentId) {
+    public UploadDataV4Request setBaseMeAgentId(Long baseMeAgentId) {
         this.baseMeAgentId = baseMeAgentId;
         return this;
     }
@@ -26,7 +23,7 @@ public class GetSkillGroupConfigRequest extends TeaModel {
         return this.baseMeAgentId;
     }
 
-    public GetSkillGroupConfigRequest setJsonStr(String jsonStr) {
+    public UploadDataV4Request setJsonStr(String jsonStr) {
         this.jsonStr = jsonStr;
         return this;
     }
