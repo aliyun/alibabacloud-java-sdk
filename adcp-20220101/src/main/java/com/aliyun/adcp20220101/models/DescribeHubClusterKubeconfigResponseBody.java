@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHubClusterKubeconfigResponseBody extends TeaModel {
     /**
-     * <p>The content of the kubeconfig file of the master instance.</p>
+     * <p>The content of the kubeconfig file.</p>
      */
     @NameInMap("Kubeconfig")
     public String kubeconfig;

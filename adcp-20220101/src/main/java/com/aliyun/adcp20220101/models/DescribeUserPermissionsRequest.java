@@ -4,6 +4,9 @@ package com.aliyun.adcp20220101.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserPermissionsRequest extends TeaModel {
+    /**
+     * <p>The ID of the RAM user that you want to query.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

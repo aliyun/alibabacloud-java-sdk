@@ -4,9 +4,15 @@ package com.aliyun.adcp20220101.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserPermissionsResponseBody extends TeaModel {
+    /**
+     * <p>The details about the permissions of the RAM user.</p>
+     */
     @NameInMap("Permissions")
     public java.util.List<DescribeUserPermissionsResponseBodyPermissions> permissions;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,37 @@ public class DescribeUserPermissionsResponseBody extends TeaModel {
     }
 
     public static class DescribeUserPermissionsResponseBodyPermissions extends TeaModel {
+        /**
+         * <p>The authorization setting. Valid values:</p>
+         * <br>
+         * <p>*   {cluster_id} is returned if the permissions are scoped to a cluster.</p>
+         * <p>*   {cluster_id}/{namespace} is returned if the permissions are scoped to a namespace of a cluster.</p>
+         * <p>*   all-clusters is returned if the permissions are scoped to all clusters.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The authorization type. Valid values:</p>
+         * <br>
+         * <p>*   cluster: indicates that the permissions are scoped to a cluster.</p>
+         * <p>*   namespace: indicates that the permissions are scoped to a namespace of a cluster.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The name of the custom role. If a custom role is assigned, the value is the name of the assigned custom role.</p>
+         */
         @NameInMap("RoleName")
         public String roleName;
 
+        /**
+         * <p>The type of predefined role. Valid values:</p>
+         * <br>
+         * <p>*   admin: administrator</p>
+         * <p>*   dev: developer</p>
+         */
         @NameInMap("RoleType")
         public String roleType;
 

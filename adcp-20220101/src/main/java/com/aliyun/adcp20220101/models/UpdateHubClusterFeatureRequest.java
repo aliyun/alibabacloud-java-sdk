@@ -17,40 +17,54 @@ public class UpdateHubClusterFeatureRequest extends TeaModel {
     public Boolean argoServerEnabled;
 
     /**
-     * <p>Specifies whether to enable audit logs. Valid values: - true: enable audit logs. - false: disables audit logs.</p>
+     * <p>Specifies whether to enable the audit logging feature. Valid values:</p>
+     * <br>
+     * <p>*   true: enables the audit logging feature.</p>
+     * <p>*   false: disables the audit logging feature.</p>
      */
     @NameInMap("AuditLogEnabled")
     public Boolean auditLogEnabled;
 
     /**
-     * <p>The ID of the master instance.</p>
+     * <p>The ID of the cluster.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>Specifies whether to enable deletion protection for the master instance. After you enable deletion protection, you cannot delete the master instance in the console or by calling API operations. Valid values:</p>
+     * <p>Specifies whether to enable deletion protection for the cluster. After you enable deletion protection, you cannot delete the master instance in the console or by calling the DeleteHubCluster operation. Valid values:</p>
+     * <br>
+     * <p>*   true: enables deletion protection for the cluster.</p>
+     * <p>*   false: disables deletion protection for the cluster. This is the default value.</p>
      */
     @NameInMap("DeletionProtection")
     public Boolean deletionProtection;
 
     /**
-     * <p>Specifies whether to enable Service Mesh (ASM). Valid values: true: enables ASM. false: disables ASM.</p>
+     * <p>Specifies whether to enable Alibaba Cloud Service Mesh (ASM). Valid values:</p>
+     * <br>
+     * <p>true: enables ASM. false: disables ASM.</p>
      */
     @NameInMap("EnableMesh")
     public Boolean enableMesh;
 
     /**
-     * <p>The name of the master instance. The name must be 1 to 63 characters in length, and can contain letters and digits. The name must start with a letter. The name can contain letters, digits, underscores (_), and hyphens (-).</p>
+     * <p>The name of the cluster. The name must be 1 to 63 characters in length. It must start with a letter, and can contain letters, digits, underscores (\_), and hyphens (-).</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The limit on the prices of containers in the workflow. This parameter takes effect only if the WorkflowScheduleMode parameter is set to cost-optimized.</p>
+     */
     @NameInMap("PriceLimit")
     public String priceLimit;
 
     /**
-     * <p>Specifies whether to associate an elastic IP address (EIP) with the API server. Default value: false. To associate an EIP with the API server, set the value to true. You can use a custom EIP by setting the ApiServerEipId parameter. If you do not set the ApiServerEipId parameter, the system automatically creates an EIP.</p>
+     * <p>Specifies whether to associate an elastic IP address (EIP) with the API server. Valid values:</p>
+     * <br>
+     * <p>*   true: associates an EIP with the API server. You can specify the ApiServerEipId parameter. If you do not specify the ApiServerEipId parameter, the system automatically creates an EIP.</p>
+     * <p>*   false: disassociates an EIP from the API server.</p>
      */
     @NameInMap("PublicApiServerEnabled")
     public Boolean publicApiServerEnabled;

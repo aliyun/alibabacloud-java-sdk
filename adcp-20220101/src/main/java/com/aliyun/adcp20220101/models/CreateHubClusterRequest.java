@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateHubClusterRequest extends TeaModel {
     /**
-     * <p>Specifies whether to use a public IP address to expose the API server. Valid values: - true: uses a public IP address to expose the API server. - true: uses an internal IP address to expose the API server.</p>
+     * <p>Specifies whether to expose the API server to the Internet. Valid values:</p>
+     * <br>
+     * <p>*   true: exposes the API server to the Internet.</p>
+     * <p>*   false: exposes the API server to the internal network.</p>
      */
     @NameInMap("ApiServerPublicEip")
     public Boolean apiServerPublicEip;
@@ -14,13 +17,16 @@ public class CreateHubClusterRequest extends TeaModel {
     public Boolean argoServerEnabled;
 
     /**
-     * <p>Specifies whether to enable audit logs. Valid values: - true: enables audit logs. - false: disables audit logs.</p>
+     * <p>Specifies whether to enable the audit log feature. Valid values:</p>
+     * <br>
+     * <p>*   true: enables the audit log feature.</p>
+     * <p>*   false: disables the audit log feature.</p>
      */
     @NameInMap("AuditLogEnabled")
     public Boolean auditLogEnabled;
 
     /**
-     * <p>Specifies whether the security group is an advanced security group.</p>
+     * <p>Specifies whether to use an advanced security group.</p>
      */
     @NameInMap("IsEnterpriseSecurityGroup")
     public Boolean isEnterpriseSecurityGroup;
@@ -35,12 +41,12 @@ public class CreateHubClusterRequest extends TeaModel {
     public String priceLimit;
 
     /**
-     * <p>Scenario-oriented master control type. The value can be:</p>
+     * <p>The type of scenario for which the master instance is suitable. Valid values:</p>
      * <br>
-     * <p>- `Default`: Standard scenario Master instance.</p>
-     * <p>- `XFlow`: Workflow scenario master instance.</p>
+     * <p>*   `Default`: The master instance is suitable for standard scenarios.</p>
+     * <p>*   `XFlow`: The master instance is suitable for workflow scenarios.</p>
      * <br>
-     * <p>Default Value: `Default`.</p>
+     * <p>Default value: `Default`.</p>
      */
     @NameInMap("Profile")
     public String profile;

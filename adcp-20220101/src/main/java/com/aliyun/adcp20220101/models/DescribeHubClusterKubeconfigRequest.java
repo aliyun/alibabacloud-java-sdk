@@ -11,7 +11,12 @@ public class DescribeHubClusterKubeconfigRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Specifies whether to obtain the credential that is used to connect to the master instance over the internal network. Valid values: - `true`: obtains only the credential that is used to access the master instance over the internal network. - `false`: obtains only the credential that is used to access the master instance over the Internet. Default value: `false`.</p>
+     * <p>Specifies whether to obtain the kubeconfig file that is used to connect to the cluster over the internal network. Valid values:</p>
+     * <br>
+     * <p>*   `true`: obtains the kubeconfig file that is used to connect to the master instance over the internal network.</p>
+     * <p>*   `false`: obtains the kubeconfig file that is used to connect to the master instance over the Internet.</p>
+     * <br>
+     * <p>Default value: `false`</p>
      */
     @NameInMap("PrivateIpAddress")
     public Boolean privateIpAddress;

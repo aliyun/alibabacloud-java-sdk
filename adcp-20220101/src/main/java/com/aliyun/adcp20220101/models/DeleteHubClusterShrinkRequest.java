@@ -11,11 +11,19 @@ public class DeleteHubClusterShrinkRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Specifies whether to forcefully delete the master instance. Valid values: - true: forcefully delete the master instance. - false: does not forcefully delete the master instance. Default value: false.</p>
+     * <p>Specifies whether to forcefully delete the master instance in ACK One. Valid values:</p>
+     * <br>
+     * <p>*   true: forcefully deletes the master instance in ACK One.</p>
+     * <p>*   false: does not forcibly delete the master instance in ACK One.</p>
+     * <br>
+     * <p>Default value: false.</p>
      */
     @NameInMap("Force")
     public Boolean force;
 
+    /**
+     * <p>The list of resources to retain.</p>
+     */
     @NameInMap("RetainResources")
     public String retainResourcesShrink;
 
