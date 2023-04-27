@@ -3492,13 +3492,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateSubScoreForApiWithOptions(request, runtime);
     }
 
-    /**
-      * ****。
-      *
-      * @param request UpdateSyncQualityCheckDataRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpdateSyncQualityCheckDataResponse
-     */
     public UpdateSyncQualityCheckDataResponse updateSyncQualityCheckDataWithOptions(UpdateSyncQualityCheckDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3527,12 +3520,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSyncQualityCheckDataResponse());
     }
 
-    /**
-      * ****。
-      *
-      * @param request UpdateSyncQualityCheckDataRequest
-      * @return UpdateSyncQualityCheckDataResponse
-     */
     public UpdateSyncQualityCheckDataResponse updateSyncQualityCheckData(UpdateSyncQualityCheckDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateSyncQualityCheckDataWithOptions(request, runtime);
@@ -3736,6 +3723,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.uploadAudioDataWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated : UploadData is deprecated, please use Qualitycheck::2019-01-15::UploadDataV4 instead.
+      *
+      * @param request UploadDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UploadDataResponse
+     */
+    // Deprecated
     public UploadDataResponse uploadDataWithOptions(UploadDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3764,6 +3759,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UploadDataResponse());
     }
 
+    /**
+      * @deprecated : UploadData is deprecated, please use Qualitycheck::2019-01-15::UploadDataV4 instead.
+      *
+      * @param request UploadDataRequest
+      * @return UploadDataResponse
+     */
+    // Deprecated
     public UploadDataResponse uploadData(UploadDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.uploadDataWithOptions(request, runtime);
@@ -3800,6 +3802,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UploadDataSyncResponse uploadDataSync(UploadDataSyncRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.uploadDataSyncWithOptions(request, runtime);
+    }
+
+    public UploadDataV4Response uploadDataV4WithOptions(UploadDataV4Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            body.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
+            body.put("JsonStr", request.jsonStr);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UploadDataV4"),
+            new TeaPair("version", "2019-01-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UploadDataV4Response());
+    }
+
+    public UploadDataV4Response uploadDataV4(UploadDataV4Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.uploadDataV4WithOptions(request, runtime);
     }
 
     public UploadRuleResponse uploadRuleWithOptions(UploadRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {

@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>qualitycheck20190115</artifactId>
-  <version>4.12.4</version>
+  <version>4.12.5</version>
   <packaging>jar</packaging>
   <name>qualitycheck20190115</name>
   <description>Alibaba Cloud Qualitycheck (20190115) SDK for Java
