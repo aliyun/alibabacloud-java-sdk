@@ -240,6 +240,9 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("invoice_title")
         public String invoiceTitle;
 
+        @NameInMap("machine_code")
+        public String machineCode;
+
         @NameInMap("order_id")
         public Long orderId;
 
@@ -439,6 +442,14 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         }
         public String getInvoiceTitle() {
             return this.invoiceTitle;
+        }
+
+        public InsInvoiceScanQueryResponseBodyModuleItems setMachineCode(String machineCode) {
+            this.machineCode = machineCode;
+            return this;
+        }
+        public String getMachineCode() {
+            return this.machineCode;
         }
 
         public InsInvoiceScanQueryResponseBodyModuleItems setOrderId(Long orderId) {

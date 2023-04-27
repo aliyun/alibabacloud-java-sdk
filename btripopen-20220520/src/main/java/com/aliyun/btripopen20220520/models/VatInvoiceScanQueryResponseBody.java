@@ -234,6 +234,9 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("invoice_type_desc")
         public String invoiceTypeDesc;
 
+        @NameInMap("machine_code")
+        public String machineCode;
+
         @NameInMap("oss_url")
         public String ossUrl;
 
@@ -408,6 +411,14 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         }
         public String getInvoiceTypeDesc() {
             return this.invoiceTypeDesc;
+        }
+
+        public VatInvoiceScanQueryResponseBodyModuleItems setMachineCode(String machineCode) {
+            this.machineCode = machineCode;
+            return this;
+        }
+        public String getMachineCode() {
+            return this.machineCode;
         }
 
         public VatInvoiceScanQueryResponseBodyModuleItems setOssUrl(String ossUrl) {

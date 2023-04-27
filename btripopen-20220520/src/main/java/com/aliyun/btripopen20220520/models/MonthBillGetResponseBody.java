@@ -76,30 +76,57 @@ public class MonthBillGetResponseBody extends TeaModel {
     }
 
     public static class MonthBillGetResponseBodyModuleMonthAccountBillDetail extends TeaModel {
+        /**
+         * <p>用车金额（单位：元）</p>
+         */
         @NameInMap("carAmount")
         public Double carAmount;
 
+        /**
+         * <p>违约金金额（单位：元）</p>
+         */
         @NameInMap("damageAmount")
         public Double damageAmount;
 
+        /**
+         * <p>机票金额（单位：元）</p>
+         */
         @NameInMap("flightAmount")
         public Double flightAmount;
 
+        /**
+         * <p>福豆金额（单位：元）</p>
+         */
         @NameInMap("fuPoint")
         public Double fuPoint;
 
+        /**
+         * <p>酒店金额（单位：元）</p>
+         */
         @NameInMap("hotelAmount")
         public Double hotelAmount;
 
+        /**
+         * <p>国际机票金额（单位：元）</p>
+         */
         @NameInMap("ieFlightAmount")
         public Double ieFlightAmount;
 
+        /**
+         * <p>账期日：YYYYMMDD</p>
+         */
         @NameInMap("mailBillDate")
         public Long mailBillDate;
 
+        /**
+         * <p>服务费金额（单位：元）</p>
+         */
         @NameInMap("serviceAmount")
         public Double serviceAmount;
 
+        /**
+         * <p>火车票金额（单位：元）</p>
+         */
         @NameInMap("trainAmount")
         public Double trainAmount;
 
@@ -186,6 +213,9 @@ public class MonthBillGetResponseBody extends TeaModel {
         @NameInMap("end_date")
         public String endDate;
 
+        /**
+         * <p>CorpMonthAccountBillFeeDetail</p>
+         */
         @NameInMap("monthAccountBillDetail")
         public MonthBillGetResponseBodyModuleMonthAccountBillDetail monthAccountBillDetail;
 

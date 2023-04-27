@@ -4,14 +4,14 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class HotelOrderPayRequest extends TeaModel {
+    @NameInMap("btrip_order_id")
+    public Long btripOrderId;
+
     @NameInMap("btrip_user_id")
     public String btripUserId;
 
     @NameInMap("company_pay_fee")
     public Long companyPayFee;
-
-    @NameInMap("dis_order_id")
-    public String disOrderId;
 
     @NameInMap("person_pay_fee")
     public Long personPayFee;
@@ -30,6 +30,14 @@ public class HotelOrderPayRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public HotelOrderPayRequest setBtripOrderId(Long btripOrderId) {
+        this.btripOrderId = btripOrderId;
+        return this;
+    }
+    public Long getBtripOrderId() {
+        return this.btripOrderId;
+    }
+
     public HotelOrderPayRequest setBtripUserId(String btripUserId) {
         this.btripUserId = btripUserId;
         return this;
@@ -44,14 +52,6 @@ public class HotelOrderPayRequest extends TeaModel {
     }
     public Long getCompanyPayFee() {
         return this.companyPayFee;
-    }
-
-    public HotelOrderPayRequest setDisOrderId(String disOrderId) {
-        this.disOrderId = disOrderId;
-        return this;
-    }
-    public String getDisOrderId() {
-        return this.disOrderId;
     }
 
     public HotelOrderPayRequest setPersonPayFee(Long personPayFee) {
