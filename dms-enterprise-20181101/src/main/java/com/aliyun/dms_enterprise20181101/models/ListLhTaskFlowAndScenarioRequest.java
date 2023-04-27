@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListLhTaskFlowAndScenarioRequest extends TeaModel {
     /**
-     * <p>The ID of the workspace. You can call the [GetLhSpaceByName](~~424379~~) operation to obtain the workspace ID.</p>
+     * <p>The name of the user who creates the workspace.</p>
      */
     @NameInMap("SpaceId")
     public Long spaceId;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
+     * <p>The ID of the workspace. You can call the [GetLhSpaceByName](~~424379~~) operation to obtain the workspace ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;
 
     /**
-     * <p>The ID of the user. You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain the user ID.</p>
+     * <p>The user ID of the task flow owner.</p>
      */
     @NameInMap("UserId")
     public Long userId;

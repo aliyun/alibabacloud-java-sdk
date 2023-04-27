@@ -4,29 +4,15 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class UpdateScenarioRequest extends TeaModel {
-    /**
-     * <p>The description of the business scenario.</p>
-     */
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <p>The ID of the business scenario.</p>
-     */
     @NameInMap("ScenarioId")
     public String scenarioId;
 
-    /**
-     * <p>The name of the business scenario.</p>
-     */
     @NameInMap("ScenarioName")
     public String scenarioName;
 
-    /**
-     * <p>The ID of the tenant.</p>
-     * <br>
-     * <p>> : To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).</p>
-     */
     @NameInMap("Tid")
     public Long tid;
 

@@ -11,13 +11,13 @@ public class CreateTaskResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned if the request fails.</p>
+     * <p>The error message returned if the request failed.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The ID of the task node returned if the node is created.</p>
+     * <p>The ID of the task node returned when the task was created.</p>
      */
     @NameInMap("NodeId")
     public Long nodeId;
@@ -31,8 +31,8 @@ public class CreateTaskResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
-     * <p>*   true: The request was successful.</p>
-     * <p>*   false: The request failed.</p>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("Success")
     public Boolean success;

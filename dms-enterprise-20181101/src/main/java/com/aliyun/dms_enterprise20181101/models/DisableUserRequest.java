@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DisableUserRequest extends TeaModel {
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("Tid")
     public Long tid;
 
     /**
-     * <p>The UID of the Alibaba Cloud account.</p>
+     * <p>You can call this operation to disable a user that is temporarily not used in Data Management (DMS) Enterprise.</p>
      */
     @NameInMap("Uid")
     public String uid;

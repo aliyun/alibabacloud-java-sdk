@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class CreateOrderRequest extends TeaModel {
     /**
-     * <p>The key of an attachment that is returned after the attachment is uploaded. You can call the [GetUserUploadFileJob](~~206069~~) operation to query the key of the attachment.</p>
+     * <p>test_AttachmentKey</p>
      */
     @NameInMap("AttachmentKey")
     public String attachmentKey;
 
     /**
-     * <p>The description of the ticket to be created.</p>
+     * <p>The key of an attachment that is returned after the attachment is uploaded. You can call the [GetUserUploadFileJob](~~206069~~) operation to query the key of the attachment.</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
-     * <p>The ticket creation parameter. The value is a JSON string. The value of this parameter differs based on the type of the ticket. For more information, see the **PluginParam parameter** section in this topic.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
      */
     @NameInMap("PluginParam")
     public java.util.Map<String, ?> pluginParam;
 
     /**
-     * <p>The type of the ticket. For more information, see [PluginType parameter](~~429109~~).</p>
+     * <p>The ID of the ticket.</p>
      */
     @NameInMap("PluginType")
     public String pluginType;
@@ -35,7 +35,7 @@ public class CreateOrderRequest extends TeaModel {
     public String relatedUserList;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Tid")
     public Long tid;

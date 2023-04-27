@@ -4,42 +4,21 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetOpLogResponseBody extends TeaModel {
-    /**
-     * <p>The error code.</p>
-     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    /**
-     * <p>The error message returned if the request failed.</p>
-     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The details of the operation log.</p>
-     */
     @NameInMap("OpLogDetails")
     public GetOpLogResponseBodyOpLogDetails opLogDetails;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
-    /**
-     * <p>The total number of operation logs that are returned.</p>
-     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -97,59 +76,27 @@ public class GetOpLogResponseBody extends TeaModel {
     }
 
     public static class GetOpLogResponseBodyOpLogDetailsOpLogDetail extends TeaModel {
-        /**
-         * <p>The endpoint of the database instance.</p>
-         * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   This parameter is valid only for database instances of the LocalInstance type.</p>
-         * <br>
-         * <p>*   This parameter is valid only for operations on the functional modules related to tasks.</p>
-         */
         @NameInMap("Database")
         public String database;
 
-        /**
-         * <p>The functional module for which the operation log is queried.</p>
-         */
         @NameInMap("Module")
         public String module;
 
-        /**
-         * <p>The details of the operation.</p>
-         */
         @NameInMap("OpContent")
         public String opContent;
 
-        /**
-         * <p>The time when the operation was performed.</p>
-         */
         @NameInMap("OpTime")
         public String opTime;
 
-        /**
-         * <p>The ID of the user who performed the operation.</p>
-         */
         @NameInMap("OpUserId")
         public Long opUserId;
 
-        /**
-         * <p>The ID of the ticket or task.</p>
-         * <br>
-         * <p>>  This parameter is valid only for operations on the functional modules related to tasks and the task management module in system management.</p>
-         */
         @NameInMap("OrderId")
         public Long orderId;
 
-        /**
-         * <p>The ID of the Alibaba Cloud account.</p>
-         */
         @NameInMap("UserId")
         public String userId;
 
-        /**
-         * <p>The display name of the user.</p>
-         */
         @NameInMap("UserNick")
         public String userNick;
 

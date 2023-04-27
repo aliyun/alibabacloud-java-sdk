@@ -5,34 +5,35 @@ import com.aliyun.tea.*;
 
 public class ListStandardGroupsResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the request fails.</p>
+     * <p>The ID of the tenant.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned if the request fails.</p>
+     * <p>The security rule sets returned.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The operation that you want to perform. Set the value to **ListStandardGroups**.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The security rule sets returned.</p>
+     * <p>The control mode. Valid values:</p>
+     * <br>
+     * <p>*   **NONE_CONTROL**: Flexible Management</p>
+     * <p>*   **STABLE**: Stable Change</p>
+     * <p>*   **COMMON**: Security Collaboration</p>
      */
     @NameInMap("StandardGroupList")
     public java.util.List<ListStandardGroupsResponseBodyStandardGroupList> standardGroupList;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <p>The error message returned if the request fails.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -83,14 +84,11 @@ public class ListStandardGroupsResponseBody extends TeaModel {
     }
 
     public static class ListStandardGroupsResponseBodyStandardGroupList extends TeaModel {
-        /**
-         * <p>The type of the database engine. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).</p>
-         */
         @NameInMap("DbType")
         public String dbType;
 
         /**
-         * <p>The description of the security rule set.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -98,13 +96,6 @@ public class ListStandardGroupsResponseBody extends TeaModel {
         @NameInMap("GroupId")
         public Long groupId;
 
-        /**
-         * <p>The control mode. Valid values:</p>
-         * <br>
-         * <p>*   **NONE_CONTROL**: Flexible Management</p>
-         * <p>*   **STABLE**: Stable Change</p>
-         * <p>*   **COMMON**: Security Collaboration</p>
-         */
         @NameInMap("GroupMode")
         public String groupMode;
 
@@ -114,9 +105,6 @@ public class ListStandardGroupsResponseBody extends TeaModel {
         @NameInMap("GroupName")
         public String groupName;
 
-        /**
-         * <p>The ID of the user who queries the security sets.</p>
-         */
         @NameInMap("LastMenderId")
         public Long lastMenderId;
 

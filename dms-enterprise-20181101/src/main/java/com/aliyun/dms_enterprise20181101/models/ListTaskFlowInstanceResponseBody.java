@@ -5,41 +5,45 @@ import com.aliyun.tea.*;
 
 public class ListTaskFlowInstanceResponseBody extends TeaModel {
     /**
-     * <p>The information about the execution records returned.</p>
+     * <p>The status of the task flow. Valid values:</p>
+     * <br>
+     * <p>*   **0**: The task flow is waiting to be scheduled.</p>
+     * <p>*   **1**: The task flow is being executed.</p>
+     * <p>*   **2**: The task flow is paused.</p>
+     * <p>*   **3**: The task flow failed.</p>
+     * <p>*   **4**: The task flow is executed.</p>
+     * <p>*   **5**: The task flow is complete.</p>
      */
     @NameInMap("DAGInstanceList")
     public ListTaskFlowInstanceResponseBodyDAGInstanceList DAGInstanceList;
 
     /**
-     * <p>The error code returned if the request fails.</p>
+     * <p>The beginning of the time range to query the execution records of the task flow. Specify the time in the yyyy-MM-DD format.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned if the request fails.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The mode in which the task flow is triggered. Valid values:</p>
+     * <br>
+     * <p>*   **0**: The task flow is automatically triggered based on periodic scheduling.</p>
+     * <p>*   **1**: The task flow is manually triggered.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request is successful.</p>
-     * <p>*   **false**: The request fails.</p>
+     * <p>The name of the task flow.</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
-    /**
-     * <p>The total number of execution records returned.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -98,20 +102,17 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
 
     public static class ListTaskFlowInstanceResponseBodyDAGInstanceListDAGInstance extends TeaModel {
         /**
-         * <p>The business time of the task flow. The time is displayed in the yyyy-MM-DD HH:mm:ss format.</p>
+         * <p>The information about the execution records returned.</p>
          */
         @NameInMap("BusinessTime")
         public String businessTime;
 
         /**
-         * <p>The ID of the task flow.</p>
+         * <p>The description of the task.</p>
          */
         @NameInMap("DagId")
         public String dagId;
 
-        /**
-         * <p>The name of the task flow.</p>
-         */
         @NameInMap("DagName")
         public String dagName;
 
@@ -119,53 +120,43 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
         public String dagVersion;
 
         /**
-         * <p>The time when the execution of the task flow was complete. The time is displayed in the yyyy-MM-DD HH:mm:ss format.</p>
+         * <p>The end of the time range to query the execution records of the task flow. Specify the time in the yyyy-MM-DD format.</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
-         * <p>The ID of the previously published version of the task flow.</p>
+         * <p>Queries the execution records of a task flow.</p>
          */
         @NameInMap("HistoryDagId")
         public Long historyDagId;
 
         /**
-         * <p>The ID of the execution record.</p>
+         * <p>The error message returned if the request fails.</p>
          */
         @NameInMap("Id")
         public Long id;
-
-        /**
-         * <p>The description of the task.</p>
-         */
-        @NameInMap("Message")
-        public String message;
-
-        /**
-         * <p>The name of the task flow owner.</p>
-         */
-        @NameInMap("OwnerName")
-        public String ownerName;
-
-        /**
-         * <p>The status of the task flow. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The task flow is waiting to be scheduled.</p>
-         * <p>*   **1**: The task flow is being executed.</p>
-         * <p>*   **2**: The task flow is paused.</p>
-         * <p>*   **3**: The task flow failed.</p>
-         * <p>*   **4**: The task flow is executed.</p>
-         * <p>*   **5**: The task flow is complete.</p>
-         */
-        @NameInMap("Status")
-        public Integer status;
 
         /**
          * <p>The mode in which the task flow is triggered. Valid values:</p>
          * <br>
          * <p>*   **0**: The task flow is automatically triggered based on periodic scheduling.</p>
          * <p>*   **1**: The task flow is manually triggered.</p>
+         */
+        @NameInMap("Message")
+        public String message;
+
+        @NameInMap("OwnerName")
+        public String ownerName;
+
+        /**
+         * <p>The ID of the request.</p>
+         */
+        @NameInMap("Status")
+        public Integer status;
+
+        /**
+         * <p>The time when the execution of the task flow was complete. The time is displayed in the yyyy-MM-DD HH:mm:ss format.</p>
          */
         @NameInMap("TriggerType")
         public Integer triggerType;

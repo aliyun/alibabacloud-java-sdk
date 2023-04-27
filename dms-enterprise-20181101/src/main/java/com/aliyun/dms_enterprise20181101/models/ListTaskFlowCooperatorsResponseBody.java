@@ -4,20 +4,17 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
-    /**
-     * <p>The users that are involved in the task flow.</p>
-     */
     @NameInMap("CooperatorList")
     public ListTaskFlowCooperatorsResponseBodyCooperatorList cooperatorList;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The operation that you want to perform. Set the value to **ListTaskFlowCooperators**.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The users that are involved in the task flow.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -28,12 +25,6 @@ public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -83,24 +74,18 @@ public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
     }
 
     public static class ListTaskFlowCooperatorsResponseBodyCooperatorListCooperator extends TeaModel {
-        /**
-         * <p>The email address of the user.</p>
-         */
         @NameInMap("Email")
         public String email;
 
-        /**
-         * <p>The username.</p>
-         */
         @NameInMap("LoginName")
         public String loginName;
 
-        /**
-         * <p>The alias of the user.</p>
-         */
         @NameInMap("NickName")
         public String nickName;
 
+        /**
+         * <p>用户ID。</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

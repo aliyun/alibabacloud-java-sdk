@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
     /**
-     * <p>The error code returned.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the ID of the tenant.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The name of the database.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The information about the databases that are involved in the precheck.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("PreCheckDBList")
     public java.util.List<ListDataCorrectPreCheckDBResponseBodyPreCheckDBList> preCheckDBList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the ticket for the data change.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>The number of SQL statements.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -80,21 +80,12 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
     }
 
     public static class ListDataCorrectPreCheckDBResponseBodyPreCheckDBList extends TeaModel {
-        /**
-         * <p>The ID of the database.</p>
-         */
         @NameInMap("DbId")
         public Long dbId;
 
-        /**
-         * <p>The name of the database.</p>
-         */
         @NameInMap("SearchName")
         public String searchName;
 
-        /**
-         * <p>The number of SQL statements.</p>
-         */
         @NameInMap("SqlNum")
         public Long sqlNum;
 

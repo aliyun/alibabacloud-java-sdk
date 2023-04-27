@@ -5,15 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetStructSyncJobDetailRequest extends TeaModel {
     /**
-     * <p>The ID of the ticket.</p>
+     * <p>The total number of tables.</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
-     * <p>The ID of the tenant.</p>
-     * <br>
-     * <p>>  The ID of the tenant is displayed when you move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Tenant information](~~181330~~).</p>
+     * <p>The error message that is returned.</p>
      */
     @NameInMap("Tid")
     public Long tid;

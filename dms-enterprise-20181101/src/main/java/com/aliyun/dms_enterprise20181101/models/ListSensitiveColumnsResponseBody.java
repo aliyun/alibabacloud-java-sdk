@@ -5,40 +5,43 @@ import com.aliyun.tea.*;
 
 public class ListSensitiveColumnsResponseBody extends TeaModel {
     /**
-     * <p>The error code.</p>
+     * <p>The sensitivity level of the field. Valid values:</p>
+     * <br>
+     * <p>*   SENSITIVE</p>
+     * <p>*   CONFIDENTIAL</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The sensitive fields.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The number of sensitive fields.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The sensitive fields.</p>
+     * <p>The type of the de-identification algorithm. Valid values:</p>
+     * <br>
+     * <p>*   DEFAULT: All characters are masked. This is the default value.</p>
+     * <p>*   FIX_POS: The characters at specific positions are masked.</p>
+     * <p>*   FIX_CHAR: Specific characters are masked.</p>
      */
     @NameInMap("SensitiveColumnList")
     public ListSensitiveColumnsResponseBodySensitiveColumnList sensitiveColumnList;
 
-    /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>- true: The request is successful.</p>
-     * <p>- false: The request fails.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>>  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -98,44 +101,31 @@ public class ListSensitiveColumnsResponseBody extends TeaModel {
 
     public static class ListSensitiveColumnsResponseBodySensitiveColumnListSensitiveColumn extends TeaModel {
         /**
-         * <p>The number of sensitive fields.</p>
+         * <p>Queries sensitive fields in a table of a database.</p>
          */
         @NameInMap("ColumnCount")
         public Long columnCount;
 
         /**
-         * <p>The name of the field.</p>
+         * <p>The name of the field. You can call the [ListColumns](~~141870~~) operation to query the name of the field.</p>
          */
         @NameInMap("ColumnName")
         public String columnName;
 
-        /**
-         * <p>The type of the de-identification algorithm. Valid values:</p>
-         * <br>
-         * <p>*   DEFAULT: All characters are masked. This is the default value.</p>
-         * <p>*   FIX_POS: The characters at specific positions are masked.</p>
-         * <p>*   FIX_CHAR: Specific characters are masked.</p>
-         */
         @NameInMap("FunctionType")
         public String functionType;
 
-        /**
-         * <p>The name of the database.</p>
-         */
         @NameInMap("SchemaName")
         public String schemaName;
 
         /**
-         * <p>The sensitivity level of the field. Valid values:</p>
-         * <br>
-         * <p>*   SENSITIVE</p>
-         * <p>*   CONFIDENTIAL</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("SecurityLevel")
         public String securityLevel;
 
         /**
-         * <p>The name of the table.</p>
+         * <p>The name of the field.</p>
          */
         @NameInMap("TableName")
         public String tableName;

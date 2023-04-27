@@ -4,31 +4,20 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class PauseDataCorrectSQLJobRequest extends TeaModel {
-    /**
-     * <p>The ID of the SQL task. You can call the [GetDataCorrectTaskDetail](~~208481~~) and [ListDBTaskSQLJob](~~207049~~) operations to obtain the value of this parameter.</p>
-     * <br>
-     * <p>>  If the Type parameter is set to SINGLE, you must pass the value of the JobId parameter to confirm the ID of the SQL task that you want to rerun.</p>
-     */
     @NameInMap("JobId")
     public Long jobId;
 
     /**
-     * <p>The ID of the data change ticket. You can call the [ListOrders](~~144643~~) operation to query the ID of the data change ticket.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
-    /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.</p>
-     */
     @NameInMap("Tid")
     public Long tid;
 
     /**
-     * <p>The type of the pause operation. Valid values:</p>
-     * <br>
-     * <p>*   ALL: pauses all SQL tasks.</p>
-     * <p>*   SINGLE: pauses a single SQL task.</p>
+     * <p>The operation that you want to perform. Set the value to **PauseDataCorrectSQLJob**.</p>
      */
     @NameInMap("Type")
     public String type;

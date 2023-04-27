@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DeleteInstanceRequest extends TeaModel {
     /**
-     * <p>The endpoint of the database instance. You can call the [ListInstances](~~141936~~) or [GetInstance](~~141567~~) operation to obtain the endpoint.</p>
+     * <p>The error code that is returned.</p>
      */
     @NameInMap("Host")
     public String host;
 
     /**
-     * <p>The port number that is used to connect to the database instance. You can call the [ListInstances](~~141936~~) or [GetInstance](~~141567~~) operation to obtain the port number.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("Port")
     public Integer port;
 
     /**
-     * <p>The system ID (SID) of the database instance. You can call the [ListInstances](~~141936~~) or [GetInstance](~~141567~~) operation to obtain the SID.</p>
+     * <p>The operation that you want to perform. Set the value to **DeleteInstance**.</p>
      */
     @NameInMap("Sid")
     public String sid;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.</p>
+     * <p>The system ID (SID) of the database instance. You can call the [ListInstances](~~141936~~) or [GetInstance](~~141567~~) operation to obtain the SID.</p>
      */
     @NameInMap("Tid")
     public Long tid;

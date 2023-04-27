@@ -5,29 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListDataCorrectPreCheckDBRequest extends TeaModel {
     /**
-     * <p>The ID of the ticket for the data change.</p>
+     * <p>The error code returned.</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
-     * <p>The number of the page to return.</p>
-     * <br>
-     * <p>Valid values: an integer that is greater than 0.</p>
-     * <br>
-     * <p>Default value: 1.</p>
+     * <p>The operation that you want to perform. Set the value to **ListDataCorrectPreCheckDB**.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The error message returned.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the ID of the tenant.</p>
+     * <p>The information about the databases that are involved in the precheck.</p>
      */
     @NameInMap("Tid")
     public Long tid;

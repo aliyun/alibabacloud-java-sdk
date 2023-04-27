@@ -5,25 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
     /**
-     * <p>The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).</p>
+     * <p>The alias of the database instance.</p>
      */
     @NameInMap("DbType")
     public String dbType;
-
-    /**
-     * <p>The type of the environment to which the database instance belongs. Valid values:</p>
-     * <br>
-     * <p>*   **product**: production environment</p>
-     * <p>*   **dev**: development environment</p>
-     * <p>*   **pre**: staging environment</p>
-     * <p>*   **test**: test environment</p>
-     * <p>*   **sit**: system integration testing (SIT) environment</p>
-     * <p>*   **uat**: user acceptance testing (UAT) environment</p>
-     * <p>*   **pet**: stress testing environment</p>
-     * <p>*   **stag**: STAG environment</p>
-     */
-    @NameInMap("EnvType")
-    public String envType;
 
     /**
      * <p>The source of the database instance. Valid values:</p>
@@ -33,17 +18,14 @@ public class ListInstancesRequest extends TeaModel {
      * <p>*   **ECS_OWN**: a self-managed database that is deployed on an Elastic Compute Service (ECS) instance</p>
      * <p>*   **VPC_IDC**: a self-managed database instance that is deployed in a data center connected over a virtual private cloud (VPC)</p>
      */
-    @NameInMap("InstanceSource")
-    public String instanceSource;
+    @NameInMap("EnvType")
+    public String envType;
 
     /**
-     * <p>The status of the database instance. Valid values:</p>
-     * <br>
-     * <p>*   **NORMAL**: normal</p>
-     * <p>*   **DISABLE**: disabled</p>
+     * <p>The timeout period for querying data in the database instance.</p>
      */
-    @NameInMap("InstanceState")
-    public String instanceState;
+    @NameInMap("InstanceSource")
+    public String instanceSource;
 
     /**
      * <p>The network type of the database instance. Valid values:</p>
@@ -51,29 +33,35 @@ public class ListInstancesRequest extends TeaModel {
      * <p>*   **CLASSIC**: classic network</p>
      * <p>*   **VPC**: VPC</p>
      */
+    @NameInMap("InstanceState")
+    public String instanceState;
+
+    /**
+     * <p>The status of the database instance.</p>
+     */
     @NameInMap("NetType")
     public String netType;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. The number cannot exceed 100.</p>
+     * <p>Indicates whether the lock-free schema change feature is enabled for the database instance.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The keyword that is used to search for database instances.</p>
+     * <p>The operation that you want to perform. Set the value to **ListInstances**.</p>
      */
     @NameInMap("SearchKey")
     public String searchKey;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.</p>
+     * <p>The ID of the owner for the database instance.</p>
      */
     @NameInMap("Tid")
     public Long tid;

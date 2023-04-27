@@ -5,21 +5,24 @@ import com.aliyun.tea.*;
 
 public class MakeTaskFlowInstanceSuccessRequest extends TeaModel {
     /**
-     * <p>The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.</p>
+     * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
      */
     @NameInMap("DagId")
     public Long dagId;
 
     /**
-     * <p>The ID of the execution record of the task flow. You can call the [ListTaskFlowInstance](~~424689~~) operation to query the execution record ID.</p>
+     * <p>{</p>
+     * <p>    "RequestId": "028BF827-3801-5869-8548-F4A039256304",</p>
+     * <p>    "ErrorCode": "UnknownError",</p>
+     * <p>    "ErrorMessage": "UnknownError",</p>
+     * <p>    "Success": true</p>
+     * <p>}</p>
      */
     @NameInMap("DagInstanceId")
     public Long dagInstanceId;
 
     /**
-     * <p>The ID of the tenant.</p>
-     * <br>
-     * <p>> To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).</p>
+     * <p>The error code returned if the request failed.</p>
      */
     @NameInMap("Tid")
     public Long tid;

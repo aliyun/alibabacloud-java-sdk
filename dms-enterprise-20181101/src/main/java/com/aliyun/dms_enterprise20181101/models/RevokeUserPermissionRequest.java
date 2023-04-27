@@ -5,43 +5,32 @@ import com.aliyun.tea.*;
 
 public class RevokeUserPermissionRequest extends TeaModel {
     /**
-     * <p>The ID of the database. The database can be a physical database or a logical database.</p>
+     * <p>Specifies whether the database is a logical database. Valid values:</p>
      * <br>
-     * <p>*   To query the ID of a physical database, call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation.</p>
-     * <p>*   To query the ID of a logical database, call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation.</p>
+     * <p>*   **true**: The database is a logical database.</p>
+     * <p>*   **false**: The database is a physical database.</p>
+     * <br>
+     * <p>> </p>
+     * <p>*   If the database is a logical database, set this parameter to **true**.</p>
+     * <p>*   If the database is a physical database, set this parameter to **false**.</p>
      */
     @NameInMap("DbId")
     public String dbId;
 
     /**
-     * <p>The object type on which the permission you want to revoke from the user. Valid values:</p>
+     * <p>The ID of the database. The database can be a physical database or a logical database.</p>
      * <br>
-     * <p>*   **INSTANCE**: database instances</p>
-     * <p>*   **DATABASE**: physical databases</p>
-     * <p>*   **LOGIC_DATABASE**: logical databases</p>
-     * <p>*   **TABLE**: physical tables</p>
-     * <p>*   **LOGIC_TABLE**: logical tables</p>
+     * <p>*   To query the ID of a physical database, call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation.</p>
+     * <p>*   To query the ID of a logical database, call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation.</p>
      */
     @NameInMap("DsType")
     public String dsType;
 
     /**
-     * <p>The ID of the database instance. You must specify this parameter when you revoke a permission from the database instance. You can call the [ListInstances](~~141936~~) or [GetInstance](~~141567~~) operation to query the database instance ID.</p>
+     * <p>The error message returned.</p>
      */
     @NameInMap("InstanceId")
     public Long instanceId;
-
-    /**
-     * <p>Specifies whether the database is a logical database. Valid values:</p>
-     * <br>
-     * <p>* **true**: The database is a logical database.</p>
-     * <p>* **false**: The database is a physical database.</p>
-     * <br>
-     * <p>> * If the database is a logical database, set this parameter to **true**.</p>
-     * <p>> * If the database is a physical database, set this parameter to **false**.</p>
-     */
-    @NameInMap("Logic")
-    public Boolean logic;
 
     /**
      * <p>The type of the permission. Valid values:</p>
@@ -50,35 +39,41 @@ public class RevokeUserPermissionRequest extends TeaModel {
      * <p>*   **EXPORT**: the data export permission</p>
      * <p>*   **CORRECT**: the data change permission</p>
      */
+    @NameInMap("Logic")
+    public Boolean logic;
+
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("PermTypes")
     public String permTypes;
 
     /**
-     * <p>The ID of the table. You must specify this parameter when you revoke a permission from the table. You can call the [ListTables](~~141878~~) operation to query the table ID.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.</p>
      */
     @NameInMap("TableId")
     public String tableId;
 
     /**
-     * <p>The name of the table. You can call the [ListTables](~~141878~~) operation to query the table name.</p>
+     * <p>The ID of the database instance. You must specify this parameter when you revoke a permission from the database instance. You can call the [ListInstances](~~141936~~) or [GetInstance](~~141567~~) operation to query the database instance ID.</p>
      */
     @NameInMap("TableName")
     public String tableName;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.</p>
+     * <p>The error code returned.</p>
      */
     @NameInMap("Tid")
     public Long tid;
 
     /**
-     * <p>The ID of the permission. You can call the [ListUserPermission](~~146957~~) operation to query the permission ID.</p>
+     * <p>Revokes a permission on a resource from a user.</p>
      */
     @NameInMap("UserAccessId")
     public String userAccessId;
 
     /**
-     * <p>The ID of the user. You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to query the user ID.</p>
+     * <p>The operation that you want to perform. Set the value to **RevokeUserPermission**.</p>
      */
     @NameInMap("UserId")
     public String userId;

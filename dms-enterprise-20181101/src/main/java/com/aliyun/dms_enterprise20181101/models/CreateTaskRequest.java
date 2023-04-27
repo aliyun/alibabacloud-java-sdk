@@ -11,7 +11,7 @@ public class CreateTaskRequest extends TeaModel {
     public Long dagId;
 
     /**
-     * <p>The position of the node on the directed acyclic graph (DAG).</p>
+     * <p>The position of the node on the Directed Acyclic Graph (DAG).</p>
      */
     @NameInMap("GraphParam")
     public String graphParam;
@@ -29,7 +29,7 @@ public class CreateTaskRequest extends TeaModel {
     public String nodeName;
 
     /**
-     * <p>The output variables for the task.</p>
+     * <p>The output variables configured for the task.</p>
      */
     @NameInMap("NodeOutput")
     public String nodeOutput;
@@ -41,15 +41,15 @@ public class CreateTaskRequest extends TeaModel {
     public String nodeType;
 
     /**
-     * <p>The ID of the tenant.</p>
+     * <p>The tenant ID.</p>
      * <br>
-     * <p>> To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the [View information about the current tenant](~~181330~~) section of the "Manage DMS tenants" topic.</p>
+     * <p>>  To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.</p>
      */
     @NameInMap("Tid")
     public Long tid;
 
     /**
-     * <p>The time variables for the node.</p>
+     * <p>The time variables configured for the node.</p>
      */
     @NameInMap("TimeVariables")
     public String timeVariables;

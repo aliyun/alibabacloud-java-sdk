@@ -4,36 +4,18 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListEffectiveOrdersResponseBody extends TeaModel {
-    /**
-     * <p>The error code returned if the request failed.</p>
-     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    /**
-     * <p>The error message returned if the request failed.</p>
-     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The information about orders.</p>
-     */
     @NameInMap("OrderSummary")
     public java.util.List<ListEffectiveOrdersResponseBodyOrderSummary> orderSummary;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -83,39 +65,21 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
     }
 
     public static class ListEffectiveOrdersResponseBodyOrderSummaryOrderList extends TeaModel {
-        /**
-         * <p>The UID of the user who placed the order.</p>
-         */
         @NameInMap("BuyerId")
         public String buyerId;
 
-        /**
-         * <p>The time when the instance expires.</p>
-         */
         @NameInMap("EndTime")
         public String endTime;
 
-        /**
-         * <p>The maximum number of database instances that you can use DMS to manage.</p>
-         */
         @NameInMap("InsNum")
         public String insNum;
 
-        /**
-         * <p>The ID of the instance for the purchased service.</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The ID of the order.</p>
-         */
         @NameInMap("OrderId")
         public String orderId;
 
-        /**
-         * <p>The time when the instance is started.</p>
-         */
         @NameInMap("StartTime")
         public String startTime;
 
@@ -175,42 +139,18 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
     }
 
     public static class ListEffectiveOrdersResponseBodyOrderSummary extends TeaModel {
-        /**
-         * <p>The commodity code of DMS.</p>
-         * <br>
-         * <p>*   dms_pre_public_cn: DMS that uses the subscription billing method</p>
-         * <p>*   dms_post_public_cn: DMS that uses the pay-as-you-go billing method</p>
-         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
-        /**
-         * <p>The type of the service.</p>
-         * <br>
-         * <p>*   **VersionType**: DMS that supports control modes</p>
-         * <p>*   **SensitiveDataProtection**: DMS that supports sensitive data protection</p>
-         */
         @NameInMap("CommodityType")
         public String commodityType;
 
-        /**
-         * <p>Details about the orders.</p>
-         */
         @NameInMap("OrderList")
         public java.util.List<ListEffectiveOrdersResponseBodyOrderSummaryOrderList> orderList;
 
-        /**
-         * <p>The sum of the number of instances that you can use DMS to manage in all orders.</p>
-         */
         @NameInMap("TotalQuota")
         public Integer totalQuota;
 
-        /**
-         * <p>The control mode of DMS. Valid values:</p>
-         * <br>
-         * <p>*   **stand**: Stable Change</p>
-         * <p>*   **safety**: Security Collaboration</p>
-         */
         @NameInMap("VersionType")
         public String versionType;
 

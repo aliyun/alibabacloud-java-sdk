@@ -11,25 +11,30 @@ public class CreateDataImportOrderShrinkRequest extends TeaModel {
     public String attachmentKey;
 
     /**
-     * <p>The purpose or objective of the data import. This parameter is used to help reduce unnecessary communication.</p>
+     * <p>The operation that you want to perform. Set the value to CreateDataImportOrder.</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
-     * <p>The parameters of the ticket.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
      */
     @NameInMap("Param")
     public String paramShrink;
 
     /**
-     * <p>The stakeholders of the data import. All stakeholders can view the ticket details and assist in the approval process. Irrelevant users other than DMS administrators and database administrators (DBAs) are not allowed to view the ticket details.</p>
+     * <p>Specifies whether the database is a logical database. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The database is a logical database.</p>
+     * <p>*   **false**: The database is a physical database.</p>
+     * <br>
+     * <p>>  If you set this parameter to **true**, the database that you specify must be a logical database.</p>
      */
     @NameInMap("RelatedUserList")
     public String relatedUserListShrink;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
+     * <p>The ID of the ticket.</p>
      */
     @NameInMap("Tid")
     public Long tid;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListStandardGroupsRequest extends TeaModel {
     /**
-     * <p>The ID of the tenant.</p>
+     * <p>The error code returned if the request fails.</p>
      */
     @NameInMap("Tid")
     public Long tid;

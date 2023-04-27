@@ -5,21 +5,45 @@ import com.aliyun.tea.*;
 
 public class UpdateTaskOutputRequest extends TeaModel {
     /**
-     * <p>The ID of the node. You can call the [GetTaskInstanceRelation](~~424711~~) operation to query the node ID.</p>
+     * <p>## Single-instance SQL assignment</p>
+     * <br>
+     * <p>- Example of NodeOutput:```</p>
+     * <p>Variable extraction settings</p>
+     * <p>             </p>
+     * <p>                "row":0, // Rows. -1 indicates all rows.</p>
+     * <p>                "column":-1, // Columns. -1 indicates all columns.</p>
+     * <p>                 </p>
+     * <p>                Delimiter</p>
+     * <p>                If you select all rows or columns, you must specify a connector. The returned value of the variable is a string.</p>
+     * <p>                 </p>
+     * <p>                  </p>
+     * <p>             </p>
+     * <p>             </p>
+     * <p>              </p>
+     * <p>            "variableName":"var", // Variable name</p>
+     * <p>            "description":"For demo" // Variable description</p>
+     * <p>```</p>
+     * <br>
+     * <br>
+     * <p>## Script code /ECS remote command</p>
+     * <br>
+     * <p>- Example of NodeOutput:```</p>
+     * <p>"extractMethod":"json", // JSON</p>
+     * <p>            "variableName":"var", // Variable name</p>
+     * <p>            "description":"demo desc" // Variable description</p>
+     * <p>```</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
 
     /**
-     * <p>The output variables for the task.</p>
+     * <p>Updates the output variables for a specified task node.</p>
      */
     @NameInMap("NodeOutput")
     public String nodeOutput;
 
     /**
-     * <p>The ID of the tenant.</p>
-     * <br>
-     * <p>>  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).</p>
+     * <p>The operation that you want to perform. Set the value to **UpdateTaskOutput**.</p>
      */
     @NameInMap("Tid")
     public Long tid;

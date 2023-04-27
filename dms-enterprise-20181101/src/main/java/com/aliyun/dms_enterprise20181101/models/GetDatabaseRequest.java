@@ -5,33 +5,31 @@ import com.aliyun.tea.*;
 
 public class GetDatabaseRequest extends TeaModel {
     /**
-     * <p>The endpoint that is used to connect to the database.</p>
+     * <p>The error code.</p>
      */
     @NameInMap("Host")
     public String host;
 
     /**
-     * <p>The port that is used to connect to the database.</p>
+     * <p>The name of the catalog to which the database belongs.</p>
      */
     @NameInMap("Port")
     public Integer port;
 
     /**
-     * <p>The name of the database.</p>
+     * <p>The details of the database.</p>
      */
     @NameInMap("SchemaName")
     public String schemaName;
 
     /**
-     * <p>The system identifier (SID) of the database.</p>
-     * <br>
-     * <p>>  The SID uniquely identifies an Oracle database. After a database is created, a SID is generated for the database.</p>
+     * <p>The operation that you want to perform. Set the value to **GetDatabase**.</p>
      */
     @NameInMap("Sid")
     public String sid;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the ID of the tenant.</p>
+     * <p>The ID of the database.</p>
      */
     @NameInMap("Tid")
     public Long tid;

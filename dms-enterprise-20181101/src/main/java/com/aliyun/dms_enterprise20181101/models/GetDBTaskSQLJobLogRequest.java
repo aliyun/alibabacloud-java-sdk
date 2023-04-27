@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetDBTaskSQLJobLogRequest extends TeaModel {
     /**
-     * <p>The ID of the SQL task. You can call the [ListDBTaskSQLJob](~~207049~~) operation to query the ID of the SQL task.</p>
+     * <p>The log that records the scheduling details.</p>
      */
     @NameInMap("JobId")
     public Long jobId;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.</p>
+     * <p>The error code returned.</p>
      */
     @NameInMap("Tid")
     public Long tid;

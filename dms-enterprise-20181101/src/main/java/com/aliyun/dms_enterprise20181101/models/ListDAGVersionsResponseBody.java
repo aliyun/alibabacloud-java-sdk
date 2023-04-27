@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDAGVersionsResponseBody extends TeaModel {
     /**
-     * <p>The information about the published versions.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
      */
     @NameInMap("DagVersionList")
     public ListDAGVersionsResponseBodyDagVersionList dagVersionList;
 
     /**
-     * <p>The error code returned if the request fails.</p>
+     * <p>The information about the published versions.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -23,22 +23,19 @@ public class ListDAGVersionsResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The operation that you want to perform. Set the value to **ListDAGVersions**.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request is successful.</p>
-     * <p>*   **false**: The request fails.</p>
+     * <p>The ID of the version.</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to obtain the ID of the task flow.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -98,38 +95,29 @@ public class ListDAGVersionsResponseBody extends TeaModel {
 
     public static class ListDAGVersionsResponseBodyDagVersionListDagVersion extends TeaModel {
         /**
-         * <p>The name of the task flow.</p>
+         * <p>The name of the task flow owner.</p>
          */
         @NameInMap("DagName")
         public String dagName;
 
         /**
-         * <p>The ID of the task flow owner.</p>
+         * <p>The name of the task flow.</p>
          */
         @NameInMap("DagOwnerId")
         public String dagOwnerId;
 
         /**
-         * <p>The name of the task flow owner.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("DagOwnerNickName")
         public String dagOwnerNickName;
 
-        /**
-         * <p>The ID of the previously published version.</p>
-         */
         @NameInMap("LastVersionId")
         public Long lastVersionId;
 
-        /**
-         * <p>The description of the version.</p>
-         */
         @NameInMap("VersionComments")
         public String versionComments;
 
-        /**
-         * <p>The ID of the version.</p>
-         */
         @NameInMap("VersionId")
         public Long versionId;
 

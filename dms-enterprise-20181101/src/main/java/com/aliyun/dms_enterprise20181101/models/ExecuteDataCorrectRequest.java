@@ -5,6 +5,18 @@ import com.aliyun.tea.*;
 
 public class ExecuteDataCorrectRequest extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     */
+    @NameInMap("ActionDetail")
+    public java.util.Map<String, ?> actionDetail;
+
+    /**
+     * <p>The error code.</p>
+     */
+    @NameInMap("OrderId")
+    public Long orderId;
+
+    /**
      * <p>The parameters that are required to perform the data change.</p>
      * <br>
      * <p>```</p>
@@ -17,18 +29,6 @@ public class ExecuteDataCorrectRequest extends TeaModel {
      * <p>    "backupData" : true // Specify whether to back up data. </p>
      * <p>  }</p>
      * <p>```</p>
-     */
-    @NameInMap("ActionDetail")
-    public java.util.Map<String, ?> actionDetail;
-
-    /**
-     * <p>The ID of the ticket. You can call the [ListOrders](~~144643~~) operation to query the ID of the ticket.</p>
-     */
-    @NameInMap("OrderId")
-    public Long orderId;
-
-    /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.</p>
      */
     @NameInMap("Tid")
     public String tid;

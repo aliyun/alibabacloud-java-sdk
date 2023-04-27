@@ -4,36 +4,18 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateLogicDatabaseResponseBody extends TeaModel {
-    /**
-     * <p>The error code.</p>
-     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    /**
-     * <p>The error message.</p>
-     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The ID of the logical database.</p>
-     */
     @NameInMap("LogicDbId")
     public Long logicDbId;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>- true: The request is successful.</p>
-     * <p>- false: The request fails.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 

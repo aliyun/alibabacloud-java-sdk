@@ -5,29 +5,20 @@ import com.aliyun.tea.*;
 
 public class AddLogicTableRouteConfigResponseBody extends TeaModel {
     /**
-     * <p>The error code returned.</p>
+     * <p>WB01220210</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    /**
-     * <p>The error message returned.</p>
-     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>AddLogicTableRouteConfig</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>- **true**: The request was successful.</p>
-     * <p>- **false**: The request failed.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 

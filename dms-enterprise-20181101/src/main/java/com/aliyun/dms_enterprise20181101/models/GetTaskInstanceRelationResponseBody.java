@@ -5,34 +5,38 @@ import com.aliyun.tea.*;
 
 public class GetTaskInstanceRelationResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the request fails.</p>
+     * <p>The operation that you want to perform. Set the value to **GetTaskInstanceRelation**.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned if the request fails.</p>
+     * <p>The status of the node. Valid values:</p>
+     * <br>
+     * <p>*   **0**: The node is waiting to be scheduled.</p>
+     * <p>*   **1**: The node is running.</p>
+     * <p>*   **2**: The node is suspended.</p>
+     * <p>*   **3**: The node failed to run.</p>
+     * <p>*   **4**: The node is run.</p>
+     * <p>*   **5**: The node is complete.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The information about the nodes in the execution record of the task flow.</p>
+     * <p>The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to obtain the ID of the task flow.</p>
      */
     @NameInMap("NodeList")
     public GetTaskInstanceRelationResponseBodyNodeList nodeList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The error code returned if the request fails.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request is successful.</p>
-     * <p>*   **false**: The request fails.</p>
+     * <p>The error message returned if the request fails.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -84,32 +88,23 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
 
     public static class GetTaskInstanceRelationResponseBodyNodeListNode extends TeaModel {
         /**
-         * <p>The business time of the node.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("BusinessTime")
         public String businessTime;
 
-        /**
-         * <p>The time when the execution of the task flow was complete. The time is displayed in the yyyy-MM-DD HH:mm:ss format.</p>
-         */
         @NameInMap("EndTime")
         public String endTime;
 
-        /**
-         * <p>The amount of time consumed for running the node. Unit: milliseconds.</p>
-         */
         @NameInMap("ExecuteTime")
         public Long executeTime;
 
         /**
-         * <p>The ID of the execution record of the task flow.</p>
+         * <p>The name of the node.</p>
          */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <p>The description of the task.</p>
-         */
         @NameInMap("Message")
         public String message;
 
@@ -120,26 +115,19 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
         public Long nodeId;
 
         /**
-         * <p>The name of the node.</p>
+         * <p>The information about the nodes in the execution record of the task flow.</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
-         * <p>The type of the node. For more information about the valid values for this parameter, see [NodeType parameter](~~424705~~).</p>
+         * <p>The ID of the execution record of the task flow.</p>
          */
         @NameInMap("NodeType")
         public Integer nodeType;
 
         /**
-         * <p>The status of the node. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The node is waiting to be scheduled.</p>
-         * <p>*   **1**: The node is running.</p>
-         * <p>*   **2**: The node is suspended.</p>
-         * <p>*   **3**: The node failed to run.</p>
-         * <p>*   **4**: The node is run.</p>
-         * <p>*   **5**: The node is complete.</p>
+         * <p>The type of the node. For more information about the valid values for this parameter, see [NodeType parameter](~~424705~~).</p>
          */
         @NameInMap("Status")
         public Integer status;

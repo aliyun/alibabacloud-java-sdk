@@ -5,40 +5,53 @@ import com.aliyun.tea.*;
 
 public class ListUserPermissionsResponseBody extends TeaModel {
     /**
-     * <p>The error code.</p>
+     * <p>The ID of the user. You can call the [GetUser](~~147098~~) or [ListUsers](~~141938~~) operation to query the ID of the user.</p>
+     * <br>
+     * <p>>  The user ID is different from the ID of your Alibaba Cloud account.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The type of the environment to which the database belongs. Valid values:</p>
+     * <br>
+     * <p>*   product: production environment</p>
+     * <p>*   dev: development environment</p>
+     * <p>*   pre: staging environment</p>
+     * <p>*   test: test environment</p>
+     * <p>*   sit: SIT environment</p>
+     * <p>*   uat: user acceptance testing (UAT) environment</p>
+     * <p>*   pet: stress testing environment</p>
+     * <p>*   stag: STAG environment</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The details of the permissions that the user has.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>- true: The request is successful.</p>
-     * <p>- false: The request fails.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The total number of entries that meet the query conditions.</p>
+     * <p>The permissions on a specific type of resources that you want to query. Valid values:</p>
+     * <br>
+     * <p>*   DATABASE: permissions on databases</p>
+     * <p>*   TABLE: permissions on tables</p>
+     * <p>*   COLUMN: permissions on fields</p>
+     * <p>*   INSTANCE: permissions on instances</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
 
     /**
-     * <p>The details of the permissions that the user has.</p>
+     * <p>Indicates whether the database is a logical database. Valid values:</p>
+     * <br>
+     * <p>*   true: The database is a logical database.</p>
+     * <p>*   false: The database is a physical database.</p>
      */
     @NameInMap("UserPermissions")
     public ListUserPermissionsResponseBodyUserPermissions userPermissions;
@@ -97,29 +110,17 @@ public class ListUserPermissionsResponseBody extends TeaModel {
     }
 
     public static class ListUserPermissionsResponseBodyUserPermissionsUserPermissionPermDetailsPermDetail extends TeaModel {
-        /**
-         * <p>The time when the permissions were granted.</p>
-         */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
-         * <p>The time when the permissions expire.</p>
+         * <p>Queries the permissions of a specific user on a database or a table.</p>
          */
         @NameInMap("ExpireDate")
         public String expireDate;
 
-        /**
-         * <p>This parameter is reserved.</p>
-         */
         @NameInMap("ExtraData")
         public String extraData;
-
-        /**
-         * <p>The user who grants the permissions.</p>
-         */
-        @NameInMap("OriginFrom")
-        public String originFrom;
 
         /**
          * <p>The type of the permissions. Valid values:</p>
@@ -128,12 +129,15 @@ public class ListUserPermissionsResponseBody extends TeaModel {
          * <p>*   EXPORT: the export permissions</p>
          * <p>*   CORRECT: the change permissions</p>
          */
+        @NameInMap("OriginFrom")
+        public String originFrom;
+
+        /**
+         * <p>The ID of the request.</p>
+         */
         @NameInMap("PermType")
         public String permType;
 
-        /**
-         * <p>The ID of the authorization record.</p>
-         */
         @NameInMap("UserAccessId")
         public String userAccessId;
 
@@ -212,121 +216,77 @@ public class ListUserPermissionsResponseBody extends TeaModel {
     }
 
     public static class ListUserPermissionsResponseBodyUserPermissionsUserPermission extends TeaModel {
-        /**
-         * <p>The alias of the instance.</p>
-         */
         @NameInMap("Alias")
         public String alias;
 
-        /**
-         * <p>The name of the field.</p>
-         */
         @NameInMap("ColumnName")
         public String columnName;
 
         /**
-         * <p>The ID of the database.</p>
+         * <p>The user who grants the permissions.</p>
          */
         @NameInMap("DbId")
         public String dbId;
 
-        /**
-         * <p>The type of the database. For more information about the valid values of this parameter, see [DbType parameter](https://www.alibabacloud.com/help/en/data-management-service/latest/dbtype-parameter).</p>
-         */
         @NameInMap("DbType")
         public String dbType;
 
-        /**
-         * <p>The permissions on a specific type of objects that are granted to the user. Valid values: </p>
-         * <br>
-         * <p>- DATABASE: permissions on physical databases</p>
-         * <p>- LOGIC_DATABASE: permissions on logical databases</p>
-         * <p>- TABLE: permissions on physical tables</p>
-         * <p>- LOGIC_TABLE: permissions on logical tables</p>
-         */
         @NameInMap("DsType")
         public String dsType;
 
-        /**
-         * <p>The type of the environment to which the database belongs. Valid values:</p>
-         * <br>
-         * <p>- product: production environment</p>
-         * <p>- dev: development environment</p>
-         * <p>- pre: staging environment</p>
-         * <p>- test: test environment</p>
-         * <p>- sit: SIT environment</p>
-         * <p>- uat: UAT environment</p>
-         * <p>- pet: stress testing environment</p>
-         * <p>- stag: STAG environment</p>
-         */
         @NameInMap("EnvType")
         public String envType;
 
-        /**
-         * <p>The endpoint that is used to connect the database.</p>
-         */
         @NameInMap("Host")
         public String host;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The details of permissions.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>Indicates whether the database is a logical database. Valid values:</p>
-         * <br>
-         * <p>*   true: The database is a logical database.</p>
-         * <p>*   false: The database is a physical database.</p>
+         * <p>The number of the page to return.</p>
          */
         @NameInMap("Logic")
         public Boolean logic;
 
         /**
-         * <p>The details of permissions.</p>
+         * <p>The name of the database.</p>
          */
         @NameInMap("PermDetails")
         public ListUserPermissionsResponseBodyUserPermissionsUserPermissionPermDetails permDetails;
 
-        /**
-         * <p>The port that is used to connect to the instance.</p>
-         */
         @NameInMap("Port")
         public Long port;
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The error message.</p>
          */
         @NameInMap("SchemaName")
         public String schemaName;
 
-        /**
-         * <p>The name that is used to search for the database.</p>
-         */
         @NameInMap("SearchName")
         public String searchName;
 
-        /**
-         * <p>The ID of the table.</p>
-         */
         @NameInMap("TableId")
         public String tableId;
 
         /**
-         * <p>The name of the table.</p>
+         * <p>The ID of the instance.</p>
          */
         @NameInMap("TableName")
         public String tableName;
 
         /**
-         * <p>The ID of the user.</p>
+         * <p>The name of the database.</p>
          */
         @NameInMap("UserId")
         public String userId;
 
         /**
-         * <p>The nickname of the user.</p>
+         * <p>The ID of the user.</p>
          */
         @NameInMap("UserNickName")
         public String userNickName;
