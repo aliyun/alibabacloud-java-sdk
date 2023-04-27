@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteHubClusterResponseBody extends TeaModel {
     /**
-     * <p>The ID of the master instance.</p>
+     * <p>The ID of the cluster.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -17,7 +17,7 @@ public class DeleteHubClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the master instance.</p>
+     * <p>The ID of the job.</p>
      */
     @NameInMap("TaskId")
     public String taskId;
