@@ -7,6 +7,9 @@ public class BeginSessionResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>静默超时时间</p>
+     */
     @NameInMap("SilenceReplyTimeout")
     public Integer silenceReplyTimeout;
 

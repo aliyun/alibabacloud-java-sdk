@@ -19,6 +19,9 @@ public class ChatShrinkRequest extends TeaModel {
     @NameInMap("Perspective")
     public String perspectiveShrink;
 
+    @NameInMap("SandBox")
+    public Boolean sandBox;
+
     @NameInMap("SenderId")
     public String senderId;
 
@@ -77,6 +80,14 @@ public class ChatShrinkRequest extends TeaModel {
     }
     public String getPerspectiveShrink() {
         return this.perspectiveShrink;
+    }
+
+    public ChatShrinkRequest setSandBox(Boolean sandBox) {
+        this.sandBox = sandBox;
+        return this;
+    }
+    public Boolean getSandBox() {
+        return this.sandBox;
     }
 
     public ChatShrinkRequest setSenderId(String senderId) {

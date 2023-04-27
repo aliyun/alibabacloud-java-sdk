@@ -19,6 +19,9 @@ public class ChatRequest extends TeaModel {
     @NameInMap("Perspective")
     public java.util.List<String> perspective;
 
+    @NameInMap("SandBox")
+    public Boolean sandBox;
+
     @NameInMap("SenderId")
     public String senderId;
 
@@ -77,6 +80,14 @@ public class ChatRequest extends TeaModel {
     }
     public java.util.List<String> getPerspective() {
         return this.perspective;
+    }
+
+    public ChatRequest setSandBox(Boolean sandBox) {
+        this.sandBox = sandBox;
+        return this;
+    }
+    public Boolean getSandBox() {
+        return this.sandBox;
     }
 
     public ChatRequest setSenderId(String senderId) {

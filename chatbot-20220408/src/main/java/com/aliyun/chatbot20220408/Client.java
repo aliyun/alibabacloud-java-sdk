@@ -213,6 +213,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Perspective", request.perspectiveShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sandBox)) {
+            query.put("SandBox", request.sandBox);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.senderId)) {
             query.put("SenderId", request.senderId);
         }
