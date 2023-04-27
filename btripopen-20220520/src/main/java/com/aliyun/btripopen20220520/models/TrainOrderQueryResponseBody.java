@@ -344,9 +344,15 @@ public class TrainOrderQueryResponseBody extends TeaModel {
         @NameInMap("depart_name")
         public String departName;
 
+        /**
+         * <p>火车票超标审批id</p>
+         */
         @NameInMap("exceed_apply_id")
         public String exceedApplyId;
 
+        /**
+         * <p>火车票超标审批三方id</p>
+         */
         @NameInMap("exceed_third_part_apply_id")
         public String exceedThirdPartApplyId;
 

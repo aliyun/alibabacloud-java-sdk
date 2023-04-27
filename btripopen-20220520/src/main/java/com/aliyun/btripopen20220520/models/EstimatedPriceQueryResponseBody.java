@@ -274,9 +274,6 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
         @NameInMap("arr_date")
         public Long arrDate;
 
-        /**
-         * <p>cheapest</p>
-         */
         @NameInMap("cheapest")
         public EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutesCheapest cheapest;
 
@@ -444,6 +441,9 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
         @NameInMap("hotel_fee_detail")
         public java.util.List<EstimatedPriceQueryResponseBodyModuleHotelFeeDetail> hotelFeeDetail;
 
+        /**
+         * <p>酒店费用总额，单位为元</p>
+         */
         @NameInMap("total_hotel_fee")
         public Long totalHotelFee;
 

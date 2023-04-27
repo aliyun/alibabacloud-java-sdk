@@ -82,39 +82,75 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
     }
 
     public static class FlightItineraryScanQueryResponseBodyModuleItemsFlights extends TeaModel {
+        /**
+         * <p>航班至</p>
+         */
         @NameInMap("arrival_station")
         public String arrivalStation;
 
+        /**
+         * <p>座位等级</p>
+         */
         @NameInMap("cabin_class")
         public String cabinClass;
 
+        /**
+         * <p>承运人</p>
+         */
         @NameInMap("carrier")
         public String carrier;
 
+        /**
+         * <p>航班从</p>
+         */
         @NameInMap("departure_station")
         public String departureStation;
 
+        /**
+         * <p>日期</p>
+         */
         @NameInMap("flight_date")
         public String flightDate;
 
+        /**
+         * <p>航班号</p>
+         */
         @NameInMap("flight_number")
         public String flightNumber;
 
+        /**
+         * <p>时间</p>
+         */
         @NameInMap("flight_time")
         public String flightTime;
 
+        /**
+         * <p>免费行李</p>
+         */
         @NameInMap("free_baggage_allowance")
         public String freeBaggageAllowance;
 
+        /**
+         * <p>行号</p>
+         */
         @NameInMap("index")
         public String index;
 
+        /**
+         * <p>客票级别</p>
+         */
         @NameInMap("seat_class")
         public String seatClass;
 
+        /**
+         * <p>客票生效日期</p>
+         */
         @NameInMap("valid_from_date")
         public String validFromDate;
 
+        /**
+         * <p>有效截止日期</p>
+         */
         @NameInMap("valid_to_date")
         public String validToDate;
 
@@ -222,6 +258,9 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
     }
 
     public static class FlightItineraryScanQueryResponseBodyModuleItems extends TeaModel {
+        /**
+         * <p>销售单位代号</p>
+         */
         @NameInMap("agent_code")
         public String agentCode;
 
@@ -237,12 +276,18 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         @NameInMap("department")
         public String department;
 
+        /**
+         * <p>机票行程明细</p>
+         */
         @NameInMap("flights")
         public java.util.List<FlightItineraryScanQueryResponseBodyModuleItemsFlights> flights;
 
         @NameInMap("fuel_surcharge")
         public String fuelSurcharge;
 
+        /**
+         * <p>UK</p>
+         */
         @NameInMap("id")
         public String id;
 
@@ -252,9 +297,15 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         @NameInMap("invoice_title")
         public String invoiceTitle;
 
+        /**
+         * <p>填开单位</p>
+         */
         @NameInMap("issue_company")
         public String issueCompany;
 
+        /**
+         * <p>填开日期</p>
+         */
         @NameInMap("issue_date")
         public String issueDate;
 
@@ -273,6 +324,9 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         @NameInMap("project")
         public String project;
 
+        /**
+         * <p>提示信息</p>
+         */
         @NameInMap("prompt_message")
         public String promptMessage;
 
@@ -291,6 +345,9 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         @NameInMap("total_price")
         public String totalPrice;
 
+        /**
+         * <p>验证码</p>
+         */
         @NameInMap("validation_code")
         public String validationCode;
 
