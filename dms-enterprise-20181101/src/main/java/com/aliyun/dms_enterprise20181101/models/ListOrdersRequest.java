@@ -5,10 +5,28 @@ import com.aliyun.tea.*;
 
 public class ListOrdersRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query.</p>
+     * <p>The user who submitted the ticket.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
+
+    /**
+     * <p>The end of the time range to query.</p>
+     */
+    @NameInMap("OrderResultType")
+    public String orderResultType;
+
+    /**
+     * <p>The type of the tickets that you want to query. For more information, see [PluginType parameter](~~429109~~).</p>
+     */
+    @NameInMap("OrderStatus")
+    public String orderStatus;
+
+    /**
+     * <p>The keyword that is used to query tickets.</p>
+     */
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     /**
      * <p>The scope of the tickets that you want to query. Valid values:</p>
@@ -19,8 +37,14 @@ public class ListOrdersRequest extends TeaModel {
      * <p>*   **AS_OWNER**: the tickets that are processed by the current user.</p>
      * <p>*   **AS_Related**: the tickets that are related to the current user.</p>
      */
-    @NameInMap("OrderResultType")
-    public String orderResultType;
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    /**
+     * <p>The ID of the user who submitted the ticket.</p>
+     */
+    @NameInMap("PluginType")
+    public String pluginType;
 
     /**
      * <p>The status of the tickets that you want to query. Valid values:</p>
@@ -29,50 +53,23 @@ public class ListOrdersRequest extends TeaModel {
      * <p>*   **FINISHED**: queries the tickets that are completed.</p>
      * <p>*   **RUNNING**: queries the tickets that are being processed.</p>
      */
-    @NameInMap("OrderStatus")
-    public String orderStatus;
-
-    /**
-     * <p>The number of the page to return.</p>
-     */
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    /**
-     * <p>The number of entries to return on each page.</p>
-     */
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    /**
-     * <p>The type of the tickets that you want to query. For more information, see [PluginType parameter](~~429109~~).</p>
-     */
-    @NameInMap("PluginType")
-    public String pluginType;
-
-    /**
-     * <p>The keyword that is used to query tickets.</p>
-     */
     @NameInMap("SearchContent")
     public String searchContent;
 
     /**
-     * <p>The time condition based on which you want to query tickets. Valid values:</p>
-     * <br>
-     * <p>*   **CREATE_TIME**: the time when a ticket was created.</p>
-     * <p>*   **MODIFY_TIME**: the time when a ticket was last modified.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
      */
     @NameInMap("SearchDateType")
     public String searchDateType;
 
     /**
-     * <p>The beginning of the time range to query.</p>
+     * <p>The remarks of the ticket.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
+     * <p>The beginning of the time range to query.</p>
      */
     @NameInMap("Tid")
     public Long tid;

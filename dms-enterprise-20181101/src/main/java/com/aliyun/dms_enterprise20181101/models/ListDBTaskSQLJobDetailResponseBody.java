@@ -5,41 +5,35 @@ import com.aliyun.tea.*;
 
 public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
     /**
-     * <p>The details of SQL tasks.</p>
+     * <p>The point in time when the SQL task ended.</p>
      */
     @NameInMap("DBTaskSQLJobDetailList")
     public java.util.List<ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList> DBTaskSQLJobDetailList;
 
     /**
-     * <p>The error code that is returned.</p>
+     * <p>The type of the SQL statement, such as DELETE, UPDATE, or ALTER_TABLE.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message that is returned.</p>
+     * <p>The ID of the SQL task. You can call the [ListDBTaskSQLJob](~~207049~~) operation to query the SQL task ID.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The operation that you want to perform. Set the value to **ListDBTaskSQLJobDetail**.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request is successful.</p>
-     * <p>*   **false**: The request fails.</p>
+     * <p>The SQL statement that was executed in the SQL task.</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
-    /**
-     * <p>The total number of SQL tasks.</p>
-     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -97,44 +91,41 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
     }
 
     public static class ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList extends TeaModel {
-        /**
-         * <p>The number of rows affected by the SQL task.</p>
-         */
         @NameInMap("AffectRows")
         public Long affectRows;
 
         /**
-         * <p>The SQL statement that was executed in the SQL task.</p>
+         * <p>The duration of the SQL task. Unit: milliseconds.</p>
          */
         @NameInMap("CurrentSql")
         public String currentSql;
 
         /**
-         * <p>The ID of the physical database.</p>
+         * <p>The number of entries to return on each page.</p>
          */
         @NameInMap("DbId")
         public Long dbId;
 
         /**
-         * <p>The point in time when the SQL task ended.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
-         * <p>The number of times that the SQL statement was executed.</p>
+         * <p>The point in time when the SQL task started.</p>
          */
         @NameInMap("ExecuteCount")
         public Long executeCount;
 
         /**
-         * <p>The ID of the details of the SQL task.</p>
+         * <p>The ID of the SQL task.</p>
          */
         @NameInMap("JobDetailId")
         public Long jobDetailId;
 
         /**
-         * <p>The ID of the SQL task.</p>
+         * <p>The number of the page to return.</p>
          */
         @NameInMap("JobId")
         public Long jobId;
@@ -146,13 +137,28 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
         public String log;
 
         /**
-         * <p>Indicates whether the database is a logical database. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The database is a logical database.</p>
-         * <p>*   **false**: The database is a physical database.</p>
+         * <p>The details of SQL tasks.</p>
          */
         @NameInMap("Logic")
         public Boolean logic;
+
+        /**
+         * <p>The error message that is returned.</p>
+         */
+        @NameInMap("Skip")
+        public Boolean skip;
+
+        /**
+         * <p>The ID of the details of the SQL task.</p>
+         */
+        @NameInMap("SqlType")
+        public String sqlType;
+
+        /**
+         * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.</p>
+         */
+        @NameInMap("StartTime")
+        public String startTime;
 
         /**
          * <p>Indicates whether the SQL statement was skipped. Valid values:</p>
@@ -160,39 +166,9 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
          * <p>*   **true**: The SQL statement was skipped.</p>
          * <p>*   **false**: The SQL statement was not skipped.</p>
          */
-        @NameInMap("Skip")
-        public Boolean skip;
-
-        /**
-         * <p>The type of the SQL statement, such as DELETE, UPDATE, or ALTER_TABLE.</p>
-         */
-        @NameInMap("SqlType")
-        public String sqlType;
-
-        /**
-         * <p>The point in time when the SQL task started.</p>
-         */
-        @NameInMap("StartTime")
-        public String startTime;
-
-        /**
-         * <p>The status of the SQL task. Valid values:</p>
-         * <br>
-         * <p>*   **INIT**: The SQL task was initialized.</p>
-         * <p>*   **PENDING**: The SQL task waited to be run.</p>
-         * <p>*   **BE_SCHEDULED**: The SQL task waited to be scheduled.</p>
-         * <p>*   **FAIL**: The SQL task failed.</p>
-         * <p>*   **SUCCESS**: The SQL task was successful.</p>
-         * <p>*   **PAUSE**: The SQL task was paused.</p>
-         * <p>*   **DELETE**: The SQL task was deleted.</p>
-         * <p>*   **RUNNING**: The SQL task was being run.</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The duration of the SQL task. Unit: milliseconds.</p>
-         */
         @NameInMap("TimeDelay")
         public Long timeDelay;
 

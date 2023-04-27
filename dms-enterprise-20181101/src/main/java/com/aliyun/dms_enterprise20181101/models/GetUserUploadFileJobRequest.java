@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetUserUploadFileJobRequest extends TeaModel {
     /**
-     * <p>The key of the file upload task. You can call the [CreateUploadFileJob](~~206059~~) or [CreateUploadOSSFileJob](~~206060~~) operation to query the key.</p>
+     * <p>The method used to upload the file. Valid values:</p>
+     * <br>
+     * <p>*   **URL**</p>
+     * <p>*   **OSS**</p>
      */
     @NameInMap("JobKey")
     public String jobKey;

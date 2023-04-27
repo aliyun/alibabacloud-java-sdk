@@ -4,37 +4,26 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateUploadFileJobResponseBody extends TeaModel {
-    /**
-     * <p>The error code returned.</p>
-     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The operation that you want to perform. Set the value to **CreateUploadFileJob**.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The key of the task.</p>
-     * <br>
-     * <p>>  You can call the [GetUserUploadFileJob](~~206069~~) operation to query the progress and details of the task.</p>
-     */
     @NameInMap("JobKey")
     public String jobKey;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The error code returned.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("Success")
     public Boolean success;

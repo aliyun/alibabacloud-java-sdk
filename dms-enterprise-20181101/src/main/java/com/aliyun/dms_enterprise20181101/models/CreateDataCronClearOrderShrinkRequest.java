@@ -5,35 +5,36 @@ import com.aliyun.tea.*;
 
 public class CreateDataCronClearOrderShrinkRequest extends TeaModel {
     /**
-     * <p>The key of the attachment for the ticket. The attachment provides more instructions for this operation.</p>
-     * <br>
-     * <p>You can call the [GetUserUploadFileJob](~~206069~~) operation to query the key of the attachment.</p>
+     * <p>The ID of the ticket.</p>
      */
     @NameInMap("AttachmentKey")
     public String attachmentKey;
 
     /**
-     * <p>The purpose or objective of the data change. This reduces unnecessary communication.</p>
+     * <p>Indicates whether the database is a logical database. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The database is a logical database.</p>
+     * <p>*   **false**: The database is not a logical database.</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
-     * <p>The parameters of the ticket.</p>
+     * <p>The databases for which you want to clear historical data.</p>
      */
     @NameInMap("Param")
     public String paramShrink;
 
     /**
-     * <p>The stakeholders of this operation. All stakeholders can view the ticket details and assist in the approval process. Irrelevant users other than Data Management (DMS) administrators and database administrators (DBAs) are not allowed to view the ticket details.</p>
+     * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>>  The ID of the tenant is displayed when you move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the [View information about the current tenant](~~181330~~) section of the Manage DMS tenants topic.</p>
      */
     @NameInMap("RelatedUserList")
     public String relatedUserListShrink;
 
     /**
-     * <p>The ID of the tenant.</p>
-     * <br>
-     * <p>>  The ID of the tenant is displayed when you move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the [View information about the current tenant](~~181330~~) section of the Manage DMS tenants topic.</p>
+     * <p>The reason for the data change.</p>
      */
     @NameInMap("Tid")
     public Long tid;

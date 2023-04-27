@@ -5,29 +5,26 @@ import com.aliyun.tea.*;
 
 public class ApproveOrderResponseBody extends TeaModel {
     /**
-     * <p>The error code returned.</p>
-     */
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    /**
-     * <p>The error message returned.</p>
-     */
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    /**
-     * <p>The ID of the request.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
-
-    /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
      * <p>*   **true**: The request was successful.</p>
      * <p>*   **false**: The request failed.</p>
      */
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    /**
+     * <p>The error code returned.</p>
+     */
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    /**
+     * <p>The error message returned.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Success")
     public Boolean success;
 

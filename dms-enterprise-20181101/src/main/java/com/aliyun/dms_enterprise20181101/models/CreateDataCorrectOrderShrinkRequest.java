@@ -5,31 +5,34 @@ import com.aliyun.tea.*;
 
 public class CreateDataCorrectOrderShrinkRequest extends TeaModel {
     /**
-     * <p>The key of the attachment that provides more instructions for the ticket. You can call the [GetUserUploadFileJob](~~206069~~) operation to obtain the attachment key from the value of the AttachmentKey parameter.</p>
+     * <p>The ID of the ticket.</p>
      */
     @NameInMap("AttachmentKey")
     public String attachmentKey;
 
     /**
-     * <p>The purpose or objective of the data change. This parameter is used to help reduce unnecessary communication.</p>
+     * <p>Specifies whether the database is a logical database. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The database is a logical database.</p>
+     * <p>*   **false**: The database is a physical database.</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
-     * <p>The parameters of the ticket.</p>
+     * <p>The databases in which you want to change data.</p>
      */
     @NameInMap("Param")
     public String paramShrink;
 
     /**
-     * <p>The stakeholders of the data change. All stakeholders can view the ticket details and assist in the approval process. Irrelevant users other than DMS administrators and database administrators (DBAs) are not allowed to view the ticket details.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
      */
     @NameInMap("RelatedUserList")
     public String relatedUserListShrink;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
+     * <p>The estimated number of data rows to be affected by the data change.</p>
      */
     @NameInMap("Tid")
     public Long tid;

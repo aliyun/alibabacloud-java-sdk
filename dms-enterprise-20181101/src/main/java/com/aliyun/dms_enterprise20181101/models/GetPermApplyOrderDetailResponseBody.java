@@ -4,33 +4,18 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetPermApplyOrderDetailResponseBody extends TeaModel {
-    /**
-     * <p>The error code returned if the request failed.</p>
-     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    /**
-     * <p>The error message returned if the request failed.</p>
-     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The details of the permission application ticket.</p>
-     */
     @NameInMap("PermApplyOrderDetail")
     public GetPermApplyOrderDetailResponseBodyPermApplyOrderDetail permApplyOrderDetail;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request is successful.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -80,15 +65,9 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesColumnInfo extends TeaModel {
-        /**
-         * <p>The name of the column.</p>
-         */
         @NameInMap("ColumnName")
         public String columnName;
 
-        /**
-         * <p>The name of the table.</p>
-         */
         @NameInMap("TableName")
         public String tableName;
 
@@ -116,48 +95,24 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesDatabaseInfo extends TeaModel {
-        /**
-         * <p>The ID of the database.</p>
-         */
         @NameInMap("DbId")
         public Long dbId;
 
-        /**
-         * <p>The type of the database engine.</p>
-         */
         @NameInMap("DbType")
         public String dbType;
 
-        /**
-         * <p>The type of the environment to which the instance belongs. For more information, see [Change the environment type of an instance](~~163309~~).</p>
-         */
         @NameInMap("EnvType")
         public String envType;
 
-        /**
-         * <p>Indicates whether the database is a logical database. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The database is a logical database.</p>
-         * <p>*   **false**: The database is not a logical database.</p>
-         */
         @NameInMap("Logic")
         public Boolean logic;
 
-        /**
-         * <p>The IDs of the owners of the database.</p>
-         */
         @NameInMap("OwnerIds")
         public java.util.List<Long> ownerIds;
 
-        /**
-         * <p>The nicknames of the owners of the database.</p>
-         */
         @NameInMap("OwnerNickNames")
         public java.util.List<String> ownerNickNames;
 
-        /**
-         * <p>The name that is used to search for the database.</p>
-         */
         @NameInMap("SearchName")
         public String searchName;
 
@@ -225,63 +180,33 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesInstanceInfo extends TeaModel {
-        /**
-         * <p>The type of the database engine.</p>
-         */
         @NameInMap("DbType")
         public String dbType;
 
-        /**
-         * <p>The ID of the database administrator (DBA) of the instance.</p>
-         */
         @NameInMap("DbaId")
         public Long dbaId;
 
-        /**
-         * <p>The nickname of the DBA of the instance.</p>
-         */
         @NameInMap("DbaNickName")
         public String dbaNickName;
 
-        /**
-         * <p>The type of the environment to which the instance belongs. For more information, see [Change the environment type of an instance](~~163309~~).</p>
-         */
         @NameInMap("EnvType")
         public String envType;
 
-        /**
-         * <p>The endpoint of the instance.</p>
-         */
         @NameInMap("Host")
         public String host;
 
-        /**
-         * <p>The ID of the instance.</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The IDs of the owners of the instance.</p>
-         */
         @NameInMap("OwnerIds")
         public java.util.List<Long> ownerIds;
 
-        /**
-         * <p>The nicknames of the owners of the instance.</p>
-         */
         @NameInMap("OwnerNickName")
         public java.util.List<String> ownerNickName;
 
-        /**
-         * <p>The port that is used to connect to the instance.</p>
-         */
         @NameInMap("Port")
         public Long port;
 
-        /**
-         * <p>The name that is used to search for the instance.</p>
-         */
         @NameInMap("SearchName")
         public String searchName;
 
@@ -373,9 +298,6 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesTableInfo extends TeaModel {
-        /**
-         * <p>The name of the table.</p>
-         */
         @NameInMap("TableName")
         public String tableName;
 
@@ -395,27 +317,15 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResources extends TeaModel {
-        /**
-         * <p>The information about the column.</p>
-         */
         @NameInMap("ColumnInfo")
         public GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesColumnInfo columnInfo;
 
-        /**
-         * <p>The information about the database.</p>
-         */
         @NameInMap("DatabaseInfo")
         public GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesDatabaseInfo databaseInfo;
 
-        /**
-         * <p>The information about the instance.</p>
-         */
         @NameInMap("InstanceInfo")
         public GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesInstanceInfo instanceInfo;
 
-        /**
-         * <p>The information about the table.</p>
-         */
         @NameInMap("TableInfo")
         public GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesTableInfo tableInfo;
 
@@ -459,40 +369,15 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetPermApplyOrderDetailResponseBodyPermApplyOrderDetail extends TeaModel {
-        /**
-         * <p>The type of objects on which you apply for permissions. Valid values:</p>
-         * <br>
-         * <p>*   **DB**: database</p>
-         * <p>*   **TAB**: table</p>
-         * <p>*   **COL**: column</p>
-         * <p>*   **INSTANT**: instance</p>
-         */
         @NameInMap("ApplyType")
         public String applyType;
 
-        /**
-         * <p>The type of permissions that you apply for. Valid values:</p>
-         * <br>
-         * <p>*   **1**: the permissions to query information</p>
-         * <p>*   **2**: the permissions to export information</p>
-         * <p>*   **3**: the permissions to query and export information</p>
-         * <p>*   **4**: the permissions to modify information</p>
-         * <p>*   **5**: the permissions to query and modify information</p>
-         * <p>*   **6**: the permissions to export and modify information</p>
-         * <p>*   **7**: the permissions to query, export, and modify information</p>
-         */
         @NameInMap("PermType")
         public Long permType;
 
-        /**
-         * <p>The list of resources.</p>
-         */
         @NameInMap("Resources")
         public java.util.List<GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResources> resources;
 
-        /**
-         * <p>The validity duration of the permissions. Unit: seconds.</p>
-         */
         @NameInMap("Seconds")
         public Long seconds;
 

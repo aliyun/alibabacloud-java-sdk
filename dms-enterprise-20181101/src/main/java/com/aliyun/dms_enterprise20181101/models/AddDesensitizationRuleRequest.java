@@ -8,33 +8,33 @@ public class AddDesensitizationRuleRequest extends TeaModel {
     public java.util.List<java.util.Map<String, String>> functionParams;
 
     /**
-     * <p>The type of the masking algorithm.</p>
+     * <p>The name of the rule.</p>
      */
     @NameInMap("FunctionType")
     public String functionType;
 
     /**
-     * <p>The description of the rule.</p>
+     * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>>  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).</p>
      */
     @NameInMap("RuleDescription")
     public String ruleDescription;
 
     /**
-     * <p>The name of the rule.</p>
+     * <p>The operation that you want to perform. Set the value to **AddDesensitizationRule**.</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
 
     /**
-     * <p>The masking algorithm.</p>
+     * <p>The error message returned if the request failed.</p>
      */
     @NameInMap("RuleType")
     public String ruleType;
 
     /**
-     * <p>The ID of the tenant.</p>
-     * <br>
-     * <p>>  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).</p>
+     * <p>The ID generated for the masking rule.</p>
      */
     @NameInMap("Tid")
     public Long tid;

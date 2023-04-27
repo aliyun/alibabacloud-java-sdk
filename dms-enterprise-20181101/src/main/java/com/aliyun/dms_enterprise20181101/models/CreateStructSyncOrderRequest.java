@@ -4,35 +4,30 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateStructSyncOrderRequest extends TeaModel {
-    /**
-     * <p>The key of an attachment that is returned after the attachment is uploaded. You can call the [GetUserUploadFileJob](~~206069~~) operation to query the key of the attachment.</p>
-     */
     @NameInMap("AttachmentKey")
     public String attachmentKey;
 
     /**
-     * <p>The remarks of the ticket.</p>
+     * <p>Specifies whether to skip an error that occurs in executing an SQL statement. Valid values:</p>
+     * <br>
+     * <p>*   **true**: continues to execute subsequent SQL statements if an error occurs in executing an SQL statement.</p>
+     * <p>*   **false**: stops executing subsequent SQL statements if an error occurs in executing an SQL statement.</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
-     * <p>The parameters of the ticket.</p>
+     * <p>The name of the source table.</p>
      */
     @NameInMap("Param")
     public CreateStructSyncOrderRequestParam param;
 
     /**
-     * <p>The IDs of the stakeholders.</p>
+     * <p>The information about the table of which you want to synchronize the schema.</p>
      */
     @NameInMap("RelatedUserList")
     public java.util.List<Long> relatedUserList;
 
-    /**
-     * <p>The ID of the tenant.</p>
-     * <br>
-     * <p>>  To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see [Manage DMS tenants](~~181330~~).</p>
-     */
     @NameInMap("Tid")
     public Long tid;
 
@@ -83,28 +78,27 @@ public class CreateStructSyncOrderRequest extends TeaModel {
 
     public static class CreateStructSyncOrderRequestParamSource extends TeaModel {
         /**
-         * <p>The ID of the database. You can call the [SearchDatabases](~~141876~~) operation to query the ID of the database.</p>
+         * <p>The key of an attachment that is returned after the attachment is uploaded. You can call the [GetUserUploadFileJob](~~206069~~) operation to query the key of the attachment.</p>
          */
         @NameInMap("DbId")
         public Long dbId;
 
         /**
-         * <p>The name that is used to search for the database. You can call the [SearchDatabases](~~141876~~) operation to query the name of the database.</p>
+         * <p>The ID of the tenant.</p>
+         * <br>
+         * <p>>  To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see [Manage DMS tenants](~~181330~~).</p>
          */
         @NameInMap("DbSearchName")
         public String dbSearchName;
 
         /**
-         * <p>Specifies whether the database is a logical database. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The database is a logical database.</p>
-         * <p>*   **false**: The database is not a logical database.</p>
+         * <p>The schema of the response.</p>
          */
         @NameInMap("Logic")
         public Boolean logic;
 
         /**
-         * <p>The version number of the schema. The default value is the latest schema version number. For more information, see [Manage schema versions](~~202275~~).</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("VersionId")
         public String versionId;
@@ -149,15 +143,9 @@ public class CreateStructSyncOrderRequest extends TeaModel {
     }
 
     public static class CreateStructSyncOrderRequestParamTableInfoList extends TeaModel {
-        /**
-         * <p>The name of the source table.</p>
-         */
         @NameInMap("SourceTableName")
         public String sourceTableName;
 
-        /**
-         * <p>The name of the destination table.</p>
-         */
         @NameInMap("TargetTableName")
         public String targetTableName;
 
@@ -186,30 +174,25 @@ public class CreateStructSyncOrderRequest extends TeaModel {
 
     public static class CreateStructSyncOrderRequestParamTarget extends TeaModel {
         /**
-         * <p>The ID of the database. You can call the [SearchDatabases](~~141876~~) operation to query the ID of the database.</p>
+         * <p>The error message.</p>
          */
         @NameInMap("DbId")
         public Long dbId;
 
         /**
-         * <p>The name that is used to search for the database. You can call the [SearchDatabases](~~141876~~) operation to query the name of the database.</p>
+         * <p>The error code.</p>
          */
         @NameInMap("DbSearchName")
         public String dbSearchName;
 
         /**
-         * <p>Specifies whether the database is a logical database. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The database is a logical database.</p>
-         * <p>*   **false**: The database is not a logical database.</p>
+         * <p>The result of creating the ticket.</p>
          */
         @NameInMap("Logic")
         public Boolean logic;
 
         /**
-         * <p>The version number. By default, this parameter is left empty.</p>
-         * <br>
-         * <p>>  If you specify the schema version number of the destination database, Data Management (DMS) only compares the schemas of the two databases.</p>
+         * <p>The ID of the ticket.</p>
          */
         @NameInMap("VersionId")
         public String versionId;
@@ -254,29 +237,20 @@ public class CreateStructSyncOrderRequest extends TeaModel {
     }
 
     public static class CreateStructSyncOrderRequestParam extends TeaModel {
-        /**
-         * <p>Specifies whether to skip an error that occurs in executing an SQL statement. Valid values:</p>
-         * <br>
-         * <p>*   **true**: continues to execute subsequent SQL statements if an error occurs in executing an SQL statement.</p>
-         * <p>*   **false**: stops executing subsequent SQL statements if an error occurs in executing an SQL statement.</p>
-         */
         @NameInMap("IgnoreError")
         public Boolean ignoreError;
 
         /**
-         * <p>The information about the base database.</p>
+         * <p>The name of the destination table.</p>
          */
         @NameInMap("Source")
         public CreateStructSyncOrderRequestParamSource source;
 
-        /**
-         * <p>The information about the table of which you want to synchronize the schema.</p>
-         */
         @NameInMap("TableInfoList")
         public java.util.List<CreateStructSyncOrderRequestParamTableInfoList> tableInfoList;
 
         /**
-         * <p>The information about the database to which you want to synchronize the schema of a table.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         @NameInMap("Target")
         public CreateStructSyncOrderRequestParamTarget target;

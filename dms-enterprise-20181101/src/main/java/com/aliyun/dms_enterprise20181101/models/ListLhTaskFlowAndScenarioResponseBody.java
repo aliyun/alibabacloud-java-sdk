@@ -4,42 +4,24 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
-    /**
-     * <p>The error code returned if the request fails.</p>
-     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    /**
-     * <p>The error message returned if the request fails.</p>
-     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The task flows in the default business scenario.</p>
+     * <p>The extended field. No meaning is specified for this field.</p>
      */
     @NameInMap("RawDAGList")
     public ListLhTaskFlowAndScenarioResponseBodyRawDAGList rawDAGList;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The task flows in other business scenarios.</p>
-     */
     @NameInMap("ScenarioDAGList")
     public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGList scenarioDAGList;
 
-    /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>- **true**: The request is successful.</p>
-     * <p>- **false**: The request fails.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -98,76 +80,19 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
 
     public static class ListLhTaskFlowAndScenarioResponseBodyRawDAGListDag extends TeaModel {
         /**
-         * <p>Indicates whether the task flow can be modified. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The task flow can be modified.</p>
-         * <p>*   **false**: The task flow cannot be modified.</p>
-         */
-        @NameInMap("CanEdit")
-        public Boolean canEdit;
-
-        /**
-         * <p>The ID of the user who creates the task flow.</p>
-         */
-        @NameInMap("CreatorId")
-        public String creatorId;
-
-        /**
-         * <p>The name of the user who creates the workspace.</p>
-         */
-        @NameInMap("CreatorNickName")
-        public String creatorNickName;
-
-        /**
-         * <p>The name of the task flow.</p>
-         */
-        @NameInMap("DagName")
-        public String dagName;
-
-        /**
-         * <p>The user ID of the task flow owner.</p>
-         */
-        @NameInMap("DagOwnerId")
-        public String dagOwnerId;
-
-        /**
-         * <p>The name of the task flow owner.</p>
-         */
-        @NameInMap("DagOwnerNickName")
-        public String dagOwnerNickName;
-
-        /**
-         * <p>The extended field. No meaning is specified for this field.</p>
-         */
-        @NameInMap("DataFlowId")
-        public Long dataFlowId;
-
-        /**
-         * <p>The extended field. No meaning is specified for this field.</p>
-         */
-        @NameInMap("DemoId")
-        public String demoId;
-
-        /**
-         * <p>The ID of the latest deployment record.</p>
-         */
-        @NameInMap("DeployId")
-        public Long deployId;
-
-        /**
-         * <p>The ID of the task flow.</p>
-         */
-        @NameInMap("Id")
-        public Long id;
-
-        /**
          * <p>Indicates whether the task flow is deleted. Valid values:</p>
          * <br>
          * <p>*   **true**: deleted</p>
          * <p>*   **false**: not deleted</p>
          */
-        @NameInMap("IsDeleted")
-        public Boolean isDeleted;
+        @NameInMap("CanEdit")
+        public Boolean canEdit;
+
+        /**
+         * <p>The ID of the workspace.</p>
+         */
+        @NameInMap("CreatorId")
+        public String creatorId;
 
         /**
          * <p>The status of the latest execution. Valid values:</p>
@@ -176,26 +101,38 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
          * <p>*   **1**: scheduling disabled</p>
          * <p>*   **2**: waiting to be scheduled</p>
          */
-        @NameInMap("LatestInstanceStatus")
-        public Integer latestInstanceStatus;
+        @NameInMap("CreatorNickName")
+        public String creatorNickName;
+
+        @NameInMap("DagName")
+        public String dagName;
+
+        @NameInMap("DagOwnerId")
+        public String dagOwnerId;
 
         /**
-         * <p>The time when the latest execution record was generated.</p>
+         * <p>The ID of the latest deployment record.</p>
          */
-        @NameInMap("LatestInstanceTime")
-        public Integer latestInstanceTime;
+        @NameInMap("DagOwnerNickName")
+        public String dagOwnerNickName;
+
+        /**
+         * <p>The name of the task flow owner.</p>
+         */
+        @NameInMap("DataFlowId")
+        public Long dataFlowId;
+
+        /**
+         * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
+         */
+        @NameInMap("DemoId")
+        public String demoId;
 
         /**
          * <p>The ID of the business scenario.</p>
          */
-        @NameInMap("ScenarioId")
-        public Long scenarioId;
-
-        /**
-         * <p>The ID of the workspace.</p>
-         */
-        @NameInMap("SpaceId")
-        public Long spaceId;
+        @NameInMap("DeployId")
+        public Long deployId;
 
         /**
          * <p>The status of the task flow. Valid values:</p>
@@ -203,6 +140,42 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
          * <p>*   **0**: invalid</p>
          * <p>*   **1**: scheduling disabled</p>
          * <p>*   **2**: waiting to be scheduled</p>
+         */
+        @NameInMap("Id")
+        public Long id;
+
+        /**
+         * <p>The ID of the user. You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain the user ID.</p>
+         */
+        @NameInMap("IsDeleted")
+        public Boolean isDeleted;
+
+        /**
+         * <p>The name of the task flow.</p>
+         */
+        @NameInMap("LatestInstanceStatus")
+        public Integer latestInstanceStatus;
+
+        /**
+         * <p>Queries the task flows corresponding to a specific business scenario in a workspace in Data Management (DMS).</p>
+         */
+        @NameInMap("LatestInstanceTime")
+        public Integer latestInstanceTime;
+
+        /**
+         * <p>The task flows in the default business scenario.</p>
+         */
+        @NameInMap("ScenarioId")
+        public Long scenarioId;
+
+        /**
+         * <p>The extended field. No meaning is specified for this field.</p>
+         */
+        @NameInMap("SpaceId")
+        public Long spaceId;
+
+        /**
+         * <p>The ID of the task flow.</p>
          */
         @NameInMap("Status")
         public Integer status;
@@ -362,113 +335,51 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
     }
 
     public static class ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGDagListDag extends TeaModel {
-        /**
-         * <p>Indicates whether the task flow can be modified. Valid values:</p>
-         * <br>
-         * <p>- **true**: The task flow can be modified.</p>
-         * <p>- **false**: The task flow cannot be modified.</p>
-         */
         @NameInMap("CanEdit")
         public Boolean canEdit;
 
-        /**
-         * <p>The ID of the user who creates the task flow.</p>
-         */
         @NameInMap("CreatorId")
         public String creatorId;
 
-        /**
-         * <p>The name of the user who creates the workspace.</p>
-         */
         @NameInMap("CreatorNickName")
         public String creatorNickName;
 
-        /**
-         * <p>The name of the task flow.</p>
-         */
         @NameInMap("DagName")
         public String dagName;
 
-        /**
-         * <p>The user ID of the task flow owner.</p>
-         */
         @NameInMap("DagOwnerId")
         public String dagOwnerId;
 
-        /**
-         * <p>The name of the task flow owner.</p>
-         */
         @NameInMap("DagOwnerNickName")
         public String dagOwnerNickName;
 
-        /**
-         * <p>The extended field. No meaning is specified for this field.</p>
-         */
         @NameInMap("DataFlowId")
         public Long dataFlowId;
 
-        /**
-         * <p>The extended field. No meaning is specified for this field.</p>
-         */
         @NameInMap("DemoId")
         public String demoId;
 
-        /**
-         * <p>The ID of the latest deployment record.</p>
-         */
         @NameInMap("DeployId")
         public Long deployId;
 
-        /**
-         * <p>The ID of the task flow.</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <p>Indicates whether the task flow is deleted. Valid values:</p>
-         * <br>
-         * <p>- **true**: deleted</p>
-         * <p>- **false**: not deleted</p>
-         */
         @NameInMap("IsDeleted")
         public Boolean isDeleted;
 
-        /**
-         * <p>The status of the latest execution. Valid values:</p>
-         * <br>
-         * <p>- 0: invalid</p>
-         * <p>- 1: scheduling disabled</p>
-         * <p>- 2: waiting to be scheduled</p>
-         */
         @NameInMap("LatestInstanceStatus")
         public Integer latestInstanceStatus;
 
-        /**
-         * <p>The time when the latest execution record was generated.</p>
-         */
         @NameInMap("LatestInstanceTime")
         public Integer latestInstanceTime;
 
-        /**
-         * <p>The ID of the business scenario.</p>
-         */
         @NameInMap("ScenarioId")
         public Long scenarioId;
 
-        /**
-         * <p>The ID of the workspace.</p>
-         */
         @NameInMap("SpaceId")
         public Long spaceId;
 
-        /**
-         * <p>The status of the task flow. Valid values:</p>
-         * <br>
-         * <p>- **0**: invalid</p>
-         * <p>- **1**: scheduling disabled</p>
-         * <p>- **2**: waiting to be scheduled</p>
-         */
         @NameInMap("Status")
         public Integer status;
 
@@ -627,21 +538,12 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
     }
 
     public static class ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGScenario extends TeaModel {
-        /**
-         * <p>The ID of the user who creates the business scenario.</p>
-         */
         @NameInMap("CreatorId")
         public String creatorId;
 
-        /**
-         * <p>The description of the business scenario.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The name of the business scenario.</p>
-         */
         @NameInMap("ScenarioName")
         public String scenarioName;
 
@@ -677,15 +579,9 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
     }
 
     public static class ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAG extends TeaModel {
-        /**
-         * <p>The list of task flows.</p>
-         */
         @NameInMap("DagList")
         public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGDagList dagList;
 
-        /**
-         * <p>The information about the business scenario.</p>
-         */
         @NameInMap("Scenario")
         public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGScenario scenario;
 

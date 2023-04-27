@@ -5,29 +5,25 @@ import com.aliyun.tea.*;
 
 public class ExecuteScriptRequest extends TeaModel {
     /**
-     * <p>The ID of the database.</p>
-     * <br>
-     * <p>>  This parameter is equivalent to the DatabaseId parameter in the SearchDatabase, ListDatabases, and GetDatabase operations. You can call one of these operations to obtain the required database ID. For more information, see [SearchDatabase](~~141876~~), [ListDatabases](~~141873~~), and [GetDatabase](~~141869~~).</p>
+     * <p>Indicates whether the SQL statement is executed.</p>
      */
     @NameInMap("DbId")
     public Integer dbId;
 
     /**
-     * <p>Specifies whether the database is a logical database.</p>
+     * <p>The error code.</p>
      */
     @NameInMap("Logic")
     public Boolean logic;
 
     /**
-     * <p>The SQL statements to be executed. Data query language (DQL) statements, data definition language (DDL) statements, and data manipulation language (DML) statements are supported. The control mode of the instance that you want to query determines whether you can execute DDL and DML statements.</p>
+     * <p>Specifies whether the database is a logical database.</p>
      */
     @NameInMap("Script")
     public String script;
 
     /**
-     * <p>The ID of the tenant.</p>
-     * <br>
-     * <p>>  To obtain the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Tenant information](~~181330~~).</p>
+     * <p>The operation that you want to perform. Set the value to **ExecuteScript**.</p>
      */
     @NameInMap("Tid")
     public Long tid;

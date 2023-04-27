@@ -5,35 +5,28 @@ import com.aliyun.tea.*;
 
 public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
     /**
-     * <p>The error code returned.</p>
+     * <p>WB01053274</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    /**
-     * <p>The error message returned.</p>
-     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The name of the field. You can call the [ListSensitiveColumns](~~188103~~) operation to obtain the name of the field.</p>
+     * <br>
+     * <p>>  You can also call the [ListColumns](~~141870~~) operation to obtain the name of the field.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The details of the sensitive field.</p>
+     * <p>The data type of the field.</p>
      */
     @NameInMap("SensitiveColumnsDetailList")
     public ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailList sensitiveColumnsDetailList;
 
-    /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>- **true**: The request was successful.</p>
-     * <p>- **false**: The request failed.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -84,40 +77,22 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
 
     public static class ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailListSensitiveColumnsDetail extends TeaModel {
         /**
-         * <p>The description of the field.</p>
+         * <p>$.parameters[6].schema.description</p>
          */
         @NameInMap("ColumnDescription")
         public String columnDescription;
 
         /**
-         * <p>The name of the field.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("ColumnName")
         public String columnName;
 
         /**
-         * <p>The data type of the field.</p>
+         * <p>$.parameters[7].schema.description</p>
          */
         @NameInMap("ColumnType")
         public String columnType;
-
-        /**
-         * <p>The ID of the database.</p>
-         */
-        @NameInMap("DbId")
-        public Long dbId;
-
-        /**
-         * <p>The type of the database.</p>
-         */
-        @NameInMap("DbType")
-        public String dbType;
-
-        /**
-         * <p>The type of the environment to which the database belongs.</p>
-         */
-        @NameInMap("EnvType")
-        public String envType;
 
         /**
          * <p>Indicates whether the database is a logical database. Valid values:</p>
@@ -125,23 +100,41 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
          * <p>*   **true**: The database is a logical database.</p>
          * <p>*   **false**: The database is not a logical database.</p>
          */
+        @NameInMap("DbId")
+        public Long dbId;
+
+        /**
+         * <p>$.parameters[6].schema.enumValueTitles</p>
+         */
+        @NameInMap("DbType")
+        public String dbType;
+
+        /**
+         * <p>ListSensitiveColumnsDetail</p>
+         */
+        @NameInMap("EnvType")
+        public String envType;
+
+        /**
+         * <p>$.parameters[7].schema.example</p>
+         */
         @NameInMap("Logic")
         public Boolean logic;
 
         /**
-         * <p>The name of the database.</p>
+         * <p>$.parameters[7].schema.enumValueTitles</p>
          */
         @NameInMap("SchemaName")
         public String schemaName;
 
         /**
-         * <p>The name that is used to search for the database.</p>
+         * <p>Queries the details of a sensitive field.</p>
          */
         @NameInMap("SearchName")
         public String searchName;
 
         /**
-         * <p>The name of the table.</p>
+         * <p>$.parameters[6].schema.example</p>
          */
         @NameInMap("TableName")
         public String tableName;

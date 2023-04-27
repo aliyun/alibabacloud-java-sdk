@@ -4,21 +4,12 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class DeleteLogicTableRouteConfigRequest extends TeaModel {
-    /**
-     * <p>The unique key of the routing algorithm. You can call the [ListLogicTableRouteConfig](https://www.alibabacloud.com/help/en/data-management-service/latest/listlogictablerouteconfig) operation to query the unique key.</p>
-     */
     @NameInMap("RouteKey")
     public String routeKey;
 
-    /**
-     * <p>The ID of the logical table. You can call the [ListLogicTables](https://www.alibabacloud.com/help/en/data-management-service/latest/listlogictables) operation to query the ID of the logical table.</p>
-     */
     @NameInMap("TableId")
     public Long tableId;
 
-    /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://www.alibabacloud.com/help/en/data-management-service/latest/getuseractivetenant) operation to query the tenant ID.</p>
-     */
     @NameInMap("Tid")
     public Long tid;
 

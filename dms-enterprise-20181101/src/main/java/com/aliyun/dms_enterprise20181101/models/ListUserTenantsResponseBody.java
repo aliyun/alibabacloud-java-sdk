@@ -4,15 +4,9 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListUserTenantsResponseBody extends TeaModel {
-    /**
-     * <p>The error code.</p>
-     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    /**
-     * <p>The error message.</p>
-     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
@@ -22,17 +16,11 @@ public class ListUserTenantsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request is successful.</p>
-     * <p>*   **false**: The request fails.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The details of the tenants that were returned.</p>
+     * <p>The operation that you want to perform. Set the value to **ListUserTenants**.</p>
      */
     @NameInMap("TenantList")
     public java.util.List<ListUserTenantsResponseBodyTenantList> tenantList;
@@ -83,24 +71,12 @@ public class ListUserTenantsResponseBody extends TeaModel {
     }
 
     public static class ListUserTenantsResponseBodyTenantList extends TeaModel {
-        /**
-         * <p>The status of the tenant. Valid values:</p>
-         * <br>
-         * <p>*   **ACTIVE**: The tenant is used to access DMS.</p>
-         * <p>*   **IN_ACTIVE**: The tenant is not used.</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The name of the tenant.</p>
-         */
         @NameInMap("TenantName")
         public String tenantName;
 
-        /**
-         * <p>The ID of the tenant.</p>
-         */
         @NameInMap("Tid")
         public Long tid;
 

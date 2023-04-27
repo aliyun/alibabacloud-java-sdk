@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ModifyDataCorrectExecSQLRequest extends TeaModel {
     /**
-     * <p>The new SQL script.</p>
+     * <p>The error code returned.</p>
      */
     @NameInMap("ExecSQL")
     public String execSQL;
 
     /**
-     * <p>The ID of the data change ticket.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("Tid")
     public Long tid;

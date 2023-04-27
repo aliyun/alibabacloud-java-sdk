@@ -5,46 +5,43 @@ import com.aliyun.tea.*;
 
 public class ListTaskFlowInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to obtain the ID of the task flow.</p>
+     * <p>The operation that you want to perform. Set the value to **ListTaskFlowInstance**.</p>
      */
     @NameInMap("DagId")
     public Long dagId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("PageIndex")
     public Integer pageIndex;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to obtain the ID of the task flow.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The beginning of the time range to query the execution records of the task flow. Specify the time in the yyyy-MM-DD format.</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("StartTimeBegin")
     public String startTimeBegin;
 
     /**
-     * <p>The end of the time range to query the execution records of the task flow. Specify the time in the yyyy-MM-DD format.</p>
+     * <p>The ID of the task flow.</p>
      */
     @NameInMap("StartTimeEnd")
     public String startTimeEnd;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
+     * <p>The ID of the execution record.</p>
      */
     @NameInMap("Tid")
     public Long tid;
 
     /**
-     * <p>The mode in which the task flow is triggered. Valid values:</p>
-     * <br>
-     * <p>*   **0**: The task flow is automatically triggered based on periodic scheduling.</p>
-     * <p>*   **1**: The task flow is manually triggered.</p>
+     * <p>The business time of the task flow. The time is displayed in the yyyy-MM-DD HH:mm:ss format.</p>
      */
     @NameInMap("TriggerType")
     public Integer triggerType;

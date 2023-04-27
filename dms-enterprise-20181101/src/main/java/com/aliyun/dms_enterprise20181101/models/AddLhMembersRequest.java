@@ -5,16 +5,13 @@ import com.aliyun.tea.*;
 
 public class AddLhMembersRequest extends TeaModel {
     /**
-     * <p>The information about the users to be added.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
      */
     @NameInMap("Members")
     public java.util.List<AddLhMembersRequestMembers> members;
 
     /**
-     * <p>The ID of the object.</p>
-     * <br>
-     * <p>*   If the object is a workspace, you can call the [GetLhSpaceByName](~~424379~~) operation to obtain the workspace ID.</p>
-     * <p>*   If the object is a task flow, you can call the [ListLhTaskFlowAndScenario](~~426672~~) operation to obtain the task flow ID.</p>
+     * <p>The ID of the user to be added. You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain the user ID.</p>
      */
     @NameInMap("ObjectId")
     public Long objectId;
@@ -28,9 +25,6 @@ public class AddLhMembersRequest extends TeaModel {
     @NameInMap("ObjectType")
     public Integer objectType;
 
-    /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
-     */
     @NameInMap("Tid")
     public Long tid;
 
@@ -72,18 +66,11 @@ public class AddLhMembersRequest extends TeaModel {
     }
 
     public static class AddLhMembersRequestMembers extends TeaModel {
-        /**
-         * <p>The role. Valid values:</p>
-         * <br>
-         * <p>*   **ADMIN**: workspace administrator. You can add a workspace administrator only as a DMS administrator or a DBA.</p>
-         * <p>*   **MEMBER**: workspace member.</p>
-         * <p>*   **DEVELOPER**: task flow developer. Only a workspace member can be added as a task flow developer.</p>
-         */
         @NameInMap("Roles")
         public java.util.List<String> roles;
 
         /**
-         * <p>The ID of the user to be added. You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain the user ID.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("UserId")
         public Long userId;

@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class GetInstanceRequest extends TeaModel {
     /**
-     * <p>The endpoint of the database instance. You can call the [ListInstances](~~141936~~) operation to obtain the endpoint.</p>
+     * <p>The name of the security rule set corresponding to the control mode.</p>
      */
     @NameInMap("Host")
     public String host;
 
     /**
-     * <p>The port number that is used to connect to the database instance. You can call the [ListInstances](~~141936~~) operation to obtain the port number.</p>
+     * <p>The name of the database link for the database instance.</p>
      */
     @NameInMap("Port")
     public Integer port;
 
     /**
-     * <p>The system ID (SID) of the database instance. You can call the [ListInstances](~~141936~~) operation to obtain the SID.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.</p>
      */
     @NameInMap("Sid")
     public String sid;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.</p>
+     * <p>The ID of the virtual private cloud (VPC) to which the database instance belongs.</p>
      */
     @NameInMap("Tid")
     public Long tid;

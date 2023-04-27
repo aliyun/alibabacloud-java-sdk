@@ -4,36 +4,18 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListScenariosResponseBody extends TeaModel {
-    /**
-     * <p>The error code returned if the request failed.</p>
-     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    /**
-     * <p>The error message returned if the request failed.</p>
-     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The details of the returned business scenarios.</p>
-     */
     @NameInMap("ScenarioList")
     public java.util.List<ListScenariosResponseBodyScenarioList> scenarioList;
 
-    /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -83,27 +65,15 @@ public class ListScenariosResponseBody extends TeaModel {
     }
 
     public static class ListScenariosResponseBodyScenarioList extends TeaModel {
-        /**
-         * <p>The ID of the user who created the business scenario.</p>
-         */
         @NameInMap("CreatorId")
         public String creatorId;
 
-        /**
-         * <p>The description of the business scenario.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the business scenario.</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <p>The name of the business scenario.</p>
-         */
         @NameInMap("ScenarioName")
         public String scenarioName;
 

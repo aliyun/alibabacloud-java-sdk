@@ -5,35 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetDataExportDownloadURLResponseBody extends TeaModel {
     /**
-     * <p>The details about the download URL of the file that records the export results for the ticket.</p>
+     * <p>The ID of the ticket. You can call the [ListOrders](~~144643~~) operation to obtain the ticket ID.</p>
      */
     @NameInMap("DownloadURLResult")
     public GetDataExportDownloadURLResponseBodyDownloadURLResult downloadURLResult;
 
-    /**
-     * <p>The error code.</p>
-     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    /**
-     * <p>The error message.</p>
-     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The operation that you want to perform. Set the value to **GetDataExportDownloadURL**.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,13 +81,13 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
         public Boolean hasResult;
 
         /**
-         * <p>The message that indicates an exception.</p>
+         * <p>The error code.</p>
          */
         @NameInMap("TipMessage")
         public String tipMessage;
 
         /**
-         * <p>The download URL of the file that records the export results for the ticket.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("URL")
         public String URL;

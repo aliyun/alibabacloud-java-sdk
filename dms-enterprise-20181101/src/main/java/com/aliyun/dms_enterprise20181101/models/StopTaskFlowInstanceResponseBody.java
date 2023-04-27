@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class StopTaskFlowInstanceResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>Stops a task flow instance.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    /**
-     * <p>The error message returned if the request failed.</p>
-     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
@@ -22,12 +19,6 @@ public class StopTaskFlowInstanceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 

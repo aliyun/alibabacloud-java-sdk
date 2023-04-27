@@ -4,33 +4,18 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetDataExportOrderDetailResponseBody extends TeaModel {
-    /**
-     * <p>The details of the data export ticket.</p>
-     */
     @NameInMap("DataExportOrderDetail")
     public GetDataExportOrderDetailResponseBodyDataExportOrderDetail dataExportOrderDetail;
 
-    /**
-     * <p>The error code.</p>
-     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    /**
-     * <p>The error message.</p>
-     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request is successful.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -80,26 +65,9 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetDataExportOrderDetailResponseBodyDataExportOrderDetailKeyInfo extends TeaModel {
-        /**
-         * <p>The status of the data export ticket. Valid values:</p>
-         * <br>
-         * <p>*   PRE_CHECKING: The ticket is being prechecked.</p>
-         * <p>*   PRE_CHECK_SUCCESS: The ticket passes the precheck.</p>
-         * <p>*   PRE_CHECK_FAIL: The ticket fails to pass the precheck.</p>
-         * <p>*   WAITING_APPLY_AUDIT: The ticket is to be submitted for approval.</p>
-         * <p>*   APPLY_AUDIT_SUCESS: The ticket is submitted for approval.</p>
-         * <p>*   ENABLE_EXPORT: The ticket is approved. Data can be exported.</p>
-         * <p>*   WAITING_EXPORT: Data is to be scheduled for export.</p>
-         * <p>*   DOING_EXPORT: Data is being exported.</p>
-         * <p>*   EXPORT_FAIL: Data fails to be exported.</p>
-         * <p>*   EXPORT_SUCCESS: Data is exported.</p>
-         */
         @NameInMap("JobStatus")
         public String jobStatus;
 
-        /**
-         * <p>The ID of the precheck.</p>
-         */
         @NameInMap("PreCheckId")
         public Long preCheckId;
 
@@ -127,57 +95,30 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetDataExportOrderDetailResponseBodyDataExportOrderDetailOrderDetail extends TeaModel {
-        /**
-         * <p>The number of rows that are affected by the system check.</p>
-         */
         @NameInMap("ActualAffectRows")
         public Long actualAffectRows;
 
-        /**
-         * <p>The category of the reason for the data export.</p>
-         */
         @NameInMap("Classify")
         public String classify;
 
-        /**
-         * <p>The database from which data is exported.</p>
-         */
         @NameInMap("Database")
         public String database;
 
-        /**
-         * <p>The ID of the database from which you want to export data.</p>
-         */
         @NameInMap("DbId")
         public Integer dbId;
 
-        /**
-         * <p>The type of the environment to which the database belongs.</p>
-         */
         @NameInMap("EnvType")
         public String envType;
 
-        /**
-         * <p>The SQL statement that is executed to export data.</p>
-         */
         @NameInMap("ExeSQL")
         public String exeSQL;
 
-        /**
-         * <p>Indicates whether the affected rows are skipped.</p>
-         */
         @NameInMap("IgnoreAffectRows")
         public Boolean ignoreAffectRows;
 
-        /**
-         * <p>The reason why the affected rows are skipped.</p>
-         */
         @NameInMap("IgnoreAffectRowsReason")
         public String ignoreAffectRowsReason;
 
-        /**
-         * <p>Indicates whether the database is a logical database.</p>
-         */
         @NameInMap("Logic")
         public Boolean logic;
 
@@ -261,15 +202,9 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetDataExportOrderDetailResponseBodyDataExportOrderDetail extends TeaModel {
-        /**
-         * <p>The status information of the data export ticket.</p>
-         */
         @NameInMap("KeyInfo")
         public GetDataExportOrderDetailResponseBodyDataExportOrderDetailKeyInfo keyInfo;
 
-        /**
-         * <p>The details of the ticket.</p>
-         */
         @NameInMap("OrderDetail")
         public GetDataExportOrderDetailResponseBodyDataExportOrderDetailOrderDetail orderDetail;
 

@@ -4,21 +4,12 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetDBTaskSQLJobLogResponseBody extends TeaModel {
-    /**
-     * <p>The error code returned.</p>
-     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    /**
-     * <p>The error message returned.</p>
-     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The log that records the scheduling details.</p>
-     */
     @NameInMap("Log")
     public String log;
 
@@ -29,10 +20,7 @@ public class GetDBTaskSQLJobLogResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <p>The operation that you want to perform. Set the value to **GetDBTaskSQLJobLog**.</p>
      */
     @NameInMap("Success")
     public Boolean success;

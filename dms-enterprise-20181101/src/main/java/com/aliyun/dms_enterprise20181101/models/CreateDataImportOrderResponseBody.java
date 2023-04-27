@@ -4,35 +4,23 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateDataImportOrderResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the ticket.</p>
-     */
     @NameInMap("CreateOrderResult")
     public java.util.List<Long> createOrderResult;
 
-    /**
-     * <p>The error code returned if the request fails.</p>
-     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    /**
-     * <p>The error message returned if the request fails.</p>
-     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The reason for the data import.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request is successful.</p>
-     * <p>*   **false**: The request fails.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("Success")
     public Boolean success;

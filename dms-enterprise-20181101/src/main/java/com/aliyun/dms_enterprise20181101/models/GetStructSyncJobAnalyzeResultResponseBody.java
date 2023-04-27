@@ -4,33 +4,18 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
-    /**
-     * <p>The error code.</p>
-     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    /**
-     * <p>The error message.</p>
-     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The analysis result of the schema synchronization task.</p>
-     */
     @NameInMap("StructSyncJobAnalyzeResult")
     public GetStructSyncJobAnalyzeResultResponseBodyStructSyncJobAnalyzeResult structSyncJobAnalyzeResult;
 
-    /**
-     * <p>Indicates whether the request is successful.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -80,21 +65,12 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
     }
 
     public static class GetStructSyncJobAnalyzeResultResponseBodyStructSyncJobAnalyzeResultResultList extends TeaModel {
-        /**
-         * <p>The SQL script.</p>
-         */
         @NameInMap("Script")
         public String script;
 
-        /**
-         * <p>The name of the source table.</p>
-         */
         @NameInMap("SourceTableName")
         public String sourceTableName;
 
-        /**
-         * <p>The name of the destination table.</p>
-         */
         @NameInMap("TargetTableName")
         public String targetTableName;
 
@@ -130,21 +106,9 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
     }
 
     public static class GetStructSyncJobAnalyzeResultResponseBodyStructSyncJobAnalyzeResultSummaryList extends TeaModel {
-        /**
-         * <p>The type of the comparison. Valid values:</p>
-         * <br>
-         * <p>*   **CREATE_TABLE**: compares the created tables.</p>
-         * <p>*   **ALTER_TABLE**: compares the modified tables.</p>
-         * <p>*   **EQUAL_TABLE**: compares the identical tables.</p>
-         * <p>*   **PASS_TABLE**: compares the tables that are skipped during schema synchronization.</p>
-         * <p>*   **NOT_COMPARE**: does not compare tables.</p>
-         */
         @NameInMap("CompareType")
         public String compareType;
 
-        /**
-         * <p>The number of tables.</p>
-         */
         @NameInMap("Count")
         public Long count;
 
@@ -172,15 +136,9 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
     }
 
     public static class GetStructSyncJobAnalyzeResultResponseBodyStructSyncJobAnalyzeResult extends TeaModel {
-        /**
-         * <p>The details of the analysis results.</p>
-         */
         @NameInMap("ResultList")
         public java.util.List<GetStructSyncJobAnalyzeResultResponseBodyStructSyncJobAnalyzeResultResultList> resultList;
 
-        /**
-         * <p>The statistics on the analysis results.</p>
-         */
         @NameInMap("SummaryList")
         public java.util.List<GetStructSyncJobAnalyzeResultResponseBodyStructSyncJobAnalyzeResultSummaryList> summaryList;
 

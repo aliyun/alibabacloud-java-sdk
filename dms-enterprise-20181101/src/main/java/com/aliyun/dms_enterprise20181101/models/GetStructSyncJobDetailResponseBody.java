@@ -5,31 +5,41 @@ import com.aliyun.tea.*;
 
 public class GetStructSyncJobDetailResponseBody extends TeaModel {
     /**
-     * <p>The error code that is returned.</p>
+     * <p>The description of the task.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message that is returned.</p>
+     * <p>The ID of the ticket.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The status of the task. Valid values:</p>
+     * <br>
+     * <p>*   **NEW**: The task was created.</p>
+     * <p>*   **COMPARING**: The schemas of tables were being compared.</p>
+     * <p>*   **COMPARE_BREAK**: The schema comparison was interrupted.</p>
+     * <p>*   **COMPARE_FINISH**: The schema comparison was complete.</p>
+     * <p>*   **NOT_SCRIPTS**: The schema comparison was complete. No scripts were available.</p>
+     * <p>*   **SUBMITED_DBTASK**: The task was submitted.</p>
+     * <p>*   **DBTASK_SUCCESS**: The task was complete.</p>
+     * <p>*   **SUBMITED_WORKFLOW**: The ticket was submitted for approval.</p>
+     * <p>*   **WORKFLOW_SUCCESS**: The ticket was approved.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The details of the schema synchronization task.</p>
+     * <p>1</p>
      */
     @NameInMap("StructSyncJobDetail")
     public GetStructSyncJobDetailResponseBodyStructSyncJobDetail structSyncJobDetail;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>The total number of SQL statements.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -80,39 +90,32 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
     }
 
     public static class GetStructSyncJobDetailResponseBodyStructSyncJobDetail extends TeaModel {
-        /**
-         * <p>The ID of the task queue.</p>
-         */
         @NameInMap("DBTaskGroupId")
         public Long DBTaskGroupId;
 
-        /**
-         * <p>The number of SQL statements that have been executed.</p>
-         */
         @NameInMap("ExecuteCount")
         public Long executeCount;
 
         /**
-         * <p>The status of the task. Valid values:</p>
-         * <br>
-         * <p>*   **NEW**: The task was created.</p>
-         * <p>*   **COMPARING**: The schemas of tables were being compared.</p>
-         * <p>*   **COMPARE_BREAK**: The schema comparison was interrupted.</p>
-         * <p>*   **COMPARE_FINISH**: The schema comparison was complete.</p>
-         * <p>*   **NOT_SCRIPTS**: The schema comparison was complete. No scripts were available.</p>
-         * <p>*   **SUBMITED_DBTASK**: The task was submitted.</p>
-         * <p>*   **DBTASK_SUCCESS**: The task was complete.</p>
-         * <p>*   **SUBMITED_WORKFLOW**: The ticket was submitted for approval.</p>
-         * <p>*   **WORKFLOW_SUCCESS**: The ticket was approved.</p>
+         * <p>The number of SQL statements that have been executed.</p>
          */
         @NameInMap("JobStatus")
         public String jobStatus;
 
         /**
-         * <p>The description of the task.</p>
+         * <p>The details of the schema synchronization task.</p>
          */
         @NameInMap("Message")
         public String message;
+
+        @NameInMap("SecurityRule")
+        public String securityRule;
+
+        /**
+         * <p>The number of tables that have been analyzed.</p>
+         */
+        @NameInMap("SqlCount")
+        public Long sqlCount;
 
         /**
          * <p>The type of security rule. Valid values:</p>
@@ -121,23 +124,11 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
          * <p>*   **WITH_APPROVE**: The schema synchronization can be performed after the ticket is approved. You can call the [SubmitStructSyncOrderApproval](~~206166~~) operation to submit the ticket for approval.</p>
          * <p>*   **WITHOUT_APPROVE**: The schema synchronization can be performed without approval.</p>
          */
-        @NameInMap("SecurityRule")
-        public String securityRule;
-
-        /**
-         * <p>The total number of SQL statements.</p>
-         */
-        @NameInMap("SqlCount")
-        public Long sqlCount;
-
-        /**
-         * <p>The number of tables that have been analyzed.</p>
-         */
         @NameInMap("TableAnalyzed")
         public Long tableAnalyzed;
 
         /**
-         * <p>The total number of tables.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("TableCount")
         public Long tableCount;

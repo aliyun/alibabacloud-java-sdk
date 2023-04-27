@@ -5,15 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListSensitiveColumnsRequest extends TeaModel {
     /**
-     * <p>The name of the field. You can call the [ListColumns](~~141870~~) operation to query the name of the field.</p>
+     * <p>The operation that you want to perform. Set the value to **ListSensitiveColumns**.</p>
      */
     @NameInMap("ColumnName")
     public String columnName;
 
     /**
-     * <p>The ID of the database. You can call the [SearchDatabase](~~141876~~) operation to query the ID of the database.</p>
-     * <br>
-     * <p>>  You can also call the [ListDatabases](~~141873~~) operation to query the ID of the physical database and the [ListLogicDatabases](~~141874~~) operation to query the ID of a logical database.</p>
+     * <p>1860</p>
      */
     @NameInMap("DbId")
     public Long dbId;
@@ -28,21 +26,19 @@ public class ListSensitiveColumnsRequest extends TeaModel {
     public Boolean logic;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The error message.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The name of the database. You can call the [SearchDatabase](~~141876~~) operation to query the name of the database.</p>
-     * <br>
-     * <p>>  You can also call the [ListDatabases](~~141873~~) operation to query the name of a physical database and the [ListLogicDatabases](~~141874~~) operation to query the name of a logical database.</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("SchemaName")
     public String schemaName;
@@ -57,15 +53,13 @@ public class ListSensitiveColumnsRequest extends TeaModel {
     public String securityLevel;
 
     /**
-     * <p>The name of the table. You can call the [ListTables](~~141878~~) operation to query the ID of the table.</p>
+     * <p>The error code.</p>
      */
     @NameInMap("TableName")
     public String tableName;
 
     /**
-     * <p>The ID of the tenant.</p>
-     * <br>
-     * <p>>  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.</p>
+     * <p>The name of the table. You can call the [ListTables](~~141878~~) operation to query the ID of the table.</p>
      */
     @NameInMap("Tid")
     public Long tid;

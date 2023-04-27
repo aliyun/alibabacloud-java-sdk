@@ -3,25 +3,19 @@ package com.aliyun.dms_enterprise20181101.models;
 
 import com.aliyun.tea.*;
 
-public class RetryDataCorrectPreCheckRequest extends TeaModel {
-    /**
-     * <p>The error code returned.</p>
-     */
+public class GetDataExportPreCheckDetailRequest extends TeaModel {
     @NameInMap("OrderId")
     public Long orderId;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("Tid")
     public Long tid;
 
-    public static RetryDataCorrectPreCheckRequest build(java.util.Map<String, ?> map) throws Exception {
-        RetryDataCorrectPreCheckRequest self = new RetryDataCorrectPreCheckRequest();
+    public static GetDataExportPreCheckDetailRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetDataExportPreCheckDetailRequest self = new GetDataExportPreCheckDetailRequest();
         return TeaModel.build(map, self);
     }
 
-    public RetryDataCorrectPreCheckRequest setOrderId(Long orderId) {
+    public GetDataExportPreCheckDetailRequest setOrderId(Long orderId) {
         this.orderId = orderId;
         return this;
     }
@@ -29,7 +23,7 @@ public class RetryDataCorrectPreCheckRequest extends TeaModel {
         return this.orderId;
     }
 
-    public RetryDataCorrectPreCheckRequest setTid(Long tid) {
+    public GetDataExportPreCheckDetailRequest setTid(Long tid) {
         this.tid = tid;
         return this;
     }

@@ -4,21 +4,12 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateDataCronClearOrderResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the ticket.</p>
-     */
     @NameInMap("CreateOrderResult")
     public java.util.List<Long> createOrderResult;
 
-    /**
-     * <p>The error code.</p>
-     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    /**
-     * <p>The error message.</p>
-     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
@@ -29,7 +20,10 @@ public class CreateDataCronClearOrderResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Specifies whether to specify an end time for the task. Valid values:</p>
+     * <br>
+     * <p>*   **true**: specifies an end time for the task. The task is automatically suspended after this end time.</p>
+     * <p>*   **false**: does not specify an end time for the task. The task is stopped after the historical data is cleared.</p>
      */
     @NameInMap("Success")
     public Boolean success;

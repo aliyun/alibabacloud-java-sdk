@@ -4,33 +4,18 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetDBTopologyResponseBody extends TeaModel {
-    /**
-     * <p>The topology of the logical database.</p>
-     */
     @NameInMap("DBTopology")
     public GetDBTopologyResponseBodyDBTopology DBTopology;
 
-    /**
-     * <p>The error code.</p>
-     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    /**
-     * <p>The error message.</p>
-     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request is successful.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -80,90 +65,33 @@ public class GetDBTopologyResponseBody extends TeaModel {
     }
 
     public static class GetDBTopologyResponseBodyDBTopologyDBTopologyInfoList extends TeaModel {
-        /**
-         * <p>The name of the catalog to which the database belongs.</p>
-         * <br>
-         * <p>> If the database is a PostgreSQL database, the value of this parameter is the name of the database.</p>
-         */
         @NameInMap("CatalogName")
         public String catalogName;
 
-        /**
-         * <p>The ID of the logical database.</p>
-         */
         @NameInMap("DbId")
         public Long dbId;
 
-        /**
-         * <p>The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).</p>
-         */
         @NameInMap("DbType")
         public String dbType;
 
-        /**
-         * <p>The type of the environment to which the logical database belongs. Valid values:</p>
-         * <br>
-         * <p>*   **product**: production environment</p>
-         * <p>*   **dev**: development environment</p>
-         * <p>*   **pre**: pre-release environment</p>
-         * <p>*   **test**: test environment</p>
-         * <p>*   **sit**: SIT environment</p>
-         * <p>*   **uat**: UAT environment</p>
-         * <p>*   **pet**: stress testing environment</p>
-         * <p>*   **stag**: staging environment</p>
-         * <br>
-         * <p>> For more information, see [Change the environment type of an instance](~~163309~~).</p>
-         */
         @NameInMap("EnvType")
         public String envType;
 
-        /**
-         * <p>The ID of the instance in which the logical database resides.</p>
-         */
         @NameInMap("InstanceId")
         public Long instanceId;
 
-        /**
-         * <p>The ID of the resource related to the instance. The resource corresponds with the database instance type returned in the InstanceSource parameter.</p>
-         * <br>
-         * <p>*   If the value of the InstanceSource parameter is RDS, the ID of an ApsaraDB RDS instance is returned.</p>
-         * <p>*   If the value of the InstanceSource parameter is ECS_OWN, the ID of a self-managed database that is hosted on an Elastic Compute Service (ECS) instance is returned.</p>
-         * <p>*   If the value of the InstanceSource parameter is PUBLIC_OWN, an empty string is returned.</p>
-         * <p>*   If the value of the InstanceSource parameter is VPC_ID, the ID of a self-managed database instance in a virtual private cloud (VPC) that is connected over Express Connect circuits is returned.</p>
-         * <p>*   If the value of the InstanceSource parameter is GATEWAY, the ID of a database instance connected by using a database gateway is returned.</p>
-         */
         @NameInMap("InstanceResourceId")
         public String instanceResourceId;
 
-        /**
-         * <p>The type of the database instance. Valid values:</p>
-         * <br>
-         * <p>*   **RDS**: an ApsaraDB RDS instance.</p>
-         * <p>*   **ECS_OWN**: a self-managed database that is hosted on an ECS instance.</p>
-         * <p>*   **PUBLIC_OWN**: a self-managed database instance that is connected over the Internet.</p>
-         * <p>*   **VPC_ID**: a self-managed database instance in a VPC that is connected over Express Connect circuits.</p>
-         * <p>*   **GATEWAY**: a database instance connected by using a database gateway.</p>
-         */
         @NameInMap("InstanceSource")
         public String instanceSource;
 
-        /**
-         * <p>The ID of the region in which the instance resides.</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The name of the logical database.</p>
-         * <br>
-         * <p>> If the database is a PostgreSQL database, the value of this parameter is the name of the database schema.</p>
-         */
         @NameInMap("SchemaName")
         public String schemaName;
 
-        /**
-         * <p>The name that is used to search for the database.</p>
-         */
         @NameInMap("SearchName")
         public String searchName;
 
@@ -255,56 +183,24 @@ public class GetDBTopologyResponseBody extends TeaModel {
     }
 
     public static class GetDBTopologyResponseBodyDBTopology extends TeaModel {
-        /**
-         * <p>The alias of the logical database.</p>
-         */
         @NameInMap("Alias")
         public String alias;
 
-        /**
-         * <p>The topologies of the physical database shards.</p>
-         */
         @NameInMap("DBTopologyInfoList")
         public java.util.List<GetDBTopologyResponseBodyDBTopologyDBTopologyInfoList> DBTopologyInfoList;
 
-        /**
-         * <p>The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).</p>
-         */
         @NameInMap("DbType")
         public String dbType;
 
-        /**
-         * <p>The type of the environment to which the logical database belongs. Valid values:</p>
-         * <br>
-         * <p>*   **product**: production environment</p>
-         * <p>*   **dev**: development environment</p>
-         * <p>*   **pre**: pre-release environment</p>
-         * <p>*   **test**: test environment</p>
-         * <p>*   **sit**: system integration testing (SIT) environment</p>
-         * <p>*   **uat**: user acceptance testing (UAT) environment</p>
-         * <p>*   **pet**: stress testing environment</p>
-         * <p>*   **stag**: staging environment</p>
-         * <br>
-         * <p>> For more information, see [Change the environment type of an instance](~~163309~~).</p>
-         */
         @NameInMap("EnvType")
         public String envType;
 
-        /**
-         * <p>The ID of the logical database.</p>
-         */
         @NameInMap("LogicDbId")
         public Long logicDbId;
 
-        /**
-         * <p>The name of the logical database.</p>
-         */
         @NameInMap("LogicDbName")
         public String logicDbName;
 
-        /**
-         * <p>The name that is used to search for the logical database.</p>
-         */
         @NameInMap("SearchName")
         public String searchName;
 

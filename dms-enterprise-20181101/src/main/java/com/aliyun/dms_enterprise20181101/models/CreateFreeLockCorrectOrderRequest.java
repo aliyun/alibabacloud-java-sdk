@@ -11,25 +11,25 @@ public class CreateFreeLockCorrectOrderRequest extends TeaModel {
     public String attachmentKey;
 
     /**
-     * <p>The purpose or objective of the data change. This parameter is used to help reduce unnecessary communication.</p>
+     * <p>The stakeholders of the data change. All stakeholders can view the ticket details and assist in the approval process. Irrelevant users other than DMS administrators and database administrators (DBAs) are not allowed to view the ticket details.</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
-     * <p>The parameters of the ticket.</p>
+     * <p>The key of the attachment that contains the SQL statements used to roll back the data change.</p>
      */
     @NameInMap("Param")
     public CreateFreeLockCorrectOrderRequestParam param;
 
     /**
-     * <p>The stakeholders of the data change. All stakeholders can view the ticket details and assist in the approval process. Irrelevant users other than DMS administrators and database administrators (DBAs) are not allowed to view the ticket details.</p>
+     * <p>The parameters of the ticket.</p>
      */
     @NameInMap("RelatedUserList")
     public java.util.List<Long> relatedUserList;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
+     * <p>The ID of the ticket.</p>
      */
     @NameInMap("Tid")
     public Long tid;
@@ -81,19 +81,13 @@ public class CreateFreeLockCorrectOrderRequest extends TeaModel {
 
     public static class CreateFreeLockCorrectOrderRequestParamDbItemList extends TeaModel {
         /**
-         * <p>The ID of the database. The database can be a physical database or a logical database.</p>
-         * <br>
-         * <p>*   To obtain the ID of a physical database, call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation.</p>
-         * <p>*   To obtain the ID of a logical database, call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation.</p>
+         * <p>The purpose or objective of the data change. This parameter is used to help reduce unnecessary communication.</p>
          */
         @NameInMap("DbId")
         public Long dbId;
 
         /**
-         * <p>Specifies whether the database is a logical database. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The database is a logical database.</p>
-         * <p>*   **false**: The database is a physical database.</p>
+         * <p>The SQL statements used to roll back the data change.</p>
          */
         @NameInMap("Logic")
         public Boolean logic;
@@ -123,50 +117,34 @@ public class CreateFreeLockCorrectOrderRequest extends TeaModel {
 
     public static class CreateFreeLockCorrectOrderRequestParam extends TeaModel {
         /**
-         * <p>The key of the attachment that contains the SQL statements used to change data. This parameter is not supported.</p>
+         * <p>Specifies whether the database is a logical database. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The database is a logical database.</p>
+         * <p>*   **false**: The database is a physical database.</p>
          */
         @NameInMap("AttachmentName")
         public String attachmentName;
 
         /**
-         * <p>The reason for the data change.</p>
+         * <p>The error code returned if the request fails.</p>
          */
         @NameInMap("Classify")
         public String classify;
 
         /**
-         * <p>The databases in which you want to change data.</p>
+         * <p>The key of the attachment that contains the SQL statements used to change data. This parameter is not supported.</p>
          */
         @NameInMap("DbItemList")
         public java.util.List<CreateFreeLockCorrectOrderRequestParamDbItemList> dbItemList;
 
         /**
-         * <p>The execution mode of the ticket after the ticket is approved. Valid values:</p>
+         * <p>The ID of the database. The database can be a physical database or a logical database.</p>
          * <br>
-         * <p>*   **COMMITOR**: The data change is performed by the user who submits the ticket.</p>
-         * <p>*   **AUTO**: The data change is automatically performed after the ticket is approved.</p>
-         * <p>*   **LAST_AUDITOR**: The data change is performed by the last approver of the ticket.</p>
+         * <p>*   To obtain the ID of a physical database, call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation.</p>
+         * <p>*   To obtain the ID of a logical database, call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation.</p>
          */
         @NameInMap("ExecMode")
         public String execMode;
-
-        /**
-         * <p>The SQL statements that you want to execute to change data.</p>
-         */
-        @NameInMap("ExecSQL")
-        public String execSQL;
-
-        /**
-         * <p>The key of the attachment that contains the SQL statements used to roll back the data change.</p>
-         */
-        @NameInMap("RollbackAttachmentName")
-        public String rollbackAttachmentName;
-
-        /**
-         * <p>The SQL statements used to roll back the data change.</p>
-         */
-        @NameInMap("RollbackSQL")
-        public String rollbackSQL;
 
         /**
          * <p>The format of the SQL statements used to roll back the data change. Valid values:</p>
@@ -174,14 +152,29 @@ public class CreateFreeLockCorrectOrderRequest extends TeaModel {
          * <p>*   **TEXT**: text</p>
          * <p>*   **ATTACHMENT**: attachment. This value is not supported.</p>
          */
+        @NameInMap("ExecSQL")
+        public String execSQL;
+
+        /**
+         * <p>The error message returned if the request fails.</p>
+         */
+        @NameInMap("RollbackAttachmentName")
+        public String rollbackAttachmentName;
+
+        /**
+         * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
+         */
+        @NameInMap("RollbackSQL")
+        public String rollbackSQL;
+
+        /**
+         * <p>The databases in which you want to change data.</p>
+         */
         @NameInMap("RollbackSqlType")
         public String rollbackSqlType;
 
         /**
-         * <p>The format of the SQL statements used to change data. Valid values:</p>
-         * <br>
-         * <p>*   **TEXT**: text</p>
-         * <p>*   **ATTACHMENT**: attachment. This value is not supported.</p>
+         * <p>The operation that you want to perform. Set the value to CreateFreeLockCorrectOrder.</p>
          */
         @NameInMap("SqlType")
         public String sqlType;

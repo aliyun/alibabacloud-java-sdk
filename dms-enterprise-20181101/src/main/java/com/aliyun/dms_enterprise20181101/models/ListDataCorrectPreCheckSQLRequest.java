@@ -5,28 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListDataCorrectPreCheckSQLRequest extends TeaModel {
     /**
-     * <p>The ID of the database. The database can be a physical database or a logical database.</p>
-     * <br>
-     * <p>*   To query the ID of a physical database, call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation.</p>
-     * <p>*   To query the ID of a logical database, call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation.</p>
+     * <p>The operation that you want to perform. Set the value to **ListDataCorrectPreCheckSQL**.</p>
      */
     @NameInMap("DbId")
     public Long dbId;
 
     /**
-     * <p>The ID of the data change ticket. You can call the [ListOrders](~~144643~~) operation to query the ID of the data change ticket.</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The error code returned.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The key that is used to query the details of optimization suggestions. You can call the [GetSQLReviewOptimizeDetail](~~265977~~) operation to query the details of optimization suggestions based on the key.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
