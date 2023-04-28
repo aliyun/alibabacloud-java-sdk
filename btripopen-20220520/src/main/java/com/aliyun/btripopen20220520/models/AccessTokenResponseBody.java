@@ -19,6 +19,9 @@ public class AccessTokenResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>成功标识</p>
+     */
     @NameInMap("success")
     public Boolean success;
 

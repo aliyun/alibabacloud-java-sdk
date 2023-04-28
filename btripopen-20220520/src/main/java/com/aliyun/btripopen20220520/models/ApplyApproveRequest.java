@@ -16,6 +16,9 @@ public class ApplyApproveRequest extends TeaModel {
     @NameInMap("status")
     public Integer status;
 
+    @NameInMap("sub_corp_id")
+    public String subCorpId;
+
     @NameInMap("user_id")
     public String userId;
 
@@ -57,6 +60,14 @@ public class ApplyApproveRequest extends TeaModel {
     }
     public Integer getStatus() {
         return this.status;
+    }
+
+    public ApplyApproveRequest setSubCorpId(String subCorpId) {
+        this.subCorpId = subCorpId;
+        return this;
+    }
+    public String getSubCorpId() {
+        return this.subCorpId;
     }
 
     public ApplyApproveRequest setUserId(String userId) {

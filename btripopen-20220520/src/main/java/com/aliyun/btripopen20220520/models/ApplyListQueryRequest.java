@@ -28,6 +28,9 @@ public class ApplyListQueryRequest extends TeaModel {
     @NameInMap("start_time")
     public String startTime;
 
+    @NameInMap("sub_corp_id")
+    public String subCorpId;
+
     @NameInMap("type")
     public Integer type;
 
@@ -104,6 +107,14 @@ public class ApplyListQueryRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
+    }
+
+    public ApplyListQueryRequest setSubCorpId(String subCorpId) {
+        this.subCorpId = subCorpId;
+        return this;
+    }
+    public String getSubCorpId() {
+        return this.subCorpId;
     }
 
     public ApplyListQueryRequest setType(Integer type) {

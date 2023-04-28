@@ -82,30 +82,57 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
     }
 
     public static class InsInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails extends TeaModel {
+        /**
+         * <p>金额</p>
+         */
         @NameInMap("amount")
         public String amount;
 
+        /**
+         * <p>行号</p>
+         */
         @NameInMap("index")
         public String index;
 
+        /**
+         * <p>货物或应税劳务、服务名称</p>
+         */
         @NameInMap("item_name")
         public String itemName;
 
+        /**
+         * <p>数量</p>
+         */
         @NameInMap("quantity")
         public String quantity;
 
+        /**
+         * <p>规格型号</p>
+         */
         @NameInMap("specification")
         public String specification;
 
+        /**
+         * <p>税额</p>
+         */
         @NameInMap("tax")
         public String tax;
 
+        /**
+         * <p>税率</p>
+         */
         @NameInMap("tax_rate")
         public String taxRate;
 
+        /**
+         * <p>单位</p>
+         */
         @NameInMap("unit")
         public String unit;
 
+        /**
+         * <p>单价</p>
+         */
         @NameInMap("unit_price")
         public String unitPrice;
 
@@ -198,6 +225,9 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("bill_date")
         public String billDate;
 
+        /**
+         * <p>校验码</p>
+         */
         @NameInMap("check_code")
         public String checkCode;
 
@@ -207,9 +237,15 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("department")
         public String department;
 
+        /**
+         * <p>开票人</p>
+         */
         @NameInMap("drawer")
         public String drawer;
 
+        /**
+         * <p>应用ID</p>
+         */
         @NameInMap("id")
         public String id;
 
@@ -228,18 +264,30 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("invoice_day")
         public String invoiceDay;
 
+        /**
+         * <p>发票明细</p>
+         */
         @NameInMap("invoice_details")
         public java.util.List<InsInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails> invoiceDetails;
 
+        /**
+         * <p>发票地区</p>
+         */
         @NameInMap("invoice_location")
         public String invoiceLocation;
 
         @NameInMap("invoice_no")
         public String invoiceNo;
 
+        /**
+         * <p>发票抬头</p>
+         */
         @NameInMap("invoice_title")
         public String invoiceTitle;
 
+        /**
+         * <p>机器码</p>
+         */
         @NameInMap("machine_code")
         public String machineCode;
 
@@ -252,15 +300,24 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("passenger")
         public String passenger;
 
+        /**
+         * <p>密码区</p>
+         */
         @NameInMap("password_area")
         public String passwordArea;
 
         @NameInMap("project")
         public String project;
 
+        /**
+         * <p>购方银行信息</p>
+         */
         @NameInMap("purchaser_bank_account_info")
         public String purchaserBankAccountInfo;
 
+        /**
+         * <p>购方联系方式</p>
+         */
         @NameInMap("purchaser_contact_info")
         public String purchaserContactInfo;
 
@@ -270,18 +327,33 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("purchaser_tax_no")
         public String purchaserTaxNo;
 
+        /**
+         * <p>收款人</p>
+         */
         @NameInMap("recipient")
         public String recipient;
 
+        /**
+         * <p>备注</p>
+         */
         @NameInMap("remarks")
         public String remarks;
 
+        /**
+         * <p>复核人</p>
+         */
         @NameInMap("reviewer")
         public String reviewer;
 
+        /**
+         * <p>销售方银行信息</p>
+         */
         @NameInMap("seller_bank_account_info")
         public String sellerBankAccountInfo;
 
+        /**
+         * <p>销售方联系方式</p>
+         */
         @NameInMap("seller_contact_info")
         public String sellerContactInfo;
 
@@ -291,6 +363,9 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("seller_tax_no")
         public String sellerTaxNo;
 
+        /**
+         * <p>校验码</p>
+         */
         @NameInMap("smart_check_code")
         public String smartCheckCode;
 
@@ -300,6 +375,9 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("tax_rate")
         public String taxRate;
 
+        /**
+         * <p>大写金额</p>
+         */
         @NameInMap("total_amount_in_words")
         public String totalAmountInWords;
 

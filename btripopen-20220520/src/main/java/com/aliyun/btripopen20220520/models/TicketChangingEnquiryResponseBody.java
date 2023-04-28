@@ -410,6 +410,9 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
     }
 
     public static class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItems extends TeaModel {
+        /**
+         * <p>attributes</p>
+         */
         @NameInMap("attributes")
         public java.util.Map<String, ?> attributes;
 
