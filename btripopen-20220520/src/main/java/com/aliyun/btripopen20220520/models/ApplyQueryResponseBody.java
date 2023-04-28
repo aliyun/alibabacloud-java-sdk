@@ -791,6 +791,9 @@ public class ApplyQueryResponseBody extends TeaModel {
         @NameInMap("depart_name")
         public String departName;
 
+        /**
+         * <p>补充描述，账单中将会体现此字段的值。可以用于企业的统计和对账</p>
+         */
         @NameInMap("extend_field")
         public String extendField;
 

@@ -4,6 +4,9 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class HotelOrderPayRequest extends TeaModel {
+    /**
+     * <p>供应商订单号（取自创单返回的订单号）</p>
+     */
     @NameInMap("btrip_order_id")
     public Long btripOrderId;
 

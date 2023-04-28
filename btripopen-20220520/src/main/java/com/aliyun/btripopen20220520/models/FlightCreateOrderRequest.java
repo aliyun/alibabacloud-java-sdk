@@ -278,9 +278,15 @@ public class FlightCreateOrderRequest extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>国籍</p>
+         */
         @NameInMap("nationality")
         public String nationality;
 
+        /**
+         * <p>国籍二字码</p>
+         */
         @NameInMap("nationality_code")
         public String nationalityCode;
 

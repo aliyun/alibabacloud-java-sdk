@@ -350,6 +350,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("status", request.status);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.subCorpId)) {
+            body.put("sub_corp_id", request.subCorpId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.thirdpartApplyId)) {
             body.put("thirdpart_apply_id", request.thirdpartApplyId);
         }
@@ -461,6 +465,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
             body.put("status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subCorpId)) {
+            body.put("sub_corp_id", request.subCorpId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
@@ -587,6 +595,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
             query.put("start_time", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subCorpId)) {
+            query.put("sub_corp_id", request.subCorpId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
@@ -731,6 +743,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("status", request.status);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.subCorpId)) {
+            body.put("sub_corp_id", request.subCorpId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.thirdpartApplyId)) {
             body.put("thirdpart_apply_id", request.thirdpartApplyId);
         }
@@ -829,6 +845,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.applyShowId)) {
             query.put("apply_show_id", request.applyShowId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subCorpId)) {
+            query.put("sub_corp_id", request.subCorpId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.thirdpartApplyId)) {

@@ -85,6 +85,9 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("amount")
         public String amount;
 
+        /**
+         * <p>行号</p>
+         */
         @NameInMap("index")
         public String index;
 
@@ -234,6 +237,9 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("invoice_type_desc")
         public String invoiceTypeDesc;
 
+        /**
+         * <p>机器码</p>
+         */
         @NameInMap("machine_code")
         public String machineCode;
 

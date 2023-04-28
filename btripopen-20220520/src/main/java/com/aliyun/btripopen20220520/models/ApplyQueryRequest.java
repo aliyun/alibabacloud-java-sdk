@@ -10,6 +10,9 @@ public class ApplyQueryRequest extends TeaModel {
     @NameInMap("apply_show_id")
     public String applyShowId;
 
+    @NameInMap("sub_corp_id")
+    public String subCorpId;
+
     @NameInMap("thirdpart_apply_id")
     public String thirdpartApplyId;
 
@@ -35,6 +38,14 @@ public class ApplyQueryRequest extends TeaModel {
     }
     public String getApplyShowId() {
         return this.applyShowId;
+    }
+
+    public ApplyQueryRequest setSubCorpId(String subCorpId) {
+        this.subCorpId = subCorpId;
+        return this;
+    }
+    public String getSubCorpId() {
+        return this.subCorpId;
     }
 
     public ApplyQueryRequest setThirdpartApplyId(String thirdpartApplyId) {

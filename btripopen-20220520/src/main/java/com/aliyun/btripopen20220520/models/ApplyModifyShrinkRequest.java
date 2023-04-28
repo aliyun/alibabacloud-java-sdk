@@ -19,6 +19,9 @@ public class ApplyModifyShrinkRequest extends TeaModel {
     @NameInMap("depart_name")
     public String departName;
 
+    /**
+     * <p>可将补充描述传入此字段，账单中将会体现此字段的值。可以用于企业的统计和对账</p>
+     */
     @NameInMap("extend_field")
     public String extendField;
 
@@ -51,6 +54,9 @@ public class ApplyModifyShrinkRequest extends TeaModel {
 
     @NameInMap("status")
     public Integer status;
+
+    @NameInMap("sub_corp_id")
+    public String subCorpId;
 
     @NameInMap("thirdpart_apply_id")
     public String thirdpartApplyId;
@@ -225,6 +231,14 @@ public class ApplyModifyShrinkRequest extends TeaModel {
     }
     public Integer getStatus() {
         return this.status;
+    }
+
+    public ApplyModifyShrinkRequest setSubCorpId(String subCorpId) {
+        this.subCorpId = subCorpId;
+        return this;
+    }
+    public String getSubCorpId() {
+        return this.subCorpId;
     }
 
     public ApplyModifyShrinkRequest setThirdpartApplyId(String thirdpartApplyId) {

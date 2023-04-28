@@ -139,9 +139,15 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         @NameInMap("tax_rate")
         public String taxRate;
 
+        /**
+         * <p>取票号</p>
+         */
         @NameInMap("ticket_no")
         public String ticketNo;
 
+        /**
+         * <p>车次</p>
+         */
         @NameInMap("train_no")
         public String trainNo;
 
