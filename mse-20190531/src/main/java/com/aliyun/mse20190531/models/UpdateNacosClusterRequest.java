@@ -5,58 +5,55 @@ import com.aliyun.tea.*;
 
 public class UpdateNacosClusterRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>system error</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>The port used for health checks.</p>
+     * <p>cluster not found</p>
      */
     @NameInMap("CheckPort")
     public Integer checkPort;
 
     /**
-     * <p>The name of the Nacos cluster.</p>
+     * <p>clusterNotFound</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
-     * <p>The name of the group.</p>
+     * <p>illegal request:%s</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
-     * <p>The type of the health check.</p>
+     * <p>systemError</p>
      */
     @NameInMap("HealthChecker")
     public String healthChecker;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>mse-100-007</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the namespace.</p>
+     * <p>mse-200-021</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
-     * <p>The name of the service.</p>
+     * <p>illegalRequest</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;
 
     /**
-     * <p>Specifies whether to use the port of the instance for a health check.</p>
+     * <p>mse-100-001</p>
      */
     @NameInMap("UseInstancePortForCheck")
     public Boolean useInstancePortForCheck;

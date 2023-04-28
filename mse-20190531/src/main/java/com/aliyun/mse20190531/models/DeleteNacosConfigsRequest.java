@@ -5,28 +5,25 @@ import com.aliyun.tea.*;
 
 public class DeleteNacosConfigsRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>The IDs of configurations.</p>
+     * <p>systemError</p>
      */
     @NameInMap("Ids")
     public String ids;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>mse-100-001</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the namespace.</p>
+     * <p>system error</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;

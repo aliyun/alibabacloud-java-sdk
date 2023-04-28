@@ -138,25 +138,25 @@ public class QueryConfigResponseBody extends TeaModel {
         public String clusterName;
 
         /**
-         * <p>Indicates whether RAM authorization of a configuration center is enabled. This parameter is valid for Nacos instances. Valid values:</p>
+         * <p>Indicates whether RAM authentication of a configuration center is enabled. This parameter is valid for Nacos instances. Valid values:</p>
          * <br>
-         * <p>*   `true`: enabled</p>
-         * <p>*   `false`: disabled</p>
+         * <p>*   `true`: enabled.</p>
+         * <p>*   `false`: disabled.</p>
          */
         @NameInMap("ConfigAuthEnabled")
         public Boolean configAuthEnabled;
 
         /**
-         * <p>Indicates whether RAM authorization is supported by a configuration center of the instance. This parameter is valid for Nacos instances. Valid values:</p>
+         * <p>Indicates whether RAM authentication is supported by a configuration center of the instance. This parameter is valid for Nacos instances. Valid values:</p>
          * <br>
-         * <p>*   `true`: supported</p>
-         * <p>*   `false`: not supported</p>
+         * <p>*   `true`: supported.</p>
+         * <p>*   `false`: not supported.</p>
          */
         @NameInMap("ConfigAuthSupported")
         public Boolean configAuthSupported;
 
         /**
-         * <p>The maximum size of a configuration. Unit: KB.</p>
+         * <p>The maximum size of contents in a configuration. Unit: KB.</p>
          */
         @NameInMap("ConfigContentLimit")
         public Long configContentLimit;
@@ -164,8 +164,8 @@ public class QueryConfigResponseBody extends TeaModel {
         /**
          * <p>Indicates whether configuration encryption of a configuration center is enabled by the instance. This parameter is valid for Nacos instances. Valid values:</p>
          * <br>
-         * <p>*   `true`: enabled</p>
-         * <p>*   `false`: disabled</p>
+         * <p>*   `true`: enabled.</p>
+         * <p>*   `false`: disabled.</p>
          */
         @NameInMap("ConfigSecretEnabled")
         public Boolean configSecretEnabled;
@@ -173,8 +173,8 @@ public class QueryConfigResponseBody extends TeaModel {
         /**
          * <p>Indicates whether configuration encryption of a configuration center is supported by the instance. This parameter is valid for Nacos instances. Valid values:</p>
          * <br>
-         * <p>*   `true`: supported</p>
-         * <p>*   `false`: not supported</p>
+         * <p>*   `true`: supported.</p>
+         * <p>*   `false`: not supported.</p>
          */
         @NameInMap("ConfigSecretSupported")
         public Boolean configSecretSupported;
@@ -209,8 +209,8 @@ public class QueryConfigResponseBody extends TeaModel {
         /**
          * <p>Indicates whether Mesh Configuration Protocol (MCP) is enabled. This parameter is valid for Nacos instances. Valid values:</p>
          * <br>
-         * <p>*   `true`: enabled</p>
-         * <p>*   `false`: disabled</p>
+         * <p>*   `true`: enabled.</p>
+         * <p>*   `false`: disabled.</p>
          */
         @NameInMap("MCPEnabled")
         public Boolean MCPEnabled;
@@ -218,8 +218,8 @@ public class QueryConfigResponseBody extends TeaModel {
         /**
          * <p>Indicates whether MCP is supported. This parameter is valid for Nacos instances. Valid values:</p>
          * <br>
-         * <p>*   `true`: supported</p>
-         * <p>*   `false`: not supported</p>
+         * <p>*   `true`: supported.</p>
+         * <p>*   `false`: not supported.</p>
          */
         @NameInMap("MCPSupported")
         public Boolean MCPSupported;
@@ -250,19 +250,19 @@ public class QueryConfigResponseBody extends TeaModel {
         public QueryConfigResponseBodyDataNacosRunningEnv nacosRunningEnv;
 
         /**
-         * <p>Indicates whether RAM authorization of a registry is enabled. This parameter is valid for Nacos instances. Valid values:</p>
+         * <p>Indicates whether RAM authentication of a registry is enabled. This parameter is valid for Nacos instances. Valid values:</p>
          * <br>
-         * <p>*   `true`: enabled</p>
-         * <p>*   `false`: disabled</p>
+         * <p>*   `true`: enabled.</p>
+         * <p>*   `false`: disabled.</p>
          */
         @NameInMap("NamingAuthEnabled")
         public Boolean namingAuthEnabled;
 
         /**
-         * <p>Indicates whether RAM authorization of services is supported by the instance. This parameter is valid for Nacos instances. Valid values:</p>
+         * <p>Indicates whether RAM authentication of services is supported by the instance. This parameter is valid for Nacos instances. Valid values:</p>
          * <br>
-         * <p>*   `true`: supported</p>
-         * <p>*   `false`: not supported</p>
+         * <p>*   `true`: supported.</p>
+         * <p>*   `false`: not supported.</p>
          */
         @NameInMap("NamingAuthSupported")
         public Boolean namingAuthSupported;
@@ -270,8 +270,8 @@ public class QueryConfigResponseBody extends TeaModel {
         /**
          * <p>Indicates whether service creation is supported for the instance. This parameter is valid for Nacos instances. Valid values:</p>
          * <br>
-         * <p>*   `true`: supported</p>
-         * <p>*   `false`: not supported</p>
+         * <p>*   `true`: supported.</p>
+         * <p>*   `false`: not supported.</p>
          */
         @NameInMap("NamingCreateServiceSupported")
         public Boolean namingCreateServiceSupported;
@@ -279,14 +279,14 @@ public class QueryConfigResponseBody extends TeaModel {
         /**
          * <p>Indicates whether super permissions are enabled. This parameter is valid for ZooKeeper instances. Valid values:</p>
          * <br>
-         * <p>*   `true`: enabled</p>
-         * <p>*   `false`: disabled</p>
+         * <p>*   `true`: enabled.</p>
+         * <p>*   `false`: disabled.</p>
          */
         @NameInMap("OpenSuperAcl")
         public Boolean openSuperAcl;
 
         /**
-         * <p>The user password. This parameter is valid only if OpenSuperAcl is set to true.</p>
+         * <p>The password that corresponds to the username. This parameter is valid only if OpenSuperAcl is set to true.</p>
          */
         @NameInMap("PassWord")
         public String passWord;
@@ -319,7 +319,7 @@ public class QueryConfigResponseBody extends TeaModel {
         public String tickTime;
 
         /**
-         * <p>The username. This parameter is valid only if OpenSuperAcl is set to true.</p>
+         * <p>The username of the user. This parameter is valid only if OpenSuperAcl is set to true.</p>
          */
         @NameInMap("UserName")
         public String userName;

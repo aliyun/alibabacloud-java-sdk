@@ -5,37 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyLosslessRuleRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>int64</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
-
-    /**
-     * <p>Specifies whether to align the lifecycle of the application in the Kubernetes cluster with that of the microservice.</p>
-     */
-    @NameInMap("Aligned")
-    public Boolean aligned;
-
-    /**
-     * <p>The ID of the application.</p>
-     */
-    @NameInMap("AppId")
-    public String appId;
-
-    /**
-     * <p>The name of the application.</p>
-     */
-    @NameInMap("AppName")
-    public String appName;
-
-    /**
-     * <p>The registration latency.</p>
-     */
-    @NameInMap("DelayTime")
-    public Integer delayTime;
 
     /**
      * <p>Specifies whether to enable the alert rule. Valid values:</p>
@@ -43,47 +16,71 @@ public class ModifyLosslessRuleRequest extends TeaModel {
      * <p>*   `true`: enables the rule.</p>
      * <p>*   `false`: disables the rule.</p>
      */
+    @NameInMap("Aligned")
+    public Boolean aligned;
+
+    /**
+     * <p>mse-100-001</p>
+     */
+    @NameInMap("AppId")
+    public String appId;
+
+    /**
+     * <p>clusterNotFound</p>
+     */
+    @NameInMap("AppName")
+    public String appName;
+
+    /**
+     * <p>The ID of the region.</p>
+     */
+    @NameInMap("DelayTime")
+    public Integer delayTime;
+
+    /**
+     * <p>systemError</p>
+     */
     @NameInMap("Enable")
     public Boolean enable;
 
     /**
-     * <p>The slope of the prefetching curve.</p>
+     * <p>The microservice namespace to which the rule applies.</p>
      */
     @NameInMap("FuncType")
     public Integer funcType;
 
     /**
-     * <p>Specifies whether to display online and offline processing details.</p>
+     * <p>int64</p>
      */
     @NameInMap("LossLessDetail")
     public Boolean lossLessDetail;
 
     /**
-     * <p>The microservice namespace to which the rule applies.</p>
+     * <p>cluster not found</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
-     * <p>Specifies whether to enable notification.</p>
+     * <p>The registration latency.</p>
      */
     @NameInMap("Notice")
     public Boolean notice;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>mse-200-021</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>Specifies whether to associate with service prefetching.</p>
+     * <p>The prefetching duration.</p>
      */
     @NameInMap("Related")
     public Boolean related;
 
     /**
-     * <p>The prefetching duration.</p>
+     * <p>system error</p>
      */
     @NameInMap("WarmupTime")
     public Integer warmupTime;

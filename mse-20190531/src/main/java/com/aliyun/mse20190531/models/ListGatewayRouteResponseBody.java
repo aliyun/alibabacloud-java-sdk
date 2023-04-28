@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListGatewayRouteResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The code returned.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public ListGatewayRouteResponseBodyData data;
@@ -23,7 +23,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message returned if the request failed.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -156,7 +156,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
 
     public static class ListGatewayRouteResponseBodyDataResultFallbackServices extends TeaModel {
         /**
-         * <p>The protocol.</p>
+         * <p>The type of the protocol.</p>
          */
         @NameInMap("AgreementType")
         public String agreementType;
@@ -192,7 +192,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         public Long serviceId;
 
         /**
-         * <p>The name of a service.</p>
+         * <p>The name of the service.</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
@@ -204,13 +204,13 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         public Integer servicePort;
 
         /**
-         * <p>The type of the service source.</p>
+         * <p>The source type.</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
 
         /**
-         * <p>The version of a service.</p>
+         * <p>The version of the service.</p>
          */
         @NameInMap("Version")
         public String version;
@@ -354,7 +354,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
 
     public static class ListGatewayRouteResponseBodyDataResultRoutePredicatesHeaderPredicates extends TeaModel {
         /**
-         * <p>Header KEY</p>
+         * <p>The header key.</p>
          */
         @NameInMap("Key")
         public String key;
@@ -804,7 +804,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
 
     public static class ListGatewayRouteResponseBodyDataResultRouteServices extends TeaModel {
         /**
-         * <p>The protocol.</p>
+         * <p>The type of the protocol.</p>
          */
         @NameInMap("AgreementType")
         public String agreementType;
@@ -1002,7 +1002,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         public Long domainId;
 
         /**
-         * <p>The IDs of domains.</p>
+         * <p>The domain IDs.</p>
          */
         @NameInMap("DomainIdList")
         public java.util.List<Long> domainIdList;
@@ -1014,7 +1014,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         public String domainName;
 
         /**
-         * <p>The names of domains.</p>
+         * <p>The domain names.</p>
          */
         @NameInMap("DomainNameList")
         public java.util.List<String> domainNameList;
@@ -1032,7 +1032,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         public Boolean fallback;
 
         /**
-         * <p>The information of the Fallback service.</p>
+         * <p>The information about the Fallback service.</p>
          */
         @NameInMap("FallbackServices")
         public java.util.List<ListGatewayRouteResponseBodyDataResultFallbackServices> fallbackServices;
@@ -1098,7 +1098,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         public ListGatewayRouteResponseBodyDataResultRoutePredicates routePredicates;
 
         /**
-         * <p>The services.</p>
+         * <p>The information about services.</p>
          */
         @NameInMap("RouteServices")
         public java.util.List<ListGatewayRouteResponseBodyDataResultRouteServices> routeServices;

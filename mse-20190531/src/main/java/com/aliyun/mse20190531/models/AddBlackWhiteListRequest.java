@@ -4,69 +4,33 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class AddBlackWhiteListRequest extends TeaModel {
-    /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
-     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    /**
-     * <p>The content of the blacklist.</p>
-     */
     @NameInMap("Content")
     public String content;
 
-    /**
-     * <p>The unique ID of the gateway.</p>
-     */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    /**
-     * <p>Specifies whether to create a whitelist.</p>
-     */
     @NameInMap("IsWhite")
     public Boolean isWhite;
 
-    /**
-     * <p>The name.</p>
-     */
     @NameInMap("Name")
     public String name;
 
-    /**
-     * <p>The description.</p>
-     */
     @NameInMap("Note")
     public String note;
 
-    /**
-     * <p>The resource IDs in the JSON format.</p>
-     */
     @NameInMap("ResourceIdJsonList")
     public String resourceIdJsonList;
 
-    /**
-     * <p>The resource type to which the blacklist or whitelist applies.</p>
-     */
     @NameInMap("ResourceType")
     public String resourceType;
 
-    /**
-     * <p>The status of the blacklist.</p>
-     * <br>
-     * <p>*   on: enabled</p>
-     * <p>*   off: disabled</p>
-     */
     @NameInMap("Status")
     public String status;
 
-    /**
-     * <p>The type of object in the blacklist or whitelist.</p>
-     */
     @NameInMap("Type")
     public String type;
 

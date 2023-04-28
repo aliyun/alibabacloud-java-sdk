@@ -5,40 +5,37 @@ import com.aliyun.tea.*;
 
 public class ListListenersByConfigRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>mse-200-021</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the data.</p>
+     * <p>mse-100-007</p>
      */
     @NameInMap("DataId")
     public String dataId;
 
     /**
-     * <p>The group.</p>
+     * <p>illegalRequest</p>
      */
     @NameInMap("Group")
     public String group;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>duplicated cluster alias name</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the namespace.</p>
+     * <p>illegal request:%s</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
-     * <p>The extended request parameters in the JSON format.</p>
+     * <p>mse-200-105</p>
      */
     @NameInMap("RequestPars")
     public String requestPars;

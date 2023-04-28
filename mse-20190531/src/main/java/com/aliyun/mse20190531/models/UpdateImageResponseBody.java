@@ -11,7 +11,7 @@ public class UpdateImageResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      */
     @NameInMap("Message")
     public String message;

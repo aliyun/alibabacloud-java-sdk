@@ -5,34 +5,31 @@ import com.aliyun.tea.*;
 
 public class ImportNacosConfigRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>mse-200-105</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>The URL that is used to download the configuration file.</p>
+     * <p>> The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).</p>
      */
     @NameInMap("FileUrl")
     public String fileUrl;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the namespace.</p>
+     * <p>mse_prepaid_public_cn-****</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
-     * <p>The policy.</p>
+     * <p>Imports Nacos configurations as a file.</p>
      */
     @NameInMap("Policy")
     public String policy;

@@ -5,34 +5,31 @@ import com.aliyun.tea.*;
 
 public class GetNacosConfigResponseBody extends TeaModel {
     /**
-     * <p>The configuration information.</p>
+     * <p>The name of the application.</p>
      */
     @NameInMap("Configuration")
     public GetNacosConfigResponseBodyConfiguration configuration;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>mse-200-105</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The configuration information.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The format of the configuration.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <p>duplicatedClusterAliasName</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -84,61 +81,61 @@ public class GetNacosConfigResponseBody extends TeaModel {
 
     public static class GetNacosConfigResponseBodyConfiguration extends TeaModel {
         /**
-         * <p>The name of the application.</p>
+         * <p>The message digest of the configuration.</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
-         * <p>The list of IP addresses where the beta release of the configuration is performed.</p>
+         * <p>The error code returned if the request failed.</p>
          */
         @NameInMap("BetaIps")
         public String betaIps;
 
         /**
-         * <p>The content of the configuration.</p>
+         * <p>The description of the configuration.</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
-         * <p>The ID of the configuration.</p>
+         * <p>The name of the configuration group.</p>
          */
         @NameInMap("DataId")
         public String dataId;
 
         /**
-         * <p>The description of the configuration.</p>
+         * <p>The encryption key.</p>
          */
         @NameInMap("Desc")
         public String desc;
 
         /**
-         * <p>The encryption key.</p>
+         * <p>1.1.XX.XX, 2.2.XX.XX</p>
          */
         @NameInMap("EncryptedDataKey")
         public String encryptedDataKey;
 
         /**
-         * <p>The name of the configuration group.</p>
+         * <p>For testing</p>
          */
         @NameInMap("Group")
         public String group;
 
         /**
-         * <p>The message digest of the configuration.</p>
+         * <p>The content of the configuration.</p>
          */
         @NameInMap("Md5")
         public String md5;
 
         /**
-         * <p>The tags of the configuration.</p>
+         * <p>The ID of the configuration.</p>
          */
         @NameInMap("Tags")
         public String tags;
 
         /**
-         * <p>The format of the configuration.</p>
+         * <p>The tags of the configuration.</p>
          */
         @NameInMap("Type")
         public String type;

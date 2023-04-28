@@ -26,6 +26,9 @@ public class ListApplicationsWithTagRulesRequest extends TeaModel {
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>应用所属的MSE命名空间。</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 

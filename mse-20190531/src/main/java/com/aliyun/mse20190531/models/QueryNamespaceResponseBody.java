@@ -8,7 +8,7 @@ public class QueryNamespaceResponseBody extends TeaModel {
     public java.util.List<QueryNamespaceResponseBodyData> data;
 
     /**
-     * <p>HttpStatusCode</p>
+     * <p>HttpStatusCode。</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;

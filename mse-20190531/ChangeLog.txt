@@ -1,3 +1,6 @@
+2023-04-28 Version: 3.0.68
+- Rebuild.
+
 2023-04-17 Version: 3.0.67
 - Support RAM.
 - Update API CreateOrUpdateSwimmingLaneGroup.

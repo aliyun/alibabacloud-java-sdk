@@ -5,25 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListClusterVersionsRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>duplicated cluster alias name</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>The type of the instance. Valid values: ZooKeeper, Nacos-Ans, and Eureka.</p>
+     * <p>mse-200-105</p>
      */
     @NameInMap("ClusterType")
     public String clusterType;
 
     /**
-     * <p>Valid values:</p>
-     * <br>
-     * <p>*   `mse_dev`: Developer Edition.</p>
-     * <p>*   `mse_pro`: Professional Edition. This is the default value.</p>
+     * <p>duplicatedClusterAliasName</p>
      */
     @NameInMap("MseVersion")
     public String mseVersion;

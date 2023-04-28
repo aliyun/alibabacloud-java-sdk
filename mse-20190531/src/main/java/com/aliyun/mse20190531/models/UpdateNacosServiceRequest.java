@@ -5,50 +5,43 @@ import com.aliyun.tea.*;
 
 public class UpdateNacosServiceRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>system error</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the cluster.</p>
-     * <br>
-     * <p>> This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.</p>
+     * <p>systemError</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The name of the group.</p>
+     * <p>clusterNotFound</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
-     * <p>The ID of the instance.</p>
-     * <br>
-     * <p>> This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.</p>
+     * <p>illegal request:%s</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the namespace.</p>
+     * <p>cluster not found</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
-     * <p>The protection threshold.</p>
+     * <p>mse-100-001</p>
      */
     @NameInMap("ProtectThreshold")
     public String protectThreshold;
 
     /**
-     * <p>The name of the service.</p>
+     * <p>mse-200-021</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;

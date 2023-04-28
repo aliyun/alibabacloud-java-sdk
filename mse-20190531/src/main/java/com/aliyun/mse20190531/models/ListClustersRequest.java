@@ -5,52 +5,49 @@ import com.aliyun.tea.*;
 
 public class ListClustersRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>system error</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>The alias of the instance. Fuzzy match is supported.</p>
+     * <p>illegalRequest</p>
      */
     @NameInMap("ClusterAliasName")
     public String clusterAliasName;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>duplicated cluster alias name</p>
      */
     @NameInMap("PageNum")
     public Integer pageNum;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>mse-100-007</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region in which the instance resides. The region is supported by MSE.</p>
+     * <p>illegal request:%s</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The extended request parameters in the JSON format.</p>
+     * <p>duplicatedClusterAliasName</p>
      */
     @NameInMap("RequestPars")
     public String requestPars;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs. For more information about resource groups, see the topic "View basic information of a resource group."</p>
+     * <p>mse-200-021</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The list of tags. A maximum number of 20 tags are supported.</p>
+     * <p>clusterNotFound</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListClustersRequestTag> tag;
@@ -126,13 +123,13 @@ public class ListClustersRequest extends TeaModel {
 
     public static class ListClustersRequestTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>mse-100-001</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>systemError</p>
          */
         @NameInMap("Value")
         public String value;

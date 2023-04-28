@@ -5,52 +5,46 @@ import com.aliyun.tea.*;
 
 public class ListClusterVersionsResponseBody extends TeaModel {
     /**
-     * <p>The response code returned.</p>
+     * <p>cluster not found</p>
      */
     @NameInMap("Code")
     public Integer code;
 
-    /**
-     * <p>The details of the data.</p>
-     */
     @NameInMap("Data")
     public java.util.List<ListClusterVersionsResponseBodyData> data;
 
     /**
-     * <p>The dynamic part in the error message.</p>
+     * <p>system error</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>clusterNotFound</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>illegalRequest</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>mse-100-001</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>illegal request:%s</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <p>mse-200-021</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -125,21 +119,12 @@ public class ListClusterVersionsResponseBody extends TeaModel {
     }
 
     public static class ListClusterVersionsResponseBodyData extends TeaModel {
-        /**
-         * <p>The type of the instance.</p>
-         */
         @NameInMap("ClusterType")
         public String clusterType;
 
-        /**
-         * <p>The code of the instance type.</p>
-         */
         @NameInMap("Code")
         public String code;
 
-        /**
-         * <p>The version of the instance.</p>
-         */
         @NameInMap("ShowName")
         public String showName;
 

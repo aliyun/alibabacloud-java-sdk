@@ -4,42 +4,21 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class PullServicesResponseBody extends TeaModel {
-    /**
-     * <p>The response code returned.</p>
-     */
     @NameInMap("Code")
     public Integer code;
 
-    /**
-     * <p>The data entries returned.</p>
-     */
     @NameInMap("Data")
     public java.util.List<PullServicesResponseBodyData> data;
 
-    /**
-     * <p>The HTTP status code.</p>
-     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <p>The message returned.</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -97,33 +76,18 @@ public class PullServicesResponseBody extends TeaModel {
     }
 
     public static class PullServicesResponseBodyDataServices extends TeaModel {
-        /**
-         * <p>The name of the group.</p>
-         */
         @NameInMap("GroupName")
         public String groupName;
 
-        /**
-         * <p>The name of the service.</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The namespace.</p>
-         */
         @NameInMap("Namespace")
         public String namespace;
 
-        /**
-         * <p>The ID of the service source.</p>
-         */
         @NameInMap("SourceId")
         public String sourceId;
 
-        /**
-         * <p>The type of the service source.</p>
-         */
         @NameInMap("SourceType")
         public String sourceType;
 
@@ -175,27 +139,15 @@ public class PullServicesResponseBody extends TeaModel {
     }
 
     public static class PullServicesResponseBodyData extends TeaModel {
-        /**
-         * <p>The name of the group.</p>
-         */
         @NameInMap("GroupName")
         public String groupName;
 
-        /**
-         * <p>The namespace.</p>
-         */
         @NameInMap("Namespace")
         public String namespace;
 
-        /**
-         * <p>The alias of the namespace.</p>
-         */
         @NameInMap("NamespaceShowName")
         public String namespaceShowName;
 
-        /**
-         * <p>The information about services.</p>
-         */
         @NameInMap("Services")
         public java.util.List<PullServicesResponseBodyDataServices> services;
 

@@ -5,53 +5,43 @@ import com.aliyun.tea.*;
 
 public class ExportNacosConfigRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>clusterNotFound</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>The tag of the application.</p>
+     * <p>mse-200-021</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
-     * <p>The ID of the data that you want to export.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   Multiple export methods are supported.</p>
-     * <p>*   If you want to export a single configuration, you must leave the Ids parameter empty and specify the DataID and Group parameters.</p>
+     * <p>illegalRequest</p>
      */
     @NameInMap("DataId")
     public String dataId;
 
     /**
-     * <p>The name of the configuration group.</p>
+     * <p>illegal request:%s</p>
      */
     @NameInMap("Group")
     public String group;
 
     /**
-     * <p>The ID of the primary key of a configuration item.</p>
-     * <br>
-     * <p>>  - Multiple export methods are supported. You must specify this parameter if you want to export multiple configurations. - You can obtain the value of this parameter by calling the ListNacosConfigs operation. - If you specify this parameter, multiple configurations are exported. The DataId and Group parameters are invalid.</p>
+     * <p>mse-100-007</p>
      */
     @NameInMap("Ids")
     public String ids;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>duplicatedClusterAliasName</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the namespace.</p>
+     * <p>duplicated cluster alias name</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;

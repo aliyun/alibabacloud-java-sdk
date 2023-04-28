@@ -11,7 +11,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public GetGatewayRouteDetailResponseBodyData data;
@@ -254,7 +254,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
 
     public static class GetGatewayRouteDetailResponseBodyDataFallbackServices extends TeaModel {
         /**
-         * <p>The type of the protocol.</p>
+         * <p>The type of the protocol. Valid values:</p>
          */
         @NameInMap("AgreementType")
         public String agreementType;
@@ -290,7 +290,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         public Long serviceId;
 
         /**
-         * <p>The name of the service.</p>
+         * <p>The name of a service.</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
@@ -302,13 +302,13 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         public Integer servicePort;
 
         /**
-         * <p>The source type.</p>
+         * <p>The type of the service source.</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
 
         /**
-         * <p>The version of the service.</p>
+         * <p>The version of a service.</p>
          */
         @NameInMap("Version")
         public String version;
@@ -426,7 +426,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         public String pattern;
 
         /**
-         * <p>The status.</p>
+         * <p>The status of the policy.</p>
          */
         @NameInMap("Status")
         public String status;
@@ -922,19 +922,19 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
 
     public static class GetGatewayRouteDetailResponseBodyDataRouteServices extends TeaModel {
         /**
-         * <p>The type of the protocol.</p>
+         * <p>The type of the protocol. Valid values:</p>
          */
         @NameInMap("AgreementType")
         public String agreementType;
 
         /**
-         * <p>The name of the group to which the service belongs.</p>
+         * <p>The name of the group to which a service belongs.</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
-         * <p>The name of the service.</p>
+         * <p>The name of a service.</p>
          */
         @NameInMap("Name")
         public String name;
@@ -952,13 +952,13 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         public Integer percent;
 
         /**
-         * <p>The ID of the service.</p>
+         * <p>The ID of a service.</p>
          */
         @NameInMap("ServiceId")
         public Long serviceId;
 
         /**
-         * <p>The name of the service.</p>
+         * <p>The name of a service.</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
@@ -970,13 +970,13 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         public Integer servicePort;
 
         /**
-         * <p>The source type.</p>
+         * <p>The source type of a service.</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
 
         /**
-         * <p>The version of the service.</p>
+         * <p>The version of a service.</p>
          */
         @NameInMap("Version")
         public String version;
@@ -1279,7 +1279,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         public GetGatewayRouteDetailResponseBodyDataRoutePredicates routePredicates;
 
         /**
-         * <p>The information about services.</p>
+         * <p>The services.</p>
          */
         @NameInMap("RouteServices")
         public java.util.List<GetGatewayRouteDetailResponseBodyDataRouteServices> routeServices;

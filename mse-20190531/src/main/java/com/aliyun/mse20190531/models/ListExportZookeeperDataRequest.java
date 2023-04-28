@@ -4,15 +4,27 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListExportZookeeperDataRequest extends TeaModel {
+    /**
+     * <p>mse-100-007</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>mse-200-105</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>duplicatedClusterAliasName</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>duplicated cluster alias name</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

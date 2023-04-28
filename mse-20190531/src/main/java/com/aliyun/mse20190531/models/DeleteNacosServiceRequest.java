@@ -5,34 +5,31 @@ import com.aliyun.tea.*;
 
 public class DeleteNacosServiceRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>system error</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>The name of the group.</p>
+     * <p>mse-100-001</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>clusterNotFound</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the namespace.</p>
+     * <p>systemError</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
-     * <p>The name of the service.</p>
+     * <p>cluster not found</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;

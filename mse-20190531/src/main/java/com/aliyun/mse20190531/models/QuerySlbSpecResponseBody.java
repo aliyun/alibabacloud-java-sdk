@@ -4,42 +4,21 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QuerySlbSpecResponseBody extends TeaModel {
-    /**
-     * <p>The return value.</p>
-     */
     @NameInMap("Code")
     public Integer code;
 
-    /**
-     * <p>The data entries returned.</p>
-     */
     @NameInMap("Data")
     public java.util.List<QuerySlbSpecResponseBodyData> data;
 
-    /**
-     * <p>The HTTP status code returned.</p>
-     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <p>The message returned. If the request is successful, a success message is returned. If the request fails, an error message is returned.</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -97,39 +76,21 @@ public class QuerySlbSpecResponseBody extends TeaModel {
     }
 
     public static class QuerySlbSpecResponseBodyData extends TeaModel {
-        /**
-         * <p>The ID of the returned data.</p>
-         */
         @NameInMap("Id")
         public Integer id;
 
-        /**
-         * <p>The maximum number of connections.</p>
-         */
         @NameInMap("MaxConnection")
         public String maxConnection;
 
-        /**
-         * <p>The name.</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The maximum connections per second (CPS).</p>
-         */
         @NameInMap("NewConnectionPerSecond")
         public String newConnectionPerSecond;
 
-        /**
-         * <p>The number of queries per second (QPS).</p>
-         */
         @NameInMap("Qps")
         public String qps;
 
-        /**
-         * <p>The specifications.</p>
-         */
         @NameInMap("Spec")
         public String spec;
 

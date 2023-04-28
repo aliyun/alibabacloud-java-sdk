@@ -20,7 +20,7 @@ public class ListZkTrackRequest extends TeaModel {
     public Long endTs;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

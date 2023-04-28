@@ -84,7 +84,7 @@ public class AddMigrationTaskResponseBody extends TeaModel {
 
     public static class AddMigrationTaskResponseBodyData extends TeaModel {
         /**
-         * <p>The type of the instance.</p>
+         * <p>The type of the instance. Valid values:</p>
          * <br>
          * <p>*   Nacos-Ans</p>
          * <p>*   ZooKeeper</p>
@@ -100,7 +100,7 @@ public class AddMigrationTaskResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The source instance node address.</p>
+         * <p>The endpoint of the source instance node.</p>
          */
         @NameInMap("OriginInstanceAddress")
         public String originInstanceAddress;
@@ -112,7 +112,7 @@ public class AddMigrationTaskResponseBody extends TeaModel {
         public String originInstanceName;
 
         /**
-         * <p>The list of namespaces. This parameter is optional if the source instance is a Nacos instance.</p>
+         * <p>The list of namespaces. This parameter is optional if applications are migrated from a Nacos instance.</p>
          */
         @NameInMap("OriginInstanceNamespace")
         public String originInstanceNamespace;

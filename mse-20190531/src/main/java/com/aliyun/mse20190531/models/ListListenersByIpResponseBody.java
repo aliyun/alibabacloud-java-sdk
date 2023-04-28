@@ -5,58 +5,55 @@ import com.aliyun.tea.*;
 
 public class ListListenersByIpResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("HttpCode")
     public String httpCode;
 
     /**
-     * <p>The information about listeners.</p>
+     * <p>The ID of the namespace.</p>
      */
     @NameInMap("Listeners")
     public java.util.List<ListListenersByIpResponseBodyListeners> listeners;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The data structure.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The group.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The ID of the data.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The information about listeners.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The total number of returned instances.</p>
+     * <p>The IP address of the listener.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -140,19 +137,19 @@ public class ListListenersByIpResponseBody extends TeaModel {
 
     public static class ListListenersByIpResponseBodyListeners extends TeaModel {
         /**
-         * <p>The ID of the data.</p>
+         * <p>The HTTP status code.</p>
          */
         @NameInMap("DataId")
         public String dataId;
 
         /**
-         * <p>The group.</p>
+         * <p>The total number of returned instances.</p>
          */
         @NameInMap("Group")
         public String group;
 
         /**
-         * <p>The verification string.</p>
+         * <p>The data structure.</p>
          */
         @NameInMap("Md5")
         public String md5;

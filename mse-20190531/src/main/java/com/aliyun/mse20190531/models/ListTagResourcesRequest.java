@@ -5,43 +5,40 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>The key of a tag.</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>The token that is required for the next query.</p>
+     * <p>The request was successfully processed.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The resource IDs. You can specify a maximum of 50 resource IDs.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resources. Valid values:</p>
-     * <br>
-     * <p>*   CLUSTER: MSE instance</p>
-     * <p>*   GATEWAY: cloud-native gateway</p>
+     * <p>The error code returned if the request failed.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The list of tags. You can specify a maximum of 20 tags.</p>
+     * <p>The details of a resource and its tags, including the resource ID, the resource type, and the keys and values of the tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -101,7 +98,7 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of a tag.</p>
+         * <p>The type of a resource.</p>
          */
         @NameInMap("Key")
         public String key;

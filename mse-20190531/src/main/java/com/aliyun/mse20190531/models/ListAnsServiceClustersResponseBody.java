@@ -4,36 +4,21 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListAnsServiceClustersResponseBody extends TeaModel {
-    /**
-     * <p>The details of the data.</p>
-     */
     @NameInMap("Data")
     public ListAnsServiceClustersResponseBodyData data;
 
-    /**
-     * <p>The error code returned if the request failed.</p>
-     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>system error</p>
      */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -83,45 +68,24 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
     }
 
     public static class ListAnsServiceClustersResponseBodyDataClusters extends TeaModel {
-        /**
-         * <p>The default port used for a health check.</p>
-         */
         @NameInMap("DefaultCheckPort")
         public Integer defaultCheckPort;
 
-        /**
-         * <p>The default port.</p>
-         */
         @NameInMap("DefaultPort")
         public Integer defaultPort;
 
-        /**
-         * <p>The type of health check.</p>
-         */
         @NameInMap("HealthCheckerType")
         public String healthCheckerType;
 
-        /**
-         * <p>The metadata of the cluster.</p>
-         */
         @NameInMap("Metadata")
         public java.util.Map<String, ?> metadata;
 
-        /**
-         * <p>The name of the cluster.</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The full name of the service.</p>
-         */
         @NameInMap("ServiceName")
         public String serviceName;
 
-        /**
-         * <p>Indicates whether an end-to-end health check is initiated by the server. This parameter is valid only if the service is a temporary service.</p>
-         */
         @NameInMap("UseIPPort4Check")
         public Boolean useIPPort4Check;
 
@@ -189,48 +153,24 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
     }
 
     public static class ListAnsServiceClustersResponseBodyData extends TeaModel {
-        /**
-         * <p>The information about the clusters.</p>
-         */
         @NameInMap("Clusters")
         public java.util.List<ListAnsServiceClustersResponseBodyDataClusters> clusters;
 
-        /**
-         * <p>Indicates whether the service is a temporary service. Valid values:</p>
-         * <br>
-         * <p>*   `true`: yes</p>
-         * <p>*   `false`: no</p>
-         */
         @NameInMap("Ephemeral")
         public Boolean ephemeral;
 
-        /**
-         * <p>The name of the contact group.</p>
-         */
         @NameInMap("GroupName")
         public String groupName;
 
-        /**
-         * <p>The metadata of the service.</p>
-         */
         @NameInMap("Metadata")
         public java.util.Map<String, ?> metadata;
 
-        /**
-         * <p>The name of the service.</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The protection threshold.</p>
-         */
         @NameInMap("ProtectThreshold")
         public Float protectThreshold;
 
-        /**
-         * <p>The election mode.</p>
-         */
         @NameInMap("SelectorType")
         public String selectorType;
 

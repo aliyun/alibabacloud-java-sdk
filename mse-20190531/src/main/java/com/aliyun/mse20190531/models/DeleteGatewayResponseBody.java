@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteGatewayResponseBody extends TeaModel {
     /**
-     * <p>The status code returned. The value 200 indicates that the request was successful. Other values indicate that the request failed.</p>
+     * <p>The HTTP status code returned. The value 200 indicates that the request was successful. Other values indicate that the request failed.</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -23,7 +23,7 @@ public class DeleteGatewayResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      * <br>
      * <p>*   If the request is successful, a success message is returned.</p>
      * <p>*   If the request fails, an error message is returned, such as the "TaskId not found" message.</p>
@@ -137,7 +137,7 @@ public class DeleteGatewayResponseBody extends TeaModel {
         public String primaryUser;
 
         /**
-         * <p>The region ID.</p>
+         * <p>The ID of the region.</p>
          */
         @NameInMap("Region")
         public String region;

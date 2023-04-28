@@ -5,34 +5,31 @@ import com.aliyun.tea.*;
 
 public class ListListenersByIpRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>system error</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>cluster not found</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The IP address of the listener.</p>
+     * <p>mse-100-001</p>
      */
     @NameInMap("Ip")
     public String ip;
 
     /**
-     * <p>The ID of the namespace.</p>
+     * <p>systemError</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
-     * <p>The extended request parameters in the JSON format.</p>
+     * <p>clusterNotFound</p>
      */
     @NameInMap("RequestPars")
     public String requestPars;

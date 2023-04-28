@@ -4,60 +4,30 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListNacosHistoryConfigsResponseBody extends TeaModel {
-    /**
-     * <p>The error code returned if the request failed.</p>
-     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    /**
-     * <p>The configuration items.</p>
-     */
     @NameInMap("HistoryItems")
     public java.util.List<ListNacosHistoryConfigsResponseBodyHistoryItems> historyItems;
 
-    /**
-     * <p>The HTTP status code returned.</p>
-     */
     @NameInMap("HttpCode")
     public String httpCode;
 
-    /**
-     * <p>The message returned.</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The page number of the returned page.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries returned per page.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
-    /**
-     * <p>The total number of entries returned.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -139,39 +109,21 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
     }
 
     public static class ListNacosHistoryConfigsResponseBodyHistoryItems extends TeaModel {
-        /**
-         * <p>The application tag.</p>
-         */
         @NameInMap("AppName")
         public String appName;
 
-        /**
-         * <p>The ID of the data.</p>
-         */
         @NameInMap("DataId")
         public String dataId;
 
-        /**
-         * <p>The name of the group.</p>
-         */
         @NameInMap("Group")
         public String group;
 
-        /**
-         * <p>The ID of the configuration.</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <p>The timestamp when the configuration was last modified.</p>
-         */
         @NameInMap("LastModifiedTime")
         public Long lastModifiedTime;
 
-        /**
-         * <p>The format of the configuration file.</p>
-         */
         @NameInMap("OpType")
         public String opType;
 

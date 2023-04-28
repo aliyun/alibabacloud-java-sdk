@@ -4,30 +4,15 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteGatewayServiceRequest extends TeaModel {
-    /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
-     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    /**
-     * <p>The ID of the gateway.</p>
-     */
     @NameInMap("GatewayId")
     public Long gatewayId;
 
-    /**
-     * <p>The unique ID of the gateway.</p>
-     */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    /**
-     * <p>The ID of the service.</p>
-     */
     @NameInMap("ServiceId")
     public String serviceId;
 

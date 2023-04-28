@@ -23,7 +23,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -95,19 +95,19 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
 
     public static class QueryGovernanceKubernetesClusterResponseBodyDataResult extends TeaModel {
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of cluster.</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The name of the cluster.</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
 
         /**
-         * <p>The Kubernetes version of the instance.</p>
+         * <p>The version of the cluster.</p>
          */
         @NameInMap("K8sVersion")
         public String k8sVersion;

@@ -5,40 +5,37 @@ import com.aliyun.tea.*;
 
 public class ApplyGatewayRouteResponseBody extends TeaModel {
     /**
-     * <p>The response code returned.</p>
+     * <p>clusterNotFound</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The data of the node.</p>
+     * <p>mse-100-001</p>
      */
     @NameInMap("Data")
     public Boolean data;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>illegal request:%s</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>mse-200-021</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>illegalRequest</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <p>cluster not found</p>
      */
     @NameInMap("Success")
     public Boolean success;

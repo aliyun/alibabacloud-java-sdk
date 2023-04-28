@@ -5,28 +5,25 @@ import com.aliyun.tea.*;
 
 public class AddGatewayServiceVersionRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>mse-100-007</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>The unique ID of the gateway.</p>
+     * <p>duplicated cluster alias name</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
-     * <p>The ID of the service.</p>
+     * <p>mse-200-105</p>
      */
     @NameInMap("ServiceId")
     public Long serviceId;
 
     /**
-     * <p>The version of the service.</p>
+     * <p>duplicatedClusterAliasName</p>
      */
     @NameInMap("ServiceVersion")
     public String serviceVersion;

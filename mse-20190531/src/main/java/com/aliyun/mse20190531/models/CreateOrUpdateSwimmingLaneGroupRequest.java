@@ -4,77 +4,71 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
-    /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
-     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>The IDs of applications. Separate application IDs with commas (,).</p>
+     * <p>cluster not found</p>
      */
     @NameInMap("AppIds")
     public String appIds;
 
     /**
-     * <p>Specifies whether to enable database canary release.</p>
+     * <p>system error</p>
      */
     @NameInMap("DbGrayEnable")
     public Boolean dbGrayEnable;
 
     /**
-     * <p>Specifies whether to enable a lane group.</p>
+     * <p>mse-100-007</p>
      */
     @NameInMap("Enable")
     public Boolean enable;
 
     /**
-     * <p>The ingress application.</p>
+     * <p>clusterNotFound</p>
      */
     @NameInMap("EntryApp")
     public String entryApp;
 
     /**
-     * <p>The creation time.</p>
+     * <p>illegal request:%s</p>
      */
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
     /**
-     * <p>The update time.</p>
+     * <p>mse-200-021</p>
      */
     @NameInMap("GmtModified")
     public String gmtModified;
 
     /**
-     * <p>The ID of the primary key. The primary key is auto-increment.</p>
+     * <p>The details of the data.</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
-     * <p>The license key in use.</p>
+     * <p>mse-200-105</p>
      */
     @NameInMap("LicenseKey")
     public String licenseKey;
 
     /**
-     * <p>The side for message filtering when the canary release for messaging feature is enabled.</p>
+     * <p>systemError</p>
      */
     @NameInMap("MessageQueueFilterSide")
     public String messageQueueFilterSide;
 
     /**
-     * <p>Specifies whether to enable canary release for messaging.</p>
+     * <p>mse-100-001</p>
      */
     @NameInMap("MessageQueueGrayEnable")
     public Boolean messageQueueGrayEnable;
 
     /**
-     * <p>The name.</p>
+     * <p>any</p>
      */
     @NameInMap("Name")
     public String name;
@@ -86,25 +80,25 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
     public Boolean recordCanaryDetail;
 
     /**
-     * <p>The region ID.</p>
+     * <p>code</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
-     * <p>The service source. Valid value: edasmsc.</p>
+     * <p>duplicatedClusterAliasName</p>
      */
     @NameInMap("Source")
     public String source;
 
     /**
-     * <p>The status of the lane group. The value 0 specifies that the lane group is disabled. The value 1 specifies that the lane group is enabled.</p>
+     * <p>illegalRequest</p>
      */
     @NameInMap("Status")
     public Integer status;
 
     /**
-     * <p>The Alibaba Cloud account. The value is a number, such as 136246\*\*\*\*\*\*809. You can leave this parameter empty.</p>
+     * <p>duplicated cluster alias name</p>
      */
     @NameInMap("UserId")
     public String userId;

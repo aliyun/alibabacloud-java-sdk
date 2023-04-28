@@ -4,42 +4,21 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListSecurityGroupRuleResponseBody extends TeaModel {
-    /**
-     * <p>The status code returned.</p>
-     */
     @NameInMap("Code")
     public Integer code;
 
-    /**
-     * <p>The returned data.</p>
-     */
     @NameInMap("Data")
     public java.util.List<ListSecurityGroupRuleResponseBodyData> data;
 
-    /**
-     * <p>The HTTP status code returned.</p>
-     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <p>The message returned.</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -97,57 +76,30 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
     }
 
     public static class ListSecurityGroupRuleResponseBodyData extends TeaModel {
-        /**
-         * <p>The description of the rule.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the gateway.</p>
-         */
         @NameInMap("GatewayId")
         public Long gatewayId;
 
-        /**
-         * <p>The unique ID of the gateway.</p>
-         */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
-        /**
-         * <p>The creation time.</p>
-         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        /**
-         * <p>The last modification time.</p>
-         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        /**
-         * <p>The ID.</p>
-         */
         @NameInMap("Id")
         public String id;
 
-        /**
-         * <p>The protocol type.</p>
-         */
         @NameInMap("IpProtocol")
         public String ipProtocol;
 
-        /**
-         * <p>The port range.</p>
-         */
         @NameInMap("PortRange")
         public String portRange;
 
-        /**
-         * <p>The ID of the security group.</p>
-         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 

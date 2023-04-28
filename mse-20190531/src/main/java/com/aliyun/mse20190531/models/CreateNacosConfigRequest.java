@@ -5,70 +5,67 @@ import com.aliyun.tea.*;
 
 public class CreateNacosConfigRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>The tags of the configuration.</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>The name of the application.</p>
+     * <p>clusterNotFound</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
-     * <p>The list of IP addresses where the beta release of the configuration is performed.</p>
+     * <p>The name of the application.</p>
      */
     @NameInMap("BetaIps")
     public String betaIps;
 
     /**
-     * <p>The content of the configuration.</p>
+     * <p>The ID of the data.</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
-     * <p>The ID of the data.</p>
+     * <p>illegal request:%s</p>
      */
     @NameInMap("DataId")
     public String dataId;
 
     /**
-     * <p>The description of the configuration.</p>
+     * <p>systemError</p>
      */
     @NameInMap("Desc")
     public String desc;
 
     /**
-     * <p>The ID of the group.</p>
+     * <p>mse-200-021</p>
      */
     @NameInMap("Group")
     public String group;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>illegalRequest</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the namespace.</p>
+     * <p>The ID of the group.</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
-     * <p>The tags of the configuration.</p>
+     * <p>cluster not found</p>
      */
     @NameInMap("Tags")
     public String tags;
 
     /**
-     * <p>The format of the configuration. Supported formats include TEXT, JSON, and XML.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("Type")
     public String type;

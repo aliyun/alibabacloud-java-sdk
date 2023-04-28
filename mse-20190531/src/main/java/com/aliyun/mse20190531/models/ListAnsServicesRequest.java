@@ -5,68 +5,61 @@ import com.aliyun.tea.*;
 
 public class ListAnsServicesRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>The total number of clusters.</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the instance.</p>
-     * <br>
-     * <p>> This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.</p>
+     * <p>The details of the data.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The name of the contact group.</p>
+     * <p>The total number of instances with healthy heartbeats.</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
-     * <p>Specifies whether to query the number of instances that are used for the service.</p>
+     * <p>The name of the contact group.</p>
      */
     @NameInMap("HasIpCount")
     public String hasIpCount;
 
     /**
-     * <p>The ID of the instance.</p>
-     * <br>
-     * <p>> This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.</p>
+     * <p>The total number of instances that are used for the current service.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the namespace.</p>
+     * <p>The name of the service.</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("PageNum")
     public Integer pageNum;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The extended request parameters in the JSON format.</p>
+     * <p>The request is successfully processed.</p>
      */
     @NameInMap("RequestPars")
     public String requestPars;
 
     /**
-     * <p>The name of the service.</p>
+     * <p>The data structure.</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;

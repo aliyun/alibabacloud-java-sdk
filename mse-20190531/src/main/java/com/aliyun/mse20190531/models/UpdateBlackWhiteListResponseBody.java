@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateBlackWhiteListResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The return value.</p>
      */
     @NameInMap("Code")
     public Integer code;

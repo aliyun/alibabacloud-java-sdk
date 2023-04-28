@@ -4,42 +4,21 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateApplicationResponseBody extends TeaModel {
-    /**
-     * <p>The response code returned.</p>
-     */
     @NameInMap("Code")
     public Integer code;
 
-    /**
-     * <p>The data of the node.</p>
-     */
     @NameInMap("Data")
     public CreateApplicationResponseBodyData data;
 
-    /**
-     * <p>The HTTP status code returned.</p>
-     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <p>The message returned.</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
-     */
     @NameInMap("Success")
     public String success;
 
@@ -97,75 +76,39 @@ public class CreateApplicationResponseBody extends TeaModel {
     }
 
     public static class CreateApplicationResponseBodyData extends TeaModel {
-        /**
-         * <p>The ID of the application.</p>
-         */
         @NameInMap("AppId")
         public String appId;
 
-        /**
-         * <p>The name of the application.</p>
-         */
         @NameInMap("AppName")
         public String appName;
 
-        /**
-         * <p>The creation time.</p>
-         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        /**
-         * <p>The additional information.</p>
-         */
         @NameInMap("ExtraInfo")
         public String extraInfo;
 
-        /**
-         * <p>The programming language of the application.</p>
-         */
         @NameInMap("Language")
         public String language;
 
-        /**
-         * <p>The license key in use.</p>
-         */
         @NameInMap("LicenseKey")
         public String licenseKey;
 
         @NameInMap("Namespace")
         public String namespace;
 
-        /**
-         * <p>The region ID.</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The service where the application is deployed. Valid values:</p>
-         * <br>
-         * <p>*   \- ACK: Container Service for Kubernetes</p>
-         * <p>*   \- Normal: another service</p>
-         */
         @NameInMap("Source")
         public String source;
 
-        /**
-         * <p>The status of the application. A value of 1 indicates that the application is in a normal state.</p>
-         */
         @NameInMap("Status")
         public Integer status;
 
-        /**
-         * <p>The update time.</p>
-         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
-        /**
-         * <p>The ID of the Alibaba Cloud account.</p>
-         */
         @NameInMap("UserId")
         public String userId;
 

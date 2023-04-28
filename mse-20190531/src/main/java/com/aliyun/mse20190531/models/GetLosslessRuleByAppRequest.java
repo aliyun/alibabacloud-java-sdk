@@ -3,7 +3,7 @@ package com.aliyun.mse20190531.models;
 
 import com.aliyun.tea.*;
 
-public class GetAppMessageQueueRouteRequest extends TeaModel {
+public class GetLosslessRuleByAppRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
@@ -16,15 +16,15 @@ public class GetAppMessageQueueRouteRequest extends TeaModel {
     @NameInMap("Namespace")
     public String namespace;
 
-    @NameInMap("Region")
-    public String region;
+    @NameInMap("RegionId")
+    public String regionId;
 
-    public static GetAppMessageQueueRouteRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetAppMessageQueueRouteRequest self = new GetAppMessageQueueRouteRequest();
+    public static GetLosslessRuleByAppRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetLosslessRuleByAppRequest self = new GetLosslessRuleByAppRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetAppMessageQueueRouteRequest setAcceptLanguage(String acceptLanguage) {
+    public GetLosslessRuleByAppRequest setAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
     }
@@ -32,7 +32,7 @@ public class GetAppMessageQueueRouteRequest extends TeaModel {
         return this.acceptLanguage;
     }
 
-    public GetAppMessageQueueRouteRequest setAppId(String appId) {
+    public GetLosslessRuleByAppRequest setAppId(String appId) {
         this.appId = appId;
         return this;
     }
@@ -40,7 +40,7 @@ public class GetAppMessageQueueRouteRequest extends TeaModel {
         return this.appId;
     }
 
-    public GetAppMessageQueueRouteRequest setAppName(String appName) {
+    public GetLosslessRuleByAppRequest setAppName(String appName) {
         this.appName = appName;
         return this;
     }
@@ -48,7 +48,7 @@ public class GetAppMessageQueueRouteRequest extends TeaModel {
         return this.appName;
     }
 
-    public GetAppMessageQueueRouteRequest setNamespace(String namespace) {
+    public GetLosslessRuleByAppRequest setNamespace(String namespace) {
         this.namespace = namespace;
         return this;
     }
@@ -56,12 +56,12 @@ public class GetAppMessageQueueRouteRequest extends TeaModel {
         return this.namespace;
     }
 
-    public GetAppMessageQueueRouteRequest setRegion(String region) {
-        this.region = region;
+    public GetLosslessRuleByAppRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getRegion() {
-        return this.region;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

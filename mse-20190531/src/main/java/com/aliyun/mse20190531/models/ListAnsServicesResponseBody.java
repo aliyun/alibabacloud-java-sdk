@@ -4,47 +4,11 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListAnsServicesResponseBody extends TeaModel {
-    /**
-     * <p>The details of the data.</p>
-     */
     @NameInMap("Data")
     public java.util.List<ListAnsServicesResponseBodyData> data;
 
-    /**
-     * <p>The error code returned if the request failed.</p>
-     */
     @NameInMap("ErrorCode")
     public String errorCode;
-
-    /**
-     * <p>The HTTP status code returned.</p>
-     */
-    @NameInMap("HttpCode")
-    public String httpCode;
-
-    /**
-     * <p>The message returned.</p>
-     */
-    @NameInMap("Message")
-    public String message;
-
-    /**
-     * <p>The page number of the returned page.</p>
-     */
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    /**
-     * <p>The number of entries returned per page.</p>
-     */
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    /**
-     * <p>The ID of the request.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
@@ -52,11 +16,29 @@ public class ListAnsServicesResponseBody extends TeaModel {
      * <p>*   `true`: The request was successful.</p>
      * <p>*   `false`: The request failed.</p>
      */
+    @NameInMap("HttpCode")
+    public String httpCode;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    /**
+     * <p>Queries Nacos services.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The total number of returned instances.</p>
+     * <p>> The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -139,33 +121,18 @@ public class ListAnsServicesResponseBody extends TeaModel {
     }
 
     public static class ListAnsServicesResponseBodyData extends TeaModel {
-        /**
-         * <p>The total number of clusters.</p>
-         */
         @NameInMap("ClusterCount")
         public Integer clusterCount;
 
-        /**
-         * <p>The name of the contact group.</p>
-         */
         @NameInMap("GroupName")
         public String groupName;
 
-        /**
-         * <p>The total number of instances with healthy heartbeats.</p>
-         */
         @NameInMap("HealthyInstanceCount")
         public Integer healthyInstanceCount;
 
-        /**
-         * <p>The total number of instances that are used for the current service.</p>
-         */
         @NameInMap("IpCount")
         public Integer ipCount;
 
-        /**
-         * <p>The name of the service.</p>
-         */
         @NameInMap("Name")
         public String name;
 

@@ -29,7 +29,7 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The number of the returned page.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -164,7 +164,7 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
         public String namespaceShowName;
 
         /**
-         * <p>The quotas.</p>
+         * <p>The quota.</p>
          */
         @NameInMap("Quota")
         public Integer quota;

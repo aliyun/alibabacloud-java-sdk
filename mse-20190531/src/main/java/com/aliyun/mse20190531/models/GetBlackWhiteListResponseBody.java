@@ -4,42 +4,21 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetBlackWhiteListResponseBody extends TeaModel {
-    /**
-     * <p>The status code returned. A value of 200 indicates that the request is successful.</p>
-     */
     @NameInMap("Code")
     public Integer code;
 
-    /**
-     * <p>The data of the node.</p>
-     */
     @NameInMap("Data")
     public GetBlackWhiteListResponseBodyData data;
 
-    /**
-     * <p>The HTTP status code returned.</p>
-     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <p>The message returned.</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -97,69 +76,36 @@ public class GetBlackWhiteListResponseBody extends TeaModel {
     }
 
     public static class GetBlackWhiteListResponseBodyData extends TeaModel {
-        /**
-         * <p>The content of the blacklist.</p>
-         */
         @NameInMap("Content")
         public String content;
 
-        /**
-         * <p>The ID of the gateway.</p>
-         */
         @NameInMap("GatewayId")
         public Long gatewayId;
 
-        /**
-         * <p>The unique ID of the gateway.</p>
-         */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
-        /**
-         * <p>The creation time.</p>
-         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        /**
-         * <p>The modification time.</p>
-         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        /**
-         * <p>The ID.</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <p>Indicates whether the whitelist is enabled.</p>
-         */
         @NameInMap("IsWhite")
         public Boolean isWhite;
 
-        /**
-         * <p>The ID of the resource.</p>
-         */
         @NameInMap("ResourceId")
         public Long resourceId;
 
-        /**
-         * <p>The type of a resource.</p>
-         */
         @NameInMap("ResourceType")
         public String resourceType;
 
-        /**
-         * <p>The status of the blacklist or whitelist.</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The type.</p>
-         */
         @NameInMap("Type")
         public String type;
 
