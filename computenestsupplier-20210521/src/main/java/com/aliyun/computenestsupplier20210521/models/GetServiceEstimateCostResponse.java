@@ -3,7 +3,7 @@ package com.aliyun.computenestsupplier20210521.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteServiceInstancesResponse extends TeaModel {
+public class GetServiceEstimateCostResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DeleteServiceInstancesResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DeleteServiceInstancesResponseBody body;
+    public GetServiceEstimateCostResponseBody body;
 
-    public static DeleteServiceInstancesResponse build(java.util.Map<String, ?> map) throws Exception {
-        DeleteServiceInstancesResponse self = new DeleteServiceInstancesResponse();
+    public static GetServiceEstimateCostResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetServiceEstimateCostResponse self = new GetServiceEstimateCostResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteServiceInstancesResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetServiceEstimateCostResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DeleteServiceInstancesResponse extends TeaModel {
         return this.headers;
     }
 
-    public DeleteServiceInstancesResponse setStatusCode(Integer statusCode) {
+    public GetServiceEstimateCostResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DeleteServiceInstancesResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DeleteServiceInstancesResponse setBody(DeleteServiceInstancesResponseBody body) {
+    public GetServiceEstimateCostResponse setBody(GetServiceEstimateCostResponseBody body) {
         this.body = body;
         return this;
     }
-    public DeleteServiceInstancesResponseBody getBody() {
+    public GetServiceEstimateCostResponseBody getBody() {
         return this.body;
     }
 
