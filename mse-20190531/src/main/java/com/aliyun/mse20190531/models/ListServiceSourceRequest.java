@@ -5,16 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListServiceSourceRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>duplicatedClusterAliasName</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>The unique ID of the gateway.</p>
+     * <p>mse-200-105</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;

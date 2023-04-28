@@ -5,40 +5,37 @@ import com.aliyun.tea.*;
 
 public class AddGatewayServiceVersionResponseBody extends TeaModel {
     /**
-     * <p>The status code returned. The value 200 indicates that the request is successfully processed.</p>
+     * <p>mse-100-001</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The ID of the gateway service.</p>
+     * <p>system error</p>
      */
     @NameInMap("Data")
     public Long data;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>mse-200-021</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>clusterNotFound</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>illegal request:%s</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <p>systemError</p>
      */
     @NameInMap("Success")
     public Boolean success;

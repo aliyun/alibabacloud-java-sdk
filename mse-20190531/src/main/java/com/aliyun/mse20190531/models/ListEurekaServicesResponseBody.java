@@ -4,60 +4,30 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListEurekaServicesResponseBody extends TeaModel {
-    /**
-     * <p>The details of the data.</p>
-     */
     @NameInMap("Data")
     public java.util.List<ListEurekaServicesResponseBodyData> data;
 
-    /**
-     * <p>The error code returned if the request failed.</p>
-     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    /**
-     * <p>The HTTP status code returned.</p>
-     */
     @NameInMap("HttpCode")
     public String httpCode;
 
-    /**
-     * <p>The message returned.</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The page number of the returned page.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries returned per page.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
-    /**
-     * <p>The total number of returned instances.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -139,21 +109,12 @@ public class ListEurekaServicesResponseBody extends TeaModel {
     }
 
     public static class ListEurekaServicesResponseBodyData extends TeaModel {
-        /**
-         * <p>The details of the instance.</p>
-         */
         @NameInMap("InstancesId")
         public java.util.List<String> instancesId;
 
-        /**
-         * <p>The name of the service.</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The number of service providers. The value is in the following format: Number of healthy instances/Total number of instances.</p>
-         */
         @NameInMap("UpStatus")
         public String upStatus;
 

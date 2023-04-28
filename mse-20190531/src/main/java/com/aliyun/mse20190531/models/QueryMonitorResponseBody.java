@@ -5,34 +5,34 @@ import com.aliyun.tea.*;
 
 public class QueryMonitorResponseBody extends TeaModel {
     /**
-     * <p>The details of the data.</p>
+     * <p>The data structure.</p>
      */
     @NameInMap("Data")
     public java.util.List<QueryMonitorResponseBodyData> data;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The name of the pod.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The interval between data points. Unit: seconds.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <p>The prefix of the name.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -84,13 +84,13 @@ public class QueryMonitorResponseBody extends TeaModel {
 
     public static class QueryMonitorResponseBodyData extends TeaModel {
         /**
-         * <p>The prefix of the name.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("clusterNamePrefix")
         public String clusterNamePrefix;
 
         /**
-         * <p>The name of the pod.</p>
+         * <p>The request was successfully processed.</p>
          */
         @NameInMap("podName")
         public String podName;

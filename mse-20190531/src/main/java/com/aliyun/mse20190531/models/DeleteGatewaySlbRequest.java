@@ -4,32 +4,20 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteGatewaySlbRequest extends TeaModel {
-    /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
-     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    /**
-     * <p>Specifies whether to delete the SLB instance purchased for the gateway when you delete the gateway.</p>
-     */
     @NameInMap("DeleteSlb")
     public Boolean deleteSlb;
 
-    /**
-     * <p>The unique ID of the gateway.</p>
-     */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    /**
-     * <p>The ID of the associated record.</p>
-     */
     @NameInMap("Id")
     public String id;
+
+    @NameInMap("SlbId")
+    public String slbId;
 
     public static DeleteGatewaySlbRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteGatewaySlbRequest self = new DeleteGatewaySlbRequest();
@@ -66,6 +54,14 @@ public class DeleteGatewaySlbRequest extends TeaModel {
     }
     public String getId() {
         return this.id;
+    }
+
+    public DeleteGatewaySlbRequest setSlbId(String slbId) {
+        this.slbId = slbId;
+        return this;
+    }
+    public String getSlbId() {
+        return this.slbId;
     }
 
 }

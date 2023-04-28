@@ -5,42 +5,36 @@ import com.aliyun.tea.*;
 
 public class PutClusterHealthCheckTaskResponseBody extends TeaModel {
     /**
-     * <p>The status code. A value of 200 is returned if the request is successful.</p>
+     * <p>The error code returned if the request failed.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The returned message.</p>
+     * <p>mse-200-105</p>
      */
     @NameInMap("Data")
     public Boolean data;
-
-    /**
-     * <p>The dynamic part in the error message.</p>
-     */
-    @NameInMap("DynamicCode")
-    public String dynamicCode;
 
     /**
      * <p>The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.</p>
      * <br>
      * <p>> If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.</p>
      */
+    @NameInMap("DynamicCode")
+    public String dynamicCode;
+
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
-
-    /**
-     * <p>The HTTP status code returned.</p>
-     */
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
 
     /**
      * <p>The message returned.</p>
@@ -48,20 +42,26 @@ public class PutClusterHealthCheckTaskResponseBody extends TeaModel {
      * <p>*   If the request is successful, a success message is returned.</p>
      * <p>*   If the request fails, an error message is returned, such as the "TaskId not found" message.</p>
      */
-    @NameInMap("Message")
-    public String message;
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request is successfully processed.</p>
      */
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Message")
+    public String message;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
      * <p>*   `true`: The request was successful.</p>
      * <p>*   `false`: The request failed.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
+     * <p>The status code. A value of 200 is returned if the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;

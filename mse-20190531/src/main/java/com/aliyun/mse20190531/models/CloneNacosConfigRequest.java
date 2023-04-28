@@ -4,46 +4,21 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CloneNacosConfigRequest extends TeaModel {
-    /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
-     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    /**
-     * <p>The IDs of configurations.</p>
-     */
     @NameInMap("Ids")
     public String ids;
 
-    /**
-     * <p>The ID of the instance.</p>
-     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    /**
-     * <p>The ID of the source namespace.</p>
-     */
     @NameInMap("OriginNamespaceId")
     public String originNamespaceId;
 
-    /**
-     * <p>The policy used when a write conflict occurs.</p>
-     * <br>
-     * <p>*   ABORT</p>
-     * <p>*   SKIP</p>
-     * <p>*   OVERWRITE</p>
-     */
     @NameInMap("Policy")
     public String policy;
 
-    /**
-     * <p>The ID of the destination namespace.</p>
-     */
     @NameInMap("TargetNamespaceId")
     public String targetNamespaceId;
 

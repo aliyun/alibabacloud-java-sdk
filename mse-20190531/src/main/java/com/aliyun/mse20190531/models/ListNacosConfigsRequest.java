@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNacosConfigsRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>The ID of the group.</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
@@ -20,55 +17,55 @@ public class ListNacosConfigsRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The ID of the data.</p>
+     * <p>The configurations.</p>
      */
     @NameInMap("DataId")
     public String dataId;
 
     /**
-     * <p>The name of the group. Default value: `default`</p>
+     * <p>The data structure.</p>
      */
     @NameInMap("Group")
     public String group;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the namespace.</p>
+     * <p>The ID of the application.</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The request was successfully processed.</p>
      */
     @NameInMap("PageNum")
     public Integer pageNum;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region in which the instance resides. The region is supported by Microservices Engine (MSE).</p>
+     * <p>The error code returned if the request failed.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The extended request parameters. The JSON format is supported.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestPars")
     public String requestPars;
 
     /**
-     * <p>The tags.</p>
+     * <p>The ID of the configuration.</p>
      */
     @NameInMap("Tags")
     public String tags;

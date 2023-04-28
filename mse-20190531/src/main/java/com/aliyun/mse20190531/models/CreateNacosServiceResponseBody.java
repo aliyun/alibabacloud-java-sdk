@@ -5,40 +5,45 @@ import com.aliyun.tea.*;
 
 public class CreateNacosServiceResponseBody extends TeaModel {
     /**
-     * <p>The response code returned.</p>
+     * <p>Specifies whether the instance is marked as a temporary node. Valid values:</p>
+     * <br>
+     * <p>*   `true`: yes</p>
+     * <p>*   `false`: no</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The data of the node.</p>
+     * <p>The protection threshold.</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The ID of the namespace.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The name of the group.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>The ID of the cluster.</p>
      * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <p>> This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.</p>
      */
     @NameInMap("Success")
     public Boolean success;

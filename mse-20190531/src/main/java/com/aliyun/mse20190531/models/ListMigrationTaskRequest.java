@@ -5,34 +5,31 @@ import com.aliyun.tea.*;
 
 public class ListMigrationTaskRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>illegalRequest</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>The name of the source instance.</p>
+     * <p>duplicatedClusterAliasName</p>
      */
     @NameInMap("OriginInstanceName")
     public String originInstanceName;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>mse-100-007</p>
      */
     @NameInMap("PageNum")
     public Long pageNum;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>duplicated cluster alias name</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The extended request parameters in the JSON format.</p>
+     * <p>mse-200-105</p>
      */
     @NameInMap("RequestPars")
     public String requestPars;

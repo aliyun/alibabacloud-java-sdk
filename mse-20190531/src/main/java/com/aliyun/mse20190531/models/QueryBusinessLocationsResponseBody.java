@@ -4,33 +4,18 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QueryBusinessLocationsResponseBody extends TeaModel {
-    /**
-     * <p>The details of the data.</p>
-     */
     @NameInMap("Data")
     public java.util.List<QueryBusinessLocationsResponseBodyData> data;
 
-    /**
-     * <p>The error code returned if the request failed.</p>
-     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    /**
-     * <p>The message returned.</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The result of the request.</p>
-     */
     @NameInMap("Success")
     public String success;
 
@@ -80,81 +65,42 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
     }
 
     public static class QueryBusinessLocationsResponseBodyData extends TeaModel {
-        /**
-         * <p>The Chinese name of the region.</p>
-         */
         @NameInMap("CnName")
         public String cnName;
 
-        /**
-         * <p>The description.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The Chinese name of the district.</p>
-         */
         @NameInMap("DistrictCnName")
         public String districtCnName;
 
-        /**
-         * <p>The English name of the district.</p>
-         */
         @NameInMap("DistrictEnName")
         public String districtEnName;
 
-        /**
-         * <p>The ID of the region.</p>
-         */
         @NameInMap("DistrictId")
         public String districtId;
 
-        /**
-         * <p>The ordering information of the district.</p>
-         */
         @NameInMap("DistrictOrdering")
         public Integer districtOrdering;
 
-        /**
-         * <p>The display name of the district.</p>
-         */
         @NameInMap("DistrictShowName")
         public String districtShowName;
 
-        /**
-         * <p>The complete description of the region.</p>
-         */
         @NameInMap("EnDescription")
         public String enDescription;
 
-        /**
-         * <p>The English name of the region.</p>
-         */
         @NameInMap("EnName")
         public String enName;
 
-        /**
-         * <p>The name.</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The ordering information.</p>
-         */
         @NameInMap("Ordering")
         public Integer ordering;
 
-        /**
-         * <p>The display name.</p>
-         */
         @NameInMap("ShowName")
         public String showName;
 
-        /**
-         * <p>The type.</p>
-         */
         @NameInMap("Type")
         public String type;
 

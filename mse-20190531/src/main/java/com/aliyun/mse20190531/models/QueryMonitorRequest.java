@@ -5,25 +5,16 @@ import com.aliyun.tea.*;
 
 public class QueryMonitorRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>The timestamp when the monitoring starts.</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>The timestamp when the monitoring ends.</p>
+     * <p>system error</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
-
-    /**
-     * <p>The ID of the instance.</p>
-     */
-    @NameInMap("InstanceId")
-    public String instanceId;
 
     /**
      * <p>The metric type. The following metric types are supported:</p>
@@ -55,23 +46,29 @@ public class QueryMonitorRequest extends TeaModel {
      * <p>*   QPS zk_QpsCount</p>
      * <p>*   zookeeper_AvgRequestLatency</p>
      */
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    /**
+     * <p>mse-100-001</p>
+     */
     @NameInMap("MonitorType")
     public String monitorType;
 
     /**
-     * <p>The extended request parameters in the JSON format.</p>
+     * <p>cluster not found</p>
      */
     @NameInMap("RequestPars")
     public String requestPars;
 
     /**
-     * <p>The timestamp when the monitoring starts.</p>
+     * <p>systemError</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
 
     /**
-     * <p>The interval between data points. Unit: seconds.</p>
+     * <p>The extended request parameters in the JSON format.</p>
      */
     @NameInMap("Step")
     public Long step;

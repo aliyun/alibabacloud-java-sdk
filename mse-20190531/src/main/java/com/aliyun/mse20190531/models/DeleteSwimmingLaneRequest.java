@@ -5,20 +5,20 @@ import com.aliyun.tea.*;
 
 public class DeleteSwimmingLaneRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>The ID of the lane.</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the lane.</p>
+     * <p>system error</p>
      */
     @NameInMap("LaneId")
     public Long laneId;
 
+    /**
+     * <p>MSE命名空间名字</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 

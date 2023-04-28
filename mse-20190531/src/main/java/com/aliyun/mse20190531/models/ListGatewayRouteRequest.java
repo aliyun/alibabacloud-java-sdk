@@ -14,7 +14,7 @@ public class ListGatewayRouteRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>Specifies whether to enable sorting. This parameter is taken offline and is unavailable.</p>
+     * <p>Specifies whether to enable sorting. This parameter is unavailable.</p>
      */
     @NameInMap("DescSort")
     public Boolean descSort;

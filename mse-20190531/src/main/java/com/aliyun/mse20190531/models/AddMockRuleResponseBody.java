@@ -4,42 +4,21 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class AddMockRuleResponseBody extends TeaModel {
-    /**
-     * <p>The status code returned.</p>
-     */
     @NameInMap("Code")
     public Integer code;
 
-    /**
-     * <p>The details of the data.</p>
-     */
     @NameInMap("Data")
     public AddMockRuleResponseBodyData data;
 
-    /**
-     * <p>The HTTP status code returned.</p>
-     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <p>The message returned.</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -97,93 +76,45 @@ public class AddMockRuleResponseBody extends TeaModel {
     }
 
     public static class AddMockRuleResponseBodyData extends TeaModel {
-        /**
-         * <p>The ID of the Alibaba Cloud account.</p>
-         */
         @NameInMap("AccountId")
         public String accountId;
 
-        /**
-         * <p>The ID of the consumer application.</p>
-         */
         @NameInMap("ConsumerAppId")
         public String consumerAppId;
 
-        /**
-         * <p>The name of the consumer application.</p>
-         */
         @NameInMap("ConsumerAppName")
         public String consumerAppName;
 
-        /**
-         * <p>Indicates whether the mock rule is enabled.</p>
-         * <br>
-         * <p>*   `true`: enabled</p>
-         * <p>*   `false`: disabled</p>
-         */
         @NameInMap("Enable")
         public Boolean enable;
 
-        /**
-         * <p>The description.</p>
-         */
         @NameInMap("ExtraJson")
         public String extraJson;
 
-        /**
-         * <p>The ID of the rule.</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <p>The mock type. Valid values:</p>
-         * <br>
-         * <p>*   \- `[unk]0[unk]`: desktop client</p>
-         * <p>*   \- `[unk]1[unk]`: mobile client</p>
-         */
         @NameInMap("MockType")
         public Long mockType;
 
-        /**
-         * <p>The name.</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The ID of the namespace.</p>
-         */
         @NameInMap("NamespaceId")
         public String namespaceId;
 
-        /**
-         * <p>The ID of the service provider application.</p>
-         */
         @NameInMap("ProviderAppId")
         public String providerAppId;
 
-        /**
-         * <p>The name of the service provider application.</p>
-         */
         @NameInMap("ProviderAppName")
         public String providerAppName;
 
-        /**
-         * <p>The region ID.</p>
-         */
         @NameInMap("Region")
         public String region;
 
-        /**
-         * <p>The HTTP mock rule.</p>
-         */
         @NameInMap("ScMockItemJson")
         public String scMockItemJson;
 
-        /**
-         * <p>The service source.</p>
-         */
         @NameInMap("Source")
         public String source;
 

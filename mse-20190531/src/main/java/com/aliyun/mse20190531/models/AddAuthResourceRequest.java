@@ -4,52 +4,27 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class AddAuthResourceRequest extends TeaModel {
-    /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
-     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    /**
-     * <p>The ID of the authorization record.</p>
-     */
     @NameInMap("AuthId")
     public Long authId;
 
     @NameInMap("AuthResourceHeaderList")
     public java.util.List<AddAuthResourceRequestAuthResourceHeaderList> authResourceHeaderList;
 
-    /**
-     * <p>The domain ID.</p>
-     */
     @NameInMap("DomainId")
     public Long domainId;
 
-    /**
-     * <p>The unique ID of the gateway.</p>
-     */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     @NameInMap("IgnoreCase")
     public Boolean ignoreCase;
 
-    /**
-     * <p>The matching type.</p>
-     * <br>
-     * <p>*   exact: exact matching</p>
-     * <p>*   prefix: prefix matching</p>
-     * <p>*   regex: regular expression matching</p>
-     */
     @NameInMap("MatchType")
     public String matchType;
 
-    /**
-     * <p>The path.</p>
-     */
     @NameInMap("Path")
     public String path;
 

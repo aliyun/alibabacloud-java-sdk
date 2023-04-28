@@ -5,46 +5,43 @@ import com.aliyun.tea.*;
 
 public class QueryClusterInfoRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>clusterNotFound</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>Specifies whether to query the configuration of a public IP address whitelist.</p>
+     * <p>illegalRequest</p>
      */
     @NameInMap("AclSwitch")
     public Boolean aclSwitch;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>duplicatedClusterAliasName</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>duplicated cluster alias name</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the order.</p>
+     * <p>mse-100-007</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>illegal request:%s</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The extended request parameters in the JSON format.</p>
+     * <p>mse-200-021</p>
      */
     @NameInMap("RequestPars")
     public String requestPars;

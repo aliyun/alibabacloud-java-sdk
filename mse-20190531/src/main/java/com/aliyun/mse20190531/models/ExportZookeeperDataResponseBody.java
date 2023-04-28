@@ -4,53 +4,24 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ExportZookeeperDataResponseBody extends TeaModel {
-    /**
-     * <p>The details of the data.</p>
-     */
     @NameInMap("Data")
     public ExportZookeeperDataResponseBodyData data;
 
-    /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.</p>
-     * <br>
-     * <p>>  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.</p>
-     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
-    /**
-     * <p>The error code returned if the request failed.</p>
-     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    /**
-     * <p>The HTTP status code returned.</p>
-     */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
-    /**
-     * <p>The message returned.</p>
-     * <br>
-     * <p>*   If the request is successful, a success message is returned.</p>
-     * <p>*   If the request fails, an error message is returned.</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -116,66 +87,30 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
     }
 
     public static class ExportZookeeperDataResponseBodyData extends TeaModel {
-        /**
-         * <p>The content of the task.</p>
-         */
         @NameInMap("ContentMap")
         public java.util.Map<String, ?> contentMap;
 
-        /**
-         * <p>The time when the task was created.</p>
-         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        /**
-         * <p>The type of the object that is exported. Valid values:</p>
-         * <br>
-         * <p>*   transactionLog: transaction logs</p>
-         * <p>*   snapshot: snapshots</p>
-         */
         @NameInMap("ExportType")
         public String exportType;
 
-        /**
-         * <p>The extended information.</p>
-         */
         @NameInMap("Extend")
         public String extend;
 
-        /**
-         * <p>The ID of the task.</p>
-         */
         @NameInMap("Id")
         public Integer id;
 
-        /**
-         * <p>The ID of the instance.</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The ID of the associated task at the underlying layer. This parameter is used only to troubleshoot failures.</p>
-         */
         @NameInMap("KubeoneTaskIds")
         public String kubeoneTaskIds;
 
-        /**
-         * <p>The task status. Valid values:</p>
-         * <br>
-         * <p>*   CREATE: The task is being created.</p>
-         * <p>*   RUNNING: The task is being executed.</p>
-         * <p>*   FINISH: The task is completed.</p>
-         * <p>*   FAILED: The task failed.</p>
-         * <p>*   EXPIRE: The task has expired.</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The last modification time.</p>
-         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 

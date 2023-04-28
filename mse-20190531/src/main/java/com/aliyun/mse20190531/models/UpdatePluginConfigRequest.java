@@ -13,7 +13,7 @@ public class UpdatePluginConfigRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The plug-in configuration.</p>
+     * <p>The plug-in configuration. Configurations of WebAssembly plug-ins are in the YAML format, and configurations of Lua plug-ins are in the Lua code.</p>
      */
     @NameInMap("Config")
     public String config;

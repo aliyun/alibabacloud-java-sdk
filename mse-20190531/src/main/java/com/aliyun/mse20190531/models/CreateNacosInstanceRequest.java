@@ -4,78 +4,39 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateNacosInstanceRequest extends TeaModel {
-    /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
-     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    /**
-     * <p>The name of the Nacos instance.</p>
-     */
     @NameInMap("ClusterName")
     public String clusterName;
 
-    /**
-     * <p>Specifies whether to enable the service for the instance.</p>
-     */
     @NameInMap("Enabled")
     public Boolean enabled;
 
-    /**
-     * <p>Specifies whether to mark the instance as a temporary node.</p>
-     */
     @NameInMap("Ephemeral")
     public Boolean ephemeral;
 
-    /**
-     * <p>The name of the group.</p>
-     */
     @NameInMap("GroupName")
     public String groupName;
 
-    /**
-     * <p>The ID of the instance.</p>
-     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    /**
-     * <p>The IP address of the Nacos instance.</p>
-     */
     @NameInMap("Ip")
     public String ip;
 
-    /**
-     * <p>The metadata of the instance.</p>
-     */
     @NameInMap("Metadata")
     public String metadata;
 
-    /**
-     * <p>The ID of the namespace.</p>
-     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
-    /**
-     * <p>The port of the Nacos instance.</p>
-     */
     @NameInMap("Port")
     public Integer port;
 
-    /**
-     * <p>The name of the service.</p>
-     */
     @NameInMap("ServiceName")
     public String serviceName;
 
-    /**
-     * <p>The weight. Valid values: 0 to 10000. The value must be an integer. A larger value indicates a higher frequency at which the instance is accessed.</p>
-     */
     @NameInMap("Weight")
     public String weight;
 

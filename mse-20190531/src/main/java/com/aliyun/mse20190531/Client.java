@@ -1004,13 +1004,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.applyTagPoliciesWithOptions(request, runtime);
     }
 
-    /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-      *
-      * @param request CloneNacosConfigRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CloneNacosConfigResponse
-     */
     public CloneNacosConfigResponse cloneNacosConfigWithOptions(CloneNacosConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1055,12 +1048,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CloneNacosConfigResponse());
     }
 
-    /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-      *
-      * @param request CloneNacosConfigRequest
-      * @return CloneNacosConfigResponse
-     */
     public CloneNacosConfigResponse cloneNacosConfig(CloneNacosConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.cloneNacosConfigWithOptions(request, runtime);
@@ -1367,7 +1354,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The list of IP addresses where the beta release of the configuration is performed.
       *
       * @param request CreateNacosConfigRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1438,7 +1425,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The list of IP addresses where the beta release of the configuration is performed.
       *
       * @param request CreateNacosConfigRequest
       * @return CreateNacosConfigResponse
@@ -1448,13 +1435,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createNacosConfigWithOptions(request, runtime);
     }
 
-    /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-      *
-      * @param request CreateNacosInstanceRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateNacosInstanceResponse
-     */
     public CreateNacosInstanceResponse createNacosInstanceWithOptions(CreateNacosInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1525,19 +1505,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateNacosInstanceResponse());
     }
 
-    /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-      *
-      * @param request CreateNacosInstanceRequest
-      * @return CreateNacosInstanceResponse
-     */
     public CreateNacosInstanceResponse createNacosInstance(CreateNacosInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createNacosInstanceWithOptions(request, runtime);
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * DEFAULT_GROUP
       *
       * @param request CreateNacosServiceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1596,7 +1570,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * DEFAULT_GROUP
       *
       * @param request CreateNacosServiceRequest
       * @return CreateNacosServiceResponse
@@ -1631,20 +1605,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EntryRule", request.entryRule);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.entryRules)) {
-            query.put("EntryRules", request.entryRules);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.gatewaySwimmingLaneRouteJsonShrink)) {
             query.put("GatewaySwimmingLaneRouteJson", request.gatewaySwimmingLaneRouteJsonShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.gmtCreate)) {
-            query.put("GmtCreate", request.gmtCreate);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.gmtModified)) {
-            query.put("GmtModified", request.gmtModified);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
@@ -1653,10 +1615,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.id)) {
             query.put("Id", request.id);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.licenseKey)) {
-            query.put("LicenseKey", request.licenseKey);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
@@ -1671,24 +1629,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
-            query.put("Source", request.source);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
-            query.put("Status", request.status);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
             query.put("Tag", request.tag);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
-            query.put("UserId", request.userId);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.entryRules)) {
+            body.put("EntryRules", request.entryRules);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateOrUpdateSwimmingLane"),
@@ -2248,6 +2200,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Id", request.id);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.slbId)) {
+            query.put("SlbId", request.slbId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -2307,13 +2263,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteMigrationTaskWithOptions(request, runtime);
     }
 
-    /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-      *
-      * @param request DeleteNacosConfigRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteNacosConfigResponse
-     */
     public DeleteNacosConfigResponse deleteNacosConfigWithOptions(DeleteNacosConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2358,19 +2307,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteNacosConfigResponse());
     }
 
-    /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-      *
-      * @param request DeleteNacosConfigRequest
-      * @return DeleteNacosConfigResponse
-     */
     public DeleteNacosConfigResponse deleteNacosConfig(DeleteNacosConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteNacosConfigWithOptions(request, runtime);
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The ID of the request.
       *
       * @param request DeleteNacosConfigsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2413,7 +2356,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The ID of the request.
       *
       * @param request DeleteNacosConfigsRequest
       * @return DeleteNacosConfigsResponse
@@ -2424,7 +2367,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The port of the Nacos instance.
       *
       * @param request DeleteNacosInstanceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2487,7 +2430,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The port of the Nacos instance.
       *
       * @param request DeleteNacosInstanceRequest
       * @return DeleteNacosInstanceResponse
@@ -2498,7 +2441,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The language of the response. Valid values:
+      * *   zh: Chinese
+      * *   en: English
       *
       * @param request DeleteNacosServiceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2545,7 +2490,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The language of the response. Valid values:
+      * *   zh: Chinese
+      * *   en: English
       *
       * @param request DeleteNacosServiceRequest
       * @return DeleteNacosServiceResponse
@@ -2790,7 +2737,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The tag of the application.
       *
       * @param request ExportNacosConfigRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2845,7 +2792,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The tag of the application.
       *
       * @param request ExportNacosConfigRequest
       * @return ExportNacosConfigResponse
@@ -2856,7 +2803,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Only one task can run at a time.
+      * Initiates a task to export ZooKeeper data.
       *
       * @param request ExportZookeeperDataRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2903,7 +2850,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Only one task can run at a time.
+      * Initiates a task to export ZooKeeper data.
       *
       * @param request ExportZookeeperDataRequest
       * @return ExportZookeeperDataResponse
@@ -2914,7 +2861,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to query the rules for graceful start and shutdown.
+      * The page number of the returned page.
       *
       * @param request FetchLosslessRuleListRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2969,7 +2916,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to query the rules for graceful start and shutdown.
+      * The page number of the returned page.
       *
       * @param request FetchLosslessRuleListRequest
       * @return FetchLosslessRuleListResponse
@@ -3525,7 +3472,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The details of the data.
       *
       * @param request GetImportFileUrlRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3568,7 +3515,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The details of the data.
       *
       * @param request GetImportFileUrlRequest
       * @return GetImportFileUrlResponse
@@ -3613,6 +3560,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetKubernetesSourceResponse getKubernetesSource(GetKubernetesSourceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getKubernetesSourceWithOptions(request, runtime);
+    }
+
+    public GetLosslessRuleByAppResponse getLosslessRuleByAppWithOptions(GetLosslessRuleByAppRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            query.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetLosslessRuleByApp"),
+            new TeaPair("version", "2019-05-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetLosslessRuleByAppResponse());
+    }
+
+    public GetLosslessRuleByAppResponse getLosslessRuleByApp(GetLosslessRuleByAppRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getLosslessRuleByAppWithOptions(request, runtime);
     }
 
     public GetMseFeatureSwitchResponse getMseFeatureSwitchWithOptions(GetMseFeatureSwitchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3682,7 +3674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * mse-200-105
       *
       * @param request GetNacosConfigRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3733,7 +3725,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * mse-200-105
       *
       * @param request GetNacosConfigRequest
       * @return GetNacosConfigResponse
@@ -3743,13 +3735,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getNacosConfigWithOptions(request, runtime);
     }
 
-    /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-      *
-      * @param request GetNacosHistoryConfigRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return GetNacosHistoryConfigResponse
-     */
     public GetNacosHistoryConfigResponse getNacosHistoryConfigWithOptions(GetNacosHistoryConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3794,19 +3779,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetNacosHistoryConfigResponse());
     }
 
-    /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-      *
-      * @param request GetNacosHistoryConfigRequest
-      * @return GetNacosHistoryConfigResponse
-     */
     public GetNacosHistoryConfigResponse getNacosHistoryConfig(GetNacosHistoryConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getNacosHistoryConfigWithOptions(request, runtime);
     }
 
     /**
-      * You can call the GetOverview operation to query overview information about service governance.
+      * mse-100-001
       *
       * @param request GetOverviewRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3845,7 +3824,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call the GetOverview operation to query overview information about service governance.
+      * mse-100-001
       *
       * @param request GetOverviewRequest
       * @return GetOverviewResponse
@@ -4134,7 +4113,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The details of the data.
       *
       * @param request ImportNacosConfigRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4181,7 +4160,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The details of the data.
       *
       * @param request ImportNacosConfigRequest
       * @return ImportNacosConfigResponse
@@ -4251,7 +4230,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * **
       * **Danger** This operation clears existing data. Exercise caution when you call this API operation.
       *
       * @param request ImportZookeeperDataRequest
@@ -4303,7 +4281,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * **
       * **Danger** This operation clears existing data. Exercise caution when you call this API operation.
       *
       * @param request ImportZookeeperDataRequest
@@ -4315,7 +4292,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The heartbeat interval of the instance. Unit: seconds.
       *
       * @param request ListAnsInstancesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4342,7 +4319,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The heartbeat interval of the instance. Unit: seconds.
       *
       * @param request ListAnsInstancesRequest
       * @return ListAnsInstancesResponse
@@ -4353,7 +4330,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The type of health check.
       *
       * @param request ListAnsServiceClustersRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4380,7 +4357,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The type of health check.
       *
       * @param request ListAnsServiceClustersRequest
       * @return ListAnsServiceClustersResponse
@@ -4391,7 +4368,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The number of entries to return on each page.
       *
       * @param request ListAnsServicesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4418,7 +4395,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The number of entries to return on each page.
       *
       * @param request ListAnsServicesRequest
       * @return ListAnsServicesResponse
@@ -4652,7 +4629,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ListClustersResponse listClustersWithOptions(ListClustersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterAliasName)) {
+            query.put("ClusterAliasName", request.clusterAliasName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("PageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestPars)) {
+            query.put("RequestPars", request.requestPars);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -4661,7 +4670,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("version", "2019-05-31"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
+            new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
             new TeaPair("reqBodyType", "formData"),
@@ -4677,7 +4686,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ListConfigTrackResponse listConfigTrackWithOptions(ListConfigTrackRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataId)) {
+            query.put("DataId", request.dataId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTs)) {
+            query.put("EndTs", request.endTs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.group)) {
+            query.put("Group", request.group);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ip)) {
+            query.put("Ip", request.ip);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            query.put("NamespaceId", request.namespaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("PageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestPars)) {
+            query.put("RequestPars", request.requestPars);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reverse)) {
+            query.put("Reverse", request.reverse);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTs)) {
+            query.put("StartTs", request.startTs);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -4686,7 +4743,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("version", "2019-05-31"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
+            new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
             new TeaPair("reqBodyType", "formData"),
@@ -4702,7 +4759,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ListEngineNamespacesResponse listEngineNamespacesWithOptions(ListEngineNamespacesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -4711,7 +4776,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("version", "2019-05-31"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
+            new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
             new TeaPair("reqBodyType", "formData"),
@@ -5240,7 +5305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The HTTP status code returned.
       *
       * @param request ListListenersByConfigRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5291,7 +5356,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The HTTP status code returned.
       *
       * @param request ListListenersByConfigRequest
       * @return ListListenersByConfigResponse
@@ -5302,7 +5367,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The group.
       *
       * @param request ListListenersByIpRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5349,7 +5414,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The group.
       *
       * @param request ListListenersByIpRequest
       * @return ListListenersByIpResponse
@@ -5385,7 +5450,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The number of the page to return.
       *
       * @param request ListNacosConfigsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5456,7 +5521,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The number of the page to return.
       *
       * @param request ListNacosConfigsRequest
       * @return ListNacosConfigsResponse
@@ -5467,7 +5532,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The message returned.
       *
       * @param request ListNacosHistoryConfigsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5530,7 +5595,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The message returned.
       *
       * @param request ListNacosHistoryConfigsRequest
       * @return ListNacosHistoryConfigsResponse
@@ -5773,7 +5838,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ListZnodeChildrenResponse listZnodeChildrenWithOptions(ListZnodeChildrenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.path)) {
+            query.put("Path", request.path);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -5782,7 +5859,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("version", "2019-05-31"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
+            new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
             new TeaPair("reqBodyType", "formData"),
@@ -6496,7 +6573,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public QueryMonitorResponse queryMonitorWithOptions(QueryMonitorRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.monitorType)) {
+            query.put("MonitorType", request.monitorType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestPars)) {
+            query.put("RequestPars", request.requestPars);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.step)) {
+            query.put("Step", request.step);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -6505,7 +6610,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("version", "2019-05-31"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
+            new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
             new TeaPair("reqBodyType", "formData"),
@@ -7008,7 +7113,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to update the number or specifications of nodes in a pay-as-you-go MSE instance. You are charged when you add nodes or upgrade node specifications. For more information, see \\[Pricing] (`~~1806469~~`).
+      * MSE_SC_2_4_200_c
       *
       * @param request UpdateClusterSpecRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -7059,7 +7164,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to update the number or specifications of nodes in a pay-as-you-go MSE instance. You are charged when you add nodes or upgrade node specifications. For more information, see \\[Pricing] (`~~1806469~~`).
+      * MSE_SC_2_4_200_c
       *
       * @param request UpdateClusterSpecRequest
       * @return UpdateClusterSpecResponse
@@ -8415,7 +8520,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * attribute1=1221111\\r\\nattribute2=Chinese\\r\\nattribute3=abc11\\r\\nattribute4=1.00111
       *
       * @param request UpdateNacosConfigRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -8494,7 +8599,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * attribute1=1221111\\r\\nattribute2=Chinese\\r\\nattribute3=abc11\\r\\nattribute4=1.00111
       *
       * @param request UpdateNacosConfigRequest
       * @return UpdateNacosConfigResponse
@@ -8504,13 +8609,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateNacosConfigWithOptions(request, runtime);
     }
 
-    /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-      *
-      * @param request UpdateNacosInstanceRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpdateNacosInstanceResponse
-     */
     public UpdateNacosInstanceResponse updateNacosInstanceWithOptions(UpdateNacosInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8581,19 +8679,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateNacosInstanceResponse());
     }
 
-    /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-      *
-      * @param request UpdateNacosInstanceRequest
-      * @return UpdateNacosInstanceResponse
-     */
     public UpdateNacosInstanceResponse updateNacosInstance(UpdateNacosInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateNacosInstanceWithOptions(request, runtime);
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * 5e3ee449-b5c0-4aee-b857-32c0acbebf26
       *
       * @param request UpdateNacosServiceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -8648,7 +8740,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * 5e3ee449-b5c0-4aee-b857-32c0acbebf26
       *
       * @param request UpdateNacosServiceRequest
       * @return UpdateNacosServiceResponse

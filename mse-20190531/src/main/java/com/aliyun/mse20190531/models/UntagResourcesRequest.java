@@ -25,7 +25,7 @@ public class UntagResourcesRequest extends TeaModel {
     public Boolean all;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -37,7 +37,7 @@ public class UntagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resources. Valid values:</p>
+     * <p>The type of the resource. Valid values:</p>
      * <br>
      * <p>*   CLUSTER: MSE instance</p>
      * <p>*   GATEWAY: cloud-native gateway</p>

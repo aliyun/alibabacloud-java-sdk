@@ -14,7 +14,7 @@ public class UpdateImageRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The ID of the destination cluster.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;

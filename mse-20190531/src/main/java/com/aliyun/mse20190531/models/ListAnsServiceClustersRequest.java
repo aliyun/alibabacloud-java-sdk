@@ -5,66 +5,61 @@ import com.aliyun.tea.*;
 
 public class ListAnsServiceClustersRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>mse-100-001</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the MSE cluster.</p>
-     * <br>
-     * <p>> The MSE cluster is different from the cluster of the Nacos service.</p>
+     * <p>mse-100-007</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The alias of the cluster.</p>
+     * <p>clusterNotFound</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
-     * <p>The name of the group.</p>
+     * <p>illegal request:%s</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>cluster not found</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the namespace.</p>
+     * <p>mse-200-021</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>duplicatedClusterAliasName</p>
      */
     @NameInMap("PageNum")
     public Integer pageNum;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>duplicated cluster alias name</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The extended request parameters in the JSON format.</p>
+     * <p>mse-200-105</p>
      */
     @NameInMap("RequestPars")
     public String requestPars;
 
     /**
-     * <p>The name of the service.</p>
+     * <p>illegalRequest</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;

@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class UpdateMigrationTaskRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>The data structure.</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
+
+    /**
+     * <p>The address of the source instance node.</p>
+     */
+    @NameInMap("ClusterType")
+    public String clusterType;
 
     /**
      * <p>The type of the instance. Valid values:</p>
@@ -20,59 +23,53 @@ public class UpdateMigrationTaskRequest extends TeaModel {
      * <p>*   ZooKeeper</p>
      * <p>*   Eureka</p>
      */
-    @NameInMap("ClusterType")
-    public String clusterType;
-
-    /**
-     * <p>The ID of the task.</p>
-     */
     @NameInMap("Id")
     public String id;
 
     /**
-     * <p>The address of the source instance node.</p>
+     * <p>The name of the source instance.</p>
      */
     @NameInMap("OriginInstanceAddress")
     public String originInstanceAddress;
 
     /**
-     * <p>The name of the source instance.</p>
+     * <p>Source instance</p>
      */
     @NameInMap("OriginInstanceName")
     public String originInstanceName;
 
     /**
-     * <p>The list of namespaces. This parameter is optional if you want to migrate applications from a Nacos instance.</p>
+     * <p>The ID of the destination instance.</p>
      */
     @NameInMap("OriginInstanceNamespace")
     public String originInstanceNamespace;
 
     /**
-     * <p>The description.</p>
+     * <p>This is a description.</p>
      */
     @NameInMap("ProjectDesc")
     public String projectDesc;
 
     /**
-     * <p>The extended request parameters in the JSON format.</p>
+     * <p>The ID of the task.</p>
      */
     @NameInMap("RequestPars")
     public String requestPars;
 
     /**
-     * <p>The name of the destination instance.</p>
+     * <p>Destination instance</p>
      */
     @NameInMap("TargetClusterName")
     public String targetClusterName;
 
     /**
-     * <p>The URL of the destination instance.</p>
+     * <p>The description.</p>
      */
     @NameInMap("TargetClusterUrl")
     public String targetClusterUrl;
 
     /**
-     * <p>The ID of the destination instance.</p>
+     * <p>The name of the destination instance.</p>
      */
     @NameInMap("TargetInstanceId")
     public String targetInstanceId;

@@ -4,38 +4,47 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ModifyLosslessRuleResponseBody extends TeaModel {
+    /**
+     * <p>响应码。</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>返回数据。</p>
+     */
     @NameInMap("Data")
     public Object data;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>Specifies whether to enable notification.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>HTTP状态码。</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Specifies whether to align the lifecycle of the application in the Kubernetes cluster with that of the microservice.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <p>Specifies whether to display online and offline processing details.</p>
      */
     @NameInMap("Success")
     public Boolean success;

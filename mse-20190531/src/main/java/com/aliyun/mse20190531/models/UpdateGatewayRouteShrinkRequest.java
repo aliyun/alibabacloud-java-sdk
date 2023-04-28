@@ -4,96 +4,48 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateGatewayRouteShrinkRequest extends TeaModel {
-    /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
-     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    /**
-     * <p>The destination service type.</p>
-     */
     @NameInMap("DestinationType")
     public String destinationType;
 
-    /**
-     * <p>The information about service mocking.</p>
-     */
     @NameInMap("DirectResponseJSON")
     public String directResponseJSONShrink;
 
-    /**
-     * <p>The associated domain name.</p>
-     */
     @NameInMap("DomainIdListJSON")
     public String domainIdListJSON;
 
-    /**
-     * <p>Specifies whether to enable Web Application Firewall (WAF).</p>
-     */
     @NameInMap("EnableWaf")
     public Boolean enableWaf;
 
-    /**
-     * <p>Specifies whether to enable the Fallback service.</p>
-     */
     @NameInMap("Fallback")
     public Boolean fallback;
 
-    /**
-     * <p>The information about the Fallback service.</p>
-     */
     @NameInMap("FallbackServices")
     public String fallbackServicesShrink;
 
-    /**
-     * <p>The ID of the gateway.</p>
-     */
     @NameInMap("GatewayId")
     public Long gatewayId;
 
-    /**
-     * <p>The unique ID of the gateway.</p>
-     */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    /**
-     * <p>The ID of the route.</p>
-     */
     @NameInMap("Id")
     public Long id;
 
-    /**
-     * <p>The name of the route.</p>
-     */
     @NameInMap("Name")
     public String name;
 
-    /**
-     * <p>The route matching conditions.</p>
-     */
     @NameInMap("Predicates")
     public String predicatesShrink;
 
-    /**
-     * <p>The information about redirection.</p>
-     */
     @NameInMap("RedirectJSON")
     public String redirectJSONShrink;
 
-    /**
-     * <p>The sequence number of the route.</p>
-     */
     @NameInMap("RouteOrder")
     public Integer routeOrder;
 
-    /**
-     * <p>The information about destination services.</p>
-     */
     @NameInMap("Services")
     public String servicesShrink;
 

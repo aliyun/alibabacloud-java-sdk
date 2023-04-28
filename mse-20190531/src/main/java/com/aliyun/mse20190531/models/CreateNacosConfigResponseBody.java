@@ -5,40 +5,40 @@ import com.aliyun.tea.*;
 
 public class CreateNacosConfigResponseBody extends TeaModel {
     /**
-     * <p>The code returned.</p>
+     * <p>The list of IP addresses where the beta release of the configuration is performed.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The ID of the namespace.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The description of the configuration.</p>
      */
     @NameInMap("HttpCode")
     public String httpCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The format of the configuration. Supported formats include TEXT, JSON, and XML.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Basic module configuration.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>The language of the response. Valid values:</p>
      * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
      */
     @NameInMap("Success")
     public Boolean success;

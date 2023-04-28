@@ -5,40 +5,37 @@ import com.aliyun.tea.*;
 
 public class DeleteNacosServiceResponseBody extends TeaModel {
     /**
-     * <p>The response code returned.</p>
+     * <p>The string object.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The deletion result.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The name of the service.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The ID of the namespace.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The name of the group.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("Success")
     public Boolean success;

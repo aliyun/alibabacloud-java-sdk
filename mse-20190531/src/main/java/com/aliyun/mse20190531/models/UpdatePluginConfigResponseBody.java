@@ -23,7 +23,7 @@ public class UpdatePluginConfigResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code that is returned.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;

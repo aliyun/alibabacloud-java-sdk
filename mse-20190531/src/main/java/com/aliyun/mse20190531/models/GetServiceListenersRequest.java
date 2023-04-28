@@ -5,82 +5,73 @@ import com.aliyun.tea.*;
 
 public class GetServiceListenersRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>system error</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the MSE instance to which the service belongs.</p>
-     * <br>
-     * <p>> You must specify InstanceId or ClusterId.</p>
+     * <p>illegal request:%s</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The name of the cluster to which the service belongs.</p>
-     * <br>
-     * <p>> The cluster is a concept for Nacos services and does not refer to a Microservices Engine (MSE) instance.</p>
+     * <p>mse-100-007</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
-     * <p>The group to which the service belongs.</p>
+     * <p>duplicatedClusterAliasName</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>illegalRequest</p>
      */
     @NameInMap("HasIpCount")
     public String hasIpCount;
 
     /**
-     * <p>The ID of the instance to which the service belongs.</p>
-     * <br>
-     * <p>> You must specify InstanceId or ClusterId.</p>
+     * <p>mse-200-021</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The namespace to which the service belongs.</p>
+     * <p>duplicated cluster alias name</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>clusterNotFound</p>
      */
     @NameInMap("PageNum")
     public Integer pageNum;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>cluster not found</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID.</p>
+     * <p>mse-100-001</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The extended request parameters in the JSON format.</p>
+     * <p>systemError</p>
      */
     @NameInMap("RequestPars")
     public String requestPars;
 
     /**
-     * <p>The name of the service whose listeners you want to query.</p>
+     * <p>mse-200-105</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;

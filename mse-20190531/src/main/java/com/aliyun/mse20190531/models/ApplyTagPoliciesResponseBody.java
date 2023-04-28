@@ -4,39 +4,21 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ApplyTagPoliciesResponseBody extends TeaModel {
-    /**
-     * <p>The status code returned.</p>
-     */
     @NameInMap("Code")
     public Integer code;
 
-    /**
-     * <p>The details of the data.</p>
-     */
     @NameInMap("Data")
     public java.util.List<ApplyTagPoliciesResponseBodyData> data;
 
-    /**
-     * <p>The HTTP status code returned.</p>
-     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <p>The message returned.</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request is successful.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -94,66 +76,33 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
     }
 
     public static class ApplyTagPoliciesResponseBodyData extends TeaModel {
-        /**
-         * <p>Indicates whether the field is the primary key.</p>
-         */
         @NameInMap("CarryData")
         public Boolean carryData;
 
-        /**
-         * <p>Indicates whether the routing rule is enabled.</p>
-         * <br>
-         * <p>*   `true`: enabled</p>
-         * <p>*   `false`: disabled</p>
-         */
         @NameInMap("Enable")
         public Boolean enable;
 
-        /**
-         * <p>The ID of the primary key.</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <p>The number of instances.</p>
-         */
         @NameInMap("InstanceNum")
         public Integer instanceNum;
 
-        /**
-         * <p>The policy name.</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The rate.</p>
-         */
         @NameInMap("Rate")
         public Integer rate;
 
-        /**
-         * <p>Indicates whether the routing rule is deleted.</p>
-         */
         @NameInMap("Remove")
         public Boolean remove;
 
-        /**
-         * <p>The details of the routing rule.</p>
-         */
         @NameInMap("Rules")
         public String rules;
 
-        /**
-         * <p>The status.</p>
-         */
         @NameInMap("Status")
         public Integer status;
 
-        /**
-         * <p>The tag.</p>
-         */
         @NameInMap("Tag")
         public String tag;
 

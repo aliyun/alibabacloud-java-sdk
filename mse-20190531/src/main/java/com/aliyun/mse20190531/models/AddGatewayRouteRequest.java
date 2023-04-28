@@ -16,13 +16,11 @@ public class AddGatewayRouteRequest extends TeaModel {
     /**
      * <p>The destination service type.</p>
      * <br>
-     * <p>Valid values</p>
-     * <br>
-     * <p><!-- --></p>
-     * <br>
-     * <p>:</p>
+     * <p>Enumeration values:</p>
      * <br>
      * <p>*   VersionOriented</p>
+     * <br>
+     * <p>    <!-- --></p>
      * <br>
      * <p>    <!-- --></p>
      * <br>
@@ -34,7 +32,11 @@ public class AddGatewayRouteRequest extends TeaModel {
      * <br>
      * <p>    <!-- --></p>
      * <br>
+     * <p>    <!-- --></p>
+     * <br>
      * <p>*   Single</p>
+     * <br>
+     * <p>    <!-- --></p>
      * <br>
      * <p>    <!-- --></p>
      * <br>
@@ -46,7 +48,11 @@ public class AddGatewayRouteRequest extends TeaModel {
      * <br>
      * <p>    <!-- --></p>
      * <br>
+     * <p>    <!-- --></p>
+     * <br>
      * <p>*   Redirect</p>
+     * <br>
+     * <p>    <!-- --></p>
      * <br>
      * <p>    <!-- --></p>
      * <br>
@@ -109,6 +115,9 @@ public class AddGatewayRouteRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The routing policy in a JSON string.</p>
+     */
     @NameInMap("Policies")
     public String policies;
 
@@ -130,6 +139,11 @@ public class AddGatewayRouteRequest extends TeaModel {
     @NameInMap("RouteOrder")
     public Integer routeOrder;
 
+    /**
+     * <p>The route type. Valid values:</p>
+     * <br>
+     * <p>Op: Manage routes.</p>
+     */
     @NameInMap("RouteType")
     public String routeType;
 
@@ -518,7 +532,7 @@ public class AddGatewayRouteRequest extends TeaModel {
          * <br>
          * <p>*   PRE: prefix matching</p>
          * <p>*   EQUAL: exact matching</p>
-         * <p>*   REGULAR: regular expression matching</p>
+         * <p>*   ERGULAR: regular expression matching</p>
          */
         @NameInMap("Type")
         public String type;

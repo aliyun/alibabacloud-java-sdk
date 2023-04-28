@@ -7,8 +7,8 @@ public class UpdateGatewayServiceTrafficPolicyShrinkRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <br>
-     * <p>*   **zh-CN**: Chinese. This is the default value.</p>
-     * <p>*   **en-US**: English</p>
+     * <p>*   **zh-CN**: Chinese</p>
+     * <p>*   **en-US**: English.</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
@@ -20,7 +20,7 @@ public class UpdateGatewayServiceTrafficPolicyShrinkRequest extends TeaModel {
     public Long gatewayId;
 
     /**
-     * <p>The traffic policy of the service.</p>
+     * <p>The traffic policy of the gateway.</p>
      */
     @NameInMap("GatewayTrafficPolicy")
     public String gatewayTrafficPolicyShrink;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListZkTrackResponseBody extends TeaModel {
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code returned if the request failed.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -155,7 +155,7 @@ public class ListZkTrackResponseBody extends TeaModel {
         public String dataType;
 
         /**
-         * <p>The type of the event. For tracks of the Notify type:</p>
+         * <p>The type of the event. Valid values: For tracks of the Notify type:</p>
          * <br>
          * <p>*   NodeCreated</p>
          * <p>*   NodeDeleted</p>

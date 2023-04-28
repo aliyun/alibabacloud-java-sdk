@@ -4,37 +4,18 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateGatewayRouteCORSShrinkRequest extends TeaModel {
-    /**
-     * <p>The language of the response. In compliance with [RFC 7231](https://tools.ietf.org/html/rfc7231), the backend service must return a response based on the language used by the user.</p>
-     * <br>
-     * <p>*   No default value</p>
-     * <p>*   zh-CN: Chinese</p>
-     * <p>*   en-US: English</p>
-     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    /**
-     * <p>The information about the CORS policy.</p>
-     */
     @NameInMap("CorsJSON")
     public String corsJSONShrink;
 
-    /**
-     * <p>The ID of the gateway.</p>
-     */
     @NameInMap("GatewayId")
     public Long gatewayId;
 
-    /**
-     * <p>The unique ID of the gateway.</p>
-     */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    /**
-     * <p>The ID of the associated record.</p>
-     */
     @NameInMap("Id")
     public Long id;
 

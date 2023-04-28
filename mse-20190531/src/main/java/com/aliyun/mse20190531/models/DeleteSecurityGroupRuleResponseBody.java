@@ -4,42 +4,21 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
-    /**
-     * <p>The status code returned.</p>
-     */
     @NameInMap("Code")
     public Integer code;
 
-    /**
-     * <p>The returned data.</p>
-     */
     @NameInMap("Data")
     public DeleteSecurityGroupRuleResponseBodyData data;
 
-    /**
-     * <p>The HTTP status code returned.</p>
-     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <p>The message returned.</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -97,68 +76,30 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
     }
 
     public static class DeleteSecurityGroupRuleResponseBodyData extends TeaModel {
-        /**
-         * <p>The description.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the gateway.</p>
-         */
         @NameInMap("GatewayId")
         public Long gatewayId;
 
-        /**
-         * <p>The unique ID of the gateway.</p>
-         */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
-        /**
-         * <p>The creation time.</p>
-         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        /**
-         * <p>The modification time.</p>
-         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        /**
-         * <p>The ID.</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <p>The transport layer protocol. The value of this parameter is case-insensitive. Valid values:</p>
-         * <br>
-         * <p>*   icmp</p>
-         * <p>*   gre</p>
-         * <p>*   tcp</p>
-         * <p>*   udp</p>
-         * <p>*   all: All protocols are supported.</p>
-         */
         @NameInMap("IpProtocol")
         public String ipProtocol;
 
-        /**
-         * <p>The range of ports for the transport layer protocol in the destination security group. Valid values:</p>
-         * <br>
-         * <p>*   When the IpProtocol parameter is set to tcp or udp, the port number range is 1 to 65535. The start port number and the end port number are separated by a forward slash (/). Example: 1/200.</p>
-         * <p>*   If the IpProtocol parameter is set to icmp, the port number range is -1/-1, which indicates all ports.</p>
-         * <p>*   If the IpProtocol parameter is set to gre, the port number range is -1/-1, which indicates all ports.</p>
-         * <p>*   If the IpProtocol parameter is set to all, the port number range is -1/-1, which indicates all ports.</p>
-         */
         @NameInMap("PortRange")
         public String portRange;
 
-        /**
-         * <p>The ID of the security group.</p>
-         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 

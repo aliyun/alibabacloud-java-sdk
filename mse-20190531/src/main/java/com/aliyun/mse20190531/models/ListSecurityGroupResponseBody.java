@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSecurityGroupResponseBody extends TeaModel {
     /**
-     * <p>The response code returned.</p>
+     * <p>The status code returned.</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -17,13 +17,13 @@ public class ListSecurityGroupResponseBody extends TeaModel {
     public java.util.List<ListSecurityGroupResponseBodyData> data;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("Message")
     public String message;

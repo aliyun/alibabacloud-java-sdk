@@ -11,7 +11,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public UpdateGatewayRouteWafStatusResponseBodyData data;
@@ -224,7 +224,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         public String body;
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The return value.</p>
          */
         @NameInMap("Code")
         public Integer code;
@@ -502,7 +502,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         public Integer attempts;
 
         /**
-         * <p>The HTTP status codes.</p>
+         * <p>The HTTP status code.</p>
          */
         @NameInMap("HttpCodes")
         public java.util.List<String> httpCodes;
@@ -728,7 +728,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         public UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesPathPredicates pathPredicates;
 
         /**
-         * <p>The information about parameter matching.</p>
+         * <p>The parameter matching rules.</p>
          */
         @NameInMap("QueryPredicates")
         public java.util.List<UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesQueryPredicates> queryPredicates;
@@ -980,7 +980,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         public Long domainId;
 
         /**
-         * <p>The IDs of domains.</p>
+         * <p>The list of domain IDs.</p>
          */
         @NameInMap("DomainIdList")
         public java.util.List<Long> domainIdList;
@@ -992,7 +992,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         public String domainName;
 
         /**
-         * <p>The names of domains.</p>
+         * <p>The domain names.</p>
          */
         @NameInMap("DomainNameList")
         public java.util.List<String> domainNameList;
@@ -1022,7 +1022,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The update time.</p>
+         * <p>The modification time.</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;

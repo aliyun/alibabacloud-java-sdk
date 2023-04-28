@@ -4,83 +4,71 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateNacosConfigRequest extends TeaModel {
-    /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
-     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>The name of the application.</p>
+     * <p>mse-100-007</p>
      */
     @NameInMap("AppName")
     public String appName;
 
-    /**
-     * <p>The list of IP addresses where the beta release of the configuration is performed.</p>
-     */
     @NameInMap("BetaIps")
     public String betaIps;
 
     /**
-     * <p>The content of the configuration.</p>
+     * <p>cluster not found</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
-     * <p>The ID of the configuration.</p>
+     * <p>duplicatedClusterAliasName</p>
      */
     @NameInMap("DataId")
     public String dataId;
 
     /**
-     * <p>The description of the configuration.</p>
+     * <p>illegal request:%s</p>
      */
     @NameInMap("Desc")
     public String desc;
 
-    /**
-     * <p>The encryption key.</p>
-     */
     @NameInMap("EncryptedDataKey")
     public String encryptedDataKey;
 
     /**
-     * <p>The name of the group.</p>
+     * <p>duplicated cluster alias name</p>
      */
     @NameInMap("Group")
     public String group;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>mse-200-105</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The MD5 value of the configuration.</p>
+     * <p>system error</p>
      */
     @NameInMap("Md5")
     public String md5;
 
     /**
-     * <p>The ID of the namespace.</p>
+     * <p>systemError</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>illegalRequest</p>
      */
     @NameInMap("Tags")
     public String tags;
 
     /**
-     * <p>The format of the configuration. Supported formats include TEXT, JSON, XML, and HTML.</p>
+     * <p>clusterNotFound</p>
      */
     @NameInMap("Type")
     public String type;

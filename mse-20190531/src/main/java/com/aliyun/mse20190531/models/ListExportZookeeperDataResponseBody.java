@@ -7,21 +7,39 @@ public class ListExportZookeeperDataResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<ListExportZookeeperDataResponseBodyData> data;
 
+    /**
+     * <p>cluster not found</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>systemError</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>system error</p>
+     */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <p>mse-200-021</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>mse-100-001</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>illegal request:%s</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

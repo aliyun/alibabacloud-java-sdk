@@ -11,11 +11,20 @@ public class AddGatewayRouteResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public Long data;
 
+    /**
+     * <p>The error code that is returned.</p>
+     * <br>
+     * <p>*   InvalidParameter: The parameter is invalid. For example, the parameter is incomplete or the parameter format is invalid.</p>
+     * <p>*   IllegalRequest: The request is invalid. Unauthorized access to data initiated by parameters is identified.</p>
+     * <p>*   NoPermission: You are not authorized to perform this operation.</p>
+     * <p>*   NotFound: The resource does not exist and error 404 is returned.</p>
+     * <p>*   InternalError: An internal error occurred.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 

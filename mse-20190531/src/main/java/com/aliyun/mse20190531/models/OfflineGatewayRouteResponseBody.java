@@ -17,13 +17,13 @@ public class OfflineGatewayRouteResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("Message")
     public String message;

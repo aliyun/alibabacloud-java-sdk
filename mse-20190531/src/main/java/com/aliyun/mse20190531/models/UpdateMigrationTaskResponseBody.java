@@ -5,40 +5,40 @@ import com.aliyun.tea.*;
 
 public class UpdateMigrationTaskResponseBody extends TeaModel {
     /**
-     * <p>The data structure.</p>
+     * <p>The ID of the task.</p>
      */
     @NameInMap("Data")
     public UpdateMigrationTaskResponseBodyData data;
-
-    /**
-     * <p>The error code returned if the request failed.</p>
-     */
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    /**
-     * <p>The HTTP status code returned.</p>
-     */
-    @NameInMap("HttpCode")
-    public String httpCode;
-
-    /**
-     * <p>The message returned.</p>
-     */
-    @NameInMap("Message")
-    public String message;
-
-    /**
-     * <p>The ID of the request.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
      * <p>*   `true`: The request was successful.</p>
      * <p>*   `false`: The request failed.</p>
+     */
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    /**
+     * <p>The data structure.</p>
+     */
+    @NameInMap("HttpCode")
+    public String httpCode;
+
+    /**
+     * <p>The request was successfully processed.</p>
+     */
+    @NameInMap("Message")
+    public String message;
+
+    /**
+     * <p>The message returned.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
+     * <p>mse-200-105</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -98,77 +98,77 @@ public class UpdateMigrationTaskResponseBody extends TeaModel {
 
     public static class UpdateMigrationTaskResponseBodyData extends TeaModel {
         /**
-         * <p>The type of the instance.</p>
-         * <br>
-         * <p>*   Nacos-Ans</p>
-         * <p>*   ZooKeeper</p>
-         * <p>*   Eureka</p>
+         * <p>The address of the source instance node.</p>
          */
         @NameInMap("ClusterType")
         public String clusterType;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The modification time.</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The ID of the user.</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
-         * <p>The address of the source instance node.</p>
+         * <p>The name of the source instance.</p>
          */
         @NameInMap("OriginInstanceAddress")
         public String originInstanceAddress;
 
         /**
-         * <p>The name of the source instance.</p>
+         * <p>The list of namespaces. This parameter is optional if applications are migrated from a Nacos instance.</p>
          */
         @NameInMap("OriginInstanceName")
         public String originInstanceName;
 
         /**
-         * <p>The list of namespaces. This parameter is optional if applications are migrated from a Nacos instance.</p>
+         * <p>The ID of the destination instance.</p>
          */
         @NameInMap("OriginInstanceNamespace")
         public String originInstanceNamespace;
 
         /**
-         * <p>The description.</p>
+         * <p>The creation time.</p>
          */
         @NameInMap("ProjectDesc")
         public String projectDesc;
 
         /**
-         * <p>The name of the destination instance.</p>
+         * <p>The URL of the destination instance.</p>
          */
         @NameInMap("TargetClusterName")
         public String targetClusterName;
 
         /**
-         * <p>The URL of the destination instance.</p>
+         * <p>The description.</p>
          */
         @NameInMap("TargetClusterUrl")
         public String targetClusterUrl;
 
         /**
-         * <p>The ID of the destination instance.</p>
+         * <p>The name of the destination instance.</p>
          */
         @NameInMap("TargetInstanceId")
         public String targetInstanceId;
 
         /**
-         * <p>The ID of the user.</p>
+         * <p>The type of the instance.</p>
+         * <br>
+         * <p>*   Nacos-Ans</p>
+         * <p>*   ZooKeeper</p>
+         * <p>*   Eureka</p>
          */
         @NameInMap("UserId")
         public String userId;

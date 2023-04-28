@@ -5,40 +5,42 @@ import com.aliyun.tea.*;
 
 public class UpdateNacosServiceResponseBody extends TeaModel {
     /**
-     * <p>The response code returned.</p>
+     * <p>The protection threshold.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The details of the data.</p>
+     * <p>The ID of the namespace.</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The name of the group.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The name of the service.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>The ID of the cluster.</p>
      * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <p>> This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.</p>
      */
     @NameInMap("Success")
     public Boolean success;
