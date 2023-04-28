@@ -16,6 +16,9 @@ public class ListServiceInstancesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ShowDeleted")
+    public Boolean showDeleted;
+
     @NameInMap("Tag")
     public java.util.List<ListServiceInstancesRequestTag> tag;
 
@@ -54,6 +57,14 @@ public class ListServiceInstancesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListServiceInstancesRequest setShowDeleted(Boolean showDeleted) {
+        this.showDeleted = showDeleted;
+        return this;
+    }
+    public Boolean getShowDeleted() {
+        return this.showDeleted;
     }
 
     public ListServiceInstancesRequest setTag(java.util.List<ListServiceInstancesRequestTag> tag) {

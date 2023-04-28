@@ -147,6 +147,9 @@ public class ListServicesResponseBody extends TeaModel {
     }
 
     public static class ListServicesResponseBodyServices extends TeaModel {
+        @NameInMap("ApprovalType")
+        public String approvalType;
+
         @NameInMap("ArtifactId")
         public String artifactId;
 
@@ -216,6 +219,14 @@ public class ListServicesResponseBody extends TeaModel {
         public static ListServicesResponseBodyServices build(java.util.Map<String, ?> map) throws Exception {
             ListServicesResponseBodyServices self = new ListServicesResponseBodyServices();
             return TeaModel.build(map, self);
+        }
+
+        public ListServicesResponseBodyServices setApprovalType(String approvalType) {
+            this.approvalType = approvalType;
+            return this;
+        }
+        public String getApprovalType() {
+            return this.approvalType;
         }
 
         public ListServicesResponseBodyServices setArtifactId(String artifactId) {

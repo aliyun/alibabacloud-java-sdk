@@ -123,6 +123,9 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         @NameInMap("DeployType")
         public String deployType;
 
+        @NameInMap("EnablePrivateVpcConnection")
+        public Boolean enablePrivateVpcConnection;
+
         @NameInMap("PublishTime")
         public String publishTime;
 
@@ -169,6 +172,14 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         }
         public String getDeployType() {
             return this.deployType;
+        }
+
+        public ListServiceInstancesResponseBodyServiceInstancesService setEnablePrivateVpcConnection(Boolean enablePrivateVpcConnection) {
+            this.enablePrivateVpcConnection = enablePrivateVpcConnection;
+            return this;
+        }
+        public Boolean getEnablePrivateVpcConnection() {
+            return this.enablePrivateVpcConnection;
         }
 
         public ListServiceInstancesResponseBodyServiceInstancesService setPublishTime(String publishTime) {

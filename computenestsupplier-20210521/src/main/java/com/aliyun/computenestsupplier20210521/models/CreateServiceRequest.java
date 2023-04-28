@@ -7,6 +7,9 @@ public class CreateServiceRequest extends TeaModel {
     @NameInMap("AlarmMetadata")
     public String alarmMetadata;
 
+    @NameInMap("ApprovalType")
+    public String approvalType;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -25,14 +28,14 @@ public class CreateServiceRequest extends TeaModel {
     @NameInMap("LicenseMetadata")
     public String licenseMetadata;
 
+    @NameInMap("OperationMetadata")
+    public String operationMetadata;
+
     @NameInMap("PolicyNames")
     public String policyNames;
 
     @NameInMap("RegionId")
     public String regionId;
-
-    @NameInMap("SaleMetadata")
-    public String saleMetadata;
 
     @NameInMap("ServiceId")
     public String serviceId;
@@ -72,6 +75,14 @@ public class CreateServiceRequest extends TeaModel {
     }
     public String getAlarmMetadata() {
         return this.alarmMetadata;
+    }
+
+    public CreateServiceRequest setApprovalType(String approvalType) {
+        this.approvalType = approvalType;
+        return this;
+    }
+    public String getApprovalType() {
+        return this.approvalType;
     }
 
     public CreateServiceRequest setClientToken(String clientToken) {
@@ -122,6 +133,14 @@ public class CreateServiceRequest extends TeaModel {
         return this.licenseMetadata;
     }
 
+    public CreateServiceRequest setOperationMetadata(String operationMetadata) {
+        this.operationMetadata = operationMetadata;
+        return this;
+    }
+    public String getOperationMetadata() {
+        return this.operationMetadata;
+    }
+
     public CreateServiceRequest setPolicyNames(String policyNames) {
         this.policyNames = policyNames;
         return this;
@@ -136,14 +155,6 @@ public class CreateServiceRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public CreateServiceRequest setSaleMetadata(String saleMetadata) {
-        this.saleMetadata = saleMetadata;
-        return this;
-    }
-    public String getSaleMetadata() {
-        return this.saleMetadata;
     }
 
     public CreateServiceRequest setServiceId(String serviceId) {

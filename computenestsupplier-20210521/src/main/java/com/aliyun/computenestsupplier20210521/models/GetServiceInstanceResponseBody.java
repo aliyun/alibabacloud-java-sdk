@@ -10,6 +10,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     @NameInMap("EnableInstanceOps")
     public Boolean enableInstanceOps;
 
+    @NameInMap("EnableUserPrometheus")
+    public String enableUserPrometheus;
+
     @NameInMap("EndTime")
     public String endTime;
 
@@ -45,6 +48,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
 
     @NameInMap("Progress")
     public Long progress;
+
+    @NameInMap("RdAccountLoginUrl")
+    public String rdAccountLoginUrl;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -104,6 +110,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     }
     public Boolean getEnableInstanceOps() {
         return this.enableInstanceOps;
+    }
+
+    public GetServiceInstanceResponseBody setEnableUserPrometheus(String enableUserPrometheus) {
+        this.enableUserPrometheus = enableUserPrometheus;
+        return this;
+    }
+    public String getEnableUserPrometheus() {
+        return this.enableUserPrometheus;
     }
 
     public GetServiceInstanceResponseBody setEndTime(String endTime) {
@@ -200,6 +214,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     }
     public Long getProgress() {
         return this.progress;
+    }
+
+    public GetServiceInstanceResponseBody setRdAccountLoginUrl(String rdAccountLoginUrl) {
+        this.rdAccountLoginUrl = rdAccountLoginUrl;
+        return this;
+    }
+    public String getRdAccountLoginUrl() {
+        return this.rdAccountLoginUrl;
     }
 
     public GetServiceInstanceResponseBody setRequestId(String requestId) {
@@ -307,6 +329,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     }
 
     public static class GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnectionsConnectionConfigs extends TeaModel {
+        @NameInMap("DomainName")
+        public String domainName;
+
         @NameInMap("EndpointIps")
         public java.util.List<String> endpointIps;
 
@@ -328,6 +353,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         public static GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnectionsConnectionConfigs build(java.util.Map<String, ?> map) throws Exception {
             GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnectionsConnectionConfigs self = new GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnectionsConnectionConfigs();
             return TeaModel.build(map, self);
+        }
+
+        public GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnectionsConnectionConfigs setDomainName(String domainName) {
+            this.domainName = domainName;
+            return this;
+        }
+        public String getDomainName() {
+            return this.domainName;
         }
 
         public GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnectionsConnectionConfigs setEndpointIps(java.util.List<String> endpointIps) {
@@ -600,6 +633,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         @NameInMap("SupplierUrl")
         public String supplierUrl;
 
+        @NameInMap("UpgradableServiceVersions")
+        public java.util.List<String> upgradableServiceVersions;
+
         @NameInMap("Version")
         public String version;
 
@@ -697,6 +733,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
         public String getSupplierUrl() {
             return this.supplierUrl;
+        }
+
+        public GetServiceInstanceResponseBodyService setUpgradableServiceVersions(java.util.List<String> upgradableServiceVersions) {
+            this.upgradableServiceVersions = upgradableServiceVersions;
+            return this;
+        }
+        public java.util.List<String> getUpgradableServiceVersions() {
+            return this.upgradableServiceVersions;
         }
 
         public GetServiceInstanceResponseBodyService setVersion(String version) {
