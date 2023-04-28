@@ -7,6 +7,9 @@ public class DetectLymphResponseBody extends TeaModel {
     @NameInMap("Data")
     public DetectLymphResponseBodyData data;
 
+    /**
+     * <p>提交异步任务后的提示信息。</p>
+     */
     @NameInMap("Message")
     public String message;
 

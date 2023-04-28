@@ -363,6 +363,121 @@ public class ScreenChestCTResponseBody extends TeaModel {
 
     }
 
+    public static class ScreenChestCTResponseBodyDataCalcBMDDetections extends TeaModel {
+        @NameInMap("VertBMD")
+        public Float vertBMD;
+
+        @NameInMap("VertCategory")
+        public Float vertCategory;
+
+        @NameInMap("VertId")
+        public String vertId;
+
+        @NameInMap("VertTScore")
+        public Float vertTScore;
+
+        @NameInMap("VertZScore")
+        public Float vertZScore;
+
+        public static ScreenChestCTResponseBodyDataCalcBMDDetections build(java.util.Map<String, ?> map) throws Exception {
+            ScreenChestCTResponseBodyDataCalcBMDDetections self = new ScreenChestCTResponseBodyDataCalcBMDDetections();
+            return TeaModel.build(map, self);
+        }
+
+        public ScreenChestCTResponseBodyDataCalcBMDDetections setVertBMD(Float vertBMD) {
+            this.vertBMD = vertBMD;
+            return this;
+        }
+        public Float getVertBMD() {
+            return this.vertBMD;
+        }
+
+        public ScreenChestCTResponseBodyDataCalcBMDDetections setVertCategory(Float vertCategory) {
+            this.vertCategory = vertCategory;
+            return this;
+        }
+        public Float getVertCategory() {
+            return this.vertCategory;
+        }
+
+        public ScreenChestCTResponseBodyDataCalcBMDDetections setVertId(String vertId) {
+            this.vertId = vertId;
+            return this;
+        }
+        public String getVertId() {
+            return this.vertId;
+        }
+
+        public ScreenChestCTResponseBodyDataCalcBMDDetections setVertTScore(Float vertTScore) {
+            this.vertTScore = vertTScore;
+            return this;
+        }
+        public Float getVertTScore() {
+            return this.vertTScore;
+        }
+
+        public ScreenChestCTResponseBodyDataCalcBMDDetections setVertZScore(Float vertZScore) {
+            this.vertZScore = vertZScore;
+            return this;
+        }
+        public Float getVertZScore() {
+            return this.vertZScore;
+        }
+
+    }
+
+    public static class ScreenChestCTResponseBodyDataCalcBMD extends TeaModel {
+        @NameInMap("Detections")
+        public java.util.List<ScreenChestCTResponseBodyDataCalcBMDDetections> detections;
+
+        @NameInMap("Origin")
+        public java.util.List<Float> origin;
+
+        @NameInMap("ResultURL")
+        public String resultURL;
+
+        @NameInMap("Spacing")
+        public java.util.List<Float> spacing;
+
+        public static ScreenChestCTResponseBodyDataCalcBMD build(java.util.Map<String, ?> map) throws Exception {
+            ScreenChestCTResponseBodyDataCalcBMD self = new ScreenChestCTResponseBodyDataCalcBMD();
+            return TeaModel.build(map, self);
+        }
+
+        public ScreenChestCTResponseBodyDataCalcBMD setDetections(java.util.List<ScreenChestCTResponseBodyDataCalcBMDDetections> detections) {
+            this.detections = detections;
+            return this;
+        }
+        public java.util.List<ScreenChestCTResponseBodyDataCalcBMDDetections> getDetections() {
+            return this.detections;
+        }
+
+        public ScreenChestCTResponseBodyDataCalcBMD setOrigin(java.util.List<Float> origin) {
+            this.origin = origin;
+            return this;
+        }
+        public java.util.List<Float> getOrigin() {
+            return this.origin;
+        }
+
+        public ScreenChestCTResponseBodyDataCalcBMD setResultURL(String resultURL) {
+            this.resultURL = resultURL;
+            return this;
+        }
+        public String getResultURL() {
+            return this.resultURL;
+        }
+
+        public ScreenChestCTResponseBodyDataCalcBMD setSpacing(java.util.List<Float> spacing) {
+            this.spacing = spacing;
+            return this;
+        }
+        public java.util.List<Float> getSpacing() {
+            return this.spacing;
+        }
+
+    }
+
     public static class ScreenChestCTResponseBodyDataCovid extends TeaModel {
         @NameInMap("LesionRatio")
         public String lesionRatio;
@@ -433,6 +548,264 @@ public class ScreenChestCTResponseBody extends TeaModel {
         }
         public String getSeriesInstanceUID() {
             return this.seriesInstanceUID;
+        }
+
+    }
+
+    public static class ScreenChestCTResponseBodyDataDetectLiverSteatosisDetections extends TeaModel {
+        @NameInMap("LiverHU")
+        public Float liverHU;
+
+        @NameInMap("LiverROI1")
+        public Float liverROI1;
+
+        @NameInMap("LiverROI2")
+        public Float liverROI2;
+
+        @NameInMap("LiverROI3")
+        public Float liverROI3;
+
+        @NameInMap("LiverSlice")
+        public Float liverSlice;
+
+        @NameInMap("LiverSpleenDifference")
+        public Float liverSpleenDifference;
+
+        @NameInMap("LiverSpleenRatio")
+        public Float liverSpleenRatio;
+
+        @NameInMap("LiverVolume")
+        public Float liverVolume;
+
+        @NameInMap("Prediction")
+        public String prediction;
+
+        @NameInMap("Probability")
+        public Float probability;
+
+        @NameInMap("ROI1Center")
+        public java.util.List<Long> ROI1Center;
+
+        @NameInMap("ROI2Center")
+        public java.util.List<Long> ROI2Center;
+
+        @NameInMap("ROI3Center")
+        public java.util.List<Long> ROI3Center;
+
+        @NameInMap("Radius")
+        public Long radius;
+
+        @NameInMap("SpleenCenter")
+        public java.util.List<Long> spleenCenter;
+
+        @NameInMap("SpleenHU")
+        public Float spleenHU;
+
+        @NameInMap("SpleenROI")
+        public Float spleenROI;
+
+        @NameInMap("SpleenSlice")
+        public Float spleenSlice;
+
+        @NameInMap("SpleenVolume")
+        public Float spleenVolume;
+
+        public static ScreenChestCTResponseBodyDataDetectLiverSteatosisDetections build(java.util.Map<String, ?> map) throws Exception {
+            ScreenChestCTResponseBodyDataDetectLiverSteatosisDetections self = new ScreenChestCTResponseBodyDataDetectLiverSteatosisDetections();
+            return TeaModel.build(map, self);
+        }
+
+        public ScreenChestCTResponseBodyDataDetectLiverSteatosisDetections setLiverHU(Float liverHU) {
+            this.liverHU = liverHU;
+            return this;
+        }
+        public Float getLiverHU() {
+            return this.liverHU;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectLiverSteatosisDetections setLiverROI1(Float liverROI1) {
+            this.liverROI1 = liverROI1;
+            return this;
+        }
+        public Float getLiverROI1() {
+            return this.liverROI1;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectLiverSteatosisDetections setLiverROI2(Float liverROI2) {
+            this.liverROI2 = liverROI2;
+            return this;
+        }
+        public Float getLiverROI2() {
+            return this.liverROI2;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectLiverSteatosisDetections setLiverROI3(Float liverROI3) {
+            this.liverROI3 = liverROI3;
+            return this;
+        }
+        public Float getLiverROI3() {
+            return this.liverROI3;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectLiverSteatosisDetections setLiverSlice(Float liverSlice) {
+            this.liverSlice = liverSlice;
+            return this;
+        }
+        public Float getLiverSlice() {
+            return this.liverSlice;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectLiverSteatosisDetections setLiverSpleenDifference(Float liverSpleenDifference) {
+            this.liverSpleenDifference = liverSpleenDifference;
+            return this;
+        }
+        public Float getLiverSpleenDifference() {
+            return this.liverSpleenDifference;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectLiverSteatosisDetections setLiverSpleenRatio(Float liverSpleenRatio) {
+            this.liverSpleenRatio = liverSpleenRatio;
+            return this;
+        }
+        public Float getLiverSpleenRatio() {
+            return this.liverSpleenRatio;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectLiverSteatosisDetections setLiverVolume(Float liverVolume) {
+            this.liverVolume = liverVolume;
+            return this;
+        }
+        public Float getLiverVolume() {
+            return this.liverVolume;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectLiverSteatosisDetections setPrediction(String prediction) {
+            this.prediction = prediction;
+            return this;
+        }
+        public String getPrediction() {
+            return this.prediction;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectLiverSteatosisDetections setProbability(Float probability) {
+            this.probability = probability;
+            return this;
+        }
+        public Float getProbability() {
+            return this.probability;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectLiverSteatosisDetections setROI1Center(java.util.List<Long> ROI1Center) {
+            this.ROI1Center = ROI1Center;
+            return this;
+        }
+        public java.util.List<Long> getROI1Center() {
+            return this.ROI1Center;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectLiverSteatosisDetections setROI2Center(java.util.List<Long> ROI2Center) {
+            this.ROI2Center = ROI2Center;
+            return this;
+        }
+        public java.util.List<Long> getROI2Center() {
+            return this.ROI2Center;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectLiverSteatosisDetections setROI3Center(java.util.List<Long> ROI3Center) {
+            this.ROI3Center = ROI3Center;
+            return this;
+        }
+        public java.util.List<Long> getROI3Center() {
+            return this.ROI3Center;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectLiverSteatosisDetections setRadius(Long radius) {
+            this.radius = radius;
+            return this;
+        }
+        public Long getRadius() {
+            return this.radius;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectLiverSteatosisDetections setSpleenCenter(java.util.List<Long> spleenCenter) {
+            this.spleenCenter = spleenCenter;
+            return this;
+        }
+        public java.util.List<Long> getSpleenCenter() {
+            return this.spleenCenter;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectLiverSteatosisDetections setSpleenHU(Float spleenHU) {
+            this.spleenHU = spleenHU;
+            return this;
+        }
+        public Float getSpleenHU() {
+            return this.spleenHU;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectLiverSteatosisDetections setSpleenROI(Float spleenROI) {
+            this.spleenROI = spleenROI;
+            return this;
+        }
+        public Float getSpleenROI() {
+            return this.spleenROI;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectLiverSteatosisDetections setSpleenSlice(Float spleenSlice) {
+            this.spleenSlice = spleenSlice;
+            return this;
+        }
+        public Float getSpleenSlice() {
+            return this.spleenSlice;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectLiverSteatosisDetections setSpleenVolume(Float spleenVolume) {
+            this.spleenVolume = spleenVolume;
+            return this;
+        }
+        public Float getSpleenVolume() {
+            return this.spleenVolume;
+        }
+
+    }
+
+    public static class ScreenChestCTResponseBodyDataDetectLiverSteatosis extends TeaModel {
+        @NameInMap("Detections")
+        public java.util.List<ScreenChestCTResponseBodyDataDetectLiverSteatosisDetections> detections;
+
+        @NameInMap("Origin")
+        public java.util.List<Float> origin;
+
+        @NameInMap("Spacing")
+        public java.util.List<Float> spacing;
+
+        public static ScreenChestCTResponseBodyDataDetectLiverSteatosis build(java.util.Map<String, ?> map) throws Exception {
+            ScreenChestCTResponseBodyDataDetectLiverSteatosis self = new ScreenChestCTResponseBodyDataDetectLiverSteatosis();
+            return TeaModel.build(map, self);
+        }
+
+        public ScreenChestCTResponseBodyDataDetectLiverSteatosis setDetections(java.util.List<ScreenChestCTResponseBodyDataDetectLiverSteatosisDetections> detections) {
+            this.detections = detections;
+            return this;
+        }
+        public java.util.List<ScreenChestCTResponseBodyDataDetectLiverSteatosisDetections> getDetections() {
+            return this.detections;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectLiverSteatosis setOrigin(java.util.List<Float> origin) {
+            this.origin = origin;
+            return this;
+        }
+        public java.util.List<Float> getOrigin() {
+            return this.origin;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectLiverSteatosis setSpacing(java.util.List<Float> spacing) {
+            this.spacing = spacing;
+            return this;
+        }
+        public java.util.List<Float> getSpacing() {
+            return this.spacing;
         }
 
     }
@@ -1192,8 +1565,14 @@ public class ScreenChestCTResponseBody extends TeaModel {
         @NameInMap("CACS")
         public ScreenChestCTResponseBodyDataCACS CACS;
 
+        @NameInMap("CalcBMD")
+        public ScreenChestCTResponseBodyDataCalcBMD calcBMD;
+
         @NameInMap("Covid")
         public ScreenChestCTResponseBodyDataCovid covid;
+
+        @NameInMap("DetectLiverSteatosis")
+        public ScreenChestCTResponseBodyDataDetectLiverSteatosis detectLiverSteatosis;
 
         @NameInMap("DetectLymph")
         public ScreenChestCTResponseBodyDataDetectLymph detectLymph;
@@ -1240,12 +1619,28 @@ public class ScreenChestCTResponseBody extends TeaModel {
             return this.CACS;
         }
 
+        public ScreenChestCTResponseBodyData setCalcBMD(ScreenChestCTResponseBodyDataCalcBMD calcBMD) {
+            this.calcBMD = calcBMD;
+            return this;
+        }
+        public ScreenChestCTResponseBodyDataCalcBMD getCalcBMD() {
+            return this.calcBMD;
+        }
+
         public ScreenChestCTResponseBodyData setCovid(ScreenChestCTResponseBodyDataCovid covid) {
             this.covid = covid;
             return this;
         }
         public ScreenChestCTResponseBodyDataCovid getCovid() {
             return this.covid;
+        }
+
+        public ScreenChestCTResponseBodyData setDetectLiverSteatosis(ScreenChestCTResponseBodyDataDetectLiverSteatosis detectLiverSteatosis) {
+            this.detectLiverSteatosis = detectLiverSteatosis;
+            return this;
+        }
+        public ScreenChestCTResponseBodyDataDetectLiverSteatosis getDetectLiverSteatosis() {
+            return this.detectLiverSteatosis;
         }
 
         public ScreenChestCTResponseBodyData setDetectLymph(ScreenChestCTResponseBodyDataDetectLymph detectLymph) {
