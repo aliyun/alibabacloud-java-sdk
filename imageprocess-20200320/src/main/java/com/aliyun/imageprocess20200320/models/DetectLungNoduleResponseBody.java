@@ -76,9 +76,15 @@ public class DetectLungNoduleResponseBody extends TeaModel {
         @NameInMap("MinorAxis")
         public java.util.List<Float> minorAxis;
 
+        /**
+         * <p>结节最大径位置所在帧的ID标识。</p>
+         */
         @NameInMap("RecistSOPInstanceUID")
         public String recistSOPInstanceUID;
 
+        /**
+         * <p>结节为恶性的置信度。取值范围0~1。</p>
+         */
         @NameInMap("Risk")
         public Float risk;
 
