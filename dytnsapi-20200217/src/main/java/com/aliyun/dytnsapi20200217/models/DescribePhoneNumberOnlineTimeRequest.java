@@ -10,6 +10,9 @@ public class DescribePhoneNumberOnlineTimeRequest extends TeaModel {
     @NameInMap("Carrier")
     public String carrier;
 
+    @NameInMap("ExtendFunction")
+    public String extendFunction;
+
     @NameInMap("InputNumber")
     public String inputNumber;
 
@@ -44,6 +47,14 @@ public class DescribePhoneNumberOnlineTimeRequest extends TeaModel {
     }
     public String getCarrier() {
         return this.carrier;
+    }
+
+    public DescribePhoneNumberOnlineTimeRequest setExtendFunction(String extendFunction) {
+        this.extendFunction = extendFunction;
+        return this;
+    }
+    public String getExtendFunction() {
+        return this.extendFunction;
     }
 
     public DescribePhoneNumberOnlineTimeRequest setInputNumber(String inputNumber) {
