@@ -5,19 +5,21 @@ import com.aliyun.tea.*;
 
 public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
     /**
-     * <p>An array consisting of the images that have malicious image samples.</p>
+     * <p>The region ID of the image repository.</p>
      */
     @NameInMap("AffectedMaliciousFileImagesResponse")
     public java.util.List<DescribeAffectedMaliciousFileImagesResponseBodyAffectedMaliciousFileImagesResponse> affectedMaliciousFileImagesResponse;
 
     /**
-     * <p>The pagination information.</p>
+     * <p>The ID of the container image.</p>
      */
     @NameInMap("PageInfo")
     public DescribeAffectedMaliciousFileImagesResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the container image.</p>
+     * <br>
+     * <p>>  You can call the [ListRepository](~~145293~~) operation to query the IDs of container images from the value of the **InstanceId** response parameter.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -52,62 +54,46 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
     }
 
     public static class DescribeAffectedMaliciousFileImagesResponseBodyAffectedMaliciousFileImagesResponse extends TeaModel {
-        /**
-         * <p>The ID of the cluster.</p>
-         */
         @NameInMap("ClusterId")
         public String clusterId;
 
-        /**
-         * <p>The name of the cluster.</p>
-         */
         @NameInMap("ClusterName")
         public String clusterName;
 
-        /**
-         * <p>The ID of the container.</p>
-         */
         @NameInMap("ContainerId")
         public String containerId;
 
         /**
-         * <p>The image digest.</p>
+         * <p>The name of the cluster.</p>
          */
         @NameInMap("Digest")
         public String digest;
 
-        /**
-         * <p>The URL to download the malicious image sample.</p>
-         */
         @NameInMap("DownloadUrl")
         public String downloadUrl;
 
         /**
-         * <p>The path to the image file.</p>
+         * <p>The number of entries returned per page. Default value: **20**.</p>
          */
         @NameInMap("FilePath")
         public String filePath;
 
         /**
-         * <p>The timestamp of the first scan.</p>
+         * <p>The ID of the container.</p>
          */
         @NameInMap("FirstScanTimestamp")
         public Long firstScanTimestamp;
 
-        /**
-         * <p>The text that is highlighted.</p>
-         */
         @NameInMap("HighLight")
         public String highLight;
 
-        /**
-         * <p>The name of the image.</p>
-         */
         @NameInMap("Image")
         public String image;
 
         /**
-         * <p>The UUID of the image.</p>
+         * <p>The namespace to which the image repository belongs.</p>
+         * <br>
+         * <p>>  Fuzzy match is supported.</p>
          */
         @NameInMap("ImageUuid")
         public String imageUuid;
@@ -122,88 +108,77 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
         public String intranetIp;
 
         /**
-         * <p>The timestamp of the last scan.</p>
+         * <p>Queries the details of malicious image samples.</p>
          */
         @NameInMap("LatestScanTimestamp")
         public Long latestScanTimestamp;
 
         /**
-         * <p>The timestamp of the last verification.</p>
+         * <p>The ID of the image repository.</p>
+         * <br>
+         * <p>>  You can call the [ListRepository](~~145293~~) operation to query the IDs of image repositories from the value of the **RepoId** response parameter.</p>
          */
         @NameInMap("LatestVerifyTimestamp")
         public Long latestVerifyTimestamp;
 
         /**
-         * <p>The image layer.</p>
+         * <p>The pod.</p>
          */
         @NameInMap("Layer")
         public String layer;
 
-        /**
-         * <p>The severity of the malicious image sample. Valid values:</p>
-         * <br>
-         * <p>*   **serious**</p>
-         * <p>*   **suspicious**</p>
-         * <p>*   **remind**</p>
-         */
         @NameInMap("Level")
         public String level;
 
         /**
-         * <p>The MD5 hash value of the malicious image sample.</p>
+         * <p>The pod.</p>
          */
         @NameInMap("MaliciousMd5")
         public String maliciousMd5;
 
         /**
-         * <p>The namespace to which the image repository belongs.</p>
+         * <p>The namespace.</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
-        /**
-         * <p>The pod.</p>
-         */
         @NameInMap("Pod")
         public String pod;
 
         /**
-         * <p>The ID of the image repository.</p>
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
          */
         @NameInMap("RepoId")
         public String repoId;
 
         /**
-         * <p>The ID of the container image.</p>
+         * <p>The timestamp of the last verification.</p>
          */
         @NameInMap("RepoInstanceId")
         public String repoInstanceId;
 
         /**
-         * <p>The name of the image repository.</p>
+         * <p>DescribeAffectedMaliciousFileImages</p>
          */
         @NameInMap("RepoName")
         public String repoName;
 
         /**
-         * <p>The region ID of the image repository.</p>
+         * <p>The pagination information.</p>
          */
         @NameInMap("RepoRegionId")
         public String repoRegionId;
 
         /**
-         * <p>The handling status of the malicious image sample. Valid values:</p>
+         * <p>The name of the image repository.</p>
          * <br>
-         * <p>*   **0**: unhandled</p>
-         * <p>*   **1**: handled</p>
-         * <p>*   **2**: verifying</p>
-         * <p>*   **3**: added to the whitelist</p>
+         * <p>>  Fuzzy match is supported.</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
-         * <p>The tag that is added to the image.</p>
+         * <p>The UUID of the image.</p>
          */
         @NameInMap("Tag")
         public String tag;
@@ -469,25 +444,25 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
 
     public static class DescribeAffectedMaliciousFileImagesResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of images that have malicious image samples returned on the current page.</p>
+         * <p>The URL to download the malicious image sample.</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
-         * <p>The page number of the returned page. Pages start from page **1**. Default value: **1**.</p>
+         * <p>The image digest.</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page. Default value: **20**.</p>
+         * <p>The tag that is added to the image.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The total number of images that have malicious image samples.</p>
+         * <p>The types of the assets that you want to scan.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

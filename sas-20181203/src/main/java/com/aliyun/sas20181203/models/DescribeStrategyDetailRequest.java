@@ -5,22 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeStrategyDetailRequest extends TeaModel {
     /**
-     * <p>The ID of the baseline check policy.</p>
+     * <p>The alias of the check item.</p>
      */
     @NameInMap("Id")
     public String id;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The default value of the rule.</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The minimum value of the rule parameter.</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;

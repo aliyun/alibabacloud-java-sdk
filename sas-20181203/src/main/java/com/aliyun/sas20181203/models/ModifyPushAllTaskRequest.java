@@ -11,25 +11,13 @@ public class ModifyPushAllTaskRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The check items. Separate multiple check items with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   **OVAL_ENTITY**: Common Vulnerabilities and Exposures (CVE) vulnerabilities</p>
-     * <p>*   **CMS**: Web-CMS vulnerabilities</p>
-     * <p>*   **SYSVUL**: Windows system vulnerabilities</p>
-     * <p>*   **SCA**: application vulnerabilities</p>
-     * <p>*   **HEALTH_CHECK**: baselines</p>
-     * <p>*   **WEBSHELL**: webshells</p>
-     * <p>*   **PROC_SNAPSHOT**: processes</p>
-     * <p>*   **PORT_SNAPSHOT**: ports</p>
-     * <p>*   **ACCOUNT_SNAPSHOT**: accounts</p>
-     * <p>*   **SOFTWARE_SNAPSHOT**: software assets</p>
-     * <p>*   **SCA_SNAPSHOT**: middleware</p>
+     * <p>The UUIDs of servers on which you want to perform security check tasks. Separate multiple UUIDs with commas (,).</p>
      */
     @NameInMap("Tasks")
     public String tasks;
 
     /**
-     * <p>The UUIDs of servers on which you want to perform security check tasks. Separate multiple UUIDs with commas (,).</p>
+     * <p>The message that describes the security check failure.</p>
      */
     @NameInMap("Uuids")
     public String uuids;

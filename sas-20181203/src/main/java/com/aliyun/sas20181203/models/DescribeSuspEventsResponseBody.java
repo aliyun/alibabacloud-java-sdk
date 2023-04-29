@@ -402,6 +402,9 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
+        @NameInMap("ImageUuid")
+        public String imageUuid;
+
         /**
          * <p>The ID of the affected asset.</p>
          */
@@ -767,6 +770,14 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setImageUuid(String imageUuid) {
+            this.imageUuid = imageUuid;
+            return this;
+        }
+        public String getImageUuid() {
+            return this.imageUuid;
         }
 
         public DescribeSuspEventsResponseBodySuspEvents setInstanceId(String instanceId) {

@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribePropertyPortItemResponseBody extends TeaModel {
     /**
-     * <p>The pagination information.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageInfo")
     public DescribePropertyPortItemResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>An array that consists of the ports returned.</p>
+     * <p>The number of the listening port.</p>
      */
     @NameInMap("PropertyItems")
     public java.util.List<DescribePropertyPortItemResponseBodyPropertyItems> propertyItems;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,25 +53,25 @@ public class DescribePropertyPortItemResponseBody extends TeaModel {
 
     public static class DescribePropertyPortItemResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>An array that consists of the ports returned.</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The number of entries returned per page.</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The total number of entries returned.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The number of entries returned on the current page.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -117,19 +117,19 @@ public class DescribePropertyPortItemResponseBody extends TeaModel {
 
     public static class DescribePropertyPortItemResponseBodyPropertyItems extends TeaModel {
         /**
-         * <p>The number of servers that use the port.</p>
+         * <p>The network protocol of the port.</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
-         * <p>The number of the listening port.</p>
+         * <p>The number of servers that use the port.</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
-         * <p>The network protocol of the port.</p>
+         * <p>Queries information about all ports.</p>
          */
         @NameInMap("Proto")
         public String proto;

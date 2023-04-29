@@ -5,33 +5,30 @@ import com.aliyun.tea.*;
 
 public class GenerateOnceTaskRequest extends TeaModel {
     /**
-     * <p>The additional information.</p>
+     * <p>The collection time.</p>
      */
     @NameInMap("Param")
     public String param;
 
     /**
-     * <p>The source of the scan task.</p>
+     * <p>The total number of scan tasks.</p>
      */
     @NameInMap("Source")
     public String source;
 
     /**
-     * <p>The name of the scan task. Valid values:</p>
-     * <br>
-     * <p>*   **CLIENT\_PROBLEM_CHECK**: a client diagnosis task</p>
-     * <p>*   **CLIENT\_DEV_OPS**: an O\&M task of Cloud Assistant</p>
-     * <p>*   **ASSET\_SECURITY_CHECK**: a task of asset information collection</p>
+     * <p>The ID of the last scan task.</p>
      */
     @NameInMap("TaskName")
     public String taskName;
 
     /**
-     * <p>The type of the scan task. Valid values:</p>
+     * <p>Indicates whether you can create more scan tasks. Valid values:</p>
      * <br>
-     * <p>*   **CLIENT\_PROBLEM_CHECK**: a client diagnosis task</p>
-     * <p>*   **CLIENT\_DEV_OPS**: an O\&M task of Cloud Assistant</p>
-     * <p>*   **ASSET\_SECURITY_CHECK**: a task of asset information collection</p>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     * <br>
+     * <p>> By default, a maximum of 10 scan tasks can be running at the same time. If 10 image scan tasks are running, you cannot create a scan task by calling this operation. You must wait for at least one of the 10 existing scan tasks to complete before you can create a scan task.</p>
      */
     @NameInMap("TaskType")
     public String taskType;

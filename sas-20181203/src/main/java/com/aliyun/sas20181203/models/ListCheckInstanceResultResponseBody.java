@@ -4,33 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListCheckInstanceResultResponseBody extends TeaModel {
-    /**
-     * <p>An array that consists of the basic information about the instances.</p>
-     */
     @NameInMap("BasicData")
     public java.util.List<ListCheckInstanceResultResponseBodyBasicData> basicData;
 
-    /**
-     * <p>The extended information about the instances.</p>
-     */
     @NameInMap("Checks")
     public java.util.List<java.util.Map<String, ?>> checks;
 
-    /**
-     * <p>The metadata information about the search conditions that can be used to filter instances.</p>
-     */
     @NameInMap("Columns")
     public java.util.List<ListCheckInstanceResultResponseBodyColumns> columns;
 
-    /**
-     * <p>The pagination information.</p>
-     */
     @NameInMap("PageInfo")
     public ListCheckInstanceResultResponseBodyPageInfo pageInfo;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -80,39 +65,18 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
     }
 
     public static class ListCheckInstanceResultResponseBodyBasicData extends TeaModel {
-        /**
-         * <p>The check result ID of the instance.</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <p>The ID of the server.</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The name of the server.</p>
-         */
         @NameInMap("InstanceName")
         public String instanceName;
 
-        /**
-         * <p>The region ID of the instance.</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The statuses of check items. Multiple statuses are separated by commas (,). Valid values:</p>
-         * <br>
-         * <p>*   **PASS**</p>
-         * <p>*   **NOT_PASS**</p>
-         * <p>*   **CHECKING**</p>
-         * <p>*   **NOT_CHECK**</p>
-         * <p>*   **WHITELIST**</p>
-         */
         @NameInMap("Status")
         public String status;
 
@@ -164,24 +128,12 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
     }
 
     public static class ListCheckInstanceResultResponseBodyColumnsGrids extends TeaModel {
-        /**
-         * <p>The search condition.</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The display name of the search condition.</p>
-         */
         @NameInMap("ShowName")
         public String showName;
 
-        /**
-         * <p>The format of the check results for the instances. Valid values:</p>
-         * <br>
-         * <p>*   **text**</p>
-         * <p>*   **link**</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -217,45 +169,21 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
     }
 
     public static class ListCheckInstanceResultResponseBodyColumns extends TeaModel {
-        /**
-         * <p>The metadata information about the details of the instances.</p>
-         */
         @NameInMap("Grids")
         public java.util.List<ListCheckInstanceResultResponseBodyColumnsGrids> grids;
 
-        /**
-         * <p>The search condition.</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>Indicates whether the search condition is used. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
-         */
         @NameInMap("Search")
         public Boolean search;
 
-        /**
-         * <p>The value of the search condition.</p>
-         */
         @NameInMap("SearchKey")
         public String searchKey;
 
-        /**
-         * <p>The display name of the search condition.</p>
-         */
         @NameInMap("ShowName")
         public String showName;
 
-        /**
-         * <p>The format of the check results for the instances. Valid values:</p>
-         * <br>
-         * <p>*   **text**</p>
-         * <p>*   **link**</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -315,27 +243,15 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
     }
 
     public static class ListCheckInstanceResultResponseBodyPageInfo extends TeaModel {
-        /**
-         * <p>The number of entries returned on the current page.</p>
-         */
         @NameInMap("Count")
         public String count;
 
-        /**
-         * <p>The page number of the returned page.</p>
-         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        /**
-         * <p>The number of entries returned per page.</p>
-         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        /**
-         * <p>The total number of entries returned.</p>
-         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

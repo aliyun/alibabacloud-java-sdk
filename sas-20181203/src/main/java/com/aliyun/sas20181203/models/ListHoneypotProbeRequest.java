@@ -4,58 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListHoneypotProbeRequest extends TeaModel {
-    /**
-     * <p>The number of the page to return. Pages start from page **1**. Default value: **1**.</p>
-     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    /**
-     * <p>The name of the probe.</p>
-     */
     @NameInMap("DisplayName")
     public String displayName;
 
-    /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
-     */
     @NameInMap("Lang")
     public String lang;
 
-    /**
-     * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
-     * <br>
-     * <p>> We recommend that you do not leave this parameter empty.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The status of the probe. Valid values:</p>
-     * <br>
-     * <p>*   **installed**: installed</p>
-     * <p>*   **install_failed**: installation failed</p>
-     * <p>*   **online**: online</p>
-     * <p>*   **offline**: offline</p>
-     * <p>*   **unnormal**: abnormal</p>
-     * <p>*   **unprobe**: unauthorized</p>
-     * <p>*   **uninstalling**: being uninstalled</p>
-     * <p>*   **uninstalled**: uninstalled</p>
-     * <p>*   **uninstall_failed**: uninstallation failed</p>
-     * <p>*   **not_exist**: not installed</p>
-     */
     @NameInMap("ProbeStatus")
     public String probeStatus;
 
-    /**
-     * <p>The type of the probe. Valid values:</p>
-     * <br>
-     * <p>*   **host_probe**: host probe</p>
-     * <p>*   **vpc_black_hole_probe**: VPC probe</p>
-     */
     @NameInMap("ProbeType")
     public String probeType;
 

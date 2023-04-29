@@ -4,21 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListClientUserDefineRulesResponseBody extends TeaModel {
-    /**
-     * <p>The pagination information.</p>
-     */
     @NameInMap("PageInfo")
     public ListClientUserDefineRulesResponseBodyPageInfo pageInfo;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>An array that consists of the rules.</p>
-     */
     @NameInMap("UserDefineRuleList")
     public java.util.List<ListClientUserDefineRulesResponseBodyUserDefineRuleList> userDefineRuleList;
 
@@ -52,21 +43,12 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
     }
 
     public static class ListClientUserDefineRulesResponseBodyPageInfo extends TeaModel {
-        /**
-         * <p>The page number of the returned page.</p>
-         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        /**
-         * <p>The number of entries returned per page.</p>
-         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        /**
-         * <p>The total number of entries returned.</p>
-         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -102,54 +84,21 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
     }
 
     public static class ListClientUserDefineRulesResponseBodyUserDefineRuleList extends TeaModel {
-        /**
-         * <p>The action of the rule. Valid values:</p>
-         * <br>
-         * <p>*   **0**: allow</p>
-         * <p>*   **1**: block</p>
-         */
         @NameInMap("ActionType")
         public Integer actionType;
 
-        /**
-         * <p>The ID of the rule.</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <p>The name of the rule.</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The type of the operating system. Valid values:</p>
-         * <br>
-         * <p>*   **windows**: Windows</p>
-         * <p>*   **linux**: Linux</p>
-         * <p>*   **all**: all types</p>
-         */
         @NameInMap("Platform")
         public String platform;
 
-        /**
-         * <p>The switch ID of the rule.</p>
-         */
         @NameInMap("SwitchId")
         public String switchId;
 
-        /**
-         * <p>The type of the rule. Valid values:</p>
-         * <br>
-         * <p>*   **1**: Process hash</p>
-         * <p>*   **2**: Command line</p>
-         * <p>*   **3**: Process Network</p>
-         * <p>*   **4**: File Read and Write</p>
-         * <p>*   **5**: Operation on Registry</p>
-         * <p>*   **6**: Dynamic-link Library Loading</p>
-         * <p>*   **7**: File Renaming</p>
-         */
         @NameInMap("Type")
         public Integer type;
 

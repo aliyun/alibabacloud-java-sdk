@@ -1,3 +1,17 @@
+2023-04-29 Version: 2.0.6
+- Fixed user flow.
+- Support RASP install info query.
+- Supported validation by check item.
+- Support Unvisable for ListVirusScanTask.
+- Support unvisable.
+- Route to shanghai vpc.
+- Opa strategy new api.
+- Support nextToken.
+- Add imagename and label.
+- Support NextToken.
+- Removed unnecessary parameter.
+- Support OSS File Detect.
+
 2023-04-15 Version: 2.0.5
 - Change DescribeSoarStrategyTaskDetail Request.
 - Fix error code for fix vul.

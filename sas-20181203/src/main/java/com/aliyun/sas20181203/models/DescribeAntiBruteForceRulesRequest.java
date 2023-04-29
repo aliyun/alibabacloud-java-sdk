@@ -7,11 +7,6 @@ public class DescribeAntiBruteForceRulesRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    /**
-     * <p>The ID of the defense rule.</p>
-     * <br>
-     * <p>> You can call the [DescribeAntiBruteForceRules](~~DescribeAntiBruteForceRules~~) operation to query the IDs of defense rules.</p>
-     */
     @NameInMap("Id")
     public Long id;
 
@@ -24,9 +19,6 @@ public class DescribeAntiBruteForceRulesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The source IP address of the request.</p>
-     */
     @NameInMap("SourceIp")
     public String sourceIp;
 

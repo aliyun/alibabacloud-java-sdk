@@ -4,12 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetHoneypotProbeRequest extends TeaModel {
+    /**
+     * <p>设置请求和接收消息的语言类型，默认为**zh**。取值：</p>
+     * <br>
+     * <p>- **zh**：中文</p>
+     * <p>- **en**：英文</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
-    /**
-     * <p>The ID of the probe.</p>
-     */
     @NameInMap("ProbeId")
     public String probeId;
 

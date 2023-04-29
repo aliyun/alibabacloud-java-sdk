@@ -4,17 +4,14 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ValidateHcWarningsRequest extends TeaModel {
+    @NameInMap("CheckIds")
+    public String checkIds;
+
     /**
      * <p>The IDs of risk items that you want to verify. Separate multiple IDs with commas (,).</p>
      */
     @NameInMap("RiskIds")
     public String riskIds;
-
-    /**
-     * <p>The source IP address of the request.</p>
-     */
-    @NameInMap("SourceIp")
-    public String sourceIp;
 
     /**
      * <p>The UUIDs of servers on which you want to verify risk items.</p>
@@ -27,20 +24,20 @@ public class ValidateHcWarningsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ValidateHcWarningsRequest setCheckIds(String checkIds) {
+        this.checkIds = checkIds;
+        return this;
+    }
+    public String getCheckIds() {
+        return this.checkIds;
+    }
+
     public ValidateHcWarningsRequest setRiskIds(String riskIds) {
         this.riskIds = riskIds;
         return this;
     }
     public String getRiskIds() {
         return this.riskIds;
-    }
-
-    public ValidateHcWarningsRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public ValidateHcWarningsRequest setUuids(String uuids) {

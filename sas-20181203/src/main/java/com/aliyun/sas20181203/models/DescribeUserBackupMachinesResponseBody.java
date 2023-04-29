@@ -4,15 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserBackupMachinesResponseBody extends TeaModel {
-    /**
-     * <p>An array consisting of the servers to which the anti-ransomware policy is applied.</p>
-     */
     @NameInMap("Machines")
     public java.util.List<DescribeUserBackupMachinesResponseBodyMachines> machines;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,21 +32,12 @@ public class DescribeUserBackupMachinesResponseBody extends TeaModel {
     }
 
     public static class DescribeUserBackupMachinesResponseBodyMachines extends TeaModel {
-        /**
-         * <p>The ID of the anti-ransomware policy that is applied to the server.</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <p>The name of the anti-ransomware policy that is applied to the server.</p>
-         */
         @NameInMap("PolicyName")
         public String policyName;
 
-        /**
-         * <p>The UUID of the server to which the anti-ransomware policy is applied.</p>
-         */
         @NameInMap("Uuid")
         public String uuid;
 

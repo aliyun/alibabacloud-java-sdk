@@ -4,33 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateCustomBlockRecordRequest extends TeaModel {
-    /**
-     * <p>The IP address that you want to specify in the policy.</p>
-     */
     @NameInMap("BlockIp")
     public String blockIp;
 
-    /**
-     * <p>The traffic direction that you want to specify in the policy. Valid values:</p>
-     * <br>
-     * <p>*   **in**: inbound</p>
-     * <p>*   **out**: outbound</p>
-     */
     @NameInMap("Bound")
     public String bound;
 
-    /**
-     * <p>The expiration time of the policy.</p>
-     */
     @NameInMap("ExpireTime")
     public Long expireTime;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The UUIDs of the servers. Separate multiple UUIDs with commas (,).</p>
-     */
     @NameInMap("Uuids")
     public String uuids;
 

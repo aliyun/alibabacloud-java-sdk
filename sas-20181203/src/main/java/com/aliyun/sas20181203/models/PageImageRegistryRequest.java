@@ -4,39 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class PageImageRegistryRequest extends TeaModel {
-    /**
-     * <p>The number of the page to return.</p>
-     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    /**
-     * <p>The number of entries to return on each page. Default value: 20.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The name of the image repository. Fuzzy match is supported.</p>
-     */
     @NameInMap("RegistryNameLike")
     public String registryNameLike;
 
-    /**
-     * <p>The types of image repositories.</p>
-     */
     @NameInMap("RegistryTypeInList")
     public java.util.List<String> registryTypeInList;
 
-    /**
-     * <p>The types of excluded image repositories.</p>
-     */
     @NameInMap("RegistryTypeNotInList")
     public java.util.List<String> registryTypeNotInList;
 
-    /**
-     * <p>The source IP address of the request.</p>
-     */
     @NameInMap("SourceIp")
     public String sourceIp;
 

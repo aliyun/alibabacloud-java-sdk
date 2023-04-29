@@ -3735,7 +3735,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If you have created restoration tasks, you can call this operation to query the number of restoration tasks that are in the **restored** or **being restored** state.
+      * The number of the restoration tasks that are in the **being restored** state.
       *
       * @param request DescribeBackupRestoreCountRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3758,7 +3758,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If you have created restoration tasks, you can call this operation to query the number of restoration tasks that are in the **restored** or **being restored** state.
+      * The number of the restoration tasks that are in the **being restored** state.
       *
       * @return DescribeBackupRestoreCountResponse
      */
@@ -4672,7 +4672,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Only users who created a Container Registry Enterprise Edition instance can call this operation.
+      * The number of nodes on which alerts are generated in the current container cluster.
       *
       * @param request DescribeContainerStatisticsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4703,7 +4703,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Only users who created a Container Registry Enterprise Edition instance can call this operation.
+      * The number of nodes on which alerts are generated in the current container cluster.
       *
       * @param request DescribeContainerStatisticsRequest
       * @return DescribeContainerStatisticsResponse
@@ -15422,6 +15422,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listPrivateRegistryTypeWithOptions(request, runtime);
     }
 
+    public ListQueryRaspAppInfoResponse listQueryRaspAppInfoWithOptions(ListQueryRaspAppInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uuids)) {
+            query.put("Uuids", request.uuids);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListQueryRaspAppInfo"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListQueryRaspAppInfoResponse());
+    }
+
+    public ListQueryRaspAppInfoResponse listQueryRaspAppInfo(ListQueryRaspAppInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listQueryRaspAppInfoWithOptions(request, runtime);
+    }
+
     public ListRuleTargetAllResponse listRuleTargetAllWithOptions(ListRuleTargetAllRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -16057,13 +16090,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyBackupPolicyStatusWithOptions(request, runtime);
     }
 
-    /**
-      * Deleted logs cannot be restored. Before you call this operation to delete all logs and free up log storage, we recommend that you export and save your logs to your computer.
-      *
-      * @param request ModifyClearLogstoreStorageRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ModifyClearLogstoreStorageResponse
-     */
     public ModifyClearLogstoreStorageResponse modifyClearLogstoreStorageWithOptions(ModifyClearLogstoreStorageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -16100,12 +16126,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyClearLogstoreStorageResponse());
     }
 
-    /**
-      * Deleted logs cannot be restored. Before you call this operation to delete all logs and free up log storage, we recommend that you export and save your logs to your computer.
-      *
-      * @param request ModifyClearLogstoreStorageRequest
-      * @return ModifyClearLogstoreStorageResponse
-     */
     public ModifyClearLogstoreStorageResponse modifyClearLogstoreStorage(ModifyClearLogstoreStorageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyClearLogstoreStorageWithOptions(request, runtime);
@@ -18983,15 +19003,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryDiscoverDatabaseWithOptions(request, runtime);
     }
 
-    /**
-      * You can call the QueryGroupIdByGroupName operation to query the ID of an asset group to which your assets belong by using the name of the asset group. When you call operations such as [GetSuspiciousStatistics](~~GetSuspiciousStatistics~~) and [DeleteGroup](~~DeleteGroup~~), you must specify the ID of the asset group. To query the ID of an asset group, call the QueryGroupIdByGroupName operation.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request QueryGroupIdByGroupNameRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return QueryGroupIdByGroupNameResponse
-     */
     public QueryGroupIdByGroupNameResponse queryGroupIdByGroupNameWithOptions(QueryGroupIdByGroupNameRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -19020,14 +19031,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryGroupIdByGroupNameResponse());
     }
 
-    /**
-      * You can call the QueryGroupIdByGroupName operation to query the ID of an asset group to which your assets belong by using the name of the asset group. When you call operations such as [GetSuspiciousStatistics](~~GetSuspiciousStatistics~~) and [DeleteGroup](~~DeleteGroup~~), you must specify the ID of the asset group. To query the ID of an asset group, call the QueryGroupIdByGroupName operation.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request QueryGroupIdByGroupNameRequest
-      * @return QueryGroupIdByGroupNameResponse
-     */
     public QueryGroupIdByGroupNameResponse queryGroupIdByGroupName(QueryGroupIdByGroupNameRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryGroupIdByGroupNameWithOptions(request, runtime);
@@ -20099,12 +20102,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ValidateHcWarningsResponse validateHcWarningsWithOptions(ValidateHcWarningsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.riskIds)) {
-            query.put("RiskIds", request.riskIds);
+        if (!com.aliyun.teautil.Common.isUnset(request.checkIds)) {
+            query.put("CheckIds", request.checkIds);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
-            query.put("SourceIp", request.sourceIp);
+        if (!com.aliyun.teautil.Common.isUnset(request.riskIds)) {
+            query.put("RiskIds", request.riskIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.uuids)) {

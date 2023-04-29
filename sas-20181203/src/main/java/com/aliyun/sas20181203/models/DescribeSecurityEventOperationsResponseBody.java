@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The configuration of the operation that you can perform to handle the alert event.</p>
+     * <br>
+     * <p>>  If the value of the OperationCode parameter is `kill_and_quara` or `block_ip`, the OperationParams parameter is required. If the value of the OperationCode parameter is a different value, the OperationParams parameter can be left empty.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>An array consisting of the operations that you can perform to handle the alert event.</p>
+     * <p>The operation that is used and can be modified in the whitelist rule. Valid values:</p>
+     * <br>
+     * <p>*   **contains**: contains</p>
+     * <p>*   **notContains**: does not contain</p>
+     * <p>*   **regex**: regular expression</p>
+     * <p>*   **strEqual**: equals</p>
+     * <p>*   **strNotEqual**: does not equal</p>
      */
     @NameInMap("SecurityEventOperationsResponse")
     public java.util.List<DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponse> securityEventOperationsResponse;
@@ -39,31 +47,28 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
 
     public static class DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkField extends TeaModel {
         /**
-         * <p>The alias of the field that is used in the whitelist rule.</p>
+         * <p>61352054</p>
          */
         @NameInMap("FiledAliasName")
         public String filedAliasName;
 
         /**
-         * <p>The field that is used in the whitelist rule.</p>
+         * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+         * <br>
+         * <p>*   **zh**: Chinese</p>
+         * <p>*   **en**: English</p>
          */
         @NameInMap("FiledName")
         public String filedName;
 
         /**
-         * <p>The operation that is used in the whitelist rule. Valid values:</p>
-         * <br>
-         * <p>*   **contains**: contains</p>
-         * <p>*   **notContains**: does not contain</p>
-         * <p>*   **regex**: regular expression</p>
-         * <p>*   **strEqual**: equals</p>
-         * <p>*   **strNotEqual**: does not equal</p>
+         * <p>An array consisting of the operations that you can perform to handle the alert event.</p>
          */
         @NameInMap("MarkMisType")
         public String markMisType;
 
         /**
-         * <p>The value of the field that is used in the whitelist rule.</p>
+         * <p>An array consisting of the configuration information that is used when the value of the OperationCode parameter is **advance_mark_mis_info**.</p>
          */
         @NameInMap("MarkMisValue")
         public String markMisValue;
@@ -75,7 +80,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
         public java.util.List<String> supportedMisType;
 
         /**
-         * <p>The UUID of the server on which the alert event is detected.</p>
+         * <p>The alias of the field that can be used in the whitelist rule.</p>
          */
         @NameInMap("Uuid")
         public String uuid;
@@ -137,26 +142,20 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
 
     public static class DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkFieldsSource extends TeaModel {
         /**
-         * <p>The alias of the field that can be used in the whitelist rule.</p>
+         * <p>DescribeSecurityEventOperations</p>
          */
         @NameInMap("FiledAliasName")
         public String filedAliasName;
 
         /**
-         * <p>The field that can be used in the whitelist rule.</p>
+         * <p>Queries the operations that you can perform to handle an alert event.</p>
          */
         @NameInMap("FiledName")
         public String filedName;
 
-        /**
-         * <p>The value of the field that can be used in the whitelist rule.</p>
-         */
         @NameInMap("MarkMisValue")
         public String markMisValue;
 
-        /**
-         * <p>An array consisting of the operations that are supported by the method to add the alert event to the whitelist.</p>
-         */
         @NameInMap("SupportedMisType")
         public java.util.List<String> supportedMisType;
 
@@ -201,13 +200,13 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
 
     public static class DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponse extends TeaModel {
         /**
-         * <p>An array consisting of the configuration information that is used when the value of the OperationCode parameter is **advance\_mark\_mis_info**.</p>
+         * <p>The source IP address of the request.</p>
          */
         @NameInMap("MarkField")
         public java.util.List<DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkField> markField;
 
         /**
-         * <p>An array consisting of the configuration items that can be used when the value of the OperationCode parameter is advance_mark_mis_info.</p>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("MarkFieldsSource")
         public java.util.List<DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkFieldsSource> markFieldsSource;
@@ -216,32 +215,30 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
          * <p>The operation that you can perform to handle the alert. Valid values:</p>
          * <br>
          * <p>*   **block_ip**: blocks the source IP address.</p>
-         * <p>*   **advance\_mark\_mis_info**: adds the alert to the whitelist.</p>
+         * <p>*   **advance_mark_mis_info**: adds the alert to the whitelist.</p>
          * <p>*   **ignore**: ignores the alert.</p>
          * <p>*   **manual_handled**: marks the alert as manually handled.</p>
          * <p>*   **kill_process**: terminates the malicious process.</p>
          * <p>*   **cleanup**: performs in-depth virus detection and removal.</p>
-         * <p>*   **kill\_and_quara**: terminates the malicious process and quarantines the source file.</p>
-         * <p>*   **disable\_malicious_defense**: stops the container on which the alerting files or processes exist.</p>
-         * <p>*   **client\_problem_check**: performs troubleshooting.</p>
+         * <p>*   **kill_and_quara**: terminates the malicious process and quarantines the source file.</p>
+         * <p>*   **disable_malicious_defense**: stops the container on which the alerting files or processes exist.</p>
+         * <p>*   **client_problem_check**: performs troubleshooting.</p>
          * <p>*   **quara**: quarantines the source file of the malicious process.</p>
          */
         @NameInMap("OperationCode")
         public String operationCode;
 
         /**
-         * <p>The configuration of the operation that you can perform to handle the alert event.</p>
+         * <p>Indicates whether you can handle the alert event in the current edition of Security Center. Valid values:</p>
          * <br>
-         * <p>>  If the value of the OperationCode parameter is `kill_and_quara` or `block_ip`, the OperationParams parameter is required. If the value of the OperationCode parameter is a different value, the OperationParams parameter can be left empty.</p>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
          */
         @NameInMap("OperationParams")
         public String operationParams;
 
         /**
-         * <p>Indicates whether you can handle the alert event in the current edition of Security Center. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>The UUID of the server on which the alert event is detected.</p>
          */
         @NameInMap("UserCanOperate")
         public Boolean userCanOperate;

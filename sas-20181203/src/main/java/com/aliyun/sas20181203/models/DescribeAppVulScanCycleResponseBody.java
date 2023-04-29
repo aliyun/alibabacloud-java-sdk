@@ -4,19 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeAppVulScanCycleResponseBody extends TeaModel {
-    /**
-     * <p>The scan cycle for application vulnerabilities.</p>
-     * <br>
-     * <p>*   1week</p>
-     * <p>*   2weeks</p>
-     * <p>*   3days</p>
-     */
     @NameInMap("Cycle")
     public String cycle;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

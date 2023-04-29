@@ -10,6 +10,9 @@ public class CreateHoneypotNodeResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("HoneypotNode")
     public CreateHoneypotNodeResponseBodyHoneypotNode honeypotNode;
 
@@ -94,6 +97,9 @@ public class CreateHoneypotNodeResponseBody extends TeaModel {
     }
 
     public static class CreateHoneypotNodeResponseBodyHoneypotNode extends TeaModel {
+        /**
+         * <p>The ID of the management node.</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 

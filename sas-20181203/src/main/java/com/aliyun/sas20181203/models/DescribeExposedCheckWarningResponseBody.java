@@ -4,21 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeExposedCheckWarningResponseBody extends TeaModel {
-    /**
-     * <p>The total number of entries returned.</p>
-     */
     @NameInMap("Count")
     public Integer count;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>An array that consists of the baseline risk items of the exposed server.</p>
-     */
     @NameInMap("WarningList")
     public java.util.List<DescribeExposedCheckWarningResponseBodyWarningList> warningList;
 
@@ -52,35 +43,18 @@ public class DescribeExposedCheckWarningResponseBody extends TeaModel {
     }
 
     public static class DescribeExposedCheckWarningResponseBodyWarningList extends TeaModel {
-        /**
-         * <p>The ID of the baseline.</p>
-         * <br>
-         * <p>>  You can call the [DescribeCheckWarningSummary](~~116179~~) operation to query the IDs of baselines.</p>
-         */
         @NameInMap("RiskId")
         public Long riskId;
 
-        /**
-         * <p>The name of the baseline.</p>
-         */
         @NameInMap("RiskName")
         public String riskName;
 
-        /**
-         * <p>The display name of the baseline sub type.</p>
-         */
         @NameInMap("SubTypeAlias")
         public String subTypeAlias;
 
-        /**
-         * <p>The display name of the baseline type.</p>
-         */
         @NameInMap("TypeAlias")
         public String typeAlias;
 
-        /**
-         * <p>The UUID of the server.</p>
-         */
         @NameInMap("Uuid")
         public String uuid;
 

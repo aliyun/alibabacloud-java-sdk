@@ -4,45 +4,24 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebLockStatusResponseBody extends TeaModel {
-    /**
-     * <p>The total quota that you purchase for web tamper proofing.</p>
-     */
     @NameInMap("AuthCount")
     public Integer authCount;
 
-    /**
-     * <p>The used quota for web tamper proofing.</p>
-     */
     @NameInMap("BindCount")
     public Integer bindCount;
 
-    /**
-     * <p>The number of blocked processes.</p>
-     */
     @NameInMap("BlockCount")
     public Integer blockCount;
 
-    /**
-     * <p>The number of protected directories.</p>
-     */
     @NameInMap("DirCount")
     public Integer dirCount;
 
-    /**
-     * <p>The timestamp when the quota for web tamper proofing expires.</p>
-     */
     @NameInMap("ExpireTime")
     public Long expireTime;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The number of processes that are added to the process whitelist.</p>
-     */
     @NameInMap("WhiteCount")
     public Integer whiteCount;
 

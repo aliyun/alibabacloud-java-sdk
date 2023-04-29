@@ -4,77 +4,33 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateCycleTaskRequest extends TeaModel {
-    /**
-     * <p>Specifies whether to enable the task. Valid values:</p>
-     * <br>
-     * <p>*   **1**: yes</p>
-     * <p>*   **0**: no</p>
-     */
     @NameInMap("Enable")
     public Integer enable;
 
-    /**
-     * <p>The first time when the task is performed.</p>
-     */
     @NameInMap("FirstDateStr")
     public Long firstDateStr;
 
-    /**
-     * <p>The interval of the task.</p>
-     */
     @NameInMap("IntervalPeriod")
     public Integer intervalPeriod;
 
-    /**
-     * <p>The additional information.</p>
-     */
     @NameInMap("Param")
     public String param;
 
-    /**
-     * <p>The unit of the scan interval. Valid values:</p>
-     * <br>
-     * <p>*   **day**: days</p>
-     * <p>*   **hour**: hours</p>
-     */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
-    /**
-     * <p>The additional source for the task.</p>
-     */
     @NameInMap("Source")
     public String source;
 
-    /**
-     * <p>The time when the task ends. Unit: hours.</p>
-     */
     @NameInMap("TargetEndTime")
     public Integer targetEndTime;
 
-    /**
-     * <p>The time when the task is started. Unit: hours.</p>
-     */
     @NameInMap("TargetStartTime")
     public Integer targetStartTime;
 
-    /**
-     * <p>The name of the task. Valid values:</p>
-     * <br>
-     * <p>*   **VIRUS_VUL_SCHEDULE_SCAN**: virus scan task</p>
-     * <p>*   **IMAGE_SCAN**: image scan task</p>
-     * <p>*   **EMG_VUL_SCHEDULE_SCAN**: urgent vulnerability scan task</p>
-     */
     @NameInMap("TaskName")
     public String taskName;
 
-    /**
-     * <p>The type of the task. Valid values:</p>
-     * <br>
-     * <p>*   **VIRUS_VUL_SCHEDULE_SCAN**: virus scan task</p>
-     * <p>*   **IMAGE_SCAN**: image scan task</p>
-     * <p>*   **EMG_VUL_SCHEDULE_SCAN**: urgent vulnerability scan task</p>
-     */
     @NameInMap("TaskType")
     public String taskType;
 
