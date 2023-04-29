@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageFixTaskResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the tasks returned.</p>
+     * <p>The tasks returned.</p>
      */
     @NameInMap("BuildTasks")
     public java.util.List<DescribeImageFixTaskResponseBodyBuildTasks> buildTasks;
@@ -17,7 +17,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
     public DescribeImageFixTaskResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -123,11 +123,14 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The type of the task. The value is fixed as IMAGE_REPAIR, which indicates a task that fixes image risks.</p>
+         * <p>The type of the task. The value is fixed as IMAGE_REPAIR. The value indicates a task that fixes image risks.</p>
          */
         @NameInMap("TaskType")
         public String taskType;
 
+        /**
+         * <p>The alias of the fixed vulnerability.</p>
+         */
         @NameInMap("VulAlias")
         public String vulAlias;
 
@@ -250,13 +253,13 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The page number of the returned page. Default value: **1**.</p>
+         * <p>The page number of the returned page. Default value: **1**</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page. Default value: **20**.</p>
+         * <p>The number of entries returned per page. Default value: **20**</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;

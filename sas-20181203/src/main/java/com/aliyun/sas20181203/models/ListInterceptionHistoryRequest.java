@@ -4,27 +4,55 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListInterceptionHistoryRequest extends TeaModel {
+    /**
+     * <p>The ID of the container cluster.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The end of the time range to query. The value is a UNIX timestamp.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The name of the alert.</p>
+     */
     @NameInMap("HistoryName")
     public String historyName;
 
+    /**
+     * <p>The types of exceptions.</p>
+     */
     @NameInMap("InterceptionTypes")
     public java.util.List<Integer> interceptionTypes;
 
+    /**
+     * <p>设置请求和接收消息的语言类型。默认值**zh**。取值：</p>
+     * <br>
+     * <br>
+     * <p>- **zh**：中文</p>
+     * <p>- **en**：英文</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The start of the time range to query. The value is a UNIX timestamp.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

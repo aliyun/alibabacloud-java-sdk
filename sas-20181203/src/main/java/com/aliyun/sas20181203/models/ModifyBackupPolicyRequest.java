@@ -5,60 +5,34 @@ import com.aliyun.tea.*;
 
 public class ModifyBackupPolicyRequest extends TeaModel {
     /**
-     * <p>The ID of the anti-ransomware policy that you want to modify.</p>
+     * <p>The region ID of the server to which the anti-ransomware policy is applied.</p>
+     * <br>
+     * <p>You can call the [DescribeSupportRegion](~~DescribeSupportRegion~~) operation to query the regions in which the anti-ransomware feature is supported.</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
-     * <p>The name of the anti-ransomware policy that you want to modify.</p>
+     * <p>Modifies an anti-ransomware policy.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The new configurations of the anti-ransomware policy that you want to modify. The value is a JSON string that contains the following fields:</p>
-     * <br>
-     * <p>*   **Source**: the directory that you want to protect. If you want to protect all directories, set this field to brackets \[].</p>
-     * <br>
-     * <p>*   **Include**: the format of the file that you want to protect. Examples: "\*.jpg" and "\*.doc".</p>
-     * <br>
-     * <p>*   **Exclude**: the directory that you want to exclude from the anti-ransomware policy. You can call the DescribeExcludeSystemPath operation to query all directories before you specify the directory that you want to exclude. Example: "/home/user".</p>
-     * <br>
-     * <p>*   **Schedule**: the start time and interval of a data backup task. We recommend that you specify a start time that begins during off-peak hours but does not start on the hour.</p>
-     * <br>
-     * <p>    *   If you set this field to I|1583216092|P21D, the data backup task starts from 2020-03-03 14:14:52, and the task is run at an interval of three weeks.</p>
-     * <p>    *   If you set this field to I|1583216092|PT24H, the data backup task starts from 2020-03-03 14:14:52, and the task is run at an interval of 24 hours.</p>
-     * <br>
-     * <p>*   **Retention**: the period during which backup data is retained. Unit: days. If you set this field to 7, backup data is retained for a week. If you set this field to 365, backup data is retained for a year. If you set this field to -1, backup data is permanently retained.</p>
-     * <br>
-     * <p>*   **SpeedLimiter**: the limit on the network bandwidth for data backup tasks. If you set this field to 12:15:15360|6:12:5120, the maximum bandwidth for a data backup task is 15 Mbit/s from 12:00 to 15:00 and 5 Mbit/s from 06:00 to 12:00.</p>
-     * <br>
-     * <p>If you back up data on an Elastic Compute Service (ECS) instance that is connected over an internal network, we recommend that you leave this field empty. If this field is left empty, the bandwidth for data backup tasks is unlimited.</p>
+     * <p>ModifyBackupPolicy</p>
      */
     @NameInMap("Policy")
     public java.util.Map<String, ?> policy;
 
-    /**
-     * <p>The region ID of the server to which the anti-ransomware policy is applied.</p>
-     * <br>
-     * <p>You can call the [DescribeSupportRegion](~~DescribeSupportRegion~~) operation to query the regions in which the anti-ransomware feature is supported.</p>
-     */
     @NameInMap("PolicyRegionId")
     public String policyRegionId;
 
     /**
-     * <p>The version of the anti-ransomware policy. You can call the [DescribeBackupPolicies](~~DescribeBackupPolicies~~) operation to query the versions of anti-ransomware policies.</p>
-     * <br>
-     * <p>*   **1.0.0**</p>
-     * <p>*   **2.0.0**</p>
+     * <p>WB01014029</p>
      */
     @NameInMap("PolicyVersion")
     public String policyVersion;
 
-    /**
-     * <p>The UUIDs of the servers to which the anti-ransomware policy is applied.</p>
-     */
     @NameInMap("UuidList")
     public java.util.List<String> uuidList;
 

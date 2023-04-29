@@ -25,6 +25,9 @@ public class DescribeCheckWarningsRequest extends TeaModel {
     @NameInMap("CheckType")
     public String checkType;
 
+    /**
+     * <p>The name of container.</p>
+     */
     @NameInMap("ContainerName")
     public String containerName;
 

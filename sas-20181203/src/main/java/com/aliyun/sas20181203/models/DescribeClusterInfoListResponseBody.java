@@ -4,15 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterInfoListResponseBody extends TeaModel {
-    /**
-     * <p>An array that consists of the information about clusters.</p>
-     */
     @NameInMap("ClusterList")
     public java.util.List<DescribeClusterInfoListResponseBodyClusterList> clusterList;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,53 +32,21 @@ public class DescribeClusterInfoListResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterInfoListResponseBodyClusterList extends TeaModel {
-        /**
-         * <p>The ID of the container cluster.</p>
-         */
         @NameInMap("ClusterId")
         public String clusterId;
 
-        /**
-         * <p>The name of the container cluster.</p>
-         */
         @NameInMap("ClusterName")
         public String clusterName;
 
-        /**
-         * <p>The type of the cluster. Valid values:</p>
-         * <br>
-         * <p>*   **ManagedKubernetes**: managed Kubernetes cluster</p>
-         * <p>*   **NotManagedKubernetes**: non-managed Kubernetes cluster</p>
-         * <p>*   **PrivateKubernetes**: private cluster</p>
-         * <p>*   **kubernetes**: dedicated Kubernetes cluster</p>
-         * <p>*   **ask**: dedicated ASK cluster</p>
-         */
         @NameInMap("ClusterType")
         public String clusterType;
 
-        /**
-         * <p>The region of the container cluster.</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The status of the cluster. Valid values:</p>
-         * <br>
-         * <p>*   **unavailable**</p>
-         * <p>*   **Available**</p>
-         * <p>*   **Creating**</p>
-         * <p>*   **CreateFailed**</p>
-         */
         @NameInMap("State")
         public String state;
 
-        /**
-         * <p>Indicates whether the cluster is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
-         */
         @NameInMap("TargetResult")
         public Boolean targetResult;
 

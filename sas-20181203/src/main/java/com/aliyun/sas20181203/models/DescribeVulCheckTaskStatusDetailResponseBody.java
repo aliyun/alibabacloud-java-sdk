@@ -4,21 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>An array that consists of the status information about the vulnerability scan tasks on the server.</p>
-     */
     @NameInMap("TaskStatuses")
     public java.util.List<DescribeVulCheckTaskStatusDetailResponseBodyTaskStatuses> taskStatuses;
 
-    /**
-     * <p>The total number of vulnerability scan tasks on the server.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -52,32 +43,12 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeVulCheckTaskStatusDetailResponseBodyTaskStatusesTaskStatusList extends TeaModel {
-        /**
-         * <p>The error code returned.</p>
-         */
         @NameInMap("Code")
         public String code;
 
-        /**
-         * <p>The status of the subtask. Valid values:</p>
-         * <br>
-         * <p>*   **0**: unhandled</p>
-         * <p>*   **1**: collecting</p>
-         * <p>*   **2**: collected</p>
-         * <p>*   **3**: matching</p>
-         * <p>*   **4**: complete</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The type of the vulnerability. Valid values:</p>
-         * <br>
-         * <p>*   **cve**: Linux software vulnerability</p>
-         * <p>*   **sys**: Windows system vulnerability</p>
-         * <p>*   **cms**: Web-CMS vulnerability</p>
-         * <p>*   **sca**: vulnerability that is detected based on software component analysis</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -113,15 +84,9 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeVulCheckTaskStatusDetailResponseBodyTaskStatuses extends TeaModel {
-        /**
-         * <p>The ID of the main task.</p>
-         */
         @NameInMap("TaskId")
         public String taskId;
 
-        /**
-         * <p>An array that consists of status information about the vulnerability scan subtask.</p>
-         */
         @NameInMap("TaskStatusList")
         public java.util.List<DescribeVulCheckTaskStatusDetailResponseBodyTaskStatusesTaskStatusList> taskStatusList;
 

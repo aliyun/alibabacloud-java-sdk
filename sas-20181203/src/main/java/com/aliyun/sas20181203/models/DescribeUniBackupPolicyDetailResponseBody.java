@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The details of the anti-ransomware policy.</p>
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      */
     @NameInMap("UniBackupPolicyDTO")
     public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTO uniBackupPolicyDTO;
@@ -39,16 +39,10 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
 
     public static class DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOFullPlan extends TeaModel {
         /**
-         * <p>An array that consists of the days of a week on which the backup is performed.</p>
+         * <p>The interval of backup tasks.</p>
          */
         @NameInMap("Days")
         public java.util.List<String> days;
-
-        /**
-         * <p>The interval of backup tasks.</p>
-         */
-        @NameInMap("Interval")
-        public Integer interval;
 
         /**
          * <p>The unit of the interval. Valid values:</p>
@@ -57,11 +51,17 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
          * <p>*   **daily**: day</p>
          * <p>*   **weekly**: week</p>
          */
+        @NameInMap("Interval")
+        public Integer interval;
+
+        /**
+         * <p>The time when the full backup started. The time is in the HH:mm:ss format.</p>
+         */
         @NameInMap("PlanType")
         public String planType;
 
         /**
-         * <p>The time when the full backup started. The time is in the HH:mm:ss format.</p>
+         * <p>The details of the policy for full backup.</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -107,16 +107,10 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
 
     public static class DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOIncPlan extends TeaModel {
         /**
-         * <p>An array that consists of the days of a week on which the backup is performed.</p>
+         * <p>The interval of backup tasks.</p>
          */
         @NameInMap("Days")
         public java.util.List<String> days;
-
-        /**
-         * <p>The interval of backup tasks.</p>
-         */
-        @NameInMap("Interval")
-        public Integer interval;
 
         /**
          * <p>The unit of the interval. Valid values:</p>
@@ -125,11 +119,17 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
          * <p>*   **daily**: day</p>
          * <p>*   **weekly**: week</p>
          */
+        @NameInMap("Interval")
+        public Integer interval;
+
+        /**
+         * <p>The time when the incremental backup started. The time is in the HH:mm:ss format.</p>
+         */
         @NameInMap("PlanType")
         public String planType;
 
         /**
-         * <p>The time when the incremental backup started. The time is in the HH:mm:ss format.</p>
+         * <p>The details of the policy for incremental backup.</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -175,12 +175,6 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
 
     public static class DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTO extends TeaModel {
         /**
-         * <p>The name of the database account.</p>
-         */
-        @NameInMap("AccountName")
-        public String accountName;
-
-        /**
          * <p>The status of the database client. Valid values:</p>
          * <br>
          * <p>*   **UNKNOWN**: unknown</p>
@@ -188,54 +182,14 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
          * <p>*   **INSTALL_FAILED**: installation failed</p>
          * <p>*   **UNINSTALL_FAILED**: uninstallation failed</p>
          */
-        @NameInMap("AgentStatus")
-        public String agentStatus;
-
-        /**
-         * <p>The type of the database. Valid values:</p>
-         * <br>
-         * <p>*   **MYSQL**</p>
-         * <p>*   **MSSQL**</p>
-         * <p>*   **Oracle**</p>
-         */
-        @NameInMap("DatabaseType")
-        public String databaseType;
-
-        /**
-         * <p>The details of the policy for full backup.</p>
-         */
-        @NameInMap("FullPlan")
-        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOFullPlan fullPlan;
-
-        /**
-         * <p>The details of the policy for incremental backup.</p>
-         */
-        @NameInMap("IncPlan")
-        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOIncPlan incPlan;
-
-        /**
-         * <p>The ID of the server.</p>
-         */
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        /**
-         * <p>The name of the server.</p>
-         */
-        @NameInMap("InstanceName")
-        public String instanceName;
+        @NameInMap("AccountName")
+        public String accountName;
 
         /**
          * <p>The ID of the anti-ransomware policy.</p>
          */
-        @NameInMap("PolicyId")
-        public Long policyId;
-
-        /**
-         * <p>The name of the anti-ransomware policy.</p>
-         */
-        @NameInMap("PolicyName")
-        public String policyName;
+        @NameInMap("AgentStatus")
+        public String agentStatus;
 
         /**
          * <p>The status of the anti-ransomware policy. Valid values:</p>
@@ -245,17 +199,71 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
          * <p>*   **closing**: disabled</p>
          * <p>*   **deleting**: deleting</p>
          */
+        @NameInMap("DatabaseType")
+        public String databaseType;
+
+        /**
+         * <p>The name of the database account.</p>
+         */
+        @NameInMap("FullPlan")
+        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOFullPlan fullPlan;
+
+        /**
+         * <p>The day of a week on which the backup is performed. Valid values:</p>
+         * <br>
+         * <p>*   **0**: Sunday</p>
+         * <p>*   **1**: Monday</p>
+         * <p>*   **2**: Tuesday</p>
+         * <p>*   **3**: Wednesday</p>
+         * <p>*   **4**: Thursday</p>
+         * <p>*   **5**: Friday</p>
+         * <p>*   **6**: Saturday</p>
+         */
+        @NameInMap("IncPlan")
+        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOIncPlan incPlan;
+
+        /**
+         * <p>The name of the anti-ransomware policy.</p>
+         */
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        /**
+         * <p>The type of the database. Valid values:</p>
+         * <br>
+         * <p>*   **MYSQL**</p>
+         * <p>*   **MSSQL**</p>
+         * <p>*   **Oracle**</p>
+         */
+        @NameInMap("InstanceName")
+        public String instanceName;
+
+        /**
+         * <p>The ID of the server.</p>
+         */
+        @NameInMap("PolicyId")
+        public Long policyId;
+
+        /**
+         * <p>The maximum network bandwidth that is allowed during data backup. Unit: bytes.</p>
+         */
+        @NameInMap("PolicyName")
+        public String policyName;
+
+        /**
+         * <p>The details of the anti-ransomware policy.</p>
+         */
         @NameInMap("PolicyStatus")
         public String policyStatus;
 
         /**
-         * <p>The retention period of the backup snapshot.</p>
+         * <p>The name of the server.</p>
          */
         @NameInMap("Retention")
         public Integer retention;
 
         /**
-         * <p>The maximum network bandwidth that is allowed during data backup. Unit: bytes.</p>
+         * <p>The retention period of the backup snapshot.</p>
          */
         @NameInMap("SpeedLimiter")
         public Long speedLimiter;

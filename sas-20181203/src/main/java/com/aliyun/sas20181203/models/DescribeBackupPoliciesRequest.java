@@ -5,35 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupPoliciesRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: 1.</p>
+     * <p>The number of entries returned per page. Default value: 10.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The information that you want to use to identify the servers protected by the anti-ransomware policy. You can enter the IP address or ID of a server.</p>
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      */
     @NameInMap("MachineRemark")
     public String machineRemark;
 
     /**
-     * <p>The name of the anti-ransomware policy that you want to query.</p>
+     * <p>The number of the page to return. Default value: 1.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The status of the anti-ransomware policy. Valid values:</p>
-     * <br>
-     * <p>*   **enabled**: The anti-ransomware policy is manually enabled.</p>
-     * <p>*   **disabled**: The anti-ransomware policy is manually disabled. After an anti-ransomware policy is disabled, the data backup task that is running based on the policy stops.</p>
-     * <p>*   **closed**: The anti-ransomware policy automatically stops because the anti-ransomware capacity is insufficient.</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("Status")
     public String status;

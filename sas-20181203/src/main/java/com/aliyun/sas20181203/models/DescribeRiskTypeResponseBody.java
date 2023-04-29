@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRiskTypeResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The description of the rule for the baseline.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,48 +38,30 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
     }
 
     public static class DescribeRiskTypeResponseBodyRiskTypesSubTypesCheckDetailsRulesParamList extends TeaModel {
-        /**
-         * <p>If the value of paramType is 1, this parameter is empty. If the value of paramType is 2, this parameter provides the options that can be selected for paramType.</p>
-         */
         @NameInMap("EnumValue")
         public String enumValue;
 
-        /**
-         * <p>The maximum value of the parameter.</p>
-         */
         @NameInMap("MaxValue")
         public Integer maxValue;
 
-        /**
-         * <p>The minimum value of the parameter.</p>
-         */
         @NameInMap("MinValue")
         public Integer minValue;
 
         /**
-         * <p>The default value of the parameter.</p>
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
          */
         @NameInMap("ParamDefaultValue")
         public String paramDefaultValue;
 
-        /**
-         * <p>The description of the parameter.</p>
-         */
         @NameInMap("ParamDesc")
         public String paramDesc;
 
         /**
-         * <p>The name of the parameter.</p>
+         * <p>Queries baseline types.</p>
          */
         @NameInMap("ParamName")
         public String paramName;
 
-        /**
-         * <p>The configuration type of the parameter. Valid values:</p>
-         * <br>
-         * <p>*   **1**: input</p>
-         * <p>*   **2**: selection</p>
-         */
         @NameInMap("ParamType")
         public Integer paramType;
 
@@ -148,28 +130,25 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
 
     public static class DescribeRiskTypeResponseBodyRiskTypesSubTypesCheckDetailsRules extends TeaModel {
         /**
-         * <p>Indicates whether the baseline can be edited. Valid values:</p>
-         * <br>
-         * <p>*   **0**: no</p>
-         * <p>*   **1**: yes</p>
+         * <p>The name of the parameter.</p>
          */
         @NameInMap("Optional")
         public Integer optional;
 
         /**
-         * <p>An array that consists of the parameters in the rule for the baseline.</p>
+         * <p>The description of the baseline.</p>
          */
         @NameInMap("ParamList")
         public java.util.List<DescribeRiskTypeResponseBodyRiskTypesSubTypesCheckDetailsRulesParamList> paramList;
 
         /**
-         * <p>The description of the rule for the baseline.</p>
+         * <p>An array that consists of the information about baseline subtypes.</p>
          */
         @NameInMap("RuleDesc")
         public String ruleDesc;
 
         /**
-         * <p>The ID of the rule for the baseline.</p>
+         * <p>The maximum value of the parameter.</p>
          */
         @NameInMap("RuleId")
         public String ruleId;
@@ -215,7 +194,7 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
 
     public static class DescribeRiskTypeResponseBodyRiskTypesSubTypesCheckDetails extends TeaModel {
         /**
-         * <p>The description of the baseline.</p>
+         * <p>The alias of the baseline subtype.</p>
          */
         @NameInMap("CheckDesc")
         public String checkDesc;
@@ -227,13 +206,13 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
         public Long checkId;
 
         /**
-         * <p>The baseline.</p>
+         * <p>The name of the baseline subtype.</p>
          */
         @NameInMap("CheckItem")
         public String checkItem;
 
         /**
-         * <p>An array that consists of the rule details about the baseline.</p>
+         * <p>The minimum value of the parameter.</p>
          */
         @NameInMap("Rules")
         public java.util.List<DescribeRiskTypeResponseBodyRiskTypesSubTypesCheckDetailsRules> rules;
@@ -279,19 +258,25 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
 
     public static class DescribeRiskTypeResponseBodyRiskTypesSubTypes extends TeaModel {
         /**
-         * <p>The alias of the baseline subtype.</p>
+         * <p>The configuration type of the parameter. Valid values:</p>
+         * <br>
+         * <p>*   **1**: input</p>
+         * <p>*   **2**: selection</p>
          */
         @NameInMap("Alias")
         public String alias;
 
         /**
-         * <p>An array that consists of the check details about the baseline subtype.</p>
+         * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+         * <br>
+         * <p>*   **zh**: Chinese</p>
+         * <p>*   **en**: English</p>
          */
         @NameInMap("CheckDetails")
         public java.util.List<DescribeRiskTypeResponseBodyRiskTypesSubTypesCheckDetails> checkDetails;
 
         /**
-         * <p>The name of the baseline subtype.</p>
+         * <p>An array that consists of the check details about the baseline subtype.</p>
          */
         @NameInMap("TypeName")
         public String typeName;
@@ -329,19 +314,19 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
 
     public static class DescribeRiskTypeResponseBodyRiskTypes extends TeaModel {
         /**
-         * <p>The alias of the baseline type.</p>
+         * <p>The description of the parameter.</p>
          */
         @NameInMap("Alias")
         public String alias;
 
         /**
-         * <p>An array that consists of the information about baseline subtypes.</p>
+         * <p>An array that consists of the rule details about the baseline.</p>
          */
         @NameInMap("SubTypes")
         public java.util.List<DescribeRiskTypeResponseBodyRiskTypesSubTypes> subTypes;
 
         /**
-         * <p>The name of the baseline type.</p>
+         * <p>The alias of the baseline type.</p>
          */
         @NameInMap("TypeName")
         public String typeName;

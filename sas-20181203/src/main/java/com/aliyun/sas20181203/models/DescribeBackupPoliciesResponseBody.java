@@ -5,19 +5,48 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupPoliciesResponseBody extends TeaModel {
     /**
-     * <p>The pagination information.</p>
+     * <p>The number of entries returned on the current page.</p>
      */
     @NameInMap("PageInfo")
     public DescribeBackupPoliciesResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>An array that consists of the anti-ransomware policies returned.</p>
+     * <p>The configurations of the anti-ransomware policy. The value of this parameter is in the JSON format and contains the following fields:</p>
+     * <br>
+     * <p>*   **IsDefault**: the type of the anti-ransomware policy. Valid values:</p>
+     * <br>
+     * <p>    *   **1**: recommended policy</p>
+     * <p>    *   **0**: custom policy</p>
+     * <br>
+     * <p>*   **Include**: the format of the files that are protected. If the value of this field is \[], all formats of files are protected.</p>
+     * <br>
+     * <p>*   **Source**: the directory that is protected. If the value of this field is \[], all directories are protected.</p>
+     * <br>
+     * <p>*   **ExcludeSystemPath**: indicates whether a specified directory is excluded from the anti-ransomware policy. If the value of this field is **true**, the directory is excluded. If this field is left empty, no directories are excluded.</p>
+     * <br>
+     * <p>*   **Exclude**: the directory that is excluded from the anti-ransomware policy. If no directory is specified, the value of this field is \[].</p>
+     * <br>
+     * <p>*   **Schedule**: the start time and interval of a data backup task. A start time that begins during off-peak hours but does not start on the hour is recommended. Examples:</p>
+     * <br>
+     * <p>    *   If the value of this field is I|1583216092|P21D, the data backup task starts from 2020-03-03 14:14:52, and the task is run at an interval of three weeks.</p>
+     * <p>    *   If the value of this field is I|1583216092|PT24H, the data backup task starts from 2020-03-03 14:14:52, and the task is run at an interval of 24 hours.</p>
+     * <br>
+     * <p>*   **Retention**: the period during which backup data is retained. Unit: days. If the value of this field is 7, backup data is retained for a week. If the value of this field is 365, backup data is retained for a year. If the value of this field is -1, backup data is permanently retained.</p>
+     * <br>
+     * <p>*   **SpeedLimiter**: the limit on the network bandwidth for data backup tasks. If the value of this field is 0:24:30720, the maximum bandwidth for a data backup task is 30 MB/s from 00:00 to 24:00.</p>
+     * <br>
+     * <p>*   **UseVss**: indicates whether the VSS feature is enabled. The feature is available only for Windows servers. Valid values:</p>
+     * <br>
+     * <p>    *   **true**: yes</p>
+     * <p>    *   **false**: no</p>
+     * <br>
+     * <p>>  The VSS feature is available only if you create the anti-ransomware policy for Windows servers. After you enable the feature, the number of backup failures due to running processes is significantly reduced. We recommend that you enable the VSS feature. After you enable the feature, the data of disks that are in the exFAT and FAT32 formats cannot be backed up.</p>
      */
     @NameInMap("Policies")
     public java.util.List<DescribeBackupPoliciesResponseBodyPolicies> policies;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The total number of anti-ransomware policies returned.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,25 +82,32 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
 
     public static class DescribeBackupPoliciesResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>The version of the anti-ransomware policy. Valid values:</p>
+         * <br>
+         * <p>*   1.0.0</p>
+         * <p>*   2.0.0</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>An array that consists of the anti-ransomware policies returned.</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page. Default value: 10.</p>
+         * <p>The number of the servers on which the anti-ransomware agent is in an abnormal state.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The total number of anti-ransomware policies returned.</p>
+         * <p>The status of the anti-ransomware policy. Valid values:</p>
+         * <br>
+         * <p>*   **enabled**: The anti-ransomware policy is manually enabled.</p>
+         * <p>*   **disabled**: The anti-ransomware policy is manually disabled. After an anti-ransomware policy is disabled, the data backup task that is running based on the policy stops.</p>
+         * <p>*   **closed**: The anti-ransomware policy automatically stops because the anti-ransomware capacity is insufficient.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -117,16 +153,51 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
 
     public static class DescribeBackupPoliciesResponseBodyPolicies extends TeaModel {
         /**
-         * <p>The number of the servers on which the anti-ransomware agent is in an abnormal state.</p>
+         * <p>The upgrade status of the anti-ransomware policy. Valid values:</p>
+         * <br>
+         * <p>*   **NotUpgraded**</p>
+         * <p>*   **Upgrading**</p>
+         * <p>*   **UpgradeFailed**</p>
+         * <p>*   **UpgradeSuccess**</p>
          */
         @NameInMap("ClientErrorCount")
         public Integer clientErrorCount;
 
         /**
-         * <p>The UUIDs of the servers on which the anti-ransomware agent is in an **abnormal** state.</p>
+         * <p>The UUIDs of the servers to which the anti-ransomware policy is applied.</p>
          */
         @NameInMap("ClientErrorUuidList")
         public java.util.List<String> clientErrorUuidList;
+
+        /**
+         * <p>The UUIDs of the servers on which the anti-ransomware agent is in an **abnormal** state.</p>
+         */
+        @NameInMap("ClientStatus")
+        public String clientStatus;
+
+        /**
+         * <p>The UUIDs that are returned based on the value of the MachineRemark request parameter.</p>
+         */
+        @NameInMap("HealthClientCount")
+        public Integer healthClientCount;
+
+        /**
+         * <p>The total number of anti-ransomware policies returned.</p>
+         */
+        @NameInMap("HealthClientUuidList")
+        public java.util.List<String> healthClientUuidList;
+
+        /**
+         * <p>The UUIDs that are returned based on the value of the MachineRemark request parameter.</p>
+         */
+        @NameInMap("Id")
+        public Long id;
+
+        /**
+         * <p>The UUIDs of the servers on which the anti-ransomware agent is in an **abnormal** state.</p>
+         */
+        @NameInMap("Name")
+        public String name;
 
         /**
          * <p>The status of the anti-ransomware agent. Valid values:</p>
@@ -134,88 +205,38 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
          * <p>*   **running**: normal</p>
          * <p>*   **exception**: abnormal</p>
          */
-        @NameInMap("ClientStatus")
-        public String clientStatus;
-
-        /**
-         * <p>The number of the servers on which the anti-ransomware agent is in a normal state.</p>
-         */
-        @NameInMap("HealthClientCount")
-        public Integer healthClientCount;
-
-        /**
-         * <p>The UUIDs of the servers on which the anti-ransomware agent is in a **normal** state.</p>
-         */
-        @NameInMap("HealthClientUuidList")
-        public java.util.List<String> healthClientUuidList;
-
-        /**
-         * <p>The ID of the anti-ransomware policy.</p>
-         */
-        @NameInMap("Id")
-        public Long id;
-
-        /**
-         * <p>The name of the anti-ransomware policy.</p>
-         */
-        @NameInMap("Name")
-        public String name;
-
-        /**
-         * <p>The configurations of the anti-ransomware policy. The value of this parameter is in the JSON format and contains the following fields:</p>
-         * <br>
-         * <p>*   **IsDefault**: the type of the anti-ransomware policy. Valid values:</p>
-         * <br>
-         * <p>    *   **1**: recommended policy</p>
-         * <p>    *   **0**: custom policy</p>
-         * <br>
-         * <p>*   **Include**: the format of the files that are protected. If the value of this field is \[], all formats of files are protected.</p>
-         * <br>
-         * <p>*   **Source**: the directory that is protected. If the value of this field is \[], all directories are protected.</p>
-         * <br>
-         * <p>*   **ExcludeSystemPath**: indicates whether a specified directory is excluded from the anti-ransomware policy. If the value of this field is **true**, the directory is excluded. If this field is left empty, no directories are excluded.</p>
-         * <br>
-         * <p>*   **Exclude**: the directory that is excluded from the anti-ransomware policy. If no directory is specified, the value of this field is \[].</p>
-         * <br>
-         * <p>*   **Schedule**: the start time and interval of a data backup task. A start time that begins during off-peak hours but does not start on the hour is recommended. Examples:</p>
-         * <br>
-         * <p>    *   If the value of this field is I|1583216092|P21D, the data backup task starts from 2020-03-03 14:14:52, and the task is run at an interval of three weeks.</p>
-         * <p>    *   If the value of this field is I|1583216092|PT24H, the data backup task starts from 2020-03-03 14:14:52, and the task is run at an interval of 24 hours.</p>
-         * <br>
-         * <p>*   **Retention**: the period during which backup data is retained. Unit: days. If the value of this field is 7, backup data is retained for a week. If the value of this field is 365, backup data is retained for a year. If the value of this field is -1, backup data is permanently retained.</p>
-         * <br>
-         * <p>*   **SpeedLimiter**: the limit on the network bandwidth for data backup tasks. If the value of this field is 0:24:30720, the maximum bandwidth for a data backup task is 30 MB/s from 00:00 to 24:00.</p>
-         * <br>
-         * <p>*   **UseVss**: indicates whether the VSS feature is enabled. The feature is available only for Windows servers. Valid values:</p>
-         * <br>
-         * <p>    *   **true**: yes</p>
-         * <p>    *   **false**: no</p>
-         * <br>
-         * <p>>  The VSS feature is available only if you create the anti-ransomware policy for Windows servers. After you enable the feature, the number of backup failures due to running processes is significantly reduced. We recommend that you enable the VSS feature. After you enable the feature, the data of disks that are in the exFAT and FAT32 formats cannot be backed up.</p>
-         */
         @NameInMap("Policy")
         public String policy;
 
         /**
-         * <p>The ID of the region that you specified for data backup when you installed the anti-ransomware agent for the server not deployed on Alibaba Cloud.</p>
+         * <p>The ID of the anti-ransomware policy.</p>
          */
         @NameInMap("PolicyRegionId")
         public String policyRegionId;
 
         /**
-         * <p>The version of the anti-ransomware policy. Valid values:</p>
-         * <br>
-         * <p>*   1.0.0</p>
-         * <p>*   2.0.0</p>
+         * <p>The ID of the region that you specified for data backup when you installed the anti-ransomware agent for the server not deployed on Alibaba Cloud.</p>
          */
         @NameInMap("PolicyVersion")
         public String policyVersion;
 
         /**
-         * <p>The UUIDs that are returned based on the value of the MachineRemark request parameter.</p>
+         * <p>The UUIDs of the servers on which data backup is exceptional.</p>
          */
         @NameInMap("RemarkedUuidList")
         public java.util.List<String> remarkedUuidList;
+
+        /**
+         * <p>The UUIDs of the servers on which the anti-ransomware agent is in a **normal** state.</p>
+         */
+        @NameInMap("ServerType")
+        public String serverType;
+
+        /**
+         * <p>The number of the servers on which the anti-ransomware agent is in a normal state.</p>
+         */
+        @NameInMap("ServiceErrorCount")
+        public Integer serviceErrorCount;
 
         /**
          * <p>The type of the server. Valid values:</p>
@@ -224,44 +245,23 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
          * <p>*   **ALIYUN**: Elastic Compute Service (ECS) instance</p>
          * <p>*   **TRIPARTITE**: simple application server</p>
          */
-        @NameInMap("ServerType")
-        public String serverType;
-
-        /**
-         * <p>The number of servers on which data backup is exceptional.</p>
-         */
-        @NameInMap("ServiceErrorCount")
-        public Integer serviceErrorCount;
-
-        /**
-         * <p>The UUIDs of the servers on which data backup is exceptional.</p>
-         */
         @NameInMap("ServiceErrorUuidList")
         public java.util.List<String> serviceErrorUuidList;
 
         /**
-         * <p>The status of the anti-ransomware policy. Valid values:</p>
-         * <br>
-         * <p>*   **enabled**: The anti-ransomware policy is manually enabled.</p>
-         * <p>*   **disabled**: The anti-ransomware policy is manually disabled. After an anti-ransomware policy is disabled, the data backup task that is running based on the policy stops.</p>
-         * <p>*   **closed**: The anti-ransomware policy automatically stops because the anti-ransomware capacity is insufficient.</p>
+         * <p>The number of servers on which data backup is exceptional.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The upgrade status of the anti-ransomware policy. Valid values:</p>
-         * <br>
-         * <p>*   **NotUpgraded**</p>
-         * <p>*   **Upgrading**</p>
-         * <p>*   **UpgradeFailed**</p>
-         * <p>*   **UpgradeSuccess**</p>
+         * <p>The name of the anti-ransomware policy.</p>
          */
         @NameInMap("UpgradeStatus")
         public String upgradeStatus;
 
         /**
-         * <p>The UUIDs of the servers to which the anti-ransomware policy is applied.</p>
+         * <p>The UUIDs of the servers on which the anti-ransomware agent is in a **normal** state.</p>
          */
         @NameInMap("UuidList")
         public java.util.List<String> uuidList;

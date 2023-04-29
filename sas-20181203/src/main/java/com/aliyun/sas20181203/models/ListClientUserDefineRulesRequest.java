@@ -4,27 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListClientUserDefineRulesRequest extends TeaModel {
-    /**
-     * <p>The number of the page to return.</p>
-     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    /**
-     * <p>The name of the rule.</p>
-     */
     @NameInMap("Name")
     public String name;
 
-    /**
-     * <p>The number of entries to return on each page.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The types of rules.</p>
-     */
     @NameInMap("Type")
     public java.util.List<Integer> type;
 

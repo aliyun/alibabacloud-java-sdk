@@ -4,9 +4,19 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeSuspEventUserSettingResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the risk levels of alert notifications. Valid values:</p>
+     * <br>
+     * <p>*   **remind**</p>
+     * <p>*   **suspicious**</p>
+     * <p>*   **serious**</p>
+     */
     @NameInMap("LevelsOn")
     public java.util.List<String> levelsOn;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

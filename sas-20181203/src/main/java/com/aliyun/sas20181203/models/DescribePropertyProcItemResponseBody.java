@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribePropertyProcItemResponseBody extends TeaModel {
     /**
-     * <p>The pagination information.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageInfo")
     public DescribePropertyProcItemResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>An array that consists of the processes returned.</p>
+     * <p>The name of the process.</p>
      */
     @NameInMap("PropertyItems")
     public java.util.List<DescribePropertyProcItemResponseBodyPropertyItems> propertyItems;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,25 +53,25 @@ public class DescribePropertyProcItemResponseBody extends TeaModel {
 
     public static class DescribePropertyProcItemResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>An array that consists of the processes returned.</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The number of entries returned per page.</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The total number of entries returned.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The number of entries returned on the current page.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -117,13 +117,13 @@ public class DescribePropertyProcItemResponseBody extends TeaModel {
 
     public static class DescribePropertyProcItemResponseBodyPropertyItems extends TeaModel {
         /**
-         * <p>The number of servers on which the process runs.</p>
+         * <p>Queries information about all processes.</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
-         * <p>The name of the process.</p>
+         * <p>The number of servers on which the process runs.</p>
          */
         @NameInMap("Name")
         public String name;

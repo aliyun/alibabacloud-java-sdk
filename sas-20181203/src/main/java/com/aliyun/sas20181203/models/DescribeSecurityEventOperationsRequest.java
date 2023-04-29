@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityEventOperationsRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The value of the field that can be used in the whitelist rule.</p>
      */
     @NameInMap("Lang")
     public String lang;
@@ -17,13 +14,19 @@ public class DescribeSecurityEventOperationsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the alert event that you want to handle.</p>
+     * <p>The field that can be used in the whitelist rule.</p>
      */
     @NameInMap("SecurityEventId")
     public Long securityEventId;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The operation that is supported in the whitelist rule. Valid values:</p>
+     * <br>
+     * <p>*   **contains**: contains</p>
+     * <p>*   **notContains**: does not contain</p>
+     * <p>*   **regex**: regular expression</p>
+     * <p>*   **strEqual**: equals</p>
+     * <p>*   **strNotEqual**: does not equal</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;

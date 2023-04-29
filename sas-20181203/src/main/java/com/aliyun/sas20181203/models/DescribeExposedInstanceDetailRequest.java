@@ -5,9 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeExposedInstanceDetailRequest extends TeaModel {
     /**
-     * <p>The UUID of the server that is exposed on the Internet.</p>
-     * <br>
-     * <p>>  You can call the [DescribeExposedInstanceList](~~DescribeExposedInstanceList~~) operation to query the UUIDs of servers.</p>
+     * <p>The server group to which the server belongs.</p>
      */
     @NameInMap("Uuid")
     public String uuid;

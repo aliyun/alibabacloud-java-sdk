@@ -4,15 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeAssetSummaryResponseBody extends TeaModel {
-    /**
-     * <p>The statistical information about the assets.</p>
-     */
     @NameInMap("AssetsSummary")
     public DescribeAssetSummaryResponseBodyAssetsSummary assetsSummary;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,21 +32,12 @@ public class DescribeAssetSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeAssetSummaryResponseBodyAssetsSummary extends TeaModel {
-        /**
-         * <p>The total number of protected assets in all regions.</p>
-         */
         @NameInMap("TotalAssetAllRegion")
         public Integer totalAssetAllRegion;
 
-        /**
-         * <p>The total number of cores of protected assets in all regions.</p>
-         */
         @NameInMap("TotalCoreAllRegion")
         public Integer totalCoreAllRegion;
 
-        /**
-         * <p>The total number of cores of protected assets in the current region.</p>
-         */
         @NameInMap("TotalCoreNum")
         public Integer totalCoreNum;
 

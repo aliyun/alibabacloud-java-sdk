@@ -73,7 +73,7 @@ public class DescribeAgentInstallStatusResponseBody extends TeaModel {
         public String resuleCode;
 
         /**
-         * <p>The installation result. Valid values:</p>
+         * <p>The installation result. Valid value:</p>
          * <br>
          * <p>*   **-1**: not installed</p>
          * <p>*   **0**: being installed</p>

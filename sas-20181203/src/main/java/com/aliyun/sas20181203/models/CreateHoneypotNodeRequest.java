@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateHoneypotNodeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to allow the honeypots to access the Internet. Valid values:</p>
+     * <p>Specifies whether to allow honeypots to access the Internet. Valid values:</p>
      * <br>
-     * <p>*   **true**: allows the honeypots to access the Internet.</p>
-     * <p>*   **false**: does not allow the honeypots to access the Internet.</p>
+     * <p>*   **true**: allows honeypots to access the Internet.</p>
+     * <p>*   **false**: does not allow honeypots to access the Internet.</p>
      */
     @NameInMap("AllowHoneypotAccessInternet")
     public Boolean allowHoneypotAccessInternet;
 
     /**
-     * <p>The number of probes that you want to allocate for the management node.</p>
+     * <p>The number of available probes.</p>
      */
     @NameInMap("AvailableProbeNum")
     public Integer availableProbeNum;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAgentInstallStatusRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the content within the request and response. Valid value:</p>
      * <br>
      * <p>*   **zh**: Chinese</p>
      * <p>*   **en**: English</p>

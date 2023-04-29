@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
     /**
-     * <p>The exposure details about the server.</p>
+     * <p>The UUID of the server that is exposed on the Internet.</p>
+     * <br>
+     * <p>>  You can call the [DescribeExposedInstanceList](~~DescribeExposedInstanceList~~) operation to query the UUIDs of servers.</p>
      */
     @NameInMap("ExposedChains")
     public java.util.List<DescribeExposedInstanceDetailResponseBodyExposedChains> exposedChains;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The exposure details about the server.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,46 +40,18 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeExposedInstanceDetailResponseBodyExposedChainsAllVulList extends TeaModel {
-        /**
-         * <p>The alias of the vulnerability.</p>
-         */
         @NameInMap("AliasName")
         public String aliasName;
 
-        /**
-         * <p>The name of the vulnerability.</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The priority to fix the vulnerability. Valid values:</p>
-         * <br>
-         * <p>*   **asap**: high</p>
-         * <p>*   **later**: medium</p>
-         * <p>*   **nntf**: low</p>
-         * <br>
-         * <p>>  We recommend that you fix the vulnerabilities that have the **high** priority at the earliest opportunity.</p>
-         */
         @NameInMap("Necessity")
         public String necessity;
 
-        /**
-         * <p>The type of the vulnerability. Valid values:</p>
-         * <br>
-         * <p>*   **cve**: Linux software vulnerabilities</p>
-         * <p>*   **sys**: Windows system vulnerabilities</p>
-         * <p>*   **cms**: Web-CMS vulnerabilities</p>
-         * <p>*   **app**: application vulnerabilities</p>
-         * <p>*   **emg**: urgent vulnerabilities</p>
-         * <p>*   **sca**: middleware vulnerabilities</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <p>The UUID of the server.</p>
-         */
         @NameInMap("Uuid")
         public String uuid;
 
@@ -130,44 +104,36 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
 
     public static class DescribeExposedInstanceDetailResponseBodyExposedChainsRealVulList extends TeaModel {
         /**
-         * <p>The alias of the vulnerability.</p>
+         * <p>Queries the details about a specified server that is exposed on the Internet.</p>
          */
         @NameInMap("AliasName")
         public String aliasName;
 
         /**
-         * <p>The name of the vulnerability.</p>
+         * <p>DescribeExposedInstanceDetail</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The priority to fix the vulnerability. Valid values:</p>
-         * <br>
-         * <p>*   **asap**: high</p>
-         * <p>*   **later**: medium</p>
-         * <p>*   **nntf**: low</p>
-         * <br>
-         * <p>>  We recommend that you fix the vulnerabilities that have the **high** priority at the earliest opportunity.</p>
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
          */
         @NameInMap("Necessity")
         public String necessity;
 
         /**
-         * <p>The type of the vulnerability. Valid values:</p>
+         * <p>The resource from which the server is exposed. Valid values:</p>
          * <br>
-         * <p>*   **cve**: Linux software vulnerabilities</p>
-         * <p>*   **sys**: Windows system vulnerabilities</p>
-         * <p>*   **cms**: Web-CMS vulnerabilities</p>
-         * <p>*   **app**: application vulnerabilities</p>
-         * <p>*   **emg**: urgent vulnerabilities</p>
-         * <p>*   **sca**: middleware vulnerabilities</p>
+         * <p>*   **INTERNET_IP**: the public IP address of an Elastic Compute Service (ECS) instance</p>
+         * <p>*   **SLB**: the public IP address of a Server Load Balancer (SLB) instance</p>
+         * <p>*   **EIP**: an elastic IP address (EIP)</p>
+         * <p>*   **DNAT**: the NAT gateway that connects to the Internet by using the DNAT feature</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The UUID of the server.</p>
+         * <p>The ID of the server.</p>
          */
         @NameInMap("Uuid")
         public String uuid;
@@ -220,40 +186,8 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeExposedInstanceDetailResponseBodyExposedChains extends TeaModel {
-        /**
-         * <p>The information about all vulnerabilities on the server.</p>
-         */
         @NameInMap("AllVulList")
         public java.util.List<DescribeExposedInstanceDetailResponseBodyExposedChainsAllVulList> allVulList;
-
-        /**
-         * <p>The server component that is exposed on the Internet.</p>
-         */
-        @NameInMap("ExposureComponent")
-        public String exposureComponent;
-
-        /**
-         * <p>The public IP address.</p>
-         */
-        @NameInMap("ExposureIp")
-        public String exposureIp;
-
-        /**
-         * <p>The port that is exposed on the Internet.</p>
-         */
-        @NameInMap("ExposurePort")
-        public String exposurePort;
-
-        /**
-         * <p>The resource from which the server is exposed. Valid values:</p>
-         * <br>
-         * <p>*   **INTERNET_IP**: the public IP address of an Elastic Compute Service (ECS) instance</p>
-         * <p>*   **SLB**: the public IP address of a Server Load Balancer (SLB) instance</p>
-         * <p>*   **EIP**: an elastic IP address (EIP)</p>
-         * <p>*   **DNAT**: the NAT gateway that connects to the Internet by using the DNAT feature</p>
-         */
-        @NameInMap("ExposureType")
-        public String exposureType;
 
         /**
          * <p>The ID of the instance to which the resource belongs. The valid values of this parameter vary based on the value of the ExposureType parameter.</p>
@@ -263,49 +197,84 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
          * <p>*   If the value of the ExposureType parameter is **EIP**, the value of this parameter is the ID of the EIP.</p>
          * <p>*   If the value of the ExposureType parameter is **DNAT**, the value of this parameter is the ID of the NAT gateway.</p>
          */
+        @NameInMap("ExposureComponent")
+        public String exposureComponent;
+
+        /**
+         * <p>The name of the server.</p>
+         */
+        @NameInMap("ExposureIp")
+        public String exposureIp;
+
+        /**
+         * <p>The information about the vulnerabilities that are exposed on the Internet and can be exploited by attackers.</p>
+         */
+        @NameInMap("ExposurePort")
+        public String exposurePort;
+
+        /**
+         * <p>The priority to fix the vulnerability. Valid values:</p>
+         * <br>
+         * <p>*   **asap**: high</p>
+         * <p>*   **later**: medium</p>
+         * <p>*   **nntf**: low</p>
+         * <br>
+         * <p>>  We recommend that you fix the vulnerabilities that have the **high** priority at the earliest opportunity.</p>
+         */
+        @NameInMap("ExposureType")
+        public String exposureType;
+
+        /**
+         * <p>The public IP address of the server.</p>
+         */
         @NameInMap("ExposureTypeId")
         public String exposureTypeId;
 
         /**
-         * <p>The server group to which the server belongs.</p>
+         * <p>The port that is exposed on the Internet.</p>
          */
         @NameInMap("GroupNo")
         public String groupNo;
 
         /**
-         * <p>The ID of the server.</p>
+         * <p>The public IP address.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The name of the server.</p>
+         * <p>The type of the vulnerability. Valid values:</p>
+         * <br>
+         * <p>*   **cve**: Linux software vulnerabilities</p>
+         * <p>*   **sys**: Windows system vulnerabilities</p>
+         * <p>*   **cms**: Web-CMS vulnerabilities</p>
+         * <p>*   **app**: application vulnerabilities</p>
+         * <p>*   **emg**: urgent vulnerabilities</p>
+         * <p>*   **sca**: middleware vulnerabilities</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>The public IP address of the server.</p>
+         * <p>The alias of the vulnerability.</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
-         * <p>The private IP address of the server.</p>
+         * <p>The name of the vulnerability.</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
-         * <p>The information about the vulnerabilities that are exposed on the Internet and can be exploited by attackers.</p>
+         * <p>The information about all vulnerabilities on the server.</p>
          */
         @NameInMap("RealVulList")
         public java.util.List<DescribeExposedInstanceDetailResponseBodyExposedChainsRealVulList> realVulList;
 
         /**
-         * <p>The region in which the server resides.</p>
-         * <br>
-         * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+         * <p>The alias of the vulnerability.</p>
          */
         @NameInMap("RegionId")
         public String regionId;

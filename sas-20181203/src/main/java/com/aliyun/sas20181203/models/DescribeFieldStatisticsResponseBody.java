@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeFieldStatisticsResponseBody extends TeaModel {
     /**
-     * <p>The information about servers that are returned.</p>
+     * <p>The number of assets whose importance is test.</p>
      */
     @NameInMap("GroupedFields")
     public DescribeFieldStatisticsResponseBodyGroupedFields groupedFields;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The information about servers that are returned.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,15 +38,9 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
     }
 
     public static class DescribeFieldStatisticsResponseBodyGroupedFields extends TeaModel {
-        /**
-         * <p>The number of assets that are deployed on Alibaba Cloud.</p>
-         */
         @NameInMap("AliYunInstanceCount")
         public Integer aliYunInstanceCount;
 
-        /**
-         * <p>The number of servers.</p>
-         */
         @NameInMap("AwsInstanceCount")
         public Integer awsInstanceCount;
 
@@ -54,133 +48,124 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         public Integer azureInstanceCount;
 
         /**
-         * <p>The number of exposed servers.</p>
+         * <p>The data returned.</p>
          */
         @NameInMap("ExposedInstanceCount")
         public Integer exposedInstanceCount;
 
         /**
-         * <p>The number of assets whose importance is common.</p>
+         * <p>The number of server groups.</p>
          */
         @NameInMap("GeneralAssetCount")
         public Integer generalAssetCount;
 
         /**
-         * <p>The number of server groups.</p>
+         * <p>The type of the asset to query. If no asset types are specified, all types of assets are returned. Valid values:</p>
+         * <br>
+         * <p>*   **ecs**: server</p>
+         * <p>*   **cloud_product**: Alibaba Cloud service</p>
          */
         @NameInMap("GroupCount")
         public Integer groupCount;
 
-        /**
-         * <p>The number of instances that are provisioned by third-party providers.</p>
-         */
         @NameInMap("HuaweiInstanceCount")
         public Integer huaweiInstanceCount;
 
         /**
-         * <p>The number of assets that can be protected by Security Center.</p>
+         * <p>DescribeFieldStatistics</p>
          */
         @NameInMap("IdcInstanceCount")
         public Integer idcInstanceCount;
 
         /**
-         * <p>The number of assets whose importance is important.</p>
+         * <p>The number of assets that are at risk.</p>
          */
         @NameInMap("ImportantAssetCount")
         public Integer importantAssetCount;
 
         /**
-         * <p>The total number of assets of the specified type. If no asset types are specified, this parameter indicates the total number of all servers and Alibaba Cloud services within your account.</p>
+         * <p>The number of assets that are deployed on Alibaba Cloud.</p>
          */
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
         /**
-         * <p>The total number of tasks for the specified type of assets. If no asset types are specified, this parameter indicates the total number of all servers and Alibaba Cloud services within your account.</p>
+         * <p>The number of assets whose importance is common.</p>
          */
         @NameInMap("InstanceSyncTaskCount")
         public Integer instanceSyncTaskCount;
 
         /**
-         * <p>The number of newly added servers.</p>
+         * <p>The number of assets whose statuses are unknown.</p>
          */
         @NameInMap("NewInstanceCount")
         public Integer newInstanceCount;
 
         /**
-         * <p>The number of assets that do not pose risks.</p>
+         * <p>The number of servers that are shut down.</p>
          */
         @NameInMap("NoRiskInstanceCount")
         public Integer noRiskInstanceCount;
 
         /**
-         * <p>The number of servers that are shut down.</p>
+         * <p>WB01224678</p>
          */
         @NameInMap("NotRunningStatusCount")
         public Integer notRunningStatusCount;
 
         /**
-         * <p>The number of servers whose Security Center agent status is Offline.</p>
+         * <p>The number of unprotected assets.</p>
          */
         @NameInMap("OfflineInstanceCount")
         public Integer offlineInstanceCount;
 
-        /**
-         * <p>The number of servers outside the cloud.</p>
-         */
         @NameInMap("OutMachineInstanceCount")
         public Integer outMachineInstanceCount;
 
         /**
-         * <p>The number of servers for which the Security Center agent suspends protection.</p>
+         * <p>Queries the statistics of assets that belong to your account.</p>
          */
         @NameInMap("PauseInstanceCount")
         public Integer pauseInstanceCount;
 
         /**
-         * <p>The number of regions to which the servers belong.</p>
+         * <p>The number of virtual private clouds (VPCs).</p>
          */
         @NameInMap("RegionCount")
         public Integer regionCount;
 
-        /**
-         * <p>The number of assets that are at risk.</p>
-         */
         @NameInMap("RiskInstanceCount")
         public Integer riskInstanceCount;
 
         /**
-         * <p>The total number of cloud services that are protected by Security Center.</p>
+         * <p>The number of servers.</p>
          */
         @NameInMap("TencentInstanceCount")
         public Integer tencentInstanceCount;
 
         /**
-         * <p>The number of assets whose importance is test.</p>
+         * <p>The number of servers outside the cloud.</p>
          */
         @NameInMap("TestAssetCount")
         public Integer testAssetCount;
 
-        /**
-         * <p>The number of simple application servers.</p>
-         */
         @NameInMap("TripartiteInstanceCount")
         public Integer tripartiteInstanceCount;
 
         /**
-         * <p>The number of assets whose statuses are unknown.</p>
+         * <p>The number of newly added servers.</p>
          */
         @NameInMap("UnKnowStatusInstanceCount")
         public Integer unKnowStatusInstanceCount;
 
         /**
-         * <p>The number of unprotected assets.</p>
+         * <p>The number of servers whose Security Center agent status is Offline.</p>
          */
         @NameInMap("UnprotectedInstanceCount")
         public Integer unprotectedInstanceCount;
 
         /**
-         * <p>The number of virtual private clouds (VPCs).</p>
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
          */
         @NameInMap("VpcCount")
         public Integer vpcCount;
