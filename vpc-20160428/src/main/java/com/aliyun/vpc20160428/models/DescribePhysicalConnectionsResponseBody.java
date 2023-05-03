@@ -92,6 +92,9 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         @NameInMap("AccessPointType")
         public String accessPointType;
 
+        @NameInMap("AdDetailLocation")
+        public String adDetailLocation;
+
         /**
          * <p>The geographical location of the access device.</p>
          */
@@ -372,6 +375,14 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         }
         public String getAccessPointType() {
             return this.accessPointType;
+        }
+
+        public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType setAdDetailLocation(String adDetailLocation) {
+            this.adDetailLocation = adDetailLocation;
+            return this;
+        }
+        public String getAdDetailLocation() {
+            return this.adDetailLocation;
         }
 
         public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType setAdLocation(String adLocation) {
