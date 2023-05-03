@@ -5,29 +5,22 @@ import com.aliyun.tea.*;
 
 public class CreateTrafficMirrorSessionRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
-     * <p>You can use the client to generate the value, but you must ensure that the value is unique among all requests. The client token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** might be different for each API request.</p>
+     * <p>The ID of the traffic mirror destination. You can specify only an elastic network interface (ENI) or a Server Load Balancer (SLB) instance as a traffic mirror destination.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>The type of the traffic mirror destination. Valid values:</p>
      * <br>
-     * <p>*   **true**: performs a dry run. The system checks the required parameters, request format, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): performs a dry run and sends the request. If the request passes the dry run, the operation is performed.</p>
+     * <p>*   **NetworkInterface**: an ENI</p>
+     * <p>*   **SLB**: an SLB instance</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to enable the traffic mirror session. Valid values:</p>
-     * <br>
-     * <p>*   **false** (default): does not enable the traffic mirror session.</p>
-     * <p>*   **true**: enables the traffic mirror session.</p>
+     * <p>The ID of the traffic mirror source. You can specify only an ENI as the traffic mirror source. The default value of **N** is **1**, which means that you can add only one traffic mirror source to a traffic mirror session.</p>
      */
     @NameInMap("Enabled")
     public Boolean enabled;
@@ -39,27 +32,25 @@ public class CreateTrafficMirrorSessionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The maximum transmission unit (MTU). Default value: **1500**.</p>
+     * <p>The ID of the region to which the traffic mirror session belongs. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list. For more information about regions that support traffic mirroring, see [Overview of traffic mirroring](~~207513~~).</p>
      */
     @NameInMap("PacketLength")
     public Integer packetLength;
 
     /**
-     * <p>The priority of the traffic mirror session. Valid values: **1** to **32766**.</p>
-     * <br>
-     * <p>A smaller value indicates a higher priority. You cannot specify identical priorities for traffic mirror sessions that are created in the same region by using the same account.</p>
+     * <p>The maximum transmission unit (MTU). Default value: **1500**.</p>
      */
     @NameInMap("Priority")
     public Integer priority;
 
     /**
-     * <p>The ID of the region to which the traffic mirror session belongs. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list. For more information about regions that support traffic mirroring, see [Overview of traffic mirroring](~~207513~~).</p>
+     * <p>The ID of the traffic mirror session.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the mirrored traffic belongs.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -71,23 +62,28 @@ public class CreateTrafficMirrorSessionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the filter.</p>
+     * <p>The priority of the traffic mirror session. Valid values: **1** to **32766**.</p>
+     * <br>
+     * <p>A smaller value indicates a higher priority. You cannot specify identical priorities for traffic mirror sessions that are created in the same region by using the same account.</p>
      */
     @NameInMap("TrafficMirrorFilterId")
     public String trafficMirrorFilterId;
 
     /**
-     * <p>The description of the traffic mirror session.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>You can use the client to generate the value, but you must ensure that the value is unique among all requests. The client token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** might be different for each API request.</p>
      */
     @NameInMap("TrafficMirrorSessionDescription")
     public String trafficMirrorSessionDescription;
 
     /**
-     * <p>The name of the traffic mirror session.</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <br>
-     * <p>The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.</p>
+     * <p>*   **true**: performs a dry run. The system checks the required parameters, request format, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): performs a dry run and sends the request. If the request passes the dry run, the operation is performed.</p>
      */
     @NameInMap("TrafficMirrorSessionName")
     public String trafficMirrorSessionName;
@@ -96,24 +92,24 @@ public class CreateTrafficMirrorSessionRequest extends TeaModel {
     public java.util.List<String> trafficMirrorSourceIds;
 
     /**
-     * <p>The ID of the traffic mirror destination. You can specify only an elastic network interface (ENI) or a Server Load Balancer (SLB) instance as a traffic mirror destination.</p>
+     * <p>The ID of the filter.</p>
      */
     @NameInMap("TrafficMirrorTargetId")
     public String trafficMirrorTargetId;
 
     /**
-     * <p>The type of the traffic mirror destination. Valid values:</p>
+     * <p>The VXLAN network identifier (VNI). Valid values: **0** to **16777215**.</p>
      * <br>
-     * <p>*   **NetworkInterface**: an ENI</p>
-     * <p>*   **SLB**: an SLB instance</p>
+     * <p>You can use VNIs to identify mirrored traffic from different sessions at the traffic mirror destination. You can specify a custom VNI or use a random VNI allocated by the system. If you want the system to randomly allocate a VNI, do not enter a value.</p>
      */
     @NameInMap("TrafficMirrorTargetType")
     public String trafficMirrorTargetType;
 
     /**
-     * <p>The VXLAN network identifier (VNI). Valid values: **0** to **16777215**.</p>
+     * <p>Specifies whether to enable the traffic mirror session. Valid values:</p>
      * <br>
-     * <p>You can use VNIs to identify mirrored traffic from different sessions at the traffic mirror destination. You can specify a custom VNI or use a random VNI allocated by the system. If you want the system to randomly allocate a VNI, do not enter a value.</p>
+     * <p>*   **false** (default): does not enable the traffic mirror session.</p>
+     * <p>*   **true**: enables the traffic mirror session.</p>
      */
     @NameInMap("VirtualNetworkId")
     public Integer virtualNetworkId;

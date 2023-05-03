@@ -5,35 +5,27 @@ import com.aliyun.tea.*;
 
 public class CreateVSwitchRequest extends TeaModel {
     /**
-     * <p>The CIDR block of the vSwitch. Take note of the following limits:</p>
-     * <br>
-     * <p>*   The subnet mask of the CIDR block must be 16 to 29 bits in length.</p>
-     * <p>*   The CIDR block of the vSwitch must fall within the CIDR block of the VPC to which the vSwitch belongs.</p>
-     * <p>*   The CIDR block of a vSwitch cannot be the same as the destination CIDR block in a route entry of the VPC. However, it can be a subset of the destination CIDR block.</p>
+     * <p>The ID of the VPC where you want to create the vSwitch.</p>
      */
     @NameInMap("CidrBlock")
     public String cidrBlock;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <p>The ID of the vSwitch.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The description of the vSwitch.</p>
-     * <br>
-     * <p>The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>The IPv6 CIDR block of the VPC.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The last eight bits of the IPv6 CIDR block of the vSwitch. Valid values: **0** to **255**.</p>
+     * <p>The name of the vSwitch.</p>
+     * <br>
+     * <p>The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Ipv6CidrBlock")
     public Integer ipv6CidrBlock;
@@ -45,9 +37,7 @@ public class CreateVSwitchRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the vSwitch.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The last eight bits of the IPv6 CIDR block of the vSwitch. Valid values: **0** to **255**.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -59,29 +49,35 @@ public class CreateVSwitchRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The name of the vSwitch.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.</p>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not specify this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
      */
     @NameInMap("VSwitchName")
     public String vSwitchName;
 
     /**
-     * <p>The ID of the VPC where you want to create the vSwitch.</p>
+     * <p>The description of the vSwitch.</p>
+     * <br>
+     * <p>The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
-     * <p>The IPv6 CIDR block of the VPC.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("VpcIpv6CidrBlock")
     public String vpcIpv6CidrBlock;
 
     /**
-     * <p>The zone ID of the vSwitch.</p>
+     * <p>The CIDR block of the vSwitch. Take note of the following limits:</p>
      * <br>
-     * <p>You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.</p>
+     * <p>*   The subnet mask of the CIDR block must be 16 to 29 bits in length.</p>
+     * <p>*   The CIDR block of the vSwitch must fall within the CIDR block of the VPC to which the vSwitch belongs.</p>
+     * <p>*   The CIDR block of a vSwitch cannot be the same as the destination CIDR block in a route entry of the VPC. However, it can be a subset of the destination CIDR block.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

@@ -5,38 +5,40 @@ import com.aliyun.tea.*;
 
 public class UpdateIpv4GatewayAttributeRequest extends TeaModel {
     /**
+     * <p>The new description of the IPv4 gateway.</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
+     * <p>The region ID of the IPv4 gateway whose name or description you want to modify.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
+     * <p>The ID of the request.</p>
+     */
+    @NameInMap("Ipv4GatewayDescription")
+    public String ipv4GatewayDescription;
+
+    /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
      * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
      * <br>
      * <p>>  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.</p>
      */
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("Ipv4GatewayId")
+    public String ipv4GatewayId;
 
     /**
      * <p>Specifies whether to check the request without performing the operation. Valid values:</p>
      * <br>
      * <p>*   **true**: checks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.</p>
      * <p>*   **false** (default): sends the request. If the request passes the check, a 2xx HTTP status code is returned and the operation is performed.</p>
-     */
-    @NameInMap("DryRun")
-    public Boolean dryRun;
-
-    /**
-     * <p>The new description of the IPv4 gateway.</p>
-     */
-    @NameInMap("Ipv4GatewayDescription")
-    public String ipv4GatewayDescription;
-
-    /**
-     * <p>The ID of the IPv4 gateway whose name or description you want to modify.</p>
-     */
-    @NameInMap("Ipv4GatewayId")
-    public String ipv4GatewayId;
-
-    /**
-     * <p>The new name of the IPv4 gateway.</p>
      */
     @NameInMap("Ipv4GatewayName")
     public String ipv4GatewayName;
@@ -47,11 +49,6 @@ public class UpdateIpv4GatewayAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The region ID of the IPv4 gateway whose name or description you want to modify.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -5,31 +5,36 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcsResponseBody extends TeaModel {
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The name of the VPC.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The ID of the Alibaba Cloud account to which the VPC belongs.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the region to which the VPC belongs.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The number of entries returned.</p>
+     * <p>The ID of the vRouter.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
     /**
-     * <p>The details of the VPCs.</p>
+     * <p>The status of the DHCP options set. Valid values:</p>
+     * <br>
+     * <p>*   **Available**: available</p>
+     * <p>*   **InUse**: in use</p>
+     * <p>*   **Deleted**: deleted</p>
+     * <p>*   **Pending**: being configured</p>
      */
     @NameInMap("Vpcs")
     public DescribeVpcsResponseBodyVpcs vpcs;
@@ -80,22 +85,9 @@ public class DescribeVpcsResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcsResponseBodyVpcsVpcIpv6CidrBlocksIpv6CidrBlock extends TeaModel {
-        /**
-         * <p>The IPv6 CIDR block of the VPC.</p>
-         */
         @NameInMap("Ipv6CidrBlock")
         public String ipv6CidrBlock;
 
-        /**
-         * <p>The type of IPv6 CIDR block. Valid values:</p>
-         * <br>
-         * <p>- **BGP**: an IPv6 CIDR block provided by Alibaba Cloud over Border Gateway Protocol (BGP)</p>
-         * <p>- **ChinaMobile**: an IPv6 CIDR block provided by China Mobile (single ISP)</p>
-         * <p>- **ChinaUnicom**: an IPv6 CIDR block provided by China Unicom (single ISP)</p>
-         * <p>- **ChinaTelecom**: an IPv6 CIDR block provided by China Telecom (single ISP)</p>
-         * <br>
-         * <p>>  If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, valid values are: **ChinaTelecom**, **ChinaUnicom**, and **ChinaMobile**.</p>
-         */
         @NameInMap("Ipv6Isp")
         public String ipv6Isp;
 
@@ -200,14 +192,11 @@ public class DescribeVpcsResponseBody extends TeaModel {
 
     public static class DescribeVpcsResponseBodyVpcsVpcTagsTag extends TeaModel {
         /**
-         * <p>The key of the tag that is added to the VPC.</p>
+         * <p>The IDs of the route tables.</p>
          */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The value of the tag that is added to the VPC.</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -293,148 +282,126 @@ public class DescribeVpcsResponseBody extends TeaModel {
 
     public static class DescribeVpcsResponseBodyVpcsVpc extends TeaModel {
         /**
-         * <p>The status of the Cloud Enterprise Network (CEN) instance to which the VPC is attached.</p>
-         * <br>
-         * <p>**Attached** is returned only if the VPC is attached to a CEN instance.</p>
+         * <p>The list of user CIDR blocks.</p>
          */
         @NameInMap("CenStatus")
         public String cenStatus;
 
         /**
-         * <p>The IPv4 CIDR block of the VPC.</p>
+         * <p>The IPv6 CIDR blocks of the VPC.</p>
          */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
         /**
-         * <p>The time when the VPC was created.</p>
+         * <p>The IPv4 CIDR block of the VPC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The description of the VPC.</p>
+         * <p>The type of IPv6 CIDR block. Valid values:</p>
+         * <br>
+         * <p>- **BGP**: an IPv6 CIDR block provided by Alibaba Cloud over Border Gateway Protocol (BGP)</p>
+         * <p>- **ChinaMobile**: an IPv6 CIDR block provided by China Mobile (single ISP)</p>
+         * <p>- **ChinaUnicom**: an IPv6 CIDR block provided by China Unicom (single ISP)</p>
+         * <p>- **ChinaTelecom**: an IPv6 CIDR block provided by China Telecom (single ISP)</p>
+         * <br>
+         * <p>>  If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, valid values are: **ChinaTelecom**, **ChinaUnicom**, and **ChinaMobile**.</p>
          */
         @NameInMap("Description")
         public String description;
-
-        /**
-         * <p>The ID of the DHCP options set.</p>
-         */
-        @NameInMap("DhcpOptionsSetId")
-        public String dhcpOptionsSetId;
-
-        /**
-         * <p>The status of the DHCP options set. Valid values:</p>
-         * <br>
-         * <p>*   **Available**: available</p>
-         * <p>*   **InUse**: in use</p>
-         * <p>*   **Deleted**: deleted</p>
-         * <p>*   **Pending**: being configured</p>
-         */
-        @NameInMap("DhcpOptionsSetStatus")
-        public String dhcpOptionsSetStatus;
-
-        /**
-         * <p>The IPv6 CIDR block of the VPC.</p>
-         */
-        @NameInMap("Ipv6CidrBlock")
-        public String ipv6CidrBlock;
-
-        /**
-         * <p>The IPv6 CIDR blocks of the VPC.</p>
-         */
-        @NameInMap("Ipv6CidrBlocks")
-        public DescribeVpcsResponseBodyVpcsVpcIpv6CidrBlocks ipv6CidrBlocks;
-
-        /**
-         * <p>Indicates whether the VPC is the default VPC in the region. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
-         */
-        @NameInMap("IsDefault")
-        public Boolean isDefault;
-
-        /**
-         * <p>The IDs of the NAT gateways.</p>
-         */
-        @NameInMap("NatGatewayIds")
-        public DescribeVpcsResponseBodyVpcsVpcNatGatewayIds natGatewayIds;
-
-        /**
-         * <p>The ID of the Alibaba Cloud account to which the VPC belongs.</p>
-         */
-        @NameInMap("OwnerId")
-        public Long ownerId;
-
-        /**
-         * <p>The ID of the region to which the VPC belongs.</p>
-         */
-        @NameInMap("RegionId")
-        public String regionId;
-
-        /**
-         * <p>The ID of the resource group to which the VPC belongs.</p>
-         */
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
-
-        /**
-         * <p>The IDs of the route tables.</p>
-         */
-        @NameInMap("RouterTableIds")
-        public DescribeVpcsResponseBodyVpcsVpcRouterTableIds routerTableIds;
-
-        /**
-         * <p>The secondary CIDR blocks of the VPC.</p>
-         */
-        @NameInMap("SecondaryCidrBlocks")
-        public DescribeVpcsResponseBodyVpcsVpcSecondaryCidrBlocks secondaryCidrBlocks;
-
-        /**
-         * <p>The status of the VPC. Valid values:</p>
-         * <br>
-         * <p>*   **Pending**: being configured</p>
-         * <p>*   **Available**: available</p>
-         */
-        @NameInMap("Status")
-        public String status;
-
-        /**
-         * <p>The tag information about the VPC.</p>
-         */
-        @NameInMap("Tags")
-        public DescribeVpcsResponseBodyVpcsVpcTags tags;
-
-        /**
-         * <p>The list of user CIDR blocks.</p>
-         */
-        @NameInMap("UserCidrs")
-        public DescribeVpcsResponseBodyVpcsVpcUserCidrs userCidrs;
-
-        /**
-         * <p>The ID of the vRouter.</p>
-         */
-        @NameInMap("VRouterId")
-        public String VRouterId;
 
         /**
          * <p>The vSwitches in the VPC. </p>
          * <br>
          * <p>You can query up to 300 vSwitches in the VPC. The information about the latest vSwitches is returned. If you want to query the information about all vSwitches in a VPC, call the [DescribeVSwitches](/help/en/virtual-private-cloud/latest/describevswitches) operation.</p>
          */
+        @NameInMap("DhcpOptionsSetId")
+        public String dhcpOptionsSetId;
+
+        /**
+         * <p>The value of the tag that is added to the VPC.</p>
+         */
+        @NameInMap("DhcpOptionsSetStatus")
+        public String dhcpOptionsSetStatus;
+
+        /**
+         * <p>The secondary CIDR blocks of the VPC.</p>
+         */
+        @NameInMap("Ipv6CidrBlock")
+        public String ipv6CidrBlock;
+
+        @NameInMap("Ipv6CidrBlocks")
+        public DescribeVpcsResponseBodyVpcsVpcIpv6CidrBlocks ipv6CidrBlocks;
+
+        /**
+         * <p>The ID of the DHCP options set.</p>
+         */
+        @NameInMap("IsDefault")
+        public Boolean isDefault;
+
+        @NameInMap("NatGatewayIds")
+        public DescribeVpcsResponseBodyVpcsVpcNatGatewayIds natGatewayIds;
+
+        /**
+         * <p>The IPv6 CIDR block of the VPC.</p>
+         */
+        @NameInMap("OwnerId")
+        public Long ownerId;
+
+        /**
+         * <p>The status of the Cloud Enterprise Network (CEN) instance to which the VPC is attached.</p>
+         * <br>
+         * <p>**Attached** is returned only if the VPC is attached to a CEN instance.</p>
+         */
+        @NameInMap("RegionId")
+        public String regionId;
+
+        /**
+         * <p>The IPv6 CIDR block of the VPC.</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        @NameInMap("RouterTableIds")
+        public DescribeVpcsResponseBodyVpcsVpcRouterTableIds routerTableIds;
+
+        @NameInMap("SecondaryCidrBlocks")
+        public DescribeVpcsResponseBodyVpcsVpcSecondaryCidrBlocks secondaryCidrBlocks;
+
+        /**
+         * <p>The description of the VPC.</p>
+         */
+        @NameInMap("Status")
+        public String status;
+
+        /**
+         * <p>The IDs of the NAT gateways.</p>
+         */
+        @NameInMap("Tags")
+        public DescribeVpcsResponseBodyVpcsVpcTags tags;
+
+        @NameInMap("UserCidrs")
+        public DescribeVpcsResponseBodyVpcsVpcUserCidrs userCidrs;
+
+        /**
+         * <p>The key of the tag that is added to the VPC.</p>
+         */
+        @NameInMap("VRouterId")
+        public String VRouterId;
+
         @NameInMap("VSwitchIds")
         public DescribeVpcsResponseBodyVpcsVpcVSwitchIds vSwitchIds;
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The ID of the resource group to which the VPC belongs.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
-         * <p>The name of the VPC.</p>
+         * <p>The tag information about the VPC.</p>
          */
         @NameInMap("VpcName")
         public String vpcName;

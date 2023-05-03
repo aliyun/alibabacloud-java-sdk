@@ -4,33 +4,24 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class AllocateEipAddressResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the EIP.</p>
-     */
     @NameInMap("AllocationId")
     public String allocationId;
 
-    /**
-     * <p>The EIP that is allocated. This parameter is returned only when **InstanceChargeType** is set to **PostPaid**.</p>
-     */
     @NameInMap("EipAddress")
     public String eipAddress;
 
     /**
-     * <p>The ID of the order. This parameter is returned only when **InstanceChargeType** is set to **PrePaid**.</p>
+     * <p>The ID of the EIP.</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The EIP that is allocated. This parameter is returned only when **InstanceChargeType** is set to **PostPaid**.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The ID of the resource group. This parameter is returned only when **InstanceChargeType** is set to **PostPaid**.</p>
-     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

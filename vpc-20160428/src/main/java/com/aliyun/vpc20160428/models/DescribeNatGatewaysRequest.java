@@ -5,47 +5,45 @@ import com.aliyun.tea.*;
 
 public class DescribeNatGatewaysRequest extends TeaModel {
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>The status of the NAT gateway. Valid values:</p>
      * <br>
-     * <p>- **true**: performs a dry run. The system prechecks whether your AccessKey pair is valid, whether the RAM user is authorized, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>- **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * <p>*   **Creating**: After you send a request to create a NAT gateway, the system creates the NAT gateway in the background. The NAT gateway remains in the **Creating** state until the operation is completed.</p>
+     * <p>*   **Available**: The NAT gateway remains in a stable state after the NAT gateway is created.</p>
+     * <p>*   **Modifying**: After you send a request to modify a NAT gateway, the system modifies the NAT gateway in the background. The NAT gateway remains in the **Modifying** state until the operation is completed.</p>
+     * <p>*   **Deleting**: After you send a request to delete a NAT gateway, the system deletes the NAT gateway in the background. The NAT gateway remains in the **Deleting** state until the operation is completed.</p>
+     * <p>*   **Converting**: After you send a request to upgrade a standard NAT gateway to an enhanced NAT gateway, the system upgrades the NAT gateway in the background. The NAT gateway remains in the **Converting** state until the operation is completed.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The billing method of the NAT gateway. Set the value to **PostPaid**, which specifies the pay-as-you-go billing method.</p>
+     * <p>The size of the NAT gateway. Ignore this parameter.</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
     /**
-     * <p>The name of the NAT gateway. </p>
-     * <br>
-     * <p>The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`. </p>
-     * <br>
-     * <p>If this parameter is not set, the system automatically assigns a name to the NAT gateway.</p>
+     * <p>The billing method of the NAT gateway. Set the value to **PostPaid**, which specifies the pay-as-you-go billing method.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The ID of the NAT gateway.</p>
+     * <p>The ID of the VPC to which the NAT gateway belongs.</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
     /**
-     * <p>The type of NAT gateway. Set the value to **Enhanced** (enhanced NAT gateway).</p>
+     * <p>The ID of the resource group to which the NAT gateway belongs.</p>
      */
     @NameInMap("NatType")
     public String natType;
 
     /**
-     * <p>The type of the NAT gateway. Valid values:</p>
+     * <p>The tag keys of the NAT gateway. You can specify up to 20 tag keys.</p>
      * <br>
-     * <p>*   **internet**: an Internet NAT gateway</p>
-     * <p>*   **intranet**: a VPC NAT gateway</p>
+     * <p>Each tag key cannot exceed 64 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
      */
     @NameInMap("NetworkType")
     public String networkType;
@@ -57,27 +55,28 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <br>
+     * <p>- **true**: performs a dry run. The system prechecks whether your AccessKey pair is valid, whether the RAM user is authorized, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>- **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the NAT gateways that you want to query.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The ID of the NAT gateway.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the NAT gateway belongs.</p>
+     * <p>The number of the page to return. Default value: **1**.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -89,19 +88,16 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The size of the NAT gateway. Ignore this parameter.</p>
+     * <p>The type of NAT gateway. Set the value to **Enhanced** (enhanced NAT gateway).</p>
      */
     @NameInMap("Spec")
     public String spec;
 
     /**
-     * <p>The status of the NAT gateway. Valid values:</p>
+     * <p>The type of the NAT gateway. Valid values:</p>
      * <br>
-     * <p>*   **Creating**: After you send a request to create a NAT gateway, the system creates the NAT gateway in the background. The NAT gateway remains in the **Creating** state until the operation is completed.</p>
-     * <p>*   **Available**: The NAT gateway remains in a stable state after the NAT gateway is created.</p>
-     * <p>*   **Modifying**: After you send a request to modify a NAT gateway, the system modifies the NAT gateway in the background. The NAT gateway remains in the **Modifying** state until the operation is completed.</p>
-     * <p>*   **Deleting**: After you send a request to delete a NAT gateway, the system deletes the NAT gateway in the background. The NAT gateway remains in the **Deleting** state until the operation is completed.</p>
-     * <p>*   **Converting**: After you send a request to upgrade a standard NAT gateway to an enhanced NAT gateway, the system upgrades the NAT gateway in the background. The NAT gateway remains in the **Converting** state until the operation is completed.</p>
+     * <p>*   **internet**: an Internet NAT gateway</p>
+     * <p>*   **intranet**: a VPC NAT gateway</p>
      */
     @NameInMap("Status")
     public String status;
@@ -110,13 +106,17 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     public java.util.List<DescribeNatGatewaysRequestTag> tag;
 
     /**
-     * <p>The ID of the VPC to which the NAT gateway belongs.</p>
+     * <p>The name of the NAT gateway. </p>
+     * <br>
+     * <p>The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`. </p>
+     * <br>
+     * <p>If this parameter is not set, the system automatically assigns a name to the NAT gateway.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
-     * <p>The ID of the zone to which the NAT gateway belongs.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -280,17 +280,15 @@ public class DescribeNatGatewaysRequest extends TeaModel {
 
     public static class DescribeNatGatewaysRequestTag extends TeaModel {
         /**
-         * <p>The tag keys of the NAT gateway. You can specify up to 20 tag keys.</p>
+         * <p>The tag values of the NAT gateway. You can specify up to 20 tag values.</p>
          * <br>
-         * <p>Each tag key cannot exceed 64 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         * <p>The tag value cannot exceed 128 characters in length, and cannot start with `aliyun` or `acs:`. The value cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag values of the NAT gateway. You can specify up to 20 tag values.</p>
-         * <br>
-         * <p>The tag value cannot exceed 128 characters in length, and cannot start with `aliyun` or `acs:`. The value cannot contain `http://` or `https://`.</p>
+         * <p>The ID of the zone to which the NAT gateway belongs.</p>
          */
         @NameInMap("Value")
         public String value;
