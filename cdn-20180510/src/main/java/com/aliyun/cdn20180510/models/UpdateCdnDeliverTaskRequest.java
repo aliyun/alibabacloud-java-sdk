@@ -17,9 +17,7 @@ public class UpdateCdnDeliverTaskRequest extends TeaModel {
     public Long deliverId;
 
     /**
-     * <p>The domain name that you want to track. You can specify multiple domain names and separate them with commas (,). You can specify at most 500 domain names in each call.</p>
-     * <br>
-     * <p>If you do not specify a domain name, the task collects data from all domain names that belong to your Alibaba Cloud account.</p>
+     * <p>The domain name that you want to track. You can specify up to 500 domain names in each request. Separate multiple domain names with commas (,). If you do not specify a domain name, the task collects data from all domain names that belong to your Alibaba Cloud account.</p>
      */
     @NameInMap("DomainName")
     public String domainName;

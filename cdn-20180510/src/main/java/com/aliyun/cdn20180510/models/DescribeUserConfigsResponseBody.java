@@ -4,6 +4,9 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserConfigsResponseBody extends TeaModel {
+    /**
+     * <p>The configurations of the specified feature.</p>
+     */
     @NameInMap("Configs")
     public DescribeUserConfigsResponseBodyConfigs configs;
 
@@ -35,12 +38,21 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeUserConfigsResponseBodyConfigsOssLogConfig extends TeaModel {
+        /**
+         * <p>The name of the bucket.</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 
+        /**
+         * <p>Indicates whether the OSS bucket is enabled.</p>
+         */
         @NameInMap("Enable")
         public String enable;
 
+        /**
+         * <p>The prefix.</p>
+         */
         @NameInMap("Prefix")
         public String prefix;
 
@@ -76,6 +88,9 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeUserConfigsResponseBodyConfigsWafConfig extends TeaModel {
+        /**
+         * <p>Indicates whether WAF is enabled.</p>
+         */
         @NameInMap("Enable")
         public String enable;
 
@@ -95,9 +110,15 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeUserConfigsResponseBodyConfigs extends TeaModel {
+        /**
+         * <p>The configurations of Object Storage Service (OSS).</p>
+         */
         @NameInMap("OssLogConfig")
         public DescribeUserConfigsResponseBodyConfigsOssLogConfig ossLogConfig;
 
+        /**
+         * <p>The configurations of Web Application Firewall (WAF).</p>
+         */
         @NameInMap("WafConfig")
         public DescribeUserConfigsResponseBodyConfigsWafConfig wafConfig;
 

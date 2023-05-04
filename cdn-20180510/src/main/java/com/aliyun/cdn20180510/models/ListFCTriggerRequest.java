@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFCTriggerRequest extends TeaModel {
     /**
-     * <p>The name of the event for which the Function Compute trigger is set. You can specify only one name.</p>
+     * <p>The name of the event. You can specify only one name.</p>
      */
     @NameInMap("EventMetaName")
     public String eventMetaName;

@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
     /**
-     * <p>The information about the SSL certificate.</p>
+     * <p>The unit of the validity period of the SSL certificate.</p>
+     * <br>
+     * <p>*   **months**: The validity period is measured in months.</p>
+     * <p>*   **years**: The validity period is measured in years.</p>
      */
     @NameInMap("CertInfos")
     public DescribeDomainCertificateInfoResponseBodyCertInfos certInfos;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The time when the SSL certificate expires.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,97 +42,10 @@ public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
 
     public static class DescribeDomainCertificateInfoResponseBodyCertInfosCertInfo extends TeaModel {
         /**
-         * <p>The domain name that matches the SSL certificate.</p>
+         * <p>The name of the certificate authority (CA) that issued the SSL certificate.</p>
          */
         @NameInMap("CertDomainName")
         public String certDomainName;
-
-        /**
-         * <p>The time when the SSL certificate expires.</p>
-         */
-        @NameInMap("CertExpireTime")
-        public String certExpireTime;
-
-        @NameInMap("CertId")
-        public String certId;
-
-        /**
-         * <p>The unit of the validity period of the SSL certificate.</p>
-         * <br>
-         * <p>*   **months**: The validity period is measured in months.</p>
-         * <p>*   **years**: The validity period is measured in years.</p>
-         */
-        @NameInMap("CertLife")
-        public String certLife;
-
-        /**
-         * <p>The name of the SSL certificate.</p>
-         */
-        @NameInMap("CertName")
-        public String certName;
-
-        /**
-         * <p>The name of the certificate authority (CA) that issued the SSL certificate.</p>
-         */
-        @NameInMap("CertOrg")
-        public String certOrg;
-
-        @NameInMap("CertRegion")
-        public String certRegion;
-
-        /**
-         * <p>The time when the SSL certificate became effective.</p>
-         */
-        @NameInMap("CertStartTime")
-        public String certStartTime;
-
-        /**
-         * <p>The type of the SSL certificate. Valid values:</p>
-         * <br>
-         * <p>*   **free**: a free SSL certificate.</p>
-         * <p>*   **cas**: an SSL certificate purchased from Alibaba Cloud SSL Certificates Service.</p>
-         * <p>*   **upload**: a user-uploaded SSL certificate.</p>
-         */
-        @NameInMap("CertType")
-        public String certType;
-
-        /**
-         * <p>The time when the certificate was renewed.</p>
-         */
-        @NameInMap("CertUpdateTime")
-        public String certUpdateTime;
-
-        /**
-         * <p>The status of the CNAME of the domain name.</p>
-         * <br>
-         * <p>*   **ok**: The domain name points to the CNAME assigned from Alibaba Cloud Content Delivery Network (CDN).</p>
-         * <p>*   **cname_error**: An error occurred and the domain name cannot point to the CNAME.</p>
-         * <p>*   **top_domain_cname_error**: An error occurred to the CNAME of the top-level domain name. The domain name cannot point to the CNAME.</p>
-         * <p>*   **unsupport_wildcard**: Wildcard domain names are not supported.</p>
-         */
-        @NameInMap("DomainCnameStatus")
-        public String domainCnameStatus;
-
-        /**
-         * <p>The accelerated domain name.</p>
-         */
-        @NameInMap("DomainName")
-        public String domainName;
-
-        /**
-         * <p>The public key of the SSL certificate.</p>
-         */
-        @NameInMap("ServerCertificate")
-        public String serverCertificate;
-
-        /**
-         * <p>The status of HTTPS.</p>
-         * <br>
-         * <p>*   **on**: enabled.</p>
-         * <p>*   **off**: disabled.</p>
-         */
-        @NameInMap("ServerCertificateStatus")
-        public String serverCertificateStatus;
 
         /**
          * <p>The status of the SSL certificate.</p>
@@ -145,6 +61,99 @@ public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
          * <p>*   **check_token_timeout**: The verification timed out.</p>
          * <p>*   **get_cert_timeout**: The request to obtain the certificate timed out.</p>
          * <p>*   **failed**: The application for a certificate failed.</p>
+         */
+        @NameInMap("CertExpireTime")
+        public String certExpireTime;
+
+        /**
+         * <p>The domain name that matches the SSL certificate.</p>
+         */
+        @NameInMap("CertId")
+        public String certId;
+
+        /**
+         * <p>The time when the certificate was renewed.</p>
+         */
+        @NameInMap("CertLife")
+        public String certLife;
+
+        /**
+         * <p>The public key of the SSL certificate.</p>
+         */
+        @NameInMap("CertName")
+        public String certName;
+
+        /**
+         * <p>The time when the SSL certificate became effective.</p>
+         */
+        @NameInMap("CertOrg")
+        public String certOrg;
+
+        /**
+         * <p>The status of HTTPS.</p>
+         * <br>
+         * <p>*   **on**: enabled.</p>
+         * <p>*   **off**: disabled.</p>
+         */
+        @NameInMap("CertRegion")
+        public String certRegion;
+
+        /**
+         * <p>The name of the SSL certificate.</p>
+         */
+        @NameInMap("CertStartTime")
+        public String certStartTime;
+
+        /**
+         * <p>The status of the CNAME of the domain name.</p>
+         * <br>
+         * <p>*   **ok**: The domain name points to the CNAME assigned from Alibaba Cloud Content Delivery Network (CDN).</p>
+         * <p>*   **cname_error**: An error occurred and the domain name cannot point to the CNAME.</p>
+         * <p>*   **top_domain_cname_error**: An error occurred to the CNAME of the top-level domain name. The domain name cannot point to the CNAME.</p>
+         * <p>*   **unsupport_wildcard**: Wildcard domain names are not supported.</p>
+         */
+        @NameInMap("CertType")
+        public String certType;
+
+        /**
+         * <p>The status of HTTPS.</p>
+         * <br>
+         * <p>*   **on**: enabled.</p>
+         * <p>*   **off**: disabled.</p>
+         */
+        @NameInMap("CertUpdateTime")
+        public String certUpdateTime;
+
+        /**
+         * <p>>  The maximum number of times that each user can call this operation per second is 100.</p>
+         */
+        @NameInMap("DomainCnameStatus")
+        public String domainCnameStatus;
+
+        /**
+         * <p>The type of the SSL certificate. Valid values:</p>
+         * <br>
+         * <p>*   **free**: a free SSL certificate.</p>
+         * <p>*   **cas**: an SSL certificate purchased from Alibaba Cloud SSL Certificates Service.</p>
+         * <p>*   **upload**: a user-uploaded SSL certificate.</p>
+         */
+        @NameInMap("DomainName")
+        public String domainName;
+
+        /**
+         * <p>The public key of the SSL certificate.</p>
+         */
+        @NameInMap("ServerCertificate")
+        public String serverCertificate;
+
+        /**
+         * <p>The accelerated domain name.</p>
+         */
+        @NameInMap("ServerCertificateStatus")
+        public String serverCertificateStatus;
+
+        /**
+         * <p>The domain name that matches the SSL certificate.</p>
          */
         @NameInMap("Status")
         public String status;

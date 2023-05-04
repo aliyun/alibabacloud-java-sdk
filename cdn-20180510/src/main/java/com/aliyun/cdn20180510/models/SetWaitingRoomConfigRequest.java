@@ -17,13 +17,13 @@ public class SetWaitingRoomConfigRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The length of waiting time to skip after users exit the queue. Unit: seconds.</p>
+     * <p>The length of waiting time to skip after an exit from the queue. Unit: seconds.</p>
      */
     @NameInMap("GapTime")
     public Integer gapTime;
 
     /**
-     * <p>The maximum length of time that users need to wait in the queue. Unit: seconds.</p>
+     * <p>The maximum length of waiting time in the queue. Unit: seconds.</p>
      */
     @NameInMap("MaxTimeWait")
     public Integer maxTimeWait;

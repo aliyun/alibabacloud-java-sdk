@@ -4,21 +4,12 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagResourcesRequest extends TeaModel {
-    /**
-     * <p>The IDs of the resources. You can specify up to 50 IDs in each request.</p>
-     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
-    /**
-     * <p>The type of the resource. Set this value to **DOMAIN**.</p>
-     */
     @NameInMap("ResourceType")
     public String resourceType;
 
-    /**
-     * <p>The tags. You can specify up to 20 tags in each request.</p>
-     */
     @NameInMap("Tag")
     public java.util.List<DescribeTagResourcesRequestTag> tag;
 
@@ -52,15 +43,9 @@ public class DescribeTagResourcesRequest extends TeaModel {
     }
 
     public static class DescribeTagResourcesRequestTag extends TeaModel {
-        /**
-         * <p>The key of the tag.</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The value of the tag.</p>
-         */
         @NameInMap("Value")
         public String value;
 

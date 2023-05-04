@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUserDomainsResponseBody extends TeaModel {
     /**
-     * <p>The information about the accelerated domain name.</p>
+     * <p>The list of the accelerated domain names returned.</p>
      */
     @NameInMap("Domains")
     public DescribeUserDomainsResponseBodyDomains domains;
@@ -29,7 +29,7 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates the total number of entries returned.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -93,7 +93,7 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The priority of the origin server.</p>
+         * <p>The priority.</p>
          */
         @NameInMap("Priority")
         public String priority;
@@ -105,7 +105,7 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The weight of the origin server if multiple origin servers are specified.</p>
+         * <p>The weight of the origin server if multiple origin servers have been specified.</p>
          */
         @NameInMap("Weight")
         public String weight;
@@ -178,7 +178,7 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
 
     public static class DescribeUserDomainsResponseBodyDomainsPageData extends TeaModel {
         /**
-         * <p>The type of workload accelerated by Alibaba Cloud CDN. Valid values:</p>
+         * <p>The type of the workload accelerated by Alibaba Cloud CDN. Valid values:</p>
          * <br>
          * <p>*   **web**: images and small files</p>
          * <p>*   **download**: large files</p>
@@ -197,14 +197,14 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
          * <p>The acceleration region. Valid values:</p>
          * <br>
          * <p>*   **domestic**: Chinese mainland</p>
-         * <p>*   **global**</p>
-         * <p>*   **overseas**: global (excluding the Chinese mainland)</p>
+         * <p>*   **global**: global</p>
+         * <p>*   **overseas**: outside the Chinese mainland</p>
          */
         @NameInMap("Coverage")
         public String coverage;
 
         /**
-         * <p>The information about the Internet Content Provider (ICP) number.</p>
+         * <p>The information about Internet Content Provider (ICP) filing.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -216,7 +216,7 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
         public Long domainId;
 
         /**
-         * <p>The accelerated domain names.</p>
+         * <p>The accelerated domain.</p>
          */
         @NameInMap("DomainName")
         public String domainName;
@@ -224,26 +224,26 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
         /**
          * <p>The status of the accelerated domain name. Valid values:</p>
          * <br>
-         * <p>*   **online**: enabled</p>
-         * <p>*   **offline**: disabled</p>
-         * <p>*   **configuring**: being configured</p>
-         * <p>*   **configure_failed**: failed to be configured</p>
-         * <p>*   **checking**: under review</p>
-         * <p>*   **check_failed**: failed the review</p>
-         * <p>*   **stopping**: being disabled</p>
-         * <p>*   **deleting**: deleting</p>
+         * <p>*   **online**</p>
+         * <p>*   **offline**</p>
+         * <p>*   **configuring**</p>
+         * <p>*   **configure_failed**</p>
+         * <p>*   **checking**</p>
+         * <p>*   **check_failed**</p>
+         * <p>*   **stopping**</p>
+         * <p>*   **deleting**</p>
          */
         @NameInMap("DomainStatus")
         public String domainStatus;
 
         /**
-         * <p>The time when the accelerated domain name was added to Alibaba Cloud CDN.</p>
+         * <p>The time when the accelerated domain name was added.</p>
          */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
         /**
-         * <p>The time when the accelerated domain name was last modified.</p>
+         * <p>The time when the accelerated domain name was modified.</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
@@ -269,8 +269,8 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether HTTPS is enabled. Valid values:</p>
          * <br>
-         * <p>*   **on**: enabled</p>
-         * <p>*   **off**: disabled</p>
+         * <p>*   **on**</p>
+         * <p>*   **off**</p>
          */
         @NameInMap("SslProtocol")
         public String sslProtocol;

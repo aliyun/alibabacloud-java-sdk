@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeCdnServiceResponseBody extends TeaModel {
     /**
-     * <p>The time when the next billing method takes effect. The time is displayed in GMT.</p>
+     * <p>The time when the metering method for the next cycle takes effect. The time is displayed in GMT.</p>
      */
     @NameInMap("ChangingAffectTime")
     public String changingAffectTime;
 
     /**
-     * <p>The next billing method that Alibaba Cloud CDN will use. Valid values:</p>
+     * <p>The metering method for the next cycle. Valid values:</p>
      * <br>
-     * <p>*   **PayByTraffic**: pay-by-data-transfer.</p>
-     * <p>*   **PayByBandwidth**: pay-by-bandwidth.</p>
+     * <p>*   **PayByTraffic**: pay-by-data-transfer</p>
+     * <p>*   **PayByBandwidth**: pay-by-bandwidth</p>
      */
     @NameInMap("ChangingChargeType")
     public String changingChargeType;
@@ -26,22 +26,22 @@ public class DescribeCdnServiceResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The current billing method of Alibaba Cloud CDN.</p>
+     * <p>The current metering method. Valid values:</p>
      * <br>
-     * <p>*   **PayByTraffic**: pay-by-data-transfer.</p>
-     * <p>*   **PayByBandwidth**: pay-by-bandwidth.</p>
+     * <p>*   **PayByTraffic**: pay-by-data-transfer</p>
+     * <p>*   **PayByBandwidth**: pay-by-bandwidth</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
     /**
-     * <p>The time when Alibaba Cloud CDN was activated. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format.</p>
+     * <p>The time when the service was activated. The time follows the ISO 8601 standard.</p>
      */
     @NameInMap("OpeningTime")
     public String openingTime;
 
     /**
-     * <p>The lock status of Alibaba Cloud CDN.</p>
+     * <p>The lock status.</p>
      */
     @NameInMap("OperationLocks")
     public DescribeCdnServiceResponseBodyOperationLocks operationLocks;
@@ -115,7 +115,7 @@ public class DescribeCdnServiceResponseBody extends TeaModel {
 
     public static class DescribeCdnServiceResponseBodyOperationLocksLockReason extends TeaModel {
         /**
-         * <p>The reason why Alibaba Cloud CDN is locked. A value of financial indicates that the service is locked due to overdue payments.</p>
+         * <p>The reason why the service is locked. A value of financial indicates that the service is locked due to overdue payments.</p>
          */
         @NameInMap("LockReason")
         public String lockReason;

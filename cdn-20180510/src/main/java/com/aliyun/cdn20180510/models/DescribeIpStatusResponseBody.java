@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeIpStatusResponseBody extends TeaModel {
     /**
-     * <p>The status of the node IP addresses.</p>
+     * <p>The status of the IP addresses of the POPs.</p>
      */
     @NameInMap("IpStatus")
     public java.util.List<DescribeIpStatusResponseBodyIpStatus> ipStatus;
@@ -39,17 +39,17 @@ public class DescribeIpStatusResponseBody extends TeaModel {
 
     public static class DescribeIpStatusResponseBodyIpStatus extends TeaModel {
         /**
-         * <p>The IP address of the node.</p>
+         * <p>The IP address of the POP.</p>
          */
         @NameInMap("ip")
         public String ip;
 
         /**
-         * <p>The status. Valid values:</p>
+         * <p>The status.</p>
          * <br>
-         * <p>*   **nonali**: The node is not an Alibaba Cloud CDN edge node.</p>
-         * <p>*   **normal**: The node is an available Alibaba Cloud CDN edge node.</p>
-         * <p>*   **abnormal**: The node is an unavailable Alibaba Cloud CDN edge node.</p>
+         * <p>*   **nonali**: not an Alibaba Cloud CDN POP</p>
+         * <p>*   **normal**: an available Alibaba Cloud CDN POP</p>
+         * <p>*   **abnormal**: an unavailable Alibaba Cloud CDN POP</p>
          */
         @NameInMap("status")
         public String status;

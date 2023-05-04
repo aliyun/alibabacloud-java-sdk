@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartCdnDomainRequest extends TeaModel {
     /**
-     * <p>The domain name that you want to enable. You can specify only one domain name.</p>
+     * <p>The accelerated domain name. You can specify only one domain name in each request.</p>
      */
     @NameInMap("DomainName")
     public String domainName;

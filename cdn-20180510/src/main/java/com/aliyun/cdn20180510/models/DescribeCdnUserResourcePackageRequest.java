@@ -11,10 +11,10 @@ public class DescribeCdnUserResourcePackageRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>Resource plan status:</p>
+     * <p>The remaining quota of the resource plan.</p>
      * <br>
-     * <p>*   **valid**: valid</p>
-     * <p>*   **closed**: invalid</p>
+     * <p>*   The total amount of data transfer provided by the resource plan. Unit: bytes.</p>
+     * <p>*   The remaining number of requests provided by the resource plan.</p>
      */
     @NameInMap("Status")
     public String status;

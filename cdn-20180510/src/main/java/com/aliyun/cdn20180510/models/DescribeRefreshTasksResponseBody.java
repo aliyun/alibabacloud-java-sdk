@@ -4,33 +4,18 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeRefreshTasksResponseBody extends TeaModel {
-    /**
-     * <p>The page number of the returned page.</p>
-     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    /**
-     * <p>The number of entries returned per page.</p>
-     */
     @NameInMap("PageSize")
     public Long pageSize;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Details about tasks.</p>
-     */
     @NameInMap("Tasks")
     public DescribeRefreshTasksResponseBodyTasks tasks;
 
-    /**
-     * <p>The total number of entries returned.</p>
-     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -80,58 +65,24 @@ public class DescribeRefreshTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeRefreshTasksResponseBodyTasksCDNTask extends TeaModel {
-        /**
-         * <p>The time when the task was created. The time is displayed in UTC.</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        /**
-         * <p>The type of the error returned when the refresh or prefetch task failed. Valid values:</p>
-         * <br>
-         * <p>*   **InternalError**: An internal error occurred.</p>
-         * <p>*   **OriginTimeout**: The response from the origin server timed out.</p>
-         * <p>*   **OriginReturnStatusCode 5XX**: The origin server returned a 5XX error.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The URL of the object refreshed.</p>
-         */
         @NameInMap("ObjectPath")
         public String objectPath;
 
-        /**
-         * <p>The type of the task.</p>
-         * <br>
-         * <p>*   **file**: refreshes one or more files.</p>
-         * <p>*   **directory**: refreshes files in the specified directories.</p>
-         * <p>*   **regex**: refreshes content based on a regular expression.</p>
-         * <p>*   **preload**: prefetches one or more files.</p>
-         */
         @NameInMap("ObjectType")
         public String objectType;
 
-        /**
-         * <p>The progress of the task, in percentage.</p>
-         */
         @NameInMap("Process")
         public String process;
 
-        /**
-         * <p>The status of the task. Valid values:</p>
-         * <br>
-         * <p>*   **Complete**: The task has completed.</p>
-         * <p>*   **Refreshing**: The task is in progress.</p>
-         * <p>*   **Failed**: The task failed.</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The ID of the task.</p>
-         */
         @NameInMap("TaskId")
         public String taskId;
 

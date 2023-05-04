@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
     /**
-     * <p>The log entry of the event that triggered rate limiting.</p>
+     * <p>The list of rate limiting logs.</p>
      */
     @NameInMap("ActivityLog")
     public java.util.List<DescribeDomainCcActivityLogResponseBodyActivityLog> activityLog;
@@ -93,31 +93,31 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
         public String domainName;
 
         /**
-         * <p>The name of the rule that was triggered</p>
+         * <p>The name of the rule based on which rate limiting was triggered.</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
-         * <p>The timestamp of the data.</p>
+         * <p>The timestamp of the data returned.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         /**
-         * <p>The object that triggered rate limiting.</p>
+         * <p>The trigger of rate limiting.</p>
          */
         @NameInMap("TriggerObject")
         public String triggerObject;
 
         /**
-         * <p>The period of time that rate limiting remains effective.</p>
+         * <p>The period of time during which rate limiting remains effective.</p>
          */
         @NameInMap("Ttl")
         public Long ttl;
 
         /**
-         * <p>The value of the object that triggered rate limiting.</p>
+         * <p>The value of the trigger for rate limiting.</p>
          */
         @NameInMap("Value")
         public String value;

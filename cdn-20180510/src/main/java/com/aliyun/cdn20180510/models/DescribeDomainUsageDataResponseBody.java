@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainUsageDataResponseBody extends TeaModel {
     /**
-     * <p>The billable region where the data was collected.</p>
+     * <p>The ID of the billable region where the data was collected.</p>
      */
     @NameInMap("Area")
     public String area;
@@ -35,7 +35,7 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The start of the time range during which data was queried.</p>
+     * <p>The beginning of the time range during which data was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -129,7 +129,7 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
         public String peakTime;
 
         /**
-         * <p>The data usage in a specific scenario.</p>
+         * <p>The resource usage in a specific scenario.</p>
          * <br>
          * <p>> SpecialValue indicates the data usage in a specific scenario. If no special billable item is specified, ignore this parameter.</p>
          */
@@ -139,7 +139,7 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
         /**
          * <p>The timestamp of the data returned.</p>
          * <br>
-         * <p>> **TimeStamp** indicates the timestamp of the returned data at each interval.</p>
+         * <p>> **TimeStamp** indicates the timestamp of the data returned at each interval.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

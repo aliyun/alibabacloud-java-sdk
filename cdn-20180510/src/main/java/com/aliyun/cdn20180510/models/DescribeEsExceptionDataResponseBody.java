@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEsExceptionDataResponseBody extends TeaModel {
     /**
-     * <p>The content of the script.</p>
+     * <p>The content of the script for which an error was reported.</p>
      */
     @NameInMap("Contents")
     public java.util.List<DescribeEsExceptionDataResponseBodyContents> contents;
@@ -38,6 +38,9 @@ public class DescribeEsExceptionDataResponseBody extends TeaModel {
     }
 
     public static class DescribeEsExceptionDataResponseBodyContentsPoints extends TeaModel {
+        /**
+         * <p>The data points.</p>
+         */
         @NameInMap("Points")
         public java.util.List<String> points;
 
@@ -58,19 +61,19 @@ public class DescribeEsExceptionDataResponseBody extends TeaModel {
 
     public static class DescribeEsExceptionDataResponseBodyContents extends TeaModel {
         /**
-         * <p>The column names of the chart that shows the errors of the script and the time of each data entry.</p>
+         * <p>Information about the time column and the error column name.</p>
          */
         @NameInMap("Columns")
         public java.util.List<String> columns;
 
         /**
-         * <p>The name of the chart that shows the errors of the script.</p>
+         * <p>The name of the table that shows the errors of the script.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The value of each time and the column of each data entry.</p>
+         * <p>The time columns and error column names.</p>
          */
         @NameInMap("Points")
         public java.util.List<DescribeEsExceptionDataResponseBodyContentsPoints> points;

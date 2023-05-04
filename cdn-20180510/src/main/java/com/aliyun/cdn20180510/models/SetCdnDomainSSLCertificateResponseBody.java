@@ -3,16 +3,16 @@ package com.aliyun.cdn20180510.models;
 
 import com.aliyun.tea.*;
 
-public class BatchAddCdnDomainResponseBody extends TeaModel {
+public class SetCdnDomainSSLCertificateResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static BatchAddCdnDomainResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        BatchAddCdnDomainResponseBody self = new BatchAddCdnDomainResponseBody();
+    public static SetCdnDomainSSLCertificateResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        SetCdnDomainSSLCertificateResponseBody self = new SetCdnDomainSSLCertificateResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public BatchAddCdnDomainResponseBody setRequestId(String requestId) {
+    public SetCdnDomainSSLCertificateResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

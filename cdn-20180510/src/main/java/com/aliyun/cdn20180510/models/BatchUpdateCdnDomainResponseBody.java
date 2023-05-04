@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class BatchUpdateCdnDomainResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The information about the addresses of origin servers.</p>
+     * <br>
+     * <p>>  You can set only one of **Sources** and **TopLevelDomain**. If you set both **Sources** and **TopLevelDomain**, **TopLevelDomain** does not take effect.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

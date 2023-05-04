@@ -5,10 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeCdnUserConfigsRequest extends TeaModel {
     /**
-     * <p>The configuration item that you want to query. Valid values:</p>
+     * <p>The name of the parameter.</p>
      * <br>
-     * <p>*   **domain\_business\_control**: Alibaba Cloud CDN configurations</p>
-     * <p>*   **waf**: Web Application Firewall (WAF) configurations</p>
+     * <p>The configurations set by enterprise or government users.</p>
      */
     @NameInMap("FunctionName")
     public String functionName;

@@ -5,37 +5,40 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainPvDataResponseBody extends TeaModel {
     /**
-     * <p>The time interval between the data entries. Unit: seconds.</p>
+     * <p>The statistical analytics feature of Alibaba Cloud CDN is discontinued. The API operations related to the statistical analytics feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://www.alibabacloud.com/help/en/alibaba-cloud-cdn/latest/customize-an-operations-report-template-and-create-a-tracking-task) feature to for data analysis.  </p>
+     * <br>
+     * <p>> - If you do not set StartTime or EndTime, monitoring data within the last 24 hours is queried. If you set both StartTime and EndTime, monitoring data within the specified time range is queried.</p>
+     * <p>- You can call this operation up to 50 times per second per account.</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
 
     /**
-     * <p>The accelerated domain name.</p>
+     * <p>The timestamp of the returned data.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The end of the time range during which data was queried.</p>
+     * <p>The time interval between the data entries. Unit: seconds.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The number of PVs at each interval.</p>
+     * <p>The end of the time range during which data was queried.</p>
      */
     @NameInMap("PvDataInterval")
     public DescribeDomainPvDataResponseBodyPvDataInterval pvDataInterval;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The number of PVs.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The beginning of the time range during which data was queried.</p>
+     * <p>The number of PVs at each interval.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -95,7 +98,7 @@ public class DescribeDomainPvDataResponseBody extends TeaModel {
 
     public static class DescribeDomainPvDataResponseBodyPvDataIntervalUsageData extends TeaModel {
         /**
-         * <p>The timestamp of the returned data.</p>
+         * <p>The accelerated domain name. You can specify only one domain name.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

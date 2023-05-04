@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomLogConfigResponseBody extends TeaModel {
     /**
-     * <p>The format of the log configuration.</p>
+     * <p>The operation that you want to perform. Set the value to **DescribeCustomLogConfig**.</p>
      */
     @NameInMap("Remark")
     public String remark;
@@ -23,7 +23,7 @@ public class DescribeCustomLogConfigResponseBody extends TeaModel {
     public String sample;
 
     /**
-     * <p>The tag information about the log configuration.</p>
+     * <p>The format of the log configuration.</p>
      */
     @NameInMap("Tag")
     public String tag;

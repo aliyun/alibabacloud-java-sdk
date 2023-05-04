@@ -5,37 +5,37 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainRegionDataResponseBody extends TeaModel {
     /**
-     * <p>The time interval between the data entries returned. Unit: seconds.</p>
+     * <p>The average response time. Unit: milliseconds.</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
 
     /**
-     * <p>The accelerated domain name.</p>
+     * <p>The average response speed. Unit: bit/s.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The end of the time range that was queried.</p>
+     * <p>The proportions of requests initiated from each area.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The total traffic. Unit: bytes.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The beginning of the time range that was queried.</p>
+     * <p>The total number of requests.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The proportions of requests initiated from each area.</p>
+     * <p>The request error rate. A value of 90 indicates that 90% of the requests encountered errors.</p>
      */
     @NameInMap("Value")
     public DescribeDomainRegionDataResponseBodyValue value;
@@ -95,73 +95,77 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
 
     public static class DescribeDomainRegionDataResponseBodyValueRegionProportionData extends TeaModel {
         /**
-         * <p>The average response size. Unit: bytes.</p>
+         * <p>cn-shenzhen</p>
          */
         @NameInMap("AvgObjectSize")
         public String avgObjectSize;
 
         /**
-         * <p>The average response speed. Unit: bit/s.</p>
+         * <p>The number of queries per second.</p>
          */
         @NameInMap("AvgResponseRate")
         public String avgResponseRate;
 
         /**
-         * <p>The average response time. Unit: milliseconds.</p>
+         * <p>The name of the region.</p>
          */
         @NameInMap("AvgResponseTime")
         public String avgResponseTime;
 
         /**
-         * <p>The bandwidth.</p>
+         * <p>The proportion of visits from each region. For example, a value of 90 indicates that 90% of the visits are from the specified area.</p>
          */
         @NameInMap("Bps")
         public String bps;
 
         /**
-         * <p>The proportion of bytes transferred from each region. For example, a value of 90 indicates that 90% of the bytes are transferred from the specified area.</p>
+         * <p>The accelerated domain name.</p>
          */
         @NameInMap("BytesProportion")
         public String bytesProportion;
 
         /**
-         * <p>The proportion of visits from each region. For example, a value of 90 indicates that 90% of the visits are from the specified area.</p>
+         * <p>The request error rate. A value of 90 indicates that 90% of the requests encountered errors.</p>
          */
         @NameInMap("Proportion")
         public String proportion;
 
         /**
-         * <p>The number of queries per second.</p>
+         * <p>The proportion of bytes transferred from each region. For example, a value of 90 indicates that 90% of the bytes are transferred from the specified area.</p>
          */
         @NameInMap("Qps")
         public String qps;
 
         /**
-         * <p>The information of the regions.</p>
+         * <p>The start of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
-         * <p>The name of the region.</p>
+         * <p>The statistical analytics feature of Alibaba Cloud CDN is discontinued. The API operations related to the statistical analytics feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://www.alibabacloud.com/help/en/alibaba-cloud-cdn/latest/customize-an-operations-report-template-and-create-a-tracking-task) feature to for data analysis.  </p>
+         * <br>
+         * <p>> - If you do not set **StartTime** or **EndTime**, data collected within the last **24** hours is queried. If you set both **StartTime** and **EndTime**, data collected within the specified time range is queried.</p>
+         * <p>- You may fail to query the latest data. If you need to query data collected within the last day, we recommend that you query the data on the next day.</p>
+         * <p>- You can call this operation up to 100 times per second per account.</p>
          */
         @NameInMap("RegionEname")
         public String regionEname;
 
         /**
-         * <p>The request error rate. A value of 90 indicates that 90% of the requests encountered errors.</p>
+         * <p>The information of the regions.</p>
          */
         @NameInMap("ReqErrRate")
         public String reqErrRate;
 
         /**
-         * <p>The total traffic. Unit: bytes.</p>
+         * <p>The bandwidth.</p>
          */
         @NameInMap("TotalBytes")
         public String totalBytes;
 
         /**
-         * <p>The total number of requests.</p>
+         * <p>The average response size. Unit: bytes.</p>
          */
         @NameInMap("TotalQuery")
         public String totalQuery;

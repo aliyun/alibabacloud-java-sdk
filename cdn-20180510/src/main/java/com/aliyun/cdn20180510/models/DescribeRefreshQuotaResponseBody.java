@@ -11,7 +11,7 @@ public class DescribeRefreshQuotaResponseBody extends TeaModel {
     public String blockQuota;
 
     /**
-     * <p>The remaining number of URLs and directories that can be blocked on the current day.</p>
+     * <p>The remaining number of URLs that can be blocked on the current day.</p>
      */
     @NameInMap("BlockRemain")
     public String blockRemain;
@@ -35,43 +35,43 @@ public class DescribeRefreshQuotaResponseBody extends TeaModel {
     public String ignoreParamsRemain;
 
     /**
-     * <p>The maximum number of times that you can prefetch content to L1 nodes on the current day.</p>
+     * <p>The maximum number of times that you can prefetch content to L1 POPs on the current day.</p>
      */
     @NameInMap("PreloadEdgeQuota")
     public String preloadEdgeQuota;
 
     /**
-     * <p>The remaining number of times that you can prefetch content to L1 nodes on the current day.</p>
+     * <p>The remaining number of times that you can prefetch content to L1 POPs on the current day.</p>
      */
     @NameInMap("PreloadEdgeRemain")
     public String preloadEdgeRemain;
 
     /**
-     * <p>The maximum number of times that you can prefetch content to L2 nodes on the current day.</p>
+     * <p>The maximum number of times that you can prefetch content to L2 POPs on the current day.</p>
      */
     @NameInMap("PreloadQuota")
     public String preloadQuota;
 
     /**
-     * <p>The remaining number of times that you can prefetch content to L2 nodes on the current day.</p>
+     * <p>The remaining number of times that you can prefetch content to L2 points of presence (POPs) on the current day.</p>
      */
     @NameInMap("PreloadRemain")
     public String preloadRemain;
 
     /**
-     * <p>The maximum number of times that you can use regular expressions to refresh directories or URLs on the current day.</p>
+     * <p>The maximum number of URLs or directories that can be refreshed by using regular expressions on the current day.</p>
      */
     @NameInMap("RegexQuota")
     public String regexQuota;
 
     /**
-     * <p>The remaining number of times that you can use regular expressions to refresh directories or URLs on the current day.</p>
+     * <p>The remaining number of URLs or directories that can be refreshed by using regular expressions on the current day.</p>
      */
     @NameInMap("RegexRemain")
     public String regexRemain;
 
     /**
-     * <p>The ID of the request</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

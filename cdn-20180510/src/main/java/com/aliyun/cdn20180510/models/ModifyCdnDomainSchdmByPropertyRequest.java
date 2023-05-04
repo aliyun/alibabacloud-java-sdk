@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCdnDomainSchdmByPropertyRequest extends TeaModel {
     /**
-     * <p>The accelerated domain name for which you want to change the accelerated region. You can specify only one domain name.</p>
+     * <p>The operation that you want to perform. Set the value to **ModifyCdnDomainSchdmByProperty**.</p>
      */
     @NameInMap("DomainName")
     public String domainName;

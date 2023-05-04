@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeUserUsageDataExportTaskResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the task.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The usage details returned per page.</p>
+     * <p>The end of the time range that was queried.</p>
      */
     @NameInMap("UsageDataPerPage")
     public DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPage usageDataPerPage;
@@ -39,13 +39,13 @@ public class DescribeUserUsageDataExportTaskResponseBody extends TeaModel {
 
     public static class DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPageDataDataItemTaskConfig extends TeaModel {
         /**
-         * <p>The end of the time range that was queried.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
-         * <p>The start of the time range that was queried.</p>
+         * <p>The last time when the task was modified.</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -75,47 +75,45 @@ public class DescribeUserUsageDataExportTaskResponseBody extends TeaModel {
 
     public static class DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPageDataDataItem extends TeaModel {
         /**
-         * <p>The time when the task was created.</p>
+         * <p>The download URL.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The download URL.</p>
+         * <p>The configurations of the task.</p>
          */
         @NameInMap("DownloadUrl")
         public String downloadUrl;
 
         /**
-         * <p>The status of the task.</p>
-         * <br>
-         * <p>*   created: The task is being created.</p>
-         * <p>*   success: The task has been created.</p>
-         * <p>*   failed: The creation of the task failed.</p>
+         * <p>The time when the task was created.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The configurations of the task.</p>
+         * <p>The total number of entries returned.</p>
          */
         @NameInMap("TaskConfig")
         public DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPageDataDataItemTaskConfig taskConfig;
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The number of the current page.</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
-         * <p>The name of the task.</p>
+         * <p>The number of entries to return on each page. Default value: **20**. Maximum value: **50**.</p>
+         * <br>
+         * <p>Valid values: **1** to **50**.</p>
          */
         @NameInMap("TaskName")
         public String taskName;
 
         /**
-         * <p>The last time when the task was modified.</p>
+         * <p>The operation that you want to perform. Set the value to **DescribeUserUsageDataExportTask**.</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
@@ -204,25 +202,29 @@ public class DescribeUserUsageDataExportTaskResponseBody extends TeaModel {
 
     public static class DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPage extends TeaModel {
         /**
-         * <p>The description of the task.</p>
+         * <p>The status of the task.</p>
+         * <br>
+         * <p>*   created: The task is being created.</p>
+         * <p>*   success: The task has been created.</p>
+         * <p>*   failed: The creation of the task failed.</p>
          */
         @NameInMap("Data")
         public DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPageData data;
 
         /**
-         * <p>The number of the current page.</p>
+         * <p>The number of the page to return. Valid values: **1** to **100000**.</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The description of the task.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The start of the time range that was queried.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

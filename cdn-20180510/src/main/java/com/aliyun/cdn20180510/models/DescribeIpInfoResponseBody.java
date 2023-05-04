@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class DescribeIpInfoResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the specified IP address is assigned to an Alibaba Cloud CDN node.</p>
+     * <p>Indicates whether the IP address belongs to an Alibaba Cloud CDN POP.</p>
      * <br>
-     * <p>*   **True**: Yes</p>
-     * <p>*   **False**: No</p>
+     * <p>*   **True**</p>
+     * <p>*   **False**</p>
      */
     @NameInMap("CdnIp")
     public String cdnIp;
 
     /**
-     * <p>The Chinese name of the Internet service provider (ISP).</p>
+     * <p>The Chinese name of the ISP.</p>
      */
     @NameInMap("ISP")
     public String ISP;
 
     /**
-     * <p>The English name of the ISP.</p>
+     * <p>The English name of the Internet service provider (ISP).</p>
      */
     @NameInMap("IspEname")
     public String ispEname;

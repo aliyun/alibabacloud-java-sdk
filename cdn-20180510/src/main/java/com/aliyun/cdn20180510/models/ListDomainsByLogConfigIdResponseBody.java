@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDomainsByLogConfigIdResponseBody extends TeaModel {
     /**
-     * <p>The list of domain names.</p>
+     * <p>The domain names.</p>
      */
     @NameInMap("Domains")
     public ListDomainsByLogConfigIdResponseBodyDomains domains;

@@ -51,7 +51,7 @@ public class DescribeFCTriggerResponseBody extends TeaModel {
         public String eventMetaVersion;
 
         /**
-         * <p>The remarks.</p>
+         * <p>The remarks of the Function Compute trigger.</p>
          */
         @NameInMap("Notes")
         public String notes;

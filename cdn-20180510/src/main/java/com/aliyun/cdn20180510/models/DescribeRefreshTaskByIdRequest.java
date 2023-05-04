@@ -5,11 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeRefreshTaskByIdRequest extends TeaModel {
     /**
-     * <p>The ID of the task that you want to query.</p>
+     * <p>The status of the task. Valid values:</p>
      * <br>
-     * <p>You can call the [RefreshObjectCaches](~~91164~~) operation to query task IDs. Then, you can use the task IDs to query task status.</p>
-     * <br>
-     * <p>You can specify up to 10 task IDs. Separate task IDs with commas (,).</p>
+     * <p>*   **Complete**: The task is complete.</p>
+     * <p>*   **Pending**: The task is pending.</p>
+     * <p>*   **Refreshing**: The task is running.</p>
+     * <p>*   **Failed**: The task failed.</p>
      */
     @NameInMap("TaskId")
     public String taskId;

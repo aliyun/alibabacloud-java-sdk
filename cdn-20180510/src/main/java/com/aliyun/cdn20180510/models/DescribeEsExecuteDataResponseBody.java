@@ -39,19 +39,19 @@ public class DescribeEsExecuteDataResponseBody extends TeaModel {
 
     public static class DescribeEsExecuteDataResponseBodyContents extends TeaModel {
         /**
-         * <p>The column names of the chart that shows the status of the script and the time of each data entry.</p>
+         * <p>The time and column names in the table that shows the status of the script.</p>
          */
         @NameInMap("Columns")
         public java.util.List<String> columns;
 
         /**
-         * <p>The name of the chart that shows the status of the script.</p>
+         * <p>The name of the table that shows the status of the script.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The value of each time and the column of each data entry.</p>
+         * <p>The list of timestamps and values in the corresponding columns of the table that shows the status of the script.</p>
          */
         @NameInMap("Points")
         public java.util.List<String> points;

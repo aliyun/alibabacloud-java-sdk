@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetCdnDomainCSRCertificateRequest extends TeaModel {
     /**
-     * <p>The accelerated domain name for which you want to configure an SSL certificate. The domain name must have HTTPS secure acceleration enabled.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("DomainName")
     public String domainName;

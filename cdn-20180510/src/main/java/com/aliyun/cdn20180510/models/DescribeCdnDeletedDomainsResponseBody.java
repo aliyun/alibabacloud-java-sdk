@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeCdnDeletedDomainsResponseBody extends TeaModel {
     /**
-     * <p>The information about the accelerated domain names.</p>
+     * <p>The list of accelerated domain names and the time each domain name was last modified.</p>
      */
     @NameInMap("Domains")
     public DescribeCdnDeletedDomainsResponseBodyDomains domains;
 
     /**
-     * <p>The page number of the returned page. It corresponds to the request parameter **PageNumber**.</p>
+     * <p>The page number of the returned page, which is the same as the **PageNumber** parameter in request parameters.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries returned per page. It corresponds to the request parameter **PageSize**.</p>
+     * <p>The number of domain names returned per page, which is the same as the **PageSize** parameter in request parameters.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -87,7 +87,7 @@ public class DescribeCdnDeletedDomainsResponseBody extends TeaModel {
         public String domainName;
 
         /**
-         * <p>The last time when the accelerated domain name was modified. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC+0.</p>
+         * <p>The time when the accelerated domain name was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;

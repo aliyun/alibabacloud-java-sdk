@@ -11,13 +11,13 @@ public class DescribeIllegalUrlExportTaskResponseBody extends TeaModel {
     public String downloadUrl;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The operation that you want to perform. Set the value to **DescribeIllegalUrlExportTask**.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The status of the export task. A value of **complete** indicates that the task is successful.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("Status")
     public String status;

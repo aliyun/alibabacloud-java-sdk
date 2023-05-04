@@ -11,7 +11,7 @@ public class DeleteRealtimeLogDeliveryRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>The name of the Logstore that collects log data from Alibaba Cloud Content Delivery Network (CDN) in real time.</p>
+     * <p>The name of the Logstore where log entries are stored.</p>
      */
     @NameInMap("Logstore")
     public String logstore;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCdnCertificateListResponseBody extends TeaModel {
     /**
-     * <p>The data type of the SSL certificate information.</p>
+     * <p>Details about certificates.</p>
      */
     @NameInMap("CertificateListModel")
     public DescribeCdnCertificateListResponseBodyCertificateListModel certificateListModel;
@@ -39,37 +39,37 @@ public class DescribeCdnCertificateListResponseBody extends TeaModel {
 
     public static class DescribeCdnCertificateListResponseBodyCertificateListModelCertListCert extends TeaModel {
         /**
-         * <p>The ID of the SSL certificate.</p>
+         * <p>The ID of the certificate.</p>
          */
         @NameInMap("CertId")
         public Long certId;
 
         /**
-         * <p>The name of the SSL certificate.</p>
+         * <p>The name of the certificate.</p>
          */
         @NameInMap("CertName")
         public String certName;
 
         /**
-         * <p>The Common Name (CN) attribute of the SSL certificate. In most cases, the value is a domain name.</p>
+         * <p>The Common Name (CN) attribute of the certificate. In most cases, the CN is a domain name.</p>
          */
         @NameInMap("Common")
         public String common;
 
         /**
-         * <p>The fingerprint of the SSL certificate.</p>
+         * <p>The fingerprint of the certificate.</p>
          */
         @NameInMap("Fingerprint")
         public String fingerprint;
 
         /**
-         * <p>The certificate authority (CA) that issued the SSL certificate.</p>
+         * <p>The certificate authority (CA) that issued the certificate.</p>
          */
         @NameInMap("Issuer")
         public String issuer;
 
         /**
-         * <p>The timestamp when the SSL certificate was issued.</p>
+         * <p>The timestamp.</p>
          */
         @NameInMap("LastTime")
         public Long lastTime;
@@ -150,13 +150,13 @@ public class DescribeCdnCertificateListResponseBody extends TeaModel {
 
     public static class DescribeCdnCertificateListResponseBodyCertificateListModel extends TeaModel {
         /**
-         * <p>The details about each SSL certificate.</p>
+         * <p>The list of certificates.</p>
          */
         @NameInMap("CertList")
         public DescribeCdnCertificateListResponseBodyCertificateListModelCertList certList;
 
         /**
-         * <p>The number of SSL certificates returned.</p>
+         * <p>The number of certificates that are returned.</p>
          */
         @NameInMap("Count")
         public Integer count;

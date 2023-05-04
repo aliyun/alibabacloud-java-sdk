@@ -39,16 +39,16 @@ public class ListRealtimeLogDeliveryDomainsResponseBody extends TeaModel {
 
     public static class ListRealtimeLogDeliveryDomainsResponseBodyContentDomains extends TeaModel {
         /**
-         * <p>The accelerated domain name.</p>
+         * <p>The domain name.</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
-         * <p>The status of the real-time log delivery feature. Valid values:</p>
+         * <p>The status. Valid values:</p>
          * <br>
-         * <p>*   **online**: The feature is enabled.</p>
-         * <p>*   **offline**: The feature is disabled.</p>
+         * <p>*   **online**: enabled</p>
+         * <p>*   **offline**: disabled</p>
          */
         @NameInMap("Status")
         public String status;

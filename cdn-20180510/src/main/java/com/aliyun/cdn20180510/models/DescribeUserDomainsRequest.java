@@ -19,7 +19,7 @@ public class DescribeUserDomainsRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
-     * <p>>  The end time must be later than the start time.</p>
+     * <p>> The end time must be later than the start time.</p>
      */
     @NameInMap("ChangeEndTime")
     public String changeEndTime;
@@ -33,24 +33,24 @@ public class DescribeUserDomainsRequest extends TeaModel {
     /**
      * <p>Specifies whether to display domain names that are under review, failed the review, or failed to be configured. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("CheckDomainShow")
     public Boolean checkDomainShow;
 
     /**
-     * <p>The accelerated region. By default, all accelerated regions are queried. Valid values:</p>
+     * <p>The acceleration region. By default, all acceleration regions are queried. Valid values:</p>
      * <br>
      * <p>*   **domestic**: Chinese mainland</p>
-     * <p>*   **global**</p>
-     * <p>*   **overseas**: global (excluding the Chinese mainland)</p>
+     * <p>*   **global**: global</p>
+     * <p>*   **overseas**: outside the Chinese mainland</p>
      */
     @NameInMap("Coverage")
     public String coverage;
 
     /**
-     * <p>The accelerated domain names. If you do not set this parameter, configurations of all domain names that match the conditions are returned.</p>
+     * <p>The accelerated domain. If you do not set this parameter, all domain names that match the conditions are returned.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -63,24 +63,24 @@ public class DescribeUserDomainsRequest extends TeaModel {
      * <p>*   **suf_match**: suffix match</p>
      * <p>*   **full_match** (default): exact match</p>
      * <br>
-     * <p>>  If you specify the domain names to query but do not set the DomainSearchType parameter, the exact match mode is used.</p>
+     * <p>> If you specify the domain names to query but do not set the DomainSearchType parameter, the exact match mode is used.</p>
      */
     @NameInMap("DomainSearchType")
     public String domainSearchType;
 
     /**
-     * <p>The status of the domain name. You can filter domain names by status. Valid values:</p>
+     * <p>The status of the domain name. Valid values:</p>
      * <br>
-     * <p>*   **online**: enabled</p>
-     * <p>*   **offline**: disabled</p>
-     * <p>*   **configuring**: being configured</p>
-     * <p>*   **configure_failed**: failed to be configured</p>
-     * <p>*   **checking**: under review</p>
-     * <p>*   **check_failed**: failed the review</p>
-     * <p>*   **stopping**: being disabled</p>
-     * <p>*   **deleting**: deleting</p>
+     * <p>*   **online**</p>
+     * <p>*   **offline**</p>
+     * <p>*   **configuring**</p>
+     * <p>*   **configure_failed**</p>
+     * <p>*   **checking**</p>
+     * <p>*   **check_failed**</p>
+     * <p>*   **stopping**</p>
+     * <p>*   **deleting**</p>
      * <br>
-     * <p>If you do not set this parameter, all states are queried.</p>
+     * <p>If you do not set this parameter, domain names in all states are queried.</p>
      */
     @NameInMap("DomainStatus")
     public String domainStatus;
@@ -116,7 +116,7 @@ public class DescribeUserDomainsRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags. Maximum number of elements in the list: 20</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeUserDomainsRequestTag> tag;
@@ -248,7 +248,7 @@ public class DescribeUserDomainsRequest extends TeaModel {
 
     public static class DescribeUserDomainsRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag. Valid values of N: **1** to **20**.</p>
+         * <p>The key of a tag.</p>
          * <br>
          * <p>By default, all tag keys are queried.</p>
          */
@@ -256,7 +256,7 @@ public class DescribeUserDomainsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag. Valid values of N: **1** to **20**.</p>
+         * <p>The value of the tag.</p>
          * <br>
          * <p>By default, all tag values are queried.</p>
          */
