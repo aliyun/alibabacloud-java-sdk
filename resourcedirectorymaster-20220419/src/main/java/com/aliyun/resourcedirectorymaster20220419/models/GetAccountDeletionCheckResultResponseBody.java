@@ -4,15 +4,9 @@ package com.aliyun.resourcedirectorymaster20220419.models;
 import com.aliyun.tea.*;
 
 public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
-    /**
-     * <p>The result of the deletion check for the member.</p>
-     */
     @NameInMap("AccountDeletionCheckResultInfo")
     public GetAccountDeletionCheckResultResponseBodyAccountDeletionCheckResultInfo accountDeletionCheckResultInfo;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,21 +32,12 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
     }
 
     public static class GetAccountDeletionCheckResultResponseBodyAccountDeletionCheckResultInfoAbandonableChecks extends TeaModel {
-        /**
-         * <p>The ID of the check item.</p>
-         */
         @NameInMap("CheckId")
         public String checkId;
 
-        /**
-         * <p>The name of the cloud service to which the check item belongs.</p>
-         */
         @NameInMap("CheckName")
         public String checkName;
 
-        /**
-         * <p>The description of the check item.</p>
-         */
         @NameInMap("Description")
         public String description;
 
@@ -88,21 +73,12 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
     }
 
     public static class GetAccountDeletionCheckResultResponseBodyAccountDeletionCheckResultInfoNotAllowReason extends TeaModel {
-        /**
-         * <p>The ID of the check item.</p>
-         */
         @NameInMap("CheckId")
         public String checkId;
 
-        /**
-         * <p>The name of the cloud service to which the check item belongs.</p>
-         */
         @NameInMap("CheckName")
         public String checkName;
 
-        /**
-         * <p>The description of the check item.</p>
-         */
         @NameInMap("Description")
         public String description;
 
@@ -138,37 +114,15 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
     }
 
     public static class GetAccountDeletionCheckResultResponseBodyAccountDeletionCheckResultInfo extends TeaModel {
-        /**
-         * <p>The check items that you can choose to ignore for the member deletion.</p>
-         * <br>
-         * <p>> This parameter may be returned if the value of AllowDelete is true.</p>
-         */
         @NameInMap("AbandonableChecks")
         public java.util.List<GetAccountDeletionCheckResultResponseBodyAccountDeletionCheckResultInfoAbandonableChecks> abandonableChecks;
 
-        /**
-         * <p>Indicates whether the member can be deleted. Valid values:</p>
-         * <br>
-         * <p>*   true: The member can be deleted.</p>
-         * <p>*   false: The member cannot be deleted.</p>
-         */
         @NameInMap("AllowDelete")
         public String allowDelete;
 
-        /**
-         * <p>The reasons why the member cannot be deleted.</p>
-         * <br>
-         * <p>> This parameter is returned only if the value of AllowDelete is false.</p>
-         */
         @NameInMap("NotAllowReason")
         public java.util.List<GetAccountDeletionCheckResultResponseBodyAccountDeletionCheckResultInfoNotAllowReason> notAllowReason;
 
-        /**
-         * <p>The status of the check. Valid values:</p>
-         * <br>
-         * <p>*   PreCheckComplete: The check is complete.</p>
-         * <p>*   PreChecking: The check is in progress.</p>
-         */
         @NameInMap("Status")
         public String status;
 

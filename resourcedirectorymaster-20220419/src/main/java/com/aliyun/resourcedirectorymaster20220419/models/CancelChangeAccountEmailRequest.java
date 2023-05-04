@@ -4,9 +4,6 @@ package com.aliyun.resourcedirectorymaster20220419.models;
 import com.aliyun.tea.*;
 
 public class CancelChangeAccountEmailRequest extends TeaModel {
-    /**
-     * <p>The Alibaba Cloud account ID of the member.</p>
-     */
     @NameInMap("AccountId")
     public String accountId;
 

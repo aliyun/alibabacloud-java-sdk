@@ -4,15 +4,9 @@ package com.aliyun.resourcedirectorymaster20220419.models;
 import com.aliyun.tea.*;
 
 public class CreateControlPolicyResponseBody extends TeaModel {
-    /**
-     * <p>The details of the access control policy.</p>
-     */
     @NameInMap("ControlPolicy")
     public CreateControlPolicyResponseBodyControlPolicy controlPolicy;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,56 +32,27 @@ public class CreateControlPolicyResponseBody extends TeaModel {
     }
 
     public static class CreateControlPolicyResponseBodyControlPolicy extends TeaModel {
-        /**
-         * <p>The number of times that the access control policy is referenced.</p>
-         */
         @NameInMap("AttachmentCount")
         public String attachmentCount;
 
-        /**
-         * <p>The time when the access control policy was created.</p>
-         */
         @NameInMap("CreateDate")
         public String createDate;
 
-        /**
-         * <p>The description of the access control policy.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The effective scope of the access control policy.</p>
-         * <br>
-         * <p>The value RAM indicates that the access control policy takes effect only for RAM users and RAM roles.</p>
-         */
         @NameInMap("EffectScope")
         public String effectScope;
 
-        /**
-         * <p>The ID of the access control policy.</p>
-         */
         @NameInMap("PolicyId")
         public String policyId;
 
-        /**
-         * <p>The name of the access control policy.</p>
-         */
         @NameInMap("PolicyName")
         public String policyName;
 
-        /**
-         * <p>The type of the access control policy. Valid values:</p>
-         * <br>
-         * <p>*   System: system access control policy</p>
-         * <p>*   Custom: custom access control policy</p>
-         */
         @NameInMap("PolicyType")
         public String policyType;
 
-        /**
-         * <p>The time when the access control policy was updated.</p>
-         */
         @NameInMap("UpdateDate")
         public String updateDate;
 
