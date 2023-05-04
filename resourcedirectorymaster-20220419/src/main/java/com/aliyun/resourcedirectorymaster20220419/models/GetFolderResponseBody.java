@@ -4,15 +4,9 @@ package com.aliyun.resourcedirectorymaster20220419.models;
 import com.aliyun.tea.*;
 
 public class GetFolderResponseBody extends TeaModel {
-    /**
-     * <p>The information about the folder.</p>
-     */
     @NameInMap("Folder")
     public GetFolderResponseBodyFolder folder;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,33 +32,18 @@ public class GetFolderResponseBody extends TeaModel {
     }
 
     public static class GetFolderResponseBodyFolder extends TeaModel {
-        /**
-         * <p>The time when the folder was created.</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The ID of the folder.</p>
-         */
         @NameInMap("FolderId")
         public String folderId;
 
-        /**
-         * <p>The name of the folder.</p>
-         */
         @NameInMap("FolderName")
         public String folderName;
 
-        /**
-         * <p>The ID of the parent folder.</p>
-         */
         @NameInMap("ParentFolderId")
         public String parentFolderId;
 
-        /**
-         * <p>The path of the folder in the resource directory.</p>
-         */
         @NameInMap("ResourceDirectoryPath")
         public String resourceDirectoryPath;
 

@@ -4,15 +4,9 @@ package com.aliyun.resourcedirectorymaster20220419.models;
 import com.aliyun.tea.*;
 
 public class GetResourceDirectoryResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The information of the resource directory.</p>
-     */
     @NameInMap("ResourceDirectory")
     public GetResourceDirectoryResponseBodyResourceDirectory resourceDirectory;
 
@@ -38,59 +32,27 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
     }
 
     public static class GetResourceDirectoryResponseBodyResourceDirectory extends TeaModel {
-        /**
-         * <p>The status of the Control Policy feature. Valid values:</p>
-         * <br>
-         * <p>*   Enabled: The feature is enabled.</p>
-         * <p>*   PendingEnable: The feature is being enabled.</p>
-         * <p>*   Disabled: The feature is disabled.</p>
-         * <p>*   PendingDisable: The feature is being disabled.</p>
-         */
         @NameInMap("ControlPolicyStatus")
         public String controlPolicyStatus;
 
-        /**
-         * <p>The time when the resource directory was enabled.</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The real-name verification information.</p>
-         */
         @NameInMap("IdentityInformation")
         public String identityInformation;
 
-        /**
-         * <p>The ID of the management account.</p>
-         */
         @NameInMap("MasterAccountId")
         public String masterAccountId;
 
-        /**
-         * <p>The name of the management account.</p>
-         */
         @NameInMap("MasterAccountName")
         public String masterAccountName;
 
-        /**
-         * <p>The status of the member deletion feature. Valid values:</p>
-         * <br>
-         * <p>*   Enabled: The feature is enabled. You can call the [DeleteAccount](~~DeleteAccount~~) operation to delete members of the resource account type.</p>
-         * <p>*   Disabled: The feature is disabled. You cannot delete members of the resource account type.</p>
-         */
         @NameInMap("MemberDeletionStatus")
         public String memberDeletionStatus;
 
-        /**
-         * <p>The ID of the resource directory.</p>
-         */
         @NameInMap("ResourceDirectoryId")
         public String resourceDirectoryId;
 
-        /**
-         * <p>The ID of the Root folder.</p>
-         */
         @NameInMap("RootFolderId")
         public String rootFolderId;
 

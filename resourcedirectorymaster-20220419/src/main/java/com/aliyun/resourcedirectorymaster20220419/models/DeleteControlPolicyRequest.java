@@ -4,9 +4,6 @@ package com.aliyun.resourcedirectorymaster20220419.models;
 import com.aliyun.tea.*;
 
 public class DeleteControlPolicyRequest extends TeaModel {
-    /**
-     * <p>The ID of the access control policy.</p>
-     */
     @NameInMap("PolicyId")
     public String policyId;
 
