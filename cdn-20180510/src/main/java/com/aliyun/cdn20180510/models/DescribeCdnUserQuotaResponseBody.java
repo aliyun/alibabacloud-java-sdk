@@ -17,7 +17,7 @@ public class DescribeCdnUserQuotaResponseBody extends TeaModel {
     public Integer blockRemain;
 
     /**
-     * <p>The maximum number of accelerated domain names that can be added to Alibaba Cloud CDN.</p>
+     * <p>The maximum number of accelerated domain names.</p>
      */
     @NameInMap("DomainQuota")
     public Integer domainQuota;

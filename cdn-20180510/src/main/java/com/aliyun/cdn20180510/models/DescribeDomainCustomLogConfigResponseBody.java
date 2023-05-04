@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainCustomLogConfigResponseBody extends TeaModel {
     /**
-     * <p>The ID of the log configuration.</p>
+     * <p>The sample log configuration.</p>
      */
     @NameInMap("ConfigId")
     public String configId;
 
     /**
-     * <p>The format of the log configuration.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("Remark")
     public String remark;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The format of the log configuration.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The sample log configuration.</p>
+     * <p>The operation that you want to perform. Set the value to **DescribeDomainCustomLogConfig**.</p>
      */
     @NameInMap("Sample")
     public String sample;
 
     /**
-     * <p>The tag information about the log configuration.</p>
+     * <p>The ID of the log configuration.</p>
      */
     @NameInMap("Tag")
     public String tag;

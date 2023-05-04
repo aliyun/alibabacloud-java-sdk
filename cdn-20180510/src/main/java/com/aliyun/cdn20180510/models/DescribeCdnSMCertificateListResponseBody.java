@@ -122,7 +122,7 @@ public class DescribeCdnSMCertificateListResponseBody extends TeaModel {
 
     public static class DescribeCdnSMCertificateListResponseBodyCertificateListModel extends TeaModel {
         /**
-         * <p>A list of certificates.</p>
+         * <p>The list of certificates.</p>
          */
         @NameInMap("CertList")
         public DescribeCdnSMCertificateListResponseBodyCertificateListModelCertList certList;

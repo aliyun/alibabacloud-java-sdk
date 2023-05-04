@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainRealtimeLogDeliveryRequest extends TeaModel {
     /**
-     * <p>The accelerated domain name for which real-time log delivery is enabled. You can specify only one domain name.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("Domain")
     public String domain;

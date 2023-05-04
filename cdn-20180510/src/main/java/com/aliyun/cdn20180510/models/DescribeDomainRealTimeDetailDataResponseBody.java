@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainRealTimeDetailDataResponseBody extends TeaModel {
     /**
-     * <p>The data usage of each ISP and the number of visits in each region.</p>
+     * <p>The name of the Internet service provider. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query ISPs.</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The accelerated domain name for which you want to query data. You can specify multiple accelerated domain names and separate them with commas (,).</p>
      */
     @NameInMap("RequestId")
     public String requestId;

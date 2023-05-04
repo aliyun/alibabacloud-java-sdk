@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCdnDomainRequest extends TeaModel {
     /**
-     * <p>The accelerated domain name. You can specify only one domain name in each call.</p>
+     * <p>The accelerated domain name. You can specify only one domain name in each request.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -23,17 +23,17 @@ public class ModifyCdnDomainRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The list of origin URLs.</p>
+     * <p>The information about the addresses of origin servers.</p>
      * <br>
-     * <p>>  You cannot set both the **Sources** and **TopLevelDomain** parameters in the same request. Otherwise, ********the **TopLevelDomain** parameter cannot take effect.</p>
+     * <p>> Do not set **Sources** and **TopLevelDomain** at the same time. If you set **Sources** and **TopLevelDomain** at the same time, **TopLevelDomain** does not take effect.</p>
      */
     @NameInMap("Sources")
     public String sources;
 
     /**
-     * <p>The top-level domain name. To add a top-level domain name, set the parameter CDN_TOP_LEVEL_DOMAIN_GREY_USER_LIST. This feature is available to only selected users.</p>
+     * <p>The root domain. To add a root domain name, you must be added to the whitelist specified by the CDN_TOP_LEVEL_DOMAIN_GREY_USER_LIST parameter.</p>
      * <br>
-     * <p>>  You cannot set both the **Sources** and **TopLevelDomain** parameters in the same request. Otherwise, ****the **TopLevelDomain** parameter cannot take effect.</p>
+     * <p>> Do not set **Sources** and **TopLevelDomain** at the same time. If you set **Sources** and **TopLevelDomain** at the same time, **TopLevelDomain** does not take effect.</p>
      */
     @NameInMap("TopLevelDomain")
     public String topLevelDomain;

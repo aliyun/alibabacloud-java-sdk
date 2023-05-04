@@ -7,9 +7,9 @@ public class DescribeBlockedRegionsRequest extends TeaModel {
     /**
      * <p>The language. Valid values:</p>
      * <br>
-     * <p>- **zh**: simplified Chinese</p>
-     * <p>- **en**: English</p>
-     * <p>- **jp**: Japanese</p>
+     * <p>*   **zh**: simplified Chinese</p>
+     * <p>*   **en**: English</p>
+     * <p>*   **jp**: Japanese</p>
      */
     @NameInMap("Language")
     public String language;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchStartCdnDomainRequest extends TeaModel {
     /**
-     * <p>The domain names that you want to enable. Separate multiple domain names with commas (,).</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("DomainNames")
     public String domainNames;

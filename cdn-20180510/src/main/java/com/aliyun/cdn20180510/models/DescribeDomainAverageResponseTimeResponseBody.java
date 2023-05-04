@@ -5,37 +5,41 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainAverageResponseTimeResponseBody extends TeaModel {
     /**
-     * <p>The average response time collected at each time interval.</p>
+     * <p>The name of the region. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query the most recent region list. If you do not set this parameter, all regions are queried.</p>
      */
     @NameInMap("AvgRTPerInterval")
     public DescribeDomainAverageResponseTimeResponseBodyAvgRTPerInterval avgRTPerInterval;
 
     /**
-     * <p>The time interval between the data entries returned.</p>
+     * <p>The statistical analytics feature of Alibaba Cloud CDN is discontinued. The API operations related to the statistical analytics feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://www.alibabacloud.com/help/en/alibaba-cloud-cdn/latest/customize-an-operations-report-template-and-create-a-tracking-task) feature to for data analysis.  </p>
+     * <br>
+     * <p>> - If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.</p>
+     * <p>- You can call this operation up to 100 times per second per account.</p>
+     * <p>- You can specify multiple domain names and separate them with commas (,). You can specify at most 50 domain names in each call.</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
 
     /**
-     * <p>The accelerated domain name.</p>
+     * <p>The timestamp of the returned data.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The end of the time range during which data was queried.</p>
+     * <p>The time interval between the data entries returned.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The average response time.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The beginning of the time range during which data was queried.</p>
+     * <p>The average response time collected at each time interval.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -95,13 +99,13 @@ public class DescribeDomainAverageResponseTimeResponseBody extends TeaModel {
 
     public static class DescribeDomainAverageResponseTimeResponseBodyAvgRTPerIntervalDataModule extends TeaModel {
         /**
-         * <p>The timestamp of the returned data.</p>
+         * <p>The accelerated domain name.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         /**
-         * <p>The average response time.</p>
+         * <p>The type of the query condition. Valid values: When you set the value to dynamic, this operation queries the average response time of dynamic resources and static resources. If you do not set this parameter, this operation queries the average response time of only static resources. By default, this parameter is not set.</p>
          */
         @NameInMap("Value")
         public String value;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSpecificStagingConfigRequest extends TeaModel {
     /**
-     * <p>The configuration IDs. Separate configuration IDs with commas (,). For more information about ConfigId, see [Usage notes on ConfigId](~~388994~~).</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("ConfigId")
     public String configId;

@@ -11,13 +11,13 @@ public class DescribeCdnDomainConfigsRequest extends TeaModel {
     public String configId;
 
     /**
-     * <p>The accelerated domain name. You can specify only one domain name in each call.</p>
+     * <p>The accelerated domain name. You can specify only one domain name in each request.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The names of the features. Separate multiple feature names with commas (,). For more information, see [BatchSetCdnDomainConfig](~~388460~~).</p>
+     * <p>The names of the features. Separate multiple feature names with commas (,). For more information, see [Parameters for configuring features for domain names](~~388460~~).</p>
      */
     @NameInMap("FunctionNames")
     public String functionNames;

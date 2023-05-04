@@ -4,33 +4,18 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnUserDomainsByFuncResponseBody extends TeaModel {
-    /**
-     * <p>The configurations of the accelerated domain name.</p>
-     */
     @NameInMap("Domains")
     public DescribeCdnUserDomainsByFuncResponseBodyDomains domains;
 
-    /**
-     * <p>The page number of the returned page.</p>
-     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    /**
-     * <p>The number of entries returned per page.</p>
-     */
     @NameInMap("PageSize")
     public Long pageSize;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of domain names returned.</p>
-     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -80,38 +65,18 @@ public class DescribeCdnUserDomainsByFuncResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnUserDomainsByFuncResponseBodyDomainsPageDataSourcesSource extends TeaModel {
-        /**
-         * <p>The address of the origin server.</p>
-         */
         @NameInMap("Content")
         public String content;
 
-        /**
-         * <p>The port of the origin server.</p>
-         */
         @NameInMap("Port")
         public Integer port;
 
-        /**
-         * <p>The priority.</p>
-         */
         @NameInMap("Priority")
         public String priority;
 
-        /**
-         * <p>The type of the origin server. Valid values:</p>
-         * <br>
-         * <p>*   **ipaddr**: an origin IP address</p>
-         * <p>*   **domain:** a domain name</p>
-         * <p>*   **oss:** the OSS domain of an Object Storage Service (OSS) bucket</p>
-         * <p>*   **fc_domain:** a Function Compute domain name</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <p>The weight of the origin server if multiple origin servers have been specified.</p>
-         */
         @NameInMap("Weight")
         public String weight;
 
@@ -182,80 +147,33 @@ public class DescribeCdnUserDomainsByFuncResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnUserDomainsByFuncResponseBodyDomainsPageData extends TeaModel {
-        /**
-         * <p>The type of the workload accelerated by Alibaba Cloud CDN. Valid values:</p>
-         * <br>
-         * <p>*   **web**: image and small file distribution</p>
-         * <p>*   **download**: large file distribution</p>
-         * <p>*   **video**: on-demand video and audio streaming</p>
-         * <p>*   **liveStream**: live streaming</p>
-         */
         @NameInMap("CdnType")
         public String cdnType;
 
-        /**
-         * <p>The CNAME assigned to the accelerated domain name.</p>
-         */
         @NameInMap("Cname")
         public String cname;
 
-        /**
-         * <p>The description of the accelerated domain name.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The accelerated domain name.</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>The status of the accelerated domain name. Valid values:</p>
-         * <br>
-         * <p>*   **online:** enabled</p>
-         * <p>*   **offline:** disabled</p>
-         * <p>*   **configuring:** configuring</p>
-         * <p>*   **configure_failed:** configuration failed</p>
-         * <p>*   **checking:** reviewing</p>
-         * <p>*   **check_failed**: failed the review</p>
-         * <p>*   **stopping**: being disabled</p>
-         * <p>*   **deleting**: deleting</p>
-         */
         @NameInMap("DomainStatus")
         public String domainStatus;
 
-        /**
-         * <p>The time when the accelerated domain name was added.</p>
-         */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
-        /**
-         * <p>The time when the accelerated domain name was modified.</p>
-         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        /**
-         * <p>The ID of the resource group.</p>
-         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        /**
-         * <p>The information about the origin server.</p>
-         */
         @NameInMap("Sources")
         public DescribeCdnUserDomainsByFuncResponseBodyDomainsPageDataSources sources;
 
-        /**
-         * <p>Indicates whether HTTPS is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **on**</p>
-         * <p>*   **off**</p>
-         */
         @NameInMap("SslProtocol")
         public String sslProtocol;
 

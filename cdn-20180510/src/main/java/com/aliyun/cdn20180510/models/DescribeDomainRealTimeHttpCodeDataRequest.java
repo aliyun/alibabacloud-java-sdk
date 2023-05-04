@@ -4,41 +4,18 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainRealTimeHttpCodeDataRequest extends TeaModel {
-    /**
-     * <p>The accelerated domain name. You can specify multiple accelerated domain names and separate them with commas (,).</p>
-     * <br>
-     * <p>> You can specify up to 100 accelerated domain names in each request.</p>
-     */
     @NameInMap("DomainName")
     public String domainName;
 
-    /**
-     * <p>The end of the time range to query.</p>
-     * <br>
-     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     * <br>
-     * <p>> The end time must be later than the start time.</p>
-     */
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <p>The name of the Internet service provider (ISP). You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query ISP names.</p>
-     */
     @NameInMap("IspNameEn")
     public String ispNameEn;
 
-    /**
-     * <p>The name of the region. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions. If you do not specify a region, all regions are queried.</p>
-     */
     @NameInMap("LocationNameEn")
     public String locationNameEn;
 
-    /**
-     * <p>The beginning of the time range to query.</p>
-     * <br>
-     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     */
     @NameInMap("StartTime")
     public String startTime;
 

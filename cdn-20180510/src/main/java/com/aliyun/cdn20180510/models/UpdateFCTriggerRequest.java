@@ -17,7 +17,7 @@ public class UpdateFCTriggerRequest extends TeaModel {
     public String notes;
 
     /**
-     * <p>The assigned Resource Access Management (RAM) role.</p>
+     * <p>The assigned RAM role.</p>
      */
     @NameInMap("RoleARN")
     public String roleARN;

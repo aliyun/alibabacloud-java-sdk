@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateRealTimeLogDeliveryRequest extends TeaModel {
     /**
-     * <p>The accelerated domain name for which you want to configure real-time log delivery. You can specify multiple domain names and separate them with commas (,).</p>
+     * <p>The accelerated domain name for which you want to configure real-time log delivery.</p>
      */
     @NameInMap("Domain")
     public String domain;
 
     /**
-     * <p>The name of the Logstore that collects log data from Alibaba Cloud Content Delivery Network (CDN) in real time.</p>
+     * <p>The name of the Logstore where log entries are stored.</p>
      */
     @NameInMap("Logstore")
     public String logstore;

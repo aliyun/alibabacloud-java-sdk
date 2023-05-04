@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeStagingIpResponseBody extends TeaModel {
     /**
-     * <p>The IPv4 addresses of the nodes.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("IPV4s")
     public DescribeStagingIpResponseBodyIPV4s IPV4s;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The IPv4 addresses of the nodes.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -65,9 +65,9 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
         /**
          * <p>The type of the origin server. Valid values:</p>
          * <br>
-         * <p>*   **ipaddr:** an IP address.</p>
-         * <p>*   **domain:** a domain name</p>
-         * <p>*   **oss:** the OSS domain of an Object Storage Service (OSS) bucket</p>
+         * <p>*   **ipaddr**: an origin IP address</p>
+         * <p>*   **domain**: an origin domain name</p>
+         * <p>*   **oss**: the domain name of an Object Storage Service (OSS) bucket</p>
          * <p>*   **fc_domain:** a Function Compute domain name</p>
          */
         @NameInMap("Type")
@@ -171,7 +171,7 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
         public String cname;
 
         /**
-         * <p>The description of the request.</p>
+         * <p>The description of the domain name.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -185,18 +185,20 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
         /**
          * <p>The status of the accelerated domain name. Valid values:</p>
          * <br>
-         * <p>*   **online:** enabled</p>
-         * <p>*   **offline:** disabled</p>
-         * <p>*   **configuring:** configuring</p>
-         * <p>*   **configure_failed:** configuration failed</p>
-         * <p>*   **checking:** reviewing</p>
-         * <p>*   **check_failed:** review failed</p>
+         * <p>*   **online**</p>
+         * <p>*   **offline**</p>
+         * <p>*   **configuring**</p>
+         * <p>*   **configure_failed**</p>
+         * <p>*   **checking**</p>
+         * <p>*   **check_failed**</p>
+         * <p>*   **stopping**</p>
+         * <p>*   **deleting**</p>
          */
         @NameInMap("DomainStatus")
         public String domainStatus;
 
         /**
-         * <p>The time when the audio or video file was created.</p>
+         * <p>The time when the domain name was created.</p>
          */
         @NameInMap("GmtCreated")
         public String gmtCreated;
@@ -226,7 +228,7 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
         public String scope;
 
         /**
-         * <p>Indicates whether the Security Socket Layer (SSL) certificate is enabled. Valid values:</p>
+         * <p>Indicates whether the SSL certificate is enabled. Valid values:</p>
          * <br>
          * <p>*   **on**</p>
          * <p>*   **off**</p>

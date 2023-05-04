@@ -5,31 +5,33 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
     /**
-     * <p>The end of the time range that was queried.</p>
+     * <p>The type of data returned.</p>
+     * <br>
+     * <p>>  For Alibaba Cloud CDN, the valid value is Simple.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The information about the accelerated domain name.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The information about requests collected every 5 minutes.</p>
+     * <p>The number of requests.</p>
      */
     @NameInMap("RequestPerInterval")
     public DescribeDomainMultiUsageDataResponseBodyRequestPerInterval requestPerInterval;
 
     /**
-     * <p>The beginning of the time range that was queried.</p>
+     * <p>The timestamp of the data returned.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The statistics about data transfer collected every 5 minutes.</p>
+     * <p>The name of the district.</p>
      */
     @NameInMap("TrafficPerInterval")
     public DescribeDomainMultiUsageDataResponseBodyTrafficPerInterval trafficPerInterval;
@@ -81,27 +83,31 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
 
     public static class DescribeDomainMultiUsageDataResponseBodyRequestPerIntervalRequestDataModule extends TeaModel {
         /**
-         * <p>The information about the accelerated domain name.</p>
+         * <p>The accelerated domain name.</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
-         * <p>The number of requests.</p>
+         * <p>The timestamp of the data returned.</p>
          */
         @NameInMap("Request")
         public Long request;
 
         /**
-         * <p>The timestamp of the data returned.</p>
+         * <p>The type of data returned. Valid values:</p>
+         * <br>
+         * <p>- **StaticHttps**: the number of HTTPS requests for static content.</p>
+         * <p>- **DynamicHttps**: the number of HTTPS requests for dynamic content.</p>
+         * <p>- **DynamicHttp**: the number of HTTP requests for dynamic content.</p>
+         * <p>- **StaticQuic**: the number of QUIC requests for static content.</p>
+         * <p>- **DynamicQuic**: the number of QUIC requests for dynamic content.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         /**
-         * <p>The type of data returned.</p>
-         * <br>
-         * <p>>  For Alibaba Cloud CDN, the valid value is Simple.</p>
+         * <p>The statistics about data transfer collected every 5 minutes.</p>
          */
         @NameInMap("Type")
         public String type;
@@ -166,37 +172,37 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
 
     public static class DescribeDomainMultiUsageDataResponseBodyTrafficPerIntervalTrafficDataModule extends TeaModel {
         /**
-         * <p>The name of the district.</p>
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <br>
+         * <p>>  The end time must be later than the start time.</p>
          */
         @NameInMap("Area")
         public String area;
 
         /**
-         * <p>The bandwidth. Unit: bit/s.</p>
+         * <p>The timestamp of the data returned.</p>
          */
         @NameInMap("Bps")
         public Float bps;
 
         /**
-         * <p>The accelerated domain name.</p>
+         * <p>> *   If you do not set StartTime or EndTime, data collected within the last 10 minutes is queried.</p>
+         * <p>*   The maximum time range between StartTime and EndTime can be 1 hour.</p>
+         * <p>*   You can query data within the last 90 days.</p>
+         * <p>*   You can query the amount of data transfer and the number of requests for accelerated domain names that have been already removed from Alibaba Cloud CDN.</p>
+         * <p>*   The maximum number of times that each user can call this operation per second is 50.</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
-         * <p>The timestamp of the data returned.</p>
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         /**
-         * <p>The type of data returned. Valid values:</p>
-         * <br>
-         * <p>- **StaticHttps**: the number of HTTPS requests for static content.</p>
-         * <p>- **DynamicHttps**: the number of HTTPS requests for dynamic content.</p>
-         * <p>- **DynamicHttp**: the number of HTTP requests for dynamic content.</p>
-         * <p>- **StaticQuic**: the number of QUIC requests for static content.</p>
-         * <p>- **DynamicQuic**: the number of QUIC requests for dynamic content.</p>
+         * <p>The bandwidth. Unit: bit/s.</p>
          */
         @NameInMap("Type")
         public String type;

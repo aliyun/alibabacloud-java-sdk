@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainsBySourceResponseBody extends TeaModel {
     /**
-     * <p>The domain names corresponding to each origin server. The data is indicated by the DomainsData parameter. Data type: array.</p>
+     * <p>The domain names corresponding to each origin server.</p>
      */
     @NameInMap("DomainsList")
     public DescribeDomainsBySourceResponseBodyDomainsList domainsList;
@@ -55,21 +55,21 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
         /**
          * <p>The workload type of the accelerated domain name. Valid values:</p>
          * <br>
-         * <p>*   **web**: images and small files.</p>
-         * <p>*   **download**: large files.</p>
-         * <p>*   **video**: on-demand video and audio streaming.</p>
+         * <p>*   **web**: images and small files</p>
+         * <p>*   **download**: large files</p>
+         * <p>*   **video**: on-demand video and audio streaming</p>
          */
         @NameInMap("CdnType")
         public String cdnType;
 
         /**
-         * <p>The time when the domain name was added to Alibaba Cloud CDN.</p>
+         * <p>The creation time.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The CNAME assigned to the domain name.</p>
+         * <p>The CNAME record assigned to the domain name.</p>
          */
         @NameInMap("DomainCname")
         public String domainCname;
@@ -81,21 +81,20 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
         public String domainName;
 
         /**
-         * <p>The status of the accelerated domain name. Valid values:</p>
+         * <p>The status of the domain name. Valid values:</p>
          * <br>
          * <p>*   **applying**: The domain name is under review.</p>
-         * <p>*   **configure_failed**: The domain name failed the review.</p>
          * <p>*   **configuring**: The domain name is being configured.</p>
          * <p>*   **online**: The domain name is working as expected.</p>
          * <p>*   **stopping**: The domain name is being stopped.</p>
          * <p>*   **offline**: The domain name is disabled.</p>
-         * <p>*   **disabling**: The domain name is being disabled.</p>
+         * <p>*   **disabling**: The domain name is being removed.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The time when the configuration was updated.</p>
+         * <p>The update time.</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
@@ -195,19 +194,19 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
 
     public static class DescribeDomainsBySourceResponseBodyDomainsListDomainsData extends TeaModel {
         /**
-         * <p>The detailed information about the domain name. The data is indicated by the domainInfo parameter. Data type: array.</p>
+         * <p>Information about the domain name.</p>
          */
         @NameInMap("DomainInfos")
         public DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomainInfos domainInfos;
 
         /**
-         * <p>The domain names that correspond to each origin server. The domain name is indicated by the domainNames parameter.</p>
+         * <p>The domain names that correspond to each origin server.</p>
          */
         @NameInMap("Domains")
         public DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomains domains;
 
         /**
-         * <p>An origin server.</p>
+         * <p>The origin server.</p>
          */
         @NameInMap("Source")
         public String source;

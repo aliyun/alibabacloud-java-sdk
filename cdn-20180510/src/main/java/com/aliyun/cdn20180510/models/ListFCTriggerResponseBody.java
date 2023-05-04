@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFCTriggerResponseBody extends TeaModel {
     /**
-     * <p>The information about the Function Compute trigger returned.</p>
+     * <p>The Function Compute triggers that are set for Alibaba Cloud CDN events.</p>
      */
     @NameInMap("FCTriggers")
     public java.util.List<ListFCTriggerResponseBodyFCTriggers> FCTriggers;
@@ -39,19 +39,19 @@ public class ListFCTriggerResponseBody extends TeaModel {
 
     public static class ListFCTriggerResponseBodyFCTriggers extends TeaModel {
         /**
-         * <p>The name of the event for which the Function Compute trigger is set.</p>
+         * <p>The name of the event.</p>
          */
         @NameInMap("EventMetaName")
         public String eventMetaName;
 
         /**
-         * <p>The version of the event for which the Function Compute trigger is set.</p>
+         * <p>The version of the event.</p>
          */
         @NameInMap("EventMetaVersion")
         public String eventMetaVersion;
 
         /**
-         * <p>The remarks for the event.</p>
+         * <p>The remarks.</p>
          */
         @NameInMap("Notes")
         public String notes;
@@ -69,7 +69,7 @@ public class ListFCTriggerResponseBody extends TeaModel {
         public String sourceArn;
 
         /**
-         * <p>The trigger corresponding to the Function Compute service.</p>
+         * <p>The trigger that corresponds to the Function Compute service.</p>
          */
         @NameInMap("TriggerARN")
         public String triggerARN;

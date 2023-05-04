@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeCdnRegionAndIspResponseBody extends TeaModel {
     /**
-     * <p>A list of ISPs.</p>
+     * <p>The list of ISPs.</p>
      */
     @NameInMap("Isps")
     public DescribeCdnRegionAndIspResponseBodyIsps isps;
 
     /**
-     * <p>A list of regions.</p>
+     * <p>The list of regions.</p>
      */
     @NameInMap("Regions")
     public DescribeCdnRegionAndIspResponseBodyRegions regions;
@@ -53,7 +53,7 @@ public class DescribeCdnRegionAndIspResponseBody extends TeaModel {
 
     public static class DescribeCdnRegionAndIspResponseBodyIspsIsp extends TeaModel {
         /**
-         * <p>The English name of the region.</p>
+         * <p>The English name of the ISP.</p>
          */
         @NameInMap("NameEn")
         public String nameEn;

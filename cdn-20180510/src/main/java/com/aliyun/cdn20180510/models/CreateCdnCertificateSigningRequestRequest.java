@@ -11,43 +11,43 @@ public class CreateCdnCertificateSigningRequestRequest extends TeaModel {
     public String city;
 
     /**
-     * <p>The Common Name of the SSL certificate.</p>
+     * <p>The email address that can be used to contact the organization.</p>
      */
     @NameInMap("CommonName")
     public String commonName;
 
     /**
-     * <p>The country to which the organization belongs. Default value: CN.</p>
+     * <p>The content of the CSR.</p>
      */
     @NameInMap("Country")
     public String country;
 
     /**
-     * <p>The email address that can be used to contact the organization.</p>
+     * <p>The operation that you want to perform. Set the value to **CreateCdnCertificateSigningRequest**.</p>
      */
     @NameInMap("Email")
     public String email;
 
     /**
-     * <p>The name of the organization. Default value: Alibaba Inc.</p>
+     * <p>The Subject Alternative Name (SAN) extension of the SSL certificate. This extension is used to add domain names to the certificate. Separate multiple domain names with commas (,).</p>
      */
     @NameInMap("Organization")
     public String organization;
 
     /**
-     * <p>The name of the organization unit. Default value: Aliyun CDN.</p>
+     * <p>The MD5 value of the certificate public key.</p>
      */
     @NameInMap("OrganizationUnit")
     public String organizationUnit;
 
     /**
-     * <p>The Subject Alternative Name (SAN) extension of the SSL certificate. This extension is used to add domain names to the certificate. Separate multiple domain names with commas (,).</p>
+     * <p>The Common Name of the certificate.</p>
      */
     @NameInMap("SANs")
     public String SANs;
 
     /**
-     * <p>The provincial district to which the organization belongs. Default value: Zhejiang.</p>
+     * <p>The name of the organization. Default value: Alibaba Inc.</p>
      */
     @NameInMap("State")
     public String state;

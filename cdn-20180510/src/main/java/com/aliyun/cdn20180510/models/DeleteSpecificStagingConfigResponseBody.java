@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSpecificStagingConfigResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The operation that you want to perform. Set the value to **DeleteSpecificStagingConfig**.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

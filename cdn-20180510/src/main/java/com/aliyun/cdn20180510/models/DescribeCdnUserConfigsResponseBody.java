@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeCdnUserConfigsResponseBody extends TeaModel {
     /**
-     * <p>The configurations of Alibaba Cloud CDN.</p>
+     * <p>>  The maximum number of times that each user can call this operation per second is 30.</p>
      */
     @NameInMap("Configs")
     public java.util.List<DescribeCdnUserConfigsResponseBodyConfigs> configs;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The name of the feature.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,9 +39,7 @@ public class DescribeCdnUserConfigsResponseBody extends TeaModel {
 
     public static class DescribeCdnUserConfigsResponseBodyConfigs extends TeaModel {
         /**
-         * <p>The name of the parameter.</p>
-         * <br>
-         * <p>The configurations set by enterprise or government users.</p>
+         * <p>The name of the feature.</p>
          */
         @NameInMap("ArgName")
         public String argName;
@@ -53,7 +51,7 @@ public class DescribeCdnUserConfigsResponseBody extends TeaModel {
          * <p>*   **ddos_dispatch**: integration with Anti-DDoS</p>
          * <p>*   **edge_safe**: application security settings on edge nodes</p>
          * <p>*   **blocked_regions**: blocked regions</p>
-         * <p>*   **http\_acl\_policy**: access control list (ACL) rules</p>
+         * <p>*   **http_acl_policy**: access control list (ACL) rules</p>
          * <p>*   **bot_manager**: bot traffic management</p>
          * <p>*   **ip_reputation**: IP reputation library</p>
          */
@@ -61,7 +59,10 @@ public class DescribeCdnUserConfigsResponseBody extends TeaModel {
         public String argValue;
 
         /**
-         * <p>The name of the feature.</p>
+         * <p>The configuration item that you want to query. Valid values:</p>
+         * <br>
+         * <p>*   **domain_business_control**: Alibaba Cloud CDN configurations</p>
+         * <p>*   **waf**: Web Application Firewall (WAF) configurations</p>
          */
         @NameInMap("FunctionName")
         public String functionName;

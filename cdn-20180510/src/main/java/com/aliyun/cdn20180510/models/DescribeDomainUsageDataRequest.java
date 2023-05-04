@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainUsageDataRequest extends TeaModel {
     /**
-     * <p>The billable region. Default value: CN. Valid values:</p>
+     * <p>The ID of the billable region. Valid values:</p>
      * <br>
-     * <p>*   **CN**: Chinese mainland</p>
+     * <p>*   **CN** (default): inside the Chinese mainland</p>
      * <p>*   **OverSeas**: outside the Chinese mainland</p>
      * <p>*   **AP1**: Asia Pacific 1</p>
      * <p>*   **AP2**: Asia Pacific 2</p>
@@ -22,12 +22,12 @@ public class DescribeDomainUsageDataRequest extends TeaModel {
     public String area;
 
     /**
-     * <p>The protocol of the data that you want to query. Default value: all. Valid values:</p>
+     * <p>The protocol of the data that you want to query. Valid values:</p>
      * <br>
      * <p>*   **http**: HTTP</p>
      * <p>*   **https**: HTTPS</p>
      * <p>*   **quic**: QUIC</p>
-     * <p>*   **all**: HTTP, HTTPS, and QUIC</p>
+     * <p>*   **all** (default): HTTP, HTTPS, and QUIC</p>
      */
     @NameInMap("DataProtocol")
     public String dataProtocol;
@@ -51,7 +51,7 @@ public class DescribeDomainUsageDataRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The type of data that you want to query. Valid values:</p>
+     * <p>The type of the data that you want to query. Valid values:</p>
      * <br>
      * <p>*   **bps**: bandwidth</p>
      * <p>*   **traf**: traffic</p>
@@ -63,11 +63,11 @@ public class DescribeDomainUsageDataRequest extends TeaModel {
     public String field;
 
     /**
-     * <p>The time interval between the data entries to return. Unit: seconds. Valid values: **300** (5 minutes), **3600** (1 hour), and **86400** (1 day).</p>
+     * <p>The time granularity of the data entries. Unit: seconds. Valid values: **300** (5 minutes), **3600** (1 hour), and **86400** (1 day).</p>
      * <br>
-     * <p>*   If **Interval** is set to **300**, you can query usage data in the last six months. The maximum time range per query that can be specified is three days.</p>
+     * <p>*   If **Interval** is set to **300**, you can query usage data in the last 6 months. The maximum time range per query that can be specified is 3 days.</p>
      * <p>*   If **Interval** is set to **3600** or **86400**, you can query usage data of the previous year.</p>
-     * <p>*   If you do not set the **Interval** parameter, the maximum time range that you can query is one month. If you specify a time range of 1 to 3 days, the time interval between the entries that are returned is 1 hour. If you specify a time range of at least 4 days, the time interval between the entries that are returned is 1 day.</p>
+     * <p>*   If you leave the **Interval** parameter empty, the maximum time range that you can query is 1 month. If you specify a time range of 1 to 3 days, the time interval between the entries that are returned is 1 hour. If you specify a time range of at least 4 days, the time interval between the entries that are returned is 1 day.</p>
      */
     @NameInMap("Interval")
     public String interval;
@@ -83,11 +83,11 @@ public class DescribeDomainUsageDataRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The type of content that you want to query. Default value: all. Valid values:</p>
+     * <p>The type of content that you want to query. Valid values:</p>
      * <br>
      * <p>*   **static**: static content</p>
      * <p>*   **dynamic**: dynamic content</p>
-     * <p>*   **all**: both static and dynamic content</p>
+     * <p>*   **all** (default): both static and dynamic content</p>
      */
     @NameInMap("Type")
     public String type;

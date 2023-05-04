@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeCdnUserResourcePackageResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The name of the resource plan.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The details about each resource plan. The details are organized in an array. The array consists of the subparameter values of the ResourcePackageInfo parameter.</p>
+     * <p>The time when the resource plan expires.</p>
      */
     @NameInMap("ResourcePackageInfos")
     public DescribeCdnUserResourcePackageResponseBodyResourcePackageInfos resourcePackageInfos;
@@ -39,49 +39,46 @@ public class DescribeCdnUserResourcePackageResponseBody extends TeaModel {
 
     public static class DescribeCdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo extends TeaModel {
         /**
-         * <p>The ID of the resource plan.</p>
-         */
-        @NameInMap("CommodityCode")
-        public String commodityCode;
-
-        /**
-         * <p>The remaining quota of the resource plan.</p>
-         * <br>
-         * <p>*   The total amount of data transfer provided by the resource plan. Unit: bytes.</p>
-         * <p>*   The remaining number of requests provided by the resource plan.</p>
-         */
-        @NameInMap("CurrCapacity")
-        public String currCapacity;
-
-        /**
-         * <p>The name of the resource plan.</p>
-         */
-        @NameInMap("DisplayName")
-        public String displayName;
-
-        /**
-         * <p>The time when the resource plan expires.</p>
-         */
-        @NameInMap("EndTime")
-        public String endTime;
-
-        /**
          * <p>The total quota of the resource plan.</p>
          * <br>
          * <p>*   The total amount of data transfer provided by the resource plan. Unit: bytes.</p>
          * <p>*   The total number of requests provided by the resource plan.</p>
          */
+        @NameInMap("CommodityCode")
+        public String commodityCode;
+
+        /**
+         * <p>The ID of the instance.</p>
+         */
+        @NameInMap("CurrCapacity")
+        public String currCapacity;
+
+        /**
+         * <p>The time when the resource plan took effect.</p>
+         */
+        @NameInMap("DisplayName")
+        public String displayName;
+
+        /**
+         * <p>The operation that you want to perform. Set the value to **DescribeCdnUserResourcePackage**.</p>
+         */
+        @NameInMap("EndTime")
+        public String endTime;
+
+        /**
+         * <p>The ID of the resource plan.</p>
+         */
         @NameInMap("InitCapacity")
         public String initCapacity;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The time when the resource plan took effect.</p>
+         * <p>The name of the template.</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -96,7 +93,7 @@ public class DescribeCdnUserResourcePackageResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The name of the template.</p>
+         * <p>The details about each resource plan. The details are organized in an array. The array consists of the subparameter values of the ResourcePackageInfo parameter.</p>
          */
         @NameInMap("TemplateName")
         public String templateName;

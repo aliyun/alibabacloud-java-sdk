@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchStartCdnDomainResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>1.0.0</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCdnDomainStagingConfigResponseBody extends TeaModel {
     /**
-     * <p>The configurations of the domain name.</p>
+     * <p>The domain name configurations.</p>
      */
     @NameInMap("DomainConfigs")
     public java.util.List<DescribeCdnDomainStagingConfigResponseBodyDomainConfigs> domainConfigs;
@@ -17,7 +17,7 @@ public class DescribeCdnDomainStagingConfigResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,13 +53,13 @@ public class DescribeCdnDomainStagingConfigResponseBody extends TeaModel {
 
     public static class DescribeCdnDomainStagingConfigResponseBodyDomainConfigsFunctionArgs extends TeaModel {
         /**
-         * <p>The name of the configuration.</p>
+         * <p>The configuration name.</p>
          */
         @NameInMap("ArgName")
         public String argName;
 
         /**
-         * <p>The value of the configuration.</p>
+         * <p>The configuration value.</p>
          */
         @NameInMap("ArgValue")
         public String argValue;
@@ -89,7 +89,7 @@ public class DescribeCdnDomainStagingConfigResponseBody extends TeaModel {
 
     public static class DescribeCdnDomainStagingConfigResponseBodyDomainConfigs extends TeaModel {
         /**
-         * <p>The ID of the configuration.</p>
+         * <p>The configuration ID.</p>
          */
         @NameInMap("ConfigId")
         public String configId;
@@ -101,26 +101,24 @@ public class DescribeCdnDomainStagingConfigResponseBody extends TeaModel {
         public java.util.List<DescribeCdnDomainStagingConfigResponseBodyDomainConfigsFunctionArgs> functionArgs;
 
         /**
-         * <p>The name of the feature.</p>
+         * <p>The feature name.</p>
          */
         @NameInMap("FunctionName")
         public String functionName;
 
         /**
-         * <p>The ID of the rule condition. This parameter is optional. To create a rule condition, you can configure the **condition** feature that is described in the [BatchSetCdnDomainConfig and SetCdnDomainStagingConfig](~~388460~~) topic. A rule condition can identify parameters that are included in requests and filter requests based on the identified parameters. Each rule condition has a [ConfigId](~~388994~~). You can use ConfigId as ParentId that is referenced by other features. This way, you can combine rule conditions and features for flexible configurations.</p>
-         * <br>
-         * <p>For more information, see [BatchSetCdnDomainConfig](~~90915~~) or ParentId configuration example in this topic.</p>
+         * <p>The rule condition ID. This parameter is optional. To create a rule condition, you can configure the **condition** feature that is described in the [Parameters for configuring features for domain names](~~388460~~) topic. A rule condition can identify parameters that are included in requests and filter requests based on the identified parameters. Each rule condition has a [ConfigId](~~388994~~). You can reference ConfigId instead of ParentId in other features. This way, you can combine rule conditions and features for flexible configurations. For more information, see [BatchSetCdnDomainConfig](~~90915~~) or ParentId configuration example in this topic.</p>
          */
         @NameInMap("ParentId")
         public String parentId;
 
         /**
-         * <p>The status of the configuration. Valid values:</p>
+         * <p>The configuration status. Valid values:</p>
          * <br>
-         * <p>*   **testing**: being verified</p>
-         * <p>*   **configuring**: being configured</p>
-         * <p>*   **success**: configured</p>
-         * <p>*   **failed**: failed</p>
+         * <p>*   **testing**</p>
+         * <p>*   **configuring**</p>
+         * <p>*   **success**</p>
+         * <p>*   **failed**</p>
          */
         @NameInMap("Status")
         public String status;

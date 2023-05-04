@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
     /**
-     * <p>The information about real-time log delivery.</p>
+     * <p>The statistics about real-time log deliveries.</p>
      */
     @NameInMap("ReatTimeDeliveryAccData")
     public DescribeRealtimeDeliveryAccResponseBodyReatTimeDeliveryAccData reatTimeDeliveryAccData;
@@ -51,7 +51,7 @@ public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
         public Integer successNum;
 
         /**
-         * <p>The timestamp of the data.</p>
+         * <p>The timestamp of the data returned.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRealtimeLogDeliveryInfosResponseBody extends TeaModel {
     /**
-     * <p>The content of the log entry.</p>
+     * <p>The information about real-time log delivery.</p>
      */
     @NameInMap("Content")
     public ListRealtimeLogDeliveryInfosResponseBodyContent content;
@@ -39,7 +39,7 @@ public class ListRealtimeLogDeliveryInfosResponseBody extends TeaModel {
 
     public static class ListRealtimeLogDeliveryInfosResponseBodyContentRealtimeLogDeliveryInfos extends TeaModel {
         /**
-         * <p>The name of the Logstore that collects log data from Alibaba Cloud Content Delivery Network (CDN) in real time.</p>
+         * <p>The name of the Logstore that collects log data from Alibaba Cloud CDN in real time.</p>
          */
         @NameInMap("Logstore")
         public String logstore;

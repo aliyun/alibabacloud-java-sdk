@@ -4,6 +4,9 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnWafDomainResponseBody extends TeaModel {
+    /**
+     * <p>The information about the accelerated domain name.</p>
+     */
     @NameInMap("OutPutDomains")
     public java.util.List<DescribeCdnWafDomainResponseBodyOutPutDomains> outPutDomains;
 
@@ -14,7 +17,7 @@ public class DescribeCdnWafDomainResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The number of accelerated domain names.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -49,21 +52,46 @@ public class DescribeCdnWafDomainResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnWafDomainResponseBodyOutPutDomains extends TeaModel {
+        /**
+         * <p>The status of the access control list (ACL) feature. Valid values:</p>
+         * <br>
+         * <p>*   **0**: disabled</p>
+         * <p>*   **1**: enabled</p>
+         */
         @NameInMap("AclStatus")
         public String aclStatus;
 
+        /**
+         * <p>The status of protection against HTTP flood attacks. Valid values:</p>
+         * <br>
+         * <p>*   **0**: disabled</p>
+         * <p>*   **1**: enabled</p>
+         */
         @NameInMap("CcStatus")
         public String ccStatus;
 
         /**
-         * <p>The domain name.</p>
+         * <p>The accelerated domain name.</p>
          */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The WAF status of the domain name. Valid values:</p>
+         * <br>
+         * <p>*   **1**: The domain name is added to WAF or valid.</p>
+         * <p>*   **10**: The domain name is being added to WAF.</p>
+         * <p>*   **11**: The domain name failed to be added to WAF.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The status of WAF. Valid values:</p>
+         * <br>
+         * <p>*   **0**: disabled</p>
+         * <p>*   **1**: enabled</p>
+         */
         @NameInMap("WafStatus")
         public String wafStatus;
 

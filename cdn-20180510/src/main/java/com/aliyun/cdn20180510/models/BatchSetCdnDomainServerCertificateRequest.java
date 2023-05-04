@@ -5,24 +5,19 @@ import com.aliyun.tea.*;
 
 public class BatchSetCdnDomainServerCertificateRequest extends TeaModel {
     /**
-     * <p>The name of the certificate.</p>
+     * <p>The region.</p>
      */
     @NameInMap("CertName")
     public String certName;
 
     /**
-     * <p>The type of the SSL certificate. Valid values:</p>
-     * <br>
-     * <p>*   **upload**: a user-uploaded SSL certificate.</p>
-     * <p>*   **cas**: a certificate that is issued by SSL Certificates Service.</p>
+     * <p>Specifies whether to check the certificate name for duplicates. If you set the value to 1, the system does not perform the check and overwrites the information about the existing certificate that uses the same name.</p>
      */
     @NameInMap("CertType")
     public String certType;
 
     /**
-     * <p>The accelerated domain name to which the SSL certificate belongs. The type of request supported by the accelerated domain name must be HTTPS. You can specify multiple accelerated domain names and separate them with commas (,).</p>
-     * <br>
-     * <p>>  You can manage the SSL certificates of up to 50 accelerated domain names in each call.</p>
+     * <p>The private key. Specify the private key only if you enable the SSL certificate.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -37,7 +32,9 @@ public class BatchSetCdnDomainServerCertificateRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region.</p>
+     * <p>The accelerated domain name to which the SSL certificate belongs. The type of request supported by the accelerated domain name must be HTTPS. You can specify multiple accelerated domain names and separate them with commas (,).</p>
+     * <br>
+     * <p>>  You can manage the SSL certificates of up to 50 accelerated domain names in each call.</p>
      */
     @NameInMap("Region")
     public String region;
@@ -49,16 +46,14 @@ public class BatchSetCdnDomainServerCertificateRequest extends TeaModel {
     public String SSLPri;
 
     /**
-     * <p>Specifies whether to enable the SSL certificate. Valid values:</p>
-     * <br>
-     * <p>*   **on**: enables the SSL certificate.</p>
-     * <p>*   **off**: disables the SSL certificate. This is the default value.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("SSLProtocol")
     public String SSLProtocol;
 
     /**
-     * <p>The content of the SSL certificate. Specify the content of the certificate only if you want to enable the SSL certificate.</p>
+     * <p>> *   The maximum number of times that each user can call this operation per second is 10.</p>
+     * <p>*   You can specify multiple domain names (no more than 50) and separate them with commas (,).</p>
      */
     @NameInMap("SSLPub")
     public String SSLPub;

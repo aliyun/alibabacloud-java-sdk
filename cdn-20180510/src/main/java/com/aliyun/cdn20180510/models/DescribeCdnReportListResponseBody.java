@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCdnReportListResponseBody extends TeaModel {
     /**
-     * <p>The information about the operations report.</p>
+     * <p>The information about the report that is queried.</p>
      */
     @NameInMap("Content")
     public String content;

@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class BatchUpdateCdnDomainRequest extends TeaModel {
     /**
-     * <p>The accelerated domain names. You can specify one or more accelerated domain names. Separate domain names with commas (,).</p>
+     * <p>The top-level domain name.</p>
+     * <br>
+     * <p>>  You can set only one of **Sources** and **TopLevelDomain**. If you set both **Sources** and **TopLevelDomain**, **TopLevelDomain** does not take effect.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -14,7 +16,7 @@ public class BatchUpdateCdnDomainRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -23,17 +25,13 @@ public class BatchUpdateCdnDomainRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The information about the addresses of origin servers.</p>
-     * <br>
-     * <p>>  You can set only one of **Sources** and **TopLevelDomain**. If you set both **Sources** and **TopLevelDomain**, **TopLevelDomain** does not take effect.</p>
+     * <p>The accelerated domain names. You can specify one or more accelerated domain names. Separate domain names with commas (,).</p>
      */
     @NameInMap("Sources")
     public String sources;
 
     /**
-     * <p>The top-level domain name.</p>
-     * <br>
-     * <p>>  You can set only one of **Sources** and **TopLevelDomain**. If you set both **Sources** and **TopLevelDomain**, **TopLevelDomain** does not take effect.</p>
+     * <p>The operation that you want to perform. Set the value to **BatchUpdateCdnDomain**.</p>
      */
     @NameInMap("TopLevelDomain")
     public String topLevelDomain;

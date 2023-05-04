@@ -5,19 +5,24 @@ import com.aliyun.tea.*;
 
 public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The type of the task. Valid values:</p>
+     * <br>
+     * <p>*   **file**: refreshes an individual file.</p>
+     * <p>*   **directory**: refreshes files under the specified directory.</p>
+     * <p>*   **preload**: prefetches an individual file.</p>
+     * <p>*   **regex**: refreshes content based on a regular expression.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The tasks.</p>
+     * <p>The progress of the task, in percentage.</p>
      */
     @NameInMap("Tasks")
     public java.util.List<DescribeRefreshTaskByIdResponseBodyTasks> tasks;
 
     /**
-     * <p>The total number of tasks.</p>
+     * <p>The time when the task was created. The time is displayed in UTC.</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -53,26 +58,16 @@ public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
 
     public static class DescribeRefreshTaskByIdResponseBodyTasks extends TeaModel {
         /**
-         * <p>The time when the task was created. The time is displayed in UTC.</p>
+         * <p>The path of the object refreshed by the refresh task.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The error returned when the refresh or prefetch task failed. Valid values:</p>
-         * <br>
-         * <p>*   **Internal Error**: An internal error occurred.</p>
-         * <p>*   **Origin Timeout**: The response from the origin server timed out.</p>
-         * <p>*   **Origin Return StatusCode 5XX**: The origin server returned a 5XX error.</p>
+         * <p>The tasks.</p>
          */
         @NameInMap("Description")
         public String description;
-
-        /**
-         * <p>The path of the object refreshed by the refresh task.</p>
-         */
-        @NameInMap("ObjectPath")
-        public String objectPath;
 
         /**
          * <p>The type of the task. Valid values:</p>
@@ -82,14 +77,31 @@ public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
          * <p>*   **preload**: prefetches an individual file.</p>
          * <p>*   **regex**: refreshes content based on a regular expression.</p>
          */
+        @NameInMap("ObjectPath")
+        public String objectPath;
+
+        /**
+         * <p>The ID of the task.</p>
+         */
         @NameInMap("ObjectType")
         public String objectType;
 
         /**
-         * <p>The progress of the task, in percentage.</p>
+         * <p>> - You can query data within the last three days.</p>
+         * <p>- You can call this operation up to 30 times per second per account.</p>
          */
         @NameInMap("Process")
         public String process;
+
+        /**
+         * <p>The error returned when the refresh or prefetch task failed. Valid values:</p>
+         * <br>
+         * <p>*   **Internal Error**: An internal error occurred.</p>
+         * <p>*   **Origin Timeout**: The response from the origin server timed out.</p>
+         * <p>*   **Origin Return StatusCode 5XX**: The origin server returned a 5XX error.</p>
+         */
+        @NameInMap("Status")
+        public String status;
 
         /**
          * <p>The status of the task. Valid values:</p>
@@ -98,12 +110,6 @@ public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
          * <p>*   **Pending**: The task is pending.</p>
          * <p>*   **Refreshing**: The task is running.</p>
          * <p>*   **Failed**: The task failed.</p>
-         */
-        @NameInMap("Status")
-        public String status;
-
-        /**
-         * <p>The ID of the task.</p>
          */
         @NameInMap("TaskId")
         public String taskId;

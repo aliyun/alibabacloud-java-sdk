@@ -29,7 +29,7 @@ public class DescribeTopDomainsByFlowResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range during which data was queried.</p>
+     * <p>The start of the time range during which data was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -119,19 +119,19 @@ public class DescribeTopDomainsByFlowResponseBody extends TeaModel {
         public Long rank;
 
         /**
-         * <p>The number of visits to the accelerated domain name.</p>
+         * <p>The number of visits to the domain name.</p>
          */
         @NameInMap("TotalAccess")
         public Long totalAccess;
 
         /**
-         * <p>The total amount of network traffic.</p>
+         * <p>The total volume of traffic.</p>
          */
         @NameInMap("TotalTraffic")
         public String totalTraffic;
 
         /**
-         * <p>The proportion of the amount of network traffic consumed for visiting the web page.</p>
+         * <p>The proportion of network traffic consumed to access the domain name.</p>
          */
         @NameInMap("TrafficPercent")
         public String trafficPercent;

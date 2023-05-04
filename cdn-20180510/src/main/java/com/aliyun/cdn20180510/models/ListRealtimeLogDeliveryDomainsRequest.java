@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRealtimeLogDeliveryDomainsRequest extends TeaModel {
     /**
-     * <p>The name of the Logstore that collects log data from Alibaba Cloud Content Delivery Network (CDN) in real time. You can specify multiple Logstore names and separate them with commas (,).</p>
+     * <p>The name of the Logstore that collects log data from Alibaba Cloud CDN in real time. You can specify multiple Logstore names and separate them with commas (,).</p>
      */
     @NameInMap("Logstore")
     public String logstore;

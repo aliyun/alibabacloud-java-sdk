@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBlockedRegionsResponseBody extends TeaModel {
     /**
-     * <p>A list of countries and regions.</p>
+     * <p>The information returned.</p>
      */
     @NameInMap("InfoList")
     public DescribeBlockedRegionsResponseBodyInfoList infoList;

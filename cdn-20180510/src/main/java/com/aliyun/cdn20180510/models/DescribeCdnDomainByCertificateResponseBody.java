@@ -41,14 +41,14 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the SSL certificate is obsolete. Valid values:</p>
          * <br>
-         * <p>*   **yes**: The SSL certificate is obsolete.</p>
-         * <p>*   **no**: The SSL certificate is working as expected.</p>
+         * <p>*   **yes**</p>
+         * <p>*   **no**</p>
          */
         @NameInMap("CertCaIsLegacy")
         public String certCaIsLegacy;
 
         /**
-         * <p>The time at which the certificate expires.</p>
+         * <p>The expiration time of the certificate.</p>
          */
         @NameInMap("CertExpireTime")
         public String certExpireTime;
@@ -56,14 +56,14 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the SSL certificate is expired. Valid values:</p>
          * <br>
-         * <p>*   **yes**: The SSL certificate is expired.</p>
-         * <p>*   **no**: The SSL certificate is not expired.</p>
+         * <p>*   **yes**</p>
+         * <p>*   **no**</p>
          */
         @NameInMap("CertExpired")
         public String certExpired;
 
         /**
-         * <p>The time at which the certificate became effective.</p>
+         * <p>The effective time of the certificate.</p>
          */
         @NameInMap("CertStartTime")
         public String certStartTime;
@@ -81,7 +81,7 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
         public String certType;
 
         /**
-         * <p>If a value is returned, the value matches the SSL certificate. Multiple domain names are separated by commas (,).</p>
+         * <p>The list of domain names. If a value is returned, the value matches the SSL certificate. Multiple domain names are separated by commas (,).</p>
          */
         @NameInMap("DomainList")
         public String domainList;
