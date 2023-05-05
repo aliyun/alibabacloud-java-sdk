@@ -130,6 +130,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("sub_corp_id", request.subCorpId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.taobaoCallbackUrl)) {
+            query.put("taobao_callback_url", request.taobaoCallbackUrl);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
             query.put("type", request.type);
         }

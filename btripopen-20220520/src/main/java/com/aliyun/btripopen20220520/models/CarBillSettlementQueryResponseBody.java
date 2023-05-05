@@ -79,6 +79,12 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("alipay_trade_no")
         public String alipayTradeNo;
 
+        /**
+         * <p>审批扩展自定义字段</p>
+         */
+        @NameInMap("apply_extend_field")
+        public String applyExtendField;
+
         @NameInMap("apply_id")
         public String applyId;
 
@@ -258,6 +264,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getAlipayTradeNo() {
             return this.alipayTradeNo;
+        }
+
+        public CarBillSettlementQueryResponseBodyModuleDataList setApplyExtendField(String applyExtendField) {
+            this.applyExtendField = applyExtendField;
+            return this;
+        }
+        public String getApplyExtendField() {
+            return this.applyExtendField;
         }
 
         public CarBillSettlementQueryResponseBodyModuleDataList setApplyId(String applyId) {

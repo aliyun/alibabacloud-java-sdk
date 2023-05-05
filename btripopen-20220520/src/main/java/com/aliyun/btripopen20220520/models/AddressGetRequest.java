@@ -19,6 +19,9 @@ public class AddressGetRequest extends TeaModel {
     @NameInMap("sub_corp_id")
     public String subCorpId;
 
+    @NameInMap("taobao_callback_url")
+    public String taobaoCallbackUrl;
+
     @NameInMap("type")
     public Integer type;
 
@@ -68,6 +71,14 @@ public class AddressGetRequest extends TeaModel {
     }
     public String getSubCorpId() {
         return this.subCorpId;
+    }
+
+    public AddressGetRequest setTaobaoCallbackUrl(String taobaoCallbackUrl) {
+        this.taobaoCallbackUrl = taobaoCallbackUrl;
+        return this;
+    }
+    public String getTaobaoCallbackUrl() {
+        return this.taobaoCallbackUrl;
     }
 
     public AddressGetRequest setType(Integer type) {

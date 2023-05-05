@@ -28,6 +28,9 @@ public class ApplyListQueryRequest extends TeaModel {
     @NameInMap("start_time")
     public String startTime;
 
+    /**
+     * <p>子企业Id</p>
+     */
     @NameInMap("sub_corp_id")
     public String subCorpId;
 
