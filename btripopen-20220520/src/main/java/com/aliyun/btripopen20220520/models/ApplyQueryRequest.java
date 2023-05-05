@@ -10,6 +10,9 @@ public class ApplyQueryRequest extends TeaModel {
     @NameInMap("apply_show_id")
     public String applyShowId;
 
+    /**
+     * <p>子企业Id</p>
+     */
     @NameInMap("sub_corp_id")
     public String subCorpId;
 
