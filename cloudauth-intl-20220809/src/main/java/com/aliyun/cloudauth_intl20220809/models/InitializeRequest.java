@@ -34,6 +34,9 @@ public class InitializeRequest extends TeaModel {
     @NameInMap("MetaInfo")
     public String metaInfo;
 
+    /**
+     * <p>OCR。</p>
+     */
     @NameInMap("Ocr")
     public String ocr;
 
