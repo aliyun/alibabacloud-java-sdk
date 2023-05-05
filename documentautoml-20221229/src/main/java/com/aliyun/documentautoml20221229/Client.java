@@ -117,6 +117,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AutoPrediction", request.autoPrediction);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.binaryToText)) {
+            query.put("BinaryToText", request.binaryToText);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.classifierId)) {
             query.put("ClassifierId", request.classifierId);
         }
