@@ -142,6 +142,9 @@ public class GetProductInfoByIdsResponseBody extends TeaModel {
         @NameInMap("DeeplinkUrl")
         public String deeplinkUrl;
 
+        @NameInMap("InputItemId")
+        public String inputItemId;
+
         @NameInMap("ItemId")
         public String itemId;
 
@@ -292,6 +295,14 @@ public class GetProductInfoByIdsResponseBody extends TeaModel {
         }
         public String getDeeplinkUrl() {
             return this.deeplinkUrl;
+        }
+
+        public GetProductInfoByIdsResponseBodyDataAuctionsResult setInputItemId(String inputItemId) {
+            this.inputItemId = inputItemId;
+            return this;
+        }
+        public String getInputItemId() {
+            return this.inputItemId;
         }
 
         public GetProductInfoByIdsResponseBodyDataAuctionsResult setItemId(String itemId) {
