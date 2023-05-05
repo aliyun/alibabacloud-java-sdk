@@ -5273,6 +5273,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.syncThirdUserMappingWithOptions(request, headers, runtime);
     }
 
+    public TBAccountInfoQueryResponse tBAccountInfoQueryWithOptions(String userId, TBAccountInfoQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TBAccountInfoQuery"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/account/v1/tb-accounts/" + com.aliyun.openapiutil.Client.getEncodeParam(userId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TBAccountInfoQueryResponse());
+    }
+
+    public TBAccountInfoQueryResponse tBAccountInfoQuery(String userId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        TBAccountInfoQueryHeaders headers = new TBAccountInfoQueryHeaders();
+        return this.tBAccountInfoQueryWithOptions(userId, headers, runtime);
+    }
+
+    public TBAccountUnbindResponse tBAccountUnbindWithOptions(String userId, TBAccountUnbindHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TBAccountUnbind"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/account/v1/tb-accounts/" + com.aliyun.openapiutil.Client.getEncodeParam(userId) + "/action/unbind"),
+            new TeaPair("method", "PATCH"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TBAccountUnbindResponse());
+    }
+
+    public TBAccountUnbindResponse tBAccountUnbind(String userId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        TBAccountUnbindHeaders headers = new TBAccountUnbindHeaders();
+        return this.tBAccountUnbindWithOptions(userId, headers, runtime);
+    }
+
     public TicketChangingApplyResponse ticketChangingApplyWithOptions(TicketChangingApplyRequest tmpReq, TicketChangingApplyHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         TicketChangingApplyShrinkRequest request = new TicketChangingApplyShrinkRequest();

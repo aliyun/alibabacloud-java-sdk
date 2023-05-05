@@ -79,6 +79,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("alipay_trade_no")
         public String alipayTradeNo;
 
+        /**
+         * <p>审批扩展自定义字段</p>
+         */
         @NameInMap("apply_extend_field")
         public String applyExtendField;
 
