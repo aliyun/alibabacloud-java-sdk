@@ -7,6 +7,9 @@ public class PredictClassifierModelRequest extends TeaModel {
     @NameInMap("AutoPrediction")
     public Boolean autoPrediction;
 
+    @NameInMap("BinaryToText")
+    public Boolean binaryToText;
+
     @NameInMap("Body")
     public String body;
 
@@ -27,6 +30,14 @@ public class PredictClassifierModelRequest extends TeaModel {
     }
     public Boolean getAutoPrediction() {
         return this.autoPrediction;
+    }
+
+    public PredictClassifierModelRequest setBinaryToText(Boolean binaryToText) {
+        this.binaryToText = binaryToText;
+        return this;
+    }
+    public Boolean getBinaryToText() {
+        return this.binaryToText;
     }
 
     public PredictClassifierModelRequest setBody(String body) {
