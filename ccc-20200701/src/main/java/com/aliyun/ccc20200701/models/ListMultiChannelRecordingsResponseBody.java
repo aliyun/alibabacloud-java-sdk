@@ -64,6 +64,36 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ListMultiChannelRecordingsResponseBodyDataHoldTimeSegments extends TeaModel {
+        @NameInMap("EndTime")
+        public Long endTime;
+
+        @NameInMap("StartTime")
+        public Long startTime;
+
+        public static ListMultiChannelRecordingsResponseBodyDataHoldTimeSegments build(java.util.Map<String, ?> map) throws Exception {
+            ListMultiChannelRecordingsResponseBodyDataHoldTimeSegments self = new ListMultiChannelRecordingsResponseBodyDataHoldTimeSegments();
+            return TeaModel.build(map, self);
+        }
+
+        public ListMultiChannelRecordingsResponseBodyDataHoldTimeSegments setEndTime(Long endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        public ListMultiChannelRecordingsResponseBodyDataHoldTimeSegments setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+    }
+
     public static class ListMultiChannelRecordingsResponseBodyData extends TeaModel {
         @NameInMap("AgentChannelId")
         public String agentChannelId;
@@ -85,6 +115,9 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
 
         @NameInMap("FileUrl")
         public String fileUrl;
+
+        @NameInMap("HoldTimeSegments")
+        public java.util.List<ListMultiChannelRecordingsResponseBodyDataHoldTimeSegments> holdTimeSegments;
 
         @NameInMap("RamId")
         public String ramId;
@@ -154,6 +187,14 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
         }
         public String getFileUrl() {
             return this.fileUrl;
+        }
+
+        public ListMultiChannelRecordingsResponseBodyData setHoldTimeSegments(java.util.List<ListMultiChannelRecordingsResponseBodyDataHoldTimeSegments> holdTimeSegments) {
+            this.holdTimeSegments = holdTimeSegments;
+            return this;
+        }
+        public java.util.List<ListMultiChannelRecordingsResponseBodyDataHoldTimeSegments> getHoldTimeSegments() {
+            return this.holdTimeSegments;
         }
 
         public ListMultiChannelRecordingsResponseBodyData setRamId(String ramId) {
