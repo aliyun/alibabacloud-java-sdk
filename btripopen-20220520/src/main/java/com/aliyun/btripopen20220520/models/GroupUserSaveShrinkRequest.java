@@ -7,9 +7,6 @@ public class GroupUserSaveShrinkRequest extends TeaModel {
     @NameInMap("job_no")
     public String jobNo;
 
-    @NameInMap("leave_status")
-    public Integer leaveStatus;
-
     @NameInMap("phone")
     public String phone;
 
@@ -36,14 +33,6 @@ public class GroupUserSaveShrinkRequest extends TeaModel {
     }
     public String getJobNo() {
         return this.jobNo;
-    }
-
-    public GroupUserSaveShrinkRequest setLeaveStatus(Integer leaveStatus) {
-        this.leaveStatus = leaveStatus;
-        return this;
-    }
-    public Integer getLeaveStatus() {
-        return this.leaveStatus;
     }
 
     public GroupUserSaveShrinkRequest setPhone(String phone) {

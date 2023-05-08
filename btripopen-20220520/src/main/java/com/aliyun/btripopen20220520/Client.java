@@ -3268,10 +3268,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("job_no", request.jobNo);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.leaveStatus)) {
-            body.put("leave_status", request.leaveStatus);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.phone)) {
             body.put("phone", request.phone);
         }

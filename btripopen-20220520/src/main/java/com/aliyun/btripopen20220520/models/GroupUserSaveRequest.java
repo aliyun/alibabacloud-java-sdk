@@ -7,9 +7,6 @@ public class GroupUserSaveRequest extends TeaModel {
     @NameInMap("job_no")
     public String jobNo;
 
-    @NameInMap("leave_status")
-    public Integer leaveStatus;
-
     @NameInMap("phone")
     public String phone;
 
@@ -36,14 +33,6 @@ public class GroupUserSaveRequest extends TeaModel {
     }
     public String getJobNo() {
         return this.jobNo;
-    }
-
-    public GroupUserSaveRequest setLeaveStatus(Integer leaveStatus) {
-        this.leaveStatus = leaveStatus;
-        return this;
-    }
-    public Integer getLeaveStatus() {
-        return this.leaveStatus;
     }
 
     public GroupUserSaveRequest setPhone(String phone) {
@@ -90,8 +79,14 @@ public class GroupUserSaveRequest extends TeaModel {
         @NameInMap("depart_ids")
         public java.util.List<String> departIds;
 
+        @NameInMap("leave_status")
+        public Integer leaveStatus;
+
         @NameInMap("manager_user_id")
         public String managerUserId;
+
+        @NameInMap("position_level")
+        public String positionLevel;
 
         @NameInMap("sub_corp_id")
         public String subCorpId;
@@ -109,12 +104,28 @@ public class GroupUserSaveRequest extends TeaModel {
             return this.departIds;
         }
 
+        public GroupUserSaveRequestSubCorpIdList setLeaveStatus(Integer leaveStatus) {
+            this.leaveStatus = leaveStatus;
+            return this;
+        }
+        public Integer getLeaveStatus() {
+            return this.leaveStatus;
+        }
+
         public GroupUserSaveRequestSubCorpIdList setManagerUserId(String managerUserId) {
             this.managerUserId = managerUserId;
             return this;
         }
         public String getManagerUserId() {
             return this.managerUserId;
+        }
+
+        public GroupUserSaveRequestSubCorpIdList setPositionLevel(String positionLevel) {
+            this.positionLevel = positionLevel;
+            return this;
+        }
+        public String getPositionLevel() {
+            return this.positionLevel;
         }
 
         public GroupUserSaveRequestSubCorpIdList setSubCorpId(String subCorpId) {
