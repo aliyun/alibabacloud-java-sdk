@@ -5,13 +5,22 @@ import com.aliyun.tea.*;
 
 public class GetCloudAssetCriteriaRequest extends TeaModel {
     /**
-     * <p>The types of cloud assets.</p>
+     * <p>The name of the filter condition. Valid values:</p>
+     * <br>
+     * <p>*   **instanceId**: the ID of the instance</p>
+     * <p>*   **instanceName**: the name of an instance</p>
+     * <p>*   **internetIp**: the public IP address</p>
+     * <p>*   **riskStatus**: the risk status</p>
+     * <p>*   **vendorRegionId**: the region ID by service provider</p>
      */
     @NameInMap("CloudAssetTypes")
     public java.util.List<GetCloudAssetCriteriaRequestCloudAssetTypes> cloudAssetTypes;
 
     /**
-     * <p>The keyword for fuzzy search when you query the asset.</p>
+     * <p>The type of the filter condition. Valid values:</p>
+     * <br>
+     * <p>*   **input**: The filter condition needs to be specified.</p>
+     * <p>*   **select**: The filter condition is an option that can be selected from the drop-down list.</p>
      */
     @NameInMap("Value")
     public String value;
@@ -39,68 +48,6 @@ public class GetCloudAssetCriteriaRequest extends TeaModel {
 
     public static class GetCloudAssetCriteriaRequestCloudAssetTypes extends TeaModel {
         /**
-         * <p>The subtype of the cloud service. Valid values:</p>
-         * <br>
-         * <p>*   **0**: ECS</p>
-         * <p>    *   **0**: instance</p>
-         * <p>    *  **1**: disk (storage)</p>
-         * <p>    *  **2**: security group</p>
-         * <p>*   **1**: SLB</p>
-         * <p>    *  **0**: SLB</p>
-         * <p>    *  **1**: Application Load Balancer (ALB)</p>
-         * <p>*   **3**: ApsaraDB RDS</p>
-         * <p>    *  **0**: instance</p>
-         * <p>*   **4**: MongoDB</p>
-         * <p>    *  **0**: instance</p>
-         * <p>*   **5**: Redis</p>
-         * <p>    *  **0**: instance</p>
-         * <p>*   **6**: Container Registry</p>
-         * <p>    *  **1**: Container Registry Enterprise Edition</p>
-         * <p>    *  **2**: Container Registry Personal Edition</p>
-         * <p>*   **8**: ACK</p>
-         * <p>    *  **0**: cluster</p>
-         * <p>*   **9**: VPC</p>
-         * <p>    *  **0**: NAT gateway</p>
-         * <p>    *  **1**: EIP</p>
-         * <p>    *  **2**: Virtual Private Network (VPN)</p>
-         * <p>    *  **3**: flow log</p>
-         * <p>*   **11**: ActionTrail</p>
-         * <p>    *  **0**: trail</p>
-         * <p>*   **12**: CDN</p>
-         * <p>    *  **0**: instance</p>
-         * <p>*   **13**: Certificate Management Service (formerly SSL Certificates Service)</p>
-         * <p>    *  **0**: certificate</p>
-         * <p>*   **14**: Apsara Devops</p>
-         * <p>    *  **0**: organization</p>
-         * <p>*   **16**: Anti-DDoS</p>
-         * <p>    *  **0**: instance</p>
-         * <p>*   **17**: WAF</p>
-         * <p>    *  **0**: domain name</p>
-         * <p>*   **18**: OSS</p>
-         * <p>    *  **0**: bucket</p>
-         * <p>*   **19**: PolarDB</p>
-         * <p>    *  **0**: cluster</p>
-         * <p>*   **20**: ApsaraDB RDS for PostgreSQL</p>
-         * <p>    *  **0**: instance</p>
-         * <p>*   **21**: MSE</p>
-         * <p>    *  **0**: cluster</p>
-         * <p>*   **22**: NAS</p>
-         * <p>    *  **0**: file system</p>
-         * <p>*   **23**: DSC</p>
-         * <p>    *  **0**: instance</p>
-         * <p>*   **24**: EIP</p>
-         * <p>    *  **0**: Anycast EIP</p>
-         * <p>*   **25**: IDaaS EIAM</p>
-         * <p>    *  **0**: instance</p>
-         * <p>*   **26**: PolarDB-X</p>
-         * <p>    *  **0**: instance</p>
-         * <p>*   **27**: Elasticsearch</p>
-         * <p>    *  **0**: instance</p>
-         */
-        @NameInMap("AssetSubType")
-        public Integer assetSubType;
-
-        /**
          * <p>The type of the asset by source. Valid values:</p>
          * <br>
          * <p>*   **0**: Elastic Compute Service (ECS)</p>
@@ -127,6 +74,12 @@ public class GetCloudAssetCriteriaRequest extends TeaModel {
          * <p>*   **25**: IDaaS EIAM</p>
          * <p>*   **26**: PolarDB-X</p>
          * <p>*   **27**: Elasticsearch</p>
+         */
+        @NameInMap("AssetSubType")
+        public Integer assetSubType;
+
+        /**
+         * <p>The type of the cloud asset.</p>
          */
         @NameInMap("AssetType")
         public Integer assetType;

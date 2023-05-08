@@ -4,14 +4,14 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DeleteHoneypotPresetRequest extends TeaModel {
-    /**
-     * <p>The ID of the honeypot template.</p>
-     * <br>
-     * <p>>  You can call the [ListHoneypotPreset](~~ListHoneypotPreset~~) operation to query the IDs of honeypot templates.</p>
-     */
     @NameInMap("HoneypotPresetId")
     public String honeypotPresetId;
 
+    /**
+     * <p>设置请求和接收消息的语言类型，默认为**zh**。取值：</p>
+     * <p>- **zh**：中文</p>
+     * <p>- **en**：英文</p>
+     */
     @NameInMap("Lang")
     public String lang;
 

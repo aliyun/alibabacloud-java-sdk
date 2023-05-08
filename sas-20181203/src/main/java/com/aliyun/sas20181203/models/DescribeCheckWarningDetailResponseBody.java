@@ -5,53 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeCheckWarningDetailResponseBody extends TeaModel {
     /**
-     * <p>The suggestion for the management of the risk item.</p>
+     * <p>Queries the details about a specified check item.</p>
      */
     @NameInMap("Advice")
     public String advice;
 
-    /**
-     * <p>The ID of the check item.</p>
-     */
     @NameInMap("CheckId")
     public Long checkId;
 
-    /**
-     * <p>The additional information about the risk item.</p>
-     */
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <p>The name of the check item.</p>
-     */
     @NameInMap("Item")
     public String item;
 
-    /**
-     * <p>The risk level of the check item. Valid values:</p>
-     * <br>
-     * <p>*   **high**: The item is a high-risk item and is highlighted in red.</p>
-     * <p>*   **medium**: The item is a medium-risk item and is highlighted in orange.</p>
-     * <p>*   **low**: The item is a low-risk item and is highlighted in gray.</p>
-     */
     @NameInMap("Level")
     public String level;
 
-    /**
-     * <p>The prompt for the risk item.</p>
-     */
     @NameInMap("Prompt")
     public String prompt;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The type of the check item. Valid values:</p>
+     * <p>DescribeCheckWarningDetail</p>
      */
     @NameInMap("Type")
     public String type;

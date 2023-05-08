@@ -5,58 +5,58 @@ import com.aliyun.tea.*;
 
 public class DescribePropertyUserDetailRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of entries to return on each page. Default value: **10**.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>Specifies whether the fuzzy search by account name is supported. If you want to use fuzzy search, set the parameter to **1**. If you set the parameter to a different value or leave the parameter empty, fuzzy search is not supported.</p>
+     * <p>The details of asset fingerprints for the account.</p>
      */
     @NameInMap("Extend")
     public String extend;
 
     /**
-     * <p>Specifies whether the account has root permissions. Valid values:</p>
-     * <br>
-     * <p>*   **0**: no</p>
-     * <p>*   **1**: yes</p>
+     * <p>The details of the user groups to which the account belongs.</p>
      */
     @NameInMap("IsRoot")
     public String isRoot;
 
     /**
-     * <p>The timestamp of the last logoff from the account. Unit: milliseconds.</p>
+     * <p>The details of the user groups to which the account belongs.</p>
      */
     @NameInMap("LastLoginTimeEnd")
     public Long lastLoginTimeEnd;
 
     /**
-     * <p>The timestamp of the last logon to the account. Unit: milliseconds.</p>
+     * <p>The date on which the account expires.</p>
      */
     @NameInMap("LastLoginTimeStart")
     public Long lastLoginTimeStart;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**.</p>
+     * <p>The name or IP address of the server.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The name or IP address of the server.</p>
+     * <p>Indicates whether the password expires. Valid values:</p>
+     * <br>
+     * <p>*   **0**: yes</p>
+     * <p>*   **1**: no</p>
      */
     @NameInMap("Remark")
     public String remark;
 
     /**
-     * <p>The name of the account to which the server belongs.</p>
+     * <p>The number of the page to return. Default value: **1**.</p>
      */
     @NameInMap("User")
     public String user;
 
     /**
-     * <p>The UUID of the server.</p>
+     * <p>The public IP address of the server.</p>
      */
     @NameInMap("Uuid")
     public String uuid;

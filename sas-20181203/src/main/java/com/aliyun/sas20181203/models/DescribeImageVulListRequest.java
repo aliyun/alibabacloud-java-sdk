@@ -29,7 +29,7 @@ public class DescribeImageVulListRequest extends TeaModel {
     public String containerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: **1**</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -93,7 +93,7 @@ public class DescribeImageVulListRequest extends TeaModel {
     public String necessity;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**.</p>
+     * <p>The number of entries to return on each page. Default value: **10**</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

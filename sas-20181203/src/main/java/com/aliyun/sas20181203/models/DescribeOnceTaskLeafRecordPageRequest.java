@@ -4,30 +4,60 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeOnceTaskLeafRecordPageRequest extends TeaModel {
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The end timestamp of the sub-task.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: 20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Specifies whether extension information is associated.</p>
+     */
     @NameInMap("RelateInfo")
     public Boolean relateInfo;
 
+    /**
+     * <p>The source of the request.</p>
+     */
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <p>The start timestamp of the sub-task.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
+    /**
+     * <p>The status information.</p>
+     */
     @NameInMap("StatusList")
     public java.util.List<String> statusList;
 
+    /**
+     * <p>The ID of the sub-task.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <p>The type of the sub-task. Valid values:</p>
+     * <br>
+     * <p>*   **IMAGE_SCAN**: image scan task</p>
+     * <p>*   **IMAGE_REGISTRY_PULL**: image asset synchronization task</p>
+     */
     @NameInMap("TaskType")
     public String taskType;
 

@@ -11,7 +11,7 @@ public class ListHoneypotRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The IDs of honeypots.</p>
+     * <p>The IDs of the honeypots.</p>
      */
     @NameInMap("HoneypotIds")
     public java.util.List<String> honeypotIds;
@@ -23,13 +23,13 @@ public class ListHoneypotRequest extends TeaModel {
     public String honeypotName;
 
     /**
-     * <p>The ID of the management node to which the honeypot belongs.</p>
+     * <p>The ID of the management node.</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
 
     /**
-     * <p>The name of the management node to which the honeypot belongs.</p>
+     * <p>The name of the management node.</p>
      */
     @NameInMap("NodeName")
     public String nodeName;

@@ -4,21 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeRestorePlansResponseBody extends TeaModel {
-    /**
-     * <p>The pagination information.</p>
-     */
     @NameInMap("PageInfo")
     public DescribeRestorePlansResponseBodyPageInfo pageInfo;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>An array that consists of the restoration tasks.</p>
-     */
     @NameInMap("RestorePlans")
     public java.util.List<DescribeRestorePlansResponseBodyRestorePlans> restorePlans;
 
@@ -52,27 +43,15 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
     }
 
     public static class DescribeRestorePlansResponseBodyPageInfo extends TeaModel {
-        /**
-         * <p>The number of entries returned on the current page.</p>
-         */
         @NameInMap("Count")
         public Integer count;
 
-        /**
-         * <p>The page number of the returned page.</p>
-         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        /**
-         * <p>The number of entries returned per page.</p>
-         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        /**
-         * <p>The total number of entries returned.</p>
-         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -116,76 +95,36 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
     }
 
     public static class DescribeRestorePlansResponseBodyRestorePlans extends TeaModel {
-        /**
-         * <p>The timestamp when the restoration task was created. Unit: milliseconds.</p>
-         */
         @NameInMap("CreatedTime")
         public Long createdTime;
 
-        /**
-         * <p>The name of the database.</p>
-         */
         @NameInMap("DatabaseName")
         public String databaseName;
 
-        /**
-         * <p>The name of the server on which the database resides.</p>
-         */
         @NameInMap("InstanceName")
         public String instanceName;
 
-        /**
-         * <p>The ID of the anti-ransomware policy.</p>
-         */
         @NameInMap("PolicyId")
         public Long policyId;
 
-        /**
-         * <p>The name of the anti-ransomware policy.</p>
-         */
         @NameInMap("PolicyName")
         public String policyName;
 
-        /**
-         * <p>The point in time to which data is restored.</p>
-         */
         @NameInMap("RestorePoint")
         public Long restorePoint;
 
-        /**
-         * <p>The status of the restoration task. Valid values:</p>
-         * <br>
-         * <p>*   **init**: initializing</p>
-         * <p>*   **created**: creating</p>
-         * <p>*   **running**: running</p>
-         * <p>*   **completed**: complete</p>
-         * <p>*   **error**: failed</p>
-         * <p>*   **restoring**: restoring</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The name of the destination database.</p>
-         */
         @NameInMap("TargetDatabaseName")
         public String targetDatabaseName;
 
-        /**
-         * <p>The ID of the destination server.</p>
-         */
         @NameInMap("TargetInstanceId")
         public String targetInstanceId;
 
-        /**
-         * <p>The name of the destination server.</p>
-         */
         @NameInMap("TargetInstanceName")
         public String targetInstanceName;
 
-        /**
-         * <p>The timestamp when the restoration task was last updated. Unit: milliseconds.</p>
-         */
         @NameInMap("UpdatedTime")
         public Long updatedTime;
 

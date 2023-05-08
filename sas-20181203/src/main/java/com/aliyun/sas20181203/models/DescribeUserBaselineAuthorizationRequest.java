@@ -14,13 +14,13 @@ public class DescribeUserBaselineAuthorizationRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the asset owner.</p>
+     * <p>资产所有者ID。</p>
      */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The ID of the asset owner.</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;

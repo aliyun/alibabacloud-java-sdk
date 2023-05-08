@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateHoneypotResponseBody extends TeaModel {
     /**
-     * <p>The status code returned. The status code **200** indicates that the request was is successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * <p>The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
      */
     @NameInMap("Code")
     public String code;
@@ -98,7 +98,7 @@ public class CreateHoneypotResponseBody extends TeaModel {
 
     public static class CreateHoneypotResponseBodyData extends TeaModel {
         /**
-         * <p>The name of the management node to which the honeypot is deployed.</p>
+         * <p>The name of the management node.</p>
          */
         @NameInMap("ControlNodeName")
         public String controlNodeName;
@@ -110,13 +110,13 @@ public class CreateHoneypotResponseBody extends TeaModel {
         public String honeypotId;
 
         /**
-         * <p>The display name of the image that is used for the honeypot.</p>
+         * <p>The display name of the honeypot image.</p>
          */
         @NameInMap("HoneypotImageDisplayName")
         public String honeypotImageDisplayName;
 
         /**
-         * <p>The name of the image that is used for the honeypot.</p>
+         * <p>The name of the honeypot image.</p>
          */
         @NameInMap("HoneypotImageName")
         public String honeypotImageName;
@@ -140,7 +140,7 @@ public class CreateHoneypotResponseBody extends TeaModel {
         public String presetId;
 
         /**
-         * <p>The status of the honeypot.</p>
+         * <p>An array that consists of the status information about the honeypot.</p>
          */
         @NameInMap("State")
         public java.util.List<String> state;

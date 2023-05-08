@@ -4,36 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateHoneypotPresetRequest extends TeaModel {
-    /**
-     * <p>The name of the honeypot image.</p>
-     */
     @NameInMap("HoneypotImageName")
     public String honeypotImageName;
 
     @NameInMap("Lang")
     public String lang;
 
-    /**
-     * <p>The custom configurations of the honeypot template. The value is a JSON string that contains the following fields:</p>
-     * <br>
-     * <p>*   **portrait_option**: Social Source Tracing</p>
-     * <p>*   **burp**: Burp-specific Defense</p>
-     * <p>*   **trojan_git**: Git-specific Defense</p>
-     */
     @NameInMap("Meta")
     public String meta;
 
-    /**
-     * <p>The ID of the management node to which you want to deploy honeypots.</p>
-     * <br>
-     * <p>>  You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to obtain the IDs of management nodes.</p>
-     */
     @NameInMap("NodeId")
     public String nodeId;
 
-    /**
-     * <p>The custom name of the honeypot template.</p>
-     */
     @NameInMap("PresetName")
     public String presetName;
 

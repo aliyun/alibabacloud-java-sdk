@@ -4,24 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeTraceInfoDetailResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
-    /**
-     * <p>The details of the tracing diagram.</p>
-     */
     @NameInMap("TraceInfoDetail")
     public DescribeTraceInfoDetailResponseBodyTraceInfoDetail traceInfoDetail;
 
@@ -55,33 +43,18 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeTraceInfoDetailResponseBodyTraceInfoDetailEdgeList extends TeaModel {
-        /**
-         * <p>The number of times.</p>
-         */
         @NameInMap("Count")
         public Integer count;
 
-        /**
-         * <p>The ending vertex ID of the edge of the tracing diagram.</p>
-         */
         @NameInMap("EndId")
         public String endId;
 
-        /**
-         * <p>The starting vertex ID of the edge of the tracing diagram.</p>
-         */
         @NameInMap("StartId")
         public String startId;
 
-        /**
-         * <p>The point in time.</p>
-         */
         @NameInMap("Time")
         public String time;
 
-        /**
-         * <p>The type of the edge of the tracing diagram.</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -133,69 +106,36 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeTraceInfoDetailResponseBodyTraceInfoDetailEntityTypeList extends TeaModel {
-        /**
-         * <p>This parameter is deprecated.</p>
-         */
         @NameInMap("DbId")
         public Integer dbId;
 
-        /**
-         * <p>The rendering color of the vertex.</p>
-         */
         @NameInMap("DisplayColor")
         public String displayColor;
 
-        /**
-         * <p>The icon style of the vertex.</p>
-         */
         @NameInMap("DisplayIcon")
         public String displayIcon;
 
-        /**
-         * <p>This parameter is deprecated.</p>
-         */
         @NameInMap("DisplayTemplate")
         public String displayTemplate;
 
-        /**
-         * <p>The timestamp when the vertex was created.</p>
-         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
-        /**
-         * <p>The time when the vertex was last modified.</p>
-         */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
-        /**
-         * <p>The ID of the vertex type.</p>
-         */
         @NameInMap("Id")
         public String id;
 
-        /**
-         * <p>This parameter is deprecated.</p>
-         */
         @NameInMap("Limit")
         public Integer limit;
 
-        /**
-         * <p>The name of the vertex type.</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The namespace.</p>
-         */
         @NameInMap("Namespace")
         public String namespace;
 
-        /**
-         * <p>This parameter is deprecated.</p>
-         */
         @NameInMap("Offset")
         public Integer offset;
 
@@ -295,36 +235,18 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeTraceInfoDetailResponseBodyTraceInfoDetailRelationTypeList extends TeaModel {
-        /**
-         * <p>Indicates whether the edge is a directional edge. Valid values:</p>
-         * <br>
-         * <p>*   **1**: yes</p>
-         * <p>*   **0**: no</p>
-         */
         @NameInMap("Directed")
         public Integer directed;
 
-        /**
-         * <p>The rendering color of the edge.</p>
-         */
         @NameInMap("DisplayColor")
         public String displayColor;
 
-        /**
-         * <p>The name of the edge type.</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The ID of the edge type.</p>
-         */
         @NameInMap("RelationTypeId")
         public String relationTypeId;
 
-        /**
-         * <p>This parameter is deprecated.</p>
-         */
         @NameInMap("ShowType")
         public String showType;
 
@@ -376,21 +298,12 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeTraceInfoDetailResponseBodyTraceInfoDetailVertexListNeighborList extends TeaModel {
-        /**
-         * <p>The number of neighbor nodes.</p>
-         */
         @NameInMap("Count")
         public Integer count;
 
-        /**
-         * <p>Indicates whether one more page is returned.</p>
-         */
         @NameInMap("HasMore")
         public Boolean hasMore;
 
-        /**
-         * <p>The type of the neighbor node. The value is fixed as **alert**.</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -426,39 +339,21 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeTraceInfoDetailResponseBodyTraceInfoDetailVertexList extends TeaModel {
-        /**
-         * <p>The number of times.</p>
-         */
         @NameInMap("Count")
         public Integer count;
 
-        /**
-         * <p>The ID of the vertex.</p>
-         */
         @NameInMap("Id")
         public String id;
 
-        /**
-         * <p>The name of the entity represented by the vertex.</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>An array that consists of the neighbor nodes.</p>
-         */
         @NameInMap("NeighborList")
         public java.util.List<DescribeTraceInfoDetailResponseBodyTraceInfoDetailVertexListNeighborList> neighborList;
 
-        /**
-         * <p>The point in time.</p>
-         */
         @NameInMap("Time")
         public String time;
 
-        /**
-         * <p>The type of the entity represented by the vertex.</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -518,27 +413,15 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeTraceInfoDetailResponseBodyTraceInfoDetail extends TeaModel {
-        /**
-         * <p>An array that consists of the edges of the tracing diagram.</p>
-         */
         @NameInMap("EdgeList")
         public java.util.List<DescribeTraceInfoDetailResponseBodyTraceInfoDetailEdgeList> edgeList;
 
-        /**
-         * <p>An array that consists of the metadata configurations of the vertex type.</p>
-         */
         @NameInMap("EntityTypeList")
         public java.util.List<DescribeTraceInfoDetailResponseBodyTraceInfoDetailEntityTypeList> entityTypeList;
 
-        /**
-         * <p>An array that consists of the metadata configurations of the edge type.</p>
-         */
         @NameInMap("RelationTypeList")
         public java.util.List<DescribeTraceInfoDetailResponseBodyTraceInfoDetailRelationTypeList> relationTypeList;
 
-        /**
-         * <p>An array that consists of all vertexes of the tracing diagram.</p>
-         */
         @NameInMap("VertexList")
         public java.util.List<DescribeTraceInfoDetailResponseBodyTraceInfoDetailVertexList> vertexList;
 

@@ -85,6 +85,9 @@ public class ListQueryRaspAppInfoResponseBody extends TeaModel {
         @NameInMap("RaspStatus")
         public String raspStatus;
 
+        /**
+         * <p>推送失败结果</p>
+         */
         @NameInMap("Result")
         public String result;
 

@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribePropertySoftwareItemRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The name of the software that you want to query.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>Specifies whether to forcefully refresh the data that you want to query.</p>
+     * <p>The number of servers on which the software is installed.</p>
      */
     @NameInMap("ForceFlush")
     public Boolean forceFlush;
 
     /**
-     * <p>The name of the software that you want to query.</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

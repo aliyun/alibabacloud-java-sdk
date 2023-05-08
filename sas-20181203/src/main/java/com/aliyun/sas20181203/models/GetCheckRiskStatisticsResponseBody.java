@@ -4,21 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetCheckRiskStatisticsResponseBody extends TeaModel {
-    /**
-     * <p>The number of risk scenarios.</p>
-     */
     @NameInMap("Count")
     public Integer count;
 
-    /**
-     * <p>An array consisting of the statistics on check items that are used in risk scenarios.</p>
-     */
     @NameInMap("Data")
     public java.util.List<GetCheckRiskStatisticsResponseBodyData> data;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -52,45 +43,24 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
     }
 
     public static class GetCheckRiskStatisticsResponseBodyDataSubStatistics extends TeaModel {
-        /**
-         * <p>The name of the baseline type.</p>
-         */
         @NameInMap("Alias")
         public String alias;
 
-        /**
-         * <p>The number of high-risk items.</p>
-         */
         @NameInMap("HighWarningCount")
         public Integer highWarningCount;
 
-        /**
-         * <p>The number of low-risk items.</p>
-         */
         @NameInMap("LowWarningCount")
         public Integer lowWarningCount;
 
-        /**
-         * <p>The number of medium-risk items.</p>
-         */
         @NameInMap("MediumWarningCount")
         public Integer mediumWarningCount;
 
-        /**
-         * <p>The number of passed check items.</p>
-         */
         @NameInMap("PassCount")
         public Integer passCount;
 
-        /**
-         * <p>The total number of check items.</p>
-         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        /**
-         * <p>The baseline type.</p>
-         */
         @NameInMap("TypeName")
         public String typeName;
 
@@ -158,45 +128,24 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
     }
 
     public static class GetCheckRiskStatisticsResponseBodyData extends TeaModel {
-        /**
-         * <p>The number of high-risk items.</p>
-         */
         @NameInMap("HighWarningCount")
         public Integer highWarningCount;
 
-        /**
-         * <p>The number of low-risk items.</p>
-         */
         @NameInMap("LowWarningCount")
         public Integer lowWarningCount;
 
-        /**
-         * <p>The number of medium-risk items.</p>
-         */
         @NameInMap("MediumWarningCount")
         public Integer mediumWarningCount;
 
-        /**
-         * <p>The number of passed check items.</p>
-         */
         @NameInMap("PassCount")
         public Integer passCount;
 
-        /**
-         * <p>The name of the risk scenario.</p>
-         */
         @NameInMap("SceneName")
         public String sceneName;
 
-        /**
-         * <p>An array consisting of the statistics on check items that are used in the risk scenario by baseline type.</p>
-         */
         @NameInMap("SubStatistics")
         public java.util.List<GetCheckRiskStatisticsResponseBodyDataSubStatistics> subStatistics;
 
-        /**
-         * <p>The total number of check items.</p>
-         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

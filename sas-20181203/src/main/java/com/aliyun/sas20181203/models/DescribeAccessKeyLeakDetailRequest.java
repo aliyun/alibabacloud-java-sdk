@@ -4,9 +4,6 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessKeyLeakDetailRequest extends TeaModel {
-    /**
-     * <p>The ID of the AccessKey pair leak.</p>
-     */
     @NameInMap("Id")
     public Long id;
 

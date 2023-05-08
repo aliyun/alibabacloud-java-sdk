@@ -4,15 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
-    /**
-     * <p>An array that consists of the details of the ECS instances.</p>
-     */
     @NameInMap("AssetList")
     public java.util.List<DescribeAssetDetailByUuidsResponseBodyAssetList> assetList;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,108 +32,48 @@ public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
     }
 
     public static class DescribeAssetDetailByUuidsResponseBodyAssetList extends TeaModel {
-        /**
-         * <p>The type of the asset.</p>
-         * <br>
-         * <p>The value is fixed as **0**, which indicates ECS instances.</p>
-         */
         @NameInMap("AssetType")
         public String assetType;
 
-        /**
-         * <p>The status of the Security Center agent. Valid values:</p>
-         * <br>
-         * <p>*   **online**</p>
-         * <p>*   **offline**</p>
-         */
         @NameInMap("ClientStatus")
         public String clientStatus;
 
-        /**
-         * <p>The type of the asset by source. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The asset is provided by Alibaba Cloud.</p>
-         * <p>*   **1**: The asset is not provided by Alibaba Cloud.</p>
-         * <p>*   **2**: The asset resides in a data center.</p>
-         * <p>*   **3**, **4**, **5**, and **7**: other cloud asset.</p>
-         * <p>*   **8**: light-weight assets.</p>
-         */
         @NameInMap("Flag")
         public Integer flag;
 
-        /**
-         * <p>The ID of the ECS instance.</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The name of the ECS instance.</p>
-         */
         @NameInMap("InstanceName")
         public String instanceName;
 
-        /**
-         * <p>The public IP address of the ECS instance.</p>
-         */
         @NameInMap("InternetIp")
         public String internetIp;
 
-        /**
-         * <p>The private IP address of the ECS instance.</p>
-         */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
-        /**
-         * <p>The IP address of the ECS instance.</p>
-         * <br>
-         * <p>>  If the ECS instance has a public IP address, the value of this parameter is the public IP address of the ECS instance. If the ECS instance does not have a public IP address, the value of this parameter is the private IP address of the ECS instance.</p>
-         */
         @NameInMap("Ip")
         public String ip;
 
-        /**
-         * <p>The operating system of the ECS instance.</p>
-         */
         @NameInMap("Os")
         public String os;
 
-        /**
-         * <p>The name of the operating system run by the ECS instance.</p>
-         */
         @NameInMap("OsName")
         public String osName;
 
-        /**
-         * <p>The region in which the ECS instance resides.</p>
-         */
         @NameInMap("Region")
         public String region;
 
-        /**
-         * <p>The region in which the ECS instance resides.</p>
-         * <br>
-         * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The name of the region in which the ECS instance resides.</p>
-         */
         @NameInMap("RegionName")
         public String regionName;
 
-        /**
-         * <p>The UUID of the ECS instance.</p>
-         */
         @NameInMap("Uuid")
         public String uuid;
 
-        /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
-         */
         @NameInMap("VpcInstanceId")
         public String vpcInstanceId;
 

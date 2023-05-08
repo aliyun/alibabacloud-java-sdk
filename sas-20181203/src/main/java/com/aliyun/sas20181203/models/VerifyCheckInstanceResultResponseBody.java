@@ -4,15 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class VerifyCheckInstanceResultResponseBody extends TeaModel {
-    /**
-     * <p>The data returned.</p>
-     */
     @NameInMap("Data")
     public VerifyCheckInstanceResultResponseBodyData data;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,18 +32,9 @@ public class VerifyCheckInstanceResultResponseBody extends TeaModel {
     }
 
     public static class VerifyCheckInstanceResultResponseBodyData extends TeaModel {
-        /**
-         * <p>An array consisting of instances that failed the check.</p>
-         */
         @NameInMap("FailInstances")
         public java.util.List<String> failInstances;
 
-        /**
-         * <p>The operation code of the task that checks the configurations of cloud services. Valid values:</p>
-         * <br>
-         * <p>*   **Throttling**</p>
-         * <p>*   **ActionTrialUnauthorized**</p>
-         */
         @NameInMap("OperateCode")
         public String operateCode;
 

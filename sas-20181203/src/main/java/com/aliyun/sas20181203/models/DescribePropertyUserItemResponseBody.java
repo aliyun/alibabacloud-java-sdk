@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribePropertyUserItemResponseBody extends TeaModel {
     /**
-     * <p>The pagination information.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageInfo")
     public DescribePropertyUserItemResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>An array that consists of the account information returned.</p>
+     * <p>The name of the account.</p>
      */
     @NameInMap("PropertyItems")
     public java.util.List<DescribePropertyUserItemResponseBodyPropertyItems> propertyItems;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,25 +53,25 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
 
     public static class DescribePropertyUserItemResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>An array that consists of the account information returned.</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The number of entries returned per page.</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The total number of entries returned.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The number of entries returned on the current page.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -117,13 +117,13 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
 
     public static class DescribePropertyUserItemResponseBodyPropertyItems extends TeaModel {
         /**
-         * <p>The number of servers that belong to the account.</p>
+         * <p>Queries information about an account.</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
-         * <p>The name of the account.</p>
+         * <p>The number of servers that belong to the account.</p>
          */
         @NameInMap("User")
         public String user;

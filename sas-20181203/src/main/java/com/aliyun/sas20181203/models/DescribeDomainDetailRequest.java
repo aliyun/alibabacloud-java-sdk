@@ -13,7 +13,13 @@ public class DescribeDomainDetailRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The type of the domain asset. Valid values:</p>
+     * <br>
+     * <p>*   **0**: an Elastic Compute Service (ECS) instance</p>
+     * <p>*   **1**: a Server Load Balancer (SLB) instance</p>
+     * <p>*   **2**: a Network Address Translation (NAT) gateway</p>
+     * <p>*   **3**: an ApsaraDB RDS instance</p>
+     * <p>*   **4**: an ApsaraDB for MongoDB instance</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;

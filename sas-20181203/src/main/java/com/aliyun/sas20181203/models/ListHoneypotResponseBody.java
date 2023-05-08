@@ -11,13 +11,13 @@ public class ListHoneypotResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The information about the honeypot.</p>
+     * <p>An array that consists of the information about the honeypots.</p>
      */
     @NameInMap("List")
     public java.util.List<ListHoneypotResponseBodyList> list;
@@ -124,19 +124,19 @@ public class ListHoneypotResponseBody extends TeaModel {
         public String honeypotId;
 
         /**
-         * <p>The display name of the image that is used for the honeypot.</p>
+         * <p>The display name of the honeypot image.</p>
          */
         @NameInMap("HoneypotImageDisplayName")
         public String honeypotImageDisplayName;
 
         /**
-         * <p>The ID of the image that is used for the honeypot.</p>
+         * <p>The ID of the honeypot image.</p>
          */
         @NameInMap("HoneypotImageId")
         public String honeypotImageId;
 
         /**
-         * <p>The name of the image that is used for the honeypot.</p>
+         * <p>The name of the honeypot image.</p>
          */
         @NameInMap("HoneypotImageName")
         public String honeypotImageName;
@@ -154,7 +154,7 @@ public class ListHoneypotResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>The custom ID of the honeypot.</p>
+         * <p>The ID of the custom configuration for the honeypot.</p>
          */
         @NameInMap("PresetId")
         public String presetId;

@@ -4,15 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListClientUserDefineRuleTypesResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>An array consisting of the rule types that are supported.</p>
-     */
     @NameInMap("UserDefineRuleTypes")
     public java.util.List<String> userDefineRuleTypes;
 

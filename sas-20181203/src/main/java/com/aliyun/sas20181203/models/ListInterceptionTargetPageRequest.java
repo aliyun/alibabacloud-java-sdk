@@ -4,55 +4,27 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListInterceptionTargetPageRequest extends TeaModel {
-    /**
-     * <p>The name of the application to which the network object belongs.</p>
-     */
     @NameInMap("AppName")
     public String appName;
 
-    /**
-     * <p>The number of the page to return. Default value: **1**.</p>
-     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    /**
-     * <p>The images of the network object.</p>
-     */
     @NameInMap("ImageList")
     public java.util.List<String> imageList;
 
-    /**
-     * <p>The namespace to which the network object belongs.</p>
-     */
     @NameInMap("Namespace")
     public String namespace;
 
-    /**
-     * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
-     * <br>
-     * <p>> We recommend that you do not leave this parameter empty.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The labels specified for the network object.</p>
-     */
     @NameInMap("TagList")
     public java.util.List<String> tagList;
 
-    /**
-     * <p>The name of the network object.</p>
-     */
     @NameInMap("TargetName")
     public String targetName;
 
-    /**
-     * <p>The type of the network object. Valid values:</p>
-     * <br>
-     * <p>*   IMAGE</p>
-     */
     @NameInMap("TargetType")
     public String targetType;
 

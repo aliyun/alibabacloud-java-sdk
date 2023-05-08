@@ -4,21 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribePropertyCronItemResponseBody extends TeaModel {
-    /**
-     * <p>The pagination information.</p>
-     */
     @NameInMap("PageInfo")
     public DescribePropertyCronItemResponseBodyPageInfo pageInfo;
 
-    /**
-     * <p>An array that consists of scheduled tasks.</p>
-     */
     @NameInMap("PropertyItems")
     public java.util.List<DescribePropertyCronItemResponseBodyPropertyItems> propertyItems;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -52,27 +43,15 @@ public class DescribePropertyCronItemResponseBody extends TeaModel {
     }
 
     public static class DescribePropertyCronItemResponseBodyPageInfo extends TeaModel {
-        /**
-         * <p>The number of entries returned on the current page.</p>
-         */
         @NameInMap("Count")
         public Integer count;
 
-        /**
-         * <p>The page number of the returned page.</p>
-         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        /**
-         * <p>The number of entries returned per page.</p>
-         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        /**
-         * <p>The total number of entries returned.</p>
-         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -116,15 +95,9 @@ public class DescribePropertyCronItemResponseBody extends TeaModel {
     }
 
     public static class DescribePropertyCronItemResponseBodyPropertyItems extends TeaModel {
-        /**
-         * <p>The number of servers on which the scheduled task is run.</p>
-         */
         @NameInMap("Count")
         public Integer count;
 
-        /**
-         * <p>The path to the scheduled task.</p>
-         */
         @NameInMap("Source")
         public String source;
 

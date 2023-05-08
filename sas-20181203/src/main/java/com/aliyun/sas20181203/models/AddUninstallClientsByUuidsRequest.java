@@ -4,35 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class AddUninstallClientsByUuidsRequest extends TeaModel {
-    /**
-     * <p>The method name. Default value: init.</p>
-     */
     @NameInMap("CallMethod")
     public String callMethod;
 
-    /**
-     * <p>The feedback.</p>
-     */
     @NameInMap("Feedback")
     public String feedback;
 
-    /**
-     * <p>The region in which the server resides.</p>
-     */
     @NameInMap("Region")
     public String region;
 
-    /**
-     * <p>The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.</p>
-     */
     @NameInMap("SourceIp")
     public String sourceIp;
 
-    /**
-     * <p>The UUID of the server that you want to unbind. Separate multiple UUIDs with commas (,).</p>
-     * <br>
-     * <p>>  You can call the [DescribeCloudCenterInstances](~~141932~~) operation to query the UUIDs of servers.</p>
-     */
     @NameInMap("Uuids")
     public String uuids;
 

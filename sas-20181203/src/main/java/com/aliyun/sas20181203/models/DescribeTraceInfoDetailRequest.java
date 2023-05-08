@@ -4,48 +4,24 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeTraceInfoDetailRequest extends TeaModel {
-    /**
-     * <p>The ID of the request source. Set the value to **sas**.</p>
-     */
     @NameInMap("From")
     public String from;
 
-    /**
-     * <p>The timestamp of the detection. Unit: milliseconds.</p>
-     */
     @NameInMap("IncidentTime")
     public Long incidentTime;
 
-    /**
-     * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
-     */
     @NameInMap("Lang")
     public String lang;
 
-    /**
-     * <p>The source IP address of the request. The value of this parameter is specified by the system.</p>
-     */
     @NameInMap("SourceIp")
     public String sourceIp;
 
-    /**
-     * <p>The type of the vertex. Set the value to **SAS_INCIDENT**.</p>
-     */
     @NameInMap("Type")
     public String type;
 
-    /**
-     * <p>The UUID of the server.</p>
-     */
     @NameInMap("Uuid")
     public String uuid;
 
-    /**
-     * <p>The ID of the vertex. You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the ID.</p>
-     */
     @NameInMap("VertexId")
     public String vertexId;
 

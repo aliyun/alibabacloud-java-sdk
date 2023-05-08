@@ -4,39 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebPathResponseBody extends TeaModel {
-    /**
-     * <p>An array that consists of the paths to the web directories.</p>
-     */
     @NameInMap("ConfigList")
     public java.util.List<DescribeWebPathResponseBodyConfigList> configList;
 
-    /**
-     * <p>The number of entries returned on the current page.</p>
-     */
     @NameInMap("Count")
     public Integer count;
 
-    /**
-     * <p>The page number of the returned page.</p>
-     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    /**
-     * <p>The number of entries returned per page.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of entries returned.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -94,17 +76,9 @@ public class DescribeWebPathResponseBody extends TeaModel {
     }
 
     public static class DescribeWebPathResponseBodyConfigListTargetList extends TeaModel {
-        /**
-         * <p>The object.</p>
-         */
         @NameInMap("Target")
         public String target;
 
-        /**
-         * <p>The object type. Valid values:</p>
-         * <br>
-         * <p>*   **uuid**</p>
-         */
         @NameInMap("TargetType")
         public String targetType;
 
@@ -132,24 +106,12 @@ public class DescribeWebPathResponseBody extends TeaModel {
     }
 
     public static class DescribeWebPathResponseBodyConfigList extends TeaModel {
-        /**
-         * <p>An array consisting of the servers on which the web directories are scanned.</p>
-         */
         @NameInMap("TargetList")
         public java.util.List<DescribeWebPathResponseBodyConfigListTargetList> targetList;
 
-        /**
-         * <p>The path to the web directory.</p>
-         */
         @NameInMap("WebPath")
         public String webPath;
 
-        /**
-         * <p>The path type of the web directory. Valid values:</p>
-         * <br>
-         * <p>*   **def**: automatically identified</p>
-         * <p>*   **customize**: manually added</p>
-         */
         @NameInMap("WebPathType")
         public String webPathType;
 

@@ -5,16 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeLogstoreStorageRequest extends TeaModel {
     /**
-     * <p>The ID of the request source. Set the value to **sas**.</p>
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      */
     @NameInMap("From")
     public String from;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The purchased log storage capacity, in GB.</p>
      */
     @NameInMap("Lang")
     public String lang;

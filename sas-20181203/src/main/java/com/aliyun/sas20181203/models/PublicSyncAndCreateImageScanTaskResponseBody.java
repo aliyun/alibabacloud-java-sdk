@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class PublicSyncAndCreateImageScanTaskResponseBody extends TeaModel {
     /**
-     * <p>The data returned if the call is successful.</p>
+     * <p>The total number of images to scan.</p>
      */
     @NameInMap("Data")
     public PublicSyncAndCreateImageScanTaskResponseBodyData data;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The data returned if the call is successful.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,69 +38,38 @@ public class PublicSyncAndCreateImageScanTaskResponseBody extends TeaModel {
     }
 
     public static class PublicSyncAndCreateImageScanTaskResponseBodyData extends TeaModel {
-        /**
-         * <p>Indicates whether you can create more image scan tasks. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
-         * <br>
-         * <p>>  By default, a maximum of 10 image scan tasks can be running at the same time. If 10 image scan tasks are running, you cannot create an image scan task by calling this operation. You must wait for at least one of the 10 existing image scan tasks to complete before you can create an image scan task.</p>
-         */
         @NameInMap("CanCreate")
         public Boolean canCreate;
 
-        /**
-         * <p>The timestamp when the image information was collected. Unit: milliseconds.</p>
-         */
         @NameInMap("CollectTime")
         public Long collectTime;
 
-        /**
-         * <p>The timestamp when the image scan task started to run. Unit: milliseconds.</p>
-         */
         @NameInMap("ExecTime")
         public Long execTime;
 
         /**
-         * <p>The number of images that have been scanned.</p>
+         * <p>PublicSyncAndCreateImageScanTask</p>
          */
         @NameInMap("FinishCount")
         public Integer finishCount;
 
-        /**
-         * <p>The progress of the image scan task.</p>
-         */
         @NameInMap("Progress")
         public Integer progress;
 
-        /**
-         * <p>The result of the image scan task. Valid values:</p>
-         * <br>
-         * <p>*   **SUCCESS**: The task is successful.</p>
-         * <p>*   **TASK\_NOT\_SUPPORT_REGION**: The image is deployed in a region that is not supported by container image scan.</p>
-         */
         @NameInMap("Result")
         public String result;
 
-        /**
-         * <p>The status of the image scan task. Valid values:</p>
-         * <br>
-         * <p>*   **INIT**: The task is being initialized.</p>
-         * <p>*   **PRE_ANALYZER**: The task is being pre-processed.</p>
-         * <p>*   **SUCCESS**: The task is successful.</p>
-         * <p>*   **FAIL**: The task failed.</p>
-         */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The ID of the image scan task.</p>
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
-         * <p>The total number of images to scan.</p>
+         * <p>Adds images to Security Center and creates an image scan task to scan the images.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

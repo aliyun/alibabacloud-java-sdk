@@ -4,15 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetInterceptionSummaryResponseBody extends TeaModel {
-    /**
-     * <p>The statistics.</p>
-     */
     @NameInMap("InterceptionSummary")
     public GetInterceptionSummaryResponseBodyInterceptionSummary interceptionSummary;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,60 +32,33 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
     }
 
     public static class GetInterceptionSummaryResponseBodyInterceptionSummary extends TeaModel {
-        /**
-         * <p>The number of clusters that are not protected.</p>
-         */
         @NameInMap("CloseClusterCount")
         public Integer closeClusterCount;
 
-        /**
-         * <p>The number of disabled cluster defense rules.</p>
-         */
         @NameInMap("CloseRuleCount")
         public Integer closeRuleCount;
 
-        /**
-         * <p>The total number of clusters.</p>
-         */
         @NameInMap("ClusterCount")
         public Integer clusterCount;
 
         @NameInMap("InterceptionCountInDays")
         public Integer interceptionCountInDays;
 
-        /**
-         * <p>The number of clusters that are protected.</p>
-         */
         @NameInMap("OpenClusterCount")
         public Integer openClusterCount;
 
-        /**
-         * <p>The number of enabled cluster defense rules.</p>
-         */
         @NameInMap("OpenRuleCount")
         public Integer openRuleCount;
 
-        /**
-         * <p>The number of security risks that are detected in the last 180 days.</p>
-         */
         @NameInMap("RiskCount180Day")
         public Long riskCount180Day;
 
-        /**
-         * <p>The number of security risks that are detected in the last 30 days.</p>
-         */
         @NameInMap("RiskCount30Day")
         public Long riskCount30Day;
 
-        /**
-         * <p>The number of security risks that are detected in the last 24 hours.</p>
-         */
         @NameInMap("RiskCountToday")
         public Long riskCountToday;
 
-        /**
-         * <p>The total number of cluster defense rules.</p>
-         */
         @NameInMap("RuleCount")
         public Integer ruleCount;
 

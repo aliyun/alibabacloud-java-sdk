@@ -4,14 +4,6 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribePropertyUsageNewestRequest extends TeaModel {
-    /**
-     * <p>The type of the accounts.</p>
-     * <br>
-     * <p>Valid values:</p>
-     * <br>
-     * <p>*   user</p>
-     * <p>*   system</p>
-     */
     @NameInMap("Type")
     public String type;
 

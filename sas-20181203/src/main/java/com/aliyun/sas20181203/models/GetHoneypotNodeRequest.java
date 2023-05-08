@@ -7,11 +7,6 @@ public class GetHoneypotNodeRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    /**
-     * <p>The ID of the management node.</p>
-     * <br>
-     * <p>>  You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to query the IDs of management nodes.</p>
-     */
     @NameInMap("NodeId")
     public String nodeId;
 

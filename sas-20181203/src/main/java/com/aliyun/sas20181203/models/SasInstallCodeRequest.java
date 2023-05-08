@@ -4,9 +4,6 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class SasInstallCodeRequest extends TeaModel {
-    /**
-     * <p>The source IP address of the request.</p>
-     */
     @NameInMap("SourceIp")
     public String sourceIp;
 

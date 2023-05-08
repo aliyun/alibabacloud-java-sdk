@@ -5,21 +5,13 @@ import com.aliyun.tea.*;
 
 public class ConfirmVirusEventsRequest extends TeaModel {
     /**
-     * <p>Specifies whether to handle all alert events. Valid values:</p>
-     * <br>
-     * <p>*   **1**: yes</p>
-     * <p>*   **0**: no</p>
+     * <p>Confirms the alert events that you want to handle.</p>
      */
     @NameInMap("OperationAll")
     public Integer operationAll;
 
     /**
-     * <p>The operation that you want to perform on the alert events. Valid values:</p>
-     * <br>
-     * <p>*   **default**: performs in-depth detection and removal</p>
-     * <p>*   **ignore**: ignores the alert event</p>
-     * <p>*   **advance\_mark\_mis_info**: adds the alert events to the whitelist</p>
-     * <p>*   **manual_handled**: marks the alert events as manually handled</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("OperationCode")
     public String operationCode;

@@ -4,11 +4,6 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeScanTaskProgressRequest extends TeaModel {
-    /**
-     * <p>The ID of the virus scan task.</p>
-     * <br>
-     * <p>>  You can call the [StartVirusScanTask](~~StartVirusScanTask~~) operation to query the IDs of virus scan tasks.</p>
-     */
     @NameInMap("TaskId")
     public Long taskId;
 

@@ -4,22 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class RollbackSuspEventQuaraFileRequest extends TeaModel {
-    /**
-     * <p>The ID of the request source. Set the value to sas.</p>
-     */
     @NameInMap("From")
     public String from;
 
-    /**
-     * <p>The ID of the quarantined file.   </p>
-     * <p>> If you do not configure this parameter, you cannot call the RollbackSuspEventQuaraFile operation to restore a quarantined file. You can call the [DescribeSuspEventQuaraFiles](~~DescribeSuspEventQuaraFiles~~) operation to query the IDs of quarantined files.</p>
-     */
     @NameInMap("QuaraFileId")
     public Integer quaraFileId;
 
-    /**
-     * <p>The source IP address of the request.</p>
-     */
     @NameInMap("SourceIp")
     public String sourceIp;
 

@@ -4,75 +4,66 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribePropertyCountResponseBody extends TeaModel {
-    /**
-     * <p>The number of startup items.</p>
-     */
     @NameInMap("Autorun")
     public Integer autorun;
 
     /**
-     * <p>The number of scheduled tasks.</p>
+     * <p>The number of middleware assets.</p>
      */
     @NameInMap("Cron")
     public Integer cron;
 
     /**
-     * <p>The number of databases.</p>
+     * <p>DescribePropertyCount</p>
      */
     @NameInMap("Database")
     public Integer database;
 
-    /**
-     * <p>The number of kernel modules.</p>
-     */
     @NameInMap("Lkm")
     public Integer lkm;
 
     /**
-     * <p>The number of ports.</p>
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      */
     @NameInMap("Port")
     public Integer port;
 
     /**
-     * <p>The number of processes.</p>
+     * <p>The number of accounts.</p>
      */
     @NameInMap("Process")
     public Integer process;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The number of processes.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The number of middleware assets.</p>
+     * <p>port,process</p>
      */
     @NameInMap("Sca")
     public Integer sca;
 
     /**
-     * <p>The number of software assets.</p>
+     * <p>The number of web services.</p>
      */
     @NameInMap("Software")
     public Integer software;
 
     /**
-     * <p>The number of accounts.</p>
+     * <p>The number of websites.</p>
      */
     @NameInMap("User")
     public Integer user;
 
     /**
-     * <p>The number of websites.</p>
+     * <p>Queries the statistics of asset fingerprints. The assets include processes, ports, software, accounts, middleware, websites, web services, scheduled tasks, startup items, and databases.</p>
      */
     @NameInMap("Web")
     public Integer web;
 
-    /**
-     * <p>The number of web services.</p>
-     */
     @NameInMap("Webserver")
     public Integer webserver;
 
