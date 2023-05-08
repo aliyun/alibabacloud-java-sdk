@@ -20,7 +20,7 @@ public class SendChatappMessageResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the message.</p>
+     * <p>The ID of the message that was sent.</p>
      */
     @NameInMap("MessageId")
     public String messageId;

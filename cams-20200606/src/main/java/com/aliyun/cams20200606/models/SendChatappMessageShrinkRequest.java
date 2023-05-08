@@ -17,25 +17,25 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     /**
      * <p>The content of the message.</p>
      * <br>
-     * <p>**Usage notes when you set the ChannelType parameter to whatsapp**</p>
+     * <p>**Usage notes when you set the ChannelType parameter to whatsapp:**</p>
      * <br>
      * <p>*   When you set the **MessageType** parameter to **text**, the **text** parameter is required and the **caption** parameter cannot be specified.</p>
      * <p>*   When you set the **MessageType** parameter to **image**, the **link** parameter is required.</p>
      * <p>*   When you set the **MessageType** parameter to **video**, the **link** parameter is required.</p>
-     * <p>*   When you set the **MessageType** parameter to **audio**, the **link** parameter is required and **caption** parameter is invalid.</p>
-     * <p>*   When you set the **MessageType** parameter to **document**, the **link** and **fileName** parameters are required and **caption** parameter is invalid.</p>
+     * <p>*   When you set the **MessageType** parameter to **audio**, the **link** parameter is required and the **caption** parameter is invalid.</p>
+     * <p>*   When you set the **MessageType** parameter to **document**, the **link** and **fileName** parameters are required and the **caption** parameter is invalid.</p>
      * <p>*   When you set the **MessageType** parameter to **interactive**, the **type** and **action** parameters are required.</p>
      * <p>*   When you set the **MessageType** parameter to **contacts**, the **name** parameter is required.</p>
      * <p>*   When you set the **MessageType** parameter to **location**, the **longitude** and **latitude** parameters are required.</p>
      * <p>*   When you set the **MessageType** parameter to **sticker**, the **link** parameter is required, and the **caption** and **fileName** parameters are invalid.</p>
      * <p>*   When you set the **MessageType** parameter to **reaction**, the **messageId** and **emoji** parameters are required.</p>
      * <br>
-     * <p>**Usage notes when you set the ChannelType parameter to viber**</p>
+     * <p>**Usage notes when you set the ChannelType parameter to viber:**</p>
      * <br>
      * <p>*   When you set the **MessageType** parameter to **text**, the **text** parameter is required.</p>
      * <p>*   When you set the **MessageType** parameter to **image**, the **link** parameter is required.</p>
      * <p>*   When you set the **MessageType** parameter to **video**, the **link**, **thumbnail**, **fileSize**, and **duration** parameters are required.</p>
-     * <p>*   When you set the **MessageType** parameter to  **document**, the **link**, **fileName**, and **fileType** parameters are required.</p>
+     * <p>*   When you set the **MessageType** parameter to **document**, the **link**, **fileName**, and **fileType** parameters are required.</p>
      * <p>*   When you set the **MessageType** parameter to **text_button**, the **text**, **caption**, and **action** parameters are required.</p>
      * <p>*   When you set the **MessageType** parameter to **text_image_button**, the **text**, **link**, **caption**, and **action** parameters are required.</p>
      * <p>*   When you set the **MessageType** parameter to **text_video**, the **text**, **link**, **thumbnail**, **fileSize**, and **duration** parameters are required.</p>
@@ -45,7 +45,7 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     public String content;
 
     /**
-     * <p>The ID of the reply message.</p>
+     * <p>The ID of the message to reply to.</p>
      */
     @NameInMap("ContextMessageId")
     public String contextMessageId;
@@ -69,6 +69,9 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     @NameInMap("FallBackContent")
     public String fallBackContent;
 
+    /**
+     * <p>消息在指定时间内未返回回执回落</p>
+     */
     @NameInMap("FallBackDuration")
     public Integer fallBackDuration;
 
@@ -81,19 +84,19 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     /**
      * <p>The phone number of the message sender.</p>
      * <br>
-     * <p>> You can specify a phone number that is registered for a WhatsApp account and is approved in the ChatAPP console.</p>
+     * <p>> You can specify a mobile phone number that is registered for a WhatsApp account and is approved in the ChatAPP console.</p>
      */
     @NameInMap("From")
     public String from;
 
     /**
-     * <p>The ISV verification code, which is used to verify whether the user is authorized by the ISV account.</p>
+     * <p>The independent software vendor (ISV) verification code, which is used to verify whether the user is authorized by the ISV account.</p>
      */
     @NameInMap("IsvCode")
     public String isvCode;
 
     /**
-     * <p>The message type when the ChannelType parameter is set to viber. Valid values: promotion and transaction.</p>
+     * <p>The type of the Viber message. This parameter is required if you set the ChannelType parameter to viber. Valid values: promotion and transaction.</p>
      */
     @NameInMap("Label")
     public String label;
@@ -105,32 +108,32 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>The specific type of the message. This parameter is required only if you set the Type parameter to **message**. Valid values:</p>
+     * <p>The specific type of the message. This parameter is required only if you set the Type parameter to **message**.</p>
      * <br>
-     * <p>**When you set the ChannelType parameter to whatsapp**</p>
+     * <p>**Valid values of MessageType when you set the ChannelType parameter to whatsapp:**</p>
      * <br>
-     * <p>*   **text**: the text message.</p>
-     * <p>*   **image**: the image message.</p>
-     * <p>*   **video**: the video message.</p>
-     * <p>*   **audio**: the audio message.</p>
-     * <p>*   **document**: the document message.</p>
-     * <p>*   **interactive**: the interactive message.</p>
-     * <p>*   **contacts**: the contact message.</p>
-     * <p>*   **location**: the location message.</p>
-     * <p>*   **sticker**: the sticker message.</p>
-     * <p>*   **reaction**: the reaction message.</p>
+     * <p>*   **text**: a text message.</p>
+     * <p>*   **image**: an image message.</p>
+     * <p>*   **video**: a video message.</p>
+     * <p>*   **audio**: an audio message.</p>
+     * <p>*   **document**: a document message.</p>
+     * <p>*   **interactive**: an interactive message.</p>
+     * <p>*   **contacts**: a contact message.</p>
+     * <p>*   **location**: a location message.</p>
+     * <p>*   **sticker**: a sticker message.</p>
+     * <p>*   **reaction**: a reaction message.</p>
      * <br>
-     * <p>**When you set the ChannelType parameter to viber**</p>
+     * <p>**Valid values of MessageType when you set the ChannelType parameter to viber:**</p>
      * <br>
-     * <p>*   **text**: the text message.</p>
-     * <p>*   **image**: the image message.</p>
-     * <p>*   **video**: the video message.</p>
-     * <p>*   **document**: the document message.</p>
-     * <p>*   **text_button**: messages that contain the text and button media objects.</p>
-     * <p>*   **text_image_button**: messages that contain multiple media objects, including the text, image, and button media objects.</p>
-     * <p>*   **text_video**: messages that contain the text and video media objects.</p>
-     * <p>*   **text_video_button**: messages that contain multiple media objects, including text, video, and button media objects.</p>
-     * <p>*   **text_image**: messages that contain the text and image media objects..</p>
+     * <p>*   **text**: a text message.</p>
+     * <p>*   **image**: an image message.</p>
+     * <p>*   **video**: a video message.</p>
+     * <p>*   **document**: a document message.</p>
+     * <p>*   **text_button**: a message that contains the text and button media objects.</p>
+     * <p>*   **text_image_button**: a message that contains multiple media objects, including the text, image, and button.</p>
+     * <p>*   **text_video**: a message that contains the text and video media objects.</p>
+     * <p>*   **text_video_button**: a message that contains multiple media objects, including text, video, and button.</p>
+     * <p>*   **text_image**: a message that contains the text and image media objects.</p>
      * <br>
      * <p>> For more information, see [Parameters of a message template](~~454530~~).</p>
      */
@@ -144,7 +147,7 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     public String payloadShrink;
 
     /**
-     * <p>The tag information when the ChannelType parameter is set to viber.</p>
+     * <p>The tag information of the Viber message.</p>
      */
     @NameInMap("Tag")
     public String tag;
@@ -168,19 +171,19 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     public String templateParamsShrink;
 
     /**
-     * <p>The phone number of the message receiver.</p>
+     * <p>The phone number that receives the message.</p>
      */
     @NameInMap("To")
     public String to;
 
     /**
-     * <p>The tracking ID when the ChannelType parameter is set to viber.</p>
+     * <p>The tracking ID of the Viber message.</p>
      */
     @NameInMap("TrackingData")
     public String trackingData;
 
     /**
-     * <p>The timeout period for sending messages when the ChannelType parameter is set to viber. Valid values: 30 to 1209600. Unit: seconds.</p>
+     * <p>The timeout period for sending the Viber message. Valid values: 30 to 1209600. Unit: seconds.</p>
      */
     @NameInMap("Ttl")
     public Integer ttl;

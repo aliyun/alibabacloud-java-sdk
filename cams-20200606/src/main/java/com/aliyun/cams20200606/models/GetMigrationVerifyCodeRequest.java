@@ -4,27 +4,15 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetMigrationVerifyCodeRequest extends TeaModel {
-    /**
-     * <p>The space ID of the user under the ISV account.</p>
-     */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
-    /**
-     * <p>The language.</p>
-     */
     @NameInMap("Locale")
     public String locale;
 
-    /**
-     * <p>The method to obtain the verification code. Valid values: sms and voice.</p>
-     */
     @NameInMap("Method")
     public String method;
 
-    /**
-     * <p>The phone number.</p>
-     */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 

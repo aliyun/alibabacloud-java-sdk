@@ -94,7 +94,7 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
         public String dir;
 
         /**
-         * <p>The address of the server to which a file is uploaded in OSS.</p>
+         * <p>The address of the OSS server to which a file is uploaded.</p>
          */
         @NameInMap("EndPoint")
         public String endPoint;

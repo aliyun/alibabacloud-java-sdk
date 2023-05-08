@@ -29,6 +29,9 @@ public class SendChatappMassMessageRequest extends TeaModel {
     @NameInMap("FallBackContent")
     public String fallBackContent;
 
+    /**
+     * <p>消息在指定时间内没有返回已到达回执时回落, 不填代表不根据此时间判断回落，只有发送失败和有失败的状态报告时才会回落。时间单位为秒 最小值为60，最大值43200</p>
+     */
     @NameInMap("FallBackDuration")
     public Integer fallBackDuration;
 
