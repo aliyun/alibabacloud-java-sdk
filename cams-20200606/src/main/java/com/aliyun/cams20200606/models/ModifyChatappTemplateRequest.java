@@ -7,46 +7,25 @@ public class ModifyChatappTemplateRequest extends TeaModel {
     @NameInMap("Category")
     public String category;
 
-    /**
-     * <p>The components of the message template.</p>
-     */
     @NameInMap("Components")
     public java.util.List<ModifyChatappTemplateRequestComponents> components;
 
-    /**
-     * <p>The space ID of the user under the ISV account.</p>
-     */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
-    /**
-     * <p>The ID of the WhatsApp Business account under the independent software vendor (ISV) account.</p>
-     */
     @NameInMap("CustWabaId")
     @Deprecated
     public String custWabaId;
 
-    /**
-     * <p>The examples of variables that are used when you create the message template.</p>
-     */
     @NameInMap("Example")
     public java.util.Map<String, String> example;
 
-    /**
-     * <p>The ISV verification code, which is used to verify whether the user is authorized by the ISV account.</p>
-     */
     @NameInMap("IsvCode")
     public String isvCode;
 
-    /**
-     * <p>The language that is used in the message template. For more information, see [Language codes](~~463420~~).</p>
-     */
     @NameInMap("Language")
     public String language;
 
-    /**
-     * <p>The code of the message template.</p>
-     */
     @NameInMap("TemplateCode")
     public String templateCode;
 
@@ -131,40 +110,30 @@ public class ModifyChatappTemplateRequest extends TeaModel {
     }
 
     public static class ModifyChatappTemplateRequestComponentsButtons extends TeaModel {
-        /**
-         * <p>The phone number.</p>
-         */
+        @NameInMap("AutofillText")
+        public String autofillText;
+
+        @NameInMap("IsOptOut")
+        public Boolean isOptOut;
+
+        @NameInMap("PackageName")
+        public String packageName;
+
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
-        /**
-         * <p>The text of the message to be sent.</p>
-         */
+        @NameInMap("SignatureHash")
+        public String signatureHash;
+
         @NameInMap("Text")
         public String text;
 
-        /**
-         * <p>The type of the button.</p>
-         * <br>
-         * <p>*   **PHONE_NUMBER**: a phone number button</p>
-         * <p>*   **URL**: a URL button</p>
-         * <p>*   **QUICK_REPLY**: a quick reply button</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <p>The URL to be visited after users click the button.</p>
-         */
         @NameInMap("Url")
         public String url;
 
-        /**
-         * <p>The type of the URL. Valid values:</p>
-         * <br>
-         * <p>*   **static**: a static URL</p>
-         * <p>*   **dynamic**: a dynamic URL</p>
-         */
         @NameInMap("UrlType")
         public String urlType;
 
@@ -173,12 +142,44 @@ public class ModifyChatappTemplateRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ModifyChatappTemplateRequestComponentsButtons setAutofillText(String autofillText) {
+            this.autofillText = autofillText;
+            return this;
+        }
+        public String getAutofillText() {
+            return this.autofillText;
+        }
+
+        public ModifyChatappTemplateRequestComponentsButtons setIsOptOut(Boolean isOptOut) {
+            this.isOptOut = isOptOut;
+            return this;
+        }
+        public Boolean getIsOptOut() {
+            return this.isOptOut;
+        }
+
+        public ModifyChatappTemplateRequestComponentsButtons setPackageName(String packageName) {
+            this.packageName = packageName;
+            return this;
+        }
+        public String getPackageName() {
+            return this.packageName;
+        }
+
         public ModifyChatappTemplateRequestComponentsButtons setPhoneNumber(String phoneNumber) {
             this.phoneNumber = phoneNumber;
             return this;
         }
         public String getPhoneNumber() {
             return this.phoneNumber;
+        }
+
+        public ModifyChatappTemplateRequestComponentsButtons setSignatureHash(String signatureHash) {
+            this.signatureHash = signatureHash;
+            return this;
+        }
+        public String getSignatureHash() {
+            return this.signatureHash;
         }
 
         public ModifyChatappTemplateRequestComponentsButtons setText(String text) {
@@ -216,74 +217,53 @@ public class ModifyChatappTemplateRequest extends TeaModel {
     }
 
     public static class ModifyChatappTemplateRequestComponents extends TeaModel {
-        /**
-         * <p>The buttons. This parameter is applicable only to components of the **BUTTONS** type.</p>
-         */
+        @NameInMap("AddSecretRecommendation")
+        public Boolean addSecretRecommendation;
+
         @NameInMap("Buttons")
         public java.util.List<ModifyChatappTemplateRequestComponentsButtons> buttons;
 
-        /**
-         * <p>The description.</p>
-         * <br>
-         * <p>> When the Type parameter is set to **HEADER** and the Format parameter is set to **IMAGE, DOCUMENT, or VIDEO**, you can specify a description.</p>
-         */
         @NameInMap("Caption")
         public String caption;
+
+        @NameInMap("CodeExpirationMinutes")
+        public Integer codeExpirationMinutes;
 
         @NameInMap("Duration")
         public Integer duration;
 
-        /**
-         * <p>The name of the file.</p>
-         * <br>
-         * <p>> When the Type parameter is set to **HEADER** and the Format parameter is set to **DOCUMENT**, you can specify a name for the file.</p>
-         */
         @NameInMap("FileName")
         public String fileName;
 
         @NameInMap("FileType")
         public String fileType;
 
-        /**
-         * <p>The type of the media resources that are included in the message.</p>
-         * <br>
-         * <p>*   **TEXT**: text</p>
-         * <p>*   **IMAGE**: image</p>
-         * <p>*   **DOCUMENT**: document</p>
-         * <p>*   **VIDEO**: video</p>
-         */
         @NameInMap("Format")
         public String format;
 
-        /**
-         * <p>The text of the message to be sent.</p>
-         */
         @NameInMap("Text")
         public String text;
 
         @NameInMap("ThumbUrl")
         public String thumbUrl;
 
-        /**
-         * <p>The type of the component. Valid values:</p>
-         * <br>
-         * <p>*   **BODY**</p>
-         * <p>*   **HEADER**</p>
-         * <p>*   **FOOTER**</p>
-         * <p>*   **BUTTONS**</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <p>The URL of the material.</p>
-         */
         @NameInMap("Url")
         public String url;
 
         public static ModifyChatappTemplateRequestComponents build(java.util.Map<String, ?> map) throws Exception {
             ModifyChatappTemplateRequestComponents self = new ModifyChatappTemplateRequestComponents();
             return TeaModel.build(map, self);
+        }
+
+        public ModifyChatappTemplateRequestComponents setAddSecretRecommendation(Boolean addSecretRecommendation) {
+            this.addSecretRecommendation = addSecretRecommendation;
+            return this;
+        }
+        public Boolean getAddSecretRecommendation() {
+            return this.addSecretRecommendation;
         }
 
         public ModifyChatappTemplateRequestComponents setButtons(java.util.List<ModifyChatappTemplateRequestComponentsButtons> buttons) {
@@ -300,6 +280,14 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         }
         public String getCaption() {
             return this.caption;
+        }
+
+        public ModifyChatappTemplateRequestComponents setCodeExpirationMinutes(Integer codeExpirationMinutes) {
+            this.codeExpirationMinutes = codeExpirationMinutes;
+            return this;
+        }
+        public Integer getCodeExpirationMinutes() {
+            return this.codeExpirationMinutes;
         }
 
         public ModifyChatappTemplateRequestComponents setDuration(Integer duration) {

@@ -41,7 +41,7 @@ public class ListChatappTemplateRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>The name of the image template.</p>
+     * <p>The name of the message template.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -57,7 +57,7 @@ public class ListChatappTemplateRequest extends TeaModel {
      * <br>
      * <p>*   **WHATSAPP**</p>
      * <p>*   **VIBER**</p>
-     * <p>*   LINE: the LINE message template. This type of message template will be released later.</p>
+     * <p>*   LINE: the Line message template. This type of message template will be released later.</p>
      */
     @NameInMap("TemplateType")
     public String templateType;

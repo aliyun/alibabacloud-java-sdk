@@ -7,46 +7,25 @@ public class ModifyChatappTemplateShrinkRequest extends TeaModel {
     @NameInMap("Category")
     public String category;
 
-    /**
-     * <p>The components of the message template.</p>
-     */
     @NameInMap("Components")
     public String componentsShrink;
 
-    /**
-     * <p>The space ID of the user under the ISV account.</p>
-     */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
-    /**
-     * <p>The ID of the WhatsApp Business account under the independent software vendor (ISV) account.</p>
-     */
     @NameInMap("CustWabaId")
     @Deprecated
     public String custWabaId;
 
-    /**
-     * <p>The examples of variables that are used when you create the message template.</p>
-     */
     @NameInMap("Example")
     public String exampleShrink;
 
-    /**
-     * <p>The ISV verification code, which is used to verify whether the user is authorized by the ISV account.</p>
-     */
     @NameInMap("IsvCode")
     public String isvCode;
 
-    /**
-     * <p>The language that is used in the message template. For more information, see [Language codes](~~463420~~).</p>
-     */
     @NameInMap("Language")
     public String language;
 
-    /**
-     * <p>The code of the message template.</p>
-     */
     @NameInMap("TemplateCode")
     public String templateCode;
 
