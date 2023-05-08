@@ -5,27 +5,19 @@ import com.aliyun.tea.*;
 
 public class GetLastOnceTaskInfoRequest extends TeaModel {
     /**
-     * <p>The source of the task.</p>
+     * <p>The number of tasks that have been completed.</p>
      */
     @NameInMap("Source")
     public String source;
 
     /**
-     * <p>The name of the task. Valid values:</p>
-     * <br>
-     * <p>*   **CLIENT\_PROBLEM_CHECK**: client diagnosis task</p>
-     * <p>*   **CLIENT\_DEV_OPS**: O\&M task of Cloud Assistant</p>
-     * <p>*   **ASSETS_COLLECTION**: asset collection task</p>
+     * <p>The ID of the latest scan task.</p>
      */
     @NameInMap("TaskName")
     public String taskName;
 
     /**
-     * <p>The type of the task. Valid values:</p>
-     * <br>
-     * <p>*   **CLIENT\_PROBLEM_CHECK**: client diagnosis task</p>
-     * <p>*   **CLIENT\_DEV_OPS**: O\&M task of Cloud Assistant</p>
-     * <p>*   **ASSETS\_COLLECTION**: asset collection task</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TaskType")
     public String taskType;

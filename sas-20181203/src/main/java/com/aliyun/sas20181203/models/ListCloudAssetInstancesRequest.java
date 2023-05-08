@@ -5,10 +5,37 @@ import com.aliyun.tea.*;
 
 public class ListCloudAssetInstancesRequest extends TeaModel {
     /**
-     * <p>The cloud service assets.</p>
+     * <p>The cloud service asset.</p>
      */
     @NameInMap("CloudAssetTypes")
     public java.util.List<ListCloudAssetInstancesRequestCloudAssetTypes> cloudAssetTypes;
+
+    /**
+     * <p>The logical relation for multiple search conditions. Valid values:</p>
+     * <br>
+     * <p>*   **OR**: The search conditions use a logical **OR**.</p>
+     * <p>*   **AND**: The search conditions use a logical **AND**.</p>
+     */
+    @NameInMap("Criteria")
+    public String criteria;
+
+    /**
+     * <p>The cloud service assets.</p>
+     */
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
+
+    /**
+     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 20.</p>
+     */
+    @NameInMap("LogicalExp")
+    public String logicalExp;
+
+    /**
+     * <p>The number of the page to return.</p>
+     */
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     /**
      * <p>The search conditions for assets. The value of this parameter is in the JSON format and contains the following fields:</p>
@@ -23,33 +50,6 @@ public class ListCloudAssetInstancesRequest extends TeaModel {
      * <p>    *   **AND**: The search conditions use a logical **AND**.</p>
      * <br>
      * <p>> You can call the [GetCloudAssetCriteria](~~GetCloudAssetCriteria~~) operation to query supported search conditions.</p>
-     */
-    @NameInMap("Criteria")
-    public String criteria;
-
-    /**
-     * <p>The number of the page to return.</p>
-     */
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
-
-    /**
-     * <p>The logical relation for multiple search conditions. Valid values:</p>
-     * <br>
-     * <p>*   **OR**: The search conditions use a logical **OR**.</p>
-     * <p>*   **AND**: The search conditions use a logical **AND**.</p>
-     */
-    @NameInMap("LogicalExp")
-    public String logicalExp;
-
-    /**
-     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 20.</p>
-     */
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    /**
-     * <p>The region ID of the instance.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -109,17 +109,18 @@ public class ListCloudAssetInstancesRequest extends TeaModel {
 
     public static class ListCloudAssetInstancesRequestCloudAssetTypes extends TeaModel {
         /**
-         * <p>The subtype of the cloud asset.</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <br>
-         * <p>You can call the [GetCloudAssetCriteria](~~GetCloudAssetCriteria~~) operation to query the subtypes of cloud assets from the AssetSubType response parameter.</p>
+         * <p>*   **true**: The request was successful.</p>
+         * <p>*   **false**: The request failed.</p>
          */
         @NameInMap("AssetSubType")
         public Integer assetSubType;
 
         /**
-         * <p>The type of the cloud asset.</p>
+         * <p>The subtype of the cloud asset.</p>
          * <br>
-         * <p>You can call the [GetCloudAssetCriteria](~~GetCloudAssetCriteria~~) operation to query the types of cloud assets from the AssetType response parameter.</p>
+         * <p>You can call the [GetCloudAssetCriteria](~~GetCloudAssetCriteria~~) operation to query the subtypes of cloud assets from the AssetSubType response parameter.</p>
          */
         @NameInMap("AssetType")
         public Integer assetType;

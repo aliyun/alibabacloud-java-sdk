@@ -7,7 +7,7 @@ public class GetHoneypotPresetRequest extends TeaModel {
     /**
      * <p>The ID of the honeypot template.</p>
      * <br>
-     * <p>>  You can call the [ListHoneypotPreset](~~ListHoneypotPreset~~) operation to query the IDs of honeypot templates.</p>
+     * <p>> You can call the [ListHoneypotPreset](~~ListHoneypotPreset~~) operation to query the IDs of honeypot templates.</p>
      */
     @NameInMap("HoneypotPresetId")
     public String honeypotPresetId;

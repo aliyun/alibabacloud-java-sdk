@@ -4,15 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterVulStatisticsResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The statistics of the vulnerabilities.</p>
-     */
     @NameInMap("VulStat")
     public DescribeClusterVulStatisticsResponseBodyVulStat vulStat;
 
@@ -38,21 +32,12 @@ public class DescribeClusterVulStatisticsResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterVulStatisticsResponseBodyVulStat extends TeaModel {
-        /**
-         * <p>The number of high-risk vulnerabilities.</p>
-         */
         @NameInMap("AsapCount")
         public String asapCount;
 
-        /**
-         * <p>The number of medium-risk vulnerabilities.</p>
-         */
         @NameInMap("LaterCount")
         public String laterCount;
 
-        /**
-         * <p>The number of low-risk vulnerabilities.</p>
-         */
         @NameInMap("NntfCount")
         public String nntfCount;
 

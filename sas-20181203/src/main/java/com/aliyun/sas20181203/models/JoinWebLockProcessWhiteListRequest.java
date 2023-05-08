@@ -4,15 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class JoinWebLockProcessWhiteListRequest extends TeaModel {
-    /**
-     * <p>The paths of the processes.</p>
-     */
     @NameInMap("ProcessPaths")
     public java.util.List<String> processPaths;
 
-    /**
-     * <p>The UUIDs of the servers on which the processes run. Separate multiple UUIDs with commas (,).</p>
-     */
     @NameInMap("Uuids")
     public String uuids;
 

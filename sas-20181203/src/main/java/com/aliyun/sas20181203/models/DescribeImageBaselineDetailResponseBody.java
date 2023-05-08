@@ -4,15 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageBaselineDetailResponseBody extends TeaModel {
-    /**
-     * <p>The details about the image baseline.</p>
-     */
     @NameInMap("BaselineDetail")
     public DescribeImageBaselineDetailResponseBodyBaselineDetail baselineDetail;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,61 +32,30 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeImageBaselineDetailResponseBodyBaselineDetail extends TeaModel {
-        /**
-         * <p>The suggestion for the management of the risk item.</p>
-         */
         @NameInMap("Advice")
         public String advice;
 
-        /**
-         * <p>The alias of the baseline type.</p>
-         */
         @NameInMap("BaselineClassAlias")
         public String baselineClassAlias;
 
-        /**
-         * <p>The alias of the baseline check item.</p>
-         */
         @NameInMap("BaselineItemAlias")
         public String baselineItemAlias;
 
-        /**
-         * <p>The key of the baseline check item.</p>
-         */
         @NameInMap("BaselineItemKey")
         public String baselineItemKey;
 
-        /**
-         * <p>The alias of the baseline.</p>
-         */
         @NameInMap("BaselineNameAlias")
         public String baselineNameAlias;
 
-        /**
-         * <p>The description of the risk item.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The risk level of the baseline check item. Valid values:</p>
-         * <br>
-         * <p>*   **high**</p>
-         * <p>*   **medium**</p>
-         * <p>*   **low**</p>
-         */
         @NameInMap("Level")
         public String level;
 
-        /**
-         * <p>The issue that is detected by using the baseline.</p>
-         */
         @NameInMap("Prompt")
         public String prompt;
 
-        /**
-         * <p>The ID of the asynchronous request.</p>
-         */
         @NameInMap("ResultId")
         public String resultId;
 

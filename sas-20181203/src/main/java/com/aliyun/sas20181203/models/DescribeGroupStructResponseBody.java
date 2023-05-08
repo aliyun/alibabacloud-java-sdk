@@ -4,60 +4,30 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeGroupStructResponseBody extends TeaModel {
-    /**
-     * <p>The parent node of the group.</p>
-     */
     @NameInMap("GroupFather")
     public Integer groupFather;
 
-    /**
-     * <p>The type of the server group. Valid values:</p>
-     * <br>
-     * <p>*   **0**: the default group</p>
-     * <p>*   **1**: other groups</p>
-     */
     @NameInMap("GroupFlag")
     public Integer groupFlag;
 
-    /**
-     * <p>The ID of the server group.</p>
-     */
     @NameInMap("GroupId")
     public Long groupId;
 
-    /**
-     * <p>The sequence number.</p>
-     */
     @NameInMap("GroupIndex")
     public Integer groupIndex;
 
-    /**
-     * <p>The level of the application group.</p>
-     */
     @NameInMap("GroupLevel")
     public Integer groupLevel;
 
-    /**
-     * <p>The name of the server group.</p>
-     */
     @NameInMap("GroupName")
     public String groupName;
 
-    /**
-     * <p>An array that consists of child groups.</p>
-     */
     @NameInMap("Groups")
     public java.util.List<String> groups;
 
-    /**
-     * <p>The number of servers in the group.</p>
-     */
     @NameInMap("MachineNum")
     public Integer machineNum;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,21 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
-    /**
-     * <p>An array that consists of the information about the databases.</p>
-     */
     @NameInMap("DatabaseList")
     public java.util.List<DescribeUniBackupDatabaseResponseBodyDatabaseList> databaseList;
 
-    /**
-     * <p>The pagination information.</p>
-     */
     @NameInMap("PageInfo")
     public DescribeUniBackupDatabaseResponseBodyPageInfo pageInfo;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -52,78 +43,33 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
     }
 
     public static class DescribeUniBackupDatabaseResponseBodyDatabaseList extends TeaModel {
-        /**
-         * <p>The status of the anti-ransomware agent. Valid values:</p>
-         * <br>
-         * <p>*   **UNKNOWN**: unknown</p>
-         * <p>*   **INSTALLED**: installed</p>
-         * <p>*   **INSTALL_FAILED**: installation failed</p>
-         * <p>*   **UNINSTALL_FAILED**: uninstallation failed</p>
-         */
         @NameInMap("AgentStatus")
         public String agentStatus;
 
-        /**
-         * <p>The service from which the database is created. Valid values:</p>
-         * <br>
-         * <p>*   **HBR**: HBR</p>
-         * <p>*   **AEGIS**: Security Center</p>
-         */
         @NameInMap("CreatedByProduct")
         public String createdByProduct;
 
-        /**
-         * <p>The name of the database.</p>
-         */
         @NameInMap("DatabaseName")
         public String databaseName;
 
-        /**
-         * <p>The type of the database. Valid values:</p>
-         * <br>
-         * <p>*   **MYSQL**</p>
-         * <p>*   **MSSQL**</p>
-         * <p>*   **Oracle**</p>
-         */
         @NameInMap("DatabaseType")
         public String databaseType;
 
-        /**
-         * <p>The version of the database engine.</p>
-         */
         @NameInMap("DatabaseVersion")
         public String databaseVersion;
 
-        /**
-         * <p>The ID of the server.</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The name of the instance to which the database belongs.</p>
-         */
         @NameInMap("InstanceName")
         public String instanceName;
 
-        /**
-         * <p>The UUID of the Hybrid Backup Recovery (HBR) agent that is used to back up the data of the database.</p>
-         */
         @NameInMap("InstanceUuid")
         public String instanceUuid;
 
-        /**
-         * <p>The ID of the anti-ransomware policy.</p>
-         */
         @NameInMap("PolicyId")
         public Long policyId;
 
-        /**
-         * <p>The status of the ECS instance. Valid values:</p>
-         * <br>
-         * <p>*   **Stopped**</p>
-         * <p>*   **Running**</p>
-         */
         @NameInMap("Status")
         public String status;
 
@@ -215,27 +161,15 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
     }
 
     public static class DescribeUniBackupDatabaseResponseBodyPageInfo extends TeaModel {
-        /**
-         * <p>The number of entries returned on the current page.</p>
-         */
         @NameInMap("Count")
         public Integer count;
 
-        /**
-         * <p>The page number of the returned page.</p>
-         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        /**
-         * <p>The number of entries returned per page.</p>
-         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        /**
-         * <p>The total number of entries returned.</p>
-         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

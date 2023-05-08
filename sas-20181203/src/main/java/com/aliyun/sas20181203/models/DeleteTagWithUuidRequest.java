@@ -4,17 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DeleteTagWithUuidRequest extends TeaModel {
-    /**
-     * <p>The name of the tag.</p>
-     */
     @NameInMap("TagName")
     public String tagName;
 
-    /**
-     * <p>The UUIDs of servers.</p>
-     * <br>
-     * <p>> If the UuidList parameter is specified, Security Center removes the tag only from the servers whose UUIDs are specified by UuidList. If the UuidList parameter is not specified, Security Center removes the tag from all servers.</p>
-     */
     @NameInMap("UuidList")
     public String uuidList;
 

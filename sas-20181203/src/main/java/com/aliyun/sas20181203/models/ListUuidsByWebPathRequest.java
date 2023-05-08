@@ -4,30 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListUuidsByWebPathRequest extends TeaModel {
-    /**
-     * <p>The number of the page to return.</p>
-     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    /**
-     * <p>The number of entries to return on each page.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The path type of the web directory. Valid values:</p>
-     * <br>
-     * <p>*   **def**: automatically identified</p>
-     * <p>*   **customize**: manually added</p>
-     */
     @NameInMap("Type")
     public String type;
 
-    /**
-     * <p>The path to the web directory.</p>
-     */
     @NameInMap("WebPath")
     public String webPath;
 

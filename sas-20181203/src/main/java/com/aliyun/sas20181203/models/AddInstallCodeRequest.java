@@ -5,20 +5,10 @@ import com.aliyun.tea.*;
 
 public class AddInstallCodeRequest extends TeaModel {
     /**
-     * <p>The validity period of the installation command. The value is a 13-digit timestamp.</p>
-     * <br>
-     * <p>>  The installation command is valid only within the validity period. An expired installation command cannot be used to install the Security Center agent.</p>
+     * <p>6134</p>
      */
     @NameInMap("ExpiredDate")
     public Long expiredDate;
-
-    /**
-     * <p>The ID of the asset group to which the you want to add the asset.</p>
-     * <br>
-     * <p>>  You can call the [DescribeAllGroups](~~describeallgroups~~) operation to query the IDs of asset groups.</p>
-     */
-    @NameInMap("GroupId")
-    public Long groupId;
 
     /**
      * <p>Specifies whether to create an image. Default value: **false**. Valid values:</p>
@@ -26,8 +16,8 @@ public class AddInstallCodeRequest extends TeaModel {
      * <p>*   **false**: does not create an image.</p>
      * <p>*   **true**: creates an image.</p>
      */
-    @NameInMap("OnlyImage")
-    public Boolean onlyImage;
+    @NameInMap("GroupId")
+    public Long groupId;
 
     /**
      * <p>The operating system of the instance. Default value: **linux**. Valid values:</p>
@@ -36,13 +26,19 @@ public class AddInstallCodeRequest extends TeaModel {
      * <p>*   **windows**</p>
      * <p>*   **windows-2003**</p>
      */
+    @NameInMap("OnlyImage")
+    public Boolean onlyImage;
+
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("Os")
     public String os;
 
     /**
-     * <p>The name of the service provider for the asset. Default value: **ALIYUN**.</p>
+     * <p>The ID of the asset group to which the you want to add the asset.</p>
      * <br>
-     * <p>>  You can call the [DescribeVendorList](~~DescribeVendorList~~) operation to query the names of service providers.</p>
+     * <p>>  You can call the [DescribeAllGroups](~~describeallgroups~~) operation to query the IDs of asset groups.</p>
      */
     @NameInMap("VendorName")
     public String vendorName;

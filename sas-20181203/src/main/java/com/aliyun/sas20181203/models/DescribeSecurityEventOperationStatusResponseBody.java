@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The source IP address of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The information about the task that handles the alert events.</p>
+     * <p>192.168.XX.XX</p>
      */
     @NameInMap("SecurityEventOperationStatusResponse")
     public DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatusResponse securityEventOperationStatusResponse;
@@ -38,25 +38,12 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatusResponseSecurityEventOperationStatuses extends TeaModel {
-        /**
-         * <p>The code that indicates the handling result of the alert event.</p>
-         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
-        /**
-         * <p>The ID of the alert event.</p>
-         */
         @NameInMap("SecurityEventId")
         public String securityEventId;
 
-        /**
-         * <p>The handling status of the alert event. Valid values:</p>
-         * <br>
-         * <p>*   **Processing**: The alert event is being handled.</p>
-         * <p>*   **Success**: The alert event is handled.</p>
-         * <p>*   **Failed**: The alert event failed to be handled.</p>
-         */
         @NameInMap("Status")
         public String status;
 
@@ -93,18 +80,13 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
 
     public static class DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatusResponse extends TeaModel {
         /**
-         * <p>An array consisting of the status of the alert events handled by the task.</p>
+         * <p>DescribeSecurityEventOperationStatus</p>
          */
         @NameInMap("SecurityEventOperationStatuses")
         public java.util.List<DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatusResponseSecurityEventOperationStatuses> securityEventOperationStatuses;
 
         /**
-         * <p>The status of the task that handles the alert events. Valid values:</p>
-         * <br>
-         * <p>*   **Processing**: The task is running.</p>
-         * <p>*   **Success**: The task is successful.</p>
-         * <p>*   **Failure**: The task failed.</p>
-         * <p>*   **Pending**: The task is pending.</p>
+         * <p>Queries the alert events that are triggered by the same IP address rule or of the same alert type as a specific alert event if you want to handle the specific alert event in batch operation mode.</p>
          */
         @NameInMap("TaskStatus")
         public String taskStatus;

@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupFilesRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The UUID of the server to which an anti-ransomware policy is applied.</p>
      */
     @NameInMap("CurrentPage")
     public String currentPage;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**.</p>
+     * <p>An array that consists of the backup files returned.</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
-     * <p>The path to the backup file.</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("Path")
     public String path;
 
     /**
-     * <p>The hash value of the backup file.</p>
+     * <p>The size of the backup file. Unit: bytes.</p>
      */
     @NameInMap("SnapshotHash")
     public String snapshotHash;
 
     /**
-     * <p>The UUID of the server to which an anti-ransomware policy is applied.</p>
+     * <p>The number of entries to return on each page. Default value: **10**.</p>
      */
     @NameInMap("Uuid")
     public String uuid;

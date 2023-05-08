@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateHoneypotRequest extends TeaModel {
     /**
-     * <p>The ID of the image that is used for the honeypot.</p>
+     * <p>The ID of the honeypot image.</p>
      * <br>
-     * <p>>  You can call the [ListAvailableHoneypot](~~ListAvailableHoneypot~~) operation to obtain the IDs of images from the **HoneypotImageId** response parameter.</p>
+     * <p>> You can call the [ListAvailableHoneypot](~~ListAvailableHoneypot~~) operation to query the IDs of images from the **HoneypotImageId** response parameter.</p>
      */
     @NameInMap("HoneypotImageId")
     public String honeypotImageId;
 
     /**
-     * <p>The name of the image that is used for the honeypot.</p>
+     * <p>The name of the honeypot image.</p>
      * <br>
-     * <p>>  You can call the [ListAvailableHoneypot](~~ListAvailableHoneypot~~) operation to obtain the names of images from the **HoneypotImageName** response parameter.</p>
+     * <p>> You can call the [ListAvailableHoneypot](~~ListAvailableHoneypot~~) operation to query the names of images from the **HoneypotImageName** response parameter.</p>
      */
     @NameInMap("HoneypotImageName")
     public String honeypotImageName;
@@ -35,14 +35,14 @@ public class CreateHoneypotRequest extends TeaModel {
      * <p>    *   **web**: Git Directory Leak</p>
      * <p>    *   **close**: Disabled</p>
      * <br>
-     * <p>*   **trojan\_git_addr**: Git Trojan Address.</p>
+     * <p>*   **trojan_git_addr**: Git Trojan Address.</p>
      * <br>
      * <p>*   **trojan_git.zip**: Git Trojan.</p>
      * <br>
      * <p>*   **burp**: Burp-specific Defense. Valid values:</p>
      * <br>
-     * <p>    *   **open**: Enabled</p>
-     * <p>    *   **close**: Disabled</p>
+     * <p>    *   **open**: Enable</p>
+     * <p>    *   **close**: Disable</p>
      * <br>
      * <p>*   **portrait_option**: Source Tracing Configuration. Valid values:</p>
      * <br>
@@ -53,9 +53,9 @@ public class CreateHoneypotRequest extends TeaModel {
     public String meta;
 
     /**
-     * <p>The ID of the management node to which you want to deploy the honeypot.</p>
+     * <p>The ID of the management node.</p>
      * <br>
-     * <p>>  You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to obtain the IDs of management nodes.</p>
+     * <p>> You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to query the IDs of management nodes.</p>
      */
     @NameInMap("NodeId")
     public String nodeId;

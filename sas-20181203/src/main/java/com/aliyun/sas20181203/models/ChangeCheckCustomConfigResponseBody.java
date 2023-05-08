@@ -4,15 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ChangeCheckCustomConfigResponseBody extends TeaModel {
-    /**
-     * <p>An array that consists of the invalid custom configuration items of the check item.</p>
-     */
     @NameInMap("IllegalCustomConfigs")
     public java.util.List<ChangeCheckCustomConfigResponseBodyIllegalCustomConfigs> illegalCustomConfigs;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,9 +32,6 @@ public class ChangeCheckCustomConfigResponseBody extends TeaModel {
     }
 
     public static class ChangeCheckCustomConfigResponseBodyIllegalCustomConfigs extends TeaModel {
-        /**
-         * <p>The name of the custom configuration item. The name of a custom configuration item is unique in a check item.</p>
-         */
         @NameInMap("Name")
         public String name;
 

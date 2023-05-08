@@ -4,18 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyClusterCnnfStatusUserConfirmRequest extends TeaModel {
-    /**
-     * <p>The IDs of the clusters.</p>
-     */
     @NameInMap("ClusterIds")
     public java.util.List<String> clusterIds;
 
-    /**
-     * <p>Specifies whether to fix the blocking status of the cluster. Valid values:</p>
-     * <br>
-     * <p>*   true: yes</p>
-     * <p>*   fasle: no</p>
-     */
     @NameInMap("UserConfirm")
     public Boolean userConfirm;
 

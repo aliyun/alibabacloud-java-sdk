@@ -4,21 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetCheckProcessResponseBody extends TeaModel {
-    /**
-     * <p>The total number of assets on which the task is complete.</p>
-     */
     @NameInMap("FinishCount")
     public Integer finishCount;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of assets on which the task is performed.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

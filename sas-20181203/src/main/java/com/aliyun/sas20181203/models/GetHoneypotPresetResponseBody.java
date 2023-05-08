@@ -148,7 +148,7 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
 
     public static class GetHoneypotPresetResponseBodyData extends TeaModel {
         /**
-         * <p>The name of the management node to which the honeypot is deployed.</p>
+         * <p>The name of the management node.</p>
          */
         @NameInMap("ControlNodeName")
         public String controlNodeName;
@@ -160,13 +160,13 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
         public java.util.List<GetHoneypotPresetResponseBodyDataFileInfoList> fileInfoList;
 
         /**
-         * <p>The display name of the image that is used for the honeypot.</p>
+         * <p>The display name of the honeypot image.</p>
          */
         @NameInMap("HoneypotImageDisplayName")
         public String honeypotImageDisplayName;
 
         /**
-         * <p>The name of the image that is used for the honeypot.</p>
+         * <p>The name of the honeypot image.</p>
          */
         @NameInMap("HoneypotImageName")
         public String honeypotImageName;
@@ -178,7 +178,7 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
         public String honeypotPresetId;
 
         /**
-         * <p>The custom configurations of the honeypot template.</p>
+         * <p>The custom configuration of the honeypot template.</p>
          */
         @NameInMap("Meta")
         public String meta;
@@ -196,11 +196,11 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
         public String presetName;
 
         /**
-         * <p>The type of the template. Valid values:</p>
+         * <p>The type of the honeypot template. Valid values:</p>
          * <br>
-         * <p>*   **TEMP**: automatically generated</p>
-         * <p>*   **CUSTOM**: custom</p>
-         * <p>*   **DEFAULT**: default</p>
+         * <p>*   **TEMP**: automatically generated template</p>
+         * <p>*   **CUSTOM**: custom template</p>
+         * <p>*   **DEFAULT**: default template</p>
          */
         @NameInMap("PresetType")
         public String presetType;

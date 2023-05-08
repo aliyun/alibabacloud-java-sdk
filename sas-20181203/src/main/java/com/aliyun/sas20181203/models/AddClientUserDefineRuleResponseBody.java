@@ -4,15 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class AddClientUserDefineRuleResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The identifier of the custom defense rule.</p>
-     */
     @NameInMap("UserDefineRuleAddResult")
     public AddClientUserDefineRuleResponseBodyUserDefineRuleAddResult userDefineRuleAddResult;
 
@@ -38,25 +32,12 @@ public class AddClientUserDefineRuleResponseBody extends TeaModel {
     }
 
     public static class AddClientUserDefineRuleResponseBodyUserDefineRuleAddResult extends TeaModel {
-        /**
-         * <p>The ID of the rule.</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <p>The type of the operating system. Valid values:</p>
-         * <br>
-         * <p>*   **windows**: Windows</p>
-         * <p>*   **linux**: Linux</p>
-         * <p>*   **all**: all types</p>
-         */
         @NameInMap("Platform")
         public String platform;
 
-        /**
-         * <p>The switch ID of the custom defense rule.</p>
-         */
         @NameInMap("SwitchId")
         public String switchId;
 

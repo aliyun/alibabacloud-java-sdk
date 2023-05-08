@@ -5,19 +5,32 @@ import com.aliyun.tea.*;
 
 public class DescribeOnceTaskResponseBody extends TeaModel {
     /**
-     * <p>The pagination information.</p>
+     * <p>An array that consists of the tasks.</p>
      */
     @NameInMap("PageInfo")
     public DescribeOnceTaskResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The number of entries returned on the current page.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>An array that consists of the tasks.</p>
+     * <p>The execution details of the task. The value of this parameter is in the JSON format.</p>
+     * <br>
+     * <p>*   **causeCode**: the returned code for the cause</p>
+     * <p>*   **causeMsg**: the returned information for the cause</p>
+     * <p>*   **resCode**: the returned code of troubleshooting</p>
+     * <p>*   **resMsg**: the returned information about troubleshooting</p>
+     * <p>*   **problemType**: the type of the issue</p>
+     * <p>*   **dispatchType**: the task delivery method</p>
+     * <p>*   **uuid**: the UUID of the server</p>
+     * <p>*   **instanceId**: the instance ID of the server</p>
+     * <p>*   **internetIp**: the public IP address of the server</p>
+     * <p>*   **intranetIp**: the private IP address of the server</p>
+     * <p>*   **instanceName**: the instance name of the server</p>
+     * <p>*   **url**: the download link of the troubleshooting log</p>
      */
     @NameInMap("TaskManageResponseList")
     public java.util.List<DescribeOnceTaskResponseBodyTaskManageResponseList> taskManageResponseList;
@@ -53,25 +66,34 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
 
     public static class DescribeOnceTaskResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>The status of the task. Valid values:</p>
+         * <br>
+         * <p>*   **1**: started</p>
+         * <p>*   **2**: complete</p>
+         * <p>*   **3**: failed</p>
+         * <p>*   **4**: timed out</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The information about the task.</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page. Default value: **20**.</p>
+         * <p>The type of the task. Valid values:</p>
+         * <br>
+         * <p>*   **CLIENT\_PROBLEM_CHECK**: a task of the Security Center agent</p>
+         * <p>*   **CLIENT\_DEV_OPS**: an O\&M task of Cloud Assistant</p>
+         * <p>*   **ASSET\_SECURITY_CHECK**: a task of asset information collection</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The progress of the task. Unit: percent (%).</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -117,102 +139,58 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
 
     public static class DescribeOnceTaskResponseBodyTaskManageResponseList extends TeaModel {
         /**
-         * <p>The execution details of the task. The value of this parameter is in the JSON format.</p>
-         * <br>
-         * <p>*   **causeCode**: the returned code for the cause</p>
-         * <p>*   **causeMsg**: the returned information for the cause</p>
-         * <p>*   **resCode**: the returned code of troubleshooting</p>
-         * <p>*   **resMsg**: the returned information about troubleshooting</p>
-         * <p>*   **problemType**: the type of the issue</p>
-         * <p>*   **dispatchType**: the task delivery method</p>
-         * <p>*   **uuid**: the UUID of the server</p>
-         * <p>*   **instanceId**: the instance ID of the server</p>
-         * <p>*   **internetIp**: the public IP address of the server</p>
-         * <p>*   **intranetIp**: the private IP address of the server</p>
-         * <p>*   **instanceName**: the instance name of the server</p>
-         * <p>*   **url**: the download link of the troubleshooting log</p>
+         * <p>The ID of the task.</p>
          */
         @NameInMap("DetailData")
         public String detailData;
 
-        /**
-         * <p>The number of tasks that failed.</p>
-         */
         @NameInMap("FailCount")
         public Integer failCount;
 
         /**
-         * <p>The progress of the task. Unit: percent (%).</p>
+         * <p>The timestamp when the task starts. Unit: milliseconds.</p>
          */
         @NameInMap("Progress")
         public String progress;
 
-        /**
-         * <p>The execution result of the task.</p>
-         */
         @NameInMap("ResultInfo")
         public String resultInfo;
 
-        /**
-         * <p>The number of tasks that succeeded.</p>
-         */
         @NameInMap("SuccessCount")
         public Integer successCount;
 
-        /**
-         * <p>The timestamp when the task ends. Unit: milliseconds.</p>
-         */
         @NameInMap("TaskEndTime")
         public Long taskEndTime;
 
-        /**
-         * <p>The ID of the task.</p>
-         */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
-         * <p>The name of the task.</p>
+         * <p>The number of tasks that failed.</p>
          */
         @NameInMap("TaskName")
         public String taskName;
 
         /**
-         * <p>The timestamp when the task starts. Unit: milliseconds.</p>
+         * <p>The execution result of the task.</p>
          */
         @NameInMap("TaskStartTime")
         public Long taskStartTime;
 
         /**
-         * <p>The status of the task. Valid values:</p>
-         * <br>
-         * <p>*   **1**: started</p>
-         * <p>*   **2**: complete</p>
-         * <p>*   **3**: failed</p>
-         * <p>*   **4**: timed out</p>
+         * <p>The timestamp when the task ends. Unit: milliseconds.</p>
          */
         @NameInMap("TaskStatus")
         public Integer taskStatus;
 
         /**
-         * <p>The text description of the status for the task. Valid values:</p>
-         * <br>
-         * <p>*   **INIT**: The task is pending start.</p>
-         * <p>*   **START**: The task is started.</p>
-         * <p>*   **DISPATCH**: The self-check command is issued.</p>
-         * <p>*   **SUCCESS**: The self-check is complete.</p>
-         * <p>*   **FAIL**: The task fails.</p>
-         * <p>*   **TIMEOUT**: The task times out.</p>
+         * <p>The number of tasks that succeeded.</p>
          */
         @NameInMap("TaskStatusText")
         public String taskStatusText;
 
         /**
-         * <p>The type of the task. Valid values:</p>
-         * <br>
-         * <p>*   **CLIENT\_PROBLEM_CHECK**: a task of the Security Center agent</p>
-         * <p>*   **CLIENT\_DEV_OPS**: an O\&M task of Cloud Assistant</p>
-         * <p>*   **ASSET\_SECURITY_CHECK**: a task of asset information collection</p>
+         * <p>The name of the task.</p>
          */
         @NameInMap("TaskType")
         public String taskType;

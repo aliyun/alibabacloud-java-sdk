@@ -4,34 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeBruteForceRecordsRequest extends TeaModel {
-    /**
-     * <p>The IP address that is blocked.</p>
-     */
     @NameInMap("BlockIp")
     public String blockIp;
 
-    /**
-     * <p>The number of the page to return.</p>
-     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    /**
-     * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page. We recommend that you do not leave this parameter empty.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The status of the defense rule. Valid values:</p>
-     * <br>
-     * <p>*   **0**: invalid</p>
-     * <p>*   **1**: enabled</p>
-     * <p>*   **2**: failed</p>
-     */
     @NameInMap("Status")
     public Integer status;
 

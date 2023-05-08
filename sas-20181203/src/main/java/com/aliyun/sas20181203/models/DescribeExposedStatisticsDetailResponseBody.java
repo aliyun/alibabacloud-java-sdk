@@ -5,19 +5,24 @@ import com.aliyun.tea.*;
 
 public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
     /**
-     * <p>The pagination information.</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("PageInfo")
     public DescribeExposedStatisticsDetailResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The resource from which the asset is exposed. Valid values:</p>
+     * <br>
+     * <p>*   **INTERNET_IP**: the IP address of the Elastic Compute Service (ECS) instance</p>
+     * <p>*   **SLB**: the public IP address of the SLB instance</p>
+     * <p>*   **EIP**: the elastic IP address (EIP)</p>
+     * <p>*   **DNAT**: the NAT gateway that connects to the Internet by using the DNAT feature</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>An array consisting of the gateway assets, ports, system components, or public IP addresses that are exposed on the Internet and are returned.</p>
+     * <p>The region ID of the asset.</p>
      */
     @NameInMap("StatisticsDetails")
     public java.util.List<DescribeExposedStatisticsDetailResponseBodyStatisticsDetails> statisticsDetails;
@@ -53,25 +58,25 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
 
     public static class DescribeExposedStatisticsDetailResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>An array consisting of the gateway assets, ports, system components, or public IP addresses that are exposed on the Internet and are returned.</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>exposureType</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The port that is exposed on the Internet.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>lb-2ze4rso39h4nczcqs****</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -123,41 +128,34 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
         public Integer exposedCount;
 
         /**
-         * <p>The system component that is exposed on the Internet.</p>
+         * <p>Queries the gateway assets, ports, system components, or public IP addresses that are exposed on the Internet.</p>
          */
         @NameInMap("ExposureComponent")
         public String exposureComponent;
 
         /**
-         * <p>The public IP address that is exposed on the Internet.</p>
+         * <p>The type of the gateway asset. This parameter is required when the **StatisticsType** parameter is set to **exposureType**. Valid values:</p>
+         * <br>
+         * <p>*   **SLB**: the public IP address of a Server Load Balancer (SLB) instance</p>
+         * <p>*   **DNAT**: the NAT gateway that connects to the Internet by using the DNAT feature</p>
          */
         @NameInMap("ExposureIp")
         public String exposureIp;
 
         /**
-         * <p>The port that is exposed on the Internet.</p>
+         * <p>The number of entries returned per page.</p>
          */
         @NameInMap("ExposurePort")
         public String exposurePort;
 
         /**
-         * <p>The resource from which the asset is exposed. Valid values:</p>
-         * <br>
-         * <p>*   **INTERNET_IP**: the IP address of the Elastic Compute Service (ECS) instance</p>
-         * <p>*   **SLB**: the public IP address of the SLB instance</p>
-         * <p>*   **EIP**: the elastic IP address (EIP)</p>
-         * <p>*   **DNAT**: the NAT gateway that connects to the Internet by using the DNAT feature</p>
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
          */
         @NameInMap("ExposureType")
         public String exposureType;
 
         /**
-         * <p>The ID of the instance to which the resource belongs. The valid values of this parameter vary based on the value of the ExposureType parameter.</p>
-         * <br>
-         * <p>*   If the value of the **ExposureType** parameter is **INTERNET_IP**, the value of this parameter is an empty string.</p>
-         * <p>*   If the value of the **ExposureType** parameter is **SLB**, the value of this parameter is the ID of the Internet-facing SLB instance.</p>
-         * <p>*   If the value of the **ExposureType** parameter is **EIP**, the value of this parameter is the ID of the EIP.</p>
-         * <p>*   If the value of the **ExposureType** parameter is **DNAT**, the value of this parameter is the ID of the NAT gateway.</p>
+         * <p>DescribeExposedStatisticsDetail</p>
          */
         @NameInMap("ExposureTypeId")
         public String exposureTypeId;
@@ -169,7 +167,7 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
         public String exposureTypeInstanceName;
 
         /**
-         * <p>The region ID of the asset.</p>
+         * <p>20</p>
          */
         @NameInMap("RegionId")
         public String regionId;

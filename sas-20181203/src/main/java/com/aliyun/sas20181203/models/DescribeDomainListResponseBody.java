@@ -4,20 +4,14 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainListResponseBody extends TeaModel {
-    /**
-     * <p>An array that consists of the information about domain names.</p>
-     */
     @NameInMap("DomainListResponseList")
     public java.util.List<DescribeDomainListResponseBodyDomainListResponseList> domainListResponseList;
 
-    /**
-     * <p>The pagination information.</p>
-     */
     @NameInMap("PageInfo")
     public DescribeDomainListResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>DescribeDomainList</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -52,15 +46,9 @@ public class DescribeDomainListResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainListResponseBodyDomainListResponseList extends TeaModel {
-        /**
-         * <p>The name of the domain or website.</p>
-         */
         @NameInMap("Domain")
         public String domain;
 
-        /**
-         * <p>The IP addresses of the domain name.</p>
-         */
         @NameInMap("IpList")
         public String ipList;
 
@@ -88,27 +76,15 @@ public class DescribeDomainListResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainListResponseBodyPageInfo extends TeaModel {
-        /**
-         * <p>The number of entries returned on the current page.</p>
-         */
         @NameInMap("Count")
         public Integer count;
 
-        /**
-         * <p>The page number of the returned page.</p>
-         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        /**
-         * <p>The number of entries returned per page. Default value: **10**.</p>
-         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        /**
-         * <p>The total number of entries returned.</p>
-         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

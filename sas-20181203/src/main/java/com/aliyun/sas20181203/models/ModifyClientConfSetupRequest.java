@@ -4,28 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyClientConfSetupRequest extends TeaModel {
-    /**
-     * <p>The configurations of the Security Center agent.</p>
-     * <br>
-     * <p>*   cpu: the maximum CPU utilization that can be occupied by the Security Center agent on the server</p>
-     * <p>*   mem: the maximum memory usage that can be occupied by the Security Center agent on the server</p>
-     */
     @NameInMap("StrategyConfig")
     public String strategyConfig;
 
-    /**
-     * <p>The type of the tag.</p>
-     */
     @NameInMap("StrategyTag")
     public String strategyTag;
 
-    /**
-     * <p>The value of the tag. Valid values:</p>
-     * <br>
-     * <p>*   major</p>
-     * <p>*   advanced</p>
-     * <p>*   basic</p>
-     */
     @NameInMap("StrategyTagValue")
     public String strategyTagValue;
 

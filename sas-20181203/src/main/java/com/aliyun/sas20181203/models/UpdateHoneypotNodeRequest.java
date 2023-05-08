@@ -4,29 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class UpdateHoneypotNodeRequest extends TeaModel {
-    /**
-     * <p>The number of available probes.</p>
-     */
     @NameInMap("AvailableProbeNum")
     public Integer availableProbeNum;
 
     /**
-     * <p>The ID of the management node.</p>
-     * <br>
-     * <p>> You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to query the IDs of management nodes.</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
 
     /**
-     * <p>The name of the management node.</p>
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      */
     @NameInMap("NodeName")
     public String nodeName;
 
-    /**
-     * <p>The CIDR blocks that are allowed to access the management node.</p>
-     */
     @NameInMap("SecurityGroupProbeIpList")
     public java.util.List<String> securityGroupProbeIpList;
 

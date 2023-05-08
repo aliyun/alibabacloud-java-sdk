@@ -5,47 +5,28 @@ import com.aliyun.tea.*;
 
 public class FindContainerNetworkConnectShrinkRequest extends TeaModel {
     /**
-     * <p>The type of the information that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   **EDGE**: connection information</p>
+     * <p>The number of entries returned per page. Default value: **20**.</p>
      */
     @NameInMap("CriteriaType")
     public String criteriaType;
 
-    /**
-     * <p>The number of the page to return. Default value: **1**.</p>
-     */
     @NameInMap("CurrentPage")
     public Long currentPage;
 
-    /**
-     * <p>The information about the destination node.</p>
-     */
     @NameInMap("DstNode")
     public String dstNodeShrink;
 
-    /**
-     * <p>The end time of the network connection.</p>
-     */
     @NameInMap("EndTime")
     public Long endTime;
 
-    /**
-     * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
-     * <br>
-     * <p>> We recommend that you do not leave this parameter empty.</p>
-     */
     @NameInMap("PageSize")
     public Long pageSize;
 
-    /**
-     * <p>The information about the source node.</p>
-     */
     @NameInMap("SrcNode")
     public String srcNodeShrink;
 
     /**
-     * <p>The start time of the network connection.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
+    /**
+     * <p>The sub-tasks returned.</p>
+     */
     @NameInMap("OnceTasks")
     public java.util.List<DescribeOnceTaskLeafRecordPageResponseBodyOnceTasks> onceTasks;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public DescribeOnceTaskLeafRecordPageResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,48 +52,93 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
     }
 
     public static class DescribeOnceTaskLeafRecordPageResponseBodyOnceTasksTaskImageInfo extends TeaModel {
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The ID of the cluster.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The name of the cluster.</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
+        /**
+         * <p>The digest of the image.</p>
+         */
         @NameInMap("Digest")
         public String digest;
 
+        /**
+         * <p>The image of the container.</p>
+         */
         @NameInMap("Image")
         public String image;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("NodeInstanceId")
         public String nodeInstanceId;
 
+        /**
+         * <p>The IP address of the node.</p>
+         */
         @NameInMap("NodeIp")
         public String nodeIp;
 
+        /**
+         * <p>The name of the node.</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <p>The pod of the image.</p>
+         */
         @NameInMap("Pod")
         public String pod;
 
+        /**
+         * <p>The region of the server image.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the image repository.</p>
+         */
         @NameInMap("RepoId")
         public String repoId;
 
+        /**
+         * <p>The name of the image repository.</p>
+         */
         @NameInMap("RepoName")
         public String repoName;
 
+        /**
+         * <p>The name of the namespace to which the image repository belongs.</p>
+         */
         @NameInMap("RepoNamespace")
         public String repoNamespace;
 
+        /**
+         * <p>The region ID of the image repository.</p>
+         */
         @NameInMap("RepoRegionId")
         public String repoRegionId;
 
+        /**
+         * <p>The tag that is added to the image.</p>
+         */
         @NameInMap("Tag")
         public String tag;
 
@@ -216,51 +270,110 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
     }
 
     public static class DescribeOnceTaskLeafRecordPageResponseBodyOnceTasks extends TeaModel {
+        /**
+         * <p>The time when the sub-task ends.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>Indicates whether the sub-task is complete.</p>
+         * <br>
+         * <p>*   **0**: no</p>
+         * <p>*   **1**: yes</p>
+         */
         @NameInMap("Finish")
         public Integer finish;
 
+        /**
+         * <p>The number of assets that are scanned.</p>
+         */
         @NameInMap("FinishCount")
         public String finishCount;
 
+        /**
+         * <p>The progress percentage of the sub-task.</p>
+         */
         @NameInMap("Progress")
         public Long progress;
 
+        /**
+         * <p>The execution duration of the sub-task.</p>
+         */
         @NameInMap("RealRunTime")
         public Long realRunTime;
 
+        /**
+         * <p>The execution result of the task.</p>
+         */
         @NameInMap("ResultInfo")
         public String resultInfo;
 
+        /**
+         * <p>The time when the sub-task starts.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>The status information.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The status of the sub-task. Valid values:</p>
+         * <br>
+         * <p>*   **INIT**: The sub-task is not started.</p>
+         * <p>*   **START**: The sub-task is started.</p>
+         * <p>*   **SUCCESS**: The sub-task is complete.</p>
+         * <p>*   **TIMEOUT**: The sub-task timed out.</p>
+         */
         @NameInMap("StatusText")
         public String statusText;
 
+        /**
+         * <p>The objective of the sub-task.</p>
+         */
         @NameInMap("Target")
         public String target;
 
+        /**
+         * <p>The type of the asset on which the sub-task is performed.</p>
+         * <br>
+         * <p>*   **IMAGE_REPO**: image repository</p>
+         * <p>*   **IMAGE**: image</p>
+         */
         @NameInMap("TargetType")
         public String targetType;
 
+        /**
+         * <p>The sub-task ID.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The information about the image scan.</p>
+         */
         @NameInMap("TaskImageInfo")
         public DescribeOnceTaskLeafRecordPageResponseBodyOnceTasksTaskImageInfo taskImageInfo;
 
+        /**
+         * <p>The name of the sub-task.</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
+        /**
+         * <p>The type of the sub-task.</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public String totalCount;
 
@@ -400,15 +513,27 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
     }
 
     public static class DescribeOnceTaskLeafRecordPageResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of entries returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

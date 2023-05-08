@@ -4,21 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeVulTargetConfigResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>An array that consists of the configurations.</p>
-     */
     @NameInMap("TargetConfigs")
     public java.util.List<DescribeVulTargetConfigResponseBodyTargetConfigs> targetConfigs;
 
-    /**
-     * <p>The total number of entries returned.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -52,32 +43,12 @@ public class DescribeVulTargetConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeVulTargetConfigResponseBodyTargetConfigs extends TeaModel {
-        /**
-         * <p>Indicates whether the vulnerability scan feature is enabled for the server.</p>
-         * <br>
-         * <p>*   **off**: disabled</p>
-         * <p>*   **on**: enabled</p>
-         */
         @NameInMap("Config")
         public String config;
 
-        /**
-         * <p>Indicates whether the vulnerability scan feature is enabled for all servers. Valid values:</p>
-         * <br>
-         * <p>*   **off**: disabled</p>
-         * <p>*   **on**: enabled</p>
-         */
         @NameInMap("OverAllConfig")
         public String overAllConfig;
 
-        /**
-         * <p>The type of the vulnerability. Valid values:</p>
-         * <br>
-         * <p>*   **cve**: Linux software vulnerability</p>
-         * <p>*   **sys**: Windows system vulnerability</p>
-         * <p>*   **cms**: Web-CMS vulnerability</p>
-         * <p>*   **emg**: urgent vulnerability</p>
-         */
         @NameInMap("Type")
         public String type;
 

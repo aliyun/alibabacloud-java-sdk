@@ -4,15 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class RemoveCheckInstanceResultWhiteListRequest extends TeaModel {
-    /**
-     * <p>The ID of the check item.</p>
-     */
     @NameInMap("CheckId")
     public Long checkId;
 
-    /**
-     * <p>The IDs of instances. Separate multiple IDs with commas (,).</p>
-     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 

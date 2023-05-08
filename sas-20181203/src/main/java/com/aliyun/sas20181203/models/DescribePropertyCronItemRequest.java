@@ -4,30 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribePropertyCronItemRequest extends TeaModel {
-    /**
-     * <p>The number of the page to return. Default value: **1**.</p>
-     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    /**
-     * <p>Specifies whether to forcefully refresh the data that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
-     */
     @NameInMap("ForceFlush")
     public Boolean forceFlush;
 
-    /**
-     * <p>The number of entries to return on each page.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The path to the scheduled task.</p>
-     */
     @NameInMap("Source")
     public String source;
 

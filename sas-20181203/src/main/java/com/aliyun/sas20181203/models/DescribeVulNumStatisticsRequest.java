@@ -4,9 +4,6 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeVulNumStatisticsRequest extends TeaModel {
-    /**
-     * <p>The source of the request. Set the value to sas.</p>
-     */
     @NameInMap("From")
     public String from;
 

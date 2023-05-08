@@ -11,13 +11,13 @@ public class DescribeImageVulListResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The number of entries returned per page. Default value: **10**.</p>
+     * <p>The number of entries returned per page. Default value: **10**</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -29,7 +29,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>An array that consists of the vulnerabilities.</p>
+     * <p>The vulnerabilities.</p>
      */
     @NameInMap("VulRecords")
     public java.util.List<DescribeImageVulListResponseBodyVulRecords> vulRecords;
@@ -111,7 +111,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The path of the software that has the vulnerability.</p>
+         * <p>The path to the software that has the vulnerability.</p>
          */
         @NameInMap("Path")
         public String path;
@@ -259,8 +259,8 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the vulnerability can be fixed in the Security Center console. Valid values:</p>
          * <br>
-         * <p>*   **yes**: yes</p>
-         * <p>*   **no**: no</p>
+         * <p>*   **yes**</p>
+         * <p>*   **no**</p>
          */
         @NameInMap("CanFix")
         public String canFix;
@@ -268,8 +268,8 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the packages of the software that has the vulnerability can be upgraded by using Security Center. Valid values:</p>
          * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("CanUpdate")
         public Boolean canUpdate;
@@ -415,7 +415,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         public String repoNamespace;
 
         /**
-         * <p>The timestamp of the scan. Unit: milliseconds.</p>
+         * <p>The time at which the scan was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("ScanTime")
         public Long scanTime;

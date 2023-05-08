@@ -8,13 +8,13 @@ public class ValidateHcWarningsRequest extends TeaModel {
     public String checkIds;
 
     /**
-     * <p>The IDs of risk items that you want to verify. Separate multiple IDs with commas (,).</p>
+     * <p>The UUIDs of servers on which you want to verify risk items.</p>
      */
     @NameInMap("RiskIds")
     public String riskIds;
 
     /**
-     * <p>The UUIDs of servers on which you want to verify risk items.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("Uuids")
     public String uuids;

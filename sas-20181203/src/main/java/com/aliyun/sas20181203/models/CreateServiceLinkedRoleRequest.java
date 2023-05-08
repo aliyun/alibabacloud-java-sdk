@@ -4,12 +4,6 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceLinkedRoleRequest extends TeaModel {
-    /**
-     * <p>The service-linked role. Default value: **AliyunServiceRoleForSas**. Valid values:</p>
-     * <br>
-     * <p>*   **AliyunServiceRoleForSas**: the service-linked role of Security Center. Security Center assumes this role to access the resources of other cloud services within your account.</p>
-     * <p>*   **AliyunServiceRoleForSasCspm**: the service-linked role of Security Center-CSPM. Security Center-CSPM assumes this role to access the resources of other cloud services within your account.</p>
-     */
     @NameInMap("ServiceLinkedRole")
     public String serviceLinkedRole;
 

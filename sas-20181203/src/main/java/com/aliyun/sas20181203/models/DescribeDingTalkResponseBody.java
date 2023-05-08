@@ -11,13 +11,16 @@ public class DescribeDingTalkResponseBody extends TeaModel {
     public java.util.List<DescribeDingTalkResponseBodyActionList> actionList;
 
     /**
-     * <p>The pagination information.</p>
+     * <p>The status of the notification. Valid values:</p>
+     * <br>
+     * <p>*   **0**: disabled</p>
+     * <p>*   **1**: enabled</p>
      */
     @NameInMap("PageInfo")
     public DescribeDingTalkResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>[{\"type\":\"vul\",\"configItemList\":[{\"key\":\"key\", \"valueList\":\"123\"}]}]</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,73 +56,52 @@ public class DescribeDingTalkResponseBody extends TeaModel {
 
     public static class DescribeDingTalkResponseBodyActionList extends TeaModel {
         /**
-         * <p>The name of the notification.</p>
+         * <p>DescribeDingTalk</p>
          */
         @NameInMap("ActionName")
         public String actionName;
 
-        /**
-         * <p>The UID of the user.</p>
-         */
         @NameInMap("AliUid")
         public Long aliUid;
 
         /**
-         * <p>The list of notification settings.</p>
+         * <p>The modification time.</p>
          */
         @NameInMap("ConfigList")
         public String configList;
 
-        /**
-         * <p>The language of the content within notifications. Valid values:</p>
-         * <br>
-         * <p>*   **zh**: Chinese</p>
-         * <p>*   **en**: English</p>
-         */
         @NameInMap("DingTalkLang")
         public String dingTalkLang;
 
         /**
-         * <p>The creation time. unit:millisecond.</p>
+         * <p>Obtains DingTalk notifications.</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
-        /**
-         * <p>The modification time.</p>
-         */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
-        /**
-         * <p>The group IDs.</p>
-         */
         @NameInMap("GroupIdList")
         public String groupIdList;
 
-        /**
-         * <p>The ID of the notification.</p>
-         */
         @NameInMap("Id")
         public Integer id;
 
-        /**
-         * <p>The interval at which the notifications are sent.unit:minute.</p>
-         */
         @NameInMap("IntervalTime")
         public Integer intervalTime;
 
         /**
-         * <p>The status of the notification. Valid values:</p>
-         * <br>
-         * <p>*   **0**: disabled</p>
-         * <p>*   **1**: enabled</p>
+         * <p>The list of notification settings.</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
-         * <p>The parameters of the notification.</p>
+         * <p>```</p>
+         * <p>http(s)://[Endpoint]/?Action=DescribeDingTalk</p>
+         * <p>&<公共请求参数></p>
+         * <p>```</p>
          */
         @NameInMap("Url")
         public String url;
@@ -221,19 +203,19 @@ public class DescribeDingTalkResponseBody extends TeaModel {
 
     public static class DescribeDingTalkResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The ID of the notification.</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The name of the notification.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The total number of messages.</p>
+         * <p>Alert notification</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

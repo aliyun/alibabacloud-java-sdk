@@ -5,21 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeInstallCaptchaResponseBody extends TeaModel {
     /**
-     * <p>The installation verification code for you to manually install the Security Center agent.</p>
+     * <p>Queries the verification code for you to manually install the Security Center agent.</p>
      */
     @NameInMap("CaptchaCode")
     public String captchaCode;
 
     /**
-     * <p>The validity period of the installation verification code.</p>
-     * <br>
-     * <p>>  The installation verification code is valid only within the validity period. An expired installation verification code cannot be used to install the agent.</p>
+     * <p>The source IP address of the request.</p>
      */
     @NameInMap("Deadline")
     public String deadline;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>192.168.XX.XX</p>
      */
     @NameInMap("RequestId")
     public String requestId;

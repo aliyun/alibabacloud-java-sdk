@@ -4,26 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ChangeCheckCustomConfigRequest extends TeaModel {
-    /**
-     * <p>The ID of the check item.</p>
-     * <br>
-     * <p>> You can call the [ListCheckResult](~~ListCheckResult~~) operation to query the IDs of check items.</p>
-     */
     @NameInMap("CheckId")
     public Long checkId;
 
-    /**
-     * <p>The custom configuration items of the check item.</p>
-     */
     @NameInMap("CustomConfigs")
     public java.util.List<ChangeCheckCustomConfigRequestCustomConfigs> customConfigs;
 
-    /**
-     * <p>The region where the Security Center instance is deployed. Valid values:</p>
-     * <br>
-     * <p>*   **cn-hangzhou**: International</p>
-     * <p>*   **ap-southeast-1**: Singapore</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -57,21 +43,12 @@ public class ChangeCheckCustomConfigRequest extends TeaModel {
     }
 
     public static class ChangeCheckCustomConfigRequestCustomConfigs extends TeaModel {
-        /**
-         * <p>The name of the custom configuration item. The name of a custom configuration item is unique in a check item.</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The operation that you want to perform on the custom configuration item. This parameter is required only if you want to delete the custom configuration item. To delete the custom configuration item, set the value to DELETE.</p>
-         */
         @NameInMap("Operation")
         public String operation;
 
-        /**
-         * <p>The value of the custom configuration item. The value is a string.</p>
-         */
         @NameInMap("Value")
         public String value;
 

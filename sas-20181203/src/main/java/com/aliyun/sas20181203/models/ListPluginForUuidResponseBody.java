@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListPluginForUuidResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the information about the plug-ins.</p>
+     * <p>The type of the plug-in. Valid values:</p>
+     * <br>
+     * <p>*   **auto_breaking**: antivirus</p>
+     * <p>*   **ransomware_breaking**: anti-ransomware (bait capture)</p>
+     * <p>*   **webshell_cloud_breaking**: webshell prevention</p>
+     * <p>*   **alisecguard**: client protection</p>
+     * <p>*   **alinet**: malicious behavior defense</p>
      */
     @NameInMap("AegisUuidTargetPluginConfigList")
     public java.util.List<ListPluginForUuidResponseBodyAegisUuidTargetPluginConfigList> aegisUuidTargetPluginConfigList;
 
-    /**
-     * <p>The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
-     */
     @NameInMap("Code")
     public Integer code;
 
-    /**
-     * <p>The error message returned.</p>
-     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -67,40 +67,29 @@ public class ListPluginForUuidResponseBody extends TeaModel {
 
     public static class ListPluginForUuidResponseBodyAegisUuidTargetPluginConfigListAegisSuspiciousConfigList extends TeaModel {
         /**
-         * <p>Indicates whether the plug-in is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
-         */
-        @NameInMap("Config")
-        public Boolean config;
-
-        /**
-         * <p>The message that indicates whether you are authorized to install the plug-in on your server or whether the plug-in is installed on your server. Valid values:</p>
-         * <br>
-         * <p>*   **authorized**: authorized</p>
-         * <p>*   **unauthorized**: unauthorized</p>
-         * <p>*   **unbind**: not installed</p>
-         * <p>*   **nonsupport**: not supported</p>
-         */
-        @NameInMap("Msg")
-        public String msg;
-
-        /**
-         * <p>Indicates whether the plug-in is globally configured. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
-         */
-        @NameInMap("OverallConfig")
-        public Boolean overallConfig;
-
-        /**
          * <p>The name of the plug-in. Valid values:</p>
          * <br>
          * <p>*   **alihips**: trojan-specific prevention</p>
          * <p>*   **alisecguard**: attack-specific prevention</p>
          * <p>*   **alinet**: defense against attacks on servers</p>
+         */
+        @NameInMap("Config")
+        public Boolean config;
+
+        /**
+         * <p>Queries the information about plug-ins on a server.</p>
+         */
+        @NameInMap("Msg")
+        public String msg;
+
+        /**
+         * <p>ListPluginForUuid</p>
+         */
+        @NameInMap("OverallConfig")
+        public Boolean overallConfig;
+
+        /**
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
          */
         @NameInMap("Type")
         public String type;
@@ -146,7 +135,7 @@ public class ListPluginForUuidResponseBody extends TeaModel {
 
     public static class ListPluginForUuidResponseBodyAegisUuidTargetPluginConfigList extends TeaModel {
         /**
-         * <p>An array that consists of the configurations of plug-ins.</p>
+         * <p>The information about the plug-in.</p>
          */
         @NameInMap("AegisSuspiciousConfigList")
         public java.util.List<ListPluginForUuidResponseBodyAegisUuidTargetPluginConfigListAegisSuspiciousConfigList> aegisSuspiciousConfigList;
@@ -158,35 +147,30 @@ public class ListPluginForUuidResponseBody extends TeaModel {
         public String pluginInstallCode;
 
         /**
-         * <p>The name of the plug-in. Valid values:</p>
+         * <p>The UUID of the server.</p>
          * <br>
-         * <p>*   **alihips**: trojan-specific prevention</p>
-         * <p>*   **alisecguard**: attack-specific prevention</p>
-         * <p>*   **alinet**: defense against attacks on servers</p>
+         * <p>>  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.</p>
          */
         @NameInMap("PluginName")
         public String pluginName;
 
         /**
-         * <p>Indicates whether the plug-in is installed. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>The version of the plug-in.</p>
          */
         @NameInMap("PluginOnlineInstalled")
         public Boolean pluginOnlineInstalled;
 
         /**
-         * <p>Indicates whether the plug-in is online. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>An array that consists of the configurations of plug-ins.</p>
          */
         @NameInMap("PluginOnlineStatus")
         public Boolean pluginOnlineStatus;
 
         /**
-         * <p>The version of the plug-in.</p>
+         * <p>Indicates whether the plug-in is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
          */
         @NameInMap("PluginVersion")
         public String pluginVersion;

@@ -4,15 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeAllImageBaselineResponseBody extends TeaModel {
-    /**
-     * <p>The baselines that are used in image baseline checks.</p>
-     */
     @NameInMap("ImageBaselines")
     public DescribeAllImageBaselineResponseBodyImageBaselines imageBaselines;
 
-    /**
-     * <p>The ID of the request, which is used to query logs and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,27 +32,15 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
     }
 
     public static class DescribeAllImageBaselineResponseBodyImageBaselinesBaselineClassListBaselineNameListBaselineItemList extends TeaModel {
-        /**
-         * <p>The alias of the baseline check item.</p>
-         */
         @NameInMap("Alias")
         public String alias;
 
-        /**
-         * <p>The key of the type for the baseline.</p>
-         */
         @NameInMap("ClassKey")
         public String classKey;
 
-        /**
-         * <p>The key of the name for the baseline check item.</p>
-         */
         @NameInMap("ItemKey")
         public String itemKey;
 
-        /**
-         * <p>The key of the name for the baseline.</p>
-         */
         @NameInMap("NameKey")
         public String nameKey;
 
@@ -102,27 +84,15 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
     }
 
     public static class DescribeAllImageBaselineResponseBodyImageBaselinesBaselineClassListBaselineNameList extends TeaModel {
-        /**
-         * <p>The alias of the baseline.</p>
-         */
         @NameInMap("Alias")
         public String alias;
 
-        /**
-         * <p>An array that consists of baseline check items.</p>
-         */
         @NameInMap("BaselineItemList")
         public java.util.List<DescribeAllImageBaselineResponseBodyImageBaselinesBaselineClassListBaselineNameListBaselineItemList> baselineItemList;
 
-        /**
-         * <p>The key of the type for the baseline.</p>
-         */
         @NameInMap("ClassKey")
         public String classKey;
 
-        /**
-         * <p>The key of the name for the baseline.</p>
-         */
         @NameInMap("NameKey")
         public String nameKey;
 
@@ -166,21 +136,12 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
     }
 
     public static class DescribeAllImageBaselineResponseBodyImageBaselinesBaselineClassList extends TeaModel {
-        /**
-         * <p>The alias of the baseline type.</p>
-         */
         @NameInMap("Alias")
         public String alias;
 
-        /**
-         * <p>An array that consists of baselines.</p>
-         */
         @NameInMap("BaselineNameList")
         public java.util.List<DescribeAllImageBaselineResponseBodyImageBaselinesBaselineClassListBaselineNameList> baselineNameList;
 
-        /**
-         * <p>The key of the baseline type.</p>
-         */
         @NameInMap("ClassKey")
         public String classKey;
 
@@ -216,9 +177,6 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
     }
 
     public static class DescribeAllImageBaselineResponseBodyImageBaselines extends TeaModel {
-        /**
-         * <p>An array that consists of baseline types.</p>
-         */
         @NameInMap("BaselineClassList")
         public java.util.List<DescribeAllImageBaselineResponseBodyImageBaselinesBaselineClassList> baselineClassList;
 

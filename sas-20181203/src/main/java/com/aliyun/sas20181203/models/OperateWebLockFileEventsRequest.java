@@ -4,30 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class OperateWebLockFileEventsRequest extends TeaModel {
-    /**
-     * <p>Specifies whether to handle all alert events that are generated for web tamper proofing. Valid values:</p>
-     * <br>
-     * <p>*   **1**: yes</p>
-     * <p>*   **0**: no</p>
-     */
     @NameInMap("DealAll")
     public Integer dealAll;
 
-    /**
-     * <p>The IDs of alert events.</p>
-     */
     @NameInMap("EventIds")
     public java.util.List<Long> eventIds;
 
-    /**
-     * <p>The operation that you want to perform on the alert events. Valid values:</p>
-     * <br>
-     * <p>*   **mark_mis_info**: marks the alert events as false positives</p>
-     * <p>*   **rm_mark_mis_info**: cancels marking the alerts events as false positives</p>
-     * <p>*   **offline_handled**: marks the alert events as handled offline</p>
-     * <p>*   **whitelist**: adds the alert events to the whitelist</p>
-     * <p>*   **rm_whitelist**: cancels adding the alert events to the whitelist</p>
-     */
     @NameInMap("OperationCode")
     public String operationCode;
 

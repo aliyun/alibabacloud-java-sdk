@@ -4,21 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeExcludeSystemPathResponseBody extends TeaModel {
-    /**
-     * <p>An array consisting of the directories that are excluded.</p>
-     */
     @NameInMap("ExcludePaths")
     public java.util.List<DescribeExcludeSystemPathResponseBodyExcludePaths> excludePaths;
 
-    /**
-     * <p>The pagination information.</p>
-     */
     @NameInMap("PageInfo")
     public DescribeExcludeSystemPathResponseBodyPageInfo pageInfo;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -52,18 +43,9 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
     }
 
     public static class DescribeExcludeSystemPathResponseBodyExcludePaths extends TeaModel {
-        /**
-         * <p>The operating system of the server. Valid values:</p>
-         * <br>
-         * <p>*   **linux**: Linux</p>
-         * <p>*   **windows**: Windows</p>
-         */
         @NameInMap("Os")
         public String os;
 
-        /**
-         * <p>The absolute path to the directory.</p>
-         */
         @NameInMap("Path")
         public String path;
 
@@ -91,27 +73,15 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
     }
 
     public static class DescribeExcludeSystemPathResponseBodyPageInfo extends TeaModel {
-        /**
-         * <p>The number of entries returned on the current page.</p>
-         */
         @NameInMap("Count")
         public Integer count;
 
-        /**
-         * <p>The page number of the returned page.</p>
-         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        /**
-         * <p>The number of entries returned per page.</p>
-         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        /**
-         * <p>The total number of entries returned.</p>
-         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

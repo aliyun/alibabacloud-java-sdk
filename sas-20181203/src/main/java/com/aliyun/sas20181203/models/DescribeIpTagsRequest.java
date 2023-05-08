@@ -4,15 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeIpTagsRequest extends TeaModel {
-    /**
-     * <p>The IP address in the alert event.</p>
-     */
     @NameInMap("Ip")
     public String ip;
 
-    /**
-     * <p>The ID of the alert event.</p>
-     */
     @NameInMap("SecurityEventId")
     public String securityEventId;
 

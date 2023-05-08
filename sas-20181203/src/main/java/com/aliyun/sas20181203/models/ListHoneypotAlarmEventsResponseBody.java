@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the alert event.</p>
+     * <p>The information about the array object.</p>
      */
     @NameInMap("HoneypotAlarmEvents")
     public java.util.List<ListHoneypotAlarmEventsResponseBodyHoneypotAlarmEvents> honeypotAlarmEvents;
 
     /**
-     * <p>The number of entries returned per page. Default value: **100**</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageInfo")
     public ListHoneypotAlarmEventsResponseBodyPageInfo pageInfo;
@@ -50,25 +50,25 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
 
     public static class ListHoneypotAlarmEventsResponseBodyHoneypotAlarmEventsMergeFieldList extends TeaModel {
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The pagination information.</p>
          */
         @NameInMap("FieldExtInfo")
         public String fieldExtInfo;
 
         /**
-         * <p>The extended value that corresponds to the field key.</p>
+         * <p>The value that corresponds to the field key.</p>
          */
         @NameInMap("FieldKey")
         public String fieldKey;
 
         /**
-         * <p>The value that corresponds to the field key.</p>
+         * <p>The key of the field.</p>
          */
         @NameInMap("FieldType")
         public String fieldType;
 
         /**
-         * <p>The pagination information.</p>
+         * <p>The extended value that corresponds to the field key.</p>
          */
         @NameInMap("FieldValue")
         public String fieldValue;
@@ -114,34 +114,44 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
 
     public static class ListHoneypotAlarmEventsResponseBodyHoneypotAlarmEvents extends TeaModel {
         /**
-         * <p>The name of the alert event.</p>
+         * <p>The type of the alert event.</p>
          */
         @NameInMap("AlarmEventId")
         public Long alarmEventId;
 
         /**
-         * <p>The timestamp when the alert event was first generated. Unit: milliseconds.</p>
+         * <p>The unique identifier of the alert event.</p>
          */
         @NameInMap("AlarmEventName")
         public String alarmEventName;
 
         /**
-         * <p>The unique identifier of the alert event.</p>
+         * <p>The name of the alert event.</p>
          */
         @NameInMap("AlarmEventType")
         public String alarmEventType;
 
         /**
-         * <p>The timestamp when the alert event was last generated. Unit: milliseconds.</p>
+         * <p>The timestamp when the alert event was first generated. Unit: milliseconds.</p>
          */
         @NameInMap("AlarmUniqueInfo")
         public String alarmUniqueInfo;
 
         /**
-         * <p>The risk information.</p>
+         * <p>The handling status of the alert event. Valid values:</p>
+         * <br>
+         * <p>*   **1**: pending</p>
+         * <p>*   **2**: ignored</p>
+         * <p>*   **4**: confirmed</p>
          */
         @NameInMap("EventCount")
         public Integer eventCount;
+
+        /**
+         * <p>The timestamp when the alert event was last generated. Unit: milliseconds.</p>
+         */
+        @NameInMap("FirstTime")
+        public Long firstTime;
 
         /**
          * <p>The risk level of the alert event. Valid values:</p>
@@ -150,33 +160,23 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
          * <p>*   **3**: medium</p>
          * <p>*   **4**: high</p>
          */
-        @NameInMap("FirstTime")
-        public Long firstTime;
-
-        /**
-         * <p>The total number of times that the alert event was generated.</p>
-         */
         @NameInMap("LastTime")
         public Long lastTime;
 
         /**
-         * <p>The type of the field. You can ignore this internal parameter.</p>
+         * <p>The information about the array object.</p>
          */
         @NameInMap("MergeFieldList")
         public java.util.List<ListHoneypotAlarmEventsResponseBodyHoneypotAlarmEventsMergeFieldList> mergeFieldList;
 
         /**
-         * <p>The information about the array object.</p>
+         * <p>The risk information.</p>
          */
         @NameInMap("OperateStatus")
         public Integer operateStatus;
 
         /**
-         * <p>The handling status of the alert event. Valid values:</p>
-         * <br>
-         * <p>*   **1**: pending</p>
-         * <p>*   **2**: ignored</p>
-         * <p>*   **4**: confirmed</p>
+         * <p>The total number of times that the alert event was generated.</p>
          */
         @NameInMap("RiskLevel")
         public String riskLevel;
@@ -269,23 +269,26 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
     }
 
     public static class ListHoneypotAlarmEventsResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The request ID.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The number of entries returned per page. Default value: **100**</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>The total number of entries returned.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The request ID.</p>
+         * <p>The number of entries returned on the current page.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

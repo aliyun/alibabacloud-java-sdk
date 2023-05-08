@@ -5,51 +5,43 @@ import com.aliyun.tea.*;
 
 public class DescribeOnceTaskRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The timestamp when the root task ends. Unit: milliseconds.</p>
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      */
     @NameInMap("EndTimeQuery")
     public Long endTimeQuery;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **20**.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the root task.</p>
-     * <br>
-     * <p>> You must specify at least one of the **TaskType** and **RootTaskId** parameters.</p>
+     * <p>The ID of the task.</p>
      */
     @NameInMap("RootTaskId")
     public String rootTaskId;
 
     /**
-     * <p>The timestamp when the root task starts. Unit: milliseconds.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("StartTimeQuery")
     public Long startTimeQuery;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The number of entries returned per page. Default value: **20**.</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
     /**
-     * <p>The type of the task. Valid values:</p>
-     * <br>
-     * <p>*   **CLIENT\_PROBLEM_CHECK**: a task of the Security Center agent</p>
-     * <p>*   **CLIENT\_DEV_OPS**: an O\&M task of Cloud Assistant</p>
-     * <p>*   **ASSET\_SECURITY_CHECK**: a task of asset information collection</p>
-     * <br>
-     * <p>> You must specify at least one of the **TaskType** and **RootTaskId** parameters.</p>
+     * <p>The number of entries to return on each page. Default value: **20**.</p>
      */
     @NameInMap("TaskType")
     public String taskType;

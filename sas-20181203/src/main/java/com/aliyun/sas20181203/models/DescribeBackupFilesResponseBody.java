@@ -4,20 +4,17 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupFilesResponseBody extends TeaModel {
-    /**
-     * <p>An array that consists of the backup files returned.</p>
-     */
     @NameInMap("BackupFiles")
     public java.util.List<DescribeBackupFilesResponseBodyBackupFiles> backupFiles;
 
     /**
-     * <p>The pagination information.</p>
+     * <p>The number of entries returned per page. Default value: **10**.</p>
      */
     @NameInMap("PageInfo")
     public DescribeBackupFilesResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The number of the page to return. Default value: **1**.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -52,30 +49,15 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupFilesResponseBodyBackupFiles extends TeaModel {
-        /**
-         * <p>The name of the anti-ransomware policy.</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The size of the backup file. Unit: bytes.</p>
-         */
         @NameInMap("Size")
         public Long size;
 
-        /**
-         * <p>The path to the subdirectory of the backup file.</p>
-         */
         @NameInMap("Subtree")
         public String subtree;
 
-        /**
-         * <p>The type of the protected file. Valid values:</p>
-         * <br>
-         * <p>*   **file**: files</p>
-         * <p>*   **dir**: folders</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -119,26 +101,23 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupFilesResponseBodyPageInfo extends TeaModel {
-        /**
-         * <p>The number of backup files returned on the current page.</p>
-         */
         @NameInMap("Count")
         public Integer count;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page. Default value: **10**.</p>
+         * <p>Queries backup files.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The total number of backup files returned.</p>
+         * <p>WB01014029</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

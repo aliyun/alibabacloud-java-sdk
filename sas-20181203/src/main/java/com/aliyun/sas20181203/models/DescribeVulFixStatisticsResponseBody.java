@@ -4,21 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeVulFixStatisticsResponseBody extends TeaModel {
-    /**
-     * <p>An array that consists of the statistics of vulnerability fixes by vulnerability type.</p>
-     */
     @NameInMap("FixStat")
     public java.util.List<DescribeVulFixStatisticsResponseBodyFixStat> fixStat;
 
-    /**
-     * <p>The total statistics of vulnerability fixes.</p>
-     */
     @NameInMap("FixTotal")
     public DescribeVulFixStatisticsResponseBodyFixTotal fixTotal;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -52,39 +43,18 @@ public class DescribeVulFixStatisticsResponseBody extends TeaModel {
     }
 
     public static class DescribeVulFixStatisticsResponseBodyFixStat extends TeaModel {
-        /**
-         * <p>The number of vulnerabilities that are fixed on the current day.</p>
-         */
         @NameInMap("FixedTodayNum")
         public Integer fixedTodayNum;
 
-        /**
-         * <p>The total number of fixed vulnerabilities.</p>
-         */
         @NameInMap("FixedTotalNum")
         public Integer fixedTotalNum;
 
-        /**
-         * <p>The number of vulnerabilities that are being fixed.</p>
-         */
         @NameInMap("FixingNum")
         public Integer fixingNum;
 
-        /**
-         * <p>The number of unfixed vulnerabilities.</p>
-         */
         @NameInMap("NeedFixNum")
         public Integer needFixNum;
 
-        /**
-         * <p>The type of the vulnerability. Valid values:</p>
-         * <br>
-         * <p>*   **cve**: Linux software vulnerability</p>
-         * <p>*   **sys**: Windows system vulnerability</p>
-         * <p>*   **cms**: Web-CMS vulnerability</p>
-         * <p>*   **app**: application vulnerability</p>
-         * <p>*   **emg**: urgent vulnerability</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -136,27 +106,15 @@ public class DescribeVulFixStatisticsResponseBody extends TeaModel {
     }
 
     public static class DescribeVulFixStatisticsResponseBodyFixTotal extends TeaModel {
-        /**
-         * <p>The number of vulnerabilities that are fixed on the current day.</p>
-         */
         @NameInMap("FixedTodayNum")
         public Integer fixedTodayNum;
 
-        /**
-         * <p>The total number of fixed vulnerabilities.</p>
-         */
         @NameInMap("FixedTotalNum")
         public Integer fixedTotalNum;
 
-        /**
-         * <p>The number of vulnerabilities that are being fixed.</p>
-         */
         @NameInMap("FixingNum")
         public Integer fixingNum;
 
-        /**
-         * <p>The number of unfixed vulnerabilities.</p>
-         */
         @NameInMap("NeedFixNum")
         public Integer needFixNum;
 

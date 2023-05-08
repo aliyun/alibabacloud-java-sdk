@@ -5,16 +5,28 @@ import com.aliyun.tea.*;
 
 public class ListHoneypotAlarmEventsRequest extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The number of entries to return on each page. Default value: **100**</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The destination IP address.</p>
+     * <p>The source IP address.</p>
      */
     @NameInMap("Dealed")
     public String dealed;
+
+    /**
+     * <p>The risk levels of the alert events.</p>
+     */
+    @NameInMap("DstIp")
+    public String dstIp;
+
+    /**
+     * <p>The data returned.</p>
+     */
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     /**
      * <p>The risk level. Valid values:</p>
@@ -23,23 +35,11 @@ public class ListHoneypotAlarmEventsRequest extends TeaModel {
      * <p>*   **3**: medium</p>
      * <p>*   **4**: high</p>
      */
-    @NameInMap("DstIp")
-    public String dstIp;
-
-    /**
-     * <p>The alert events.</p>
-     */
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    /**
-     * <p>The number of the page to return.</p>
-     */
     @NameInMap("RiskLevelList")
     public java.util.List<String> riskLevelList;
 
     /**
-     * <p>The risk levels of the alert events.</p>
+     * <p>The destination IP address.</p>
      */
     @NameInMap("SrcIp")
     public String srcIp;
