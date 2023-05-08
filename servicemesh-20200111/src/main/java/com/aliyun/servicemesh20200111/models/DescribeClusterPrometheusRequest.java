@@ -4,12 +4,21 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterPrometheusRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster on the data plane.</p>
+     */
     @NameInMap("K8sClusterId")
     public String k8sClusterId;
 
+    /**
+     * <p>The ID of the region where the cluster on the data plane resides.</p>
+     */
     @NameInMap("K8sClusterRegionId")
     public String k8sClusterRegionId;
 
+    /**
+     * <p>The ID of the ASM instance.</p>
+     */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 

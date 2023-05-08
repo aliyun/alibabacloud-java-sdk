@@ -4,33 +4,66 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class CreateIstioGatewayDomainsRequest extends TeaModel {
+    /**
+     * <p>The name of the secret that contains the Transport Layer Security (TLS) certificate and certificate authority (CA) certificate.</p>
+     */
     @NameInMap("Credential")
     public String credential;
 
+    /**
+     * <p>Specifies whether to forcibly use TLS to protect connection security.</p>
+     * <br>
+     * <p>*   `true`: forcibly uses TLS to protect connection security.</p>
+     * <p>*   `false`: does not forcibly use TLS to protect connection security.</p>
+     */
     @NameInMap("ForceHttps")
     public Boolean forceHttps;
 
+    /**
+     * <p>The domain names of the one or more hosts that are exposed by the ASM gateway. Separate multiple domain names with commas (,).</p>
+     */
     @NameInMap("Hosts")
     public String hosts;
 
+    /**
+     * <p>The name of the ASM gateway.</p>
+     */
     @NameInMap("IstioGatewayName")
     public String istioGatewayName;
 
+    /**
+     * <p>The maximum number of ASM gateways to query.</p>
+     */
     @NameInMap("Limit")
     public String limit;
 
+    /**
+     * <p>The name of the namespace.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The port that is provided by the ASM gateway.</p>
+     */
     @NameInMap("Number")
     public Integer number;
 
+    /**
+     * <p>The name of the port.</p>
+     */
     @NameInMap("PortName")
     public String portName;
 
+    /**
+     * <p>The type of the protocol. Valid values: `HTTP`, `HTTPS`, `GRPC`, `HTTP2`, `MONGO`, `TCP`, and `TLS`.</p>
+     */
     @NameInMap("Protocol")
     public String protocol;
 
+    /**
+     * <p>The ID of the ASM instance.</p>
+     */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 

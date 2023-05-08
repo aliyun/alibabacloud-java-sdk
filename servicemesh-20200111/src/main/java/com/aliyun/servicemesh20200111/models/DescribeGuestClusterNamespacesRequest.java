@@ -4,12 +4,21 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeGuestClusterNamespacesRequest extends TeaModel {
+    /**
+     * <p>The ID of the Kubernetes cluster that is added to the ASM instance.</p>
+     */
     @NameInMap("GuestClusterID")
     public String guestClusterID;
 
+    /**
+     * <p>The ID of the ASM instance.</p>
+     */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 
+    /**
+     * <p>Specifies whether to return the labels of the namespaces.</p>
+     */
     @NameInMap("ShowNsLabels")
     public Boolean showNsLabels;
 

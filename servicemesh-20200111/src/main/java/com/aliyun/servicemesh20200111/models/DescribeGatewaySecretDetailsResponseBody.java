@@ -4,9 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeGatewaySecretDetailsResponseBody extends TeaModel {
+    /**
+     * <p>The detailed information about the secret of the ASM gateway.</p>
+     */
     @NameInMap("GatewaySecretDetails")
     public java.util.List<DescribeGatewaySecretDetailsResponseBodyGatewaySecretDetails> gatewaySecretDetails;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +38,49 @@ public class DescribeGatewaySecretDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeGatewaySecretDetailsResponseBodyGatewaySecretDetails extends TeaModel {
+        /**
+         * <p>The time when the certificate expires.</p>
+         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        /**
+         * <p>The name of the gateway.</p>
+         */
         @NameInMap("GatewayName")
         public String gatewayName;
 
+        /**
+         * <p>The time when the certificate was issued.</p>
+         */
         @NameInMap("IssueTime")
         public String issueTime;
 
+        /**
+         * <p>*   An error message is returned if the status of the gateway is abnormal. Examples: `tls.crt not exist`, `tls.key not exist`, and `secret type must be kubernetes.io/tls`.</p>
+         * <p>*   An empty value is returned if the status of the gateway is normal.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The Server Name Indication (SNI) value that indicates the hostname of the service.</p>
+         */
         @NameInMap("SNI")
         public String SNI;
 
+        /**
+         * <p>The name of the secret.</p>
+         */
         @NameInMap("SecretName")
         public String secretName;
 
+        /**
+         * <p>The status of the certificate. Valid values:</p>
+         * <br>
+         * <p>*   `normal`</p>
+         * <p>*   `abnormal`</p>
+         */
         @NameInMap("State")
         public String state;
 

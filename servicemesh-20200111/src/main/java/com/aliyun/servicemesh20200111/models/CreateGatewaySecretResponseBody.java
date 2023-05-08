@@ -4,9 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class CreateGatewaySecretResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The record of creating the secret.</p>
+     */
     @NameInMap("SecretCreateRecord")
     public java.util.Map<String, SecretCreateRecordValue> secretCreateRecord;
 

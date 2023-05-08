@@ -4,9 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeServiceMeshUpgradeStatusResponseBody extends TeaModel {
+    /**
+     * <p>The upgrade results.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of ingress gateways that are upgraded.</p>
+     */
     @NameInMap("UpgradeDetail")
     public DescribeServiceMeshUpgradeStatusResponseBodyUpgradeDetail upgradeDetail;
 
@@ -32,15 +38,28 @@ public class DescribeServiceMeshUpgradeStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeServiceMeshUpgradeStatusResponseBodyUpgradeDetail extends TeaModel {
+        /**
+         * <p>The status of the ASM instance. Valid values:</p>
+         * <br>
+         * <p>*   running: The instance is running.</p>
+         * <p>*   `upgrading`: The instance is being upgraded.</p>
+         * <p>*   `upgrading_failed`: The upgrade of the instance fails.</p>
+         */
         @NameInMap("FinishedGatewaysNum")
         public Long finishedGatewaysNum;
 
         @NameInMap("GatewayStatusRecord")
         public java.util.Map<String, UpgradeDetailGatewayStatusRecordValue> gatewayStatusRecord;
 
+        /**
+         * <p>The total number of ingress gateways in the ASM instance.</p>
+         */
         @NameInMap("MeshStatus")
         public String meshStatus;
 
+        /**
+         * <p>The information about the status of the ingress gateways.</p>
+         */
         @NameInMap("TotalGatewaysNum")
         public Long totalGatewaysNum;
 

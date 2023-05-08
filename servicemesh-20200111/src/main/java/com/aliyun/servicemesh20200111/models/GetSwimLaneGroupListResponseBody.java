@@ -4,6 +4,9 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class GetSwimLaneGroupListResponseBody extends TeaModel {
+    /**
+     * <p>The ingress type. Traffic routing rules can be configured only in an ingress gateway. Fixed value: ASM.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +35,9 @@ public class GetSwimLaneGroupListResponseBody extends TeaModel {
     }
 
     public static class GetSwimLaneGroupListResponseBodySwimLaneGroupList extends TeaModel {
+        /**
+         * <p>The name of the ingress gateway.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 

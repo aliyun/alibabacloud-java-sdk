@@ -4,9 +4,27 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeCrTemplatesRequest extends TeaModel {
+    /**
+     * <p>The Istio version used in ASM.</p>
+     */
     @NameInMap("IstioVersion")
     public String istioVersion;
 
+    /**
+     * <p>The type of Istio resource whose common YAML templates you want to query. Valid values:</p>
+     * <br>
+     * <p>*   AuthorizationPolicy</p>
+     * <p>*   RequestAuthentication</p>
+     * <p>*   PeerAuthentication</p>
+     * <p>*   WorkloadGroup</p>
+     * <p>*   WorkloadEntry</p>
+     * <p>*   Sidecar</p>
+     * <p>*   EnvoyFilter</p>
+     * <p>*   ServiceEntry</p>
+     * <p>*   Gateway</p>
+     * <p>*   DestinationRule</p>
+     * <p>*   VirtualService</p>
+     */
     @NameInMap("Kind")
     public String kind;
 

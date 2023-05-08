@@ -4,6 +4,9 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserPermissionsRequest extends TeaModel {
+    /**
+     * <p>The ID of the RAM user or RAM role.</p>
+     */
     @NameInMap("SubAccountUserId")
     public String subAccountUserId;
 

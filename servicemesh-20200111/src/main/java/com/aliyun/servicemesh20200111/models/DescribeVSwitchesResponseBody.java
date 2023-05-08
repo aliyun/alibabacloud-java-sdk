@@ -4,18 +4,39 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeVSwitchesResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the vSwitch is the default vSwitch. Valid values:</p>
+     * <br>
+     * <p>*   `true`: yes</p>
+     * <p>*   `false`: no</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The status of the vSwitch. Valid values:</p>
+     * <br>
+     * <p>*   `Pending`: The vSwitch is being configured.</p>
+     * <p>*   `Available`: The vSwitch is available for use.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the vSwitch.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the VPC in which the vSwitch is deployed.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The name of the vSwitch.</p>
+     */
     @NameInMap("VSwitches")
     public java.util.List<DescribeVSwitchesResponseBodyVSwitches> vSwitches;
 
@@ -80,6 +101,9 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         @NameInMap("VpcId")
         public String vpcId;
 
+        @NameInMap("ZoneId")
+        public String zoneId;
+
         public static DescribeVSwitchesResponseBodyVSwitches build(java.util.Map<String, ?> map) throws Exception {
             DescribeVSwitchesResponseBodyVSwitches self = new DescribeVSwitchesResponseBodyVSwitches();
             return TeaModel.build(map, self);
@@ -123,6 +147,14 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
         public String getVpcId() {
             return this.vpcId;
+        }
+
+        public DescribeVSwitchesResponseBodyVSwitches setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

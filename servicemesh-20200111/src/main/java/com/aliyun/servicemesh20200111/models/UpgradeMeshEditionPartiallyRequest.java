@@ -10,6 +10,9 @@ public class UpgradeMeshEditionPartiallyRequest extends TeaModel {
     @NameInMap("ExpectedVersion")
     public String expectedVersion;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 

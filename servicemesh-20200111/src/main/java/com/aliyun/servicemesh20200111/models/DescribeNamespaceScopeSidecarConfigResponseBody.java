@@ -4,9 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
+    /**
+     * <p>The namespace-level sidecar configurations.</p>
+     */
     @NameInMap("ConfigPatches")
     public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatches configPatches;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,21 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesProxyStatsMatcher extends TeaModel {
+        /**
+         * <p>The prefix of the monitoring metrics for data collected by Envoy proxies.</p>
+         */
         @NameInMap("InclusionPrefixes")
         public java.util.List<String> inclusionPrefixes;
 
+        /**
+         * <p>The regular expression of the monitoring metrics for data collected by Envoy proxies.</p>
+         */
         @NameInMap("InclusionRegexps")
         public java.util.List<String> inclusionRegexps;
 
+        /**
+         * <p>The suffix of the monitoring metrics for data collected by Envoy proxies.</p>
+         */
         @NameInMap("InclusionSuffixes")
         public java.util.List<String> inclusionSuffixes;
 
@@ -72,10 +87,76 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyAckSloResource extends TeaModel {
+        @NameInMap("Limits")
+        public java.util.Map<String, String> limits;
+
+        @NameInMap("Requests")
+        public java.util.Map<String, String> requests;
+
+        public static DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyAckSloResource build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyAckSloResource self = new DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyAckSloResource();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyAckSloResource setLimits(java.util.Map<String, String> limits) {
+            this.limits = limits;
+            return this;
+        }
+        public java.util.Map<String, String> getLimits() {
+            return this.limits;
+        }
+
+        public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyAckSloResource setRequests(java.util.Map<String, String> requests) {
+            this.requests = requests;
+            return this;
+        }
+        public java.util.Map<String, String> getRequests() {
+            return this.requests;
+        }
+
+    }
+
+    public static class DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyInitAckSloResource extends TeaModel {
+        @NameInMap("Limits")
+        public java.util.Map<String, String> limits;
+
+        @NameInMap("Requests")
+        public java.util.Map<String, String> requests;
+
+        public static DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyInitAckSloResource build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyInitAckSloResource self = new DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyInitAckSloResource();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyInitAckSloResource setLimits(java.util.Map<String, String> limits) {
+            this.limits = limits;
+            return this;
+        }
+        public java.util.Map<String, String> getLimits() {
+            return this.limits;
+        }
+
+        public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyInitAckSloResource setRequests(java.util.Map<String, String> requests) {
+            this.requests = requests;
+            return this;
+        }
+        public java.util.Map<String, String> getRequests() {
+            return this.requests;
+        }
+
+    }
+
     public static class DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyInitResourceLimit extends TeaModel {
+        /**
+         * <p>The maximum number of CPU cores.</p>
+         */
         @NameInMap("ResourceCPULimit")
         public String resourceCPULimit;
 
+        /**
+         * <p>The maximum size of the memory.</p>
+         */
         @NameInMap("ResourceMemoryLimit")
         public String resourceMemoryLimit;
 
@@ -103,9 +184,15 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyInitResourceRequest extends TeaModel {
+        /**
+         * <p>The minimum number of CPU cores.</p>
+         */
         @NameInMap("ResourceCPURequest")
         public String resourceCPURequest;
 
+        /**
+         * <p>The minimum size of the memory.</p>
+         */
         @NameInMap("ResourceMemoryRequest")
         public String resourceMemoryRequest;
 
@@ -133,9 +220,15 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyResourceLimit extends TeaModel {
+        /**
+         * <p>The maximum number of CPU cores.</p>
+         */
         @NameInMap("ResourceCPULimit")
         public String resourceCPULimit;
 
+        /**
+         * <p>The maximum size of the memory.</p>
+         */
         @NameInMap("ResourceMemoryLimit")
         public String resourceMemoryLimit;
 
@@ -163,9 +256,15 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyResourceRequest extends TeaModel {
+        /**
+         * <p>The minimum number of CPU cores.</p>
+         */
         @NameInMap("ResourceCPURequest")
         public String resourceCPURequest;
 
+        /**
+         * <p>The minimum size of the memory.</p>
+         */
         @NameInMap("ResourceMemoryRequest")
         public String resourceMemoryRequest;
 
@@ -193,12 +292,28 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesTracing extends TeaModel {
+        /**
+         * <p>The custom tags added to reported spans. The key of a tag is of the string type. The value of a tag is in the JSON format. A custom tag can belong to one of the following types:</p>
+         * <br>
+         * <p>*   `literal`: The tag value is a fixed value in the JSON format. This tag must contain the `value` field that specifies a literal. Example: `{"value":"test"}`.</p>
+         * <br>
+         * <p><!----></p>
+         * <br>
+         * <p>*   `header`: The tag value is a request header in the JSON format. This tag must contain the `name` field and `defaultValue` field.The name field indicates the name of the request header. The defaultValue field indicates the default value that is used when no request header is available. Example: `{"name":"test","defaultValue":"test"}`.</p>
+         * <p>*   `environment`: The tag value is an environment variable in the JSON format. This tag must contain the `name` field and `defaultValue` field. The name field indicates the name of the environment variable. The defaultValue field indicates the environment variable that is used when no environment variable is available. Example: `{"name":"test","defaultValue":"test"}`.</p>
+         */
         @NameInMap("CustomTags")
         public java.util.Map<String, ?> customTags;
 
+        /**
+         * <p>The maximum tag length.</p>
+         */
         @NameInMap("MaxPathTagLength")
         public Integer maxPathTagLength;
 
+        /**
+         * <p>The sampling rate.</p>
+         */
         @NameInMap("Sampling")
         public Double sampling;
 
@@ -234,60 +349,135 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatches extends TeaModel {
+        /**
+         * <p>The number of worker threads running in the sidecar proxy.</p>
+         */
         @NameInMap("Concurrency")
         public Integer concurrency;
 
+        /**
+         * <p>The port that the inbound traffic of the sidecar proxy does not pass through.</p>
+         */
         @NameInMap("ExcludeInboundPorts")
         public String excludeInboundPorts;
 
+        /**
+         * <p>The IP address from which the outbound traffic does not pass through the sidecar proxy.</p>
+         */
         @NameInMap("ExcludeOutboundIPRanges")
         public String excludeOutboundIPRanges;
 
+        /**
+         * <p>The port that the outbound traffic of the sidecar proxy does not pass through.</p>
+         */
         @NameInMap("ExcludeOutboundPorts")
         public String excludeOutboundPorts;
 
+        /**
+         * <p>Indicates whether applications can be started only after Istio Proxy starts. Valid values:</p>
+         * <br>
+         * <p>*   `true`: Applications can be started only after Istio Proxy starts.</p>
+         * <p>*   false: Applications can be started before Istio Proxy starts.</p>
+         */
         @NameInMap("HoldApplicationUntilProxyStarts")
         public Boolean holdApplicationUntilProxyStarts;
 
+        /**
+         * <p>The port that the inbound traffic of the sidecar proxy passes through.</p>
+         */
         @NameInMap("IncludeInboundPorts")
         public String includeInboundPorts;
 
+        /**
+         * <p>The IP address from which the outbound traffic passes through the sidecar proxy.</p>
+         */
         @NameInMap("IncludeOutboundIPRanges")
         public String includeOutboundIPRanges;
 
+        /**
+         * <p>The port that the outbound traffic of the sidecar proxy passes through.</p>
+         */
         @NameInMap("IncludeOutboundPorts")
         public String includeOutboundPorts;
 
+        /**
+         * <p>The mode in which the sidecar proxy intercepts inbound traffic. Valid values:</p>
+         * <br>
+         * <p>*   `REDIRECT`: The sidecar proxy intercepts inbound traffic in the REDIRECT mode.</p>
+         * <p>*   `TPROXY`: The sidecar proxy intercepts inbound traffic in the TPROXY mode.</p>
+         */
         @NameInMap("InterceptionMode")
         public String interceptionMode;
 
+        /**
+         * <p>Indicates whether the Domain Name System (DNS) proxy feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   `true`: The DNS proxy feature is enabled.</p>
+         * <p>*   `false`: The DNS proxy feature is disabled.</p>
+         */
         @NameInMap("IstioDNSProxyEnabled")
         public Boolean istioDNSProxyEnabled;
 
+        /**
+         * <p>The JSON string that describes the lifecycle of the sidecar proxy.</p>
+         */
         @NameInMap("LifecycleStr")
         public String lifecycleStr;
 
+        /**
+         * <p>The log level. Valid values: `info`, `debug`, `trace`, and `error`.</p>
+         */
         @NameInMap("LogLevel")
         public String logLevel;
 
+        @NameInMap("ProxyMetadata")
+        public java.util.Map<String, String> proxyMetadata;
+
+        /**
+         * <p>The monitoring metrics for data collected by Envoy proxies.</p>
+         */
         @NameInMap("ProxyStatsMatcher")
         public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesProxyStatsMatcher proxyStatsMatcher;
 
+        @NameInMap("SidecarProxyAckSloResource")
+        public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyAckSloResource sidecarProxyAckSloResource;
+
+        @NameInMap("SidecarProxyInitAckSloResource")
+        public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyInitAckSloResource sidecarProxyInitAckSloResource;
+
+        /**
+         * <p>The maximum size of resources that are available to the sidecar proxy init container.</p>
+         */
         @NameInMap("SidecarProxyInitResourceLimit")
         public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyInitResourceLimit sidecarProxyInitResourceLimit;
 
+        /**
+         * <p>The minimum size of resources that are requested by the sidecar proxy init container.</p>
+         */
         @NameInMap("SidecarProxyInitResourceRequest")
         public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyInitResourceRequest sidecarProxyInitResourceRequest;
 
+        /**
+         * <p>The maximum size of resources that are available to the sidecar proxy container.</p>
+         */
         @NameInMap("SidecarProxyResourceLimit")
         public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyResourceLimit sidecarProxyResourceLimit;
 
+        /**
+         * <p>The minimum size of resources that are requested by the sidecar proxy container.</p>
+         */
         @NameInMap("SidecarProxyResourceRequest")
         public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyResourceRequest sidecarProxyResourceRequest;
 
+        /**
+         * <p>The maximum period of time that the sidecar proxy waits for a request to end.</p>
+         */
         @NameInMap("TerminationDrainDuration")
         public String terminationDrainDuration;
 
+        /**
+         * <p>The custom configurations of Tracing Analysis.</p>
+         */
         @NameInMap("Tracing")
         public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesTracing tracing;
 
@@ -392,12 +582,36 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             return this.logLevel;
         }
 
+        public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatches setProxyMetadata(java.util.Map<String, String> proxyMetadata) {
+            this.proxyMetadata = proxyMetadata;
+            return this;
+        }
+        public java.util.Map<String, String> getProxyMetadata() {
+            return this.proxyMetadata;
+        }
+
         public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatches setProxyStatsMatcher(DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesProxyStatsMatcher proxyStatsMatcher) {
             this.proxyStatsMatcher = proxyStatsMatcher;
             return this;
         }
         public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesProxyStatsMatcher getProxyStatsMatcher() {
             return this.proxyStatsMatcher;
+        }
+
+        public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatches setSidecarProxyAckSloResource(DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyAckSloResource sidecarProxyAckSloResource) {
+            this.sidecarProxyAckSloResource = sidecarProxyAckSloResource;
+            return this;
+        }
+        public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyAckSloResource getSidecarProxyAckSloResource() {
+            return this.sidecarProxyAckSloResource;
+        }
+
+        public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatches setSidecarProxyInitAckSloResource(DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyInitAckSloResource sidecarProxyInitAckSloResource) {
+            this.sidecarProxyInitAckSloResource = sidecarProxyInitAckSloResource;
+            return this;
+        }
+        public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyInitAckSloResource getSidecarProxyInitAckSloResource() {
+            return this.sidecarProxyInitAckSloResource;
         }
 
         public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatches setSidecarProxyInitResourceLimit(DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyInitResourceLimit sidecarProxyInitResourceLimit) {

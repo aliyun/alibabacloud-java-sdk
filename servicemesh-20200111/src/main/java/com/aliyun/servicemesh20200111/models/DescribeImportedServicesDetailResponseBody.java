@@ -4,9 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeImportedServicesDetailResponseBody extends TeaModel {
+    /**
+     * <p>The details of the services.</p>
+     */
     @NameInMap("Details")
     public java.util.List<DescribeImportedServicesDetailResponseBodyDetails> details;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +38,33 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeImportedServicesDetailResponseBodyDetailsPorts extends TeaModel {
+        /**
+         * <p>The name of the port.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The node port.</p>
+         */
         @NameInMap("NodePort")
         public Integer nodePort;
 
+        /**
+         * <p>The port number.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The protocol of the port.</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <p>The container port.</p>
+         */
         @NameInMap("TargetPort")
         public Integer targetPort;
 
@@ -95,21 +116,39 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeImportedServicesDetailResponseBodyDetails extends TeaModel {
+        /**
+         * <p>The IDs of the clusters to which the service belongs.</p>
+         */
         @NameInMap("ClusterIds")
         public java.util.List<String> clusterIds;
 
+        /**
+         * <p>The labels of the service.</p>
+         */
         @NameInMap("Labels")
         public java.util.Map<String, String> labels;
 
+        /**
+         * <p>The namespace in which the service resides.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The ports declared for the service.</p>
+         */
         @NameInMap("Ports")
         public java.util.List<DescribeImportedServicesDetailResponseBodyDetailsPorts> ports;
 
+        /**
+         * <p>The name of the service.</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
+        /**
+         * <p>The type of the service.</p>
+         */
         @NameInMap("ServiceType")
         public String serviceType;
 

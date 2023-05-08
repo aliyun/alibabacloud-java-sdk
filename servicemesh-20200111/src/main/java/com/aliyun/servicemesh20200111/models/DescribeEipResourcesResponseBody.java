@@ -4,12 +4,21 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeEipResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The EIPs.</p>
+     */
     @NameInMap("EipList")
     public java.util.List<DescribeEipResourcesResponseBodyEipList> eipList;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageResult")
     public DescribeEipResourcesResponseBodyPageResult pageResult;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,15 +52,40 @@ public class DescribeEipResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeEipResourcesResponseBodyEipList extends TeaModel {
+        /**
+         * <p>The ID of the EIP.</p>
+         */
         @NameInMap("AllocationId")
         public String allocationId;
 
+        /**
+         * <p>The type of the resource that is associated with the EIP. Valid values:</p>
+         * <br>
+         * <p>*   `EcsInstance`: an ECS instance in a VPC</p>
+         * <p>*   `SlbInstance`: a Server Load Balancer (SLB) instance in a VPC</p>
+         * <p>*   `Nat`: a NAT gateway</p>
+         * <p>*   `HaVip`: a high-availability virtual IP address (HAVIP)</p>
+         * <p>*   `NetworkInterface`: a secondary elastic network interface (ENI)</p>
+         * <br>
+         * <p>Default value: `EcsInstance`.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The IP address of the EIP.</p>
+         */
         @NameInMap("IpAddress")
         public String ipAddress;
 
+        /**
+         * <p>The status of the EIP. Valid values:</p>
+         * <br>
+         * <p>*   `Associating`: The EIP is being associated with a resource.</p>
+         * <p>*   `Unassociating`: The EIP is being disassociated from a resource.</p>
+         * <p>*   `InUse`: The EIP is associated with a resource.</p>
+         * <p>*   `Available`: The EIP is available.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -95,12 +129,21 @@ public class DescribeEipResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeEipResourcesResponseBodyPageResult extends TeaModel {
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

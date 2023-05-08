@@ -4,9 +4,21 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeServiceMeshAdditionalStatusRequest extends TeaModel {
+    /**
+     * <p>The check result of the SLB instance. Valid values:</p>
+     * <br>
+     * <p>*   `exist`: The SLB instance exists.</p>
+     * <p>*   `not_exist`: The SLB instance does not exist.</p>
+     * <p>*   `conflict`: Conflicts are detected.</p>
+     * <p>*   `failed`: The check fails.</p>
+     * <p>*   `time_out`: The check times out.</p>
+     */
     @NameInMap("CheckMode")
     public String checkMode;
 
+    /**
+     * <p>The check results of the SLB instances created for exposing the API server.</p>
+     */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 

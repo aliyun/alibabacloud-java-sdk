@@ -4,6 +4,9 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceMeshResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the ASM instance.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,9 +4,18 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class RevokeKubeconfigRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to return the kubeconfig file for private access.</p>
+     * <br>
+     * <p>*   `true`: returns the kubeconfig file for private access.</p>
+     * <p>*   `false`: returns the kubeconfig file for public access.</p>
+     */
     @NameInMap("PrivateIpAddress")
     public Boolean privateIpAddress;
 
+    /**
+     * <p>The ID of the ASM instance for which you want to revoke a kubeconfig file.</p>
+     */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 

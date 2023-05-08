@@ -4,9 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterGrafanaRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster on the data plane.</p>
+     */
     @NameInMap("K8sClusterId")
     public String k8sClusterId;
 
+    /**
+     * <p>The ID of the ASM instance.</p>
+     */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 

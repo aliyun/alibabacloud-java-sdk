@@ -4,21 +4,43 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class UpdateIstioRouteAdditionalStatusRequest extends TeaModel {
+    /**
+     * <p>The description of the routing rule.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The name of the ASM gateway.</p>
+     */
     @NameInMap("IstioGatewayName")
     public String istioGatewayName;
 
+    /**
+     * <p>The priority of the routing rule. The value of this parameter is an integer. A smaller value indicates a higher priority.</p>
+     */
     @NameInMap("Priority")
     public Integer priority;
 
+    /**
+     * <p>The name of the routing rule.</p>
+     */
     @NameInMap("RouteName")
     public String routeName;
 
+    /**
+     * <p>The ID of the ASM instance.</p>
+     */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 
+    /**
+     * <p>The status of the routing rule. Valid values:</p>
+     * <br>
+     * <p>*   `0`: The routing rule is valid.</p>
+     * <p>*   `1`: The routing rule is invalid.</p>
+     * <p>*   `2`: An error occurs during the creation or update of the routing rule.</p>
+     */
     @NameInMap("Status")
     public Integer status;
 

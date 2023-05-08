@@ -4,18 +4,36 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class GetRegisteredServiceEndpointsRequest extends TeaModel {
+    /**
+     * <p>The name of the registered service.</p>
+     */
     @NameInMap("ClusterIds")
     public String clusterIds;
 
+    /**
+     * <p>The type of the registered service. Valid values:</p>
+     * <br>
+     * <p>*   `ServiceEntry`: indicates that the service is registered by creating a service entry.</p>
+     * <p>*   `Kubernetes`: indicates that the service is registered on a Kubernetes cluster on the data plane.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The IDs of clusters in the ASM instance. Separate multiple cluster IDs with commas (,).</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The name of the namespace.</p>
+     */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 
+    /**
+     * <p>The endpoints of the registered service.</p>
+     */
     @NameInMap("ServiceType")
     public String serviceType;
 

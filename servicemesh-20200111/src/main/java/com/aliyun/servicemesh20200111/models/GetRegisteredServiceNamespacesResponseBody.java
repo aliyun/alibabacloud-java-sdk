@@ -4,9 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class GetRegisteredServiceNamespacesResponseBody extends TeaModel {
+    /**
+     * <p>The names of the queried namespaces.</p>
+     */
     @NameInMap("Namespaces")
     public java.util.List<String> namespaces;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

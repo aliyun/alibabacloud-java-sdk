@@ -10,6 +10,9 @@ public class DescribeServiceMeshClustersRequest extends TeaModel {
     @NameInMap("Offset")
     public Long offset;
 
+    /**
+     * <p>The ID of the virtual private cloud (VPC).</p>
+     */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 

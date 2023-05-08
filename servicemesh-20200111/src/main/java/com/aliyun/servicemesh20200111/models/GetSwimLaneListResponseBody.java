@@ -4,9 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class GetSwimLaneListResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>A list of all the lanes in the lane group.</p>
+     */
     @NameInMap("SwimLaneList")
     public java.util.List<GetSwimLaneListResponseBodySwimLaneList> swimLaneList;
 
@@ -32,24 +38,45 @@ public class GetSwimLaneListResponseBody extends TeaModel {
     }
 
     public static class GetSwimLaneListResponseBodySwimLaneList extends TeaModel {
+        /**
+         * <p>The name of the lane group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The traffic routing rule associated with the lane.</p>
+         */
         @NameInMap("IngressRule")
         public String ingressRule;
 
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("IngressService")
         public String ingressService;
 
+        /**
+         * <p>The label key of the associated service workload. Fixed value: `ASM_TRAFFIC_TAG`.</p>
+         */
         @NameInMap("LabelSelectorKey")
         public String labelSelectorKey;
 
+        /**
+         * <p>The label value of the associated service workload.``</p>
+         */
         @NameInMap("LabelSelectorValue")
         public String labelSelectorValue;
 
+        /**
+         * <p>The name of the lane.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>A list of services associated with the lane.</p>
+         */
         @NameInMap("ServiceList")
         public String serviceList;
 

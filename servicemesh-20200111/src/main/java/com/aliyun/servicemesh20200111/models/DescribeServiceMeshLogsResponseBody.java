@@ -4,9 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeServiceMeshLogsResponseBody extends TeaModel {
+    /**
+     * <p>The details of the logs.</p>
+     */
     @NameInMap("Logs")
     public java.util.List<DescribeServiceMeshLogsResponseBodyLogs> logs;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,21 @@ public class DescribeServiceMeshLogsResponseBody extends TeaModel {
     }
 
     public static class DescribeServiceMeshLogsResponseBodyLogs extends TeaModel {
+        /**
+         * <p>The point in time when the logs were generated.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The content of the logs.</p>
+         */
         @NameInMap("Log")
         public String log;
 
+        /**
+         * <p>The ID of the ASM instance.</p>
+         */
         @NameInMap("ServiceMeshId")
         public String serviceMeshId;
 

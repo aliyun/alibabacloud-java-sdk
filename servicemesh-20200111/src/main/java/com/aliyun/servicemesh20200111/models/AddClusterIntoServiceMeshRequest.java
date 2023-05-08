@@ -7,6 +7,9 @@ public class AddClusterIntoServiceMeshRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>添加集群时不检查目标集群是否存在istio-system namespace，一般用于自建istio 迁移ASM 场景</p>
+     */
     @NameInMap("IgnoreNamespaceCheck")
     public Boolean ignoreNamespaceCheck;
 

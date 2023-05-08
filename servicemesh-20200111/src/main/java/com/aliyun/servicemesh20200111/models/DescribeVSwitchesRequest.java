@@ -4,9 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeVSwitchesRequest extends TeaModel {
+    /**
+     * <p>The maximum number of entries returned on a single page.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The list of the queried vSwitches.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

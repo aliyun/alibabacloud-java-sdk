@@ -4,15 +4,27 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class UpdateIstioInjectionConfigRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable Istio automatic sidecar injection.</p>
+     */
     @NameInMap("EnableIstioInjection")
     public Boolean enableIstioInjection;
 
+    /**
+     * <p>Specifies whether to enable automatic sidecar injection by using SidecarSet.</p>
+     */
     @NameInMap("EnableSidecarSetInjection")
     public Boolean enableSidecarSetInjection;
 
+    /**
+     * <p>The namespace for which you want to modify the sidecar injection setting.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The ID of the ASM instance.</p>
+     */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 

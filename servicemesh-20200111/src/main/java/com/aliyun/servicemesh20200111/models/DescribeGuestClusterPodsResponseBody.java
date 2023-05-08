@@ -4,9 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeGuestClusterPodsResponseBody extends TeaModel {
+    /**
+     * <p>The names of the queried pods.</p>
+     */
     @NameInMap("PodList")
     public java.util.List<String> podList;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,9 +4,18 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeReusableSlbRequest extends TeaModel {
+    /**
+     * <p>The ID of the Kubernetes cluster on the data plane.</p>
+     */
     @NameInMap("K8sClusterId")
     public String k8sClusterId;
 
+    /**
+     * <p>The network type of the SLB instance. Valid values:</p>
+     * <br>
+     * <p>*   `intranet`</p>
+     * <p>*   `internet`</p>
+     */
     @NameInMap("NetworkType")
     public String networkType;
 

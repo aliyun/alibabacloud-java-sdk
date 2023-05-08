@@ -4,9 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterPrometheusResponseBody extends TeaModel {
+    /**
+     * <p>The public endpoint of the Prometheus service that is used to monitor a cluster in the ASM instance.</p>
+     */
     @NameInMap("Prometheus")
     public String prometheus;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,9 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetadataResponseBody extends TeaModel {
+    /**
+     * <p>The metadata of ASM, which contains basic information about ASM.</p>
+     */
     @NameInMap("MetaData")
     public DescribeMetadataResponseBodyMetaData metaData;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,27 @@ public class DescribeMetadataResponseBody extends TeaModel {
     }
 
     public static class DescribeMetadataResponseBodyMetaDataProEdition extends TeaModel {
+        /**
+         * <p>The current version.</p>
+         */
         @NameInMap("CurrentVersion")
         public String currentVersion;
 
+        /**
+         * <p>The CRDs of the versions.</p>
+         */
         @NameInMap("VersionCrds")
         public java.util.List<java.util.Map<String, ?>> versionCrds;
 
+        /**
+         * <p>The ASM version and the corresponding Istio version.</p>
+         */
         @NameInMap("VersionRegistry")
         public java.util.List<java.util.Map<String, ?>> versionRegistry;
 
+        /**
+         * <p>The supported versions.</p>
+         */
         @NameInMap("Versions")
         public java.util.List<String> versions;
 
@@ -84,21 +102,39 @@ public class DescribeMetadataResponseBody extends TeaModel {
     }
 
     public static class DescribeMetadataResponseBodyMetaData extends TeaModel {
+        /**
+         * <p>The current version.</p>
+         */
         @NameInMap("CurrentVersion")
         public String currentVersion;
 
+        /**
+         * <p>The version information about ASM of a commercial edition.</p>
+         */
         @NameInMap("ProEdition")
         public DescribeMetadataResponseBodyMetaDataProEdition proEdition;
 
+        /**
+         * <p>The regions where ASM instances can be created.</p>
+         */
         @NameInMap("Regions")
         public java.util.List<String> regions;
 
+        /**
+         * <p>The Custom Resource Definitions (CRDs) of the versions.</p>
+         */
         @NameInMap("VersionCrds")
         public java.util.List<java.util.Map<String, ?>> versionCrds;
 
+        /**
+         * <p>The ASM version and the corresponding Istio version.</p>
+         */
         @NameInMap("VersionRegistry")
         public java.util.List<java.util.Map<String, ?>> versionRegistry;
 
+        /**
+         * <p>The supported versions.</p>
+         */
         @NameInMap("Versions")
         public java.util.List<String> versions;
 

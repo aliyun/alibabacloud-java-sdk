@@ -4,21 +4,39 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class GetSwimLaneDetailResponseBody extends TeaModel {
+    /**
+     * <p>The traffic routing rule that routes traffic to the lane by using the ingress gateway. The traffic routing rule contains one or more custom routes.</p>
+     */
     @NameInMap("IngressRule")
     public String ingressRule;
 
+    /**
+     * <p>This parameter is deprecated.</p>
+     */
     @NameInMap("IngressService")
     public String ingressService;
 
+    /**
+     * <p>Fixed value: **ASM_TRAFFIC_TAG**.</p>
+     */
     @NameInMap("LabelSelectorKey")
     public String labelSelectorKey;
 
+    /**
+     * <p>The value of ASM_TRAFFIC_TAG.</p>
+     */
     @NameInMap("LabelSelectorValue")
     public String labelSelectorValue;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>A list of services associated with the lane.</p>
+     */
     @NameInMap("ServicesList")
     public String servicesList;
 

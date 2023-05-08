@@ -4,12 +4,18 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeServiceMeshClustersResponseBody extends TeaModel {
+    /**
+     * <p>The point in time when the cluster was last modified.</p>
+     */
     @NameInMap("Clusters")
     public java.util.List<DescribeServiceMeshClustersResponseBodyClusters> clusters;
 
     @NameInMap("NumberOfClusters")
     public Long numberOfClusters;
 
+    /**
+     * <p>The point in time when the cluster was created.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,6 +49,9 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeServiceMeshClustersResponseBodyClusters extends TeaModel {
+        /**
+         * <p>The ID of the cluster.</p>
+         */
         @NameInMap("ClusterDomain")
         public String clusterDomain;
 
@@ -52,9 +61,15 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
         @NameInMap("ClusterType")
         public String clusterType;
 
+        /**
+         * <p>The ID of the ASM instance.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The domain name of the cluster.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
@@ -67,24 +82,57 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The name of the cluster.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The type of the cluster.</p>
+         */
         @NameInMap("ServiceMeshId")
         public String serviceMeshId;
 
+        /**
+         * <p>The error message about the cluster.</p>
+         */
         @NameInMap("SgId")
         public String sgId;
 
+        /**
+         * <p>The version number of the cluster.</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The ID of the region in which the cluster resides.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <p>Indicates that the cluster is available or the reason why the cluster cannot be added to the ASM instance. Valid values:</p>
+         * <br>
+         * <p>*   `0`: The cluster can be added to the ASM instance.</p>
+         * <p>*   `1`: The cluster cannot be added to the ASM instance because you do not have administrator permissions on the cluster.</p>
+         * <p>*   `2`: The cluster cannot be added to the ASM instance because the cluster and the ASM instance reside in different VPCs between which no private connections are built.</p>
+         * <p>*   `3`: The CIDR block of the cluster conflicts with that of the ASM instance.</p>
+         * <p>*   `4`: The cluster has a namespace that is named istio system.</p>
+         */
         @NameInMap("Version")
         public String version;
 
+        /**
+         * <p>The status of the cluster. Valid values:</p>
+         * <br>
+         * <p>*   `running`: The cluster is running.</p>
+         * <p>*   `starting`: The cluster is starting.</p>
+         * <p>*   `stopping`: The cluster is being stopped.</p>
+         * <p>*   `stopped`: The cluster is stopped.</p>
+         * <p>*   `failed`: The cluster fails to be run.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

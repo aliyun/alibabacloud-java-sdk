@@ -7,6 +7,9 @@ public class RemoveClusterFromServiceMeshRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>移除集群时，保留istio-system 命名空间</p>
+     */
     @NameInMap("ReserveNamespace")
     public Boolean reserveNamespace;
 

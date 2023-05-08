@@ -4,21 +4,39 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class UpdateSwimLaneRequest extends TeaModel {
+    /**
+     * <p>The name of the lane group.</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
+    /**
+     * <p>The label key of the associated service workload. Set the value to `ASM_TRAFFIC_TAG`.</p>
+     */
     @NameInMap("LabelSelectorKey")
     public String labelSelectorKey;
 
+    /**
+     * <p>The label value of the associated service workload.``</p>
+     */
     @NameInMap("LabelSelectorValue")
     public String labelSelectorValue;
 
+    /**
+     * <p>The ID of the ASM instance.</p>
+     */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 
+    /**
+     * <p>A list of services associated with the lane.</p>
+     */
     @NameInMap("ServicesList")
     public String servicesList;
 
+    /**
+     * <p>The name of the lane.</p>
+     */
     @NameInMap("SwimLaneName")
     public String swimLaneName;
 
