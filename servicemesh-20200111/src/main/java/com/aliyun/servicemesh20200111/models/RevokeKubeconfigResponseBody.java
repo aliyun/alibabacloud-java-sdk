@@ -4,9 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class RevokeKubeconfigResponseBody extends TeaModel {
+    /**
+     * <p>The new kubeconfig file generated.</p>
+     */
     @NameInMap("Kubeconfig")
     public String kubeconfig;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

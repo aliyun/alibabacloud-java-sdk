@@ -4,9 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class AddVMIntoServiceMeshRequest extends TeaModel {
+    /**
+     * <p>The ID of the VM.</p>
+     */
     @NameInMap("EcsId")
     public String ecsId;
 
+    /**
+     * <p>The ID of the ASM instance.</p>
+     */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 

@@ -4,12 +4,21 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DeleteGatewayRouteRequest extends TeaModel {
+    /**
+     * <p>The name of the ASM gateway.</p>
+     */
     @NameInMap("IstioGatewayName")
     public String istioGatewayName;
 
+    /**
+     * <p>The name of the routing rule.</p>
+     */
     @NameInMap("RouteName")
     public String routeName;
 
+    /**
+     * <p>The ID of the ASM instance.</p>
+     */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 

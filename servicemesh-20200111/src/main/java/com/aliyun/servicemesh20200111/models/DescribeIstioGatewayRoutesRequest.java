@@ -4,9 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeIstioGatewayRoutesRequest extends TeaModel {
+    /**
+     * <p>The name of the ASM gateway.</p>
+     */
     @NameInMap("IstioGatewayName")
     public String istioGatewayName;
 
+    /**
+     * <p>The routing rules.</p>
+     */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 

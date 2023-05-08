@@ -4,9 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeServiceMeshKubeconfigResponseBody extends TeaModel {
+    /**
+     * <p>The content of the kubeconfig file of the cluster.</p>
+     */
     @NameInMap("Kubeconfig")
     public String kubeconfig;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

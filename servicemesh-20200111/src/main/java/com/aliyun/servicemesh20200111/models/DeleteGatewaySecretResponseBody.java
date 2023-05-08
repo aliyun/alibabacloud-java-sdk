@@ -4,9 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DeleteGatewaySecretResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The record of deleting the secret.</p>
+     */
     @NameInMap("SecretDeleteRecord")
     public java.util.Map<String, SecretDeleteRecordValue> secretDeleteRecord;
 

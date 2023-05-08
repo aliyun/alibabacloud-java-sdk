@@ -4,9 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class GetCaCertResponseBody extends TeaModel {
+    /**
+     * <p>The Base64-encoded content of the CA certificate.</p>
+     */
     @NameInMap("CaCert")
     public String caCert;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

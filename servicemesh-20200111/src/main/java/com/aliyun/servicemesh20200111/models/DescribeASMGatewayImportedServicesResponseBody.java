@@ -4,9 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeASMGatewayImportedServicesResponseBody extends TeaModel {
+    /**
+     * <p>The imported services.</p>
+     */
     @NameInMap("ImportedServices")
     public java.util.List<DescribeASMGatewayImportedServicesResponseBodyImportedServices> importedServices;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class DescribeASMGatewayImportedServicesResponseBody extends TeaModel {
     }
 
     public static class DescribeASMGatewayImportedServicesResponseBodyImportedServices extends TeaModel {
+        /**
+         * <p>The name of the service.</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
+        /**
+         * <p>The namespace in which the service resides.</p>
+         */
         @NameInMap("ServiceNamespace")
         public String serviceNamespace;
 

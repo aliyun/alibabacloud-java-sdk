@@ -4,9 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeServiceMeshVMsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ECS instances that reside in the same VPC as the ASM instance.</p>
+     */
     @NameInMap("VMs")
     public java.util.List<DescribeServiceMeshVMsResponseBodyVMs> VMs;
 
@@ -32,27 +38,51 @@ public class DescribeServiceMeshVMsResponseBody extends TeaModel {
     }
 
     public static class DescribeServiceMeshVMsResponseBodyVMs extends TeaModel {
+        /**
+         * <p>Indicates whether the ECS instance has labels.</p>
+         */
         @NameInMap("HasTag")
         public Boolean hasTag;
 
+        /**
+         * <p>The hostname of the ECS instance.</p>
+         */
         @NameInMap("HostName")
         public String hostName;
 
+        /**
+         * <p>The ID of the ECS instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The IP address of the ECS instance.</p>
+         */
         @NameInMap("IpAddress")
         public String ipAddress;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The security group to which the ECS instance belongs.</p>
+         */
         @NameInMap("SecurityGroupIds")
         public String securityGroupIds;
 
+        /**
+         * <p>The ID of the ASM instance.</p>
+         */
         @NameInMap("ServiceMeshId")
         public String serviceMeshId;
 
+        /**
+         * <p>The state of the ECS instance.</p>
+         */
         @NameInMap("Status")
         public String status;
 

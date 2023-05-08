@@ -4,21 +4,39 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DeleteIstioGatewayDomainsRequest extends TeaModel {
+    /**
+     * <p>The domain names of the one or more hosts that are exposed by the ASM gateway. Separate multiple domain names with commas (,).</p>
+     */
     @NameInMap("Hosts")
     public String hosts;
 
+    /**
+     * <p>The name of the ASM gateway.</p>
+     */
     @NameInMap("IstioGatewayName")
     public String istioGatewayName;
 
+    /**
+     * <p>The maximum number of ASM gateways to query.</p>
+     */
     @NameInMap("Limit")
     public String limit;
 
+    /**
+     * <p>The namespace in which the ASM gateway resides.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The name of the port.</p>
+     */
     @NameInMap("PortName")
     public String portName;
 
+    /**
+     * <p>The ID of the ASM instance.</p>
+     */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 

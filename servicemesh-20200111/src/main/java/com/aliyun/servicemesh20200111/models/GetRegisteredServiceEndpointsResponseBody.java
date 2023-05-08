@@ -4,12 +4,18 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
+    /**
+     * <p>The name of the registered service.</p>
+     */
     @NameInMap("EndPointSlice")
     public GetRegisteredServiceEndpointsResponseBodyEndPointSlice endPointSlice;
 
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The IP address of the registered service.</p>
+     */
     @NameInMap("ServiceEndpoints")
     public java.util.List<GetRegisteredServiceEndpointsResponseBodyServiceEndpoints> serviceEndpoints;
 
@@ -43,21 +49,42 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
     }
 
     public static class GetRegisteredServiceEndpointsResponseBodyEndPointSliceEndpointsDetails extends TeaModel {
+        /**
+         * <p>The port of the registered service.</p>
+         */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <p>The ID of the region in which the registered service resides.</p>
+         */
         @NameInMap("Hostname")
         public String hostname;
 
+        /**
+         * <p>The IP address of the registered service.</p>
+         */
         @NameInMap("PodName")
         public String podName;
 
+        /**
+         * <p>The host name of the registered service.</p>
+         */
         @NameInMap("Ports")
         public java.util.List<Integer> ports;
 
+        /**
+         * <p>Indicates whether sidecar proxies are injected. Valid values:</p>
+         * <br>
+         * <p>*   `true`: yes</p>
+         * <p>*   `false`: no</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The ID of the request.</p>
+         */
         @NameInMap("SidecarInjected")
         public Boolean sidecarInjected;
 
@@ -117,15 +144,30 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
     }
 
     public static class GetRegisteredServiceEndpointsResponseBodyEndPointSlice extends TeaModel {
+        /**
+         * <p>The name of the pod.</p>
+         */
         @NameInMap("EndpointsDetails")
         public java.util.List<GetRegisteredServiceEndpointsResponseBodyEndPointSliceEndpointsDetails> endpointsDetails;
 
+        /**
+         * <p>The details of the endpoint of the registered service.</p>
+         */
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <p>The location of the registered service. Valid values:</p>
+         * <br>
+         * <p>*   `MESH_INTERNAL`: The service is deployed inside the ASM instance.</p>
+         * <p>*   `MESH_EXTERNAL`: The service is deployed outside the ASM instance.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The name of the namespace.</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
@@ -169,9 +211,15 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
     }
 
     public static class GetRegisteredServiceEndpointsResponseBodyServiceEndpoints extends TeaModel {
+        /**
+         * <p>The ID of the cluster on the data plane.</p>
+         */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <p>The details of the endpoints of the registered service.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 

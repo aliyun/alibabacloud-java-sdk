@@ -4,9 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterGrafanaResponseBody extends TeaModel {
+    /**
+     * <p>The information of Grafana dashboards.</p>
+     */
     @NameInMap("Dashboards")
     public java.util.List<DescribeClusterGrafanaResponseBodyDashboards> dashboards;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class DescribeClusterGrafanaResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterGrafanaResponseBodyDashboards extends TeaModel {
+        /**
+         * <p>The title of the Grafana dashboard.</p>
+         */
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <p>The endpoint of the Grafana dashboard.</p>
+         */
         @NameInMap("Url")
         public String url;
 

@@ -4,12 +4,21 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeGuestClusterAccessLogDashboardsResponseBody extends TeaModel {
+    /**
+     * <p>The access log reports of a cluster on the data plane.</p>
+     */
     @NameInMap("Dashboards")
     public java.util.List<DescribeGuestClusterAccessLogDashboardsResponseBodyDashboards> dashboards;
 
+    /**
+     * <p>The ID of the cluster on the data plane.</p>
+     */
     @NameInMap("K8sClusterId")
     public String k8sClusterId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,9 +52,15 @@ public class DescribeGuestClusterAccessLogDashboardsResponseBody extends TeaMode
     }
 
     public static class DescribeGuestClusterAccessLogDashboardsResponseBodyDashboards extends TeaModel {
+        /**
+         * <p>The title of the report.</p>
+         */
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <p>The URL of the report.</p>
+         */
         @NameInMap("Url")
         public String url;
 

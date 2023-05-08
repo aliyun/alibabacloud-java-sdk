@@ -4,12 +4,21 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class UpdateSwimLaneGroupRequest extends TeaModel {
+    /**
+     * <p>The name of the lane group.</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
+    /**
+     * <p>The ID of the ASM instance.</p>
+     */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 
+    /**
+     * <p>A list of services associated with the lane group.</p>
+     */
     @NameInMap("ServicesList")
     public String servicesList;
 

@@ -4,9 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class ReActivateAuditResponseBody extends TeaModel {
+    /**
+     * <p>The name of the project that is used to store audit logs.</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

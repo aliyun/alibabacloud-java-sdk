@@ -4,6 +4,9 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeCCMVersionRequest extends TeaModel {
+    /**
+     * <p>The versions of the CCM component in all clusters on the data plane.</p>
+     */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 

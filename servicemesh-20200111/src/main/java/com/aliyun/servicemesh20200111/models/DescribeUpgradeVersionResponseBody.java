@@ -4,9 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeUpgradeVersionResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The version information.</p>
+     */
     @NameInMap("Version")
     public DescribeUpgradeVersionResponseBodyVersion version;
 
@@ -32,12 +38,21 @@ public class DescribeUpgradeVersionResponseBody extends TeaModel {
     }
 
     public static class DescribeUpgradeVersionResponseBodyVersion extends TeaModel {
+        /**
+         * <p>The version of the ASM instance.</p>
+         */
         @NameInMap("IstioOperatorVersion")
         public String istioOperatorVersion;
 
+        /**
+         * <p>The Istio version.</p>
+         */
         @NameInMap("IstioVersion")
         public String istioVersion;
 
+        /**
+         * <p>The Kubernetes version.</p>
+         */
         @NameInMap("KubernetesVersion")
         public String kubernetesVersion;
 

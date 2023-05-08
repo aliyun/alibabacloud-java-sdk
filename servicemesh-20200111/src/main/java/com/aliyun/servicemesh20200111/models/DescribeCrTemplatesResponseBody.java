@@ -4,9 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeCrTemplatesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The common YAML templates for the specified type of Istio resource.</p>
+     */
     @NameInMap("Templates")
     public java.util.List<DescribeCrTemplatesResponseBodyTemplates> templates;
 
@@ -32,12 +38,21 @@ public class DescribeCrTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeCrTemplatesResponseBodyTemplates extends TeaModel {
+        /**
+         * <p>The Chinese name of the YAML template.</p>
+         */
         @NameInMap("ChineseName")
         public String chineseName;
 
+        /**
+         * <p>The English name of the YAML template.</p>
+         */
         @NameInMap("EnglishName")
         public String englishName;
 
+        /**
+         * <p>The content in the YAML template.</p>
+         */
         @NameInMap("Yaml")
         public String yaml;
 

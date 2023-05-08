@@ -4,9 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeReusableSlbResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of SLB instances that can be reused.</p>
+     */
     @NameInMap("ReusableSlbList")
     public java.util.List<DescribeReusableSlbResponseBodyReusableSlbList> reusableSlbList;
 
@@ -32,9 +38,15 @@ public class DescribeReusableSlbResponseBody extends TeaModel {
     }
 
     public static class DescribeReusableSlbResponseBodyReusableSlbList extends TeaModel {
+        /**
+         * <p>The ID of the SLB instance.</p>
+         */
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
+        /**
+         * <p>The name of the SLB instance.</p>
+         */
         @NameInMap("LoadBalancerName")
         public String loadBalancerName;
 

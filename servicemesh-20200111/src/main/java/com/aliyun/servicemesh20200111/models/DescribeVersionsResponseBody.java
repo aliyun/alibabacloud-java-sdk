@@ -4,9 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeVersionsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The available ASM versions.</p>
+     */
     @NameInMap("VersionInfo")
     public java.util.List<DescribeVersionsResponseBodyVersionInfo> versionInfo;
 
@@ -32,9 +38,18 @@ public class DescribeVersionsResponseBody extends TeaModel {
     }
 
     public static class DescribeVersionsResponseBodyVersionInfo extends TeaModel {
+        /**
+         * <p>The edition of the ASM instance. Valid values:</p>
+         * <br>
+         * <p>*   `Default`: Standard Edition</p>
+         * <p>*   `Pro`: Professional Edition that is commercially released</p>
+         */
         @NameInMap("Edition")
         public String edition;
 
+        /**
+         * <p>The ASM versions available for the ASM instance of the current edition.</p>
+         */
         @NameInMap("Versions")
         public java.util.List<String> versions;
 

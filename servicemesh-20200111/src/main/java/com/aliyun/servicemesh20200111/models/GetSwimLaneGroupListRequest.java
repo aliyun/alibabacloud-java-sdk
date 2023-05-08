@@ -4,6 +4,9 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class GetSwimLaneGroupListRequest extends TeaModel {
+    /**
+     * <p>A list of services associated with the lane group.</p>
+     */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 

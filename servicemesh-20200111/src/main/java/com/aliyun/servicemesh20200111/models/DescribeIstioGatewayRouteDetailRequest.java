@@ -4,12 +4,21 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeIstioGatewayRouteDetailRequest extends TeaModel {
+    /**
+     * <p>The fixed duration for request delay.</p>
+     */
     @NameInMap("IstioGatewayName")
     public String istioGatewayName;
 
+    /**
+     * <p>The duration for request delay is expressed as 2 raised to the power of x. You must specify the value of x.</p>
+     */
     @NameInMap("RouteName")
     public String routeName;
 
+    /**
+     * <p>The duration to delay a request.</p>
+     */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 

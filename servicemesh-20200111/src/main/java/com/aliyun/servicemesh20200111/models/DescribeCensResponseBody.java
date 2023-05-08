@@ -4,9 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeCensResponseBody extends TeaModel {
+    /**
+     * <p>The IDs of the queried Kubernetes clusters.</p>
+     */
     @NameInMap("Clusters")
     public java.util.List<String> clusters;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

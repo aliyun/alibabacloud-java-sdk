@@ -4,6 +4,9 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeGuestClusterAccessLogDashboardsRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster on the data plane.</p>
+     */
     @NameInMap("K8sClusterId")
     public String k8sClusterId;
 

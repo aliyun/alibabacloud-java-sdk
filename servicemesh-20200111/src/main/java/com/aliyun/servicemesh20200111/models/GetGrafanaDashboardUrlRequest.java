@@ -4,12 +4,21 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class GetGrafanaDashboardUrlRequest extends TeaModel {
+    /**
+     * <p>The ID of the Container Service for Kubernetes (ACK) or serverless Kubernetes (ASK) cluster.</p>
+     */
     @NameInMap("K8sClusterId")
     public String k8sClusterId;
 
+    /**
+     * <p>The ID of the Alibaba Cloud Service Mesh (ASM) instance.</p>
+     */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 
+    /**
+     * <p>The name of the dashboard.</p>
+     */
     @NameInMap("Title")
     public String title;
 

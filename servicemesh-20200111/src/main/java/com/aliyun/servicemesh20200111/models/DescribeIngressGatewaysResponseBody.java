@@ -4,9 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeIngressGatewaysResponseBody extends TeaModel {
+    /**
+     * <p>The information about the ingress gateways of the ASM instance.</p>
+     */
     @NameInMap("IngressGateways")
     public java.util.List<java.util.Map<String, ?>> ingressGateways;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

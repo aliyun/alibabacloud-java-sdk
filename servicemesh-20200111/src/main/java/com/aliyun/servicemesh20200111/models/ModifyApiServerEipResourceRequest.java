@@ -4,12 +4,24 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class ModifyApiServerEipResourceRequest extends TeaModel {
+    /**
+     * <p>The ID of the EIP.</p>
+     */
     @NameInMap("ApiServerEipId")
     public String apiServerEipId;
 
+    /**
+     * <p>The type of the operation. Valid values:</p>
+     * <br>
+     * <p>*   `UnBindEip`: disassociates an EIP from the API server.</p>
+     * <p>*   `BindEip`: associates an EIP with the API server.</p>
+     */
     @NameInMap("Operation")
     public String operation;
 
+    /**
+     * <p>The ID of the Alibaba Cloud Service Mesh (ASM) instance.</p>
+     */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 

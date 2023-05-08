@@ -4,9 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
+    /**
+     * <p>The clusters in the ASM instance.</p>
+     */
     @NameInMap("Clusters")
     public java.util.List<DescribeClustersInServiceMeshResponseBodyClusters> clusters;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
     }
 
     public static class DescribeClustersInServiceMeshResponseBodyClustersAccessLogDashboards extends TeaModel {
+        /**
+         * <p>The name of the dashboard for access logs.</p>
+         */
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <p>The URL of the dashboard for access logs.</p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -62,45 +74,93 @@ public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
     }
 
     public static class DescribeClustersInServiceMeshResponseBodyClusters extends TeaModel {
+        /**
+         * <p>The configurations of access log collection.</p>
+         */
         @NameInMap("AccessLogDashboards")
         public java.util.List<DescribeClustersInServiceMeshResponseBodyClustersAccessLogDashboards> accessLogDashboards;
 
+        /**
+         * <p>The domain of the cluster.</p>
+         */
         @NameInMap("ClusterDomain")
         public String clusterDomain;
 
+        /**
+         * <p>The ID of the cluster.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The type of the cluster.</p>
+         */
         @NameInMap("ClusterType")
         public String clusterType;
 
+        /**
+         * <p>The point in time when the cluster was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The error message that is returned when the call failed.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>Indicates whether the Logtail component is installed in the cluster. Valid values:</p>
+         * <br>
+         * <p>*   `logtail_installed`: The Logtail component is installed.</p>
+         * <br>
+         * <p>\-`logtail_uninstalled`: The Logtail component is not installed.</p>
+         * <br>
+         * <p>*   `logtail_state_get_error`: The Logtail component fails to be installed.</p>
+         */
         @NameInMap("LogtailInstalledState")
         public String logtailInstalledState;
 
+        /**
+         * <p>The name of the cluster.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the region in which the cluster resides.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the security group.</p>
+         */
         @NameInMap("SgId")
         public String sgId;
 
+        /**
+         * <p>The status of the cluster.</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The point in time when the cluster was last modified.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <p>The version number of the cluster.</p>
+         */
         @NameInMap("Version")
         public String version;
 
+        /**
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

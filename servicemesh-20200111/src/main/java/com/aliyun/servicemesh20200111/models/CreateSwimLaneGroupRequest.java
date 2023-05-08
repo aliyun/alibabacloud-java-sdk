@@ -4,6 +4,9 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class CreateSwimLaneGroupRequest extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
@@ -13,9 +16,15 @@ public class CreateSwimLaneGroupRequest extends TeaModel {
     @NameInMap("IngressType")
     public String ingressType;
 
+    /**
+     * <p>The type of the ingress. Only ingress gateways are supported. Set the value to ASM.</p>
+     */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 
+    /**
+     * <p>The name of the ingress gateway.</p>
+     */
     @NameInMap("ServicesList")
     public String servicesList;
 

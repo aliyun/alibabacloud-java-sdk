@@ -4,9 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeIstioGatewayDomainsResponseBody extends TeaModel {
+    /**
+     * <p>The domain names that are exposed by the ASM gateway.</p>
+     */
     @NameInMap("GatewaySecretDetails")
     public java.util.List<DescribeIstioGatewayDomainsResponseBodyGatewaySecretDetails> gatewaySecretDetails;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,39 @@ public class DescribeIstioGatewayDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeIstioGatewayDomainsResponseBodyGatewaySecretDetails extends TeaModel {
+        /**
+         * <p>The name of the secret that contains the Transport Layer Security (TLS) certificate and certificate authority (CA) certificate.</p>
+         */
         @NameInMap("CredentialName")
         public String credentialName;
 
+        /**
+         * <p>The details of the domain name in the JSON format.</p>
+         */
         @NameInMap("Detail")
         public String detail;
 
+        /**
+         * <p>The domain name.</p>
+         */
         @NameInMap("Domains")
         public java.util.List<String> domains;
 
+        /**
+         * <p>The namespace in which the ASM gateway resides.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The name of the port.</p>
+         */
         @NameInMap("PortName")
         public String portName;
 
+        /**
+         * <p>The type of the protocol. Valid values: `HTTP`, `HTTPS`, `GRPC`, `HTTP2`, `MONGO`, `TCP`, and `TLS`.</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 

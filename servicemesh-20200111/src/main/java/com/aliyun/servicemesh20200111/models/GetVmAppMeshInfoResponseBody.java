@@ -4,9 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class GetVmAppMeshInfoResponseBody extends TeaModel {
+    /**
+     * <p>The returned information.</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

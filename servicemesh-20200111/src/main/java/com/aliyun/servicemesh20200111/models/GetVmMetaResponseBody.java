@@ -4,9 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class GetVmMetaResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The metadata that is required to add a non-containerized application to the ASM instance.</p>
+     */
     @NameInMap("VmMetaInfo")
     public GetVmMetaResponseBodyVmMetaInfo vmMetaInfo;
 
@@ -32,12 +38,21 @@ public class GetVmMetaResponseBody extends TeaModel {
     }
 
     public static class GetVmMetaResponseBodyVmMetaInfo extends TeaModel {
+        /**
+         * <p>The content of the EnvoyEnv file.</p>
+         */
         @NameInMap("EnvoyEnvContent")
         public String envoyEnvContent;
 
+        /**
+         * <p>The content of the hosts file.</p>
+         */
         @NameInMap("HostsContent")
         public String hostsContent;
 
+        /**
+         * <p>The content of the Token file.</p>
+         */
         @NameInMap("TokenContent")
         public String tokenContent;
 

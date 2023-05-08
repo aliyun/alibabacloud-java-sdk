@@ -4,18 +4,33 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class CreateGatewaySecretRequest extends TeaModel {
+    /**
+     * <p>The content of the certificate.</p>
+     */
     @NameInMap("Cert")
     public String cert;
 
+    /**
+     * <p>The name of the ASM gateway.</p>
+     */
     @NameInMap("IstioGatewayName")
     public String istioGatewayName;
 
+    /**
+     * <p>The private key of the certificate.</p>
+     */
     @NameInMap("Key")
     public String key;
 
+    /**
+     * <p>The name of the secret.</p>
+     */
     @NameInMap("SecretName")
     public String secretName;
 
+    /**
+     * <p>The ID of the ASM instance.</p>
+     */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 

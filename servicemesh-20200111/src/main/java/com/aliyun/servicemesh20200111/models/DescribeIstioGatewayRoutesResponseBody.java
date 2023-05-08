@@ -4,6 +4,9 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
+    /**
+     * <p>The name of the routing rule.</p>
+     */
     @NameInMap("ManagementRoutes")
     public java.util.List<DescribeIstioGatewayRoutesResponseBodyManagementRoutes> managementRoutes;
 
@@ -32,6 +35,9 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
     }
 
     public static class DescribeIstioGatewayRoutesResponseBodyManagementRoutes extends TeaModel {
+        /**
+         * <p>The path that is used to match request URLs.</p>
+         */
         @NameInMap("ASMGatewayName")
         public String ASMGatewayName;
 
@@ -47,15 +53,31 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The ID of the request.</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <p>The status of the routing rule. Valid values:</p>
+         * <br>
+         * <p>*   `0`: The routing rule is valid.</p>
+         * <p>*   `1`: The routing rule is invalid.</p>
+         * <p>*   `2`: An error occurs during the creation or update of the routing rule.</p>
+         */
         @NameInMap("RouteName")
         public String routeName;
 
+        /**
+         * <p>The priority of the routing rule. The value of this parameter is an integer. A smaller value indicates a higher priority.</p>
+         */
         @NameInMap("RoutePath")
         public String routePath;
 
+        /**
+         * <p>The description of the routing rule.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
