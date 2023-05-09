@@ -302,7 +302,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String endpointUrl;
 
         @NameInMap("ipWhitelist")
-        public String ipWhitelist;
+        public java.util.List<String> ipWhitelist;
 
         public static GetInstanceResponseBodyDataNetworkInfoEndpoints build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceResponseBodyDataNetworkInfoEndpoints self = new GetInstanceResponseBodyDataNetworkInfoEndpoints();
@@ -325,11 +325,11 @@ public class GetInstanceResponseBody extends TeaModel {
             return this.endpointUrl;
         }
 
-        public GetInstanceResponseBodyDataNetworkInfoEndpoints setIpWhitelist(String ipWhitelist) {
+        public GetInstanceResponseBodyDataNetworkInfoEndpoints setIpWhitelist(java.util.List<String> ipWhitelist) {
             this.ipWhitelist = ipWhitelist;
             return this;
         }
-        public String getIpWhitelist() {
+        public java.util.List<String> getIpWhitelist() {
             return this.ipWhitelist;
         }
 
@@ -521,6 +521,47 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
 
+    public static class GetInstanceResponseBodyDataSoftware extends TeaModel {
+        @NameInMap("maintainTime")
+        public String maintainTime;
+
+        @NameInMap("softwareVersion")
+        public String softwareVersion;
+
+        @NameInMap("upgradeMethod")
+        public String upgradeMethod;
+
+        public static GetInstanceResponseBodyDataSoftware build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceResponseBodyDataSoftware self = new GetInstanceResponseBodyDataSoftware();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceResponseBodyDataSoftware setMaintainTime(String maintainTime) {
+            this.maintainTime = maintainTime;
+            return this;
+        }
+        public String getMaintainTime() {
+            return this.maintainTime;
+        }
+
+        public GetInstanceResponseBodyDataSoftware setSoftwareVersion(String softwareVersion) {
+            this.softwareVersion = softwareVersion;
+            return this;
+        }
+        public String getSoftwareVersion() {
+            return this.softwareVersion;
+        }
+
+        public GetInstanceResponseBodyDataSoftware setUpgradeMethod(String upgradeMethod) {
+            this.upgradeMethod = upgradeMethod;
+            return this;
+        }
+        public String getUpgradeMethod() {
+            return this.upgradeMethod;
+        }
+
+    }
+
     public static class GetInstanceResponseBodyData extends TeaModel {
         @NameInMap("accountInfo")
         public GetInstanceResponseBodyDataAccountInfo accountInfo;
@@ -528,9 +569,6 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("aclInfo")
         public GetInstanceResponseBodyDataAclInfo aclInfo;
 
-        /**
-         * <p>BID</p>
-         */
         @NameInMap("bid")
         public String bid;
 
@@ -545,6 +583,9 @@ public class GetInstanceResponseBody extends TeaModel {
 
         @NameInMap("extConfig")
         public GetInstanceResponseBodyDataExtConfig extConfig;
+
+        @NameInMap("groupCount")
+        public Long groupCount;
 
         @NameInMap("instanceId")
         public String instanceId;
@@ -582,6 +623,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("serviceCode")
         public String serviceCode;
 
+        @NameInMap("software")
+        public GetInstanceResponseBodyDataSoftware software;
+
         @NameInMap("startTime")
         public String startTime;
 
@@ -590,6 +634,9 @@ public class GetInstanceResponseBody extends TeaModel {
 
         @NameInMap("subSeriesCode")
         public String subSeriesCode;
+
+        @NameInMap("topicCount")
+        public Long topicCount;
 
         @NameInMap("updateTime")
         public String updateTime;
@@ -656,6 +703,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public GetInstanceResponseBodyDataExtConfig getExtConfig() {
             return this.extConfig;
+        }
+
+        public GetInstanceResponseBodyData setGroupCount(Long groupCount) {
+            this.groupCount = groupCount;
+            return this;
+        }
+        public Long getGroupCount() {
+            return this.groupCount;
         }
 
         public GetInstanceResponseBodyData setInstanceId(String instanceId) {
@@ -754,6 +809,14 @@ public class GetInstanceResponseBody extends TeaModel {
             return this.serviceCode;
         }
 
+        public GetInstanceResponseBodyData setSoftware(GetInstanceResponseBodyDataSoftware software) {
+            this.software = software;
+            return this;
+        }
+        public GetInstanceResponseBodyDataSoftware getSoftware() {
+            return this.software;
+        }
+
         public GetInstanceResponseBodyData setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
@@ -776,6 +839,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public String getSubSeriesCode() {
             return this.subSeriesCode;
+        }
+
+        public GetInstanceResponseBodyData setTopicCount(Long topicCount) {
+            this.topicCount = topicCount;
+            return this;
+        }
+        public Long getTopicCount() {
+            return this.topicCount;
         }
 
         public GetInstanceResponseBodyData setUpdateTime(String updateTime) {
