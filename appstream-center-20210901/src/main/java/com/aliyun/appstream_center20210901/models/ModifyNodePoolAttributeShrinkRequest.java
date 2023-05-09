@@ -16,6 +16,9 @@ public class ModifyNodePoolAttributeShrinkRequest extends TeaModel {
     @NameInMap("PoolId")
     public String poolId;
 
+    /**
+     * <p>产品类型。</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 
