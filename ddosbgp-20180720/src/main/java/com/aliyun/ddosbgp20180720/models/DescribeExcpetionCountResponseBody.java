@@ -4,6 +4,9 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class DescribeExcpetionCountResponseBody extends TeaModel {
+    /**
+     * <p>WB269094</p>
+     */
     @NameInMap("ExceptionIpCount")
     public Integer exceptionIpCount;
 

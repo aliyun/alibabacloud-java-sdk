@@ -4,27 +4,53 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class DescribeOnDemandDdosEventRequest extends TeaModel {
+    /**
+     * <p>The timestamp that indicates the end time of the attack. Unit: seconds. The timestamp follows the UNIX time format. It is the number of seconds that have elapsed since 00:00:00 Thursday, 1 January 1970.</p>
+     */
     @NameInMap("EndTime")
     public Integer endTime;
 
+    /**
+     * <p>The timestamp that specifies the beginning of the time range to query. Unit: seconds. The timestamp follows the UNIX time format. It is the number of seconds that have elapsed since 00:00:00 Thursday, 1 January 1970.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The status of the event. Valid values:</p>
+     * <br>
+     * <p>*   **hole_begin **: indicates that the event is in the blackhole state.</p>
+     * <p>*   **hole_end **: indicates that blackhole ends.</p>
+     * <p>*   **defense_begin **: indicates that the event is in the cleaning state.</p>
+     * <p>*   **defense_end **: indicates that cleaning ends.</p>
+     */
     @NameInMap("Ip")
     public String ip;
 
+    /**
+     * <p>The IP address of the protection target.</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>The ID of the on-demand instance to query.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The operation that you want to perform. Set the value to **DescribeOnDemandDdosEvent**.</p>
+     */
     @NameInMap("StartTime")
     public Integer startTime;
 

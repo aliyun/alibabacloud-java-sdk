@@ -4,9 +4,18 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class GetSlsOpenStatusRequest extends TeaModel {
+    /**
+     * <p>Indicates whether Log Service was activated. Valid values:</p>
+     * <br>
+     * <p>*   **true**: Log Service was activated.</p>
+     * <p>*   **false**: Log Service was not activated.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

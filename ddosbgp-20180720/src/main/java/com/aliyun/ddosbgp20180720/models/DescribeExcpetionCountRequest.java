@@ -4,9 +4,15 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class DescribeExcpetionCountRequest extends TeaModel {
+    /**
+     * <p>DescribeExcpetionCount</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Queries the number of assets that are in an abnormal state and the number of Anti-DDoS Origin instances that are about to expire in a specific region.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

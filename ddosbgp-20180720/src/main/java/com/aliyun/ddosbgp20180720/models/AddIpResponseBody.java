@@ -4,6 +4,9 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class AddIpResponseBody extends TeaModel {
+    /**
+     * <p>Adds IP addresses to an Anti-DDoS Origin Enterprise instance.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

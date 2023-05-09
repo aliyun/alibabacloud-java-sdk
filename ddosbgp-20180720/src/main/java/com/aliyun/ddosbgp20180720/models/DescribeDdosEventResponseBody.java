@@ -4,12 +4,21 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class DescribeDdosEventResponseBody extends TeaModel {
+    /**
+     * <p>The number of packets at the start of the DDoS attack. Unit: packets per second (PPS).</p>
+     */
     @NameInMap("Events")
     public java.util.List<DescribeDdosEventResponseBodyEvents> events;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The time when the DDoS attack started. This value is a UNIX timestamp. Unit: seconds.</p>
+     */
     @NameInMap("Total")
     public Long total;
 
@@ -43,21 +52,35 @@ public class DescribeDdosEventResponseBody extends TeaModel {
     }
 
     public static class DescribeDdosEventResponseBodyEvents extends TeaModel {
+        /**
+         * <p>All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).</p>
+         * <br>
+         * <p>For more information about sample requests, see the **"Examples"** section of this topic.</p>
+         */
         @NameInMap("EndTime")
         public Integer endTime;
 
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>WB269094</p>
+         */
         @NameInMap("Mbps")
         public Integer mbps;
 
         @NameInMap("Pps")
         public Integer pps;
 
+        /**
+         * <p>DescribeDdosEvent</p>
+         */
         @NameInMap("StartTime")
         public Integer startTime;
 
+        /**
+         * <p>Queries the details about the DDoS attack events that occurred on a specific Anti-DDoS Origin instance.</p>
+         */
         @NameInMap("Status")
         public String status;
 

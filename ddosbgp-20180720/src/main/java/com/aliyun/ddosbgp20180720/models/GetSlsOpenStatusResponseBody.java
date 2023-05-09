@@ -7,6 +7,11 @@ public class GetSlsOpenStatusResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).</p>
+     * <br>
+     * <p>For more information about sample requests, see the **"Examples"** section of this topic.</p>
+     */
     @NameInMap("SlsOpenStatus")
     public Boolean slsOpenStatus;
 

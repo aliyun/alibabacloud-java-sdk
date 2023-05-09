@@ -4,9 +4,15 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class QuerySchedruleOnDemandRequest extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the on-demand instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

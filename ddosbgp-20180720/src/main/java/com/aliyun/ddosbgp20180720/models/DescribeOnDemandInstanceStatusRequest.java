@@ -4,9 +4,18 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class DescribeOnDemandInstanceStatusRequest extends TeaModel {
+    /**
+     * <p>The mode used to start the on-demand instance. Valid values:</p>
+     * <br>
+     * <p>*   **manual**: The instance is manually started.</p>
+     * <p>*   **netflow-auto**: The instance is automatically started by using NetFlow that monitors network traffic.</p>
+     */
     @NameInMap("InstanceIdList")
     public java.util.List<String> instanceIdList;
 
+    /**
+     * <p>The details of the on-demand instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

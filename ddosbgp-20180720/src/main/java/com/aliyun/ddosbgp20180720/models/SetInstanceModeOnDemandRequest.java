@@ -4,12 +4,21 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class SetInstanceModeOnDemandRequest extends TeaModel {
+    /**
+     * <p>SetInstanceModeOnDemand</p>
+     */
     @NameInMap("InstanceIdList")
     public java.util.List<String> instanceIdList;
 
+    /**
+     * <p>SetInstanceModeOnDemand</p>
+     */
     @NameInMap("Mode")
     public String mode;
 
+    /**
+     * <p>WB269094</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

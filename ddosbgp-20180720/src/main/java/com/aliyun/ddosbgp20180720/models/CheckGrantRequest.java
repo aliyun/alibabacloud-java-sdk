@@ -4,9 +4,15 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class CheckGrantRequest extends TeaModel {
+    /**
+     * <p>WB269094</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>CheckGrant</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

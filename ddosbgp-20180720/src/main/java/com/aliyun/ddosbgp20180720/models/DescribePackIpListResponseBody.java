@@ -4,18 +4,35 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class DescribePackIpListResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>WB269094</p>
+     */
     @NameInMap("IpList")
     public java.util.List<DescribePackIpListResponseBodyIpList> ipList;
 
+    /**
+     * <p>All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).</p>
+     * <br>
+     * <p>For more information about sample requests, see the **"Examples"** section of this topic.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>DescribePackIpList</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>Queries the IP addresses that are protected by a specific Anti-DDoS Origin instance.</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -71,6 +88,9 @@ public class DescribePackIpListResponseBody extends TeaModel {
         @NameInMap("Product")
         public String product;
 
+        @NameInMap("Region")
+        public String region;
+
         @NameInMap("Remark")
         public String remark;
 
@@ -96,6 +116,14 @@ public class DescribePackIpListResponseBody extends TeaModel {
         }
         public String getProduct() {
             return this.product;
+        }
+
+        public DescribePackIpListResponseBodyIpList setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
         }
 
         public DescribePackIpListResponseBodyIpList setRemark(String remark) {
