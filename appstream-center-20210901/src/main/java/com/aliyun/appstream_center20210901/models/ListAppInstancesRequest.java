@@ -10,6 +10,12 @@ public class ListAppInstancesRequest extends TeaModel {
     @NameInMap("AppInstanceId")
     public String appInstanceId;
 
+    @NameInMap("AppInstanceIdList")
+    public java.util.List<String> appInstanceIdList;
+
+    @NameInMap("IncludeDeleted")
+    public Boolean includeDeleted;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -38,6 +44,22 @@ public class ListAppInstancesRequest extends TeaModel {
     }
     public String getAppInstanceId() {
         return this.appInstanceId;
+    }
+
+    public ListAppInstancesRequest setAppInstanceIdList(java.util.List<String> appInstanceIdList) {
+        this.appInstanceIdList = appInstanceIdList;
+        return this;
+    }
+    public java.util.List<String> getAppInstanceIdList() {
+        return this.appInstanceIdList;
+    }
+
+    public ListAppInstancesRequest setIncludeDeleted(Boolean includeDeleted) {
+        this.includeDeleted = includeDeleted;
+        return this;
+    }
+    public Boolean getIncludeDeleted() {
+        return this.includeDeleted;
     }
 
     public ListAppInstancesRequest setPageNumber(Integer pageNumber) {

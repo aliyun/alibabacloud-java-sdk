@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>appstream_center20210901</artifactId>
-  <version>1.0.6</version>
+  <version>1.0.7</version>
   <packaging>jar</packaging>
   <name>appstream_center20210901</name>
   <description>Alibaba Cloud appstream-center (20210901) SDK for Java

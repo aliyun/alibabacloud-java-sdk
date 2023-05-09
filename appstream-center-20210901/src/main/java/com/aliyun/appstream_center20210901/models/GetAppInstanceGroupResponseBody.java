@@ -448,6 +448,9 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         @NameInMap("SessionTimeout")
         public String sessionTimeout;
 
+        @NameInMap("SkipUserAuthCheck")
+        public Boolean skipUserAuthCheck;
+
         @NameInMap("SpecId")
         public String specId;
 
@@ -601,6 +604,14 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         }
         public String getSessionTimeout() {
             return this.sessionTimeout;
+        }
+
+        public GetAppInstanceGroupResponseBodyAppInstanceGroupModels setSkipUserAuthCheck(Boolean skipUserAuthCheck) {
+            this.skipUserAuthCheck = skipUserAuthCheck;
+            return this;
+        }
+        public Boolean getSkipUserAuthCheck() {
+            return this.skipUserAuthCheck;
         }
 
         public GetAppInstanceGroupResponseBodyAppInstanceGroupModels setSpecId(String specId) {

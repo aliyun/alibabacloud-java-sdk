@@ -49,8 +49,14 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     @NameInMap("RuntimePolicy")
     public CreateAppInstanceGroupRequestRuntimePolicy runtimePolicy;
 
+    @NameInMap("SecurityPolicy")
+    public CreateAppInstanceGroupRequestSecurityPolicy securityPolicy;
+
     @NameInMap("SessionTimeout")
     public Integer sessionTimeout;
+
+    @NameInMap("StoragePolicy")
+    public CreateAppInstanceGroupRequestStoragePolicy storagePolicy;
 
     @NameInMap("UserInfo")
     public CreateAppInstanceGroupRequestUserInfo userInfo;
@@ -183,12 +189,28 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         return this.runtimePolicy;
     }
 
+    public CreateAppInstanceGroupRequest setSecurityPolicy(CreateAppInstanceGroupRequestSecurityPolicy securityPolicy) {
+        this.securityPolicy = securityPolicy;
+        return this;
+    }
+    public CreateAppInstanceGroupRequestSecurityPolicy getSecurityPolicy() {
+        return this.securityPolicy;
+    }
+
     public CreateAppInstanceGroupRequest setSessionTimeout(Integer sessionTimeout) {
         this.sessionTimeout = sessionTimeout;
         return this;
     }
     public Integer getSessionTimeout() {
         return this.sessionTimeout;
+    }
+
+    public CreateAppInstanceGroupRequest setStoragePolicy(CreateAppInstanceGroupRequestStoragePolicy storagePolicy) {
+        this.storagePolicy = storagePolicy;
+        return this;
+    }
+    public CreateAppInstanceGroupRequestStoragePolicy getStoragePolicy() {
+        return this.storagePolicy;
     }
 
     public CreateAppInstanceGroupRequest setUserInfo(CreateAppInstanceGroupRequestUserInfo userInfo) {
@@ -238,6 +260,9 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     }
 
     public static class CreateAppInstanceGroupRequestNetwork extends TeaModel {
+        @NameInMap("IpExpireMinutes")
+        public Integer ipExpireMinutes;
+
         @NameInMap("Routes")
         public java.util.List<CreateAppInstanceGroupRequestNetworkRoutes> routes;
 
@@ -247,6 +272,14 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         public static CreateAppInstanceGroupRequestNetwork build(java.util.Map<String, ?> map) throws Exception {
             CreateAppInstanceGroupRequestNetwork self = new CreateAppInstanceGroupRequestNetwork();
             return TeaModel.build(map, self);
+        }
+
+        public CreateAppInstanceGroupRequestNetwork setIpExpireMinutes(Integer ipExpireMinutes) {
+            this.ipExpireMinutes = ipExpireMinutes;
+            return this;
+        }
+        public Integer getIpExpireMinutes() {
+            return this.ipExpireMinutes;
         }
 
         public CreateAppInstanceGroupRequestNetwork setRoutes(java.util.List<CreateAppInstanceGroupRequestNetworkRoutes> routes) {
@@ -490,6 +523,12 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     }
 
     public static class CreateAppInstanceGroupRequestRuntimePolicy extends TeaModel {
+        @NameInMap("DebugMode")
+        public String debugMode;
+
+        /**
+         * <p>会话类型。</p>
+         */
         @NameInMap("SessionType")
         public String sessionType;
 
@@ -498,12 +537,69 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public CreateAppInstanceGroupRequestRuntimePolicy setDebugMode(String debugMode) {
+            this.debugMode = debugMode;
+            return this;
+        }
+        public String getDebugMode() {
+            return this.debugMode;
+        }
+
         public CreateAppInstanceGroupRequestRuntimePolicy setSessionType(String sessionType) {
             this.sessionType = sessionType;
             return this;
         }
         public String getSessionType() {
             return this.sessionType;
+        }
+
+    }
+
+    public static class CreateAppInstanceGroupRequestSecurityPolicy extends TeaModel {
+        @NameInMap("ResetAfterUnbind")
+        public Boolean resetAfterUnbind;
+
+        @NameInMap("SkipUserAuthCheck")
+        public Boolean skipUserAuthCheck;
+
+        public static CreateAppInstanceGroupRequestSecurityPolicy build(java.util.Map<String, ?> map) throws Exception {
+            CreateAppInstanceGroupRequestSecurityPolicy self = new CreateAppInstanceGroupRequestSecurityPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAppInstanceGroupRequestSecurityPolicy setResetAfterUnbind(Boolean resetAfterUnbind) {
+            this.resetAfterUnbind = resetAfterUnbind;
+            return this;
+        }
+        public Boolean getResetAfterUnbind() {
+            return this.resetAfterUnbind;
+        }
+
+        public CreateAppInstanceGroupRequestSecurityPolicy setSkipUserAuthCheck(Boolean skipUserAuthCheck) {
+            this.skipUserAuthCheck = skipUserAuthCheck;
+            return this;
+        }
+        public Boolean getSkipUserAuthCheck() {
+            return this.skipUserAuthCheck;
+        }
+
+    }
+
+    public static class CreateAppInstanceGroupRequestStoragePolicy extends TeaModel {
+        @NameInMap("StorageTypeList")
+        public java.util.List<String> storageTypeList;
+
+        public static CreateAppInstanceGroupRequestStoragePolicy build(java.util.Map<String, ?> map) throws Exception {
+            CreateAppInstanceGroupRequestStoragePolicy self = new CreateAppInstanceGroupRequestStoragePolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAppInstanceGroupRequestStoragePolicy setStorageTypeList(java.util.List<String> storageTypeList) {
+            this.storageTypeList = storageTypeList;
+            return this;
+        }
+        public java.util.List<String> getStorageTypeList() {
+            return this.storageTypeList;
         }
 
     }

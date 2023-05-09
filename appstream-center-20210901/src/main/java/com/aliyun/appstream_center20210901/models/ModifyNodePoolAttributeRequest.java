@@ -16,6 +16,9 @@ public class ModifyNodePoolAttributeRequest extends TeaModel {
     @NameInMap("PoolId")
     public String poolId;
 
+    /**
+     * <p>产品类型。</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 
@@ -65,12 +68,21 @@ public class ModifyNodePoolAttributeRequest extends TeaModel {
     }
 
     public static class ModifyNodePoolAttributeRequestNodePoolStrategyRecurrenceSchedulesTimerPeriods extends TeaModel {
+        /**
+         * <p>资源数量。</p>
+         */
         @NameInMap("Amount")
         public Integer amount;
 
+        /**
+         * <p>结束时间。格式为HH:mm。</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>开始时间。格式为HH:mm。</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
@@ -106,12 +118,27 @@ public class ModifyNodePoolAttributeRequest extends TeaModel {
     }
 
     public static class ModifyNodePoolAttributeRequestNodePoolStrategyRecurrenceSchedules extends TeaModel {
+        /**
+         * <p>策略执行周期的类型。必须同时指定`RecurrenceType`和`RecurrenceValues`。</p>
+         */
         @NameInMap("RecurrenceType")
         public String recurrenceType;
 
+        /**
+         * <p>策略执行周期的数值列表。</p>
+         */
         @NameInMap("RecurrenceValues")
         public java.util.List<Integer> recurrenceValues;
 
+        /**
+         * <p>策略执行周期的时间段列表。时间段设置要求：</p>
+         * <br>
+         * <p>- 最多可添加3个时间段。</p>
+         * <p>- 时间段之间不重叠。</p>
+         * <p>- 时间段之间的间隔大于或等于5分钟。</p>
+         * <p>- 单个时间段的时长大于或等于15分钟。</p>
+         * <p>- 所有时间段累计不跨天。</p>
+         */
         @NameInMap("TimerPeriods")
         public java.util.List<ModifyNodePoolAttributeRequestNodePoolStrategyRecurrenceSchedulesTimerPeriods> timerPeriods;
 
@@ -150,9 +177,19 @@ public class ModifyNodePoolAttributeRequest extends TeaModel {
         @NameInMap("MaxScalingAmount")
         public Integer maxScalingAmount;
 
+        /**
+         * <p>购买资源的数量。取值范围：1~100。</p>
+         * <br>
+         * <p>> </p>
+         * <p>- 若为包年包月资源，则该参数不可修改。</p>
+         * <p>- 若为按量付费资源，则当弹性模式（`StrategyType`）为固定数量（`NODE_FIXED`）或自动扩缩容（`NODE_SCALING_BY_USAGE`）时该参数可修改。</p>
+         */
         @NameInMap("NodeAmount")
         public Integer nodeAmount;
 
+        /**
+         * <p>策略执行周期列表。`StrategyType`（弹性模式）设为`NODE_SCALING_BY_SCHEDULE`（定时扩缩容）时，该字段必填。</p>
+         */
         @NameInMap("RecurrenceSchedules")
         public java.util.List<ModifyNodePoolAttributeRequestNodePoolStrategyRecurrenceSchedules> recurrenceSchedules;
 
@@ -165,15 +202,24 @@ public class ModifyNodePoolAttributeRequest extends TeaModel {
         @NameInMap("ScalingUsageThreshold")
         public String scalingUsageThreshold;
 
+        /**
+         * <p>策略失效日期。格式为：yyyy-MM-dd。失效日期与生效日期的间隔必须介于7天到1年之间（含7天和1年）。`StrategyType`（弹性模式）设为`NODE_SCALING_BY_SCHEDULE`（定时扩缩容）时，该字段必填。</p>
+         */
         @NameInMap("StrategyDisableDate")
         public String strategyDisableDate;
 
+        /**
+         * <p>策略生效日期。格式为：yyyy-MM-dd。该日期必须大于或等于当前日期。`StrategyType`（弹性模式）设为`NODE_SCALING_BY_SCHEDULE`（定时扩缩容）时，该字段必填。</p>
+         */
         @NameInMap("StrategyEnableDate")
         public String strategyEnableDate;
 
         @NameInMap("StrategyType")
         public String strategyType;
 
+        /**
+         * <p>是否开启资源预热策略。`StrategyType`（弹性模式）设为`NODE_SCALING_BY_SCHEDULE`（定时扩缩容）时，该字段必填。</p>
+         */
         @NameInMap("WarmUp")
         public Boolean warmUp;
 

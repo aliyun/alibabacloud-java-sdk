@@ -49,8 +49,14 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     @NameInMap("RuntimePolicy")
     public String runtimePolicyShrink;
 
+    @NameInMap("SecurityPolicy")
+    public String securityPolicyShrink;
+
     @NameInMap("SessionTimeout")
     public Integer sessionTimeout;
+
+    @NameInMap("StoragePolicy")
+    public String storagePolicyShrink;
 
     @NameInMap("UserInfo")
     public String userInfoShrink;
@@ -183,12 +189,28 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
         return this.runtimePolicyShrink;
     }
 
+    public CreateAppInstanceGroupShrinkRequest setSecurityPolicyShrink(String securityPolicyShrink) {
+        this.securityPolicyShrink = securityPolicyShrink;
+        return this;
+    }
+    public String getSecurityPolicyShrink() {
+        return this.securityPolicyShrink;
+    }
+
     public CreateAppInstanceGroupShrinkRequest setSessionTimeout(Integer sessionTimeout) {
         this.sessionTimeout = sessionTimeout;
         return this;
     }
     public Integer getSessionTimeout() {
         return this.sessionTimeout;
+    }
+
+    public CreateAppInstanceGroupShrinkRequest setStoragePolicyShrink(String storagePolicyShrink) {
+        this.storagePolicyShrink = storagePolicyShrink;
+        return this;
+    }
+    public String getStoragePolicyShrink() {
+        return this.storagePolicyShrink;
     }
 
     public CreateAppInstanceGroupShrinkRequest setUserInfoShrink(String userInfoShrink) {

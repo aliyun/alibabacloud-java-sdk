@@ -64,12 +64,45 @@ public class ListAppInstancesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListAppInstancesResponseBodyAppInstanceModelsBindInfo extends TeaModel {
+        @NameInMap("EndUserId")
+        public String endUserId;
+
+        @NameInMap("UsageDuration")
+        public Long usageDuration;
+
+        public static ListAppInstancesResponseBodyAppInstanceModelsBindInfo build(java.util.Map<String, ?> map) throws Exception {
+            ListAppInstancesResponseBodyAppInstanceModelsBindInfo self = new ListAppInstancesResponseBodyAppInstanceModelsBindInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAppInstancesResponseBodyAppInstanceModelsBindInfo setEndUserId(String endUserId) {
+            this.endUserId = endUserId;
+            return this;
+        }
+        public String getEndUserId() {
+            return this.endUserId;
+        }
+
+        public ListAppInstancesResponseBodyAppInstanceModelsBindInfo setUsageDuration(Long usageDuration) {
+            this.usageDuration = usageDuration;
+            return this;
+        }
+        public Long getUsageDuration() {
+            return this.usageDuration;
+        }
+
+    }
+
     public static class ListAppInstancesResponseBodyAppInstanceModels extends TeaModel {
         @NameInMap("AppInstanceGroupId")
         public String appInstanceGroupId;
 
         @NameInMap("AppInstanceId")
         public String appInstanceId;
+
+        @NameInMap("BindInfo")
+        public ListAppInstancesResponseBodyAppInstanceModelsBindInfo bindInfo;
 
         @NameInMap("GmtCreate")
         public String gmtCreate;
@@ -105,6 +138,14 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
         public String getAppInstanceId() {
             return this.appInstanceId;
+        }
+
+        public ListAppInstancesResponseBodyAppInstanceModels setBindInfo(ListAppInstancesResponseBodyAppInstanceModelsBindInfo bindInfo) {
+            this.bindInfo = bindInfo;
+            return this;
+        }
+        public ListAppInstancesResponseBodyAppInstanceModelsBindInfo getBindInfo() {
+            return this.bindInfo;
         }
 
         public ListAppInstancesResponseBodyAppInstanceModels setGmtCreate(String gmtCreate) {

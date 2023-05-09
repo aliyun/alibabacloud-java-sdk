@@ -16,8 +16,14 @@ public class ModifyAppInstanceGroupAttributeShrinkRequest extends TeaModel {
     @NameInMap("ProductType")
     public String productType;
 
+    @NameInMap("SecurityPolicy")
+    public String securityPolicyShrink;
+
     @NameInMap("SessionTimeout")
     public Integer sessionTimeout;
+
+    @NameInMap("StoragePolicy")
+    public String storagePolicyShrink;
 
     public static ModifyAppInstanceGroupAttributeShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyAppInstanceGroupAttributeShrinkRequest self = new ModifyAppInstanceGroupAttributeShrinkRequest();
@@ -56,12 +62,28 @@ public class ModifyAppInstanceGroupAttributeShrinkRequest extends TeaModel {
         return this.productType;
     }
 
+    public ModifyAppInstanceGroupAttributeShrinkRequest setSecurityPolicyShrink(String securityPolicyShrink) {
+        this.securityPolicyShrink = securityPolicyShrink;
+        return this;
+    }
+    public String getSecurityPolicyShrink() {
+        return this.securityPolicyShrink;
+    }
+
     public ModifyAppInstanceGroupAttributeShrinkRequest setSessionTimeout(Integer sessionTimeout) {
         this.sessionTimeout = sessionTimeout;
         return this;
     }
     public Integer getSessionTimeout() {
         return this.sessionTimeout;
+    }
+
+    public ModifyAppInstanceGroupAttributeShrinkRequest setStoragePolicyShrink(String storagePolicyShrink) {
+        this.storagePolicyShrink = storagePolicyShrink;
+        return this;
+    }
+    public String getStoragePolicyShrink() {
+        return this.storagePolicyShrink;
     }
 
 }

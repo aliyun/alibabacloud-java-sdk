@@ -65,6 +65,9 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
     }
 
     public static class ListAppInstanceGroupResponseBodyAppInstanceGroupModelsApps extends TeaModel {
+        /**
+         * <p>应用图标。</p>
+         */
         @NameInMap("AppIcon")
         public String appIcon;
 
@@ -74,9 +77,15 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>应用版本。</p>
+         */
         @NameInMap("AppVersion")
         public String appVersion;
 
+        /**
+         * <p>应用版本名称。</p>
+         */
         @NameInMap("AppVersionName")
         public String appVersionName;
 
@@ -472,12 +481,18 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         @NameInMap("AppInstanceType")
         public String appInstanceType;
 
+        /**
+         * <p>策略ID。</p>
+         */
         @NameInMap("AppPolicyId")
         public String appPolicyId;
 
         @NameInMap("Apps")
         public java.util.List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsApps> apps;
 
+        /**
+         * <p>售卖模式。</p>
+         */
         @NameInMap("ChargeResourceMode")
         public String chargeResourceMode;
 
@@ -510,6 +525,9 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
 
         @NameInMap("SessionTimeout")
         public String sessionTimeout;
+
+        @NameInMap("SkipUserAuthCheck")
+        public Boolean skipUserAuthCheck;
 
         @NameInMap("SpecId")
         public String specId;
@@ -664,6 +682,14 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         }
         public String getSessionTimeout() {
             return this.sessionTimeout;
+        }
+
+        public ListAppInstanceGroupResponseBodyAppInstanceGroupModels setSkipUserAuthCheck(Boolean skipUserAuthCheck) {
+            this.skipUserAuthCheck = skipUserAuthCheck;
+            return this;
+        }
+        public Boolean getSkipUserAuthCheck() {
+            return this.skipUserAuthCheck;
         }
 
         public ListAppInstanceGroupResponseBodyAppInstanceGroupModels setSpecId(String specId) {

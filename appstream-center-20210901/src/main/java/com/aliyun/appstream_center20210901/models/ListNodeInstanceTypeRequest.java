@@ -4,15 +4,24 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class ListNodeInstanceTypeRequest extends TeaModel {
+    /**
+     * <p>资源所属的地域ID。关于支持的地域详情，请参见[使用限制](~~426036~~)。</p>
+     */
     @NameInMap("BizRegionId")
     public String bizRegionId;
 
+    /**
+     * <p>语言类型。</p>
+     */
     @NameInMap("Language")
     public String language;
 
     @NameInMap("NodeInstanceType")
     public String nodeInstanceType;
 
+    /**
+     * <p>支持的操作系统类型。</p>
+     */
     @NameInMap("OsType")
     public String osType;
 

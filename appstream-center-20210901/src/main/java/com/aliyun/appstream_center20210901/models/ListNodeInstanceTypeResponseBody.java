@@ -71,9 +71,21 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
         @NameInMap("Gpu")
         public String gpu;
 
+        /**
+         * <p>显卡内存大小，单位为MB。</p>
+         */
         @NameInMap("GpuMemory")
         public Long gpuMemory;
 
+        /**
+         * <p>最大并发会话数，即单个资源可同时连接的会话数。如果同时连接的会话数过多，可能导致应用的使用体验下降。取值范围因资源规格不同而不同。各资源规格对应的取值范围分别是：</p>
+         * <br>
+         * <p>- appstreaming.general.4c8g：1\~2；</p>
+         * <p>- appstreaming.general.8c16g：1\~4；</p>
+         * <p>- appstreaming.vgpu.8c16g.4g：1\~4；</p>
+         * <p>- appstreaming.vgpu.8c31g.16g：1\~4；</p>
+         * <p>- appstreaming.vgpu.14c93g.12g：1\~6；</p>
+         */
         @NameInMap("MaxCapacity")
         public Integer maxCapacity;
 
@@ -86,6 +98,9 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
         @NameInMap("NodeInstanceTypeFamily")
         public String nodeInstanceTypeFamily;
 
+        /**
+         * <p>资源规格名称。</p>
+         */
         @NameInMap("NodeTypeName")
         public String nodeTypeName;
 
