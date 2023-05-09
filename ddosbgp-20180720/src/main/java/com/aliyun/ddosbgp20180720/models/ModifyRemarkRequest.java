@@ -4,15 +4,24 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class ModifyRemarkRequest extends TeaModel {
+    /**
+     * <p>Adds remarks for a specific Anti-DDoS Origin instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>ModifyRemark</p>
+     */
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <p>WB269094</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

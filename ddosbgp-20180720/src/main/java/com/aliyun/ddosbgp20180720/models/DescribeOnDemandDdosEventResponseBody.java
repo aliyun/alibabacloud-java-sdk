@@ -4,12 +4,21 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class DescribeOnDemandDdosEventResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Events")
     public java.util.List<DescribeOnDemandDdosEventResponseBodyEvents> events;
 
+    /**
+     * <p>The timestamp that indicates the start time of the attack. Unit: seconds. The timestamp follows the UNIX time format. It is the number of seconds that have elapsed since 00:00:00 Thursday, 1 January 1970.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of DDoS events and the details of each event.</p>
+     */
     @NameInMap("Total")
     public Long total;
 
@@ -43,6 +52,9 @@ public class DescribeOnDemandDdosEventResponseBody extends TeaModel {
     }
 
     public static class DescribeOnDemandDdosEventResponseBodyEvents extends TeaModel {
+        /**
+         * <p>The packet forwarding rate of the DDoS attack. Unit: packets per second (PPS).</p>
+         */
         @NameInMap("EndTime")
         public Integer endTime;
 

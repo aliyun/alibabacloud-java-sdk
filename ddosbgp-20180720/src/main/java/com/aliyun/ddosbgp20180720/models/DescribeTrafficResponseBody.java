@@ -4,9 +4,15 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class DescribeTrafficResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the traffic statistics.</p>
+     */
     @NameInMap("FlowList")
     public java.util.List<DescribeTrafficResponseBodyFlowList> flowList;
 
+    /**
+     * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,21 +41,38 @@ public class DescribeTrafficResponseBody extends TeaModel {
         @NameInMap("AttackBps")
         public Long attackBps;
 
+        /**
+         * <p>Queries traffic statistics of an Anti-DDoS Origin instance within a specific time period.</p>
+         */
         @NameInMap("AttackPps")
         public Long attackPps;
 
+        /**
+         * <p>All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).</p>
+         * <br>
+         * <p>For more information about sample requests, see the "**Examples**" section of this topic.</p>
+         */
         @NameInMap("FlowType")
         public String flowType;
 
         @NameInMap("Kbps")
         public Integer kbps;
 
+        /**
+         * <p>DescribeTraffic</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>WB269094</p>
+         */
         @NameInMap("Pps")
         public Integer pps;
 
+        /**
+         * <p>The ID of the request.</p>
+         */
         @NameInMap("Time")
         public Integer time;
 

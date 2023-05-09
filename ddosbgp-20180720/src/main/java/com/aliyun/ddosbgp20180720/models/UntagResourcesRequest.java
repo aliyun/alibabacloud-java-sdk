@@ -4,18 +4,30 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
+    /**
+     * <p>The operation that you want to perform. Set the value to **UntagResources**.</p>
+     */
     @NameInMap("All")
     public Boolean all;
 
+    /**
+     * <p>testKey1</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The type of the specified resource. Set the value to **INSTANCE**.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

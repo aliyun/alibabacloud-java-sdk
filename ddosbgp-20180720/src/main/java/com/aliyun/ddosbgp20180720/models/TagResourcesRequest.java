@@ -4,15 +4,26 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
+    /**
+     * <p>All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).</p>
+     * <br>
+     * <p>For more information about sample requests, see the **"Examples"** section of this topic.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The operation that you want to perform. Set the value to **TagResources**.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    /**
+     * <p>Adds tags to Anti-DDoS Origin instances.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
@@ -64,37 +75,10 @@ public class TagResourcesRequest extends TeaModel {
         return this.tag;
     }
 
-    public static class ListTagResourcesRequestTag extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static ListTagResourcesRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            ListTagResourcesRequestTag self = new ListTagResourcesRequestTag();
-            return TeaModel.build(map, self);
-        }
-
-        public ListTagResourcesRequestTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public ListTagResourcesRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-    }
-
     public static class TagResourcesRequestTag extends TeaModel {
+        /**
+         * <p>WB269094</p>
+         */
         @NameInMap("Key")
         public String key;
 

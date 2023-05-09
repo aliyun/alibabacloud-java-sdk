@@ -4,6 +4,9 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class CreateSchedruleOnDemandResponseBody extends TeaModel {
+    /**
+     * <p>Creates a scheduling rule for an on-demand instance.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

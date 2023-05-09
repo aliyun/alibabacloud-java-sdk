@@ -4,15 +4,24 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class DeleteBlackholeRequest extends TeaModel {
+    /**
+     * <p>DeleteBlackhole</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Deactivates blackhole filtering for a protected IP address.</p>
+     */
     @NameInMap("Ip")
     public String ip;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>WB269094</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

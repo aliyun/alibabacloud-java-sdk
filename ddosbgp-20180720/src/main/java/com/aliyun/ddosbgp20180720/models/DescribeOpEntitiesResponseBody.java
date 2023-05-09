@@ -4,12 +4,21 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class DescribeOpEntitiesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("OpEntities")
     public java.util.List<DescribeOpEntitiesResponseBodyOpEntities> opEntities;
 
+    /**
+     * <p>The end time. Operation logs that were generated before this time are queried.**** This value is a UNIX timestamp. Unit: milliseconds.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The time when the log was generated. This value is a UNIX timestamp. Unit: milliseconds.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -43,18 +52,32 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
     }
 
     public static class DescribeOpEntitiesResponseBodyOpEntities extends TeaModel {
+        /**
+         * <p>Queries the operation logs of an Anti-DDoS Origin instance.</p>
+         */
         @NameInMap("EntityObject")
         public String entityObject;
 
+        /**
+         * <p>All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).</p>
+         * <br>
+         * <p>For more information about sample requests, see the **"Examples"** section of this topic.</p>
+         */
         @NameInMap("EntityType")
         public Integer entityType;
 
+        /**
+         * <p>WB01342967</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         @NameInMap("OpAccount")
         public String opAccount;
 
+        /**
+         * <p>DescribeOpEntities</p>
+         */
         @NameInMap("OpAction")
         public Integer opAction;
 

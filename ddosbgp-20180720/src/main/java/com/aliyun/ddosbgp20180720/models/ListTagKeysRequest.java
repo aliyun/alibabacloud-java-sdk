@@ -4,18 +4,33 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class ListTagKeysRequest extends TeaModel {
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The number of the page to return. Pages start from page **1**. Default value: **1**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The type of the resource. Valid value: **INSTANCE**.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: 1 to **50**. Default value: **10**.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

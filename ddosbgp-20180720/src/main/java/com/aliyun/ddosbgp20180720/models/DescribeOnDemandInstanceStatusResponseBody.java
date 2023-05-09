@@ -4,9 +4,15 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class DescribeOnDemandInstanceStatusResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the Alibaba Cloud account.</p>
+     */
     @NameInMap("Instances")
     public java.util.List<DescribeOnDemandInstanceStatusResponseBodyInstances> instances;
 
+    /**
+     * <p>The CIDR block of the on-demand instance.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +38,41 @@ public class DescribeOnDemandInstanceStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeOnDemandInstanceStatusResponseBodyInstances extends TeaModel {
+        /**
+         * <p>WB269094</p>
+         */
         @NameInMap("Declared")
         public String declared;
 
         @NameInMap("Desc")
         public String desc;
 
+        /**
+         * <p>DescribeOnDemandInstanceStatus</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).</p>
+         * <br>
+         * <p>For more information about sample requests, see the **"Examples"** section of this topic.</p>
+         */
         @NameInMap("Mode")
         public String mode;
 
         @NameInMap("Net")
         public String net;
 
+        /**
+         * <p>DescribeOnDemandInstanceStatus</p>
+         */
         @NameInMap("RegistedAs")
         public String registedAs;
 
+        /**
+         * <p>The ID of the request.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

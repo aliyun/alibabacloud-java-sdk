@@ -4,9 +4,18 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class CheckAccessLogAuthRequest extends TeaModel {
+    /**
+     * <p>Indicates whether Anti-DDoS Origin was authorized to access Log Service. Valid values:</p>
+     * <br>
+     * <p>*   **true**: Anti-DDoS Origin was authorized.</p>
+     * <p>*   **false**: Anti-DDoS Origin was not authorized.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

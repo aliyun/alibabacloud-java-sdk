@@ -4,12 +4,21 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class ListOpenedAccessLogInstancesRequest extends TeaModel {
+    /**
+     * <p>The number of the Anti-DDoS Origin instances for which log analysis was enabled.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: **10**.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
