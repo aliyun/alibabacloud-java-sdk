@@ -4,6 +4,9 @@ package com.aliyun.avatar20220130.models;
 import com.aliyun.tea.*;
 
 public class SendMessageShrinkRequest extends TeaModel {
+    @NameInMap("Feedback")
+    public Boolean feedback;
+
     @NameInMap("SessionId")
     public String sessionId;
 
@@ -19,6 +22,14 @@ public class SendMessageShrinkRequest extends TeaModel {
     public static SendMessageShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         SendMessageShrinkRequest self = new SendMessageShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SendMessageShrinkRequest setFeedback(Boolean feedback) {
+        this.feedback = feedback;
+        return this;
+    }
+    public Boolean getFeedback() {
+        return this.feedback;
     }
 
     public SendMessageShrinkRequest setSessionId(String sessionId) {
