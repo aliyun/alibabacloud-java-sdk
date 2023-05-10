@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>dytnsapi20200217</artifactId>
-  <version>1.0.26</version>
+  <version>1.0.27</version>
   <packaging>jar</packaging>
   <name>dytnsapi20200217</name>
   <description>Alibaba Cloud Dytnsapi (20200217) SDK for Java

@@ -200,6 +200,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AuthCode", request.authCode);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.extendFunction)) {
+            query.put("ExtendFunction", request.extendFunction);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.inputNumber)) {
             query.put("InputNumber", request.inputNumber);
         }
