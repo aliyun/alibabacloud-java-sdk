@@ -3,16 +3,16 @@ package com.aliyun.ros20190910.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteStackResponseBody extends TeaModel {
+public class DeregisterResourceTypeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DeleteStackResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteStackResponseBody self = new DeleteStackResponseBody();
+    public static DeregisterResourceTypeResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeregisterResourceTypeResponseBody self = new DeregisterResourceTypeResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteStackResponseBody setRequestId(String requestId) {
+    public DeregisterResourceTypeResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

@@ -4,90 +4,129 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListStacksRequest extends TeaModel {
+    /**
+     * <p>The reason why the stack is in its current state.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The number of the page to return.</p>
-     * <br>
-     * <p>Pages start from page 1.</p>
-     * <br>
-     * <p>Default value: 1.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The state N of the stack. Valid values:</p>
      * <br>
-     * <p>Maximum value: 50.</p>
-     * <br>
-     * <p>Default value: 10.</p>
+     * <p>*   CREATE_IN_PROGRESS: The stack is being created.</p>
+     * <p>*   CREATE_FAILED: The stack fails to be created.</p>
+     * <p>*   CREATE_COMPLETE: The stack is created.</p>
+     * <p>*   UPDATE_IN_PROGRESS: The stack is being updated.</p>
+     * <p>*   UPDATE_FAILED: The stack fails to be updated.</p>
+     * <p>*   UPDATE_COMPLETE: The stack is updated.</p>
+     * <p>*   DELETE_IN_PROGRESS: The stack is being deleted.</p>
+     * <p>*   DELETE_FAILED: The stack fails to be deleted.</p>
+     * <p>*   CREATE_ROLLBACK_IN_PROGRESS: The resources are being rolled back after the stack fails to be created.</p>
+     * <p>*   CREATE_ROLLBACK_FAILED: The resources fail to be rolled back after the stack fails to be created.</p>
+     * <p>*   CREATE_ROLLBACK_COMPLETE: The resources are rolled back after the stack fails to be created.</p>
+     * <p>*   ROLLBACK_IN_PROGRESS: The resources of the stack are being rolled back.</p>
+     * <p>*   ROLLBACK_FAILED: The resources of the stack fail to be rolled back.</p>
+     * <p>*   ROLLBACK_COMPLETE: The resources of the stack are rolled back.</p>
+     * <p>*   CHECK_IN_PROGRESS: The stack is being validated.</p>
+     * <p>*   CHECK_FAILED: The stack fails to be validated.</p>
+     * <p>*   CHECK_COMPLETE: The stack is validated.</p>
+     * <p>*   REVIEW_IN_PROGRESS: The stack is being reviewed.</p>
+     * <p>*   IMPORT_CREATE_IN_PROGRESS: The stack is being created by using imported resources.</p>
+     * <p>*   IMPORT_CREATE_FAILED: The stack fails to be created by using imported resources.</p>
+     * <p>*   IMPORT_CREATE_COMPLETE: The stack is created by using imported resources.</p>
+     * <p>*   IMPORT_CREATE_ROLLBACK_IN_PROGRESS: The resources are being rolled back after the stack fails to be created by using imported resources.</p>
+     * <p>*   IMPORT_CREATE_ROLLBACK_FAILED: The resources fail to be rolled back after the stack fails to be created by using imported resources.</p>
+     * <p>*   IMPORT_CREATE_ROLLBACK_COMPLETE: The resources are rolled back after the stack fails to be created by using imported resources.</p>
+     * <p>*   IMPORT_UPDATE_IN_PROGRESS: The stack is being updated by using imported resources.</p>
+     * <p>*   IMPORT_UPDATE_FAILED: The stack fails to be updated by using imported resources.</p>
+     * <p>*   IMPORT_UPDATE_COMPLETE: The stack is updated by using imported resources.</p>
+     * <p>*   IMPORT_UPDATE_ROLLBACK_IN_PROGRESS: The resources are being rolled back after the stack fails to be updated by using imported resources.</p>
+     * <p>*   IMPORT_UPDATE_ROLLBACK_FAILED: The resources fail to be rolled back after the stack fails to be updated by using imported resources.</p>
+     * <p>*   IMPORT_UPDATE_ROLLBACK_COMPLETE: The resources are rolled back after the stack fails to be updated by using imported resources.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The ID of the parent stack.</p>
+     * <p>The name of stack N.</p>
      */
     @NameInMap("ParentStackId")
     public String parentStackId;
 
     /**
-     * <p>The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>The name of stack N.</p>
+     * <br>
+     * <p>The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). The name must start with a digit or letter. You can use the wildcard character (∗) for fuzzy search.</p>
+     * <br>
+     * <p>Valid values of N: 1 to 5.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    /**
+     * <p>The list of stacks.</p>
+     */
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    /**
+     * <p>The key of tag N of the stack.</p>
+     * <br>
+     * <p>Valid values of N: 1 to 20.</p>
+     */
+    @NameInMap("ShowNestedStack")
+    public Boolean showNestedStack;
+
+    /**
+     * <p>The value of tag N of the stack.</p>
+     * <br>
+     * <p>Valid values of N: 1 to 20.</p>
+     */
+    @NameInMap("StackId")
+    public String stackId;
+
+    /**
+     * <p>The state of the stack.</p>
+     */
+    @NameInMap("StackIds")
+    public java.util.List<String> stackIds;
+
+    /**
+     * <p>The ID of stack N.</p>
+     * <br>
+     * <p>You can specify one or more IDs to query one or more stacks at the same time.</p>
+     * <br>
+     * <p>Valid values of N: 1 to 10.</p>
+     */
+    @NameInMap("StackName")
+    public java.util.List<String> stackName;
+
+    /**
+     * <p>The time when the last successful drift detection was performed on the stack.</p>
+     */
+    @NameInMap("StartTime")
+    public String startTime;
 
     /**
      * <p>The ID of the resource group.</p>
      * <br>
      * <p>For more information about resource groups, see the "Resource Group" section of the [What is Resource Management?](~~94475~~) topic.</p>
      */
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
-    /**
-     * <p>Specifies whether to return nested stacks. Default value: false. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <br>
-     * <p>*   false</p>
-     * <br>
-     * <p>> If the ParentStackId parameter is specified, you must set the ShowNestedStack parameter to true.</p>
-     */
-    @NameInMap("ShowNestedStack")
-    public Boolean showNestedStack;
-
-    /**
-     * <p>The ID of the stack. If you want to query the basic information about the stack, you can use this parameter and do not need to call the GetStack operation.</p>
-     */
-    @NameInMap("StackId")
-    public String stackId;
-
-    /**
-     * <p>The ID of stack N.</p>
-     */
-    @NameInMap("StackIds")
-    public java.util.List<String> stackIds;
-
-    /**
-     * <p>The name of stack N.</p>
-     */
-    @NameInMap("StackName")
-    public java.util.List<String> stackName;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
-    /**
-     * <p>The state N of the stack.</p>
-     */
     @NameInMap("Status")
     public java.util.List<String> status;
 
     /**
-     * <p>The tags.</p>
+     * <p>The number of entries returned per page.</p>
+     * <br>
+     * <p>Maximum value: 50.</p>
+     * <br>
+     * <p>Default value: 10.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListStacksRequestTag> tag;
@@ -203,17 +242,13 @@ public class ListStacksRequest extends TeaModel {
 
     public static class ListStacksRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the stack.</p>
-         * <br>
-         * <p>Valid values of N: 1 to 20.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N of the stack.</p>
-         * <br>
-         * <p>Valid values of N: 1 to 20.</p>
+         * <p>The page number of the returned page.</p>
          */
         @NameInMap("Value")
         public String value;

@@ -343,11 +343,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * A stack is a collection of Resource Orchestration Service (ROS) resources that you can manage as a single unit. To create a collection of resources, you can create a stack. For more information about stacks, see [Overview](~~172973~~).
-      * When you call this operation, you must take note of the following limits:
-      * *   You can create up to 200 stacks within an Alibaba Cloud account.
-      * *   You can create up to 200 resources in a stack.
-      * This topic provides an example on how to create a stack named `MyStack` in the China (Hangzhou) region. The template body of the stack is `{"ROSTemplateFormatVersion":"2015-09-01"}`.
+      * | Error code | Error message | HTTPS status code | Description |
+      * | ---------- | ------------- | ----------------- | ----------- |
+      * | CircularDependency | Circular Dependency Found: {reason}. | 400 | The error message returned because the template contains circular dependencies. reason indicates the cause of the error. |
+      * | InvalidSchema | {reason}. | 400 | The error message returned because the format of the template is invalid. reason indicates the cause of the error. |
+      * | InvalidTemplateAttribute | The Referenced Attribute ({resource} {name}) is incorrect. | 400 | The error message returned because the resource property that is referenced in the Outputs section of the template is invalid. resource indicates the resource name. name indicates the property name. |
+      * | InvalidTemplatePropertyType | The specified value type of ({resource} {section}) is incorrect. | 400 | The error message returned because the type of the resource property that is defined in a section of the template is invalid. resource indicates the resource name. section indicates the section name. |
+      * | InvalidTemplateReference | The specified reference "{name}" (in {referencer}) is incorrect. | 400 | The error message returned because the template contains an invalid reference. name indicates the reference name. referencer indicates the referencer name. |
+      * | InvalidTemplateSection | The template section is invalid: {section}. | 400 | The error message returned because the template contains an invalid section. section indicates the section name. |
+      * | InvalidTemplateVersion | The template version is invalid: {reason}. | 400 | The error message returned because the template version is invalid. reason indicates the cause of the error. |
+      * | StackValidationFailed | {reason}. | 400 | The error message returned because the stack failed to be validated. reason indicates the cause of the error. |
+      * | UnknownUserParameter | The Parameter ({name}) was not defined in template. | 400 | The error message returned because the specified parameter is not defined in the template. name indicates the parameter name. |
+      * | UserParameterMissing | The Parameter {name} was not provided. | 400 | The error message returned because no value is specified for the specified parameter that is defined in the template. name indicates the parameter name. |
+      * | ActionInProgress | Stack {name} already has an action ({action}) in progress. | 409 | The error message returned because the stack is being changed. name indicates the name or ID of the stack. action indicates the change operation. |
+      * | StackExists | The Stack ({name}) already exists. | 409 | The error message returned because a stack that has the same name already exists. name indicates the stack name. |
+      * | TemplateNotFound | The Template ({ ID }) could not be found. | 404 | The error message returned because the specified template does not exist. ID indicates the template ID. |
+      * | TemplateNotFound | The Template { ID } with version { version } could not be found. | 404 | The error message returned because the specified template or template version does not exist. ID indicates the template ID. version indicates the template version. |
       *
       * @param request CreateStackRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -462,11 +473,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * A stack is a collection of Resource Orchestration Service (ROS) resources that you can manage as a single unit. To create a collection of resources, you can create a stack. For more information about stacks, see [Overview](~~172973~~).
-      * When you call this operation, you must take note of the following limits:
-      * *   You can create up to 200 stacks within an Alibaba Cloud account.
-      * *   You can create up to 200 resources in a stack.
-      * This topic provides an example on how to create a stack named `MyStack` in the China (Hangzhou) region. The template body of the stack is `{"ROSTemplateFormatVersion":"2015-09-01"}`.
+      * | Error code | Error message | HTTPS status code | Description |
+      * | ---------- | ------------- | ----------------- | ----------- |
+      * | CircularDependency | Circular Dependency Found: {reason}. | 400 | The error message returned because the template contains circular dependencies. reason indicates the cause of the error. |
+      * | InvalidSchema | {reason}. | 400 | The error message returned because the format of the template is invalid. reason indicates the cause of the error. |
+      * | InvalidTemplateAttribute | The Referenced Attribute ({resource} {name}) is incorrect. | 400 | The error message returned because the resource property that is referenced in the Outputs section of the template is invalid. resource indicates the resource name. name indicates the property name. |
+      * | InvalidTemplatePropertyType | The specified value type of ({resource} {section}) is incorrect. | 400 | The error message returned because the type of the resource property that is defined in a section of the template is invalid. resource indicates the resource name. section indicates the section name. |
+      * | InvalidTemplateReference | The specified reference "{name}" (in {referencer}) is incorrect. | 400 | The error message returned because the template contains an invalid reference. name indicates the reference name. referencer indicates the referencer name. |
+      * | InvalidTemplateSection | The template section is invalid: {section}. | 400 | The error message returned because the template contains an invalid section. section indicates the section name. |
+      * | InvalidTemplateVersion | The template version is invalid: {reason}. | 400 | The error message returned because the template version is invalid. reason indicates the cause of the error. |
+      * | StackValidationFailed | {reason}. | 400 | The error message returned because the stack failed to be validated. reason indicates the cause of the error. |
+      * | UnknownUserParameter | The Parameter ({name}) was not defined in template. | 400 | The error message returned because the specified parameter is not defined in the template. name indicates the parameter name. |
+      * | UserParameterMissing | The Parameter {name} was not provided. | 400 | The error message returned because no value is specified for the specified parameter that is defined in the template. name indicates the parameter name. |
+      * | ActionInProgress | Stack {name} already has an action ({action}) in progress. | 409 | The error message returned because the stack is being changed. name indicates the name or ID of the stack. action indicates the change operation. |
+      * | StackExists | The Stack ({name}) already exists. | 409 | The error message returned because a stack that has the same name already exists. name indicates the stack name. |
+      * | TemplateNotFound | The Template ({ ID }) could not be found. | 404 | The error message returned because the specified template does not exist. ID indicates the template ID. |
+      * | TemplateNotFound | The Template { ID } with version { version } could not be found. | 404 | The error message returned because the specified template or template version does not exist. ID indicates the template ID. version indicates the template version. |
       *
       * @param request CreateStackRequest
       * @return CreateStackResponse
@@ -477,12 +499,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * A stack group is a collection of Resource Orchestration Service (ROS) stacks that you can manage as a unit. You can use an ROS template of a stack group to create stacks within Alibaba Cloud accounts in multiple regions.
-      * You can create a stack group that is granted self-managed or service-managed permissions:
-      * *   If you use an Alibaba Cloud account to create a self-managed stack group, the administrator account and the execution account are Alibaba Cloud accounts.
-      * *   If you enable a resource directory and use the management account or a delegated administrator account of the resource directory to create a service-managed stack group, the administrator account is the management account or delegated administrator account, and the execution account is a member of the resource directory.
-      * For more information about stack groups, see [Overview](~~154578~~).
-      * This topic provides an example on how to create a self-managed stack group named `MyStackGroup` by using a template. In this example, the template ID is `5ecd1e10-b0e9-4389-a565-e4c15efc****`. The region ID of the stack group is `cn-hangzhou`.
+      * The operation that you want to perform. Set the value to CreateStackGroup.
       *
       * @param tmpReq CreateStackGroupRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -503,6 +520,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.autoDeploymentShrink)) {
             query.put("AutoDeployment", request.autoDeploymentShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.capabilities)) {
+            query.put("Capabilities", request.capabilities);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
@@ -575,12 +596,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * A stack group is a collection of Resource Orchestration Service (ROS) stacks that you can manage as a unit. You can use an ROS template of a stack group to create stacks within Alibaba Cloud accounts in multiple regions.
-      * You can create a stack group that is granted self-managed or service-managed permissions:
-      * *   If you use an Alibaba Cloud account to create a self-managed stack group, the administrator account and the execution account are Alibaba Cloud accounts.
-      * *   If you enable a resource directory and use the management account or a delegated administrator account of the resource directory to create a service-managed stack group, the administrator account is the management account or delegated administrator account, and the execution account is a member of the resource directory.
-      * For more information about stack groups, see [Overview](~~154578~~).
-      * This topic provides an example on how to create a self-managed stack group named `MyStackGroup` by using a template. In this example, the template ID is `5ecd1e10-b0e9-4389-a565-e4c15efc****`. The region ID of the stack group is `cn-hangzhou`.
+      * The operation that you want to perform. Set the value to CreateStackGroup.
       *
       * @param request CreateStackGroupRequest
       * @return CreateStackGroupResponse
@@ -1193,6 +1209,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteTemplateScratchWithOptions(request, runtime);
     }
 
+    public DeregisterResourceTypeResponse deregisterResourceTypeWithOptions(DeregisterResourceTypeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
+            query.put("VersionId", request.versionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeregisterResourceType"),
+            new TeaPair("version", "2019-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeregisterResourceTypeResponse());
+    }
+
+    public DeregisterResourceTypeResponse deregisterResourceType(DeregisterResourceTypeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deregisterResourceTypeWithOptions(request, runtime);
+    }
+
     public DescribeRegionsResponse describeRegionsWithOptions(DescribeRegionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1562,9 +1611,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to query the Terraform hosting, resource cleaner, and scenario features.
-      * This topic provides an example on how to query the details of features supported by ROS in the China (Hangzhou) region. The details include Terraform versions, provider versions, and supported resource types.
-      * >  In the Examples section, only part of the sample code is provided.
+      * The Terraform version that is supported by ROS. The parameter value is the same as the value of the Transform parameter in a Terraform template.
       *
       * @param request GetFeatureDetailsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1599,9 +1646,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to query the Terraform hosting, resource cleaner, and scenario features.
-      * This topic provides an example on how to query the details of features supported by ROS in the China (Hangzhou) region. The details include Terraform versions, provider versions, and supported resource types.
-      * >  In the Examples section, only part of the sample code is provided.
+      * The Terraform version that is supported by ROS. The parameter value is the same as the value of the Transform parameter in a Terraform template.
       *
       * @param request GetFeatureDetailsRequest
       * @return GetFeatureDetailsResponse
@@ -1612,7 +1657,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to query the details of `ALIYUN::ROS::WaitConditionHandle`.
+      * | HttpCode | Error codes | Error message | Description |
+      * | -------- | ----------- | ------------- | ----------- |
+      * | 404 | ResourceTypeNotFound | The Resource Type ({name}) could not be found. | The error message returned because the specified resource type does not exist. name indicates the name of the resource type. |
       *
       * @param request GetResourceTypeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1623,6 +1670,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
             query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
+            query.put("VersionId", request.versionId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1643,7 +1694,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to query the details of `ALIYUN::ROS::WaitConditionHandle`.
+      * | HttpCode | Error codes | Error message | Description |
+      * | -------- | ----------- | ------------- | ----------- |
+      * | 404 | ResourceTypeNotFound | The Resource Type ({name}) could not be found. | The error message returned because the specified resource type does not exist. name indicates the name of the resource type. |
       *
       * @param request GetResourceTypeRequest
       * @return GetResourceTypeResponse
@@ -1658,6 +1711,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
             query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
+            query.put("VersionId", request.versionId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1859,7 +1916,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In this example, the information about a stack group named `MyStackGroup` is queried. The stack group is granted self-managed permissions and created in the China (Hangzhou) region.
+      * | Error code | Error message | HTTP status code | Description |
+      * | ---------- | ------------- | ---------------- | ----------- |
+      * | StackGroupNotFound | The StackGroup ({name}) could not be found. | 404 | The error message returned because the specified stack group does not exist. name indicates the name of the stack group. |
       *
       * @param request GetStackGroupRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1898,7 +1957,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In this example, the information about a stack group named `MyStackGroup` is queried. The stack group is granted self-managed permissions and created in the China (Hangzhou) region.
+      * | Error code | Error message | HTTP status code | Description |
+      * | ---------- | ------------- | ---------------- | ----------- |
+      * | StackGroupNotFound | The StackGroup ({name}) could not be found. | 404 | The error message returned because the specified stack group does not exist. name indicates the name of the stack group. |
       *
       * @param request GetStackGroupRequest
       * @return GetStackGroupResponse
@@ -2055,7 +2116,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In this topic, a resource named `WebServer` in a stack whose ID is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****` is queried. The stack is deployed in the China (Hangzhou) region.
+      * The operation that you want to perform. Set the value to GetStackResource.
       *
       * @param request GetStackResourceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2106,7 +2167,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In this topic, a resource named `WebServer` in a stack whose ID is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****` is queried. The stack is deployed in the China (Hangzhou) region.
+      * The operation that you want to perform. Set the value to GetStackResource.
       *
       * @param request GetStackResourceRequest
       * @return GetStackResourceResponse
@@ -2191,9 +2252,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   For more information about the resources that support price inquiry in Resource Orchestration Service (ROS) templates, see the **Resource types that support price inquiry** section of the [Estimate resource prices](~~203165~~) topic.
-      * *   For more information about the resources that support price inquiry in Terraform templates, see the "ROS resources supported by Terraform" section of the [ROS features and resources supported by Terraform](~~184389~~) topic.****
-      * This topic provides an example on how to query the estimated price of an elastic IP address (EIP) that you want to create by using a template. In this example, the template body is `{"ROSTemplateFormatVersion": "2015-09-01", "Parameters": {"Isp": {"Type": "String"}, "Name": {"Type": "String"},"Netmode": {"Type": "String"}, "Bandwidth": {"Type": "Number", "Default": 5}}, "Resources": {"NewEip": {"Type": "ALIYUN::VPC::EIP","Properties": {"InstanceChargeType": "Prepaid", "PricingCycle": "Month", "Isp": {"Ref": "Isp"}, "Period": 1, "DeletionProtection": false, "AutoPay": false, "Name": {"Ref": "Name"}, "InternetChargeType": "PayByTraffic", "Netmode": { "Ref": "Netmode"},"Bandwidth": 5}}}}`.
+      * The operation that you want to perform. Set the value to GetTemplateEstimateCost.
       *
       * @param request GetTemplateEstimateCostRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2256,9 +2315,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   For more information about the resources that support price inquiry in Resource Orchestration Service (ROS) templates, see the **Resource types that support price inquiry** section of the [Estimate resource prices](~~203165~~) topic.
-      * *   For more information about the resources that support price inquiry in Terraform templates, see the "ROS resources supported by Terraform" section of the [ROS features and resources supported by Terraform](~~184389~~) topic.****
-      * This topic provides an example on how to query the estimated price of an elastic IP address (EIP) that you want to create by using a template. In this example, the template body is `{"ROSTemplateFormatVersion": "2015-09-01", "Parameters": {"Isp": {"Type": "String"}, "Name": {"Type": "String"},"Netmode": {"Type": "String"}, "Bandwidth": {"Type": "Number", "Default": 5}}, "Resources": {"NewEip": {"Type": "ALIYUN::VPC::EIP","Properties": {"InstanceChargeType": "Prepaid", "PricingCycle": "Month", "Isp": {"Ref": "Isp"}, "Period": 1, "DeletionProtection": false, "AutoPay": false, "Name": {"Ref": "Name"}, "InternetChargeType": "PayByTraffic", "Netmode": { "Ref": "Netmode"},"Bandwidth": 5}}}}`.
+      * The operation that you want to perform. Set the value to GetTemplateEstimateCost.
       *
       * @param request GetTemplateEstimateCostRequest
       * @return GetTemplateEstimateCostResponse
@@ -2583,8 +2640,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listChangeSetsWithOptions(request, runtime);
     }
 
+    public ListResourceTypeRegistrationsResponse listResourceTypeRegistrationsWithOptions(ListResourceTypeRegistrationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.entityType)) {
+            query.put("EntityType", request.entityType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.registrationId)) {
+            query.put("RegistrationId", request.registrationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListResourceTypeRegistrations"),
+            new TeaPair("version", "2019-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListResourceTypeRegistrationsResponse());
+    }
+
+    public ListResourceTypeRegistrationsResponse listResourceTypeRegistrations(ListResourceTypeRegistrationsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listResourceTypeRegistrationsWithOptions(request, runtime);
+    }
+
+    public ListResourceTypeVersionsResponse listResourceTypeVersionsWithOptions(ListResourceTypeVersionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListResourceTypeVersions"),
+            new TeaPair("version", "2019-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListResourceTypeVersionsResponse());
+    }
+
+    public ListResourceTypeVersionsResponse listResourceTypeVersions(ListResourceTypeVersionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listResourceTypeVersionsWithOptions(request, runtime);
+    }
+
     /**
-      * This topic provides an example on how to query the list of resource types supported by Resource Orchestration Service (ROS).
+      * For more information about errors common to all operations, see [Common error codes](/help/en/resource-orchestration-service/latest/common-error-codes).
       *
       * @param request ListResourceTypesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2595,6 +2730,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.entityType)) {
             query.put("EntityType", request.entityType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.provider)) {
+            query.put("Provider", request.provider);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2615,7 +2758,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to query the list of resource types supported by Resource Orchestration Service (ROS).
+      * For more information about errors common to all operations, see [Common error codes](/help/en/resource-orchestration-service/latest/common-error-codes).
       *
       * @param request ListResourceTypesRequest
       * @return ListResourceTypesResponse
@@ -2774,7 +2917,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to query the list of stack groups. In this example, the stack groups that are in the active state and deployed in the China (Hangzhou) region are queried.
+      * For more information about common request parameters, see [Common parameters](~~131957~~).
       *
       * @param request ListStackGroupsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2825,7 +2968,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to query the list of stack groups. In this example, the stack groups that are in the active state and deployed in the China (Hangzhou) region are queried.
+      * For more information about common request parameters, see [Common parameters](~~131957~~).
       *
       * @param request ListStackGroupsRequest
       * @return ListStackGroupsResponse
@@ -2898,9 +3041,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ListStackOperationRisks operation is suitable for the following scenarios:
-      * *   You want to detect high risks that may arise in resources when you delete a stack that contains the resources, and query the reason for each risk in a resource.
-      * *   You want to detect risks of creation failure that may arise when you create a stack. In this case, Resource Orchestration Service (ROS) allows you to detect only the required permissions that are not granted to the Alibaba Cloud account of the caller.
+      * The ID of the stack.
       *
       * @param request ListStackOperationRisksRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2971,9 +3112,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ListStackOperationRisks operation is suitable for the following scenarios:
-      * *   You want to detect high risks that may arise in resources when you delete a stack that contains the resources, and query the reason for each risk in a resource.
-      * *   You want to detect risks of creation failure that may arise when you create a stack. In this case, Resource Orchestration Service (ROS) allows you to detect only the required permissions that are not granted to the Alibaba Cloud account of the caller.
+      * The ID of the stack.
       *
       * @param request ListStackOperationRisksRequest
       * @return ListStackOperationRisksResponse
@@ -3029,7 +3168,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to query the resources in a specified stack. In this example, the resources in the stack whose ID is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****` in the China (Hangzhou) region are queried.
+      * | Error code | Error message | HTTP status code | Description |
+      * | ---------- | ------------- | ---------------- | ----------- |
+      * | StackNotFound | The Stack ({name}) could not be found. | 404 | The error message returned because the specified stack does not exist. name indicates the name or ID of the stack. |
       *
       * @param request ListStackResourcesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3064,7 +3205,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to query the resources in a specified stack. In this example, the resources in the stack whose ID is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****` in the China (Hangzhou) region are queried.
+      * | Error code | Error message | HTTP status code | Description |
+      * | ---------- | ------------- | ---------------- | ----------- |
+      * | StackNotFound | The Stack ({name}) could not be found. | 404 | The error message returned because the specified stack does not exist. name indicates the name or ID of the stack. |
       *
       * @param request ListStackResourcesRequest
       * @return ListStackResourcesResponse
@@ -3075,7 +3218,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to query the list of stacks. In this example, the stacks that are deployed in the China (Hangzhou) region are queried.
+      * Specifies whether to return nested stacks. Default value: false. Valid values:
+      * *   true
+      * *   false
+      * > If the ParentStackId parameter is specified, you must set the ShowNestedStack parameter to true.
       *
       * @param request ListStacksRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3154,7 +3300,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to query the list of stacks. In this example, the stacks that are deployed in the China (Hangzhou) region are queried.
+      * Specifies whether to return nested stacks. Default value: false. Valid values:
+      * *   true
+      * *   false
+      * > If the ParentStackId parameter is specified, you must set the ShowNestedStack parameter to true.
       *
       * @param request ListStacksRequest
       * @return ListStacksResponse
@@ -3646,6 +3795,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.previewStackWithOptions(request, runtime);
     }
 
+    public RegisterResourceTypeResponse registerResourceTypeWithOptions(RegisterResourceTypeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entityType)) {
+            query.put("EntityType", request.entityType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateURL)) {
+            query.put("TemplateURL", request.templateURL);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.templateBody)) {
+            body.put("TemplateBody", request.templateBody);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RegisterResourceType"),
+            new TeaPair("version", "2019-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RegisterResourceTypeResponse());
+    }
+
+    public RegisterResourceTypeResponse registerResourceType(RegisterResourceTypeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.registerResourceTypeWithOptions(request, runtime);
+    }
+
     public SetDeletionProtectionResponse setDeletionProtectionWithOptions(SetDeletionProtectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3681,6 +3881,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SetDeletionProtectionResponse setDeletionProtection(SetDeletionProtectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setDeletionProtectionWithOptions(request, runtime);
+    }
+
+    public SetResourceTypeResponse setResourceTypeWithOptions(SetResourceTypeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.defaultVersionId)) {
+            query.put("DefaultVersionId", request.defaultVersionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
+            query.put("VersionId", request.versionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetResourceType"),
+            new TeaPair("version", "2019-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetResourceTypeResponse());
+    }
+
+    public SetResourceTypeResponse setResourceType(SetResourceTypeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.setResourceTypeWithOptions(request, runtime);
     }
 
     /**
@@ -4133,7 +4374,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In this example, the template content `{"ROSTemplateFormatVersion": "2015-09-01"}` is specified to update a stack group named `MyStackGroup`. The stack group is granted self-managed permissions and deployed in the China (Hangzhou) region.
+      * The description of the stack group.
+      * The description must be 1 to 256 characters in length.
       *
       * @param tmpReq UpdateStackGroupRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4174,6 +4416,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.autoDeploymentShrink)) {
             query.put("AutoDeployment", request.autoDeploymentShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.capabilities)) {
+            query.put("Capabilities", request.capabilities);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
@@ -4254,7 +4500,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In this example, the template content `{"ROSTemplateFormatVersion": "2015-09-01"}` is specified to update a stack group named `MyStackGroup`. The stack group is granted self-managed permissions and deployed in the China (Hangzhou) region.
+      * The description of the stack group.
+      * The description must be 1 to 256 characters in length.
       *
       * @param request UpdateStackGroupRequest
       * @return UpdateStackGroupResponse
@@ -4585,7 +4832,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to validate a template that you want to use to create a stack. In this example, the `TemplateURL` parameter is set to `oss://ros/template/demo`.
+      * The description of the template.
       *
       * @param request ValidateTemplateRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4634,7 +4881,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to validate a template that you want to use to create a stack. In this example, the `TemplateURL` parameter is set to `oss://ros/template/demo`.
+      * The description of the template.
       *
       * @param request ValidateTemplateRequest
       * @return ValidateTemplateResponse

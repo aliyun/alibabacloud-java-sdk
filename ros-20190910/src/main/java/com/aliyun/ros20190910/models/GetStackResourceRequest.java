@@ -5,44 +5,57 @@ import com.aliyun.tea.*;
 
 public class GetStackResourceRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests.</p>
-     * <br>
-     * <p>The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).</p>
-     * <br>
-     * <p>For more information, see [Ensure idempotence](~~134212~~).</p>
+     * <p>The logical ID of the resource defined in the template.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The logical ID of the resource defined in the template.</p>
+     * <p>The status of the resource. Valid values:</p>
+     * <br>
+     * <p>*   CREATE_COMPLETE</p>
+     * <p>*   CREATE_FAILED</p>
+     * <p>*   CREATE_IN_PROGRESS</p>
+     * <p>*   UPDATE_IN_PROGRESS</p>
+     * <p>*   UPDATE_FAILED</p>
+     * <p>*   UPDATE_COMPLETE</p>
+     * <p>*   DELETE_IN_PROGRESS</p>
+     * <p>*   DELETE_FAILED</p>
+     * <p>*   CHECK_IN_PROGRESS</p>
+     * <p>*   CHECK_FAILED</p>
+     * <p>*   CHECK_COMPLETE</p>
+     * <p>*   IMPORT_IN_PROGRESS</p>
+     * <p>*   IMPORT_FAILED</p>
+     * <p>*   IMPORT_COMPLETE</p>
      */
     @NameInMap("LogicalResourceId")
     public String logicalResourceId;
 
     /**
-     * <p>The ID of the region to which the stack belongs. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>The name of resource property N that you want to query.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The name of resource property N that you want to query.</p>
+     * <p>The description of the resource.</p>
      */
     @NameInMap("ResourceAttributes")
     public java.util.List<String> resourceAttributes;
+
+    /**
+     * <p>The name of resource property N that you want to query.</p>
+     * <br>
+     * <p>>  Maximum value of N: 20.</p>
+     */
+    @NameInMap("ShowResourceAttributes")
+    public Boolean showResourceAttributes;
 
     /**
      * <p>Specifies whether to query the resource properties. Valid values:</p>
      * <br>
      * <p>*   true</p>
      * <p>*   false</p>
-     */
-    @NameInMap("ShowResourceAttributes")
-    public Boolean showResourceAttributes;
-
-    /**
-     * <p>The ID of the stack.</p>
      */
     @NameInMap("StackId")
     public String stackId;

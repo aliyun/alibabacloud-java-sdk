@@ -3,22 +3,19 @@ package com.aliyun.ros20190910.models;
 
 import com.aliyun.tea.*;
 
-public class GetResourceTypeRequest extends TeaModel {
-    /**
-     * <p>The attributes of the resource.</p>
-     */
+public class DeregisterResourceTypeRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
     @NameInMap("VersionId")
     public String versionId;
 
-    public static GetResourceTypeRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetResourceTypeRequest self = new GetResourceTypeRequest();
+    public static DeregisterResourceTypeRequest build(java.util.Map<String, ?> map) throws Exception {
+        DeregisterResourceTypeRequest self = new DeregisterResourceTypeRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetResourceTypeRequest setResourceType(String resourceType) {
+    public DeregisterResourceTypeRequest setResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
@@ -26,7 +23,7 @@ public class GetResourceTypeRequest extends TeaModel {
         return this.resourceType;
     }
 
-    public GetResourceTypeRequest setVersionId(String versionId) {
+    public DeregisterResourceTypeRequest setVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }

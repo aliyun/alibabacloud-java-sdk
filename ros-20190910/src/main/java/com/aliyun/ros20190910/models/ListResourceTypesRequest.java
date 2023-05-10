@@ -5,14 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListResourceTypesRequest extends TeaModel {
     /**
-     * <p>The entity type. Valid values:</p>
-     * <br>
-     * <p>*   All: all resource types.</p>
-     * <p>*   Resource: resources other than DataSource resources. For more information, see [Resources](~~28863~~).</p>
-     * <p>*   DataSource: DataSource resources.</p>
+     * <p>The array of resource types.</p>
      */
     @NameInMap("EntityType")
     public String entityType;
+
+    @NameInMap("Provider")
+    public String provider;
+
+    @NameInMap("ResourceType")
+    public String resourceType;
 
     public static ListResourceTypesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListResourceTypesRequest self = new ListResourceTypesRequest();
@@ -25,6 +27,22 @@ public class ListResourceTypesRequest extends TeaModel {
     }
     public String getEntityType() {
         return this.entityType;
+    }
+
+    public ListResourceTypesRequest setProvider(String provider) {
+        this.provider = provider;
+        return this;
+    }
+    public String getProvider() {
+        return this.provider;
+    }
+
+    public ListResourceTypesRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
 }

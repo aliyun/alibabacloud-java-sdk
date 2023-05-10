@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListStackResourcesRequest extends TeaModel {
     /**
-     * <p>The ID of the region to which the stack belongs. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>Details about resources.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the stack.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("StackId")
     public String stackId;
