@@ -4,9 +4,6 @@ package com.aliyun.avatar20220130.models;
 import com.aliyun.tea.*;
 
 public class StopInstanceResponseBody extends TeaModel {
-    /**
-     * <p>Id of the request</p>
-     */
     @NameInMap("Code")
     public String code;
 
