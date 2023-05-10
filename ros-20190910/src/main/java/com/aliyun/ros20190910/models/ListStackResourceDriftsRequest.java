@@ -5,35 +5,36 @@ import com.aliyun.tea.*;
 
 public class ListStackResourceDriftsRequest extends TeaModel {
     /**
-     * <p>The maximum number of results to be returned with a single call when the NextToken parameter is used for the query.</p>
-     * <br>
-     * <p>Valid values: 1 to 100.</p>
-     * <br>
-     * <p>Default value: 50.</p>
+     * <p>The type of the resource.</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
 
     /**
-     * <p>The query token. Set this parameter to the NextToken value returned in the last API call.</p>
+     * <p>The resource properties as defined in the template, in JSON format.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>The time when the resource drift detection operation was initiated.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The drift status of the resource.</p>
+     * <p>The drift status of the resource. Valid values:</p>
+     * <br>
+     * <p>*   DELETED: The actual configuration of the resource differs from its expected template configuration because the resource had been deleted.</p>
+     * <p>*   MODIFIED: The actual configuration of the resource differs from its expected template configuration.</p>
+     * <p>*   NOT_CHECKED: ROS has not checked whether the actual configuration of the resource differs from its expected template configuration.</p>
+     * <p>*   IN_SYNC: The actual configuration of the resource matches its expected template configuration.</p>
      */
     @NameInMap("ResourceDriftStatus")
     public java.util.List<String> resourceDriftStatus;
 
     /**
-     * <p>The ID of the stack.</p>
+     * <p>The physical ID of the resource.</p>
      */
     @NameInMap("StackId")
     public String stackId;

@@ -8,6 +8,18 @@ public class DeleteStackRequest extends TeaModel {
     public java.util.List<String> deleteOptions;
 
     /**
+     * <p>The name of resource N that you want to retain.</p>
+     */
+    @NameInMap("RamRoleName")
+    public String ramRoleName;
+
+    /**
+     * <p>The name of resource N that you want to retain.</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
+
+    /**
      * <p>The name of the RAM role. Resource Orchestration Service (ROS) assumes the RAM role to create the stack and uses credentials of the role to call the APIs of Alibaba Cloud services.</p>
      * <br>
      * <p>ROS assumes the RAM role to perform operations on the stack. If you have permissions to perform operations on the stack but do not have permissions to use the RAM role, ROS still assumes the RAM role. You must make sure that the least privileges are granted to the role.</p>
@@ -16,34 +28,17 @@ public class DeleteStackRequest extends TeaModel {
      * <br>
      * <p>The name of the RAM role can be up to 64 bytes in length.</p>
      */
-    @NameInMap("RamRoleName")
-    public String ramRoleName;
-
-    /**
-     * <p>The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
-     */
-    @NameInMap("RegionId")
-    public String regionId;
-
-    /**
-     * <p>Specifies whether to retain all resources in the stack.</p>
-     * <br>
-     * <p>Default value: false. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     */
     @NameInMap("RetainAllResources")
     public Boolean retainAllResources;
 
     /**
-     * <p>The name of resource N that you want to retain.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RetainResources")
     public java.util.List<String> retainResources;
 
     /**
-     * <p>The ID of the stack.</p>
+     * <p>The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
      */
     @NameInMap("StackId")
     public String stackId;

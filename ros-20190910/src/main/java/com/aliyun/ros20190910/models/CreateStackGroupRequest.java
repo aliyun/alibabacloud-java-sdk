@@ -5,20 +5,29 @@ import com.aliyun.tea.*;
 
 public class CreateStackGroupRequest extends TeaModel {
     /**
-     * <p>The name of the RAM role that you specify for the administrator account when you create a self-managed stack group. ROS assumes the administrator role to perform operations. If you do not specify this parameter, the default value AliyunROSStackGroupAdministrationRole is used. ROS uses the administrator role to assume the execution role AliyunROSStackGroupExecutionRole to perform operations on the stacks in the stack group.</p>
+     * <p>The version of the template. If you do not specify this parameter, the latest version is used.</p>
      * <br>
-     * <p>The name must be 1 to 64 characters in length, and can contain letters, digits, and hyphens (-).</p>
+     * <p>>  This parameter takes effect only when the TemplateId parameter is specified.</p>
      */
     @NameInMap("AdministrationRoleName")
     public String administrationRoleName;
 
     /**
-     * <p>The information about automatic deployment settings.</p>
-     * <br>
-     * <p>>  This parameter is required only if the PermissionModel parameter is set to SERVICE_MANAGED.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("AutoDeployment")
     public CreateStackGroupRequestAutoDeployment autoDeployment;
+
+    @NameInMap("Capabilities")
+    public java.util.List<String> capabilities;
+
+    /**
+     * <p>The ID of the template. This parameter applies to shared and private templates.</p>
+     * <br>
+     * <p>>  You must specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests.</p>
@@ -27,100 +36,93 @@ public class CreateStackGroupRequest extends TeaModel {
      * <br>
      * <p>For more information, see [Ensure idempotence](~~134212~~).</p>
      */
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    /**
-     * <p>The description of the stack group.</p>
-     * <br>
-     * <p>The description must be 1 to 256 characters in length.</p>
-     */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The name of the RAM role that you specify for the execution account when you create a self-managed stack group. The administrator role AliyunROSStackGroupAdministrationRole assumes the execution role to perform operations. If you do not specify this parameter, the default value AliyunROSStackGroupExecutionRole is used. ROS assumes the execution role to perform operations on the stacks in the stack group.</p>
-     * <br>
-     * <p>The name must be 1 to 64 characters in length, and can contain letters, digits, and hyphens (-).</p>
+     * <p>The parameters.</p>
      */
     @NameInMap("ExecutionRoleName")
     public String executionRoleName;
-
-    /**
-     * <p>The parameters.</p>
-     */
-    @NameInMap("Parameters")
-    public java.util.List<CreateStackGroupRequestParameters> parameters;
-
-    /**
-     * <p>The permission model.</p>
-     * <br>
-     * <p>Default value: SELF_MANAGED. Valid values:</p>
-     * <br>
-     * <p>*   SELF_MANAGED: the self-managed permission model. If you create a self-managed stack group, you must create RAM roles within the administrator and execution accounts and establish a trust relationship between the accounts. Then, you can deploy stacks within the execution account.</p>
-     * <p>*   SERVICE_MANAGED: the service-managed permission model. If you create a service-managed stack group, ROS creates service-linked roles for the administrator and execution accounts, and the administrator account uses its role to deploy stacks within the execution account.</p>
-     * <br>
-     * <p>>  When you use the service-managed permission model to deploy stacks, make sure that your account is the management account or a delegated administrator account in the resource directory and the trusted access feature is enabled for your account. For more information, see [Step 1: (Optional) Create a delegated administrator account](~~308253~~) and [Step 2: Enable trusted access](~~298229~~).</p>
-     */
-    @NameInMap("PermissionModel")
-    public String permissionModel;
-
-    /**
-     * <p>The region ID of the stack group. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
-     */
-    @NameInMap("RegionId")
-    public String regionId;
 
     /**
      * <p>The ID of the resource group. If you do not specify this parameter, the stack group is added to the default resource group.</p>
      * <br>
      * <p>For more information about resource groups, see the "Resource Group" section of the [What is Resource Management?](~~94475~~) topic.</p>
      */
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
+    @NameInMap("Parameters")
+    public java.util.List<CreateStackGroupRequestParameters> parameters;
 
     /**
-     * <p>The name of the stack group. The name must be unique within a region.</p>
-     * <br>
-     * <p>The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). The name must start with a digit or letter.</p>
+     * <p>The value of tag N that you want to add to the stack group.</p>
      */
-    @NameInMap("StackGroupName")
-    public String stackGroupName;
-
-    /**
-     * <p>The tags.</p>
-     */
-    @NameInMap("Tags")
-    public java.util.List<CreateStackGroupRequestTags> tags;
+    @NameInMap("PermissionModel")
+    public String permissionModel;
 
     /**
      * <p>The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.</p>
      * <br>
      * <p>>  You must specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</p>
      */
-    @NameInMap("TemplateBody")
-    public String templateBody;
+    @NameInMap("RegionId")
+    public String regionId;
 
     /**
-     * <p>The ID of the template. This parameter applies to shared and private templates.</p>
+     * <p>The key of tag N that you want to add to the stack group.</p>
      * <br>
-     * <p>>  You must specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</p>
+     * <p>>  The Tags parameter is optional. If you specify the Tags parameter, you must specify the Tags.N.Key parameter.</p>
      */
-    @NameInMap("TemplateId")
-    public String templateId;
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     /**
      * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Alibaba Cloud Object Storage Service (OSS) bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body must be 1 to 524,288 bytes in length. If you do not specify the region ID of the OSS bucket, the value of the RegionId parameter is used.</p>
      * <br>
      * <p>>  You must specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</p>
      */
+    @NameInMap("StackGroupName")
+    public String stackGroupName;
+
+    /**
+     * <p>The information about automatic deployment settings.</p>
+     * <br>
+     * <p>>  This parameter is required only if the PermissionModel parameter is set to SERVICE_MANAGED.</p>
+     */
+    @NameInMap("Tags")
+    public java.util.List<CreateStackGroupRequestTags> tags;
+
+    /**
+     * <p>The name of the RAM role that you specify for the administrator account when you create a self-managed stack group. ROS assumes the administrator role to perform operations. If you do not specify this parameter, the default value AliyunROSStackGroupAdministrationRole is used. ROS uses the administrator role to assume the execution role AliyunROSStackGroupExecutionRole to perform operations on the stacks in the stack group.</p>
+     * <br>
+     * <p>The name must be 1 to 64 characters in length, and can contain letters, digits, and hyphens (-).</p>
+     */
+    @NameInMap("TemplateBody")
+    public String templateBody;
+
+    /**
+     * <p>The name of parameter N. If you do not specify the name and value of a parameter, ROS uses the default name and value that are defined in the template.</p>
+     * <br>
+     * <p>Maximum value of N: 200.</p>
+     * <br>
+     * <p>>  The Parameters parameter is optional. If you specify the Parameters parameter, you must specify the Parameters.N.ParameterKey parameter.</p>
+     */
+    @NameInMap("TemplateId")
+    public String templateId;
+
+    /**
+     * <p>The name of the RAM role that you specify for the execution account when you create a self-managed stack group. The administrator role AliyunROSStackGroupAdministrationRole assumes the execution role to perform operations. If you do not specify this parameter, the default value AliyunROSStackGroupExecutionRole is used. ROS assumes the execution role to perform operations on the stacks in the stack group.</p>
+     * <br>
+     * <p>The name must be 1 to 64 characters in length, and can contain letters, digits, and hyphens (-).</p>
+     */
     @NameInMap("TemplateURL")
     public String templateURL;
 
     /**
-     * <p>The version of the template. If you do not specify this parameter, the latest version is used.</p>
+     * <p>The value of parameter N.</p>
      * <br>
-     * <p>>  This parameter takes effect only when the TemplateId parameter is specified.</p>
+     * <p>Maximum value of N: 200.</p>
+     * <br>
+     * <p>>  The Parameters parameter is optional. If you specify the Parameters parameter, you must specify the Parameters.N.ParameterValue parameter.</p>
      */
     @NameInMap("TemplateVersion")
     public String templateVersion;
@@ -144,6 +146,14 @@ public class CreateStackGroupRequest extends TeaModel {
     }
     public CreateStackGroupRequestAutoDeployment getAutoDeployment() {
         return this.autoDeployment;
+    }
+
+    public CreateStackGroupRequest setCapabilities(java.util.List<String> capabilities) {
+        this.capabilities = capabilities;
+        return this;
+    }
+    public java.util.List<String> getCapabilities() {
+        return this.capabilities;
     }
 
     public CreateStackGroupRequest setClientToken(String clientToken) {
@@ -252,26 +262,11 @@ public class CreateStackGroupRequest extends TeaModel {
 
     public static class CreateStackGroupRequestAutoDeployment extends TeaModel {
         /**
-         * <p>Specifies whether to enable automatic deployment.</p>
-         * <br>
-         * <p>Valid values:</p>
-         * <br>
-         * <p>*   true: enables automatic deployment. If you add a member to the folder to which the stack group belongs after you enable automatic deployment, ROS automatically adds the stacks in the stack group to the member. If you remove a member from the folder, ROS automatically deletes the stacks from the member.</p>
-         * <p>*   false: disables automatic deployment. After you disable automatic deployment, the stacks remain unchanged when you change the members in the folder.</p>
+         * <p>The ID of the stack group.</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
-        /**
-         * <p>Specifies whether to retain stacks within a member when you remove the member from the folder.</p>
-         * <br>
-         * <p>Valid values:</p>
-         * <br>
-         * <p>*   true: retains the stacks.</p>
-         * <p>*   false: deletes the stacks.</p>
-         * <br>
-         * <p>>  This parameter is required if the Enabled parameter is set to true.</p>
-         */
         @NameInMap("RetainStacksOnAccountRemoval")
         public Boolean retainStacksOnAccountRemoval;
 
@@ -300,21 +295,20 @@ public class CreateStackGroupRequest extends TeaModel {
 
     public static class CreateStackGroupRequestParameters extends TeaModel {
         /**
-         * <p>The name of parameter N. If you do not specify the name and value of a parameter, ROS uses the default name and value that are defined in the template.</p>
+         * <p>The permission model.</p>
          * <br>
-         * <p>Maximum value of N: 200.</p>
+         * <p>Default value: SELF_MANAGED. Valid values:</p>
          * <br>
-         * <p>>  The Parameters parameter is optional. If you specify the Parameters parameter, you must specify the Parameters.N.ParameterKey parameter.</p>
+         * <p>*   SELF_MANAGED: the self-managed permission model. If you create a self-managed stack group, you must create RAM roles within the administrator and execution accounts and establish a trust relationship between the accounts. Then, you can deploy stacks within the execution account.</p>
+         * <p>*   SERVICE_MANAGED: the service-managed permission model. If you create a service-managed stack group, ROS creates service-linked roles for the administrator and execution accounts, and the administrator account uses its role to deploy stacks within the execution account.</p>
+         * <br>
+         * <p>>  When you use the service-managed permission model to deploy stacks, make sure that your account is the management account or a delegated administrator account in the resource directory and the trusted access feature is enabled for your account. For more information, see [Step 1: (Optional) Create a delegated administrator account](~~308253~~) and [Step 2: Enable trusted access](~~298229~~).</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
 
         /**
-         * <p>The value of parameter N.</p>
-         * <br>
-         * <p>Maximum value of N: 200.</p>
-         * <br>
-         * <p>>  The Parameters parameter is optional. If you specify the Parameters parameter, you must specify the Parameters.N.ParameterValue parameter.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
@@ -344,15 +338,25 @@ public class CreateStackGroupRequest extends TeaModel {
 
     public static class CreateStackGroupRequestTags extends TeaModel {
         /**
-         * <p>The key of tag N that you want to add to the stack group.</p>
+         * <p>Specifies whether to enable automatic deployment.</p>
          * <br>
-         * <p>>  The Tags parameter is optional. If you specify the Tags parameter, you must specify the Tags.N.Key parameter.</p>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   true: enables automatic deployment. If you add a member to the folder to which the stack group belongs after you enable automatic deployment, ROS automatically adds the stacks in the stack group to the member. If you remove a member from the folder, ROS automatically deletes the stacks from the member.</p>
+         * <p>*   false: disables automatic deployment. After you disable automatic deployment, the stacks remain unchanged when you change the members in the folder.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N that you want to add to the stack group.</p>
+         * <p>Specifies whether to retain stacks within a member when you remove the member from the folder.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   true: retains the stacks.</p>
+         * <p>*   false: deletes the stacks.</p>
+         * <br>
+         * <p>>  This parameter is required if the Enabled parameter is set to true.</p>
          */
         @NameInMap("Value")
         public String value;

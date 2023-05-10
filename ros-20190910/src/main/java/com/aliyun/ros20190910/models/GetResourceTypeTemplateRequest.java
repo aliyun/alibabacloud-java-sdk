@@ -4,13 +4,11 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class GetResourceTypeTemplateRequest extends TeaModel {
-    /**
-     * <p>The resource type.</p>
-     * <br>
-     * <p>You can call the [ListResourceTypes](~~133957~~) operation to query the resource type.</p>
-     */
     @NameInMap("ResourceType")
     public String resourceType;
+
+    @NameInMap("VersionId")
+    public String versionId;
 
     public static GetResourceTypeTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         GetResourceTypeTemplateRequest self = new GetResourceTypeTemplateRequest();
@@ -23,6 +21,14 @@ public class GetResourceTypeTemplateRequest extends TeaModel {
     }
     public String getResourceType() {
         return this.resourceType;
+    }
+
+    public GetResourceTypeTemplateRequest setVersionId(String versionId) {
+        this.versionId = versionId;
+        return this;
+    }
+    public String getVersionId() {
+        return this.versionId;
     }
 
 }
