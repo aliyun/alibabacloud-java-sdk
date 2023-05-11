@@ -10,6 +10,9 @@ public class QueryLiveStreamingRequest extends TeaModel {
     @NameInMap("DeviceName")
     public String deviceName;
 
+    @NameInMap("EnableStun")
+    public Boolean enableStun;
+
     @NameInMap("EncryptType")
     public Integer encryptType;
 
@@ -59,6 +62,14 @@ public class QueryLiveStreamingRequest extends TeaModel {
     }
     public String getDeviceName() {
         return this.deviceName;
+    }
+
+    public QueryLiveStreamingRequest setEnableStun(Boolean enableStun) {
+        this.enableStun = enableStun;
+        return this;
+    }
+    public Boolean getEnableStun() {
+        return this.enableStun;
     }
 
     public QueryLiveStreamingRequest setEncryptType(Integer encryptType) {

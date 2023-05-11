@@ -1,3 +1,6 @@
+2023-05-11 Version: 2.0.4
+- Support Live Streaming and VOD P2P.
+
 2022-12-26 Version: 2.0.3
 - 增加IP协议版本配置接口.
 
