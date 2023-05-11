@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class ModifyMonitorGroupInstancesRequest extends TeaModel {
+    /**
+     * <p>The ID of the region where the instance resides. Valid values of N: 1 to 2000.</p>
+     */
     @NameInMap("GroupId")
     public Long groupId;
 
@@ -43,15 +46,29 @@ public class ModifyMonitorGroupInstancesRequest extends TeaModel {
     }
 
     public static class ModifyMonitorGroupInstancesRequestInstances extends TeaModel {
+        /**
+         * <p>The ID of the instance. Valid values of N: 1 to 2000.</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The name of the instance. Valid values of N: 1 to 2000.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The ID of the application group.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The HTTP status code.</p>
+         * <br>
+         * <p>>  The status code 200 indicates that the call was successful.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

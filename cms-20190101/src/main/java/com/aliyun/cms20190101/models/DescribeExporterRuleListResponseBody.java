@@ -4,24 +4,50 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeExporterRuleListResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>> The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The details of the data export rules.</p>
+     */
     @NameInMap("Datapoints")
     public DescribeExporterRuleListResponseBodyDatapoints datapoints;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`</p>
+     * <p>*   `false`</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -106,30 +132,61 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
     }
 
     public static class DescribeExporterRuleListResponseBodyDatapointsDatapoint extends TeaModel {
+        /**
+         * <p>The time when the rule was created. The value is a UNIX timestamp.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The description of the rule.</p>
+         */
         @NameInMap("Describe")
         public String describe;
 
+        /**
+         * <p>The associated dimensions.</p>
+         */
         @NameInMap("Dimension")
         public String dimension;
 
         @NameInMap("DstName")
         public DescribeExporterRuleListResponseBodyDatapointsDatapointDstName dstName;
 
+        /**
+         * <p>Indicates whether the rule is enabled.</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        /**
+         * <p>The name of the metric.</p>
+         * <br>
+         * <p>> For more information, see [DescribeMetricMetaList](~~98846~~) or [Appendix 1: Metrics](~~28619~~).</p>
+         */
         @NameInMap("MetricName")
         public String metricName;
 
+        /**
+         * <p>The namespace of the service.</p>
+         * <br>
+         * <p>> For more information, see [DescribeMetricMetaList](~~98846~~) or [Appendix 1: Metrics](~~28619~~).</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The name of the data export rule.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The time window of the exported data.\</p>
+         * <p>Multiple windows are separated with commas (,).</p>
+         * <br>
+         * <p>> Data in a time window of less than 60 seconds cannot be exported.</p>
+         */
         @NameInMap("TargetWindows")
         public String targetWindows;
 

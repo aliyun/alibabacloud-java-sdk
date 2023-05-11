@@ -43,9 +43,20 @@ public class RemoveTagsRequest extends TeaModel {
     }
 
     public static class RemoveTagsRequestTag extends TeaModel {
+        /**
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <br>
+         * <p>*   true: The call was successful.</p>
+         * <p>*   false: The call failed.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         * <br>
+         * <p>>  The `Tag.N.Key` and `Tag.N.Value` parameters must be used in pairs.</p>
+         */
         @NameInMap("Value")
         public String value;
 

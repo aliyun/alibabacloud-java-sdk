@@ -4,15 +4,26 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventRuleTargetListResponseBody extends TeaModel {
+    /**
+     * <p>The alert notification methods. Valid values:</p>
+     * <br>
+     * <p>4: Alert notifications are sent by using DingTalk chatbots and emails.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+     */
     @NameInMap("ContactParameters")
     public DescribeEventRuleTargetListResponseBodyContactParameters contactParameters;
 
     @NameInMap("FcParameters")
     public DescribeEventRuleTargetListResponseBodyFcParameters fcParameters;
 
+    /**
+     * <p>The information about the recipients if alert notifications are sent to the alert contacts of an alert contact group.</p>
+     */
     @NameInMap("Message")
     public String message;
 
@@ -22,6 +33,9 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
     @NameInMap("OpenApiParameters")
     public DescribeEventRuleTargetListResponseBodyOpenApiParameters openApiParameters;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -109,6 +123,9 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventRuleTargetListResponseBodyContactParametersContactParameter extends TeaModel {
+        /**
+         * <p>Queries the details of an event-triggered alert rule.</p>
+         */
         @NameInMap("ContactGroupName")
         public String contactGroupName;
 

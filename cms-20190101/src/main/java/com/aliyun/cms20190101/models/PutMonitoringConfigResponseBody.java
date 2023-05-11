@@ -4,9 +4,15 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutMonitoringConfigResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The operation that you want to perform. Set the value to **PutMonitoringConfig**.</p>
+     */
     @NameInMap("Message")
     public String message;
 

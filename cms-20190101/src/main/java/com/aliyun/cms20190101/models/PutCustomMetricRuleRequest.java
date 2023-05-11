@@ -4,51 +4,118 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutCustomMetricRuleRequest extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The value 200 indicates that the call was successful.</p>
+     */
     @NameInMap("ComparisonOperator")
     public String comparisonOperator;
 
+    /**
+     * <p>The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.</p>
+     */
     @NameInMap("ContactGroups")
     public String contactGroups;
 
+    /**
+     * <p>The mute period during which notifications are not repeatedly sent for an alert. Unit: seconds. Default value: 86400. The default value indicates one day.</p>
+     * <br>
+     * <p>>  Only one alert notification is sent during each mute period even if the metric value consecutively exceeds the alert threshold several times.</p>
+     */
     @NameInMap("EffectiveInterval")
     public String effectiveInterval;
 
+    /**
+     * <p>The threshold of the metric value.</p>
+     */
     @NameInMap("EmailSubject")
     public String emailSubject;
 
+    /**
+     * <p>The method that is used to calculate the metric values that trigger alerts.</p>
+     */
     @NameInMap("EvaluationCount")
     public Integer evaluationCount;
 
+    /**
+     * <p>The ID of the alert rule.</p>
+     * <br>
+     * <p>>  You can specify an existing ID to modify the corresponding alert rule or specify a new ID to create an alert rule.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The consecutive number of times for which the metric value is measured before an alert is triggered.</p>
+     */
     @NameInMap("Level")
     public String level;
 
+    /**
+     * <p>The custom monitoring data to which the alert rule applies. The value includes the application group ID to which the custom monitoring data belongs and the dimension to which the metric belongs.</p>
+     */
     @NameInMap("MetricName")
     public String metricName;
 
+    /**
+     * <p>The subject of the alert notification email.</p>
+     */
     @NameInMap("Period")
     public String period;
 
+    /**
+     * <p>The alert group that receives alert notifications. Separate multiple alert groups with commas (,).</p>
+     */
     @NameInMap("Resources")
     public String resources;
 
+    /**
+     * <p>The name of the alert rule.</p>
+     */
     @NameInMap("RuleId")
     public String ruleId;
 
+    /**
+     * <p>The name of the metric.</p>
+     * <br>
+     * <p>>  For more information about how to obtain the metric name, see [DescribeCustomMetricList](~~115005~~).</p>
+     */
     @NameInMap("RuleName")
     public String ruleName;
 
+    /**
+     * <p>The cycle that is used to aggregate custom monitoring data. Unit: seconds. Set the value to an integral multiple of 60. The original reporting cycle of custom monitoring data is used by default.</p>
+     */
     @NameInMap("SilenceTime")
     public Integer silenceTime;
 
+    /**
+     * <p>The comparison operator before the threshold. Valid values:</p>
+     * <br>
+     * <p>*   `>=`</p>
+     * <p>*   `=`</p>
+     * <p>*   `<=`</p>
+     * <p>*   `>`</p>
+     * <p>*   `<`</p>
+     * <p>*   `!=`</p>
+     */
     @NameInMap("Statistics")
     public String statistics;
 
+    /**
+     * <p>The level of the alert. Valid values:</p>
+     * <br>
+     * <p>*   CRITICAL</p>
+     * <p>*   WARN</p>
+     * <p>*   INFO</p>
+     */
     @NameInMap("Threshold")
     public String threshold;
 
+    /**
+     * <p>The time period during which the alert rule is effective. Valid values: 00:00 to 23:59.</p>
+     */
     @NameInMap("Webhook")
     public String webhook;
 

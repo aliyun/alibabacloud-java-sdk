@@ -4,15 +4,30 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutContactGroupResponseBody extends TeaModel {
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The call was successful.</p>
+     * <p>*   false: The call failed.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>This topic provides an example on how to create an alert contact group named `ECS_Group`.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

@@ -4,21 +4,40 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSiteMonitorISPCityListRequest extends TeaModel {
+    /**
+     * <p>The name of the country.</p>
+     * <br>
+     * <p>>  This parameter can be returned only on the China site (aliyun.com).</p>
+     */
     @NameInMap("City")
     public String city;
 
+    /**
+     * <p>The name of the area.</p>
+     */
     @NameInMap("IPV4")
     public Boolean IPV4;
 
+    /**
+     * <p>The name of the area.</p>
+     * <br>
+     * <p>>  This parameter can be returned only on the China site (aliyun.com).</p>
+     */
     @NameInMap("IPV6")
     public Boolean IPV6;
 
+    /**
+     * <p>The name of the province.</p>
+     */
     @NameInMap("Isp")
     public String isp;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The IP address pool.</p>
+     */
     @NameInMap("ViewAll")
     public Boolean viewAll;
 

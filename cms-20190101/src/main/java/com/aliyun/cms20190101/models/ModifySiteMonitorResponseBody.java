@@ -4,18 +4,30 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class ModifySiteMonitorResponseBody extends TeaModel {
+    /**
+     * <p>The URL or IP address that is monitored by the task.</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public ModifySiteMonitorResponseBodyData data;
 
+    /**
+     * <p>The monitoring frequency. Valid values: 1, 5, 15, and 15000. Unit: milliseconds. Default value: 1.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The result of modifying the task.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Success")
     public String success;
 

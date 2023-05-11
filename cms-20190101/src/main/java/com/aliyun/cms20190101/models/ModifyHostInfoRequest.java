@@ -4,9 +4,15 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class ModifyHostInfoRequest extends TeaModel {
+    /**
+     * <p>The name of the host.</p>
+     */
     @NameInMap("HostName")
     public String hostName;
 
+    /**
+     * <p>The ID of the instance. Only hosts not on Alibaba Cloud are supported.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

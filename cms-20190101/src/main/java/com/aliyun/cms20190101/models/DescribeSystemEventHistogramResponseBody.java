@@ -4,18 +4,32 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSystemEventHistogramResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.</p>
+     */
     @NameInMap("Success")
     public String success;
 
+    /**
+     * <p>The information about the number of times that the system event occurred during each interval of a time period.</p>
+     */
     @NameInMap("SystemEventHistograms")
     public DescribeSystemEventHistogramResponseBodySystemEventHistograms systemEventHistograms;
 
@@ -65,12 +79,25 @@ public class DescribeSystemEventHistogramResponseBody extends TeaModel {
     }
 
     public static class DescribeSystemEventHistogramResponseBodySystemEventHistogramsSystemEventHistogram extends TeaModel {
+        /**
+         * <p>The number of times that the system event occurred.</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The end of an interval.</p>
+         * <br>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The beginning of an interval.</p>
+         * <br>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 

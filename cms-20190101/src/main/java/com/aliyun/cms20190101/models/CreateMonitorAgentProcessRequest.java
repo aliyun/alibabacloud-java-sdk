@@ -4,12 +4,23 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateMonitorAgentProcessRequest extends TeaModel {
+    /**
+     * <p>The user who launches the process.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("ProcessName")
     public String processName;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
+     */
     @NameInMap("ProcessUser")
     public String processUser;
 

@@ -46,6 +46,9 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
+        @NameInMap("N")
+        public String n;
+
         @NameInMap("PreCondition")
         public String preCondition;
 
@@ -69,6 +72,14 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         }
         public String getComparisonOperator() {
             return this.comparisonOperator;
+        }
+
+        public CreateGroupMetricRulesRequestGroupMetricRulesEscalationsCritical setN(String n) {
+            this.n = n;
+            return this;
+        }
+        public String getN() {
+            return this.n;
         }
 
         public CreateGroupMetricRulesRequestGroupMetricRulesEscalationsCritical setPreCondition(String preCondition) {
@@ -109,6 +120,9 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
+        @NameInMap("N")
+        public String n;
+
         @NameInMap("PreCondition")
         public String preCondition;
 
@@ -132,6 +146,14 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         }
         public String getComparisonOperator() {
             return this.comparisonOperator;
+        }
+
+        public CreateGroupMetricRulesRequestGroupMetricRulesEscalationsInfo setN(String n) {
+            this.n = n;
+            return this;
+        }
+        public String getN() {
+            return this.n;
         }
 
         public CreateGroupMetricRulesRequestGroupMetricRulesEscalationsInfo setPreCondition(String preCondition) {
@@ -172,6 +194,9 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
+        @NameInMap("N")
+        public String n;
+
         @NameInMap("PreCondition")
         public String preCondition;
 
@@ -195,6 +220,14 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         }
         public String getComparisonOperator() {
             return this.comparisonOperator;
+        }
+
+        public CreateGroupMetricRulesRequestGroupMetricRulesEscalationsWarn setN(String n) {
+            this.n = n;
+            return this;
+        }
+        public String getN() {
+            return this.n;
         }
 
         public CreateGroupMetricRulesRequestGroupMetricRulesEscalationsWarn setPreCondition(String preCondition) {
@@ -233,15 +266,12 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
 
     public static class CreateGroupMetricRulesRequestGroupMetricRulesEscalations extends TeaModel {
         @NameInMap("Critical")
-        @Validation(required = true)
         public CreateGroupMetricRulesRequestGroupMetricRulesEscalationsCritical critical;
 
         @NameInMap("Info")
-        @Validation(required = true)
         public CreateGroupMetricRulesRequestGroupMetricRulesEscalationsInfo info;
 
         @NameInMap("Warn")
-        @Validation(required = true)
         public CreateGroupMetricRulesRequestGroupMetricRulesEscalationsWarn warn;
 
         public static CreateGroupMetricRulesRequestGroupMetricRulesEscalations build(java.util.Map<String, ?> map) throws Exception {
@@ -307,7 +337,6 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
 
     public static class CreateGroupMetricRulesRequestGroupMetricRules extends TeaModel {
         @NameInMap("Escalations")
-        @Validation(required = true)
         public CreateGroupMetricRulesRequestGroupMetricRulesEscalations escalations;
 
         @NameInMap("Category")

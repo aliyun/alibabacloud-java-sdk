@@ -7,21 +7,33 @@ public class DescribeMetricListResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Queries the monitoring data of a metric for a specified cloud service.</p>
+     */
     @NameInMap("Datapoints")
     public String datapoints;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("Period")
     public String period;
 
+    /**
+     * <p>The monitoring data.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

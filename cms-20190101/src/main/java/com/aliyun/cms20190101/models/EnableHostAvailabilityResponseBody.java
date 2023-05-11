@@ -4,15 +4,32 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class EnableHostAvailabilityResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     * <br>
+     * <p>>  The HTTP status code 200 indicates a success.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: successful.</p>
+     * <p>*   false: failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

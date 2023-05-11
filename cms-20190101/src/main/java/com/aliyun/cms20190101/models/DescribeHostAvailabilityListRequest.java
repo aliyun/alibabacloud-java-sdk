@@ -4,24 +4,48 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeHostAvailabilityListRequest extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("GroupId")
     public Long groupId;
 
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("Ids")
     public String ids;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The value 200 indicates that the call was successful.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the application group.</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 

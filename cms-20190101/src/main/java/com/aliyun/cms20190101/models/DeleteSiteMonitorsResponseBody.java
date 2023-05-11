@@ -4,15 +4,24 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteSiteMonitorsResponseBody extends TeaModel {
+    /**
+     * <p>The information about the site monitoring tasks that were deleted.</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public DeleteSiteMonitorsResponseBodyData data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Deletes one or more site monitoring tasks.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

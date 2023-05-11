@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteExporterOutputRequest extends TeaModel {
+    /**
+     * <p>The name of the configuration set.</p>
+     */
     @NameInMap("DestName")
     public String destName;
 

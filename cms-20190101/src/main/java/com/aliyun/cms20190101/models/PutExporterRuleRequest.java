@@ -4,24 +4,56 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutExporterRuleRequest extends TeaModel {
+    /**
+     * <p>The description of the data export rule.</p>
+     */
     @NameInMap("Describe")
     public String describe;
 
+    /**
+     * <p>The destination to which the data is exported. Valid values of N: 1 to 20.</p>
+     */
     @NameInMap("DstNames")
     public java.util.List<String> dstNames;
 
+    /**
+     * <p>The name of the metric.</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>For more information, see [Appendix 1: Metrics](~~163515~~).</p>
+     */
     @NameInMap("MetricName")
     public String metricName;
 
+    /**
+     * <p>The namespace of the cloud service.</p>
+     * <br>
+     * <p>> For more information, see [Appendix 1: Metrics](~~163515~~).</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The name of the rule.</p>
+     * <br>
+     * <p>> If the specified rule exists, the existing rule is modified. Otherwise, a rule is created.</p>
+     */
     @NameInMap("RuleName")
     public String ruleName;
 
+    /**
+     * <p>The time window of the exported data. Unit: seconds.</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   Separate multiple time windows with commas (,).</p>
+     * <br>
+     * <p>*   Data in a time window of less than 60 seconds cannot be exported.</p>
+     */
     @NameInMap("TargetWindows")
     public String targetWindows;
 

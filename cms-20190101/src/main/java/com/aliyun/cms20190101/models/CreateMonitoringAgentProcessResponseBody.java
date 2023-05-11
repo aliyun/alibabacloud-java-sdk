@@ -4,18 +4,33 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateMonitoringAgentProcessResponseBody extends TeaModel {
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The call was successful.</p>
+     * <p>*   false: The call failed.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the process.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

@@ -4,12 +4,23 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteSiteMonitorsRequest extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
+     */
     @NameInMap("IsDeleteAlarms")
     public Boolean isDeleteAlarms;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Specifies whether to delete the alert rules configured for the site monitoring tasks. Valid values:</p>
+     * <br>
+     * <p>*   true (default value)</p>
+     * <p>*   false</p>
+     */
     @NameInMap("TaskIds")
     public String taskIds;
 

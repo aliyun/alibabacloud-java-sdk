@@ -19,6 +19,13 @@ public class PutEventRuleTargetsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The name of the protocol. Valid values of N: 1 to 5. Valid values:</p>
+     * <br>
+     * <p>*   http</p>
+     * <p>*   telnet</p>
+     * <p>*   ping</p>
+     */
     @NameInMap("RuleName")
     public String ruleName;
 
@@ -98,12 +105,23 @@ public class PutEventRuleTargetsRequest extends TeaModel {
     }
 
     public static class PutEventRuleTargetsRequestContactParameters extends TeaModel {
+        /**
+         * <p>The operation that you want to perform. Set the value to **PutEventRuleTargets**.</p>
+         */
         @NameInMap("ContactGroupName")
         public String contactGroupName;
 
+        /**
+         * <p>The HTTP request method. Valid values of N: 1 to 5.</p>
+         * <br>
+         * <p>Valid values: GET and POST.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the event-triggered alert rule.</p>
+         */
         @NameInMap("Level")
         public String level;
 
@@ -139,15 +157,29 @@ public class PutEventRuleTargetsRequest extends TeaModel {
     }
 
     public static class PutEventRuleTargetsRequestFcParameters extends TeaModel {
+        /**
+         * <p>The number of resources that failed to be created or modified.</p>
+         */
         @NameInMap("FunctionName")
         public String functionName;
 
+        /**
+         * <p>The HTTP status code.</p>
+         * <br>
+         * <p>>  The status code 200 indicates that the call was successful.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The MNS topic.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The region where Log Service is deployed. Valid values of N: 1 to 5.</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
@@ -191,15 +223,35 @@ public class PutEventRuleTargetsRequest extends TeaModel {
     }
 
     public static class PutEventRuleTargetsRequestMnsParameters extends TeaModel {
+        /**
+         * <p>The ID of the recipient that receives alert notifications. Valid values of N: 1 to 5.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The version of the API.</p>
+         */
         @NameInMap("Queue")
         public String queue;
 
+        /**
+         * <p>The ID of the recipient that receives alert notifications. Valid values of N: 1 to 5.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the resource. Valid values of N: 1 to 5.</p>
+         * <br>
+         * <p>Format: `arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}`. Fields:</p>
+         * <br>
+         * <p>*   Service: the code of a cloud service</p>
+         * <p>*   Region: the region ID</p>
+         * <p>*   Account: the ID of an Alibaba Cloud account</p>
+         * <p>*   ResourceType: the resource type</p>
+         * <p>*   ResourceId: the resource ID</p>
+         */
         @NameInMap("Topic")
         public String topic;
 
@@ -243,27 +295,51 @@ public class PutEventRuleTargetsRequest extends TeaModel {
     }
 
     public static class PutEventRuleTargetsRequestOpenApiParameters extends TeaModel {
+        /**
+         * <p>The ID of the recipient that receives alert notifications sent by an API callback.</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The error message.</p>
+         */
         @NameInMap("Arn")
         public String arn;
 
+        /**
+         * <p>The region where Function Compute is deployed. Valid values of N: 1 to 5.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The region where Message Service (MNS) is deployed. Valid values of N: 1 to 5.</p>
+         */
         @NameInMap("JsonParams")
         public String jsonParams;
 
+        /**
+         * <p>The name of the Log Service project. Valid values of N: 1 to 5.</p>
+         */
         @NameInMap("Product")
         public String product;
 
+        /**
+         * <p>The callback URL. Valid values of N: 1 to 5.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>This parameter is returned if the specified alert contact groups in the request failed to be created or modified.</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <p>The name of the alert contact group.</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -339,15 +415,27 @@ public class PutEventRuleTargetsRequest extends TeaModel {
     }
 
     public static class PutEventRuleTargetsRequestSlsParameters extends TeaModel {
+        /**
+         * <p>The name of the alert contact group. Valid values of N: 1 to 5.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the Log Service Logstore. Valid values of N: 1 to 5.</p>
+         */
         @NameInMap("LogStore")
         public String logStore;
 
+        /**
+         * <p>The parameters of the alert callback. The parameters are in the JSON format.</p>
+         */
         @NameInMap("Project")
         public String project;
 
+        /**
+         * <p>The ID of the recipient that receives alert notifications. Valid values of N: 1 to 5.</p>
+         */
         @NameInMap("Region")
         public String region;
 
@@ -391,15 +479,29 @@ public class PutEventRuleTargetsRequest extends TeaModel {
     }
 
     public static class PutEventRuleTargetsRequestWebhookParameters extends TeaModel {
+        /**
+         * <p>The alert notification methods. Valid values of N: 1 to 5. Valid values:</p>
+         * <br>
+         * <p>4: Alert notifications are sent by using DingTalk chatbots and emails.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The region where the resource resides.</p>
+         */
         @NameInMap("Method")
         public String method;
 
+        /**
+         * <p>The ID of the recipient.</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <p>The name of the function. Valid values of N: 1 to 5.</p>
+         */
         @NameInMap("Url")
         public String url;
 

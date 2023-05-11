@@ -7,6 +7,9 @@ public class DeleteExporterRuleRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The name of the data export rule.</p>
+     */
     @NameInMap("RuleName")
     public String ruleName;
 

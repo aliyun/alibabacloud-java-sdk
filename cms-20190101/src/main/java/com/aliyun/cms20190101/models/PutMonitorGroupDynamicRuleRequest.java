@@ -4,12 +4,23 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutMonitorGroupDynamicRuleRequest extends TeaModel {
+    /**
+     * <p>The method that is used to filter instances. Valid values of N: 1 to 3. Valid values:</p>
+     * <br>
+     * <p>*   contains: contains</p>
+     * <p>*   notContains: excludes</p>
+     * <p>*   startWith: starts with a prefix</p>
+     * <p>*   endWith: ends with a suffix</p>
+     */
     @NameInMap("GroupId")
     public Long groupId;
 
     @NameInMap("GroupRules")
     public java.util.List<PutMonitorGroupDynamicRuleRequestGroupRules> groupRules;
 
+    /**
+     * <p>The ID of the application group.</p>
+     */
     @NameInMap("IsAsync")
     public Boolean isAsync;
 
@@ -54,12 +65,23 @@ public class PutMonitorGroupDynamicRuleRequest extends TeaModel {
     }
 
     public static class PutMonitorGroupDynamicRuleRequestGroupRulesFilters extends TeaModel {
+        /**
+         * <p>The error message.</p>
+         */
         @NameInMap("Function")
         public String function;
 
+        /**
+         * <p>The operation that you want to perform. Set the value to **PutMonitorGroupDynamicRule**.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The HTTP status code.</p>
+         * <br>
+         * <p>>  The status code 200 indicates that the call was successful.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -95,9 +117,21 @@ public class PutMonitorGroupDynamicRuleRequest extends TeaModel {
     }
 
     public static class PutMonitorGroupDynamicRuleRequestGroupRules extends TeaModel {
+        /**
+         * <p>The logical operator used between conditional expressions in the alert rule. Valid values of N: 1 to 3. Valid values:</p>
+         * <br>
+         * <p>*   and: The instances that meet all the conditional expressions are automatically added to the application group.</p>
+         * <p>*   or: The instances that meet one of the conditional expressions are automatically added to the application group.</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The mode for creating the alert rule. Valid values:</p>
+         * <br>
+         * <p>*   true: creates asynchronously</p>
+         * <p>*   false (default value): creates synchronously</p>
+         */
         @NameInMap("FilterRelation")
         public String filterRelation;
 

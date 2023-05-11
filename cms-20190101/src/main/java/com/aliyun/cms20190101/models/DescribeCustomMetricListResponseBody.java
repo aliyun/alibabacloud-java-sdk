@@ -4,12 +4,21 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCustomMetricListResponseBody extends TeaModel {
+    /**
+     * <p>The reported custom metrics that are found in the query.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>>  You can call the DescribeMetricList operation to query the metrics of a cloud service. For more information, see [DescribeMetricList](~~51936~~).</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

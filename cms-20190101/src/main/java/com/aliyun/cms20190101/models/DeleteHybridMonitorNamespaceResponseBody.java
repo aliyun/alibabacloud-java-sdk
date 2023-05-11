@@ -4,9 +4,15 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteHybridMonitorNamespaceResponseBody extends TeaModel {
+    /**
+     * <p>The operation that you want to perform. Set the value to **DeleteHybridMonitorNamespace**.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+     */
     @NameInMap("Message")
     public String message;
 

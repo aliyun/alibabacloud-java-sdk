@@ -7,6 +7,9 @@ public class DeleteMetricRuleTargetsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the message resource. Valid values of N: 1 to 5.</p>
+     */
     @NameInMap("RuleId")
     public String ruleId;
 

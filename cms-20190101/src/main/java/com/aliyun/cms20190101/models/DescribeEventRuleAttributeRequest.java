@@ -7,9 +7,15 @@ public class DescribeEventRuleAttributeRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("RuleName")
     public String ruleName;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("SilenceTime")
     public String silenceTime;
 

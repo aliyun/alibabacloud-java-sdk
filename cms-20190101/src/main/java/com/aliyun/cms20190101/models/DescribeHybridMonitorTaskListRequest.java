@@ -4,33 +4,76 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeHybridMonitorTaskListRequest extends TeaModel {
+    /**
+     * <p>The additional information of the instance.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The timestamp when the metric import task was created.</p>
+     * <br>
+     * <p>Unit: milliseconds.</p>
+     */
     @NameInMap("IncludeAliyunTask")
     public Boolean includeAliyunTask;
 
+    /**
+     * <p>The conditions that are used to filter logs imported from Log Service.</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
+    /**
+     * <p>The configuration file of the Alibaba Cloud service that you want to monitor by using Hybrid Cloud Monitoring.</p>
+     * <br>
+     * <p>*   namespace: the namespace of the Alibaba Cloud service.</p>
+     * <p>*   metric_list: the metrics of the Alibaba Cloud service.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The operation that you want to perform. Set the value to **DescribeHybridMonitorTaskList**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The keyword that is used to search for metric import tasks.</p>
+     */
     @NameInMap("TargetUserId")
     public Long targetUserId;
 
+    /**
+     * <p>The type of the metric import task. Valid values:</p>
+     * <br>
+     * <p>*   aliyun_fc: metric import tasks for Alibaba Cloud services</p>
+     * <p>*   aliyun_sls: metrics for logs imported from Log Service</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <p>The interval at which the CloudMonitor agent collects host monitoring data. Valid values:</p>
+     * <br>
+     * <p>*   15</p>
+     * <p>*   30</p>
+     * <p>*   60</p>
+     * <br>
+     * <p>Unit: seconds.</p>
+     */
     @NameInMap("TaskType")
     public String taskType;
 

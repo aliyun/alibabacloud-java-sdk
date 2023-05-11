@@ -4,21 +4,47 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSiteMonitorListRequest extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
+    /**
+     * <p>The number of hops for the PING protocol.</p>
+     */
     @NameInMap("Page")
     public Integer page;
 
+    /**
+     * <p>The operation that you want to perform. Set the value to **DescribeSiteMonitorList**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The parsing path of the assertion.</p>
+     * <br>
+     * <p>*   If the assertion type is `body_json`, the path is `json path`.</p>
+     * <p>*   If the assertion type is `body_xml`, the path is `xml path`.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <p>The ID of the site monitoring task.</p>
+     */
+    @NameInMap("TaskState")
+    public String taskState;
+
+    /**
+     * <p>The time when the site monitoring task was updated.</p>
+     */
     @NameInMap("TaskType")
     public String taskType;
 
@@ -65,6 +91,14 @@ public class DescribeSiteMonitorListRequest extends TeaModel {
     }
     public String getTaskId() {
         return this.taskId;
+    }
+
+    public DescribeSiteMonitorListRequest setTaskState(String taskState) {
+        this.taskState = taskState;
+        return this;
+    }
+    public String getTaskState() {
+        return this.taskState;
     }
 
     public DescribeSiteMonitorListRequest setTaskType(String taskType) {

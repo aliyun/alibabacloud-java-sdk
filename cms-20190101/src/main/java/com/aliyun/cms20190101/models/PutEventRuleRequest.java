@@ -4,27 +4,57 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutEventRuleRequest extends TeaModel {
+    /**
+     * <p>The operation that you want to perform. Set the value to **PutEventRule**.</p>
+     */
     @NameInMap("Description")
     public String description;
 
     @NameInMap("EventPattern")
     public java.util.List<PutEventRuleRequestEventPattern> eventPattern;
 
+    /**
+     * <p>The type of the cloud service. Valid values of N: 1 to 50.</p>
+     * <br>
+     * <p>>  You can call the DescribeSystemEventMetaList operation to query the cloud services that support event-triggered alerts. For more information, see [DescribeSystemEventMetaList](~~114972~~).</p>
+     */
     @NameInMap("EventType")
     public String eventType;
 
+    /**
+     * <p>The type of the event-triggered alert rule. Valid values of N: 1 to 50. Valid values:</p>
+     * <br>
+     * <p>*   StatusNotification: fault notifications</p>
+     * <p>*   Exception: exceptions</p>
+     * <p>*   Maintenance: O\&M</p>
+     * <p>*   \*: all types</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
+     */
     @NameInMap("RuleName")
     public String ruleName;
 
+    /**
+     * <p>The number of event-triggered alert rules that were created or modified.</p>
+     */
     @NameInMap("SilenceTime")
     public Long silenceTime;
 
+    /**
+     * <p>The status of the event-triggered alert rule. Valid values:</p>
+     * <br>
+     * <p>*   ENABLED: enabled</p>
+     * <p>*   DISABLED: disabled</p>
+     */
     @NameInMap("State")
     public String state;
 
@@ -98,6 +128,11 @@ public class PutEventRuleRequest extends TeaModel {
     }
 
     public static class PutEventRuleRequestEventPattern extends TeaModel {
+        /**
+         * <p>The SQL condition that is used to filter events. If the content of an event meets the specified SQL condition, an alert is automatically triggered.</p>
+         * <br>
+         * <p>>  The syntax of SQL event filtering is consistent with the query syntax of Log Service.</p>
+         */
         @NameInMap("CustomFilters")
         public String customFilters;
 
@@ -110,9 +145,15 @@ public class PutEventRuleRequest extends TeaModel {
         @NameInMap("NameList")
         public java.util.List<String> nameList;
 
+        /**
+         * <p>The name of the event-triggered alert rule.</p>
+         */
         @NameInMap("Product")
         public String product;
 
+        /**
+         * <p>The description of the event-triggered alert rule.</p>
+         */
         @NameInMap("SQLFilter")
         public String SQLFilter;
 

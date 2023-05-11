@@ -4,18 +4,38 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateInstantSiteMonitorResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     * <br>
+     * <p>> The status code 200 indicates that the call was successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The results for creating the instant test task.</p>
+     */
     @NameInMap("CreateResultList")
     public java.util.List<CreateInstantSiteMonitorResponseBodyCreateResultList> createResultList;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The call was successful.</p>
+     * <p>*   false: The call failed.</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -64,40 +84,16 @@ public class CreateInstantSiteMonitorResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class BatchCreateInstantSiteMonitorResponseBodyData extends TeaModel {
-        @NameInMap("TaskId")
-        public String taskId;
-
-        @NameInMap("TaskName")
-        public String taskName;
-
-        public static BatchCreateInstantSiteMonitorResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            BatchCreateInstantSiteMonitorResponseBodyData self = new BatchCreateInstantSiteMonitorResponseBodyData();
-            return TeaModel.build(map, self);
-        }
-
-        public BatchCreateInstantSiteMonitorResponseBodyData setTaskId(String taskId) {
-            this.taskId = taskId;
-            return this;
-        }
-        public String getTaskId() {
-            return this.taskId;
-        }
-
-        public BatchCreateInstantSiteMonitorResponseBodyData setTaskName(String taskName) {
-            this.taskName = taskName;
-            return this;
-        }
-        public String getTaskName() {
-            return this.taskName;
-        }
-
-    }
-
     public static class CreateInstantSiteMonitorResponseBodyCreateResultList extends TeaModel {
+        /**
+         * <p>The ID of the instant test task.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The name of the instant test task.</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 

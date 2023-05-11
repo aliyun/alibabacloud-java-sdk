@@ -7,39 +7,93 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
     @NameInMap("AttachLabels")
     public java.util.List<CreateHybridMonitorTaskRequestAttachLabels> attachLabels;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("CollectInterval")
     public String collectInterval;
 
+    /**
+     * <p>The type of the collection target.</p>
+     * <br>
+     * <p>*   If the `TaskType` parameter is set to `aliyun_fc`, enter `aliyun_fc`.</p>
+     * <p>*   If the `TaskType` parameter is set to `aliyun_sls`, enter the name of the Logstore group.</p>
+     */
     @NameInMap("CollectTargetType")
     public String collectTargetType;
 
+    /**
+     * <p>The tag value of the metric.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The conditions that are used to filter logs imported from Log Service.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The extended field that specifies the result of basic operations that are performed on aggregation results.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The tag key of the metric.</p>
+     */
     @NameInMap("SLSProcessConfig")
     public CreateHybridMonitorTaskRequestSLSProcessConfig SLSProcessConfig;
 
+    /**
+     * <p>The method that is used to filter logs imported from Log Service. Valid values:</p>
+     * <br>
+     * <p>*   `contain`: contains</p>
+     * <p>*   `notContain`: does not contain</p>
+     * <p>*   `>`: greater than</p>
+     * <p>*   `<`: less than</p>
+     * <p>*   `=`: equal to</p>
+     * <p>*   `! =`: not equal to</p>
+     * <p>*   `>=`: greater than or equal to</p>
+     * <p>*   `<=`: less than or equal to</p>
+     */
     @NameInMap("TargetUserId")
     public String targetUserId;
 
+    /**
+     * <p>The ID of the metric import task.</p>
+     */
     @NameInMap("TargetUserIdList")
     public String targetUserIdList;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 
+    /**
+     * <p>The operation that you want to perform. Set the value to **CreateHybridMonitorTask**.</p>
+     */
     @NameInMap("TaskType")
     public String taskType;
 
+    /**
+     * <p>The interval at which metrics are collected. Valid values:</p>
+     * <br>
+     * <p>*   15</p>
+     * <p>*   60 (default value)</p>
+     * <br>
+     * <p>Unit: seconds.</p>
+     * <br>
+     * <p>>  This parameter is required only if the `TaskType` parameter is set to `aliyun_sls`.</p>
+     */
     @NameInMap("YARMConfig")
     public String YARMConfig;
 
@@ -153,9 +207,17 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
     }
 
     public static class CreateHybridMonitorTaskRequestAttachLabels extends TeaModel {
+        /**
+         * <p>The conditions that are used to filter logs imported from Log Service.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The name of the namespace.</p>
+         * <br>
+         * <p>For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -183,9 +245,18 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
     }
 
     public static class CreateHybridMonitorTaskRequestSLSProcessConfigExpress extends TeaModel {
+        /**
+         * <p>The value of the key that is used to filter logs imported from Log Service.</p>
+         */
         @NameInMap("Alias")
         public String alias;
 
+        /**
+         * <p>Specifies whether to create a metric import task for an Alibaba Cloud service or create a metric for logs imported from Log Service. Valid values:</p>
+         * <br>
+         * <p>*   aliyun_fc: creates a metric import task for an Alibaba Cloud service</p>
+         * <p>*   aliyun_sls: creates a metric for logs imported from Log Service</p>
+         */
         @NameInMap("Express")
         public String express;
 
@@ -213,12 +284,52 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
     }
 
     public static class CreateHybridMonitorTaskRequestSLSProcessConfigFilterFilters extends TeaModel {
+        /**
+         * <p>The description of the metric import task.</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <p>The configuration file of the Alibaba Cloud service that you want to monitor by using Hybrid Cloud Monitoring.</p>
+         * <br>
+         * <p>*   namespace: the namespace of the Alibaba Cloud service. For information about how to query the namespace of an Alibaba Cloud service, see [DescribeMetricMetaList](~~98846~~).</p>
+         * <p>*   metric_list: the metrics of the Alibaba Cloud service. For information about how to query the metrics of an Alibaba Cloud service, see [DescribeMetricMetaList](~~98846~~).</p>
+         * <br>
+         * <p>The following code shows a sample configuration file:</p>
+         * <br>
+         * <p>```</p>
+         * <br>
+         * <p>products:</p>
+         * <p>- namespace: acs_ecs_dashboard</p>
+         * <p>  metric_info:</p>
+         * <p>  - metric_list:</p>
+         * <p>    - cpu_total</p>
+         * <p>    - cpu_idle</p>
+         * <p>    - diskusage_utilization</p>
+         * <p>    - CPUUtilization</p>
+         * <p>    - DiskReadBPS</p>
+         * <p>    - InternetOut</p>
+         * <p>    - IntranetOut</p>
+         * <p>    - cpu_system</p>
+         * <p>- namespace: acs_rds_dashboard</p>
+         * <p>  metric_info:</p>
+         * <p>  - metric_list:</p>
+         * <p>    - MySQL_QPS</p>
+         * <p>    - MySQL_TPS</p>
+         * <p>```</p>
+         * <br>
+         * <p>>  This parameter is required only if the `TaskType` parameter is set to `aliyun_fc`.</p>
+         */
         @NameInMap("SLSKeyName")
         public String SLSKeyName;
 
+        /**
+         * <p>The name of the metric import task.</p>
+         * <br>
+         * <p>*   If the `TaskType` parameter is set to `aliyun_fc`, enter the name of the metric import task.</p>
+         * <p>*   If the `TaskType` parameter is set to `aliyun_sls`, enter the name of the metric for logs imported from Log Service.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -254,9 +365,20 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
     }
 
     public static class CreateHybridMonitorTaskRequestSLSProcessConfigFilter extends TeaModel {
+        /**
+         * <p>The relationship between multiple filter conditions. Valid values:</p>
+         * <br>
+         * <p>*   and (default value): Logs are processed only if all filter conditions are met.</p>
+         * <p>*   or: Logs are processed if one of the filter conditions is met.</p>
+         */
         @NameInMap("Filters")
         public java.util.List<CreateHybridMonitorTaskRequestSLSProcessConfigFilterFilters> filters;
 
+        /**
+         * <p>The configurations of the logs that are imported from Log Service.</p>
+         * <br>
+         * <p>>  This parameter is required only if the `TaskType` parameter is set to `aliyun_sls`.</p>
+         */
         @NameInMap("Relation")
         public String relation;
 
@@ -284,9 +406,21 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
     }
 
     public static class CreateHybridMonitorTaskRequestSLSProcessConfigGroupBy extends TeaModel {
+        /**
+         * <p>The ID of the member account.</p>
+         * <br>
+         * <p>If you call API operations by using a management account, you can connect the Alibaba Cloud services that are activated for a member account in a resource directory to Hybrid Cloud Monitoring. You can use the resource directory to monitor Alibaba Cloud services across enterprise accounts.</p>
+         * <br>
+         * <p>>  This parameter is required only if the `TaskType` parameter is set to `aliyun_fc`.</p>
+         */
         @NameInMap("Alias")
         public String alias;
 
+        /**
+         * <p>The IDs of the member accounts. Separate multiple member account IDs with commas (,).</p>
+         * <br>
+         * <p>>  This parameter is required only if you call this operation by using the management account.</p>
+         */
         @NameInMap("SLSKeyName")
         public String SLSKeyName;
 
@@ -377,12 +511,25 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
     }
 
     public static class CreateHybridMonitorTaskRequestSLSProcessConfig extends TeaModel {
+        /**
+         * <p>The name of the key that is used to aggregate logs imported from Log Service.</p>
+         */
         @NameInMap("Express")
         public java.util.List<CreateHybridMonitorTaskRequestSLSProcessConfigExpress> express;
 
+        /**
+         * <p>The extended fields that specify the results of basic operations that are performed on aggregation results.</p>
+         */
         @NameInMap("Filter")
         public CreateHybridMonitorTaskRequestSLSProcessConfigFilter filter;
 
+        /**
+         * <p>The ID of the application group.</p>
+         * <br>
+         * <p>For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).</p>
+         * <br>
+         * <p>>  This parameter is required only if the `TaskType` parameter is set to `aliyun_sls`.</p>
+         */
         @NameInMap("GroupBy")
         public java.util.List<CreateHybridMonitorTaskRequestSLSProcessConfigGroupBy> groupBy;
 

@@ -4,18 +4,35 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetricMetaListRequest extends TeaModel {
+    /**
+     * <p>The page to return. Default value: 1</p>
+     */
     @NameInMap("Labels")
     public String labels;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: 30.</p>
+     */
     @NameInMap("MetricName")
     public String metricName;
 
+    /**
+     * <p>The name of the metric. For more information, see [Appendix 1: Metrics](~~163515~~).</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The response code.</p>
+     * <br>
+     * <p>>  The HTTP 200 code indicates that the request was successful.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

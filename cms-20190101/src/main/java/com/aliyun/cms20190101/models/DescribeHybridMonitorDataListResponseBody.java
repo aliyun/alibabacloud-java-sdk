@@ -4,18 +4,37 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
+    /**
+     * <p>The name of the metric.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned monitoring data.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The name of the namespace.</p>
+     * <br>
+     * <p>For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The timestamp that indicates the time when the metric value is collected.</p>
+     * <br>
+     * <p>Unit: seconds.</p>
+     */
     @NameInMap("Success")
     public String success;
 
+    /**
+     * <p>The metric value.</p>
+     */
     @NameInMap("TimeSeries")
     public java.util.List<DescribeHybridMonitorDataListResponseBodyTimeSeries> timeSeries;
 
@@ -65,9 +84,17 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
     }
 
     public static class DescribeHybridMonitorDataListResponseBodyTimeSeriesLabels extends TeaModel {
+        /**
+         * <p>The timestamp that specifies the end of the time range to query.</p>
+         * <br>
+         * <p>Unit: seconds.</p>
+         */
         @NameInMap("K")
         public String k;
 
+        /**
+         * <p>The ID of the request.</p>
+         */
         @NameInMap("V")
         public String v;
 
@@ -125,12 +152,21 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
     }
 
     public static class DescribeHybridMonitorDataListResponseBodyTimeSeries extends TeaModel {
+        /**
+         * <p>The tags of the time dimension.</p>
+         */
         @NameInMap("Labels")
         public java.util.List<DescribeHybridMonitorDataListResponseBodyTimeSeriesLabels> labels;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("MetricName")
         public String metricName;
 
+        /**
+         * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+         */
         @NameInMap("Values")
         public java.util.List<DescribeHybridMonitorDataListResponseBodyTimeSeriesValues> values;
 

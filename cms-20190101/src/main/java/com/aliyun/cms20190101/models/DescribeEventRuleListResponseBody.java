@@ -4,21 +4,41 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventRuleListResponseBody extends TeaModel {
+    /**
+     * <p>The prefix in the name of the event-triggered alert rule.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("EventRules")
     public DescribeEventRuleListResponseBodyEventRules eventRules;
 
+    /**
+     * <p>The event-triggered alert rules.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The name of the event-triggered alert rule.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The list of event names.</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -182,21 +202,41 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPattern extends TeaModel {
+        /**
+         * <p>The ID of the request.</p>
+         */
         @NameInMap("CustomFilters")
         public String customFilters;
 
+        /**
+         * <p>The keywords that are used to match events.</p>
+         */
         @NameInMap("EventTypeList")
         public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternEventTypeList eventTypeList;
 
+        /**
+         * <p>Queries event-triggered alert rules.</p>
+         */
         @NameInMap("KeywordFilter")
         public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternKeywordFilter keywordFilter;
 
+        /**
+         * <p>The type of the event-triggered alert rule.</p>
+         * <br>
+         * <p>`*` indicates all types of alert rules.</p>
+         */
         @NameInMap("LevelList")
         public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternLevelList levelList;
 
+        /**
+         * <p>Indicates that logs are filtered based on the specified SQL statement. If the specified conditions are met, an alert is triggered.</p>
+         */
         @NameInMap("NameList")
         public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternNameList nameList;
 
+        /**
+         * <p>The ID of the application group.</p>
+         */
         @NameInMap("Product")
         public String product;
 
@@ -286,24 +326,51 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventRuleListResponseBodyEventRulesEventRule extends TeaModel {
+        /**
+         * <p>The filter keyword.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the application group.</p>
+         */
         @NameInMap("EventPattern")
         public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPattern eventPattern;
 
+        /**
+         * <p>The mode of the event-triggered alert rule.</p>
+         */
         @NameInMap("EventType")
         public String eventType;
 
+        /**
+         * <p>The number of entries to return on each page.</p>
+         * <br>
+         * <p>A minimum of one entry can be returned on each page. Default value: 10.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The relationship between multiple keywords in a condition. Valid values:</p>
+         * <br>
+         * <p>*   OR: The relationship between keywords is OR.</p>
+         * <p>*   NOT: The keyword is excluded. The value NOT indicates that all events that do not contain the keywords are matched.</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("SilenceTime")
         public Long silenceTime;
 
+        /**
+         * <p>The level of the event. Valid values:</p>
+         * <br>
+         * <p>*   CRITICAL: critical</p>
+         * <p>*   WARN: warning</p>
+         * <p>*   INFO: information</p>
+         */
         @NameInMap("State")
         public String state;
 

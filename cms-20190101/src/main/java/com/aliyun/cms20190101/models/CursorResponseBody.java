@@ -3,9 +3,12 @@ package com.aliyun.cms20190101.models;
 
 import com.aliyun.tea.*;
 
-public class PutAlertStrategyResponseBody extends TeaModel {
+public class CursorResponseBody extends TeaModel {
     @NameInMap("Code")
-    public String code;
+    public Integer code;
+
+    @NameInMap("Cursor")
+    public String cursor;
 
     @NameInMap("Message")
     public String message;
@@ -16,20 +19,28 @@ public class PutAlertStrategyResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static PutAlertStrategyResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        PutAlertStrategyResponseBody self = new PutAlertStrategyResponseBody();
+    public static CursorResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        CursorResponseBody self = new CursorResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public PutAlertStrategyResponseBody setCode(String code) {
+    public CursorResponseBody setCode(Integer code) {
         this.code = code;
         return this;
     }
-    public String getCode() {
+    public Integer getCode() {
         return this.code;
     }
 
-    public PutAlertStrategyResponseBody setMessage(String message) {
+    public CursorResponseBody setCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
+    public String getCursor() {
+        return this.cursor;
+    }
+
+    public CursorResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -37,7 +48,7 @@ public class PutAlertStrategyResponseBody extends TeaModel {
         return this.message;
     }
 
-    public PutAlertStrategyResponseBody setRequestId(String requestId) {
+    public CursorResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -45,7 +56,7 @@ public class PutAlertStrategyResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public PutAlertStrategyResponseBody setSuccess(Boolean success) {
+    public CursorResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

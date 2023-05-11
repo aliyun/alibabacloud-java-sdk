@@ -4,9 +4,17 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class InstallMonitoringAgentRequest extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
+     */
     @NameInMap("Force")
     public Boolean force;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("InstallCommand")
     public String installCommand;
 

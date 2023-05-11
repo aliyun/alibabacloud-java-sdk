@@ -4,24 +4,41 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetricLastResponseBody extends TeaModel {
+    /**
+     * <p>Queries the latest monitoring data of a metric.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+     */
     @NameInMap("Datapoints")
     public String datapoints;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The interval at which the monitoring data is queried.</p>
+     * <br>
+     * <p>Unit: seconds.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("Period")
     public String period;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The monitoring data.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

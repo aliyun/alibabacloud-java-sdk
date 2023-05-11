@@ -7,9 +7,15 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
     @NameInMap("AlertTemplates")
     public java.util.List<CreateMetricRuleTemplateRequestAlertTemplates> alertTemplates;
 
+    /**
+     * <p>The description of the alert template.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The name of the alert template.</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -57,6 +63,9 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
+        @NameInMap("N")
+        public Integer n;
+
         @NameInMap("Statistics")
         public String statistics;
 
@@ -77,6 +86,14 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
         }
         public String getComparisonOperator() {
             return this.comparisonOperator;
+        }
+
+        public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsCritical setN(Integer n) {
+            this.n = n;
+            return this;
+        }
+        public Integer getN() {
+            return this.n;
         }
 
         public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsCritical setStatistics(String statistics) {
@@ -109,6 +126,9 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
+        @NameInMap("N")
+        public Integer n;
+
         @NameInMap("Statistics")
         public String statistics;
 
@@ -129,6 +149,14 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
         }
         public String getComparisonOperator() {
             return this.comparisonOperator;
+        }
+
+        public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsInfo setN(Integer n) {
+            this.n = n;
+            return this;
+        }
+        public Integer getN() {
+            return this.n;
         }
 
         public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsInfo setStatistics(String statistics) {
@@ -161,6 +189,9 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
+        @NameInMap("N")
+        public Integer n;
+
         @NameInMap("Statistics")
         public String statistics;
 
@@ -181,6 +212,14 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
         }
         public String getComparisonOperator() {
             return this.comparisonOperator;
+        }
+
+        public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsWarn setN(Integer n) {
+            this.n = n;
+            return this;
+        }
+        public Integer getN() {
+            return this.n;
         }
 
         public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsWarn setStatistics(String statistics) {
@@ -211,15 +250,12 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
 
     public static class CreateMetricRuleTemplateRequestAlertTemplatesEscalations extends TeaModel {
         @NameInMap("Critical")
-        @Validation(required = true)
         public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsCritical critical;
 
         @NameInMap("Info")
-        @Validation(required = true)
         public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsInfo info;
 
         @NameInMap("Warn")
-        @Validation(required = true)
         public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsWarn warn;
 
         public static CreateMetricRuleTemplateRequestAlertTemplatesEscalations build(java.util.Map<String, ?> map) throws Exception {
@@ -255,27 +291,57 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
 
     public static class CreateMetricRuleTemplateRequestAlertTemplates extends TeaModel {
         @NameInMap("Escalations")
-        @Validation(required = true)
         public CreateMetricRuleTemplateRequestAlertTemplatesEscalations escalations;
 
+        /**
+         * <p>The abbreviation of the Alibaba Cloud service name.</p>
+         * <br>
+         * <p>To obtain the abbreviation of an Alibaba Cloud service name, call the [DescribeProjectMeta](~~114916~~) operation. The `metricCategory` tag in the `Labels` response parameter indicates the abbreviation of the Alibaba Cloud service name.</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The name of the metric. Valid values of N: 1 to 200.</p>
+         * <br>
+         * <p>>  For more information, see [DescribeMetricMetaList](~~98846~~) or [Appendix 1: Metrics](~~28619~~).</p>
+         */
         @NameInMap("MetricName")
         public String metricName;
 
+        /**
+         * <p>The namespace of the cloud service. Valid values of N: 1 to 200.</p>
+         * <br>
+         * <p>>  For more information, see [DescribeMetricMetaList](~~98846~~) or [Appendix 1: Metrics](~~28619~~).</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The aggregation period of monitoring data. Unit: seconds.</p>
+         * <br>
+         * <p>The default value is the minimum aggregation period. Generally, you do not need to specify the minimum aggregation period.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 200.</p>
+         */
         @NameInMap("Period")
         public Integer period;
 
+        /**
+         * <p>The name of the alert rule. Valid values of N: 1 to 200.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The extended field selectors. Valid values of N: 1 to 200.</p>
+         */
         @NameInMap("Selector")
         public String selector;
 
+        /**
+         * <p>The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.</p>
+         */
         @NameInMap("Webhook")
         public String webhook;
 

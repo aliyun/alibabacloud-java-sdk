@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteDynamicTagGroupResponseBody extends TeaModel {
+    /**
+     * <p>The operation that you want to perform. Set the value to **DeleteDynamicTagGroup**.</p>
+     */
     @NameInMap("Code")
     public String code;
 

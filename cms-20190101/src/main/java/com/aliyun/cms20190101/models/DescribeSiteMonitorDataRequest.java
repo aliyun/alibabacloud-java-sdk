@@ -4,30 +4,68 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSiteMonitorDataRequest extends TeaModel {
+    /**
+     * <p>The interval at which monitoring data is returned. The value is an integral multiple of 60. Unit: seconds.</p>
+     * <br>
+     * <p>>  The default value equals the minimum interval at which detection requests are sent to the monitored address.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The returned monitoring data.</p>
+     */
     @NameInMap("Length")
     public Integer length;
 
+    /**
+     * <p>The beginning of the time range for the query. Supported formats:</p>
+     * <br>
+     * <p>*   UNIX timestamp: The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * <p>*   Time format: The value is in the YYYY-MM-DDThh:mm:ssZ format.</p>
+     */
     @NameInMap("MetricName")
     public String metricName;
 
+    /**
+     * <p>The number of data points to return.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The pagination cursor.</p>
+     */
     @NameInMap("Period")
     public String period;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The end of the time range for the query. Supported formats:</p>
+     * <br>
+     * <p>*   UNIX timestamp: The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * <p>*   Time format: The value is in the YYYY-MM-DDThh:mm:ssZ format.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The type of the monitored object whose monitoring data is to be queried. Valid values:</p>
+     * <br>
+     * <p>*   metric</p>
+     * <p>*   event</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <p>The name of the metric. Valid values:</p>
+     * <br>
+     * <p>*   Availability</p>
+     * <p>*   ResponseTime</p>
+     */
     @NameInMap("Type")
     public String type;
 

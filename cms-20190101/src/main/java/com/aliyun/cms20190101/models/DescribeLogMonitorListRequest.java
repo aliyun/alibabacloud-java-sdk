@@ -4,18 +4,30 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogMonitorListRequest extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("GroupId")
     public Long groupId;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: 10</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The keyword that is used to search for log monitoring metrics. Fuzzy match is supported.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the application group.</p>
+     */
     @NameInMap("SearchValue")
     public String searchValue;
 

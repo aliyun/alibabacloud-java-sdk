@@ -43,9 +43,17 @@ public class AddTagsRequest extends TeaModel {
     }
 
     public static class AddTagsRequestTag extends TeaModel {
+        /**
+         * <p>The HTTP status code.</p>
+         * <br>
+         * <p>>  The status code 200 indicates that the call was successful.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The ID of the request.</p>
+         */
         @NameInMap("Value")
         public String value;
 

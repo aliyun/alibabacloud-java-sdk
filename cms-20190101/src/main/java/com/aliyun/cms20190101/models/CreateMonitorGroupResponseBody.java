@@ -4,15 +4,30 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateMonitorGroupResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the application group.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+     */
     @NameInMap("GroupId")
     public Long groupId;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The call was successful.</p>
+     * <p>*   false: The call failed.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>In this example, the application group named `ECS_Group` is created.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

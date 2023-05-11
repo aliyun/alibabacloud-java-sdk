@@ -4,18 +4,35 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCustomEventCountResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The number of times that the custom event occurred in the specified time period.</p>
+     */
     @NameInMap("CustomEventCounts")
     public DescribeCustomEventCountResponseBodyCustomEventCounts customEventCounts;
 
+    /**
+     * <p>Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The details of the custom event.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The time when the custom event occurred.</p>
+     * <br>
+     * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +82,21 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
     }
 
     public static class DescribeCustomEventCountResponseBodyCustomEventCountsCustomEventCount extends TeaModel {
+        /**
+         * <p>Queries the number of times that a custom event occurred in a specified time period.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>>  This operation counts the number of times that a custom event occurred for each service.</p>
+         */
         @NameInMap("Num")
         public Integer num;
 
+        /**
+         * <p>The name of the custom event.</p>
+         */
         @NameInMap("Time")
         public Long time;
 

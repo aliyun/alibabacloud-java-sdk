@@ -4,18 +4,38 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
+    /**
+     * <p>This topic provides an example on how to query the detection points that are provided by China Unicom in Guiyang.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The IP address pool.</p>
+     */
     @NameInMap("IspCityList")
     public DescribeSiteMonitorISPCityListResponseBodyIspCityList ispCityList;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The call was successful.</p>
+     * <p>*   false: The call failed.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The detection points.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -90,6 +110,9 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
         @NameInMap("Area.zh_CN")
         public String area_zh_cN;
 
+        /**
+         * <p>The code of the province.</p>
+         */
         @NameInMap("City")
         public String city;
 
@@ -99,6 +122,12 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
         @NameInMap("CityName.zh_CN")
         public String cityName_zh_cN;
 
+        /**
+         * <p>Specifies whether to query IPv4 probes. Valid values:</p>
+         * <br>
+         * <p>*   true (default value): IPv4 probes are queried.</p>
+         * <p>*   false: IPv4 probes are not queried.</p>
+         */
         @NameInMap("Country")
         public String country;
 
@@ -111,12 +140,24 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
         @NameInMap("IPPool")
         public DescribeSiteMonitorISPCityListResponseBodyIspCityListIspCityIPPool IPPool;
 
+        /**
+         * <p>Specifies whether to return all detection points. Valid values:</p>
+         * <br>
+         * <p>*   true (default value): returns all detection points.</p>
+         * <p>*   false: returns only available detection points.</p>
+         */
         @NameInMap("IPV4ProbeCount")
         public String IPV4ProbeCount;
 
+        /**
+         * <p>The ID of the carrier.</p>
+         */
         @NameInMap("IPV6ProbeCount")
         public String IPV6ProbeCount;
 
+        /**
+         * <p>The returned message.</p>
+         */
         @NameInMap("Isp")
         public String isp;
 
@@ -126,6 +167,9 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
         @NameInMap("IspName.zh_CN")
         public String ispName_zh_cN;
 
+        /**
+         * <p>The code of the country.</p>
+         */
         @NameInMap("Region")
         public String region;
 

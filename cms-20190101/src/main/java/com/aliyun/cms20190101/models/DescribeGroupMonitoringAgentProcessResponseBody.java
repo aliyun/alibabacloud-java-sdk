@@ -4,27 +4,53 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
+    /**
+     * <p>The number of the returned page. Default value: 1.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The number of entries returned on each page. Default value: 10.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The process monitoring tasks created for the application group.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The ID of the process monitoring task.</p>
+     */
     @NameInMap("Processes")
     public DescribeGroupMonitoringAgentProcessResponseBodyProcesses processes;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The name of the process monitoring task.</p>
+     */
     @NameInMap("Total")
     public String total;
 
@@ -97,31 +123,138 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
         return this.total;
     }
 
+    public static class DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfigTargetListTarget extends TeaModel {
+        @NameInMap("Arn")
+        public String arn;
+
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("JsonParmas")
+        public String jsonParmas;
+
+        @NameInMap("Level")
+        public String level;
+
+        public static DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfigTargetListTarget build(java.util.Map<String, ?> map) throws Exception {
+            DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfigTargetListTarget self = new DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfigTargetListTarget();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfigTargetListTarget setArn(String arn) {
+            this.arn = arn;
+            return this;
+        }
+        public String getArn() {
+            return this.arn;
+        }
+
+        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfigTargetListTarget setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfigTargetListTarget setJsonParmas(String jsonParmas) {
+            this.jsonParmas = jsonParmas;
+            return this;
+        }
+        public String getJsonParmas() {
+            return this.jsonParmas;
+        }
+
+        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfigTargetListTarget setLevel(String level) {
+            this.level = level;
+            return this;
+        }
+        public String getLevel() {
+            return this.level;
+        }
+
+    }
+
+    public static class DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfigTargetList extends TeaModel {
+        @NameInMap("Target")
+        public java.util.List<DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfigTargetListTarget> target;
+
+        public static DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfigTargetList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfigTargetList self = new DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfigTargetList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfigTargetList setTarget(java.util.List<DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfigTargetListTarget> target) {
+            this.target = target;
+            return this;
+        }
+        public java.util.List<DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfigTargetListTarget> getTarget() {
+            return this.target;
+        }
+
+    }
+
     public static class DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfig extends TeaModel {
+        /**
+         * <p>The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.</p>
+         */
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
+        /**
+         * <p>The method used to calculate metric values that trigger alerts.</p>
+         */
         @NameInMap("EffectiveInterval")
         public String effectiveInterval;
 
+        /**
+         * <p>The time period during which the alert rule is effective.</p>
+         */
         @NameInMap("EscalationsLevel")
         public String escalationsLevel;
 
+        /**
+         * <p>The threshold for triggering alerts.</p>
+         */
         @NameInMap("NoEffectiveInterval")
         public String noEffectiveInterval;
 
+        /**
+         * <p>The number of times for which the threshold can be consecutively exceeded.</p>
+         * <br>
+         * <p>>  A metric triggers an alert only after the metric value reaches the threshold consecutively for the specified times.</p>
+         */
         @NameInMap("SilenceTime")
         public String silenceTime;
 
+        /**
+         * <p>Queries the process monitoring tasks for an application group.</p>
+         */
         @NameInMap("Statistics")
         public String statistics;
 
+        @NameInMap("TargetList")
+        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfigTargetList targetList;
+
+        /**
+         * <p>You can create a process monitoring task to monitor all or the specified Elastic Compute Service (ECS) instances in an application group and set alert rules for the process monitoring task.</p>
+         */
         @NameInMap("Threshold")
         public String threshold;
 
+        /**
+         * <p>The time period during which the alert rule is ineffective.</p>
+         */
         @NameInMap("Times")
         public String times;
 
+        /**
+         * <p>The level of the alert. Valid values:</p>
+         * <br>
+         * <p>*   critical</p>
+         * <p>*   warn</p>
+         * <p>*   info</p>
+         */
         @NameInMap("Webhook")
         public String webhook;
 
@@ -178,6 +311,14 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             return this.statistics;
         }
 
+        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfig setTargetList(DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfigTargetList targetList) {
+            this.targetList = targetList;
+            return this;
+        }
+        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfigTargetList getTargetList() {
+            return this.targetList;
+        }
+
         public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfig setThreshold(String threshold) {
             this.threshold = threshold;
             return this;
@@ -224,12 +365,42 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
     }
 
     public static class DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpressMatchExpress extends TeaModel {
+        /**
+         * <p>The comparison operator of the threshold for critical-level alerts. Valid values:</p>
+         * <br>
+         * <p>*   GreaterThanOrEqualToThreshold: greater than or equal to the threshold</p>
+         * <p>*   GreaterThanThreshold: greater than the threshold</p>
+         * <p>*   LessThanOrEqualToThreshold: less than or equal to the threshold</p>
+         * <p>*   LessThanThreshold: less than the threshold</p>
+         * <p>*   NotEqualToThreshold: not equal to the threshold</p>
+         * <p>*   GreaterThanYesterday: greater than the metric value at the same time yesterday</p>
+         * <p>*   LessThanYesterday: less than the metric value at the same time yesterday</p>
+         * <p>*   GreaterThanLastWeek: greater than the metric value at the same time last week</p>
+         * <p>*   LessThanLastWeek: less than the metric value at the same time last week</p>
+         * <p>*   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
+         * <p>*   LessThanLastPeriod: less than the metric value in the last monitoring cycle</p>
+         */
         @NameInMap("Function")
         public String function;
 
+        /**
+         * <p>The configurations of the alert rule.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The method used to match the instances. Default value: all. Valid values:</p>
+         * <br>
+         * <p>*   all</p>
+         * <p>*   startWith</p>
+         * <p>*   endWith</p>
+         * <p>*   contains</p>
+         * <p>*   notContains</p>
+         * <p>*   equals</p>
+         * <br>
+         * <p>>  The matched instances are monitored by the process monitoring task.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -284,21 +455,39 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
     }
 
     public static class DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcess extends TeaModel {
+        /**
+         * <p>The duration of the mute period during which new alerts are not sent even if the trigger conditions are met. Unit: seconds. Minimum value: 3600, which is equivalent to one hour. Default value: 86400, which is equivalent to one day.</p>
+         * <br>
+         * <p>>  Only one alert notification is sent during each mute period even if the metric value consecutively exceeds the alert threshold several times.</p>
+         */
         @NameInMap("AlertConfig")
         public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfig alertConfig;
 
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The keyword used to match the instance name.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The criteria based on which the instances are matched.</p>
+         * <br>
+         * <p>>  Set the value to `name`, indicating that the instances are matched based on instance name.</p>
+         */
         @NameInMap("MatchExpress")
         public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpress matchExpress;
 
         @NameInMap("MatchExpressFilterRelation")
         public String matchExpressFilterRelation;
 
+        /**
+         * <p>The conditional expressions used to match the instances.</p>
+         * <br>
+         * <p>>  Only the instances that meet the conditional expressions are monitored by the process monitoring task.</p>
+         */
         @NameInMap("ProcessName")
         public String processName;
 

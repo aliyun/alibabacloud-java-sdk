@@ -4,6 +4,11 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class UninstallMonitoringAgentRequest extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The HTTP status code 200 indicates that the call was successful.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

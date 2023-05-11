@@ -4,21 +4,42 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
+    /**
+     * <p>The mute period during which new alerts are not sent even if the trigger conditions are met. Unit: seconds. Default value: 86400.</p>
+     */
     @NameInMap("AlertList")
     public DescribeActiveMetricRuleListResponseBodyAlertList alertList;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The mute period during which new alerts are not sent even if the trigger conditions are met. Unit: seconds. Default value: 86400.</p>
+     */
     @NameInMap("Datapoints")
     public DescribeActiveMetricRuleListResponseBodyDatapoints datapoints;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The call was successful.</p>
+     * <p>*   false: The call failed.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of the alert rules.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,15 +97,27 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
     }
 
     public static class DescribeActiveMetricRuleListResponseBodyAlertListAlertEscalationsCritical extends TeaModel {
+        /**
+         * <p>The consecutive number of times for which the metric value meets the alert condition before a Critical-level alert is triggered.</p>
+         */
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
+        /**
+         * <p>Queries details about one-click alert rules.</p>
+         */
         @NameInMap("Statistics")
         public String statistics;
 
+        /**
+         * <p>The statistical aggregation method for critical-level alerts.</p>
+         */
         @NameInMap("Threshold")
         public String threshold;
 
+        /**
+         * <p>The threshold for critical-level alerts.</p>
+         */
         @NameInMap("Times")
         public String times;
 
@@ -128,15 +161,27 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
     }
 
     public static class DescribeActiveMetricRuleListResponseBodyAlertListAlertEscalationsInfo extends TeaModel {
+        /**
+         * <p>The consecutive number of times for which the metric value meets the alert condition before an info-level alert is triggered.</p>
+         */
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
+        /**
+         * <p>The condition for triggering warn-level alerts.</p>
+         */
         @NameInMap("Statistics")
         public String statistics;
 
+        /**
+         * <p>The statistical aggregation method for info-level alerts.</p>
+         */
         @NameInMap("Threshold")
         public String threshold;
 
+        /**
+         * <p>The threshold for info-level alerts.</p>
+         */
         @NameInMap("Times")
         public String times;
 
@@ -180,15 +225,27 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
     }
 
     public static class DescribeActiveMetricRuleListResponseBodyAlertListAlertEscalationsWarn extends TeaModel {
+        /**
+         * <p>The consecutive number of times for which the metric value meets the alert condition before a warn-level alert is triggered.</p>
+         */
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
+        /**
+         * <p>The condition for triggering critical-level alerts.</p>
+         */
         @NameInMap("Statistics")
         public String statistics;
 
+        /**
+         * <p>The statistical aggregation method for warn-level alerts.</p>
+         */
         @NameInMap("Threshold")
         public String threshold;
 
+        /**
+         * <p>The threshold of warn-level alerts.</p>
+         */
         @NameInMap("Times")
         public String times;
 
@@ -232,12 +289,57 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
     }
 
     public static class DescribeActiveMetricRuleListResponseBodyAlertListAlertEscalations extends TeaModel {
+        /**
+         * <p>The comparison operator of the threshold for critical-level alerts. Valid values:</p>
+         * <br>
+         * <p>*   GreaterThanOrEqualToThreshold: greater than or equal to the threshold</p>
+         * <p>*   GreaterThanThreshold: greater than the threshold</p>
+         * <p>*   LessThanOrEqualToThreshold: less than or equal to the threshold</p>
+         * <p>*   LessThanThreshold: less than the threshold</p>
+         * <p>*   NotEqualToThreshold: not equal to the threshold</p>
+         * <p>*   GreaterThanYesterday: greater than the metric value at the same time yesterday</p>
+         * <p>*   LessThanYesterday: less than the metric value at the same time yesterday</p>
+         * <p>*   GreaterThanLastWeek: greater than the metric value at the same time last week</p>
+         * <p>*   LessThanLastWeek: less than the metric value at the same time last week</p>
+         * <p>*   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
+         * <p>*   LessThanLastPeriod: less than the metric value in the last monitoring cycle</p>
+         */
         @NameInMap("Critical")
         public DescribeActiveMetricRuleListResponseBodyAlertListAlertEscalationsCritical critical;
 
+        /**
+         * <p>The comparison operator of the threshold for info-level alerts. Valid values:</p>
+         * <br>
+         * <p>*   GreaterThanOrEqualToThreshold: greater than or equal to the threshold</p>
+         * <p>*   GreaterThanThreshold: greater than the threshold</p>
+         * <p>*   LessThanOrEqualToThreshold: less than or equal to the threshold</p>
+         * <p>*   LessThanThreshold: less than the threshold</p>
+         * <p>*   NotEqualToThreshold: not equal to the threshold</p>
+         * <p>*   GreaterThanYesterday: greater than the metric value at the same time yesterday</p>
+         * <p>*   LessThanYesterday: less than the metric value at the same time yesterday</p>
+         * <p>*   GreaterThanLastWeek: greater than the metric value at the same time last week</p>
+         * <p>*   LessThanLastWeek: less than the metric value at the same time last week</p>
+         * <p>*   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
+         * <p>*   LessThanLastPeriod: less than the metric value in the last monitoring cycle</p>
+         */
         @NameInMap("Info")
         public DescribeActiveMetricRuleListResponseBodyAlertListAlertEscalationsInfo info;
 
+        /**
+         * <p>The comparison operator of the threshold for critical-level alerts. Valid values:</p>
+         * <br>
+         * <p>*   GreaterThanOrEqualToThreshold: greater than or equal to the threshold</p>
+         * <p>*   GreaterThanThreshold: greater than the threshold</p>
+         * <p>*   LessThanOrEqualToThreshold: less than or equal to the threshold</p>
+         * <p>*   LessThanThreshold: less than the threshold</p>
+         * <p>*   NotEqualToThreshold: not equal to the threshold</p>
+         * <p>*   GreaterThanYesterday: greater than the metric value at the same time yesterday</p>
+         * <p>*   LessThanYesterday: less than the metric value at the same time yesterday</p>
+         * <p>*   GreaterThanLastWeek: greater than the metric value at the same time last week</p>
+         * <p>*   LessThanLastWeek: less than the metric value at the same time last week</p>
+         * <p>*   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
+         * <p>*   LessThanLastPeriod: less than the metric value in the last monitoring cycle</p>
+         */
         @NameInMap("Warn")
         public DescribeActiveMetricRuleListResponseBodyAlertListAlertEscalationsWarn warn;
 
@@ -273,51 +375,111 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
     }
 
     public static class DescribeActiveMetricRuleListResponseBodyAlertListAlert extends TeaModel {
+        /**
+         * <p>The dimensions that specify the resources for which you want to query monitoring data.</p>
+         * <br>
+         * <p>The value is a collection of key-value pairs. A typical key-value pair is `instanceId:XXXXXX`.</p>
+         * <br>
+         * <p>The key and value must be 1 to 64 bytes in length, respectively. Excessive bytes are truncated from the string.</p>
+         * <br>
+         * <p>The key and value can contain letters, digits, periods (.), hyphens (-), underscores (\_), forward slashes (/), and backslashes (\\).</p>
+         * <br>
+         * <p>>  Dimensions must be organized in a JSON string and follow the required order.</p>
+         */
         @NameInMap("AlertState")
         public String alertState;
 
+        /**
+         * <p>The namespace of the service. For more information, see [Appendix 1: Metrics](~~163515~~).</p>
+         */
         @NameInMap("ContactGroups")
         public String contactGroups;
 
+        /**
+         * <p>Indicates whether the alert rule is enabled. Valid values:</p>
+         * <br>
+         * <p>*   true: The alert rule is enabled.</p>
+         * <p>*   false: The alert rule is disabled.</p>
+         */
         @NameInMap("Dimensions")
         public String dimensions;
 
+        /**
+         * <p>The time period during which the alert rule is ineffective.</p>
+         */
         @NameInMap("EffectiveInterval")
         public String effectiveInterval;
 
+        /**
+         * <p>The resources that are associated with the alert rule. A one-click alert rule is associated with all resources. The return value is fixed.</p>
+         */
         @NameInMap("EnableState")
         public Boolean enableState;
 
+        /**
+         * <p>The condition for triggering info-level alerts.</p>
+         */
         @NameInMap("Escalations")
         public DescribeActiveMetricRuleListResponseBodyAlertListAlertEscalations escalations;
 
         @NameInMap("MailSubject")
         public String mailSubject;
 
+        /**
+         * <p>The callback URL.</p>
+         */
         @NameInMap("MetricName")
         public String metricName;
 
+        /**
+         * <p>The time period during which the alert rule is effective.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The name of the alert rule.</p>
+         */
         @NameInMap("NoEffectiveInterval")
         public String noEffectiveInterval;
 
+        /**
+         * <p>The status of the alert rule. Valid values:</p>
+         * <br>
+         * <p>*   OK: The alert rule has no active alert.</p>
+         * <p>*   ALARM: The alert rule has at least one active alert.</p>
+         * <p>*   INSUFFICIENT_DATA: The alert rule has no data.</p>
+         */
         @NameInMap("Period")
         public String period;
 
+        /**
+         * <p>The conditions for triggering different levels of alerts.</p>
+         */
         @NameInMap("Resources")
         public String resources;
 
+        /**
+         * <p>The aggregation period of the monitoring data. Unit: seconds. The default value is the minimum aggregation period, indicating that the metric is polled at the highest frequency. Typically, you do not need to specify the minimum aggregation period.</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 
+        /**
+         * <p>The ID of the alert rule.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("SilenceTime")
         public String silenceTime;
 
+        /**
+         * <p>The alert group that receives alert notifications.</p>
+         */
         @NameInMap("Webhook")
         public String webhook;
 
@@ -476,51 +638,109 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
     }
 
     public static class DescribeActiveMetricRuleListResponseBodyDatapointsAlarm extends TeaModel {
+        /**
+         * <p>The beginning of the time period during which the alert rule is effective. Unit: hours. For example, the value 23 indicates `23:59:59`.</p>
+         */
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
+        /**
+         * <p>The namespace of the service. For more information, see [Appendix 1: Metrics](~~163515~~).</p>
+         */
         @NameInMap("ContactGroups")
         public String contactGroups;
 
+        /**
+         * <p>The details of the alert rules.</p>
+         */
         @NameInMap("Enable")
         public String enable;
 
+        /**
+         * <p>The end of the time period during which the alert rule is effective. Unit: hours. For example, the value 00 indicates `00:00:00`.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The callback URL.</p>
+         */
         @NameInMap("EvaluationCount")
         public String evaluationCount;
 
+        /**
+         * <p>The consecutive number of times for which the metric value meets the alert condition before an alert is triggered.</p>
+         */
         @NameInMap("MetricName")
         public String metricName;
 
+        /**
+         * <p>The name of the alert rule.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The comparison operator that is used in the alert rule. Valid values:</p>
+         * <br>
+         * <p>*   `>`</p>
+         * <p>*   `<`</p>
+         * <p>*   `>=`</p>
+         * <p>*   `<=`</p>
+         * <p>*   `=`</p>
+         * <p>*   `=`</p>
+         */
         @NameInMap("Period")
         public String period;
 
+        /**
+         * <p>The aggregation period of the monitoring data. Unit: seconds. The default value is the minimum aggregation period, indicating that the metric is polled at the highest frequency. Typically, you do not need to specify the minimum aggregation period.</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 
+        /**
+         * <p>The ID of the alert rule.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("SilenceTime")
         public String silenceTime;
 
+        /**
+         * <p>The threshold of the metric value.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The alert group that receives alert notifications.</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>Indicates whether the alert rule is enabled. Valid values:</p>
+         * <br>
+         * <p>*   true: The alert rule is enabled.</p>
+         * <p>*   false: The alert rule is disabled.</p>
+         */
         @NameInMap("Statistics")
         public String statistics;
 
+        /**
+         * <p>The statistical aggregation method.</p>
+         */
         @NameInMap("Threshold")
         public String threshold;
 
+        /**
+         * <p>Indicates whether the alert rule is enabled.</p>
+         */
         @NameInMap("Webhook")
         public String webhook;
 

@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateMonitorGroupInstancesRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
@@ -43,15 +46,29 @@ public class CreateMonitorGroupInstancesRequest extends TeaModel {
     }
 
     public static class CreateMonitorGroupInstancesRequestInstances extends TeaModel {
+        /**
+         * <p>The HTTP status code.</p>
+         * <br>
+         * <p>>  The status code 200 indicates that the call was successful.</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The ID of the request.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The operation that you want to perform. Set the value to **CreateMonitorGroupInstances**.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

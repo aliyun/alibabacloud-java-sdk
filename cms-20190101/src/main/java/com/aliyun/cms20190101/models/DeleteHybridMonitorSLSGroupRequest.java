@@ -7,6 +7,9 @@ public class DeleteHybridMonitorSLSGroupRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("SLSGroupName")
     public String SLSGroupName;
 

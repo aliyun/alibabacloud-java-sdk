@@ -4,18 +4,36 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteMetricRuleTargetsResponseBody extends TeaModel {
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The ID of the message resource that failed to be deleted.</p>
+     */
     @NameInMap("FailIds")
     public DeleteMetricRuleTargetsResponseBodyFailIds failIds;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The call was successful.</p>
+     * <p>*   false: The call failed.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The message resources that failed to be deleted.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -84,6 +102,9 @@ public class DeleteMetricRuleTargetsResponseBody extends TeaModel {
     }
 
     public static class DeleteMetricRuleTargetsResponseBodyFailIds extends TeaModel {
+        /**
+         * <p>Deletes the message resources of an alert rule. This operation supports only Message Service (MNS) resources.</p>
+         */
         @NameInMap("TargetIds")
         public DeleteMetricRuleTargetsResponseBodyFailIdsTargetIds targetIds;
 

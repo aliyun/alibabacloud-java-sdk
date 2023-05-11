@@ -4,15 +4,23 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutHybridMonitorMetricDataResponseBody extends TeaModel {
-    // 返回code
+    /**
+     * <p>The details of the invalid parameters.</p>
+     * <br>
+     * <p>If the request parameters that you set are invalid, the details of the invalid parameters are displayed.</p>
+     */
     @NameInMap("Code")
     public String code;
 
-    // 不合法的指标信息
+    /**
+     * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+     */
     @NameInMap("ErrorDetail")
     public java.util.List<PutHybridMonitorMetricDataResponseBodyErrorDetail> errorDetail;
 
-    // 请求的requestId
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,11 +54,9 @@ public class PutHybridMonitorMetricDataResponseBody extends TeaModel {
     }
 
     public static class PutHybridMonitorMetricDataResponseBodyErrorDetail extends TeaModel {
-        // 错误信息
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        // 错误数据在上报列表中的序号，从0开始
         @NameInMap("Index")
         public Long index;
 

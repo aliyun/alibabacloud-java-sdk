@@ -4,12 +4,20 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSiteMonitorAttributeRequest extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("IncludeAlert")
     public Boolean includeAlert;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

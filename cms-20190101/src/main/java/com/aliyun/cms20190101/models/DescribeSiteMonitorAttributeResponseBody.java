@@ -4,21 +4,39 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The call was successful.</p>
+     * <p>*   false: The call failed.</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The consecutive number of times for which the metric value is measured before an alert is triggered.</p>
+     */
     @NameInMap("MetricRules")
     public DescribeSiteMonitorAttributeResponseBodyMetricRules metricRules;
 
+    /**
+     * <p>The details of the site monitoring task.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The interval at which the site monitoring task is executed. Unit: minutes. Valid values: 1, 5, 15, 30, and 60.</p>
+     */
     @NameInMap("SiteMonitors")
     public DescribeSiteMonitorAttributeResponseBodySiteMonitors siteMonitors;
 
+    /**
+     * <p>The protocol that is used by the site monitoring task. Valid values: HTTP, HTTPS, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,51 +94,130 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeSiteMonitorAttributeResponseBodyMetricRulesMetricRule extends TeaModel {
+        /**
+         * <p>The alert threshold.</p>
+         */
         @NameInMap("ActionEnable")
         public String actionEnable;
 
+        /**
+         * <p>The name of the alert rule.</p>
+         */
         @NameInMap("AlarmActions")
         public String alarmActions;
 
+        /**
+         * <p>The dimension of the alert rule.</p>
+         */
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
+        /**
+         * <p>The status of the alert. Valid values:</p>
+         * <br>
+         * <p>*   OK: normal.</p>
+         * <p>*   ALARM: The alert is triggered.</p>
+         */
         @NameInMap("Dimensions")
         public String dimensions;
 
+        /**
+         * <p>The alert contact groups to which alert notifications are sent.</p>
+         */
         @NameInMap("EvaluationCount")
         public String evaluationCount;
 
+        /**
+         * <p>Indicates whether the alert rule is enabled. Valid values:</p>
+         * <br>
+         * <p>*   true: The alert rule is enabled.</p>
+         * <p>*   false: The alert rule is disabled.</p>
+         */
         @NameInMap("Expression")
         public String expression;
 
+        /**
+         * <p>This topic provides an example on how to query the details of a site monitoring task whose ID is `cc641dff-c19d-45f3-ad0a-818a0c4f****`. The returned result indicates that the task name is `test123`, the address that is monitored by the task is `https://aliyun.com`, and the name of the carrier is `Alibaba`.</p>
+         */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <p>The namespace of the cloud service.</p>
+         */
         @NameInMap("MetricName")
         public String metricName;
 
+        /**
+         * <p>The alert contact group to which alert notifications are sent.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The ID of the alert rule.</p>
+         */
         @NameInMap("OkActions")
         public String okActions;
 
+        /**
+         * <p>The expression that is used to trigger alerts.</p>
+         */
         @NameInMap("Period")
         public String period;
 
+        /**
+         * <p>The interval at which the monitoring data is queried. The value is the same as the interval at which metric data is reported. Unit: seconds.</p>
+         * <br>
+         * <p>>  If you specify a statistical period for the alert rule, raw data is queried based on the statistical period.</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 
+        /**
+         * <p>The comparison operator that is used in the alert rule. Valid values:</p>
+         * <br>
+         * <p>*   `>=`</p>
+         * <p>*   `>`</p>
+         * <p>*   `<=`</p>
+         * <p>*   `<`</p>
+         * <p>*   `=`</p>
+         * <p>*   `!=`</p>
+         * <p>*   GreaterThanYesterday: greater than the metric value at the same time yesterday</p>
+         * <p>*   LessThanYesterday: less than the metric value at the same time yesterday</p>
+         * <p>*   GreaterThanLastWeek: greater than the metric value at the same time last week</p>
+         * <p>*   LessThanLastWeek: less than the metric value at the same time last week</p>
+         * <p>*   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
+         * <p>*   LessThanLastPeriod: less than the metric value in the last monitoring cycle</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The severity of the alert. Valid values:</p>
+         * <br>
+         * <p>*   1: critical</p>
+         * <p>*   2: warning</p>
+         * <p>*   3: information</p>
+         */
         @NameInMap("StateValue")
         public String stateValue;
 
+        /**
+         * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+         */
         @NameInMap("Statistics")
         public String statistics;
 
+        /**
+         * <p>The statistical method of the alert rule. Valid values:</p>
+         * <br>
+         * <p>*   Availability: the percentage of available detection points</p>
+         * <p>*   AvailableNumber: the number of available detection points</p>
+         * <p>*   ErrorCodeMaximum: a status code for an alert</p>
+         * <p>*   ErrorCodeMinimum: all status codes for a set of alerts</p>
+         * <p>*   Average: response time</p>
+         */
         @NameInMap("Threshold")
         public String threshold;
 
@@ -279,15 +376,27 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeSiteMonitorAttributeResponseBodySiteMonitorsIspCitiesIspCity extends TeaModel {
+        /**
+         * <p>The ID of the carrier.</p>
+         */
         @NameInMap("City")
         public String city;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("CityName")
         public String cityName;
 
+        /**
+         * <p>The information of the alert rules that are configured for the site monitoring task.</p>
+         */
         @NameInMap("Isp")
         public String isp;
 
+        /**
+         * <p>The name of the city.</p>
+         */
         @NameInMap("IspName")
         public String ispName;
 
@@ -466,6 +575,9 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("match_rule")
         public Integer matchRule;
 
+        @NameInMap("min_tls_version")
+        public String minTlsVersion;
+
         @NameInMap("password")
         public String password;
 
@@ -624,6 +736,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             return this.matchRule;
         }
 
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setMinTlsVersion(String minTlsVersion) {
+            this.minTlsVersion = minTlsVersion;
+            return this;
+        }
+        public String getMinTlsVersion() {
+            return this.minTlsVersion;
+        }
+
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setPassword(String password) {
             this.password = password;
             return this;
@@ -715,27 +835,51 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeSiteMonitorAttributeResponseBodySiteMonitors extends TeaModel {
+        /**
+         * <p>The information of detection points. The information includes the carriers that provide the detection points and the cities where the detection points reside.</p>
+         */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <p>The name of the site monitoring task.</p>
+         */
         @NameInMap("Interval")
         public String interval;
 
+        /**
+         * <p>The name of the carrier.</p>
+         */
         @NameInMap("IspCities")
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsIspCities ispCities;
 
         @NameInMap("OptionJson")
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson optionJson;
 
+        /**
+         * <p>The ID of the city.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The ID of the site monitoring task.</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
+        /**
+         * <p>The address that is monitored by the site monitoring task.</p>
+         */
         @NameInMap("TaskState")
         public String taskState;
 
+        /**
+         * <p>The status of the site monitoring task. Valid values:</p>
+         * <br>
+         * <p>*   1: The task is enabled.</p>
+         * <p>*   2: The task is disabled.</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 

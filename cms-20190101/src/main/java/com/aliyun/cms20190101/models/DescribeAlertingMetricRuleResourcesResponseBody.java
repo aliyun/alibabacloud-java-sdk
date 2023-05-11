@@ -4,21 +4,44 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the application group.</p>
+     * <br>
+     * <p>>  If the alert rule is associated with an application group, the ID of the application group is returned in this parameter.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The relationship between multiple metrics. Valid values:</p>
+     * <br>
+     * <p>*   &&: If all metrics meet the alert conditions, CloudMonitor sends alert notifications.</p>
+     * <p>*   ||: If one of the metrics meets the alert conditions, CloudMonitor sends alert notifications.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The dimensions that specify the resources whose monitoring data you want to query.</p>
+     */
     @NameInMap("Resources")
     public DescribeAlertingMetricRuleResourcesResponseBodyResources resources;
 
+    /**
+     * <p>The tags of the instance.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The name of the metric.</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -76,12 +99,25 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalationResourceExpressionListExpressionList extends TeaModel {
+        /**
+         * <p>The statistical method of the alert level. Valid values:</p>
+         * <br>
+         * <p>*   Maximum: the maximum value</p>
+         * <p>*   Minimum: the minimum value</p>
+         * <p>*   Average: the average value</p>
+         */
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
+        /**
+         * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+         */
         @NameInMap("MetricName")
         public String metricName;
 
+        /**
+         * <p>Queries the resources for which active alerts are triggered based on an alert rule.</p>
+         */
         @NameInMap("Period")
         public String period;
 
@@ -158,30 +194,82 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalationResource extends TeaModel {
+        /**
+         * <p>The operator that is used to compare the metric value with the threshold. Valid values:</p>
+         * <br>
+         * <p>*   GreaterThanOrEqualToThreshold: greater than or equal to the threshold</p>
+         * <p>*   GreaterThanThreshold: greater than the threshold</p>
+         * <p>*   LessThanOrEqualToThreshold: less than or equal to the threshold</p>
+         * <p>*   LessThanThreshold: less than the threshold</p>
+         * <p>*   NotEqualToThreshold: not equal to the threshold</p>
+         * <p>*   GreaterThanYesterday: greater than the metric value at the same time yesterday</p>
+         * <p>*   LessThanYesterday: less than the metric value at the same time yesterday</p>
+         * <p>*   GreaterThanLastWeek: greater than the metric value at the same time last week</p>
+         * <p>*   LessThanLastWeek: less than the metric value at the same time last week</p>
+         * <p>*   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
+         * <p>*   LessThanLastPeriod: less than the metric value in the last monitoring cycle</p>
+         */
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
+        /**
+         * <p>The time when the resource was associated with the alert rule.</p>
+         * <br>
+         * <p>Unit: milliseconds.</p>
+         */
         @NameInMap("Expression")
         public String expression;
 
+        /**
+         * <p>The alert threshold.</p>
+         */
         @NameInMap("ExpressionList")
         public DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalationResourceExpressionList expressionList;
 
+        /**
+         * <p>The ID of the request.</p>
+         */
         @NameInMap("ExpressionListJoin")
         public String expressionListJoin;
 
+        @NameInMap("ExpressionRaw")
+        public String expressionRaw;
+
+        /**
+         * <p>The statistical period of the metric. Unit: seconds. The default value is the interval at which the monitoring data of the metric is collected.</p>
+         */
         @NameInMap("Level")
         public Integer level;
 
+        /**
+         * <p>The resources to which the alert rule is applied.</p>
+         */
         @NameInMap("PreCondition")
         public String preCondition;
 
+        /**
+         * <p>The number of entries to return on each page.</p>
+         * <br>
+         * <p>Default value: 10.</p>
+         */
         @NameInMap("Tag")
         public String tag;
 
+        /**
+         * <p>The severity level and notification method of the alert. Valid values:</p>
+         * <br>
+         * <p>*   4: Alert notifications are sent by using emails and DingTalk chatbots.</p>
+         * <br>
+         * <p><!----></p>
+         * <br>
+         * <p>*   OK: No alert is generated.</p>
+         */
         @NameInMap("Threshold")
         public String threshold;
 
+        /**
+         * <p>The type of the cloud service.</p>
+         */
         @NameInMap("Times")
         public Integer times;
 
@@ -220,6 +308,14 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
         }
         public String getExpressionListJoin() {
             return this.expressionListJoin;
+        }
+
+        public DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalationResource setExpressionRaw(String expressionRaw) {
+            this.expressionRaw = expressionRaw;
+            return this;
+        }
+        public String getExpressionRaw() {
+            return this.expressionRaw;
         }
 
         public DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalationResource setLevel(Integer level) {
@@ -284,57 +380,136 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeAlertingMetricRuleResourcesResponseBodyResourcesResource extends TeaModel {
+        /**
+         * <p>The alert threshold.</p>
+         */
         @NameInMap("Dimensions")
         public String dimensions;
 
+        /**
+         * <p>The name of the alert rule.</p>
+         */
         @NameInMap("Enable")
         public String enable;
 
+        /**
+         * <p>The ID of the alert rule.</p>
+         */
         @NameInMap("Escalation")
         public DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalation escalation;
 
+        /**
+         * <p>The total number of returned entries.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The method used to calculate metric values that trigger alerts.</p>
+         */
         @NameInMap("LastAlertTime")
         public String lastAlertTime;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("LastModifyTime")
         public String lastModifyTime;
 
+        /**
+         * <p>The ID of the application group. For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).</p>
+         */
         @NameInMap("Level")
         public Integer level;
 
+        /**
+         * <p>The ID of the alert rule. For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).</p>
+         */
         @NameInMap("MetricName")
         public String metricName;
 
+        /**
+         * <p>The description of the multi-metric alert rule.</p>
+         */
         @NameInMap("MetricValues")
         public String metricValues;
 
+        /**
+         * <p>The alert rule based on which the alert is triggered.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The dimensions that specify the resources whose monitoring data you want to query.</p>
+         */
         @NameInMap("ProductCategory")
         public String productCategory;
 
+        /**
+         * <p>The consecutive number of times for which the metric value meets the alert condition before an alert is triggered.</p>
+         */
         @NameInMap("Resource")
         public String resource;
 
+        /**
+         * <p>The operator that is used to compare the metric value with the threshold. Valid values:</p>
+         * <br>
+         * <p>*   GreaterThanOrEqualToThreshold: greater than or equal to the threshold</p>
+         * <p>*   GreaterThanThreshold: greater than the threshold</p>
+         * <p>*   LessThanOrEqualToThreshold: less than or equal to the threshold</p>
+         * <p>*   LessThanThreshold: less than the threshold</p>
+         * <p>*   NotEqualToThreshold: not equal to the threshold</p>
+         * <p>*   GreaterThanYesterday: greater than the metric value at the same time yesterday</p>
+         * <p>*   LessThanYesterday: less than the metric value at the same time yesterday</p>
+         * <p>*   GreaterThanLastWeek: greater than the metric value at the same time last week</p>
+         * <p>*   LessThanLastWeek: less than the metric value at the same time last week</p>
+         * <p>*   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
+         * <p>*   LessThanLastPeriod: less than the metric value in the last monitoring cycle</p>
+         */
         @NameInMap("RetryTimes")
         public String retryTimes;
 
+        /**
+         * <p>The description of the alert rule.</p>
+         * <br>
+         * <p>>  This parameter is the content of the alert rule. If the metric value meets the alert condition, an alert is triggered.</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 
+        /**
+         * <p>The alert threshold.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The severity level and notification method of the alert. Valid values:</p>
+         * <br>
+         * <p>*   4: Alert notifications are sent by using emails and DingTalk chatbots.</p>
+         * <br>
+         * <p><!----></p>
+         * <br>
+         * <p>*   OK: No alert is generated.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>Indicates whether the alert rule is enabled. Valid values:</p>
+         * <br>
+         * <p>*   true: The alert rule is enabled.</p>
+         * <p>*   false: The alert rule is disabled.</p>
+         */
         @NameInMap("Statistics")
         public String statistics;
 
+        /**
+         * <p>The number of the page to return.</p>
+         * <br>
+         * <p>Default value: 1.</p>
+         */
         @NameInMap("Threshold")
         public String threshold;
 

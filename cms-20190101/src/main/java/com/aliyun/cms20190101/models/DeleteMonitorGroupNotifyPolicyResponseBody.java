@@ -4,9 +4,15 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteMonitorGroupNotifyPolicyResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The operation that you want to perform. Set the value to **DeleteMonitorGroupNotifyPolicy**.</p>
+     */
     @NameInMap("Message")
     public String message;
 

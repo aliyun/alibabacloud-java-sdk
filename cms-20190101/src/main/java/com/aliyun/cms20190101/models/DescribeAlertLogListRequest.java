@@ -4,54 +4,121 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlertLogListRequest extends TeaModel {
+    /**
+     * <p>The start timestamp of the alert logs to be queried. Unit: milliseconds.</p>
+     */
     @NameInMap("ContactGroup")
     public String contactGroup;
 
+    /**
+     * <p>The alert contact group.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The alert information in a JSON string.</p>
+     */
     @NameInMap("GroupBy")
     public String groupBy;
 
+    /**
+     * <p>The operation that you want to perform. Set the value to **DescribeAlertLogList**.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The name of the blacklist policy.</p>
+     */
     @NameInMap("LastMin")
     public String lastMin;
 
+    /**
+     * <p>The webhook URLs of alert contacts.</p>
+     */
     @NameInMap("Level")
     public String level;
 
+    /**
+     * <p>The message returned for the alert callback.</p>
+     */
     @NameInMap("MetricName")
     public String metricName;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     * <br>
+     * <p>*   true: The call was successful.</p>
+     * <p>*   false: The call failed.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The severity level and notification methods of the alert. Valid values:</p>
+     * <br>
+     * <p>*   P4: Alert notifications are sent by using emails and DingTalk chatbots.</p>
+     * <br>
+     * <p><!----></p>
+     * <br>
+     * <p>*   OK: No alert is generated.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The email addresses of alert contacts.</p>
+     */
     @NameInMap("Product")
     public String product;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The phone numbers of alert contacts that can receive alert text messages.</p>
+     * <br>
+     * <p>>  This parameter can be returned only on the China site (aliyun.com).</p>
+     */
     @NameInMap("RuleId")
     public String ruleId;
 
+    /**
+     * <p>The identifier of the cloud service. Valid values:</p>
+     * <br>
+     * <p>*   If the cloud service is provided by Alibaba Cloud, the abbreviation of the service name is returned. Example: ECS.</p>
+     * <p>*   If the cloud service is not provided by Alibaba Cloud, a value in the `acs_Service keyword` format is returned. Example: acs_networkmonitor.</p>
+     */
     @NameInMap("RuleName")
     public String ruleName;
 
+    /**
+     * <p>The ID of the log.</p>
+     */
     @NameInMap("SearchKey")
     public String searchKey;
 
+    /**
+     * <p>The sending results of alert notifications.</p>
+     */
     @NameInMap("SendStatus")
     public String sendStatus;
 
+    /**
+     * <p>Indicates whether the alert level was changed. Valid values:</p>
+     * <br>
+     * <p>*   `P4->OK`: The alert level was changed from P4 to OK.</p>
+     * <p>*   `P4->P4`: The alert level was still P4.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

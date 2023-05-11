@@ -4,21 +4,40 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeHybridMonitorDataListRequest extends TeaModel {
+    /**
+     * <p>The interval at which monitoring data is collected.</p>
+     * <br>
+     * <p>Unit: seconds.</p>
+     */
     @NameInMap("End")
     public Long end;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call is successful.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Period")
     public String period;
 
+    /**
+     * <p>The operation that you want to perform. Set the value to **DescribeHybridMonitorDataList**.</p>
+     */
     @NameInMap("PromSQL")
     public String promSQL;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The metric values that are collected at different timestamps.</p>
+     */
     @NameInMap("Start")
     public Long start;
 

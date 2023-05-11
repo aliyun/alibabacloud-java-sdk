@@ -4,21 +4,39 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetricMetaListResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The total number of returned records.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Indicates whether the request was successful. The value true indicates success. The value false indicates failure.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The description of the metric.</p>
+     */
     @NameInMap("Resources")
     public DescribeMetricMetaListResponseBodyResources resources;
 
+    /**
+     * <p>The name of the metric.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The configuration of the metric.</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -76,27 +94,57 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
     }
 
     public static class DescribeMetricMetaListResponseBodyResourcesResource extends TeaModel {
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The statistical period of the metric. Multiple statistical periods are separated with commas (,).</p>
+         */
         @NameInMap("Dimensions")
         public String dimensions;
 
+        /**
+         * <p>The dimensions of the metric. Multiple dimensions are separated with commas (,).</p>
+         */
         @NameInMap("Labels")
         public String labels;
 
+        /**
+         * <p>The tags of the metric, including one or more JSON strings. Format: `[{"name":"tag name","value":"tag value"}]`. The `name` can be repeated.</p>
+         * <br>
+         * <p>The following tags are available:</p>
+         * <br>
+         * <p>*   metricCategory: the category of the metric.</p>
+         * <p>*   alertEnable: specifies whether to report alerts for the metric.</p>
+         * <p>*   alertUnit: the suggested unit of the metric value in alerts.</p>
+         * <p>*   unitFactor: the factor for metric unit conversion.</p>
+         * <p>*   minAlertPeriod: the minimum time interval to report a new alert.</p>
+         * <p>*   productCategory: the category of the service.</p>
+         */
         @NameInMap("MetricName")
         public String metricName;
 
+        /**
+         * <p>The statistical method. Multiple statistic methods are separated with commas (,).</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>This operation is usually used with DescribeMetricList and DescribeMetricLast. For more information, see [DescribeMetricList](~~51936~~) and [DescribeMetricLast](~~51939~~).</p>
+         */
         @NameInMap("Periods")
         public String periods;
 
         @NameInMap("Statistics")
         public String statistics;
 
+        /**
+         * <p>The namespace of the service. The value is usually in the format of acs_Service.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 

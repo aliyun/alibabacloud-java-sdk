@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutCustomEventResponseBody extends TeaModel {
+    /**
+     * <p>The operation that you want to perform. Set the value to **PutCustomEvent**.</p>
+     */
     @NameInMap("Code")
     public String code;
 
