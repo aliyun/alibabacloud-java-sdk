@@ -3329,17 +3329,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryDeviceStatusWithOptions(request, headers, runtime);
     }
 
-    public QueryHotelProductResponse queryHotelProductWithOptions(QueryHotelProductRequest tmpReq, QueryHotelProductHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        QueryHotelProductShrinkRequest request = new QueryHotelProductShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.userInfo)) {
-            request.userInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.userInfo, "UserInfo", "json");
+    public QueryHotelRoomDetailResponse queryHotelRoomDetailWithOptions(QueryHotelRoomDetailRequest request, QueryHotelRoomDetailHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.hotelId)) {
+            body.put("HotelId", request.hotelId);
         }
 
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.userInfoShrink)) {
-            query.put("UserInfo", request.userInfoShrink);
+        if (!com.aliyun.teautil.Common.isUnset(request.mac)) {
+            body.put("Mac", request.mac);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roomNo)) {
+            body.put("RoomNo", request.roomNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uuid)) {
+            body.put("Uuid", request.uuid);
         }
 
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
@@ -3357,26 +3363,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "QueryHotelProduct"),
+            new TeaPair("action", "QueryHotelRoomDetail"),
             new TeaPair("version", "ip_1.0"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/v1.0/ip/queryHotelProduct"),
+            new TeaPair("pathname", "/v1.0/ip/queryHotelRoomDetail"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryHotelProductResponse());
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryHotelRoomDetailResponse());
     }
 
-    public QueryHotelProductResponse queryHotelProduct(QueryHotelProductRequest request) throws Exception {
+    public QueryHotelRoomDetailResponse queryHotelRoomDetail(QueryHotelRoomDetailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        QueryHotelProductHeaders headers = new QueryHotelProductHeaders();
-        return this.queryHotelProductWithOptions(request, headers, runtime);
+        QueryHotelRoomDetailHeaders headers = new QueryHotelRoomDetailHeaders();
+        return this.queryHotelRoomDetailWithOptions(request, headers, runtime);
     }
 
     public QueryRoomControlDevicesResponse queryRoomControlDevicesWithOptions(QueryRoomControlDevicesRequest request, QueryRoomControlDevicesHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {

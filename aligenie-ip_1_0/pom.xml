@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>aligenieip_1_0</artifactId>
-  <version>1.0.20</version>
+  <version>1.0.21</version>
   <packaging>jar</packaging>
   <name>aligenieip_1_0</name>
   <description>Alibaba Cloud AliGenie (ip_1_0) SDK for Java

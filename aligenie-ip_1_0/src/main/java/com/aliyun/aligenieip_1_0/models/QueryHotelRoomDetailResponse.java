@@ -3,7 +3,7 @@ package com.aliyun.aligenieip_1_0.models;
 
 import com.aliyun.tea.*;
 
-public class QueryHotelProductResponse extends TeaModel {
+public class QueryHotelRoomDetailResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class QueryHotelProductResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public QueryHotelProductResponseBody body;
+    public QueryHotelRoomDetailResponseBody body;
 
-    public static QueryHotelProductResponse build(java.util.Map<String, ?> map) throws Exception {
-        QueryHotelProductResponse self = new QueryHotelProductResponse();
+    public static QueryHotelRoomDetailResponse build(java.util.Map<String, ?> map) throws Exception {
+        QueryHotelRoomDetailResponse self = new QueryHotelRoomDetailResponse();
         return TeaModel.build(map, self);
     }
 
-    public QueryHotelProductResponse setHeaders(java.util.Map<String, String> headers) {
+    public QueryHotelRoomDetailResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class QueryHotelProductResponse extends TeaModel {
         return this.headers;
     }
 
-    public QueryHotelProductResponse setStatusCode(Integer statusCode) {
+    public QueryHotelRoomDetailResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class QueryHotelProductResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public QueryHotelProductResponse setBody(QueryHotelProductResponseBody body) {
+    public QueryHotelRoomDetailResponse setBody(QueryHotelRoomDetailResponseBody body) {
         this.body = body;
         return this;
     }
-    public QueryHotelProductResponseBody getBody() {
+    public QueryHotelRoomDetailResponseBody getBody() {
         return this.body;
     }
 

@@ -123,6 +123,9 @@ public class ListHotelSceneItemsResponseBody extends TeaModel {
         @NameInMap("Icon")
         public String icon;
 
+        /**
+         * <p>id</p>
+         */
         @NameInMap("Id")
         public Long id;
 
