@@ -4,35 +4,41 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDnsProductInstancesRequest extends TeaModel {
+    @NameInMap("Direction")
+    public String direction;
+
     @NameInMap("DomainType")
     public String domainType;
 
     /**
-     * <p>The language type.</p>
+     * <p>The IP address of the client.</p>
      */
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("OrderBy")
+    public String orderBy;
+
     /**
-     * <p>The number of the page to return. Pages start from page **1**. Default value: **1**.</p>
+     * <p>The number of entries to return on each page. Maximum value: **100**. Default value: **20**.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: **100**. Default value: **20**.</p>
+     * <p>The version code of the Alibaba Cloud DNS instance.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The IP address of the client.</p>
+     * <p>The number of the page to return. Pages start from page **1**. Default value: **1**.</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
     /**
-     * <p>The version code of the Alibaba Cloud DNS instance.</p>
+     * <p>The total number of domain names.</p>
      */
     @NameInMap("VersionCode")
     public String versionCode;
@@ -40,6 +46,14 @@ public class DescribeDnsProductInstancesRequest extends TeaModel {
     public static DescribeDnsProductInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDnsProductInstancesRequest self = new DescribeDnsProductInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDnsProductInstancesRequest setDirection(String direction) {
+        this.direction = direction;
+        return this;
+    }
+    public String getDirection() {
+        return this.direction;
     }
 
     public DescribeDnsProductInstancesRequest setDomainType(String domainType) {
@@ -56,6 +70,14 @@ public class DescribeDnsProductInstancesRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public DescribeDnsProductInstancesRequest setOrderBy(String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    public String getOrderBy() {
+        return this.orderBy;
     }
 
     public DescribeDnsProductInstancesRequest setPageNumber(Long pageNumber) {

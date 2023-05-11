@@ -4,24 +4,39 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>RequestId</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The statistics.</p>
+     */
     @NameInMap("Statistics")
     public java.util.List<DescribeDomainResolveStatisticsSummaryResponseBodyStatistics> statistics;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalItems")
     public Integer totalItems;
 
+    /**
+     * <p>The total number of pages returned.</p>
+     */
     @NameInMap("TotalPages")
     public Integer totalPages;
 
@@ -79,12 +94,21 @@ public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel
     }
 
     public static class DescribeDomainResolveStatisticsSummaryResponseBodyStatistics extends TeaModel {
+        /**
+         * <p>The number of resolution requests.</p>
+         */
         @NameInMap("Count")
         public String count;
 
+        /**
+         * <p>The domain name.</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>The instance type. Valid values: PUBLIC and CACHE. PUBLIC indicates an authoritative domain name. CACHE indicates a cache-accelerated domain name.</p>
+         */
         @NameInMap("DomainType")
         public String domainType;
 

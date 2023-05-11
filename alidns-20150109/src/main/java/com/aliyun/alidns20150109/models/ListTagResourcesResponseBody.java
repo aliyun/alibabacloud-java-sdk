@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. If the NextToken parameter is empty, no next page exists.</p>
+     * <p>The token used to start the next query. If no value is returned for NextToken, no next queries are sent.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The unique ID of the request.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Details of the resource and tags, such as the resource ID, the resource type, tag keys, and tag values.</p>
+     * <p>Details of the resource and tags, including the resource ID, the resource type, tag keys, and tag values.</p>
      */
     @NameInMap("TagResources")
     public java.util.List<ListTagResourcesResponseBodyTagResources> tagResources;
@@ -59,7 +59,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The type of the resource. The returned parameter value is fixed to DOMAIN.</p>
+         * <p>The type of the resource. Only DOMAIN is returned.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;

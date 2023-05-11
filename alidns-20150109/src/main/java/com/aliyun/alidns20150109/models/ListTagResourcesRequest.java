@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>The language.</p>
+     * <p>The language in which you want some response parameters to be returned.</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <p>The token that determines the start point of the query.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -23,13 +23,13 @@ public class ListTagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resource.</p>
+     * <p>The resource type.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The key-value pairs of tags.</p>
+     * <p>An array of tag key-value pairs.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -81,13 +81,13 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of the tag.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of the tag.</p>
          */
         @NameInMap("Value")
         public String value;
