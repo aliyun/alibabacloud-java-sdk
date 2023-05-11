@@ -4,12 +4,18 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class GenerateVideoPlaylistResponseBody extends TeaModel {
+    /**
+     * <p>转码文件列表。</p>
+     */
     @NameInMap("AudioPlaylist")
     public java.util.List<GenerateVideoPlaylistResponseBodyAudioPlaylist> audioPlaylist;
 
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>转码文件列表。</p>
+     */
     @NameInMap("SubtitlePlaylist")
     public java.util.List<GenerateVideoPlaylistResponseBodySubtitlePlaylist> subtitlePlaylist;
 
@@ -19,6 +25,9 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
     @NameInMap("URI")
     public String URI;
 
+    /**
+     * <p>转码文件列表。</p>
+     */
     @NameInMap("VideoPlaylist")
     public java.util.List<GenerateVideoPlaylistResponseBodyVideoPlaylist> videoPlaylist;
 
@@ -76,9 +85,15 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
     }
 
     public static class GenerateVideoPlaylistResponseBodyAudioPlaylist extends TeaModel {
+        /**
+         * <p>转码生成的Token。用于LiveTranscoding访问的参数。</p>
+         */
         @NameInMap("Token")
         public String token;
 
+        /**
+         * <p>输出m3u8的OSS地址。地址规则为 Target.URI + ".m3u8“， 其中Target.URI为输入参数中视频转码输出地址前缀。</p>
+         */
         @NameInMap("URI")
         public String URI;
 
@@ -106,15 +121,27 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
     }
 
     public static class GenerateVideoPlaylistResponseBodySubtitlePlaylist extends TeaModel {
+        /**
+         * <p>字幕流编号，从0开始。</p>
+         */
         @NameInMap("Index")
         public Integer index;
 
+        /**
+         * <p>视频源中字幕流的语言。</p>
+         */
         @NameInMap("Language")
         public String language;
 
+        /**
+         * <p>转码生成的Token。用于LiveTranscoding访问的参数。</p>
+         */
         @NameInMap("Token")
         public String token;
 
+        /**
+         * <p>输出m3u8的OSS地址。地址规则为 Target.URI + “_” + Index + ".m3u8“， 其中Target.URI为输入参数中视频转码输出地址前缀。</p>
+         */
         @NameInMap("URI")
         public String URI;
 
@@ -158,9 +185,15 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
     }
 
     public static class GenerateVideoPlaylistResponseBodyVideoPlaylist extends TeaModel {
+        /**
+         * <p>转码生成的Token。用于LiveTranscoding访问的参数。</p>
+         */
         @NameInMap("Token")
         public String token;
 
+        /**
+         * <p>输出m3u8的OSS地址。地址规则为 Target.URI + ".m3u8“， 其中Target.URI为输入参数中视频转码输出地址前缀。</p>
+         */
         @NameInMap("URI")
         public String URI;
 

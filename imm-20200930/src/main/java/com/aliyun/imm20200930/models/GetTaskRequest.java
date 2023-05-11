@@ -7,6 +7,9 @@ public class GetTaskRequest extends TeaModel {
     @NameInMap("ProjectName")
     public String projectName;
 
+    @NameInMap("RequestDefinition")
+    public Boolean requestDefinition;
+
     @NameInMap("TaskId")
     public String taskId;
 
@@ -24,6 +27,14 @@ public class GetTaskRequest extends TeaModel {
     }
     public String getProjectName() {
         return this.projectName;
+    }
+
+    public GetTaskRequest setRequestDefinition(Boolean requestDefinition) {
+        this.requestDefinition = requestDefinition;
+        return this;
+    }
+    public Boolean getRequestDefinition() {
+        return this.requestDefinition;
     }
 
     public GetTaskRequest setTaskId(String taskId) {

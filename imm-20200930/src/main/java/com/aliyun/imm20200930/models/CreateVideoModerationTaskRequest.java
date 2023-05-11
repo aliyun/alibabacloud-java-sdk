@@ -13,6 +13,9 @@ public class CreateVideoModerationTaskRequest extends TeaModel {
     @NameInMap("MaxFrames")
     public Long maxFrames;
 
+    /**
+     * <p>消息通知配置，支持使用MNS、RocketMQ接收异步消息通知。</p>
+     */
     @NameInMap("Notification")
     public Notification notification;
 

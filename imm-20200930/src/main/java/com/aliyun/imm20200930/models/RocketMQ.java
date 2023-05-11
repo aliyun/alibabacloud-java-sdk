@@ -4,9 +4,6 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class RocketMQ extends TeaModel {
-    @NameInMap("Endpoint")
-    public String endpoint;
-
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -16,14 +13,6 @@ public class RocketMQ extends TeaModel {
     public static RocketMQ build(java.util.Map<String, ?> map) throws Exception {
         RocketMQ self = new RocketMQ();
         return TeaModel.build(map, self);
-    }
-
-    public RocketMQ setEndpoint(String endpoint) {
-        this.endpoint = endpoint;
-        return this;
-    }
-    public String getEndpoint() {
-        return this.endpoint;
     }
 
     public RocketMQ setInstanceId(String instanceId) {

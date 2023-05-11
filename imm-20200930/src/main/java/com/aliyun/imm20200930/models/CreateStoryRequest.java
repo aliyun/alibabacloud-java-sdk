@@ -22,6 +22,9 @@ public class CreateStoryRequest extends TeaModel {
     @NameInMap("MinFileCount")
     public Long minFileCount;
 
+    /**
+     * <p>消息通知配置，支持使用MNS、RocketMQ接收异步消息通知。</p>
+     */
     @NameInMap("Notification")
     public Notification notification;
 

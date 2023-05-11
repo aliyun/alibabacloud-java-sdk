@@ -1,3 +1,8 @@
+2023-05-11 Version: 2.1.13
+- Add RequestDefinition.
+- Hide  endpoint.
+- Fix width and height.
+
 2023-04-24 Version: 2.1.12
 - Remove deprecated structs.
 

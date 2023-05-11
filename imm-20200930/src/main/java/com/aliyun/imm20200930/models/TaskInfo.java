@@ -13,6 +13,9 @@ public class TaskInfo extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    @NameInMap("Progress")
+    public Integer progress;
+
     @NameInMap("StartTime")
     public String startTime;
 
@@ -24,6 +27,9 @@ public class TaskInfo extends TeaModel {
 
     @NameInMap("TaskId")
     public String taskId;
+
+    @NameInMap("TaskRequestDefinition")
+    public String taskRequestDefinition;
 
     @NameInMap("TaskType")
     public String taskType;
@@ -60,6 +66,14 @@ public class TaskInfo extends TeaModel {
         return this.message;
     }
 
+    public TaskInfo setProgress(Integer progress) {
+        this.progress = progress;
+        return this;
+    }
+    public Integer getProgress() {
+        return this.progress;
+    }
+
     public TaskInfo setStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -90,6 +104,14 @@ public class TaskInfo extends TeaModel {
     }
     public String getTaskId() {
         return this.taskId;
+    }
+
+    public TaskInfo setTaskRequestDefinition(String taskRequestDefinition) {
+        this.taskRequestDefinition = taskRequestDefinition;
+        return this;
+    }
+    public String getTaskRequestDefinition() {
+        return this.taskRequestDefinition;
     }
 
     public TaskInfo setTaskType(String taskType) {

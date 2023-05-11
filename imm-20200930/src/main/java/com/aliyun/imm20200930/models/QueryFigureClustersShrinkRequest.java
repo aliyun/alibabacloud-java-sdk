@@ -31,6 +31,9 @@ public class QueryFigureClustersShrinkRequest extends TeaModel {
     @NameInMap("UpdateTimeRange")
     public String updateTimeRangeShrink;
 
+    @NameInMap("WithTotalCount")
+    public Boolean withTotalCount;
+
     public static QueryFigureClustersShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryFigureClustersShrinkRequest self = new QueryFigureClustersShrinkRequest();
         return TeaModel.build(map, self);
@@ -106,6 +109,14 @@ public class QueryFigureClustersShrinkRequest extends TeaModel {
     }
     public String getUpdateTimeRangeShrink() {
         return this.updateTimeRangeShrink;
+    }
+
+    public QueryFigureClustersShrinkRequest setWithTotalCount(Boolean withTotalCount) {
+        this.withTotalCount = withTotalCount;
+        return this;
+    }
+    public Boolean getWithTotalCount() {
+        return this.withTotalCount;
     }
 
 }

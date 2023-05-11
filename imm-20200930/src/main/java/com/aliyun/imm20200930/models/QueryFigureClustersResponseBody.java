@@ -13,6 +13,9 @@ public class QueryFigureClustersResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TotalCount")
+    public Long totalCount;
+
     public static QueryFigureClustersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryFigureClustersResponseBody self = new QueryFigureClustersResponseBody();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class QueryFigureClustersResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public QueryFigureClustersResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
 }
