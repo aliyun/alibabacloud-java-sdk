@@ -4,6 +4,9 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class RefundApplyResponseBody extends TeaModel {
+    /**
+     * <p>请求 RequestId</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
