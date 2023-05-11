@@ -68,6 +68,9 @@ public class QueryDeviceVodUrlResponseBody extends TeaModel {
         @NameInMap("DecryptKey")
         public String decryptKey;
 
+        @NameInMap("StunInfo")
+        public String stunInfo;
+
         @NameInMap("VodUrl")
         public String vodUrl;
 
@@ -82,6 +85,14 @@ public class QueryDeviceVodUrlResponseBody extends TeaModel {
         }
         public String getDecryptKey() {
             return this.decryptKey;
+        }
+
+        public QueryDeviceVodUrlResponseBodyData setStunInfo(String stunInfo) {
+            this.stunInfo = stunInfo;
+            return this;
+        }
+        public String getStunInfo() {
+            return this.stunInfo;
         }
 
         public QueryDeviceVodUrlResponseBodyData setVodUrl(String vodUrl) {

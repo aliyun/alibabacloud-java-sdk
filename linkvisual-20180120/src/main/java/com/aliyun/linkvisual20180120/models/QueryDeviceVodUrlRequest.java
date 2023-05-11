@@ -7,6 +7,9 @@ public class QueryDeviceVodUrlRequest extends TeaModel {
     @NameInMap("DeviceName")
     public String deviceName;
 
+    @NameInMap("EnableStun")
+    public Boolean enableStun;
+
     @NameInMap("EncryptType")
     public Integer encryptType;
 
@@ -48,6 +51,14 @@ public class QueryDeviceVodUrlRequest extends TeaModel {
     }
     public String getDeviceName() {
         return this.deviceName;
+    }
+
+    public QueryDeviceVodUrlRequest setEnableStun(Boolean enableStun) {
+        this.enableStun = enableStun;
+        return this;
+    }
+    public Boolean getEnableStun() {
+        return this.enableStun;
     }
 
     public QueryDeviceVodUrlRequest setEncryptType(Integer encryptType) {

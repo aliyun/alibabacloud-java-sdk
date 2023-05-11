@@ -1805,6 +1805,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DeviceName", request.deviceName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableStun)) {
+            query.put("EnableStun", request.enableStun);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.encryptType)) {
             query.put("EncryptType", request.encryptType);
         }
@@ -1876,6 +1880,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.deviceName)) {
             query.put("DeviceName", request.deviceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableStun)) {
+            query.put("EnableStun", request.enableStun);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.encryptType)) {
@@ -2549,6 +2557,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.deviceName)) {
             query.put("DeviceName", request.deviceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableStun)) {
+            query.put("EnableStun", request.enableStun);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.encryptType)) {

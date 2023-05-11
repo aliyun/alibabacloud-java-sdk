@@ -65,23 +65,18 @@ public class QueryLiveStreamingResponseBody extends TeaModel {
     }
 
     public static class QueryLiveStreamingResponseBodyData extends TeaModel {
-        @NameInMap("DecryptKey")
-        public String decryptKey;
-
         @NameInMap("Path")
         public String path;
+
+        @NameInMap("RelayDecryptKey")
+        public String relayDecryptKey;
+
+        @NameInMap("StunInfo")
+        public String stunInfo;
 
         public static QueryLiveStreamingResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryLiveStreamingResponseBodyData self = new QueryLiveStreamingResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public QueryLiveStreamingResponseBodyData setDecryptKey(String decryptKey) {
-            this.decryptKey = decryptKey;
-            return this;
-        }
-        public String getDecryptKey() {
-            return this.decryptKey;
         }
 
         public QueryLiveStreamingResponseBodyData setPath(String path) {
@@ -90,6 +85,22 @@ public class QueryLiveStreamingResponseBody extends TeaModel {
         }
         public String getPath() {
             return this.path;
+        }
+
+        public QueryLiveStreamingResponseBodyData setRelayDecryptKey(String relayDecryptKey) {
+            this.relayDecryptKey = relayDecryptKey;
+            return this;
+        }
+        public String getRelayDecryptKey() {
+            return this.relayDecryptKey;
+        }
+
+        public QueryLiveStreamingResponseBodyData setStunInfo(String stunInfo) {
+            this.stunInfo = stunInfo;
+            return this;
+        }
+        public String getStunInfo() {
+            return this.stunInfo;
         }
 
     }
