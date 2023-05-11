@@ -4,9 +4,15 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeExporterOutputListRequest extends TeaModel {
+    /**
+     * <p>The number of the page to return. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

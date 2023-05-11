@@ -4,27 +4,55 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
+    /**
+     * <p>The account that is used to create the namespace.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The metrics.</p>
+     */
     @NameInMap("DescribeHybridMonitorNamespace")
     public java.util.List<DescribeHybridMonitorNamespaceListResponseBodyDescribeHybridMonitorNamespace> describeHybridMonitorNamespace;
 
+    /**
+     * <p>The ID of the namespace.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The timestamp that was generated when the namespace was last modified.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>A minimum of 1 entry can be returned on each page. Default value: 10.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The namespace for the Alibaba Cloud service.</p>
+     */
     @NameInMap("Success")
     public String success;
 
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -128,9 +156,17 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
     }
 
     public static class DescribeHybridMonitorNamespaceListResponseBodyDescribeHybridMonitorNamespaceAliyunProductMetricListNamespaceList extends TeaModel {
+        /**
+         * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+         */
         @NameInMap("MetricList")
         public java.util.List<DescribeHybridMonitorNamespaceListResponseBodyDescribeHybridMonitorNamespaceAliyunProductMetricListNamespaceListMetricList> metricList;
 
+        /**
+         * <p>The interval at which metrics are collected.</p>
+         * <br>
+         * <p>Unit: seconds.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
@@ -158,9 +194,15 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
     }
 
     public static class DescribeHybridMonitorNamespaceListResponseBodyDescribeHybridMonitorNamespaceAliyunProductMetricList extends TeaModel {
+        /**
+         * <p>The list of namespaces.</p>
+         */
         @NameInMap("NamespaceList")
         public java.util.List<DescribeHybridMonitorNamespaceListResponseBodyDescribeHybridMonitorNamespaceAliyunProductMetricListNamespaceList> namespaceList;
 
+        /**
+         * <p>The ID of the request.</p>
+         */
         @NameInMap("UserId")
         public Long userId;
 
@@ -199,6 +241,9 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
     }
 
     public static class DescribeHybridMonitorNamespaceListResponseBodyDescribeHybridMonitorNamespaceDetail extends TeaModel {
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("Spec")
         public String spec;
 
@@ -218,30 +263,62 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
     }
 
     public static class DescribeHybridMonitorNamespaceListResponseBodyDescribeHybridMonitorNamespace extends TeaModel {
+        /**
+         * <p>Indicates whether the namespace is deleted. Valid values:</p>
+         * <br>
+         * <p>*   0: The namespace is not deleted.</p>
+         * <p>*   1: The namespace is deleted.</p>
+         */
         @NameInMap("AliyunProductMetricList")
         public java.util.List<DescribeHybridMonitorNamespaceListResponseBodyDescribeHybridMonitorNamespaceAliyunProductMetricList> aliyunProductMetricList;
 
+        /**
+         * <p>The keyword that is used to search for namespaces.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The number of metric import tasks for third-party services.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the namespace.</p>
+         * <br>
+         * <p>The name can contain uppercase letters, lowercase letters, digits, and hyphens (-).</p>
+         */
         @NameInMap("Detail")
         public DescribeHybridMonitorNamespaceListResponseBodyDescribeHybridMonitorNamespaceDetail detail;
 
+        /**
+         * <p>The list of metrics for the Alibaba Cloud service.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The details of the data retention period.</p>
+         */
         @NameInMap("IsDelete")
         public Integer isDelete;
 
+        /**
+         * <p>The name of the namespace.</p>
+         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        /**
+         * <p>The configuration details of metric import tasks for Alibaba Cloud services.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("NotAliyunTaskNumber")
         public Long notAliyunTaskNumber;
 

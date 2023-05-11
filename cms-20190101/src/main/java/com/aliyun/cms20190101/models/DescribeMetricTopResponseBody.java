@@ -4,18 +4,27 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetricTopResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Datapoints")
     public String datapoints;
 
+    /**
+     * <p>The monitoring data.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Period")
     public String period;
 
+    /**
+     * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

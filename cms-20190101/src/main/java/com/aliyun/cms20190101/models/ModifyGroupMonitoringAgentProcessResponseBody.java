@@ -4,9 +4,17 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class ModifyGroupMonitoringAgentProcessResponseBody extends TeaModel {
+    /**
+     * <p>The number of times for which the threshold can be consecutively exceeded. Valid values of N: 1 to 200. Default value: 3.</p>
+     * <br>
+     * <p>>  A metric triggers an alert only after the metric value reaches the threshold consecutively for the specified times.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Message")
     public String message;
 

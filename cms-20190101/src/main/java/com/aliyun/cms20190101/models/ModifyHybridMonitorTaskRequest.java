@@ -7,21 +7,38 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
     @NameInMap("AttachLabels")
     public java.util.List<ModifyHybridMonitorTaskRequestAttachLabels> attachLabels;
 
+    /**
+     * <p>The value of the key that is used to filter logs imported from Log Service.</p>
+     */
     @NameInMap("CollectInterval")
     public String collectInterval;
 
+    /**
+     * <p>The operation that you want to perform. Set the value to **ModifyHybridMonitorTask**.</p>
+     */
     @NameInMap("Description")
     public String description;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>None.</p>
+     */
     @NameInMap("SLSProcessConfig")
     public ModifyHybridMonitorTaskRequestSLSProcessConfig SLSProcessConfig;
 
+    /**
+     * <p>The tag value of the metric.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 
@@ -87,9 +104,15 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
     }
 
     public static class ModifyHybridMonitorTaskRequestAttachLabels extends TeaModel {
+        /**
+         * <p>The alias of the aggregation result.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The error message.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -117,9 +140,20 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
     }
 
     public static class ModifyHybridMonitorTaskRequestSLSProcessConfigExpress extends TeaModel {
+        /**
+         * <p>The interval at which metrics are collected. Valid values:</p>
+         * <br>
+         * <p>*   15</p>
+         * <p>*   60</p>
+         * <br>
+         * <p>Unit: seconds.</p>
+         */
         @NameInMap("Alias")
         public String alias;
 
+        /**
+         * <p>The name of the key that is used to filter logs imported from Log Service.</p>
+         */
         @NameInMap("Express")
         public String express;
 
@@ -147,12 +181,32 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
     }
 
     public static class ModifyHybridMonitorTaskRequestSLSProcessConfigFilterFilters extends TeaModel {
+        /**
+         * <p>The extended field that specifies the result of basic operations performed on aggregation results.</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <p>The method that is used to filter logs imported from Log Service. Valid values:</p>
+         * <br>
+         * <p>*   `contain`: contains</p>
+         * <p>*   `notContain`: does not contain</p>
+         * <p>*   `>`: greater than</p>
+         * <p>*   `<`: less than</p>
+         * <p>*   `=`: equal to</p>
+         * <p>*   `! =`: not equal to</p>
+         * <p>*   `>=`: greater than or equal to</p>
+         * <p>*   `<=`: less than or equal to</p>
+         */
         @NameInMap("SLSKeyName")
         public String SLSKeyName;
 
+        /**
+         * <p>The name of the metric import task.</p>
+         * <br>
+         * <p>For information about how to obtain the ID of a metric import task, see [DescribeHybridMonitorTaskList](~~428624~~).</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -188,9 +242,17 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
     }
 
     public static class ModifyHybridMonitorTaskRequestSLSProcessConfigFilter extends TeaModel {
+        /**
+         * <p>The conditions that are used to filter logs imported from Log Service.</p>
+         */
         @NameInMap("Filters")
         public java.util.List<ModifyHybridMonitorTaskRequestSLSProcessConfigFilterFilters> filters;
 
+        /**
+         * <p>The ID of the metric import task.</p>
+         * <br>
+         * <p>For information about how to obtain the ID of a metric import task, see [DescribeHybridMonitorTaskList](~~428624~~).</p>
+         */
         @NameInMap("Relation")
         public String relation;
 
@@ -218,9 +280,18 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
     }
 
     public static class ModifyHybridMonitorTaskRequestSLSProcessConfigGroupBy extends TeaModel {
+        /**
+         * <p>The relationship between multiple filter conditions. Valid values:</p>
+         * <br>
+         * <p>*   and (default value): Logs are processed only if all filter conditions are met.</p>
+         * <p>*   or: Logs are processed if one of the filter conditions is met.</p>
+         */
         @NameInMap("Alias")
         public String alias;
 
+        /**
+         * <p>The tag key of the metric.</p>
+         */
         @NameInMap("SLSKeyName")
         public String SLSKeyName;
 
@@ -311,12 +382,21 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
     }
 
     public static class ModifyHybridMonitorTaskRequestSLSProcessConfig extends TeaModel {
+        /**
+         * <p>The name of the key that is used to aggregate logs imported from Log Service.</p>
+         */
         @NameInMap("Express")
         public java.util.List<ModifyHybridMonitorTaskRequestSLSProcessConfigExpress> express;
 
+        /**
+         * <p>The configurations of the logs that are imported from Log Service.</p>
+         */
         @NameInMap("Filter")
         public ModifyHybridMonitorTaskRequestSLSProcessConfigFilter filter;
 
+        /**
+         * <p>The description of the metric import task.</p>
+         */
         @NameInMap("GroupBy")
         public java.util.List<ModifyHybridMonitorTaskRequestSLSProcessConfigGroupBy> groupBy;
 

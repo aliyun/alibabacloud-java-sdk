@@ -10,6 +10,9 @@ public class DeleteEventRuleTargetsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the target. Valid values of N: 1 to 20.</p>
+     */
     @NameInMap("RuleName")
     public String ruleName;
 

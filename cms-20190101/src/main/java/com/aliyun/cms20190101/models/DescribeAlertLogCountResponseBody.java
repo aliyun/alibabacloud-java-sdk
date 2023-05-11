@@ -4,18 +4,38 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlertLogCountResponseBody extends TeaModel {
+    /**
+     * <p>The statistics of alert logs.</p>
+     */
     @NameInMap("AlertLogCount")
     public java.util.List<DescribeAlertLogCountResponseBodyAlertLogCount> alertLogCount;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>> The status code 200 indicates that the request was successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +85,15 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
     }
 
     public static class DescribeAlertLogCountResponseBodyAlertLogCountLogs extends TeaModel {
+        /**
+         * <p>The name of the dimension field based on which alert logs are aggregated.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The value of the dimension field based on which alert logs are aggregated.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -95,9 +121,15 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
     }
 
     public static class DescribeAlertLogCountResponseBodyAlertLogCount extends TeaModel {
+        /**
+         * <p>The number of alert logs.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The details about alert logs.</p>
+         */
         @NameInMap("Logs")
         public java.util.List<DescribeAlertLogCountResponseBodyAlertLogCountLogs> logs;
 

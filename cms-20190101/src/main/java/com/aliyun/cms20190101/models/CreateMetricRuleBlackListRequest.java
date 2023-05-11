@@ -4,15 +4,31 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateMetricRuleBlackListRequest extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
+     */
     @NameInMap("Category")
     public String category;
 
+    /**
+     * <p>The ID of the application group. The value of this parameter is a JSON array.</p>
+     * <br>
+     * <p>>  This parameter is required only if the `ScopeType` parameter is set to `GROUP`.</p>
+     */
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
+    /**
+     * <p>The operation that you want to perform. Set the value to **CreateMetricRuleBlackList**.</p>
+     */
     @NameInMap("EnableEndTime")
     public String enableEndTime;
 
+    /**
+     * <p>The ID of the blacklist policy.</p>
+     */
     @NameInMap("EnableStartTime")
     public String enableStartTime;
 
@@ -22,18 +38,36 @@ public class CreateMetricRuleBlackListRequest extends TeaModel {
     @NameInMap("Metrics")
     public java.util.List<CreateMetricRuleBlackListRequestMetrics> metrics;
 
+    /**
+     * <p>The category of the cloud service. For example, ApsaraDB for Redis includes the following categories: ApsaraDB for Redis (standard architecture), ApsaraDB for Redis (cluster architecture), and ApsaraDB for Redis (read/write splitting architecture). In this case, the valid values of this parameter for ApsaraDB for Redis include `kvstore_standard`, `kvstore_sharding`, and `kvstore_splitrw`.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The timestamp when the blacklist policy expires.</p>
+     * <br>
+     * <p>Unit: milliseconds.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The IDs of instances that belong to the specified cloud service. The value of this parameter is a JSON array.</p>
+     * <br>
+     * <p>Valid values of N: 1 to 20.</p>
+     */
     @NameInMap("ScopeType")
     public String scopeType;
 
+    /**
+     * <p>The extended dimension of the instance. For example, `{"device":"C:"}` specifies that the blacklist policy is applied to all C disks of the specified Elastic Compute Service (ECS) instance.</p>
+     * <br>
+     * <p>Valid values of N: 1 to 10</p>
+     */
     @NameInMap("ScopeValue")
     public String scopeValue;
 
@@ -131,9 +165,17 @@ public class CreateMetricRuleBlackListRequest extends TeaModel {
     }
 
     public static class CreateMetricRuleBlackListRequestMetrics extends TeaModel {
+        /**
+         * <p>The timestamp when the blacklist policy starts to take effect.</p>
+         * <br>
+         * <p>Unit: milliseconds.</p>
+         */
         @NameInMap("MetricName")
         public String metricName;
 
+        /**
+         * <p>The name of the blacklist policy.</p>
+         */
         @NameInMap("Resource")
         public String resource;
 

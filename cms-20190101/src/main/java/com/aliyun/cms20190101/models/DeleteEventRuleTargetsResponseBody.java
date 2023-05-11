@@ -4,15 +4,27 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteEventRuleTargetsResponseBody extends TeaModel {
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Deletes the targets to which alert notifications are sent based on an event-triggered alert rule.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

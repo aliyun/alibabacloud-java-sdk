@@ -4,15 +4,30 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class UninstallMonitoringAgentResponseBody extends TeaModel {
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The call was successful.</p>
+     * <p>*   false: The call failed.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>>  This API operation is not applicable to ECS instances. To uninstall the agent from an ECS instance, see [Install and uninstall the Cloud Monitor agent](~~183482~~).</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

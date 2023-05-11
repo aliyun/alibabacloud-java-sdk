@@ -4,12 +4,26 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutEventRuleResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>The level of the event-triggered alert rule. Valid values of N: 1 to 50. Valid values:</p>
+     * <br>
+     * <p>*   CRITICAL: critical</p>
+     * <p>*   WARN: warning</p>
+     * <p>*   INFO: information</p>
+     * <p>*   \*: all levels</p>
+     */
     @NameInMap("Message")
     public String message;
 

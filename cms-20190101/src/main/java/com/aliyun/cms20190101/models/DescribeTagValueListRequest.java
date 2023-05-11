@@ -4,15 +4,28 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagValueListRequest extends TeaModel {
+    /**
+     * <p>The key of the tag whose values you want to query.</p>
+     * <br>
+     * <p>For more information about how to obtain a tag key, see [DescribeTagKeyList](~~145558~~).</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The value 200 indicates that the call was successful.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("TagKey")
     public String tagKey;
 

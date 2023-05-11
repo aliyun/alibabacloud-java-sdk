@@ -4,27 +4,52 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMonitorGroupInstanceAttributeRequest extends TeaModel {
+    /**
+     * <p>The keyword that is used to search for resources.</p>
+     */
     @NameInMap("Category")
     public String category;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
+     */
     @NameInMap("GroupId")
     public Long groupId;
 
+    /**
+     * <p>The ID of the application group.</p>
+     */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
+    /**
+     * <p>The ID of the vSwitch to which the instance belongs.</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
+    /**
+     * <p>The operation that you want to perform. Set the value to **DescribeMonitorGroupInstanceAttribute**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The abbreviation of the Alibaba Cloud service name.</p>
+     * <br>
+     * <p>To obtain the abbreviation of an Alibaba Cloud service name, call the [DescribeProjectMeta](~~114916~~) operation. The `metricCategory` tag in the `Labels` response parameter indicates the abbreviation of the Alibaba Cloud service name.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Total")
     public Boolean total;
 

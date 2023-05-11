@@ -7,6 +7,9 @@ public class DescribeMonitorResourceQuotaAttributeRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the instance to be monitored.</p>
+     */
     @NameInMap("ShowUsed")
     public Boolean showUsed;
 

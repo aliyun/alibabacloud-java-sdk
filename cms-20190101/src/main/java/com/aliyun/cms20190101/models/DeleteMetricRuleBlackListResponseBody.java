@@ -4,15 +4,24 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteMetricRuleBlackListResponseBody extends TeaModel {
+    /**
+     * <p>The operation that you want to perform. Set the value to **DeleteMetricRuleBlackList**.</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Count")
     public Integer count;
 
+    /**
+     * <p>The number of blacklist policies that are deleted.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

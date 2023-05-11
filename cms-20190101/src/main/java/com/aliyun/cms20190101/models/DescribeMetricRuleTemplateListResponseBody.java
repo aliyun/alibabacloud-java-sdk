@@ -4,21 +4,44 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
+    /**
+     * <p>The timestamp when the alert template was applied to the application group.</p>
+     * <br>
+     * <p>Unit: milliseconds.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The list of alert templates.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The keyword of the alert template name.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The ID of the alert template.</p>
+     */
     @NameInMap("Templates")
     public DescribeMetricRuleTemplateListResponseBodyTemplates templates;
 
+    /**
+     * <p>The sorting basis. Default value: gmtCreate. Valid values:</p>
+     * <br>
+     * <p>*   gmtMotified: Sorts alert templates by modification time.</p>
+     * <p>*   gmtCreate: Sorts alert templates by creation time.</p>
+     */
     @NameInMap("Total")
     public Long total;
 
@@ -79,6 +102,9 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
         @NameInMap("ApplyTime")
         public Long applyTime;
 
+        /**
+         * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+         */
         @NameInMap("GroupId")
         public Long groupId;
 
@@ -136,24 +162,50 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
     }
 
     public static class DescribeMetricRuleTemplateListResponseBodyTemplatesTemplate extends TeaModel {
+        /**
+         * <p>The ID of the request.</p>
+         */
         @NameInMap("ApplyHistories")
         public DescribeMetricRuleTemplateListResponseBodyTemplatesTemplateApplyHistories applyHistories;
 
+        /**
+         * <p>The order in which you want to sort alert templates. Default value: true. Valid values:</p>
+         * <br>
+         * <p>*   true: ascending order</p>
+         * <p>*   false: descending order</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the application group.</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>The number of the page to return.</p>
+         * <br>
+         * <p>Default value: 1</p>
+         */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>The application history of the alert template.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the alert template.</p>
+         */
         @NameInMap("RestVersion")
         public Long restVersion;
 
+        /**
+         * <p>The description of the alert template.</p>
+         */
         @NameInMap("TemplateId")
         public Long templateId;
 

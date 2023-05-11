@@ -4,18 +4,36 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetricRuleCountResponseBody extends TeaModel {
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The number of alert rules without active alerts.</p>
+     */
     @NameInMap("MetricRuleCount")
     public DescribeMetricRuleCountResponseBodyMetricRuleCount metricRuleCount;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The call was successful.</p>
+     * <p>*   false: The call failed.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of alert rules in each state.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -68,15 +86,27 @@ public class DescribeMetricRuleCountResponseBody extends TeaModel {
         @NameInMap("Alarm")
         public Integer alarm;
 
+        /**
+         * <p>The total number of alert rules.</p>
+         */
         @NameInMap("Disable")
         public Integer disable;
 
+        /**
+         * <p>The number of disabled alert rules.</p>
+         */
         @NameInMap("Nodata")
         public Integer nodata;
 
+        /**
+         * <p>The number of alert rules without data.</p>
+         */
         @NameInMap("Ok")
         public Integer ok;
 
+        /**
+         * <p>The number of alert rules with active alerts.</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

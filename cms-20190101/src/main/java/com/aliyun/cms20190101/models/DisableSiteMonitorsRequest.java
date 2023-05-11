@@ -7,6 +7,9 @@ public class DisableSiteMonitorsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The IDs of the site monitoring tasks. Separate multiple IDs with commas (,).</p>
+     */
     @NameInMap("TaskIds")
     public String taskIds;
 

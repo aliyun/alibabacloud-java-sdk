@@ -4,39 +4,99 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSystemEventAttributeRequest extends TeaModel {
+    /**
+     * <p>The end of the time range to query.</p>
+     * <br>
+     * <p>The value must be a UNIX timestamp. It is the number of seconds that have elapsed since 00:00:00 UTC, January 1, 1970.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The type of the system event.</p>
+     * <br>
+     * <p>>  You can call the [DescribeSystemEventMetaList](~~114972~~) operation to query the types of system events.</p>
+     */
     @NameInMap("EventType")
     public String eventType;
 
+    /**
+     * <p>The ID of the application group.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The level of the system event. Valid values:</p>
+     * <br>
+     * <p>*   CRITICAL: critical</p>
+     * <p>*   WARN: warning</p>
+     * <p>*   INFO: information</p>
+     */
     @NameInMap("Level")
     public String level;
 
+    /**
+     * <p>The name of the system event.</p>
+     * <br>
+     * <p>>  You can call the [DescribeSystemEventMetaList](~~114972~~) operation to query the names of system events.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Valid values: 1 to 100000000.</p>
+     * <br>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Valid values: 1 to 100.</p>
+     * <br>
+     * <p>Default value: 10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The abbreviation of the service name.</p>
+     * <br>
+     * <p>>  You can call the [DescribeSystemEventMetaList](~~114972~~) operation to query the abbreviations of service names.</p>
+     */
     @NameInMap("Product")
     public String product;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The keywords that are used to search for the system event. Valid values:</p>
+     * <br>
+     * <p>*   If you want to search for the system event whose content contains a and b, set the value to `a and b`.</p>
+     * <p>*   If you want to search for the system event whose content contains a or b, set the value to `a or b`.</p>
+     */
     @NameInMap("SearchKeywords")
     public String searchKeywords;
 
+    /**
+     * <p>The beginning of the time range to query.</p>
+     * <br>
+     * <p>The value must be a UNIX timestamp. It is the number of seconds that have elapsed since 00:00:00 UTC, January 1, 1970.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The status of the system event.</p>
+     * <br>
+     * <p>>  You can call the [DescribeSystemEventMetaList](~~114972~~) operation to query the statuses of system events.</p>
+     */
     @NameInMap("Status")
     public String status;
 

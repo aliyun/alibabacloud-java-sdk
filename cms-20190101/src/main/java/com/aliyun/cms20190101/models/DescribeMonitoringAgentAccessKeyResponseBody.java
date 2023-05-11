@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMonitoringAgentAccessKeyResponseBody extends TeaModel {
+    /**
+     * <p>The AccessKey ID that is required to install the agent.</p>
+     */
     @NameInMap("AccessKey")
     public String accessKey;
 
@@ -13,12 +16,23 @@ public class DescribeMonitoringAgentAccessKeyResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
+     */
     @NameInMap("SecretKey")
     public String secretKey;
 
+    /**
+     * <p>The operation that you want to perform. Set the value to **DescribeMonitoringAgentAccessKey**.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

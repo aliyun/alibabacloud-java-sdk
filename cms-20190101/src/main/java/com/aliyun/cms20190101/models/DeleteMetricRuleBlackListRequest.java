@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteMetricRuleBlackListRequest extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Id")
     public String id;
 

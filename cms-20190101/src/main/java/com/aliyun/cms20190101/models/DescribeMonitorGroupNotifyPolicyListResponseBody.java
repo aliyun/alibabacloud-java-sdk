@@ -4,21 +4,43 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the application group.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The policies that were returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The type of the policy.</p>
+     * <br>
+     * <p>Valid value: PauseNotify.</p>
+     */
     @NameInMap("NotifyPolicyList")
     public DescribeMonitorGroupNotifyPolicyListResponseBodyNotifyPolicyList notifyPolicyList;
 
+    /**
+     * <p>The operation that you want to perform. Set the value to **DescribeMonitorGroupNotifyPolicyList**.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Success")
     public String success;
 
+    /**
+     * <p>The timestamp that specifies the beginning of the time range to query.</p>
+     * <br>
+     * <p>Unit: milliseconds.</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -76,6 +98,9 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
     }
 
     public static class DescribeMonitorGroupNotifyPolicyListResponseBodyNotifyPolicyListNotifyPolicy extends TeaModel {
+        /**
+         * <p>The ID of the policy.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
@@ -85,9 +110,15 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The ID of the request.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>The ID of the application group.</p>
+         */
         @NameInMap("Type")
         public String type;
 

@@ -4,18 +4,35 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSystemEventMetaListResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The detailed meta information.</p>
+     */
     @NameInMap("Data")
     public DescribeSystemEventMetaListResponseBodyData data;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The call was successful.</p>
+     * <p>*   false: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,27 +82,56 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
     }
 
     public static class DescribeSystemEventMetaListResponseBodyDataResource extends TeaModel {
+        /**
+         * <p>The type of the system event. Valid values:</p>
+         * <br>
+         * <p>*   StatusNotification</p>
+         * <p>*   Exception</p>
+         * <p>*   Maintenance</p>
+         */
         @NameInMap("EventType")
         public String eventType;
 
+        /**
+         * <p>The level of the alert. Valid values:</p>
+         * <br>
+         * <p>*   CRITICAL</p>
+         * <p>*   WARN</p>
+         * <p>*   INFO</p>
+         */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <p>The name of the system event.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The description of the system event, in Chinese.</p>
+         */
         @NameInMap("NameDesc")
         public String nameDesc;
 
         @NameInMap("NameDesc.En")
         public String nameDesc_en;
 
+        /**
+         * <p>The abbreviation of the service name.</p>
+         */
         @NameInMap("Product")
         public String product;
 
+        /**
+         * <p>The status of the system event.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The description of the event status.</p>
+         */
         @NameInMap("StatusDesc")
         public String statusDesc;
 

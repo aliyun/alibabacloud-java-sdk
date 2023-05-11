@@ -3,7 +3,7 @@ package com.aliyun.cms20190101.models;
 
 import com.aliyun.tea.*;
 
-public class PutAlertStrategyResponse extends TeaModel {
+public class CursorResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class PutAlertStrategyResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public PutAlertStrategyResponseBody body;
+    public CursorResponseBody body;
 
-    public static PutAlertStrategyResponse build(java.util.Map<String, ?> map) throws Exception {
-        PutAlertStrategyResponse self = new PutAlertStrategyResponse();
+    public static CursorResponse build(java.util.Map<String, ?> map) throws Exception {
+        CursorResponse self = new CursorResponse();
         return TeaModel.build(map, self);
     }
 
-    public PutAlertStrategyResponse setHeaders(java.util.Map<String, String> headers) {
+    public CursorResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class PutAlertStrategyResponse extends TeaModel {
         return this.headers;
     }
 
-    public PutAlertStrategyResponse setStatusCode(Integer statusCode) {
+    public CursorResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class PutAlertStrategyResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public PutAlertStrategyResponse setBody(PutAlertStrategyResponseBody body) {
+    public CursorResponse setBody(CursorResponseBody body) {
         this.body = body;
         return this;
     }
-    public PutAlertStrategyResponseBody getBody() {
+    public CursorResponseBody getBody() {
         return this.body;
     }
 

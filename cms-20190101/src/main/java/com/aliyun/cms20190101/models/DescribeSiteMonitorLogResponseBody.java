@@ -4,21 +4,44 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSiteMonitorLogResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>> The status code 200 indicates that the call was successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The logs of the instant test tasks.</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The token that is used to initiate the next request.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The call was successful.</p>
+     * <p>*   false: The call failed.</p>
+     */
     @NameInMap("Success")
     public String success;
 

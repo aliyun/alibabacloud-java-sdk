@@ -4,15 +4,35 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateGroupMonitoringAgentProcessResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     * <br>
+     * <p>> The status code 200 indicates that the call is successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Resource")
+    public CreateGroupMonitoringAgentProcessResponseBodyResource resource;
+
+    /**
+     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The call is successful.</p>
+     * <p>*   false: The call fails.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -45,12 +65,39 @@ public class CreateGroupMonitoringAgentProcessResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public CreateGroupMonitoringAgentProcessResponseBody setResource(CreateGroupMonitoringAgentProcessResponseBodyResource resource) {
+        this.resource = resource;
+        return this;
+    }
+    public CreateGroupMonitoringAgentProcessResponseBodyResource getResource() {
+        return this.resource;
+    }
+
     public CreateGroupMonitoringAgentProcessResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public static class CreateGroupMonitoringAgentProcessResponseBodyResource extends TeaModel {
+        @NameInMap("GroupProcessId")
+        public String groupProcessId;
+
+        public static CreateGroupMonitoringAgentProcessResponseBodyResource build(java.util.Map<String, ?> map) throws Exception {
+            CreateGroupMonitoringAgentProcessResponseBodyResource self = new CreateGroupMonitoringAgentProcessResponseBodyResource();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateGroupMonitoringAgentProcessResponseBodyResource setGroupProcessId(String groupProcessId) {
+            this.groupProcessId = groupProcessId;
+            return this;
+        }
+        public String getGroupProcessId() {
+            return this.groupProcessId;
+        }
+
     }
 
 }

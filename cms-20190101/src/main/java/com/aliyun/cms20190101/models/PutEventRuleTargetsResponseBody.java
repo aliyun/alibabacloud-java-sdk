@@ -4,9 +4,15 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutEventRuleTargetsResponseBody extends TeaModel {
+    /**
+     * <p>The name of the API operation.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The name of the queue. Valid values of N: 1 to 5.</p>
+     */
     @NameInMap("FailedContactParameters")
     public PutEventRuleTargetsResponseBodyFailedContactParameters failedContactParameters;
 
@@ -16,15 +22,29 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
     @NameInMap("FailedMnsParameters")
     public PutEventRuleTargetsResponseBodyFailedMnsParameters failedMnsParameters;
 
+    /**
+     * <p>The name of the Function Compute service. Valid values of N: 1 to 5.</p>
+     */
     @NameInMap("FailedParameterCount")
     public String failedParameterCount;
 
+    /**
+     * <p>The ID of the recipient that receives alert notifications. Valid values of N: 1 to 5.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The alert notification methods. Valid values:</p>
+     * <br>
+     * <p>4: Alert notifications are sent by using DingTalk chatbots and emails.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The name of the role.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -98,6 +118,9 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
     }
 
     public static class PutEventRuleTargetsResponseBodyFailedContactParametersContactParameter extends TeaModel {
+        /**
+         * <p>The ID of the request.</p>
+         */
         @NameInMap("ContactGroupName")
         public String contactGroupName;
 

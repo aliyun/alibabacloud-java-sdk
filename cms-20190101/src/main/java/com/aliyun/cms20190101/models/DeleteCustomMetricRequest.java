@@ -4,18 +4,34 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteCustomMetricRequest extends TeaModel {
+    /**
+     * <p>The ID of the application group.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The MD5 value of the HTTP request body. The MD5 value is a 128-bit hash value used to verify the uniqueness of the reported monitoring data.</p>
+     * <br>
+     * <p>>  `Md5` is returned when you query the reported monitoring data of a metric.</p>
+     */
     @NameInMap("Md5")
     public String md5;
 
+    /**
+     * <p>The name of the metric.</p>
+     */
     @NameInMap("MetricName")
     public String metricName;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the request for reporting monitoring data.</p>
+     * <br>
+     * <p>>  `UUID` is returned when you query the reported monitoring data of a metric. We recommend that you specify the `Md5` parameter.</p>
+     */
     @NameInMap("UUID")
     public String UUID;
 

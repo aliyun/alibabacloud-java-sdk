@@ -4,51 +4,125 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlertLogCountRequest extends TeaModel {
+    /**
+     * <p>The alert group.</p>
+     */
     @NameInMap("ContactGroup")
     public String contactGroup;
 
+    /**
+     * <p>The statistical period of alert logs. Unit: minutes.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The dimension based on which data is aggregated. This parameter is similar to the Group By clause of SQL statements. Valid values:</p>
+     * <br>
+     * <p>*   `product`: aggregates data by cloud service.</p>
+     * <p>*   `level`: aggregates data by alert level.</p>
+     * <p>*   `groupId`: aggregates data by application group.</p>
+     * <p>*   `contactGroup`: aggregates data by alert group.</p>
+     * <p>*   `product,metricName`: aggregates data both by cloud service and by metric.</p>
+     */
     @NameInMap("GroupBy")
     public String groupBy;
 
+    /**
+     * <p>The ID of the application group.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The statistical period of alert logs. Unit: minutes.</p>
+     */
     @NameInMap("LastMin")
     public String lastMin;
 
+    /**
+     * <p>The level and notification method of the alert. Valid values:</p>
+     * <br>
+     * <p>*   P4: Alert notifications are sent by using emails and DingTalk chatbots.</p>
+     * <p>*   OK: No alert is generated.</p>
+     */
     @NameInMap("Level")
     public String level;
 
+    /**
+     * <p>The name of the metric.</p>
+     * <br>
+     * <p>>  For more information about the metrics of different cloud services, see [Appendix 1: Metrics](~~163515~~).</p>
+     */
     @NameInMap("MetricName")
     public String metricName;
 
+    /**
+     * <p>The namespace of the cloud service.</p>
+     * <br>
+     * <p>>  For more information about the namespaces of cloud services, see [Appendix 1: Metrics](~~163515~~).</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The dimension based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL. Valid values:</p>
+     * <br>
+     * <p>*   `product`: aggregates data by cloud service.</p>
+     * <p>*   `level`: aggregates data by alert level.</p>
+     * <p>*   `groupId`: aggregates data by application group.</p>
+     * <p>*   `contactGroup`: aggregates data by alert contact group.</p>
+     * <p>*   `product,metricName`: aggregates data both by cloud service and by metric.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The abbreviation of the service name.</p>
+     */
     @NameInMap("Product")
     public String product;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The name of the alert rule.</p>
+     */
     @NameInMap("RuleName")
     public String ruleName;
 
+    /**
+     * <p>The keyword based on which the alert logs to be counted are searched.</p>
+     */
     @NameInMap("SearchKey")
     public String searchKey;
 
+    /**
+     * <p>The status of the alert. Valid values:</p>
+     * <br>
+     * <p>*   0: The alert is triggered or cleared.</p>
+     * <p>*   1: The alert is generated not during the effective period.</p>
+     * <p>*   2: The alert is muted and not triggered in a specified period.</p>
+     * <p>*   3: The host is restarting.</p>
+     * <p>*   4: Notifications are not sent for the alert.</p>
+     * <br>
+     * <p>When the value of the SendStatus parameter is 0, the value P4 of the Level parameter indicates a triggered alert and the value OK indicates a cleared alert.</p>
+     */
     @NameInMap("SendStatus")
     public String sendStatus;
 
+    /**
+     * <p>The name of the metric.</p>
+     * <br>
+     * <p>> For more information about the metrics of different cloud services, see [Appendix 1: Metrics](~~163515~~).</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

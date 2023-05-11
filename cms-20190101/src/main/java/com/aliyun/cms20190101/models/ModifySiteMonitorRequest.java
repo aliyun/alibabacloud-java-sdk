@@ -4,30 +4,58 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class ModifySiteMonitorRequest extends TeaModel {
+    /**
+     * <p>The ID of the site monitoring task.</p>
+     */
     @NameInMap("Address")
     public String address;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("AlertIds")
     public String alertIds;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
+     */
     @NameInMap("Interval")
     public String interval;
 
+    /**
+     * <p>The extended options of the protocol that is used by the site monitoring task. The options vary based on the protocol.</p>
+     */
     @NameInMap("IntervalUnit")
     public String intervalUnit;
 
+    /**
+     * <p>The operation that you want to perform. Set the value to ModifySiteMonitor.</p>
+     */
     @NameInMap("IspCities")
     public String ispCities;
 
+    /**
+     * <p>The detection points. The value is a JSON array. Example: `[{"city":"546","isp":"465"},{"city":"572","isp":"465"},{"city":"738","isp":"465"}]`. The values of the `city` field indicate Beijing, Hangzhou, and Qingdao.</p>
+     * <br>
+     * <p>>  You can call the DescribeSiteMonitorISPCityList operation to query the detection points. For more information, see [DescribeSiteMonitorISPCityList](~~115045~~). If you leave this parameter empty, the system randomly selects three detection points.</p>
+     */
     @NameInMap("OptionsJson")
     public String optionsJson;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The name of the site monitoring task. The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (\_).</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <p>The ID of the alert rule. You can call the DescribeMetricRuleList operation to query the IDs of existing alert rules in CloudMonitor. For more information, see [DescribeMetricRuleList](~~114941~~).</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 

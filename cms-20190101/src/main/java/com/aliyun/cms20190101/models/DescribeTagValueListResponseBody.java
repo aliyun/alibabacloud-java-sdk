@@ -4,18 +4,36 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagValueListResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The call was successful.</p>
+     * <p>*   false: The call failed.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The tag values returned.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>This topic provides an example of how to query the tag values corresponding to `tagKey1`. The return results are `tagValue1` and `tagValue2`.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+     */
     @NameInMap("TagValues")
     public DescribeTagValueListResponseBodyTagValues tagValues;
 

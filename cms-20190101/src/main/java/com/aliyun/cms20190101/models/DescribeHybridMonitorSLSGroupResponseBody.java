@@ -4,24 +4,44 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The description of the Logstore group.</p>
+     */
     @NameInMap("List")
     public java.util.List<DescribeHybridMonitorSLSGroupResponseBodyList> list;
 
+    /**
+     * <p>The timestamp that was generated when the Logstore group was modified.</p>
+     * <br>
+     * <p>Unit: milliseconds.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The name of the Logstore group.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The keyword that is used to search for Logstore groups.</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -98,15 +118,29 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeHybridMonitorSLSGroupResponseBodyListSLSGroupConfig extends TeaModel {
+        /**
+         * <p>The name of the Logstore group.</p>
+         */
         @NameInMap("SLSLogstore")
         public String SLSLogstore;
 
+        /**
+         * <p>The ID of the member account.</p>
+         * <br>
+         * <p>>  This parameter is returned only when you call API operations by using a management account.</p>
+         */
         @NameInMap("SLSProject")
         public String SLSProject;
 
+        /**
+         * <p>The Logstore.</p>
+         */
         @NameInMap("SLSRegion")
         public String SLSRegion;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("SLSUserId")
         public String SLSUserId;
 
@@ -150,18 +184,33 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeHybridMonitorSLSGroupResponseBodyList extends TeaModel {
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The Log Service project.</p>
+         */
         @NameInMap("SLSGroupConfig")
         public java.util.List<DescribeHybridMonitorSLSGroupResponseBodyListSLSGroupConfig> SLSGroupConfig;
 
+        /**
+         * <p>The configurations of the Logstore group.</p>
+         */
         @NameInMap("SLSGroupDescription")
         public String SLSGroupDescription;
 
+        /**
+         * <p>The region ID.</p>
+         */
         @NameInMap("SLSGroupName")
         public String SLSGroupName;
 
+        /**
+         * <p>The ID of the request.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

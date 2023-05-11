@@ -4,18 +4,35 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSystemEventAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call is successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The message that is returned. If the call is successful, `success` is returned. If the call fails, an error message is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call is successful. Valid values: True: The call is successful. false: The call fails.</p>
+     */
     @NameInMap("Success")
     public String success;
 
+    /**
+     * <p>The details of the system event.</p>
+     */
     @NameInMap("SystemEvents")
     public DescribeSystemEventAttributeResponseBodySystemEvents systemEvents;
 
@@ -65,33 +82,69 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeSystemEventAttributeResponseBodySystemEventsSystemEvent extends TeaModel {
+        /**
+         * <p>The details of the system event.</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The ID of the application group.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The level of the system event. Valid values:</p>
+         * <br>
+         * <p>*   CRITICAL: critical</p>
+         * <p>*   WARN: warning</p>
+         * <p>*   INFO: information</p>
+         */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <p>The name of the system event.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The abbreviation of the service name.</p>
+         */
         @NameInMap("Product")
         public String product;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The status of the system event.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The timestamp when the system event occurred.</p>
+         * <br>
+         * <p>Unit: milliseconds.</p>
+         */
         @NameInMap("Time")
         public Long time;
 

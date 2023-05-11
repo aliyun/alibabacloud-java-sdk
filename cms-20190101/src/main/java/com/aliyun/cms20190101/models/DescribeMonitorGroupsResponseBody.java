@@ -4,27 +4,56 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMonitorGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>> The status code 200 indicates that the request was successful.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The resources that are associated with the application group.</p>
+     */
     @NameInMap("Resources")
     public DescribeMonitorGroupsResponseBodyResources resources;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -98,6 +127,9 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeMonitorGroupsResponseBodyResourcesResourceContactGroupsContactGroup extends TeaModel {
+        /**
+         * <p>The name of the alert contact group.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -136,9 +168,15 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeMonitorGroupsResponseBodyResourcesResourceTagsTag extends TeaModel {
+        /**
+         * <p>The tag key of the application group.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value of the application group.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -204,42 +242,89 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeMonitorGroupsResponseBodyResourcesResource extends TeaModel {
+        /**
+         * <p>The URL of the ACK cluster from which the application group is synchronized.</p>
+         */
         @NameInMap("BindUrl")
         public String bindUrl;
 
+        /**
+         * <p>The alert contact groups.</p>
+         */
         @NameInMap("ContactGroups")
         public DescribeMonitorGroupsResponseBodyResourcesResourceContactGroups contactGroups;
 
+        /**
+         * <p>The ID of the tag rule.</p>
+         */
         @NameInMap("DynamicTagRuleId")
         public String dynamicTagRuleId;
 
+        /**
+         * <p>The timestamp when the application group was created.</p>
+         * <br>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>The timestamp when the application group was last modified.</p>
+         * <br>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>The tag key that is created for the application group by using the tag rule.</p>
+         */
         @NameInMap("GroupFounderTagKey")
         public String groupFounderTagKey;
 
+        /**
+         * <p>The tag value that is created for the application group by using the tag rule.</p>
+         */
         @NameInMap("GroupFounderTagValue")
         public String groupFounderTagValue;
 
+        /**
+         * <p>The ID of the application group.</p>
+         */
         @NameInMap("GroupId")
         public Long groupId;
 
+        /**
+         * <p>The name of the application group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
+         * <p>The ID of the Alibaba Cloud service.</p>
+         */
         @NameInMap("ServiceId")
         public String serviceId;
 
+        /**
+         * <p>The tags that are attached to the application group.</p>
+         */
         @NameInMap("Tags")
         public DescribeMonitorGroupsResponseBodyResourcesResourceTags tags;
 
         @NameInMap("TemplateIds")
         public DescribeMonitorGroupsResponseBodyResourcesResourceTemplateIds templateIds;
 
+        /**
+         * <p>The type of the application group. Valid values:</p>
+         * <br>
+         * <p>*   custom: a self-managed application group</p>
+         * <p>*   ehpc_cluster: an application group that is synchronized from an E-HPC cluster</p>
+         * <p>*   kubernetes: an application group that is synchronized from an ACK cluster</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -318,6 +403,14 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         }
         public String getGroupName() {
             return this.groupName;
+        }
+
+        public DescribeMonitorGroupsResponseBodyResourcesResource setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public DescribeMonitorGroupsResponseBodyResourcesResource setServiceId(String serviceId) {

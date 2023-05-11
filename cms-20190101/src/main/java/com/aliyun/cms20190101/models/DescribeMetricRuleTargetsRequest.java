@@ -7,6 +7,11 @@ public class DescribeMetricRuleTargetsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the alert rule.</p>
+     * <br>
+     * <p>For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).</p>
+     */
     @NameInMap("RuleId")
     public String ruleId;
 

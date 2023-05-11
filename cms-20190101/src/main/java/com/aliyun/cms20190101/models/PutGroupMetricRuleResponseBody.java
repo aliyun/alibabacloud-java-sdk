@@ -4,12 +4,25 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutGroupMetricRuleResponseBody extends TeaModel {
+    /**
+     * <p>The statistical methods for Info-level alerts. Separate multiple statistical methods with commas (,). Valid values:</p>
+     * <br>
+     * <p>*   Average: the average value</p>
+     * <p>*   Minimum: the minimum value</p>
+     * <p>*   Maximum: the maximum value</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

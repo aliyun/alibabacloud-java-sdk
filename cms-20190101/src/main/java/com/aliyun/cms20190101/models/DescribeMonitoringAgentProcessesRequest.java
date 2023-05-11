@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMonitoringAgentProcessesRequest extends TeaModel {
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

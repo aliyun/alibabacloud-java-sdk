@@ -24,6 +24,9 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
+        @NameInMap("N")
+        public Integer n;
+
         @NameInMap("PreCondition")
         public String preCondition;
 
@@ -47,6 +50,14 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         }
         public String getComparisonOperator() {
             return this.comparisonOperator;
+        }
+
+        public PutResourceMetricRulesRequestRulesEscalationsCritical setN(Integer n) {
+            this.n = n;
+            return this;
+        }
+        public Integer getN() {
+            return this.n;
         }
 
         public PutResourceMetricRulesRequestRulesEscalationsCritical setPreCondition(String preCondition) {
@@ -87,6 +98,9 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
+        @NameInMap("N")
+        public Integer n;
+
         @NameInMap("PreCondition")
         public String preCondition;
 
@@ -110,6 +124,14 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         }
         public String getComparisonOperator() {
             return this.comparisonOperator;
+        }
+
+        public PutResourceMetricRulesRequestRulesEscalationsInfo setN(Integer n) {
+            this.n = n;
+            return this;
+        }
+        public Integer getN() {
+            return this.n;
         }
 
         public PutResourceMetricRulesRequestRulesEscalationsInfo setPreCondition(String preCondition) {
@@ -150,6 +172,9 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
+        @NameInMap("N")
+        public Integer n;
+
         @NameInMap("PreCondition")
         public String preCondition;
 
@@ -173,6 +198,14 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         }
         public String getComparisonOperator() {
             return this.comparisonOperator;
+        }
+
+        public PutResourceMetricRulesRequestRulesEscalationsWarn setN(Integer n) {
+            this.n = n;
+            return this;
+        }
+        public Integer getN() {
+            return this.n;
         }
 
         public PutResourceMetricRulesRequestRulesEscalationsWarn setPreCondition(String preCondition) {
@@ -211,15 +244,12 @@ public class PutResourceMetricRulesRequest extends TeaModel {
 
     public static class PutResourceMetricRulesRequestRulesEscalations extends TeaModel {
         @NameInMap("Critical")
-        @Validation(required = true)
         public PutResourceMetricRulesRequestRulesEscalationsCritical critical;
 
         @NameInMap("Info")
-        @Validation(required = true)
         public PutResourceMetricRulesRequestRulesEscalationsInfo info;
 
         @NameInMap("Warn")
-        @Validation(required = true)
         public PutResourceMetricRulesRequestRulesEscalationsWarn warn;
 
         public static PutResourceMetricRulesRequestRulesEscalations build(java.util.Map<String, ?> map) throws Exception {
@@ -254,9 +284,23 @@ public class PutResourceMetricRulesRequest extends TeaModel {
     }
 
     public static class PutResourceMetricRulesRequestRulesLabels extends TeaModel {
+        /**
+         * <p>The interval at which the alert rule is executed.</p>
+         * <br>
+         * <p>Unit: seconds.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 500.</p>
+         * <br>
+         * <p>>  For information about how to query the statistical period of a metric, see [Appendix 1: Metrics](~~163515~~).</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The subject of the alert notification email.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 500.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -285,51 +329,134 @@ public class PutResourceMetricRulesRequest extends TeaModel {
 
     public static class PutResourceMetricRulesRequestRules extends TeaModel {
         @NameInMap("Escalations")
-        @Validation(required = true)
         public PutResourceMetricRulesRequestRulesEscalations escalations;
 
+        /**
+         * <p>The error message.</p>
+         */
         @NameInMap("ContactGroups")
         public String contactGroups;
 
+        /**
+         * <p>The operation that you want to perform. Set the value to **PutResourceMetricRules**.</p>
+         */
         @NameInMap("EffectiveInterval")
         public String effectiveInterval;
 
+        /**
+         * <p>The HTTP status code.</p>
+         */
         @NameInMap("EmailSubject")
         public String emailSubject;
 
+        /**
+         * <p>The alert contact group. The alert notifications are sent to the alert contacts in the alert contact group.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 500.</p>
+         * <br>
+         * <p>>  An alert contact group can contain one or more alert contacts. For information about how to create alert contacts and alert contact groups, see [PutContact](~~114923~~) and [PutContactGroup](~~114929~~).</p>
+         */
         @NameInMap("Interval")
         public String interval;
 
         @NameInMap("Labels")
         public java.util.List<PutResourceMetricRulesRequestRulesLabels> labels;
 
+        /**
+         * <p>The HTTP status code.</p>
+         * <br>
+         * <p>>  The status code 200 indicates that the call was successful.</p>
+         */
         @NameInMap("MetricName")
         public String metricName;
 
+        /**
+         * <p>The name of the alert rule.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 500.</p>
+         * <br>
+         * <p>You can specify a new name or the name of an existing alert rule. For information about how to query the name of an alert rule, see [DescribeMetricRuleList](~~114941~~).</p>
+         * <br>
+         * <p>>  If you specify a new name, you create a threshold-triggered alert rule.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <br>
+         * <p>*   true: The call was successful.</p>
+         * <p>*   false: The call failed.</p>
+         */
         @NameInMap("NoDataPolicy")
         public String noDataPolicy;
 
+        /**
+         * <p>The time period during which the alert rule is effective.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 500.</p>
+         */
         @NameInMap("NoEffectiveInterval")
         public String noEffectiveInterval;
 
+        /**
+         * <p>The name of the metric.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 500.</p>
+         * <br>
+         * <p>For information about how to query the name of a metric, see [Appendix 1: Metrics](~~163515~~).</p>
+         */
         @NameInMap("Period")
         public String period;
 
+        /**
+         * <p>The statistical methods for Warn-level alerts. Valid values:</p>
+         * <br>
+         * <p>*   Maximum: the maximum value</p>
+         * <p>*   Minimum: the minimum value</p>
+         * <p>*   Average: the average value</p>
+         * <p>*   Availability: the availability rate</p>
+         * <br>
+         * <p>Valid values of N: 1 to 500.</p>
+         * <br>
+         * <p>>  You must set a collection of the Rules.N.Escalations.Critical.Statistics, Rules.N.Escalations.Critical.ComparisonOperator, Rules.N.Escalations.Critical.Threshold, and Rules.N.Escalations.Critical.Times parameters, a collection of the Rules.N.Escalations.Warn.Statistics, Rules.N.Escalations.Warn.ComparisonOperator, Rules.N.Escalations.Warn.Threshold, and Rules.N.Escalations.Warn.Times parameters, or a collection of the Rules.N.Escalations.Info.Statistics, Rules.N.Escalations.Info.ComparisonOperator, Rules.N.Escalations.Info.Threshold, and Rules.N.Escalations.Info.Times parameters.</p>
+         */
         @NameInMap("Resources")
         public String resources;
 
+        /**
+         * <p>The error message.</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 
+        /**
+         * <p>The ID of the alert rule.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The method that is used to handle alerts when no monitoring data is found. Valid values:</p>
+         * <br>
+         * <p>*   KEEP_LAST_STATE (default value): No operation is performed.</p>
+         * <p>*   INSUFFICIENT_DATA: An alert whose content is "Insufficient data" is triggered.</p>
+         * <p>*   OK: The status is considered normal.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 500.</p>
+         */
         @NameInMap("SilenceTime")
         public Integer silenceTime;
 
+        /**
+         * <p>The mute period during which new alerts are not sent even if the trigger conditions are met.</p>
+         * <br>
+         * <p>Unit: seconds. Default value: 86400.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 500.</p>
+         * <br>
+         * <p>>  If an alert is not cleared after the mute period ends, CloudMonitor resends an alert notification.</p>
+         */
         @NameInMap("Webhook")
         public String webhook;
 

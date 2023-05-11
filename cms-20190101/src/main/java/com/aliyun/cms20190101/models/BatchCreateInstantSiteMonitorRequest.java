@@ -32,18 +32,39 @@ public class BatchCreateInstantSiteMonitorRequest extends TeaModel {
     }
 
     public static class BatchCreateInstantSiteMonitorRequestTaskList extends TeaModel {
+        /**
+         * <p>The HTTP status code.</p>
+         * <br>
+         * <p>>  The status code 200 indicates that the call was successful.</p>
+         */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <p>The ID of the site monitoring task.</p>
+         */
         @NameInMap("IspCities")
         public String ispCities;
 
+        /**
+         * <p>The detection points. If you leave this parameter empty, the system randomly selects three detection points.</p>
+         * <br>
+         * <p>The value is a `JSON array`. Example: `{"city":"546","isp":"465"},{"city":"572","isp":"465"},{"city":"738","isp":"465"}`. The values of the city field indicate Beijing, Hangzhou, and Qingdao.</p>
+         * <br>
+         * <p>For information about how to obtain detection points, see [DescribeSiteMonitorISPCityList](~~115045~~).</p>
+         */
         @NameInMap("OptionsJson")
         public String optionsJson;
 
+        /**
+         * <p>The operation that you want to perform. Set the value to **BatchCreateInstantSiteMonitor**.</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
+        /**
+         * <p>The name of the site monitoring task.</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 

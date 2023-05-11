@@ -4,24 +4,50 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeExporterOutputListResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>> The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The configuration sets for exporting monitoring data.</p>
+     */
     @NameInMap("Datapoints")
     public DescribeExporterOutputListResponseBodyDatapoints datapoints;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`</p>
+     * <p>*   `false`</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -87,15 +113,27 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
     }
 
     public static class DescribeExporterOutputListResponseBodyDatapointsDatapointConfigJson extends TeaModel {
+        /**
+         * <p>The AccessKey ID.</p>
+         */
         @NameInMap("ak")
         public String ak;
 
+        /**
+         * <p>The Log Service endpoint to which the monitoring data is exported.</p>
+         */
         @NameInMap("endpoint")
         public String endpoint;
 
+        /**
+         * <p>The Logstore.</p>
+         */
         @NameInMap("logstore")
         public String logstore;
 
+        /**
+         * <p>The Log Service project to which the monitoring data is exported.</p>
+         */
         @NameInMap("project")
         public String project;
 
@@ -139,15 +177,29 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
     }
 
     public static class DescribeExporterOutputListResponseBodyDatapointsDatapoint extends TeaModel {
+        /**
+         * <p>The JSON object that contains the details about the destination to which the monitoring data is exported.</p>
+         */
         @NameInMap("ConfigJson")
         public DescribeExporterOutputListResponseBodyDatapointsDatapointConfigJson configJson;
 
+        /**
+         * <p>The time when the configuration set was created. The value is a UNIX timestamp.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The name of the configuration set.</p>
+         */
         @NameInMap("DestName")
         public String destName;
 
+        /**
+         * <p>The service to which the monitoring data is exported.</p>
+         * <br>
+         * <p>> Only Log Service is supported. More services will be supported in the future.</p>
+         */
         @NameInMap("DestType")
         public String destType;
 

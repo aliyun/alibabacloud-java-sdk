@@ -4,27 +4,59 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The information about the virtual private cloud (VPC).</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Valid values: 1 to 1000000000.</p>
+     * <br>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the VPC.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Valid values: 1 to 1000000000.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The dimensions of the resource that is associated with the application group.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("Resources")
     public DescribeMonitorGroupInstanceAttributeResponseBodyResources resources;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The ID of the resource. Separate multiple resource IDs with commas (,). You can query the details about a maximum of 20 resources in each request.</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -128,9 +160,15 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
     }
 
     public static class DescribeMonitorGroupInstanceAttributeResponseBodyResourcesResourceTagsTag extends TeaModel {
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The description of the resource.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -207,30 +245,57 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
     }
 
     public static class DescribeMonitorGroupInstanceAttributeResponseBodyResourcesResource extends TeaModel {
+        /**
+         * <p>The network type.</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The total number of returned pages.</p>
+         */
         @NameInMap("Desc")
         public String desc;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Dimension")
         public String dimension;
 
+        /**
+         * <p>Specifies whether to return the total number of resources in the specified application group. Valid values:</p>
+         * <br>
+         * <p>*   true (default value)</p>
+         * <p>*   false</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The resources that are associated with the application group.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("NetworkType")
         public String networkType;
 
         @NameInMap("Region")
         public DescribeMonitorGroupInstanceAttributeResponseBodyResourcesResourceRegion region;
 
+        /**
+         * <p>The tags of the resource.</p>
+         */
         @NameInMap("Tags")
         public DescribeMonitorGroupInstanceAttributeResponseBodyResourcesResourceTags tags;
 
+        /**
+         * <p>The ID of the request.</p>
+         */
         @NameInMap("Vpc")
         public DescribeMonitorGroupInstanceAttributeResponseBodyResourcesResourceVpc vpc;
 

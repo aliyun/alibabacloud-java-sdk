@@ -4,18 +4,38 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the call succeeds. Valid values:</p>
+     * <br>
+     * <p>*   true: The call succeeds.</p>
+     * <p>*   false: The call fails.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The resources that are affected by the alert rule.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the application group to which the alert template is applied.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The response code.</p>
+     * <br>
+     * <p>>  The HTTP status code 200 indicates that the call succeeds.</p>
+     */
     @NameInMap("Resource")
     public ApplyMetricRuleTemplateResponseBodyResource resource;
 
+    /**
+     * <p>The details of the generated alert rule.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,18 +85,30 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
     }
 
     public static class ApplyMetricRuleTemplateResponseBodyResourceAlertResults extends TeaModel {
+        /**
+         * <p>The name of the alert rule.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The ID of the alert rule.</p>
+         */
         @NameInMap("Message")
         public String message;
 
         @NameInMap("RuleId")
         public String ruleId;
 
+        /**
+         * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>In this example, the `700****` alert template is applied to the `123456` application group. For the generated alert rule, the ID is `applyTemplate8ab74c6b-9f27-47ab-8841-de01dc08****`, and the name is `test123`.</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 
@@ -128,9 +160,18 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
     }
 
     public static class ApplyMetricRuleTemplateResponseBodyResource extends TeaModel {
+        /**
+         * <p>Indicates whether the call succeeds. Valid values:</p>
+         * <br>
+         * <p>*   true: The call succeeds.</p>
+         * <p>*   false: The call fails.</p>
+         */
         @NameInMap("AlertResults")
         public java.util.List<ApplyMetricRuleTemplateResponseBodyResourceAlertResults> alertResults;
 
+        /**
+         * <p>The returned information.</p>
+         */
         @NameInMap("GroupId")
         public Long groupId;
 

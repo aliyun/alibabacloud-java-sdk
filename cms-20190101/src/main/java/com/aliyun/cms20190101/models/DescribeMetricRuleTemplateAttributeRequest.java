@@ -4,12 +4,20 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetricRuleTemplateAttributeRequest extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call is successful.</p>
+     */
     @NameInMap("Name")
     public String name;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 

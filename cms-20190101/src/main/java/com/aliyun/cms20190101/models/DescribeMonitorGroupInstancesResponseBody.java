@@ -4,24 +4,47 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the resources in the application group.</p>
+     */
     @NameInMap("Resources")
     public DescribeMonitorGroupInstancesResponseBodyResources resources;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -98,18 +121,33 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeMonitorGroupInstancesResponseBodyResourcesResource extends TeaModel {
+        /**
+         * <p>The abbreviation of the service name.</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The ID of the resource.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The ID of the region where the instance resides.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

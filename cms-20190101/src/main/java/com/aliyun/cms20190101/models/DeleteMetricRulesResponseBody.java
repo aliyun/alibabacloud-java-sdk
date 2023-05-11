@@ -4,15 +4,30 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteMetricRulesResponseBody extends TeaModel {
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: successful.</p>
+     * <p>*   false: failed.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Deletes one or more alert rules.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

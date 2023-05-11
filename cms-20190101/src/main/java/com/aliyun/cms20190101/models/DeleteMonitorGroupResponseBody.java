@@ -4,18 +4,33 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteMonitorGroupResponseBody extends TeaModel {
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The name of the application group.</p>
+     */
     @NameInMap("Group")
     public DeleteMonitorGroupResponseBodyGroup group;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The deleted application group.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,6 +80,9 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
     }
 
     public static class DeleteMonitorGroupResponseBodyGroupContactGroupsContactGroup extends TeaModel {
+        /**
+         * <p>Deletes an application group.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -103,9 +121,15 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
     }
 
     public static class DeleteMonitorGroupResponseBodyGroup extends TeaModel {
+        /**
+         * <p>The name of the alert group.</p>
+         */
         @NameInMap("ContactGroups")
         public DeleteMonitorGroupResponseBodyGroupContactGroups contactGroups;
 
+        /**
+         * <p>The alert groups that receive alert notifications for the application group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 

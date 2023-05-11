@@ -7,16 +7,31 @@ public class BatchCreateInstantSiteMonitorResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Data")
     public java.util.List<BatchCreateInstantSiteMonitorResponseBodyData> data;
 
+    /**
+     * <p>The type of the site monitoring task.</p>
+     * <br>
+     * <p>Valid values: HTTP, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.</p>
+     * <br>
+     * <p>>  You must create at least one site monitoring task. You must specify all of the `Address`, `TaskName`, and `TaskType` parameters in each request.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the site monitoring task.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -69,6 +84,9 @@ public class BatchCreateInstantSiteMonitorResponseBody extends TeaModel {
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 

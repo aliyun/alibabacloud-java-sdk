@@ -4,9 +4,15 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteContactGroupResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.</p>
+     */
     @NameInMap("Message")
     public String message;
 

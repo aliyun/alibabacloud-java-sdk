@@ -4,21 +4,46 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeHostAvailabilityListResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The call was successful.</p>
+     * <p>*   false: The call failed.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The details of the availability monitoring tasks.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The type of the availability monitoring task. Valid values:</p>
+     * <br>
+     * <p>*   PING</p>
+     * <p>*   TELNET</p>
+     * <p>*   HTTP</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The ID of the application group.</p>
+     */
     @NameInMap("TaskList")
     public DescribeHostAvailabilityListResponseBodyTaskList taskList;
 
+    /**
+     * <p>The name of the application group.</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -76,18 +101,39 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
     }
 
     public static class DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfigEscalationListEscalationList extends TeaModel {
+        /**
+         * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+         */
         @NameInMap("Aggregate")
         public String aggregate;
 
+        /**
+         * <p>The method used to calculate metric values that trigger alerts. Valid values:</p>
+         * <br>
+         * <p>*   Value: the value of the HTTP status code</p>
+         * <p>*   Average: the average HTTP response time</p>
+         * <p>*   Value: the value of the Telnet status code</p>
+         * <p>*   TelnetLatency: the average Telnet response time</p>
+         * <p>*   Average: the average Ping packet loss rate</p>
+         */
         @NameInMap("MetricName")
         public String metricName;
 
+        /**
+         * <p>This topic provides an example to show how to query all the availability monitoring tasks of your Alibaba Cloud account. The sample responses indicate that the account has one availability monitoring task named `ecs_instance`.</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <p>Queries availability monitoring tasks.</p>
+         */
         @NameInMap("Times")
         public String times;
 
+        /**
+         * <p>The consecutive number of times for which the metric value is measured before an alert is triggered.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -157,22 +203,130 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfigTargetListTarget extends TeaModel {
+        @NameInMap("Arn")
+        public String arn;
+
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("JsonParams")
+        public String jsonParams;
+
+        @NameInMap("Level")
+        public String level;
+
+        public static DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfigTargetListTarget build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfigTargetListTarget self = new DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfigTargetListTarget();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfigTargetListTarget setArn(String arn) {
+            this.arn = arn;
+            return this;
+        }
+        public String getArn() {
+            return this.arn;
+        }
+
+        public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfigTargetListTarget setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfigTargetListTarget setJsonParams(String jsonParams) {
+            this.jsonParams = jsonParams;
+            return this;
+        }
+        public String getJsonParams() {
+            return this.jsonParams;
+        }
+
+        public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfigTargetListTarget setLevel(String level) {
+            this.level = level;
+            return this;
+        }
+        public String getLevel() {
+            return this.level;
+        }
+
+    }
+
+    public static class DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfigTargetList extends TeaModel {
+        @NameInMap("Target")
+        public java.util.List<DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfigTargetListTarget> target;
+
+        public static DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfigTargetList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfigTargetList self = new DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfigTargetList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfigTargetList setTarget(java.util.List<DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfigTargetListTarget> target) {
+            this.target = target;
+            return this;
+        }
+        public java.util.List<DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfigTargetListTarget> getTarget() {
+            return this.target;
+        }
+
+    }
+
     public static class DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfig extends TeaModel {
+        /**
+         * <p>The alert notification methods. Valid values:</p>
+         * <br>
+         * <p>0: Alert notifications are sent by using emails and DingTalk chatbots.</p>
+         */
         @NameInMap("EndTime")
         public Integer endTime;
 
+        /**
+         * <p>The comparison operator that is used in the alert rule. Valid values:</p>
+         * <br>
+         * <p>*   `>`</p>
+         * <p>*   `>=`</p>
+         * <p>*   `<`</p>
+         * <p>*   `<=`</p>
+         * <p>*   `=`</p>
+         */
         @NameInMap("EscalationList")
         public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfigEscalationList escalationList;
 
+        /**
+         * <p>The name of the metric. Valid values:</p>
+         * <br>
+         * <p>*   HttpStatus: HTTP status code</p>
+         * <p>*   HttpLatency: HTTP response time</p>
+         * <p>*   TelnetStatus: Telnet status code</p>
+         * <p>*   TelnetLatency: Telnet response time</p>
+         * <p>*   PingLostRate: Ping packet loss rate</p>
+         */
         @NameInMap("NotifyType")
         public Integer notifyType;
 
+        /**
+         * <p>The callback URL.</p>
+         * <br>
+         * <p>CloudMonitor pushes an alert notification to the specified callback URL by sending an HTTP POST request. Only the HTTP protocol is supported.</p>
+         */
         @NameInMap("SilenceTime")
         public Integer silenceTime;
 
+        /**
+         * <p>The trigger conditions of the alert rule.</p>
+         */
         @NameInMap("StartTime")
         public Integer startTime;
 
+        @NameInMap("TargetList")
+        public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfigTargetList targetList;
+
+        /**
+         * <p>The alert threshold.</p>
+         */
         @NameInMap("WebHook")
         public String webHook;
 
@@ -221,6 +375,14 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             return this.startTime;
         }
 
+        public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfig setTargetList(DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfigTargetList targetList) {
+            this.targetList = targetList;
+            return this;
+        }
+        public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfigTargetList getTargetList() {
+            return this.targetList;
+        }
+
         public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfig setWebHook(String webHook) {
             this.webHook = webHook;
             return this;
@@ -251,27 +413,58 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
     }
 
     public static class DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigTaskOption extends TeaModel {
+        /**
+         * <p>The mute period during which new alerts are not sent even if the trigger conditions are met. Unit: seconds. Default value: 86400.</p>
+         */
         @NameInMap("HttpKeyword")
         public String httpKeyword;
 
+        /**
+         * <p>The domain name or IP address that you want to monitor.</p>
+         */
         @NameInMap("HttpMethod")
         public String httpMethod;
 
+        /**
+         * <p>The end of the time period during which the alert rule is effective. Valid values: 0 to 23.</p>
+         * <br>
+         * <p>For example, if the `AlertConfig.StartTime` parameter is set to 0 and the `AlertConfig.EndTime` parameter is set to 22, the alert rule is effective from 00:00:00 to 22:00:00.</p>
+         * <br>
+         * <p>>  Alert notifications are sent based on the specified threshold only if the alert rule is effective.</p>
+         */
         @NameInMap("HttpNegative")
         public Boolean httpNegative;
 
+        /**
+         * <p>The configurations of the alert rule.</p>
+         */
         @NameInMap("HttpPostContent")
         public String httpPostContent;
 
+        /**
+         * <p>The response to the HTTP request.</p>
+         */
         @NameInMap("HttpResponseCharset")
         public String httpResponseCharset;
 
+        /**
+         * <p>The content of the HTTP POST request.</p>
+         */
         @NameInMap("HttpURI")
         public String httpURI;
 
+        /**
+         * <p>The character set that is used in the HTTP response.</p>
+         */
         @NameInMap("Interval")
         public Integer interval;
 
+        /**
+         * <p>The method to trigger an alert. The alert can be triggered based on whether the specified alert rule is included in the response body. Valid values:</p>
+         * <br>
+         * <p>*   true: If the HTTP response body includes the alert rule, an alert is triggered.</p>
+         * <p>*   false: If the HTTP response does not include the alert rule, an alert is triggered.</p>
+         */
         @NameInMap("TelnetOrPingHost")
         public String telnetOrPingHost;
 
@@ -347,33 +540,77 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
     }
 
     public static class DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfig extends TeaModel {
+        /**
+         * <p>The beginning of the time period during which the alert rule is effective. Valid values: 0 to 23.</p>
+         * <br>
+         * <p>For example, if the `AlertConfig.StartTime` parameter is set to 0 and the `AlertConfig.EndTime` parameter is set to 22, the alert rule is effective from 00:00:00 to 22:00:00.</p>
+         * <br>
+         * <p>>  Alert notifications are sent based on the specified threshold only if the alert rule is effective.</p>
+         */
         @NameInMap("AlertConfig")
         public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfig alertConfig;
 
+        /**
+         * <p>The ECS instances that are monitored.</p>
+         */
         @NameInMap("Disabled")
         public Boolean disabled;
 
+        /**
+         * <p>The range of instances that are monitored by the availability monitoring task. Valid values:</p>
+         * <br>
+         * <p>*   GROUP: All ECS instances in the application group are monitored.</p>
+         * <p>*   GROUP_SPEC_INSTANCE: Specified ECS instances in the application group are monitored.</p>
+         */
         @NameInMap("GroupId")
         public Long groupId;
 
+        /**
+         * <p>Indicates whether the availability monitoring task is disabled. Valid values:</p>
+         * <br>
+         * <p>*   true: The availability monitoring task is disabled.</p>
+         * <p>*   false: The availability monitoring task is enabled.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The HTTP request method. Valid values:</p>
+         * <br>
+         * <p>*   GET</p>
+         * <p>*   POST</p>
+         * <p>*   HEAD</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The interval at which detection requests are sent. Unit: seconds.</p>
+         */
         @NameInMap("Instances")
         public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigInstances instances;
 
+        /**
+         * <p>The ID of the availability monitoring task.</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
+        /**
+         * <p>The URI that you want to monitor. If the TaskType parameter is set to HTTP, this parameter is required.</p>
+         */
         @NameInMap("TaskOption")
         public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigTaskOption taskOption;
 
+        /**
+         * <p>The optional parameters of the availability monitoring task.</p>
+         */
         @NameInMap("TaskScope")
         public String taskScope;
 
+        /**
+         * <p>The name of the availability monitoring task.</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 

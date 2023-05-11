@@ -4,12 +4,23 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class RemoveTagsResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The operation that you want to perform. Set the value to RemoveTags.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

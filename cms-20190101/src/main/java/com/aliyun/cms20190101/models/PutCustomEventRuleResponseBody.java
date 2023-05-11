@@ -4,15 +4,30 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutCustomEventRuleResponseBody extends TeaModel {
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The call was successful.</p>
+     * <p>*   false: The call failed.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Before you call this operation, call the PutCustomEvent operation to report the monitoring data of the custom event. For more information, see [PutCustomEvent](~~115012~~).</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

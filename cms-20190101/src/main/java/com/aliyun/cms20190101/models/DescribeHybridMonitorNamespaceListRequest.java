@@ -4,21 +4,39 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeHybridMonitorNamespaceListRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to return the configuration details of metric import tasks for Alibaba Cloud services and the number of metric import tasks for third-party services. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false (default value)</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The operation that you want to perform. Set the value to **DescribeHybridMonitorNamespaceList**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The details of the namespaces.</p>
+     */
     @NameInMap("ShowTaskStatistic")
     public Boolean showTaskStatistic;
 

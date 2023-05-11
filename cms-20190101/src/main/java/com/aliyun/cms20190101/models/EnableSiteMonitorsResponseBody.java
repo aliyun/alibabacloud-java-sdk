@@ -4,18 +4,38 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class EnableSiteMonitorsResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates a success.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The number of detection points that are affected by the site monitoring tasks.</p>
+     */
     @NameInMap("Data")
     public EnableSiteMonitorsResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: successful.</p>
+     * <p>*   false: failed.</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -65,6 +85,9 @@ public class EnableSiteMonitorsResponseBody extends TeaModel {
     }
 
     public static class EnableSiteMonitorsResponseBodyData extends TeaModel {
+        /**
+         * <p>The number of detection points.</p>
+         */
         @NameInMap("count")
         public Integer count;
 

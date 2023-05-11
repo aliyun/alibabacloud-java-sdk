@@ -4,18 +4,40 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
+    /**
+     * <p>The Alibaba Cloud Resource Name (ARN) of the resource. Format: `acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message`. Example: `acs:mns:cn-hangzhou:120886317861****:/queues/test123/message`. Fields:</p>
+     * <br>
+     * <p>*   {Service name abbreviation}: the abbreviation of the service name. Valid value: mns.</p>
+     * <p>*   {userId}: the ID of the Alibaba Cloud account.</p>
+     * <p>*   {regionId}: the region ID of the message queue or topic.</p>
+     * <p>*   {Resource type}`: the type of the resource for which alerts are triggered. Valid values: - **queues** - **topics** {Resource name}: the name of the resource. - If the resource type is set to **queues**, the resource name is the name of the message queue. - If the resource type is set to **topics**, the resource name is the name of the topic.`</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The ID of the resource for which alerts are triggered.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The operation that you want to perform. Set the value to **DescribeMetricRuleTargets**.</p>
+     */
     @NameInMap("Targets")
     public DescribeMetricRuleTargetsResponseBodyTargets targets;
 
@@ -65,9 +87,15 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
     }
 
     public static class DescribeMetricRuleTargetsResponseBodyTargetsTarget extends TeaModel {
+        /**
+         * <p>Queries the resources that are associated with a specified alert rule.</p>
+         */
         @NameInMap("Arn")
         public String arn;
 
+        /**
+         * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+         */
         @NameInMap("Id")
         public String id;
 
@@ -76,9 +104,6 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
 
         @NameInMap("Level")
         public String level;
-
-        @NameInMap("RuleId")
-        public String ruleId;
 
         public static DescribeMetricRuleTargetsResponseBodyTargetsTarget build(java.util.Map<String, ?> map) throws Exception {
             DescribeMetricRuleTargetsResponseBodyTargetsTarget self = new DescribeMetricRuleTargetsResponseBodyTargetsTarget();
@@ -115,14 +140,6 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
         }
         public String getLevel() {
             return this.level;
-        }
-
-        public DescribeMetricRuleTargetsResponseBodyTargetsTarget setRuleId(String ruleId) {
-            this.ruleId = ruleId;
-            return this;
-        }
-        public String getRuleId() {
-            return this.ruleId;
         }
 
     }

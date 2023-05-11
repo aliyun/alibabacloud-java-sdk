@@ -4,12 +4,23 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetricDataResponseBody extends TeaModel {
+    /**
+     * <p>The monitoring data. The value includes the following fields:</p>
+     * <br>
+     * <p>*   `timestamp`: the timestamp when the alert was triggered.</p>
+     * <p>*   `userId`: the ID of the user for which the alert was triggered.</p>
+     * <p>*   `instanceId`: the ID of the instance for which the alert was triggered.</p>
+     * <p>*   `Minimum`, `Average`, and `Maximum`: the aggregation methods.</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Datapoints")
     public String datapoints;
 
+    /**
+     * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+     */
     @NameInMap("Message")
     public String message;
 

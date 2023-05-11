@@ -4,9 +4,15 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class ModifyHostAvailabilityResponseBody extends TeaModel {
+    /**
+     * <p>The alert threshold. Valid values of N: 1 to 21.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+     */
     @NameInMap("Message")
     public String message;
 

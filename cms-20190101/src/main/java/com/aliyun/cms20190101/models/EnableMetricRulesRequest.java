@@ -7,6 +7,13 @@ public class EnableMetricRulesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The IDs of the alert rules.</p>
+     * <br>
+     * <p>Valid values of N: 1 to 100.</p>
+     * <br>
+     * <p>For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).</p>
+     */
     @NameInMap("RuleId")
     public java.util.List<String> ruleId;
 

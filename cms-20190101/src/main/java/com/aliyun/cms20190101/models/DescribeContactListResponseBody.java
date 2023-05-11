@@ -4,21 +4,49 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeContactListResponseBody extends TeaModel {
+    /**
+     * <p>The description of the alert contact.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The status of the phone number. Valid values:</p>
+     * <br>
+     * <p>*   PENDING: The phone number is not activated. Alert notifications can be sent to the phone number by using text messages only after the phone number is activated.</p>
+     * <p>*   OK: The phone number is activated and can receive alert notifications.</p>
+     * <br>
+     * <p>>  This parameter can be returned only on the China site (aliyun.com).</p>
+     */
     @NameInMap("Contacts")
     public DescribeContactListResponseBodyContacts contacts;
 
+    /**
+     * <p>The language in which the alert information is displayed. Valid values:</p>
+     * <br>
+     * <p>*   zh-cn: simplified Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Default value: 100.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The TradeManager ID of the alert contact.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -76,15 +104,32 @@ public class DescribeContactListResponseBody extends TeaModel {
     }
 
     public static class DescribeContactListResponseBodyContactsContactChannels extends TeaModel {
+        /**
+         * <p>The alert notification method. Valid values:</p>
+         * <br>
+         * <p>*   Mail: emails</p>
+         * <p>*   DingWebHook: DingTalk chatbots</p>
+         */
         @NameInMap("AliIM")
         public String aliIM;
 
+        /**
+         * <p>The timestamp when the alert contact was updated.</p>
+         * <br>
+         * <p>Unit: milliseconds.</p>
+         */
         @NameInMap("DingWebHook")
         public String dingWebHook;
 
+        /**
+         * <p>The alert contact groups.</p>
+         */
         @NameInMap("Mail")
         public String mail;
 
+        /**
+         * <p>The ID of the request.</p>
+         */
         @NameInMap("SMS")
         public String SMS;
 
@@ -128,12 +173,20 @@ public class DescribeContactListResponseBody extends TeaModel {
     }
 
     public static class DescribeContactListResponseBodyContactsContactChannelsState extends TeaModel {
+        /**
+         * <p>Queries alert contacts.</p>
+         */
         @NameInMap("AliIM")
         public String aliIM;
 
         @NameInMap("DingWebHook")
         public String dingWebHook;
 
+        /**
+         * <p>The status of the DingTalk chatbot.</p>
+         * <br>
+         * <p>Valid value: OK. The value OK indicates that the DingTalk chatbot is normal and alert notifications can be received in a DingTalk group.</p>
+         */
         @NameInMap("Mail")
         public String mail;
 
@@ -199,27 +252,60 @@ public class DescribeContactListResponseBody extends TeaModel {
     }
 
     public static class DescribeContactListResponseBodyContactsContact extends TeaModel {
+        /**
+         * <p>The status of the email address. Valid values:</p>
+         * <br>
+         * <p>*   PENDING: The email address is not activated. Alert notifications can be sent to the email address only after the email address is activated.</p>
+         * <p>*   OK: The email address is activated and can receive alert notifications.</p>
+         */
         @NameInMap("Channels")
         public DescribeContactListResponseBodyContactsContactChannels channels;
 
+        /**
+         * <p>The status of the alert notification method. Valid values: PENDING and OK.</p>
+         * <br>
+         * <p>The email address must be activated after it is added as the value specified for the alert notification method. The value PENDING indicates that the email address is not activated. The value OK indicates that the email address is activated.</p>
+         */
         @NameInMap("ChannelsState")
         public DescribeContactListResponseBodyContactsContactChannelsState channelsState;
 
+        /**
+         * <p>The alert notification method.</p>
+         */
         @NameInMap("ContactGroups")
         public DescribeContactListResponseBodyContactsContactContactGroups contactGroups;
 
+        /**
+         * <p>The name of the alert contact.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The alert contacts.</p>
+         */
         @NameInMap("Desc")
         public String desc;
 
+        /**
+         * <p>The timestamp when the alert contact was created.</p>
+         * <br>
+         * <p>Unit: milliseconds.</p>
+         */
         @NameInMap("Lang")
         public String lang;
 
+        /**
+         * <p>The number of the page to return.</p>
+         * <br>
+         * <p>Default value: 1.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The email address of the alert contact.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 

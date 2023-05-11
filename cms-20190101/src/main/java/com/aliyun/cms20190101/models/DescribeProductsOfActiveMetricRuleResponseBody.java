@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
+    /**
+     * <p>The information about the services for which one-click alert is enabled.</p>
+     */
     @NameInMap("AllProductInitMetricRuleList")
     public DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleList allProductInitMetricRuleList;
 
@@ -13,12 +16,24 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
     @NameInMap("Datapoints")
     public String datapoints;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The call was successful.</p>
+     * <p>*   false: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,21 +91,39 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
     }
 
     public static class DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRuleAlertInitConfigListAlertInitConfig extends TeaModel {
+        /**
+         * <p>The consecutive number of times for which the metric value is measured before an alert is triggered.</p>
+         */
         @NameInMap("EvaluationCount")
         public String evaluationCount;
 
+        /**
+         * <p>The name of the metric. For more information, see [Appendix 1: Metrics](~~163515~~).</p>
+         */
         @NameInMap("MetricName")
         public String metricName;
 
+        /**
+         * <p>The namespace of the service. For more information, see [Appendix 1: Metrics](~~163515~~).</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The aggregation period of the monitoring data. Unit: minutes. For more information, see [Appendix 1: Metrics](~~163515~~).</p>
+         */
         @NameInMap("Period")
         public String period;
 
+        /**
+         * <p>The statistical aggregation method that is used to calculate metric values that trigger alerts. For more information, see [Appendix 1: Metrics](~~163515~~).</p>
+         */
         @NameInMap("Statistics")
         public String statistics;
 
+        /**
+         * <p>The threshold of the metric value.</p>
+         */
         @NameInMap("Threshold")
         public String threshold;
 
@@ -169,6 +202,9 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
     }
 
     public static class DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRule extends TeaModel {
+        /**
+         * <p>The initial alert rules that are generated after one-click alert is enabled for a service.</p>
+         */
         @NameInMap("AlertInitConfigList")
         public DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRuleAlertInitConfigList alertInitConfigList;
 

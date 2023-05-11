@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMonitorGroupDynamicRulesRequest extends TeaModel {
+    /**
+     * <p>The ID of application group.</p>
+     */
     @NameInMap("GroupId")
     public Long groupId;
 

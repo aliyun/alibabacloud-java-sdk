@@ -4,18 +4,38 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The quotas and version of site monitoring.</p>
+     */
     @NameInMap("Data")
     public DescribeSiteMonitorQuotaResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The call was successful.</p>
+     * <p>*   false: The call failed.</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -65,21 +85,45 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
     }
 
     public static class DescribeSiteMonitorQuotaResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether the second-level monitoring is enabled. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("SecondMonitor")
         public Boolean secondMonitor;
 
+        /**
+         * <p>The quota of detection points that are provided by Alibaba Cloud. Five detection points are provided for free.</p>
+         */
         @NameInMap("SiteMonitorIdcQuota")
         public Integer siteMonitorIdcQuota;
 
+        /**
+         * <p>The quota of detection points that are not provided by Alibaba Cloud. Default value: 0.</p>
+         */
         @NameInMap("SiteMonitorOperatorQuotaQuota")
         public Integer siteMonitorOperatorQuotaQuota;
 
+        /**
+         * <p>The used quota of site monitoring tasks.</p>
+         */
         @NameInMap("SiteMonitorQuotaTaskUsed")
         public Integer siteMonitorQuotaTaskUsed;
 
+        /**
+         * <p>The quota of site monitoring tasks.</p>
+         */
         @NameInMap("SiteMonitorTaskQuota")
         public Integer siteMonitorTaskQuota;
 
+        /**
+         * <p>The version of site monitoring. Valid values:</p>
+         * <br>
+         * <p>*   V1</p>
+         * <p>*   V2</p>
+         */
         @NameInMap("SiteMonitorVersion")
         public String siteMonitorVersion;
 

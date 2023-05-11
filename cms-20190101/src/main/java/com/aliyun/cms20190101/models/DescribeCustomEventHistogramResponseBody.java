@@ -4,18 +4,35 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCustomEventHistogramResponseBody extends TeaModel {
+    /**
+     * <p>The returned message. If the call was successful, the value success is returned. If the call failed, an error message is returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The end of an interval.</p>
+     * <br>
+     * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     */
     @NameInMap("EventHistograms")
     public DescribeCustomEventHistogramResponseBodyEventHistograms eventHistograms;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the number of times that the custom event occurred during each interval of a time period.</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -65,12 +82,23 @@ public class DescribeCustomEventHistogramResponseBody extends TeaModel {
     }
 
     public static class DescribeCustomEventHistogramResponseBodyEventHistogramsEventHistogram extends TeaModel {
+        /**
+         * <p>Queries the number of times that a custom event occurred during each interval of a time period.</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The beginning of an interval.</p>
+         * <br>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The information about the number of times that the custom event occurred during an interval of a time period.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 

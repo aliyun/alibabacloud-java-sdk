@@ -4,9 +4,15 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutMonitorGroupDynamicRuleResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+     */
     @NameInMap("Message")
     public String message;
 

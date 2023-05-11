@@ -7,12 +7,26 @@ public class PutContactRequest extends TeaModel {
     @NameInMap("Channels")
     public PutContactRequestChannels channels;
 
+    /**
+     * <p>The name of the alert contact.</p>
+     */
     @NameInMap("ContactName")
     public String contactName;
 
+    /**
+     * <p>The description of the alert contact.</p>
+     */
     @NameInMap("Describe")
     public String describe;
 
+    /**
+     * <p>The language in which the alert information is displayed. Valid values:</p>
+     * <br>
+     * <p>*   zh-cn: simplified Chinese</p>
+     * <p>*   en: English</p>
+     * <br>
+     * <p>>  If you do not specify a value for this parameter, Cloud Monitor identifies the language of the alert information based on the region of your Alibaba Cloud account.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
@@ -54,15 +68,35 @@ public class PutContactRequest extends TeaModel {
     }
 
     public static class PutContactRequestChannels extends TeaModel {
+        /**
+         * <p>The TradeManager ID of the alert contact.</p>
+         * <br>
+         * <p>Specify at least one of the following alert notification targets: email address or webhook URL of the DingTalk chatbot.</p>
+         */
         @NameInMap("AliIM")
         public String aliIM;
 
+        /**
+         * <p>The webhook URL of the DingTalk chatbot.</p>
+         * <br>
+         * <p>Specify at least one of the following alert notification targets: email address or webhook URL of the DingTalk chatbot.</p>
+         */
         @NameInMap("DingWebHook")
         public String dingWebHook;
 
+        /**
+         * <p>The email address of the alert contact. After you add or modify an email address, the recipient receives an email that contains an activation link. The system adds the recipient to the list of alert contacts only after the recipient activates the email address.</p>
+         * <br>
+         * <p>Specify at least one of the following alert notification targets: email address or webhook URL of the DingTalk chatbot.</p>
+         */
         @NameInMap("Mail")
         public String mail;
 
+        /**
+         * <p>The phone number of the alert contact. After you add or modify a phone number, the recipient receives a text message that contains an activation link. The system adds the recipient to the list of alert contacts only after the recipient activates the phone number.</p>
+         * <br>
+         * <p>Specify at least one of the following alert notification targets: email address or webhook URL of the DingTalk chatbot.</p>
+         */
         @NameInMap("SMS")
         public String SMS;
 

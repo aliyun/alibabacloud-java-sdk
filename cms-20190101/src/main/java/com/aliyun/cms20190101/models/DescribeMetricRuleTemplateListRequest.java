@@ -4,30 +4,61 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetricRuleTemplateListRequest extends TeaModel {
+    /**
+     * <p>The name of the alert template.</p>
+     */
     @NameInMap("History")
     public Boolean history;
 
+    /**
+     * <p>The name of the application group.</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The version of the alert template.</p>
+     * <br>
+     * <p>Default value: 0.</p>
+     */
     @NameInMap("Order")
     public Boolean order;
 
+    /**
+     * <p>The timestamp when the alert template was created.</p>
+     * <br>
+     * <p>Unit: milliseconds.</p>
+     */
     @NameInMap("OrderBy")
     public String orderBy;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>Specifies whether to display the application history of the alert templates. Default value: false. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The name of the alert template.</p>
+     */
     @NameInMap("TemplateId")
     public Long templateId;
 

@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutCustomMetricResponseBody extends TeaModel {
+    /**
+     * <p>The name of the metric. Valid values of N: 1 to 21. For more information, see [Appendix 1: Metrics](~~163515~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 

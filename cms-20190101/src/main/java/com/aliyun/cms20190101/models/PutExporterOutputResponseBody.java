@@ -4,15 +4,29 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutExporterOutputResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>> The status code 200 indicates that the request was successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. true: The request was successful. false: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

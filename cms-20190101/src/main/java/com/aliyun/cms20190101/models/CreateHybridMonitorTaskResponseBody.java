@@ -4,12 +4,21 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateHybridMonitorTaskResponseBody extends TeaModel {
+    /**
+     * <p>The alias of the aggregation result.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,27 +4,65 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
+    /**
+     * <p>The tag value.</p>
+     * <br>
+     * <p>The `TagValue` and `TagValueMatchFunction` parameters must be used in pairs.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The tag value.</p>
+     * <br>
+     * <p>For more information about how to obtain a tag value, see [DescribeTagKeyList](~~145557~~).</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The status of adding instances that meet the tag rule to the application group. Valid values:</p>
+     * <br>
+     * <p>*   `RUNNING`</p>
+     * <p>*   `FINISH`</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The ID of the region to which the tags belong.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The logical operator that is used between conditional expressions. Valid values:</p>
+     * <br>
+     * <p>*   `and`</p>
+     * <p>*   `or`</p>
+     * <br>
+     * <p>>  Only one logical operator can be used in a request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The tag key.</p>
+     * <br>
+     * <p>For more information about how to obtain a tag key, see [DescribeTagKeyList](~~145558~~).</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The ID of the tag rule.</p>
+     */
     @NameInMap("TagGroupList")
     public DescribeDynamicTagRuleListResponseBodyTagGroupList tagGroupList;
 
+    /**
+     * <p>The tag rules of application groups.</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -117,15 +155,32 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
     }
 
     public static class DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupMatchExpressMatchExpress extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        /**
+         * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
+        /**
+         * <p>Queries tag rules.</p>
+         */
         @NameInMap("TagValueMatchFunction")
         public String tagValueMatchFunction;
 
         public static DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupMatchExpressMatchExpress build(java.util.Map<String, ?> map) throws Exception {
             DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupMatchExpressMatchExpress self = new DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupMatchExpressMatchExpress();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupMatchExpressMatchExpress setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
         }
 
         public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupMatchExpressMatchExpress setTagValue(String tagValue) {
@@ -188,21 +243,41 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
         @NameInMap("ContactGroupList")
         public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupContactGroupList contactGroupList;
 
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("DynamicTagRuleId")
         public String dynamicTagRuleId;
 
+        /**
+         * <p>The ID of the request.</p>
+         */
         @NameInMap("MatchExpress")
         public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupMatchExpress matchExpress;
 
+        /**
+         * <p>The number of the page to return.</p>
+         * <br>
+         * <p>Pages start from page 1. Default value: 1.</p>
+         */
         @NameInMap("MatchExpressFilterRelation")
         public String matchExpressFilterRelation;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The alert contact group.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
