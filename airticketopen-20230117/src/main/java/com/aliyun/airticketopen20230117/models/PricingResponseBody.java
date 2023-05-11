@@ -161,21 +161,39 @@ public class PricingResponseBody extends TeaModel {
     }
 
     public static class PricingResponseBodyDataOriginalPriceInfo extends TeaModel {
+        /**
+         * <p>成人单价</p>
+         */
         @NameInMap("adult_price")
         public Double adultPrice;
 
+        /**
+         * <p>成人税</p>
+         */
         @NameInMap("adult_tax")
         public Double adultTax;
 
+        /**
+         * <p>儿童单价</p>
+         */
         @NameInMap("child_price")
         public Double childPrice;
 
+        /**
+         * <p>儿童税</p>
+         */
         @NameInMap("child_tax")
         public Double childTax;
 
+        /**
+         * <p>婴儿单价</p>
+         */
         @NameInMap("infant_price")
         public Double infantPrice;
 
+        /**
+         * <p>婴儿税</p>
+         */
         @NameInMap("infant_tax")
         public Double infantTax;
 
@@ -765,6 +783,9 @@ public class PricingResponseBody extends TeaModel {
         @NameInMap("is_changed")
         public Boolean isChanged;
 
+        /**
+         * <p>变价之前价格信息 isChanged = true 时，才有值</p>
+         */
         @NameInMap("original_price_info")
         public PricingResponseBodyDataOriginalPriceInfo originalPriceInfo;
 
