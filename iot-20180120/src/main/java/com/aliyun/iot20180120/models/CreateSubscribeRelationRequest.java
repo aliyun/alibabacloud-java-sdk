@@ -7,48 +7,142 @@ public class CreateSubscribeRelationRequest extends TeaModel {
     @NameInMap("ConsumerGroupIds")
     public java.util.List<String> consumerGroupIds;
 
+    /**
+     * <p>Specifies whether to push upstream device messages. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes.</p>
+     * <p>*   **false**: no. This is the default value.</p>
+     */
     @NameInMap("DeviceDataFlag")
     public Boolean deviceDataFlag;
 
+    /**
+     * <p>Specifies whether to push messages about device lifecycle changes. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes.</p>
+     * <p>*   **false**: no. This is the default value.</p>
+     */
     @NameInMap("DeviceLifeCycleFlag")
     public Boolean deviceLifeCycleFlag;
 
+    /**
+     * <p>Specifies whether to push messages about device status changes. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes.</p>
+     * <p>*   **false**: no. This is the default value.</p>
+     */
     @NameInMap("DeviceStatusChangeFlag")
     public Boolean deviceStatusChangeFlag;
 
+    /**
+     * <p>Specifies whether to push messages about device tag changes. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes. This parameter is valid only if you set the **Type** parameter to **AMQP**.</p>
+     * <p>*   **false**: no. This is the default value.</p>
+     */
     @NameInMap("DeviceTagFlag")
     public Boolean deviceTagFlag;
 
+    /**
+     * <p>Specifies whether to push messages about topological relationship changes of devices. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes. This parameter is valid only for gateway products.</p>
+     * <p>*   **false**: no. This is the default value.</p>
+     */
     @NameInMap("DeviceTopoLifeCycleFlag")
     public Boolean deviceTopoLifeCycleFlag;
 
+    /**
+     * <p>Specifies whether to push messages when a gateway detects new sub-devices. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes. This parameter is valid only for gateway products.</p>
+     * <p>*   **false**: no. This is the default value.</p>
+     */
     @NameInMap("FoundDeviceListFlag")
     public Boolean foundDeviceListFlag;
 
+    /**
+     * <p>The ID of the instance. You can view the ID of the instance on the **Overview** page in the IoT Platform console.</p>
+     * <br>
+     * <p>>*   If your instance has an ID, you must specify the ID for this parameter. Otherwise, the call fails.****</p>
+     * <p>>*   If no **Overview** page or **ID** is generated for your instance, you do not need to configure this parameter.</p>
+     * <br>
+     * <p>For more information, see [Overview](~~356505~~).</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>The configurations of the MNS queue. If you set the **Type** parameter to **AMQP**, this parameter is required.</p>
+     * <br>
+     * <p>For more information, see the "Definition of the MnsConfiguration parameter" section.</p>
+     */
     @NameInMap("MnsConfiguration")
     public String mnsConfiguration;
 
+    /**
+     * <p>Specifies whether to push notifications about the status of over-the-air (OTA) update batches. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes.</p>
+     * <p>*   **false**: no. This is the default value.</p>
+     */
     @NameInMap("OtaEventFlag")
     public Boolean otaEventFlag;
 
+    /**
+     * <p>Specifies whether to push notifications about the status of OTA update batches. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes. This parameter is valid only if you set the **Type** parameter to **AMQP**.</p>
+     * <p>*   **false**: no. This is the default value.</p>
+     */
     @NameInMap("OtaJobFlag")
     public Boolean otaJobFlag;
 
+    /**
+     * <p>Specifies whether to push messages about the version numbers of OTA modules. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes. This parameter is valid only if you set the **Type** parameter to **AMQP**.</p>
+     * <p>*   **false**: no. This is the default value.</p>
+     */
     @NameInMap("OtaVersionFlag")
     public Boolean otaVersionFlag;
 
+    /**
+     * <p>The **ProductKey** of the product that is specified for the subscription.</p>
+     */
     @NameInMap("ProductKey")
     public String productKey;
 
+    /**
+     * <p>Specifies whether to receive the messages of a specific subscribed product.</p>
+     * <br>
+     * <p>If you subscribe to JT/T 808 gateway products, you must configure the **SubscribeFlags** parameter. Set the value to the following code.</p>
+     * <br>
+     * <p>```</p>
+     * <br>
+     * <p>{</p>
+     * <p>    "jt808DeviceDataFlag": true</p>
+     * <p>}</p>
+     * <p>```</p>
+     */
     @NameInMap("SubscribeFlags")
     public String subscribeFlags;
 
+    /**
+     * <p>Specifies whether to push upstream historical Thing Specification Language (TSL) data. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes.</p>
+     * <p>*   **false**: no. This is the default value.</p>
+     */
     @NameInMap("ThingHistoryFlag")
     public Boolean thingHistoryFlag;
 
+    /**
+     * <p>The type of the subscription. Valid values:</p>
+     * <br>
+     * <p>*   **MNS**</p>
+     * <p>*   **AMQP**</p>
+     */
     @NameInMap("Type")
     public String type;
 

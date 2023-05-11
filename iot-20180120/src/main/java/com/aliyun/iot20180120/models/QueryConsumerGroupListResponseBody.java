@@ -4,30 +4,60 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryConsumerGroupListResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The number of the returned page.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The details about the consumer group. This parameter is returned if the call is successful. For more information, see ConsumerGroupDTO.</p>
+     */
     @NameInMap("Data")
     public QueryConsumerGroupListResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the call fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The total number of returned pages.</p>
+     */
     @NameInMap("PageCount")
     public Integer pageCount;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of entries.</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -109,12 +139,21 @@ public class QueryConsumerGroupListResponseBody extends TeaModel {
     }
 
     public static class QueryConsumerGroupListResponseBodyDataConsumerGroupDTO extends TeaModel {
+        /**
+         * <p>The time when the consumer group was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ss.SSSZ format. The time is displayed in UTC and accurate to milliseconds.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The ID of the consumer group.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The name of the consumer group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 

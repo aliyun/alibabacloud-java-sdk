@@ -4,27 +4,51 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchAddDeviceGroupRelationsResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("AlreadyRelatedGroupDeviceCount")
     public Integer alreadyRelatedGroupDeviceCount;
 
+    /**
+     * <p>The number of valid devices that you specified.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The number of devices that exist in the group.</p>
+     */
     @NameInMap("ExceedTenGroupDeviceCount")
     public Integer exceedTenGroupDeviceCount;
 
+    /**
+     * <p>The number of the specified devices that are added to 10 or more groups. You can add a device to a maximum of 10 groups.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
     @NameInMap("SuccessAddedDeviceCount")
     public Integer successAddedDeviceCount;
 
+    /**
+     * <p>The number of devices that are added to the group.</p>
+     */
     @NameInMap("ValidDeviceCount")
     public Integer validDeviceCount;
 

@@ -4,18 +4,36 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ListDeviceDistributeJobResponseBody extends TeaModel {
+    /**
+     * <p>The error code that is returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The distribution tasks that are returned if the call is successful. For more information, see the **JobInfo** parameter.</p>
+     */
     @NameInMap("Data")
     public ListDeviceDistributeJobResponseBodyData data;
 
+    /**
+     * <p>The error message that is returned if the call fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +83,21 @@ public class ListDeviceDistributeJobResponseBody extends TeaModel {
     }
 
     public static class ListDeviceDistributeJobResponseBodyDataJobInfoItemsTargetInstanceConfigsTargetInstanceConfigs extends TeaModel {
+        /**
+         * <p>The ID of the destination instance.</p>
+         */
         @NameInMap("TargetInstanceId")
         public String targetInstanceId;
 
+        /**
+         * <p>The name of the destination instance.</p>
+         */
         @NameInMap("TargetInstanceName")
         public String targetInstanceName;
 
+        /**
+         * <p>The region where the destination instance resides.</p>
+         */
         @NameInMap("TargetRegion")
         public String targetRegion;
 
@@ -125,39 +152,86 @@ public class ListDeviceDistributeJobResponseBody extends TeaModel {
     }
 
     public static class ListDeviceDistributeJobResponseBodyDataJobInfoItems extends TeaModel {
+        /**
+         * <p>The time when the task was created.</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>The ID of the task.</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>The **ProductKey** of the product to which the device belongs.</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 
+        /**
+         * <p>The ID of the source instance.</p>
+         */
         @NameInMap("SourceInstanceId")
         public String sourceInstanceId;
 
+        /**
+         * <p>The name of the source instance.</p>
+         */
         @NameInMap("SourceInstanceName")
         public String sourceInstanceName;
 
+        /**
+         * <p>The region where the source instance resides.</p>
+         */
         @NameInMap("SourceRegion")
         public String sourceRegion;
 
+        /**
+         * <p>The ID of the source Alibaba Cloud account.</p>
+         */
         @NameInMap("SourceUid")
         public String sourceUid;
 
+        /**
+         * <p>The status of the task.</p>
+         * <br>
+         * <p>*   **0**: The task is being initialized.</p>
+         * <p>*   **1**: The task is running.</p>
+         * <p>*   **2**: The task is completed. The status indicates that the distribution task is complete but does not indicate that all products and devices are distributed. To obtain distribution results, call the [QueryDeviceDistributeDetail](~~199533~~) operation.</p>
+         * <p>*   **3**: The task is unexpectedly interrupted.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The distribution policy.</p>
+         * <br>
+         * <p>*   **0**: distributes devices to specified instances in a specified region. This is the default value.</p>
+         * <p>*   **1**: configures instance IDs in multiple regions and distributes devices to the nearest regions based on the IP addresses of the devices.</p>
+         */
         @NameInMap("Strategy")
         public Integer strategy;
 
+        /**
+         * <p>The IDs of the destination instances.</p>
+         * <br>
+         * <p>*   If the value of the **Strategy** parameter is **1**, multiple instance IDs exist.</p>
+         * <p>*   If the value of the **Strategy** parameter is **0**, only one instance ID exists.</p>
+         */
         @NameInMap("TargetInstanceConfigs")
         public ListDeviceDistributeJobResponseBodyDataJobInfoItemsTargetInstanceConfigs targetInstanceConfigs;
 
+        /**
+         * <p>The ID of the destination Alibaba Cloud account.</p>
+         */
         @NameInMap("TargetUid")
         public String targetUid;
 
+        /**
+         * <p>The total number of devices in the distribution task.</p>
+         */
         @NameInMap("Total")
         public Integer total;
 
@@ -284,12 +358,23 @@ public class ListDeviceDistributeJobResponseBody extends TeaModel {
     }
 
     public static class ListDeviceDistributeJobResponseBodyData extends TeaModel {
+        /**
+         * <p>The information about the task.</p>
+         */
         @NameInMap("JobInfo")
         public ListDeviceDistributeJobResponseBodyDataJobInfo jobInfo;
 
+        /**
+         * <p>The token that is used to retrieve the subsequent pages of the query results. The value of this parameter can be used in the next query to obtain the subsequent pages of results. </p>
+         * <br>
+         * <p>If the return value is empty, no subsequent page exists.</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 
+        /**
+         * <p>The total number of device distribution tasks.</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

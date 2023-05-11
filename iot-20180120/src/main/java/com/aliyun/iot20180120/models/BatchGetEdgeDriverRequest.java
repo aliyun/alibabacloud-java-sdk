@@ -7,6 +7,9 @@ public class BatchGetEdgeDriverRequest extends TeaModel {
     @NameInMap("DriverIds")
     public java.util.List<String> driverIds;
 
+    /**
+     * <p>The ID of the Internet of Things (IoT) service instance. This parameter is not required for public instances. However, this parameter is required for the instances that you have purchased.</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 

@@ -4,21 +4,42 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryThingModelPublishedResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public QueryThingModelPublishedResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the call fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ProductKey of the product.</p>
+     */
     @NameInMap("ProductKey")
     public String productKey;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,6 +97,9 @@ public class QueryThingModelPublishedResponseBody extends TeaModel {
     }
 
     public static class QueryThingModelPublishedResponseBodyData extends TeaModel {
+        /**
+         * <p>Define features for the TSL model. For more information about the data format of the ThingModelJson parameter, see [Data structure of ThingModelJson](~~150457~~).</p>
+         */
         @NameInMap("ThingModelJson")
         public String thingModelJson;
 

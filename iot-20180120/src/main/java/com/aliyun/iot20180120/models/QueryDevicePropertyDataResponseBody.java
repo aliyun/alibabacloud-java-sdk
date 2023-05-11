@@ -4,18 +4,36 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDevicePropertyDataResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The property data returned if the call is successful.</p>
+     */
     @NameInMap("Data")
     public QueryDevicePropertyDataResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the call fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +83,15 @@ public class QueryDevicePropertyDataResponseBody extends TeaModel {
     }
 
     public static class QueryDevicePropertyDataResponseBodyDataListPropertyInfo extends TeaModel {
+        /**
+         * <p>The time when the property was modified.</p>
+         */
         @NameInMap("Time")
         public String time;
 
+        /**
+         * <p>The value of the property.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -114,12 +138,27 @@ public class QueryDevicePropertyDataResponseBody extends TeaModel {
     }
 
     public static class QueryDevicePropertyDataResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of property records.</p>
+         */
         @NameInMap("List")
         public QueryDevicePropertyDataResponseBodyDataList list;
 
+        /**
+         * <p>The start time of the property records on the next page. </p>
+         * <br>
+         * <p>- If the **Asc** parameter is set to **0**, you can specify this value for the **EndTime** parameter when you call this operation again to query the next page of property records.</p>
+         * <p>- If the **Asc** parameter is set to **1**, you can specify this value for the **StartTime** parameter when you call this operation again to query the next page of property records.</p>
+         */
         @NameInMap("NextTime")
         public Long nextTime;
 
+        /**
+         * <p>Indicates whether the next page exists.</p>
+         * <br>
+         * <p>*   **true**: The next page exists. If the return value of the NextValid parameter is true, the value of the **NextTime** parameter is returned. For more information, see the description of the **NextTime** parameter in this topic.</p>
+         * <p>*   **false**: The next page does not exist.</p>
+         */
         @NameInMap("NextValid")
         public Boolean nextValid;
 

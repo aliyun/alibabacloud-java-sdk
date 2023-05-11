@@ -4,30 +4,60 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryPageByApplyIdResponseBody extends TeaModel {
+    /**
+     * <p>The registered device list information returned if the call succeeds. The **ApplyDeviceInfo** parameter includes the details of the registered devices.</p>
+     */
     @NameInMap("ApplyDeviceList")
     public QueryPageByApplyIdResponseBodyApplyDeviceList applyDeviceList;
 
+    /**
+     * <p>The error code returned if the call fails. For more information, see [Error codes](/help/en/iot-platform/latest/bce100).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The error message returned if the call fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("Page")
     public Integer page;
 
+    /**
+     * <p>The total number of pages.</p>
+     */
     @NameInMap("PageCount")
     public Integer pageCount;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of devices.</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -109,15 +139,29 @@ public class QueryPageByApplyIdResponseBody extends TeaModel {
     }
 
     public static class QueryPageByApplyIdResponseBodyApplyDeviceListApplyDeviceInfo extends TeaModel {
+        /**
+         * <p>The ID of the device (expired).</p>
+         * <br>
+         * <p>>  This parameter is no longer used. Do not use this parameter to identify a device. You can use the **IotId** parameter or a combination of the **ProductKey** and **DeviceName** parameters to identify a device.</p>
+         */
         @NameInMap("DeviceId")
         public String deviceId;
 
+        /**
+         * <p>The DeviceName of the device.</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <p>The DeviceSecret of the device.</p>
+         */
         @NameInMap("DeviceSecret")
         public String deviceSecret;
 
+        /**
+         * <p>The ID of the device. The ID is the unique identifier that is issued by IoT Platform to the device.</p>
+         */
         @NameInMap("IotId")
         public String iotId;
 

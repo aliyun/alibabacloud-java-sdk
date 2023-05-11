@@ -4,30 +4,60 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ListOTAJobByFirmwareResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The number of the returned page.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The update batch information returned if the call is successful. For more information, see **SimpleOTATaskInfo**.</p>
+     */
     @NameInMap("Data")
     public ListOTAJobByFirmwareResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the call fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The total number of pages.</p>
+     */
     @NameInMap("PageCount")
     public Integer pageCount;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of update jobs returned.</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -109,9 +139,15 @@ public class ListOTAJobByFirmwareResponseBody extends TeaModel {
     }
 
     public static class ListOTAJobByFirmwareResponseBodyDataSimpleOTAJobInfoTagsOtaTagDTO extends TeaModel {
+        /**
+         * <p>The key of each tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -158,39 +194,94 @@ public class ListOTAJobByFirmwareResponseBody extends TeaModel {
     }
 
     public static class ListOTAJobByFirmwareResponseBodyDataSimpleOTAJobInfo extends TeaModel {
+        /**
+         * <p>The ID of the update package.</p>
+         */
         @NameInMap("FirmwareId")
         public String firmwareId;
 
+        /**
+         * <p>The ID of the update batch.</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>The status of the update batch.</p>
+         * <br>
+         * <p>*   **PLANNED**: The update batch is being planned. The batch is created, but the scheduled time has not arrived. This parameter is returned only if you perform a static update.</p>
+         * <p>*   **IN_PROGRESS**: The update batch is running.</p>
+         * <p>*   **COMPLETE**: The update batch is completed.</p>
+         * <p>*   **CANCELED**: The update batch is canceled.</p>
+         */
         @NameInMap("JobStatus")
         public String jobStatus;
 
+        /**
+         * <p>The type of the batch. Valid values:</p>
+         * <br>
+         * <p>*   **VERFIY_FIRMWARE**: update package verification.</p>
+         * <p>*   **UPGRADE_FIRMWARE**: batch update.</p>
+         */
         @NameInMap("JobType")
         public String jobType;
 
+        /**
+         * <p>The ProductKey of the product to which the update package belongs.</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 
+        /**
+         * <p>The update policy of the update batch. Valid values:</p>
+         * <br>
+         * <p>*   **DYNAMIC**: dynamic update. This value is returned if you call the [CreateOTADynamicUpgradeJob](~~147887~~) API operation to create an update batch.</p>
+         * <p>*   **STATIC**: static update. This value is returned if you call the [CreateOTAStaticUpgradeJob](~~147496~~) API operation to create an update batch.</p>
+         */
         @NameInMap("SelectionType")
         public String selectionType;
 
+        /**
+         * <p>The tags of the update batch.</p>
+         */
         @NameInMap("Tags")
         public ListOTAJobByFirmwareResponseBodyDataSimpleOTAJobInfoTags tags;
 
+        /**
+         * <p>The scope of the update batch. Valid values: </p>
+         * <br>
+         * <p>- **ALL**: updates all devices.</p>
+         * <p>- **SPECIFIC**: updates specified devices.</p>
+         * <p>- **GRAY**: performs a phased update.</p>
+         * <br>
+         * <p>>  The value ALL is returned if you call the [CreateOTADynamicUpgradeJob](/help/en/iot-platform/latest/av6dui) API operation to create an update batch.</p>
+         */
         @NameInMap("TargetSelection")
         public String targetSelection;
 
+        /**
+         * <p>The time when the update batch was created. The time is displayed in UTC.</p>
+         */
         @NameInMap("UtcCreate")
         public String utcCreate;
 
+        /**
+         * <p>The end time of the update batch. The time is displayed in UTC.</p>
+         * <br>
+         * <p>This parameter is returned only after the update batch is completed.</p>
+         */
         @NameInMap("UtcEndTime")
         public String utcEndTime;
 
+        /**
+         * <p>The time when the update batch was last modified. The time is displayed in UTC.</p>
+         */
         @NameInMap("UtcModified")
         public String utcModified;
 
+        /**
+         * <p>The start time of the update batch. The time is displayed in UTC.</p>
+         */
         @NameInMap("UtcStartTime")
         public String utcStartTime;
 

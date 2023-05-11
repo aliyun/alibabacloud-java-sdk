@@ -4,30 +4,60 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ListOTATaskByJobResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The number of the returned page.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The update task information returned if the call is successful. For more information, see **SimpleOTATaskInfo**.</p>
+     */
     @NameInMap("Data")
     public ListOTATaskByJobResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the call fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The total number of pages returned.</p>
+     */
     @NameInMap("PageCount")
     public Integer pageCount;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of update tasks.</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -109,48 +139,103 @@ public class ListOTATaskByJobResponseBody extends TeaModel {
     }
 
     public static class ListOTATaskByJobResponseBodyDataSimpleOTATaskInfo extends TeaModel {
+        /**
+         * <p>The version of the destination over-the-air (OTA) update package.</p>
+         */
         @NameInMap("DestVersion")
         public String destVersion;
 
+        /**
+         * <p>The name of the device.</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <p>The ID of the update package.</p>
+         */
         @NameInMap("FirmwareId")
         public String firmwareId;
 
+        /**
+         * <p>The ID of the device.</p>
+         */
         @NameInMap("IotId")
         public String iotId;
 
+        /**
+         * <p>The ID of the update batch.</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>The ProductKey of the product to which the device belongs.</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 
+        /**
+         * <p>The name of the product to which the device belongs.</p>
+         */
         @NameInMap("ProductName")
         public String productName;
 
+        /**
+         * <p>The current update progress.</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <p>The firmware version before the update.</p>
+         */
         @NameInMap("SrcVersion")
         public String srcVersion;
 
+        /**
+         * <p>The description of the update task. This parameter displays an error message if the device update times out or the update task is canceled.</p>
+         */
         @NameInMap("TaskDesc")
         public String taskDesc;
 
+        /**
+         * <p>The ID of the update task.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The update status of the device.</p>
+         * <br>
+         * <p>*   **CONFIRM**: The update task is pending confirmation.</p>
+         * <p>*   **QUEUED**: The update notification is to be pushed.</p>
+         * <p>*   **NOTIFIED**: The update notification is pushed to the device.</p>
+         * <p>*   **IN_PROGRESS**: The update task is in progress.</p>
+         * <p>*   **SUCCEEDED**: The update is successful.</p>
+         * <p>*   **FAILED**: The update failed.</p>
+         * <p>*   **CANCELED**: The update batch is canceled.</p>
+         */
         @NameInMap("TaskStatus")
         public String taskStatus;
 
+        /**
+         * <p>The timeout period of the device update. Unit: minutes.</p>
+         * <br>
+         * <p>>  If no timeout period is specified for the update batch, the return value is null.</p>
+         */
         @NameInMap("Timeout")
         public String timeout;
 
+        /**
+         * <p>The time when the update task was created. The time is displayed in UTC.</p>
+         */
         @NameInMap("UtcCreate")
         public String utcCreate;
 
+        /**
+         * <p>The time when the update task was last modified. The time is displayed in UTC.</p>
+         */
         @NameInMap("UtcModified")
         public String utcModified;
 

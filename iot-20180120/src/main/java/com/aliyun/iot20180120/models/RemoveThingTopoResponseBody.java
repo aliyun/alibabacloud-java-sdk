@@ -4,18 +4,39 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class RemoveThingTopoResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Indicates whether the topological relationship was deleted.</p>
+     * <br>
+     * <p>*   **true**: The topological relationship was deleted.</p>
+     * <p>*   **false**: The topological relationship failed to be deleted.</p>
+     */
     @NameInMap("Data")
     public Boolean data;
 
+    /**
+     * <p>The error message returned if the call fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

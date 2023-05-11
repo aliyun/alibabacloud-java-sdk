@@ -4,18 +4,36 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDevicePropertyStatusResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned if the call succeeds. For more information, see **List**.</p>
+     */
     @NameInMap("Data")
     public QueryDevicePropertyStatusResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the request fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,21 +83,49 @@ public class QueryDevicePropertyStatusResponseBody extends TeaModel {
     }
 
     public static class QueryDevicePropertyStatusResponseBodyDataListPropertyStatusInfo extends TeaModel {
+        /**
+         * <p>The data type of the property. Valid values:</p>
+         * <br>
+         * <p>*   **int**: integer</p>
+         * <p>*   **float**: single-precision floating-point number</p>
+         * <p>*   **double**: double-precision floating-point number</p>
+         * <p>*   **enum**: enumeration</p>
+         * <p>*   **bool**: Boolean</p>
+         * <p>*   **text**: character</p>
+         * <p>*   **date**: time (string-type UTC timestamp in milliseconds)</p>
+         * <p>*   **array**: array</p>
+         * <p>*   **struct**: structure</p>
+         */
         @NameInMap("DataType")
         public String dataType;
 
+        /**
+         * <p>The identifier of the property.</p>
+         */
         @NameInMap("Identifier")
         public String identifier;
 
+        /**
+         * <p>The name of the property.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The time when the property was modified, in milliseconds.</p>
+         */
         @NameInMap("Time")
         public String time;
 
+        /**
+         * <p>The unit of the property value.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the property.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -158,6 +204,9 @@ public class QueryDevicePropertyStatusResponseBody extends TeaModel {
     }
 
     public static class QueryDevicePropertyStatusResponseBodyData extends TeaModel {
+        /**
+         * <p>The array of property information. The information about each property is indicated by the **PropertyStatusInfo** parameter.</p>
+         */
         @NameInMap("List")
         public QueryDevicePropertyStatusResponseBodyDataList list;
 

@@ -4,18 +4,33 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryEdgeInstanceDeviceResponseBody extends TeaModel {
+    /**
+     * <p>The return code of the operation. A value of Success indicates that the call was successful. Other values indicate that specific errors occurred. For more information, see [Error codes](~~135200~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data that is returned if the call was successful.</p>
+     */
     @NameInMap("Data")
     public QueryEdgeInstanceDeviceResponseBodyData data;
 
+    /**
+     * <p>The error message that is returned if the call failed.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful. A value of true indicates that the call was successful. A value of false indicates that the call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,15 +80,27 @@ public class QueryEdgeInstanceDeviceResponseBody extends TeaModel {
     }
 
     public static class QueryEdgeInstanceDeviceResponseBodyDataDeviceList extends TeaModel {
+        /**
+         * <p>The name of the device.</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <p>The ID of the driver.</p>
+         */
         @NameInMap("DriverId")
         public String driverId;
 
+        /**
+         * <p>The ID of the device.</p>
+         */
         @NameInMap("IotId")
         public String iotId;
 
+        /**
+         * <p>The key that uniquely identifies the product to which the device belongs.</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 
@@ -117,15 +144,27 @@ public class QueryEdgeInstanceDeviceResponseBody extends TeaModel {
     }
 
     public static class QueryEdgeInstanceDeviceResponseBodyData extends TeaModel {
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The list of device information.</p>
+         */
         @NameInMap("DeviceList")
         public java.util.List<QueryEdgeInstanceDeviceResponseBodyDataDeviceList> deviceList;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The number of devices.</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

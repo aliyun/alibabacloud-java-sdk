@@ -4,18 +4,39 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GetRuleActionResponseBody extends TeaModel {
+    /**
+     * <p>The error message returned if the call fails.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the rule action forwarded error operation data that failed to be forwarded to the destination cloud service. A data forwarding failure indicates that forwarding retries also failed.</p>
+     * <br>
+     * <p>*   **true**: forwards error operation data.</p>
+     * <p>*   **false**: forwards normal data instead of error operation data.</p>
+     */
     @NameInMap("RuleActionInfo")
     public GetRuleActionResponseBodyRuleActionInfo ruleActionInfo;
 
+    /**
+     * <p>The rule action information returned if the call was successful. For more information, see the following parameters.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,18 +86,37 @@ public class GetRuleActionResponseBody extends TeaModel {
     }
 
     public static class GetRuleActionResponseBodyRuleActionInfo extends TeaModel {
+        /**
+         * <p>The ID of rule action.</p>
+         */
         @NameInMap("Configuration")
         public String configuration;
 
+        /**
+         * <p>The type of the rule action. Valid values:</p>
+         * <br>
+         * <p>*   **REPUBLISH**: forwards data to another topic.</p>
+         * <p>*   **OTS**: stores data to Tablestore.</p>
+         * <p>*   **MNS**: sends data to Message Service (MNS).</p>
+         * <p>*   **FC**: sends data to Function Compute.</p>
+         * <p>*   **RDS**: Save to cloud databases.</p>
+         * <p>*   **AMQP**: forwards data to an AMQP consumer group.</p>
+         */
         @NameInMap("ErrorActionFlag")
         public Boolean errorActionFlag;
 
+        /**
+         * <p>The ID of the rule based on which the rule action is performed.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
         @NameInMap("RuleId")
         public Long ruleId;
 
+        /**
+         * <p>The configurations of the rule action.</p>
+         */
         @NameInMap("Type")
         public String type;
 

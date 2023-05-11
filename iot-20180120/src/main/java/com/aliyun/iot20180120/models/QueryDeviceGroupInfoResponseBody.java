@@ -4,18 +4,36 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceGroupInfoResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The group details returned if the call succeeds. This parameter includes the following parameters.</p>
+     */
     @NameInMap("Data")
     public QueryDeviceGroupInfoResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the call fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,27 +83,51 @@ public class QueryDeviceGroupInfoResponseBody extends TeaModel {
     }
 
     public static class QueryDeviceGroupInfoResponseBodyData extends TeaModel {
+        /**
+         * <p>The number of activated devices.</p>
+         */
         @NameInMap("DeviceActive")
         public Integer deviceActive;
 
+        /**
+         * <p>The total number of devices.</p>
+         */
         @NameInMap("DeviceCount")
         public Integer deviceCount;
 
+        /**
+         * <p>The number of online devices.</p>
+         */
         @NameInMap("DeviceOnline")
         public Integer deviceOnline;
 
+        /**
+         * <p>The rule of the dynamic group. This parameter is returned if a dynamic group is queried.</p>
+         */
         @NameInMap("DynamicGroupExpression")
         public String dynamicGroupExpression;
 
+        /**
+         * <p>The description of the group.</p>
+         */
         @NameInMap("GroupDesc")
         public String groupDesc;
 
+        /**
+         * <p>The ID of the group.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The name of the group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The time when the group was created.</p>
+         */
         @NameInMap("UtcCreate")
         public String utcCreate;
 

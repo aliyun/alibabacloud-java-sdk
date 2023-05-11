@@ -4,6 +4,9 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceDistributeDetailRequest extends TeaModel {
+    /**
+     * <p>The ID of the distribution task. The ID globally identifies the task.</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 

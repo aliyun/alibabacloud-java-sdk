@@ -4,18 +4,33 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryEdgeInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The error message returned if the call failed.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("Data")
     public QueryEdgeInstanceResponseBodyData data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>Indicates whether the call was successful. true: indicates that the call was successful. false: indicates that the call failed.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The data returned if the call was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,51 +80,102 @@ public class QueryEdgeInstanceResponseBody extends TeaModel {
     }
 
     public static class QueryEdgeInstanceResponseBodyDataInstanceList extends TeaModel {
+        /**
+         * <p>The time when the edge instance was created.</p>
+         */
         @NameInMap("BizEnable")
         public Boolean bizEnable;
 
+        /**
+         * <p>The name of the edge instance.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         @NameInMap("GmtCreateTimestamp")
         public Long gmtCreateTimestamp;
 
+        /**
+         * <p>The type of the latest deployment task.</p>
+         * <br>
+         * <p>*   deploy: deploys the edge instance.</p>
+         * <p>*   Reset: resets the edge instance.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         @NameInMap("GmtModifiedTimestamp")
         public Long gmtModifiedTimestamp;
 
+        /**
+         * <p>The name of the RAM role.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>Indicates whether the edge instance was enabled.</p>
+         * <br>
+         * <p>*   true: enabled</p>
+         * <p>*   false: disabled</p>
+         */
         @NameInMap("LatestDeploymentStatus")
         public Integer latestDeploymentStatus;
 
+        /**
+         * <p>The status of the latest deployment task.</p>
+         * <br>
+         * <p>*   0: The task has not started.</p>
+         * <p>*   1: The task is being processed.</p>
+         * <p>*   2: The task was successful.</p>
+         * <p>*   3: The task failed.</p>
+         */
         @NameInMap("LatestDeploymentType")
         public String latestDeploymentType;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The time when the RAM role was attached to IoT Platform.</p>
+         */
         @NameInMap("RoleArn")
         public String roleArn;
 
+        /**
+         * <p>The specification of the edge instance.</p>
+         * <br>
+         * <p>*   10: Lite Edition.</p>
+         * <p>*   20: Standard Edition.</p>
+         * <p>*   30: Pro Edition.</p>
+         */
         @NameInMap("RoleAttachTime")
         public String roleAttachTime;
 
         @NameInMap("RoleAttachTimestamp")
         public Long roleAttachTimestamp;
 
+        /**
+         * <p>The time when the edge instance was last updated.</p>
+         */
         @NameInMap("RoleName")
         public String roleName;
 
+        /**
+         * <p>The tags of the edge instance.</p>
+         */
         @NameInMap("Spec")
         public Integer spec;
 
+        /**
+         * <p>The ID of the edge instance.</p>
+         */
         @NameInMap("Tags")
         public String tags;
 
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role.</p>
+         */
         @NameInMap("Type")
         public Integer type;
 
@@ -249,15 +315,30 @@ public class QueryEdgeInstanceResponseBody extends TeaModel {
     }
 
     public static class QueryEdgeInstanceResponseBodyData extends TeaModel {
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>Indicates whether you own the edge instance or you are authorized to use the edge instance.</p>
+         * <br>
+         * <p>*   0: You own the edge instance.</p>
+         * <p>*   1: You are authorized to use the edge instance.</p>
+         */
         @NameInMap("InstanceList")
         public java.util.List<QueryEdgeInstanceResponseBodyDataInstanceList> instanceList;
 
+        /**
+         * <p>The number of edge instances.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>A list of edge instances.</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

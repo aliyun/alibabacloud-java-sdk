@@ -64,6 +64,77 @@ public class BatchImportDeviceResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class BatchImportDeviceResponseBodyDataInvalidDetailListInvalidDetailList extends TeaModel {
+        @NameInMap("DeviceName")
+        public String deviceName;
+
+        @NameInMap("DeviceSecret")
+        public String deviceSecret;
+
+        @NameInMap("ErrorMsg")
+        public String errorMsg;
+
+        @NameInMap("Sn")
+        public String sn;
+
+        public static BatchImportDeviceResponseBodyDataInvalidDetailListInvalidDetailList build(java.util.Map<String, ?> map) throws Exception {
+            BatchImportDeviceResponseBodyDataInvalidDetailListInvalidDetailList self = new BatchImportDeviceResponseBodyDataInvalidDetailListInvalidDetailList();
+            return TeaModel.build(map, self);
+        }
+
+        public BatchImportDeviceResponseBodyDataInvalidDetailListInvalidDetailList setDeviceName(String deviceName) {
+            this.deviceName = deviceName;
+            return this;
+        }
+        public String getDeviceName() {
+            return this.deviceName;
+        }
+
+        public BatchImportDeviceResponseBodyDataInvalidDetailListInvalidDetailList setDeviceSecret(String deviceSecret) {
+            this.deviceSecret = deviceSecret;
+            return this;
+        }
+        public String getDeviceSecret() {
+            return this.deviceSecret;
+        }
+
+        public BatchImportDeviceResponseBodyDataInvalidDetailListInvalidDetailList setErrorMsg(String errorMsg) {
+            this.errorMsg = errorMsg;
+            return this;
+        }
+        public String getErrorMsg() {
+            return this.errorMsg;
+        }
+
+        public BatchImportDeviceResponseBodyDataInvalidDetailListInvalidDetailList setSn(String sn) {
+            this.sn = sn;
+            return this;
+        }
+        public String getSn() {
+            return this.sn;
+        }
+
+    }
+
+    public static class BatchImportDeviceResponseBodyDataInvalidDetailList extends TeaModel {
+        @NameInMap("InvalidDetailList")
+        public java.util.List<BatchImportDeviceResponseBodyDataInvalidDetailListInvalidDetailList> invalidDetailList;
+
+        public static BatchImportDeviceResponseBodyDataInvalidDetailList build(java.util.Map<String, ?> map) throws Exception {
+            BatchImportDeviceResponseBodyDataInvalidDetailList self = new BatchImportDeviceResponseBodyDataInvalidDetailList();
+            return TeaModel.build(map, self);
+        }
+
+        public BatchImportDeviceResponseBodyDataInvalidDetailList setInvalidDetailList(java.util.List<BatchImportDeviceResponseBodyDataInvalidDetailListInvalidDetailList> invalidDetailList) {
+            this.invalidDetailList = invalidDetailList;
+            return this;
+        }
+        public java.util.List<BatchImportDeviceResponseBodyDataInvalidDetailListInvalidDetailList> getInvalidDetailList() {
+            return this.invalidDetailList;
+        }
+
+    }
+
     public static class BatchImportDeviceResponseBodyDataInvalidDeviceNameList extends TeaModel {
         @NameInMap("invalidDeviceName")
         public java.util.List<String> invalidDeviceName;
@@ -144,6 +215,9 @@ public class BatchImportDeviceResponseBody extends TeaModel {
         @NameInMap("ApplyId")
         public Long applyId;
 
+        @NameInMap("InvalidDetailList")
+        public BatchImportDeviceResponseBodyDataInvalidDetailList invalidDetailList;
+
         @NameInMap("InvalidDeviceNameList")
         public BatchImportDeviceResponseBodyDataInvalidDeviceNameList invalidDeviceNameList;
 
@@ -167,6 +241,14 @@ public class BatchImportDeviceResponseBody extends TeaModel {
         }
         public Long getApplyId() {
             return this.applyId;
+        }
+
+        public BatchImportDeviceResponseBodyData setInvalidDetailList(BatchImportDeviceResponseBodyDataInvalidDetailList invalidDetailList) {
+            this.invalidDetailList = invalidDetailList;
+            return this;
+        }
+        public BatchImportDeviceResponseBodyDataInvalidDetailList getInvalidDetailList() {
+            return this.invalidDetailList;
         }
 
         public BatchImportDeviceResponseBodyData setInvalidDeviceNameList(BatchImportDeviceResponseBodyDataInvalidDeviceNameList invalidDeviceNameList) {

@@ -4,9 +4,20 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GetRuleRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance. You can view the instance **ID** on the **Overview** page in the IoT Platform console.</p>
+     * <br>
+     * <p>>*   If your instance has an ID, you must configure this parameter. If you do not set this parameter, the call fails.</p>
+     * <p>>*   If your instance has no **Overview** page or ID, you do not need to set this parameter.</p>
+     * <br>
+     * <p>For more information, see [Overview](~~356505~~).</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>The ID of the rule that you want to query. You can log on to the IoT Platform console and choose **Rules** > **Data Forwarding** to view the rule ID. You can also call the [ListRule](~~69486~~) operation and view the rule ID in the response.</p>
+     */
     @NameInMap("RuleId")
     public Long ruleId;
 

@@ -4,18 +4,36 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ListThingTemplatesResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The list of standard categories returned if the call is successful.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListThingTemplatesResponseBodyData> data;
 
+    /**
+     * <p>The error message returned if the call fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +83,15 @@ public class ListThingTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListThingTemplatesResponseBodyData extends TeaModel {
+        /**
+         * <p>The identifier of the category.</p>
+         */
         @NameInMap("CategoryKey")
         public String categoryKey;
 
+        /**
+         * <p>The name of the category.</p>
+         */
         @NameInMap("CategoryName")
         public String categoryName;
 

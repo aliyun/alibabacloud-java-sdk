@@ -4,18 +4,36 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchGetDeviceStateResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The device status information returned if the call is successful. For more information, see the following parameters that are included in the DeviceStatus parameter.</p>
+     */
     @NameInMap("DeviceStatusList")
     public BatchGetDeviceStateResponseBodyDeviceStatusList deviceStatusList;
 
+    /**
+     * <p>The error message returned if the call fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,21 +83,46 @@ public class BatchGetDeviceStateResponseBody extends TeaModel {
     }
 
     public static class BatchGetDeviceStateResponseBodyDeviceStatusListDeviceStatus extends TeaModel {
+        /**
+         * <p>The IP address of the device.</p>
+         */
         @NameInMap("AsAddress")
         public String asAddress;
 
+        /**
+         * <p>The ID of the device (expired).</p>
+         * <br>
+         * <p>>  This parameter is no longer supported. Do not use this parameter to identify a device. You can use the value of the **IotId**** parameter or a combination of the values of the ****ProductKey** and DeviceName parameters to identify a device.</p>
+         */
         @NameInMap("DeviceId")
         public String deviceId;
 
+        /**
+         * <p>The DeviceName of the device.</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <p>The ID of the device. The ID is the unique identifier that is issued by IoT Platform to the device.</p>
+         */
         @NameInMap("IotId")
         public String iotId;
 
+        /**
+         * <p>The last time when the device was online.</p>
+         */
         @NameInMap("LastOnlineTime")
         public String lastOnlineTime;
 
+        /**
+         * <p>The status of the device. Valid values: Valid values:</p>
+         * <br>
+         * <p>*   **ONLINE**: The device is online.</p>
+         * <p>*   **OFFLINE**: The device is offline.</p>
+         * <p>*   **UNACTIVE**: The device is not activated.</p>
+         * <p>*   **DISABLE**: The device is disabled.</p>
+         */
         @NameInMap("Status")
         public String status;
 

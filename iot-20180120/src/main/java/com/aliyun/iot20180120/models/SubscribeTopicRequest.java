@@ -4,12 +4,26 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class SubscribeTopicRequest extends TeaModel {
+    /**
+     * <p>The **DeviceName** of the device to which the topic belongs.</p>
+     */
     @NameInMap("DeviceName")
     public String deviceName;
 
+    /**
+     * <p>The ID of the instance. You can view the **ID** of the instance on the **Overview** page in the IoT Platform console.</p>
+     * <br>
+     * <p>>*   If your instance has an ID, you must specify the ID for this parameter. Otherwise, the call fails.</p>
+     * <p>>*   If no **Overview** page or ID is generated for your instance, you do not need to configure this parameter.</p>
+     * <br>
+     * <p>For more information, see [Overview](~~356505~~).</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>The **ProductKey** of the product to which the device belongs.</p>
+     */
     @NameInMap("ProductKey")
     public String productKey;
 

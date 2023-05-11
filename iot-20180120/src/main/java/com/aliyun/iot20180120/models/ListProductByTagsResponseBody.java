@@ -4,18 +4,38 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ListProductByTagsResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The error message returned if the call fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The details of the products returned if the call is successful. The details are included in the **ProductInfo** parameter.</p>
+     * <br>
+     * <p>>  The returned product information is sorted in reverse-chronological order based on the time when the products were created.</p>
+     */
     @NameInMap("ProductInfos")
     public ListProductByTagsResponseBodyProductInfos productInfos;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,18 +85,36 @@ public class ListProductByTagsResponseBody extends TeaModel {
     }
 
     public static class ListProductByTagsResponseBodyProductInfosProductInfo extends TeaModel {
+        /**
+         * <p>The time when the product was created.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The description of the product.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The node type of the product. Valid values:</p>
+         * <br>
+         * <p>*   **0**: device. Sub-devices cannot be attached to a device. A device can connect to IoT Platform directly or as a sub-device of a gateway.</p>
+         * <p>*   **1**: gateway. Sub-devices can be attached to a gateway. A gateway can manage sub-devices, maintain the topological relationships with sub-devices, and synchronize the topological relationships to IoT Platform.</p>
+         */
         @NameInMap("NodeType")
         public Integer nodeType;
 
+        /**
+         * <p>The ProductKey of the product. A ProductKey is a globally unique identifier (GUID) issued by IoT Platform to a new product.</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 
+        /**
+         * <p>The name of the product.</p>
+         */
         @NameInMap("ProductName")
         public String productName;
 

@@ -4,18 +4,36 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ListOTAUnfinishedTaskByDeviceResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The update task information returned if the call is successful. For more information, see the following **SimpleOTATaskInfo**.</p>
+     */
     @NameInMap("Data")
     public ListOTAUnfinishedTaskByDeviceResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the call fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,42 +83,86 @@ public class ListOTAUnfinishedTaskByDeviceResponseBody extends TeaModel {
     }
 
     public static class ListOTAUnfinishedTaskByDeviceResponseBodyDataSimpleOTATaskInfo extends TeaModel {
+        /**
+         * <p>The firmware version after the update.</p>
+         */
         @NameInMap("DestVersion")
         public String destVersion;
 
+        /**
+         * <p>The DeviceName of the device.</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <p>The ID of the update package.</p>
+         */
         @NameInMap("FirmwareId")
         public String firmwareId;
 
+        /**
+         * <p>The ID of the device. The ID is a unique identifier that is issued by IoT Platform to the device.</p>
+         */
         @NameInMap("IotId")
         public String iotId;
 
+        /**
+         * <p>The ID of the update batch.</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>The name of the OTA module.</p>
+         */
         @NameInMap("ModuleName")
         public String moduleName;
 
+        /**
+         * <p>The ProductKey of the product to which the device belongs.</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 
+        /**
+         * <p>The name of the product to which the device belongs.</p>
+         */
         @NameInMap("ProductName")
         public String productName;
 
+        /**
+         * <p>The firmware version before the update.</p>
+         */
         @NameInMap("SrcVersion")
         public String srcVersion;
 
+        /**
+         * <p>The ID of the update task.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The status of the update task.</p>
+         * <br>
+         * <p>*   **CONFIRM**: The update task is pending confirmation.</p>
+         * <p>*   **QUEUED**: The update notification is to be pushed.</p>
+         * <p>*   **NOTIFIED**: The update notification is pushed to the device.</p>
+         * <p>*   **IN_PROGRESS**: The update task is in progress.</p>
+         */
         @NameInMap("TaskStatus")
         public String taskStatus;
 
+        /**
+         * <p>The time when the update task was created. The time is displayed in UTC.</p>
+         */
         @NameInMap("UtcCreate")
         public String utcCreate;
 
+        /**
+         * <p>The time when the update task was last modified. The time is displayed in UTC.</p>
+         */
         @NameInMap("UtcModified")
         public String utcModified;
 

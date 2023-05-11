@@ -4,18 +4,36 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchQueryDeviceDetailResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The device details returned if the call is successful.</p>
+     */
     @NameInMap("Data")
     public BatchQueryDeviceDetailResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the call fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,45 +83,95 @@ public class BatchQueryDeviceDetailResponseBody extends TeaModel {
     }
 
     public static class BatchQueryDeviceDetailResponseBodyDataData extends TeaModel {
+        /**
+         * <p>The DeviceName of the device.</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <p>The DeviceSecret of the device.</p>
+         */
         @NameInMap("DeviceSecret")
         public String deviceSecret;
 
+        /**
+         * <p>The firmware version number of the device.</p>
+         */
         @NameInMap("FirmwareVersion")
         public String firmwareVersion;
 
+        /**
+         * <p>The activation time of the device. The time is displayed in UTC.</p>
+         */
         @NameInMap("GmtActive")
         public String gmtActive;
 
+        /**
+         * <p>The creation time of the device. The time is displayed in UTC.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The unique ID of the device. The device ID is issued by IoT Platform.</p>
+         */
         @NameInMap("IotId")
         public String iotId;
 
+        /**
+         * <p>The alias of the device.</p>
+         */
         @NameInMap("Nickname")
         public String nickname;
 
+        /**
+         * <p>The type of the node. Valid values:</p>
+         * <br>
+         * <p>*   **0**: device. Sub-devices cannot be mounted on a gateway. A device can connect to IoT Platform directly or as a sub-device of a gateway.</p>
+         * <p>*   **1**: gateway. Sub-devices can be attached to a gateway. A gateway can manage sub-devices, maintain the topological relationships with sub-devices, and synchronize the topological relationships to IoT Platform.</p>
+         */
         @NameInMap("NodeType")
         public Integer nodeType;
 
+        /**
+         * <p>The **ProductKey** of the product to which the device belongs.</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 
+        /**
+         * <p>The name of the product to which the device belongs.</p>
+         */
         @NameInMap("ProductName")
         public String productName;
 
+        /**
+         * <p>The ID of the region where the device resides. The region is the same as the region where IoT Platform resides. You can view the region in the IoT Platform console.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The status of the device. Valid values:</p>
+         * <br>
+         * <p>*   **ONLINE**: The device is online.</p>
+         * <p>*   **OFFLINE**: The device is offline.</p>
+         * <p>*   **UNACTIVE**: The device is not activated.</p>
+         * <p>*   **DISABLE**: The device is disabled.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The activation time of the device. The time is displayed in UTC.</p>
+         */
         @NameInMap("UtcActive")
         public String utcActive;
 
+        /**
+         * <p>The creation time of the device. The time is displayed in UTC.</p>
+         */
         @NameInMap("UtcCreate")
         public String utcCreate;
 

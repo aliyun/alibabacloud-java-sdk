@@ -4,18 +4,36 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ListOTAModuleByProductResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The OTA modules returned if the call is successful.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListOTAModuleByProductResponseBodyData> data;
 
+    /**
+     * <p>The error message returned if the call fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,21 +83,39 @@ public class ListOTAModuleByProductResponseBody extends TeaModel {
     }
 
     public static class ListOTAModuleByProductResponseBodyData extends TeaModel {
+        /**
+         * <p>The alias of the OTA module.</p>
+         */
         @NameInMap("AliasName")
         public String aliasName;
 
+        /**
+         * <p>The description of the OTA module.</p>
+         */
         @NameInMap("Desc")
         public String desc;
 
+        /**
+         * <p>The time when the OTA module was created. The time is displayed in UTC.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The last time when the OTA module was updated. The time is displayed in UTC.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The name of the OTA module.</p>
+         */
         @NameInMap("ModuleName")
         public String moduleName;
 
+        /**
+         * <p>The ProductKey of the product.</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 

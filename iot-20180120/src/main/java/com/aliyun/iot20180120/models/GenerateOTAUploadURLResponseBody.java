@@ -4,18 +4,36 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GenerateOTAUploadURLResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The information returned if the call is successful. For more information, see the following parameters.</p>
+     */
     @NameInMap("Data")
     public GenerateOTAUploadURLResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the call fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,27 +83,55 @@ public class GenerateOTAUploadURLResponseBody extends TeaModel {
     }
 
     public static class GenerateOTAUploadURLResponseBodyData extends TeaModel {
+        /**
+         * <p>The URL of the update package file that is stored in OSS.</p>
+         * <br>
+         * <p>After the update package file is uploaded, this parameter is used to call the [CreateOTAFirmware](~~147311~~) operation to create an update package.</p>
+         */
         @NameInMap("FirmwareUrl")
         public String firmwareUrl;
 
+        /**
+         * <p>The endpoint of OSS.</p>
+         */
         @NameInMap("Host")
         public String host;
 
+        /**
+         * <p>The full path of the file in OSS. The file is uploaded by calling the OSS PostObject operation.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The AccessKey ID of the bucket owner.</p>
+         * <br>
+         * <p>This OSS bucket stores the update package file.</p>
+         */
         @NameInMap("OSSAccessKeyId")
         public String OSSAccessKeyId;
 
+        /**
+         * <p>The type of object storage. Default value: OSS.</p>
+         */
         @NameInMap("ObjectStorage")
         public String objectStorage;
 
+        /**
+         * <p>The parameter that is used by OSS to verify form fields for the request.</p>
+         */
         @NameInMap("Policy")
         public String policy;
 
+        /**
+         * <p>The signature that is calculated based on **AccessKeySecret** and **Policy**. When you call an OSS operation, OSS uses the signature information to verify the POST request.</p>
+         */
         @NameInMap("Signature")
         public String signature;
 
+        /**
+         * <p>The time when the URL of the uploaded update package file was generated. The time is displayed in UTC.</p>
+         */
         @NameInMap("UtcCreate")
         public String utcCreate;
 

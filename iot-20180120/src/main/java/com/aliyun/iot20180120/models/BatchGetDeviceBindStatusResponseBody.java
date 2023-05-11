@@ -68,6 +68,9 @@ public class BatchGetDeviceBindStatusResponseBody extends TeaModel {
         @NameInMap("BindStatus")
         public Integer bindStatus;
 
+        /**
+         * <p>实例ID。</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 

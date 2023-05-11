@@ -4,12 +4,26 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class DetachDestinationRequest extends TeaModel {
+    /**
+     * <p>The ID of the data destination. You can call the [ListDestination](~~433025~~) operation to query data destinations and obtain the ID of the **data destination**.</p>
+     */
     @NameInMap("DestinationId")
     public Long destinationId;
 
+    /**
+     * <p>The ID of the instance. You can view the **ID** of the instance on the **Overview** page in the IoT Platform console.</p>
+     * <br>
+     * <p>>*   If your instance has an ID, you must specify the ID for this parameter. Otherwise, the call fails.</p>
+     * <p>>*   If no **Overview** page or ID is generated for your instance, you do not need to configure this parameter.</p>
+     * <br>
+     * <p>For more information, see [Overview](~~356505~~).</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>The ID of the parser. You can call the [ListParser](~~444814~~) operation to query parsers and obtain the ID of the **parser**.</p>
+     */
     @NameInMap("ParserId")
     public Long parserId;
 

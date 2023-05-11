@@ -4,18 +4,36 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceInfoResponseBody extends TeaModel {
+    /**
+     * <p>The error message returned if the call fails.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The alias of the device.</p>
+     */
     @NameInMap("Data")
     public QueryDeviceInfoResponseBodyData data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the device returned if the call is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,18 +83,30 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
     }
 
     public static class QueryDeviceInfoResponseBodyData extends TeaModel {
+        /**
+         * <p>The DeviceSecret of the device.</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <p>The ID of the device. The ID is the unique identifier that is issued by IoT Platform to the device.</p>
+         */
         @NameInMap("DeviceSecret")
         public String deviceSecret;
 
         @NameInMap("IotId")
         public String iotId;
 
+        /**
+         * <p>The ProductKey of the product to which the device belongs.</p>
+         */
         @NameInMap("Nickname")
         public String nickname;
 
+        /**
+         * <p>The DeviceName of the device.</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 

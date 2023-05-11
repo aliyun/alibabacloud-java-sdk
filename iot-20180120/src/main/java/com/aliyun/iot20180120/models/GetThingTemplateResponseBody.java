@@ -4,12 +4,36 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GetThingTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The TSL features returned if the call is successful. Format:</p>
+     * <br>
+     * <p>```</p>
+     * <br>
+     * <p>{</p>
+     * <p>  "properties": [], //The list of properties</p>
+     * <p>  "services": [], //The list of services</p>
+     * <p>  "events": [], //The list of events</p>
+     * <p>}</p>
+     * <p>                                </p>
+     * <p>```</p>
+     * <br>
+     * <p>For more information, see [TSL formats](~~73727~~).</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

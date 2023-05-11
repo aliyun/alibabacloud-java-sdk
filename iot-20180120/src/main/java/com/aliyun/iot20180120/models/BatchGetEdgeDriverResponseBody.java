@@ -4,18 +4,33 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchGetEdgeDriverResponseBody extends TeaModel {
+    /**
+     * <p>The error code. Success indicates that the call was successful. Other values indicate that specific errors occurred. For more information, see [Error codes](~~135200~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The information about each driver.</p>
+     */
     @NameInMap("DriverList")
     public java.util.List<BatchGetEdgeDriverResponseBodyDriverList> driverList;
 
+    /**
+     * <p>The error message returned if the call failed.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful. true indicates that the call was successful. false indicates that the call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,30 +80,77 @@ public class BatchGetEdgeDriverResponseBody extends TeaModel {
     }
 
     public static class BatchGetEdgeDriverResponseBodyDriverList extends TeaModel {
+        /**
+         * <p>The CPU architecture that the driver supports. Valid values:</p>
+         * <br>
+         * <p>*   ARMv7</p>
+         * <p>*   ARMv7-HF</p>
+         * <p>*   AArch64</p>
+         * <p>*   x86-64</p>
+         * <p>*   x86</p>
+         */
         @NameInMap("CpuArch")
         public String cpuArch;
 
+        /**
+         * <p>The ID of the driver.</p>
+         */
         @NameInMap("DriverId")
         public String driverId;
 
+        /**
+         * <p>The name of the driver.</p>
+         */
         @NameInMap("DriverName")
         public String driverName;
 
+        /**
+         * <p>The communications protocol that the driver uses. Valid values:</p>
+         * <br>
+         * <p>*   modbus: Modbus protocol</p>
+         * <p>*   opc-ua: OPC UA protocol</p>
+         * <p>*   customize: custom protocol</p>
+         */
         @NameInMap("DriverProtocol")
         public String driverProtocol;
 
+        /**
+         * <p>The time when the driver was created. The time is displayed in UTC.</p>
+         */
         @NameInMap("GmtCreateTimestamp")
         public Long gmtCreateTimestamp;
 
+        /**
+         * <p>The time when the driver was last modified. The time is displayed in UTC.</p>
+         */
         @NameInMap("GmtModifiedTimestamp")
         public Long gmtModifiedTimestamp;
 
+        /**
+         * <p>Indicates whether the driver is a built-in driver.</p>
+         * <br>
+         * <p>*   true: indicates that the driver is a built-in driver, that is, the driver code is pre-configured on the gateway device.</p>
+         * <p>*   false: indicates that the driver is not a built-in driver.</p>
+         */
         @NameInMap("IsBuiltIn")
         public Boolean isBuiltIn;
 
+        /**
+         * <p>The language in which the driver is programmed. Valid values:</p>
+         * <br>
+         * <p>*   nodejs8: Node.js v8</p>
+         * <p>*   python3: Python v3.5</p>
+         * <p>*   c: C</p>
+         */
         @NameInMap("Runtime")
         public String runtime;
 
+        /**
+         * <p>The type of the driver. Valid values:</p>
+         * <br>
+         * <p>*   0: official driver</p>
+         * <p>*   1: custom driver</p>
+         */
         @NameInMap("Type")
         public Integer type;
 

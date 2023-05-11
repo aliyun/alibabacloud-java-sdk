@@ -4,18 +4,33 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryEdgeInstanceHistoricDeploymentResponseBody extends TeaModel {
+    /**
+     * <p>The return code of the operation. A value of Success indicates that the call was successful. Other values indicate that specific errors occurred. For more information, see [Error codes](~~135200~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data that is returned if the call was successful.</p>
+     */
     @NameInMap("Data")
     public QueryEdgeInstanceHistoricDeploymentResponseBodyData data;
 
+    /**
+     * <p>The error message that is returned if the call failed.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful. A value of true indicates that the call was successful. A value of false indicates that the call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,33 +80,71 @@ public class QueryEdgeInstanceHistoricDeploymentResponseBody extends TeaModel {
     }
 
     public static class QueryEdgeInstanceHistoricDeploymentResponseBodyDataDeploymentList extends TeaModel {
+        /**
+         * <p>The ID of the deployment task.</p>
+         */
         @NameInMap("DeploymentId")
         public String deploymentId;
 
+        /**
+         * <p>The description of the deployment task.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The time when the deployment task was complete.</p>
+         */
         @NameInMap("GmtCompleted")
         public String gmtCompleted;
 
+        /**
+         * <p>The UNIX timestamp when the deployment task was complete.</p>
+         */
         @NameInMap("GmtCompletedTimestamp")
         public Long gmtCompletedTimestamp;
 
+        /**
+         * <p>The time when the deployment task was created.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The UNIX timestamp when the deployment task was created.</p>
+         */
         @NameInMap("GmtCreateTimestamp")
         public Long gmtCreateTimestamp;
 
+        /**
+         * <p>The last time when the deployment task was modified.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The last UNIX timestamp when the deployment task was modified.</p>
+         */
         @NameInMap("GmtModifiedTimestamp")
         public Long gmtModifiedTimestamp;
 
+        /**
+         * <p>The status of the deployment task.</p>
+         * <br>
+         * <p>*   0: The task was not started.</p>
+         * <p>*   1: The task was being processed.</p>
+         * <p>*   2: The task was successful.</p>
+         * <p>*   3: The task failed.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The type of the deployment task.</p>
+         * <br>
+         * <p>*   deploy: deploys the edge instance.</p>
+         * <p>*   reset: resets the edge instance.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -183,15 +236,27 @@ public class QueryEdgeInstanceHistoricDeploymentResponseBody extends TeaModel {
     }
 
     public static class QueryEdgeInstanceHistoricDeploymentResponseBodyData extends TeaModel {
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The list of deployment tasks.</p>
+         */
         @NameInMap("DeploymentList")
         public java.util.List<QueryEdgeInstanceHistoricDeploymentResponseBodyDataDeploymentList> deploymentList;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of deployment tasks.</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

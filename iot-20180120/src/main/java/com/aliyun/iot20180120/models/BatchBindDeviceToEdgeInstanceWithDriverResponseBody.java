@@ -4,12 +4,21 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchBindDeviceToEdgeInstanceWithDriverResponseBody extends TeaModel {
+    /**
+     * <p>The error message that is returned if the call failed.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>Indicates whether the call was successful. A value of true indicates that the call was successful. A value of false indicates that the call failed.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
