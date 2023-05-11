@@ -4,12 +4,24 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class QueryUserGroupListByParentIdResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the sub-user group.</p>
+     */
     @NameInMap("Result")
     public java.util.List<QueryUserGroupListByParentIdResponseBodyResult> result;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The request was successful.</p>
+     * <p>*   false: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,30 +55,57 @@ public class QueryUserGroupListByParentIdResponseBody extends TeaModel {
     }
 
     public static class QueryUserGroupListByParentIdResponseBodyResult extends TeaModel {
+        /**
+         * <p>The time when the sub-user group was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The creator of the sub-user group. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.</p>
+         */
         @NameInMap("CreateUser")
         public String createUser;
 
+        /**
+         * <p>Directory level of the sub-user group.</p>
+         */
         @NameInMap("IdentifiedPath")
         public String identifiedPath;
 
+        /**
+         * <p>The time when the sub-user group was last modified.</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <p>The user who modified the subgroup. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.</p>
+         */
         @NameInMap("ModifyUser")
         public String modifyUser;
 
+        /**
+         * <p>The ID of the parent user group.</p>
+         */
         @NameInMap("ParentUserGroupId")
         public String parentUserGroupId;
 
+        /**
+         * <p>The description of the sub-user group.</p>
+         */
         @NameInMap("UserGroupDescription")
         public String userGroupDescription;
 
+        /**
+         * <p>The ID of the sub-user group.</p>
+         */
         @NameInMap("UserGroupId")
         public String userGroupId;
 
+        /**
+         * <p>The name of the sub-user group.</p>
+         */
         @NameInMap("UserGroupName")
         public String userGroupName;
 

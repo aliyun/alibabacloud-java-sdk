@@ -4,12 +4,24 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class QueryDatasetInfoResponseBody extends TeaModel {
+    /**
+     * <p>Whether the operation is successfully returned. Valid values:</p>
+     * <br>
+     * <p>*   true: The call is successful.</p>
+     * <p>*   false: The call fails.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Result")
     public QueryDatasetInfoResponseBodyResult result;
 
+    /**
+     * <p>The unique ID of the dataset.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,27 +55,62 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
     }
 
     public static class QueryDatasetInfoResponseBodyResultCubeTableList extends TeaModel {
+        /**
+         * <p>Indicates whether the data source table is valid. Valid values:</p>
+         * <br>
+         * <p>*   true: data source table</p>
+         * <p>*   false: custom table</p>
+         */
         @NameInMap("Caption")
         public String caption;
 
+        /**
+         * <p>The display name of the table.</p>
+         */
         @NameInMap("Customsql")
         public Boolean customsql;
 
+        /**
+         * <p>The name of the table.</p>
+         */
         @NameInMap("DatasourceId")
         public String datasourceId;
 
+        /**
+         * <p>The ID of the data source.</p>
+         */
         @NameInMap("DsType")
         public String dsType;
 
+        /**
+         * <p>The unique ID of the table.</p>
+         */
         @NameInMap("FactTable")
         public Boolean factTable;
 
+        /**
+         * <p>Indicates whether the table is a custom SQL table. Valid values:</p>
+         * <br>
+         * <p>*   true: custom SQL table</p>
+         * <p>*   false: non-custom SQL table</p>
+         */
         @NameInMap("Sql")
         public String sql;
 
+        /**
+         * <p>The list of tables used by the dataset.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 
+        /**
+         * <p>The type of the data source. Valid values:</p>
+         * <br>
+         * <p>*   mysql</p>
+         * <p>*   odps</p>
+         * <p>*   oracle</p>
+         * <p>*   ... and other data source types supported by Quick BI</p>
+         */
         @NameInMap("UniqueId")
         public String uniqueId;
 
@@ -139,30 +186,65 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
     }
 
     public static class QueryDatasetInfoResponseBodyResultDimensionList extends TeaModel {
+        /**
+         * <p>The unique ID of the field that is referenced by the group measure. Non-NULL if and only if the metric is a grouping metric.</p>
+         */
         @NameInMap("Caption")
         public String caption;
 
+        /**
+         * <p>A list of all dimensions in the dataset.</p>
+         */
         @NameInMap("DataType")
         public String dataType;
 
+        /**
+         * <p>The actual physical field.</p>
+         */
         @NameInMap("DimensionType")
         public String dimensionType;
 
+        /**
+         * <p>Data type; value:</p>
+         * <br>
+         * <p>*   string: character</p>
+         * <p>*   number: a number</p>
+         * <p>*   datetime: time</p>
+         */
         @NameInMap("Expression")
         public String expression;
 
+        /**
+         * <p>Expression for a calculated dimension; valid only for calculated dimensions.</p>
+         */
         @NameInMap("FactColumn")
         public String factColumn;
 
+        /**
+         * <p>The type of the dimension. Valid values:</p>
+         * <br>
+         * <p>*   standard_dimension: General Dimension</p>
+         * <p>*   calculate_dimension: calculating dimensions</p>
+         * <p>*   group_dimension: grouping dimensions</p>
+         */
         @NameInMap("Granularity")
         public String granularity;
 
+        /**
+         * <p>The granularity.</p>
+         */
         @NameInMap("RefUid")
         public String refUid;
 
+        /**
+         * <p>The ARN.</p>
+         */
         @NameInMap("TableUniqueId")
         public String tableUniqueId;
 
+        /**
+         * <p>The display name of the dimension.</p>
+         */
         @NameInMap("Uid")
         public String uid;
 
@@ -246,15 +328,27 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
     }
 
     public static class QueryDatasetInfoResponseBodyResultDirectory extends TeaModel {
+        /**
+         * <p>Test directory</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>Test directory</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The information about the directory to which the dataset belongs.</p>
+         */
         @NameInMap("PathId")
         public String pathId;
 
+        /**
+         * <p>The path of the directory ID, for example, aa/bb/cc/dd.</p>
+         */
         @NameInMap("PathName")
         public String pathName;
 
@@ -298,24 +392,52 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
     }
 
     public static class QueryDatasetInfoResponseBodyResultMeasureList extends TeaModel {
+        /**
+         * <p>The actual physical field.</p>
+         */
         @NameInMap("Caption")
         public String caption;
 
+        /**
+         * <p>A list of all measures for the dataset.</p>
+         */
         @NameInMap("DataType")
         public String dataType;
 
+        /**
+         * <p>Data type; value:</p>
+         * <br>
+         * <p>*   string: character</p>
+         * <p>*   number: a number</p>
+         * <p>*   datetime: time</p>
+         */
         @NameInMap("Expression")
         public String expression;
 
+        /**
+         * <p>The type of the measure. Valid values:</p>
+         * <br>
+         * <p>*   standard_measure: General Metrics</p>
+         * <p>*   calculate_measure: Calculating Measures</p>
+         */
         @NameInMap("FactColumn")
         public String factColumn;
 
+        /**
+         * <p>An expression that calculates a measure; valid only for calculated measures.</p>
+         */
         @NameInMap("MeasureType")
         public String measureType;
 
+        /**
+         * <p>The display name of the metric.</p>
+         */
         @NameInMap("TableUniqueId")
         public String tableUniqueId;
 
+        /**
+         * <p>The unique ID of the table to which the table belongs, which corresponds to the UniqueId of the CubeTypeList.</p>
+         */
         @NameInMap("Uid")
         public String uid;
 
@@ -383,54 +505,116 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
     }
 
     public static class QueryDatasetInfoResponseBodyResult extends TeaModel {
+        /**
+         * <p>The unique ID of the dataset.</p>
+         */
         @NameInMap("CubeTableList")
         public java.util.List<QueryDatasetInfoResponseBodyResultCubeTableList> cubeTableList;
 
+        /**
+         * <p>The unique ID of the workspace to which the dataset belongs.</p>
+         */
         @NameInMap("CustimzeSql")
         public Boolean custimzeSql;
 
+        /**
+         * <p>The type of the data source. Valid values:</p>
+         * <br>
+         * <p>*   mysql</p>
+         * <p>*   odps</p>
+         * <p>*   oracle</p>
+         * <p>*   ... Data source types supported by Quick BI such as</p>
+         */
         @NameInMap("DatasetId")
         public String datasetId;
 
+        /**
+         * <p>The user ID of the dataset owner in the Quick BI.</p>
+         */
         @NameInMap("DatasetName")
         public String datasetName;
 
+        /**
+         * <p>If it is a custom SQL table, this is the specific SQL.</p>
+         */
         @NameInMap("DimensionList")
         public java.util.List<QueryDatasetInfoResponseBodyResultDimensionList> dimensionList;
 
+        /**
+         * <p>The unique ID of the metric.</p>
+         */
         @NameInMap("Directory")
         public QueryDatasetInfoResponseBodyResultDirectory directory;
 
+        /**
+         * <p>The name of the data source.</p>
+         */
         @NameInMap("DsId")
         public String dsId;
 
+        /**
+         * <p>The time when the dataset was last modified.</p>
+         */
         @NameInMap("DsName")
         public String dsName;
 
+        /**
+         * <p>The point in time when the training dataset was created.</p>
+         */
         @NameInMap("DsType")
         public String dsType;
 
+        /**
+         * <p>Indicates whether to customize SQL statements. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The information about the dataset.</p>
+         */
         @NameInMap("GmtModify")
         public String gmtModify;
 
+        /**
+         * <p>The unique ID of the table to which the table belongs, which corresponds to the UniqueId of the CubeTypeList.</p>
+         */
         @NameInMap("MeasureList")
         public java.util.List<QueryDatasetInfoResponseBodyResultMeasureList> measureList;
 
+        /**
+         * <p>Test Space</p>
+         */
         @NameInMap("OwnerId")
         public String ownerId;
 
+        /**
+         * <p>The unique ID of the data source.</p>
+         */
         @NameInMap("OwnerName")
         public String ownerName;
 
+        /**
+         * <p>The name of the training dataset.</p>
+         */
         @NameInMap("RowLevel")
         public Boolean rowLevel;
 
+        /**
+         * <p>Whether row-level permissions are enabled. Valid values:</p>
+         * <br>
+         * <p>*   true: The VIP Netty channel is enabled.</p>
+         * <p>*   false: The VIP Netty channel is disabled.</p>
+         */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 
+        /**
+         * <p>Big Baby</p>
+         */
         @NameInMap("WorkspaceName")
         public String workspaceName;
 

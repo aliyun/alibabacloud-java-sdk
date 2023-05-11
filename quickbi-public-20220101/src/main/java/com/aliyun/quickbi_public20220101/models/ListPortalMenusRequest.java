@@ -4,9 +4,15 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class ListPortalMenusRequest extends TeaModel {
+    /**
+     * <p>The ID of the BI portal.</p>
+     */
     @NameInMap("DataPortalId")
     public String dataPortalId;
 
+    /**
+     * <p>The user ID in the Quick BI. When passed in, the list displays only the menus that the user has permissions on.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

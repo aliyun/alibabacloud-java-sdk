@@ -4,9 +4,18 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class ChangeVisibilityModelRequest extends TeaModel {
+    /**
+     * <p>The number of menus that are successfully modified.</p>
+     */
     @NameInMap("DataPortalId")
     public String dataPortalId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The request was successful.</p>
+     * <p>*   false: The request failed.</p>
+     */
     @NameInMap("MenuIds")
     public String menuIds;
 

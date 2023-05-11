@@ -4,6 +4,9 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class ListPortalMenuAuthorizationRequest extends TeaModel {
+    /**
+     * <p>The ID of the BI portal.</p>
+     */
     @NameInMap("DataPortalId")
     public String dataPortalId;
 

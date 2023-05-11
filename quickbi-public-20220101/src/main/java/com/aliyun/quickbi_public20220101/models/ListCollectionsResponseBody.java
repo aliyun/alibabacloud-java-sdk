@@ -4,12 +4,18 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class ListCollectionsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public java.util.List<ListCollectionsResponseBodyResult> result;
 
+    /**
+     * <p>The primary key ID of the favorite record.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

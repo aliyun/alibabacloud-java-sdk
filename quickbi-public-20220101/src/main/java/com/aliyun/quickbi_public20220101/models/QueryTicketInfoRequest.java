@@ -4,6 +4,9 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class QueryTicketInfoRequest extends TeaModel {
+    /**
+     * <p>Obtains the details of a specified ticket for a report that is not embedded in the report.</p>
+     */
     @NameInMap("Ticket")
     public String ticket;
 

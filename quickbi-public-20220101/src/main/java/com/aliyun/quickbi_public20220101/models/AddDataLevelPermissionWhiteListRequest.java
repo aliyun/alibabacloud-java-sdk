@@ -4,18 +4,39 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class AddDataLevelPermissionWhiteListRequest extends TeaModel {
+    /**
+     * <p>The ID of the training dataset that you want to remove from the specified custom linguistic model.</p>
+     */
     @NameInMap("CubeId")
     public String cubeId;
 
+    /**
+     * <p>Operation Type: You can set this parameter to one of the following values.</p>
+     * <br>
+     * <p>*   ADD: Add a whitelist</p>
+     * <p>*   DELETE: deletes a whitelist.</p>
+     */
     @NameInMap("OperateType")
     public String operateType;
 
+    /**
+     * <p>The type of row-level permissions.</p>
+     * <br>
+     * <p>*   ROW_LEVEL: row-level permissions,</p>
+     * <p>*   COLUMN_LEVEL: column-level permissions</p>
+     */
     @NameInMap("RuleType")
     public String ruleType;
 
     @NameInMap("TargetIds")
     public String targetIds;
 
+    /**
+     * <p>Modify the type of the whitelist:</p>
+     * <br>
+     * <p>*   1: user</p>
+     * <p>*   2: user group</p>
+     */
     @NameInMap("TargetType")
     public String targetType;
 

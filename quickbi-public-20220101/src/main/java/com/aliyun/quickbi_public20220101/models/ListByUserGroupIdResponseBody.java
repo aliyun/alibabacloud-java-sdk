@@ -4,12 +4,24 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class ListByUserGroupIdResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The user group query result is returned.</p>
+     */
     @NameInMap("Result")
     public ListByUserGroupIdResponseBodyResult result;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The request was successful.</p>
+     * <p>*   false: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,30 +55,57 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
     }
 
     public static class ListByUserGroupIdResponseBodyResultUserGroupModels extends TeaModel {
+        /**
+         * <p>The time when the Secret was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The UserID of the creator in the Quick BI.</p>
+         */
         @NameInMap("CreateUser")
         public String createUser;
 
+        /**
+         * <p>The path of the user group.</p>
+         */
         @NameInMap("IdentifiedPath")
         public String identifiedPath;
 
+        /**
+         * <p>The time when the protection policy was last modified.</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <p>The UserID of the modifier in the Quick BI.</p>
+         */
         @NameInMap("ModifyUser")
         public String modifyUser;
 
+        /**
+         * <p>The ID of the parent user group.</p>
+         */
         @NameInMap("ParentUsergroupId")
         public String parentUsergroupId;
 
+        /**
+         * <p>The description of the user group.</p>
+         */
         @NameInMap("UsergroupDesc")
         public String usergroupDesc;
 
+        /**
+         * <p>The ID of the user group.</p>
+         */
         @NameInMap("UsergroupId")
         public String usergroupId;
 
+        /**
+         * <p>The name of the user group.</p>
+         */
         @NameInMap("UsergroupName")
         public String usergroupName;
 
@@ -153,6 +192,9 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
         @NameInMap("FailedUserGroupIds")
         public java.util.List<String> failedUserGroupIds;
 
+        /**
+         * <p>The details of the user group that was queried.</p>
+         */
         @NameInMap("UserGroupModels")
         public java.util.List<ListByUserGroupIdResponseBodyResultUserGroupModels> userGroupModels;
 

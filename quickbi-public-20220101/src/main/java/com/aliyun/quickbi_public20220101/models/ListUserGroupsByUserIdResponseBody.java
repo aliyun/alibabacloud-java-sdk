@@ -10,6 +10,9 @@ public class ListUserGroupsByUserIdResponseBody extends TeaModel {
     @NameInMap("Result")
     public java.util.List<ListUserGroupsByUserIdResponseBodyResult> result;
 
+    /**
+     * <p>The user group modifier. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

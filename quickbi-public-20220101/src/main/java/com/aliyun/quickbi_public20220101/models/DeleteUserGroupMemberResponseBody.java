@@ -4,12 +4,27 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class DeleteUserGroupMemberResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returns the result of deleting a user group member. Valid values:</p>
+     * <br>
+     * <p>*   true: The task is deleted.</p>
+     * <p>*   false: The deletion failed.</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The request was successful.</p>
+     * <p>*   false: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

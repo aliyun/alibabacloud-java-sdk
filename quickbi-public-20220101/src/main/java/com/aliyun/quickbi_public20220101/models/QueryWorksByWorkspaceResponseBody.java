@@ -4,12 +4,24 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class QueryWorksByWorkspaceResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returns a list of all works in the organization workspace that meet the requested criteria.</p>
+     */
     @NameInMap("Result")
     public QueryWorksByWorkspaceResponseBodyResult result;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The request was successful.</p>
+     * <p>*   false: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -49,9 +61,15 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The hierarchical structure of the directory ID to which the directory belongs. Separate the hierarchical structure with a /.</p>
+         */
         @NameInMap("PathId")
         public String pathId;
 
+        /**
+         * <p>The hierarchical structure of the directory to which the directory belongs. Separate the hierarchical structure with a (/).</p>
+         */
         @NameInMap("PathName")
         public String pathName;
 
@@ -95,48 +113,119 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
     }
 
     public static class QueryWorksByWorkspaceResponseBodyResultData extends TeaModel {
+        /**
+         * <p>Third-party embedding status. Valid values:</p>
+         * <br>
+         * <p>*   0: The embed service is not enabled.</p>
+         * <p>*   1: Embed is enabled.</p>
+         */
         @NameInMap("Auth3rdFlag")
         public Integer auth3rdFlag;
 
+        /**
+         * <p>Remarks on the work.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The directory to which the work belongs.</p>
+         */
         @NameInMap("Directory")
         public QueryWorksByWorkspaceResponseBodyResultDataDirectory directory;
 
+        /**
+         * <p>The timestamp of the creation of the work in milliseconds.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The timestamp of the modification of the work in milliseconds.</p>
+         */
         @NameInMap("GmtModify")
         public String gmtModify;
 
+        /**
+         * <p>Nickname of the work modifier.</p>
+         */
         @NameInMap("ModifyName")
         public String modifyName;
 
+        /**
+         * <p>The user ID of the work owner in the Quick BI.</p>
+         */
         @NameInMap("OwnerId")
         public String ownerId;
 
+        /**
+         * <p>The nickname of the work owner.</p>
+         */
         @NameInMap("OwnerName")
         public String ownerName;
 
+        /**
+         * <p>Security policies for collaborative authorization of works. Valid values:</p>
+         * <br>
+         * <p>*   0: private</p>
+         * <p>*   12: Authorize specified members</p>
+         * <p>*   1 or 11: Authorize all workspace members</p>
+         * <br>
+         * <p>> </p>
+         * <br>
+         * <p>*   If you use legacy permissions, the return value is 1.</p>
+         * <br>
+         * <p>*   If you use the new permissions, the return value is 11.</p>
+         */
         @NameInMap("SecurityLevel")
         public String securityLevel;
 
+        /**
+         * <p>Status of dashboards, full-screen dashboards, spreadsheets. The default value of other work types is 1. Valid values:</p>
+         * <br>
+         * <p>*   0: unpublished</p>
+         * <p>*   1: published</p>
+         * <p>*   2: modified but not published</p>
+         * <p>*   3: unpublished</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The name of the work.</p>
+         */
         @NameInMap("WorkName")
         public String workName;
 
+        /**
+         * <p>The type of the work. Valid values:</p>
+         * <br>
+         * <p>*   DATAPRODUCT: BI portal</p>
+         * <p>*   PAGE: Dashboard</p>
+         * <p>*   FULLPAGE: full-screen dashboards</p>
+         * <p>*   REPORT: workbook</p>
+         * <p>*   dashboardOfflineQuery: self-service data retrieval</p>
+         * <p>*   Analysis: Ad hoc analysis</p>
+         * <p>*   DATAFORM: form filling</p>
+         */
         @NameInMap("WorkType")
         public String workType;
 
+        /**
+         * <p>The ID of the work.</p>
+         */
         @NameInMap("WorksId")
         public String worksId;
 
+        /**
+         * <p>The ID of the workspace to which the work belongs.</p>
+         */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 
+        /**
+         * <p>The name of the workspace to which the work belongs.</p>
+         */
         @NameInMap("WorkspaceName")
         public String workspaceName;
 
@@ -268,18 +357,33 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
     }
 
     public static class QueryWorksByWorkspaceResponseBodyResult extends TeaModel {
+        /**
+         * <p>The details of the list of works.</p>
+         */
         @NameInMap("Data")
         public java.util.List<QueryWorksByWorkspaceResponseBodyResultData> data;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNum")
         public Integer pageNum;
 
+        /**
+         * <p>The number of rows per page set when the interface is requested.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of rows in the table.</p>
+         */
         @NameInMap("TotalNum")
         public Integer totalNum;
 
+        /**
+         * <p>The total number of pages returned.</p>
+         */
         @NameInMap("TotalPages")
         public Integer totalPages;
 

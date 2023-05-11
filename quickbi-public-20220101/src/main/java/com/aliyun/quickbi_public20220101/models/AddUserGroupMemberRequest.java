@@ -4,9 +4,21 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class AddUserGroupMemberRequest extends TeaModel {
+    /**
+     * <p>The result of adding members to a user group is returned. Valid values:</p>
+     * <br>
+     * <p>*   true: The task is added.</p>
+     * <p>*   false: The tag failed to be added.</p>
+     */
     @NameInMap("UserGroupId")
     public String userGroupId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The request was successful.</p>
+     * <p>*   false: The request failed.</p>
+     */
     @NameInMap("UserIdList")
     public String userIdList;
 
