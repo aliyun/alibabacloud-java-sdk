@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDnsGtmAddressPoolRequest extends TeaModel {
     /**
-     * <p>The addresses in the address pool.</p>
+     * <p>The address pools.</p>
      */
     @NameInMap("Addr")
     public java.util.List<UpdateDnsGtmAddressPoolRequestAddr> addr;
@@ -23,7 +23,7 @@ public class UpdateDnsGtmAddressPoolRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The load balancing policy for the address pool. Valid values:</p>
+     * <p>The load balancing policy of the address pool. Valid values:</p>
      * <br>
      * <p>*   ALL_RR: returns all addresses.</p>
      * <p>*   RATIO: returns addresses by weight.</p>
@@ -84,23 +84,23 @@ public class UpdateDnsGtmAddressPoolRequest extends TeaModel {
 
     public static class UpdateDnsGtmAddressPoolRequestAddr extends TeaModel {
         /**
-         * <p>The address.</p>
+         * <p>The address in the address pool.</p>
          */
         @NameInMap("Addr")
         public String addr;
 
         /**
-         * <p>The source region of the address. The value is a JSON string.</p>
+         * <p>The source region of the address, in JSON-formatted string.</p>
          * <br>
-         * <p>*   lineCode: the line code of the source region of the address. This parameter is deprecated, and lineCodes prevails.</p>
+         * <p>*   LineCode: the line code of the source region of the address. The LineCode field is deprecated, and the lineCodes field is used as a substitute.</p>
          * <br>
-         * <p>*   lineCodes: the line codes of the source regions of the address.</p>
+         * <p>*   LineCodes: the line code list of the source regions of addresses.</p>
          * <br>
-         * <p>*   lineCodeRectifyType: the rectification type of the line code. Default value: AUTO. Valid values:</p>
+         * <p>*   lineCodeRectifyType: the rectification type of the line codes. Default value: AUTO. Valid values:</p>
          * <br>
-         * <p>    *   NO_NEED: no need for rectification</p>
-         * <p>    *   RECTIFIED: rectified</p>
-         * <p>    *   AUTO: automatic rectification</p>
+         * <p>    *   NO_NEED: no need for rectification.</p>
+         * <p>    *   RECTIFIED: rectified.</p>
+         * <p>    *   AUTO: automatic rectification.</p>
          */
         @NameInMap("AttributeInfo")
         public String attributeInfo;
@@ -112,17 +112,17 @@ public class UpdateDnsGtmAddressPoolRequest extends TeaModel {
         public Integer lbaWeight;
 
         /**
-         * <p>The mode of the address. Valid values:</p>
+         * <p>The response mode: Valid values:</p>
          * <br>
-         * <p>*   SMART: smart return</p>
-         * <p>*   ONLINE: always online</p>
-         * <p>*   OFFLINE: always offline</p>
+         * <p>*   SMART: smart return.</p>
+         * <p>*   ONLINE: always online.</p>
+         * <p>*   OFFLINE: always offline.</p>
          */
         @NameInMap("Mode")
         public String mode;
 
         /**
-         * <p>The description of the address.</p>
+         * <p>The additional information about the address.</p>
          */
         @NameInMap("Remark")
         public String remark;

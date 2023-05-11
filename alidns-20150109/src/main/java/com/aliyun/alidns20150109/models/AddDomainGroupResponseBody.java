@@ -5,19 +5,16 @@ import com.aliyun.tea.*;
 
 public class AddDomainGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the domain name group.</p>
+     * <p>The name of the domain name group.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
-    /**
-     * <p>The name of the domain name group.</p>
-     */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the domain name group.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

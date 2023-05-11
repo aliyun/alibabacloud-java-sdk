@@ -4,36 +4,24 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainNsResponseBody extends TeaModel {
-    /**
-     * <p>Indicates whether all the name servers were Alibaba Cloud DNS servers.</p>
-     */
     @NameInMap("AllAliDns")
     public Boolean allAliDns;
 
+    /**
+     * <p>检测失败原因编码</p>
+     */
     @NameInMap("DetectFailedReasonCode")
     public String detectFailedReasonCode;
 
-    /**
-     * <p>The list of DNS servers for the domain name.</p>
-     */
     @NameInMap("DnsServers")
     public DescribeDomainNsResponseBodyDnsServers dnsServers;
 
-    /**
-     * <p>The list of DNS servers assigned by Alibaba Cloud.</p>
-     */
     @NameInMap("ExpectDnsServers")
     public DescribeDomainNsResponseBodyExpectDnsServers expectDnsServers;
 
-    /**
-     * <p>Indicates whether the name servers included Alibaba Cloud DNS servers.</p>
-     */
     @NameInMap("IncludeAliDns")
     public Boolean includeAliDns;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
