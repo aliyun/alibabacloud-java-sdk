@@ -4,11 +4,17 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class UpdatePolarDBXInstanceNodeRequest extends TeaModel {
+    @NameInMap("CNNodeCount")
+    public String CNNodeCount;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
+
+    @NameInMap("DNNodeCount")
+    public String DNNodeCount;
 
     @NameInMap("DbInstanceNodeCount")
     public String dbInstanceNodeCount;
@@ -19,6 +25,14 @@ public class UpdatePolarDBXInstanceNodeRequest extends TeaModel {
     public static UpdatePolarDBXInstanceNodeRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdatePolarDBXInstanceNodeRequest self = new UpdatePolarDBXInstanceNodeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdatePolarDBXInstanceNodeRequest setCNNodeCount(String CNNodeCount) {
+        this.CNNodeCount = CNNodeCount;
+        return this;
+    }
+    public String getCNNodeCount() {
+        return this.CNNodeCount;
     }
 
     public UpdatePolarDBXInstanceNodeRequest setClientToken(String clientToken) {
@@ -35,6 +49,14 @@ public class UpdatePolarDBXInstanceNodeRequest extends TeaModel {
     }
     public String getDBInstanceName() {
         return this.DBInstanceName;
+    }
+
+    public UpdatePolarDBXInstanceNodeRequest setDNNodeCount(String DNNodeCount) {
+        this.DNNodeCount = DNNodeCount;
+        return this;
+    }
+    public String getDNNodeCount() {
+        return this.DNNodeCount;
     }
 
     public UpdatePolarDBXInstanceNodeRequest setDbInstanceNodeCount(String dbInstanceNodeCount) {

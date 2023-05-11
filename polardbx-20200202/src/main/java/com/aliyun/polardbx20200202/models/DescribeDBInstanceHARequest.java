@@ -3,21 +3,19 @@ package com.aliyun.polardbx20200202.models;
 
 import com.aliyun.tea.*;
 
-public class InitDBInstanceResourceGroupIdRequest extends TeaModel {
-    // 资源类型
+public class DescribeDBInstanceHARequest extends TeaModel {
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
-    // 地域
     @NameInMap("RegionId")
     public String regionId;
 
-    public static InitDBInstanceResourceGroupIdRequest build(java.util.Map<String, ?> map) throws Exception {
-        InitDBInstanceResourceGroupIdRequest self = new InitDBInstanceResourceGroupIdRequest();
+    public static DescribeDBInstanceHARequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeDBInstanceHARequest self = new DescribeDBInstanceHARequest();
         return TeaModel.build(map, self);
     }
 
-    public InitDBInstanceResourceGroupIdRequest setDBInstanceName(String DBInstanceName) {
+    public DescribeDBInstanceHARequest setDBInstanceName(String DBInstanceName) {
         this.DBInstanceName = DBInstanceName;
         return this;
     }
@@ -25,7 +23,7 @@ public class InitDBInstanceResourceGroupIdRequest extends TeaModel {
         return this.DBInstanceName;
     }
 
-    public InitDBInstanceResourceGroupIdRequest setRegionId(String regionId) {
+    public DescribeDBInstanceHARequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }

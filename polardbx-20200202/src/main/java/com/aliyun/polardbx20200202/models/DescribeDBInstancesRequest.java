@@ -4,7 +4,6 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancesRequest extends TeaModel {
-    // 实例名称
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -17,11 +16,12 @@ public class DescribeDBInstancesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    // 资源组ID
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    // 标签过滤条件
+    @NameInMap("Series")
+    public String series;
+
     @NameInMap("Tags")
     public String tags;
 
@@ -68,6 +68,14 @@ public class DescribeDBInstancesRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public DescribeDBInstancesRequest setSeries(String series) {
+        this.series = series;
+        return this;
+    }
+    public String getSeries() {
+        return this.series;
     }
 
     public DescribeDBInstancesRequest setTags(String tags) {

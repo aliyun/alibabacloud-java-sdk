@@ -10,7 +10,6 @@ public class DescribeDBInstanceAttributeRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    // 资源组ID
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

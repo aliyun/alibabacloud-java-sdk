@@ -41,11 +41,17 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>VPC ID。</p>
+         */
         @NameInMap("VPCId")
         public String VPCId;
 
         @NameInMap("VSwitchId")
         public String vSwitchId;
+
+        @NameInMap("VpcInstanceId")
+        public String vpcInstanceId;
 
         public static DescribeDBInstanceAttributeResponseBodyDBInstanceConnAddrs build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstanceAttributeResponseBodyDBInstanceConnAddrs self = new DescribeDBInstanceAttributeResponseBodyDBInstanceConnAddrs();
@@ -90,6 +96,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getVSwitchId() {
             return this.vSwitchId;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstanceConnAddrs setVpcInstanceId(String vpcInstanceId) {
+            this.vpcInstanceId = vpcInstanceId;
+            return this;
+        }
+        public String getVpcInstanceId() {
+            return this.vpcInstanceId;
         }
 
     }
@@ -169,11 +183,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceAttributeResponseBodyDBInstanceTagSet extends TeaModel {
-        // 标签名称
         @NameInMap("Key")
         public String key;
 
-        // 标签值
         @NameInMap("Value")
         public String value;
 
@@ -201,6 +213,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceAttributeResponseBodyDBInstance extends TeaModel {
+        @NameInMap("CnNodeClassCode")
+        public String cnNodeClassCode;
+
+        @NameInMap("CnNodeCount")
+        public Integer cnNodeCount;
+
         @NameInMap("CommodityCode")
         public String commodityCode;
 
@@ -234,6 +252,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("DnNodeClassCode")
+        public String dnNodeClassCode;
+
+        @NameInMap("DnNodeCount")
+        public Integer dnNodeCount;
+
         @NameInMap("Engine")
         public String engine;
 
@@ -248,6 +272,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         @NameInMap("KindCode")
         public Integer kindCode;
+
+        @NameInMap("LTSVersions")
+        public java.util.List<String> LTSVersions;
 
         @NameInMap("LatestMinorVersion")
         public String latestMinorVersion;
@@ -279,7 +306,6 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
-        // 资源组ID
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
@@ -289,19 +315,24 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("RightsSeparationStatus")
         public String rightsSeparationStatus;
 
+        @NameInMap("Series")
+        public String series;
+
         @NameInMap("Status")
         public String status;
 
         @NameInMap("StorageUsed")
         public Long storageUsed;
 
-        // 标签集合
         @NameInMap("TagSet")
         public java.util.List<DescribeDBInstanceAttributeResponseBodyDBInstanceTagSet> tagSet;
 
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>VPC ID。</p>
+         */
         @NameInMap("VPCId")
         public String VPCId;
 
@@ -314,6 +345,22 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public static DescribeDBInstanceAttributeResponseBodyDBInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstanceAttributeResponseBodyDBInstance self = new DescribeDBInstanceAttributeResponseBodyDBInstance();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstance setCnNodeClassCode(String cnNodeClassCode) {
+            this.cnNodeClassCode = cnNodeClassCode;
+            return this;
+        }
+        public String getCnNodeClassCode() {
+            return this.cnNodeClassCode;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstance setCnNodeCount(Integer cnNodeCount) {
+            this.cnNodeCount = cnNodeCount;
+            return this;
+        }
+        public Integer getCnNodeCount() {
+            return this.cnNodeCount;
         }
 
         public DescribeDBInstanceAttributeResponseBodyDBInstance setCommodityCode(String commodityCode) {
@@ -404,6 +451,22 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             return this.description;
         }
 
+        public DescribeDBInstanceAttributeResponseBodyDBInstance setDnNodeClassCode(String dnNodeClassCode) {
+            this.dnNodeClassCode = dnNodeClassCode;
+            return this;
+        }
+        public String getDnNodeClassCode() {
+            return this.dnNodeClassCode;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstance setDnNodeCount(Integer dnNodeCount) {
+            this.dnNodeCount = dnNodeCount;
+            return this;
+        }
+        public Integer getDnNodeCount() {
+            return this.dnNodeCount;
+        }
+
         public DescribeDBInstanceAttributeResponseBodyDBInstance setEngine(String engine) {
             this.engine = engine;
             return this;
@@ -442,6 +505,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public Integer getKindCode() {
             return this.kindCode;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstance setLTSVersions(java.util.List<String> LTSVersions) {
+            this.LTSVersions = LTSVersions;
+            return this;
+        }
+        public java.util.List<String> getLTSVersions() {
+            return this.LTSVersions;
         }
 
         public DescribeDBInstanceAttributeResponseBodyDBInstance setLatestMinorVersion(String latestMinorVersion) {
@@ -546,6 +617,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getRightsSeparationStatus() {
             return this.rightsSeparationStatus;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstance setSeries(String series) {
+            this.series = series;
+            return this;
+        }
+        public String getSeries() {
+            return this.series;
         }
 
         public DescribeDBInstanceAttributeResponseBodyDBInstance setStatus(String status) {

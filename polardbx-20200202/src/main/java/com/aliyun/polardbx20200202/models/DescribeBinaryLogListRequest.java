@@ -10,6 +10,9 @@ public class DescribeBinaryLogListRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("InstanceName")
+    public String instanceName;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -41,6 +44,14 @@ public class DescribeBinaryLogListRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeBinaryLogListRequest setInstanceName(String instanceName) {
+        this.instanceName = instanceName;
+        return this;
+    }
+    public String getInstanceName() {
+        return this.instanceName;
     }
 
     public DescribeBinaryLogListRequest setPageNumber(Integer pageNumber) {

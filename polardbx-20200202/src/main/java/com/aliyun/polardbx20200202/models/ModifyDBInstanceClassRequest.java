@@ -7,8 +7,14 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("CnClass")
+    public String cnClass;
+
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
+
+    @NameInMap("DnClass")
+    public String dnClass;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -29,12 +35,28 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public ModifyDBInstanceClassRequest setCnClass(String cnClass) {
+        this.cnClass = cnClass;
+        return this;
+    }
+    public String getCnClass() {
+        return this.cnClass;
+    }
+
     public ModifyDBInstanceClassRequest setDBInstanceName(String DBInstanceName) {
         this.DBInstanceName = DBInstanceName;
         return this;
     }
     public String getDBInstanceName() {
         return this.DBInstanceName;
+    }
+
+    public ModifyDBInstanceClassRequest setDnClass(String dnClass) {
+        this.dnClass = dnClass;
+        return this;
+    }
+    public String getDnClass() {
+        return this.dnClass;
     }
 
     public ModifyDBInstanceClassRequest setRegionId(String regionId) {

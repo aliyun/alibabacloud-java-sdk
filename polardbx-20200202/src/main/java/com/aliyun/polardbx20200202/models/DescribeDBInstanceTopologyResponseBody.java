@@ -166,11 +166,20 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         @NameInMap("MaxIops")
         public Integer maxIops;
 
+        @NameInMap("NodeClass")
+        public String nodeClass;
+
         @NameInMap("Region")
         public String region;
 
         @NameInMap("Role")
         public String role;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Version")
+        public String version;
 
         public static DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems self = new DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems();
@@ -345,6 +354,14 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             return this.maxIops;
         }
 
+        public DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems setNodeClass(String nodeClass) {
+            this.nodeClass = nodeClass;
+            return this;
+        }
+        public String getNodeClass() {
+            return this.nodeClass;
+        }
+
         public DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems setRegion(String region) {
             this.region = region;
             return this;
@@ -359,6 +376,22 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         }
         public String getRole() {
             return this.role;
+        }
+
+        public DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
         }
 
     }

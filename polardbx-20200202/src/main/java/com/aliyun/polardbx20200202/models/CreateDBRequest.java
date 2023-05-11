@@ -22,7 +22,6 @@ public class CreateDBRequest extends TeaModel {
     @NameInMap("DbName")
     public String dbName;
 
-    // drds/auto 用来区分所建库为自动拆分模式，还是手动拆分模式
     @NameInMap("Mode")
     public String mode;
 

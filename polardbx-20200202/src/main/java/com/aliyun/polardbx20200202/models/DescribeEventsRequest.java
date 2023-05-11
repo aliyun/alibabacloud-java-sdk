@@ -4,23 +4,18 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventsRequest extends TeaModel {
-    // 结束时间
     @NameInMap("EndTime")
     public String endTime;
 
-    // 页面下标
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 页面大小
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 区域ID
     @NameInMap("RegionId")
     public String regionId;
 
-    // 开始时间
     @NameInMap("StartTime")
     public String startTime;
 

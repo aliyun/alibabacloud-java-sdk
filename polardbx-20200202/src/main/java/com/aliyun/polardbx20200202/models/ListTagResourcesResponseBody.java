@@ -4,14 +4,12 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
-    // 下一个查询开始Token，NextToken为空说明没有下一个
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    // 资源列表
     @NameInMap("TagResources")
     public ListTagResourcesResponseBodyTagResources tagResources;
 
@@ -45,19 +43,15 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
-        // 资源ID
         @NameInMap("ResourceId")
         public String resourceId;
 
-        // 资源类型
         @NameInMap("ResourceType")
         public String resourceType;
 
-        // 标签键
         @NameInMap("TagKey")
         public String tagKey;
 
-        // 标签值
         @NameInMap("TagValue")
         public String tagValue;
 

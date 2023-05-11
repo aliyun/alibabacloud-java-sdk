@@ -4,7 +4,6 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeActiveOperationMaintainConfRequest extends TeaModel {
-    // 区域ID
     @NameInMap("RegionId")
     public String regionId;
 

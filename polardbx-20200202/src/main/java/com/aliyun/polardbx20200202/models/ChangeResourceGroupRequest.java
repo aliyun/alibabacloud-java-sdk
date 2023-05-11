@@ -4,19 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class ChangeResourceGroupRequest extends TeaModel {
-    // 新资源组ID
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
 
-    // 地域
     @NameInMap("RegionId")
     public String regionId;
 
-    // 资源ID
     @NameInMap("ResourceId")
     public String resourceId;
 
-    // 资源类型
     @NameInMap("ResourceType")
     public String resourceType;
 

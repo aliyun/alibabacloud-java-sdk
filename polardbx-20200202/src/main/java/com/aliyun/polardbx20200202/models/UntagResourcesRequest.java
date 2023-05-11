@@ -4,23 +4,18 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
-    // 是否全部删除，只针对TagKey.N为空时有效。 取值范围： true  false True False  默认是 false
     @NameInMap("All")
     public Boolean all;
 
-    // 地域
     @NameInMap("RegionId")
     public String regionId;
 
-    // 资源ID，最多50个子项
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
-    // 资源类型
     @NameInMap("ResourceType")
     public String resourceType;
 
-    // 标签键，最多20个子项
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 

@@ -7,7 +7,6 @@ public class DescribeActiveOperationTaskCountResponseBody extends TeaModel {
     @NameInMap("NeedPop")
     public Long needPop;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

@@ -7,7 +7,6 @@ public class CancelActiveOperationTasksResponseBody extends TeaModel {
     @NameInMap("Ids")
     public String ids;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
