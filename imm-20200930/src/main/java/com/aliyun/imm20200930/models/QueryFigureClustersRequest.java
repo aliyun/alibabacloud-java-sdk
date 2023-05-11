@@ -31,6 +31,9 @@ public class QueryFigureClustersRequest extends TeaModel {
     @NameInMap("UpdateTimeRange")
     public TimeRange updateTimeRange;
 
+    @NameInMap("WithTotalCount")
+    public Boolean withTotalCount;
+
     public static QueryFigureClustersRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryFigureClustersRequest self = new QueryFigureClustersRequest();
         return TeaModel.build(map, self);
@@ -106,6 +109,14 @@ public class QueryFigureClustersRequest extends TeaModel {
     }
     public TimeRange getUpdateTimeRange() {
         return this.updateTimeRange;
+    }
+
+    public QueryFigureClustersRequest setWithTotalCount(Boolean withTotalCount) {
+        this.withTotalCount = withTotalCount;
+        return this;
+    }
+    public Boolean getWithTotalCount() {
+        return this.withTotalCount;
     }
 
 }

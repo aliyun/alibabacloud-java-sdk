@@ -19,6 +19,9 @@ public class ListTasksShrinkRequest extends TeaModel {
     @NameInMap("ProjectName")
     public String projectName;
 
+    @NameInMap("RequestDefinition")
+    public Boolean requestDefinition;
+
     @NameInMap("Sort")
     public String sort;
 
@@ -77,6 +80,14 @@ public class ListTasksShrinkRequest extends TeaModel {
     }
     public String getProjectName() {
         return this.projectName;
+    }
+
+    public ListTasksShrinkRequest setRequestDefinition(Boolean requestDefinition) {
+        this.requestDefinition = requestDefinition;
+        return this;
+    }
+    public Boolean getRequestDefinition() {
+        return this.requestDefinition;
     }
 
     public ListTasksShrinkRequest setSort(String sort) {

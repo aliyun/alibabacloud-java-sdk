@@ -4,9 +4,15 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateMediaConvertTaskRequest extends TeaModel {
+    @NameInMap("AlignmentIndex")
+    public Integer alignmentIndex;
+
     @NameInMap("CredentialConfig")
     public CredentialConfig credentialConfig;
 
+    /**
+     * <p>消息通知配置，支持使用MNS、RocketMQ接收异步消息通知。</p>
+     */
     @NameInMap("Notification")
     public Notification notification;
 
@@ -28,6 +34,14 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
     public static CreateMediaConvertTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateMediaConvertTaskRequest self = new CreateMediaConvertTaskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateMediaConvertTaskRequest setAlignmentIndex(Integer alignmentIndex) {
+        this.alignmentIndex = alignmentIndex;
+        return this;
+    }
+    public Integer getAlignmentIndex() {
+        return this.alignmentIndex;
     }
 
     public CreateMediaConvertTaskRequest setCredentialConfig(CredentialConfig credentialConfig) {

@@ -1532,6 +1532,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.alignmentIndex)) {
+            query.put("AlignmentIndex", request.alignmentIndex);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.credentialConfigShrink)) {
             query.put("CredentialConfig", request.credentialConfigShrink);
         }
@@ -3610,6 +3614,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ProjectName", request.projectName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.requestDefinition)) {
+            query.put("RequestDefinition", request.requestDefinition);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
             query.put("TaskId", request.taskId);
         }
@@ -4036,6 +4044,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ProjectName", request.projectName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.requestDefinition)) {
+            query.put("RequestDefinition", request.requestDefinition);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sort)) {
             query.put("Sort", request.sort);
         }
@@ -4152,10 +4164,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SourceURI", request.sourceURI);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.token)) {
-            query.put("Token", request.token);
-        }
-
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -4225,6 +4233,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.updateTimeRangeShrink)) {
             query.put("UpdateTimeRange", request.updateTimeRangeShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.withTotalCount)) {
+            query.put("WithTotalCount", request.withTotalCount);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

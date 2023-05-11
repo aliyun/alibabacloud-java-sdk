@@ -50,7 +50,7 @@ public class TargetImage extends TeaModel {
         public Double frameRate;
 
         @NameInMap("Height")
-        public Integer height;
+        public Double height;
 
         @NameInMap("Interval")
         public Double interval;
@@ -68,7 +68,7 @@ public class TargetImage extends TeaModel {
         public String URI;
 
         @NameInMap("Width")
-        public Integer width;
+        public Double width;
 
         public static TargetImageAnimations build(java.util.Map<String, ?> map) throws Exception {
             TargetImageAnimations self = new TargetImageAnimations();
@@ -91,11 +91,11 @@ public class TargetImage extends TeaModel {
             return this.frameRate;
         }
 
-        public TargetImageAnimations setHeight(Integer height) {
+        public TargetImageAnimations setHeight(Double height) {
             this.height = height;
             return this;
         }
-        public Integer getHeight() {
+        public Double getHeight() {
             return this.height;
         }
 
@@ -139,11 +139,11 @@ public class TargetImage extends TeaModel {
             return this.URI;
         }
 
-        public TargetImageAnimations setWidth(Integer width) {
+        public TargetImageAnimations setWidth(Double width) {
             this.width = width;
             return this;
         }
-        public Integer getWidth() {
+        public Double getWidth() {
             return this.width;
         }
 
@@ -154,7 +154,7 @@ public class TargetImage extends TeaModel {
         public String format;
 
         @NameInMap("Height")
-        public Integer height;
+        public Double height;
 
         @NameInMap("Interval")
         public Double interval;
@@ -172,7 +172,7 @@ public class TargetImage extends TeaModel {
         public String URI;
 
         @NameInMap("Width")
-        public Integer width;
+        public Double width;
 
         public static TargetImageSnapshots build(java.util.Map<String, ?> map) throws Exception {
             TargetImageSnapshots self = new TargetImageSnapshots();
@@ -187,11 +187,11 @@ public class TargetImage extends TeaModel {
             return this.format;
         }
 
-        public TargetImageSnapshots setHeight(Integer height) {
+        public TargetImageSnapshots setHeight(Double height) {
             this.height = height;
             return this;
         }
-        public Integer getHeight() {
+        public Double getHeight() {
             return this.height;
         }
 
@@ -235,11 +235,11 @@ public class TargetImage extends TeaModel {
             return this.URI;
         }
 
-        public TargetImageSnapshots setWidth(Integer width) {
+        public TargetImageSnapshots setWidth(Double width) {
             this.width = width;
             return this;
         }
-        public Integer getWidth() {
+        public Double getWidth() {
             return this.width;
         }
 

@@ -16,6 +16,9 @@ public class GetTaskResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    @NameInMap("Progress")
+    public Integer progress;
+
     @NameInMap("ProjectName")
     public String projectName;
 
@@ -33,6 +36,9 @@ public class GetTaskResponseBody extends TeaModel {
 
     @NameInMap("TaskId")
     public String taskId;
+
+    @NameInMap("TaskRequestDefinition")
+    public String taskRequestDefinition;
 
     @NameInMap("TaskType")
     public String taskType;
@@ -75,6 +81,14 @@ public class GetTaskResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public GetTaskResponseBody setProgress(Integer progress) {
+        this.progress = progress;
+        return this;
+    }
+    public Integer getProgress() {
+        return this.progress;
     }
 
     public GetTaskResponseBody setProjectName(String projectName) {
@@ -123,6 +137,14 @@ public class GetTaskResponseBody extends TeaModel {
     }
     public String getTaskId() {
         return this.taskId;
+    }
+
+    public GetTaskResponseBody setTaskRequestDefinition(String taskRequestDefinition) {
+        this.taskRequestDefinition = taskRequestDefinition;
+        return this;
+    }
+    public String getTaskRequestDefinition() {
+        return this.taskRequestDefinition;
     }
 
     public GetTaskResponseBody setTaskType(String taskType) {

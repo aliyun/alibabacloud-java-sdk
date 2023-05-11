@@ -13,9 +13,6 @@ public class LiveTranscodingRequest extends TeaModel {
     @NameInMap("SourceURI")
     public String sourceURI;
 
-    @NameInMap("Token")
-    public String token;
-
     public static LiveTranscodingRequest build(java.util.Map<String, ?> map) throws Exception {
         LiveTranscodingRequest self = new LiveTranscodingRequest();
         return TeaModel.build(map, self);
@@ -43,14 +40,6 @@ public class LiveTranscodingRequest extends TeaModel {
     }
     public String getSourceURI() {
         return this.sourceURI;
-    }
-
-    public LiveTranscodingRequest setToken(String token) {
-        this.token = token;
-        return this;
-    }
-    public String getToken() {
-        return this.token;
     }
 
 }
