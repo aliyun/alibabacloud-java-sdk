@@ -4,23 +4,18 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventsResponseBody extends TeaModel {
-    // 事件体
     @NameInMap("EventItems")
     public java.util.List<DescribeEventsResponseBodyEventItems> eventItems;
 
-    // 页面下标
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // 页面大小
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 总页数
     @NameInMap("TotalRecordCount")
     public Long totalRecordCount;
 
@@ -70,47 +65,36 @@ public class DescribeEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeEventsResponseBodyEventItems extends TeaModel {
-        // 事件ID
         @NameInMap("EventId")
         public Long eventId;
 
-        // 事件名称
         @NameInMap("EventName")
         public String eventName;
 
-        // 补充信息
         @NameInMap("EventPayload")
         public String eventPayload;
 
-        // 原因
         @NameInMap("EventReason")
         public String eventReason;
 
-        // 记录时间
         @NameInMap("EventRecordTime")
         public String eventRecordTime;
 
-        // 事件时间
         @NameInMap("EventTime")
         public String eventTime;
 
-        // 事件类型
         @NameInMap("EventType")
         public String eventType;
 
-        // 事件用户类型
         @NameInMap("EventUserType")
         public String eventUserType;
 
-        // 区域ID
         @NameInMap("RegionId")
         public String regionId;
 
-        // 资源名
         @NameInMap("ResourceName")
         public String resourceName;
 
-        // 资源类型
         @NameInMap("ResourceType")
         public String resourceType;
 

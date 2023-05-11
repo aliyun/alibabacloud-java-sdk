@@ -69,6 +69,12 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
         @NameInMap("BackupWay")
         public String backupWay;
 
+        @NameInMap("ColdDataBackupInterval")
+        public Integer coldDataBackupInterval;
+
+        @NameInMap("ColdDataBackupRetention")
+        public Integer coldDataBackupRetention;
+
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
@@ -130,6 +136,22 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
         }
         public String getBackupWay() {
             return this.backupWay;
+        }
+
+        public UpdateBackupPolicyResponseBodyData setColdDataBackupInterval(Integer coldDataBackupInterval) {
+            this.coldDataBackupInterval = coldDataBackupInterval;
+            return this;
+        }
+        public Integer getColdDataBackupInterval() {
+            return this.coldDataBackupInterval;
+        }
+
+        public UpdateBackupPolicyResponseBodyData setColdDataBackupRetention(Integer coldDataBackupRetention) {
+            this.coldDataBackupRetention = coldDataBackupRetention;
+            return this;
+        }
+        public Integer getColdDataBackupRetention() {
+            return this.coldDataBackupRetention;
         }
 
         public UpdateBackupPolicyResponseBodyData setDBInstanceName(String DBInstanceName) {

@@ -1,3 +1,7 @@
+2023-05-11 Version: 2.1.5
+- Support 3azone instance creation.
+- Updated DescribeLogicDBInstanceTopology return value to support 3 azone topology.
+
 2022-04-20 Version: 2.1.4
 - DescribeBackupSet.
 

@@ -117,11 +117,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancesResponseBodyDBInstancesTagSet extends TeaModel {
-        // 标签名称
         @NameInMap("Key")
         public String key;
 
-        // 标签值
         @NameInMap("Value")
         public String value;
 
@@ -149,13 +147,24 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancesResponseBodyDBInstances extends TeaModel {
+        @NameInMap("CdcInstanceName")
+        public String cdcInstanceName;
+
+        @NameInMap("CnNodeClassCode")
+        public String cnNodeClassCode;
+
+        @NameInMap("CnNodeCount")
+        public Integer cnNodeCount;
+
         @NameInMap("CommodityCode")
         public String commodityCode;
+
+        @NameInMap("ContainBinlogX")
+        public Boolean containBinlogX;
 
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 数据库实例名称
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
@@ -167,6 +176,12 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("DnNodeClassCode")
+        public String dnNodeClassCode;
+
+        @NameInMap("DnNodeCount")
+        public Integer dnNodeCount;
 
         @NameInMap("Engine")
         public String engine;
@@ -210,9 +225,11 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
-        // 资源组ID
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
+
+        @NameInMap("Series")
+        public String series;
 
         @NameInMap("Status")
         public String status;
@@ -220,13 +237,18 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("StorageUsed")
         public Long storageUsed;
 
-        // 标签集合
+        @NameInMap("SupportBinlogX")
+        public Boolean supportBinlogX;
+
         @NameInMap("TagSet")
         public java.util.List<DescribeDBInstancesResponseBodyDBInstancesTagSet> tagSet;
 
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>VPC ID。</p>
+         */
         @NameInMap("VPCId")
         public String VPCId;
 
@@ -238,12 +260,44 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeDBInstancesResponseBodyDBInstances setCdcInstanceName(String cdcInstanceName) {
+            this.cdcInstanceName = cdcInstanceName;
+            return this;
+        }
+        public String getCdcInstanceName() {
+            return this.cdcInstanceName;
+        }
+
+        public DescribeDBInstancesResponseBodyDBInstances setCnNodeClassCode(String cnNodeClassCode) {
+            this.cnNodeClassCode = cnNodeClassCode;
+            return this;
+        }
+        public String getCnNodeClassCode() {
+            return this.cnNodeClassCode;
+        }
+
+        public DescribeDBInstancesResponseBodyDBInstances setCnNodeCount(Integer cnNodeCount) {
+            this.cnNodeCount = cnNodeCount;
+            return this;
+        }
+        public Integer getCnNodeCount() {
+            return this.cnNodeCount;
+        }
+
         public DescribeDBInstancesResponseBodyDBInstances setCommodityCode(String commodityCode) {
             this.commodityCode = commodityCode;
             return this;
         }
         public String getCommodityCode() {
             return this.commodityCode;
+        }
+
+        public DescribeDBInstancesResponseBodyDBInstances setContainBinlogX(Boolean containBinlogX) {
+            this.containBinlogX = containBinlogX;
+            return this;
+        }
+        public Boolean getContainBinlogX() {
+            return this.containBinlogX;
         }
 
         public DescribeDBInstancesResponseBodyDBInstances setCreateTime(String createTime) {
@@ -284,6 +338,22 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeDBInstancesResponseBodyDBInstances setDnNodeClassCode(String dnNodeClassCode) {
+            this.dnNodeClassCode = dnNodeClassCode;
+            return this;
+        }
+        public String getDnNodeClassCode() {
+            return this.dnNodeClassCode;
+        }
+
+        public DescribeDBInstancesResponseBodyDBInstances setDnNodeCount(Integer dnNodeCount) {
+            this.dnNodeCount = dnNodeCount;
+            return this;
+        }
+        public Integer getDnNodeCount() {
+            return this.dnNodeCount;
         }
 
         public DescribeDBInstancesResponseBodyDBInstances setEngine(String engine) {
@@ -406,6 +476,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
+        public DescribeDBInstancesResponseBodyDBInstances setSeries(String series) {
+            this.series = series;
+            return this;
+        }
+        public String getSeries() {
+            return this.series;
+        }
+
         public DescribeDBInstancesResponseBodyDBInstances setStatus(String status) {
             this.status = status;
             return this;
@@ -420,6 +498,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
         public Long getStorageUsed() {
             return this.storageUsed;
+        }
+
+        public DescribeDBInstancesResponseBodyDBInstances setSupportBinlogX(Boolean supportBinlogX) {
+            this.supportBinlogX = supportBinlogX;
+            return this;
+        }
+        public Boolean getSupportBinlogX() {
+            return this.supportBinlogX;
         }
 
         public DescribeDBInstancesResponseBodyDBInstances setTagSet(java.util.List<DescribeDBInstancesResponseBodyDBInstancesTagSet> tagSet) {

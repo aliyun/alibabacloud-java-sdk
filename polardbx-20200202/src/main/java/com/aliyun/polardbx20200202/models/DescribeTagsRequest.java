@@ -4,15 +4,12 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagsRequest extends TeaModel {
-    // 实例名称
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
-    // 地域
     @NameInMap("RegionId")
     public String regionId;
 
-    // 标签Key
     @NameInMap("TagKey")
     public String tagKey;
 

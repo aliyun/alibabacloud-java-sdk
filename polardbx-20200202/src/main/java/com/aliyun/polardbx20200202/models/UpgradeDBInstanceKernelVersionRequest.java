@@ -7,10 +7,12 @@ public class UpgradeDBInstanceKernelVersionRequest extends TeaModel {
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    @NameInMap("MinorVersion")
+    public String minorVersion;
+
     @NameInMap("RegionId")
     public String regionId;
 
-    // 切换模式： 0:立刻执行，1：运维时间执行
     @NameInMap("SwitchMode")
     public String switchMode;
 
@@ -25,6 +27,14 @@ public class UpgradeDBInstanceKernelVersionRequest extends TeaModel {
     }
     public String getDBInstanceName() {
         return this.DBInstanceName;
+    }
+
+    public UpgradeDBInstanceKernelVersionRequest setMinorVersion(String minorVersion) {
+        this.minorVersion = minorVersion;
+        return this;
+    }
+    public String getMinorVersion() {
+        return this.minorVersion;
     }
 
     public UpgradeDBInstanceKernelVersionRequest setRegionId(String regionId) {

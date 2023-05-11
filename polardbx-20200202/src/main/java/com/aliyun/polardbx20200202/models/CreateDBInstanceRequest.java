@@ -55,6 +55,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("UsedTime")
     public Integer usedTime;
 
+    /**
+     * <p>VPC ID。</p>
+     */
     @NameInMap("VPCId")
     public String VPCId;
 

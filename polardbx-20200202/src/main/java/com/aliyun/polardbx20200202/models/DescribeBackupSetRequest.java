@@ -4,15 +4,12 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupSetRequest extends TeaModel {
-    // 备份集ID
     @NameInMap("BackupSetId")
     public String backupSetId;
 
-    // polardb-x实例名
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
-    // 区域
     @NameInMap("RegionId")
     public String regionId;
 

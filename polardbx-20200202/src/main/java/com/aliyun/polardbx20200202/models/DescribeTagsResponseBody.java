@@ -4,11 +4,12 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagsResponseBody extends TeaModel {
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // 标签信息列表
     @NameInMap("TagInfos")
     public java.util.List<DescribeTagsResponseBodyTagInfos> tagInfos;
 
@@ -34,15 +35,12 @@ public class DescribeTagsResponseBody extends TeaModel {
     }
 
     public static class DescribeTagsResponseBodyTagInfos extends TeaModel {
-        // 标签关联数据库实例列表
         @NameInMap("DBInstanceIds")
         public java.util.List<String> DBInstanceIds;
 
-        // 标签Key
         @NameInMap("TagKey")
         public String tagKey;
 
-        // 标签Value
         @NameInMap("TagValue")
         public String tagValue;
 

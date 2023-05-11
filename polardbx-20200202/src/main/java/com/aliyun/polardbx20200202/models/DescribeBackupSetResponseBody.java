@@ -54,19 +54,15 @@ public class DescribeBackupSetResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupSetResponseBodyDataOSSList extends TeaModel {
-        // OSS 文件名
         @NameInMap("BackupSetFile")
         public String backupSetFile;
 
-        // 外网下载地址
         @NameInMap("DownloadLink")
         public String downloadLink;
 
-        // 内网OSS 下载地址
         @NameInMap("IntranetDownloadLink")
         public String intranetDownloadLink;
 
-        // 过期时间
         @NameInMap("LinkExpiredTime")
         public String linkExpiredTime;
 
@@ -110,34 +106,27 @@ public class DescribeBackupSetResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupSetResponseBodyData extends TeaModel {
-        // 备份模式
         @NameInMap("BackupModel")
         public Integer backupModel;
 
-        // 备份集ID
         @NameInMap("BackupSetId")
         public Long backupSetId;
 
-        // 备份集大小
         @NameInMap("BackupSetSize")
         public Long backupSetSize;
 
-        // 备份类型
         @NameInMap("BackupType")
         public Integer backupType;
 
-        // 备份开始时间
         @NameInMap("BeginTime")
         public Long beginTime;
 
-        // 备份结束时间
         @NameInMap("EndTime")
         public Long endTime;
 
         @NameInMap("OSSList")
         public java.util.List<DescribeBackupSetResponseBodyDataOSSList> OSSList;
 
-        // 状态
         @NameInMap("Status")
         public Integer status;
 
