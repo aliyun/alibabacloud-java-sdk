@@ -4,6 +4,9 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class QuerySharesToUserListRequest extends TeaModel {
+    /**
+     * <p>The ID of the user. The user ID is the UserID of the Quick BI, not the UID of Alibaba Cloud.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

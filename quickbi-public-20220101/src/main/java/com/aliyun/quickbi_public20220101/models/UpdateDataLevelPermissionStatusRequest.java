@@ -4,6 +4,9 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class UpdateDataLevelPermissionStatusRequest extends TeaModel {
+    /**
+     * <p>The ID of the training dataset that you want to remove from the specified custom linguistic model.</p>
+     */
     @NameInMap("CubeId")
     public String cubeId;
 

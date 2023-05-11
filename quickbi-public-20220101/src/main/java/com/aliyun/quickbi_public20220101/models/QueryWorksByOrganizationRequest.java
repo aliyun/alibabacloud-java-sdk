@@ -4,18 +4,33 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class QueryWorksByOrganizationRequest extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <p>The number of rows per page set when the interface is requested.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Returns a list of all works in the organization that meet the requested criteria.</p>
+     */
     @NameInMap("Status")
     public Integer status;
 
+    /**
+     * <p>The total number of pages returned.</p>
+     */
     @NameInMap("ThirdPartAuthFlag")
     public Integer thirdPartAuthFlag;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("WorksType")
     public String worksType;
 

@@ -4,9 +4,15 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class AddUserGroupMembersRequest extends TeaModel {
+    /**
+     * <p>The IDs of the user groups. Separate the IDs with commas (,). Example: aGroupId,bGroupId,cGroupIds</p>
+     */
     @NameInMap("UserGroupIds")
     public String userGroupIds;
 
+    /**
+     * <p>The user ID of the Quick BI.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

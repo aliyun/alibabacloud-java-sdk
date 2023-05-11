@@ -10,6 +10,12 @@ public class QueryEmbeddedInfoResponseBody extends TeaModel {
     @NameInMap("Result")
     public QueryEmbeddedInfoResponseBodyResult result;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The request was successful.</p>
+     * <p>*   false: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

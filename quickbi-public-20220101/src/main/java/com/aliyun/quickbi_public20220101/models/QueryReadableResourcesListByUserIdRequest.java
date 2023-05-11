@@ -4,6 +4,9 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class QueryReadableResourcesListByUserIdRequest extends TeaModel {
+    /**
+     * <p>Quick BI the user ID.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

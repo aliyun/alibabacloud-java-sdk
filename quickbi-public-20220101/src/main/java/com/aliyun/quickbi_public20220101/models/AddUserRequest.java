@@ -7,6 +7,9 @@ public class AddUserRequest extends TeaModel {
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <p>Add organization members.</p>
+     */
     @NameInMap("AdminUser")
     public Boolean adminUser;
 

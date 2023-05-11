@@ -4,12 +4,24 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class QueryDataServiceResponseBody extends TeaModel {
+    /**
+     * <p>The list of parameter names of the returned parameters. The value is a string of the List type.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The request was successful.</p>
+     * <p>*   false: The request failed.</p>
+     */
     @NameInMap("Result")
     public QueryDataServiceResponseBodyResult result;
 
+    /**
+     * <p>{ "area": \["East China", "North China"], "shopping_date": "2019Q1", }</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,21 +55,42 @@ public class QueryDataServiceResponseBody extends TeaModel {
     }
 
     public static class QueryDataServiceResponseBodyResultHeaders extends TeaModel {
+        /**
+         * <p>The field name, which corresponds to the physical table field name.</p>
+         */
         @NameInMap("Aggregator")
         public String aggregator;
 
+        /**
+         * <p>The granularity of the dimension field. This field is returned only when the requested field is a date dimension or a geographical dimension. Valid values:</p>
+         * <br>
+         * <p>*   Date granularity: yearRegion (year), monthRegion (month), weekRegion (week), dayRegion (day), hourRegion (hour), minRegion (minute), secRegion (second)</p>
+         * <p>*   Geographic information granularity: COUNTRY (international level), PROVINCE (provincial level), CITY (municipal level), XIAN (district /county), and REGION (regional level)</p>
+         */
         @NameInMap("Column")
         public String column;
 
+        /**
+         * <p>The column header.</p>
+         */
         @NameInMap("DataType")
         public String dataType;
 
+        /**
+         * <p>The field type, which is used to distinguish whether the field type is a dimension or a measure.</p>
+         */
         @NameInMap("Granularity")
         public String granularity;
 
+        /**
+         * <p>The data type of the field. generally have number, string, date, datetime, time, and geographic.</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <p>SELECT COMPANY_T\_1\_.\"area\" AS D_AREA\_2\_, COMPANY_T\_1\_.\"city\" AS D_CITY\_3\_, SUM(COMPANY_T\_1\_.\"profit_amt\") AS D_PROFIT\_4\_ FROM \"quickbi_test\".\"company_sales_record_copy\" AS COMPANY_T\_1\_ WHERE COMPANY_T\_1\_.\"area\" LIKE \"% China East %\" GROUP BY COMPANY_T\_1\_.\"area\", COMPANY_T\_1\_.\"city\" HAVING SUM(COMPANY_T\_1\_.\"order_amt\") > 1 LIMIT 0,10</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -117,12 +150,21 @@ public class QueryDataServiceResponseBody extends TeaModel {
     }
 
     public static class QueryDataServiceResponseBodyResult extends TeaModel {
+        /**
+         * <p>The SQL of the request query.</p>
+         */
         @NameInMap("Headers")
         public java.util.List<QueryDataServiceResponseBodyResultHeaders> headers;
 
+        /**
+         * <p>The ID of the request.</p>
+         */
         @NameInMap("Sql")
         public String sql;
 
+        /**
+         * <p>Physical Field Name</p>
+         */
         @NameInMap("Values")
         public java.util.List<java.util.Map<String, ?>> values;
 

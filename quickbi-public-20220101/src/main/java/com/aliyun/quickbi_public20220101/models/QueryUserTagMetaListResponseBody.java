@@ -10,6 +10,9 @@ public class QueryUserTagMetaListResponseBody extends TeaModel {
     @NameInMap("Result")
     public java.util.List<QueryUserTagMetaListResponseBodyResult> result;
 
+    /**
+     * <p>Queries the metadata list of member tags in an organization.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

@@ -4,18 +4,44 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class AuthorizeMenuRequest extends TeaModel {
+    /**
+     * <p>Authorizes the permissions of the menu. Valid values:</p>
+     * <br>
+     * <p>*   1: view</p>
+     * <p>*   3: View + Export (default)</p>
+     */
     @NameInMap("AuthPointsValue")
     public Integer authPointsValue;
 
+    /**
+     * <p>The ID of the BI portal.</p>
+     */
     @NameInMap("DataPortalId")
     public String dataPortalId;
 
+    /**
+     * <p>The menu ID of the BI portal leaf node.</p>
+     * <br>
+     * <p>*   The directory menu cannot be authorized.</p>
+     * <p>*   You can upload multiple parameters at a time. Separate multiple IDs with commas (,). The maximum number of parameters that can be modified at a time is 100.</p>
+     */
     @NameInMap("MenuIds")
     public String menuIds;
 
+    /**
+     * <p>The IDs of the user groups.</p>
+     * <br>
+     * <p>*   You can upload multiple parameters at a time. Separate multiple IDs with commas (,). The maximum number of parameters that can be modified at a time is 200.</p>
+     * <p>*   UserGroupIds and UserIds cannot be empty at the same time</p>
+     */
     @NameInMap("UserGroupIds")
     public String userGroupIds;
 
+    /**
+     * <p>The IDs of the end users. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.</p>
+     * <br>
+     * <p>*   You can upload multiple parameters at a time. Separate multiple IDs with commas (,). The maximum number of parameters that can be modified at a time is 200.</p>
+     */
     @NameInMap("UserIds")
     public String userIds;
 

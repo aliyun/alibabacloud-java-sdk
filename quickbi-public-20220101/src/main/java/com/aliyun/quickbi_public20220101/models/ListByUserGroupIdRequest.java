@@ -4,6 +4,9 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class ListByUserGroupIdRequest extends TeaModel {
+    /**
+     * <p>The ID of the user group that you want to query. Separate multiple user groups with commas (,).</p>
+     */
     @NameInMap("UserGroupIds")
     public String userGroupIds;
 

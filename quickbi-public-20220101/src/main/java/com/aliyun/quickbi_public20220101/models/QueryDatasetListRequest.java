@@ -4,21 +4,41 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class QueryDatasetListRequest extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    /**
+     * <p>Information about the directory where the dataset is located</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
+    /**
+     * <p>The ID of the workspace.</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <p>Specifies the directory ID.</p>
+     * <br>
+     * <p>*   If this field is not empty, all datasets in the directory are obtained.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The total number of pages returned.</p>
+     */
     @NameInMap("WithChildren")
     public Boolean withChildren;
 
+    /**
+     * <p>The name of the data source.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

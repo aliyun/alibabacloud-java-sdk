@@ -4,12 +4,27 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class UpdateUserGroupRequest extends TeaModel {
+    /**
+     * <p>The description of the user group.</p>
+     * <br>
+     * <p>*   Format verification: Maximum length 255</p>
+     * <p>*   Special format verification: Chinese and English digits\_ \ / | () ] \[</p>
+     */
     @NameInMap("UserGroupDescription")
     public String userGroupDescription;
 
+    /**
+     * <p>The ID of the user group.</p>
+     */
     @NameInMap("UserGroupId")
     public String userGroupId;
 
+    /**
+     * <p>The name of the user group.</p>
+     * <br>
+     * <p>*   Format verification: Maximum length 255</p>
+     * <p>*   Special format verification: Chinese and English digits\_ \ / | () ] \[</p>
+     */
     @NameInMap("UserGroupName")
     public String userGroupName;
 

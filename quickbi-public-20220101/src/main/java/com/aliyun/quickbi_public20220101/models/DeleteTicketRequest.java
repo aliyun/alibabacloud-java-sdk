@@ -4,6 +4,9 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class DeleteTicketRequest extends TeaModel {
+    /**
+     * <p>Deletes a specified ticket from an embedded report.</p>
+     */
     @NameInMap("Ticket")
     public String ticket;
 

@@ -4,6 +4,9 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class QueryDatasetInfoRequest extends TeaModel {
+    /**
+     * <p>Queries information about a specified dataset.</p>
+     */
     @NameInMap("DatasetId")
     public String datasetId;
 

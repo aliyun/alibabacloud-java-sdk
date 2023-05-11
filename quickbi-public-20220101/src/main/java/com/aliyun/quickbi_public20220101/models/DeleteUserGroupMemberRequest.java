@@ -4,9 +4,15 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class DeleteUserGroupMemberRequest extends TeaModel {
+    /**
+     * <p>The ID of the user group.</p>
+     */
     @NameInMap("UserGroupId")
     public String userGroupId;
 
+    /**
+     * <p>The user ID of the Quick BI.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

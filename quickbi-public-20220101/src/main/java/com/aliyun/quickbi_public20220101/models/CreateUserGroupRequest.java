@@ -4,15 +4,39 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class CreateUserGroupRequest extends TeaModel {
+    /**
+     * <p>The ID of the parent user group. You can add new user groups to this group:</p>
+     * <br>
+     * <p>*   If you enter the ID of a parent user group, the new user group is added to the user group with the ID.</p>
+     * <p>*   If you enter -1, the new user group is added to the root directory.</p>
+     */
     @NameInMap("ParentUserGroupId")
     public String parentUserGroupId;
 
+    /**
+     * <p>The description of the user group.</p>
+     * <br>
+     * <p>*   Format verification: Maximum length 255</p>
+     * <p>*   Special format verification: Chinese and English digits\_ \ / | () ] \[</p>
+     */
     @NameInMap("UserGroupDescription")
     public String userGroupDescription;
 
+    /**
+     * <p>The unique ID of the user group.</p>
+     * <br>
+     * <p>*   If you specify the UserGroupId parameter, the system automatically generates the UserGroupId parameter. If you specify the UserGroupId parameter, the user ID is used as the user group ID. You must ensure that the user ID is unique within the organization.</p>
+     * <p>*   Format verification: Maximum length 64, cannot be -1,</p>
+     */
     @NameInMap("UserGroupId")
     public String userGroupId;
 
+    /**
+     * <p>The name of the RAM user group.</p>
+     * <br>
+     * <p>*   Format verification: Maximum length 255</p>
+     * <p>*   Special format verification: Chinese and English digits\_ \ / | () ] \[</p>
+     */
     @NameInMap("UserGroupName")
     public String userGroupName;
 

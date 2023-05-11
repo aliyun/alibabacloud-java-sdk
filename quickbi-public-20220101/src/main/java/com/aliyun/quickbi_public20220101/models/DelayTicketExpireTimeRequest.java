@@ -4,9 +4,18 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class DelayTicketExpireTimeRequest extends TeaModel {
+    /**
+     * <p>The time to postpone.</p>
+     * <br>
+     * <p>*   Unit: minutes. Valid values: 0 to 240. Unit: minutes. Valid values: 4 hours.</p>
+     * <p>*   Expired bills cannot be extended.</p>
+     */
     @NameInMap("ExpireTime")
     public Integer expireTime;
 
+    /**
+     * <p>The value of the third-party embedded ticket, that is, the accessTicket value in the URL.</p>
+     */
     @NameInMap("Ticket")
     public String ticket;
 

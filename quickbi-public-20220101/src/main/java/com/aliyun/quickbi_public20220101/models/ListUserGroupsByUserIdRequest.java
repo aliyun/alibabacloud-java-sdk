@@ -4,6 +4,9 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class ListUserGroupsByUserIdRequest extends TeaModel {
+    /**
+     * <p>The ID of the user group.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

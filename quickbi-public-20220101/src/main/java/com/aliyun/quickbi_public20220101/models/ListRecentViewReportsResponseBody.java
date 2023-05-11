@@ -216,6 +216,9 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
     }
 
     public static class ListRecentViewReportsResponseBodyResult extends TeaModel {
+        @NameInMap("Attention")
+        public String attention;
+
         @NameInMap("Data")
         public java.util.List<ListRecentViewReportsResponseBodyResultData> data;
 
@@ -234,6 +237,14 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
         public static ListRecentViewReportsResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListRecentViewReportsResponseBodyResult self = new ListRecentViewReportsResponseBodyResult();
             return TeaModel.build(map, self);
+        }
+
+        public ListRecentViewReportsResponseBodyResult setAttention(String attention) {
+            this.attention = attention;
+            return this;
+        }
+        public String getAttention() {
+            return this.attention;
         }
 
         public ListRecentViewReportsResponseBodyResult setData(java.util.List<ListRecentViewReportsResponseBodyResultData> data) {

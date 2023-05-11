@@ -4,12 +4,24 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of authorization details of the portal menu.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListPortalMenuAuthorizationResponseBodyResult> result;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The request was successful.</p>
+     * <p>*   false: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,9 +55,18 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
     }
 
     public static class ListPortalMenuAuthorizationResponseBodyResultReceivers extends TeaModel {
+        /**
+         * <p>The ID of the authorization object.</p>
+         */
         @NameInMap("ReceiverId")
         public String receiverId;
 
+        /**
+         * <p>The type of the authorization object. Valid values:</p>
+         * <br>
+         * <p>*   0: user</p>
+         * <p>*   1: user group</p>
+         */
         @NameInMap("ReceiverType")
         public Integer receiverType;
 
@@ -73,12 +94,24 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
     }
 
     public static class ListPortalMenuAuthorizationResponseBodyResult extends TeaModel {
+        /**
+         * <p>The menu ID of the BI portal leaf node.</p>
+         */
         @NameInMap("MenuId")
         public String menuId;
 
+        /**
+         * <p>The details of the object to which the menu is authorized.</p>
+         */
         @NameInMap("Receivers")
         public java.util.List<ListPortalMenuAuthorizationResponseBodyResultReceivers> receivers;
 
+        /**
+         * <p>Whether only authorization is visible. Valid values:</p>
+         * <br>
+         * <p>*   true: Only the authorization is visible.</p>
+         * <p>*   false: Both are visible.</p>
+         */
         @NameInMap("ShowOnlyWithAccess")
         public Boolean showOnlyWithAccess;
 

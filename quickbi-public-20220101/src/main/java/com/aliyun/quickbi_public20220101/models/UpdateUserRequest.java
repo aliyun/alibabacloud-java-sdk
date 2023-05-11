@@ -4,18 +4,46 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class UpdateUserRequest extends TeaModel {
+    /**
+     * <p>Indicates whether the organization administrator. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("AdminUser")
     public Boolean adminUser;
 
+    /**
+     * <p>Indicate whether the RAM user is a permission administrator. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("AuthAdminUser")
     public Boolean authAdminUser;
 
+    /**
+     * <p>The nickname of the account.</p>
+     * <br>
+     * <p>*   Format check: The value can be up to 50 characters in length.</p>
+     * <p>*   Special format verification: Chinese and English digits\_ \ / | () ] \[</p>
+     */
     @NameInMap("NickName")
     public String nickName;
 
+    /**
+     * <p>The ID of the user to be updated. The user ID is the UserID of the Quick BI, not the UID of Alibaba Cloud.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <p>The role type of the organization member. Valid values:</p>
+     * <br>
+     * <p>*   1 : developer</p>
+     * <p>*   2 : visitors</p>
+     * <p>*   3 : Analyst</p>
+     */
     @NameInMap("UserType")
     public Integer userType;
 

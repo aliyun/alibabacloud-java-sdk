@@ -4,12 +4,24 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of works that the user has permission to view.</p>
+     */
     @NameInMap("Result")
     public java.util.List<QueryReadableResourcesListByUserIdResponseBodyResult> result;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The request was successful.</p>
+     * <p>*   false: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,48 +107,110 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
     }
 
     public static class QueryReadableResourcesListByUserIdResponseBodyResult extends TeaModel {
+        /**
+         * <p>The timestamp of the creation time in milliseconds.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>Remarks on the work.</p>
+         */
         @NameInMap("Description")
         public String description;
 
         @NameInMap("Directory")
         public QueryReadableResourcesListByUserIdResponseBodyResultDirectory directory;
 
+        /**
+         * <p>The name of the Alibaba Cloud account to which the modifier belongs.</p>
+         */
         @NameInMap("ModifyName")
         public String modifyName;
 
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        /**
+         * <p>The Quick BI UserID of the work owner.</p>
+         */
         @NameInMap("OwnerId")
         public String ownerId;
 
+        /**
+         * <p>The Alibaba Cloud account name of the owner.</p>
+         */
         @NameInMap("OwnerName")
         public String ownerName;
 
+        /**
+         * <p>Security policies for collaborative authorization of works. Valid values:</p>
+         * <br>
+         * <p>*   0: private</p>
+         * <p>*   12: Authorize specified members</p>
+         * <p>*   1 or 11: Authorize all workspace members</p>
+         * <br>
+         * <p>> </p>
+         * <br>
+         * <p>*   If you use legacy permissions, the return value is 1.</p>
+         * <br>
+         * <p>*   If you use the new permissions, the return value is 11.</p>
+         */
         @NameInMap("SecurityLevel")
         public String securityLevel;
 
+        /**
+         * <p>The status of the report. Valid values:</p>
+         * <br>
+         * <p>*   0: unpublished</p>
+         * <p>*   1: published</p>
+         * <p>*   2: modified but not published</p>
+         * <p>*   3: unpublished</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>Third-party embedding status. Valid values:</p>
+         * <br>
+         * <p>*   0: The embed service is not enabled.</p>
+         * <p>*   1: Embed is enabled.</p>
+         */
         @NameInMap("ThirdPartAuthFlag")
         public Integer thirdPartAuthFlag;
 
+        /**
+         * <p>The name of the work.</p>
+         */
         @NameInMap("WorkName")
         public String workName;
 
+        /**
+         * <p>The type of the work. Valid values:</p>
+         * <br>
+         * <p>*   DATAPRODUCT: BI portal</p>
+         * <p>*   PAGE: Dashboard</p>
+         * <p>*   FULLPAGE: full-screen dashboards</p>
+         * <p>*   REPORT: workbook</p>
+         */
         @NameInMap("WorkType")
         public String workType;
 
+        /**
+         * <p>The ID of the work.</p>
+         */
         @NameInMap("WorksId")
         public String worksId;
 
+        /**
+         * <p>The ID of the workspace to which the work belongs.</p>
+         */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 
+        /**
+         * <p>The name of the workspace to which the work belongs.</p>
+         */
         @NameInMap("WorkspaceName")
         public String workspaceName;
 
