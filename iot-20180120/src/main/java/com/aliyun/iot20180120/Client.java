@@ -11719,6 +11719,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("IotInstanceId", request.iotInstanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.messageExpiryInterval)) {
+            query.put("MessageExpiryInterval", request.messageExpiryInterval);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.payloadFormatIndicator)) {
             query.put("PayloadFormatIndicator", request.payloadFormatIndicator);
         }
@@ -11733,6 +11737,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.responseTopic)) {
             query.put("ResponseTopic", request.responseTopic);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.retained)) {
+            query.put("Retained", request.retained);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.topicFullName)) {

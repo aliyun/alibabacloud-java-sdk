@@ -49,6 +49,9 @@ public class PubRequest extends TeaModel {
     @NameInMap("MessageContent")
     public String messageContent;
 
+    @NameInMap("MessageExpiryInterval")
+    public Long messageExpiryInterval;
+
     /**
      * <p>The payload identifier of the message when you use MQTT 5.0 for communication. Valid values:</p>
      * <br>
@@ -82,6 +85,9 @@ public class PubRequest extends TeaModel {
      */
     @NameInMap("ResponseTopic")
     public String responseTopic;
+
+    @NameInMap("Retained")
+    public Boolean retained;
 
     /**
      * <p>The custom topic for the device that receives the message.</p>
@@ -144,6 +150,14 @@ public class PubRequest extends TeaModel {
         return this.messageContent;
     }
 
+    public PubRequest setMessageExpiryInterval(Long messageExpiryInterval) {
+        this.messageExpiryInterval = messageExpiryInterval;
+        return this;
+    }
+    public Long getMessageExpiryInterval() {
+        return this.messageExpiryInterval;
+    }
+
     public PubRequest setPayloadFormatIndicator(Integer payloadFormatIndicator) {
         this.payloadFormatIndicator = payloadFormatIndicator;
         return this;
@@ -174,6 +188,14 @@ public class PubRequest extends TeaModel {
     }
     public String getResponseTopic() {
         return this.responseTopic;
+    }
+
+    public PubRequest setRetained(Boolean retained) {
+        this.retained = retained;
+        return this;
+    }
+    public Boolean getRetained() {
+        return this.retained;
     }
 
     public PubRequest setTopicFullName(String topicFullName) {
