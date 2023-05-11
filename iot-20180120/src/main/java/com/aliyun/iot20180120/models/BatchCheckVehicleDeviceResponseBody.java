@@ -64,12 +64,81 @@ public class BatchCheckVehicleDeviceResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class BatchCheckVehicleDeviceResponseBodyDataInvalidDetailList extends TeaModel {
+        @NameInMap("DeviceId")
+        public String deviceId;
+
+        @NameInMap("DeviceModel")
+        public String deviceModel;
+
+        @NameInMap("DeviceName")
+        public String deviceName;
+
+        @NameInMap("ErrorMsg")
+        public String errorMsg;
+
+        @NameInMap("Manufacturer")
+        public String manufacturer;
+
+        public static BatchCheckVehicleDeviceResponseBodyDataInvalidDetailList build(java.util.Map<String, ?> map) throws Exception {
+            BatchCheckVehicleDeviceResponseBodyDataInvalidDetailList self = new BatchCheckVehicleDeviceResponseBodyDataInvalidDetailList();
+            return TeaModel.build(map, self);
+        }
+
+        public BatchCheckVehicleDeviceResponseBodyDataInvalidDetailList setDeviceId(String deviceId) {
+            this.deviceId = deviceId;
+            return this;
+        }
+        public String getDeviceId() {
+            return this.deviceId;
+        }
+
+        public BatchCheckVehicleDeviceResponseBodyDataInvalidDetailList setDeviceModel(String deviceModel) {
+            this.deviceModel = deviceModel;
+            return this;
+        }
+        public String getDeviceModel() {
+            return this.deviceModel;
+        }
+
+        public BatchCheckVehicleDeviceResponseBodyDataInvalidDetailList setDeviceName(String deviceName) {
+            this.deviceName = deviceName;
+            return this;
+        }
+        public String getDeviceName() {
+            return this.deviceName;
+        }
+
+        public BatchCheckVehicleDeviceResponseBodyDataInvalidDetailList setErrorMsg(String errorMsg) {
+            this.errorMsg = errorMsg;
+            return this;
+        }
+        public String getErrorMsg() {
+            return this.errorMsg;
+        }
+
+        public BatchCheckVehicleDeviceResponseBodyDataInvalidDetailList setManufacturer(String manufacturer) {
+            this.manufacturer = manufacturer;
+            return this;
+        }
+        public String getManufacturer() {
+            return this.manufacturer;
+        }
+
+    }
+
     public static class BatchCheckVehicleDeviceResponseBodyData extends TeaModel {
+        @NameInMap("InvalidDetailList")
+        public java.util.List<BatchCheckVehicleDeviceResponseBodyDataInvalidDetailList> invalidDetailList;
+
         @NameInMap("InvalidDeviceIdList")
         public java.util.List<String> invalidDeviceIdList;
 
         @NameInMap("InvalidDeviceModelList")
         public java.util.List<String> invalidDeviceModelList;
+
+        @NameInMap("InvalidDeviceNameList")
+        public java.util.List<String> invalidDeviceNameList;
 
         @NameInMap("InvalidManufacturerList")
         public java.util.List<String> invalidManufacturerList;
@@ -77,9 +146,20 @@ public class BatchCheckVehicleDeviceResponseBody extends TeaModel {
         @NameInMap("RepeatedDeviceIdList")
         public java.util.List<String> repeatedDeviceIdList;
 
+        @NameInMap("RepeatedDeviceNameList")
+        public java.util.List<String> repeatedDeviceNameList;
+
         public static BatchCheckVehicleDeviceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             BatchCheckVehicleDeviceResponseBodyData self = new BatchCheckVehicleDeviceResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public BatchCheckVehicleDeviceResponseBodyData setInvalidDetailList(java.util.List<BatchCheckVehicleDeviceResponseBodyDataInvalidDetailList> invalidDetailList) {
+            this.invalidDetailList = invalidDetailList;
+            return this;
+        }
+        public java.util.List<BatchCheckVehicleDeviceResponseBodyDataInvalidDetailList> getInvalidDetailList() {
+            return this.invalidDetailList;
         }
 
         public BatchCheckVehicleDeviceResponseBodyData setInvalidDeviceIdList(java.util.List<String> invalidDeviceIdList) {
@@ -98,6 +178,14 @@ public class BatchCheckVehicleDeviceResponseBody extends TeaModel {
             return this.invalidDeviceModelList;
         }
 
+        public BatchCheckVehicleDeviceResponseBodyData setInvalidDeviceNameList(java.util.List<String> invalidDeviceNameList) {
+            this.invalidDeviceNameList = invalidDeviceNameList;
+            return this;
+        }
+        public java.util.List<String> getInvalidDeviceNameList() {
+            return this.invalidDeviceNameList;
+        }
+
         public BatchCheckVehicleDeviceResponseBodyData setInvalidManufacturerList(java.util.List<String> invalidManufacturerList) {
             this.invalidManufacturerList = invalidManufacturerList;
             return this;
@@ -112,6 +200,14 @@ public class BatchCheckVehicleDeviceResponseBody extends TeaModel {
         }
         public java.util.List<String> getRepeatedDeviceIdList() {
             return this.repeatedDeviceIdList;
+        }
+
+        public BatchCheckVehicleDeviceResponseBodyData setRepeatedDeviceNameList(java.util.List<String> repeatedDeviceNameList) {
+            this.repeatedDeviceNameList = repeatedDeviceNameList;
+            return this;
+        }
+        public java.util.List<String> getRepeatedDeviceNameList() {
+            return this.repeatedDeviceNameList;
         }
 
     }

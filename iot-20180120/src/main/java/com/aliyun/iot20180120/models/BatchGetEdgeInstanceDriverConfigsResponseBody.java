@@ -4,18 +4,33 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchGetEdgeInstanceDriverConfigsResponseBody extends TeaModel {
+    /**
+     * <p>The return code of the operation. A value of Success indicates that the call was successful. Other values indicate that specific errors occurred. For more information, see [Error codes](~~135200~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data that is returned if the call was successful.</p>
+     */
     @NameInMap("DriverConfigList")
     public java.util.List<BatchGetEdgeInstanceDriverConfigsResponseBodyDriverConfigList> driverConfigList;
 
+    /**
+     * <p>The error message that is returned if the call failed.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful. A value of true indicates that the call was successful. A value of false indicates that the call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,15 +80,27 @@ public class BatchGetEdgeInstanceDriverConfigsResponseBody extends TeaModel {
     }
 
     public static class BatchGetEdgeInstanceDriverConfigsResponseBodyDriverConfigListConfigList extends TeaModel {
+        /**
+         * <p>The ID of the configuration.</p>
+         */
         @NameInMap("ConfigId")
         public String configId;
 
+        /**
+         * <p>The configuration content or the Object Storage Service (OSS) path of the configuration file.</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The format of the configuration. Valid values: KV (key-value pair), JSON (JSON string), and FILE (configuration file).</p>
+         */
         @NameInMap("Format")
         public String format;
 
+        /**
+         * <p>The key of the configuration. If multiple configurations are available, keywords can be used to identify the configurations.</p>
+         */
         @NameInMap("Key")
         public String key;
 
@@ -117,9 +144,15 @@ public class BatchGetEdgeInstanceDriverConfigsResponseBody extends TeaModel {
     }
 
     public static class BatchGetEdgeInstanceDriverConfigsResponseBodyDriverConfigList extends TeaModel {
+        /**
+         * <p>The configuration information of the driver.</p>
+         */
         @NameInMap("ConfigList")
         public java.util.List<BatchGetEdgeInstanceDriverConfigsResponseBodyDriverConfigListConfigList> configList;
 
+        /**
+         * <p>The ID of the driver.</p>
+         */
         @NameInMap("DriverId")
         public String driverId;
 

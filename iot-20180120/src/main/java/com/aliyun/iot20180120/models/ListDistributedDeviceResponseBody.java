@@ -4,18 +4,36 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ListDistributedDeviceResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The products returned if the call is successful. For more information, see **Info**.</p>
+     */
     @NameInMap("Data")
     public ListDistributedDeviceResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the call fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,42 +83,85 @@ public class ListDistributedDeviceResponseBody extends TeaModel {
     }
 
     public static class ListDistributedDeviceResponseBodyDataInfoItems extends TeaModel {
+        /**
+         * <p>The DeviceName of the device.</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <p>The time when the distribution task was created.</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>The time when the distribution task was modified.</p>
+         */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>The **ProductKey** of the product to which the device belongs.</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 
+        /**
+         * <p>The ID of the source instance.</p>
+         */
         @NameInMap("SourceInstanceId")
         public String sourceInstanceId;
 
+        /**
+         * <p>The name of the source instance.</p>
+         */
         @NameInMap("SourceInstanceName")
         public String sourceInstanceName;
 
+        /**
+         * <p>The source region in which the device resides.</p>
+         */
         @NameInMap("SourceRegion")
         public String sourceRegion;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account that distributes the device.</p>
+         * <br>
+         * <p>You can only distribute devices across regions and instances by using the same Alibaba cloud account. The value of this parameter is the same as the value of the **TargetUid** parameter.</p>
+         */
         @NameInMap("SourceUid")
         public String sourceUid;
 
+        /**
+         * <p>The Alibaba Cloud account to which the device is distributed.</p>
+         */
         @NameInMap("TargetAliyunId")
         public String targetAliyunId;
 
+        /**
+         * <p>The ID of the destination instance.</p>
+         */
         @NameInMap("TargetInstanceId")
         public String targetInstanceId;
 
+        /**
+         * <p>The name of the destination instance.</p>
+         */
         @NameInMap("TargetInstanceName")
         public String targetInstanceName;
 
+        /**
+         * <p>The destination region to which the device is distributed.</p>
+         */
         @NameInMap("TargetRegion")
         public String targetRegion;
 
+        /**
+         * <p>The Alibaba Cloud account to which the device is distributed.</p>
+         * <br>
+         * <p>You can only distribute devices across regions and instances by using the same Alibaba cloud account. The value of this parameter is the same as the value of the **TargetUid** parameter.</p>
+         */
         @NameInMap("TargetUid")
         public String targetUid;
 
@@ -235,9 +296,15 @@ public class ListDistributedDeviceResponseBody extends TeaModel {
     }
 
     public static class ListDistributedDeviceResponseBodyData extends TeaModel {
+        /**
+         * <p>The information about the device.</p>
+         */
         @NameInMap("Info")
         public ListDistributedDeviceResponseBodyDataInfo info;
 
+        /**
+         * <p>The total number of returned devices.</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

@@ -4,18 +4,36 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceDistributeJobResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The task information returned if the call is successful.</p>
+     */
     @NameInMap("Data")
     public QueryDeviceDistributeJobResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the call fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,6 +83,9 @@ public class QueryDeviceDistributeJobResponseBody extends TeaModel {
     }
 
     public static class QueryDeviceDistributeJobResponseBodyDataTargetInstanceConfigsTargetInstanceConfigs extends TeaModel {
+        /**
+         * <p>The ID of the destination instance.</p>
+         */
         @NameInMap("TargetInstanceId")
         public String targetInstanceId;
 
@@ -103,33 +124,71 @@ public class QueryDeviceDistributeJobResponseBody extends TeaModel {
     }
 
     public static class QueryDeviceDistributeJobResponseBodyData extends TeaModel {
+        /**
+         * <p>The time when the task was created.</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>The ID of the distribution task.</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>The **ProductKey** of the product to which the device belongs.</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 
+        /**
+         * <p>The ID of the source instance.</p>
+         */
         @NameInMap("SourceInstanceId")
         public String sourceInstanceId;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account.</p>
+         */
         @NameInMap("SourceUid")
         public String sourceUid;
 
+        /**
+         * <p>The status of the distribution task.</p>
+         * <br>
+         * <p>*   **0**: The task is being initialized.</p>
+         * <p>*   **1**: The task is being implemented.</p>
+         * <p>*   **2**: The task is completed. This status only indicates that the distribution task is completed. This status does not indicate that all products and devices are distributed. To obtain distribution results, call the [QueryDeviceDistributeDetail](~~199533~~) operation.</p>
+         * <p>*   **3**: The task is unexpectedly interrupted.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The distribution policy.</p>
+         * <br>
+         * <p>*   **0**: distributes devices to instances in a specified region.</p>
+         * <p>*   **1**: configures instance IDs in multiple regions and distributes devices to the nearest regions based on the IP addresses of the devices.</p>
+         */
         @NameInMap("Strategy")
         public Integer strategy;
 
+        /**
+         * <p>The IDs of the destination instances.</p>
+         * <br>
+         * <p>*   If the value of the **Strategy** parameter is **1**, multiple instance IDs exist.</p>
+         * <p>*   If the value of the **Strategy** parameter is **0**, only one instance ID exists.</p>
+         */
         @NameInMap("TargetInstanceConfigs")
         public QueryDeviceDistributeJobResponseBodyDataTargetInstanceConfigs targetInstanceConfigs;
 
         @NameInMap("TargetUid")
         public String targetUid;
 
+        /**
+         * <p>The total number of devices in the distribution task.</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

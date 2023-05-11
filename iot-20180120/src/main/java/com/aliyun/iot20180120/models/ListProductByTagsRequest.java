@@ -4,12 +4,28 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ListProductByTagsRequest extends TeaModel {
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The ID of the instance. You can view the instance **ID** on the **Overview** page in the IoT Platform console.</p>
+     * <br>
+     * <br>
+     * <br>
+     * <p>>*   If your instance has an ID, you must configure this parameter. If you do not set this parameter, the call fails.</p>
+     * <p>>*   If your instance has no **Overview** page or ID, you do not need to set this parameter.</p>
+     * <br>
+     * <p>For more information, see [Overview](~~356505~~).</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: 50.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -54,9 +70,15 @@ public class ListProductByTagsRequest extends TeaModel {
     }
 
     public static class ListProductByTagsRequestProductTag extends TeaModel {
+        /**
+         * <p>The keys of the product tags.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The values of the product tags.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 

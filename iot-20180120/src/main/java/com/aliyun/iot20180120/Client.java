@@ -153,6 +153,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.addShareTaskDeviceWithOptions(request, runtime);
     }
 
+    public AsyncRRpcResponse asyncRRpcWithOptions(AsyncRRpcRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceName)) {
+            query.put("DeviceName", request.deviceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extInfo)) {
+            query.put("ExtInfo", request.extInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            query.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productKey)) {
+            query.put("ProductKey", request.productKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topicFullName)) {
+            query.put("TopicFullName", request.topicFullName);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.messageContent)) {
+            body.put("MessageContent", request.messageContent);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AsyncRRpc"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AsyncRRpcResponse());
+    }
+
+    public AsyncRRpcResponse asyncRRpc(AsyncRRpcRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.asyncRRpcWithOptions(request, runtime);
+    }
+
     public AttachDestinationResponse attachDestinationWithOptions(AttachDestinationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -274,6 +325,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.batchAddDataForApiSourceWithOptions(request, runtime);
     }
 
+    /**
+      * In addition to the preceding operation-specific request parameters, you must specify common request parameters when you call this operation. For more information, see [Common request parameters](~~30561~~).
+      *
+      * @param request BatchAddDeviceGroupRelationsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BatchAddDeviceGroupRelationsResponse
+     */
     public BatchAddDeviceGroupRelationsResponse batchAddDeviceGroupRelationsWithOptions(BatchAddDeviceGroupRelationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -306,11 +364,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BatchAddDeviceGroupRelationsResponse());
     }
 
+    /**
+      * In addition to the preceding operation-specific request parameters, you must specify common request parameters when you call this operation. For more information, see [Common request parameters](~~30561~~).
+      *
+      * @param request BatchAddDeviceGroupRelationsRequest
+      * @return BatchAddDeviceGroupRelationsResponse
+     */
     public BatchAddDeviceGroupRelationsResponse batchAddDeviceGroupRelations(BatchAddDeviceGroupRelationsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchAddDeviceGroupRelationsWithOptions(request, runtime);
     }
 
+    /**
+      * *   You can attach up to 10 sub-devices to a gateway in a single call.
+      * *   The API operation caller must be the gateway owner.
+      * *   If you specify a sub-device that is already attached to a gateway, the original gateway is replaced with the specified gateway.
+      * *   If one of the specified sub-devices fails to establish a topological relationship with the gateway, the system rolls back, and all specified sub-devices fail to establish topological relationships with the gateway.
+      * *   After you call this operation to establish topological relationships between sub-devices and the gateway, IoT Platform uses the `/sys/${productKey}/${deviceName}/thing/topo/change` topic to push information that includes the result of this operation to the gateway. For more information, see [Notify gateways of changes of topological relationships](~~89299~~).
+      * ## QPS limits
+      * You can call this API operation up to 10 times per second per Alibaba Cloud account. 
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request BatchAddThingTopoRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BatchAddThingTopoResponse
+     */
     public BatchAddThingTopoResponse batchAddThingTopoWithOptions(BatchAddThingTopoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -347,11 +425,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BatchAddThingTopoResponse());
     }
 
+    /**
+      * *   You can attach up to 10 sub-devices to a gateway in a single call.
+      * *   The API operation caller must be the gateway owner.
+      * *   If you specify a sub-device that is already attached to a gateway, the original gateway is replaced with the specified gateway.
+      * *   If one of the specified sub-devices fails to establish a topological relationship with the gateway, the system rolls back, and all specified sub-devices fail to establish topological relationships with the gateway.
+      * *   After you call this operation to establish topological relationships between sub-devices and the gateway, IoT Platform uses the `/sys/${productKey}/${deviceName}/thing/topo/change` topic to push information that includes the result of this operation to the gateway. For more information, see [Notify gateways of changes of topological relationships](~~89299~~).
+      * ## QPS limits
+      * You can call this API operation up to 10 times per second per Alibaba Cloud account. 
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request BatchAddThingTopoRequest
+      * @return BatchAddThingTopoResponse
+     */
     public BatchAddThingTopoResponse batchAddThingTopo(BatchAddThingTopoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchAddThingTopoWithOptions(request, runtime);
     }
 
+    /**
+      * In addition to the preceding operation-specific request parameters, you must specify common request parameters when you call this operation. For more information about common request parameters, see [Common parameters](~~30561~~).
+      *
+      * @param request BatchBindDeviceToEdgeInstanceWithDriverRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BatchBindDeviceToEdgeInstanceWithDriverResponse
+     */
     public BatchBindDeviceToEdgeInstanceWithDriverResponse batchBindDeviceToEdgeInstanceWithDriverWithOptions(BatchBindDeviceToEdgeInstanceWithDriverRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -388,6 +486,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BatchBindDeviceToEdgeInstanceWithDriverResponse());
     }
 
+    /**
+      * In addition to the preceding operation-specific request parameters, you must specify common request parameters when you call this operation. For more information about common request parameters, see [Common parameters](~~30561~~).
+      *
+      * @param request BatchBindDeviceToEdgeInstanceWithDriverRequest
+      * @return BatchBindDeviceToEdgeInstanceWithDriverResponse
+     */
     public BatchBindDeviceToEdgeInstanceWithDriverResponse batchBindDeviceToEdgeInstanceWithDriver(BatchBindDeviceToEdgeInstanceWithDriverRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchBindDeviceToEdgeInstanceWithDriverWithOptions(request, runtime);
@@ -467,17 +571,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.batchBindProductsIntoProjectWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation with the **BatchRegisterDeviceWithApplyId** operation to register multiple devices under a product. Each device carries a unique DeviceName.
+      * Procedure:
+      * 1\\. Call this operation to specify the DeviceNames of the devices to be registered. IoT Platform returns an application ID (**ApplyId**). A successful response indicates that the request to verify the DeviceNames is submitted. The actual registration process is asynchronously implemented and takes some minutes.
+      * 2\\. Call the [QueryBatchRegisterDeviceStatus](~~69483~~) operation to query the name setting result.
+      * 3\\. Call the [BatchRegisterDeviceWithApplyId](~~69514~~) operation to register multiple devices.
+      * 4\\. Optional. Call the [QueryBatchRegisterDeviceStatus](~~69483~~) operation to view the registration result.
+      * 5\\. Call the [QueryPageByApplyId](~~69518~~) operation to query the information about the registered devices.
+      * ## Limits
+      * - You can specify a maximum of 10,000 DeviceNames in a single call.
+      * - Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).  >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request BatchCheckDeviceNamesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BatchCheckDeviceNamesResponse
+     */
     public BatchCheckDeviceNamesResponse batchCheckDeviceNamesWithOptions(BatchCheckDeviceNamesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.deviceName)) {
-            query.put("DeviceName", request.deviceName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.deviceNameList)) {
-            query.put("DeviceNameList", request.deviceNameList);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
             query.put("IotInstanceId", request.iotInstanceId);
         }
@@ -486,8 +598,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ProductKey", request.productKey);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceName)) {
+            body.put("DeviceName", request.deviceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceNameList)) {
+            body.put("DeviceNameList", request.deviceNameList);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "BatchCheckDeviceNames"),
@@ -503,6 +625,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BatchCheckDeviceNamesResponse());
     }
 
+    /**
+      * You can call this operation with the **BatchRegisterDeviceWithApplyId** operation to register multiple devices under a product. Each device carries a unique DeviceName.
+      * Procedure:
+      * 1\\. Call this operation to specify the DeviceNames of the devices to be registered. IoT Platform returns an application ID (**ApplyId**). A successful response indicates that the request to verify the DeviceNames is submitted. The actual registration process is asynchronously implemented and takes some minutes.
+      * 2\\. Call the [QueryBatchRegisterDeviceStatus](~~69483~~) operation to query the name setting result.
+      * 3\\. Call the [BatchRegisterDeviceWithApplyId](~~69514~~) operation to register multiple devices.
+      * 4\\. Optional. Call the [QueryBatchRegisterDeviceStatus](~~69483~~) operation to view the registration result.
+      * 5\\. Call the [QueryPageByApplyId](~~69518~~) operation to query the information about the registered devices.
+      * ## Limits
+      * - You can specify a maximum of 10,000 DeviceNames in a single call.
+      * - Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).  >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request BatchCheckDeviceNamesRequest
+      * @return BatchCheckDeviceNamesResponse
+     */
     public BatchCheckDeviceNamesResponse batchCheckDeviceNames(BatchCheckDeviceNamesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchCheckDeviceNamesWithOptions(request, runtime);
@@ -511,10 +648,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public BatchCheckImportDeviceResponse batchCheckImportDeviceWithOptions(BatchCheckImportDeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.deviceList)) {
-            query.put("DeviceList", request.deviceList);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
             query.put("IotInstanceId", request.iotInstanceId);
         }
@@ -523,8 +656,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ProductKey", request.productKey);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceList)) {
+            body.put("DeviceList", request.deviceList);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "BatchCheckImportDevice"),
@@ -545,13 +684,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.batchCheckImportDeviceWithOptions(request, runtime);
     }
 
+    /**
+      * The invalid device models returned if the call fails.
+      *
+      * @param request BatchCheckVehicleDeviceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BatchCheckVehicleDeviceResponse
+     */
     public BatchCheckVehicleDeviceResponse batchCheckVehicleDeviceWithOptions(BatchCheckVehicleDeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.deviceList)) {
-            query.put("DeviceList", request.deviceList);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
             query.put("IotInstanceId", request.iotInstanceId);
         }
@@ -560,8 +702,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ProductKey", request.productKey);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceList)) {
+            body.put("DeviceList", request.deviceList);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "BatchCheckVehicleDevice"),
@@ -577,11 +725,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BatchCheckVehicleDeviceResponse());
     }
 
+    /**
+      * The invalid device models returned if the call fails.
+      *
+      * @param request BatchCheckVehicleDeviceRequest
+      * @return BatchCheckVehicleDeviceResponse
+     */
     public BatchCheckVehicleDeviceResponse batchCheckVehicleDevice(BatchCheckVehicleDeviceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchCheckVehicleDeviceWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of five queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request BatchClearEdgeInstanceDeviceConfigRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BatchClearEdgeInstanceDeviceConfigResponse
+     */
     public BatchClearEdgeInstanceDeviceConfigResponse batchClearEdgeInstanceDeviceConfigWithOptions(BatchClearEdgeInstanceDeviceConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -614,6 +777,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BatchClearEdgeInstanceDeviceConfigResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of five queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request BatchClearEdgeInstanceDeviceConfigRequest
+      * @return BatchClearEdgeInstanceDeviceConfigResponse
+     */
     public BatchClearEdgeInstanceDeviceConfigResponse batchClearEdgeInstanceDeviceConfig(BatchClearEdgeInstanceDeviceConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchClearEdgeInstanceDeviceConfigWithOptions(request, runtime);
@@ -701,6 +872,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.batchCreateSoundCodeLabelWithLabelsWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request BatchDeleteDeviceGroupRelationsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BatchDeleteDeviceGroupRelationsResponse
+     */
     public BatchDeleteDeviceGroupRelationsResponse batchDeleteDeviceGroupRelationsWithOptions(BatchDeleteDeviceGroupRelationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -733,6 +913,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BatchDeleteDeviceGroupRelationsResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request BatchDeleteDeviceGroupRelationsRequest
+      * @return BatchDeleteDeviceGroupRelationsResponse
+     */
     public BatchDeleteDeviceGroupRelationsResponse batchDeleteDeviceGroupRelations(BatchDeleteDeviceGroupRelationsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchDeleteDeviceGroupRelationsWithOptions(request, runtime);
@@ -812,6 +1000,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.batchGetDeviceBindStatusWithOptions(request, runtime);
     }
 
+    /**
+      * When you call this operation, you can perform the following operations:
+      * *   You can specify a value for the **ProductKey** parameter and multiple values for the **DeviceName** parameter to query the status of devices that belong to a product.
+      * *   You can specify multiple values for the **IotId** parameter to query the status of devices that belong to different products.****
+      * >You can query the status of up to 50 devices in a call.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 50 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request BatchGetDeviceStateRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BatchGetDeviceStateResponse
+     */
     public BatchGetDeviceStateResponse batchGetDeviceStateWithOptions(BatchGetDeviceStateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -848,11 +1049,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BatchGetDeviceStateResponse());
     }
 
+    /**
+      * When you call this operation, you can perform the following operations:
+      * *   You can specify a value for the **ProductKey** parameter and multiple values for the **DeviceName** parameter to query the status of devices that belong to a product.
+      * *   You can specify multiple values for the **IotId** parameter to query the status of devices that belong to different products.****
+      * >You can query the status of up to 50 devices in a call.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 50 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request BatchGetDeviceStateRequest
+      * @return BatchGetDeviceStateResponse
+     */
     public BatchGetDeviceStateResponse batchGetDeviceState(BatchGetDeviceStateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchGetDeviceStateWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * A single Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * >  RAM users share the quota of the Alibaba Cloud account.
+      *
+      * @param request BatchGetEdgeDriverRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BatchGetEdgeDriverResponse
+     */
     public BatchGetEdgeDriverResponse batchGetEdgeDriverWithOptions(BatchGetEdgeDriverRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -881,6 +1103,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BatchGetEdgeDriverResponse());
     }
 
+    /**
+      * ## Limits
+      * A single Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * >  RAM users share the quota of the Alibaba Cloud account.
+      *
+      * @param request BatchGetEdgeDriverRequest
+      * @return BatchGetEdgeDriverResponse
+     */
     public BatchGetEdgeDriverResponse batchGetEdgeDriver(BatchGetEdgeDriverRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchGetEdgeDriverWithOptions(request, runtime);
@@ -968,6 +1198,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.batchGetEdgeInstanceDeviceChannelWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of five queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request BatchGetEdgeInstanceDeviceConfigRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BatchGetEdgeInstanceDeviceConfigResponse
+     */
     public BatchGetEdgeInstanceDeviceConfigResponse batchGetEdgeInstanceDeviceConfigWithOptions(BatchGetEdgeInstanceDeviceConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1000,6 +1239,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BatchGetEdgeInstanceDeviceConfigResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of five queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request BatchGetEdgeInstanceDeviceConfigRequest
+      * @return BatchGetEdgeInstanceDeviceConfigResponse
+     */
     public BatchGetEdgeInstanceDeviceConfigResponse batchGetEdgeInstanceDeviceConfig(BatchGetEdgeInstanceDeviceConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchGetEdgeInstanceDeviceConfigWithOptions(request, runtime);
@@ -1042,6 +1289,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.batchGetEdgeInstanceDeviceDriverWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request BatchGetEdgeInstanceDriverConfigsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BatchGetEdgeInstanceDriverConfigsResponse
+     */
     public BatchGetEdgeInstanceDriverConfigsResponse batchGetEdgeInstanceDriverConfigsWithOptions(BatchGetEdgeInstanceDriverConfigsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1074,18 +1330,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BatchGetEdgeInstanceDriverConfigsResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request BatchGetEdgeInstanceDriverConfigsRequest
+      * @return BatchGetEdgeInstanceDriverConfigsResponse
+     */
     public BatchGetEdgeInstanceDriverConfigsResponse batchGetEdgeInstanceDriverConfigs(BatchGetEdgeInstanceDriverConfigsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchGetEdgeInstanceDriverConfigsWithOptions(request, runtime);
     }
 
+    public BatchGrayMigrationDeviceResponse batchGrayMigrationDeviceWithOptions(BatchGrayMigrationDeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.productKey)) {
+            query.put("ProductKey", request.productKey);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceNames)) {
+            body.put("DeviceNames", request.deviceNames);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchGrayMigrationDevice"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchGrayMigrationDeviceResponse());
+    }
+
+    public BatchGrayMigrationDeviceResponse batchGrayMigrationDevice(BatchGrayMigrationDeviceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.batchGrayMigrationDeviceWithOptions(request, runtime);
+    }
+
     public BatchImportDeviceResponse batchImportDeviceWithOptions(BatchImportDeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.deviceList)) {
-            query.put("DeviceList", request.deviceList);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
             query.put("IotInstanceId", request.iotInstanceId);
         }
@@ -1094,8 +1389,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ProductKey", request.productKey);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceList)) {
+            body.put("DeviceList", request.deviceList);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "BatchImportDevice"),
@@ -1116,13 +1417,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.batchImportDeviceWithOptions(request, runtime);
     }
 
+    /**
+      * Indicates whether the call was successful. Valid values: 
+      * - **true**: The call was successful.
+      * - **false**: The call failed.
+      *
+      * @param request BatchImportVehicleDeviceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BatchImportVehicleDeviceResponse
+     */
     public BatchImportVehicleDeviceResponse batchImportVehicleDeviceWithOptions(BatchImportVehicleDeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.deviceList)) {
-            query.put("DeviceList", request.deviceList);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
             query.put("IotInstanceId", request.iotInstanceId);
         }
@@ -1131,8 +1437,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ProductKey", request.productKey);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceList)) {
+            body.put("DeviceList", request.deviceList);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "BatchImportVehicleDevice"),
@@ -1148,11 +1460,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BatchImportVehicleDeviceResponse());
     }
 
+    /**
+      * Indicates whether the call was successful. Valid values: 
+      * - **true**: The call was successful.
+      * - **false**: The call failed.
+      *
+      * @param request BatchImportVehicleDeviceRequest
+      * @return BatchImportVehicleDeviceResponse
+     */
     public BatchImportVehicleDeviceResponse batchImportVehicleDevice(BatchImportVehicleDeviceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchImportVehicleDeviceWithOptions(request, runtime);
     }
 
+    /**
+      * *   You can call this operation to publish a message to a maximum of 100 devices of a product at a time.
+      * *   The BatchPub operation cannot be used to send commands of setting properties or calling services. If you need to set properties, use the [SetDeviceProperty](~~69579~~) or [SetDevicesProperty](~~96243~~) operation. If you need to call services, use the [InvokeThingService](~~69584~~) or [InvokeThingsService](~~96242~~) operation.
+      * *   Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request BatchPubRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BatchPubResponse
+     */
     public BatchPubResponse batchPubWithOptions(BatchPubRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1197,11 +1527,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BatchPubResponse());
     }
 
+    /**
+      * *   You can call this operation to publish a message to a maximum of 100 devices of a product at a time.
+      * *   The BatchPub operation cannot be used to send commands of setting properties or calling services. If you need to set properties, use the [SetDeviceProperty](~~69579~~) or [SetDevicesProperty](~~96243~~) operation. If you need to call services, use the [InvokeThingService](~~69584~~) or [InvokeThingsService](~~96242~~) operation.
+      * *   Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request BatchPubRequest
+      * @return BatchPubResponse
+     */
     public BatchPubResponse batchPub(BatchPubRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchPubWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * *   You can query a maximum of 100 devices in a single call.
+      * *   You can query the details of devices that belong only to the current Alibaba Cloud account. If you specify a device that does not belong to the current account, an error message is returned.
+      * *   If you specify multiple devices and some devices do not exist, only the details of existing devices are returned.
+      * *   Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request BatchQueryDeviceDetailRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BatchQueryDeviceDetailResponse
+     */
     public BatchQueryDeviceDetailResponse batchQueryDeviceDetailWithOptions(BatchQueryDeviceDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1234,11 +1585,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BatchQueryDeviceDetailResponse());
     }
 
+    /**
+      * ## Limits
+      * *   You can query a maximum of 100 devices in a single call.
+      * *   You can query the details of devices that belong only to the current Alibaba Cloud account. If you specify a device that does not belong to the current account, an error message is returned.
+      * *   If you specify multiple devices and some devices do not exist, only the details of existing devices are returned.
+      * *   Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request BatchQueryDeviceDetailRequest
+      * @return BatchQueryDeviceDetailResponse
+     */
     public BatchQueryDeviceDetailResponse batchQueryDeviceDetail(BatchQueryDeviceDetailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchQueryDeviceDetailWithOptions(request, runtime);
     }
 
+    /**
+      * You can use one of the following methods to register multiple devices:
+      * *   If you want to generate random DeviceNames, call the BatchRegisterDevice operation.
+      *     Perform the following steps to register devices and view the result:
+      *     1\\. Call the BatchRegisterDevice operation to register multiple devices. A successful response indicates that the registration request is submitted. The actual registration process is asynchronously implemented and takes some minutes.
+      *     2\\. Call the [QueryBatchRegisterDeviceStatus](~~69483~~) operation to query the device registration result.
+      *     3\\. Call the [QueryPageByApplyId](~~69518~~) operation to view the details of registered devices. The details include the DeviceName, DeviceSecret, and IotId parameters.
+      * *   If you want to specify custom DeviceNames, call the BatchRegisterDeviceWithApplyId operation. For more information, see [BatchRegisterDeviceWithApplyId](~~69514~~).
+      * ## Limits
+      * - You can create a maximum of 10,000 devices in a single call.
+      * - Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).  >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request BatchRegisterDeviceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BatchRegisterDeviceResponse
+     */
     public BatchRegisterDeviceResponse batchRegisterDeviceWithOptions(BatchRegisterDeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1271,11 +1649,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BatchRegisterDeviceResponse());
     }
 
+    /**
+      * You can use one of the following methods to register multiple devices:
+      * *   If you want to generate random DeviceNames, call the BatchRegisterDevice operation.
+      *     Perform the following steps to register devices and view the result:
+      *     1\\. Call the BatchRegisterDevice operation to register multiple devices. A successful response indicates that the registration request is submitted. The actual registration process is asynchronously implemented and takes some minutes.
+      *     2\\. Call the [QueryBatchRegisterDeviceStatus](~~69483~~) operation to query the device registration result.
+      *     3\\. Call the [QueryPageByApplyId](~~69518~~) operation to view the details of registered devices. The details include the DeviceName, DeviceSecret, and IotId parameters.
+      * *   If you want to specify custom DeviceNames, call the BatchRegisterDeviceWithApplyId operation. For more information, see [BatchRegisterDeviceWithApplyId](~~69514~~).
+      * ## Limits
+      * - You can create a maximum of 10,000 devices in a single call.
+      * - Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).  >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request BatchRegisterDeviceRequest
+      * @return BatchRegisterDeviceResponse
+     */
     public BatchRegisterDeviceResponse batchRegisterDevice(BatchRegisterDeviceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchRegisterDeviceWithOptions(request, runtime);
     }
 
+    /**
+      * You can use one of the following methods to register multiple devices at a time:
+      * *   Call the [BatchRegisterDevice](~~69473~~) operation to generate random DeviceNames.
+      * *   Call the BatchRegisterDeviceWithApplyId and **BatchCheckDeviceNames** operations to specify custom DeviceNames. Procedure:
+      *     Call the [BatchCheckDeviceNames](~~69482~~) operation and specify the names of devices that you want to register. If the DeviceNames are valid, IoT Platform returns an application ID that is specified by the **ApplyId** parameter. You can query the DeviceName setting results, device registration results, and device details by **ApplyId**.
+      *     Call the [QueryBatchRegisterDeviceStatus](~~69483~~) operation to query the name setting result.
+      *     Call the BatchRegisterDeviceWithApplyId operation to register multiple devices. The successful result that is returned by this operation indicates that only the batch registration request is submitted. In actual scenarios, the registration process takes a few minutes.
+      *     Optional. Call the [QueryBatchRegisterDeviceStatus](~~69483~~) operation to query the device registration result.
+      *     Call the [QueryPageByApplyId](~~69518~~) operation to view the details of devices that are registered in batches.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 500 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.
+      *
+      * @param request BatchRegisterDeviceWithApplyIdRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BatchRegisterDeviceWithApplyIdResponse
+     */
     public BatchRegisterDeviceWithApplyIdResponse batchRegisterDeviceWithApplyIdWithOptions(BatchRegisterDeviceWithApplyIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1308,6 +1718,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BatchRegisterDeviceWithApplyIdResponse());
     }
 
+    /**
+      * You can use one of the following methods to register multiple devices at a time:
+      * *   Call the [BatchRegisterDevice](~~69473~~) operation to generate random DeviceNames.
+      * *   Call the BatchRegisterDeviceWithApplyId and **BatchCheckDeviceNames** operations to specify custom DeviceNames. Procedure:
+      *     Call the [BatchCheckDeviceNames](~~69482~~) operation and specify the names of devices that you want to register. If the DeviceNames are valid, IoT Platform returns an application ID that is specified by the **ApplyId** parameter. You can query the DeviceName setting results, device registration results, and device details by **ApplyId**.
+      *     Call the [QueryBatchRegisterDeviceStatus](~~69483~~) operation to query the name setting result.
+      *     Call the BatchRegisterDeviceWithApplyId operation to register multiple devices. The successful result that is returned by this operation indicates that only the batch registration request is submitted. In actual scenarios, the registration process takes a few minutes.
+      *     Optional. Call the [QueryBatchRegisterDeviceStatus](~~69483~~) operation to query the device registration result.
+      *     Call the [QueryPageByApplyId](~~69518~~) operation to view the details of devices that are registered in batches.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 500 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.
+      *
+      * @param request BatchRegisterDeviceWithApplyIdRequest
+      * @return BatchRegisterDeviceWithApplyIdResponse
+     */
     public BatchRegisterDeviceWithApplyIdResponse batchRegisterDeviceWithApplyId(BatchRegisterDeviceWithApplyIdRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchRegisterDeviceWithApplyIdWithOptions(request, runtime);
@@ -1395,6 +1821,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.batchSetEdgeInstanceDeviceConfigWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of five queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request BatchUnbindDeviceFromEdgeInstanceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BatchUnbindDeviceFromEdgeInstanceResponse
+     */
     public BatchUnbindDeviceFromEdgeInstanceResponse batchUnbindDeviceFromEdgeInstanceWithOptions(BatchUnbindDeviceFromEdgeInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1427,6 +1862,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BatchUnbindDeviceFromEdgeInstanceResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of five queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request BatchUnbindDeviceFromEdgeInstanceRequest
+      * @return BatchUnbindDeviceFromEdgeInstanceResponse
+     */
     public BatchUnbindDeviceFromEdgeInstanceResponse batchUnbindDeviceFromEdgeInstance(BatchUnbindDeviceFromEdgeInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchUnbindDeviceFromEdgeInstanceWithOptions(request, runtime);
@@ -1506,6 +1949,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.batchUnbindProjectProductsWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request BatchUpdateDeviceNicknameRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BatchUpdateDeviceNicknameResponse
+     */
     public BatchUpdateDeviceNicknameResponse batchUpdateDeviceNicknameWithOptions(BatchUpdateDeviceNicknameRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1534,6 +1986,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BatchUpdateDeviceNicknameResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request BatchUpdateDeviceNicknameRequest
+      * @return BatchUpdateDeviceNicknameResponse
+     */
     public BatchUpdateDeviceNicknameResponse batchUpdateDeviceNickname(BatchUpdateDeviceNicknameRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchUpdateDeviceNicknameWithOptions(request, runtime);
@@ -1580,6 +2040,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.bindApplicationToEdgeInstanceWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of five queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request BindDriverToEdgeInstanceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BindDriverToEdgeInstanceResponse
+     */
     public BindDriverToEdgeInstanceResponse bindDriverToEdgeInstanceWithOptions(BindDriverToEdgeInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1620,11 +2089,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BindDriverToEdgeInstanceResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of five queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request BindDriverToEdgeInstanceRequest
+      * @return BindDriverToEdgeInstanceResponse
+     */
     public BindDriverToEdgeInstanceResponse bindDriverToEdgeInstance(BindDriverToEdgeInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.bindDriverToEdgeInstanceWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request BindGatewayToEdgeInstanceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BindGatewayToEdgeInstanceResponse
+     */
     public BindGatewayToEdgeInstanceResponse bindGatewayToEdgeInstanceWithOptions(BindGatewayToEdgeInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1665,6 +2151,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BindGatewayToEdgeInstanceResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request BindGatewayToEdgeInstanceRequest
+      * @return BindGatewayToEdgeInstanceResponse
+     */
     public BindGatewayToEdgeInstanceResponse bindGatewayToEdgeInstance(BindGatewayToEdgeInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.bindGatewayToEdgeInstanceWithOptions(request, runtime);
@@ -1865,6 +2359,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.cancelJobWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * *   You can cancel only the dynamic update policy that is attached to a dynamic update batch. This operation is not applicable to static update batches.
+      *     After the operation is successful, the **JobStatus** parameter is set to CANCELED.
+      * *   Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CancelOTAStrategyByJobRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CancelOTAStrategyByJobResponse
+     */
     public CancelOTAStrategyByJobResponse cancelOTAStrategyByJobWithOptions(CancelOTAStrategyByJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1893,11 +2398,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CancelOTAStrategyByJobResponse());
     }
 
+    /**
+      * ## Limits
+      * *   You can cancel only the dynamic update policy that is attached to a dynamic update batch. This operation is not applicable to static update batches.
+      *     After the operation is successful, the **JobStatus** parameter is set to CANCELED.
+      * *   Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CancelOTAStrategyByJobRequest
+      * @return CancelOTAStrategyByJobResponse
+     */
     public CancelOTAStrategyByJobResponse cancelOTAStrategyByJob(CancelOTAStrategyByJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.cancelOTAStrategyByJobWithOptions(request, runtime);
     }
 
+    /**
+      * This operation can cancel device update tasks only when the tasks are in the to be pushed, pushed, or in upgrade state.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 10 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.
+      *
+      * @param request CancelOTATaskByDeviceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CancelOTATaskByDeviceResponse
+     */
     public CancelOTATaskByDeviceResponse cancelOTATaskByDeviceWithOptions(CancelOTATaskByDeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1938,11 +2463,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CancelOTATaskByDeviceResponse());
     }
 
+    /**
+      * This operation can cancel device update tasks only when the tasks are in the to be pushed, pushed, or in upgrade state.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 10 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.
+      *
+      * @param request CancelOTATaskByDeviceRequest
+      * @return CancelOTATaskByDeviceResponse
+     */
     public CancelOTATaskByDeviceResponse cancelOTATaskByDevice(CancelOTATaskByDeviceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.cancelOTATaskByDeviceWithOptions(request, runtime);
     }
 
+    /**
+      * When you call this operation, make sure that you specify at least one of the CancelScheduledTask, CancelQueuedTask, CancelInProgressTask, CancelNotifiedTask, and CancelUnconfirmedTask parameters. Otherwise, the request will fail.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run a maximum of five queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CancelOTATaskByJobRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CancelOTATaskByJobResponse
+     */
     public CancelOTATaskByJobResponse cancelOTATaskByJobWithOptions(CancelOTATaskByJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1991,11 +2535,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CancelOTATaskByJobResponse());
     }
 
+    /**
+      * When you call this operation, make sure that you specify at least one of the CancelScheduledTask, CancelQueuedTask, CancelInProgressTask, CancelNotifiedTask, and CancelUnconfirmedTask parameters. Otherwise, the request will fail.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run a maximum of five queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CancelOTATaskByJobRequest
+      * @return CancelOTATaskByJobResponse
+     */
     public CancelOTATaskByJobResponse cancelOTATaskByJob(CancelOTATaskByJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.cancelOTATaskByJobWithOptions(request, runtime);
     }
 
+    /**
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CancelReleaseProductRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CancelReleaseProductResponse
+     */
     public CancelReleaseProductResponse cancelReleaseProductWithOptions(CancelReleaseProductRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2024,6 +2585,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CancelReleaseProductResponse());
     }
 
+    /**
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CancelReleaseProductRequest
+      * @return CancelReleaseProductResponse
+     */
     public CancelReleaseProductResponse cancelReleaseProduct(CancelReleaseProductRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.cancelReleaseProductWithOptions(request, runtime);
@@ -2070,6 +2638,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.checkBindLicenseDeviceProgressWithOptions(request, runtime);
     }
 
+    /**
+      * *   Each time you call this operation, you must specify the identifiers of properties whose desired values you want to delete for the **Identifies** parameter. If you do not configure the **Identifies** parameter, the call fails.
+      * *   You can specify up to 10 property identifiers for the **Identifies** parameter in a single call.
+      * *   After you call this operation to deletes the desired values of properties of a device, you can call the [QueryDeviceDesiredProperty](~~107566~~) operation to query the desired values of properties of the device. In this case, the QueryDeviceDesiredProperty operation returns the **Identifier** parameter instead of the **Value** parameter.
+      * ## QPS limits
+      * You can call this API operation up to 50 times per second per account. 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ClearDeviceDesiredPropertyRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ClearDeviceDesiredPropertyResponse
+     */
     public ClearDeviceDesiredPropertyResponse clearDeviceDesiredPropertyWithOptions(ClearDeviceDesiredPropertyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2112,11 +2692,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ClearDeviceDesiredPropertyResponse());
     }
 
+    /**
+      * *   Each time you call this operation, you must specify the identifiers of properties whose desired values you want to delete for the **Identifies** parameter. If you do not configure the **Identifies** parameter, the call fails.
+      * *   You can specify up to 10 property identifiers for the **Identifies** parameter in a single call.
+      * *   After you call this operation to deletes the desired values of properties of a device, you can call the [QueryDeviceDesiredProperty](~~107566~~) operation to query the desired values of properties of the device. In this case, the QueryDeviceDesiredProperty operation returns the **Identifier** parameter instead of the **Value** parameter.
+      * ## QPS limits
+      * You can call this API operation up to 50 times per second per account. 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ClearDeviceDesiredPropertyRequest
+      * @return ClearDeviceDesiredPropertyResponse
+     */
     public ClearDeviceDesiredPropertyResponse clearDeviceDesiredProperty(ClearDeviceDesiredPropertyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.clearDeviceDesiredPropertyWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ClearEdgeInstanceDriverConfigsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ClearEdgeInstanceDriverConfigsResponse
+     */
     public ClearEdgeInstanceDriverConfigsResponse clearEdgeInstanceDriverConfigsWithOptions(ClearEdgeInstanceDriverConfigsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2149,6 +2749,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ClearEdgeInstanceDriverConfigsResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ClearEdgeInstanceDriverConfigsRequest
+      * @return ClearEdgeInstanceDriverConfigsResponse
+     */
     public ClearEdgeInstanceDriverConfigsResponse clearEdgeInstanceDriverConfigs(ClearEdgeInstanceDriverConfigsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.clearEdgeInstanceDriverConfigsWithOptions(request, runtime);
@@ -2187,6 +2795,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.closeDeviceTunnelWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of five queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CloseEdgeInstanceDeploymentRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CloseEdgeInstanceDeploymentResponse
+     */
     public CloseEdgeInstanceDeploymentResponse closeEdgeInstanceDeploymentWithOptions(CloseEdgeInstanceDeploymentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2215,11 +2832,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CloseEdgeInstanceDeploymentResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of five queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CloseEdgeInstanceDeploymentRequest
+      * @return CloseEdgeInstanceDeploymentResponse
+     */
     public CloseEdgeInstanceDeploymentResponse closeEdgeInstanceDeployment(CloseEdgeInstanceDeploymentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.closeEdgeInstanceDeploymentWithOptions(request, runtime);
     }
 
+    /**
+      * To confirm update tasks in a scheduled update batch, you must call this operation within the specified time range.
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 20 queries per second (QPS). 
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ConfirmOTATaskRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ConfirmOTATaskResponse
+     */
     public ConfirmOTATaskResponse confirmOTATaskWithOptions(ConfirmOTATaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2248,11 +2883,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ConfirmOTATaskResponse());
     }
 
+    /**
+      * To confirm update tasks in a scheduled update batch, you must call this operation within the specified time range.
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 20 queries per second (QPS). 
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ConfirmOTATaskRequest
+      * @return ConfirmOTATaskResponse
+     */
     public ConfirmOTATaskResponse confirmOTATask(ConfirmOTATaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.confirmOTATaskWithOptions(request, runtime);
     }
 
+    /**
+      * *   If a destination product is published, you must call the [CancelReleaseProduct](~~213875~~) operation to unpublish the product before you can copy a TSL model.
+      * *   The categories of the source product and destination product must be the same. The product category is indicated by the **CategoryKey** parameter. You can call the [QueryProduct](~~69272~~) operation and view the **CategoryKey** parameter of a product in the returned result.
+      * *   You must specify the version of the TSL model that you want to copy by using the **SourceModelVersion** parameter in the request. Otherwise, the CopyThingModel operation fails.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to five queries per second (QPS). 
+      * >  The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CopyThingModelRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CopyThingModelResponse
+     */
     public CopyThingModelResponse copyThingModelWithOptions(CopyThingModelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2293,6 +2949,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CopyThingModelResponse());
     }
 
+    /**
+      * *   If a destination product is published, you must call the [CancelReleaseProduct](~~213875~~) operation to unpublish the product before you can copy a TSL model.
+      * *   The categories of the source product and destination product must be the same. The product category is indicated by the **CategoryKey** parameter. You can call the [QueryProduct](~~69272~~) operation and view the **CategoryKey** parameter of a product in the returned result.
+      * *   You must specify the version of the TSL model that you want to copy by using the **SourceModelVersion** parameter in the request. Otherwise, the CopyThingModel operation fails.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to five queries per second (QPS). 
+      * >  The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CopyThingModelRequest
+      * @return CopyThingModelResponse
+     */
     public CopyThingModelResponse copyThingModel(CopyThingModelRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.copyThingModelWithOptions(request, runtime);
@@ -2337,6 +3004,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.countSpeechBroadcastHourWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateConsumerGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateConsumerGroupResponse
+     */
     public CreateConsumerGroupResponse createConsumerGroupWithOptions(CreateConsumerGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2346,6 +3022,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
             query.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subBizCode)) {
+            query.put("SubBizCode", request.subBizCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2365,11 +3049,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateConsumerGroupResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateConsumerGroupRequest
+      * @return CreateConsumerGroupResponse
+     */
     public CreateConsumerGroupResponse createConsumerGroup(CreateConsumerGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createConsumerGroupWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateConsumerGroupSubscribeRelationRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateConsumerGroupSubscribeRelationResponse
+     */
     public CreateConsumerGroupSubscribeRelationResponse createConsumerGroupSubscribeRelationWithOptions(CreateConsumerGroupSubscribeRelationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2402,6 +3103,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateConsumerGroupSubscribeRelationResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateConsumerGroupSubscribeRelationRequest
+      * @return CreateConsumerGroupSubscribeRelationResponse
+     */
     public CreateConsumerGroupSubscribeRelationResponse createConsumerGroupSubscribeRelation(CreateConsumerGroupSubscribeRelationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createConsumerGroupSubscribeRelationWithOptions(request, runtime);
@@ -2558,6 +3267,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createDestinationWithOptions(request, runtime);
     }
 
+    /**
+      * To distribute devices, perform the following steps:
+      * 1\\. Asynchronously call this operation to create a device distribution task and obtain the **JobId** parameter.
+      * 2\\. Use **JobId** as a request parameter and repeatedly call the [QueryDeviceDistributeJob](~~199536~~) operation to obtain the **Status** parameter.
+      * >  You must control the frequency of calls based on the QPS limit of the QueryDeviceDistributeJob operation.
+      * If either of the following values is returned for the **Status** parameter, the distribution task ends:
+      * *   **2**: The device distribution task is completed. This return value does not indicate that the devices are distributed. To obtain the distribution result of each device, perform the next step.
+      * *   **3**: The distribution is unexpectedly interrupted. After you process the error, you can initiate a device distribution task again.
+      * 3\\. Use **JobId** that is returned in Step 1 as a request parameter and call the [QueryDeviceDistributeDetail](~~199533~~) operation to obtain the **File** parameter. The File parameter indicates the file URL of the distribution result.
+      * >  The file URL is valid for 10 minutes.
+      * 4\\. Obtain the distribution result by using the file URL. The **Code** parameter indicates whether a device is distributed. If the value of the **Code** parameter is 200, the device is distributed.
+      * If the distribution fails, you can perform the preceding steps to distribute devices again.
+      * ## Limits
+      * - This operation can be called only by using the following **endpoint**: `iot.cn-shanghai.aliyuncs.com`.
+      * - You cannot call this operation to distribute devices across accounts.
+      * - Each Alibaba Cloud account can create a maximum of 10 tasks to distribute products or devices. For more information about how to create a product distribution task, see [CreateProductDistributeJob](/help/en/iot-platform/latest/createproductdistributejob).
+      * - Each Alibaba Cloud account can run a maximum of 2 queries per second (QPS).  >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateDeviceDistributeJobRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateDeviceDistributeJobResponse
+     */
     public CreateDeviceDistributeJobResponse createDeviceDistributeJobWithOptions(CreateDeviceDistributeJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2606,6 +3337,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDeviceDistributeJobResponse());
     }
 
+    /**
+      * To distribute devices, perform the following steps:
+      * 1\\. Asynchronously call this operation to create a device distribution task and obtain the **JobId** parameter.
+      * 2\\. Use **JobId** as a request parameter and repeatedly call the [QueryDeviceDistributeJob](~~199536~~) operation to obtain the **Status** parameter.
+      * >  You must control the frequency of calls based on the QPS limit of the QueryDeviceDistributeJob operation.
+      * If either of the following values is returned for the **Status** parameter, the distribution task ends:
+      * *   **2**: The device distribution task is completed. This return value does not indicate that the devices are distributed. To obtain the distribution result of each device, perform the next step.
+      * *   **3**: The distribution is unexpectedly interrupted. After you process the error, you can initiate a device distribution task again.
+      * 3\\. Use **JobId** that is returned in Step 1 as a request parameter and call the [QueryDeviceDistributeDetail](~~199533~~) operation to obtain the **File** parameter. The File parameter indicates the file URL of the distribution result.
+      * >  The file URL is valid for 10 minutes.
+      * 4\\. Obtain the distribution result by using the file URL. The **Code** parameter indicates whether a device is distributed. If the value of the **Code** parameter is 200, the device is distributed.
+      * If the distribution fails, you can perform the preceding steps to distribute devices again.
+      * ## Limits
+      * - This operation can be called only by using the following **endpoint**: `iot.cn-shanghai.aliyuncs.com`.
+      * - You cannot call this operation to distribute devices across accounts.
+      * - Each Alibaba Cloud account can create a maximum of 10 tasks to distribute products or devices. For more information about how to create a product distribution task, see [CreateProductDistributeJob](/help/en/iot-platform/latest/createproductdistributejob).
+      * - Each Alibaba Cloud account can run a maximum of 2 queries per second (QPS).  >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateDeviceDistributeJobRequest
+      * @return CreateDeviceDistributeJobResponse
+     */
     public CreateDeviceDistributeJobResponse createDeviceDistributeJob(CreateDeviceDistributeJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDeviceDistributeJobWithOptions(request, runtime);
@@ -2652,6 +3404,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createDeviceDynamicGroupWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateDeviceGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateDeviceGroupResponse
+     */
     public CreateDeviceGroupResponse createDeviceGroupWithOptions(CreateDeviceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2688,6 +3449,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDeviceGroupResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateDeviceGroupRequest
+      * @return CreateDeviceGroupResponse
+     */
     public CreateDeviceGroupResponse createDeviceGroup(CreateDeviceGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDeviceGroupWithOptions(request, runtime);
@@ -2799,6 +3568,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createDownloadDataJobWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * A single Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users share the quota of the Alibaba Cloud account.
+      *
+      * @param request CreateEdgeDriverRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateEdgeDriverResponse
+     */
     public CreateEdgeDriverResponse createEdgeDriverWithOptions(CreateEdgeDriverRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2843,11 +3621,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateEdgeDriverResponse());
     }
 
+    /**
+      * ## Limits
+      * A single Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users share the quota of the Alibaba Cloud account.
+      *
+      * @param request CreateEdgeDriverRequest
+      * @return CreateEdgeDriverResponse
+     */
     public CreateEdgeDriverResponse createEdgeDriver(CreateEdgeDriverRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createEdgeDriverWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateEdgeDriverVersionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateEdgeDriverVersionResponse
+     */
     public CreateEdgeDriverVersionResponse createEdgeDriverVersionWithOptions(CreateEdgeDriverVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2908,11 +3703,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateEdgeDriverVersionResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateEdgeDriverVersionRequest
+      * @return CreateEdgeDriverVersionResponse
+     */
     public CreateEdgeDriverVersionResponse createEdgeDriverVersion(CreateEdgeDriverVersionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createEdgeDriverVersionWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * A single Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users share the quota of the Alibaba Cloud account.
+      *
+      * @param request CreateEdgeInstanceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateEdgeInstanceResponse
+     */
     public CreateEdgeInstanceResponse createEdgeInstanceWithOptions(CreateEdgeInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2949,6 +3761,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateEdgeInstanceResponse());
     }
 
+    /**
+      * ## Limits
+      * A single Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users share the quota of the Alibaba Cloud account.
+      *
+      * @param request CreateEdgeInstanceRequest
+      * @return CreateEdgeInstanceResponse
+     */
     public CreateEdgeInstanceResponse createEdgeInstance(CreateEdgeInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createEdgeInstanceWithOptions(request, runtime);
@@ -2999,6 +3819,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createEdgeInstanceChannelWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of five queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateEdgeInstanceDeploymentRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateEdgeInstanceDeploymentResponse
+     */
     public CreateEdgeInstanceDeploymentResponse createEdgeInstanceDeploymentWithOptions(CreateEdgeInstanceDeploymentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3031,6 +3860,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateEdgeInstanceDeploymentResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of five queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateEdgeInstanceDeploymentRequest
+      * @return CreateEdgeInstanceDeploymentResponse
+     */
     public CreateEdgeInstanceDeploymentResponse createEdgeInstanceDeployment(CreateEdgeInstanceDeploymentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createEdgeInstanceDeploymentWithOptions(request, runtime);
@@ -3097,6 +3934,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createEdgeInstanceMessageRoutingWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of five queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateEdgeOssPreSignedAddressRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateEdgeOssPreSignedAddressResponse
+     */
     public CreateEdgeOssPreSignedAddressResponse createEdgeOssPreSignedAddressWithOptions(CreateEdgeOssPreSignedAddressRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3141,6 +3987,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateEdgeOssPreSignedAddressResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of five queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateEdgeOssPreSignedAddressRequest
+      * @return CreateEdgeOssPreSignedAddressResponse
+     */
     public CreateEdgeOssPreSignedAddressResponse createEdgeOssPreSignedAddress(CreateEdgeOssPreSignedAddressRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createEdgeOssPreSignedAddressWithOptions(request, runtime);
@@ -3266,6 +4120,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createLoRaNodesTaskWithOptions(request, runtime);
     }
 
+    /**
+      * In addition to the preceding operation-specific request parameters, you must specify common request parameters when you call this operation. For more information, see [Common parameters](~~30561~~).
+      *
+      * @param request CreateOTADynamicUpgradeJobRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateOTADynamicUpgradeJobResponse
+     */
     public CreateOTADynamicUpgradeJobResponse createOTADynamicUpgradeJobWithOptions(CreateOTADynamicUpgradeJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3354,11 +4215,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateOTADynamicUpgradeJobResponse());
     }
 
+    /**
+      * In addition to the preceding operation-specific request parameters, you must specify common request parameters when you call this operation. For more information, see [Common parameters](~~30561~~).
+      *
+      * @param request CreateOTADynamicUpgradeJobRequest
+      * @return CreateOTADynamicUpgradeJobResponse
+     */
     public CreateOTADynamicUpgradeJobResponse createOTADynamicUpgradeJob(CreateOTADynamicUpgradeJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createOTADynamicUpgradeJobWithOptions(request, runtime);
     }
 
+    /**
+      * Before you call this operation to create an OTA update package, you must call the [GenerateOTAUploadURL](~~147310~~) operation to generate the information about the files that you want to add to the OTA update package and call the Object Storage Service (OSS) [PostObject](~~31988~~) operation to upload the files.
+      * ## Limits
+      * Each Alibaba Cloud account can have up to 500 update packages. 
+      * ## QPS limits
+      * You can call this API operation up to 10 times per second per account. 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateOTAFirmwareRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateOTAFirmwareResponse
+     */
     public CreateOTAFirmwareResponse createOTAFirmwareWithOptions(CreateOTAFirmwareRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3439,11 +4318,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateOTAFirmwareResponse());
     }
 
+    /**
+      * Before you call this operation to create an OTA update package, you must call the [GenerateOTAUploadURL](~~147310~~) operation to generate the information about the files that you want to add to the OTA update package and call the Object Storage Service (OSS) [PostObject](~~31988~~) operation to upload the files.
+      * ## Limits
+      * Each Alibaba Cloud account can have up to 500 update packages. 
+      * ## QPS limits
+      * You can call this API operation up to 10 times per second per account. 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateOTAFirmwareRequest
+      * @return CreateOTAFirmwareResponse
+     */
     public CreateOTAFirmwareResponse createOTAFirmware(CreateOTAFirmwareRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createOTAFirmwareWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * OTA modules are the updatable units of the devices that belong to the same product. The default module indicates the entire firmware of a device. You can call this operation to create a custom OTA module.
+      * *   You can create a maximum of 10 custom OTA modules for each product.
+      * *   After an OTA module is created, you cannot modify its name. You can call the [UpdateOTAModule](~~186061~~) operation to modify the module alias and description.
+      * *   Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateOTAModuleRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateOTAModuleResponse
+     */
     public CreateOTAModuleResponse createOTAModuleWithOptions(CreateOTAModuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3484,11 +4386,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateOTAModuleResponse());
     }
 
+    /**
+      * ## Limits
+      * OTA modules are the updatable units of the devices that belong to the same product. The default module indicates the entire firmware of a device. You can call this operation to create a custom OTA module.
+      * *   You can create a maximum of 10 custom OTA modules for each product.
+      * *   After an OTA module is created, you cannot modify its name. You can call the [UpdateOTAModule](~~186061~~) operation to modify the module alias and description.
+      * *   Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateOTAModuleRequest
+      * @return CreateOTAModuleResponse
+     */
     public CreateOTAModuleResponse createOTAModule(CreateOTAModuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createOTAModuleWithOptions(request, runtime);
     }
 
+    /**
+      * *   If you specify that an update package does not need to be verified when you call the [CreateOTAFirmware](~~147311~~) operation, you must make sure that the update package is verified before you call the CreateOTAStaticUpgradeJob operation to create an update batch. For more information about how to create a task to verify an update package, see [CreateOTAVerifyJob](~~147480~~).
+      * *   You can initiate update tasks for a maximum of 200 devices in each call. If you use a device list file, you can initiate update tasks for a maximum of 1,000,000 devices. However, you must call the [GenerateDeviceNameListURL](~~186062~~) operation to generate a URL for the device list file. Then, you can perform the operations as prompted to upload the device list file.
+      * *   When you initiate update tasks for multiple devices, the devices that already have the destination firmware versions are skipped.
+      * *   Each device can be in the pending or updating status only in one update task. If you initiate another update task for a device that is in the pending or updating status, the update task fails.
+      * *   You can create multiple static update batches by using a single update package.
+      * *   Downloading update packages through the MQTT protocol is supported only in the China (Shanghai) region.
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 20 queries per second (QPS). 
+      * >  The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateOTAStaticUpgradeJobRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateOTAStaticUpgradeJobResponse
+     */
     public CreateOTAStaticUpgradeJobResponse createOTAStaticUpgradeJobWithOptions(CreateOTAStaticUpgradeJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3597,11 +4525,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateOTAStaticUpgradeJobResponse());
     }
 
+    /**
+      * *   If you specify that an update package does not need to be verified when you call the [CreateOTAFirmware](~~147311~~) operation, you must make sure that the update package is verified before you call the CreateOTAStaticUpgradeJob operation to create an update batch. For more information about how to create a task to verify an update package, see [CreateOTAVerifyJob](~~147480~~).
+      * *   You can initiate update tasks for a maximum of 200 devices in each call. If you use a device list file, you can initiate update tasks for a maximum of 1,000,000 devices. However, you must call the [GenerateDeviceNameListURL](~~186062~~) operation to generate a URL for the device list file. Then, you can perform the operations as prompted to upload the device list file.
+      * *   When you initiate update tasks for multiple devices, the devices that already have the destination firmware versions are skipped.
+      * *   Each device can be in the pending or updating status only in one update task. If you initiate another update task for a device that is in the pending or updating status, the update task fails.
+      * *   You can create multiple static update batches by using a single update package.
+      * *   Downloading update packages through the MQTT protocol is supported only in the China (Shanghai) region.
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 20 queries per second (QPS). 
+      * >  The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateOTAStaticUpgradeJobRequest
+      * @return CreateOTAStaticUpgradeJobResponse
+     */
     public CreateOTAStaticUpgradeJobResponse createOTAStaticUpgradeJob(CreateOTAStaticUpgradeJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createOTAStaticUpgradeJobWithOptions(request, runtime);
     }
 
+    /**
+      * *   You must verify an update package before you push the package to devices for a batch update. Only verified update packages can be used to update devices in batches. You can call the [QueryOTAFirmware](~~147461~~) operation to view the status of a verification task.
+      * *   You cannot initiate a verification task for an update package that is being verified or has been verified.
+      * *   You can specify a maximum of 10 devices for a verification task.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 10 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateOTAVerifyJobRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateOTAVerifyJobResponse
+     */
     public CreateOTAVerifyJobResponse createOTAVerifyJobWithOptions(CreateOTAVerifyJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3658,6 +4612,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateOTAVerifyJobResponse());
     }
 
+    /**
+      * *   You must verify an update package before you push the package to devices for a batch update. Only verified update packages can be used to update devices in batches. You can call the [QueryOTAFirmware](~~147461~~) operation to view the status of a verification task.
+      * *   You cannot initiate a verification task for an update package that is being verified or has been verified.
+      * *   You can specify a maximum of 10 devices for a verification task.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 10 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateOTAVerifyJobRequest
+      * @return CreateOTAVerifyJobResponse
+     */
     public CreateOTAVerifyJobResponse createOTAVerifyJob(CreateOTAVerifyJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createOTAVerifyJobWithOptions(request, runtime);
@@ -3737,6 +4702,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createParserDataSourceWithOptions(request, runtime);
     }
 
+    /**
+      * If a Thing Specification Language (TSL) model is required to create a product, you must set the **AliyunCommodityCode** parameter to iothub_senior and configure the **DataFormat** parameter.******** For more information, see the "**Request parameters**" section of this topic.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 50 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateProductRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateProductResponse
+     */
     public CreateProductResponse createProductWithOptions(CreateProductRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3817,11 +4792,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateProductResponse());
     }
 
+    /**
+      * If a Thing Specification Language (TSL) model is required to create a product, you must set the **AliyunCommodityCode** parameter to iothub_senior and configure the **DataFormat** parameter.******** For more information, see the "**Request parameters**" section of this topic.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 50 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateProductRequest
+      * @return CreateProductResponse
+     */
     public CreateProductResponse createProduct(CreateProductRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createProductWithOptions(request, runtime);
     }
 
+    /**
+      * *   This operation can be called only by using the following **endpoint**: `iot.cn-shanghai.aliyuncs.com`.
+      * *   You cannot call this operation to distribute a product across accounts.
+      * *   A product distribution task does not distribute the devices under the product.
+      * *   After a product is distributed, you cannot modify its TSL model and scripts.
+      * *   Each Alibaba Cloud account can create a maximum of 10 tasks to distribute products or devices. For more information about how to create a device distribution task, see [CreateDeviceDistributeJob](~~199390~~).
+      * *   Each Alibaba Cloud account can run a maximum of 2 queries per second (QPS).
+      *     **
+      *     **Note** RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateProductDistributeJobRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateProductDistributeJobResponse
+     */
     public CreateProductDistributeJobResponse createProductDistributeJobWithOptions(CreateProductDistributeJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3862,11 +4860,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateProductDistributeJobResponse());
     }
 
+    /**
+      * *   This operation can be called only by using the following **endpoint**: `iot.cn-shanghai.aliyuncs.com`.
+      * *   You cannot call this operation to distribute a product across accounts.
+      * *   A product distribution task does not distribute the devices under the product.
+      * *   After a product is distributed, you cannot modify its TSL model and scripts.
+      * *   Each Alibaba Cloud account can create a maximum of 10 tasks to distribute products or devices. For more information about how to create a device distribution task, see [CreateDeviceDistributeJob](~~199390~~).
+      * *   Each Alibaba Cloud account can run a maximum of 2 queries per second (QPS).
+      *     **
+      *     **Note** RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateProductDistributeJobRequest
+      * @return CreateProductDistributeJobResponse
+     */
     public CreateProductDistributeJobResponse createProductDistributeJob(CreateProductDistributeJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createProductDistributeJobWithOptions(request, runtime);
     }
 
+    /**
+      * *   You can create a maximum of 10 tags for a product in a single call.
+      * *   Each product can have a maximum of 100 tags.
+      * > You must specify the tag keys and tag values. Otherwise, the call fails. For description about the tag values, see the "**Request parameters**" section of this topic.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS). 
+      * >  The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateProductTagsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateProductTagsResponse
+     */
     public CreateProductTagsResponse createProductTagsWithOptions(CreateProductTagsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3899,16 +4922,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateProductTagsResponse());
     }
 
+    /**
+      * *   You can create a maximum of 10 tags for a product in a single call.
+      * *   Each product can have a maximum of 100 tags.
+      * > You must specify the tag keys and tag values. Otherwise, the call fails. For description about the tag values, see the "**Request parameters**" section of this topic.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS). 
+      * >  The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateProductTagsRequest
+      * @return CreateProductTagsResponse
+     */
     public CreateProductTagsResponse createProductTags(CreateProductTagsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createProductTagsWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 1 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateProductTopicRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateProductTopicResponse
+     */
     public CreateProductTopicResponse createProductTopicWithOptions(CreateProductTopicRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.codec)) {
+            query.put("Codec", request.codec);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.desc)) {
             query.put("Desc", request.desc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableProxySubscribe)) {
+            query.put("EnableProxySubscribe", request.enableProxySubscribe);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
@@ -3944,11 +4995,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateProductTopicResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 1 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateProductTopicRequest
+      * @return CreateProductTopicResponse
+     */
     public CreateProductTopicResponse createProductTopic(CreateProductTopicRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createProductTopicWithOptions(request, runtime);
     }
 
+    /**
+      * When you call this operation, you must specify the **ProductKey** parameter in the request.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 50 queries per second (QPS). 
+      * >  The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateRuleRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateRuleResponse
+     */
     public CreateRuleResponse createRuleWithOptions(CreateRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4013,11 +5082,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRuleResponse());
     }
 
+    /**
+      * When you call this operation, you must specify the **ProductKey** parameter in the request.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 50 queries per second (QPS). 
+      * >  The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateRuleRequest
+      * @return CreateRuleResponse
+     */
     public CreateRuleResponse createRule(CreateRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createRuleWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * *   Destination Alibaba Cloud services that are supported by the rules engine vary based on regions. For more information about the regions and destination cloud services that are supported by the rules engine, see [Regions and zones](~~85669~~).
+      * *   You can create a maximum of 10 rule actions for each rule.
+      * *   You can call this API operation to define rule actions to forward data to an IoT Platform topic, AMQP consumer group, or Alibaba Cloud service. The supported Alibaba Cloud services include Message Service (MNS), Function Compute, and Tablestore. If you need to forward data to ApsaraDB RDS, you must use the [IoT Platform console](https://iot.console.aliyun.com).
+      * *   Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateRuleActionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateRuleActionResponse
+     */
     public CreateRuleActionResponse createRuleActionWithOptions(CreateRuleActionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4058,6 +5148,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRuleActionResponse());
     }
 
+    /**
+      * ## Limits
+      * *   Destination Alibaba Cloud services that are supported by the rules engine vary based on regions. For more information about the regions and destination cloud services that are supported by the rules engine, see [Regions and zones](~~85669~~).
+      * *   You can create a maximum of 10 rule actions for each rule.
+      * *   You can call this API operation to define rule actions to forward data to an IoT Platform topic, AMQP consumer group, or Alibaba Cloud service. The supported Alibaba Cloud services include Message Service (MNS), Function Compute, and Tablestore. If you need to forward data to ApsaraDB RDS, you must use the [IoT Platform console](https://iot.console.aliyun.com).
+      * *   Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateRuleActionRequest
+      * @return CreateRuleActionResponse
+     */
     public CreateRuleActionResponse createRuleAction(CreateRuleActionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createRuleActionWithOptions(request, runtime);
@@ -4404,6 +5505,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createStudioAppDomainOpenWithOptions(request, runtime);
     }
 
+    /**
+      * Server-side subscriptions are categorized into the following two types:
+      * *   MNS subscription: pushes subscribed messages to MNS queues. Your server applications listen to MNS queues to receive device messages. For more information, see [Configure MNS server-side subscriptions](~~68948~~). You can call this operation to create an MNS subscription.
+      * *   AMQP subscription: pushes subscribed messages to your server by using the AMQP channel. For more information, see [Configure AMQP server-side subscriptions](~~142376~~). To configure an AMQP subscription, perform the following steps:
+      *     1\\. Call the [CreateConsumerGroup](~~170388~~) operation to create a consumer group and obtain the returned consumer group ID. Messages are pushed to the consumer group. The AMQP client carries the consumer group ID when the client connected to IoT Platform. For more information, see [Connect an AMQP client to IoT Platform](~~142489~~).
+      *     2\\. Call the CreateSubscribeRelation operation to create an AMQP subscription.
+      *     3\\. Optional. Call the [CreateConsumerGroupSubscribeRelation](~~170354~~) operation to add a consumer group to the AMQP subscription. You can also call the [DeleteConsumerGroupSubscribeRelation](~~170357~~) operation to remove a consumer group from an AMQP subscription.
+      *     4\\. Optional. Call the [QueryConsumerGroupStatus](~~170358~~) operation to query the status of a consumer group, including online client information, message consumption rate, number of accumulated messages, and last message consumption time. You can also call the [ResetConsumerGroupPosition](~~170355~~) operation to clear the accumulated messages of the consumer group.
+      * ## QPS limits
+      * You can call this API operation up to five times per second per account. 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateSubscribeRelationRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateSubscribeRelationResponse
+     */
     public CreateSubscribeRelationResponse createSubscribeRelationWithOptions(CreateSubscribeRelationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4488,11 +5605,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSubscribeRelationResponse());
     }
 
+    /**
+      * Server-side subscriptions are categorized into the following two types:
+      * *   MNS subscription: pushes subscribed messages to MNS queues. Your server applications listen to MNS queues to receive device messages. For more information, see [Configure MNS server-side subscriptions](~~68948~~). You can call this operation to create an MNS subscription.
+      * *   AMQP subscription: pushes subscribed messages to your server by using the AMQP channel. For more information, see [Configure AMQP server-side subscriptions](~~142376~~). To configure an AMQP subscription, perform the following steps:
+      *     1\\. Call the [CreateConsumerGroup](~~170388~~) operation to create a consumer group and obtain the returned consumer group ID. Messages are pushed to the consumer group. The AMQP client carries the consumer group ID when the client connected to IoT Platform. For more information, see [Connect an AMQP client to IoT Platform](~~142489~~).
+      *     2\\. Call the CreateSubscribeRelation operation to create an AMQP subscription.
+      *     3\\. Optional. Call the [CreateConsumerGroupSubscribeRelation](~~170354~~) operation to add a consumer group to the AMQP subscription. You can also call the [DeleteConsumerGroupSubscribeRelation](~~170357~~) operation to remove a consumer group from an AMQP subscription.
+      *     4\\. Optional. Call the [QueryConsumerGroupStatus](~~170358~~) operation to query the status of a consumer group, including online client information, message consumption rate, number of accumulated messages, and last message consumption time. You can also call the [ResetConsumerGroupPosition](~~170355~~) operation to clear the accumulated messages of the consumer group.
+      * ## QPS limits
+      * You can call this API operation up to five times per second per account. 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateSubscribeRelationRequest
+      * @return CreateSubscribeRelationResponse
+     */
     public CreateSubscribeRelationResponse createSubscribeRelation(CreateSubscribeRelationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createSubscribeRelationWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * *   If a product is published, you must call the [CancelReleaseProduct](~~213875~~) operation to unpublish the product before you call this operation.
+      * *   Before you call the operation, you can use the [json-schema](https://github.com/everit-org/json-schema?spm=a2c4g.11186623.2.23.575832d9zD7fZb) library to verify the input parameters in **ThingModelJson**. For more information, see [Data structure of ThingModelJson](~~150457~~).
+      * *   You can call this operation to add a maximum of 10 TSL features. TSL features include properties, services, and events.
+      * *   Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateThingModelRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateThingModelResponse
+     */
     public CreateThingModelResponse createThingModelWithOptions(CreateThingModelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4533,11 +5677,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateThingModelResponse());
     }
 
+    /**
+      * ## Limits
+      * *   If a product is published, you must call the [CancelReleaseProduct](~~213875~~) operation to unpublish the product before you call this operation.
+      * *   Before you call the operation, you can use the [json-schema](https://github.com/everit-org/json-schema?spm=a2c4g.11186623.2.23.575832d9zD7fZb) library to verify the input parameters in **ThingModelJson**. For more information, see [Data structure of ThingModelJson](~~150457~~).
+      * *   You can call this operation to add a maximum of 10 TSL features. TSL features include properties, services, and events.
+      * *   Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateThingModelRequest
+      * @return CreateThingModelResponse
+     */
     public CreateThingModelResponse createThingModel(CreateThingModelRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createThingModelWithOptions(request, runtime);
     }
 
+    /**
+      * A data parsing script is used to convert data submitted by devices into the JSON format. The data submitted by devices is in a custom format. You can write a script in JavaScript, Python 2.7, and PHP 7.2. For more information, see [Submit scripts for data parsing](~~149963~~).
+      * > If the data format is **Alink JSON**, the CreateThingScript operation is not supported. Alink JSON is a standard data format that is defined by IoT Connectivity Alliance (ICA).
+      * ## QPS limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS). 
+      * >  The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateThingScriptRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateThingScriptResponse
+     */
     public CreateThingScriptResponse createThingScriptWithOptions(CreateThingScriptRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4574,11 +5740,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateThingScriptResponse());
     }
 
+    /**
+      * A data parsing script is used to convert data submitted by devices into the JSON format. The data submitted by devices is in a custom format. You can write a script in JavaScript, Python 2.7, and PHP 7.2. For more information, see [Submit scripts for data parsing](~~149963~~).
+      * > If the data format is **Alink JSON**, the CreateThingScript operation is not supported. Alink JSON is a standard data format that is defined by IoT Connectivity Alliance (ICA).
+      * ## QPS limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS). 
+      * >  The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateThingScriptRequest
+      * @return CreateThingScriptResponse
+     */
     public CreateThingScriptResponse createThingScript(CreateThingScriptRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createThingScriptWithOptions(request, runtime);
     }
 
+    public CreateTopicConfigResponse createTopicConfigWithOptions(CreateTopicConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.codec)) {
+            query.put("Codec", request.codec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableBroadcast)) {
+            query.put("EnableBroadcast", request.enableBroadcast);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableProxySubscribe)) {
+            query.put("EnableProxySubscribe", request.enableProxySubscribe);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            query.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operation)) {
+            query.put("Operation", request.operation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productKey)) {
+            query.put("ProductKey", request.productKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topicFullName)) {
+            query.put("TopicFullName", request.topicFullName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateTopicConfig"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTopicConfigResponse());
+    }
+
+    public CreateTopicConfigResponse createTopicConfig(CreateTopicConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createTopicConfigWithOptions(request, runtime);
+    }
+
+    /**
+      * ## Limits
+      * *   You can specify a maximum of 100 destination topics for a source topic.
+      * *   The device to which the source topic belongs must be activated.
+      * *   The source and destination topics support only custom topics.
+      * *   Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateTopicRouteTableRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateTopicRouteTableResponse
+     */
     public CreateTopicRouteTableResponse createTopicRouteTableWithOptions(CreateTopicRouteTableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4611,11 +5856,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTopicRouteTableResponse());
     }
 
+    /**
+      * ## Limits
+      * *   You can specify a maximum of 100 destination topics for a source topic.
+      * *   The device to which the source topic belongs must be activated.
+      * *   The source and destination topics support only custom topics.
+      * *   Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateTopicRouteTableRequest
+      * @return CreateTopicRouteTableResponse
+     */
     public CreateTopicRouteTableResponse createTopicRouteTable(CreateTopicRouteTableRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createTopicRouteTableWithOptions(request, runtime);
     }
 
+    /**
+      * *   You can call the [QueryClientIds](~~371985~~) operation to view the ClientIDs of a device and obtain the number of ClientIDs.
+      * *   After you call the DeleteClientIds operation, all ClientIDs of the device are deleted and cannot be resumed. To obtain a new ClientID, you can register the device again.
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS). 
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteClientIdsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteClientIdsResponse
+     */
     public DeleteClientIdsResponse deleteClientIdsWithOptions(DeleteClientIdsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4644,11 +5911,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteClientIdsResponse());
     }
 
+    /**
+      * *   You can call the [QueryClientIds](~~371985~~) operation to view the ClientIDs of a device and obtain the number of ClientIDs.
+      * *   After you call the DeleteClientIds operation, all ClientIDs of the device are deleted and cannot be resumed. To obtain a new ClientID, you can register the device again.
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS). 
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteClientIdsRequest
+      * @return DeleteClientIdsResponse
+     */
     public DeleteClientIdsResponse deleteClientIds(DeleteClientIdsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteClientIdsWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * *   You cannot delete the default consumer group provided by IoT Platform.
+      * *   If the consumer group is associated with an AMQP subscription, you must disassociate the consumer group from the subscription. If the subscription has multiple consumer groups, you can call the [DeleteConsumerGroupSubscribeRelation](~~170357~~) operation to remove the consumer group from the subscription. If the subscription has only one consumer group, you can call the [UpdateSubscribeRelation](~~170351~~) operation to change the consumer group or call the [DeleteSubscribeRelation](~~170353~~) operation to delete the subscription.
+      * *   Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteConsumerGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteConsumerGroupResponse
+     */
     public DeleteConsumerGroupResponse deleteConsumerGroupWithOptions(DeleteConsumerGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4677,11 +5965,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteConsumerGroupResponse());
     }
 
+    /**
+      * ## Limits
+      * *   You cannot delete the default consumer group provided by IoT Platform.
+      * *   If the consumer group is associated with an AMQP subscription, you must disassociate the consumer group from the subscription. If the subscription has multiple consumer groups, you can call the [DeleteConsumerGroupSubscribeRelation](~~170357~~) operation to remove the consumer group from the subscription. If the subscription has only one consumer group, you can call the [UpdateSubscribeRelation](~~170351~~) operation to change the consumer group or call the [DeleteSubscribeRelation](~~170353~~) operation to delete the subscription.
+      * *   Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteConsumerGroupRequest
+      * @return DeleteConsumerGroupResponse
+     */
     public DeleteConsumerGroupResponse deleteConsumerGroup(DeleteConsumerGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteConsumerGroupWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * *   If the AMQP subscription has only one consumer group, you cannot call this operation to remove the consumer group.
+      * *   Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteConsumerGroupSubscribeRelationRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteConsumerGroupSubscribeRelationResponse
+     */
     public DeleteConsumerGroupSubscribeRelationResponse deleteConsumerGroupSubscribeRelationWithOptions(DeleteConsumerGroupSubscribeRelationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4714,6 +6022,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteConsumerGroupSubscribeRelationResponse());
     }
 
+    /**
+      * ## Limits
+      * *   If the AMQP subscription has only one consumer group, you cannot call this operation to remove the consumer group.
+      * *   Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteConsumerGroupSubscribeRelationRequest
+      * @return DeleteConsumerGroupSubscribeRelationResponse
+     */
     public DeleteConsumerGroupSubscribeRelationResponse deleteConsumerGroupSubscribeRelation(DeleteConsumerGroupSubscribeRelationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteConsumerGroupSubscribeRelationWithOptions(request, runtime);
@@ -4789,6 +6106,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteDestinationWithOptions(request, runtime);
     }
 
+    /**
+      * *   When you call this operation with an Alibaba Cloud account, IoT Platform sends a verification code by text message to confirm your identity.
+      * *   When you call this operation with a RAM user, IoT Platform does not send a verification code. To ensure device security, you can create custom permission policies to perform fine-grained permission management. For more information, see [Mapping of IoT Platform operations and RAM policies](~~47485~~) and [Custom permissions](~~47495~~).
+      * **Warning**
+      * *   After a device is deleted, the device ID (**IotId**) becomes invalid, and all other information associated with the device is deleted. In addition, you can no longer perform an operation on the device.
+      * *   Before you delete a device in the IoT Platform console, make sure that the corresponding actual device is offline. Otherwise, after the device is deleted from IoT Platform, the actual device continues to initiate connection requests to IoT Platform. If the number of requests exceeds the upper limit, IoT Platform starts request throttling. In this case, access of other devices within your Alibaba Cloud account is affected.
+      * *   After you delete a device, the certificate of the device becomes invalid and cannot be restored. Proceed with caution.
+      * ****
+      * *   You must specify a value for the **IotId** parameter or values for the **ProductKey** and **DeviceName** parameters to identify a device.
+      * *   If you specify a gateway and the number of sub-devices that belong to the gateway exceeds 2,000, you can call this operation to create a device job to delete the topological relationships in an asynchronous manner. The operation returns the **JobId** parameter.
+      * ## QPS limits
+      * You can call this API operation up to 50 times per second per account. 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteDeviceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteDeviceResponse
+     */
     public DeleteDeviceResponse deleteDeviceWithOptions(DeleteDeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4825,11 +6160,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDeviceResponse());
     }
 
+    /**
+      * *   When you call this operation with an Alibaba Cloud account, IoT Platform sends a verification code by text message to confirm your identity.
+      * *   When you call this operation with a RAM user, IoT Platform does not send a verification code. To ensure device security, you can create custom permission policies to perform fine-grained permission management. For more information, see [Mapping of IoT Platform operations and RAM policies](~~47485~~) and [Custom permissions](~~47495~~).
+      * **Warning**
+      * *   After a device is deleted, the device ID (**IotId**) becomes invalid, and all other information associated with the device is deleted. In addition, you can no longer perform an operation on the device.
+      * *   Before you delete a device in the IoT Platform console, make sure that the corresponding actual device is offline. Otherwise, after the device is deleted from IoT Platform, the actual device continues to initiate connection requests to IoT Platform. If the number of requests exceeds the upper limit, IoT Platform starts request throttling. In this case, access of other devices within your Alibaba Cloud account is affected.
+      * *   After you delete a device, the certificate of the device becomes invalid and cannot be restored. Proceed with caution.
+      * ****
+      * *   You must specify a value for the **IotId** parameter or values for the **ProductKey** and **DeviceName** parameters to identify a device.
+      * *   If you specify a gateway and the number of sub-devices that belong to the gateway exceeds 2,000, you can call this operation to create a device job to delete the topological relationships in an asynchronous manner. The operation returns the **JobId** parameter.
+      * ## QPS limits
+      * You can call this API operation up to 50 times per second per account. 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteDeviceRequest
+      * @return DeleteDeviceResponse
+     */
     public DeleteDeviceResponse deleteDevice(DeleteDeviceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDeviceWithOptions(request, runtime);
     }
 
+    /**
+      * *   This operation can be called only by using the following **endpoint**: `iot.cn-shanghai.aliyuncs.com`.
+      * *   Each Alibaba Cloud account can run a maximum of 2 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteDeviceDistributeJobRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteDeviceDistributeJobResponse
+     */
     public DeleteDeviceDistributeJobResponse deleteDeviceDistributeJobWithOptions(DeleteDeviceDistributeJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4854,6 +6215,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDeviceDistributeJobResponse());
     }
 
+    /**
+      * *   This operation can be called only by using the following **endpoint**: `iot.cn-shanghai.aliyuncs.com`.
+      * *   Each Alibaba Cloud account can run a maximum of 2 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteDeviceDistributeJobRequest
+      * @return DeleteDeviceDistributeJobResponse
+     */
     public DeleteDeviceDistributeJobResponse deleteDeviceDistributeJob(DeleteDeviceDistributeJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDeviceDistributeJobWithOptions(request, runtime);
@@ -4892,6 +6261,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteDeviceDynamicGroupWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteDeviceFileRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteDeviceFileResponse
+     */
     public DeleteDeviceFileResponse deleteDeviceFileWithOptions(DeleteDeviceFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4932,11 +6310,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDeviceFileResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteDeviceFileRequest
+      * @return DeleteDeviceFileResponse
+     */
     public DeleteDeviceFileResponse deleteDeviceFile(DeleteDeviceFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDeviceFileWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteDeviceGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteDeviceGroupResponse
+     */
     public DeleteDeviceGroupResponse deleteDeviceGroupWithOptions(DeleteDeviceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4965,11 +6360,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDeviceGroupResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteDeviceGroupRequest
+      * @return DeleteDeviceGroupResponse
+     */
     public DeleteDeviceGroupResponse deleteDeviceGroup(DeleteDeviceGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDeviceGroupWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteDevicePropRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteDevicePropResponse
+     */
     public DeleteDevicePropResponse deleteDevicePropWithOptions(DeleteDevicePropRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5010,6 +6422,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDevicePropResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteDevicePropRequest
+      * @return DeleteDevicePropResponse
+     */
     public DeleteDevicePropResponse deleteDeviceProp(DeleteDevicePropRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDevicePropWithOptions(request, runtime);
@@ -5085,6 +6505,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteDeviceTunnelWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * *   You are not allowed to delete a driver that has a published version.
+      * *   Each Alibaba Cloud account can run a maximum of five queries per second (QPS).
+      * >RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteEdgeDriverRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteEdgeDriverResponse
+     */
     public DeleteEdgeDriverResponse deleteEdgeDriverWithOptions(DeleteEdgeDriverRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5113,11 +6543,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteEdgeDriverResponse());
     }
 
+    /**
+      * ## Limits
+      * *   You are not allowed to delete a driver that has a published version.
+      * *   Each Alibaba Cloud account can run a maximum of five queries per second (QPS).
+      * >RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteEdgeDriverRequest
+      * @return DeleteEdgeDriverResponse
+     */
     public DeleteEdgeDriverResponse deleteEdgeDriver(DeleteEdgeDriverRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteEdgeDriverWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * *   You are not allowed to delete a published driver version.
+      * *   Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteEdgeDriverVersionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteEdgeDriverVersionResponse
+     */
     public DeleteEdgeDriverVersionResponse deleteEdgeDriverVersionWithOptions(DeleteEdgeDriverVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5150,11 +6599,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteEdgeDriverVersionResponse());
     }
 
+    /**
+      * ## Limits
+      * *   You are not allowed to delete a published driver version.
+      * *   Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteEdgeDriverVersionRequest
+      * @return DeleteEdgeDriverVersionResponse
+     */
     public DeleteEdgeDriverVersionResponse deleteEdgeDriverVersion(DeleteEdgeDriverVersionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteEdgeDriverVersionWithOptions(request, runtime);
     }
 
+    /**
+      * Each Alibaba Cloud account can run a maximum of five queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteEdgeInstanceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteEdgeInstanceResponse
+     */
     public DeleteEdgeInstanceResponse deleteEdgeInstanceWithOptions(DeleteEdgeInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5183,6 +6649,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteEdgeInstanceResponse());
     }
 
+    /**
+      * Each Alibaba Cloud account can run a maximum of five queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteEdgeInstanceRequest
+      * @return DeleteEdgeInstanceResponse
+     */
     public DeleteEdgeInstanceResponse deleteEdgeInstance(DeleteEdgeInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteEdgeInstanceWithOptions(request, runtime);
@@ -5258,6 +6731,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteJobWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteOTAFirmwareRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteOTAFirmwareResponse
+     */
     public DeleteOTAFirmwareResponse deleteOTAFirmwareWithOptions(DeleteOTAFirmwareRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5286,11 +6768,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteOTAFirmwareResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteOTAFirmwareRequest
+      * @return DeleteOTAFirmwareResponse
+     */
     public DeleteOTAFirmwareResponse deleteOTAFirmware(DeleteOTAFirmwareRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteOTAFirmwareWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * *   The default module cannot be deleted.
+      * *   If an update package exists in an OTA module, you cannot delete the OTA module.
+      * *   Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteOTAModuleRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteOTAModuleResponse
+     */
     public DeleteOTAModuleResponse deleteOTAModuleWithOptions(DeleteOTAModuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5323,6 +6824,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteOTAModuleResponse());
     }
 
+    /**
+      * ## Limits
+      * *   The default module cannot be deleted.
+      * *   If an update package exists in an OTA module, you cannot delete the OTA module.
+      * *   Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteOTAModuleRequest
+      * @return DeleteOTAModuleResponse
+     */
     public DeleteOTAModuleResponse deleteOTAModule(DeleteOTAModuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteOTAModuleWithOptions(request, runtime);
@@ -5394,6 +6905,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteParserDataSourceWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * *   After a product is deleted, the ProductKey of the product is invalid. The related information about the product is also deleted. You cannot perform the required operations on the product.
+      * *   Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteProductRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteProductResponse
+     */
     public DeleteProductResponse deleteProductWithOptions(DeleteProductRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5422,11 +6943,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteProductResponse());
     }
 
+    /**
+      * ## Limits
+      * *   After a product is deleted, the ProductKey of the product is invalid. The related information about the product is also deleted. You cannot perform the required operations on the product.
+      * *   Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteProductRequest
+      * @return DeleteProductResponse
+     */
     public DeleteProductResponse deleteProduct(DeleteProductRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteProductWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * *   You can delete a maximum of 10 tags in a single call.
+      * *   Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteProductTagsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteProductTagsResponse
+     */
     public DeleteProductTagsResponse deleteProductTagsWithOptions(DeleteProductTagsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5459,11 +6999,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteProductTagsResponse());
     }
 
+    /**
+      * ## Limits
+      * *   You can delete a maximum of 10 tags in a single call.
+      * *   Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteProductTagsRequest
+      * @return DeleteProductTagsResponse
+     */
     public DeleteProductTagsResponse deleteProductTags(DeleteProductTagsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteProductTagsWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteProductTopicRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteProductTopicResponse
+     */
     public DeleteProductTopicResponse deleteProductTopicWithOptions(DeleteProductTopicRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5492,11 +7050,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteProductTopicResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteProductTopicRequest
+      * @return DeleteProductTopicResponse
+     */
     public DeleteProductTopicResponse deleteProductTopic(DeleteProductTopicRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteProductTopicWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteRuleRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteRuleResponse
+     */
     public DeleteRuleResponse deleteRuleWithOptions(DeleteRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5525,11 +7100,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRuleResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteRuleRequest
+      * @return DeleteRuleResponse
+     */
     public DeleteRuleResponse deleteRule(DeleteRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteRuleWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteRuleActionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteRuleActionResponse
+     */
     public DeleteRuleActionResponse deleteRuleActionWithOptions(DeleteRuleActionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5558,6 +7150,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRuleActionResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteRuleActionRequest
+      * @return DeleteRuleActionResponse
+     */
     public DeleteRuleActionResponse deleteRuleAction(DeleteRuleActionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteRuleActionWithOptions(request, runtime);
@@ -5839,6 +7439,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteStudioAppDomainOpenWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteSubscribeRelationRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteSubscribeRelationResponse
+     */
     public DeleteSubscribeRelationResponse deleteSubscribeRelationWithOptions(DeleteSubscribeRelationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5871,11 +7480,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSubscribeRelationResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteSubscribeRelationRequest
+      * @return DeleteSubscribeRelationResponse
+     */
     public DeleteSubscribeRelationResponse deleteSubscribeRelation(DeleteSubscribeRelationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteSubscribeRelationWithOptions(request, runtime);
     }
 
+    /**
+      * *   If a product is published, you must call the [CancelReleaseProduct](~~213875~~) operation to unpublish the product before you call the DeleteThingModel operation.
+      * *   If an existing feature or custom TSL module in a product is not published, you can call the DeleteThingModel operation to remove the feature or delete the custom TSL module.
+      * *   When you call the DeleteThingModel operation, you must specify a value for the **ProductKey** parameter. The following list describes how the DeleteThingModel operation works:
+      *     *   If you specify a value only for the **ProductKey** parameter, the operation deletes all custom TSL modules and removes all features in the default TSL module from the specified product.
+      *     *   If you specify values only for the **ProductKey** and **FunctionBlockId** parameters, the operation deletes the specified custom TSL module from the specified product.
+      *     *   If you specify a value for the **ProductKey** parameter and a value for the **PropertyIdentifier.N**, **ServiceIdentifier.N**, or **EventIdentifier.N** parameter, the operation removes one or more specified features from the default TSL module of the specified product. The operation removes the specified features only if the features exist. If the value that you specified for the **PropertyIdentifier.N**, **ServiceIdentifier.N**, or **EventIdentifier.N** parameter does not exist in the default TSL module, the operation returns the same result as when you specify a value only for the **ProductKey** parameter.
+      *     *   If you specify values for the **ProductKey** and **FunctionBlockId** parameters and a value for the **PropertyIdentifier.N**, **ServiceIdentifier.N**, or **EventIdentifier.N** parameter, the operation removes one or more specified features from a specified custom TSL module in a specified product. The operation removes the specified features only if the features exist. If the value that you specified for the **PropertyIdentifier.N**, **ServiceIdentifier.N**, or **EventIdentifier.N** parameter does not exist, the operation returns the same result as when you specify values only for the **ProductKey** and **FunctionBlockId** parameters.
+      * > You must specify up to 10 identifiers for the **PropertyIdentifier.N**, **ServiceIdentifier.N**, or **EventIdentifier.N** parameter.
+      * *   After you call the DeleteThingModel operation to remove one or more features from a product, you must call the [PublishThingModel](~~150311~~) operation to re-publish the TSL model of the product. This way, the change takes effect.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 5 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.
+      *
+      * @param request DeleteThingModelRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteThingModelResponse
+     */
     public DeleteThingModelResponse deleteThingModelWithOptions(DeleteThingModelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5924,11 +7559,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteThingModelResponse());
     }
 
+    /**
+      * *   If a product is published, you must call the [CancelReleaseProduct](~~213875~~) operation to unpublish the product before you call the DeleteThingModel operation.
+      * *   If an existing feature or custom TSL module in a product is not published, you can call the DeleteThingModel operation to remove the feature or delete the custom TSL module.
+      * *   When you call the DeleteThingModel operation, you must specify a value for the **ProductKey** parameter. The following list describes how the DeleteThingModel operation works:
+      *     *   If you specify a value only for the **ProductKey** parameter, the operation deletes all custom TSL modules and removes all features in the default TSL module from the specified product.
+      *     *   If you specify values only for the **ProductKey** and **FunctionBlockId** parameters, the operation deletes the specified custom TSL module from the specified product.
+      *     *   If you specify a value for the **ProductKey** parameter and a value for the **PropertyIdentifier.N**, **ServiceIdentifier.N**, or **EventIdentifier.N** parameter, the operation removes one or more specified features from the default TSL module of the specified product. The operation removes the specified features only if the features exist. If the value that you specified for the **PropertyIdentifier.N**, **ServiceIdentifier.N**, or **EventIdentifier.N** parameter does not exist in the default TSL module, the operation returns the same result as when you specify a value only for the **ProductKey** parameter.
+      *     *   If you specify values for the **ProductKey** and **FunctionBlockId** parameters and a value for the **PropertyIdentifier.N**, **ServiceIdentifier.N**, or **EventIdentifier.N** parameter, the operation removes one or more specified features from a specified custom TSL module in a specified product. The operation removes the specified features only if the features exist. If the value that you specified for the **PropertyIdentifier.N**, **ServiceIdentifier.N**, or **EventIdentifier.N** parameter does not exist, the operation returns the same result as when you specify values only for the **ProductKey** and **FunctionBlockId** parameters.
+      * > You must specify up to 10 identifiers for the **PropertyIdentifier.N**, **ServiceIdentifier.N**, or **EventIdentifier.N** parameter.
+      * *   After you call the DeleteThingModel operation to remove one or more features from a product, you must call the [PublishThingModel](~~150311~~) operation to re-publish the TSL model of the product. This way, the change takes effect.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 5 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.
+      *
+      * @param request DeleteThingModelRequest
+      * @return DeleteThingModelResponse
+     */
     public DeleteThingModelResponse deleteThingModel(DeleteThingModelRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteThingModelWithOptions(request, runtime);
     }
 
+    public DeleteTopicConfigResponse deleteTopicConfigWithOptions(DeleteTopicConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            query.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productKey)) {
+            query.put("ProductKey", request.productKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topicFullName)) {
+            query.put("TopicFullName", request.topicFullName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteTopicConfig"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTopicConfigResponse());
+    }
+
+    public DeleteTopicConfigResponse deleteTopicConfig(DeleteTopicConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteTopicConfigWithOptions(request, runtime);
+    }
+
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteTopicRouteTableRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteTopicRouteTableResponse
+     */
     public DeleteTopicRouteTableResponse deleteTopicRouteTableWithOptions(DeleteTopicRouteTableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5961,11 +7659,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTopicRouteTableResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DeleteTopicRouteTableRequest
+      * @return DeleteTopicRouteTableResponse
+     */
     public DeleteTopicRouteTableResponse deleteTopicRouteTable(DeleteTopicRouteTableRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteTopicRouteTableWithOptions(request, runtime);
     }
 
+    /**
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 10 queries per second (QPS).
+      * >  The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.
+      *
+      * @param request DetachDestinationRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DetachDestinationResponse
+     */
     public DetachDestinationResponse detachDestinationWithOptions(DetachDestinationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5998,6 +7713,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DetachDestinationResponse());
     }
 
+    /**
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 10 queries per second (QPS).
+      * >  The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.
+      *
+      * @param request DetachDestinationRequest
+      * @return DetachDestinationResponse
+     */
     public DetachDestinationResponse detachDestination(DetachDestinationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.detachDestinationWithOptions(request, runtime);
@@ -6147,6 +7870,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.disableSceneRuleWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * *   After a device is disabled, you cannot connect the device to IoT Platform. You can perform device-specific operations on the device. However, the information about the device is still retained in IoT Platform. You can use the [EnableThing](~~69603~~) API operation to connect the disabled device to IoT Platform again.
+      * *   Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DisableThingRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DisableThingResponse
+     */
     public DisableThingResponse disableThingWithOptions(DisableThingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6183,6 +7916,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DisableThingResponse());
     }
 
+    /**
+      * ## Limits
+      * *   After a device is disabled, you cannot connect the device to IoT Platform. You can perform device-specific operations on the device. However, the information about the device is still retained in IoT Platform. You can use the [EnableThing](~~69603~~) API operation to connect the disabled device to IoT Platform again.
+      * *   Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request DisableThingRequest
+      * @return DisableThingResponse
+     */
     public DisableThingResponse disableThing(DisableThingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.disableThingWithOptions(request, runtime);
@@ -6295,6 +8037,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.enableSceneRuleWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request EnableThingRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return EnableThingResponse
+     */
     public EnableThingResponse enableThingWithOptions(EnableThingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6331,11 +8082,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new EnableThingResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request EnableThingRequest
+      * @return EnableThingResponse
+     */
     public EnableThingResponse enableThing(EnableThingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.enableThingWithOptions(request, runtime);
     }
 
+    /**
+      * This operation can be used with other operations to upload a device list file. Procedure:
+      * 1. Call this operation to generate the information of a device list file that you want to upload to OSS.  
+      * The response parameters of this API operation include:
+      * The following request parameters of the OSS [PostObject](/help/en/object-storage-service/latest/postobject) operation that is used to upload the device list file: **Key**, **AccessKeyId**, **Signature**, and **Policy**.  
+      * 2. Use an [OSS SDK](/help/en/object-storage-service/latest/sdk-code-samples-overview) to call the [PostObject](/help/en/object-storage-service/latest/postobject) operation to upload the device list file within 1 minute after a response is returned. For more information about sample code, see the "Usage of response parameters" section in this topic.  
+      * >  The parameter information that is returned by this operation is valid for 1 minute. You must upload the device list file within 1 minute.  3. After you upload the device list file, call the [CreateOTAStaticUpgradeJob](/help/en/iot-platform/latest/e1qtmo) operation of IoT Platform to create a static update batch within 60 minutes.  
+      * If you upload device list files but you do not call the CreateOTAStaticUpgradeJob operation to create a static update batch, the system automatically deletes the uploaded files. The system deletes files on a regular basis.  
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 10 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account. 
+      * ## Requirements
+      * *   A device list file contains the names of devices. Separate multiple device names with line feeds. Each line contains only one device name. A device list file must be in the CSV format. The maximum size of a device list file is 5 MB.
+      * *   Each device list file can contain up to 10,000 names for the devices in a product that is related to an update package. If the number of device names in a device list file exceeds the limit, an error occurs when you use the file to create a static update batch.
+      *
+      * @param request GenerateDeviceNameListURLRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GenerateDeviceNameListURLResponse
+     */
     public GenerateDeviceNameListURLResponse generateDeviceNameListURLWithOptions(GenerateDeviceNameListURLRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6360,6 +8138,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateDeviceNameListURLResponse());
     }
 
+    /**
+      * This operation can be used with other operations to upload a device list file. Procedure:
+      * 1. Call this operation to generate the information of a device list file that you want to upload to OSS.  
+      * The response parameters of this API operation include:
+      * The following request parameters of the OSS [PostObject](/help/en/object-storage-service/latest/postobject) operation that is used to upload the device list file: **Key**, **AccessKeyId**, **Signature**, and **Policy**.  
+      * 2. Use an [OSS SDK](/help/en/object-storage-service/latest/sdk-code-samples-overview) to call the [PostObject](/help/en/object-storage-service/latest/postobject) operation to upload the device list file within 1 minute after a response is returned. For more information about sample code, see the "Usage of response parameters" section in this topic.  
+      * >  The parameter information that is returned by this operation is valid for 1 minute. You must upload the device list file within 1 minute.  3. After you upload the device list file, call the [CreateOTAStaticUpgradeJob](/help/en/iot-platform/latest/e1qtmo) operation of IoT Platform to create a static update batch within 60 minutes.  
+      * If you upload device list files but you do not call the CreateOTAStaticUpgradeJob operation to create a static update batch, the system automatically deletes the uploaded files. The system deletes files on a regular basis.  
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 10 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account. 
+      * ## Requirements
+      * *   A device list file contains the names of devices. Separate multiple device names with line feeds. Each line contains only one device name. A device list file must be in the CSV format. The maximum size of a device list file is 5 MB.
+      * *   Each device list file can contain up to 10,000 names for the devices in a product that is related to an update package. If the number of device names in a device list file exceeds the limit, an error occurs when you use the file to create a static update batch.
+      *
+      * @param request GenerateDeviceNameListURLRequest
+      * @return GenerateDeviceNameListURLResponse
+     */
     public GenerateDeviceNameListURLResponse generateDeviceNameListURL(GenerateDeviceNameListURLRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.generateDeviceNameListURLWithOptions(request, runtime);
@@ -6406,6 +8202,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.generateFileUploadURLWithOptions(request, runtime);
     }
 
+    /**
+      * This operation can be used together with other operations to create an update package. Procedure:
+      * 1\\. Call this API operation to generate the details of an update package file that you want to upload to OSS.
+      * The following section describes the response parameters of this API operation:
+      * *   The following request parameters of the OSS [PostObject](~~31988~~) operation that is used to upload the update package file: **Key**, **OSSAccessKeyId**, **Signature**, and **Policy**.
+      * *   The following request parameter of the [CreateOTAFirmware](~~147311~~) operation that is used to create the update package: **FirmwareUrl**.
+      * 2\\. Use an [OSS SDK](~~52834~~) to call the [PostObject](~~31988~~) operation to upload the update package file. For more information about sample code, see the "Usage of response parameters" section.
+      * > The parameter information that is returned by this operation is valid for 1 minute. You must upload the update package file within 1 minute. The maximum size of the uploaded update package file is 1,000 MB.
+      * 3\\. After the update package file is uploaded, call the [CreateOTAFirmware](~~147311~~) operation to create an update package within 60 minutes.
+      * If update package files are uploaded but you do not call the CreateOTAFirmware operation to create update packages for the files, the uploaded files are automatically deleted by the system on a regular basis.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 10 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.
+      *
+      * @param request GenerateOTAUploadURLRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GenerateOTAUploadURLResponse
+     */
     public GenerateOTAUploadURLResponse generateOTAUploadURLWithOptions(GenerateOTAUploadURLRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6434,6 +8248,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateOTAUploadURLResponse());
     }
 
+    /**
+      * This operation can be used together with other operations to create an update package. Procedure:
+      * 1\\. Call this API operation to generate the details of an update package file that you want to upload to OSS.
+      * The following section describes the response parameters of this API operation:
+      * *   The following request parameters of the OSS [PostObject](~~31988~~) operation that is used to upload the update package file: **Key**, **OSSAccessKeyId**, **Signature**, and **Policy**.
+      * *   The following request parameter of the [CreateOTAFirmware](~~147311~~) operation that is used to create the update package: **FirmwareUrl**.
+      * 2\\. Use an [OSS SDK](~~52834~~) to call the [PostObject](~~31988~~) operation to upload the update package file. For more information about sample code, see the "Usage of response parameters" section.
+      * > The parameter information that is returned by this operation is valid for 1 minute. You must upload the update package file within 1 minute. The maximum size of the uploaded update package file is 1,000 MB.
+      * 3\\. After the update package file is uploaded, call the [CreateOTAFirmware](~~147311~~) operation to create an update package within 60 minutes.
+      * If update package files are uploaded but you do not call the CreateOTAFirmware operation to create update packages for the files, the uploaded files are automatically deleted by the system on a regular basis.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 10 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.
+      *
+      * @param request GenerateOTAUploadURLRequest
+      * @return GenerateOTAUploadURLResponse
+     */
     public GenerateOTAUploadURLResponse generateOTAUploadURL(GenerateOTAUploadURLRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.generateOTAUploadURLWithOptions(request, runtime);
@@ -6505,6 +8336,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getDestinationWithOptions(request, runtime);
     }
 
+    /**
+      * ## QPS limits
+      * You can call this API operation up to 500 times per second per account.
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request GetDeviceShadowRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetDeviceShadowResponse
+     */
     public GetDeviceShadowResponse getDeviceShadowWithOptions(GetDeviceShadowRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6537,11 +8377,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetDeviceShadowResponse());
     }
 
+    /**
+      * ## QPS limits
+      * You can call this API operation up to 500 times per second per account.
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request GetDeviceShadowRequest
+      * @return GetDeviceShadowResponse
+     */
     public GetDeviceShadowResponse getDeviceShadow(GetDeviceShadowRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getDeviceShadowWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request GetDeviceStatusRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetDeviceStatusResponse
+     */
     public GetDeviceStatusResponse getDeviceStatusWithOptions(GetDeviceStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6578,6 +8435,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetDeviceStatusResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request GetDeviceStatusRequest
+      * @return GetDeviceStatusResponse
+     */
     public GetDeviceStatusResponse getDeviceStatus(GetDeviceStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getDeviceStatusWithOptions(request, runtime);
@@ -6702,6 +8567,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getDownloadFileWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request GetEdgeDriverVersionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetEdgeDriverVersionResponse
+     */
     public GetEdgeDriverVersionResponse getEdgeDriverVersionWithOptions(GetEdgeDriverVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6734,11 +8608,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetEdgeDriverVersionResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request GetEdgeDriverVersionRequest
+      * @return GetEdgeDriverVersionResponse
+     */
     public GetEdgeDriverVersionResponse getEdgeDriverVersion(GetEdgeDriverVersionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getEdgeDriverVersionWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request GetEdgeInstanceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetEdgeInstanceResponse
+     */
     public GetEdgeInstanceResponse getEdgeInstanceWithOptions(GetEdgeInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6767,11 +8658,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetEdgeInstanceResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request GetEdgeInstanceRequest
+      * @return GetEdgeInstanceResponse
+     */
     public GetEdgeInstanceResponse getEdgeInstance(GetEdgeInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getEdgeInstanceWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of five queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request GetEdgeInstanceDeploymentRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetEdgeInstanceDeploymentResponse
+     */
     public GetEdgeInstanceDeploymentResponse getEdgeInstanceDeploymentWithOptions(GetEdgeInstanceDeploymentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6804,6 +8712,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetEdgeInstanceDeploymentResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of five queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request GetEdgeInstanceDeploymentRequest
+      * @return GetEdgeInstanceDeploymentResponse
+     */
     public GetEdgeInstanceDeploymentResponse getEdgeInstanceDeployment(GetEdgeInstanceDeploymentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getEdgeInstanceDeploymentWithOptions(request, runtime);
@@ -6846,6 +8762,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getEdgeInstanceMessageRoutingWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request GetGatewayBySubDeviceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetGatewayBySubDeviceResponse
+     */
     public GetGatewayBySubDeviceResponse getGatewayBySubDeviceWithOptions(GetGatewayBySubDeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6882,6 +8807,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetGatewayBySubDeviceResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request GetGatewayBySubDeviceRequest
+      * @return GetGatewayBySubDeviceResponse
+     */
     public GetGatewayBySubDeviceResponse getGatewayBySubDevice(GetGatewayBySubDeviceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getGatewayBySubDeviceWithOptions(request, runtime);
@@ -6986,6 +8919,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getParserDataSourceWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request GetRuleRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetRuleResponse
+     */
     public GetRuleResponse getRuleWithOptions(GetRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7014,11 +8956,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetRuleResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request GetRuleRequest
+      * @return GetRuleResponse
+     */
     public GetRuleResponse getRule(GetRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getRuleWithOptions(request, runtime);
     }
 
+    /**
+      * In addition to the preceding operation-specific request parameters, you must specify common request parameters when you call this operation. For more information, see [Common request parameters](~~30561~~).
+      *
+      * @param request GetRuleActionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetRuleActionResponse
+     */
     public GetRuleActionResponse getRuleActionWithOptions(GetRuleActionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7047,6 +9004,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetRuleActionResponse());
     }
 
+    /**
+      * In addition to the preceding operation-specific request parameters, you must specify common request parameters when you call this operation. For more information, see [Common request parameters](~~30561~~).
+      *
+      * @param request GetRuleActionRequest
+      * @return GetRuleActionResponse
+     */
     public GetRuleActionResponse getRuleAction(GetRuleActionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getRuleActionWithOptions(request, runtime);
@@ -7349,6 +9312,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getStudioAppTokenOpenWithOptions(request, runtime);
     }
 
+    /**
+      * In addition to the preceding operation-specific request parameters, you must specify common request parameters when you call this operation. For more information, see [Common request parameters](~~30561~~).
+      *
+      * @param request GetThingModelTslRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetThingModelTslResponse
+     */
     public GetThingModelTslResponse getThingModelTslWithOptions(GetThingModelTslRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7389,11 +9359,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetThingModelTslResponse());
     }
 
+    /**
+      * In addition to the preceding operation-specific request parameters, you must specify common request parameters when you call this operation. For more information, see [Common request parameters](~~30561~~).
+      *
+      * @param request GetThingModelTslRequest
+      * @return GetThingModelTslResponse
+     */
     public GetThingModelTslResponse getThingModelTsl(GetThingModelTslRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getThingModelTslWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 20 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request GetThingModelTslPublishedRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetThingModelTslPublishedResponse
+     */
     public GetThingModelTslPublishedResponse getThingModelTslPublishedWithOptions(GetThingModelTslPublishedRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7438,11 +9423,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetThingModelTslPublishedResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 20 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request GetThingModelTslPublishedRequest
+      * @return GetThingModelTslPublishedResponse
+     */
     public GetThingModelTslPublishedResponse getThingModelTslPublished(GetThingModelTslPublishedRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getThingModelTslPublishedWithOptions(request, runtime);
     }
 
+    /**
+      * *   A data parsing script is used to convert the custom-formatted data to JSON data after the data is submitted by a device. You can write a script in JavaScript, Python 2.7, and PHP 7.2. For more information, see [Submit scripts for data parsing](~~149963~~).
+      * *   Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request GetThingScriptRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetThingScriptResponse
+     */
     public GetThingScriptResponse getThingScriptWithOptions(GetThingScriptRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7471,11 +9473,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetThingScriptResponse());
     }
 
+    /**
+      * *   A data parsing script is used to convert the custom-formatted data to JSON data after the data is submitted by a device. You can write a script in JavaScript, Python 2.7, and PHP 7.2. For more information, see [Submit scripts for data parsing](~~149963~~).
+      * *   Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request GetThingScriptRequest
+      * @return GetThingScriptResponse
+     */
     public GetThingScriptResponse getThingScript(GetThingScriptRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getThingScriptWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 2 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request GetThingTemplateRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetThingTemplateResponse
+     */
     public GetThingTemplateResponse getThingTemplateWithOptions(GetThingTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7508,11 +9527,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetThingTemplateResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 2 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request GetThingTemplateRequest
+      * @return GetThingTemplateResponse
+     */
     public GetThingTemplateResponse getThingTemplate(GetThingTemplateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getThingTemplateWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can initiate a maximum of 500 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request GetThingTopoRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetThingTopoResponse
+     */
     public GetThingTopoResponse getThingTopoWithOptions(GetThingTopoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7557,6 +9593,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetThingTopoResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can initiate a maximum of 500 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request GetThingTopoRequest
+      * @return GetThingTopoResponse
+     */
     public GetThingTopoResponse getThingTopo(GetThingTopoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getThingTopoWithOptions(request, runtime);
@@ -7646,6 +9690,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ImportDTDataResponse importDTDataWithOptions(ImportDTDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DTInstanceId)) {
+            query.put("DTInstanceId", request.DTInstanceId);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
             body.put("IotInstanceId", request.iotInstanceId);
@@ -7660,6 +9709,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -7730,6 +9780,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.importDeviceWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * *   If a product is published, you must call the [CancelReleaseProduct](~~213875~~) operation to unpublish the product before you call this operation.
+      * *   Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ImportThingModelTslRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ImportThingModelTslResponse
+     */
     public ImportThingModelTslResponse importThingModelTslWithOptions(ImportThingModelTslRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7778,6 +9838,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ImportThingModelTslResponse());
     }
 
+    /**
+      * ## Limits
+      * *   If a product is published, you must call the [CancelReleaseProduct](~~213875~~) operation to unpublish the product before you call this operation.
+      * *   Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ImportThingModelTslRequest
+      * @return ImportThingModelTslResponse
+     */
     public ImportThingModelTslResponse importThingModelTsl(ImportThingModelTslRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.importThingModelTslWithOptions(request, runtime);
@@ -7820,6 +9889,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.invokeDataAPIServiceWithOptions(request, runtime);
     }
 
+    /**
+      * When you define a service in a Thing Specification Language (TSL) model, the mode in which the service is called is specified. When you call a service by using this operation, IoT Platform uses a call mode based on the value of the **Identifier** parameter.
+      * *   Synchronous mode: IoT Platform sends a revert-remote procedure call (RRPC) request to a device. Then, the device synchronously returns an RRPC response. For more information about how to use an RRPC, see [What is RRPC?](~~90567~~)
+      * *   Asynchronous mode: IoT Platform sends an RRPC request to a device. Then, the device asynchronously returns an RRPC response. For more information about topics, see [Device properties, events, and services](~~89301~~).
+      * > If you set the Checksum Type parameter to **Verification-free** when you create a product, the asynchronous mode is used.
+      * When the device receives the service call, the device returns a response to the service caller. When you configure the device, you must specify the response logic and response parameters. The data formats of response parameters must comply with the Alink protocol. Example:
+      * ```
+      * {
+      * 	"id": "58***89",
+      * 	"code": 200,
+      * 	"data": {},
+      * 	"message": "success",
+      * 	"localizedMsg": "localizedMsg"
+      * }
+      * ```
+      * > *   The **id** parameter specifies the unique identifier of the request. The ID is generated by IoT Platform. The device can obtain the ID from the request parameters and then return the ID.
+      * >*   The **code** parameter specifies the result of the service call. The value of the parameter is an integer.
+      * >*   The **data** parameter specifies the result of the service call. This parameter is returned to the service caller. You can configure the parameters that you want to include in the returned result. The data must be in the JSON format.
+      * >*   The **message** and **localizedMsg** parameters are optional.
+      * >*   Link SDK for C of IoT Platform provides an example on how to use a TSL model. For more information, see [Call device services](~~258239~~).
+      * ## Limits
+      * If you synchronously call a service, the timeout period is 8 seconds. If a server does not receive a response within 8 seconds, a timeout error occurs. No limit is imposed on the timeout period of asynchronous calls. 
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 500 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request InvokeThingServiceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return InvokeThingServiceResponse
+     */
     public InvokeThingServiceResponse invokeThingServiceWithOptions(InvokeThingServiceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7864,11 +9963,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new InvokeThingServiceResponse());
     }
 
+    /**
+      * When you define a service in a Thing Specification Language (TSL) model, the mode in which the service is called is specified. When you call a service by using this operation, IoT Platform uses a call mode based on the value of the **Identifier** parameter.
+      * *   Synchronous mode: IoT Platform sends a revert-remote procedure call (RRPC) request to a device. Then, the device synchronously returns an RRPC response. For more information about how to use an RRPC, see [What is RRPC?](~~90567~~)
+      * *   Asynchronous mode: IoT Platform sends an RRPC request to a device. Then, the device asynchronously returns an RRPC response. For more information about topics, see [Device properties, events, and services](~~89301~~).
+      * > If you set the Checksum Type parameter to **Verification-free** when you create a product, the asynchronous mode is used.
+      * When the device receives the service call, the device returns a response to the service caller. When you configure the device, you must specify the response logic and response parameters. The data formats of response parameters must comply with the Alink protocol. Example:
+      * ```
+      * {
+      * 	"id": "58***89",
+      * 	"code": 200,
+      * 	"data": {},
+      * 	"message": "success",
+      * 	"localizedMsg": "localizedMsg"
+      * }
+      * ```
+      * > *   The **id** parameter specifies the unique identifier of the request. The ID is generated by IoT Platform. The device can obtain the ID from the request parameters and then return the ID.
+      * >*   The **code** parameter specifies the result of the service call. The value of the parameter is an integer.
+      * >*   The **data** parameter specifies the result of the service call. This parameter is returned to the service caller. You can configure the parameters that you want to include in the returned result. The data must be in the JSON format.
+      * >*   The **message** and **localizedMsg** parameters are optional.
+      * >*   Link SDK for C of IoT Platform provides an example on how to use a TSL model. For more information, see [Call device services](~~258239~~).
+      * ## Limits
+      * If you synchronously call a service, the timeout period is 8 seconds. If a server does not receive a response within 8 seconds, a timeout error occurs. No limit is imposed on the timeout period of asynchronous calls. 
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 500 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request InvokeThingServiceRequest
+      * @return InvokeThingServiceResponse
+     */
     public InvokeThingServiceResponse invokeThingService(InvokeThingServiceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.invokeThingServiceWithOptions(request, runtime);
     }
 
+    /**
+      * You can only asynchronously call this operation.
+      * When the device receives the service call, the device returns a response to the service caller. When you configure the device, you must specify the response logic and response parameters. The data formats of response parameters must comply with the Alink protocol. Example:
+      * ```
+      * {
+      * 	"id": "58***89",
+      * 	"code": 200,
+      * 	"data": {},
+      * 	"message": "success",
+      * 	"localizedMsg": "localizedMsg"
+      * }
+      * ```
+      * > *   The **id** parameter specifies the unique identifier of the request. The ID is generated by IoT Platform. The device can obtain the ID from the request parameters and return the ID.
+      * >*   The **code** parameter specifies the result of the service call. The value of the parameter is an integer.
+      * >*   The **data** parameter specifies the result of the service call. This parameter is returned to the service caller. You can specify the parameters included in the returned result. The data must be in JSON format.
+      * >*   The **message** and **localizedMsg** parameters are optional.
+      * >*    Link SDK for C of IoT Platform provides an example on how to use a TSL model. For more information, see [Call device services](~~258239~~).
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 10 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request InvokeThingsServiceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return InvokeThingsServiceResponse
+     */
     public InvokeThingsServiceResponse invokeThingsServiceWithOptions(InvokeThingsServiceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7909,6 +10062,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new InvokeThingsServiceResponse());
     }
 
+    /**
+      * You can only asynchronously call this operation.
+      * When the device receives the service call, the device returns a response to the service caller. When you configure the device, you must specify the response logic and response parameters. The data formats of response parameters must comply with the Alink protocol. Example:
+      * ```
+      * {
+      * 	"id": "58***89",
+      * 	"code": 200,
+      * 	"data": {},
+      * 	"message": "success",
+      * 	"localizedMsg": "localizedMsg"
+      * }
+      * ```
+      * > *   The **id** parameter specifies the unique identifier of the request. The ID is generated by IoT Platform. The device can obtain the ID from the request parameters and return the ID.
+      * >*   The **code** parameter specifies the result of the service call. The value of the parameter is an integer.
+      * >*   The **data** parameter specifies the result of the service call. This parameter is returned to the service caller. You can specify the parameters included in the returned result. The data must be in JSON format.
+      * >*   The **message** and **localizedMsg** parameters are optional.
+      * >*    Link SDK for C of IoT Platform provides an example on how to use a TSL model. For more information, see [Call device services](~~258239~~).
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 10 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request InvokeThingsServiceRequest
+      * @return InvokeThingsServiceResponse
+     */
     public InvokeThingsServiceResponse invokeThingsService(InvokeThingsServiceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.invokeThingsServiceWithOptions(request, runtime);
@@ -8053,6 +10230,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listDestinationWithOptions(request, runtime);
     }
 
+    /**
+      * If you use an Enterprise Edition instance, you must specify the **IotInstanceId** parameter when you call this operation. Otherwise, the call fails.
+      * ## QPS limits
+      * You can call this API operation up to five times per second per account. 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ListDeviceDistributeJobRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListDeviceDistributeJobResponse
+     */
     public ListDeviceDistributeJobResponse listDeviceDistributeJobWithOptions(ListDeviceDistributeJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8103,11 +10290,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListDeviceDistributeJobResponse());
     }
 
+    /**
+      * If you use an Enterprise Edition instance, you must specify the **IotInstanceId** parameter when you call this operation. Otherwise, the call fails.
+      * ## QPS limits
+      * You can call this API operation up to five times per second per account. 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ListDeviceDistributeJobRequest
+      * @return ListDeviceDistributeJobResponse
+     */
     public ListDeviceDistributeJobResponse listDeviceDistributeJob(ListDeviceDistributeJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDeviceDistributeJobWithOptions(request, runtime);
     }
 
+    /**
+      * *   This operation can be called only by using the following **endpoint**: `iot.cn-shanghai.aliyuncs.com`.
+      * *   Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      * *   Multiple Alibaba Cloud accounts can run a maximum of 200 QPS at the same time.
+      *
+      * @param request ListDistributedDeviceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListDistributedDeviceResponse
+     */
     public ListDistributedDeviceResponse listDistributedDeviceWithOptions(ListDistributedDeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8152,11 +10358,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListDistributedDeviceResponse());
     }
 
+    /**
+      * *   This operation can be called only by using the following **endpoint**: `iot.cn-shanghai.aliyuncs.com`.
+      * *   Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      * *   Multiple Alibaba Cloud accounts can run a maximum of 200 QPS at the same time.
+      *
+      * @param request ListDistributedDeviceRequest
+      * @return ListDistributedDeviceResponse
+     */
     public ListDistributedDeviceResponse listDistributedDevice(ListDistributedDeviceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDistributedDeviceWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation only by using the following **endpoint**: `iot.cn-shanghai.aliyuncs.com`.
+      * ## QPS limits
+      * You can call this API operation up to five times per second per account. 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ListDistributedProductRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListDistributedProductResponse
+     */
     public ListDistributedProductResponse listDistributedProductWithOptions(ListDistributedProductRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8201,6 +10426,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListDistributedProductResponse());
     }
 
+    /**
+      * You can call this operation only by using the following **endpoint**: `iot.cn-shanghai.aliyuncs.com`.
+      * ## QPS limits
+      * You can call this API operation up to five times per second per account. 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ListDistributedProductRequest
+      * @return ListDistributedProductResponse
+     */
     public ListDistributedProductResponse listDistributedProduct(ListDistributedProductRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDistributedProductWithOptions(request, runtime);
@@ -8247,6 +10481,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listJobWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ListOTAFirmwareRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListOTAFirmwareResponse
+     */
     public ListOTAFirmwareResponse listOTAFirmwareWithOptions(ListOTAFirmwareRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8287,11 +10530,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListOTAFirmwareResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ListOTAFirmwareRequest
+      * @return ListOTAFirmwareResponse
+     */
     public ListOTAFirmwareResponse listOTAFirmware(ListOTAFirmwareRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listOTAFirmwareWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ListOTAJobByDeviceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListOTAJobByDeviceResponse
+     */
     public ListOTAJobByDeviceResponse listOTAJobByDeviceWithOptions(ListOTAJobByDeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8336,11 +10596,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListOTAJobByDeviceResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ListOTAJobByDeviceRequest
+      * @return ListOTAJobByDeviceResponse
+     */
     public ListOTAJobByDeviceResponse listOTAJobByDevice(ListOTAJobByDeviceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listOTAJobByDeviceWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ListOTAJobByFirmwareRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListOTAJobByFirmwareResponse
+     */
     public ListOTAJobByFirmwareResponse listOTAJobByFirmwareWithOptions(ListOTAJobByFirmwareRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8377,11 +10654,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListOTAJobByFirmwareResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ListOTAJobByFirmwareRequest
+      * @return ListOTAJobByFirmwareResponse
+     */
     public ListOTAJobByFirmwareResponse listOTAJobByFirmware(ListOTAJobByFirmwareRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listOTAJobByFirmwareWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ListOTAModuleByProductRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListOTAModuleByProductResponse
+     */
     public ListOTAModuleByProductResponse listOTAModuleByProductWithOptions(ListOTAModuleByProductRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -8402,11 +10696,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListOTAModuleByProductResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ListOTAModuleByProductRequest
+      * @return ListOTAModuleByProductResponse
+     */
     public ListOTAModuleByProductResponse listOTAModuleByProduct(ListOTAModuleByProductRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listOTAModuleByProductWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ListOTAModuleVersionsByDeviceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListOTAModuleVersionsByDeviceResponse
+     */
     public ListOTAModuleVersionsByDeviceResponse listOTAModuleVersionsByDeviceWithOptions(ListOTAModuleVersionsByDeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8451,11 +10762,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListOTAModuleVersionsByDeviceResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ListOTAModuleVersionsByDeviceRequest
+      * @return ListOTAModuleVersionsByDeviceResponse
+     */
     public ListOTAModuleVersionsByDeviceResponse listOTAModuleVersionsByDevice(ListOTAModuleVersionsByDeviceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listOTAModuleVersionsByDeviceWithOptions(request, runtime);
     }
 
+    /**
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 10 queries per second (QPS).
+      * >  The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.
+      *
+      * @param request ListOTATaskByJobRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListOTATaskByJobResponse
+     */
     public ListOTATaskByJobResponse listOTATaskByJobWithOptions(ListOTATaskByJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8500,11 +10828,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListOTATaskByJobResponse());
     }
 
+    /**
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 10 queries per second (QPS).
+      * >  The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.
+      *
+      * @param request ListOTATaskByJobRequest
+      * @return ListOTATaskByJobResponse
+     */
     public ListOTATaskByJobResponse listOTATaskByJob(ListOTATaskByJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listOTATaskByJobWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ListOTAUnfinishedTaskByDeviceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListOTAUnfinishedTaskByDeviceResponse
+     */
     public ListOTAUnfinishedTaskByDeviceResponse listOTAUnfinishedTaskByDeviceWithOptions(ListOTAUnfinishedTaskByDeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8549,6 +10894,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListOTAUnfinishedTaskByDeviceResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ListOTAUnfinishedTaskByDeviceRequest
+      * @return ListOTAUnfinishedTaskByDeviceResponse
+     */
     public ListOTAUnfinishedTaskByDeviceResponse listOTAUnfinishedTaskByDevice(ListOTAUnfinishedTaskByDeviceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listOTAUnfinishedTaskByDeviceWithOptions(request, runtime);
@@ -8673,6 +11026,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listParserDestinationWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * *   Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      * *   You can specify a tag key or a tag key-value pair for search.
+      * *   If you specify multiple tags, the logical relationship among these tags is **OR**.
+      *
+      * @param request ListProductByTagsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListProductByTagsResponse
+     */
     public ListProductByTagsResponse listProductByTagsWithOptions(ListProductByTagsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8709,11 +11073,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListProductByTagsResponse());
     }
 
+    /**
+      * ## Limits
+      * *   Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      * *   You can specify a tag key or a tag key-value pair for search.
+      * *   If you specify multiple tags, the logical relationship among these tags is **OR**.
+      *
+      * @param request ListProductByTagsRequest
+      * @return ListProductByTagsResponse
+     */
     public ListProductByTagsResponse listProductByTags(ListProductByTagsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listProductByTagsWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ListProductTagsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListProductTagsResponse
+     */
     public ListProductTagsResponse listProductTagsWithOptions(ListProductTagsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8742,11 +11125,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListProductTagsResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ListProductTagsRequest
+      * @return ListProductTagsResponse
+     */
     public ListProductTagsResponse listProductTags(ListProductTagsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listProductTagsWithOptions(request, runtime);
     }
 
+    /**
+      * ## QPS limits
+      * You can call this API operation up to 20 times per second per account.
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ListRuleRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListRuleResponse
+     */
     public ListRuleResponse listRuleWithOptions(ListRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8783,11 +11183,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListRuleResponse());
     }
 
+    /**
+      * ## QPS limits
+      * You can call this API operation up to 20 times per second per account.
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ListRuleRequest
+      * @return ListRuleResponse
+     */
     public ListRuleResponse listRule(ListRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listRuleWithOptions(request, runtime);
     }
 
+    /**
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 50 queries per second (QPS).
+      * >  The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ListRuleActionsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListRuleActionsResponse
+     */
     public ListRuleActionsResponse listRuleActionsWithOptions(ListRuleActionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8816,6 +11233,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListRuleActionsResponse());
     }
 
+    /**
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 50 queries per second (QPS).
+      * >  The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ListRuleActionsRequest
+      * @return ListRuleActionsResponse
+     */
     public ListRuleActionsResponse listRuleActions(ListRuleActionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listRuleActionsWithOptions(request, runtime);
@@ -8876,6 +11301,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listTaskWithOptions(request, runtime);
     }
 
+    /**
+      * You can manage TSL models by version. After you import a TSL model by calling the [ImportThingModelTsl](~~150320~~) operation, copy a TSL model by calling the [CopyThingModel](~~150322~~) operation, or edit a TSL model, you must publish the TSL model by calling the [PublishThingModel](~~150311~~) operation. Then, the TSL model can be used. Each time a TSL model of a product is published, a new version is generated.
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS). 
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ListThingModelVersionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListThingModelVersionResponse
+     */
     public ListThingModelVersionResponse listThingModelVersionWithOptions(ListThingModelVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8904,11 +11339,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListThingModelVersionResponse());
     }
 
+    /**
+      * You can manage TSL models by version. After you import a TSL model by calling the [ImportThingModelTsl](~~150320~~) operation, copy a TSL model by calling the [CopyThingModel](~~150322~~) operation, or edit a TSL model, you must publish the TSL model by calling the [PublishThingModel](~~150311~~) operation. Then, the TSL model can be used. Each time a TSL model of a product is published, a new version is generated.
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS). 
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ListThingModelVersionRequest
+      * @return ListThingModelVersionResponse
+     */
     public ListThingModelVersionResponse listThingModelVersion(ListThingModelVersionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listThingModelVersionWithOptions(request, runtime);
     }
 
+    /**
+      * IoT Platform provides product categories that have defined TSL models, such as street lamps, vehicle location cards, and water immersion detectors.
+      * When you call the [CreateProduct](~~69123~~) operation to create a product, you can set the CategoryKey parameter to specify a product category. The product that you create references the standardized TSL model of the specified category.
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS). 
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ListThingTemplatesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListThingTemplatesResponse
+     */
     public ListThingTemplatesResponse listThingTemplatesWithOptions(ListThingTemplatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8933,11 +11388,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListThingTemplatesResponse());
     }
 
+    /**
+      * IoT Platform provides product categories that have defined TSL models, such as street lamps, vehicle location cards, and water immersion detectors.
+      * When you call the [CreateProduct](~~69123~~) operation to create a product, you can set the CategoryKey parameter to specify a product category. The product that you create references the standardized TSL model of the specified category.
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS). 
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ListThingTemplatesRequest
+      * @return ListThingTemplatesResponse
+     */
     public ListThingTemplatesResponse listThingTemplates(ListThingTemplatesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listThingTemplatesWithOptions(request, runtime);
     }
 
+    /**
+      * A successful response indicates that the command to add topological relationships is sent to the gateway. It does not indicate that the topological relationships are added.
+      * When you develop the gateway, you must subscribe to the topic that is used to send notifications when you add topological relationships. For more information about the topic and message format, see [Manage topological relationships](~~89299~~).
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS). 
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request NotifyAddThingTopoRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return NotifyAddThingTopoResponse
+     */
     public NotifyAddThingTopoResponse notifyAddThingTopoWithOptions(NotifyAddThingTopoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8978,6 +11454,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new NotifyAddThingTopoResponse());
     }
 
+    /**
+      * A successful response indicates that the command to add topological relationships is sent to the gateway. It does not indicate that the topological relationships are added.
+      * When you develop the gateway, you must subscribe to the topic that is used to send notifications when you add topological relationships. For more information about the topic and message format, see [Manage topological relationships](~~89299~~).
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS). 
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request NotifyAddThingTopoRequest
+      * @return NotifyAddThingTopoResponse
+     */
     public NotifyAddThingTopoResponse notifyAddThingTopo(NotifyAddThingTopoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.notifyAddThingTopoWithOptions(request, runtime);
@@ -9202,6 +11688,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.printByTemplateWithOptions(request, runtime);
     }
 
+    /**
+      * This operation does not support device property settings and service invocations.
+      * *   To set properties, call the [SetDeviceProperty](~~69579~~) or [SetDevicesProperty](~~96243~~) operation.
+      * *   To invoke a service, call the [InvokeThingService](~~69584~~) or [InvokeThingsService](~~96242~~) operation.
+      * ## QPS limit
+      * You can call this API operation up to 1,600 times per second per account. 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request PubRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return PubResponse
+     */
     public PubResponse pubWithOptions(PubRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -9268,11 +11766,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PubResponse());
     }
 
+    /**
+      * This operation does not support device property settings and service invocations.
+      * *   To set properties, call the [SetDeviceProperty](~~69579~~) or [SetDevicesProperty](~~96243~~) operation.
+      * *   To invoke a service, call the [InvokeThingService](~~69584~~) or [InvokeThingsService](~~96242~~) operation.
+      * ## QPS limit
+      * You can call this API operation up to 1,600 times per second per account. 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request PubRequest
+      * @return PubResponse
+     */
     public PubResponse pub(PubRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.pubWithOptions(request, runtime);
     }
 
+    /**
+      * You can use the **TopicFullName** parameter in the **request** to specify the devices to which you want to broadcast messages. For more information, see the description about the **TopicFullName** parameter in this topic.
+      * ## QPS limits
+      * - Each Alibaba Cloud account can run only one query per second (QPS) to broadcast a message to devices that subscribe to a topic.
+      * - Each Alibaba Cloud account can run only one query per minute (QPM) to broadcast a message to all online devices of a product.      >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request PubBroadcastRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return PubBroadcastResponse
+     */
     public PubBroadcastResponse pubBroadcastWithOptions(PubBroadcastRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -9309,6 +11828,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PubBroadcastResponse());
     }
 
+    /**
+      * You can use the **TopicFullName** parameter in the **request** to specify the devices to which you want to broadcast messages. For more information, see the description about the **TopicFullName** parameter in this topic.
+      * ## QPS limits
+      * - Each Alibaba Cloud account can run only one query per second (QPS) to broadcast a message to devices that subscribe to a topic.
+      * - Each Alibaba Cloud account can run only one query per minute (QPM) to broadcast a message to all online devices of a product.      >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request PubBroadcastRequest
+      * @return PubBroadcastResponse
+     */
     public PubBroadcastResponse pubBroadcast(PubBroadcastRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.pubBroadcastWithOptions(request, runtime);
@@ -9388,6 +11916,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.publishStudioAppWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * *   If a product is published, you must call the [CancelReleaseProduct](~~213875~~) operation to unpublish the product before you call this operation.
+      * *   Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request PublishThingModelRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return PublishThingModelResponse
+     */
     public PublishThingModelResponse publishThingModelWithOptions(PublishThingModelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -9428,6 +11966,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PublishThingModelResponse());
     }
 
+    /**
+      * ## Limits
+      * *   If a product is published, you must call the [CancelReleaseProduct](~~213875~~) operation to unpublish the product before you call this operation.
+      * *   Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request PublishThingModelRequest
+      * @return PublishThingModelResponse
+     */
     public PublishThingModelResponse publishThingModel(PublishThingModelRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.publishThingModelWithOptions(request, runtime);
@@ -9492,6 +12039,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.pushSpeechWithOptions(request, runtime);
     }
 
+    /**
+      * ## QPS limits
+      * You can call this API operation up to 30 times per second per account.
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryBatchRegisterDeviceStatusRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryBatchRegisterDeviceStatusResponse
+     */
     public QueryBatchRegisterDeviceStatusResponse queryBatchRegisterDeviceStatusWithOptions(QueryBatchRegisterDeviceStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -9524,6 +12080,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryBatchRegisterDeviceStatusResponse());
     }
 
+    /**
+      * ## QPS limits
+      * You can call this API operation up to 30 times per second per account.
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryBatchRegisterDeviceStatusRequest
+      * @return QueryBatchRegisterDeviceStatusResponse
+     */
     public QueryBatchRegisterDeviceStatusResponse queryBatchRegisterDeviceStatus(QueryBatchRegisterDeviceStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryBatchRegisterDeviceStatusWithOptions(request, runtime);
@@ -9562,6 +12126,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryCertUrlByApplyIdWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryClientIdsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryClientIdsResponse
+     */
     public QueryClientIdsResponse queryClientIdsWithOptions(QueryClientIdsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -9590,11 +12163,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryClientIdsResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryClientIdsRequest
+      * @return QueryClientIdsResponse
+     */
     public QueryClientIdsResponse queryClientIds(QueryClientIdsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryClientIdsWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryConsumerGroupByGroupIdRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryConsumerGroupByGroupIdResponse
+     */
     public QueryConsumerGroupByGroupIdResponse queryConsumerGroupByGroupIdWithOptions(QueryConsumerGroupByGroupIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -9623,11 +12213,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryConsumerGroupByGroupIdResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryConsumerGroupByGroupIdRequest
+      * @return QueryConsumerGroupByGroupIdResponse
+     */
     public QueryConsumerGroupByGroupIdResponse queryConsumerGroupByGroupId(QueryConsumerGroupByGroupIdRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryConsumerGroupByGroupIdWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryConsumerGroupListRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryConsumerGroupListResponse
+     */
     public QueryConsumerGroupListResponse queryConsumerGroupListWithOptions(QueryConsumerGroupListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -9651,6 +12258,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.subBizCode)) {
+            query.put("SubBizCode", request.subBizCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -9668,11 +12283,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryConsumerGroupListResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryConsumerGroupListRequest
+      * @return QueryConsumerGroupListResponse
+     */
     public QueryConsumerGroupListResponse queryConsumerGroupList(QueryConsumerGroupListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryConsumerGroupListWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryConsumerGroupStatusRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryConsumerGroupStatusResponse
+     */
     public QueryConsumerGroupStatusResponse queryConsumerGroupStatusWithOptions(QueryConsumerGroupStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -9701,6 +12333,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryConsumerGroupStatusResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryConsumerGroupStatusRequest
+      * @return QueryConsumerGroupStatusResponse
+     */
     public QueryConsumerGroupStatusResponse queryConsumerGroupStatus(QueryConsumerGroupStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryConsumerGroupStatusWithOptions(request, runtime);
@@ -9759,6 +12399,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryDetailSceneRuleLogWithOptions(request, runtime);
     }
 
+    /**
+      * The QueryDevice operation can return up to one million devices each time you call the operation.
+      * ## QPS limits
+      * - You can call this API operation up to 50 times per second per account. >  The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.
+      * - If the product of the value of the **CurrentPage** parameter and the value of the **PageSize** parameter is greater than or equal to 100,000, the queries per second (QPS) of this operation decreases. 
+      * In this case, you can call this API operation up to two times per second per account.
+      *
+      * @param request QueryDeviceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryDeviceResponse
+     */
     public QueryDeviceResponse queryDeviceWithOptions(QueryDeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -9799,11 +12450,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDeviceResponse());
     }
 
+    /**
+      * The QueryDevice operation can return up to one million devices each time you call the operation.
+      * ## QPS limits
+      * - You can call this API operation up to 50 times per second per account. >  The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.
+      * - If the product of the value of the **CurrentPage** parameter and the value of the **PageSize** parameter is greater than or equal to 100,000, the queries per second (QPS) of this operation decreases. 
+      * In this case, you can call this API operation up to two times per second per account.
+      *
+      * @param request QueryDeviceRequest
+      * @return QueryDeviceResponse
+     */
     public QueryDeviceResponse queryDevice(QueryDeviceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryDeviceWithOptions(request, runtime);
     }
 
+    /**
+      * *   You can query devices on Enterprise Edition instances only in the China (Shanghai) and Japan (Tokyo) regions.
+      * *   The QueryDeviceBySQL operation can return up to 10,000 devices each time you call the operation. For more information, see the "`Syntax of LIMIT clauses`" section of this topic.
+      * ## QPS limits
+      * You can call this API operation up to 10 times per second per account. 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceBySQLRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryDeviceBySQLResponse
+     */
     public QueryDeviceBySQLResponse queryDeviceBySQLWithOptions(QueryDeviceBySQLRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -9832,11 +12504,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDeviceBySQLResponse());
     }
 
+    /**
+      * *   You can query devices on Enterprise Edition instances only in the China (Shanghai) and Japan (Tokyo) regions.
+      * *   The QueryDeviceBySQL operation can return up to 10,000 devices each time you call the operation. For more information, see the "`Syntax of LIMIT clauses`" section of this topic.
+      * ## QPS limits
+      * You can call this API operation up to 10 times per second per account. 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceBySQLRequest
+      * @return QueryDeviceBySQLResponse
+     */
     public QueryDeviceBySQLResponse queryDeviceBySQL(QueryDeviceBySQLRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryDeviceBySQLWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * *   After the status of a device changes, the new status is applied within 10 seconds. After the new status is applied, you can search for the device by using the new status. Before the new status is applied, you can search for the device by using the previous status.
+      * *   Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceByStatusRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryDeviceByStatusResponse
+     */
     public QueryDeviceByStatusResponse queryDeviceByStatusWithOptions(QueryDeviceByStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -9881,11 +12573,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDeviceByStatusResponse());
     }
 
+    /**
+      * ## Limits
+      * *   After the status of a device changes, the new status is applied within 10 seconds. After the new status is applied, you can search for the device by using the new status. Before the new status is applied, you can search for the device by using the previous status.
+      * *   Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceByStatusRequest
+      * @return QueryDeviceByStatusResponse
+     */
     public QueryDeviceByStatusResponse queryDeviceByStatus(QueryDeviceByStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryDeviceByStatusWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * *   You can specify a maximum of 10 tags in a single call.
+      * *   Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceByTagsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryDeviceByTagsResponse
+     */
     public QueryDeviceByTagsResponse queryDeviceByTagsWithOptions(QueryDeviceByTagsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -9922,6 +12633,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDeviceByTagsResponse());
     }
 
+    /**
+      * ## Limits
+      * *   You can specify a maximum of 10 tags in a single call.
+      * *   Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceByTagsRequest
+      * @return QueryDeviceByTagsResponse
+     */
     public QueryDeviceByTagsResponse queryDeviceByTags(QueryDeviceByTagsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryDeviceByTagsWithOptions(request, runtime);
@@ -9964,6 +12684,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryDeviceCertWithOptions(request, runtime);
     }
 
+    /**
+      * *   The desired values of read-only properties cannot be queried.
+      * *   You can query the desired values of up to 10 properties in a single call.
+      * ## QPS limits
+      * You can call this API operation up to 50 times per second per account. 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceDesiredPropertyRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryDeviceDesiredPropertyResponse
+     */
     public QueryDeviceDesiredPropertyResponse queryDeviceDesiredPropertyWithOptions(QueryDeviceDesiredPropertyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -10008,11 +12739,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDeviceDesiredPropertyResponse());
     }
 
+    /**
+      * *   The desired values of read-only properties cannot be queried.
+      * *   You can query the desired values of up to 10 properties in a single call.
+      * ## QPS limits
+      * You can call this API operation up to 50 times per second per account. 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceDesiredPropertyRequest
+      * @return QueryDeviceDesiredPropertyResponse
+     */
     public QueryDeviceDesiredPropertyResponse queryDeviceDesiredProperty(QueryDeviceDesiredPropertyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryDeviceDesiredPropertyWithOptions(request, runtime);
     }
 
+    /**
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 50 queries per second (QPS).
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceDetailRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryDeviceDetailResponse
+     */
     public QueryDeviceDetailResponse queryDeviceDetailWithOptions(QueryDeviceDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -10049,11 +12799,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDeviceDetailResponse());
     }
 
+    /**
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 50 queries per second (QPS).
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceDetailRequest
+      * @return QueryDeviceDetailResponse
+     */
     public QueryDeviceDetailResponse queryDeviceDetail(QueryDeviceDetailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryDeviceDetailWithOptions(request, runtime);
     }
 
+    /**
+      * *   This operation can be called only by using the following **endpoint**: `iot.cn-shanghai.aliyuncs.com`.
+      * *   Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceDistributeDetailRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryDeviceDistributeDetailResponse
+     */
     public QueryDeviceDistributeDetailResponse queryDeviceDistributeDetailWithOptions(QueryDeviceDistributeDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -10078,11 +12845,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDeviceDistributeDetailResponse());
     }
 
+    /**
+      * *   This operation can be called only by using the following **endpoint**: `iot.cn-shanghai.aliyuncs.com`.
+      * *   Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceDistributeDetailRequest
+      * @return QueryDeviceDistributeDetailResponse
+     */
     public QueryDeviceDistributeDetailResponse queryDeviceDistributeDetail(QueryDeviceDistributeDetailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryDeviceDistributeDetailWithOptions(request, runtime);
     }
 
+    /**
+      * *   This operation can be called only by using the following **endpoint**: `iot.cn-shanghai.aliyuncs.com`.
+      * *   Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceDistributeJobRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryDeviceDistributeJobResponse
+     */
     public QueryDeviceDistributeJobResponse queryDeviceDistributeJobWithOptions(QueryDeviceDistributeJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -10107,11 +12891,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDeviceDistributeJobResponse());
     }
 
+    /**
+      * *   This operation can be called only by using the following **endpoint**: `iot.cn-shanghai.aliyuncs.com`.
+      * *   Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceDistributeJobRequest
+      * @return QueryDeviceDistributeJobResponse
+     */
     public QueryDeviceDistributeJobResponse queryDeviceDistributeJob(QueryDeviceDistributeJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryDeviceDistributeJobWithOptions(request, runtime);
     }
 
+    /**
+      * You can query only the event records that are generated in the previous 30 days.
+      * >  The storage period of an event record is calculated from the day when the record is generated.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 50 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.
+      *
+      * @param request QueryDeviceEventDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryDeviceEventDataResponse
+     */
     public QueryDeviceEventDataResponse queryDeviceEventDataWithOptions(QueryDeviceEventDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -10172,11 +12975,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDeviceEventDataResponse());
     }
 
+    /**
+      * You can query only the event records that are generated in the previous 30 days.
+      * >  The storage period of an event record is calculated from the day when the record is generated.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 50 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.
+      *
+      * @param request QueryDeviceEventDataRequest
+      * @return QueryDeviceEventDataResponse
+     */
     public QueryDeviceEventDataResponse queryDeviceEventData(QueryDeviceEventDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryDeviceEventDataWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceFileRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryDeviceFileResponse
+     */
     public QueryDeviceFileResponse queryDeviceFileWithOptions(QueryDeviceFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -10217,11 +13039,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDeviceFileResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceFileRequest
+      * @return QueryDeviceFileResponse
+     */
     public QueryDeviceFileResponse queryDeviceFile(QueryDeviceFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryDeviceFileWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * *   The returned file information for this operation call does not contain download URLs. To obtain the download URL of a file, call [QueryDeviceFile](~~112002~~).
+      * *   Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).
+      * >RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceFileListRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryDeviceFileListResponse
+     */
     public QueryDeviceFileListResponse queryDeviceFileListWithOptions(QueryDeviceFileListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -10266,11 +13106,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDeviceFileListResponse());
     }
 
+    /**
+      * ## Limits
+      * *   The returned file information for this operation call does not contain download URLs. To obtain the download URL of a file, call [QueryDeviceFile](~~112002~~).
+      * *   Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).
+      * >RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceFileListRequest
+      * @return QueryDeviceFileListResponse
+     */
     public QueryDeviceFileListResponse queryDeviceFileList(QueryDeviceFileListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryDeviceFileListWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * *   You can add a device to a maximum of 10 groups.
+      * *   Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceGroupByDeviceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryDeviceGroupByDeviceResponse
+     */
     public QueryDeviceGroupByDeviceResponse queryDeviceGroupByDeviceWithOptions(QueryDeviceGroupByDeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -10303,11 +13162,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDeviceGroupByDeviceResponse());
     }
 
+    /**
+      * ## Limits
+      * *   You can add a device to a maximum of 10 groups.
+      * *   Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceGroupByDeviceRequest
+      * @return QueryDeviceGroupByDeviceResponse
+     */
     public QueryDeviceGroupByDeviceResponse queryDeviceGroupByDevice(QueryDeviceGroupByDeviceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryDeviceGroupByDeviceWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceGroupByTagsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryDeviceGroupByTagsResponse
+     */
     public QueryDeviceGroupByTagsResponse queryDeviceGroupByTagsWithOptions(QueryDeviceGroupByTagsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -10344,11 +13221,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDeviceGroupByTagsResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceGroupByTagsRequest
+      * @return QueryDeviceGroupByTagsResponse
+     */
     public QueryDeviceGroupByTagsResponse queryDeviceGroupByTags(QueryDeviceGroupByTagsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryDeviceGroupByTagsWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 30 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceGroupInfoRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryDeviceGroupInfoResponse
+     */
     public QueryDeviceGroupInfoResponse queryDeviceGroupInfoWithOptions(QueryDeviceGroupInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -10381,11 +13275,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDeviceGroupInfoResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 30 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceGroupInfoRequest
+      * @return QueryDeviceGroupInfoResponse
+     */
     public QueryDeviceGroupInfoResponse queryDeviceGroupInfo(QueryDeviceGroupInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryDeviceGroupInfoWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 100 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceGroupListRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryDeviceGroupListResponse
+     */
     public QueryDeviceGroupListResponse queryDeviceGroupListWithOptions(QueryDeviceGroupListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -10430,11 +13341,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDeviceGroupListResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 100 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceGroupListRequest
+      * @return QueryDeviceGroupListResponse
+     */
     public QueryDeviceGroupListResponse queryDeviceGroupList(QueryDeviceGroupListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryDeviceGroupListWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceGroupTagListRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryDeviceGroupTagListResponse
+     */
     public QueryDeviceGroupTagListResponse queryDeviceGroupTagListWithOptions(QueryDeviceGroupTagListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -10467,11 +13395,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDeviceGroupTagListResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceGroupTagListRequest
+      * @return QueryDeviceGroupTagListResponse
+     */
     public QueryDeviceGroupTagListResponse queryDeviceGroupTagList(QueryDeviceGroupTagListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryDeviceGroupTagListWithOptions(request, runtime);
     }
 
+    /**
+      * In addition to the preceding operation-specific request parameters, you must specify common request parameters when you call this operation. For more information, see [Common request parameters](~~30561~~).
+      *
+      * @param request QueryDeviceInfoRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryDeviceInfoResponse
+     */
     public QueryDeviceInfoResponse queryDeviceInfoWithOptions(QueryDeviceInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -10508,11 +13451,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDeviceInfoResponse());
     }
 
+    /**
+      * In addition to the preceding operation-specific request parameters, you must specify common request parameters when you call this operation. For more information, see [Common request parameters](~~30561~~).
+      *
+      * @param request QueryDeviceInfoRequest
+      * @return QueryDeviceInfoResponse
+     */
     public QueryDeviceInfoResponse queryDeviceInfo(QueryDeviceInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryDeviceInfoWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceListByDeviceGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryDeviceListByDeviceGroupResponse
+     */
     public QueryDeviceListByDeviceGroupResponse queryDeviceListByDeviceGroupWithOptions(QueryDeviceListByDeviceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -10549,11 +13507,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDeviceListByDeviceGroupResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceListByDeviceGroupRequest
+      * @return QueryDeviceListByDeviceGroupResponse
+     */
     public QueryDeviceListByDeviceGroupResponse queryDeviceListByDeviceGroup(QueryDeviceListByDeviceGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryDeviceListByDeviceGroupWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * *   You can query only the event records that are generated in the last 30 days.
+      * >  The storage period of an event record is calculated from the day when the record is generated.
+      * *   Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceOriginalEventDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryDeviceOriginalEventDataResponse
+     */
     public QueryDeviceOriginalEventDataResponse queryDeviceOriginalEventDataWithOptions(QueryDeviceOriginalEventDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -10614,11 +13591,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDeviceOriginalEventDataResponse());
     }
 
+    /**
+      * ## Limits
+      * *   You can query only the event records that are generated in the last 30 days.
+      * >  The storage period of an event record is calculated from the day when the record is generated.
+      * *   Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceOriginalEventDataRequest
+      * @return QueryDeviceOriginalEventDataResponse
+     */
     public QueryDeviceOriginalEventDataResponse queryDeviceOriginalEventData(QueryDeviceOriginalEventDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryDeviceOriginalEventDataWithOptions(request, runtime);
     }
 
+    /**
+      * You can query only the property records that are generated within the previous 30 days.
+      * >  The data of a property is stored from the day when the data is generated.
+      * ## QPS limits
+      * You can call this API operation up to 50 times per second per account. 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceOriginalPropertyDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryDeviceOriginalPropertyDataResponse
+     */
     public QueryDeviceOriginalPropertyDataResponse queryDeviceOriginalPropertyDataWithOptions(QueryDeviceOriginalPropertyDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -10679,11 +13677,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDeviceOriginalPropertyDataResponse());
     }
 
+    /**
+      * You can query only the property records that are generated within the previous 30 days.
+      * >  The data of a property is stored from the day when the data is generated.
+      * ## QPS limits
+      * You can call this API operation up to 50 times per second per account. 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceOriginalPropertyDataRequest
+      * @return QueryDeviceOriginalPropertyDataResponse
+     */
     public QueryDeviceOriginalPropertyDataResponse queryDeviceOriginalPropertyData(QueryDeviceOriginalPropertyDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryDeviceOriginalPropertyDataWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceOriginalPropertyStatusRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryDeviceOriginalPropertyStatusResponse
+     */
     public QueryDeviceOriginalPropertyStatusResponse queryDeviceOriginalPropertyStatusWithOptions(QueryDeviceOriginalPropertyStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -10732,11 +13749,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDeviceOriginalPropertyStatusResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceOriginalPropertyStatusRequest
+      * @return QueryDeviceOriginalPropertyStatusResponse
+     */
     public QueryDeviceOriginalPropertyStatusResponse queryDeviceOriginalPropertyStatus(QueryDeviceOriginalPropertyStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryDeviceOriginalPropertyStatusWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * *   You can query only the service call records that are generated in the last 30 days.
+      * >  The storage period of a service call record is calculated from the day when the service is called.
+      * *   Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * > Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceOriginalServiceDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryDeviceOriginalServiceDataResponse
+     */
     public QueryDeviceOriginalServiceDataResponse queryDeviceOriginalServiceDataWithOptions(QueryDeviceOriginalServiceDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -10797,11 +13833,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDeviceOriginalServiceDataResponse());
     }
 
+    /**
+      * ## Limits
+      * *   You can query only the service call records that are generated in the last 30 days.
+      * >  The storage period of a service call record is calculated from the day when the service is called.
+      * *   Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * > Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceOriginalServiceDataRequest
+      * @return QueryDeviceOriginalServiceDataResponse
+     */
     public QueryDeviceOriginalServiceDataResponse queryDeviceOriginalServiceData(QueryDeviceOriginalServiceDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryDeviceOriginalServiceDataWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDevicePropRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryDevicePropResponse
+     */
     public QueryDevicePropResponse queryDevicePropWithOptions(QueryDevicePropRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -10838,11 +13893,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDevicePropResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDevicePropRequest
+      * @return QueryDevicePropResponse
+     */
     public QueryDevicePropResponse queryDeviceProp(QueryDevicePropRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryDevicePropWithOptions(request, runtime);
     }
 
+    /**
+      * When you call this operation to query property records within a specified period, the number of records for a property at a point in time may reach the limit.**** The limit is specified by the **PageSize** parameter. In this case, the query stops. Some records of other properties may be not returned.**** You can check whether all records of a property are returned based on the NextValid repsonse parameter: 
+      * - If the value of the **NextValid** parameter is true, unretrieved records exist in the period that is indicated by the **NextTime** and **EndTime** parameter.  
+      * You can use the value of the **NextTime** response parameter as the value of the StartTime request parameter and call this operation again to query the rest records. You can call this operation multiple times until the value of the **NextValid** parameter is false.  >  To retrieve all property records within a specified period, you can set the **PageSize** parameter to the maximum value. Then, call this operation multiple times until the value of the **NextValid** parameter is false.
+      * - If the value of the **NextValid** parameter is false, all property records are returned.
+      * ## Limits
+      * *   A maximum of 10 properties can be queried at a time. A maximum of 100 records can be queried for each property.
+      * *   You can query property data that is generated within the last 30 days.
+      * > The storage period of a property record is calculated from the day when the property record was generated.
+      * *   Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDevicePropertiesDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryDevicePropertiesDataResponse
+     */
     public QueryDevicePropertiesDataResponse queryDevicePropertiesDataWithOptions(QueryDevicePropertiesDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -10899,11 +13978,40 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDevicePropertiesDataResponse());
     }
 
+    /**
+      * When you call this operation to query property records within a specified period, the number of records for a property at a point in time may reach the limit.**** The limit is specified by the **PageSize** parameter. In this case, the query stops. Some records of other properties may be not returned.**** You can check whether all records of a property are returned based on the NextValid repsonse parameter: 
+      * - If the value of the **NextValid** parameter is true, unretrieved records exist in the period that is indicated by the **NextTime** and **EndTime** parameter.  
+      * You can use the value of the **NextTime** response parameter as the value of the StartTime request parameter and call this operation again to query the rest records. You can call this operation multiple times until the value of the **NextValid** parameter is false.  >  To retrieve all property records within a specified period, you can set the **PageSize** parameter to the maximum value. Then, call this operation multiple times until the value of the **NextValid** parameter is false.
+      * - If the value of the **NextValid** parameter is false, all property records are returned.
+      * ## Limits
+      * *   A maximum of 10 properties can be queried at a time. A maximum of 100 records can be queried for each property.
+      * *   You can query property data that is generated within the last 30 days.
+      * > The storage period of a property record is calculated from the day when the property record was generated.
+      * *   Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDevicePropertiesDataRequest
+      * @return QueryDevicePropertiesDataResponse
+     */
     public QueryDevicePropertiesDataResponse queryDevicePropertiesData(QueryDevicePropertiesDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryDevicePropertiesDataWithOptions(request, runtime);
     }
 
+    /**
+      * If a device or a digital twin node has multiple properties, you can call this operation to query the data of the properties multiple times. You must specify a value for the **Identifier** parameter each time you call the operation. You can also call the [QueryDevicePropertiesData](~~99237~~) operation and specify multiple values for the **Identifier** parameter to query the data of the properties.
+      * ## Limits
+      * You can query only property data that is generated within the previous 30 days. 
+      * >  The data of a property is stored from the day when the data is generated.
+      *   
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 50 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.
+      *
+      * @param request QueryDevicePropertyDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryDevicePropertyDataResponse
+     */
     public QueryDevicePropertyDataResponse queryDevicePropertyDataWithOptions(QueryDevicePropertyDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -10960,11 +14068,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDevicePropertyDataResponse());
     }
 
+    /**
+      * If a device or a digital twin node has multiple properties, you can call this operation to query the data of the properties multiple times. You must specify a value for the **Identifier** parameter each time you call the operation. You can also call the [QueryDevicePropertiesData](~~99237~~) operation and specify multiple values for the **Identifier** parameter to query the data of the properties.
+      * ## Limits
+      * You can query only property data that is generated within the previous 30 days. 
+      * >  The data of a property is stored from the day when the data is generated.
+      *   
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 50 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.
+      *
+      * @param request QueryDevicePropertyDataRequest
+      * @return QueryDevicePropertyDataResponse
+     */
     public QueryDevicePropertyDataResponse queryDevicePropertyData(QueryDevicePropertyDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryDevicePropertyDataWithOptions(request, runtime);
     }
 
+    /**
+      * To query the property data of a digital twin node, you must set the **IotId** parameter to the ID of the digital twin node.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 200 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.
+      *
+      * @param request QueryDevicePropertyStatusRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryDevicePropertyStatusResponse
+     */
     public QueryDevicePropertyStatusResponse queryDevicePropertyStatusWithOptions(QueryDevicePropertyStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -11005,6 +14136,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDevicePropertyStatusResponse());
     }
 
+    /**
+      * To query the property data of a digital twin node, you must set the **IotId** parameter to the ID of the digital twin node.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 200 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.
+      *
+      * @param request QueryDevicePropertyStatusRequest
+      * @return QueryDevicePropertyStatusResponse
+     */
     public QueryDevicePropertyStatusResponse queryDevicePropertyStatus(QueryDevicePropertyStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryDevicePropertyStatusWithOptions(request, runtime);
@@ -11045,6 +14185,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryDeviceProvisioningWithOptions(request, runtime);
     }
 
+    /**
+      * You can query only the service call records of the previous 30 days.
+      * >  The storage period of a service call record is calculated from the day when the service is called.
+      * ## QPS limits
+      * You can call this API operation up to 50 times per second per account. 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceServiceDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryDeviceServiceDataResponse
+     */
     public QueryDeviceServiceDataResponse queryDeviceServiceDataWithOptions(QueryDeviceServiceDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -11101,6 +14252,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDeviceServiceDataResponse());
     }
 
+    /**
+      * You can query only the service call records of the previous 30 days.
+      * >  The storage period of a service call record is calculated from the day when the service is called.
+      * ## QPS limits
+      * You can call this API operation up to 50 times per second per account. 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceServiceDataRequest
+      * @return QueryDeviceServiceDataResponse
+     */
     public QueryDeviceServiceDataResponse queryDeviceServiceData(QueryDeviceServiceDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryDeviceServiceDataWithOptions(request, runtime);
@@ -11147,6 +14308,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryDeviceSpeechWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceStatisticsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryDeviceStatisticsResponse
+     */
     public QueryDeviceStatisticsResponse queryDeviceStatisticsWithOptions(QueryDeviceStatisticsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -11179,11 +14349,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDeviceStatisticsResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceStatisticsRequest
+      * @return QueryDeviceStatisticsResponse
+     */
     public QueryDeviceStatisticsResponse queryDeviceStatistics(QueryDeviceStatisticsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryDeviceStatisticsWithOptions(request, runtime);
     }
 
+    /**
+      * ## QPS limits
+      * You can call this operation up to 100 times per second per account.
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceSubTopicRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryDeviceSubTopicResponse
+     */
     public QueryDeviceSubTopicResponse queryDeviceSubTopicWithOptions(QueryDeviceSubTopicRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -11216,6 +14403,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDeviceSubTopicResponse());
     }
 
+    /**
+      * ## QPS limits
+      * You can call this operation up to 100 times per second per account.
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDeviceSubTopicRequest
+      * @return QueryDeviceSubTopicResponse
+     */
     public QueryDeviceSubTopicResponse queryDeviceSubTopic(QueryDeviceSubTopicRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryDeviceSubTopicWithOptions(request, runtime);
@@ -11441,6 +14636,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryDynamicGroupDevicesWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * A single Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * >  RAM users share the quota of the Alibaba Cloud account.
+      *
+      * @param request QueryEdgeDriverRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryEdgeDriverResponse
+     */
     public QueryEdgeDriverResponse queryEdgeDriverWithOptions(QueryEdgeDriverRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -11481,11 +14685,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryEdgeDriverResponse());
     }
 
+    /**
+      * ## Limits
+      * A single Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * >  RAM users share the quota of the Alibaba Cloud account.
+      *
+      * @param request QueryEdgeDriverRequest
+      * @return QueryEdgeDriverResponse
+     */
     public QueryEdgeDriverResponse queryEdgeDriver(QueryEdgeDriverRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryEdgeDriverWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryEdgeDriverVersionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryEdgeDriverVersionResponse
+     */
     public QueryEdgeDriverVersionResponse queryEdgeDriverVersionWithOptions(QueryEdgeDriverVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -11530,11 +14751,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryEdgeDriverVersionResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryEdgeDriverVersionRequest
+      * @return QueryEdgeDriverVersionResponse
+     */
     public QueryEdgeDriverVersionResponse queryEdgeDriverVersion(QueryEdgeDriverVersionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryEdgeDriverVersionWithOptions(request, runtime);
     }
 
+    /**
+      * In addition to the preceding exclusive request parameters, you must specify common request parameters when calling this API operation. For more information about common request parameters, see [Common parameters](~~30561~~).
+      *
+      * @param request QueryEdgeInstanceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryEdgeInstanceResponse
+     */
     public QueryEdgeInstanceResponse queryEdgeInstanceWithOptions(QueryEdgeInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -11571,6 +14807,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryEdgeInstanceResponse());
     }
 
+    /**
+      * In addition to the preceding exclusive request parameters, you must specify common request parameters when calling this API operation. For more information about common request parameters, see [Common parameters](~~30561~~).
+      *
+      * @param request QueryEdgeInstanceRequest
+      * @return QueryEdgeInstanceResponse
+     */
     public QueryEdgeInstanceResponse queryEdgeInstance(QueryEdgeInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryEdgeInstanceWithOptions(request, runtime);
@@ -11625,6 +14867,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryEdgeInstanceChannelWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryEdgeInstanceDeviceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryEdgeInstanceDeviceResponse
+     */
     public QueryEdgeInstanceDeviceResponse queryEdgeInstanceDeviceWithOptions(QueryEdgeInstanceDeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -11661,6 +14912,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryEdgeInstanceDeviceResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryEdgeInstanceDeviceRequest
+      * @return QueryEdgeInstanceDeviceResponse
+     */
     public QueryEdgeInstanceDeviceResponse queryEdgeInstanceDevice(QueryEdgeInstanceDeviceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryEdgeInstanceDeviceWithOptions(request, runtime);
@@ -11715,6 +14974,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryEdgeInstanceDeviceByDriverWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryEdgeInstanceDriverRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryEdgeInstanceDriverResponse
+     */
     public QueryEdgeInstanceDriverResponse queryEdgeInstanceDriverWithOptions(QueryEdgeInstanceDriverRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -11751,11 +15019,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryEdgeInstanceDriverResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryEdgeInstanceDriverRequest
+      * @return QueryEdgeInstanceDriverResponse
+     */
     public QueryEdgeInstanceDriverResponse queryEdgeInstanceDriver(QueryEdgeInstanceDriverRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryEdgeInstanceDriverWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryEdgeInstanceGatewayRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryEdgeInstanceGatewayResponse
+     */
     public QueryEdgeInstanceGatewayResponse queryEdgeInstanceGatewayWithOptions(QueryEdgeInstanceGatewayRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -11784,11 +15069,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryEdgeInstanceGatewayResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryEdgeInstanceGatewayRequest
+      * @return QueryEdgeInstanceGatewayResponse
+     */
     public QueryEdgeInstanceGatewayResponse queryEdgeInstanceGateway(QueryEdgeInstanceGatewayRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryEdgeInstanceGatewayWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryEdgeInstanceHistoricDeploymentRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryEdgeInstanceHistoricDeploymentResponse
+     */
     public QueryEdgeInstanceHistoricDeploymentResponse queryEdgeInstanceHistoricDeploymentWithOptions(QueryEdgeInstanceHistoricDeploymentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -11833,6 +15135,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryEdgeInstanceHistoricDeploymentResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryEdgeInstanceHistoricDeploymentRequest
+      * @return QueryEdgeInstanceHistoricDeploymentResponse
+     */
     public QueryEdgeInstanceHistoricDeploymentResponse queryEdgeInstanceHistoricDeployment(QueryEdgeInstanceHistoricDeploymentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryEdgeInstanceHistoricDeploymentWithOptions(request, runtime);
@@ -12138,6 +15448,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryMessageInfoWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 20 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryOTAFirmwareRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryOTAFirmwareResponse
+     */
     public QueryOTAFirmwareResponse queryOTAFirmwareWithOptions(QueryOTAFirmwareRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -12166,11 +15485,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryOTAFirmwareResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 20 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryOTAFirmwareRequest
+      * @return QueryOTAFirmwareResponse
+     */
     public QueryOTAFirmwareResponse queryOTAFirmware(QueryOTAFirmwareRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryOTAFirmwareWithOptions(request, runtime);
     }
 
+    /**
+      * After you call the [CreateOTAVerifyJob](~~147480~~), [CreateOTAStaticUpgradeJob](~~147496~~), or [CreateOTADynamicUpgradeJob](~~147887~~) API operation to create an update batch, the **JobId** parameter is returned. You can use this parameter to query the details of the update batch.
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS). 
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryOTAJobRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryOTAJobResponse
+     */
     public QueryOTAJobResponse queryOTAJobWithOptions(QueryOTAJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -12199,11 +15536,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryOTAJobResponse());
     }
 
+    /**
+      * After you call the [CreateOTAVerifyJob](~~147480~~), [CreateOTAStaticUpgradeJob](~~147496~~), or [CreateOTADynamicUpgradeJob](~~147887~~) API operation to create an update batch, the **JobId** parameter is returned. You can use this parameter to query the details of the update batch.
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS). 
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryOTAJobRequest
+      * @return QueryOTAJobResponse
+     */
     public QueryOTAJobResponse queryOTAJob(QueryOTAJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryOTAJobWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryPageByApplyIdRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryPageByApplyIdResponse
+     */
     public QueryPageByApplyIdResponse queryPageByApplyIdWithOptions(QueryPageByApplyIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -12240,11 +15595,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryPageByApplyIdResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryPageByApplyIdRequest
+      * @return QueryPageByApplyIdResponse
+     */
     public QueryPageByApplyIdResponse queryPageByApplyId(QueryPageByApplyIdRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryPageByApplyIdWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryProductRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryProductResponse
+     */
     public QueryProductResponse queryProductWithOptions(QueryProductRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -12273,6 +15645,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryProductResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryProductRequest
+      * @return QueryProductResponse
+     */
     public QueryProductResponse queryProduct(QueryProductRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryProductWithOptions(request, runtime);
@@ -12311,6 +15691,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryProductCertInfoWithOptions(request, runtime);
     }
 
+    /**
+      * ## QPS limits
+      * *   Each Alibaba Cloud account can run up to 50 queries per second (QPS).
+      * > The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.
+      * *   If the product of the value of the **CurrentPage** parameter and the value of the **PageSize** parameter is greater than or equal to 100,000, the QPS of this operation decreases.
+      *     In this case, each Alibaba Cloud account can run up to 2 QPS.
+      *
+      * @param request QueryProductListRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryProductListResponse
+     */
     public QueryProductListResponse queryProductListWithOptions(QueryProductListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -12351,11 +15742,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryProductListResponse());
     }
 
+    /**
+      * ## QPS limits
+      * *   Each Alibaba Cloud account can run up to 50 queries per second (QPS).
+      * > The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.
+      * *   If the product of the value of the **CurrentPage** parameter and the value of the **PageSize** parameter is greater than or equal to 100,000, the QPS of this operation decreases.
+      *     In this case, each Alibaba Cloud account can run up to 2 QPS.
+      *
+      * @param request QueryProductListRequest
+      * @return QueryProductListResponse
+     */
     public QueryProductListResponse queryProductList(QueryProductListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryProductListWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 3 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryProductTopicRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryProductTopicResponse
+     */
     public QueryProductTopicResponse queryProductTopicWithOptions(QueryProductTopicRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -12384,6 +15794,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryProductTopicResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 3 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryProductTopicRequest
+      * @return QueryProductTopicResponse
+     */
     public QueryProductTopicResponse queryProductTopic(QueryProductTopicRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryProductTopicWithOptions(request, runtime);
@@ -13331,6 +16749,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryStudioProjectListWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QuerySubscribeRelationRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QuerySubscribeRelationResponse
+     */
     public QuerySubscribeRelationResponse querySubscribeRelationWithOptions(QuerySubscribeRelationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -13363,6 +16790,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QuerySubscribeRelationResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QuerySubscribeRelationRequest
+      * @return QuerySubscribeRelationResponse
+     */
     public QuerySubscribeRelationResponse querySubscribeRelation(QuerySubscribeRelationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.querySubscribeRelationWithOptions(request, runtime);
@@ -13421,6 +16856,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.querySummarySceneRuleLogWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QuerySuperDeviceGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QuerySuperDeviceGroupResponse
+     */
     public QuerySuperDeviceGroupResponse querySuperDeviceGroupWithOptions(QuerySuperDeviceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -13449,6 +16893,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QuerySuperDeviceGroupResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QuerySuperDeviceGroupRequest
+      * @return QuerySuperDeviceGroupResponse
+     */
     public QuerySuperDeviceGroupResponse querySuperDeviceGroup(QuerySuperDeviceGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.querySuperDeviceGroupWithOptions(request, runtime);
@@ -13487,6 +16939,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryTaskWithOptions(request, runtime);
     }
 
+    /**
+      * TSL features include properties, services, and events.
+      * If you add custom modules to a TSL model and the value of the **FunctionBlockId** parameter is empty, you can obtain the TSL features of each custom module. If the value of the FunctionBlockId parameter is not empty, you can obtain the TSL features of a specified custom module.
+      * For more information about the data format of the **ThingModelJson** parameter, see [Data structure of ThingModelJson](~~150457~~).
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS). 
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryThingModelRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryThingModelResponse
+     */
     public QueryThingModelResponse queryThingModelWithOptions(QueryThingModelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -13527,11 +16991,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryThingModelResponse());
     }
 
+    /**
+      * TSL features include properties, services, and events.
+      * If you add custom modules to a TSL model and the value of the **FunctionBlockId** parameter is empty, you can obtain the TSL features of each custom module. If the value of the FunctionBlockId parameter is not empty, you can obtain the TSL features of a specified custom module.
+      * For more information about the data format of the **ThingModelJson** parameter, see [Data structure of ThingModelJson](~~150457~~).
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS). 
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryThingModelRequest
+      * @return QueryThingModelResponse
+     */
     public QueryThingModelResponse queryThingModel(QueryThingModelRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryThingModelWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 20 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryThingModelExtendConfigRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryThingModelExtendConfigResponse
+     */
     public QueryThingModelExtendConfigResponse queryThingModelExtendConfigWithOptions(QueryThingModelExtendConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -13572,11 +17056,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryThingModelExtendConfigResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 20 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryThingModelExtendConfigRequest
+      * @return QueryThingModelExtendConfigResponse
+     */
     public QueryThingModelExtendConfigResponse queryThingModelExtendConfig(QueryThingModelExtendConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryThingModelExtendConfigWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 20 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryThingModelExtendConfigPublishedRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryThingModelExtendConfigPublishedResponse
+     */
     public QueryThingModelExtendConfigPublishedResponse queryThingModelExtendConfigPublishedWithOptions(QueryThingModelExtendConfigPublishedRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -13613,11 +17114,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryThingModelExtendConfigPublishedResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 20 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryThingModelExtendConfigPublishedRequest
+      * @return QueryThingModelExtendConfigPublishedResponse
+     */
     public QueryThingModelExtendConfigPublishedResponse queryThingModelExtendConfigPublished(QueryThingModelExtendConfigPublishedRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryThingModelExtendConfigPublishedWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryThingModelPublishedRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryThingModelPublishedResponse
+     */
     public QueryThingModelPublishedResponse queryThingModelPublishedWithOptions(QueryThingModelPublishedRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -13658,11 +17176,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryThingModelPublishedResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryThingModelPublishedRequest
+      * @return QueryThingModelPublishedResponse
+     */
     public QueryThingModelPublishedResponse queryThingModelPublished(QueryThingModelPublishedRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryThingModelPublishedWithOptions(request, runtime);
     }
 
+    public QueryTopicConfigResponse queryTopicConfigWithOptions(QueryTopicConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            query.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productKey)) {
+            query.put("ProductKey", request.productKey);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryTopicConfig"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryTopicConfigResponse());
+    }
+
+    public QueryTopicConfigResponse queryTopicConfig(QueryTopicConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryTopicConfigWithOptions(request, runtime);
+    }
+
+    /**
+      * In addition to the preceding operation-specific request parameters, you must specify common request parameters when you call this operation. For more information, see [Common request parameters](~~30561~~).
+      *
+      * @param request QueryTopicReverseRouteTableRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryTopicReverseRouteTableResponse
+     */
     public QueryTopicReverseRouteTableResponse queryTopicReverseRouteTableWithOptions(QueryTopicReverseRouteTableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -13695,11 +17261,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryTopicReverseRouteTableResponse());
     }
 
+    /**
+      * In addition to the preceding operation-specific request parameters, you must specify common request parameters when you call this operation. For more information, see [Common request parameters](~~30561~~).
+      *
+      * @param request QueryTopicReverseRouteTableRequest
+      * @return QueryTopicReverseRouteTableResponse
+     */
     public QueryTopicReverseRouteTableResponse queryTopicReverseRouteTable(QueryTopicReverseRouteTableRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryTopicReverseRouteTableWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryTopicRouteTableRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryTopicRouteTableResponse
+     */
     public QueryTopicRouteTableResponse queryTopicRouteTableWithOptions(QueryTopicRouteTableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -13728,11 +17309,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryTopicRouteTableResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryTopicRouteTableRequest
+      * @return QueryTopicRouteTableResponse
+     */
     public QueryTopicRouteTableResponse queryTopicRouteTable(QueryTopicRouteTableRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryTopicRouteTableWithOptions(request, runtime);
     }
 
+    /**
+      * *   You can call this operation to query the information about a device of a JT/T 808 gateway product.
+      * *   When you call this operation, you must specify a **ProductKey** and a **DeviceName**. Otherwise, the call fails.
+      * ## QPS limits
+      * You can call this API operation up to 50 times per second per account. 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.
+      *
+      * @param request QueryVehicleDeviceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryVehicleDeviceResponse
+     */
     public QueryVehicleDeviceResponse queryVehicleDeviceWithOptions(QueryVehicleDeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -13765,11 +17365,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryVehicleDeviceResponse());
     }
 
+    /**
+      * *   You can call this operation to query the information about a device of a JT/T 808 gateway product.
+      * *   When you call this operation, you must specify a **ProductKey** and a **DeviceName**. Otherwise, the call fails.
+      * ## QPS limits
+      * You can call this API operation up to 50 times per second per account. 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.
+      *
+      * @param request QueryVehicleDeviceRequest
+      * @return QueryVehicleDeviceResponse
+     */
     public QueryVehicleDeviceResponse queryVehicleDevice(QueryVehicleDeviceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryVehicleDeviceWithOptions(request, runtime);
     }
 
+    /**
+      * If the device fails to send a response within the timeout period after you call the operation, IoT Platform considers that the call fails even if the device receives the message. The timeout period is specified by the **Timeout** parameter.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 1000 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request RRpcRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RRpcResponse
+     */
     public RRpcResponse rRpcWithOptions(RRpcRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -13818,6 +17438,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RRpcResponse());
     }
 
+    /**
+      * If the device fails to send a response within the timeout period after you call the operation, IoT Platform considers that the call fails even if the device receives the message. The timeout period is specified by the **Timeout** parameter.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 1000 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request RRpcRequest
+      * @return RRpcResponse
+     */
     public RRpcResponse rRpc(RRpcRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.rRpcWithOptions(request, runtime);
@@ -13998,6 +17627,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.refreshStudioAppTokenOpenWithOptions(request, runtime);
     }
 
+    /**
+      * If you call this operation to register a device under a product, the device is added to the product in the IoT Platform console. After the device is registered, IoT Platform issues the IotId parameter to the device. This parameter is a globally unique identifier (GUID) of the device. To perform operations on a device, you must use the IotId parameter to identify the device.
+      * You can also use a combination of the ProductKey and DeviceName parameters to identify a device. A ProductKey is issued by IoT Platform to a product when you create the product. A DeviceName is specified or randomly generated when you create a device. The IotId parameter has a higher priority than a combination of the ProductKey and DeviceName parameters.
+      * For information about how to register multiple devices under a product at the same time, see [BatchRegisterDeviceWithApplyId](~~69514~~).
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 30 queries per second (QPS). 
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request RegisterDeviceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RegisterDeviceResponse
+     */
     public RegisterDeviceResponse registerDeviceWithOptions(RegisterDeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -14054,6 +17695,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RegisterDeviceResponse());
     }
 
+    /**
+      * If you call this operation to register a device under a product, the device is added to the product in the IoT Platform console. After the device is registered, IoT Platform issues the IotId parameter to the device. This parameter is a globally unique identifier (GUID) of the device. To perform operations on a device, you must use the IotId parameter to identify the device.
+      * You can also use a combination of the ProductKey and DeviceName parameters to identify a device. A ProductKey is issued by IoT Platform to a product when you create the product. A DeviceName is specified or randomly generated when you create a device. The IotId parameter has a higher priority than a combination of the ProductKey and DeviceName parameters.
+      * For information about how to register multiple devices under a product at the same time, see [BatchRegisterDeviceWithApplyId](~~69514~~).
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 30 queries per second (QPS). 
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request RegisterDeviceRequest
+      * @return RegisterDeviceResponse
+     */
     public RegisterDeviceResponse registerDevice(RegisterDeviceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.registerDeviceWithOptions(request, runtime);
@@ -14096,6 +17748,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.releaseEdgeDriverVersionWithOptions(request, runtime);
     }
 
+    /**
+      * *   After a product is published, you cannot call the [CreateThingModel](~~150323~~), [UpdateThingModel](~~151240~~), [ImportThingModelTSL](~~150320~~), [PublishThingModel](~~150311~~), [DeleteThingModel](~~150312~~), or [CopyThingModel](~~150322~~) operation to edit the Thing Specification Language (TSL) model of the product. To edit the TSL model, you must call the [CancelReleaseProduct](~~213875~~) operation to unpublish the product.
+      * *   Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ReleaseProductRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ReleaseProductResponse
+     */
     public ReleaseProductResponse releaseProductWithOptions(ReleaseProductRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -14124,11 +17785,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ReleaseProductResponse());
     }
 
+    /**
+      * *   After a product is published, you cannot call the [CreateThingModel](~~150323~~), [UpdateThingModel](~~151240~~), [ImportThingModelTSL](~~150320~~), [PublishThingModel](~~150311~~), [DeleteThingModel](~~150312~~), or [CopyThingModel](~~150322~~) operation to edit the Thing Specification Language (TSL) model of the product. To edit the TSL model, you must call the [CancelReleaseProduct](~~213875~~) operation to unpublish the product.
+      * *   Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ReleaseProductRequest
+      * @return ReleaseProductResponse
+     */
     public ReleaseProductResponse releaseProduct(ReleaseProductRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.releaseProductWithOptions(request, runtime);
     }
 
+    /**
+      * *   If you specify a gateway, this operation removes the topological relationships between the gateway and all attached sub-devices.
+      * *   If you specify a sub-device, this operation removes the topological relationship between the sub-device and the gateway to which the sub-device is attached.
+      * # QPS limits
+      * Each Alibaba Cloud account can run up to 500 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request RemoveThingTopoRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RemoveThingTopoResponse
+     */
     public RemoveThingTopoResponse removeThingTopoWithOptions(RemoveThingTopoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -14165,6 +17845,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveThingTopoResponse());
     }
 
+    /**
+      * *   If you specify a gateway, this operation removes the topological relationships between the gateway and all attached sub-devices.
+      * *   If you specify a sub-device, this operation removes the topological relationship between the sub-device and the gateway to which the sub-device is attached.
+      * # QPS limits
+      * Each Alibaba Cloud account can run up to 500 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request RemoveThingTopoRequest
+      * @return RemoveThingTopoResponse
+     */
     public RemoveThingTopoResponse removeThingTopo(RemoveThingTopoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.removeThingTopoWithOptions(request, runtime);
@@ -14244,6 +17934,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.rerunJobWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ResetConsumerGroupPositionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ResetConsumerGroupPositionResponse
+     */
     public ResetConsumerGroupPositionResponse resetConsumerGroupPositionWithOptions(ResetConsumerGroupPositionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -14272,11 +17971,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ResetConsumerGroupPositionResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ResetConsumerGroupPositionRequest
+      * @return ResetConsumerGroupPositionResponse
+     */
     public ResetConsumerGroupPositionResponse resetConsumerGroupPosition(ResetConsumerGroupPositionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.resetConsumerGroupPositionWithOptions(request, runtime);
     }
 
+    /**
+      * *   After you use dynamic registration to obtain the device certificate information of a directly connected device and activate the device, you can call this operation to reset the dynamic registration status of the status to unregistered in the IoT Platform console. Then, you can use dynamic registration again to obtain the device certificate information. The device certificate information includes ProductKey, DeviceName, and DeviceSecret.
+      * > This operation is called to reset the dynamic registration status instead of activation status of a device. After you call the operation to reset the dynamic registration status of a device, the status of the device in the IoT Platform console is not reset to inactive.
+      * *   If you specify a gateway and the number of sub-devices that belong to the gateway exceeds 2,000, you can call this operation to create a device job to delete the topological relationships in an asynchronous manner. The operation returns the **JobId** parameter.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 500 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.
+      *
+      * @param request ResetThingRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ResetThingResponse
+     */
     public ResetThingResponse resetThingWithOptions(ResetThingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -14313,6 +18032,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ResetThingResponse());
     }
 
+    /**
+      * *   After you use dynamic registration to obtain the device certificate information of a directly connected device and activate the device, you can call this operation to reset the dynamic registration status of the status to unregistered in the IoT Platform console. Then, you can use dynamic registration again to obtain the device certificate information. The device certificate information includes ProductKey, DeviceName, and DeviceSecret.
+      * > This operation is called to reset the dynamic registration status instead of activation status of a device. After you call the operation to reset the dynamic registration status of a device, the status of the device in the IoT Platform console is not reset to inactive.
+      * *   If you specify a gateway and the number of sub-devices that belong to the gateway exceeds 2,000, you can call this operation to create a device job to delete the topological relationships in an asynchronous manner. The operation returns the **JobId** parameter.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 500 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.
+      *
+      * @param request ResetThingRequest
+      * @return ResetThingResponse
+     */
     public ResetThingResponse resetThing(ResetThingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.resetThingWithOptions(request, runtime);
@@ -14351,6 +18081,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.retrySoundCodeLabelBatchWithOptions(request, runtime);
     }
 
+    /**
+      * If the update task requires confirmation, you must make sure that it has been confirmed before you call this operation. You can call the [ConfirmOTATask](~~254666~~) operation to confirm update tasks.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run a maximum of 20 queries per second (QPS). 
+      * >  The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ReupgradeOTATaskRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ReupgradeOTATaskResponse
+     */
     public ReupgradeOTATaskResponse reupgradeOTATaskWithOptions(ReupgradeOTATaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -14383,11 +18123,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ReupgradeOTATaskResponse());
     }
 
+    /**
+      * If the update task requires confirmation, you must make sure that it has been confirmed before you call this operation. You can call the [ConfirmOTATask](~~254666~~) operation to confirm update tasks.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run a maximum of 20 queries per second (QPS). 
+      * >  The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ReupgradeOTATaskRequest
+      * @return ReupgradeOTATaskResponse
+     */
     public ReupgradeOTATaskResponse reupgradeOTATask(ReupgradeOTATaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.reupgradeOTATaskWithOptions(request, runtime);
     }
 
+    /**
+      * *   A device can have a maximum of 100 tags.
+      * *   You can modify or add a maximum of 100 tags at a time.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 50 queries per second (QPS). 
+      * >  The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request SaveDevicePropRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SaveDevicePropResponse
+     */
     public SaveDevicePropResponse saveDevicePropWithOptions(SaveDevicePropRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -14428,6 +18188,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SaveDevicePropResponse());
     }
 
+    /**
+      * *   A device can have a maximum of 100 tags.
+      * *   You can modify or add a maximum of 100 tags at a time.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 50 queries per second (QPS). 
+      * >  The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request SaveDevicePropRequest
+      * @return SaveDevicePropResponse
+     */
     public SaveDevicePropResponse saveDeviceProp(SaveDevicePropRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.saveDevicePropWithOptions(request, runtime);
@@ -14470,6 +18240,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.saveScriptWithOptions(request, runtime);
     }
 
+    /**
+      * *   You cannot query the desired values of read-only properties.
+      * *   You can specify up to 10 desired property values in a call.
+      * *   After a device is created, the value of the **Version** parameter is 0. If you want to configure the **Version** parameter the first time you specify a desired property value, set the **Version** parameter to 0.
+      * > If the Thing Specification Language (TSL) data is of the float or double type, the parameter values that correspond to the TSL data contain at least one decimal place. Examples: 10.0 and 11.1.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 50 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request SetDeviceDesiredPropertyRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SetDeviceDesiredPropertyResponse
+     */
     public SetDeviceDesiredPropertyResponse setDeviceDesiredPropertyWithOptions(SetDeviceDesiredPropertyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -14514,11 +18297,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SetDeviceDesiredPropertyResponse());
     }
 
+    /**
+      * *   You cannot query the desired values of read-only properties.
+      * *   You can specify up to 10 desired property values in a call.
+      * *   After a device is created, the value of the **Version** parameter is 0. If you want to configure the **Version** parameter the first time you specify a desired property value, set the **Version** parameter to 0.
+      * > If the Thing Specification Language (TSL) data is of the float or double type, the parameter values that correspond to the TSL data contain at least one decimal place. Examples: 10.0 and 11.1.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 50 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request SetDeviceDesiredPropertyRequest
+      * @return SetDeviceDesiredPropertyResponse
+     */
     public SetDeviceDesiredPropertyResponse setDeviceDesiredProperty(SetDeviceDesiredPropertyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setDeviceDesiredPropertyWithOptions(request, runtime);
     }
 
+    /**
+      * A device group can have a maximum of 100 tags.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 50 queries per second (QPS). 
+      * >  The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request SetDeviceGroupTagsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SetDeviceGroupTagsResponse
+     */
     public SetDeviceGroupTagsResponse setDeviceGroupTagsWithOptions(SetDeviceGroupTagsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -14555,11 +18360,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SetDeviceGroupTagsResponse());
     }
 
+    /**
+      * A device group can have a maximum of 100 tags.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 50 queries per second (QPS). 
+      * >  The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request SetDeviceGroupTagsRequest
+      * @return SetDeviceGroupTagsResponse
+     */
     public SetDeviceGroupTagsResponse setDeviceGroupTags(SetDeviceGroupTagsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setDeviceGroupTagsWithOptions(request, runtime);
     }
 
+    /**
+      * After IoT Platform sends a request to configure device properties, the device receives and processes the request in an asynchronous manner. When you call this operation, a successful response indicates that IoT Platform sent a request. The response does not indicate that the device received and processed the request. After the device SDK responds to the request, the device properties are configured.
+      * > If the Thing Specification Language (TSL) data is of the float or double type, the parameter values that correspond to the TSL data contain at least one decimal place. Examples: 10.0 and 11.1.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 500 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request SetDevicePropertyRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SetDevicePropertyResponse
+     */
     public SetDevicePropertyResponse setDevicePropertyWithOptions(SetDevicePropertyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -14600,11 +18425,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SetDevicePropertyResponse());
     }
 
+    /**
+      * After IoT Platform sends a request to configure device properties, the device receives and processes the request in an asynchronous manner. When you call this operation, a successful response indicates that IoT Platform sent a request. The response does not indicate that the device received and processed the request. After the device SDK responds to the request, the device properties are configured.
+      * > If the Thing Specification Language (TSL) data is of the float or double type, the parameter values that correspond to the TSL data contain at least one decimal place. Examples: 10.0 and 11.1.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 500 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request SetDevicePropertyRequest
+      * @return SetDevicePropertyResponse
+     */
     public SetDevicePropertyResponse setDeviceProperty(SetDevicePropertyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setDevicePropertyWithOptions(request, runtime);
     }
 
+    /**
+      * If the Thing Specification Language (TSL) data is of the float or double type, the parameter values that correspond to the TSL data contain at least one decimal place. Examples: 10.0 and 11.1.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 10 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request SetDevicesPropertyRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SetDevicesPropertyResponse
+     */
     public SetDevicesPropertyResponse setDevicesPropertyWithOptions(SetDevicesPropertyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -14641,6 +18486,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SetDevicesPropertyResponse());
     }
 
+    /**
+      * If the Thing Specification Language (TSL) data is of the float or double type, the parameter values that correspond to the TSL data contain at least one decimal place. Examples: 10.0 and 11.1.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 10 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request SetDevicesPropertyRequest
+      * @return SetDevicesPropertyResponse
+     */
     public SetDevicesPropertyResponse setDevicesProperty(SetDevicesPropertyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setDevicesPropertyWithOptions(request, runtime);
@@ -15006,6 +18860,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.startParserWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * *   You must verify that the rule has SQL statements configured before you start the rule. If you do not set an SQL statement when you create the rule, call the [UpdateRule](~~69513~~) operation to add an SQL statement and update the rule.
+      * *   Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request StartRuleRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return StartRuleResponse
+     */
     public StartRuleResponse startRuleWithOptions(StartRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -15034,6 +18898,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartRuleResponse());
     }
 
+    /**
+      * ## Limits
+      * *   You must verify that the rule has SQL statements configured before you start the rule. If you do not set an SQL statement when you create the rule, call the [UpdateRule](~~69513~~) operation to add an SQL statement and update the rule.
+      * *   Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request StartRuleRequest
+      * @return StartRuleResponse
+     */
     public StartRuleResponse startRule(StartRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startRuleWithOptions(request, runtime);
@@ -15072,6 +18945,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.stopParserWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request StopRuleRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return StopRuleResponse
+     */
     public StopRuleResponse stopRuleWithOptions(StopRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -15100,11 +18982,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StopRuleResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request StopRuleRequest
+      * @return StopRuleResponse
+     */
     public StopRuleResponse stopRule(StopRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopRuleWithOptions(request, runtime);
     }
 
+    /**
+      * *   The device that needs to subscribe to topics must be connected to IoT Platform and online.
+      * *   You can call this operation to subscribe to the topics of a specified device. You can specify a maximum of 10 topics in a single call.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 10 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.
+      *
+      * @param request SubscribeTopicRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SubscribeTopicResponse
+     */
     public SubscribeTopicResponse subscribeTopicWithOptions(SubscribeTopicRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -15141,6 +19042,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SubscribeTopicResponse());
     }
 
+    /**
+      * *   The device that needs to subscribe to topics must be connected to IoT Platform and online.
+      * *   You can call this operation to subscribe to the topics of a specified device. You can specify a maximum of 10 topics in a single call.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run up to 10 queries per second (QPS). 
+      * >  The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.
+      *
+      * @param request SubscribeTopicRequest
+      * @return SubscribeTopicResponse
+     */
     public SubscribeTopicResponse subscribeTopic(SubscribeTopicRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.subscribeTopicWithOptions(request, runtime);
@@ -15274,6 +19185,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.testSpeechWithOptions(request, runtime);
     }
 
+    public TestSwitchResponse testSwitchWithOptions(TestSwitchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceName)) {
+            query.put("DeviceName", request.deviceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            query.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productKey)) {
+            query.put("ProductKey", request.productKey);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TestSwitch"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TestSwitchResponse());
+    }
+
+    public TestSwitchResponse testSwitch(TestSwitchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.testSwitchWithOptions(request, runtime);
+    }
+
+    /**
+      * You can call the [QueryClientIds](~~371985~~) operation to view the ClientIDs of a device.
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS). 
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request TransformClientIdRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return TransformClientIdResponse
+     */
     public TransformClientIdResponse transformClientIdWithOptions(TransformClientIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -15306,6 +19264,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TransformClientIdResponse());
     }
 
+    /**
+      * You can call the [QueryClientIds](~~371985~~) operation to view the ClientIDs of a device.
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS). 
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request TransformClientIdRequest
+      * @return TransformClientIdResponse
+     */
     public TransformClientIdResponse transformClientId(TransformClientIdRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.transformClientIdWithOptions(request, runtime);
@@ -15385,6 +19352,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.unbindApplicationFromEdgeInstanceWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of five queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request UnbindDriverFromEdgeInstanceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UnbindDriverFromEdgeInstanceResponse
+     */
     public UnbindDriverFromEdgeInstanceResponse unbindDriverFromEdgeInstanceWithOptions(UnbindDriverFromEdgeInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -15417,6 +19393,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UnbindDriverFromEdgeInstanceResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of five queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request UnbindDriverFromEdgeInstanceRequest
+      * @return UnbindDriverFromEdgeInstanceResponse
+     */
     public UnbindDriverFromEdgeInstanceResponse unbindDriverFromEdgeInstance(UnbindDriverFromEdgeInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.unbindDriverFromEdgeInstanceWithOptions(request, runtime);
@@ -15529,6 +19513,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.unbindSceneRuleFromEdgeInstanceWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * *   You cannot modify the default consumer group provided by IoT Platform.
+      * *   Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request UpdateConsumerGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateConsumerGroupResponse
+     */
     public UpdateConsumerGroupResponse updateConsumerGroupWithOptions(UpdateConsumerGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -15561,6 +19555,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateConsumerGroupResponse());
     }
 
+    /**
+      * ## Limits
+      * *   You cannot modify the default consumer group provided by IoT Platform.
+      * *   Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request UpdateConsumerGroupRequest
+      * @return UpdateConsumerGroupResponse
+     */
     public UpdateConsumerGroupResponse updateConsumerGroup(UpdateConsumerGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateConsumerGroupWithOptions(request, runtime);
@@ -15615,6 +19618,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateDestinationWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request UpdateDeviceGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateDeviceGroupResponse
+     */
     public UpdateDeviceGroupResponse updateDeviceGroupWithOptions(UpdateDeviceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -15651,11 +19663,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDeviceGroupResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request UpdateDeviceGroupRequest
+      * @return UpdateDeviceGroupResponse
+     */
     public UpdateDeviceGroupResponse updateDeviceGroup(UpdateDeviceGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateDeviceGroupWithOptions(request, runtime);
     }
 
+    /**
+      * ## QPS limits
+      * You can call this API operation up to 500 times per second per account.
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request UpdateDeviceShadowRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateDeviceShadowResponse
+     */
     public UpdateDeviceShadowResponse updateDeviceShadowWithOptions(UpdateDeviceShadowRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -15696,11 +19725,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDeviceShadowResponse());
     }
 
+    /**
+      * ## QPS limits
+      * You can call this API operation up to 500 times per second per account.
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request UpdateDeviceShadowRequest
+      * @return UpdateDeviceShadowResponse
+     */
     public UpdateDeviceShadowResponse updateDeviceShadow(UpdateDeviceShadowRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateDeviceShadowWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * *   If a request parameter is not specified, the original value of the parameter will be cleared for the driver version.
+      * *   You are not allowed to update a published driver version.
+      * *   Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request UpdateEdgeDriverVersionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateEdgeDriverVersionResponse
+     */
     public UpdateEdgeDriverVersionResponse updateEdgeDriverVersionWithOptions(UpdateEdgeDriverVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -15761,11 +19809,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateEdgeDriverVersionResponse());
     }
 
+    /**
+      * ## Limits
+      * *   If a request parameter is not specified, the original value of the parameter will be cleared for the driver version.
+      * *   You are not allowed to update a published driver version.
+      * *   Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request UpdateEdgeDriverVersionRequest
+      * @return UpdateEdgeDriverVersionResponse
+     */
     public UpdateEdgeDriverVersionResponse updateEdgeDriverVersion(UpdateEdgeDriverVersionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateEdgeDriverVersionWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of five queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request UpdateEdgeInstanceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateEdgeInstanceResponse
+     */
     public UpdateEdgeInstanceResponse updateEdgeInstanceWithOptions(UpdateEdgeInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -15810,6 +19877,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateEdgeInstanceResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of five queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request UpdateEdgeInstanceRequest
+      * @return UpdateEdgeInstanceResponse
+     */
     public UpdateEdgeInstanceResponse updateEdgeInstance(UpdateEdgeInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateEdgeInstanceWithOptions(request, runtime);
@@ -15984,6 +20059,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateJobWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request UpdateOTAModuleRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateOTAModuleResponse
+     */
     public UpdateOTAModuleResponse updateOTAModuleWithOptions(UpdateOTAModuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -16024,6 +20108,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateOTAModuleResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request UpdateOTAModuleRequest
+      * @return UpdateOTAModuleResponse
+     */
     public UpdateOTAModuleResponse updateOTAModule(UpdateOTAModuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateOTAModuleWithOptions(request, runtime);
@@ -16111,6 +20203,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateParserDataSourceWithOptions(request, runtime);
     }
 
+    /**
+      * ## QPS limits
+      * You can call this API operation up to 10 times per second per account.
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request UpdateProductRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateProductResponse
+     */
     public UpdateProductResponse updateProductWithOptions(UpdateProductRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -16147,11 +20248,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateProductResponse());
     }
 
+    /**
+      * ## QPS limits
+      * You can call this API operation up to 10 times per second per account.
+      * >  The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request UpdateProductRequest
+      * @return UpdateProductResponse
+     */
     public UpdateProductResponse updateProduct(UpdateProductRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateProductWithOptions(request, runtime);
     }
 
+    /**
+      * ## Message deduplication rules
+      * Based on the rules that you set, IoT Platform determines whether to use the rules engine or server-side subscriptions to forward property data that is submitted by devices to a specified destination.
+      * The triggering conditions of rules are related by the logic AND relation. For example, if you set the PropertyValueFilter=true and PropertyTimestampFilter=true conditions, the rule to remove duplicate messages is triggered only when both of the conditions are met.
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS). 
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request UpdateProductFilterConfigRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateProductFilterConfigResponse
+     */
     public UpdateProductFilterConfigResponse updateProductFilterConfigWithOptions(UpdateProductFilterConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -16188,11 +20309,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateProductFilterConfigResponse());
     }
 
+    /**
+      * ## Message deduplication rules
+      * Based on the rules that you set, IoT Platform determines whether to use the rules engine or server-side subscriptions to forward property data that is submitted by devices to a specified destination.
+      * The triggering conditions of rules are related by the logic AND relation. For example, if you set the PropertyValueFilter=true and PropertyTimestampFilter=true conditions, the rule to remove duplicate messages is triggered only when both of the conditions are met.
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS). 
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request UpdateProductFilterConfigRequest
+      * @return UpdateProductFilterConfigResponse
+     */
     public UpdateProductFilterConfigResponse updateProductFilterConfig(UpdateProductFilterConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateProductFilterConfigWithOptions(request, runtime);
     }
 
+    /**
+      * You can update a maximum of 10 tags in a single call.
+      * > You must specify the tag keys and tag values. Otherwise, the call fails. For description about the tag values, see the "**Request parameters**" section of this topic.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS). 
+      * >  The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request UpdateProductTagsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateProductTagsResponse
+     */
     public UpdateProductTagsResponse updateProductTagsWithOptions(UpdateProductTagsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -16225,16 +20368,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateProductTagsResponse());
     }
 
+    /**
+      * You can update a maximum of 10 tags in a single call.
+      * > You must specify the tag keys and tag values. Otherwise, the call fails. For description about the tag values, see the "**Request parameters**" section of this topic.
+      * ## QPS limits
+      * Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS). 
+      * >  The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request UpdateProductTagsRequest
+      * @return UpdateProductTagsResponse
+     */
     public UpdateProductTagsResponse updateProductTags(UpdateProductTagsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateProductTagsWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request UpdateProductTopicRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateProductTopicResponse
+     */
     public UpdateProductTopicResponse updateProductTopicWithOptions(UpdateProductTopicRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.codec)) {
+            query.put("Codec", request.codec);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.desc)) {
             query.put("Desc", request.desc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableProxySubscribe)) {
+            query.put("EnableProxySubscribe", request.enableProxySubscribe);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
@@ -16270,11 +20440,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateProductTopicResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request UpdateProductTopicRequest
+      * @return UpdateProductTopicResponse
+     */
     public UpdateProductTopicResponse updateProductTopic(UpdateProductTopicRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateProductTopicWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request UpdateRuleRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateRuleResponse
+     */
     public UpdateRuleResponse updateRuleWithOptions(UpdateRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -16335,11 +20522,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRuleResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request UpdateRuleRequest
+      * @return UpdateRuleResponse
+     */
     public UpdateRuleResponse updateRule(UpdateRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateRuleWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request UpdateRuleActionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateRuleActionResponse
+     */
     public UpdateRuleActionResponse updateRuleActionWithOptions(UpdateRuleActionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -16376,6 +20580,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRuleActionResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request UpdateRuleActionRequest
+      * @return UpdateRuleActionResponse
+     */
     public UpdateRuleActionResponse updateRuleAction(UpdateRuleActionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateRuleActionWithOptions(request, runtime);
@@ -16681,6 +20893,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateSpeechWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request UpdateSubscribeRelationRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateSubscribeRelationResponse
+     */
     public UpdateSubscribeRelationResponse updateSubscribeRelationWithOptions(UpdateSubscribeRelationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -16765,11 +20986,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSubscribeRelationResponse());
     }
 
+    /**
+      * ## Limits
+      * Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * >  RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request UpdateSubscribeRelationRequest
+      * @return UpdateSubscribeRelationResponse
+     */
     public UpdateSubscribeRelationResponse updateSubscribeRelation(UpdateSubscribeRelationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateSubscribeRelationWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * *   If a product is published, you must call the [CancelReleaseProduct](~~213875~~) operation to unpublish the product before you call this operation.
+      * *   When you call this operation, you can use the [json-schema](https://github.com/everit-org/json-schema?spm=a2c4g.11186623.2.23.575832d9zD7fZb) library to verify the input parameters in **ThingModelJson**. For more information, see [Data structure of ThingModelJson](~~150457~~).
+      * *   You can call this operation to update only one feature. TSL features include properties, services, and events.
+      * *   Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request UpdateThingModelRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateThingModelResponse
+     */
     public UpdateThingModelResponse updateThingModelWithOptions(UpdateThingModelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -16814,11 +21055,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateThingModelResponse());
     }
 
+    /**
+      * ## Limits
+      * *   If a product is published, you must call the [CancelReleaseProduct](~~213875~~) operation to unpublish the product before you call this operation.
+      * *   When you call this operation, you can use the [json-schema](https://github.com/everit-org/json-schema?spm=a2c4g.11186623.2.23.575832d9zD7fZb) library to verify the input parameters in **ThingModelJson**. For more information, see [Data structure of ThingModelJson](~~150457~~).
+      * *   You can call this operation to update only one feature. TSL features include properties, services, and events.
+      * *   Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request UpdateThingModelRequest
+      * @return UpdateThingModelResponse
+     */
     public UpdateThingModelResponse updateThingModel(UpdateThingModelRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateThingModelWithOptions(request, runtime);
     }
 
+    /**
+      * *   A data parsing script is used to convert the custom-formatted data to JSON data after the data is submitted by a device. You can write a script in JavaScript, Python 2.7, and PHP 7.2. For more information, see [Submit scripts for data parsing](~~149963~~).
+      * *   Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request UpdateThingScriptRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateThingScriptResponse
+     */
     public UpdateThingScriptResponse updateThingScriptWithOptions(UpdateThingScriptRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -16855,6 +21116,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateThingScriptResponse());
     }
 
+    /**
+      * *   A data parsing script is used to convert the custom-formatted data to JSON data after the data is submitted by a device. You can write a script in JavaScript, Python 2.7, and PHP 7.2. For more information, see [Submit scripts for data parsing](~~149963~~).
+      * *   Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).
+      * > RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request UpdateThingScriptRequest
+      * @return UpdateThingScriptResponse
+     */
     public UpdateThingScriptResponse updateThingScript(UpdateThingScriptRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateThingScriptWithOptions(request, runtime);
@@ -16863,12 +21132,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateTopicConfigResponse updateTopicConfigWithOptions(UpdateTopicConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.codec)) {
+            query.put("Codec", request.codec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.enableBroadcast)) {
             query.put("EnableBroadcast", request.enableBroadcast);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableProxySubscribe)) {
+            query.put("EnableProxySubscribe", request.enableProxySubscribe);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
             query.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operation)) {
+            query.put("Operation", request.operation);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.productKey)) {

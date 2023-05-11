@@ -4,18 +4,36 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class RegisterDeviceResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The device information returned if the call is successful.</p>
+     */
     @NameInMap("Data")
     public RegisterDeviceResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the call fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,24 +83,53 @@ public class RegisterDeviceResponseBody extends TeaModel {
     }
 
     public static class RegisterDeviceResponseBodyData extends TeaModel {
+        /**
+         * <p>The DevEUI of the LoRaWAN device. This parameter is returned only when you create a LoRaWAN device.</p>
+         */
         @NameInMap("DevEui")
         public String devEui;
 
+        /**
+         * <p>The DeviceName of the device.</p>
+         * <br>
+         * <p>> Keep the information confidential.</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <p>The DeviceSecret of the device.</p>
+         * <br>
+         * <p>> Keep the information confidential.</p>
+         */
         @NameInMap("DeviceSecret")
         public String deviceSecret;
 
+        /**
+         * <p>The ID of the device. The ID is the unique identifier that is issued by IoT Platform to the device.</p>
+         * <br>
+         * <p>> Keep the information confidential.</p>
+         */
         @NameInMap("IotId")
         public String iotId;
 
+        /**
+         * <p>The JoinEUI of the LoRaWAN device. This parameter is returned only when you create a LoRaWAN device.</p>
+         */
         @NameInMap("JoinEui")
         public String joinEui;
 
+        /**
+         * <p>The alias of the device.</p>
+         * <br>
+         * <p>If you do not specify an alias for the device, this parameter is empty.</p>
+         */
         @NameInMap("Nickname")
         public String nickname;
 
+        /**
+         * <p>The ProductKey of the product to which the device belongs.</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 

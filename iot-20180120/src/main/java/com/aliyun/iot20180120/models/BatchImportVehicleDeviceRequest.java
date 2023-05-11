@@ -7,6 +7,9 @@ public class BatchImportVehicleDeviceRequest extends TeaModel {
     @NameInMap("DeviceList")
     public java.util.List<BatchImportVehicleDeviceRequestDeviceList> deviceList;
 
+    /**
+     * <p>BatchImportVehicleDevice</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -49,6 +52,9 @@ public class BatchImportVehicleDeviceRequest extends TeaModel {
         @NameInMap("DeviceModel")
         public String deviceModel;
 
+        @NameInMap("DeviceName")
+        public String deviceName;
+
         @NameInMap("Manufacturer")
         public String manufacturer;
 
@@ -71,6 +77,14 @@ public class BatchImportVehicleDeviceRequest extends TeaModel {
         }
         public String getDeviceModel() {
             return this.deviceModel;
+        }
+
+        public BatchImportVehicleDeviceRequestDeviceList setDeviceName(String deviceName) {
+            this.deviceName = deviceName;
+            return this;
+        }
+        public String getDeviceName() {
+            return this.deviceName;
         }
 
         public BatchImportVehicleDeviceRequestDeviceList setManufacturer(String manufacturer) {

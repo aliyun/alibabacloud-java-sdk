@@ -4,18 +4,36 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GetThingTopoResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned if the call succeeds. For more information, see the following parameters.</p>
+     */
     @NameInMap("Data")
     public GetThingTopoResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the call fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call succeeds.</p>
+     * <br>
+     * <p>*   **true**: The call succeeds.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +83,21 @@ public class GetThingTopoResponseBody extends TeaModel {
     }
 
     public static class GetThingTopoResponseBodyDataListDeviceInfo extends TeaModel {
+        /**
+         * <p>The DeviceName of the sub-device.</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <p>The ID of the sub-device. The ID is the unique identifier that is issued by IoT Platform to the sub-device.</p>
+         */
         @NameInMap("IotId")
         public String iotId;
 
+        /**
+         * <p>The ProductKey of the product to which the sub-device belongs.</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 
@@ -125,18 +152,33 @@ public class GetThingTopoResponseBody extends TeaModel {
     }
 
     public static class GetThingTopoResponseBodyData extends TeaModel {
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The details of the sub-device. The details of the sub-device are included in the **deviceInfo** parameter.</p>
+         */
         @NameInMap("List")
         public GetThingTopoResponseBodyDataList list;
 
+        /**
+         * <p>The total number of pages returned.</p>
+         */
         @NameInMap("PageCount")
         public Long pageCount;
 
+        /**
+         * <p>The number of entries returned on each page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("Total")
         public Long total;
 

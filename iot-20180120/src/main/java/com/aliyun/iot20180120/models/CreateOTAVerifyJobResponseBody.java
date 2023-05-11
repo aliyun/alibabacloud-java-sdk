@@ -4,18 +4,36 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateOTAVerifyJobResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The task information returned if the call is successful. For more information, see the following parameters.</p>
+     */
     @NameInMap("Data")
     public CreateOTAVerifyJobResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the call fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request. The ID uniquely identifies this request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +83,15 @@ public class CreateOTAVerifyJobResponseBody extends TeaModel {
     }
 
     public static class CreateOTAVerifyJobResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the verification task.</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>The time when the verification task was created. The time is displayed in UTC.</p>
+         */
         @NameInMap("UtcCreate")
         public String utcCreate;
 

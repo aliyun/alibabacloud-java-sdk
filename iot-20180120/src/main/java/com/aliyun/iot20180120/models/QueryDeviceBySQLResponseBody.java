@@ -4,21 +4,42 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceBySQLResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The device information returned if the call is successful.</p>
+     */
     @NameInMap("Data")
     public java.util.List<QueryDeviceBySQLResponseBodyData> data;
 
+    /**
+     * <p>The error message returned if the call fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>If you specify `SELECT count(*) FROM device` in the SQL-like statement, the number of rows that match the specified conditions is returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -76,6 +97,9 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
     }
 
     public static class QueryDeviceBySQLResponseBodyDataGroups extends TeaModel {
+        /**
+         * <p>The ID of the group.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
@@ -95,9 +119,15 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
     }
 
     public static class QueryDeviceBySQLResponseBodyDataOTAModules extends TeaModel {
+        /**
+         * <p>The version number of each OTA module.</p>
+         */
         @NameInMap("FirmwareVersion")
         public String firmwareVersion;
 
+        /**
+         * <p>The name of the OTA module.</p>
+         */
         @NameInMap("ModuleName")
         public String moduleName;
 
@@ -125,9 +155,15 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
     }
 
     public static class QueryDeviceBySQLResponseBodyDataTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("TagName")
         public String tagName;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -155,36 +191,74 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
     }
 
     public static class QueryDeviceBySQLResponseBodyData extends TeaModel {
+        /**
+         * <p>The time when the device was activated. The time is in the GMT format.</p>
+         */
         @NameInMap("ActiveTime")
         public String activeTime;
 
+        /**
+         * <p>The name of the device.</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <p>The time when the device was created. The time is in the GMT format.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The time when the device information was last updated. The time is in the GMT format.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The information about the groups to which the device belongs.</p>
+         */
         @NameInMap("Groups")
         public java.util.List<QueryDeviceBySQLResponseBodyDataGroups> groups;
 
+        /**
+         * <p>The ID of the device. The ID is a unique identifier that is issued by IoT Platform to the device.</p>
+         */
         @NameInMap("IotId")
         public String iotId;
 
+        /**
+         * <p>The alias of the device.</p>
+         */
         @NameInMap("Nickname")
         public String nickname;
 
+        /**
+         * <p>The information about the firmware of each device module.</p>
+         */
         @NameInMap("OTAModules")
         public java.util.List<QueryDeviceBySQLResponseBodyDataOTAModules> OTAModules;
 
+        /**
+         * <p>The **ProductKey** of the product to which the device belongs.</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 
+        /**
+         * <p>The status of the device. Valid values:</p>
+         * <br>
+         * <p>*   **ONLINE**: The device is online.</p>
+         * <p>*   **OFFLINE**: The device is offline.</p>
+         * <p>*   **UNACTIVE**: The device is not activated.</p>
+         * <p>*   **DISABLE**: The device is disabled.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The information about device tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<QueryDeviceBySQLResponseBodyDataTags> tags;
 

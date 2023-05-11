@@ -4,18 +4,36 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryOTAFirmwareResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The error message returned if the call fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The update package information returned if the call succeeds. For more information, see **FirmwareInfo**.</p>
+     */
     @NameInMap("FirmwareInfo")
     public QueryOTAFirmwareResponseBodyFirmwareInfo firmwareInfo;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,18 +83,33 @@ public class QueryOTAFirmwareResponseBody extends TeaModel {
     }
 
     public static class QueryOTAFirmwareResponseBodyFirmwareInfoMultiFiles extends TeaModel {
+        /**
+         * <p>The MD5 value of the OTA update package file.</p>
+         */
         @NameInMap("FileMd5")
         public String fileMd5;
 
+        /**
+         * <p>The name of the OTA update package file.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The signature of the OTA update package file.</p>
+         */
         @NameInMap("SignValue")
         public String signValue;
 
+        /**
+         * <p>The size of the OTA update package file. Unit: bytes.</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
+        /**
+         * <p>The URL of the update package file that is stored in Object Storage Service (OSS).</p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -128,60 +161,142 @@ public class QueryOTAFirmwareResponseBody extends TeaModel {
     }
 
     public static class QueryOTAFirmwareResponseBodyFirmwareInfo extends TeaModel {
+        /**
+         * <p>The version number of the OTA update package.</p>
+         */
         @NameInMap("DestVersion")
         public String destVersion;
 
+        /**
+         * <p>The description of the OTA update package.</p>
+         */
         @NameInMap("FirmwareDesc")
         public String firmwareDesc;
 
+        /**
+         * <p>The unique ID of the OTA update package.</p>
+         */
         @NameInMap("FirmwareId")
         public String firmwareId;
 
+        /**
+         * <p>The name of the OTA update package.</p>
+         */
         @NameInMap("FirmwareName")
         public String firmwareName;
 
+        /**
+         * <p>The signature of the OTA update package.</p>
+         * <br>
+         * <p>>  This parameter is available if the OTA update package contains a single file.</p>
+         */
         @NameInMap("FirmwareSign")
         public String firmwareSign;
 
+        /**
+         * <p>The size of the OTA update package file. Unit: bytes.</p>
+         * <br>
+         * <p>>  This parameter is available if the OTA update package contains a single file.</p>
+         */
         @NameInMap("FirmwareSize")
         public Integer firmwareSize;
 
+        /**
+         * <p>The URL of the update package file that is stored in Object Storage Service (OSS).</p>
+         * <br>
+         * <p>>  This parameter is available if the OTA update package contains a single file.</p>
+         */
         @NameInMap("FirmwareUrl")
         public String firmwareUrl;
 
+        /**
+         * <p>The name of the module.</p>
+         * <br>
+         * <p>OTA updates are based on the firmware modules of a device. For more information, see [Add a custom OTA module to an update package](~~202664~~).</p>
+         */
         @NameInMap("ModuleName")
         public String moduleName;
 
+        /**
+         * <p>The information about the OTA update package files. This parameter is available if the OTA update package contains multiple files.</p>
+         */
         @NameInMap("MultiFiles")
         public java.util.List<QueryOTAFirmwareResponseBodyFirmwareInfoMultiFiles> multiFiles;
 
+        /**
+         * <p>The **ProductKey** of the product to which the OTA update package belongs.</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 
+        /**
+         * <p>The name of the product to which the OTA update package belongs.</p>
+         */
         @NameInMap("ProductName")
         public String productName;
 
+        /**
+         * <p>The signature method of the OTA update package.</p>
+         */
         @NameInMap("SignMethod")
         public String signMethod;
 
+        /**
+         * <p>The version number of the original update package to be updated.</p>
+         * <br>
+         * <p>>  This parameter is returned if you perform a delta update. For more information about update package types, see the description of the **Type** parameter.</p>
+         */
         @NameInMap("SrcVersion")
         public String srcVersion;
 
+        /**
+         * <p>The status of the OTA update package. Valid values:</p>
+         * <br>
+         * <p>*   **-1**: no verification is required</p>
+         * <p>*   **0**: unverified</p>
+         * <p>*   **1**: verified</p>
+         * <p>*   **2**: verifying</p>
+         * <p>*   **3**: failed to be verified</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The type of the OTA update package. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The uploaded file contains a full update package. IoT Platform pushes the full update package to a device for update.</p>
+         * <p>*   **1**: The uploaded file contains only the differences between the latest update package and previous update package. IoT Platform pushes only the differences to a device for update.</p>
+         */
         @NameInMap("Type")
         public Integer type;
 
+        /**
+         * <p>The custom information that was pushed to the device. The information can be up to 4,096 characters in length. No limit is applies to the content format.</p>
+         * <br>
+         * <p>After you add the update package and create an update task, IoT Platform sends the custom information to the specified device when IoT Platform pushes the update notification.</p>
+         */
         @NameInMap("Udi")
         public String udi;
 
+        /**
+         * <p>The time when the OTA update package was created. The time is displayed in UTC.</p>
+         */
         @NameInMap("UtcCreate")
         public String utcCreate;
 
+        /**
+         * <p>The time when the update task was last modified. The time is displayed in UTC.</p>
+         */
         @NameInMap("UtcModified")
         public String utcModified;
 
+        /**
+         * <p>The verification status of the OTA update package. Valid values:</p>
+         * <br>
+         * <p>*   **0**: unverified</p>
+         * <p>*   **100**: verified</p>
+         * <p>*   A value N between 0 and 100 indicates that the update task is N percent completed. You can check the response parameter **Status** to see the verification status.</p>
+         */
         @NameInMap("VerifyProgress")
         public Integer verifyProgress;
 

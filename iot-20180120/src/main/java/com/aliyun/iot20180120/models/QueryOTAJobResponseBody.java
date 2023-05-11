@@ -4,18 +4,36 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryOTAJobResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The update batch information returned if the call is successful. For more information, see the following parameters.</p>
+     */
     @NameInMap("Data")
     public QueryOTAJobResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the call fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -84,9 +102,15 @@ public class QueryOTAJobResponseBody extends TeaModel {
     }
 
     public static class QueryOTAJobResponseBodyDataTagsOtaTagDTO extends TeaModel {
+        /**
+         * <p>The key of each tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -133,96 +157,231 @@ public class QueryOTAJobResponseBody extends TeaModel {
     }
 
     public static class QueryOTAJobResponseBodyData extends TeaModel {
+        /**
+         * <p>The destination firmware version of the update.</p>
+         */
         @NameInMap("DestVersion")
         public String destVersion;
 
+        /**
+         * <p>The download protocol of the update package.</p>
+         */
         @NameInMap("DownloadProtocol")
         public String downloadProtocol;
 
+        /**
+         * <p>The mode of dynamic update. Valid values:</p>
+         * <br>
+         * <p>*   **1**: constantly updates the devices that meet the conditions.</p>
+         * <p>*   **2**: updates only the devices that subsequently submit the latest firmware versions.</p>
+         * <br>
+         * <p>This parameter is returned only if you perform a dynamic update.</p>
+         */
         @NameInMap("DynamicMode")
         public Integer dynamicMode;
 
+        /**
+         * <p>The ID of the update package.</p>
+         */
         @NameInMap("FirmwareId")
         public String firmwareId;
 
+        /**
+         * <p>The phase ratio of the phased update.</p>
+         * <br>
+         * <p>This parameter is returned only if you perform a phased update.</p>
+         */
         @NameInMap("GrayPercent")
         public String grayPercent;
 
+        /**
+         * <p>The ID of the device group to be updated.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The name of the device group to be updated.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The description of the update batch.</p>
+         */
         @NameInMap("JobDesc")
         public String jobDesc;
 
+        /**
+         * <p>The ID of the update batch.</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>The status of the update batch.</p>
+         * <br>
+         * <p>*   **PLANNED**: The update batch is being planned. The batch is created, but the scheduled time has not arrived. This parameter is returned only if you perform a static update.</p>
+         * <p>*   **IN_PROGRESS**: The update batch is running.</p>
+         * <p>*   **COMPLETED**: The update batch is completed.</p>
+         * <p>*   **CANCELED**: The update batch is canceled.</p>
+         */
         @NameInMap("JobStatus")
         public String jobStatus;
 
+        /**
+         * <p>The type of the batch. Valid values:</p>
+         * <br>
+         * <p>*   **VERFIY_FIRMWARE**: update package verification.</p>
+         * <p>*   **UPGRADE_FIRMWARE**: batch update.</p>
+         */
         @NameInMap("JobType")
         public String jobType;
 
+        /**
+         * <p>The maximum number of devices to which the download URL of the update package is pushed per minute.</p>
+         */
         @NameInMap("MaximumPerMinute")
         public Integer maximumPerMinute;
 
+        /**
+         * <p>Specifies whether the device supports simultaneous updates of multiple modules.</p>
+         * <br>
+         * <p>*   **false** (default): no.</p>
+         * <p>*   **true**: yes.</p>
+         * <br>
+         * <p>For more information, see [Overview](~~58328~~).</p>
+         */
         @NameInMap("MultiModuleMode")
         public Boolean multiModuleMode;
 
+        /**
+         * <p>The name of the update package.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Specifies whether to confirm the update by using your mobile app.</p>
+         */
         @NameInMap("NeedConfirm")
         public Boolean needConfirm;
 
+        /**
+         * <p>Specifies whether to automatically push update tasks from IoT Platform to devices.</p>
+         */
         @NameInMap("NeedPush")
         public Boolean needPush;
 
+        /**
+         * <p>Specifies whether to overwrite the previous update task. Valid values:</p>
+         * <br>
+         * <p>*   **1**: The previous update task is not overwritten. If a device already has an update task, the previous update task is implemented.</p>
+         * <p>*   **2**: The previous update task is overwritten. Only the current update task is implemented.</p>
+         * <br>
+         * <p>The update task that is in progress is not overwritten.</p>
+         */
         @NameInMap("OverwriteMode")
         public Integer overwriteMode;
 
+        /**
+         * <p>The ProductKey of the product to which the update package belongs.</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 
+        /**
+         * <p>The number of automatic retries after a device fails to be updated.</p>
+         * <br>
+         * <p>This parameter is returned if a retry policy is set when you create the update batch.</p>
+         */
         @NameInMap("RetryCount")
         public Integer retryCount;
 
+        /**
+         * <p>The automatic retry interval after a device fails to be updated. Unit: minutes.</p>
+         * <br>
+         * <p>This parameter is returned if a retry policy is set when you create the update batch.</p>
+         */
         @NameInMap("RetryInterval")
         public Integer retryInterval;
 
+        /**
+         * <p>The update policy of the update batch. Valid values:</p>
+         * <br>
+         * <p>*   **DYNAMIC**: dynamic update. This value is returned if you call the [CreateOTADynamicUpgradeJob](~~147887~~) API operation to create an update batch.</p>
+         * <p>*   **STATIC**: static update. This value is returned if you call the [CreateOTAStaticUpgradeJob](~~147496~~) API operation to create an update batch.</p>
+         */
         @NameInMap("SelectionType")
         public String selectionType;
 
+        /**
+         * <p>The list of firmware versions to be updated.</p>
+         */
         @NameInMap("SrcVersions")
         public QueryOTAJobResponseBodyDataSrcVersions srcVersions;
 
+        /**
+         * <p>The tags of the update batch.</p>
+         */
         @NameInMap("Tags")
         public QueryOTAJobResponseBodyDataTags tags;
 
+        /**
+         * <p>The scope of the update batch. Valid values: </p>
+         * <br>
+         * <p>- **ALL**: updates all devices.</p>
+         * <p>- **SPECIFIC**: updates specified devices.</p>
+         * <p>- **GRAY**: performs a phased update.</p>
+         * <br>
+         * <p>>  The value ALL is returned if you call the [CreateOTADynamicUpgradeJob](/help/en/iot-platform/latest/av6dui) API operation to create an update batch.</p>
+         */
         @NameInMap("TargetSelection")
         public String targetSelection;
 
+        /**
+         * <p>The timeout period of the device update. Unit: minutes.</p>
+         * <br>
+         * <p>This parameter is returned if the timeout period is set when you create the update batch.</p>
+         */
         @NameInMap("TimeoutInMinutes")
         public Integer timeoutInMinutes;
 
+        /**
+         * <p>The time when the update batch was created. The time is displayed in UTC.</p>
+         */
         @NameInMap("UtcCreate")
         public String utcCreate;
 
+        /**
+         * <p>The end time of the update batch. The time is displayed in UTC.</p>
+         * <br>
+         * <p>This parameter is returned only after the update batch is completed.</p>
+         */
         @NameInMap("UtcEndTime")
         public String utcEndTime;
 
+        /**
+         * <p>The time when the update batch was last modified. The time is displayed in UTC.</p>
+         */
         @NameInMap("UtcModified")
         public String utcModified;
 
+        /**
+         * <p>The end time of the scheduled update batch. This parameter is returned only if the update batch is scheduled and the end time of the scheduled update batch is specified.</p>
+         */
         @NameInMap("UtcScheduleFinishTime")
         public String utcScheduleFinishTime;
 
+        /**
+         * <p>The start time of the scheduled update batch. This parameter is returned only for scheduled update batches.</p>
+         */
         @NameInMap("UtcScheduleTime")
         public String utcScheduleTime;
 
+        /**
+         * <p>The start time of the update batch. The time is displayed in UTC.</p>
+         */
         @NameInMap("UtcStartTime")
         public String utcStartTime;
 

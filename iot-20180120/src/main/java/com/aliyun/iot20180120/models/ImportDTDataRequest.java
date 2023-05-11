@@ -4,6 +4,9 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ImportDTDataRequest extends TeaModel {
+    @NameInMap("DTInstanceId")
+    public String DTInstanceId;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -16,6 +19,14 @@ public class ImportDTDataRequest extends TeaModel {
     public static ImportDTDataRequest build(java.util.Map<String, ?> map) throws Exception {
         ImportDTDataRequest self = new ImportDTDataRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ImportDTDataRequest setDTInstanceId(String DTInstanceId) {
+        this.DTInstanceId = DTInstanceId;
+        return this;
+    }
+    public String getDTInstanceId() {
+        return this.DTInstanceId;
     }
 
     public ImportDTDataRequest setIotInstanceId(String iotInstanceId) {

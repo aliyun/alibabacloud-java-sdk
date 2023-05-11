@@ -4,18 +4,36 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GetThingModelTslResponseBody extends TeaModel {
+    /**
+     * <p>The error message returned if the call fails.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The URI that is used to store the TSL data in Object Storage Service (OSS). The URI is valid for 60 minutes.</p>
+     */
     @NameInMap("Data")
     public GetThingModelTslResponseBodyData data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The TSL data returned if the call is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -68,6 +86,9 @@ public class GetThingModelTslResponseBody extends TeaModel {
         @NameInMap("TslStr")
         public String tslStr;
 
+        /**
+         * <p>The string of the TSL model.</p>
+         */
         @NameInMap("TslUri")
         public String tslUri;
 

@@ -7,9 +7,15 @@ public class BatchAddDeviceGroupRelationsRequest extends TeaModel {
     @NameInMap("Device")
     public java.util.List<BatchAddDeviceGroupRelationsRequestDevice> device;
 
+    /**
+     * <p>The ProductKeys of the products to which the devices belong. You can specify a maximum of 200 ProductKeys.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The ID of the group. The ID is the globally unique identifier (GUID) for the group.</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -43,9 +49,15 @@ public class BatchAddDeviceGroupRelationsRequest extends TeaModel {
     }
 
     public static class BatchAddDeviceGroupRelationsRequestDevice extends TeaModel {
+        /**
+         * <p>The error message returned if the call fails.</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <p>The names of the devices to be added. You can specify a maximum of 200 devices.</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 

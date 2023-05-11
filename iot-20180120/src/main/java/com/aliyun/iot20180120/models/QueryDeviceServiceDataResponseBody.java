@@ -4,18 +4,36 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceServiceDataResponseBody extends TeaModel {
+    /**
+     * <p>The error code that is returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The service call records returned if the call is successful.</p>
+     */
     @NameInMap("Data")
     public QueryDeviceServiceDataResponseBodyData data;
 
+    /**
+     * <p>The error message that is returned if the call fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request. The ID uniquely identifies the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,18 +83,33 @@ public class QueryDeviceServiceDataResponseBody extends TeaModel {
     }
 
     public static class QueryDeviceServiceDataResponseBodyDataListServiceInfo extends TeaModel {
+        /**
+         * <p>The identifier of the service.</p>
+         */
         @NameInMap("Identifier")
         public String identifier;
 
+        /**
+         * <p>The input parameter of the service. The value is a string in the MAP format. Syntax: `key:value`.</p>
+         */
         @NameInMap("InputData")
         public String inputData;
 
+        /**
+         * <p>The name of the service.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The output parameter of the service. The value is a string in the MAP format. Syntax: `key:value`.</p>
+         */
         @NameInMap("OutputData")
         public String outputData;
 
+        /**
+         * <p>The time when the service was called.</p>
+         */
         @NameInMap("Time")
         public String time;
 
@@ -147,12 +180,28 @@ public class QueryDeviceServiceDataResponseBody extends TeaModel {
     }
 
     public static class QueryDeviceServiceDataResponseBodyData extends TeaModel {
+        /**
+         * <p>The array of service call records. Each element represents a service call record.</p>
+         */
         @NameInMap("List")
         public QueryDeviceServiceDataResponseBodyDataList list;
 
+        /**
+         * <p>The start time of service call records on the next page. </p>
+         * <br>
+         * <p>If you call the QueryDeviceServiceData operation to query the service call records on the next page, you must set the **StartTime** parameter to the value of this parameter.</p>
+         */
         @NameInMap("NextTime")
         public Long nextTime;
 
+        /**
+         * <p>Indicates whether the next page exists.</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         * <br>
+         * <p>If the return value of the **NextValid** parameter is **true**, you can use the value of the **NextTime** parameter as the value of the **StartTime** parameter when you query the next page of results.</p>
+         */
         @NameInMap("NextValid")
         public Boolean nextValid;
 

@@ -4,18 +4,36 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryVehicleDeviceResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call fails. For more information, see the "**Error codes**" section of this topic.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The device information returned.</p>
+     */
     @NameInMap("Data")
     public QueryVehicleDeviceResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the call fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -64,15 +82,12 @@ public class QueryVehicleDeviceResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class QueryVehicleDeviceResponseBodyData extends TeaModel {
+    public static class QueryVehicleDeviceResponseBodyDataJtProtocolDeviceData extends TeaModel {
         @NameInMap("AuthCode")
         public String authCode;
 
         @NameInMap("City")
         public String city;
-
-        @NameInMap("CreateTime")
-        public Long createTime;
 
         @NameInMap("DeviceId")
         public String deviceId;
@@ -80,26 +95,14 @@ public class QueryVehicleDeviceResponseBody extends TeaModel {
         @NameInMap("DeviceModel")
         public String deviceModel;
 
-        @NameInMap("DeviceName")
-        public String deviceName;
-
-        @NameInMap("IotId")
-        public String iotId;
-
         @NameInMap("Manufacturer")
         public String manufacturer;
-
-        @NameInMap("ModifiedTime")
-        public Long modifiedTime;
-
-        @NameInMap("ProductKey")
-        public String productKey;
 
         @NameInMap("Province")
         public String province;
 
         @NameInMap("RegisterTime")
-        public Long registerTime;
+        public String registerTime;
 
         @NameInMap("Status")
         public String status;
@@ -110,12 +113,12 @@ public class QueryVehicleDeviceResponseBody extends TeaModel {
         @NameInMap("VehicleNumber")
         public String vehicleNumber;
 
-        public static QueryVehicleDeviceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            QueryVehicleDeviceResponseBodyData self = new QueryVehicleDeviceResponseBodyData();
+        public static QueryVehicleDeviceResponseBodyDataJtProtocolDeviceData build(java.util.Map<String, ?> map) throws Exception {
+            QueryVehicleDeviceResponseBodyDataJtProtocolDeviceData self = new QueryVehicleDeviceResponseBodyDataJtProtocolDeviceData();
             return TeaModel.build(map, self);
         }
 
-        public QueryVehicleDeviceResponseBodyData setAuthCode(String authCode) {
+        public QueryVehicleDeviceResponseBodyDataJtProtocolDeviceData setAuthCode(String authCode) {
             this.authCode = authCode;
             return this;
         }
@@ -123,12 +126,120 @@ public class QueryVehicleDeviceResponseBody extends TeaModel {
             return this.authCode;
         }
 
-        public QueryVehicleDeviceResponseBodyData setCity(String city) {
+        public QueryVehicleDeviceResponseBodyDataJtProtocolDeviceData setCity(String city) {
             this.city = city;
             return this;
         }
         public String getCity() {
             return this.city;
+        }
+
+        public QueryVehicleDeviceResponseBodyDataJtProtocolDeviceData setDeviceId(String deviceId) {
+            this.deviceId = deviceId;
+            return this;
+        }
+        public String getDeviceId() {
+            return this.deviceId;
+        }
+
+        public QueryVehicleDeviceResponseBodyDataJtProtocolDeviceData setDeviceModel(String deviceModel) {
+            this.deviceModel = deviceModel;
+            return this;
+        }
+        public String getDeviceModel() {
+            return this.deviceModel;
+        }
+
+        public QueryVehicleDeviceResponseBodyDataJtProtocolDeviceData setManufacturer(String manufacturer) {
+            this.manufacturer = manufacturer;
+            return this;
+        }
+        public String getManufacturer() {
+            return this.manufacturer;
+        }
+
+        public QueryVehicleDeviceResponseBodyDataJtProtocolDeviceData setProvince(String province) {
+            this.province = province;
+            return this;
+        }
+        public String getProvince() {
+            return this.province;
+        }
+
+        public QueryVehicleDeviceResponseBodyDataJtProtocolDeviceData setRegisterTime(String registerTime) {
+            this.registerTime = registerTime;
+            return this;
+        }
+        public String getRegisterTime() {
+            return this.registerTime;
+        }
+
+        public QueryVehicleDeviceResponseBodyDataJtProtocolDeviceData setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public QueryVehicleDeviceResponseBodyDataJtProtocolDeviceData setVehicleColour(String vehicleColour) {
+            this.vehicleColour = vehicleColour;
+            return this;
+        }
+        public String getVehicleColour() {
+            return this.vehicleColour;
+        }
+
+        public QueryVehicleDeviceResponseBodyDataJtProtocolDeviceData setVehicleNumber(String vehicleNumber) {
+            this.vehicleNumber = vehicleNumber;
+            return this;
+        }
+        public String getVehicleNumber() {
+            return this.vehicleNumber;
+        }
+
+    }
+
+    public static class QueryVehicleDeviceResponseBodyData extends TeaModel {
+        /**
+         * <p>The timestamp when the device was created. Unit: milliseconds.</p>
+         */
+        @NameInMap("CreateTime")
+        public Long createTime;
+
+        /**
+         * <p>The DeviceName of the device.</p>
+         */
+        @NameInMap("DeviceName")
+        public String deviceName;
+
+        /**
+         * <p>The ID is a unique identifier that is issued by IoT Platform to the device.</p>
+         */
+        @NameInMap("IotId")
+        public String iotId;
+
+        @NameInMap("JtProtocolDeviceData")
+        public QueryVehicleDeviceResponseBodyDataJtProtocolDeviceData jtProtocolDeviceData;
+
+        /**
+         * <p>The timestamp when the device was last updated. Unit: milliseconds.</p>
+         */
+        @NameInMap("ModifiedTime")
+        public Long modifiedTime;
+
+        /**
+         * <p>The **ProductKey** of the gateway product to which the device belongs.</p>
+         */
+        @NameInMap("ProductKey")
+        public String productKey;
+
+        @NameInMap("Protocol")
+        public String protocol;
+
+        public static QueryVehicleDeviceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            QueryVehicleDeviceResponseBodyData self = new QueryVehicleDeviceResponseBodyData();
+            return TeaModel.build(map, self);
         }
 
         public QueryVehicleDeviceResponseBodyData setCreateTime(Long createTime) {
@@ -137,22 +248,6 @@ public class QueryVehicleDeviceResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
-        }
-
-        public QueryVehicleDeviceResponseBodyData setDeviceId(String deviceId) {
-            this.deviceId = deviceId;
-            return this;
-        }
-        public String getDeviceId() {
-            return this.deviceId;
-        }
-
-        public QueryVehicleDeviceResponseBodyData setDeviceModel(String deviceModel) {
-            this.deviceModel = deviceModel;
-            return this;
-        }
-        public String getDeviceModel() {
-            return this.deviceModel;
         }
 
         public QueryVehicleDeviceResponseBodyData setDeviceName(String deviceName) {
@@ -171,12 +266,12 @@ public class QueryVehicleDeviceResponseBody extends TeaModel {
             return this.iotId;
         }
 
-        public QueryVehicleDeviceResponseBodyData setManufacturer(String manufacturer) {
-            this.manufacturer = manufacturer;
+        public QueryVehicleDeviceResponseBodyData setJtProtocolDeviceData(QueryVehicleDeviceResponseBodyDataJtProtocolDeviceData jtProtocolDeviceData) {
+            this.jtProtocolDeviceData = jtProtocolDeviceData;
             return this;
         }
-        public String getManufacturer() {
-            return this.manufacturer;
+        public QueryVehicleDeviceResponseBodyDataJtProtocolDeviceData getJtProtocolDeviceData() {
+            return this.jtProtocolDeviceData;
         }
 
         public QueryVehicleDeviceResponseBodyData setModifiedTime(Long modifiedTime) {
@@ -195,44 +290,12 @@ public class QueryVehicleDeviceResponseBody extends TeaModel {
             return this.productKey;
         }
 
-        public QueryVehicleDeviceResponseBodyData setProvince(String province) {
-            this.province = province;
+        public QueryVehicleDeviceResponseBodyData setProtocol(String protocol) {
+            this.protocol = protocol;
             return this;
         }
-        public String getProvince() {
-            return this.province;
-        }
-
-        public QueryVehicleDeviceResponseBodyData setRegisterTime(Long registerTime) {
-            this.registerTime = registerTime;
-            return this;
-        }
-        public Long getRegisterTime() {
-            return this.registerTime;
-        }
-
-        public QueryVehicleDeviceResponseBodyData setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public QueryVehicleDeviceResponseBodyData setVehicleColour(String vehicleColour) {
-            this.vehicleColour = vehicleColour;
-            return this;
-        }
-        public String getVehicleColour() {
-            return this.vehicleColour;
-        }
-
-        public QueryVehicleDeviceResponseBodyData setVehicleNumber(String vehicleNumber) {
-            this.vehicleNumber = vehicleNumber;
-            return this;
-        }
-        public String getVehicleNumber() {
-            return this.vehicleNumber;
+        public String getProtocol() {
+            return this.protocol;
         }
 
     }

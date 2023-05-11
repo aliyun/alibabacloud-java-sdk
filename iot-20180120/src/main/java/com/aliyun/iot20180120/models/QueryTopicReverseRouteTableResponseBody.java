@@ -4,18 +4,33 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryTopicReverseRouteTableResponseBody extends TeaModel {
+    /**
+     * <p>The error message returned if the call fails.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SrcTopics")
     public QueryTopicReverseRouteTableResponseBodySrcTopics srcTopics;
 
+    /**
+     * <p>The list of source topics returned if the call is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

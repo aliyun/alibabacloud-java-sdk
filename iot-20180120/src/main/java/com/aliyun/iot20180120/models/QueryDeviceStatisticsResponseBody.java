@@ -4,18 +4,36 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceStatisticsResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The device statistics returned if the call is successful.</p>
+     */
     @NameInMap("Data")
     public QueryDeviceStatisticsResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the call fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +83,21 @@ public class QueryDeviceStatisticsResponseBody extends TeaModel {
     }
 
     public static class QueryDeviceStatisticsResponseBodyData extends TeaModel {
+        /**
+         * <p>The number of activated devices.</p>
+         */
         @NameInMap("activeCount")
         public Long activeCount;
 
+        /**
+         * <p>The total number of devices.</p>
+         */
         @NameInMap("deviceCount")
         public Long deviceCount;
 
+        /**
+         * <p>The number of online devices.</p>
+         */
         @NameInMap("onlineCount")
         public Long onlineCount;
 

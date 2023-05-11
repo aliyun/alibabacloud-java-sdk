@@ -4,18 +4,36 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GetThingScriptResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned if the call is successful.</p>
+     */
     @NameInMap("Data")
     public GetThingScriptResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the call fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +83,19 @@ public class GetThingScriptResponseBody extends TeaModel {
     }
 
     public static class GetThingScriptResponseBodyData extends TeaModel {
+        /**
+         * <p>The type of the script. Valid values:</p>
+         * <br>
+         * <p>*   JavaScript</p>
+         * <p>*   Python\_27: Python 2.7</p>
+         * <p>*   PHP\_72: PHP 7.2</p>
+         */
         @NameInMap("ScriptType")
         public String scriptType;
 
+        /**
+         * <p>The URL of the script payload.</p>
+         */
         @NameInMap("ScriptUrl")
         public String scriptUrl;
 

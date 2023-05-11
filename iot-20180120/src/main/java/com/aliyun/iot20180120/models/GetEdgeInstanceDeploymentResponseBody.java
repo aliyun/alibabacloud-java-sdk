@@ -4,18 +4,33 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GetEdgeInstanceDeploymentResponseBody extends TeaModel {
+    /**
+     * <p>The return code of the operation. A value of Success indicates that the call was successful. Other values indicate that specific errors occurred. For more information, see [Error codes](~~135200~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data that is returned if the call was successful.</p>
+     */
     @NameInMap("Data")
     public GetEdgeInstanceDeploymentResponseBodyData data;
 
+    /**
+     * <p>The error message that is returned if the call failed.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful. A value of true indicates that the call was successful. A value of false indicates that the call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,45 +80,101 @@ public class GetEdgeInstanceDeploymentResponseBody extends TeaModel {
     }
 
     public static class GetEdgeInstanceDeploymentResponseBodyDataTaskListResourceSnapshotList extends TeaModel {
+        /**
+         * <p>The time when the deployment task snapshot was complete.</p>
+         */
         @NameInMap("GmtCompleted")
         public String gmtCompleted;
 
+        /**
+         * <p>The UNIX timestamp when the deployment task snapshot was complete.</p>
+         */
         @NameInMap("GmtCompletedTimestamp")
         public Long gmtCompletedTimestamp;
 
+        /**
+         * <p>The time when the deployment task snapshot was created.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The UNIX timestamp when the deployment task snapshot was created.</p>
+         */
         @NameInMap("GmtCreateTimestamp")
         public Long gmtCreateTimestamp;
 
+        /**
+         * <p>The last time when the deployment task snapshot was modified.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The last UNIX timestamp when the deployment task snapshot was modified.</p>
+         */
         @NameInMap("GmtModifiedTimestamp")
         public Long gmtModifiedTimestamp;
 
+        /**
+         * <p>The logs of resource deployment.</p>
+         */
         @NameInMap("Log")
         public String log;
 
+        /**
+         * <p>The type of the operation.</p>
+         * <br>
+         * <p>*   0: deploys resources.</p>
+         * <p>*   1: deletes resources.</p>
+         */
         @NameInMap("OperateType")
         public Integer operateType;
 
+        /**
+         * <p>The ID of the resource.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The name of the resource.</p>
+         */
         @NameInMap("ResourceName")
         public String resourceName;
 
+        /**
+         * <p>The type of the resource.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The ID of the deployment task snapshot.</p>
+         */
         @NameInMap("SnapshotId")
         public String snapshotId;
 
+        /**
+         * <p>The stage of the snapshot task.</p>
+         * <br>
+         * <p>*   0: The snapshot task was in the initial state.</p>
+         * <p>*   8: The snapshot task was being assembled.</p>
+         * <p>*   16: The snapshot task was being packaged.</p>
+         * <p>*   24: The snapshot task was being dispatched.</p>
+         * <p>*   32: The snapshot task was complete.</p>
+         */
         @NameInMap("Stage")
         public Integer stage;
 
+        /**
+         * <p>The status of the snapshot task.</p>
+         * <br>
+         * <p>*   0: The snapshot task was not started.</p>
+         * <p>*   1: The snapshot task was being processed.</p>
+         * <p>*   2: The snapshot task was successful.</p>
+         * <p>*   3: The snapshot task failed.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
@@ -227,36 +298,80 @@ public class GetEdgeInstanceDeploymentResponseBody extends TeaModel {
     }
 
     public static class GetEdgeInstanceDeploymentResponseBodyDataTaskList extends TeaModel {
+        /**
+         * <p>The ID of the gateway.</p>
+         */
         @NameInMap("GatewayId")
         public String gatewayId;
 
+        /**
+         * <p>The time when the deployment subtask was complete.</p>
+         */
         @NameInMap("GmtCompleted")
         public String gmtCompleted;
 
+        /**
+         * <p>The UNIX timestamp when the deployment subtask was complete.</p>
+         */
         @NameInMap("GmtCompletedTimestamp")
         public Long gmtCompletedTimestamp;
 
+        /**
+         * <p>The time when the deployment subtask was created.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The UNIX timestamp when the deployment subtask was created.</p>
+         */
         @NameInMap("GmtCreateTimestamp")
         public Long gmtCreateTimestamp;
 
+        /**
+         * <p>The last time when the deployment subtask was modified.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The last UNIX timestamp when the deployment subtask was modified.</p>
+         */
         @NameInMap("GmtModifiedTimestamp")
         public Long gmtModifiedTimestamp;
 
+        /**
+         * <p>The list of deployment task snapshots.</p>
+         */
         @NameInMap("ResourceSnapshotList")
         public java.util.List<GetEdgeInstanceDeploymentResponseBodyDataTaskListResourceSnapshotList> resourceSnapshotList;
 
+        /**
+         * <p>The stage of the deployment subtask.</p>
+         * <br>
+         * <p>*   0: The subtask was not started.</p>
+         * <p>*   8: The subtask was being assembled.</p>
+         * <p>*   16: The subtask was being packaged.</p>
+         * <p>*   24: The subtask was being dispatched.</p>
+         * <p>*   32: The subtask was complete.</p>
+         */
         @NameInMap("Stage")
         public Integer stage;
 
+        /**
+         * <p>The status of the deployment subtask.</p>
+         * <br>
+         * <p>*   0: The subtask was in the initial state.</p>
+         * <p>*   1: The subtask was being processed.</p>
+         * <p>*   2: The subtask was successful.</p>
+         * <p>*   3: The subtask failed.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The ID of the deployment subtask.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
@@ -356,36 +471,77 @@ public class GetEdgeInstanceDeploymentResponseBody extends TeaModel {
     }
 
     public static class GetEdgeInstanceDeploymentResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the deployment task.</p>
+         */
         @NameInMap("DeploymentId")
         public String deploymentId;
 
+        /**
+         * <p>The description of the deployment task.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The time when the deployment task was complete.</p>
+         */
         @NameInMap("GmtCompleted")
         public String gmtCompleted;
 
+        /**
+         * <p>The UNIX timestamp when the deployment task was complete.</p>
+         */
         @NameInMap("GmtCompletedTimestamp")
         public Long gmtCompletedTimestamp;
 
+        /**
+         * <p>The time when the deployment task was created.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The UNIX timestamp when the deployment task was created.</p>
+         */
         @NameInMap("GmtCreateTimestamp")
         public Long gmtCreateTimestamp;
 
+        /**
+         * <p>The last time when the deployment task was modified.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The last UNIX timestamp when the deployment task was modified.</p>
+         */
         @NameInMap("GmtModifiedTimestamp")
         public Long gmtModifiedTimestamp;
 
+        /**
+         * <p>The status of the deployment task.</p>
+         * <br>
+         * <p>*   0: The task was not started.</p>
+         * <p>*   1: The task was being processed.</p>
+         * <p>*   2: The task was successful.</p>
+         * <p>*   3: The task failed.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The list of deployment subtasks.</p>
+         */
         @NameInMap("TaskList")
         public java.util.List<GetEdgeInstanceDeploymentResponseBodyDataTaskList> taskList;
 
+        /**
+         * <p>The type of the deployment task.</p>
+         * <br>
+         * <p>*   deploy: deploys the edge instance.</p>
+         * <p>*   reset: resets the edge instance.</p>
+         */
         @NameInMap("Type")
         public String type;
 

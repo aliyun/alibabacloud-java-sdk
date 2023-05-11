@@ -7,8 +7,8 @@ public class UpdateTopicConfigResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -29,12 +29,12 @@ public class UpdateTopicConfigResponseBody extends TeaModel {
         return this.code;
     }
 
-    public UpdateTopicConfigResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public UpdateTopicConfigResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public String getMessage() {
+        return this.message;
     }
 
     public UpdateTopicConfigResponseBody setRequestId(String requestId) {

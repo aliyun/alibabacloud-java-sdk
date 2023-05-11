@@ -4,18 +4,36 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceFileResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The file information returned if the call succeeds.</p>
+     */
     @NameInMap("Data")
     public QueryDeviceFileResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the call fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,18 +83,33 @@ public class QueryDeviceFileResponseBody extends TeaModel {
     }
 
     public static class QueryDeviceFileResponseBodyData extends TeaModel {
+        /**
+         * <p>The download URL of the file.</p>
+         */
         @NameInMap("DownloadUrl")
         public String downloadUrl;
 
+        /**
+         * <p>The ID of the file.</p>
+         */
         @NameInMap("FileId")
         public String fileId;
 
+        /**
+         * <p>The name of the file.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The size of the file. Unit: KB.</p>
+         */
         @NameInMap("Size")
         public String size;
 
+        /**
+         * <p>The time when the file was created.</p>
+         */
         @NameInMap("UtcCreatedOn")
         public String utcCreatedOn;
 

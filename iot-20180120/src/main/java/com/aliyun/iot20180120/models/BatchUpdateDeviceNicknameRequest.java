@@ -7,6 +7,14 @@ public class BatchUpdateDeviceNicknameRequest extends TeaModel {
     @NameInMap("DeviceNicknameInfo")
     public java.util.List<BatchUpdateDeviceNicknameRequestDeviceNicknameInfo> deviceNicknameInfo;
 
+    /**
+     * <p>The ID of the instance. You can view the instance **ID** on the **Overview** page in the IoT Platform console.</p>
+     * <br>
+     * <p>>*   If your instance has an ID, you must configure this parameter. If you do not set this parameter, the call fails.</p>
+     * <p>>*   If your instance has no **Overview** page or ID, you do not need to set this parameter.</p>
+     * <br>
+     * <p>For more information, see [Overview](~~356505~~).</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -32,15 +40,35 @@ public class BatchUpdateDeviceNicknameRequest extends TeaModel {
     }
 
     public static class BatchUpdateDeviceNicknameRequestDeviceNicknameInfo extends TeaModel {
+        /**
+         * <p>The DeviceName of the device.</p>
+         * <br>
+         * <p>>  If you specify this parameter, you must also specify the **ProductKey** parameter.</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <p>The ID of the device.</p>
+         * <br>
+         * <p>>  If you specify this parameter, you do not need to specify **ProductKey** or **DeviceName**. The **IotId** parameter specifies a globally unique identifier (GUID) of the device, which corresponds to a combination of **ProductKey** and **DeviceName**. If you specify both **IotId** and the combination of **ProductKey** and **DeviceName**, **IotId** takes precedence.</p>
+         */
         @NameInMap("IotId")
         public String iotId;
 
+        /**
+         * <p>The new alias of the device. The alias must be 4 to 32 characters in length, and can contain letters, digits, and underscores (\_). Each Chinese character is counted as two characters.</p>
+         * <br>
+         * <p>>  If you do not specify this parameter, the original alias of the device will be deleted.</p>
+         */
         @NameInMap("Nickname")
         public String nickname;
 
+        /**
+         * <p>The ProductKey of the product to which the device belongs.</p>
+         * <br>
+         * <p>>  If you specify this parameter, you must also specify the **DeviceName** parameter.</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 

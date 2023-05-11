@@ -4,18 +4,36 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ClearDeviceDesiredPropertyResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call fails. For more information, see the "**Error codes**" section of this topic.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned if the call is successful.</p>
+     */
     @NameInMap("Data")
     public ClearDeviceDesiredPropertyResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the call fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,6 +83,9 @@ public class ClearDeviceDesiredPropertyResponseBody extends TeaModel {
     }
 
     public static class ClearDeviceDesiredPropertyResponseBodyData extends TeaModel {
+        /**
+         * <p>The latest version of the desired values of the properties after you call this operation to delete the specified desired property values.</p>
+         */
         @NameInMap("Versions")
         public String versions;
 

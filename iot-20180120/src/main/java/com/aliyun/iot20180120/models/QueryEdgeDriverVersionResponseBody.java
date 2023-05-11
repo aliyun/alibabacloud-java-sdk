@@ -4,18 +4,33 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryEdgeDriverVersionResponseBody extends TeaModel {
+    /**
+     * <p>The return code of the operation. A value of Success indicates that the call was successful. Other values indicate that specific errors occurred. For more information, see [Error codes](~~135200~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data that is returned if the call was successful.</p>
+     */
     @NameInMap("Data")
     public QueryEdgeDriverVersionResponseBodyData data;
 
+    /**
+     * <p>The error message that is returned if the call failed.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful. A value of true indicates that the call was successful. A value of false indicates that the call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,39 +80,89 @@ public class QueryEdgeDriverVersionResponseBody extends TeaModel {
     }
 
     public static class QueryEdgeDriverVersionResponseBodyDataDriverVersionList extends TeaModel {
+        /**
+         * <p>The Java Virtual Machine (JVM) startup parameter.</p>
+         */
         @NameInMap("Argument")
         public String argument;
 
+        /**
+         * <p>The rule for verifying configurations. The value is a JSON string in the following format:</p>
+         * <br>
+         * <p>`{"deviceConfig":{"required":false},"driverConfig":{"required":false}`</p>
+         * <br>
+         * <p>The JSON string contains the following parameters:</p>
+         * <br>
+         * <p>*   driverConfig: the rule for verifying the configuration of the driver when the driver is to be deployed in an edge instance.</p>
+         * <p>*   deviceConfig: the rule for verifying the configurations of devices that use the driver when the driver is to be deployed in an edge instance.</p>
+         */
         @NameInMap("ConfigCheckRule")
         public String configCheckRule;
 
+        /**
+         * <p>The configuration of the container where the driver runs. The value is a JSON string. For more information about parameters in the JSON string, see the following parameter description of ContainerConfig.</p>
+         */
         @NameInMap("ContainerConfig")
         public String containerConfig;
 
+        /**
+         * <p>The description of the driver.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The configuration of the driver. The value is a JSON string in the following format:</p>
+         * <br>
+         * <p>`{"format":"JSON","content":"{}"}`</p>
+         * <br>
+         * <p>The JSON string contains the following parameters:</p>
+         * <br>
+         * <p>*   format: the format of the driver configuration. Valid values: KV (key-value pair), JSON (JSON string), and FILE (configuration file).</p>
+         * <p>*   content: the content of the driver configuration. If the format parameter is set to KV or JSON, the value of this parameter is the configuration content. If the format parameter is set to FILE, the value of this parameter is the URL of the configuration file stored in Object Storage Service (OSS).</p>
+         */
         @NameInMap("DriverConfig")
         public String driverConfig;
 
+        /**
+         * <p>The ID of the driver.</p>
+         */
         @NameInMap("DriverId")
         public String driverId;
 
+        /**
+         * <p>The version number of the driver.</p>
+         */
         @NameInMap("DriverVersion")
         public String driverVersion;
 
+        /**
+         * <p>The earliest version of Link IoT Edge that is supported by the driver.</p>
+         */
         @NameInMap("EdgeVersion")
         public String edgeVersion;
 
+        /**
+         * <p>The UNIX timestamp when the driver was created.</p>
+         */
         @NameInMap("GmtCreateTimestamp")
         public Long gmtCreateTimestamp;
 
+        /**
+         * <p>The last UNIX timestamp when the driver was updated.</p>
+         */
         @NameInMap("GmtModifiedTimestamp")
         public Long gmtModifiedTimestamp;
 
         @NameInMap("SourceConfig")
         public String sourceConfig;
 
+        /**
+         * <p>The status of the driver version. Valid values:</p>
+         * <br>
+         * <p>*   0: The driver version was not published.</p>
+         * <p>*   1: The driver version was published.</p>
+         */
         @NameInMap("VersionState")
         public String versionState;
 
@@ -205,15 +270,27 @@ public class QueryEdgeDriverVersionResponseBody extends TeaModel {
     }
 
     public static class QueryEdgeDriverVersionResponseBodyData extends TeaModel {
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The information about each version of the driver.</p>
+         */
         @NameInMap("DriverVersionList")
         public java.util.List<QueryEdgeDriverVersionResponseBodyDataDriverVersionList> driverVersionList;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The number of driver versions.</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

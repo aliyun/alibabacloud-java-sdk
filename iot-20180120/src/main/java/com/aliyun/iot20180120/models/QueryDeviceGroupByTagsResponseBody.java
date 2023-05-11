@@ -4,30 +4,60 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceGroupByTagsResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The group information returned if the call succeeds.</p>
+     */
     @NameInMap("Data")
     public QueryDeviceGroupByTagsResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the call fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The number of the returned page.</p>
+     */
     @NameInMap("Page")
     public Integer page;
 
+    /**
+     * <p>The total number of pages.</p>
+     */
     @NameInMap("PageCount")
     public Integer pageCount;
 
+    /**
+     * <p>The number of entries returned on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of records.</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -109,9 +139,15 @@ public class QueryDeviceGroupByTagsResponseBody extends TeaModel {
     }
 
     public static class QueryDeviceGroupByTagsResponseBodyDataDeviceGroup extends TeaModel {
+        /**
+         * <p>The ID of the group.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The name of the group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 

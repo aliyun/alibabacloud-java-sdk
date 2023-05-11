@@ -4,27 +4,56 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ListRuleResponseBody extends TeaModel {
+    /**
+     * <p>The error code that is returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The rules returned if the call is successful. For more information, see the "**RuleInfo**" section of this topic.</p>
+     * <br>
+     * <p>>  The returned rules are sorted in reverse-chronological order based on the time when the rules were created.</p>
+     */
     @NameInMap("Data")
     public ListRuleResponseBodyData data;
 
+    /**
+     * <p>The error message that is returned if the call fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("Page")
     public Integer page;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of pages returned.</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -98,48 +127,100 @@ public class ListRuleResponseBody extends TeaModel {
     }
 
     public static class ListRuleResponseBodyDataRuleInfo extends TeaModel {
+        /**
+         * <p>The ID of the user who created the rule.</p>
+         */
         @NameInMap("CreateUserId")
         public Long createUserId;
 
+        /**
+         * <p>The time when the rule was created. The time is displayed in UTC-6.</p>
+         */
         @NameInMap("Created")
         public String created;
 
+        /**
+         * <p>The data type of the rule. Valid values: **JSON** and **BINARY**.</p>
+         */
         @NameInMap("DataType")
         public String dataType;
 
+        /**
+         * <p>The ID of the rule.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The time when the rule was last modified. The time is displayed in UTC-6.</p>
+         */
         @NameInMap("Modified")
         public String modified;
 
+        /**
+         * <p>The name of the rule.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The **ProductKey** of the product to which the rule applies.</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 
+        /**
+         * <p>The description of the rule.</p>
+         */
         @NameInMap("RuleDesc")
         public String ruleDesc;
 
+        /**
+         * <p>The content that follows the **Select** keyword in the SQL statement of the rule.</p>
+         */
         @NameInMap("Select")
         public String select;
 
+        /**
+         * <p>The topic to which the rule applies. The topic does not include the ProductKey level. Format: `${deviceName}/topicShortName`. ${deviceName} indicates the name of the device, and topicShortName indicates the custom name of the topic.</p>
+         * <br>
+         * <p>>  For information about how to use a plus sign (`+`) or a number sign (`#`) as a wildcard character in a topic, see [Topic wildcards](~~73731~~).</p>
+         */
         @NameInMap("ShortTopic")
         public String shortTopic;
 
+        /**
+         * <p>The status of the rule. Valid values:</p>
+         * <br>
+         * <p>*   **RUNNING**: The rule is running.</p>
+         * <p>*   **STOP**: The rule is disabled.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The topic to which the rule applies. Format: `${productKey}/${deviceName}/topicShortName`.</p>
+         * <br>
+         * <p>>  For information about how to use a plus sign (`+`) or a number sign (`#`) as a wildcard character in a topic, see [Topic wildcards](~~73731~~).</p>
+         */
         @NameInMap("Topic")
         public String topic;
 
+        /**
+         * <p>The time when the device was created. The time is displayed in UTC.</p>
+         */
         @NameInMap("UtcCreated")
         public String utcCreated;
 
+        /**
+         * <p>The time when the rule was last modified.</p>
+         */
         @NameInMap("UtcModified")
         public String utcModified;
 
+        /**
+         * <p>The **Where** query condition in the SQL statement of the rule.</p>
+         */
         @NameInMap("Where")
         public String where;
 

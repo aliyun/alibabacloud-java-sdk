@@ -4,30 +4,60 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceByTagsResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The device information returned if the call succeeds. The **SimpleDeviceInfo** parameter includes the details of the devices.</p>
+     */
     @NameInMap("Data")
     public QueryDeviceByTagsResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the call fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("Page")
     public Integer page;
 
+    /**
+     * <p>The total number of pages.</p>
+     */
     @NameInMap("PageCount")
     public Integer pageCount;
 
+    /**
+     * <p>The number of entries returned on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of records.</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -109,15 +139,27 @@ public class QueryDeviceByTagsResponseBody extends TeaModel {
     }
 
     public static class QueryDeviceByTagsResponseBodyDataSimpleDeviceInfo extends TeaModel {
+        /**
+         * <p>The DeviceName of the device.</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <p>The ID of the device. The ID is the unique identifier that is issued by IoT Platform to the device.</p>
+         */
         @NameInMap("IotId")
         public String iotId;
 
+        /**
+         * <p>The ProductKey of the product to which the device belongs.</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 
+        /**
+         * <p>The name of the product.</p>
+         */
         @NameInMap("ProductName")
         public String productName;
 

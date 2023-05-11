@@ -4,15 +4,27 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryEdgeInstanceRequest extends TeaModel {
+    /**
+     * <p>The name of the edge instance.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: 30. Default value: 10. If you specify a value smaller than 1, the system uses 10.</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>The error code. Success indicates that the call was successful. Other values indicate that specific errors occurred. For more information, see [Error codes](~~135200~~).</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The number of the page from which the results are displayed. The minimum value is 1. If you specify a value smaller than 1, the system uses 1.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

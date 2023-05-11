@@ -4,15 +4,38 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryThingModelExtendConfigRequest extends TeaModel {
+    /**
+     * <p>The identifier of the custom TSL module. Each identifier is unique in a product.</p>
+     * <br>
+     * <p>If you do not specify this parameter, the system exports the data of the default module.</p>
+     */
     @NameInMap("FunctionBlockId")
     public String functionBlockId;
 
+    /**
+     * <p>The ID of the instance. You can view the instance **ID** on the **Overview** page in the IoT Platform console.</p>
+     * <br>
+     * <p>>*   If your instance has an ID, you must configure this parameter. If you do not set this parameter, the call fails.</p>
+     * <p>>*   If your instance has no **Overview** page or ID, you do not need to set this parameter.</p>
+     * <br>
+     * <p>For more information, see [Overview](~~356505~~).</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>The version number of the TSL model.</p>
+     * <br>
+     * <p>You can call the [ListThingModelVersion](~~150318~~) operation to view the version numbers of the TSL model for a product.</p>
+     * <br>
+     * <p>If you do not specify this parameter, the last published TSL version is returned.</p>
+     */
     @NameInMap("ModelVersion")
     public String modelVersion;
 
+    /**
+     * <p>The ProductKey of the product.</p>
+     */
     @NameInMap("ProductKey")
     public String productKey;
 

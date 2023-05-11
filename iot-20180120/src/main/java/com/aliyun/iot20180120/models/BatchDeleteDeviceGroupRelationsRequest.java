@@ -7,9 +7,20 @@ public class BatchDeleteDeviceGroupRelationsRequest extends TeaModel {
     @NameInMap("Device")
     public java.util.List<BatchDeleteDeviceGroupRelationsRequestDevice> device;
 
+    /**
+     * <p>The ID of the group. The ID is the globally unique identifier (GUID) for the group.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The ID of the instance. You can view the instance **ID** on the **Overview** page in the IoT Platform console.</p>
+     * <br>
+     * <p>>*   If your instance has an ID, you must configure this parameter. If you do not set this parameter, the call fails.</p>
+     * <p>>*   If your instance has no **Overview** page or ID, you do not need to set this parameter.</p>
+     * <br>
+     * <p>For more information, see [Overview](~~356505~~).</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -43,9 +54,15 @@ public class BatchDeleteDeviceGroupRelationsRequest extends TeaModel {
     }
 
     public static class BatchDeleteDeviceGroupRelationsRequestDevice extends TeaModel {
+        /**
+         * <p>The names of the devices to be removed. You can specify a maximum of 200 devices.</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <p>The ProductKeys of the products to which the devices belong. You can specify a maximum of 200 ProductKeys.</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 

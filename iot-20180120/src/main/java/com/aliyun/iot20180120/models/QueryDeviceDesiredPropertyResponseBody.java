@@ -4,18 +4,36 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceDesiredPropertyResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned in the **List** parameter if the call is successful.</p>
+     */
     @NameInMap("Data")
     public QueryDeviceDesiredPropertyResponseBodyData data;
 
+    /**
+     * <p>The error message that is returned if the call fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,24 +83,47 @@ public class QueryDeviceDesiredPropertyResponseBody extends TeaModel {
     }
 
     public static class QueryDeviceDesiredPropertyResponseBodyDataListDesiredPropertyInfo extends TeaModel {
+        /**
+         * <p>The data type of the property.</p>
+         */
         @NameInMap("DataType")
         public String dataType;
 
+        /**
+         * <p>The identifier of the property.</p>
+         */
         @NameInMap("Identifier")
         public String identifier;
 
+        /**
+         * <p>The name of the property.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The time when the desired value of the property was last modified. Unit: milliseconds.</p>
+         */
         @NameInMap("Time")
         public String time;
 
+        /**
+         * <p>The unit of the property.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The desired value of the property.</p>
+         * <br>
+         * <p>>  If you call the [ClearDeviceDesiredProperty](~~477431~~) operation to delete the desired value of the property, the **Value** parameter is not returned.</p>
+         */
         @NameInMap("Value")
         public String value;
 
+        /**
+         * <p>The version of the desired value.</p>
+         */
         @NameInMap("Version")
         public Long version;
 
@@ -169,6 +210,9 @@ public class QueryDeviceDesiredPropertyResponseBody extends TeaModel {
     }
 
     public static class QueryDeviceDesiredPropertyResponseBodyData extends TeaModel {
+        /**
+         * <p>The desired property information returned in the **DesiredPropertyInfo** parameter.</p>
+         */
         @NameInMap("List")
         public QueryDeviceDesiredPropertyResponseBodyDataList list;
 
