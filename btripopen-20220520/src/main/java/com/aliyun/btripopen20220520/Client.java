@@ -3189,6 +3189,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.flightSearchListWithOptions(request, headers, runtime);
     }
 
+    public GroupCorpTokenResponse groupCorpTokenWithOptions(GroupCorpTokenRequest request, GroupCorpTokenHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appSecret)) {
+            query.put("app_secret", request.appSecret);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.corpId)) {
+            query.put("corp_id", request.corpId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subCorpId)) {
+            query.put("sub_corp_id", request.subCorpId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripAccessToken)) {
+            realHeaders.put("x-acs-btrip-access-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripAccessToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GroupCorpToken"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/btrip-open-auth/v1/group-corp-token/action/take"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GroupCorpTokenResponse());
+    }
+
+    public GroupCorpTokenResponse groupCorpToken(GroupCorpTokenRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GroupCorpTokenHeaders headers = new GroupCorpTokenHeaders();
+        return this.groupCorpTokenWithOptions(request, headers, runtime);
+    }
+
     public GroupDepartSaveResponse groupDepartSaveWithOptions(GroupDepartSaveRequest tmpReq, GroupDepartSaveHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         GroupDepartSaveShrinkRequest request = new GroupDepartSaveShrinkRequest();
