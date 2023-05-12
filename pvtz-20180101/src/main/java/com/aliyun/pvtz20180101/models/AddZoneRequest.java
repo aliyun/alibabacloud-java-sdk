@@ -7,23 +7,20 @@ public class AddZoneRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("ZoneName")
-    public String zoneName;
-
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("ProxyPattern")
     public String proxyPattern;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    @NameInMap("ZoneType")
-    public String zoneType;
+    @NameInMap("ZoneName")
+    public String zoneName;
 
     @NameInMap("ZoneTag")
     public String zoneTag;
+
+    @NameInMap("ZoneType")
+    public String zoneType;
 
     public static AddZoneRequest build(java.util.Map<String, ?> map) throws Exception {
         AddZoneRequest self = new AddZoneRequest();
@@ -36,22 +33,6 @@ public class AddZoneRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public AddZoneRequest setZoneName(String zoneName) {
-        this.zoneName = zoneName;
-        return this;
-    }
-    public String getZoneName() {
-        return this.zoneName;
-    }
-
-    public AddZoneRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
     public AddZoneRequest setProxyPattern(String proxyPattern) {
@@ -70,12 +51,12 @@ public class AddZoneRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public AddZoneRequest setZoneType(String zoneType) {
-        this.zoneType = zoneType;
+    public AddZoneRequest setZoneName(String zoneName) {
+        this.zoneName = zoneName;
         return this;
     }
-    public String getZoneType() {
-        return this.zoneType;
+    public String getZoneName() {
+        return this.zoneName;
     }
 
     public AddZoneRequest setZoneTag(String zoneTag) {
@@ -84,6 +65,14 @@ public class AddZoneRequest extends TeaModel {
     }
     public String getZoneTag() {
         return this.zoneTag;
+    }
+
+    public AddZoneRequest setZoneType(String zoneType) {
+        this.zoneType = zoneType;
+        return this;
+    }
+    public String getZoneType() {
+        return this.zoneType;
     }
 
 }

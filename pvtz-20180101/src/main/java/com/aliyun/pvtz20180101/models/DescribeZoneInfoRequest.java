@@ -7,11 +7,11 @@ public class DescribeZoneInfoRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Zone ID。</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
-
-    @NameInMap("UserClientIp")
-    public String userClientIp;
 
     public static DescribeZoneInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeZoneInfoRequest self = new DescribeZoneInfoRequest();
@@ -32,14 +32,6 @@ public class DescribeZoneInfoRequest extends TeaModel {
     }
     public String getZoneId() {
         return this.zoneId;
-    }
-
-    public DescribeZoneInfoRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
 }

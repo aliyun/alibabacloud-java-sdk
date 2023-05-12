@@ -7,11 +7,14 @@ public class DeleteZoneRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("ZoneId")
-    public String zoneId;
-
     @NameInMap("UserClientIp")
     public String userClientIp;
+
+    /**
+     * <p>zone ID</p>
+     */
+    @NameInMap("ZoneId")
+    public String zoneId;
 
     public static DeleteZoneRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteZoneRequest self = new DeleteZoneRequest();
@@ -26,20 +29,20 @@ public class DeleteZoneRequest extends TeaModel {
         return this.lang;
     }
 
-    public DeleteZoneRequest setZoneId(String zoneId) {
-        this.zoneId = zoneId;
-        return this;
-    }
-    public String getZoneId() {
-        return this.zoneId;
-    }
-
     public DeleteZoneRequest setUserClientIp(String userClientIp) {
         this.userClientIp = userClientIp;
         return this;
     }
     public String getUserClientIp() {
         return this.userClientIp;
+    }
+
+    public DeleteZoneRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public String getZoneId() {
+        return this.zoneId;
     }
 
 }

@@ -7,14 +7,14 @@ public class MoveResourceGroupRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("ResourceId")
-    public String resourceId;
-
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
+
+    /**
+     * <p>Zone Id。</p>
+     */
+    @NameInMap("ResourceId")
+    public String resourceId;
 
     public static MoveResourceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         MoveResourceGroupRequest self = new MoveResourceGroupRequest();
@@ -29,28 +29,20 @@ public class MoveResourceGroupRequest extends TeaModel {
         return this.lang;
     }
 
-    public MoveResourceGroupRequest setResourceId(String resourceId) {
-        this.resourceId = resourceId;
-        return this;
-    }
-    public String getResourceId() {
-        return this.resourceId;
-    }
-
-    public MoveResourceGroupRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
-    }
-
     public MoveResourceGroupRequest setNewResourceGroupId(String newResourceGroupId) {
         this.newResourceGroupId = newResourceGroupId;
         return this;
     }
     public String getNewResourceGroupId() {
         return this.newResourceGroupId;
+    }
+
+    public MoveResourceGroupRequest setResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public String getResourceId() {
+        return this.resourceId;
     }
 
 }

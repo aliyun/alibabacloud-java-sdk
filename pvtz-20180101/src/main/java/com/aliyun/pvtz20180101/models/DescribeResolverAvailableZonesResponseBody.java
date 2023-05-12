@@ -1,0 +1,64 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.pvtz20180101.models;
+
+import com.aliyun.tea.*;
+
+public class DescribeResolverAvailableZonesResponseBody extends TeaModel {
+    @NameInMap("AvailableZones")
+    public java.util.List<DescribeResolverAvailableZonesResponseBodyAvailableZones> availableZones;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    public static DescribeResolverAvailableZonesResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DescribeResolverAvailableZonesResponseBody self = new DescribeResolverAvailableZonesResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public DescribeResolverAvailableZonesResponseBody setAvailableZones(java.util.List<DescribeResolverAvailableZonesResponseBodyAvailableZones> availableZones) {
+        this.availableZones = availableZones;
+        return this;
+    }
+    public java.util.List<DescribeResolverAvailableZonesResponseBodyAvailableZones> getAvailableZones() {
+        return this.availableZones;
+    }
+
+    public DescribeResolverAvailableZonesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static class DescribeResolverAvailableZonesResponseBodyAvailableZones extends TeaModel {
+        @NameInMap("AzId")
+        public String azId;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static DescribeResolverAvailableZonesResponseBodyAvailableZones build(java.util.Map<String, ?> map) throws Exception {
+            DescribeResolverAvailableZonesResponseBodyAvailableZones self = new DescribeResolverAvailableZonesResponseBodyAvailableZones();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeResolverAvailableZonesResponseBodyAvailableZones setAzId(String azId) {
+            this.azId = azId;
+            return this;
+        }
+        public String getAzId() {
+            return this.azId;
+        }
+
+        public DescribeResolverAvailableZonesResponseBodyAvailableZones setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
+}

@@ -32,37 +32,38 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
     }
 
     public static class DescribeZoneVpcTreeResponseBodyZonesZoneVpcsVpc extends TeaModel {
-        @NameInMap("VpcName")
-        public String vpcName;
-
-        @NameInMap("VpcId")
-        public String vpcId;
+        /**
+         * <p>region Id</p>
+         */
+        @NameInMap("RegionId")
+        public String regionId;
 
         @NameInMap("RegionName")
         public String regionName;
 
-        @NameInMap("RegionId")
-        public String regionId;
+        /**
+         * <p>vpc id</p>
+         */
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        @NameInMap("VpcName")
+        public String vpcName;
+
+        @NameInMap("VpcType")
+        public String vpcType;
 
         public static DescribeZoneVpcTreeResponseBodyZonesZoneVpcsVpc build(java.util.Map<String, ?> map) throws Exception {
             DescribeZoneVpcTreeResponseBodyZonesZoneVpcsVpc self = new DescribeZoneVpcTreeResponseBodyZonesZoneVpcsVpc();
             return TeaModel.build(map, self);
         }
 
-        public DescribeZoneVpcTreeResponseBodyZonesZoneVpcsVpc setVpcName(String vpcName) {
-            this.vpcName = vpcName;
+        public DescribeZoneVpcTreeResponseBodyZonesZoneVpcsVpc setRegionId(String regionId) {
+            this.regionId = regionId;
             return this;
         }
-        public String getVpcName() {
-            return this.vpcName;
-        }
-
-        public DescribeZoneVpcTreeResponseBodyZonesZoneVpcsVpc setVpcId(String vpcId) {
-            this.vpcId = vpcId;
-            return this;
-        }
-        public String getVpcId() {
-            return this.vpcId;
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public DescribeZoneVpcTreeResponseBodyZonesZoneVpcsVpc setRegionName(String regionName) {
@@ -73,12 +74,28 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
             return this.regionName;
         }
 
-        public DescribeZoneVpcTreeResponseBodyZonesZoneVpcsVpc setRegionId(String regionId) {
-            this.regionId = regionId;
+        public DescribeZoneVpcTreeResponseBodyZonesZoneVpcsVpc setVpcId(String vpcId) {
+            this.vpcId = vpcId;
             return this;
         }
-        public String getRegionId() {
-            return this.regionId;
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public DescribeZoneVpcTreeResponseBodyZonesZoneVpcsVpc setVpcName(String vpcName) {
+            this.vpcName = vpcName;
+            return this;
+        }
+        public String getVpcName() {
+            return this.vpcName;
+        }
+
+        public DescribeZoneVpcTreeResponseBodyZonesZoneVpcsVpc setVpcType(String vpcType) {
+            this.vpcType = vpcType;
+            return this;
+        }
+        public String getVpcType() {
+            return this.vpcType;
         }
 
     }
@@ -103,69 +120,48 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
     }
 
     public static class DescribeZoneVpcTreeResponseBodyZonesZone extends TeaModel {
-        @NameInMap("UpdateTime")
-        public String updateTime;
-
-        @NameInMap("ZoneType")
-        public String zoneType;
-
-        @NameInMap("Remark")
-        public String remark;
-
         @NameInMap("CreateTime")
         public String createTime;
-
-        @NameInMap("Vpcs")
-        public DescribeZoneVpcTreeResponseBodyZonesZoneVpcs vpcs;
-
-        @NameInMap("RecordCount")
-        public Integer recordCount;
-
-        @NameInMap("ZoneName")
-        public String zoneName;
-
-        @NameInMap("UpdateTimestamp")
-        public Long updateTimestamp;
-
-        @NameInMap("ZoneId")
-        public String zoneId;
-
-        @NameInMap("ZoneTag")
-        public String zoneTag;
-
-        @NameInMap("IsPtr")
-        public Boolean isPtr;
 
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
+        @NameInMap("IsPtr")
+        public Boolean isPtr;
+
+        @NameInMap("RecordCount")
+        public Integer recordCount;
+
+        @NameInMap("Remark")
+        public String remark;
+
+        @NameInMap("UpdateTime")
+        public String updateTime;
+
+        @NameInMap("UpdateTimestamp")
+        public Long updateTimestamp;
+
+        @NameInMap("Vpcs")
+        public DescribeZoneVpcTreeResponseBodyZonesZoneVpcs vpcs;
+
+        /**
+         * <p>Zone id</p>
+         */
+        @NameInMap("ZoneId")
+        public String zoneId;
+
+        @NameInMap("ZoneName")
+        public String zoneName;
+
+        @NameInMap("ZoneTag")
+        public String zoneTag;
+
+        @NameInMap("ZoneType")
+        public String zoneType;
+
         public static DescribeZoneVpcTreeResponseBodyZonesZone build(java.util.Map<String, ?> map) throws Exception {
             DescribeZoneVpcTreeResponseBodyZonesZone self = new DescribeZoneVpcTreeResponseBodyZonesZone();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeZoneVpcTreeResponseBodyZonesZone setUpdateTime(String updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public String getUpdateTime() {
-            return this.updateTime;
-        }
-
-        public DescribeZoneVpcTreeResponseBodyZonesZone setZoneType(String zoneType) {
-            this.zoneType = zoneType;
-            return this;
-        }
-        public String getZoneType() {
-            return this.zoneType;
-        }
-
-        public DescribeZoneVpcTreeResponseBodyZonesZone setRemark(String remark) {
-            this.remark = remark;
-            return this;
-        }
-        public String getRemark() {
-            return this.remark;
         }
 
         public DescribeZoneVpcTreeResponseBodyZonesZone setCreateTime(String createTime) {
@@ -176,52 +172,12 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public DescribeZoneVpcTreeResponseBodyZonesZone setVpcs(DescribeZoneVpcTreeResponseBodyZonesZoneVpcs vpcs) {
-            this.vpcs = vpcs;
+        public DescribeZoneVpcTreeResponseBodyZonesZone setCreateTimestamp(Long createTimestamp) {
+            this.createTimestamp = createTimestamp;
             return this;
         }
-        public DescribeZoneVpcTreeResponseBodyZonesZoneVpcs getVpcs() {
-            return this.vpcs;
-        }
-
-        public DescribeZoneVpcTreeResponseBodyZonesZone setRecordCount(Integer recordCount) {
-            this.recordCount = recordCount;
-            return this;
-        }
-        public Integer getRecordCount() {
-            return this.recordCount;
-        }
-
-        public DescribeZoneVpcTreeResponseBodyZonesZone setZoneName(String zoneName) {
-            this.zoneName = zoneName;
-            return this;
-        }
-        public String getZoneName() {
-            return this.zoneName;
-        }
-
-        public DescribeZoneVpcTreeResponseBodyZonesZone setUpdateTimestamp(Long updateTimestamp) {
-            this.updateTimestamp = updateTimestamp;
-            return this;
-        }
-        public Long getUpdateTimestamp() {
-            return this.updateTimestamp;
-        }
-
-        public DescribeZoneVpcTreeResponseBodyZonesZone setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
-        }
-
-        public DescribeZoneVpcTreeResponseBodyZonesZone setZoneTag(String zoneTag) {
-            this.zoneTag = zoneTag;
-            return this;
-        }
-        public String getZoneTag() {
-            return this.zoneTag;
+        public Long getCreateTimestamp() {
+            return this.createTimestamp;
         }
 
         public DescribeZoneVpcTreeResponseBodyZonesZone setIsPtr(Boolean isPtr) {
@@ -232,12 +188,76 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
             return this.isPtr;
         }
 
-        public DescribeZoneVpcTreeResponseBodyZonesZone setCreateTimestamp(Long createTimestamp) {
-            this.createTimestamp = createTimestamp;
+        public DescribeZoneVpcTreeResponseBodyZonesZone setRecordCount(Integer recordCount) {
+            this.recordCount = recordCount;
             return this;
         }
-        public Long getCreateTimestamp() {
-            return this.createTimestamp;
+        public Integer getRecordCount() {
+            return this.recordCount;
+        }
+
+        public DescribeZoneVpcTreeResponseBodyZonesZone setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
+        }
+
+        public DescribeZoneVpcTreeResponseBodyZonesZone setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public String getUpdateTime() {
+            return this.updateTime;
+        }
+
+        public DescribeZoneVpcTreeResponseBodyZonesZone setUpdateTimestamp(Long updateTimestamp) {
+            this.updateTimestamp = updateTimestamp;
+            return this;
+        }
+        public Long getUpdateTimestamp() {
+            return this.updateTimestamp;
+        }
+
+        public DescribeZoneVpcTreeResponseBodyZonesZone setVpcs(DescribeZoneVpcTreeResponseBodyZonesZoneVpcs vpcs) {
+            this.vpcs = vpcs;
+            return this;
+        }
+        public DescribeZoneVpcTreeResponseBodyZonesZoneVpcs getVpcs() {
+            return this.vpcs;
+        }
+
+        public DescribeZoneVpcTreeResponseBodyZonesZone setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public DescribeZoneVpcTreeResponseBodyZonesZone setZoneName(String zoneName) {
+            this.zoneName = zoneName;
+            return this;
+        }
+        public String getZoneName() {
+            return this.zoneName;
+        }
+
+        public DescribeZoneVpcTreeResponseBodyZonesZone setZoneTag(String zoneTag) {
+            this.zoneTag = zoneTag;
+            return this;
+        }
+        public String getZoneTag() {
+            return this.zoneTag;
+        }
+
+        public DescribeZoneVpcTreeResponseBodyZonesZone setZoneType(String zoneType) {
+            this.zoneType = zoneType;
+            return this;
+        }
+        public String getZoneType() {
+            return this.zoneType;
         }
 
     }

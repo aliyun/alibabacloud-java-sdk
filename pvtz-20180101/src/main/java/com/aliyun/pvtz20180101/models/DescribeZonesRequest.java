@@ -4,6 +4,9 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class DescribeZonesRequest extends TeaModel {
+    @NameInMap("Keyword")
+    public String keyword;
+
     @NameInMap("Lang")
     public String lang;
 
@@ -13,39 +16,41 @@ public class DescribeZonesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("Keyword")
-    public String keyword;
-
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
-    @NameInMap("SearchMode")
-    public String searchMode;
-
     @NameInMap("QueryRegionId")
     public String queryRegionId;
 
+    /**
+     * <p>VPC ID。</p>
+     */
     @NameInMap("QueryVpcId")
     public String queryVpcId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    @NameInMap("OrderBy")
-    public String orderBy;
+    @NameInMap("ResourceTag")
+    public java.util.List<DescribeZonesRequestResourceTag> resourceTag;
 
-    @NameInMap("Direction")
-    public String direction;
-
-    @NameInMap("ZoneType")
-    public String zoneType;
+    @NameInMap("SearchMode")
+    public String searchMode;
 
     @NameInMap("ZoneTag")
     public java.util.List<String> zoneTag;
 
+    @NameInMap("ZoneType")
+    public String zoneType;
+
     public static DescribeZonesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeZonesRequest self = new DescribeZonesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeZonesRequest setKeyword(String keyword) {
+        this.keyword = keyword;
+        return this;
+    }
+    public String getKeyword() {
+        return this.keyword;
     }
 
     public DescribeZonesRequest setLang(String lang) {
@@ -72,30 +77,6 @@ public class DescribeZonesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeZonesRequest setKeyword(String keyword) {
-        this.keyword = keyword;
-        return this;
-    }
-    public String getKeyword() {
-        return this.keyword;
-    }
-
-    public DescribeZonesRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
-    }
-
-    public DescribeZonesRequest setSearchMode(String searchMode) {
-        this.searchMode = searchMode;
-        return this;
-    }
-    public String getSearchMode() {
-        return this.searchMode;
-    }
-
     public DescribeZonesRequest setQueryRegionId(String queryRegionId) {
         this.queryRegionId = queryRegionId;
         return this;
@@ -120,20 +101,28 @@ public class DescribeZonesRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public DescribeZonesRequest setOrderBy(String orderBy) {
-        this.orderBy = orderBy;
+    public DescribeZonesRequest setResourceTag(java.util.List<DescribeZonesRequestResourceTag> resourceTag) {
+        this.resourceTag = resourceTag;
         return this;
     }
-    public String getOrderBy() {
-        return this.orderBy;
+    public java.util.List<DescribeZonesRequestResourceTag> getResourceTag() {
+        return this.resourceTag;
     }
 
-    public DescribeZonesRequest setDirection(String direction) {
-        this.direction = direction;
+    public DescribeZonesRequest setSearchMode(String searchMode) {
+        this.searchMode = searchMode;
         return this;
     }
-    public String getDirection() {
-        return this.direction;
+    public String getSearchMode() {
+        return this.searchMode;
+    }
+
+    public DescribeZonesRequest setZoneTag(java.util.List<String> zoneTag) {
+        this.zoneTag = zoneTag;
+        return this;
+    }
+    public java.util.List<String> getZoneTag() {
+        return this.zoneTag;
     }
 
     public DescribeZonesRequest setZoneType(String zoneType) {
@@ -144,12 +133,34 @@ public class DescribeZonesRequest extends TeaModel {
         return this.zoneType;
     }
 
-    public DescribeZonesRequest setZoneTag(java.util.List<String> zoneTag) {
-        this.zoneTag = zoneTag;
-        return this;
-    }
-    public java.util.List<String> getZoneTag() {
-        return this.zoneTag;
+    public static class DescribeZonesRequestResourceTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeZonesRequestResourceTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeZonesRequestResourceTag self = new DescribeZonesRequestResourceTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeZonesRequestResourceTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeZonesRequestResourceTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

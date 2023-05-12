@@ -4,23 +4,15 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Regions")
     public DescribeRegionsResponseBodyRegions regions;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeRegionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRegionsResponseBody self = new DescribeRegionsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeRegionsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeRegionsResponseBody setRegions(DescribeRegionsResponseBodyRegions regions) {
@@ -31,18 +23,26 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return this.regions;
     }
 
+    public DescribeRegionsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeRegionsResponseBodyRegionsRegion extends TeaModel {
         @NameInMap("LocalName")
         public String localName;
-
-        @NameInMap("RegionName")
-        public String regionName;
 
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
 
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("RegionName")
+        public String regionName;
 
         public static DescribeRegionsResponseBodyRegionsRegion build(java.util.Map<String, ?> map) throws Exception {
             DescribeRegionsResponseBodyRegionsRegion self = new DescribeRegionsResponseBodyRegionsRegion();
@@ -55,14 +55,6 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
         public String getLocalName() {
             return this.localName;
-        }
-
-        public DescribeRegionsResponseBodyRegionsRegion setRegionName(String regionName) {
-            this.regionName = regionName;
-            return this;
-        }
-        public String getRegionName() {
-            return this.regionName;
         }
 
         public DescribeRegionsResponseBodyRegionsRegion setRegionEndpoint(String regionEndpoint) {
@@ -79,6 +71,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeRegionsResponseBodyRegionsRegion setRegionName(String regionName) {
+            this.regionName = regionName;
+            return this;
+        }
+        public String getRegionName() {
+            return this.regionName;
         }
 
     }

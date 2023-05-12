@@ -4,23 +4,15 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class DescribeRequestGraphResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("RequestDetails")
     public DescribeRequestGraphResponseBodyRequestDetails requestDetails;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeRequestGraphResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRequestGraphResponseBody self = new DescribeRequestGraphResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeRequestGraphResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeRequestGraphResponseBody setRequestDetails(DescribeRequestGraphResponseBodyRequestDetails requestDetails) {
@@ -31,12 +23,20 @@ public class DescribeRequestGraphResponseBody extends TeaModel {
         return this.requestDetails;
     }
 
-    public static class DescribeRequestGraphResponseBodyRequestDetailsZoneRequestTop extends TeaModel {
-        @NameInMap("Time")
-        public String time;
+    public DescribeRequestGraphResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeRequestGraphResponseBodyRequestDetailsZoneRequestTop extends TeaModel {
         @NameInMap("RequestCount")
         public Long requestCount;
+
+        @NameInMap("Time")
+        public String time;
 
         @NameInMap("Timestamp")
         public Long timestamp;
@@ -46,20 +46,20 @@ public class DescribeRequestGraphResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeRequestGraphResponseBodyRequestDetailsZoneRequestTop setTime(String time) {
-            this.time = time;
-            return this;
-        }
-        public String getTime() {
-            return this.time;
-        }
-
         public DescribeRequestGraphResponseBodyRequestDetailsZoneRequestTop setRequestCount(Long requestCount) {
             this.requestCount = requestCount;
             return this;
         }
         public Long getRequestCount() {
             return this.requestCount;
+        }
+
+        public DescribeRequestGraphResponseBodyRequestDetailsZoneRequestTop setTime(String time) {
+            this.time = time;
+            return this;
+        }
+        public String getTime() {
+            return this.time;
         }
 
         public DescribeRequestGraphResponseBodyRequestDetailsZoneRequestTop setTimestamp(Long timestamp) {

@@ -4,14 +4,17 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class DescribeChangeLogsRequest extends TeaModel {
+    @NameInMap("EndTimestamp")
+    public Long endTimestamp;
+
+    @NameInMap("EntityType")
+    public String entityType;
+
     @NameInMap("Keyword")
     public String keyword;
 
     @NameInMap("Lang")
     public String lang;
-
-    @NameInMap("ZoneId")
-    public String zoneId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -22,18 +25,31 @@ public class DescribeChangeLogsRequest extends TeaModel {
     @NameInMap("StartTimestamp")
     public Long startTimestamp;
 
-    @NameInMap("EndTimestamp")
-    public Long endTimestamp;
-
-    @NameInMap("EntityType")
-    public String entityType;
-
     @NameInMap("UserClientIp")
     public String userClientIp;
+
+    @NameInMap("ZoneId")
+    public String zoneId;
 
     public static DescribeChangeLogsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeChangeLogsRequest self = new DescribeChangeLogsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeChangeLogsRequest setEndTimestamp(Long endTimestamp) {
+        this.endTimestamp = endTimestamp;
+        return this;
+    }
+    public Long getEndTimestamp() {
+        return this.endTimestamp;
+    }
+
+    public DescribeChangeLogsRequest setEntityType(String entityType) {
+        this.entityType = entityType;
+        return this;
+    }
+    public String getEntityType() {
+        return this.entityType;
     }
 
     public DescribeChangeLogsRequest setKeyword(String keyword) {
@@ -50,14 +66,6 @@ public class DescribeChangeLogsRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public DescribeChangeLogsRequest setZoneId(String zoneId) {
-        this.zoneId = zoneId;
-        return this;
-    }
-    public String getZoneId() {
-        return this.zoneId;
     }
 
     public DescribeChangeLogsRequest setPageNumber(Integer pageNumber) {
@@ -84,28 +92,20 @@ public class DescribeChangeLogsRequest extends TeaModel {
         return this.startTimestamp;
     }
 
-    public DescribeChangeLogsRequest setEndTimestamp(Long endTimestamp) {
-        this.endTimestamp = endTimestamp;
-        return this;
-    }
-    public Long getEndTimestamp() {
-        return this.endTimestamp;
-    }
-
-    public DescribeChangeLogsRequest setEntityType(String entityType) {
-        this.entityType = entityType;
-        return this;
-    }
-    public String getEntityType() {
-        return this.entityType;
-    }
-
     public DescribeChangeLogsRequest setUserClientIp(String userClientIp) {
         this.userClientIp = userClientIp;
         return this;
     }
     public String getUserClientIp() {
         return this.userClientIp;
+    }
+
+    public DescribeChangeLogsRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public String getZoneId() {
+        return this.zoneId;
     }
 
 }
