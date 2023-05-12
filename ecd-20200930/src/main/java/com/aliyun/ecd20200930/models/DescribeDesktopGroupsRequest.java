@@ -7,191 +7,48 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
     @NameInMap("BundleId")
     public java.util.List<String> bundleId;
 
-    /**
-     * <p>The ID of the desktop group.</p>
-     */
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
-    /**
-     * <p>The name of the desktop group that you want to query. Fuzzy search is supported.</p>
-     */
     @NameInMap("DesktopGroupName")
     public String desktopGroupName;
 
-    /**
-     * <p>The IDs of the end users who have the permissions on the desktop group.</p>
-     */
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
 
-    /**
-     * <p>The IDs of the end users that you want to exclude. The end users have the permissions on the desktop group.</p>
-     */
     @NameInMap("ExcludedEndUserIds")
     public java.util.List<String> excludedEndUserIds;
 
     @NameInMap("ImageId")
     public java.util.List<String> imageId;
 
-    /**
-     * <p>The maximum number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
-     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    /**
-     * <p>The workspace ID of the desktop groups that you want to query.</p>
-     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
-    /**
-     * <p>The type of the desktop group.</p>
-     * <br>
-     * <p>Valid values:</p>
-     * <br>
-     * <p>*   0</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    personal desktop group.</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   1</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    shared desktop group (multi-session)</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    .</p>
-     */
     @NameInMap("OwnType")
     public Long ownType;
 
-    /**
-     * <p>The validity period of the desktop group. The unit is specified by the PeriodUnit parameter.</p>
-     */
     @NameInMap("Period")
     public Integer period;
 
-    /**
-     * <p>The unit of the validity period of the desktop group.</p>
-     * <br>
-     * <p>Valid values:</p>
-     * <br>
-     * <p>*   Month</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   Year</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   Day</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
-    /**
-     * <p>The ID of the policy with which you want to associate the desktop group.</p>
-     */
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
 
-    /**
-     * <p>The type of the protocol. Valid values:</p>
-     * <br>
-     * <p>*   ASP</p>
-     * <p>*   HDX</p>
-     */
     @NameInMap("ProtocolType")
     public String protocolType;
 
-    /**
-     * <p>The region ID of the desktop groups that you want to query.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The payment status of the desktop group.</p>
-     * <br>
-     * <p>Valid values:</p>
-     * <br>
-     * <p>*   0</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    The desktop group is unpaid</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    .</p>
-     * <br>
-     * <p>*   1</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    The desktop group is paid</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    .</p>
-     * <br>
-     * <p>*   2</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    The desktop group has an overdue payment or expired</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    .</p>
-     */
     @NameInMap("Status")
     public Integer status;
 

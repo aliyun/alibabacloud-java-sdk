@@ -4,28 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class HandleSecurityEventsRequest extends TeaModel {
-    /**
-     * <p>The operation to handle multiple alerts of the same type at a time.</p>
-     */
     @NameInMap("OperationCode")
     public String operationCode;
 
-    /**
-     * <p>The return value from the operation to handle multiple alerts of the same type at a time.\</p>
-     * <p>This parameter is required only if you set the OperationCode parameter to `kill_and_quara` or `block_ip`. This parameter is not required if you set the OperationCode parameter to other values.</p>
-     */
     @NameInMap("OperationParams")
     public String operationParams;
 
-    /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The alerts.</p>
-     */
     @NameInMap("SecurityEvent")
     public java.util.List<HandleSecurityEventsRequestSecurityEvent> securityEvent;
 
@@ -67,15 +54,9 @@ public class HandleSecurityEventsRequest extends TeaModel {
     }
 
     public static class HandleSecurityEventsRequestSecurityEvent extends TeaModel {
-        /**
-         * <p>The ID of the cloud desktop.</p>
-         */
         @NameInMap("DesktopId")
         public String desktopId;
 
-        /**
-         * <p>The ID of the alert.</p>
-         */
         @NameInMap("SecurityEventId")
         public String securityEventId;
 

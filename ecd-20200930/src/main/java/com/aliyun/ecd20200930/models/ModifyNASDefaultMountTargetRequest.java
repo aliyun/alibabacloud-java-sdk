@@ -10,14 +10,11 @@ public class ModifyNASDefaultMountTargetRequest extends TeaModel {
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
-    /**
-     * <p>The domain name of the mount target.</p>
-     */
     @NameInMap("MountTargetDomain")
     public String mountTargetDomain;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The operation that you want to perform. Set the value to ModifyNASDefaultMountTarget.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

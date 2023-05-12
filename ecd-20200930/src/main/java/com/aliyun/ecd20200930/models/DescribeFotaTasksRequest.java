@@ -4,42 +4,21 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeFotaTasksRequest extends TeaModel {
-    /**
-     * <p>This parameter is not available to the public.</p>
-     */
     @NameInMap("FotaStatus")
     public String fotaStatus;
 
-    /**
-     * <p>The number of entries to return on each page.</p>
-     * <br>
-     * <p>*   Maximum value: 100</p>
-     * <p>*   Default value: 20</p>
-     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    /**
-     * <p>The token that determines the start point of the next query. If this parameter is left empty, all results are returned.</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The ID of the image update task. You can call the DescribeFotaTasks operation to obtain the value of this parameter.</p>
-     */
     @NameInMap("TaskUid")
     public java.util.List<String> taskUid;
 
-    /**
-     * <p>Specifies whether to automatically push the image update task.</p>
-     */
     @NameInMap("UserStatus")
     public String userStatus;
 

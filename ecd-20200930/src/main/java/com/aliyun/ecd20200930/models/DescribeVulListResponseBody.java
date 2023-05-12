@@ -4,33 +4,18 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeVulListResponseBody extends TeaModel {
-    /**
-     * <p>The page number of the returned page.</p>
-     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    /**
-     * <p>The number of entries returned per page.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of returned entries.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    /**
-     * <p>The vulnerabilities.</p>
-     */
     @NameInMap("VulRecords")
     public java.util.List<DescribeVulListResponseBodyVulRecords> vulRecords;
 
@@ -80,33 +65,18 @@ public class DescribeVulListResponseBody extends TeaModel {
     }
 
     public static class DescribeVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList extends TeaModel {
-        /**
-         * <p>The complete version number.</p>
-         */
         @NameInMap("FullVersion")
         public String fullVersion;
 
-        /**
-         * <p>The reason why the vulnerability is detected.</p>
-         */
         @NameInMap("MatchDetail")
         public String matchDetail;
 
-        /**
-         * <p>The name of the RPM package.</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The path of the software that has the vulnerability.</p>
-         */
         @NameInMap("Path")
         public String path;
 
-        /**
-         * <p>The command that is used to fix the vulnerability.</p>
-         */
         @NameInMap("UpdateCmd")
         public String updateCmd;
 
@@ -158,9 +128,6 @@ public class DescribeVulListResponseBody extends TeaModel {
     }
 
     public static class DescribeVulListResponseBodyVulRecordsExtendContentJson extends TeaModel {
-        /**
-         * <p>The RPM Package Manager (RPM) packages.</p>
-         */
         @NameInMap("RpmEntityList")
         public java.util.List<DescribeVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList> rpmEntityList;
 
@@ -180,111 +147,57 @@ public class DescribeVulListResponseBody extends TeaModel {
     }
 
     public static class DescribeVulListResponseBodyVulRecords extends TeaModel {
-        /**
-         * <p>The alias of the vulnerability.</p>
-         */
         @NameInMap("AliasName")
         public String aliasName;
 
-        /**
-         * <p>The ID of the affected cloud desktop.</p>
-         */
         @NameInMap("DesktopId")
         public String desktopId;
 
-        /**
-         * <p>The name of the affected cloud desktop.</p>
-         */
         @NameInMap("DesktopName")
         public String desktopName;
 
-        /**
-         * <p>The extended information about the vulnerability.</p>
-         */
         @NameInMap("ExtendContentJson")
         public DescribeVulListResponseBodyVulRecordsExtendContentJson extendContentJson;
 
-        /**
-         * <p>The UNIX timestamp when the vulnerability was first detected. Unit: milliseconds.</p>
-         */
         @NameInMap("FirstTs")
         public Long firstTs;
 
-        /**
-         * <p>The UNIX timestamp when the vulnerability was last detected. Unit: milliseconds.</p>
-         */
         @NameInMap("LastTs")
         public Long lastTs;
 
-        /**
-         * <p>The timestamp when the vulnerability status was changed. Unit: milliseconds.</p>
-         */
         @NameInMap("ModifyTs")
         public Long modifyTs;
 
-        /**
-         * <p>The name of the vulnerability.</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The priority to fix the vulnerability or the risk level of the vulnerability.</p>
-         */
         @NameInMap("Necessity")
         public String necessity;
 
-        /**
-         * <p>Indicates whether the Security Center agent on the cloud desktop is online.</p>
-         */
         @NameInMap("Online")
         public Boolean online;
 
-        /**
-         * <p>The version of the OS of the cloud desktop.</p>
-         */
         @NameInMap("OsVersion")
         public String osVersion;
 
-        /**
-         * <p>The IDs of the common vulnerabilities and exposures (CVEs) that are related to the vulnerability.</p>
-         */
         @NameInMap("Related")
         public String related;
 
-        /**
-         * <p>The UNIX timestamp when the vulnerability was fixed. Unit: milliseconds.</p>
-         */
         @NameInMap("RepairTs")
         public Long repairTs;
 
-        /**
-         * <p>The code returned after the vulnerability is fixed.</p>
-         */
         @NameInMap("ResultCode")
         public String resultCode;
 
-        /**
-         * <p>The message returned after the vulnerability is fixed.</p>
-         */
         @NameInMap("ResultMessage")
         public String resultMessage;
 
-        /**
-         * <p>The status of the vulnerability.</p>
-         */
         @NameInMap("Status")
         public Integer status;
 
-        /**
-         * <p>The tag that is added to the vulnerability.</p>
-         */
         @NameInMap("Tag")
         public String tag;
 
-        /**
-         * <p>The type of the vulnerability.</p>
-         */
         @NameInMap("Type")
         public String type;
 

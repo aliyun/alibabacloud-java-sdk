@@ -4,21 +4,12 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
-    /**
-     * <p>Details about connection records.</p>
-     */
     @NameInMap("ConnectionRecords")
     public java.util.List<DescribeUserConnectionRecordsResponseBodyConnectionRecords> connectionRecords;
 
-    /**
-     * <p>The token that is used to start the next query.</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -52,39 +43,21 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeUserConnectionRecordsResponseBodyConnectionRecords extends TeaModel {
-        /**
-         * <p>The duration of the desktop connection. Unit: seconds.</p>
-         */
         @NameInMap("ConnectDuration")
         public String connectDuration;
 
-        /**
-         * <p>The time when the cloud desktop was disconnected.</p>
-         */
         @NameInMap("ConnectEndTime")
         public String connectEndTime;
 
-        /**
-         * <p>The time when the cloud desktop was connected.</p>
-         */
         @NameInMap("ConnectStartTime")
         public String connectStartTime;
 
-        /**
-         * <p>The ID of the connection record.</p>
-         */
         @NameInMap("ConnectionRecordId")
         public String connectionRecordId;
 
-        /**
-         * <p>The ID of the cloud desktop that is connected.</p>
-         */
         @NameInMap("DesktopId")
         public String desktopId;
 
-        /**
-         * <p>The name of the cloud desktop that is connected.</p>
-         */
         @NameInMap("DesktopName")
         public String desktopName;
 

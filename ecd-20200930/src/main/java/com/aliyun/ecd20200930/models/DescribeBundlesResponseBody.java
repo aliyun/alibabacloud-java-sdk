@@ -4,21 +4,12 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeBundlesResponseBody extends TeaModel {
-    /**
-     * <p>Details of the desktop templates.</p>
-     */
     @NameInMap("Bundles")
     public java.util.List<DescribeBundlesResponseBodyBundles> bundles;
 
-    /**
-     * <p>The token that is used to start the next query. If null is returned, the next query is not required.</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -52,27 +43,15 @@ public class DescribeBundlesResponseBody extends TeaModel {
     }
 
     public static class DescribeBundlesResponseBodyBundlesDesktopTypeAttribute extends TeaModel {
-        /**
-         * <p>The number of vCPUs.</p>
-         */
         @NameInMap("CpuCount")
         public Integer cpuCount;
 
-        /**
-         * <p>The number of GPUs.</p>
-         */
         @NameInMap("GpuCount")
         public Float gpuCount;
 
-        /**
-         * <p>The type of the GPU.</p>
-         */
         @NameInMap("GpuSpec")
         public String gpuSpec;
 
-        /**
-         * <p>The size of the memory. Unit: MB.</p>
-         */
         @NameInMap("MemorySize")
         public Integer memorySize;
 
@@ -116,21 +95,12 @@ public class DescribeBundlesResponseBody extends TeaModel {
     }
 
     public static class DescribeBundlesResponseBodyBundlesDisks extends TeaModel {
-        /**
-         * <p>The performance level (PL) of the disk.</p>
-         */
         @NameInMap("DiskPerformanceLevel")
         public String diskPerformanceLevel;
 
-        /**
-         * <p>The size of the disk. Unit: GiB.</p>
-         */
         @NameInMap("DiskSize")
         public Integer diskSize;
 
-        /**
-         * <p>The type of the disk.</p>
-         */
         @NameInMap("DiskType")
         public String diskType;
 
@@ -166,126 +136,63 @@ public class DescribeBundlesResponseBody extends TeaModel {
     }
 
     public static class DescribeBundlesResponseBodyBundles extends TeaModel {
-        /**
-         * <p>The ID of the desktop template.</p>
-         */
         @NameInMap("BundleId")
         public String bundleId;
 
-        /**
-         * <p>The name of the desktop template.</p>
-         */
         @NameInMap("BundleName")
         public String bundleName;
 
-        /**
-         * <p>The type of the desktop template.</p>
-         */
         @NameInMap("BundleType")
         public String bundleType;
 
-        /**
-         * <p>The time when the desktop template was created.</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        /**
-         * <p>The description of the desktop template.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The desktop type.</p>
-         */
         @NameInMap("DesktopType")
         public String desktopType;
 
-        /**
-         * <p>Details of the desktop type.</p>
-         */
         @NameInMap("DesktopTypeAttribute")
         public DescribeBundlesResponseBodyBundlesDesktopTypeAttribute desktopTypeAttribute;
 
-        /**
-         * <p>The family of the desktop type.</p>
-         */
         @NameInMap("DesktopTypeFamily")
         public String desktopTypeFamily;
 
-        /**
-         * <p>Details of the disks.</p>
-         */
         @NameInMap("Disks")
         public java.util.List<DescribeBundlesResponseBodyBundlesDisks> disks;
 
-        /**
-         * <p>The ID of the image.</p>
-         */
         @NameInMap("ImageId")
         public String imageId;
 
-        /**
-         * <p>The name of the image.</p>
-         */
         @NameInMap("ImageName")
         public String imageName;
 
         @NameInMap("ImageStatus")
         public String imageStatus;
 
-        /**
-         * <p>The OS language of the image.</p>
-         */
         @NameInMap("Language")
         public String language;
 
-        /**
-         * <p>The type of the OS.</p>
-         */
         @NameInMap("OsType")
         public String osType;
 
-        /**
-         * <p>The information about the OS platform. Valid values:</p>
-         * <br>
-         * <p>*   CentOS</p>
-         * <p>*   Ubuntu</p>
-         * <p>*   Windows Server 2016</p>
-         * <p>*   Windows Server 2019</p>
-         * <p>*   UOS</p>
-         */
         @NameInMap("Platform")
         public String platform;
 
-        /**
-         * <p>The type of the protocol.</p>
-         */
         @NameInMap("ProtocolType")
         public String protocolType;
 
-        /**
-         * <p>The type of the session.</p>
-         */
         @NameInMap("SessionType")
         public String sessionType;
 
-        /**
-         * <p>The inventory status of the desktop type. This parameter is returned only if you set the `CheckStock` parameter to `True`.</p>
-         */
         @NameInMap("StockState")
         public String stockState;
 
-        /**
-         * <p>Indicates whether disk encryption is enabled.</p>
-         */
         @NameInMap("VolumeEncryptionEnabled")
         public Boolean volumeEncryptionEnabled;
 
-        /**
-         * <p>The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled.</p>
-         */
         @NameInMap("VolumeEncryptionKey")
         public String volumeEncryptionKey;
 

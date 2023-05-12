@@ -5,23 +5,22 @@ import com.aliyun.tea.*;
 
 public class DescribeGroupedVulRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
-     * <br>
-     * <p>Pages start from page 1.</p>
-     * <br>
-     * <p>Default value: 1.</p>
+     * <p>The name of the vulnerability.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The processing status of the vulnerability. Valid values:</p>
-     * <br>
-     * <p>*   y: handled</p>
-     * <p>*   n: unhandled</p>
+     * <p>The number of low-risk vulnerabilities.</p>
      */
     @NameInMap("Dealed")
     public String dealed;
+
+    /**
+     * <p>The time when the vulnerability was last detected. The timestamp follows the UNIX time format. It is the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970.</p>
+     */
+    @NameInMap("Lang")
+    public String lang;
 
     /**
      * <p>The natural language of the request and response. Valid values:</p>
@@ -29,44 +28,34 @@ public class DescribeGroupedVulRequest extends TeaModel {
      * <p>*   zh: Chinese</p>
      * <p>*   en: English</p>
      */
-    @NameInMap("Lang")
-    public String lang;
-
-    /**
-     * <p>The priority to fix the vulnerability or the risk level of the vulnerability. Valid values:</p>
-     * <br>
-     * <p>*   asap: high</p>
-     * <p>*   later: medium</p>
-     * <p>*   nntf: low</p>
-     */
     @NameInMap("Necessity")
     public String necessity;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The tags of the vulnerability.</p>
      */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
-
-    /**
-     * <p>The maximum number of entries to return on each page.</p>
-     * <br>
-     * <p>Default value: 20.</p>
-     */
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    /**
-     * <p>The ID of the region.</p>
-     */
-    @NameInMap("RegionId")
-    public String regionId;
 
     /**
      * <p>The type of the vulnerability. Valid values:</p>
      * <br>
      * <p>*   cve: Linux software vulnerability</p>
      * <p>*   sys: Windows system vulnerability</p>
+     */
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    /**
+     * <p>The total number of entries returned.</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
+
+    /**
+     * <p>The maximum number of entries to return on each page.</p>
+     * <br>
+     * <p>Default value: 20.</p>
      */
     @NameInMap("Type")
     public String type;

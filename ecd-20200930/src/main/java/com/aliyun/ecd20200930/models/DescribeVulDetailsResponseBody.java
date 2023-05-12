@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeVulDetailsResponseBody extends TeaModel {
     /**
-     * <p>Details about the vulnerability.</p>
+     * <p>The name of the vulnerability.</p>
      */
     @NameInMap("Cves")
     public java.util.List<DescribeVulDetailsResponseBodyCves> cves;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,26 +39,22 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
 
     public static class DescribeVulDetailsResponseBodyCves extends TeaModel {
         /**
-         * <p>The ID of the vulnerability.</p>
+         * <p>The name of the Redhat Package Manager (RPM) package.</p>
+         * <br>
+         * <p>You can call the [DescribeVulList](~~223907~~) operation to obtain the names of RPM packages.</p>
          */
         @NameInMap("CveId")
         public String cveId;
 
-        /**
-         * <p>The Common Vulnerability Scoring System (CVSS) score of the vulnerability, which indicates the severity of the vulnerability. A larger value indicates a higher severity. Valid values: 0 to 10.</p>
-         */
         @NameInMap("CvssScore")
         public String cvssScore;
 
         /**
-         * <p>The description of the vulnerability.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("Summary")
         public String summary;
 
-        /**
-         * <p>The name of the vulnerability.</p>
-         */
         @NameInMap("Title")
         public String title;
 

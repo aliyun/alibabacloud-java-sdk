@@ -4,24 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ConfigADConnectorTrustRequest extends TeaModel {
-    /**
-     * <p>The ID of the AD workspace.</p>
-     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     @NameInMap("RdsLicenseDomain")
     public Boolean rdsLicenseDomain;
 
-    /**
-     * <p>The region ID.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The trust password. You can specify the password when you configure a trust relationship between the AD domain and the ecd.acs domain.</p>
-     */
     @NameInMap("TrustKey")
     public String trustKey;
 

@@ -5,25 +5,22 @@ import com.aliyun.tea.*;
 
 public class SetIdpMetadataRequest extends TeaModel {
     /**
-     * <p>The ID of the directory.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
 
-    /**
-     * <p>The metadata of the IdP.</p>
-     */
     @NameInMap("IdpMetadata")
     public String idpMetadata;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The operation that you want to perform. Set the value to SetIdpMetadata.</p>
      */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The metadata of the IdP.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

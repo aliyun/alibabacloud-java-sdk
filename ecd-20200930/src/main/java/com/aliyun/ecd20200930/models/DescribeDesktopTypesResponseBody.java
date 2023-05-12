@@ -4,15 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDesktopTypesResponseBody extends TeaModel {
-    /**
-     * <p>Details of the desktop types.</p>
-     */
     @NameInMap("DesktopTypes")
     public java.util.List<DescribeDesktopTypesResponseBodyDesktopTypes> desktopTypes;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,57 +32,30 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
     }
 
     public static class DescribeDesktopTypesResponseBodyDesktopTypes extends TeaModel {
-        /**
-         * <p>The number of vCPUs.</p>
-         */
         @NameInMap("CpuCount")
         public String cpuCount;
 
-        /**
-         * <p>The size of the data disk. Unit: GiB.</p>
-         */
         @NameInMap("DataDiskSize")
         public String dataDiskSize;
 
-        /**
-         * <p>The ID of the desktop type.</p>
-         */
         @NameInMap("DesktopTypeId")
         public String desktopTypeId;
 
-        /**
-         * <p>The status of the desktop type. If `SUFFICIENT` is returned, the number of cloud desktops of the specified desktop type is sufficient.</p>
-         */
         @NameInMap("DesktopTypeStatus")
         public String desktopTypeStatus;
 
-        /**
-         * <p>The number of GPUs.</p>
-         */
         @NameInMap("GpuCount")
         public Float gpuCount;
 
-        /**
-         * <p>The GPU memory.</p>
-         */
         @NameInMap("GpuSpec")
         public String gpuSpec;
 
-        /**
-         * <p>The family of the desktop type.</p>
-         */
         @NameInMap("InstanceTypeFamily")
         public String instanceTypeFamily;
 
-        /**
-         * <p>The size of the memory. Unit: MiB.</p>
-         */
         @NameInMap("MemorySize")
         public String memorySize;
 
-        /**
-         * <p>The size of the system disk. Unit: GiB.</p>
-         */
         @NameInMap("SystemDiskSize")
         public String systemDiskSize;
 

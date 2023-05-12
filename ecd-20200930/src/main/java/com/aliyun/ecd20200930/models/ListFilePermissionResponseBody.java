@@ -4,9 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ListFilePermissionResponseBody extends TeaModel {
+    /**
+     * <p>The permissions on the shared file.</p>
+     */
     @NameInMap("FilePermissions")
     public java.util.List<FilePermissionMember> filePermissions;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

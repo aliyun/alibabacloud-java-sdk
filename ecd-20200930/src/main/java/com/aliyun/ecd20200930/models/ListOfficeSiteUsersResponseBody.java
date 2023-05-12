@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOfficeSiteUsersResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The token that specifies the start point of the next query.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -19,7 +19,7 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The usernames of AD users.</p>
+     * <p>Queries the details about Active Directory (AD) users in an AD workspace after the workspace is connected to an AD domain.</p>
      */
     @NameInMap("Users")
     public java.util.List<ListOfficeSiteUsersResponseBodyUsers> users;
@@ -54,15 +54,9 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
     }
 
     public static class ListOfficeSiteUsersResponseBodyUsers extends TeaModel {
-        /**
-         * <p>The display name of the AD user.</p>
-         */
         @NameInMap("DisplayName")
         public String displayName;
 
-        /**
-         * <p>The username of the AD user.</p>
-         */
         @NameInMap("EndUser")
         public String endUser;
 

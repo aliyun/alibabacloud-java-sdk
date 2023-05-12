@@ -4,15 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyDesktopsPolicyGroupResponseBody extends TeaModel {
-    /**
-     * <p>The modification results.</p>
-     */
     @NameInMap("ModifyResults")
     public java.util.List<ModifyDesktopsPolicyGroupResponseBodyModifyResults> modifyResults;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,21 +32,12 @@ public class ModifyDesktopsPolicyGroupResponseBody extends TeaModel {
     }
 
     public static class ModifyDesktopsPolicyGroupResponseBodyModifyResults extends TeaModel {
-        /**
-         * <p>The result of the modification. A value of success indicates that the policy is modified. If the policy failed to be modified, an error message is returned.</p>
-         */
         @NameInMap("Code")
         public String code;
 
-        /**
-         * <p>The ID of the cloud desktop.</p>
-         */
         @NameInMap("DesktopId")
         public String desktopId;
 
-        /**
-         * <p>The error message. This parameter is not returned if the value of Code is `success`.</p>
-         */
         @NameInMap("Message")
         public String message;
 

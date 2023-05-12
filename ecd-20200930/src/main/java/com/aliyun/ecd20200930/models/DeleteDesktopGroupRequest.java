@@ -4,15 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DeleteDesktopGroupRequest extends TeaModel {
-    /**
-     * <p>The ID of the desktop group.</p>
-     */
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
-    /**
-     * <p>The ID of the region.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

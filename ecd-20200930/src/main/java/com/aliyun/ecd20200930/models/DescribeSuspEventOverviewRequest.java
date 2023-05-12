@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSuspEventOverviewRequest extends TeaModel {
     /**
-     * <p>The ID of the region.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

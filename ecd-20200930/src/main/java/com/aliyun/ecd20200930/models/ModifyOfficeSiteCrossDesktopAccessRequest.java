@@ -4,23 +4,17 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyOfficeSiteCrossDesktopAccessRequest extends TeaModel {
-    /**
-     * <p>Specifies whether to enable cross-desktop access for a workspace.</p>
-     * <br>
-     * <p>*   true: enables cross-desktop access.</p>
-     * <p>*   false: disables cross-desktop access.</p>
-     */
     @NameInMap("EnableCrossDesktopAccess")
     public Boolean enableCrossDesktopAccess;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>ModifyOfficeSiteCrossDesktopAccess</p>
      */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>Enables cross-desktop access in a workspace.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

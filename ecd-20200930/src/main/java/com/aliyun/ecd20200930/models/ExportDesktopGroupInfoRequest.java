@@ -4,72 +4,36 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ExportDesktopGroupInfoRequest extends TeaModel {
-    /**
-     * <p>The billing method of cloud desktops in a desktop group.</p>
-     */
     @NameInMap("ChargeType")
     public String chargeType;
 
-    /**
-     * <p>The IDs of the desktop groups. You can specify 1 to 100 desktop groups.</p>
-     */
     @NameInMap("DesktopGroupId")
     public java.util.List<String> desktopGroupId;
 
-    /**
-     * <p>The name of the desktop group.</p>
-     */
     @NameInMap("DesktopGroupName")
     public String desktopGroupName;
 
-    /**
-     * <p>The IDs of the users authorized to use the desktop group. You can specify 1 to 100 users.</p>
-     */
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
 
-    /**
-     * <p>The time when the subscription cloud desktop expires.</p>
-     */
     @NameInMap("ExpiredTime")
     public String expiredTime;
 
-    /**
-     * <p>The language that you want to use.</p>
-     */
     @NameInMap("LangType")
     public String langType;
 
-    /**
-     * <p>The number of entries to return on each page.</p>
-     * <br>
-     * <p>*   Maximum value: 100.</p>
-     * <p>*   Default value: 10.</p>
-     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    /**
-     * <p>The token that determines the start point of the next query. If this parameter is empty, all results are returned.</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    /**
-     * <p>The ID of the workspace to which the desktop group belongs.</p>
-     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
-    /**
-     * <p>The ID of policy with which the desktop group is associated.</p>
-     */
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
 
-    /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

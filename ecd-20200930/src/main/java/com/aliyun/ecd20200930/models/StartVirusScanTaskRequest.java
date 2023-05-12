@@ -4,21 +4,12 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class StartVirusScanTaskRequest extends TeaModel {
-    /**
-     * <p>The IDs of the cloud desktops.</p>
-     */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
-    /**
-     * <p>The IDs of the workspaces.</p>
-     */
     @NameInMap("OfficeSiteId")
     public java.util.List<String> officeSiteId;
 
-    /**
-     * <p>The ID of the region.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

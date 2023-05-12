@@ -4,15 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ActivateOfficeSiteRequest extends TeaModel {
-    /**
-     * <p>The ID of the convenience workspace that is locked.</p>
-     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
-    /**
-     * <p>The ID of the region.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

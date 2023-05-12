@@ -4,21 +4,12 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyCustomizedListHeadersRequest extends TeaModel {
-    /**
-     * <p>The list of headers.</p>
-     */
     @NameInMap("Headers")
     public java.util.List<ModifyCustomizedListHeadersRequestHeaders> headers;
 
-    /**
-     * <p>The type of the list.</p>
-     */
     @NameInMap("ListType")
     public String listType;
 
-    /**
-     * <p>The ID of the region.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -52,15 +43,9 @@ public class ModifyCustomizedListHeadersRequest extends TeaModel {
     }
 
     public static class ModifyCustomizedListHeadersRequestHeaders extends TeaModel {
-        /**
-         * <p>The display type of the header.</p>
-         */
         @NameInMap("DisplayType")
         public String displayType;
 
-        /**
-         * <p>The key of the header.</p>
-         */
         @NameInMap("HeaderKey")
         public String headerKey;
 

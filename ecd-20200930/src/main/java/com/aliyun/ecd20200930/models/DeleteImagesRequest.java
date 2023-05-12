@@ -7,14 +7,11 @@ public class DeleteImagesRequest extends TeaModel {
     @NameInMap("DeleteCascadedBundle")
     public Boolean deleteCascadedBundle;
 
-    /**
-     * <p>The IDs of the images that you want to delete.</p>
-     */
     @NameInMap("ImageId")
     public java.util.List<String> imageId;
 
     /**
-     * <p>The ID of the region where the images to delete are located.</p>
+     * <p>The operation that you want to perform. Set the value to DeleteImages.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
     /**
-     * <p>The list of regions.</p>
+     * <p>DescribeRegions</p>
      */
     @NameInMap("Regions")
     public java.util.List<DescribeRegionsResponseBodyRegions> regions;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The operation that you want to perform. Set the value to DescribeRegions.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,23 +38,12 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegions extends TeaModel {
-        /**
-         * <p>The name of the region.</p>
-         * <br>
-         * <p>> If the AcceptLanguage parameter is set to zh-CN, the Chinese name of the region is returned. If the AcceptLanguage parameter is set to zh-US or left empty, the English name of the region is returned.</p>
-         */
         @NameInMap("LocalName")
         public String localName;
 
-        /**
-         * <p>The endpoint of the region.</p>
-         */
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
 
-        /**
-         * <p>The ID of the region.</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 

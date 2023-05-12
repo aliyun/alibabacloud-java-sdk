@@ -4,111 +4,60 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeBundlesRequest extends TeaModel {
-    /**
-     * <p>The IDs of the desktop templates. You can specify 1 to 100 desktop templates.</p>
-     */
     @NameInMap("BundleId")
     public java.util.List<String> bundleId;
 
-    /**
-     * <p>The type of the desktop template.</p>
-     */
     @NameInMap("BundleType")
     public String bundleType;
 
-    /**
-     * <p>Specifies whether to query the inventory status of the desktop type.</p>
-     */
     @NameInMap("CheckStock")
     public Boolean checkStock;
 
-    /**
-     * <p>The number of vCPUs of the desktop type.</p>
-     */
     @NameInMap("CpuCount")
     public Integer cpuCount;
 
-    /**
-     * <p>The family of the desktop type.</p>
-     */
     @NameInMap("DesktopTypeFamily")
     public String desktopTypeFamily;
 
-    /**
-     * <p>This parameter is now in invitational preview and unavailable.</p>
-     */
     @NameInMap("FotaChannel")
     public String fotaChannel;
 
-    /**
-     * <p>Specifies whether the cloud desktop that uses the desktop template belongs to the desktop group. Default value: `false`.</p>
-     */
     @NameInMap("FromDesktopGroup")
     public Boolean fromDesktopGroup;
 
-    /**
-     * <p>The number of GPUs of the desktop type.</p>
-     */
     @NameInMap("GpuCount")
     public Float gpuCount;
 
     @NameInMap("ImageId")
     public java.util.List<String> imageId;
 
-    /**
-     * <p>The number of entries to return on each page.</p>
-     * <br>
-     * <p>*   Maximum value: 100.</p>
-     * <p>*   Default value: 10.</p>
-     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    /**
-     * <p>The memory size of the desktop type. Unit: GiB.</p>
-     */
     @NameInMap("MemorySize")
     public Integer memorySize;
 
-    /**
-     * <p>The token that determines the start point of the next query.</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    /**
-     * <p>The type of the protocol.</p>
-     */
+    @NameInMap("OsType")
+    public String osType;
+
     @NameInMap("ProtocolType")
     public String protocolType;
 
-    /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The desktop template that is selected based on specific criteria.</p>
-     */
     @NameInMap("SelectedBundle")
     public Boolean selectedBundle;
 
-    /**
-     * <p>The type of the session.</p>
-     */
     @NameInMap("SessionType")
     public String sessionType;
 
-    /**
-     * <p>Specifies whether to return multi-session desktop templates in this call. Default value: false.</p>
-     */
     @NameInMap("SupportMultiSession")
     public Boolean supportMultiSession;
 
-    /**
-     * <p>Specifies whether to enable disk encryption.</p>
-     */
     @NameInMap("VolumeEncryptionEnabled")
     public Boolean volumeEncryptionEnabled;
 
@@ -211,6 +160,14 @@ public class DescribeBundlesRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public DescribeBundlesRequest setOsType(String osType) {
+        this.osType = osType;
+        return this;
+    }
+    public String getOsType() {
+        return this.osType;
     }
 
     public DescribeBundlesRequest setProtocolType(String protocolType) {

@@ -4,118 +4,48 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ExportDesktopListInfoRequest extends TeaModel {
-    /**
-     * <p>The billing method of the cloud desktop. Valid values:</p>
-     * <br>
-     * <p>*   PostPaid: pay-as-you-go</p>
-     * <p>*   PrePaid: subscription</p>
-     * <br>
-     * <p>Default value: PostPaid.</p>
-     */
     @NameInMap("ChargeType")
     public String chargeType;
 
-    /**
-     * <p>The ID of cloud desktop N. Valid values of N: 1 to 100.</p>
-     */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
-    /**
-     * <p>The name of the cloud desktop.</p>
-     */
     @NameInMap("DesktopName")
     public String desktopName;
 
-    /**
-     * <p>The status of the cloud desktop. Valid values:</p>
-     * <br>
-     * <p>*   Pending: The cloud desktop is pending.</p>
-     * <p>*   Starting: The cloud desktop is being started.</p>
-     * <p>*   Running: The cloud desktop is running.</p>
-     * <p>*   Stopping: The cloud desktop is being stopped.</p>
-     * <p>*   Rebuilding: The cloud desktop is being rebuilt.</p>
-     * <p>*   Stopped: The cloud desktop is stopped.</p>
-     * <p>*   Expired: The cloud desktop expired.</p>
-     * <p>*   Deleted: The cloud desktop is deleted.</p>
-     */
     @NameInMap("DesktopStatus")
     public String desktopStatus;
 
-    /**
-     * <p>The ID of end user N that is assigned the cloud desktop. Valid values of N: 1 to 100.</p>
-     * <br>
-     * <p>> Only one end user can use the cloud desktop at a time.</p>
-     */
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
 
-    /**
-     * <p>The time when the subscription cloud desktop expires.</p>
-     */
     @NameInMap("ExpiredTime")
     public String expiredTime;
 
-    /**
-     * <p>The ID of the desktop group.</p>
-     */
     @NameInMap("GroupId")
     public String groupId;
 
-    /**
-     * <p>The language in which the cloud desktop is displayed in the console UI. You can export the list of cloud desktops in the specified language. Valid values:</p>
-     * <br>
-     * <p>*   `zh-CN`: Simplified Chinese</p>
-     * <p>*   `en-GB`: English (United Kingdom)</p>
-     * <br>
-     * <p>Default value: `zh-CN`.</p>
-     */
     @NameInMap("LangType")
     public String langType;
 
-    /**
-     * <p>The number of entries to return on each page.</p>
-     * <br>
-     * <p>Maximum value: 100.</p>
-     * <br>
-     * <p>Default value: 10.</p>
-     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    /**
-     * <p>The token that determines the start point of the next query. If this parameter is left empty, all results are returned.</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    /**
-     * <p>The ID of the workspace.</p>
-     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
-    /**
-     * <p>The ID of the policy that is associated with the cloud desktop.</p>
-     */
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
 
-    /**
-     * <p>The ID of the region.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The tags. A tag is a key-value pair that consists of a tag key and a tag value. Tags are used to identify resources. You can use tags to manage cloud desktops by group for easy searching and batch operations. For more information, see [Use tags to manage cloud desktops](~~203781~~).</p>
-     */
     @NameInMap("Tag")
     public java.util.List<ExportDesktopListInfoRequestTag> tag;
 
-    /**
-     * <p>The username of the end user that is using the cloud desktop.</p>
-     */
     @NameInMap("UserName")
     public String userName;
 
@@ -245,15 +175,9 @@ public class ExportDesktopListInfoRequest extends TeaModel {
     }
 
     public static class ExportDesktopListInfoRequestTag extends TeaModel {
-        /**
-         * <p>The key of the tag. If you specify the `Tag` parameter, you must also specify the `Key` parameter. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`. You cannot specify an empty string as a tag key.</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The value of the tag. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.</p>
-         */
         @NameInMap("Value")
         public String value;
 

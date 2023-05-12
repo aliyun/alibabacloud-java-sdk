@@ -4,15 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class SetIdpMetadataResponseBody extends TeaModel {
-    /**
-     * <p>The entityID value obtained after the IdP metadata file is parsed.</p>
-     */
     @NameInMap("IdpEntityId")
     public String idpEntityId;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

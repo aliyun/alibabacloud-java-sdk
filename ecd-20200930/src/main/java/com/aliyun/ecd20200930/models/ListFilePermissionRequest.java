@@ -4,15 +4,27 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ListFilePermissionRequest extends TeaModel {
+    /**
+     * <p>The ID of the cloud disk.</p>
+     */
     @NameInMap("CdsId")
     public String cdsId;
 
+    /**
+     * <p>The ID of the end user who uses the cloud disk.</p>
+     */
     @NameInMap("EndUserId")
     public String endUserId;
 
+    /**
+     * <p>The ID of the shared file.</p>
+     */
     @NameInMap("FileId")
     public String fileId;
 
+    /**
+     * <p>The region ID of the cloud disk. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

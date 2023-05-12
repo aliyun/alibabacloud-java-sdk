@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class DescribeScanTaskProgressRequest extends TeaModel {
     /**
-     * <p>The ID of the region.</p>
+     * <p>The ID of the virus scan task. If this parameter is not specified, the status of the latest scan task is queried by default.</p>
+     * <br>
+     * <p>You can call the [StartVirusScanTask](~~217908~~) operation to query the ID of a virus scan task.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the virus scan task. If this parameter is not specified, the status of the latest scan task is queried by default.</p>
-     * <br>
-     * <p>You can call the [StartVirusScanTask](~~217908~~) operation to query the ID of a virus scan task.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("TaskId")
     public Long taskId;

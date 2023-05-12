@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDesktopIdsByVulNamesResponseBody extends TeaModel {
     /**
-     * <p>Details about cloud desktops.</p>
+     * <p>The ID of the cloud desktop.</p>
      */
     @NameInMap("DesktopItems")
     public java.util.List<DescribeDesktopIdsByVulNamesResponseBodyDesktopItems> desktopItems;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Details about cloud desktops.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,15 +38,9 @@ public class DescribeDesktopIdsByVulNamesResponseBody extends TeaModel {
     }
 
     public static class DescribeDesktopIdsByVulNamesResponseBodyDesktopItems extends TeaModel {
-        /**
-         * <p>The ID of the cloud desktop.</p>
-         */
         @NameInMap("DesktopId")
         public String desktopId;
 
-        /**
-         * <p>The name of the cloud desktop.</p>
-         */
         @NameInMap("DesktopName")
         public String desktopName;
 

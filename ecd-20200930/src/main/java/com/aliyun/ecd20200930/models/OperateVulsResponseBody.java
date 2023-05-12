@@ -4,9 +4,6 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class OperateVulsResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

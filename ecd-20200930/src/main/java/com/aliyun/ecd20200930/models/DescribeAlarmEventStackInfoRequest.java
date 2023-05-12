@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAlarmEventStackInfoRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud desktop.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("DesktopId")
     public String desktopId;
 
     /**
-     * <p>The name of the alert event.</p>
+     * <p>The operation that you want to perform. Set the value to DescribeAlarmEventStackInfo.</p>
      */
     @NameInMap("EventName")
     public String eventName;
@@ -26,13 +26,13 @@ public class DescribeAlarmEventStackInfoRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The ID of the alert event.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the alert event.</p>
+     * <p>The stack information of the alert details.</p>
      */
     @NameInMap("UniqueInfo")
     public String uniqueInfo;

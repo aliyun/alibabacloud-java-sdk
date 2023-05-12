@@ -4,18 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class AddFilePermissionRequest extends TeaModel {
+    /**
+     * <p>The ID of the cloud disk whose folder you want to share.</p>
+     */
     @NameInMap("CdsId")
     public String cdsId;
 
+    /**
+     * <p>The ID of the end user who uses the cloud disk of the folder.</p>
+     */
     @NameInMap("EndUserId")
     public String endUserId;
 
+    /**
+     * <p>The ID of the file.</p>
+     */
     @NameInMap("FileId")
     public String fileId;
 
+    /**
+     * <p>The members who are granted the folder permissions.</p>
+     */
     @NameInMap("MemberList")
     public java.util.List<AddFilePermissionRequestMemberList> memberList;
 
+    /**
+     * <p>The region ID of the folder. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -65,9 +80,33 @@ public class AddFilePermissionRequest extends TeaModel {
     }
 
     public static class AddFilePermissionRequestMemberListCdsIdentity extends TeaModel {
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The type of the user.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   <!-- --></p>
+         * <br>
+         * <p>    IT_Group</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   <!-- --></p>
+         * <br>
+         * <p>    IT_User</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -95,15 +134,135 @@ public class AddFilePermissionRequest extends TeaModel {
     }
 
     public static class AddFilePermissionRequestMemberList extends TeaModel {
+        /**
+         * <p>The user of the cloud disk.</p>
+         */
         @NameInMap("CdsIdentity")
         public AddFilePermissionRequestMemberListCdsIdentity cdsIdentity;
 
+        /**
+         * <p>Specifies whether the users of the child group can inherit the folder permissions.</p>
+         */
         @NameInMap("DisinheritSubGroup")
         public Boolean disinheritSubGroup;
 
+        /**
+         * <p>The time when the authorization expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. The value never expires. You can specify a value that is predefined by the system for this parameter. Example: 4775500800000.</p>
+         */
         @NameInMap("ExpireTime")
         public Long expireTime;
 
+        /**
+         * <p>The ID of the role to which you want to attach the folder permissions. To configure the folder permissions: you can specify a role or create custom operation permissions. You can use RoleId to specify a role. RoleId is mutually exclusive with ActionList. If you specify both of them, the value of RoleId takes precedence.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   <!-- --></p>
+         * <br>
+         * <p>    SystemFileEditorWithoutShareLink</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   <!-- --></p>
+         * <br>
+         * <p>    SystemFileUploaderAndDownloaderWithShareLink</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   <!-- --></p>
+         * <br>
+         * <p>    SystemFileDownloader</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   <!-- --></p>
+         * <br>
+         * <p>    SystemFileEditorWithoutDelete</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   <!-- --></p>
+         * <br>
+         * <p>    SystemFileOwner</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   <!-- --></p>
+         * <br>
+         * <p>    SystemFileDownloaderWithShareLink</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   <!-- --></p>
+         * <br>
+         * <p>    SystemFileUploaderAndViewer</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   <!-- --></p>
+         * <br>
+         * <p>    SystemFileViewer</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   <!-- --></p>
+         * <br>
+         * <p>    SystemFileEditor</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   <!-- --></p>
+         * <br>
+         * <p>    SystemFileUploaderWithShareLink</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   <!-- --></p>
+         * <br>
+         * <p>    SystemFileUploader</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   <!-- --></p>
+         * <br>
+         * <p>    SystemFileUploaderAndDownloader</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   <!-- --></p>
+         * <br>
+         * <p>    SystemFileMetaViewer</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
         @NameInMap("RoleId")
         public String roleId;
 

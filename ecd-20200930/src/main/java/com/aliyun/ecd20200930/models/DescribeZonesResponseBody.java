@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeZonesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>DescribeZones</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Details about zones.</p>
-     */
     @NameInMap("Zones")
     public java.util.List<DescribeZonesResponseBodyZones> zones;
 
@@ -38,9 +35,6 @@ public class DescribeZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeZonesResponseBodyZones extends TeaModel {
-        /**
-         * <p>The ID of the zone.</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 

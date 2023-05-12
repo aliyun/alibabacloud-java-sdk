@@ -4,14 +4,11 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DeleteNetworkPackagesRequest extends TeaModel {
-    /**
-     * <p>The IDs of Internet access packages.</p>
-     */
     @NameInMap("NetworkPackageId")
     public java.util.List<String> networkPackageId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>DeleteNetworkPackages</p>
      */
     @NameInMap("RegionId")
     public String regionId;

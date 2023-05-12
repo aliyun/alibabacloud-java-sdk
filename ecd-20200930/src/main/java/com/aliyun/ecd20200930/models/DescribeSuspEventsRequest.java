@@ -4,67 +4,30 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeSuspEventsRequest extends TeaModel {
-    /**
-     * <p>The ID of the alert event to which the exception belongs.</p>
-     */
     @NameInMap("AlarmUniqueInfo")
     public String alarmUniqueInfo;
 
-    /**
-     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
-     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    /**
-     * <p>The processing status of the exception. Valid values:</p>
-     * <br>
-     * <p>*   N: not processed</p>
-     * <p>*   Y: processed</p>
-     */
     @NameInMap("Dealed")
     public String dealed;
 
-    /**
-     * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
-     */
     @NameInMap("Lang")
     public String lang;
 
-    /**
-     * <p>The severity of the exception. Valid values:</p>
-     * <br>
-     * <p>*   serious: The exception is urgent.</p>
-     * <p>*   suspicious: The exception is a warning</p>
-     * <p>*   remind: The exception is a suggestion.</p>
-     */
     @NameInMap("Levels")
     public String levels;
 
-    /**
-     * <p>The ID of the workspace.</p>
-     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
-    /**
-     * <p>The number of entries to return on each page. Default value: 20.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The type of the alert event to which the exception belongs.</p>
-     */
     @NameInMap("ParentEventType")
     public String parentEventType;
 
-    /**
-     * <p>The ID of the region.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

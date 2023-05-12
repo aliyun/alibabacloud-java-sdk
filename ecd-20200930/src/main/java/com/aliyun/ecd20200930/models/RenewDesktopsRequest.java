@@ -5,6 +5,18 @@ import com.aliyun.tea.*;
 
 public class RenewDesktopsRequest extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     */
+    @NameInMap("AutoPay")
+    public Boolean autoPay;
+
+    /**
+     * <p>The operation that you want to perform. Set the value to RenewDesktops.</p>
+     */
+    @NameInMap("DesktopId")
+    public java.util.List<String> desktopId;
+
+    /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <br>
      * <p>*   true: enables automatic payment. Make sure that you have sufficient balance in your account. Otherwise, abnormal orders are generated.</p>
@@ -12,27 +24,19 @@ public class RenewDesktopsRequest extends TeaModel {
      * <br>
      * <p>Default value: true.</p>
      */
-    @NameInMap("AutoPay")
-    public Boolean autoPay;
+    @NameInMap("Period")
+    public Integer period;
 
     /**
-     * <p>The IDs of cloud desktops.</p>
+     * <p>The ID of cloud desktop N.</p>
      * <br>
      * <p>Only subscription cloud desktops can be renewed by calling this operation.</p>
      */
-    @NameInMap("DesktopId")
-    public java.util.List<String> desktopId;
+    @NameInMap("PeriodUnit")
+    public String periodUnit;
 
-    /**
-     * <p>The renewal duration. The valid values of this parameter are determined by the PeriodUnit value.</p>
-     * <br>
-     * <p>*   If PeriodUnit is set to Month, the valid values of the Period parameter are 1, 2, 3, and 6.</p>
-     * <p>*   If PeriodUnit is set to Year, the valid values of the Period parameter are 1, 2, 3, 4, and 5.</p>
-     * <br>
-     * <p>Default value: 1.</p>
-     */
-    @NameInMap("Period")
-    public Integer period;
+    @NameInMap("PromotionId")
+    public String promotionId;
 
     /**
      * <p>The unit of the renewal duration specified by the Period parameter. Valid values:</p>
@@ -41,18 +45,6 @@ public class RenewDesktopsRequest extends TeaModel {
      * <p>*   Year</p>
      * <br>
      * <p>Default value: Month.</p>
-     */
-    @NameInMap("PeriodUnit")
-    public String periodUnit;
-
-    /**
-     * <p>The ID of the sales promotion.</p>
-     */
-    @NameInMap("PromotionId")
-    public String promotionId;
-
-    /**
-     * <p>The region ID of the cloud desktop.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

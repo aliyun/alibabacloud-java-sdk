@@ -4,67 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeVulListRequest extends TeaModel {
-    /**
-     * <p>The alias of the vulnerability.</p>
-     */
     @NameInMap("AliasName")
     public String aliasName;
 
-    /**
-     * <p>The number of the page to return.</p>
-     * <br>
-     * <p>*   Pages start from page 1.</p>
-     * <p>*   Default value: 1.</p>
-     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    /**
-     * <p>The processing status of the vulnerability.</p>
-     */
     @NameInMap("Dealed")
     public String dealed;
 
-    /**
-     * <p>The language of the content within the request and response.</p>
-     */
     @NameInMap("Lang")
     public String lang;
 
-    /**
-     * <p>The name of the vulnerability.</p>
-     */
     @NameInMap("Name")
     public String name;
 
-    /**
-     * <p>The priority to fix the detected vulnerability or the risk level of the vulnerability.</p>
-     */
     @NameInMap("Necessity")
     public String necessity;
 
-    /**
-     * <p>The ID of the workspace.</p>
-     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
-    /**
-     * <p>The number of entries to return on each page.\</p>
-     * <p>Default value: 20.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The type of the detected vulnerability.</p>
-     */
     @NameInMap("Type")
     public String type;
 

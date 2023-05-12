@@ -5,16 +5,13 @@ import com.aliyun.tea.*;
 
 public class LockVirtualMFADeviceRequest extends TeaModel {
     /**
-     * <p>The ID of the region.</p>
-     */
-    @NameInMap("RegionId")
-    public String regionId;
-
-    /**
      * <p>The serial number of the virtual MFA device, which is a unique identifier.</p>
      * <br>
      * <p>You can call the [DescribeVirtualMFADevices](~~206210~~) operation to query the serial number of the virtual MFA device bound by AD users.</p>
      */
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("SerialNumber")
     public String serialNumber;
 

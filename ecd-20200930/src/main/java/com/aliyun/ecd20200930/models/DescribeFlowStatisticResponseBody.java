@@ -4,21 +4,12 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeFlowStatisticResponseBody extends TeaModel {
-    /**
-     * <p>The number of available cloud desktops in the workspace.</p>
-     */
     @NameInMap("DesktopCount")
     public Integer desktopCount;
 
-    /**
-     * <p>Details of the traffic that is consumed by cloud desktops.</p>
-     */
     @NameInMap("DesktopFlowStatistic")
     public java.util.List<DescribeFlowStatisticResponseBodyDesktopFlowStatistic> desktopFlowStatistic;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -52,27 +43,15 @@ public class DescribeFlowStatisticResponseBody extends TeaModel {
     }
 
     public static class DescribeFlowStatisticResponseBodyDesktopFlowStatistic extends TeaModel {
-        /**
-         * <p>The ID of the cloud desktop.</p>
-         */
         @NameInMap("DesktopId")
         public String desktopId;
 
-        /**
-         * <p>The name of the cloud desktop.</p>
-         */
         @NameInMap("DesktopName")
         public String desktopName;
 
-        /**
-         * <p>The amount of the traffic. Unit: KB.</p>
-         */
         @NameInMap("FlowIn")
         public String flowIn;
 
-        /**
-         * <p>The traffic ranking.</p>
-         */
         @NameInMap("FlowRank")
         public Integer flowRank;
 
