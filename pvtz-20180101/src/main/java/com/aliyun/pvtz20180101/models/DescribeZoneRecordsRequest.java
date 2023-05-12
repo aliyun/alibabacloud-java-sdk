@@ -4,14 +4,11 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class DescribeZoneRecordsRequest extends TeaModel {
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("Keyword")
     public String keyword;
 
-    @NameInMap("ZoneId")
-    public String zoneId;
+    @NameInMap("Lang")
+    public String lang;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -19,32 +16,24 @@ public class DescribeZoneRecordsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
+    @NameInMap("SearchMode")
+    public String searchMode;
 
     @NameInMap("Tag")
     public String tag;
 
-    @NameInMap("SearchMode")
-    public String searchMode;
+    @NameInMap("UserClientIp")
+    public String userClientIp;
 
-    @NameInMap("OrderBy")
-    public String orderBy;
-
-    @NameInMap("Direction")
-    public String direction;
+    /**
+     * <p>Zone ID。</p>
+     */
+    @NameInMap("ZoneId")
+    public String zoneId;
 
     public static DescribeZoneRecordsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeZoneRecordsRequest self = new DescribeZoneRecordsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeZoneRecordsRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public DescribeZoneRecordsRequest setKeyword(String keyword) {
@@ -55,12 +44,12 @@ public class DescribeZoneRecordsRequest extends TeaModel {
         return this.keyword;
     }
 
-    public DescribeZoneRecordsRequest setZoneId(String zoneId) {
-        this.zoneId = zoneId;
+    public DescribeZoneRecordsRequest setLang(String lang) {
+        this.lang = lang;
         return this;
     }
-    public String getZoneId() {
-        return this.zoneId;
+    public String getLang() {
+        return this.lang;
     }
 
     public DescribeZoneRecordsRequest setPageNumber(Integer pageNumber) {
@@ -79,12 +68,12 @@ public class DescribeZoneRecordsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeZoneRecordsRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
+    public DescribeZoneRecordsRequest setSearchMode(String searchMode) {
+        this.searchMode = searchMode;
         return this;
     }
-    public String getUserClientIp() {
-        return this.userClientIp;
+    public String getSearchMode() {
+        return this.searchMode;
     }
 
     public DescribeZoneRecordsRequest setTag(String tag) {
@@ -95,28 +84,20 @@ public class DescribeZoneRecordsRequest extends TeaModel {
         return this.tag;
     }
 
-    public DescribeZoneRecordsRequest setSearchMode(String searchMode) {
-        this.searchMode = searchMode;
+    public DescribeZoneRecordsRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
         return this;
     }
-    public String getSearchMode() {
-        return this.searchMode;
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
-    public DescribeZoneRecordsRequest setOrderBy(String orderBy) {
-        this.orderBy = orderBy;
+    public DescribeZoneRecordsRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
         return this;
     }
-    public String getOrderBy() {
-        return this.orderBy;
-    }
-
-    public DescribeZoneRecordsRequest setDirection(String direction) {
-        this.direction = direction;
-        return this;
-    }
-    public String getDirection() {
-        return this.direction;
+    public String getZoneId() {
+        return this.zoneId;
     }
 
 }

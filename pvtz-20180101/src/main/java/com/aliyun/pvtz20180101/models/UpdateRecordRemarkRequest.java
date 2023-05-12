@@ -13,9 +13,6 @@ public class UpdateRecordRemarkRequest extends TeaModel {
     @NameInMap("Remark")
     public String remark;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     public static UpdateRecordRemarkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateRecordRemarkRequest self = new UpdateRecordRemarkRequest();
         return TeaModel.build(map, self);
@@ -43,14 +40,6 @@ public class UpdateRecordRemarkRequest extends TeaModel {
     }
     public String getRemark() {
         return this.remark;
-    }
-
-    public UpdateRecordRemarkRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
 }

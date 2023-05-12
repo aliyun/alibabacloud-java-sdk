@@ -4,35 +4,35 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class DescribeZoneInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("SlaveDns")
-    public Boolean slaveDns;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
-    @NameInMap("ZoneId")
-    public String zoneId;
-
-    @NameInMap("ProxyPattern")
-    public String proxyPattern;
+    @NameInMap("BindVpcs")
+    public DescribeZoneInfoResponseBodyBindVpcs bindVpcs;
 
     @NameInMap("CreateTime")
     public String createTime;
 
-    @NameInMap("ZoneType")
-    public String zoneType;
+    @NameInMap("CreateTimestamp")
+    public Long createTimestamp;
+
+    @NameInMap("IsPtr")
+    public Boolean isPtr;
+
+    @NameInMap("ProxyPattern")
+    public String proxyPattern;
+
+    @NameInMap("RecordCount")
+    public Integer recordCount;
 
     @NameInMap("Remark")
     public String remark;
 
-    @NameInMap("ZoneName")
-    public String zoneName;
+    @NameInMap("RequestId")
+    public String requestId;
 
-    @NameInMap("ZoneTag")
-    public String zoneTag;
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("SlaveDns")
+    public Boolean slaveDns;
 
     @NameInMap("UpdateTime")
     public String updateTime;
@@ -40,61 +40,32 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
     @NameInMap("UpdateTimestamp")
     public Long updateTimestamp;
 
-    @NameInMap("RecordCount")
-    public Integer recordCount;
+    /**
+     * <p>Zone ID。</p>
+     */
+    @NameInMap("ZoneId")
+    public String zoneId;
 
-    @NameInMap("CreateTimestamp")
-    public Long createTimestamp;
+    @NameInMap("ZoneName")
+    public String zoneName;
 
-    @NameInMap("BindVpcs")
-    public DescribeZoneInfoResponseBodyBindVpcs bindVpcs;
+    @NameInMap("ZoneTag")
+    public String zoneTag;
 
-    @NameInMap("IsPtr")
-    public Boolean isPtr;
+    @NameInMap("ZoneType")
+    public String zoneType;
 
     public static DescribeZoneInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeZoneInfoResponseBody self = new DescribeZoneInfoResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeZoneInfoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeZoneInfoResponseBody setBindVpcs(DescribeZoneInfoResponseBodyBindVpcs bindVpcs) {
+        this.bindVpcs = bindVpcs;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeZoneInfoResponseBody setSlaveDns(Boolean slaveDns) {
-        this.slaveDns = slaveDns;
-        return this;
-    }
-    public Boolean getSlaveDns() {
-        return this.slaveDns;
-    }
-
-    public DescribeZoneInfoResponseBody setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
-    public DescribeZoneInfoResponseBody setZoneId(String zoneId) {
-        this.zoneId = zoneId;
-        return this;
-    }
-    public String getZoneId() {
-        return this.zoneId;
-    }
-
-    public DescribeZoneInfoResponseBody setProxyPattern(String proxyPattern) {
-        this.proxyPattern = proxyPattern;
-        return this;
-    }
-    public String getProxyPattern() {
-        return this.proxyPattern;
+    public DescribeZoneInfoResponseBodyBindVpcs getBindVpcs() {
+        return this.bindVpcs;
     }
 
     public DescribeZoneInfoResponseBody setCreateTime(String createTime) {
@@ -105,12 +76,36 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
         return this.createTime;
     }
 
-    public DescribeZoneInfoResponseBody setZoneType(String zoneType) {
-        this.zoneType = zoneType;
+    public DescribeZoneInfoResponseBody setCreateTimestamp(Long createTimestamp) {
+        this.createTimestamp = createTimestamp;
         return this;
     }
-    public String getZoneType() {
-        return this.zoneType;
+    public Long getCreateTimestamp() {
+        return this.createTimestamp;
+    }
+
+    public DescribeZoneInfoResponseBody setIsPtr(Boolean isPtr) {
+        this.isPtr = isPtr;
+        return this;
+    }
+    public Boolean getIsPtr() {
+        return this.isPtr;
+    }
+
+    public DescribeZoneInfoResponseBody setProxyPattern(String proxyPattern) {
+        this.proxyPattern = proxyPattern;
+        return this;
+    }
+    public String getProxyPattern() {
+        return this.proxyPattern;
+    }
+
+    public DescribeZoneInfoResponseBody setRecordCount(Integer recordCount) {
+        this.recordCount = recordCount;
+        return this;
+    }
+    public Integer getRecordCount() {
+        return this.recordCount;
     }
 
     public DescribeZoneInfoResponseBody setRemark(String remark) {
@@ -121,20 +116,28 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
         return this.remark;
     }
 
-    public DescribeZoneInfoResponseBody setZoneName(String zoneName) {
-        this.zoneName = zoneName;
+    public DescribeZoneInfoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getZoneName() {
-        return this.zoneName;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public DescribeZoneInfoResponseBody setZoneTag(String zoneTag) {
-        this.zoneTag = zoneTag;
+    public DescribeZoneInfoResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
         return this;
     }
-    public String getZoneTag() {
-        return this.zoneTag;
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public DescribeZoneInfoResponseBody setSlaveDns(Boolean slaveDns) {
+        this.slaveDns = slaveDns;
+        return this;
+    }
+    public Boolean getSlaveDns() {
+        return this.slaveDns;
     }
 
     public DescribeZoneInfoResponseBody setUpdateTime(String updateTime) {
@@ -153,73 +156,71 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
         return this.updateTimestamp;
     }
 
-    public DescribeZoneInfoResponseBody setRecordCount(Integer recordCount) {
-        this.recordCount = recordCount;
+    public DescribeZoneInfoResponseBody setZoneId(String zoneId) {
+        this.zoneId = zoneId;
         return this;
     }
-    public Integer getRecordCount() {
-        return this.recordCount;
+    public String getZoneId() {
+        return this.zoneId;
     }
 
-    public DescribeZoneInfoResponseBody setCreateTimestamp(Long createTimestamp) {
-        this.createTimestamp = createTimestamp;
+    public DescribeZoneInfoResponseBody setZoneName(String zoneName) {
+        this.zoneName = zoneName;
         return this;
     }
-    public Long getCreateTimestamp() {
-        return this.createTimestamp;
+    public String getZoneName() {
+        return this.zoneName;
     }
 
-    public DescribeZoneInfoResponseBody setBindVpcs(DescribeZoneInfoResponseBodyBindVpcs bindVpcs) {
-        this.bindVpcs = bindVpcs;
+    public DescribeZoneInfoResponseBody setZoneTag(String zoneTag) {
+        this.zoneTag = zoneTag;
         return this;
     }
-    public DescribeZoneInfoResponseBodyBindVpcs getBindVpcs() {
-        return this.bindVpcs;
+    public String getZoneTag() {
+        return this.zoneTag;
     }
 
-    public DescribeZoneInfoResponseBody setIsPtr(Boolean isPtr) {
-        this.isPtr = isPtr;
+    public DescribeZoneInfoResponseBody setZoneType(String zoneType) {
+        this.zoneType = zoneType;
         return this;
     }
-    public Boolean getIsPtr() {
-        return this.isPtr;
+    public String getZoneType() {
+        return this.zoneType;
     }
 
     public static class DescribeZoneInfoResponseBodyBindVpcsVpc extends TeaModel {
-        @NameInMap("VpcName")
-        public String vpcName;
-
-        @NameInMap("VpcId")
-        public String vpcId;
+        @NameInMap("RegionId")
+        public String regionId;
 
         @NameInMap("RegionName")
         public String regionName;
 
+        /**
+         * <p>Vpc ID。</p>
+         */
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        @NameInMap("VpcName")
+        public String vpcName;
+
+        @NameInMap("VpcType")
+        public String vpcType;
+
         @NameInMap("VpcUserId")
         public Long vpcUserId;
-
-        @NameInMap("RegionId")
-        public String regionId;
 
         public static DescribeZoneInfoResponseBodyBindVpcsVpc build(java.util.Map<String, ?> map) throws Exception {
             DescribeZoneInfoResponseBodyBindVpcsVpc self = new DescribeZoneInfoResponseBodyBindVpcsVpc();
             return TeaModel.build(map, self);
         }
 
-        public DescribeZoneInfoResponseBodyBindVpcsVpc setVpcName(String vpcName) {
-            this.vpcName = vpcName;
+        public DescribeZoneInfoResponseBodyBindVpcsVpc setRegionId(String regionId) {
+            this.regionId = regionId;
             return this;
         }
-        public String getVpcName() {
-            return this.vpcName;
-        }
-
-        public DescribeZoneInfoResponseBodyBindVpcsVpc setVpcId(String vpcId) {
-            this.vpcId = vpcId;
-            return this;
-        }
-        public String getVpcId() {
-            return this.vpcId;
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public DescribeZoneInfoResponseBodyBindVpcsVpc setRegionName(String regionName) {
@@ -230,20 +231,36 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
             return this.regionName;
         }
 
+        public DescribeZoneInfoResponseBodyBindVpcsVpc setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public DescribeZoneInfoResponseBodyBindVpcsVpc setVpcName(String vpcName) {
+            this.vpcName = vpcName;
+            return this;
+        }
+        public String getVpcName() {
+            return this.vpcName;
+        }
+
+        public DescribeZoneInfoResponseBodyBindVpcsVpc setVpcType(String vpcType) {
+            this.vpcType = vpcType;
+            return this;
+        }
+        public String getVpcType() {
+            return this.vpcType;
+        }
+
         public DescribeZoneInfoResponseBodyBindVpcsVpc setVpcUserId(Long vpcUserId) {
             this.vpcUserId = vpcUserId;
             return this;
         }
         public Long getVpcUserId() {
             return this.vpcUserId;
-        }
-
-        public DescribeZoneInfoResponseBodyBindVpcsVpc setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
         }
 
     }

@@ -4,26 +4,26 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class SetZoneRecordStatusResponseBody extends TeaModel {
-    @NameInMap("Status")
-    public String status;
+    @NameInMap("RecordId")
+    public Long recordId;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("RecordId")
-    public Long recordId;
+    @NameInMap("Status")
+    public String status;
 
     public static SetZoneRecordStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SetZoneRecordStatusResponseBody self = new SetZoneRecordStatusResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public SetZoneRecordStatusResponseBody setStatus(String status) {
-        this.status = status;
+    public SetZoneRecordStatusResponseBody setRecordId(Long recordId) {
+        this.recordId = recordId;
         return this;
     }
-    public String getStatus() {
-        return this.status;
+    public Long getRecordId() {
+        return this.recordId;
     }
 
     public SetZoneRecordStatusResponseBody setRequestId(String requestId) {
@@ -34,12 +34,12 @@ public class SetZoneRecordStatusResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public SetZoneRecordStatusResponseBody setRecordId(Long recordId) {
-        this.recordId = recordId;
+    public SetZoneRecordStatusResponseBody setStatus(String status) {
+        this.status = status;
         return this;
     }
-    public Long getRecordId() {
-        return this.recordId;
+    public String getStatus() {
+        return this.status;
     }
 
 }

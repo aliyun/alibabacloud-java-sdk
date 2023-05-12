@@ -7,11 +7,11 @@ public class CheckZoneNameRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("ZoneName")
-    public String zoneName;
-
     @NameInMap("UserClientIp")
     public String userClientIp;
+
+    @NameInMap("ZoneName")
+    public String zoneName;
 
     public static CheckZoneNameRequest build(java.util.Map<String, ?> map) throws Exception {
         CheckZoneNameRequest self = new CheckZoneNameRequest();
@@ -26,20 +26,20 @@ public class CheckZoneNameRequest extends TeaModel {
         return this.lang;
     }
 
-    public CheckZoneNameRequest setZoneName(String zoneName) {
-        this.zoneName = zoneName;
-        return this;
-    }
-    public String getZoneName() {
-        return this.zoneName;
-    }
-
     public CheckZoneNameRequest setUserClientIp(String userClientIp) {
         this.userClientIp = userClientIp;
         return this;
     }
     public String getUserClientIp() {
         return this.userClientIp;
+    }
+
+    public CheckZoneNameRequest setZoneName(String zoneName) {
+        this.zoneName = zoneName;
+        return this;
+    }
+    public String getZoneName() {
+        return this.zoneName;
     }
 
 }

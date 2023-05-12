@@ -4,41 +4,33 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class UpdateZoneRecordRequest extends TeaModel {
-    @NameInMap("Rr")
-    public String rr;
-
     @NameInMap("Lang")
     public String lang;
-
-    @NameInMap("RecordId")
-    public Long recordId;
-
-    @NameInMap("Type")
-    public String type;
-
-    @NameInMap("Ttl")
-    public Integer ttl;
 
     @NameInMap("Priority")
     public Integer priority;
 
-    @NameInMap("Value")
-    public String value;
+    @NameInMap("RecordId")
+    public Long recordId;
+
+    @NameInMap("Rr")
+    public String rr;
+
+    @NameInMap("Ttl")
+    public Integer ttl;
+
+    @NameInMap("Type")
+    public String type;
 
     @NameInMap("UserClientIp")
     public String userClientIp;
 
+    @NameInMap("Value")
+    public String value;
+
     public static UpdateZoneRecordRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateZoneRecordRequest self = new UpdateZoneRecordRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateZoneRecordRequest setRr(String rr) {
-        this.rr = rr;
-        return this;
-    }
-    public String getRr() {
-        return this.rr;
     }
 
     public UpdateZoneRecordRequest setLang(String lang) {
@@ -49,6 +41,14 @@ public class UpdateZoneRecordRequest extends TeaModel {
         return this.lang;
     }
 
+    public UpdateZoneRecordRequest setPriority(Integer priority) {
+        this.priority = priority;
+        return this;
+    }
+    public Integer getPriority() {
+        return this.priority;
+    }
+
     public UpdateZoneRecordRequest setRecordId(Long recordId) {
         this.recordId = recordId;
         return this;
@@ -57,12 +57,12 @@ public class UpdateZoneRecordRequest extends TeaModel {
         return this.recordId;
     }
 
-    public UpdateZoneRecordRequest setType(String type) {
-        this.type = type;
+    public UpdateZoneRecordRequest setRr(String rr) {
+        this.rr = rr;
         return this;
     }
-    public String getType() {
-        return this.type;
+    public String getRr() {
+        return this.rr;
     }
 
     public UpdateZoneRecordRequest setTtl(Integer ttl) {
@@ -73,20 +73,12 @@ public class UpdateZoneRecordRequest extends TeaModel {
         return this.ttl;
     }
 
-    public UpdateZoneRecordRequest setPriority(Integer priority) {
-        this.priority = priority;
+    public UpdateZoneRecordRequest setType(String type) {
+        this.type = type;
         return this;
     }
-    public Integer getPriority() {
-        return this.priority;
-    }
-
-    public UpdateZoneRecordRequest setValue(String value) {
-        this.value = value;
-        return this;
-    }
-    public String getValue() {
-        return this.value;
+    public String getType() {
+        return this.type;
     }
 
     public UpdateZoneRecordRequest setUserClientIp(String userClientIp) {
@@ -95,6 +87,14 @@ public class UpdateZoneRecordRequest extends TeaModel {
     }
     public String getUserClientIp() {
         return this.userClientIp;
+    }
+
+    public UpdateZoneRecordRequest setValue(String value) {
+        this.value = value;
+        return this;
+    }
+    public String getValue() {
+        return this.value;
     }
 
 }

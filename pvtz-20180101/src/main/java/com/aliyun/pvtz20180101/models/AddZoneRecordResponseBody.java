@@ -4,11 +4,11 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class AddZoneRecordResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("RecordId")
     public Long recordId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -18,20 +18,20 @@ public class AddZoneRecordResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public AddZoneRecordResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public AddZoneRecordResponseBody setRecordId(Long recordId) {
         this.recordId = recordId;
         return this;
     }
     public Long getRecordId() {
         return this.recordId;
+    }
+
+    public AddZoneRecordResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public AddZoneRecordResponseBody setSuccess(Boolean success) {

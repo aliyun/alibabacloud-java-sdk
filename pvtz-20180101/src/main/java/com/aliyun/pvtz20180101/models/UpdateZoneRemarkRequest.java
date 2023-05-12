@@ -7,14 +7,17 @@ public class UpdateZoneRemarkRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("ZoneId")
-    public String zoneId;
-
     @NameInMap("Remark")
     public String remark;
 
     @NameInMap("UserClientIp")
     public String userClientIp;
+
+    /**
+     * <p>Zone ID。</p>
+     */
+    @NameInMap("ZoneId")
+    public String zoneId;
 
     public static UpdateZoneRemarkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateZoneRemarkRequest self = new UpdateZoneRemarkRequest();
@@ -27,14 +30,6 @@ public class UpdateZoneRemarkRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public UpdateZoneRemarkRequest setZoneId(String zoneId) {
-        this.zoneId = zoneId;
-        return this;
-    }
-    public String getZoneId() {
-        return this.zoneId;
     }
 
     public UpdateZoneRemarkRequest setRemark(String remark) {
@@ -51,6 +46,14 @@ public class UpdateZoneRemarkRequest extends TeaModel {
     }
     public String getUserClientIp() {
         return this.userClientIp;
+    }
+
+    public UpdateZoneRemarkRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public String getZoneId() {
+        return this.zoneId;
     }
 
 }
