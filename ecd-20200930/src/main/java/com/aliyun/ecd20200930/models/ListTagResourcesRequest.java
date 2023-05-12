@@ -5,37 +5,37 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The ID of the resource, which is the ID of the cloud desktop. Valid values of N: 1 to 50.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token used to start the next query.</p>
+     * <p>The ID of the resource, which is the ID of the cloud desktop.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The region ID of the resource.</p>
+     * <p>The type of the resource. Set the value to ALIYUN::GWS::INSTANCE.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource, which is the ID of the cloud desktop. Valid values of N: 1 to 50.</p>
+     * <p>The operation that you want to perform. Set the value to ListTagResources.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resource. Set the value to ALIYUN::GWS::INSTANCE.</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The list of the resource.</p>
+     * <p>The region ID of the resource.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -95,13 +95,13 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N. Valid values of N: 1 to 20.</p>
+         * <p>The token used to start the next query.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N. Valid values of N: 1 to 20.</p>
+         * <p>The key of tag N. Valid values of N: 1 to 20.</p>
          */
         @NameInMap("Value")
         public String value;

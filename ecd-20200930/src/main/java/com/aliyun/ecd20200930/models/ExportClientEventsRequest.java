@@ -4,74 +4,39 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ExportClientEventsRequest extends TeaModel {
-    /**
-     * <p>The ID of the cloud desktop.</p>
-     */
     @NameInMap("DesktopId")
     public String desktopId;
 
-    /**
-     * <p>The name of the cloud desktop.</p>
-     */
     @NameInMap("DesktopName")
     public String desktopName;
 
-    /**
-     * <p>The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.\</p>
-     * <p>If you leave this parameter empty, the current time is used.</p>
-     */
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <p>The ID of the end user.</p>
-     */
     @NameInMap("EndUserId")
     public String endUserId;
 
-    /**
-     * <p>The type of the event that you want to query. If you specify a value for the EventTypes parameter, the combination of event types that you want to query is considered the filter condition for the query. If you do not specify a value for the EventTypes parameter and the EventType parameter is left empty, all events are queried.</p>
-     */
     @NameInMap("EventType")
     public String eventType;
 
-    /**
-     * <p>The combination of event types that you want to query. You can combine multiple event types. The query result contains all the combined events.</p>
-     */
     @NameInMap("EventTypes")
     public java.util.List<String> eventTypes;
 
     @NameInMap("LangType")
     public String langType;
 
-    /**
-     * <p>The number of records that you want to export. Maximum Value: 5000 Default value: 5000</p>
-     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    /**
-     * <p>The ID of the workspace.</p>
-     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
-    /**
-     * <p>The name of the workspace.</p>
-     */
     @NameInMap("OfficeSiteName")
     public String officeSiteName;
 
-    /**
-     * <p>The ID of the region.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.\</p>
-     * <p>If you leave this parameter empty, all events that occurred before the point in time that you specify for `EndTime` are queried.</p>
-     */
     @NameInMap("StartTime")
     public String startTime;
 

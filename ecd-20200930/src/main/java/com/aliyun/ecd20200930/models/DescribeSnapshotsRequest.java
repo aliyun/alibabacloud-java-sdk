@@ -8,22 +8,18 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String creator;
 
     /**
-     * <p>The ID of the cloud desktop.</p>
+     * <p>The ID of the snapshot.</p>
      */
     @NameInMap("DesktopId")
     public String desktopId;
 
     /**
-     * <p>The name of the cloud desktop.</p>
+     * <p>The name of the snapshot. The name must be 2 to 128 characters in length. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`.</p>
+     * <br>
+     * <p>It cannot start with `auto` because snapshots whose names start with auto are recognized as automatic snapshots.</p>
      */
     @NameInMap("DesktopName")
     public String desktopName;
-
-    /**
-     * <p>The time when you want to stop creating the snapshot. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-mm-ddthh:mm:ssz format. The time must be in UTC.</p>
-     */
-    @NameInMap("EndTime")
-    public String endTime;
 
     /**
      * <p>The maximum number of entries to return on each page.</p>
@@ -31,46 +27,32 @@ public class DescribeSnapshotsRequest extends TeaModel {
      * <p>*   Maximum value: 100</p>
      * <p>*   Default value: 10</p>
      */
+    @NameInMap("EndTime")
+    public String endTime;
+
+    /**
+     * <p>The token that is used to start the next query. If the value of this parameter is empty, all results are returned.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the query. Set the value to the value of NextToken that is returned from the last call.</p>
+     * <p>The information that is returned.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The name of the cloud desktop.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the snapshot.</p>
+     * <p>test data disk</p>
      */
     @NameInMap("SnapshotId")
     public String snapshotId;
-
-    /**
-     * <p>The name of the snapshot. The name must be 2 to 128 characters in length. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`.</p>
-     * <br>
-     * <p>It cannot start with `auto` because snapshots whose names start with auto are recognized as automatic snapshots.</p>
-     */
-    @NameInMap("SnapshotName")
-    public String snapshotName;
-
-    /**
-     * <p>The type of the snapshot. Default value: all.</p>
-     * <br>
-     * <p>Valid values:</p>
-     * <br>
-     * <p>*   auto: auto snapshot</p>
-     * <p>*   user: manual snapshot</p>
-     * <p>*   all: all types of snapshots</p>
-     */
-    @NameInMap("SnapshotType")
-    public String snapshotType;
 
     /**
      * <p>The type of the source disk for which you want to create the snapshot. Valid values:</p>
@@ -80,11 +62,23 @@ public class DescribeSnapshotsRequest extends TeaModel {
      * <br>
      * <p>> The value of this parameter is not case-sensitive.</p>
      */
+    @NameInMap("SnapshotName")
+    public String snapshotName;
+
+    /**
+     * <p>The time when you want to stop creating the snapshot. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-mm-ddthh:mm:ssz format. The time must be in UTC.</p>
+     */
+    @NameInMap("SnapshotType")
+    public String snapshotType;
+
+    /**
+     * <p>The time when you want to create the snapshot. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-mm-ddthh:mm:ssz format. The time must be in UTC.</p>
+     */
     @NameInMap("SourceDiskType")
     public String sourceDiskType;
 
     /**
-     * <p>The time when you want to create the snapshot. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-mm-ddthh:mm:ssz format. The time must be in UTC.</p>
+     * <p>The token that determines the start point of the query. Set the value to the value of NextToken that is returned from the last call.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

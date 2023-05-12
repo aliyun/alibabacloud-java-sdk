@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVulOverviewRequest extends TeaModel {
     /**
-     * <p>The ID of the region.</p>
+     * <p>The number of medium-risk vulnerabilities.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

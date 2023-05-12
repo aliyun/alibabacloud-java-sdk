@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityEventOperationStatusRequest extends TeaModel {
     /**
-     * <p>The ID of the region.</p>
+     * <p>The ID of the task to handle the alerts.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -14,7 +14,7 @@ public class DescribeSecurityEventOperationStatusRequest extends TeaModel {
     public java.util.List<String> securityEventId;
 
     /**
-     * <p>The ID of the task to handle the alerts.</p>
+     * <p>The ID of the alert.</p>
      */
     @NameInMap("TaskId")
     public Long taskId;

@@ -467,6 +467,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @NameInMap("ManagementFlag")
         public String managementFlag;
 
+        @NameInMap("ManagementFlags")
+        public java.util.List<String> managementFlags;
+
         /**
          * <p>The memory size. Unit: MiB.</p>
          */
@@ -878,6 +881,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
         public String getManagementFlag() {
             return this.managementFlag;
+        }
+
+        public DescribeDesktopsResponseBodyDesktops setManagementFlags(java.util.List<String> managementFlags) {
+            this.managementFlags = managementFlags;
+            return this;
+        }
+        public java.util.List<String> getManagementFlags() {
+            return this.managementFlags;
         }
 
         public DescribeDesktopsResponseBodyDesktops setMemory(Long memory) {

@@ -5,34 +5,28 @@ import com.aliyun.tea.*;
 
 public class AttachCenRequest extends TeaModel {
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
-     * <p>The ID of the Alibaba Cloud account to which the CEN instance belongs.</p>
-     * <br>
-     * <p>*   If you specify the CenId parameter and the CEN instance that you specify for the CenId parameter belongs to the Alibaba Cloud account, skip this parameter.</p>
-     * <p>*   If you specify the CenId parameter and the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, enter the ID of the exact Alibaba Cloud account.</p>
+     * <p>The operation that you want to perform. Set the value to **AttachCen**.</p>
      */
     @NameInMap("CenOwnerId")
     public Long cenOwnerId;
 
-    /**
-     * <p>The ID of the workspace.</p>
-     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The verification code. If the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, you must call the SendVerifyCode operation to obtain the verification code.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The verification code. If the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, you must call the SendVerifyCode operation to obtain the verification code.</p>
+     * <p>The ID of the workspace.</p>
      */
     @NameInMap("VerifyCode")
     public String verifyCode;

@@ -4,9 +4,6 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyDesktopHostNameRequest extends TeaModel {
-    /**
-     * <p>The ID of the cloud desktop.</p>
-     */
     @NameInMap("DesktopId")
     public String desktopId;
 
@@ -20,7 +17,7 @@ public class ModifyDesktopHostNameRequest extends TeaModel {
     public String newHostName;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The operation that you want to perform. Set the value to ModifyDesktopHostName.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -5,25 +5,27 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
-     * <p>The region ID of the resource.</p>
+     * <p>The IDs of the resources. You can specify 1 to 50 resource IDs.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource, which is the ID of the cloud desktop. Valid values of N: 1 to 50.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resource. Set the value to ALIYUN::GWS::INSTANCE.</p>
+     * <p>The tags. You can specify 1 to 20 tags.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The list of the resource.</p>
+     * <p>The key of tag.</p>
+     * <br>
+     * <p>The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
@@ -66,19 +68,9 @@ public class TagResourcesRequest extends TeaModel {
     }
 
     public static class TagResourcesRequestTag extends TeaModel {
-        /**
-         * <p>The key of tag.</p>
-         * <p>Valid values of N: 1 to 20.</p>
-         * <p>The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The value of tag.</p>
-         * <p>Valid values of N: 1 to 20.</p>
-         * <p>The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with `acs:` or contain `http://` or `https://`.</p>
-         */
         @NameInMap("Value")
         public String value;
 

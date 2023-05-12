@@ -5,31 +5,42 @@ import com.aliyun.tea.*;
 
 public class DescribeGroupedVulResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of entries returned per page.</p>
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1.</p>
+     * <br>
+     * <p>Default value: 1.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>Details about vulnerabilities.</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("GroupedVulItems")
     public java.util.List<DescribeGroupedVulResponseBodyGroupedVulItems> groupedVulItems;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The priority to fix the vulnerability or the risk level of the vulnerability. Valid values:</p>
+     * <br>
+     * <p>*   asap: high</p>
+     * <p>*   later: medium</p>
+     * <p>*   nntf: low</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The operation that you want to perform. Set the value to DescribeGroupedVul.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The processing status of the vulnerability. Valid values:</p>
+     * <br>
+     * <p>*   y: handled</p>
+     * <p>*   n: unhandled</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -81,58 +92,52 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
 
     public static class DescribeGroupedVulResponseBodyGroupedVulItems extends TeaModel {
         /**
-         * <p>The alias of the vulnerability.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("AliasName")
         public String aliasName;
 
-        /**
-         * <p>The number of high-risk vulnerabilities.</p>
-         */
         @NameInMap("AsapCount")
         public Integer asapCount;
 
         /**
-         * <p>The time when the vulnerability was last detected. The timestamp follows the UNIX time format. It is the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970.</p>
+         * <p>The ID of the workspace.</p>
          */
         @NameInMap("GmtLast")
         public String gmtLast;
 
         /**
-         * <p>The number of vulnerabilities processed.</p>
+         * <p>The maximum number of entries returned per page.</p>
          */
         @NameInMap("HandledCount")
         public Integer handledCount;
 
         /**
-         * <p>The number of medium-risk vulnerabilities.</p>
+         * <p>The page number of the returned page.</p>
          */
         @NameInMap("LaterCount")
         public Integer laterCount;
 
-        /**
-         * <p>The name of the vulnerability.</p>
-         */
         @NameInMap("Name")
         public String name;
-
-        /**
-         * <p>The number of low-risk vulnerabilities.</p>
-         */
-        @NameInMap("NntfCount")
-        public Integer nntfCount;
-
-        /**
-         * <p>The tags of the vulnerability.</p>
-         */
-        @NameInMap("Tags")
-        public String tags;
 
         /**
          * <p>The type of the vulnerability. Valid values:</p>
          * <br>
          * <p>*   cve: Linux software vulnerability</p>
          * <p>*   sys: Windows system vulnerability</p>
+         */
+        @NameInMap("NntfCount")
+        public Integer nntfCount;
+
+        /**
+         * <p>Details about vulnerabilities.</p>
+         */
+        @NameInMap("Tags")
+        public String tags;
+
+        /**
+         * <p>The alias of the vulnerability.</p>
          */
         @NameInMap("Type")
         public String type;

@@ -5,44 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeSuspEventQuaraFilesRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
-     * <br>
-     * <p>Pages start from page 1.</p>
-     * <br>
-     * <p>Default value: 1.</p>
+     * <p>The operation that you want to perform. Set the value to DescribeSuspEventQuaraFiles.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The type of the alert.</p>
      */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     /**
-     * <p>The maximum number of entries to return on each page.</p>
-     * <br>
-     * <p>Default value: 20.</p>
+     * <p>The name of the cloud desktop.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The ID of the workspace.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The status of the quarantined file. Valid values:</p>
-     * <br>
-     * <p>*   quaraFailed: The file failed to be quarantined.</p>
-     * <p>*   quaraDone: The file is quarantined.</p>
-     * <p>*   quaraing: The file is being quarantined.</p>
-     * <p>*   rollbackFailed: Quarantine for the file failed to be canceled.</p>
-     * <p>*   rollbackDone: Quarantine for the file is canceled.</p>
-     * <p>*   rollbacking: Quarantine for the file is being canceled.</p>
+     * <p>The time when the quarantined file was updated.</p>
      */
     @NameInMap("Status")
     public String status;

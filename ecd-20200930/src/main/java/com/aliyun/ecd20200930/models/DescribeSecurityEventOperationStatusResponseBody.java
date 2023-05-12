@@ -5,24 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The processing status of the alert. Valid values:</p>
+     * <br>
+     * <p>*   Processing: The alert is being processed.</p>
+     * <p>*   Success: The alert is processed.</p>
+     * <p>*   Failed: The alert failed to be processed.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Details about the processing status of alerts.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("SecurityEventOperationStatuses")
     public java.util.List<DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatuses> securityEventOperationStatuses;
 
     /**
-     * <p>The status of the task that handles the alerts. Valid values:</p>
-     * <br>
-     * <p>*   Processing: The task is being executed.</p>
-     * <p>*   Success: The task is executed.</p>
-     * <p>*   Failure: The task failed.</p>
-     * <p>*   Pending: The task is waiting to be executed.</p>
+     * <p>The code that indicates the processing result of the alert.</p>
      */
     @NameInMap("TaskStatus")
     public String taskStatus;
@@ -57,24 +56,14 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatuses extends TeaModel {
-        /**
-         * <p>The code that indicates the processing result of the alert.</p>
-         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
-        /**
-         * <p>The ID of the alert.</p>
-         */
         @NameInMap("SecurityEventId")
         public Long securityEventId;
 
         /**
-         * <p>The processing status of the alert. Valid values:</p>
-         * <br>
-         * <p>*   Processing: The alert is being processed.</p>
-         * <p>*   Success: The alert is processed.</p>
-         * <p>*   Failed: The alert failed to be processed.</p>
+         * <p>The operation that you want to perform. Set the value to DescribeSecurityEventOperationStatus.</p>
          */
         @NameInMap("Status")
         public String status;

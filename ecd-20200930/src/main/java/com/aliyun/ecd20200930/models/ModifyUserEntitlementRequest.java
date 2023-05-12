@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class ModifyUserEntitlementRequest extends TeaModel {
     /**
-     * <p>The IDs of cloud desktops which you want to grant permissions to regular users.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("AuthorizeDesktopId")
     public java.util.List<String> authorizeDesktopId;
 
     /**
-     * <p>The IDs of regular users.</p>
+     * <p>The ID of cloud desktop.</p>
      */
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The IDs of cloud desktops which you want to revoke permissions from regular users.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The IDs of cloud desktops which you want to revoke permissions from regular users.</p>
+     * <p>ModifyUserEntitlement</p>
      */
     @NameInMap("RevokeDesktopId")
     public java.util.List<String> revokeDesktopId;

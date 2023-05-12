@@ -4,9 +4,6 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class RollbackSuspEventQuaraFileRequest extends TeaModel {
-    /**
-     * <p>The ID of the cloud desktop.</p>
-     */
     @NameInMap("DesktopId")
     public String desktopId;
 
@@ -19,7 +16,7 @@ public class RollbackSuspEventQuaraFileRequest extends TeaModel {
     public Integer quaraFieldId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The operation that you want to perform. Set the value to RollbackSuspEventQuaraFile.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

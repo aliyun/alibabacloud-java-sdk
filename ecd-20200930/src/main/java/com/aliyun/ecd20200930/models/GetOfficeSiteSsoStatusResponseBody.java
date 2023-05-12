@@ -4,15 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class GetOfficeSiteSsoStatusResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether SSO is enabled.</p>
-     */
     @NameInMap("SsoStatus")
     public Boolean ssoStatus;
 

@@ -5,31 +5,38 @@ import com.aliyun.tea.*;
 
 public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The ID of the cloud desktop.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The maximum number of entries returned per page.</p>
+     * <p>The name of the alert.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The quarantined files.</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("QuaraFiles")
     public java.util.List<DescribeSuspEventQuaraFilesResponseBodyQuaraFiles> quaraFiles;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The quarantined files.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of quarantined files.</p>
+     * <p>The status of the quarantined file. Valid values:</p>
+     * <br>
+     * <p>*   quaraFailed: The file failed to be quarantined.</p>
+     * <p>*   quaraDone: The file is quarantined.</p>
+     * <p>*   quaraing: The file is being quarantined.</p>
+     * <p>*   rollbackFailed: Quarantine for the file failed to be canceled.</p>
+     * <p>*   rollbackDone: Quarantine for the file is canceled.</p>
+     * <p>*   rollbacking: Quarantine for the file is being canceled.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -80,70 +87,55 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
     }
 
     public static class DescribeSuspEventQuaraFilesResponseBodyQuaraFiles extends TeaModel {
-        /**
-         * <p>The ID of the cloud desktop.</p>
-         */
         @NameInMap("DesktopId")
         public String desktopId;
 
         /**
-         * <p>The name of the cloud desktop.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("DesktopName")
         public String desktopName;
 
         /**
-         * <p>The name of the alert.</p>
+         * <p>The number of the page to return.</p>
+         * <br>
+         * <p>Pages start from page 1.</p>
+         * <br>
+         * <p>Default value: 1.</p>
          */
         @NameInMap("EventName")
         public String eventName;
 
         /**
-         * <p>The type of the alert.</p>
+         * <p>The maximum number of entries returned per page.</p>
          */
         @NameInMap("EventType")
         public String eventType;
 
-        /**
-         * <p>The ID of the quarantined file.</p>
-         */
         @NameInMap("Id")
         public Integer id;
 
         /**
-         * <p>The message-digest algorithm 5 (MD5) value of the quarantined file.</p>
+         * <p>DescribeSuspEventQuaraFiles</p>
          */
         @NameInMap("Md5")
         public String md5;
 
-        /**
-         * <p>The time when the quarantined file was updated.</p>
-         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
         /**
-         * <p>The path where the quarantined file is stored on the cloud desktop.</p>
+         * <p>The tag of the alert.</p>
          */
         @NameInMap("Path")
         public String path;
 
         /**
-         * <p>The status of the quarantined file. Valid values:</p>
-         * <br>
-         * <p>*   quaraFailed: The file failed to be quarantined.</p>
-         * <p>*   quaraDone: The file is quarantined.</p>
-         * <p>*   quaraing: The file is being quarantined.</p>
-         * <p>*   rollbackFailed: Quarantine for the file failed to be canceled.</p>
-         * <p>*   rollbackDone: Quarantine for the file is canceled.</p>
-         * <p>*   rollbacking: Quarantine for the file is being canceled.</p>
+         * <p>The ID of the quarantined file.</p>
          */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The tag of the alert.</p>
-         */
         @NameInMap("Tag")
         public String tag;
 

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeZonesRequest extends TeaModel {
     /**
-     * <p>The ID of the region.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The type of the zone. Default value: **AvailabilityZone**. This value indicates Alibaba Cloud zones.</p>
+     * <p>The operation that you want to perform. Set the value to **DescribeZones**.</p>
      */
     @NameInMap("ZoneType")
     public String zoneType;

@@ -232,6 +232,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("Domain")
         public String domain;
 
+        @NameInMap("Policy")
+        public String policy;
+
         @NameInMap("RuleType")
         public String ruleType;
 
@@ -246,6 +249,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
         public String getDomain() {
             return this.domain;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroupsNetRedirectRule setPolicy(String policy) {
+            this.policy = policy;
+            return this;
+        }
+        public String getPolicy() {
+            return this.policy;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroupsNetRedirectRule setRuleType(String ruleType) {
@@ -362,6 +373,24 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("Clipboard")
         public String clipboard;
 
+        @NameInMap("CpuDownGradeDuration")
+        public Integer cpuDownGradeDuration;
+
+        @NameInMap("CpuProcessors")
+        public java.util.List<String> cpuProcessors;
+
+        @NameInMap("CpuProtectedMode")
+        public String cpuProtectedMode;
+
+        @NameInMap("CpuRateLimit")
+        public Integer cpuRateLimit;
+
+        @NameInMap("CpuSampleDuration")
+        public Integer cpuSampleDuration;
+
+        @NameInMap("CpuSingleRateLimit")
+        public Integer cpuSingleRateLimit;
+
         @NameInMap("DomainList")
         public String domainList;
 
@@ -394,6 +423,24 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
         @NameInMap("LocalDrive")
         public String localDrive;
+
+        @NameInMap("MemoryDownGradeDuration")
+        public Integer memoryDownGradeDuration;
+
+        @NameInMap("MemoryProcessors")
+        public java.util.List<String> memoryProcessors;
+
+        @NameInMap("MemoryProtectedMode")
+        public String memoryProtectedMode;
+
+        @NameInMap("MemoryRateLimit")
+        public Integer memoryRateLimit;
+
+        @NameInMap("MemorySampleDuration")
+        public Integer memorySampleDuration;
+
+        @NameInMap("MemorySingleRateLimit")
+        public Integer memorySingleRateLimit;
 
         @NameInMap("Name")
         public String name;
@@ -553,6 +600,54 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             return this.clipboard;
         }
 
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setCpuDownGradeDuration(Integer cpuDownGradeDuration) {
+            this.cpuDownGradeDuration = cpuDownGradeDuration;
+            return this;
+        }
+        public Integer getCpuDownGradeDuration() {
+            return this.cpuDownGradeDuration;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setCpuProcessors(java.util.List<String> cpuProcessors) {
+            this.cpuProcessors = cpuProcessors;
+            return this;
+        }
+        public java.util.List<String> getCpuProcessors() {
+            return this.cpuProcessors;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setCpuProtectedMode(String cpuProtectedMode) {
+            this.cpuProtectedMode = cpuProtectedMode;
+            return this;
+        }
+        public String getCpuProtectedMode() {
+            return this.cpuProtectedMode;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setCpuRateLimit(Integer cpuRateLimit) {
+            this.cpuRateLimit = cpuRateLimit;
+            return this;
+        }
+        public Integer getCpuRateLimit() {
+            return this.cpuRateLimit;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setCpuSampleDuration(Integer cpuSampleDuration) {
+            this.cpuSampleDuration = cpuSampleDuration;
+            return this;
+        }
+        public Integer getCpuSampleDuration() {
+            return this.cpuSampleDuration;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setCpuSingleRateLimit(Integer cpuSingleRateLimit) {
+            this.cpuSingleRateLimit = cpuSingleRateLimit;
+            return this;
+        }
+        public Integer getCpuSingleRateLimit() {
+            return this.cpuSingleRateLimit;
+        }
+
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setDomainList(String domainList) {
             this.domainList = domainList;
             return this;
@@ -639,6 +734,54 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
         public String getLocalDrive() {
             return this.localDrive;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setMemoryDownGradeDuration(Integer memoryDownGradeDuration) {
+            this.memoryDownGradeDuration = memoryDownGradeDuration;
+            return this;
+        }
+        public Integer getMemoryDownGradeDuration() {
+            return this.memoryDownGradeDuration;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setMemoryProcessors(java.util.List<String> memoryProcessors) {
+            this.memoryProcessors = memoryProcessors;
+            return this;
+        }
+        public java.util.List<String> getMemoryProcessors() {
+            return this.memoryProcessors;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setMemoryProtectedMode(String memoryProtectedMode) {
+            this.memoryProtectedMode = memoryProtectedMode;
+            return this;
+        }
+        public String getMemoryProtectedMode() {
+            return this.memoryProtectedMode;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setMemoryRateLimit(Integer memoryRateLimit) {
+            this.memoryRateLimit = memoryRateLimit;
+            return this;
+        }
+        public Integer getMemoryRateLimit() {
+            return this.memoryRateLimit;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setMemorySampleDuration(Integer memorySampleDuration) {
+            this.memorySampleDuration = memorySampleDuration;
+            return this;
+        }
+        public Integer getMemorySampleDuration() {
+            return this.memorySampleDuration;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setMemorySingleRateLimit(Integer memorySingleRateLimit) {
+            this.memorySingleRateLimit = memorySingleRateLimit;
+            return this;
+        }
+        public Integer getMemorySingleRateLimit() {
+            return this.memorySingleRateLimit;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setName(String name) {

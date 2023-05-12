@@ -20,35 +20,31 @@ public class CreateRAMDirectoryRequest extends TeaModel {
     public String desktopAccessType;
 
     /**
-     * <p>The name of the directory. The name must be 2 to 255 characters in length and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`.</p>
-     * <br>
-     * <p>This parameter is empty by default.</p>
+     * <p>Specifies whether to grant the permissions of the local administrator to the desktop users. Default value: true.</p>
      */
     @NameInMap("DirectoryName")
     public String directoryName;
 
     /**
-     * <p>Specifies whether to grant the permissions of the local administrator to the desktop users.</p>
-     * <br>
-     * <p>Default value: true.</p>
+     * <p>The operation that you want to perform. Set the value to CreateRAMDirectory.</p>
      */
     @NameInMap("EnableAdminAccess")
     public Boolean enableAdminAccess;
 
     /**
-     * <p>Specifies whether to enable the Internet access feature.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("EnableInternetAccess")
     public Boolean enableInternetAccess;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>Specifies whether to enable the Internet access feature.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The IDs of vSwitches. You can configure only one vSwitch.</p>
+     * <p>CreateRAMDirectory</p>
      */
     @NameInMap("VSwitchId")
     public java.util.List<String> vSwitchId;

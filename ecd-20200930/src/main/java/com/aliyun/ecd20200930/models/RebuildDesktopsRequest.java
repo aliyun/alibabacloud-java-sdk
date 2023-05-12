@@ -5,19 +5,22 @@ import com.aliyun.tea.*;
 
 public class RebuildDesktopsRequest extends TeaModel {
     /**
-     * <p>The IDs of the cloud desktops. You can specify 1 to 20 cloud desktop IDs.</p>
+     * <p>The ID of cloud desktop N. You can specify one or more cloud desktop IDs. Valid values of N: 1 to 20.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
     /**
-     * <p>The ID of the new image.</p>
+     * <p>The operation that you want to perform. Set the value to **RebuildDesktops**.</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
+    @NameInMap("OperateType")
+    public String operateType;
+
     /**
-     * <p>The ID of the region.</p>
+     * <p>The ID of the new image.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -41,6 +44,14 @@ public class RebuildDesktopsRequest extends TeaModel {
     }
     public String getImageId() {
         return this.imageId;
+    }
+
+    public RebuildDesktopsRequest setOperateType(String operateType) {
+        this.operateType = operateType;
+        return this;
+    }
+    public String getOperateType() {
+        return this.operateType;
     }
 
     public RebuildDesktopsRequest setRegionId(String regionId) {

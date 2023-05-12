@@ -55,6 +55,9 @@ public class CreateDesktopsRequest extends TeaModel {
     @NameInMap("DesktopNameSuffix")
     public Boolean desktopNameSuffix;
 
+    @NameInMap("DesktopTimers")
+    public java.util.List<CreateDesktopsRequestDesktopTimers> desktopTimers;
+
     /**
      * <p>This parameter is not available.</p>
      */
@@ -255,6 +258,14 @@ public class CreateDesktopsRequest extends TeaModel {
     }
     public Boolean getDesktopNameSuffix() {
         return this.desktopNameSuffix;
+    }
+
+    public CreateDesktopsRequest setDesktopTimers(java.util.List<CreateDesktopsRequestDesktopTimers> desktopTimers) {
+        this.desktopTimers = desktopTimers;
+        return this;
+    }
+    public java.util.List<CreateDesktopsRequestDesktopTimers> getDesktopTimers() {
+        return this.desktopTimers;
     }
 
     public CreateDesktopsRequest setDirectoryId(String directoryId) {
@@ -506,6 +517,91 @@ public class CreateDesktopsRequest extends TeaModel {
         }
         public String getVolumeEncryptionKey() {
             return this.volumeEncryptionKey;
+        }
+
+    }
+
+    public static class CreateDesktopsRequestDesktopTimers extends TeaModel {
+        @NameInMap("AllowClientSetting")
+        public Boolean allowClientSetting;
+
+        @NameInMap("CronExpression")
+        public String cronExpression;
+
+        @NameInMap("Enforce")
+        public Boolean enforce;
+
+        @NameInMap("Interval")
+        public Integer interval;
+
+        @NameInMap("OperationType")
+        public String operationType;
+
+        @NameInMap("ResetType")
+        public String resetType;
+
+        @NameInMap("TimerType")
+        public String timerType;
+
+        public static CreateDesktopsRequestDesktopTimers build(java.util.Map<String, ?> map) throws Exception {
+            CreateDesktopsRequestDesktopTimers self = new CreateDesktopsRequestDesktopTimers();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDesktopsRequestDesktopTimers setAllowClientSetting(Boolean allowClientSetting) {
+            this.allowClientSetting = allowClientSetting;
+            return this;
+        }
+        public Boolean getAllowClientSetting() {
+            return this.allowClientSetting;
+        }
+
+        public CreateDesktopsRequestDesktopTimers setCronExpression(String cronExpression) {
+            this.cronExpression = cronExpression;
+            return this;
+        }
+        public String getCronExpression() {
+            return this.cronExpression;
+        }
+
+        public CreateDesktopsRequestDesktopTimers setEnforce(Boolean enforce) {
+            this.enforce = enforce;
+            return this;
+        }
+        public Boolean getEnforce() {
+            return this.enforce;
+        }
+
+        public CreateDesktopsRequestDesktopTimers setInterval(Integer interval) {
+            this.interval = interval;
+            return this;
+        }
+        public Integer getInterval() {
+            return this.interval;
+        }
+
+        public CreateDesktopsRequestDesktopTimers setOperationType(String operationType) {
+            this.operationType = operationType;
+            return this;
+        }
+        public String getOperationType() {
+            return this.operationType;
+        }
+
+        public CreateDesktopsRequestDesktopTimers setResetType(String resetType) {
+            this.resetType = resetType;
+            return this;
+        }
+        public String getResetType() {
+            return this.resetType;
+        }
+
+        public CreateDesktopsRequestDesktopTimers setTimerType(String timerType) {
+            this.timerType = timerType;
+            return this;
+        }
+        public String getTimerType() {
+            return this.timerType;
         }
 
     }

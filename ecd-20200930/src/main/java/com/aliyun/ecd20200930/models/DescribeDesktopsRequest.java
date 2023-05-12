@@ -34,6 +34,9 @@ public class DescribeDesktopsRequest extends TeaModel {
     @NameInMap("DesktopStatus")
     public String desktopStatus;
 
+    @NameInMap("DesktopStatusList")
+    public java.util.List<String> desktopStatusList;
+
     /**
      * <p>The new desktop type. You can call the [DescribeDesktopTypes](~~188882~~) operation to query the IDs of supported desktop types.</p>
      */
@@ -214,6 +217,14 @@ public class DescribeDesktopsRequest extends TeaModel {
     }
     public String getDesktopStatus() {
         return this.desktopStatus;
+    }
+
+    public DescribeDesktopsRequest setDesktopStatusList(java.util.List<String> desktopStatusList) {
+        this.desktopStatusList = desktopStatusList;
+        return this;
+    }
+    public java.util.List<String> getDesktopStatusList() {
+        return this.desktopStatusList;
     }
 
     public DescribeDesktopsRequest setDesktopType(String desktopType) {

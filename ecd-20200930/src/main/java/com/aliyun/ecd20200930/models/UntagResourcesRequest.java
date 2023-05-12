@@ -5,32 +5,29 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to unbind all tags from the resource. This parameter takes effect only when the TagKey.N parameter is not specified. Default value: false.</p>
+     * <p>The operation that you want to perform. Set the value to UntagResources.</p>
      */
     @NameInMap("All")
     public Boolean all;
 
     /**
-     * <p>The region ID of the resource.</p>
+     * <p>The key of tag N. Valid values of N: 1 to 20.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource, which is the ID of the cloud desktop. Valid values of N: 1 to 50.</p>
+     * <p>UntagResources</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resource. Set the value to ALIYUN::GWS::INSTANCE.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
-    /**
-     * <p>The key of tag N. Valid values of N: 1 to 20.</p>
-     */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 

@@ -4,21 +4,12 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeNASFileSystemsResponseBody extends TeaModel {
-    /**
-     * <p>Details of the NAS file systems.</p>
-     */
     @NameInMap("FileSystems")
     public java.util.List<DescribeNASFileSystemsResponseBodyFileSystems> fileSystems;
 
-    /**
-     * <p>The token that is used for the next query. If this parameter is left empty, all results are returned.</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -52,15 +43,9 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
     }
 
     public static class DescribeNASFileSystemsResponseBodyFileSystemsDesktopGroups extends TeaModel {
-        /**
-         * <p>The ID of the desktop group.</p>
-         */
         @NameInMap("DesktopGroupId")
         public String desktopGroupId;
 
-        /**
-         * <p>The name of the desktop group.</p>
-         */
         @NameInMap("DesktopGroupName")
         public String desktopGroupName;
 
@@ -88,120 +73,60 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
     }
 
     public static class DescribeNASFileSystemsResponseBodyFileSystems extends TeaModel {
-        /**
-         * <p>The total capacity of the NAS file system. Unit: GiB.</p>
-         * <br>
-         * <p>*   The Capacity type has 10 PiB of storage, which is equal to 10,485,760 GiB.</p>
-         * <p>*   The Performance type has 1 PiB of storage, which is equal to 1,048,576 GiB.</p>
-         */
         @NameInMap("Capacity")
         public Long capacity;
 
-        /**
-         * <p>The time when the NAS file system was created.</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The description of the NAS file system.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The desktop groups that are associated with the NAS file systems that support the UPM feature.</p>
-         */
         @NameInMap("DesktopGroups")
         public java.util.List<DescribeNASFileSystemsResponseBodyFileSystemsDesktopGroups> desktopGroups;
 
-        /**
-         * <p>Indicates whether disk encryption is enabled.</p>
-         */
         @NameInMap("EncryptionEnabled")
         public Boolean encryptionEnabled;
 
-        /**
-         * <p>The ID of the NAS file system.</p>
-         */
         @NameInMap("FileSystemId")
         public String fileSystemId;
 
-        /**
-         * <p>The name of the NAS file system.</p>
-         */
         @NameInMap("FileSystemName")
         public String fileSystemName;
 
-        /**
-         * <p>The status of the NAS file system.</p>
-         */
         @NameInMap("FileSystemStatus")
         public String fileSystemStatus;
 
-        /**
-         * <p>The type of the NAS file system. Valid value: `standard`.</p>
-         */
         @NameInMap("FileSystemType")
         public String fileSystemType;
 
-        /**
-         * <p>The used storage of the NAS file system. Unit: byte.</p>
-         */
         @NameInMap("MeteredSize")
         public Long meteredSize;
 
-        /**
-         * <p>The domain name of the mount target.</p>
-         */
         @NameInMap("MountTargetDomain")
         public String mountTargetDomain;
 
-        /**
-         * <p>The status of the mount target.</p>
-         */
         @NameInMap("MountTargetStatus")
         public String mountTargetStatus;
 
-        /**
-         * <p>The ID of the workspace.</p>
-         */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
-        /**
-         * <p>The name of the workspace.</p>
-         */
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
 
-        /**
-         * <p>Indicates whether the UPM feature is supported.</p>
-         */
         @NameInMap("ProfileCompatible")
         public Boolean profileCompatible;
 
-        /**
-         * <p>The ID of the region.</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The storage type of the NAS file system.</p>
-         */
         @NameInMap("StorageType")
         public String storageType;
 
-        /**
-         * <p>Indicates whether the Server Message Block (SMB) access control list (ACL) feature is enabled.</p>
-         */
         @NameInMap("SupportAcl")
         public Boolean supportAcl;
 
-        /**
-         * <p>The zone.</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 

@@ -4,27 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeKmsKeysResponseBody extends TeaModel {
-    /**
-     * <p>The authorization status.</p>
-     */
     @NameInMap("AuthorizeStatus")
     public String authorizeStatus;
 
-    /**
-     * <p>Details about the customer master keys (CMKs).</p>
-     */
     @NameInMap("Keys")
     public java.util.List<DescribeKmsKeysResponseBodyKeys> keys;
 
-    /**
-     * <p>Indicates whether KMS is activated.</p>
-     */
     @NameInMap("KmsServiceStatus")
     public String kmsServiceStatus;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -66,27 +54,15 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
     }
 
     public static class DescribeKmsKeysResponseBodyKeys extends TeaModel {
-        /**
-         * <p>The alias of the key.</p>
-         */
         @NameInMap("Alias")
         public String alias;
 
-        /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the key in KMS.</p>
-         */
         @NameInMap("Arn")
         public String arn;
 
-        /**
-         * <p>The ID of the key.</p>
-         */
         @NameInMap("KeyId")
         public String keyId;
 
-        /**
-         * <p>The type of the key.</p>
-         */
         @NameInMap("Type")
         public String type;
 

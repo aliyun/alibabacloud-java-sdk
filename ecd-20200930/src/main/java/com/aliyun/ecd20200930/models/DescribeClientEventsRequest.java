@@ -5,101 +5,91 @@ import com.aliyun.tea.*;
 
 public class DescribeClientEventsRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud desktop. If you do not specify a value for this parameter, events of all cloud desktops in the specified region are queried.</p>
+     * <p>The ID of the Alibaba Cloud account with which the event is associated.</p>
      */
     @NameInMap("DesktopId")
     public String desktopId;
 
     /**
-     * <p>The IP address of the cloud desktop. If you do not specify a value for this parameter, events of all cloud desktops in the specified region are queried.</p>
+     * <p>The account type of the workspace. Valid values:</p>
+     * <br>
+     * <p>*   SIMPLE: convenience account</p>
+     * <p>*   AD_CONNECTOR: enterprise AD account</p>
      */
     @NameInMap("DesktopIp")
     public String desktopIp;
 
     /**
-     * <p>The name of the cloud desktop.</p>
+     * <p>The types of event.</p>
      */
     @NameInMap("DesktopName")
     public String desktopName;
 
     /**
-     * <p>The ID of the directory to which the cloud desktop belongs.</p>
+     * <p>The ID of the desktop group.</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
-     * <br>
-     * <p>If you do not specify a value for this parameter, the current time is used.</p>
+     * <p>The ID of the region where the cloud desktop resides.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The information about the regular user that connects to the cloud desktop from the EDS client. The information can be the RAM user ID or Active Directory (AD) username. If you do not specify a value for this parameter, events of all regular users in the specified region are queried.</p>
+     * <p>The ID of the directory to which the cloud desktop belongs.</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;
 
     /**
-     * <p>The type of event that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   DESKTOP_CONNECT: The desktop session is established.</p>
-     * <p>*   DESKTOP_DISCONNECT: The desktop session is disconnected.</p>
-     * <p>*   DESKTOP_REBOOT: The cloud desktop is restarted.</p>
-     * <p>*   CLIENT_AD_LOGIN: The AD user logs on to the client.</p>
-     * <p>*   GET_CONNECTION_TICKET: The request to connect to the cloud desktop is sent.</p>
-     * <p>*   DESKTOP_START: The cloud desktop is started.</p>
-     * <p>*   DESKTOP_STOP: The cloud desktop is stopped.</p>
-     * <br>
-     * <p>If you do not specify a value for this parameter, events of all types are queried.</p>
+     * <p>The ID of the workspace to which the cloud desktop belongs. If you do not specify a value for this parameter, events of all workspaces in the specified region are queried.</p>
      */
     @NameInMap("EventType")
     public String eventType;
 
     /**
-     * <p>The types of event.</p>
+     * <p>Details about the events.</p>
      */
     @NameInMap("EventTypes")
     public java.util.List<String> eventTypes;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The status of the event. This parameter is returned if you set the EventType parameter to DESKTOP_DISCONNECT or GET_CONNECTION_TICKET. Valid values:</p>
      * <br>
-     * <p>Default value: 100.</p>
+     * <p>*   200\. The value indicates that the request is successful.</p>
+     * <p>*   An error message. The value indicates that the request failed. Example: FailedToGetConnectionTicket.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The query token. Set the value to the NextToken value that is returned from the last call to the DescribeClientEvents operation.</p>
+     * <p>The IP address of the client.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the workspace to which the cloud desktop belongs. If you do not specify a value for this parameter, events of all workspaces in the specified region are queried.</p>
+     * <p>The ID of the workspace to which the cloud desktop belongs.</p>
      */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     /**
-     * <p>The name of the workspace.</p>
+     * <p>The OS that the client runs.</p>
      */
     @NameInMap("OfficeSiteName")
     public String officeSiteName;
 
     /**
-     * <p>The ID of the region where the cloud desktop resides.</p>
+     * <p>The number of bytes that are received.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
-     * <br>
-     * <p>If you do not specify a value for this parameter, all events that occurred before the point in time that you specify for `EndTime` are queried.</p>
+     * <p>The IP address of the cloud desktop.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

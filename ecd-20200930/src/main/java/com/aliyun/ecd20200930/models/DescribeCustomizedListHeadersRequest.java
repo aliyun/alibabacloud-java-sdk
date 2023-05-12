@@ -4,21 +4,12 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeCustomizedListHeadersRequest extends TeaModel {
-    /**
-     * <p>The language in which the exported cloud desktop list is displayed.</p>
-     */
     @NameInMap("LangType")
     public String langType;
 
-    /**
-     * <p>The type of the list.</p>
-     */
     @NameInMap("ListType")
     public String listType;
 
-    /**
-     * <p>The ID of the region.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

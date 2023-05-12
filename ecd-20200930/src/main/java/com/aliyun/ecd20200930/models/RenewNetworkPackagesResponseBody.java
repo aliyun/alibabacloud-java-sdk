@@ -4,15 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class RenewNetworkPackagesResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the order.</p>
-     */
     @NameInMap("OrderId")
     public String orderId;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
