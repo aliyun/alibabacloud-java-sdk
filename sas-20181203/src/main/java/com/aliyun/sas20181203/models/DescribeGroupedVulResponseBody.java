@@ -4,18 +4,42 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeGroupedVulResponseBody extends TeaModel {
+    /**
+     * <p>The number of entries to return on each page. Default value: 10.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("GroupedVulItems")
     public java.util.List<DescribeGroupedVulResponseBodyGroupedVulItems> groupedVulItems;
 
+    /**
+     * <p>The tag that is used to search for the vulnerabilities. Valid values:</p>
+     * <br>
+     * <p>*   Restart required</p>
+     * <p>*   Remote exploitation</p>
+     * <p>*   Exploit exists</p>
+     * <p>*   Exploitable</p>
+     * <p>*   Privilege escalation</p>
+     * <p>*   Code execution</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the asset group.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The types of the vulnerabilities.</p>
+     * <br>
+     * <p>> This parameter is valid only for application vulnerabilities and vulnerabilities that are detected based on software component analysis.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,42 +89,83 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
     }
 
     public static class DescribeGroupedVulResponseBodyGroupedVulItems extends TeaModel {
+        /**
+         * <p>The number of handled vulnerabilities.</p>
+         */
         @NameInMap("AliasName")
         public String aliasName;
 
+        /**
+         * <p>The tag that is added to the vulnerability. Valid values:</p>
+         * <br>
+         * <p>*   Restart required</p>
+         * <p>*   Remote exploitation</p>
+         * <p>*   Exploit exists</p>
+         * <p>*   Exploitable</p>
+         * <p>*   Privilege escalation</p>
+         * <p>*   Code execution</p>
+         */
         @NameInMap("AsapCount")
         public Integer asapCount;
 
+        /**
+         * <p>An array that consists of the details about the vulnerability.</p>
+         */
         @NameInMap("GmtLast")
         public Long gmtLast;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("HandledCount")
         public Integer handledCount;
 
+        /**
+         * <p>The number of vulnerabilities that have the **low** priority.</p>
+         */
         @NameInMap("LaterCount")
         public Integer laterCount;
 
+        /**
+         * <p>The timestamp when the vulnerability was last detected. Unit: milliseconds.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         */
         @NameInMap("NntfCount")
         public Integer nntfCount;
 
         /**
-         * <p>支持RASP实时防护，取值：</p>
-         * <p>- **0**：不支持</p>
-         * <p>- **1**：支持</p>
-         * <p>> 无该属性也表示不支持。</p>
+         * <p>The number of entries returned per page. Default value: 10.</p>
          */
         @NameInMap("RaspDefend")
         public Integer raspDefend;
 
+        /**
+         * <p>The type of the vulnerability. Valid values:</p>
+         * <br>
+         * <p>*   **cve**: Linux software vulnerability</p>
+         * <p>*   **sys**: Windows system vulnerability</p>
+         * <p>*   **cms**: Web-CMS vulnerability</p>
+         * <p>*   **app**: application vulnerability</p>
+         * <p>*   **emg**: urgent vulnerability</p>
+         * <p>*   **sca**: vulnerability that is detected based on software component analysis</p>
+         */
         @NameInMap("Tags")
         public String tags;
 
+        /**
+         * <p>gmtLast</p>
+         */
         @NameInMap("TotalFixCount")
         public Long totalFixCount;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("Type")
         public String type;
 
