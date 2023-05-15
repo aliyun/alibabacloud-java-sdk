@@ -5,19 +5,21 @@ import com.aliyun.tea.*;
 
 public class UpdateTaskFlowEdgesRequest extends TeaModel {
     /**
-     * <p>$.parameters[3].schema.example</p>
+     * <p>The task flow ID. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.</p>
      */
     @NameInMap("DagId")
     public Long dagId;
 
     /**
-     * <p>$.parameters[3].schema.enumValueTitles</p>
+     * <p>The list of updated task flow edges.</p>
      */
     @NameInMap("Edges")
     public java.util.List<UpdateTaskFlowEdgesRequestEdges> edges;
 
     /**
-     * <p>$.parameters[3].schema.description</p>
+     * <p>The tenant ID.</p>
+     * <br>
+     * <p>> To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](~~181330~~).</p>
      */
     @NameInMap("Tid")
     public Long tid;
@@ -53,19 +55,19 @@ public class UpdateTaskFlowEdgesRequest extends TeaModel {
 
     public static class UpdateTaskFlowEdgesRequestEdges extends TeaModel {
         /**
-         * <p>$.parameters[2].schema.description</p>
+         * <p>The ID of the task flow edge.</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
-         * <p>$.parameters[2].schema.example</p>
+         * <p>The ID of the end node of the edge.</p>
          */
         @NameInMap("NodeEnd")
         public Long nodeEnd;
 
         /**
-         * <p>$.parameters[2].schema.enumValueTitles</p>
+         * <p>The ID of the start node of the edge.</p>
          */
         @NameInMap("NodeFrom")
         public Long nodeFrom;

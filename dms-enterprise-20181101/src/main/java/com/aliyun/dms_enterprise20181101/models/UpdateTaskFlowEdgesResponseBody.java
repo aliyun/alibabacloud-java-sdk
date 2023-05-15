@@ -5,23 +5,29 @@ import com.aliyun.tea.*;
 
 public class UpdateTaskFlowEdgesResponseBody extends TeaModel {
     /**
-     * <p>UpdateTaskFlowEdges</p>
+     * <p>The error code.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>WB01220505</p>
+     * <p>The error message returned if the request failed.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>Updates the start and end nodes of specified edges of a specified task flow at a time.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
