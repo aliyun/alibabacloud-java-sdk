@@ -2585,6 +2585,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.executeScriptWithOptions(request, runtime);
     }
 
+    /**
+      * If the security rules of an instance indicate that a ticket must be approved before you perform schema synchronization, you can call the [SubmitStructSyncOrderApproval](~~206166~~) operation to submit the ticket for approval.
+      * >  You can call the [GetStructSyncJobDetail](~~206160~~) operation to query whether you need to submit a ticket for approval.
+      *
+      * @param request ExecuteStructSyncRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ExecuteStructSyncResponse
+     */
     public ExecuteStructSyncResponse executeStructSyncWithOptions(ExecuteStructSyncRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2613,6 +2621,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteStructSyncResponse());
     }
 
+    /**
+      * If the security rules of an instance indicate that a ticket must be approved before you perform schema synchronization, you can call the [SubmitStructSyncOrderApproval](~~206166~~) operation to submit the ticket for approval.
+      * >  You can call the [GetStructSyncJobDetail](~~206160~~) operation to query whether you need to submit a ticket for approval.
+      *
+      * @param request ExecuteStructSyncRequest
+      * @return ExecuteStructSyncResponse
+     */
     public ExecuteStructSyncResponse executeStructSync(ExecuteStructSyncRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.executeStructSyncWithOptions(request, runtime);
@@ -7953,6 +7968,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.setOwnersWithOptions(request, runtime);
     }
 
+    public SkipDataCorrectRowCheckResponse skipDataCorrectRowCheckWithOptions(SkipDataCorrectRowCheckRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("OrderId", request.orderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reason)) {
+            query.put("Reason", request.reason);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
+            query.put("Tid", request.tid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SkipDataCorrectRowCheck"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SkipDataCorrectRowCheckResponse());
+    }
+
+    public SkipDataCorrectRowCheckResponse skipDataCorrectRowCheck(SkipDataCorrectRowCheckRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.skipDataCorrectRowCheckWithOptions(request, runtime);
+    }
+
     public StopTaskFlowInstanceResponse stopTaskFlowInstanceWithOptions(StopTaskFlowInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8617,9 +8669,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Indicates whether the request was successful. Valid values:
-      * *   **true**: The request was successful.
-      * *   **false**: The request failed.
+      * ###
+      * The edges can be updated only when the following conditions are met:
+      * 1.  The specified edge exists in the directed acyclic graph (DAG) of the task flow specified by DagId.
+      * 2.  The specified edge nodes exist in the DAG of the task flow specified by DagId.
+      * 3.  After the update, rings do not exist in the DAG.
       *
       * @param tmpReq UpdateTaskFlowEdgesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -8664,9 +8718,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Indicates whether the request was successful. Valid values:
-      * *   **true**: The request was successful.
-      * *   **false**: The request failed.
+      * ###
+      * The edges can be updated only when the following conditions are met:
+      * 1.  The specified edge exists in the directed acyclic graph (DAG) of the task flow specified by DagId.
+      * 2.  The specified edge nodes exist in the DAG of the task flow specified by DagId.
+      * 3.  After the update, rings do not exist in the DAG.
       *
       * @param request UpdateTaskFlowEdgesRequest
       * @return UpdateTaskFlowEdgesResponse

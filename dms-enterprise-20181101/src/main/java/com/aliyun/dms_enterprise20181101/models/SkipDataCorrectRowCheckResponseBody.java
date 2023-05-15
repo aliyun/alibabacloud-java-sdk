@@ -3,37 +3,25 @@ package com.aliyun.dms_enterprise20181101.models;
 
 import com.aliyun.tea.*;
 
-public class ExecuteStructSyncResponseBody extends TeaModel {
-    /**
-     * <p>The error code.</p>
-     */
+public class SkipDataCorrectRowCheckResponseBody extends TeaModel {
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    /**
-     * <p>The error message.</p>
-     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request was successful.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
-    public static ExecuteStructSyncResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ExecuteStructSyncResponseBody self = new ExecuteStructSyncResponseBody();
+    public static SkipDataCorrectRowCheckResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        SkipDataCorrectRowCheckResponseBody self = new SkipDataCorrectRowCheckResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ExecuteStructSyncResponseBody setErrorCode(String errorCode) {
+    public SkipDataCorrectRowCheckResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -41,7 +29,7 @@ public class ExecuteStructSyncResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public ExecuteStructSyncResponseBody setErrorMessage(String errorMessage) {
+    public SkipDataCorrectRowCheckResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
@@ -49,7 +37,7 @@ public class ExecuteStructSyncResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public ExecuteStructSyncResponseBody setRequestId(String requestId) {
+    public SkipDataCorrectRowCheckResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -57,7 +45,7 @@ public class ExecuteStructSyncResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ExecuteStructSyncResponseBody setSuccess(Boolean success) {
+    public SkipDataCorrectRowCheckResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

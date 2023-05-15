@@ -5,19 +5,21 @@ import com.aliyun.tea.*;
 
 public class UpdateTaskFlowEdgesShrinkRequest extends TeaModel {
     /**
-     * <p>$.parameters[3].schema.example</p>
+     * <p>The task flow ID. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.</p>
      */
     @NameInMap("DagId")
     public Long dagId;
 
     /**
-     * <p>$.parameters[3].schema.enumValueTitles</p>
+     * <p>The list of updated task flow edges.</p>
      */
     @NameInMap("Edges")
     public String edgesShrink;
 
     /**
-     * <p>$.parameters[3].schema.description</p>
+     * <p>The tenant ID.</p>
+     * <br>
+     * <p>> To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](~~181330~~).</p>
      */
     @NameInMap("Tid")
     public Long tid;
