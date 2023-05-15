@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateFileDetectRequest extends TeaModel {
+    @NameInMap("DownloadUrl")
+    public String downloadUrl;
+
     @NameInMap("HashKey")
     public String hashKey;
 
@@ -19,6 +22,14 @@ public class CreateFileDetectRequest extends TeaModel {
     public static CreateFileDetectRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateFileDetectRequest self = new CreateFileDetectRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateFileDetectRequest setDownloadUrl(String downloadUrl) {
+        this.downloadUrl = downloadUrl;
+        return this;
+    }
+    public String getDownloadUrl() {
+        return this.downloadUrl;
     }
 
     public CreateFileDetectRequest setHashKey(String hashKey) {

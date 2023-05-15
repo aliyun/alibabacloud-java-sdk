@@ -1183,6 +1183,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateFileDetectResponse createFileDetectWithOptions(CreateFileDetectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.downloadUrl)) {
+            query.put("DownloadUrl", request.downloadUrl);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.hashKey)) {
             query.put("HashKey", request.hashKey);
         }
@@ -1748,6 +1752,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateOrUpdateAssetGroupResponse createOrUpdateAssetGroup(CreateOrUpdateAssetGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createOrUpdateAssetGroupWithOptions(request, runtime);
+    }
+
+    public CreateOrUpdateDingTalkResponse createOrUpdateDingTalkWithOptions(CreateOrUpdateDingTalkRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configList)) {
+            query.put("ConfigList", request.configList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dingTalkLang)) {
+            query.put("DingTalkLang", request.dingTalkLang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupIdList)) {
+            query.put("GroupIdList", request.groupIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.intervalTime)) {
+            query.put("IntervalTime", request.intervalTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleActionName)) {
+            query.put("RuleActionName", request.ruleActionName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sendUrl)) {
+            query.put("SendUrl", request.sendUrl);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateOrUpdateDingTalk"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateOrUpdateDingTalkResponse());
+    }
+
+    public CreateOrUpdateDingTalkResponse createOrUpdateDingTalk(CreateOrUpdateDingTalkRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createOrUpdateDingTalkWithOptions(request, runtime);
     }
 
     public CreateRestoreJobResponse createRestoreJobWithOptions(CreateRestoreJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {

@@ -4,53 +4,102 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeGroupedVulRequest extends TeaModel {
+    /**
+     * <p>$.parameters[10].schema.example</p>
+     */
     @NameInMap("AliasName")
     public String aliasName;
 
+    /**
+     * <p>Specifies whether the vulnerability is handled. Valid values:</p>
+     * <br>
+     * <p>**y**: handled **n**: The vulnerability is not handled.</p>
+     */
     @NameInMap("AssetType")
     public String assetType;
 
+    /**
+     * <p>The priorities to fix the vulnerabilities. Separate multiple priorities with commas (,). Valid values:</p>
+     * <br>
+     * <p>*   **asap**: high</p>
+     * <p>*   **later**: medium</p>
+     * <p>*   **nntf**: low</p>
+     */
     @NameInMap("AttachTypes")
     public String attachTypes;
 
+    /**
+     * <p>The type of the vulnerability. Valid values:</p>
+     * <br>
+     * <p>*   **cve**: Linux software vulnerability</p>
+     * <p>*   **sys**: Windows system vulnerability</p>
+     * <p>*   **cms**: Web-CMS vulnerability</p>
+     * <p>*   **app**: application vulnerability</p>
+     * <p>*   **emg**: urgent vulnerability</p>
+     * <p>*   **sca**: vulnerability that is detected based on software component analysis</p>
+     */
     @NameInMap("ContainerFieldName")
     public String containerFieldName;
 
+    /**
+     * <p>$.parameters[11].schema.example</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>$.parameters[11].schema.description</p>
+     */
     @NameInMap("Dealed")
     public String dealed;
 
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The name of the vulnerability.</p>
+     * <p>Code Execution</p>
      */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>$.parameters[10].schema.enumValueTitles</p>
+     */
     @NameInMap("Necessity")
     public String necessity;
 
+    /**
+     * <p>$.parameters[11].schema.enumValueTitles</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The alias of the vulnerability.</p>
+     */
     @NameInMap("SearchTags")
     public String searchTags;
 
+    /**
+     * <p>The UUID of the server. Separate multiple UUIDs with commas (,).</p>
+     */
     @NameInMap("TargetType")
     public String targetType;
 
     /**
-     * <p>The total number of fixed vulnerabilities.</p>
+     * <p>Queries vulnerabilities by group.</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
-     * <p>The number of vulnerabilities that have the **high** priority.</p>
+     * <p>$.parameters[10].schema.description</p>
      */
     @NameInMap("Uuids")
     public String uuids;

@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>An array that consists of the configurations of the vulnerability scan feature.</p>
+     * <p>The configurations of the vulnerability scan feature.</p>
      */
     @NameInMap("TargetStats")
     public java.util.List<DescribeVulTargetStatisticsResponseBodyTargetStats> targetStats;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>An array that consists of the configurations of the vulnerability scan feature.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -81,19 +81,10 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
 
     public static class DescribeVulTargetStatisticsResponseBodyTargetStatsTargets extends TeaModel {
         /**
-         * <p>Indicates whether the configurations are applied to the server. Valid values:</p>
-         * <br>
-         * <p>*   **add**: yes</p>
-         * <p>*   **del**: no</p>
+         * <p>The group ID or UUID of the server to which the configurations are applied.</p>
          */
         @NameInMap("Flag")
         public String flag;
-
-        /**
-         * <p>The group ID or UUID of the server to which the configurations are applied.</p>
-         */
-        @NameInMap("Target")
-        public String target;
 
         /**
          * <p>The condition by which the configurations are applied to the server. Valid values:</p>
@@ -101,6 +92,9 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
          * <p>*   **uuid**: the UUID of the server</p>
          * <p>*   **groupId**: the ID of the server group</p>
          */
+        @NameInMap("Target")
+        public String target;
+
         @NameInMap("TargetType")
         public String targetType;
 
@@ -137,30 +131,25 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
 
     public static class DescribeVulTargetStatisticsResponseBodyTargetStats extends TeaModel {
         /**
-         * <p>An array that consists of available servers.</p>
+         * <p>The information about the server.</p>
          */
         @NameInMap("Targets")
         public java.util.List<DescribeVulTargetStatisticsResponseBodyTargetStatsTargets> targets;
 
         /**
-         * <p>The total number of servers.</p>
+         * <p>The number of servers to which the configurations are applied.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
         /**
-         * <p>The number of servers to which the configurations are applied.</p>
+         * <p>An array that consists of available servers.</p>
          */
         @NameInMap("UuidCount")
         public Integer uuidCount;
 
         /**
-         * <p>The type of the vulnerabilities. Valid values:</p>
-         * <br>
-         * <p>*   cve: Linux software vulnerabilities</p>
-         * <p>*   sys: Windows system vulnerabilities</p>
-         * <p>*   cms: Web-CMS vulnerabilities</p>
-         * <p>*   emg: urgent vulnerabilities</p>
+         * <p>The total number of servers.</p>
          */
         @NameInMap("VulType")
         public String vulType;

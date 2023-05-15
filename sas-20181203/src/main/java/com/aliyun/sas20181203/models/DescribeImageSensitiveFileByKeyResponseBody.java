@@ -4,25 +4,33 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
+    /**
+     * <p>The status code returned. If the 200 status code is returned, the request was successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The risk level of the sensitive file. Valid values:</p>
-     * <br>
-     * <p>*   **high**</p>
-     * <p>*   **medium**</p>
-     * <p>*   **low**</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("PageInfo")
     public DescribeImageSensitiveFileByKeyResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +40,12 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
     @NameInMap("SensitiveFileList")
     public java.util.List<DescribeImageSensitiveFileByKeyResponseBodySensitiveFileList> sensitiveFileList;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -97,26 +111,32 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
     }
 
     public static class DescribeImageSensitiveFileByKeyResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of entries returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The page number of the returned page.</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The key of the last data entry.</p>
+         */
         @NameInMap("LastRowKey")
         public String lastRowKey;
 
         /**
-         * <p>Queries the sensitive files in an image.</p>
+         * <p>The number of entries returned per page.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>DescribeImageSensitiveFileByKey</p>
+         * <p>The total number of entries returned.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -170,16 +190,50 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
 
     public static class DescribeImageSensitiveFileByKeyResponseBodySensitiveFileList extends TeaModel {
         /**
-         * <p>The timestamp when the first scan was performed. Unit: milliseconds.</p>
+         * <p>The suggestion.</p>
          */
         @NameInMap("Advice")
         public String advice;
 
         /**
-         * <p>The UUID of the image.</p>
+         * <p>The file path.</p>
          */
         @NameInMap("FilePath")
         public String filePath;
+
+        /**
+         * <p>The timestamp when the first scan was performed. Unit: milliseconds.</p>
+         */
+        @NameInMap("FirstScanTime")
+        public Long firstScanTime;
+
+        /**
+         * <p>The timestamp when the last scan was performed. Unit: milliseconds.</p>
+         */
+        @NameInMap("LastScanTime")
+        public Long lastScanTime;
+
+        /**
+         * <p>The digest of the image layer.</p>
+         */
+        @NameInMap("LayerDigest")
+        public String layerDigest;
+
+        /**
+         * <p>The sensitive content.</p>
+         */
+        @NameInMap("Promt")
+        public String promt;
+
+        /**
+         * <p>The risk level of the sensitive file. Valid values:</p>
+         * <br>
+         * <p>*   **high**</p>
+         * <p>*   **medium**</p>
+         * <p>*   **low**</p>
+         */
+        @NameInMap("RiskLevel")
+        public String riskLevel;
 
         /**
          * <p>The alert type of the sensitive file. Valid values:</p>
@@ -239,7 +293,7 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
          * <p>*   **github_oauth_token**: Github OAuth Token</p>
          * <p>*   **pulumi_token**: Pulumi Token</p>
          * <p>*   **ventrilo_voip**: Ventrilo VoIP Server Config</p>
-         * <p>*   **macos_keychain**: MacOS Keychain</p>
+         * <p>*   **macos_keychain**: macOS Keychain</p>
          * <p>*   **amazon_mws_token**: Amazon MWS Token</p>
          * <p>*   **dynatrace_token**: Dynatrace Token</p>
          * <p>*   **java_keystore**: Java Keystore</p>
@@ -296,42 +350,6 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
          * <p>*   **newrelic_api_key**: New Relic User API Key</p>
          * <p>*   **github_hub**: Github Token</p>
          * <p>*   **rubygem**: Rubygem Token</p>
-         */
-        @NameInMap("FirstScanTime")
-        public Long firstScanTime;
-
-        /**
-         * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-         * <br>
-         * <p>*   **zh**: Chinese</p>
-         * <p>*   **en**: English</p>
-         */
-        @NameInMap("LastScanTime")
-        public Long lastScanTime;
-
-        /**
-         * <p>The type of the asset that you want to scan. Valid values:</p>
-         * <br>
-         * <p>*   **image**</p>
-         * <p>*   **container**</p>
-         */
-        @NameInMap("LayerDigest")
-        public String layerDigest;
-
-        /**
-         * <p>The number of entries returned on the current page.</p>
-         */
-        @NameInMap("Promt")
-        public String promt;
-
-        /**
-         * <p>The suggestion.</p>
-         */
-        @NameInMap("RiskLevel")
-        public String riskLevel;
-
-        /**
-         * <p>The pagination information.</p>
          */
         @NameInMap("SensitiveFileKey")
         public String sensitiveFileKey;
