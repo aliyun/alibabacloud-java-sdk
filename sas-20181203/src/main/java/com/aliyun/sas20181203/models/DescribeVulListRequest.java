@@ -67,7 +67,7 @@ public class DescribeVulListRequest extends TeaModel {
     public String necessity;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**.</p>
+     * <p>The number of entries per page. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -83,9 +83,9 @@ public class DescribeVulListRequest extends TeaModel {
      * <br>
      * <p>*   **cve**: Linux software vulnerability</p>
      * <p>*   **sys**: Windows system vulnerability</p>
-     * <p>*   **cms**: Web-CMS vulnerability</p>
+     * <p>*   **cms**: Web-CMS vulnerability.</p>
      * <p>*   **app**: application vulnerability that is detected by using web scanner</p>
-     * <p>*   **emg**: urgent vulnerability</p>
+     * <p>*   **emg**: urgent vulnerability.</p>
      * <p>*   **sca**: application vulnerability that is detected by using software component analysis</p>
      */
     @NameInMap("Type")
@@ -98,7 +98,7 @@ public class DescribeVulListRequest extends TeaModel {
     public String uuids;
 
     /**
-     * <p>The IDs of the virtual private clouds (VPCs) in which the vulnerability is detected. Separate multiple IDs with commas (,).</p>
+     * <p>The ID of the virtual private cloud (VPC) in which the vulnerabilities are detected. Separate multiple IDs with commas (,).</p>
      */
     @NameInMap("VpcInstanceIds")
     public String vpcInstanceIds;
