@@ -3,20 +3,19 @@ package com.aliyun.eiam_developerapi20220225.models;
 
 import com.aliyun.tea.*;
 
-public class GetUserPasswordPolicyHeaders extends TeaModel {
+public class SetUserPrimaryOrganizationalUnitHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
-    // 认证信息，格式:Bearer access_token
     @NameInMap("Authorization")
     public String authorization;
 
-    public static GetUserPasswordPolicyHeaders build(java.util.Map<String, ?> map) throws Exception {
-        GetUserPasswordPolicyHeaders self = new GetUserPasswordPolicyHeaders();
+    public static SetUserPrimaryOrganizationalUnitHeaders build(java.util.Map<String, ?> map) throws Exception {
+        SetUserPrimaryOrganizationalUnitHeaders self = new SetUserPrimaryOrganizationalUnitHeaders();
         return TeaModel.build(map, self);
     }
 
-    public GetUserPasswordPolicyHeaders setCommonHeaders(java.util.Map<String, String> commonHeaders) {
+    public SetUserPrimaryOrganizationalUnitHeaders setCommonHeaders(java.util.Map<String, String> commonHeaders) {
         this.commonHeaders = commonHeaders;
         return this;
     }
@@ -24,7 +23,7 @@ public class GetUserPasswordPolicyHeaders extends TeaModel {
         return this.commonHeaders;
     }
 
-    public GetUserPasswordPolicyHeaders setAuthorization(String authorization) {
+    public SetUserPrimaryOrganizationalUnitHeaders setAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
     }

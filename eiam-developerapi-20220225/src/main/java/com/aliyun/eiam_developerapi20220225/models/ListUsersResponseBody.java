@@ -56,6 +56,9 @@ public class ListUsersResponseBody extends TeaModel {
         @NameInMap("lockExpireTime")
         public Long lockExpireTime;
 
+        /**
+         * <p>密码是否已设置</p>
+         */
         @NameInMap("passwordSet")
         public Boolean passwordSet;
 

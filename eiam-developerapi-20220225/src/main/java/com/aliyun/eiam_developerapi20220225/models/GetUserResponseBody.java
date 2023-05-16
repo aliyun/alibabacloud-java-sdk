@@ -25,6 +25,9 @@ public class GetUserResponseBody extends TeaModel {
     @NameInMap("emailVerified")
     public Boolean emailVerified;
 
+    @NameInMap("groups")
+    public java.util.List<GetUserResponseBodyGroups> groups;
+
     @NameInMap("instanceId")
     public String instanceId;
 
@@ -132,6 +135,14 @@ public class GetUserResponseBody extends TeaModel {
     }
     public Boolean getEmailVerified() {
         return this.emailVerified;
+    }
+
+    public GetUserResponseBody setGroups(java.util.List<GetUserResponseBodyGroups> groups) {
+        this.groups = groups;
+        return this;
+    }
+    public java.util.List<GetUserResponseBodyGroups> getGroups() {
+        return this.groups;
     }
 
     public GetUserResponseBody setInstanceId(String instanceId) {
@@ -288,6 +299,47 @@ public class GetUserResponseBody extends TeaModel {
         }
         public String getFieldValue() {
             return this.fieldValue;
+        }
+
+    }
+
+    public static class GetUserResponseBodyGroups extends TeaModel {
+        @NameInMap("description")
+        public String description;
+
+        @NameInMap("groupId")
+        public String groupId;
+
+        @NameInMap("groupName")
+        public String groupName;
+
+        public static GetUserResponseBodyGroups build(java.util.Map<String, ?> map) throws Exception {
+            GetUserResponseBodyGroups self = new GetUserResponseBodyGroups();
+            return TeaModel.build(map, self);
+        }
+
+        public GetUserResponseBodyGroups setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public GetUserResponseBodyGroups setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        public GetUserResponseBodyGroups setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
         }
 
     }
