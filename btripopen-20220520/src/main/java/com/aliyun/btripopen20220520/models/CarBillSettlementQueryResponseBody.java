@@ -238,6 +238,12 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("sub_order_id")
         public String subOrderId;
 
+        /**
+         * <p>税率</p>
+         */
+        @NameInMap("tax_rate")
+        public String taxRate;
+
         @NameInMap("traveler_id")
         public String travelerId;
 
@@ -680,6 +686,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getSubOrderId() {
             return this.subOrderId;
+        }
+
+        public CarBillSettlementQueryResponseBodyModuleDataList setTaxRate(String taxRate) {
+            this.taxRate = taxRate;
+            return this;
+        }
+        public String getTaxRate() {
+            return this.taxRate;
         }
 
         public CarBillSettlementQueryResponseBodyModuleDataList setTravelerId(String travelerId) {

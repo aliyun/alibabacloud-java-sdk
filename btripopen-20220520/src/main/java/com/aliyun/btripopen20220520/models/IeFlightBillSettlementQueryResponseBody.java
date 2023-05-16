@@ -291,6 +291,12 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("tax_fee")
         public Double taxFee;
 
+        /**
+         * <p>税率</p>
+         */
+        @NameInMap("tax_rate")
+        public String taxRate;
+
         @NameInMap("ticket_id")
         public String ticketId;
 
@@ -848,6 +854,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public Double getTaxFee() {
             return this.taxFee;
+        }
+
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setTaxRate(String taxRate) {
+            this.taxRate = taxRate;
+            return this;
+        }
+        public String getTaxRate() {
+            return this.taxRate;
         }
 
         public IeFlightBillSettlementQueryResponseBodyModuleDataList setTicketId(String ticketId) {

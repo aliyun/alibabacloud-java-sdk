@@ -16,9 +16,6 @@ public class ApplyApproveRequest extends TeaModel {
     @NameInMap("status")
     public Integer status;
 
-    /**
-     * <p>子企业Id</p>
-     */
     @NameInMap("sub_corp_id")
     public String subCorpId;
 

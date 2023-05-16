@@ -205,6 +205,12 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("status")
         public Integer status;
 
+        /**
+         * <p>税率</p>
+         */
+        @NameInMap("tax_rate")
+        public String taxRate;
+
         @NameInMap("ticket_no")
         public String ticketNo;
 
@@ -568,6 +574,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
         public Integer getStatus() {
             return this.status;
+        }
+
+        public TrainBillSettlementQueryResponseBodyModuleDataList setTaxRate(String taxRate) {
+            this.taxRate = taxRate;
+            return this;
+        }
+        public String getTaxRate() {
+            return this.taxRate;
         }
 
         public TrainBillSettlementQueryResponseBodyModuleDataList setTicketNo(String ticketNo) {
