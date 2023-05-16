@@ -115,6 +115,12 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("LatestAction")
+        public String latestAction;
+
+        @NameInMap("Name")
+        public String name;
+
         @NameInMap("NetworkAttributes")
         public DescribeARMServerInstancesResponseBodyServersAICInstancesNetworkAttributes networkAttributes;
 
@@ -157,6 +163,22 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeARMServerInstancesResponseBodyServersAICInstances setLatestAction(String latestAction) {
+            this.latestAction = latestAction;
+            return this;
+        }
+        public String getLatestAction() {
+            return this.latestAction;
+        }
+
+        public DescribeARMServerInstancesResponseBodyServersAICInstances setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public DescribeARMServerInstancesResponseBodyServersAICInstances setNetworkAttributes(DescribeARMServerInstancesResponseBodyServersAICInstancesNetworkAttributes networkAttributes) {
@@ -214,8 +236,17 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        @NameInMap("LatestAction")
+        public String latestAction;
+
+        @NameInMap("Name")
+        public String name;
+
         @NameInMap("Namespace")
         public String namespace;
+
+        @NameInMap("PayType")
+        public String payType;
 
         @NameInMap("ServerId")
         public String serverId;
@@ -266,12 +297,36 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             return this.expiredTime;
         }
 
+        public DescribeARMServerInstancesResponseBodyServers setLatestAction(String latestAction) {
+            this.latestAction = latestAction;
+            return this;
+        }
+        public String getLatestAction() {
+            return this.latestAction;
+        }
+
+        public DescribeARMServerInstancesResponseBodyServers setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
         public DescribeARMServerInstancesResponseBodyServers setNamespace(String namespace) {
             this.namespace = namespace;
             return this;
         }
         public String getNamespace() {
             return this.namespace;
+        }
+
+        public DescribeARMServerInstancesResponseBodyServers setPayType(String payType) {
+            this.payType = payType;
+            return this;
+        }
+        public String getPayType() {
+            return this.payType;
         }
 
         public DescribeARMServerInstancesResponseBodyServers setServerId(String serverId) {

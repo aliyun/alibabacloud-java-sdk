@@ -7,8 +7,17 @@ public class DescribeAICImagesResponseBody extends TeaModel {
     @NameInMap("Images")
     public java.util.List<DescribeAICImagesResponseBodyImages> images;
 
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeAICImagesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAICImagesResponseBody self = new DescribeAICImagesResponseBody();
@@ -23,6 +32,22 @@ public class DescribeAICImagesResponseBody extends TeaModel {
         return this.images;
     }
 
+    public DescribeAICImagesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeAICImagesResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
     public DescribeAICImagesResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -31,9 +56,20 @@ public class DescribeAICImagesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeAICImagesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class DescribeAICImagesResponseBodyImages extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
+
+        @NameInMap("Description")
+        public String description;
 
         @NameInMap("ImageId")
         public String imageId;
@@ -58,6 +94,14 @@ public class DescribeAICImagesResponseBody extends TeaModel {
         }
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        public DescribeAICImagesResponseBodyImages setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public DescribeAICImagesResponseBodyImages setImageId(String imageId) {

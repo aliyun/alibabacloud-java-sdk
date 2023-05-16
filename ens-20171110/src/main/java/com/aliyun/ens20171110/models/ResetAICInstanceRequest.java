@@ -7,6 +7,9 @@ public class ResetAICInstanceRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("InstanceIds")
+    public java.util.List<String> instanceIds;
+
     @NameInMap("ServerId")
     public String serverId;
 
@@ -21,6 +24,14 @@ public class ResetAICInstanceRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ResetAICInstanceRequest setInstanceIds(java.util.List<String> instanceIds) {
+        this.instanceIds = instanceIds;
+        return this;
+    }
+    public java.util.List<String> getInstanceIds() {
+        return this.instanceIds;
     }
 
     public ResetAICInstanceRequest setServerId(String serverId) {
