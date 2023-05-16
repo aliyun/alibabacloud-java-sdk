@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>ens20171110</artifactId>
-  <version>3.0.14</version>
+  <version>3.0.15</version>
   <packaging>jar</packaging>
   <name>ens20171110</name>
   <description>Alibaba Cloud edge node service (20171110) SDK for Java

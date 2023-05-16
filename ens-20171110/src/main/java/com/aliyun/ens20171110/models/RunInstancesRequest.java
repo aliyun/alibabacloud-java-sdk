@@ -25,6 +25,9 @@ public class RunInstancesRequest extends TeaModel {
     @NameInMap("ImageId")
     public String imageId;
 
+    @NameInMap("InstanceChargeStrategy")
+    public String instanceChargeStrategy;
+
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
@@ -150,6 +153,14 @@ public class RunInstancesRequest extends TeaModel {
     }
     public String getImageId() {
         return this.imageId;
+    }
+
+    public RunInstancesRequest setInstanceChargeStrategy(String instanceChargeStrategy) {
+        this.instanceChargeStrategy = instanceChargeStrategy;
+        return this;
+    }
+    public String getInstanceChargeStrategy() {
+        return this.instanceChargeStrategy;
     }
 
     public RunInstancesRequest setInstanceChargeType(String instanceChargeType) {
