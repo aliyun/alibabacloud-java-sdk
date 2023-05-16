@@ -4,6 +4,9 @@ package com.aliyun.eiam_developerapi20220225.models;
 import com.aliyun.tea.*;
 
 public class GenerateTokenResponseBody extends TeaModel {
+    /**
+     * <p>access_token。</p>
+     */
     @NameInMap("access_token")
     public String accessToken;
 
@@ -13,9 +16,15 @@ public class GenerateTokenResponseBody extends TeaModel {
     @NameInMap("expires_in")
     public Long expiresIn;
 
+    /**
+     * <p>id_token。</p>
+     */
     @NameInMap("id_token")
     public String idToken;
 
+    /**
+     * <p>refresh_token。</p>
+     */
     @NameInMap("refresh_token")
     public String refreshToken;
 

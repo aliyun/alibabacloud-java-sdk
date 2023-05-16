@@ -104,7 +104,17 @@ public class PatchUserRequest extends TeaModel {
         @NameInMap("fieldValue")
         public String fieldValue;
 
+        /**
+         * <p>字段操作类型，取值可选范围：</p>
+         * <p>- add：添加。</p>
+         * <p>- replace：替换。若对应扩展字段无设置值，会转换为add操作。</p>
+         * <p>- remove：移除。</p>
+         */
+        @NameInMap("operation")
+        public String operation;
+
         @NameInMap("operator")
+        @Deprecated
         public String operator;
 
         public static PatchUserRequestCustomFields build(java.util.Map<String, ?> map) throws Exception {
@@ -126,6 +136,14 @@ public class PatchUserRequest extends TeaModel {
         }
         public String getFieldValue() {
             return this.fieldValue;
+        }
+
+        public PatchUserRequestCustomFields setOperation(String operation) {
+            this.operation = operation;
+            return this;
+        }
+        public String getOperation() {
+            return this.operation;
         }
 
         public PatchUserRequestCustomFields setOperator(String operator) {
