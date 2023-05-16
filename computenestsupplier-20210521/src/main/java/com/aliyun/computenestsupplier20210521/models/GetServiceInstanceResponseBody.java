@@ -329,6 +329,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     }
 
     public static class GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnectionsConnectionConfigs extends TeaModel {
+        @NameInMap("ConnectBandwidth")
+        public Integer connectBandwidth;
+
         @NameInMap("DomainName")
         public String domainName;
 
@@ -353,6 +356,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         public static GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnectionsConnectionConfigs build(java.util.Map<String, ?> map) throws Exception {
             GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnectionsConnectionConfigs self = new GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnectionsConnectionConfigs();
             return TeaModel.build(map, self);
+        }
+
+        public GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnectionsConnectionConfigs setConnectBandwidth(Integer connectBandwidth) {
+            this.connectBandwidth = connectBandwidth;
+            return this;
+        }
+        public Integer getConnectBandwidth() {
+            return this.connectBandwidth;
         }
 
         public GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnectionsConnectionConfigs setDomainName(String domainName) {

@@ -19,6 +19,9 @@ public class ListServicesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("Tag")
     public java.util.List<ListServicesRequestTag> tag;
 
@@ -65,6 +68,14 @@ public class ListServicesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListServicesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ListServicesRequest setTag(java.util.List<ListServicesRequestTag> tag) {
