@@ -174,6 +174,9 @@ public class ListServicesResponseBody extends TeaModel {
         @NameInMap("RelationType")
         public String relationType;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("ServiceId")
         public String serviceId;
 
@@ -291,6 +294,14 @@ public class ListServicesResponseBody extends TeaModel {
         }
         public String getRelationType() {
             return this.relationType;
+        }
+
+        public ListServicesResponseBodyServices setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListServicesResponseBodyServices setServiceId(String serviceId) {
