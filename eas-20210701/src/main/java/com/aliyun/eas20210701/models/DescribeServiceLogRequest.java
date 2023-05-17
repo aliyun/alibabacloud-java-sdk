@@ -4,8 +4,17 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class DescribeServiceLogRequest extends TeaModel {
+    /**
+     * <p>服务实例的容器名称。</p>
+     */
+    @NameInMap("ContainerName")
+    public String containerName;
+
     @NameInMap("EndTime")
     public String endTime;
+
+    @NameInMap("InstanceName")
+    public String instanceName;
 
     @NameInMap("Ip")
     public String ip;
@@ -19,6 +28,9 @@ public class DescribeServiceLogRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    @NameInMap("Previous")
+    public Boolean previous;
+
     @NameInMap("StartTime")
     public String startTime;
 
@@ -27,12 +39,28 @@ public class DescribeServiceLogRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeServiceLogRequest setContainerName(String containerName) {
+        this.containerName = containerName;
+        return this;
+    }
+    public String getContainerName() {
+        return this.containerName;
+    }
+
     public DescribeServiceLogRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeServiceLogRequest setInstanceName(String instanceName) {
+        this.instanceName = instanceName;
+        return this;
+    }
+    public String getInstanceName() {
+        return this.instanceName;
     }
 
     public DescribeServiceLogRequest setIp(String ip) {
@@ -65,6 +93,14 @@ public class DescribeServiceLogRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeServiceLogRequest setPrevious(Boolean previous) {
+        this.previous = previous;
+        return this;
+    }
+    public Boolean getPrevious() {
+        return this.previous;
     }
 
     public DescribeServiceLogRequest setStartTime(String startTime) {
