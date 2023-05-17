@@ -74,6 +74,9 @@ public class ListCostUnitOrdersResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public Long createTime;
 
+        @NameInMap("Exhausted")
+        public Boolean exhausted;
+
         @NameInMap("ExpiredTime")
         public Long expiredTime;
 
@@ -116,6 +119,14 @@ public class ListCostUnitOrdersResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public ListCostUnitOrdersResponseBodyItems setExhausted(Boolean exhausted) {
+            this.exhausted = exhausted;
+            return this;
+        }
+        public Boolean getExhausted() {
+            return this.exhausted;
         }
 
         public ListCostUnitOrdersResponseBodyItems setExpiredTime(Long expiredTime) {
