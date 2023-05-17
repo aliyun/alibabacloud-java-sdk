@@ -10,9 +10,6 @@ public class ThreeElementsVerificationRequest extends TeaModel {
     @NameInMap("CertCode")
     public String certCode;
 
-    @NameInMap("ExtendFunction")
-    public String extendFunction;
-
     @NameInMap("InputNumber")
     public String inputNumber;
 
@@ -50,14 +47,6 @@ public class ThreeElementsVerificationRequest extends TeaModel {
     }
     public String getCertCode() {
         return this.certCode;
-    }
-
-    public ThreeElementsVerificationRequest setExtendFunction(String extendFunction) {
-        this.extendFunction = extendFunction;
-        return this;
-    }
-    public String getExtendFunction() {
-        return this.extendFunction;
     }
 
     public ThreeElementsVerificationRequest setInputNumber(String inputNumber) {

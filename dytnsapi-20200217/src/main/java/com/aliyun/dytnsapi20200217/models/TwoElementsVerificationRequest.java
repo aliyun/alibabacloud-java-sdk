@@ -7,9 +7,6 @@ public class TwoElementsVerificationRequest extends TeaModel {
     @NameInMap("AuthCode")
     public String authCode;
 
-    @NameInMap("ExtendFunction")
-    public String extendFunction;
-
     @NameInMap("InputNumber")
     public String inputNumber;
 
@@ -39,14 +36,6 @@ public class TwoElementsVerificationRequest extends TeaModel {
     }
     public String getAuthCode() {
         return this.authCode;
-    }
-
-    public TwoElementsVerificationRequest setExtendFunction(String extendFunction) {
-        this.extendFunction = extendFunction;
-        return this;
-    }
-    public String getExtendFunction() {
-        return this.extendFunction;
     }
 
     public TwoElementsVerificationRequest setInputNumber(String inputNumber) {

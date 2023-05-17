@@ -7,9 +7,6 @@ public class PhoneNumberStatusForVoiceRequest extends TeaModel {
     @NameInMap("AuthCode")
     public String authCode;
 
-    @NameInMap("ExtendFunction")
-    public String extendFunction;
-
     @NameInMap("InputNumber")
     public String inputNumber;
 
@@ -36,14 +33,6 @@ public class PhoneNumberStatusForVoiceRequest extends TeaModel {
     }
     public String getAuthCode() {
         return this.authCode;
-    }
-
-    public PhoneNumberStatusForVoiceRequest setExtendFunction(String extendFunction) {
-        this.extendFunction = extendFunction;
-        return this;
-    }
-    public String getExtendFunction() {
-        return this.extendFunction;
     }
 
     public PhoneNumberStatusForVoiceRequest setInputNumber(String inputNumber) {
