@@ -4,9 +4,6 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class RemoveMfaDeviceRequest extends TeaModel {
-    /**
-     * <p>The serial number of the virtual MFA device, which is a unique identifier.</p>
-     */
     @NameInMap("SerialNumber")
     public String serialNumber;
 

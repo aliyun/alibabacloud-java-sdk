@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class CheckUsedPropertyValueRequest extends TeaModel {
     /**
-     * <p>The ID of the property.</p>
+     * <p>CheckUsedPropertyValue</p>
      */
     @NameInMap("PropertyId")
     public Long propertyId;
 
-    /**
-     * <p>The ID of the property value.</p>
-     */
     @NameInMap("PropertyValueId")
     public Long propertyValueId;
 

@@ -4,15 +4,9 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class ResetUserPasswordRequest extends TeaModel {
-    /**
-     * <p>The method to notify the user after the password is reset.</p>
-     */
     @NameInMap("NotifyType")
     public Integer notifyType;
 
-    /**
-     * <p>The names of the convenience users whose passwords you want to reset.</p>
-     */
     @NameInMap("Users")
     public java.util.List<String> users;
 

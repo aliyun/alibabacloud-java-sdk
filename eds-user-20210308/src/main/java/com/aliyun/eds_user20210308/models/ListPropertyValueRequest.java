@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPropertyValueRequest extends TeaModel {
     /**
-     * <p>The ID of the property. You can call the [ListProperty](~~410890~~) operation to query the property ID.</p>
+     * <p>Queries property values of a user property.</p>
      */
     @NameInMap("PropertyId")
     public Long propertyId;

@@ -4,26 +4,20 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class SetUserPropertyValueRequest extends TeaModel {
-    /**
-     * <p>The ID of the property.</p>
-     */
     @NameInMap("PropertyId")
     public Long propertyId;
 
-    /**
-     * <p>The ID of the property value.</p>
-     */
     @NameInMap("PropertyValueId")
     public Long propertyValueId;
 
     /**
-     * <p>The ID of the user.</p>
+     * <p>Associates a user property with a user.</p>
      */
     @NameInMap("UserId")
     public Long userId;
 
     /**
-     * <p>The name of the user.</p>
+     * <p>SetUserPropertyValue</p>
      */
     @NameInMap("UserName")
     public String userName;

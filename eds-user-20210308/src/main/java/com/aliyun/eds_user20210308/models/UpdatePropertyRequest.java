@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class UpdatePropertyRequest extends TeaModel {
     /**
-     * <p>The ID of the property that you want to modify. You can call the [ListProperty](~~410890~~) operation to query the property ID.</p>
+     * <p>The operation that you want to perform. Set the value to **UpdateProperty**.</p>
      */
     @NameInMap("PropertyId")
     public Long propertyId;
 
     /**
-     * <p>The new property name.</p>
+     * <p>The property values that failed to be modified.</p>
      */
     @NameInMap("PropertyKey")
     public String propertyKey;
 
     /**
-     * <p>The values of property.</p>
+     * <p>The new property value N.</p>
      */
     @NameInMap("PropertyValues")
     public java.util.List<UpdatePropertyRequestPropertyValues> propertyValues;
@@ -53,13 +53,13 @@ public class UpdatePropertyRequest extends TeaModel {
 
     public static class UpdatePropertyRequestPropertyValues extends TeaModel {
         /**
-         * <p>The new property value.</p>
+         * <p>The error code.</p>
          */
         @NameInMap("PropertyValue")
         public String propertyValue;
 
         /**
-         * <p>The ID of property value that you want to modify. You can call the [ListProperty](~~410890~~) operation to query the property value ID.</p>
+         * <p>The ID of the property that you want to modify. You can call the [ListProperty](~~410890~~) operation to query the property ID.</p>
          */
         @NameInMap("PropertyValueId")
         public Long propertyValueId;

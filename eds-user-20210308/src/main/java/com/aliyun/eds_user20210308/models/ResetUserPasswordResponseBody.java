@@ -4,15 +4,9 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class ResetUserPasswordResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The result of resetting the password of the convenience user.</p>
-     */
     @NameInMap("ResetUsersResult")
     public ResetUserPasswordResponseBodyResetUsersResult resetUsersResult;
 
@@ -38,21 +32,12 @@ public class ResetUserPasswordResponseBody extends TeaModel {
     }
 
     public static class ResetUserPasswordResponseBodyResetUsersResultFailedUsers extends TeaModel {
-        /**
-         * <p>The ID of the convenience user whose password failed to be reset.</p>
-         */
         @NameInMap("EndUserId")
         public String endUserId;
 
-        /**
-         * <p>The error code.</p>
-         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
-        /**
-         * <p>The error message.</p>
-         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
@@ -88,15 +73,9 @@ public class ResetUserPasswordResponseBody extends TeaModel {
     }
 
     public static class ResetUserPasswordResponseBodyResetUsersResult extends TeaModel {
-        /**
-         * <p>The information about the convenience users whose passwords failed to be reset.</p>
-         */
         @NameInMap("FailedUsers")
         public java.util.List<ResetUserPasswordResponseBodyResetUsersResultFailedUsers> failedUsers;
 
-        /**
-         * <p>The convenience users to which the system sent a password reset email.</p>
-         */
         @NameInMap("ResetUsers")
         public java.util.List<String> resetUsers;
 
