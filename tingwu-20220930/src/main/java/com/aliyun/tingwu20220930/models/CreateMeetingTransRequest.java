@@ -4,8 +4,14 @@ package com.aliyun.tingwu20220930.models;
 import com.aliyun.tea.*;
 
 public class CreateMeetingTransRequest extends TeaModel {
+    @NameInMap("AbilityParams")
+    public java.util.Map<String, ?> abilityParams;
+
     @NameInMap("AppKey")
     public String appKey;
+
+    @NameInMap("AsrParams")
+    public java.util.Map<String, ?> asrParams;
 
     @NameInMap("AudioBitRate")
     public Integer audioBitRate;
@@ -37,6 +43,9 @@ public class CreateMeetingTransRequest extends TeaModel {
     @NameInMap("DocResultEnabled")
     public Boolean docResultEnabled;
 
+    @NameInMap("LabParams")
+    public java.util.Map<String, ?> labParams;
+
     @NameInMap("MeetingKey")
     public String meetingKey;
 
@@ -64,6 +73,9 @@ public class CreateMeetingTransRequest extends TeaModel {
     @NameInMap("RealtimeResultWordsEnabled")
     public Boolean realtimeResultWordsEnabled;
 
+    @NameInMap("Tags")
+    public java.util.Map<String, ?> tags;
+
     @NameInMap("TranslateActiveResultLevel")
     public Integer translateActiveResultLevel;
 
@@ -81,12 +93,28 @@ public class CreateMeetingTransRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateMeetingTransRequest setAbilityParams(java.util.Map<String, ?> abilityParams) {
+        this.abilityParams = abilityParams;
+        return this;
+    }
+    public java.util.Map<String, ?> getAbilityParams() {
+        return this.abilityParams;
+    }
+
     public CreateMeetingTransRequest setAppKey(String appKey) {
         this.appKey = appKey;
         return this;
     }
     public String getAppKey() {
         return this.appKey;
+    }
+
+    public CreateMeetingTransRequest setAsrParams(java.util.Map<String, ?> asrParams) {
+        this.asrParams = asrParams;
+        return this;
+    }
+    public java.util.Map<String, ?> getAsrParams() {
+        return this.asrParams;
     }
 
     public CreateMeetingTransRequest setAudioBitRate(Integer audioBitRate) {
@@ -169,6 +197,14 @@ public class CreateMeetingTransRequest extends TeaModel {
         return this.docResultEnabled;
     }
 
+    public CreateMeetingTransRequest setLabParams(java.util.Map<String, ?> labParams) {
+        this.labParams = labParams;
+        return this;
+    }
+    public java.util.Map<String, ?> getLabParams() {
+        return this.labParams;
+    }
+
     public CreateMeetingTransRequest setMeetingKey(String meetingKey) {
         this.meetingKey = meetingKey;
         return this;
@@ -239,6 +275,14 @@ public class CreateMeetingTransRequest extends TeaModel {
     }
     public Boolean getRealtimeResultWordsEnabled() {
         return this.realtimeResultWordsEnabled;
+    }
+
+    public CreateMeetingTransRequest setTags(java.util.Map<String, ?> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.Map<String, ?> getTags() {
+        return this.tags;
     }
 
     public CreateMeetingTransRequest setTranslateActiveResultLevel(Integer translateActiveResultLevel) {

@@ -4,8 +4,14 @@ package com.aliyun.tingwu20220930.models;
 import com.aliyun.tea.*;
 
 public class CreateFileTransRequest extends TeaModel {
+    @NameInMap("AbilityParams")
+    public java.util.Map<String, ?> abilityParams;
+
     @NameInMap("AppKey")
     public String appKey;
+
+    @NameInMap("AsrParams")
+    public java.util.Map<String, ?> asrParams;
 
     @NameInMap("AudioLanguage")
     public String audioLanguage;
@@ -31,6 +37,12 @@ public class CreateFileTransRequest extends TeaModel {
     @NameInMap("AudioSegmentsEnabled")
     public Boolean audioSegmentsEnabled;
 
+    @NameInMap("LabParams")
+    public java.util.Map<String, ?> labParams;
+
+    @NameInMap("Tags")
+    public java.util.Map<String, ?> tags;
+
     @NameInMap("TransKey")
     public String transKey;
 
@@ -45,12 +57,28 @@ public class CreateFileTransRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateFileTransRequest setAbilityParams(java.util.Map<String, ?> abilityParams) {
+        this.abilityParams = abilityParams;
+        return this;
+    }
+    public java.util.Map<String, ?> getAbilityParams() {
+        return this.abilityParams;
+    }
+
     public CreateFileTransRequest setAppKey(String appKey) {
         this.appKey = appKey;
         return this;
     }
     public String getAppKey() {
         return this.appKey;
+    }
+
+    public CreateFileTransRequest setAsrParams(java.util.Map<String, ?> asrParams) {
+        this.asrParams = asrParams;
+        return this;
+    }
+    public java.util.Map<String, ?> getAsrParams() {
+        return this.asrParams;
     }
 
     public CreateFileTransRequest setAudioLanguage(String audioLanguage) {
@@ -115,6 +143,22 @@ public class CreateFileTransRequest extends TeaModel {
     }
     public Boolean getAudioSegmentsEnabled() {
         return this.audioSegmentsEnabled;
+    }
+
+    public CreateFileTransRequest setLabParams(java.util.Map<String, ?> labParams) {
+        this.labParams = labParams;
+        return this;
+    }
+    public java.util.Map<String, ?> getLabParams() {
+        return this.labParams;
+    }
+
+    public CreateFileTransRequest setTags(java.util.Map<String, ?> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.Map<String, ?> getTags() {
+        return this.tags;
     }
 
     public CreateFileTransRequest setTransKey(String transKey) {
