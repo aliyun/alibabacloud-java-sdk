@@ -46,6 +46,9 @@ public class QuerySmsReportsResponseBody extends TeaModel {
         @NameInMap("AppId")
         public String appId;
 
+        @NameInMap("ChargedCount")
+        public Integer chargedCount;
+
         @NameInMap("Code")
         public String code;
 
@@ -81,6 +84,14 @@ public class QuerySmsReportsResponseBody extends TeaModel {
         }
         public String getAppId() {
             return this.appId;
+        }
+
+        public QuerySmsReportsResponseBodySmsReports setChargedCount(Integer chargedCount) {
+            this.chargedCount = chargedCount;
+            return this;
+        }
+        public Integer getChargedCount() {
+            return this.chargedCount;
         }
 
         public QuerySmsReportsResponseBodySmsReports setCode(String code) {

@@ -7,6 +7,9 @@ public class VerifyIdTokenRequest extends TeaModel {
     @NameInMap("ApplicationExternalId")
     public String applicationExternalId;
 
+    /**
+     * <p>jwtIdToken</p>
+     */
     @NameInMap("JwtIdToken")
     public String jwtIdToken;
 
