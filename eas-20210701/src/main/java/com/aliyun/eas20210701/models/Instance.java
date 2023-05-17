@@ -4,6 +4,9 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class Instance extends TeaModel {
+    @NameInMap("CurrentAmount")
+    public Float currentAmount;
+
     @NameInMap("HostIP")
     public String hostIP;
 
@@ -19,11 +22,17 @@ public class Instance extends TeaModel {
     @NameInMap("InstancePort")
     public Integer instancePort;
 
+    @NameInMap("IsSpot")
+    public Boolean isSpot;
+
     @NameInMap("LastState")
     public java.util.List<java.util.Map<String, ?>> lastState;
 
     @NameInMap("Namespace")
     public String namespace;
+
+    @NameInMap("OriginalAmount")
+    public Float originalAmount;
 
     @NameInMap("ReadyProcesses")
     public Integer readyProcesses;
@@ -58,6 +67,14 @@ public class Instance extends TeaModel {
     public static Instance build(java.util.Map<String, ?> map) throws Exception {
         Instance self = new Instance();
         return TeaModel.build(map, self);
+    }
+
+    public Instance setCurrentAmount(Float currentAmount) {
+        this.currentAmount = currentAmount;
+        return this;
+    }
+    public Float getCurrentAmount() {
+        return this.currentAmount;
     }
 
     public Instance setHostIP(String hostIP) {
@@ -100,6 +117,14 @@ public class Instance extends TeaModel {
         return this.instancePort;
     }
 
+    public Instance setIsSpot(Boolean isSpot) {
+        this.isSpot = isSpot;
+        return this;
+    }
+    public Boolean getIsSpot() {
+        return this.isSpot;
+    }
+
     public Instance setLastState(java.util.List<java.util.Map<String, ?>> lastState) {
         this.lastState = lastState;
         return this;
@@ -114,6 +139,14 @@ public class Instance extends TeaModel {
     }
     public String getNamespace() {
         return this.namespace;
+    }
+
+    public Instance setOriginalAmount(Float originalAmount) {
+        this.originalAmount = originalAmount;
+        return this;
+    }
+    public Float getOriginalAmount() {
+        return this.originalAmount;
     }
 
     public Instance setReadyProcesses(Integer readyProcesses) {

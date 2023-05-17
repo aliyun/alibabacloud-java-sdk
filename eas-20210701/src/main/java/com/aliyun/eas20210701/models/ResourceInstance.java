@@ -43,6 +43,9 @@ public class ResourceInstance extends TeaModel {
     @NameInMap("InstanceStatus")
     public String instanceStatus;
 
+    @NameInMap("InstanceSystemDiskSize")
+    public Integer instanceSystemDiskSize;
+
     @NameInMap("InstanceTenantIp")
     public String instanceTenantIp;
 
@@ -63,6 +66,9 @@ public class ResourceInstance extends TeaModel {
 
     @NameInMap("Region")
     public String region;
+
+    @NameInMap("ResourceId")
+    public String resourceId;
 
     @NameInMap("Zone")
     public String zone;
@@ -176,6 +182,14 @@ public class ResourceInstance extends TeaModel {
         return this.instanceStatus;
     }
 
+    public ResourceInstance setInstanceSystemDiskSize(Integer instanceSystemDiskSize) {
+        this.instanceSystemDiskSize = instanceSystemDiskSize;
+        return this;
+    }
+    public Integer getInstanceSystemDiskSize() {
+        return this.instanceSystemDiskSize;
+    }
+
     public ResourceInstance setInstanceTenantIp(String instanceTenantIp) {
         this.instanceTenantIp = instanceTenantIp;
         return this;
@@ -230,6 +244,14 @@ public class ResourceInstance extends TeaModel {
     }
     public String getRegion() {
         return this.region;
+    }
+
+    public ResourceInstance setResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public String getResourceId() {
+        return this.resourceId;
     }
 
     public ResourceInstance setZone(String zone) {

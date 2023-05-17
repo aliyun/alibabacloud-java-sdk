@@ -7,17 +7,32 @@ public class ListResourceInstancesRequest extends TeaModel {
     @NameInMap("ChargeType")
     public String chargeType;
 
+    @NameInMap("Filter")
+    public String filter;
+
+    @NameInMap("InstanceIP")
+    public String instanceIP;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("InstanceName")
     public String instanceName;
 
+    @NameInMap("InstanceStatus")
+    public String instanceStatus;
+
+    @NameInMap("Order")
+    public String order;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("Sort")
+    public String sort;
 
     public static ListResourceInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListResourceInstancesRequest self = new ListResourceInstancesRequest();
@@ -30,6 +45,22 @@ public class ListResourceInstancesRequest extends TeaModel {
     }
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    public ListResourceInstancesRequest setFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
+    public String getFilter() {
+        return this.filter;
+    }
+
+    public ListResourceInstancesRequest setInstanceIP(String instanceIP) {
+        this.instanceIP = instanceIP;
+        return this;
+    }
+    public String getInstanceIP() {
+        return this.instanceIP;
     }
 
     public ListResourceInstancesRequest setInstanceId(String instanceId) {
@@ -48,6 +79,22 @@ public class ListResourceInstancesRequest extends TeaModel {
         return this.instanceName;
     }
 
+    public ListResourceInstancesRequest setInstanceStatus(String instanceStatus) {
+        this.instanceStatus = instanceStatus;
+        return this;
+    }
+    public String getInstanceStatus() {
+        return this.instanceStatus;
+    }
+
+    public ListResourceInstancesRequest setOrder(String order) {
+        this.order = order;
+        return this;
+    }
+    public String getOrder() {
+        return this.order;
+    }
+
     public ListResourceInstancesRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -62,6 +109,14 @@ public class ListResourceInstancesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListResourceInstancesRequest setSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    public String getSort() {
+        return this.sort;
     }
 
 }

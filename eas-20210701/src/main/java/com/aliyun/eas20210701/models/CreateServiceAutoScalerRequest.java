@@ -4,6 +4,9 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceAutoScalerRequest extends TeaModel {
+    @NameInMap("behavior")
+    public CreateServiceAutoScalerRequestBehavior behavior;
+
     @NameInMap("max")
     public Integer max;
 
@@ -16,6 +19,14 @@ public class CreateServiceAutoScalerRequest extends TeaModel {
     public static CreateServiceAutoScalerRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateServiceAutoScalerRequest self = new CreateServiceAutoScalerRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateServiceAutoScalerRequest setBehavior(CreateServiceAutoScalerRequestBehavior behavior) {
+        this.behavior = behavior;
+        return this;
+    }
+    public CreateServiceAutoScalerRequestBehavior getBehavior() {
+        return this.behavior;
     }
 
     public CreateServiceAutoScalerRequest setMax(Integer max) {
@@ -40,6 +51,115 @@ public class CreateServiceAutoScalerRequest extends TeaModel {
     }
     public java.util.List<CreateServiceAutoScalerRequestScaleStrategies> getScaleStrategies() {
         return this.scaleStrategies;
+    }
+
+    public static class CreateServiceAutoScalerRequestBehaviorOnZero extends TeaModel {
+        @NameInMap("scaleDownGracePeriodSeconds")
+        public Integer scaleDownGracePeriodSeconds;
+
+        @NameInMap("scaleUpActivationReplicas")
+        public Integer scaleUpActivationReplicas;
+
+        public static CreateServiceAutoScalerRequestBehaviorOnZero build(java.util.Map<String, ?> map) throws Exception {
+            CreateServiceAutoScalerRequestBehaviorOnZero self = new CreateServiceAutoScalerRequestBehaviorOnZero();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateServiceAutoScalerRequestBehaviorOnZero setScaleDownGracePeriodSeconds(Integer scaleDownGracePeriodSeconds) {
+            this.scaleDownGracePeriodSeconds = scaleDownGracePeriodSeconds;
+            return this;
+        }
+        public Integer getScaleDownGracePeriodSeconds() {
+            return this.scaleDownGracePeriodSeconds;
+        }
+
+        public CreateServiceAutoScalerRequestBehaviorOnZero setScaleUpActivationReplicas(Integer scaleUpActivationReplicas) {
+            this.scaleUpActivationReplicas = scaleUpActivationReplicas;
+            return this;
+        }
+        public Integer getScaleUpActivationReplicas() {
+            return this.scaleUpActivationReplicas;
+        }
+
+    }
+
+    public static class CreateServiceAutoScalerRequestBehaviorScaleDown extends TeaModel {
+        @NameInMap("stabilizationWindowSeconds")
+        public Integer stabilizationWindowSeconds;
+
+        public static CreateServiceAutoScalerRequestBehaviorScaleDown build(java.util.Map<String, ?> map) throws Exception {
+            CreateServiceAutoScalerRequestBehaviorScaleDown self = new CreateServiceAutoScalerRequestBehaviorScaleDown();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateServiceAutoScalerRequestBehaviorScaleDown setStabilizationWindowSeconds(Integer stabilizationWindowSeconds) {
+            this.stabilizationWindowSeconds = stabilizationWindowSeconds;
+            return this;
+        }
+        public Integer getStabilizationWindowSeconds() {
+            return this.stabilizationWindowSeconds;
+        }
+
+    }
+
+    public static class CreateServiceAutoScalerRequestBehaviorScaleUp extends TeaModel {
+        @NameInMap("stabilizationWindowSeconds")
+        public Integer stabilizationWindowSeconds;
+
+        public static CreateServiceAutoScalerRequestBehaviorScaleUp build(java.util.Map<String, ?> map) throws Exception {
+            CreateServiceAutoScalerRequestBehaviorScaleUp self = new CreateServiceAutoScalerRequestBehaviorScaleUp();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateServiceAutoScalerRequestBehaviorScaleUp setStabilizationWindowSeconds(Integer stabilizationWindowSeconds) {
+            this.stabilizationWindowSeconds = stabilizationWindowSeconds;
+            return this;
+        }
+        public Integer getStabilizationWindowSeconds() {
+            return this.stabilizationWindowSeconds;
+        }
+
+    }
+
+    public static class CreateServiceAutoScalerRequestBehavior extends TeaModel {
+        @NameInMap("onZero")
+        public CreateServiceAutoScalerRequestBehaviorOnZero onZero;
+
+        @NameInMap("scaleDown")
+        public CreateServiceAutoScalerRequestBehaviorScaleDown scaleDown;
+
+        @NameInMap("scaleUp")
+        public CreateServiceAutoScalerRequestBehaviorScaleUp scaleUp;
+
+        public static CreateServiceAutoScalerRequestBehavior build(java.util.Map<String, ?> map) throws Exception {
+            CreateServiceAutoScalerRequestBehavior self = new CreateServiceAutoScalerRequestBehavior();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateServiceAutoScalerRequestBehavior setOnZero(CreateServiceAutoScalerRequestBehaviorOnZero onZero) {
+            this.onZero = onZero;
+            return this;
+        }
+        public CreateServiceAutoScalerRequestBehaviorOnZero getOnZero() {
+            return this.onZero;
+        }
+
+        public CreateServiceAutoScalerRequestBehavior setScaleDown(CreateServiceAutoScalerRequestBehaviorScaleDown scaleDown) {
+            this.scaleDown = scaleDown;
+            return this;
+        }
+        public CreateServiceAutoScalerRequestBehaviorScaleDown getScaleDown() {
+            return this.scaleDown;
+        }
+
+        public CreateServiceAutoScalerRequestBehavior setScaleUp(CreateServiceAutoScalerRequestBehaviorScaleUp scaleUp) {
+            this.scaleUp = scaleUp;
+            return this;
+        }
+        public CreateServiceAutoScalerRequestBehaviorScaleUp getScaleUp() {
+            return this.scaleUp;
+        }
+
     }
 
     public static class CreateServiceAutoScalerRequestScaleStrategies extends TeaModel {

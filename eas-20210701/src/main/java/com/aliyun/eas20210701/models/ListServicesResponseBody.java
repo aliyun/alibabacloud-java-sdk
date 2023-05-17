@@ -4,15 +4,9 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class ListServicesResponseBody extends TeaModel {
-    /**
-     * <p>页码。</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>每页显示的服务数。</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

@@ -16,8 +16,14 @@ public class CreateResourceInstancesRequest extends TeaModel {
     @NameInMap("EcsInstanceType")
     public String ecsInstanceType;
 
+    @NameInMap("SystemDiskSize")
+    public Integer systemDiskSize;
+
     @NameInMap("UserData")
     public String userData;
+
+    @NameInMap("Zone")
+    public String zone;
 
     public static CreateResourceInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateResourceInstancesRequest self = new CreateResourceInstancesRequest();
@@ -56,12 +62,28 @@ public class CreateResourceInstancesRequest extends TeaModel {
         return this.ecsInstanceType;
     }
 
+    public CreateResourceInstancesRequest setSystemDiskSize(Integer systemDiskSize) {
+        this.systemDiskSize = systemDiskSize;
+        return this;
+    }
+    public Integer getSystemDiskSize() {
+        return this.systemDiskSize;
+    }
+
     public CreateResourceInstancesRequest setUserData(String userData) {
         this.userData = userData;
         return this;
     }
     public String getUserData() {
         return this.userData;
+    }
+
+    public CreateResourceInstancesRequest setZone(String zone) {
+        this.zone = zone;
+        return this;
+    }
+    public String getZone() {
+        return this.zone;
     }
 
 }

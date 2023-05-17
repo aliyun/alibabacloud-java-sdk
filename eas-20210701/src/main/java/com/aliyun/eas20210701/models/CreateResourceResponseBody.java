@@ -7,6 +7,9 @@ public class CreateResourceResponseBody extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    @NameInMap("InstanceIds")
+    public java.util.List<String> instanceIds;
+
     @NameInMap("OwnerUid")
     public String ownerUid;
 
@@ -30,6 +33,14 @@ public class CreateResourceResponseBody extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public CreateResourceResponseBody setInstanceIds(java.util.List<String> instanceIds) {
+        this.instanceIds = instanceIds;
+        return this;
+    }
+    public java.util.List<String> getInstanceIds() {
+        return this.instanceIds;
     }
 
     public CreateResourceResponseBody setOwnerUid(String ownerUid) {

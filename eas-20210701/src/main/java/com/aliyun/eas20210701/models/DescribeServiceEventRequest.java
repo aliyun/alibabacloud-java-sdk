@@ -7,6 +7,12 @@ public class DescribeServiceEventRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("EventType")
+    public String eventType;
+
+    @NameInMap("InstanceName")
+    public String instanceName;
+
     @NameInMap("PageNum")
     public String pageNum;
 
@@ -27,6 +33,22 @@ public class DescribeServiceEventRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeServiceEventRequest setEventType(String eventType) {
+        this.eventType = eventType;
+        return this;
+    }
+    public String getEventType() {
+        return this.eventType;
+    }
+
+    public DescribeServiceEventRequest setInstanceName(String instanceName) {
+        this.instanceName = instanceName;
+        return this;
+    }
+    public String getInstanceName() {
+        return this.instanceName;
     }
 
     public DescribeServiceEventRequest setPageNum(String pageNum) {

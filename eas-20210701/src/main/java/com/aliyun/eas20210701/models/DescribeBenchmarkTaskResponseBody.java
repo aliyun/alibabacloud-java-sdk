@@ -4,14 +4,11 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class DescribeBenchmarkTaskResponseBody extends TeaModel {
-    /**
-     * <p>实际可用的压测实例个数。</p>
-     */
     @NameInMap("AvailableAgent")
     public Long availableAgent;
 
     /**
-     * <p>调用者的UID。</p>
+     * <p>压测任务的状态。</p>
      */
     @NameInMap("CallerUid")
     public String callerUid;
@@ -22,27 +19,15 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
     @NameInMap("DesiredAgent")
     public Long desiredAgent;
 
-    /**
-     * <p>服务对外公开的访问路径。</p>
-     */
     @NameInMap("Endpoint")
     public String endpoint;
 
-    /**
-     * <p>当前压测任务的运行进度信息。</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>资源拥有者的UID。</p>
-     */
     @NameInMap("ParentUid")
     public String parentUid;
 
-    /**
-     * <p>当前压测任务状态产生的原因。</p>
-     */
     @NameInMap("Reason")
     public String reason;
 
@@ -53,14 +38,11 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>压测的eas服务名。</p>
+     * <p>访问eas服务的鉴权token。</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;
 
-    /**
-     * <p>压测任务的状态。</p>
-     */
     @NameInMap("Status")
     public String status;
 
@@ -71,13 +53,13 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
     public String taskId;
 
     /**
-     * <p>压测任务名字。</p>
+     * <p>当前压测任务状态产生的原因。</p>
      */
     @NameInMap("TaskName")
     public String taskName;
 
     /**
-     * <p>访问eas服务的鉴权token。</p>
+     * <p>资源拥有者的UID。</p>
      */
     @NameInMap("Token")
     public String token;
