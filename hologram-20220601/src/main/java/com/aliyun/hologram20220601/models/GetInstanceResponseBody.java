@@ -227,6 +227,15 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("ExpirationTime")
         public String expirationTime;
 
+        @NameInMap("GatewayCount")
+        public Long gatewayCount;
+
+        @NameInMap("GatewayCpu")
+        public Long gatewayCpu;
+
+        @NameInMap("GatewayMemory")
+        public Long gatewayMemory;
+
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
@@ -349,6 +358,30 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public String getExpirationTime() {
             return this.expirationTime;
+        }
+
+        public GetInstanceResponseBodyInstance setGatewayCount(Long gatewayCount) {
+            this.gatewayCount = gatewayCount;
+            return this;
+        }
+        public Long getGatewayCount() {
+            return this.gatewayCount;
+        }
+
+        public GetInstanceResponseBodyInstance setGatewayCpu(Long gatewayCpu) {
+            this.gatewayCpu = gatewayCpu;
+            return this;
+        }
+        public Long getGatewayCpu() {
+            return this.gatewayCpu;
+        }
+
+        public GetInstanceResponseBodyInstance setGatewayMemory(Long gatewayMemory) {
+            this.gatewayMemory = gatewayMemory;
+            return this;
+        }
+        public Long getGatewayMemory() {
+            return this.gatewayMemory;
         }
 
         public GetInstanceResponseBodyInstance setInstanceChargeType(String instanceChargeType) {
