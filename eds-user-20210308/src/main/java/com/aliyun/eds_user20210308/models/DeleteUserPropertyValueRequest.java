@@ -5,19 +5,16 @@ import com.aliyun.tea.*;
 
 public class DeleteUserPropertyValueRequest extends TeaModel {
     /**
-     * <p>The ID of the property.</p>
+     * <p>DeleteUserPropertyValue</p>
      */
     @NameInMap("PropertyId")
     public Long propertyId;
 
-    /**
-     * <p>The ID of the property value.</p>
-     */
     @NameInMap("PropertyValueId")
     public Long propertyValueId;
 
     /**
-     * <p>The ID of the user.</p>
+     * <p>Dissociates a user property from a user.</p>
      */
     @NameInMap("UserId")
     public Long userId;

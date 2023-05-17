@@ -4,15 +4,9 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class CreatePropertyRequest extends TeaModel {
-    /**
-     * <p>The name of the property.</p>
-     */
     @NameInMap("PropertyKey")
     public String propertyKey;
 
-    /**
-     * <p>The values of the property. You can specify up to 50 values for a property.</p>
-     */
     @NameInMap("PropertyValues")
     public java.util.List<String> propertyValues;
 

@@ -4,9 +4,6 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class RemovePropertyRequest extends TeaModel {
-    /**
-     * <p>The ID of the property. You can call the [ListProperty](~~410890~~) operation to query the property ID.</p>
-     */
     @NameInMap("PropertyId")
     public Long propertyId;
 

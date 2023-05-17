@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeMfaDevicesResponseBody extends TeaModel {
     /**
-     * <p>Details about the virtual MFA devices.</p>
+     * <p>The serial number of the virtual MFA device, which is a unique identifier.</p>
      */
     @NameInMap("MfaDevices")
     public java.util.List<DescribeMfaDevicesResponseBodyMfaDevices> mfaDevices;
 
     /**
-     * <p>The token that determines the start point of the next query.</p>
+     * <p>The operation that you want to perform. Set the value to DescribeMfaDevices.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>This parameter is unavailable.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,60 +53,52 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
 
     public static class DescribeMfaDevicesResponseBodyMfaDevices extends TeaModel {
         /**
-         * <p>The number of consecutive failures to bind the virtual MFA device, or the number of MFA failures based on the virtual MFA device.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("ConsecutiveFails")
         public Integer consecutiveFails;
 
-        /**
-         * <p>The types of the virtual MFA device. Set the value to TOTP_VIRTUAL, which indicates that the virtual MFA devices follow the Time-based One-time Password (TOTP) algorithm.</p>
-         */
         @NameInMap("DeviceType")
         public String deviceType;
 
         /**
-         * <p>This parameter is unavailable.</p>
+         * <p>The username of the convenience user that uses the virtual MFA device.</p>
          */
         @NameInMap("Email")
         public String email;
 
         /**
-         * <p>The username of the convenience user that uses the virtual MFA device.</p>
+         * <p>The types of the virtual MFA device. Set the value to TOTP_VIRTUAL, which indicates that the virtual MFA devices follow the Time-based One-time Password (TOTP) algorithm.</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;
 
         /**
-         * <p>The time when the virtual MFA device was enabled. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The serial numbers of the virtual MFA devices.</p>
          */
         @NameInMap("GmtEnabled")
         public String gmtEnabled;
 
         /**
-         * <p>The time when a locked virtual MFA device is automatically unlocked. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The serial number of the virtual MFA device, which is a unique identifier.</p>
          */
         @NameInMap("GmtUnlock")
         public String gmtUnlock;
 
         /**
-         * <p>This parameter is unavailable.</p>
+         * <p>The maximum number of entries to return. Valid values: 1 to 500.</p>
+         * <br>
+         * <p>Default value: 100.</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
-         * <p>The serial number of the virtual MFA device, which is a unique identifier.</p>
+         * <p>Queries the information about virtual MFA devices that are bound to convenience users.</p>
          */
         @NameInMap("SerialNumber")
         public String serialNumber;
 
-        /**
-         * <p>The status of the virtual MFA device. Valid values:</p>
-         * <br>
-         * <p>*   UNBOUND</p>
-         * <p>*   NORMAL</p>
-         * <p>*   LOCKED</p>
-         */
         @NameInMap("Status")
         public String status;
 

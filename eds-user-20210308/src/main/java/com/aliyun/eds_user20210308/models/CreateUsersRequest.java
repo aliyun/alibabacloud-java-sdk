@@ -4,14 +4,11 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class CreateUsersRequest extends TeaModel {
-    /**
-     * <p>The initial password. If this parameter is left empty, an email for password reset is sent to the specified email address.</p>
-     */
     @NameInMap("Password")
     public String password;
 
     /**
-     * <p>Details of the convenience users.</p>
+     * <p>The remarks of the end user.</p>
      */
     @NameInMap("Users")
     public java.util.List<CreateUsersRequestUsers> users;
@@ -39,44 +36,41 @@ public class CreateUsersRequest extends TeaModel {
 
     public static class CreateUsersRequestUsers extends TeaModel {
         /**
-         * <p>The email address of the end user. The email address is used to receive notifications about events such as desktop assignment. You must specify an email address or a mobile number to receive notifications.</p>
+         * <p>The name of the end user.</p>
          */
         @NameInMap("Email")
         public String email;
 
         /**
-         * <p>The name of the end user. The name must be 3 to 24 characters in length, and can contain lowercase letters, digits, and underscores (\_).</p>
+         * <p>Details of the convenience user that failed to be created.</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;
 
         /**
-         * <p>The organization to which the end user belongs.</p>
+         * <p>The error message returned.</p>
          */
         @NameInMap("OrgId")
         public String orgId;
 
         /**
-         * <p>The type of the account ownership.</p>
+         * <p>The error code returned if the request failed.</p>
          */
         @NameInMap("OwnerType")
         public String ownerType;
 
         /**
-         * <p>The password of the end user.</p>
+         * <p>The mobile number of the end user.</p>
          */
         @NameInMap("Password")
         public String password;
 
         /**
-         * <p>Mobile numbers are not supported on the international site (alibabacloud.com).</p>
+         * <p>The email address of the end user.</p>
          */
         @NameInMap("Phone")
         public String phone;
 
-        /**
-         * <p>The remarks of the end user.</p>
-         */
         @NameInMap("Remark")
         public String remark;
 

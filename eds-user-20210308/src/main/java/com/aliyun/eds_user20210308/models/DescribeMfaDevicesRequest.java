@@ -5,27 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeMfaDevicesRequest extends TeaModel {
     /**
-     * <p>The list of username of convenience users.</p>
+     * <p>This parameter is unavailable.</p>
      */
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
 
     /**
-     * <p>The maximum number of entries to return. Valid values: 1 to 500.</p>
-     * <br>
-     * <p>Default value: 100.</p>
+     * <p>The list of username of convenience users.</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
 
     /**
-     * <p>The query token. Set the value to the NextToken value returned in the last call.</p>
+     * <p>The time when the virtual MFA device was enabled. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The serial numbers of the virtual MFA devices.</p>
+     * <p>The time when a locked virtual MFA device is automatically unlocked. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
      */
     @NameInMap("SerialNumbers")
     public java.util.List<String> serialNumbers;

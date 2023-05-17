@@ -4,15 +4,9 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class CreatePropertyResponseBody extends TeaModel {
-    /**
-     * <p>The result of creating the property.</p>
-     */
     @NameInMap("CreateResult")
     public CreatePropertyResponseBodyCreateResult createResult;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,27 +32,15 @@ public class CreatePropertyResponseBody extends TeaModel {
     }
 
     public static class CreatePropertyResponseBodyCreateResultSavePropertyValueModelFailedPropertyValues extends TeaModel {
-        /**
-         * <p>The error code.</p>
-         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
-        /**
-         * <p>The error message.</p>
-         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        /**
-         * <p>The ID of the property value.</p>
-         */
         @NameInMap("PropertyId")
         public Long propertyId;
 
-        /**
-         * <p>The value of the property.</p>
-         */
         @NameInMap("PropertyValue")
         public String propertyValue;
 
@@ -102,15 +84,9 @@ public class CreatePropertyResponseBody extends TeaModel {
     }
 
     public static class CreatePropertyResponseBodyCreateResultSavePropertyValueModelSavePropertyValues extends TeaModel {
-        /**
-         * <p>The value of the property.</p>
-         */
         @NameInMap("PropertyValue")
         public String propertyValue;
 
-        /**
-         * <p>The ID of the property value.</p>
-         */
         @NameInMap("PropertyValueId")
         public Long propertyValueId;
 
@@ -138,15 +114,9 @@ public class CreatePropertyResponseBody extends TeaModel {
     }
 
     public static class CreatePropertyResponseBodyCreateResultSavePropertyValueModel extends TeaModel {
-        /**
-         * <p>The property values that failed to be created.</p>
-         */
         @NameInMap("FailedPropertyValues")
         public java.util.List<CreatePropertyResponseBodyCreateResultSavePropertyValueModelFailedPropertyValues> failedPropertyValues;
 
-        /**
-         * <p>Details of the property values that were created.</p>
-         */
         @NameInMap("SavePropertyValues")
         public java.util.List<CreatePropertyResponseBodyCreateResultSavePropertyValueModelSavePropertyValues> savePropertyValues;
 
@@ -174,21 +144,12 @@ public class CreatePropertyResponseBody extends TeaModel {
     }
 
     public static class CreatePropertyResponseBodyCreateResult extends TeaModel {
-        /**
-         * <p>The ID of the property.</p>
-         */
         @NameInMap("PropertyId")
         public Long propertyId;
 
-        /**
-         * <p>The name of the property.</p>
-         */
         @NameInMap("PropertyKey")
         public String propertyKey;
 
-        /**
-         * <p>The result of creating the property value.</p>
-         */
         @NameInMap("SavePropertyValueModel")
         public CreatePropertyResponseBodyCreateResultSavePropertyValueModel savePropertyValueModel;
 

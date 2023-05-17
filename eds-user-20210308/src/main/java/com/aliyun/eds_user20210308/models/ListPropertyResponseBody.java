@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListPropertyResponseBody extends TeaModel {
     /**
-     * <p>The token that is used for the next query. If this parameter is empty, all results have been returned.</p>
+     * <p>The information about the properties.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The information about the properties.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("Properties")
     public java.util.List<ListPropertyResponseBodyProperties> properties;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the property.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -52,15 +52,9 @@ public class ListPropertyResponseBody extends TeaModel {
     }
 
     public static class ListPropertyResponseBodyPropertiesPropertyValues extends TeaModel {
-        /**
-         * <p>The value of the property.</p>
-         */
         @NameInMap("PropertyValue")
         public String propertyValue;
 
-        /**
-         * <p>The ID of the property value.</p>
-         */
         @NameInMap("PropertyValueId")
         public Long propertyValueId;
 
@@ -89,19 +83,19 @@ public class ListPropertyResponseBody extends TeaModel {
 
     public static class ListPropertyResponseBodyProperties extends TeaModel {
         /**
-         * <p>The ID of the property.</p>
+         * <p>The operation that you want to perform. Set the value to **ListProperty**.</p>
          */
         @NameInMap("PropertyId")
         public Long propertyId;
 
         /**
-         * <p>The name of the property.</p>
+         * <p>Queries all user properties within an Alibaba Cloud account.</p>
          */
         @NameInMap("PropertyKey")
         public String propertyKey;
 
         /**
-         * <p>Details about the property values.</p>
+         * <p>ListProperty</p>
          */
         @NameInMap("PropertyValues")
         public java.util.List<ListPropertyResponseBodyPropertiesPropertyValues> propertyValues;

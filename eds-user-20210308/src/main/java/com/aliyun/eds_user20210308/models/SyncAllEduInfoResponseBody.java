@@ -4,33 +4,18 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class SyncAllEduInfoResponseBody extends TeaModel {
-    /**
-     * <p>The error code.</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The HTTP status code.</p>
-     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <p>The error message.</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request is successful.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 

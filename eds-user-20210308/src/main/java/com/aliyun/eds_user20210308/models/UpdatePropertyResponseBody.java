@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdatePropertyResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The name of the property.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The result of the modification.</p>
+     * <p>The ID of the property.</p>
      */
     @NameInMap("UpdateResult")
     public UpdatePropertyResponseBodyUpdateResult updateResult;
@@ -38,27 +38,15 @@ public class UpdatePropertyResponseBody extends TeaModel {
     }
 
     public static class UpdatePropertyResponseBodyUpdateResultSavePropertyValueModelFailedPropertyValues extends TeaModel {
-        /**
-         * <p>The error code.</p>
-         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
-        /**
-         * <p>The error message.</p>
-         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        /**
-         * <p>The ID of the property.</p>
-         */
         @NameInMap("PropertyId")
         public Long propertyId;
 
-        /**
-         * <p>The value of the property.</p>
-         */
         @NameInMap("PropertyValue")
         public String propertyValue;
 
@@ -103,13 +91,13 @@ public class UpdatePropertyResponseBody extends TeaModel {
 
     public static class UpdatePropertyResponseBodyUpdateResultSavePropertyValueModelSavePropertyValues extends TeaModel {
         /**
-         * <p>The value of the property.</p>
+         * <p>Modifies a user property.</p>
          */
         @NameInMap("PropertyValue")
         public String propertyValue;
 
         /**
-         * <p>The ID of the property value.</p>
+         * <p>The value of the property.</p>
          */
         @NameInMap("PropertyValueId")
         public Long propertyValueId;
@@ -139,13 +127,13 @@ public class UpdatePropertyResponseBody extends TeaModel {
 
     public static class UpdatePropertyResponseBodyUpdateResultSavePropertyValueModel extends TeaModel {
         /**
-         * <p>The property values that failed to be modified.</p>
+         * <p>UpdateProperty</p>
          */
         @NameInMap("FailedPropertyValues")
         public java.util.List<UpdatePropertyResponseBodyUpdateResultSavePropertyValueModelFailedPropertyValues> failedPropertyValues;
 
         /**
-         * <p>The property values that were modified.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("SavePropertyValues")
         public java.util.List<UpdatePropertyResponseBodyUpdateResultSavePropertyValueModelSavePropertyValues> savePropertyValues;
@@ -181,13 +169,13 @@ public class UpdatePropertyResponseBody extends TeaModel {
         public Long propertyId;
 
         /**
-         * <p>The name of the property.</p>
+         * <p>The ID of property value N that you want to modify. You can call the [ListProperty](~~410890~~) operation to query the property value ID.</p>
          */
         @NameInMap("PropertyKey")
         public String propertyKey;
 
         /**
-         * <p>The result of the property value modification.</p>
+         * <p>The property values that were modified.</p>
          */
         @NameInMap("SavePropertyValueModel")
         public UpdatePropertyResponseBodyUpdateResultSavePropertyValueModel savePropertyValueModel;

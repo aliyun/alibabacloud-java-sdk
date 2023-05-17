@@ -4,14 +4,11 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class ListPropertyValueResponseBody extends TeaModel {
-    /**
-     * <p>Details about property values.</p>
-     */
     @NameInMap("PropertyValueInfos")
     public java.util.List<ListPropertyValueResponseBodyPropertyValueInfos> propertyValueInfos;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>ListPropertyValue</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,15 +35,9 @@ public class ListPropertyValueResponseBody extends TeaModel {
     }
 
     public static class ListPropertyValueResponseBodyPropertyValueInfos extends TeaModel {
-        /**
-         * <p>The value of the property.</p>
-         */
         @NameInMap("PropertyValue")
         public String propertyValue;
 
-        /**
-         * <p>The ID of the property value.</p>
-         */
         @NameInMap("PropertyValueId")
         public Long propertyValueId;
 
