@@ -7,9 +7,6 @@ public class DescribeEmptyNumberRequest extends TeaModel {
     @NameInMap("AuthCode")
     public String authCode;
 
-    @NameInMap("ExtendFunction")
-    public String extendFunction;
-
     @NameInMap("InputNumber")
     public String inputNumber;
 
@@ -36,14 +33,6 @@ public class DescribeEmptyNumberRequest extends TeaModel {
     }
     public String getAuthCode() {
         return this.authCode;
-    }
-
-    public DescribeEmptyNumberRequest setExtendFunction(String extendFunction) {
-        this.extendFunction = extendFunction;
-        return this;
-    }
-    public String getExtendFunction() {
-        return this.extendFunction;
     }
 
     public DescribeEmptyNumberRequest setInputNumber(String inputNumber) {
