@@ -4,6 +4,9 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class GetPayerForAccountRequest extends TeaModel {
+    /**
+     * <p>The ID of the account.</p>
+     */
     @NameInMap("AccountId")
     public String accountId;
 

@@ -4,6 +4,9 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class GetServiceLinkedRoleDeletionStatusRequest extends TeaModel {
+    /**
+     * <p>The ID of the deletion task.</p>
+     */
     @NameInMap("DeletionTaskId")
     public String deletionTaskId;
 

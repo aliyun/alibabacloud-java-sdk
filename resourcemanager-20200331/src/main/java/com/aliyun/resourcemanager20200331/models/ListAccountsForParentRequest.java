@@ -4,18 +4,43 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class ListAccountsForParentRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to return the information of tags. Valid values:</p>
+     * <br>
+     * <p>false (default value)</p>
+     * <br>
+     * <p>true</p>
+     */
     @NameInMap("IncludeTags")
     public Boolean includeTags;
 
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Valid values: 1 to 100. Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the folder.</p>
+     */
     @NameInMap("ParentFolderId")
     public String parentFolderId;
 
+    /**
+     * <p>The keyword used for the query, such as the display name of a member.</p>
+     * <br>
+     * <p>Fuzzy match is supported.</p>
+     */
     @NameInMap("QueryKeyword")
     public String queryKeyword;
 
@@ -76,9 +101,15 @@ public class ListAccountsForParentRequest extends TeaModel {
     }
 
     public static class ListAccountsForParentRequestTag extends TeaModel {
+        /**
+         * <p>A tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>A tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 

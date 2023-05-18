@@ -4,9 +4,15 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class UpdateRoleResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information of the RAM role.</p>
+     */
     @NameInMap("Role")
     public UpdateRoleResponseBodyRole role;
 
@@ -32,30 +38,57 @@ public class UpdateRoleResponseBody extends TeaModel {
     }
 
     public static class UpdateRoleResponseBodyRole extends TeaModel {
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role.</p>
+         */
         @NameInMap("Arn")
         public String arn;
 
+        /**
+         * <p>The document of the policy that specifies the trusted entity to assume the RAM role.</p>
+         */
         @NameInMap("AssumeRolePolicyDocument")
         public String assumeRolePolicyDocument;
 
+        /**
+         * <p>The time when the RAM role was created.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The description of the RAM role.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The maximum session duration of the RAM role.</p>
+         */
         @NameInMap("MaxSessionDuration")
         public Long maxSessionDuration;
 
+        /**
+         * <p>The ID of the RAM role.</p>
+         */
         @NameInMap("RoleId")
         public String roleId;
 
+        /**
+         * <p>The name of the RAM role.</p>
+         */
         @NameInMap("RoleName")
         public String roleName;
 
+        /**
+         * <p>The name of the RAM role after authorization.</p>
+         */
         @NameInMap("RolePrincipalName")
         public String rolePrincipalName;
 
+        /**
+         * <p>The time when the RAM role was updated.</p>
+         */
         @NameInMap("UpdateDate")
         public String updateDate;
 

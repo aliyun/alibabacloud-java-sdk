@@ -4,12 +4,31 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceLinkedRoleRequest extends TeaModel {
+    /**
+     * <p>The suffix of the role name.</p>
+     * <br>
+     * <p>The role name (including its suffix) must be 1 to 64 characters in length and can contain letters, digits, periods (.), and hyphens (-).</p>
+     * <br>
+     * <p>For example, if the suffix is `Example`, the role name is `ServiceLinkedRoleName_Example`.</p>
+     */
     @NameInMap("CustomSuffix")
     public String customSuffix;
 
+    /**
+     * <p>The description of the service-linked role.</p>
+     * <br>
+     * <p>You must configure this parameter for service-linked roles that support custom suffixes. Otherwise, the preset value is used and cannot be modified.</p>
+     * <br>
+     * <p>The description must be 1 to 1,024 characters in length.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The name of the service.</p>
+     * <br>
+     * <p>For more information about the service name, see [Alibaba Cloud services that support service-linked roles](~~461722~~).</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 

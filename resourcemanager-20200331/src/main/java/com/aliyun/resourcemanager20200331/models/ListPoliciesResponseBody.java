@@ -4,18 +4,33 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class ListPoliciesResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The information of the policies.</p>
+     */
     @NameInMap("Policies")
     public ListPoliciesResponseBodyPolicies policies;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,24 +80,48 @@ public class ListPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListPoliciesResponseBodyPoliciesPolicy extends TeaModel {
+        /**
+         * <p>The number of times the policy is referenced.</p>
+         */
         @NameInMap("AttachmentCount")
         public Integer attachmentCount;
 
+        /**
+         * <p>The time when the policy was created.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The default version of the policy.</p>
+         */
         @NameInMap("DefaultVersion")
         public String defaultVersion;
 
+        /**
+         * <p>The description of the policy.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the policy.</p>
+         */
         @NameInMap("PolicyName")
         public String policyName;
 
+        /**
+         * <p>The type of the policy. Valid values:</p>
+         * <br>
+         * <p>*   Custom: custom policy</p>
+         * <p>*   System: system policy</p>
+         */
         @NameInMap("PolicyType")
         public String policyType;
 
+        /**
+         * <p>The time when the policy was updated.</p>
+         */
         @NameInMap("UpdateDate")
         public String updateDate;
 

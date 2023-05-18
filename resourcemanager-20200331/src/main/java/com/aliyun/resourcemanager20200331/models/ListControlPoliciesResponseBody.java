@@ -4,18 +4,33 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class ListControlPoliciesResponseBody extends TeaModel {
+    /**
+     * <p>The access control policies.</p>
+     */
     @NameInMap("ControlPolicies")
     public ListControlPoliciesResponseBodyControlPolicies controlPolicies;
 
+    /**
+     * <p>The number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of access control policies.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,27 +80,57 @@ public class ListControlPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListControlPoliciesResponseBodyControlPoliciesControlPolicy extends TeaModel {
+        /**
+         * <p>The number of times that the access control policy is referenced.</p>
+         */
         @NameInMap("AttachmentCount")
         public String attachmentCount;
 
+        /**
+         * <p>The time when the access control policy was created.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The description of the access control policy.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The effective scope of the access control policy. Valid values:</p>
+         * <br>
+         * <p>- All: The access control policy is in effect for Alibaba Cloud accounts, RAM users, and RAM roles.</p>
+         * <p>- RAM: The access control policy is in effect only for RAM users and RAM roles.</p>
+         */
         @NameInMap("EffectScope")
         public String effectScope;
 
+        /**
+         * <p>The ID of the access control policy.</p>
+         */
         @NameInMap("PolicyId")
         public String policyId;
 
+        /**
+         * <p>The name of the access control policy.</p>
+         */
         @NameInMap("PolicyName")
         public String policyName;
 
+        /**
+         * <p>The type of the access control policy. Valid values:</p>
+         * <br>
+         * <p>- System: system access control policy</p>
+         * <p>- Custom: custom access control policy</p>
+         */
         @NameInMap("PolicyType")
         public String policyType;
 
+        /**
+         * <p>The time when the access control policy was updated.</p>
+         */
         @NameInMap("UpdateDate")
         public String updateDate;
 

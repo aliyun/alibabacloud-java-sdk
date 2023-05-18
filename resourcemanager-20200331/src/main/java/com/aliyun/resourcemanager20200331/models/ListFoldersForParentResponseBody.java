@@ -4,18 +4,33 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class ListFoldersForParentResponseBody extends TeaModel {
+    /**
+     * <p>The information of the folders.</p>
+     */
     @NameInMap("Folders")
     public ListFoldersForParentResponseBodyFolders folders;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,12 +80,21 @@ public class ListFoldersForParentResponseBody extends TeaModel {
     }
 
     public static class ListFoldersForParentResponseBodyFoldersFolder extends TeaModel {
+        /**
+         * <p>The time when the folder was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The ID of the folder.</p>
+         */
         @NameInMap("FolderId")
         public String folderId;
 
+        /**
+         * <p>The name of the folder.</p>
+         */
         @NameInMap("FolderName")
         public String folderName;
 

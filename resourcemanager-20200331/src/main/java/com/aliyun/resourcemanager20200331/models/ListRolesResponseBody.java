@@ -4,18 +4,33 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class ListRolesResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information of the RAM roles.</p>
+     */
     @NameInMap("Roles")
     public ListRolesResponseBodyRoles roles;
 
+    /**
+     * <p>The total number of RAM roles.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +80,15 @@ public class ListRolesResponseBody extends TeaModel {
     }
 
     public static class ListRolesResponseBodyRolesRoleLatestDeletionTask extends TeaModel {
+        /**
+         * <p>The time when the deletion task was created.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The ID of the deletion task.</p>
+         */
         @NameInMap("DeletionTaskId")
         public String deletionTaskId;
 
@@ -95,33 +116,63 @@ public class ListRolesResponseBody extends TeaModel {
     }
 
     public static class ListRolesResponseBodyRolesRole extends TeaModel {
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role.</p>
+         */
         @NameInMap("Arn")
         public String arn;
 
+        /**
+         * <p>The time when the RAM role was created.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The description of the RAM role.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Indicates whether the RAM role is a service linked role.</p>
+         */
         @NameInMap("IsServiceLinkedRole")
         public Boolean isServiceLinkedRole;
 
+        /**
+         * <p>The information of the most recent deletion task.</p>
+         */
         @NameInMap("LatestDeletionTask")
         public ListRolesResponseBodyRolesRoleLatestDeletionTask latestDeletionTask;
 
+        /**
+         * <p>The maximum session duration of the RAM role.</p>
+         */
         @NameInMap("MaxSessionDuration")
         public Long maxSessionDuration;
 
+        /**
+         * <p>The ID of the RAM role.</p>
+         */
         @NameInMap("RoleId")
         public String roleId;
 
+        /**
+         * <p>The name of the RAM role.</p>
+         */
         @NameInMap("RoleName")
         public String roleName;
 
+        /**
+         * <p>The name of the RAM role after authorization.</p>
+         */
         @NameInMap("RolePrincipalName")
         public String rolePrincipalName;
 
+        /**
+         * <p>The time when the RAM role was updated.</p>
+         */
         @NameInMap("UpdateDate")
         public String updateDate;
 

@@ -4,6 +4,11 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class DeleteResourceGroupRequest extends TeaModel {
+    /**
+     * <p>The ID of the resource group.</p>
+     * <br>
+     * <p>You can call the [ListResourceGroups](~~158855~~) operation to obtain the ID.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

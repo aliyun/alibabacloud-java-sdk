@@ -4,9 +4,15 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class DeleteServiceLinkedRoleResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the deletion task.</p>
+     */
     @NameInMap("DeletionTaskId")
     public String deletionTaskId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

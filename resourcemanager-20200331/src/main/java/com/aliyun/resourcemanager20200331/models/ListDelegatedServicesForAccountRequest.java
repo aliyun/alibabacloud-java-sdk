@@ -4,6 +4,9 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class ListDelegatedServicesForAccountRequest extends TeaModel {
+    /**
+     * <p>The ID of the member.</p>
+     */
     @NameInMap("AccountId")
     public String accountId;
 

@@ -4,9 +4,15 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class CreatePolicyResponseBody extends TeaModel {
+    /**
+     * <p>The information of the policy.</p>
+     */
     @NameInMap("Policy")
     public CreatePolicyResponseBodyPolicy policy;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +38,36 @@ public class CreatePolicyResponseBody extends TeaModel {
     }
 
     public static class CreatePolicyResponseBodyPolicy extends TeaModel {
+        /**
+         * <p>The time when the policy was created.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The version number of the policy. Default value: v1.</p>
+         */
         @NameInMap("DefaultVersion")
         public String defaultVersion;
 
+        /**
+         * <p>The description of the policy.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the policy.</p>
+         */
         @NameInMap("PolicyName")
         public String policyName;
 
+        /**
+         * <p>The type of the policy. Valid values:</p>
+         * <br>
+         * <p>*   Custom: custom policy</p>
+         * <p>*   System: system policy</p>
+         */
         @NameInMap("PolicyType")
         public String policyType;
 

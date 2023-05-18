@@ -4,15 +4,29 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class InviteAccountToResourceDirectoryRequest extends TeaModel {
+    /**
+     * <p>The comment on the invitation.</p>
+     * <br>
+     * <p>The comment can be up to 1,024 characters in length.</p>
+     */
     @NameInMap("Note")
     public String note;
 
     @NameInMap("Tag")
     public java.util.List<InviteAccountToResourceDirectoryRequestTag> tag;
 
+    /**
+     * <p>The ID or logon email address of the account that you want to invite.</p>
+     */
     @NameInMap("TargetEntity")
     public String targetEntity;
 
+    /**
+     * <p>The type of the account. Valid values:</p>
+     * <br>
+     * <p>*   Account: indicates the ID of the account.</p>
+     * <p>*   Email: indicates the logon email address of the account.</p>
+     */
     @NameInMap("TargetType")
     public String targetType;
 
@@ -54,9 +68,15 @@ public class InviteAccountToResourceDirectoryRequest extends TeaModel {
     }
 
     public static class InviteAccountToResourceDirectoryRequestTag extends TeaModel {
+        /**
+         * <p>A tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>A tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 

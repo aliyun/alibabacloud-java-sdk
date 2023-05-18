@@ -4,18 +4,44 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class DetachPolicyRequest extends TeaModel {
+    /**
+     * <p>The name of the policy.</p>
+     * <br>
+     * <p>The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</p>
+     */
     @NameInMap("PolicyName")
     public String policyName;
 
+    /**
+     * <p>The type of the policy. Valid values:</p>
+     * <br>
+     * <p>*   Custom: custom policy</p>
+     * <p>*   System: system policy</p>
+     */
     @NameInMap("PolicyType")
     public String policyType;
 
+    /**
+     * <p>The name of the object to which the policy is attached.</p>
+     */
     @NameInMap("PrincipalName")
     public String principalName;
 
+    /**
+     * <p>The type of the object to which the policy is attached. Valid values:</p>
+     * <br>
+     * <p>*   IMSUser: RAM user</p>
+     * <p>*   IMSGroup: RAM user group</p>
+     * <p>*   ServiceRole: RAM role</p>
+     */
     @NameInMap("PrincipalType")
     public String principalType;
 
+    /**
+     * <p>The ID of the resource group or the ID of the Alibaba Cloud account to which the resource group belongs.</p>
+     * <br>
+     * <p>This parameter specifies the resource group or Alibaba Cloud account for which you want to revoke permissions.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

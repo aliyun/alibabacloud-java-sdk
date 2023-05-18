@@ -4,9 +4,17 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class MoveResourcesRequest extends TeaModel {
+    /**
+     * <p>The ID of the resource group to which you want to move the resources.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The resources that you want to move.</p>
+     * <br>
+     * <p>>  You can move a maximum of 10 resources at a time. If you want to move more than 10 resources, move them in batches.</p>
+     */
     @NameInMap("Resources")
     public java.util.List<MoveResourcesRequestResources> resources;
 
@@ -32,15 +40,27 @@ public class MoveResourcesRequest extends TeaModel {
     }
 
     public static class MoveResourcesRequestResources extends TeaModel {
+        /**
+         * <p>The region ID of the resource.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The type of the resource.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The ID of the Alibaba Cloud service to which the resource belongs.</p>
+         */
         @NameInMap("Service")
         public String service;
 

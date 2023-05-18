@@ -4,6 +4,9 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class DeclineHandshakeRequest extends TeaModel {
+    /**
+     * <p>The ID of the invitation.</p>
+     */
     @NameInMap("HandshakeId")
     public String handshakeId;
 

@@ -4,6 +4,9 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class ListAncestorsRequest extends TeaModel {
+    /**
+     * <p>The ID of the child folder.</p>
+     */
     @NameInMap("ChildId")
     public String childId;
 

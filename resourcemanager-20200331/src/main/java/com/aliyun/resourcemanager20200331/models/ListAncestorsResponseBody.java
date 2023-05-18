@@ -4,9 +4,15 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class ListAncestorsResponseBody extends TeaModel {
+    /**
+     * <p>The information of the folders.</p>
+     */
     @NameInMap("Folders")
     public ListAncestorsResponseBodyFolders folders;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,21 @@ public class ListAncestorsResponseBody extends TeaModel {
     }
 
     public static class ListAncestorsResponseBodyFoldersFolder extends TeaModel {
+        /**
+         * <p>The time when the folder was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The ID of the folder.</p>
+         */
         @NameInMap("FolderId")
         public String folderId;
 
+        /**
+         * <p>The name of the folder.</p>
+         */
         @NameInMap("FolderName")
         public String folderName;
 

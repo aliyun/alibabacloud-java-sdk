@@ -4,9 +4,15 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class EnableResourceDirectoryResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information of the resource directory.</p>
+     */
     @NameInMap("ResourceDirectory")
     public EnableResourceDirectoryResponseBodyResourceDirectory resourceDirectory;
 
@@ -32,18 +38,33 @@ public class EnableResourceDirectoryResponseBody extends TeaModel {
     }
 
     public static class EnableResourceDirectoryResponseBodyResourceDirectory extends TeaModel {
+        /**
+         * <p>The time when the resource directory was enabled.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The ID of the management account.</p>
+         */
         @NameInMap("MasterAccountId")
         public String masterAccountId;
 
+        /**
+         * <p>The name of the management account.</p>
+         */
         @NameInMap("MasterAccountName")
         public String masterAccountName;
 
+        /**
+         * <p>The ID of the resource directory.</p>
+         */
         @NameInMap("ResourceDirectoryId")
         public String resourceDirectoryId;
 
+        /**
+         * <p>The ID of the Root folder.</p>
+         */
         @NameInMap("RootFolderId")
         public String rootFolderId;
 

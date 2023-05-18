@@ -4,6 +4,9 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class GetAccountDeletionCheckResultRequest extends TeaModel {
+    /**
+     * <p>The ID of the member that you want to delete.</p>
+     */
     @NameInMap("AccountId")
     public String accountId;
 

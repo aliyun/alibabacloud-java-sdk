@@ -7,6 +7,14 @@ public class TagResourcesRequest extends TeaModel {
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    /**
+     * <p>The type of the objects to which you want to add tags. Valid values:</p>
+     * <br>
+     * <p>*   ResourceGroup : resource group. This is the default value.</p>
+     * <p>*   Account: member.</p>
+     * <br>
+     * <p>>  This parameter is required if you add tags to members in a resource directory.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
@@ -43,9 +51,19 @@ public class TagResourcesRequest extends TeaModel {
     }
 
     public static class TagResourcesRequestTag extends TeaModel {
+        /**
+         * <p>A tag key.</p>
+         * <br>
+         * <p>A tag key can be a maximum of 128 characters in length. It cannot contain `http://` or `https://` and cannot start with `acs:` or `aliyun`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>A tag value.</p>
+         * <br>
+         * <p>A tag value can be a maximum of 128 characters in length. It cannot contain `http://` or `https://` and cannot start with `acs:`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

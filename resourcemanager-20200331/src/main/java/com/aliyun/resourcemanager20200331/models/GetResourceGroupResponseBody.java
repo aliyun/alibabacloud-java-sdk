@@ -4,9 +4,15 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class GetResourceGroupResponseBody extends TeaModel {
+    /**
+     * <p>The information of the resource group.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The display name of the resource group.</p>
+     */
     @NameInMap("ResourceGroup")
     public GetResourceGroupResponseBodyResourceGroup resourceGroup;
 
@@ -32,9 +38,15 @@ public class GetResourceGroupResponseBody extends TeaModel {
     }
 
     public static class GetResourceGroupResponseBodyResourceGroupRegionStatusesRegionStatus extends TeaModel {
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the resource group belongs.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The region ID.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -81,6 +93,9 @@ public class GetResourceGroupResponseBody extends TeaModel {
     }
 
     public static class GetResourceGroupResponseBodyResourceGroupTagsTag extends TeaModel {
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
@@ -130,27 +145,60 @@ public class GetResourceGroupResponseBody extends TeaModel {
     }
 
     public static class GetResourceGroupResponseBodyResourceGroup extends TeaModel {
+        /**
+         * <p>The identifier of the resource group.</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The status of the resource group. Valid values:</p>
+         * <br>
+         * <p>*   Creating: The resource group is being created.</p>
+         * <p>*   OK: The resource group is created.</p>
+         * <p>*   PendingDelete: The resource group is waiting to be deleted.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The tags that are added to the resource group.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The time when the resource group was created. The time is displayed in UTC.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The status of the resource group. Valid values:</p>
+         * <br>
+         * <p>*   Creating: The resource group is being created.</p>
+         * <p>*   OK: The resource group is created.</p>
+         * <p>*   PendingDelete: The resource group is waiting to be deleted.</p>
+         * <p>*   Deleting: The resource group is being deleted.</p>
+         */
         @NameInMap("RegionStatuses")
         public GetResourceGroupResponseBodyResourceGroupRegionStatuses regionStatuses;
 
+        /**
+         * <p>The status of the resource group in all regions.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Tags")
         public GetResourceGroupResponseBodyResourceGroupTags tags;
 

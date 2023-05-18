@@ -4,6 +4,9 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class DeleteServiceLinkedRoleRequest extends TeaModel {
+    /**
+     * <p>The name of the role.</p>
+     */
     @NameInMap("RoleName")
     public String roleName;
 

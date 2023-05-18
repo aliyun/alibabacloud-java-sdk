@@ -4,9 +4,15 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceLinkedRoleResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the role.</p>
+     */
     @NameInMap("Role")
     public CreateServiceLinkedRoleResponseBodyRole role;
 
@@ -32,27 +38,54 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
     }
 
     public static class CreateServiceLinkedRoleResponseBodyRole extends TeaModel {
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the role.</p>
+         */
         @NameInMap("Arn")
         public String arn;
 
+        /**
+         * <p>The document of the trust policy for the role.</p>
+         */
         @NameInMap("AssumeRolePolicyDocument")
         public String assumeRolePolicyDocument;
 
+        /**
+         * <p>The time when the role was created. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The description of the role.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Indicates whether the role is a service-linked role. Valid values:</p>
+         * <br>
+         * <p>*   true: The role is a service-linked role.</p>
+         * <p>*   false: The role is not a service-linked role.</p>
+         */
         @NameInMap("IsServiceLinkedRole")
         public Boolean isServiceLinkedRole;
 
+        /**
+         * <p>The ID of the role.</p>
+         */
         @NameInMap("RoleId")
         public String roleId;
 
+        /**
+         * <p>The name of the role.</p>
+         */
         @NameInMap("RoleName")
         public String roleName;
 
+        /**
+         * <p>The role name that uses a domain name as the suffix.</p>
+         */
         @NameInMap("RolePrincipalName")
         public String rolePrincipalName;
 

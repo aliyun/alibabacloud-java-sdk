@@ -4,6 +4,9 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class ResendCreateCloudAccountEmailRequest extends TeaModel {
+    /**
+     * <p>The account record ID.</p>
+     */
     @NameInMap("RecordId")
     public String recordId;
 
