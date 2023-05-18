@@ -61,6 +61,9 @@ public class InitFaceVerifyRequest extends TeaModel {
     @NameInMap("OuterOrderNo")
     public String outerOrderNo;
 
+    @NameInMap("ProcedurePriority")
+    public String procedurePriority;
+
     @NameInMap("ProductCode")
     public String productCode;
 
@@ -69,6 +72,9 @@ public class InitFaceVerifyRequest extends TeaModel {
 
     @NameInMap("SceneId")
     public Long sceneId;
+
+    @NameInMap("SuitableType")
+    public String suitableType;
 
     @NameInMap("UserId")
     public String userId;
@@ -233,6 +239,14 @@ public class InitFaceVerifyRequest extends TeaModel {
         return this.outerOrderNo;
     }
 
+    public InitFaceVerifyRequest setProcedurePriority(String procedurePriority) {
+        this.procedurePriority = procedurePriority;
+        return this;
+    }
+    public String getProcedurePriority() {
+        return this.procedurePriority;
+    }
+
     public InitFaceVerifyRequest setProductCode(String productCode) {
         this.productCode = productCode;
         return this;
@@ -255,6 +269,14 @@ public class InitFaceVerifyRequest extends TeaModel {
     }
     public Long getSceneId() {
         return this.sceneId;
+    }
+
+    public InitFaceVerifyRequest setSuitableType(String suitableType) {
+        this.suitableType = suitableType;
+        return this;
+    }
+    public String getSuitableType() {
+        return this.suitableType;
     }
 
     public InitFaceVerifyRequest setUserId(String userId) {
