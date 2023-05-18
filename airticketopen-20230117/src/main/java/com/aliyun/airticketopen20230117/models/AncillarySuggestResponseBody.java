@@ -86,15 +86,96 @@ public class AncillarySuggestResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class AncillarySuggestResponseBodyDataSegAncillaryMapListAncillaryBaggageAncillary extends TeaModel {
+        /**
+         * <p>行李件数 取值如：3、2、1、0、-2。 -2 表示计重</p>
+         */
+        @NameInMap("baggage_amount")
+        public Integer baggageAmount;
+
+        /**
+         * <p>行李重量，0-50。isAllWeght=true 时，表示所有件数总重量。</p>
+         */
+        @NameInMap("baggage_weight")
+        public Integer baggageWeight;
+
+        /**
+         * <p>行李重量单位</p>
+         */
+        @NameInMap("baggage_weight_unit")
+        public String baggageWeightUnit;
+
+        /**
+         * <p>是否所有行李重量</p>
+         */
+        @NameInMap("is_all_weight")
+        public Boolean isAllWeight;
+
+        /**
+         * <p>总价</p>
+         */
+        @NameInMap("price")
+        public Double price;
+
+        public static AncillarySuggestResponseBodyDataSegAncillaryMapListAncillaryBaggageAncillary build(java.util.Map<String, ?> map) throws Exception {
+            AncillarySuggestResponseBodyDataSegAncillaryMapListAncillaryBaggageAncillary self = new AncillarySuggestResponseBodyDataSegAncillaryMapListAncillaryBaggageAncillary();
+            return TeaModel.build(map, self);
+        }
+
+        public AncillarySuggestResponseBodyDataSegAncillaryMapListAncillaryBaggageAncillary setBaggageAmount(Integer baggageAmount) {
+            this.baggageAmount = baggageAmount;
+            return this;
+        }
+        public Integer getBaggageAmount() {
+            return this.baggageAmount;
+        }
+
+        public AncillarySuggestResponseBodyDataSegAncillaryMapListAncillaryBaggageAncillary setBaggageWeight(Integer baggageWeight) {
+            this.baggageWeight = baggageWeight;
+            return this;
+        }
+        public Integer getBaggageWeight() {
+            return this.baggageWeight;
+        }
+
+        public AncillarySuggestResponseBodyDataSegAncillaryMapListAncillaryBaggageAncillary setBaggageWeightUnit(String baggageWeightUnit) {
+            this.baggageWeightUnit = baggageWeightUnit;
+            return this;
+        }
+        public String getBaggageWeightUnit() {
+            return this.baggageWeightUnit;
+        }
+
+        public AncillarySuggestResponseBodyDataSegAncillaryMapListAncillaryBaggageAncillary setIsAllWeight(Boolean isAllWeight) {
+            this.isAllWeight = isAllWeight;
+            return this;
+        }
+        public Boolean getIsAllWeight() {
+            return this.isAllWeight;
+        }
+
+        public AncillarySuggestResponseBodyDataSegAncillaryMapListAncillaryBaggageAncillary setPrice(Double price) {
+            this.price = price;
+            return this;
+        }
+        public Double getPrice() {
+            return this.price;
+        }
+
+    }
+
     public static class AncillarySuggestResponseBodyDataSegAncillaryMapListAncillary extends TeaModel {
         @NameInMap("ancillary_id")
         public String ancillaryId;
 
-        @NameInMap("ancillary_info")
-        public java.util.Map<String, ?> ancillaryInfo;
-
         @NameInMap("ancillary_type")
         public Integer ancillaryType;
+
+        /**
+         * <p>行李辅营详情</p>
+         */
+        @NameInMap("baggage_ancillary")
+        public AncillarySuggestResponseBodyDataSegAncillaryMapListAncillaryBaggageAncillary baggageAncillary;
 
         public static AncillarySuggestResponseBodyDataSegAncillaryMapListAncillary build(java.util.Map<String, ?> map) throws Exception {
             AncillarySuggestResponseBodyDataSegAncillaryMapListAncillary self = new AncillarySuggestResponseBodyDataSegAncillaryMapListAncillary();
@@ -109,20 +190,20 @@ public class AncillarySuggestResponseBody extends TeaModel {
             return this.ancillaryId;
         }
 
-        public AncillarySuggestResponseBodyDataSegAncillaryMapListAncillary setAncillaryInfo(java.util.Map<String, ?> ancillaryInfo) {
-            this.ancillaryInfo = ancillaryInfo;
-            return this;
-        }
-        public java.util.Map<String, ?> getAncillaryInfo() {
-            return this.ancillaryInfo;
-        }
-
         public AncillarySuggestResponseBodyDataSegAncillaryMapListAncillary setAncillaryType(Integer ancillaryType) {
             this.ancillaryType = ancillaryType;
             return this;
         }
         public Integer getAncillaryType() {
             return this.ancillaryType;
+        }
+
+        public AncillarySuggestResponseBodyDataSegAncillaryMapListAncillary setBaggageAncillary(AncillarySuggestResponseBodyDataSegAncillaryMapListAncillaryBaggageAncillary baggageAncillary) {
+            this.baggageAncillary = baggageAncillary;
+            return this;
+        }
+        public AncillarySuggestResponseBodyDataSegAncillaryMapListAncillaryBaggageAncillary getBaggageAncillary() {
+            return this.baggageAncillary;
         }
 
     }

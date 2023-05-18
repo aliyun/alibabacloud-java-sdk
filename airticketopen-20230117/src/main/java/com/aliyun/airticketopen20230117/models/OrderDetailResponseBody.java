@@ -86,15 +86,78 @@ public class OrderDetailResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class OrderDetailResponseBodyDataAncillaryItemDetailListAncillaryBaggageAncillary extends TeaModel {
+        @NameInMap("baggage_amount")
+        public Integer baggageAmount;
+
+        @NameInMap("baggage_weight")
+        public Integer baggageWeight;
+
+        @NameInMap("baggage_weight_unit")
+        public String baggageWeightUnit;
+
+        @NameInMap("is_all_weight")
+        public Boolean isAllWeight;
+
+        @NameInMap("price")
+        public Double price;
+
+        public static OrderDetailResponseBodyDataAncillaryItemDetailListAncillaryBaggageAncillary build(java.util.Map<String, ?> map) throws Exception {
+            OrderDetailResponseBodyDataAncillaryItemDetailListAncillaryBaggageAncillary self = new OrderDetailResponseBodyDataAncillaryItemDetailListAncillaryBaggageAncillary();
+            return TeaModel.build(map, self);
+        }
+
+        public OrderDetailResponseBodyDataAncillaryItemDetailListAncillaryBaggageAncillary setBaggageAmount(Integer baggageAmount) {
+            this.baggageAmount = baggageAmount;
+            return this;
+        }
+        public Integer getBaggageAmount() {
+            return this.baggageAmount;
+        }
+
+        public OrderDetailResponseBodyDataAncillaryItemDetailListAncillaryBaggageAncillary setBaggageWeight(Integer baggageWeight) {
+            this.baggageWeight = baggageWeight;
+            return this;
+        }
+        public Integer getBaggageWeight() {
+            return this.baggageWeight;
+        }
+
+        public OrderDetailResponseBodyDataAncillaryItemDetailListAncillaryBaggageAncillary setBaggageWeightUnit(String baggageWeightUnit) {
+            this.baggageWeightUnit = baggageWeightUnit;
+            return this;
+        }
+        public String getBaggageWeightUnit() {
+            return this.baggageWeightUnit;
+        }
+
+        public OrderDetailResponseBodyDataAncillaryItemDetailListAncillaryBaggageAncillary setIsAllWeight(Boolean isAllWeight) {
+            this.isAllWeight = isAllWeight;
+            return this;
+        }
+        public Boolean getIsAllWeight() {
+            return this.isAllWeight;
+        }
+
+        public OrderDetailResponseBodyDataAncillaryItemDetailListAncillaryBaggageAncillary setPrice(Double price) {
+            this.price = price;
+            return this;
+        }
+        public Double getPrice() {
+            return this.price;
+        }
+
+    }
+
     public static class OrderDetailResponseBodyDataAncillaryItemDetailListAncillary extends TeaModel {
         @NameInMap("ancillary_id")
         public String ancillaryId;
 
-        @NameInMap("ancillary_info")
-        public java.util.Map<String, ?> ancillaryInfo;
-
         @NameInMap("ancillary_type")
         public Integer ancillaryType;
+
+        @NameInMap("baggage_ancillary")
+        public OrderDetailResponseBodyDataAncillaryItemDetailListAncillaryBaggageAncillary baggageAncillary;
 
         public static OrderDetailResponseBodyDataAncillaryItemDetailListAncillary build(java.util.Map<String, ?> map) throws Exception {
             OrderDetailResponseBodyDataAncillaryItemDetailListAncillary self = new OrderDetailResponseBodyDataAncillaryItemDetailListAncillary();
@@ -109,20 +172,20 @@ public class OrderDetailResponseBody extends TeaModel {
             return this.ancillaryId;
         }
 
-        public OrderDetailResponseBodyDataAncillaryItemDetailListAncillary setAncillaryInfo(java.util.Map<String, ?> ancillaryInfo) {
-            this.ancillaryInfo = ancillaryInfo;
-            return this;
-        }
-        public java.util.Map<String, ?> getAncillaryInfo() {
-            return this.ancillaryInfo;
-        }
-
         public OrderDetailResponseBodyDataAncillaryItemDetailListAncillary setAncillaryType(Integer ancillaryType) {
             this.ancillaryType = ancillaryType;
             return this;
         }
         public Integer getAncillaryType() {
             return this.ancillaryType;
+        }
+
+        public OrderDetailResponseBodyDataAncillaryItemDetailListAncillary setBaggageAncillary(OrderDetailResponseBodyDataAncillaryItemDetailListAncillaryBaggageAncillary baggageAncillary) {
+            this.baggageAncillary = baggageAncillary;
+            return this;
+        }
+        public OrderDetailResponseBodyDataAncillaryItemDetailListAncillaryBaggageAncillary getBaggageAncillary() {
+            return this.baggageAncillary;
         }
 
     }
