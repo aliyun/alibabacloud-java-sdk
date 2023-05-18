@@ -4,9 +4,17 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class UpdateFolderRequest extends TeaModel {
+    /**
+     * <p>The ID of the folder.</p>
+     */
     @NameInMap("FolderId")
     public String folderId;
 
+    /**
+     * <p>The new name of the folder.</p>
+     * <br>
+     * <p>The name must be 1 to 24 characters in length and can contain letters, digits, underscores (\_), periods (.), and hyphens (-).</p>
+     */
     @NameInMap("NewFolderName")
     public String newFolderName;
 

@@ -4,18 +4,33 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class ListTrustedServiceStatusResponseBody extends TeaModel {
+    /**
+     * <p>The trusted services that are enabled.</p>
+     */
     @NameInMap("EnabledServicePrincipals")
     public ListTrustedServiceStatusResponseBodyEnabledServicePrincipals enabledServicePrincipals;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +80,15 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
     }
 
     public static class ListTrustedServiceStatusResponseBodyEnabledServicePrincipalsEnabledServicePrincipal extends TeaModel {
+        /**
+         * <p>The time when the trusted service was enabled.</p>
+         */
         @NameInMap("EnableTime")
         public String enableTime;
 
+        /**
+         * <p>The identification of the trusted service.</p>
+         */
         @NameInMap("ServicePrincipal")
         public String servicePrincipal;
 

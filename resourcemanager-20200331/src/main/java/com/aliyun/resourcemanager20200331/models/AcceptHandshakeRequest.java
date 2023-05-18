@@ -4,6 +4,11 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class AcceptHandshakeRequest extends TeaModel {
+    /**
+     * <p>The ID of the invitation.</p>
+     * <br>
+     * <p>You can call the [ListHandshakesForAccount](~~160006~~) operation to obtain the ID.</p>
+     */
     @NameInMap("HandshakeId")
     public String handshakeId;
 

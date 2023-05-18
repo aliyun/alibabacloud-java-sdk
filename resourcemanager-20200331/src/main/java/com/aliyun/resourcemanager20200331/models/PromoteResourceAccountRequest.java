@@ -4,9 +4,15 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class PromoteResourceAccountRequest extends TeaModel {
+    /**
+     * <p>The ID of the resource account you want to upgrade.</p>
+     */
     @NameInMap("AccountId")
     public String accountId;
 
+    /**
+     * <p>The email address used to log on to the cloud account after the upgrade.</p>
+     */
     @NameInMap("Email")
     public String email;
 

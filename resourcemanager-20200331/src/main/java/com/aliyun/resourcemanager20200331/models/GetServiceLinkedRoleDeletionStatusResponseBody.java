@@ -4,12 +4,27 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
+    /**
+     * <p>The reason why the deletion task failed.</p>
+     */
     @NameInMap("Reason")
     public GetServiceLinkedRoleDeletionStatusResponseBodyReason reason;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The status of the task.</p>
+     * <br>
+     * <p>- SUCCEEDED</p>
+     * <p>- IN_PROGRESS</p>
+     * <p>- FAILED</p>
+     * <p>- NOT_STARTED</p>
+     * <p>- INTERNAL_ERROR</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -62,9 +77,15 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
     }
 
     public static class GetServiceLinkedRoleDeletionStatusResponseBodyReasonRoleUsagesRoleUsage extends TeaModel {
+        /**
+         * <p>The IDs of the regions in which the resources are to be queried.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The returned resources.</p>
+         */
         @NameInMap("Resources")
         public GetServiceLinkedRoleDeletionStatusResponseBodyReasonRoleUsagesRoleUsageResources resources;
 
@@ -111,9 +132,15 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
     }
 
     public static class GetServiceLinkedRoleDeletionStatusResponseBodyReason extends TeaModel {
+        /**
+         * <p>Failure information.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>Use resource information of the service linked role.</p>
+         */
         @NameInMap("RoleUsages")
         public GetServiceLinkedRoleDeletionStatusResponseBodyReasonRoleUsages roleUsages;
 

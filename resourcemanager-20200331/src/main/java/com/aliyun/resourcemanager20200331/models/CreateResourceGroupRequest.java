@@ -4,9 +4,17 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class CreateResourceGroupRequest extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
+    /**
+     * <p>The display name of the resource group.</p>
+     * <br>
+     * <p>The name must be 1 to 50 characters in length.</p>
+     */
     @NameInMap("Name")
     public String name;
 

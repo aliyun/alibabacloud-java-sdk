@@ -4,12 +4,28 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class ListAccountsRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to return the information of tags. Valid values:</p>
+     * <br>
+     * <p>*   false (default value)</p>
+     * <p>*   true</p>
+     */
     @NameInMap("IncludeTags")
     public Boolean includeTags;
 
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Valid values: 1 to 100. Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -54,9 +70,15 @@ public class ListAccountsRequest extends TeaModel {
     }
 
     public static class ListAccountsRequestTag extends TeaModel {
+        /**
+         * <p>A tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>A tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 

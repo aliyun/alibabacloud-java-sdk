@@ -4,9 +4,15 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class MoveAccountRequest extends TeaModel {
+    /**
+     * <p>The ID of the account you want to move.</p>
+     */
     @NameInMap("AccountId")
     public String accountId;
 
+    /**
+     * <p>The ID of the destination folder.</p>
+     */
     @NameInMap("DestinationFolderId")
     public String destinationFolderId;
 

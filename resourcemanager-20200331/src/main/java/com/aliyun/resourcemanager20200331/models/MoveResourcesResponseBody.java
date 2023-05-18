@@ -4,9 +4,15 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class MoveResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned results.</p>
+     */
     @NameInMap("Responses")
     public java.util.List<MoveResourcesResponseBodyResponses> responses;
 
@@ -32,27 +38,58 @@ public class MoveResourcesResponseBody extends TeaModel {
     }
 
     public static class MoveResourcesResponseBodyResponses extends TeaModel {
+        /**
+         * <p>The error code returned.</p>
+         * <br>
+         * <p>>  This parameter is returned if the resource failed to be moved.</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The error message returned.</p>
+         * <br>
+         * <p>>  This parameter is returned if the resource failed to be moved.</p>
+         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
+        /**
+         * <p>The region ID of the resource.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the request.</p>
+         */
         @NameInMap("RequestId")
         public String requestId;
 
+        /**
+         * <p>The ID of the resource.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The type of the resource.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The ID of the Alibaba Cloud service.</p>
+         */
         @NameInMap("Service")
         public String service;
 
+        /**
+         * <p>The status of the move task. Valid values:</p>
+         * <br>
+         * <p>*   SUCCESS</p>
+         * <p>*   FAIL</p>
+         */
         @NameInMap("Status")
         public String status;
 

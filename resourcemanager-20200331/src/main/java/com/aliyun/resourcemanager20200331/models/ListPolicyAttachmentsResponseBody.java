@@ -4,18 +4,33 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class ListPolicyAttachmentsResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The policy attachment records.</p>
+     */
     @NameInMap("PolicyAttachments")
     public ListPolicyAttachmentsResponseBodyPolicyAttachments policyAttachments;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,24 +80,52 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
     }
 
     public static class ListPolicyAttachmentsResponseBodyPolicyAttachmentsPolicyAttachment extends TeaModel {
+        /**
+         * <p>The time when the policy was attached.</p>
+         */
         @NameInMap("AttachDate")
         public String attachDate;
 
+        /**
+         * <p>The description of the policy.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the policy.</p>
+         */
         @NameInMap("PolicyName")
         public String policyName;
 
+        /**
+         * <p>The type of the policy. Valid values:</p>
+         * <br>
+         * <p>*   Custom: custom policy</p>
+         * <p>*   System: system policy</p>
+         */
         @NameInMap("PolicyType")
         public String policyType;
 
+        /**
+         * <p>The name of the object to which the policy is attached.</p>
+         */
         @NameInMap("PrincipalName")
         public String principalName;
 
+        /**
+         * <p>The type of the object to which the policy is attached. Valid values:</p>
+         * <br>
+         * <p>*   IMSUser: RAM user</p>
+         * <p>*   IMSGroup: RAM user group</p>
+         * <p>*   ServiceRole: RAM role</p>
+         */
         @NameInMap("PrincipalType")
         public String principalType;
 
+        /**
+         * <p>The ID of the resource group or the ID of the Alibaba Cloud account to which the resource group belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 

@@ -4,6 +4,11 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class DeletePolicyRequest extends TeaModel {
+    /**
+     * <p>The name of the policy.</p>
+     * <br>
+     * <p>The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</p>
+     */
     @NameInMap("PolicyName")
     public String policyName;
 

@@ -4,6 +4,9 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class GetFolderRequest extends TeaModel {
+    /**
+     * <p>The ID of the folder.</p>
+     */
     @NameInMap("FolderId")
     public String folderId;
 

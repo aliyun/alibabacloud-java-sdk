@@ -4,15 +4,29 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Valid values: 1 to 100. Default value: 10.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is used to start the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    /**
+     * <p>The type of the objects whose tags you want to query. This parameter specifies a filter condition for the query. Valid values:</p>
+     * <br>
+     * <p>*   ResourceGroup: resource group. This is the default value.</p>
+     * <p>*   Account: member.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
@@ -65,9 +79,15 @@ public class ListTagResourcesRequest extends TeaModel {
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {
+        /**
+         * <p>A tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>A tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 

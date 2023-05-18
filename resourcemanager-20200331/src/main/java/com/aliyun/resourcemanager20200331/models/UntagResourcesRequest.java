@@ -4,12 +4,26 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to remove all tags from the specified resource groups or members. Valid values:</p>
+     * <br>
+     * <p>*   false (default value)</p>
+     * <p>*   true</p>
+     */
     @NameInMap("All")
     public Boolean all;
 
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    /**
+     * <p>The type of the objects from which you want to remove tags. Valid values:</p>
+     * <br>
+     * <p>*   ResourceGroup: resource group. This is the default value.</p>
+     * <p>*   Account: member.</p>
+     * <br>
+     * <p>>  This parameter is required if you remove tags from members in a resource directory.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
