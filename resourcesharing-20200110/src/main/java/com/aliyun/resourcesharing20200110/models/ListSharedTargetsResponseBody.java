@@ -4,12 +4,21 @@ package com.aliyun.resourcesharing20200110.models;
 import com.aliyun.tea.*;
 
 public class ListSharedTargetsResponseBody extends TeaModel {
+    /**
+     * <p>The `token` that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information of the principals.</p>
+     */
     @NameInMap("SharedTargets")
     public java.util.List<ListSharedTargetsResponseBodySharedTargets> sharedTargets;
 
@@ -43,18 +52,39 @@ public class ListSharedTargetsResponseBody extends TeaModel {
     }
 
     public static class ListSharedTargetsResponseBodySharedTargets extends TeaModel {
+        /**
+         * <p>The time when the principal was associated with the resource share.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>Indicates whether the principal is outside the resource directory. Valid values:</p>
+         * <br>
+         * <p>*   true: The principal is outside the resource directory.</p>
+         * <p>*   false: The principal is in the resource directory.</p>
+         */
         @NameInMap("External")
         public Boolean external;
 
+        /**
+         * <p>The ID of the resource share.</p>
+         */
         @NameInMap("ResourceShareId")
         public String resourceShareId;
 
+        /**
+         * <p>The ID of the principal or resource owner.</p>
+         * <br>
+         * <p>*   If the value of `ResourceOwner` is `Self`, the value of this parameter is the ID of a principal.</p>
+         * <p>*   If the value of `ResourceOwner` is `OtherAccounts`, the value of this parameter is the ID of a resource owner.</p>
+         */
         @NameInMap("TargetId")
         public String targetId;
 
+        /**
+         * <p>The time when the association of the principal was updated.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

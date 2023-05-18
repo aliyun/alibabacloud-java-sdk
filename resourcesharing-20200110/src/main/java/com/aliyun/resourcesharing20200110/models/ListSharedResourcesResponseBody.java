@@ -4,12 +4,21 @@ package com.aliyun.resourcesharing20200110.models;
 import com.aliyun.tea.*;
 
 public class ListSharedResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The token that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information of the shared resources.</p>
+     */
     @NameInMap("SharedResources")
     public java.util.List<ListSharedResourcesResponseBodySharedResources> sharedResources;
 
@@ -43,24 +52,54 @@ public class ListSharedResourcesResponseBody extends TeaModel {
     }
 
     public static class ListSharedResourcesResponseBodySharedResources extends TeaModel {
+        /**
+         * <p>The time when the shared resource was associated with the resource share.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The ID of the shared resource.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The ID of the resource share.</p>
+         */
         @NameInMap("ResourceShareId")
         public String resourceShareId;
 
+        /**
+         * <p>The status of the shared resource. This parameter is returned only when you query the resources that other accounts share with you.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   Available: The resource is available.</p>
+         * <p>*   ZonalResourceInaccessible: The resource is unavailable in the current zone.</p>
+         * <p>*   LimitExceeded: The resource is unavailable because the maximum number of resources that other accounts can share with you exceeds the upper limit.</p>
+         * <p>*   Unavailable: The resource is unavailable.</p>
+         */
         @NameInMap("ResourceStatus")
         public String resourceStatus;
 
+        /**
+         * <p>The cause of the association failure.</p>
+         */
         @NameInMap("ResourceStatusMessage")
         public String resourceStatusMessage;
 
+        /**
+         * <p>The type of the shared resource.</p>
+         * <br>
+         * <p>For more information about the types of resources that can be shared, see [Services that work with Resource Sharing](~~450526~~).</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The time when the association of the shared resource was updated.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

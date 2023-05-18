@@ -4,6 +4,9 @@ package com.aliyun.resourcesharing20200110.models;
 import com.aliyun.tea.*;
 
 public class AcceptResourceShareInvitationRequest extends TeaModel {
+    /**
+     * <p>The ID of the invitation.</p>
+     */
     @NameInMap("ResourceShareInvitationId")
     public String resourceShareInvitationId;
 

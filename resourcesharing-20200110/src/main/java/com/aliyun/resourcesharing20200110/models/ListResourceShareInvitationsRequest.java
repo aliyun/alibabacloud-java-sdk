@@ -4,9 +4,15 @@ package com.aliyun.resourcesharing20200110.models;
 import com.aliyun.tea.*;
 
 public class ListResourceShareInvitationsRequest extends TeaModel {
+    /**
+     * <p>The IDs of the resource sharing invitations.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The `token` that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 

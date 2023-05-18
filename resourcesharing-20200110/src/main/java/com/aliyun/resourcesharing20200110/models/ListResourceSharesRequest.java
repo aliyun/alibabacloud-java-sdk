@@ -4,24 +4,51 @@ package com.aliyun.resourcesharing20200110.models;
 import com.aliyun.tea.*;
 
 public class ListResourceSharesRequest extends TeaModel {
+    /**
+     * <p>The ID of a resource share.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The name of the permission. For more information, see [Permission library](~~465474~~).</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("PermissionName")
     public String permissionName;
 
+    /**
+     * <p>The status of the resource share. Valid values:</p>
+     * <br>
+     * <p>*   Active: The resource share is enabled.</p>
+     * <p>*   Pending: The resource share is associated with one or more resource sharing invitations that are waiting for confirmation.</p>
+     * <p>*   Deleting: The resource share is being deleted.</p>
+     * <p>*   Deleted: The resource share is deleted.</p>
+     * <br>
+     * <p>>  The system deletes the records of resource shares in the Deleted state within 48 hours to 96 hours after you delete the resource shares.</p>
+     */
     @NameInMap("ResourceOwner")
     public String resourceOwner;
 
     @NameInMap("ResourceShareIds")
     public java.util.List<String> resourceShareIds;
 
+    /**
+     * <p>The maximum number of entries to return for a single request.</p>
+     * <br>
+     * <p>Valid values: 1 to 100. Default value: 20.</p>
+     */
     @NameInMap("ResourceShareName")
     public String resourceShareName;
 
+    /**
+     * <p>The `token` that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</p>
+     */
     @NameInMap("ResourceShareStatus")
     public String resourceShareStatus;
 

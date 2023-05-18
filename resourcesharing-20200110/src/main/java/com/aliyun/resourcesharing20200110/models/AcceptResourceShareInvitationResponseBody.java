@@ -4,9 +4,15 @@ package com.aliyun.resourcesharing20200110.models;
 import com.aliyun.tea.*;
 
 public class AcceptResourceShareInvitationResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the resource share.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The name of the resource share.</p>
+     */
     @NameInMap("ResourceShareInvitation")
     public AcceptResourceShareInvitationResponseBodyResourceShareInvitation resourceShareInvitation;
 
@@ -38,15 +44,33 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
         @NameInMap("ReceiverAccountId")
         public String receiverAccountId;
 
+        /**
+         * <p>The Alibaba Cloud account ID of the invitee.</p>
+         */
         @NameInMap("ResourceShareId")
         public String resourceShareId;
 
+        /**
+         * <p>The Alibaba Cloud account ID of the inviter.</p>
+         */
         @NameInMap("ResourceShareInvitationId")
         public String resourceShareInvitationId;
 
+        /**
+         * <p>The time when the invitation was created. The time is displayed in UTC.</p>
+         */
         @NameInMap("ResourceShareName")
         public String resourceShareName;
 
+        /**
+         * <p>The status of the invitation. Valid values:</p>
+         * <br>
+         * <p>*   Pending: The invitation is waiting for confirmation.</p>
+         * <p>*   Accepted: The invitation is accepted.</p>
+         * <p>*   Cancelled: The invitation is canceled.</p>
+         * <p>*   Rejected: The invitation is rejected.</p>
+         * <p>*   Expired: The invitation has expired.</p>
+         */
         @NameInMap("SenderAccountId")
         public String senderAccountId;
 

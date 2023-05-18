@@ -4,6 +4,12 @@ package com.aliyun.resourcesharing20200110.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
+    /**
+     * <p>The supported natural language. Valid values:</p>
+     * <br>
+     * <p>*   zh-CN: Chinese</p>
+     * <p>*   en-US: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 

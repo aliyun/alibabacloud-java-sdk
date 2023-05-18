@@ -4,9 +4,21 @@ package com.aliyun.resourcesharing20200110.models;
 import com.aliyun.tea.*;
 
 public class DisassociateResourceShareResponseBody extends TeaModel {
+    /**
+     * <p>The time when the disassociation of the entity was updated. The value of this parameter depends on the value of the AssociationType parameter:</p>
+     * <br>
+     * <p>*   If the value of `AssociationType` is `Resource`, the value of this parameter is the time when the disassociation of the resource was updated.</p>
+     * <p>*   If the value of `AssociationType` is `Target`, the value of this parameter is the time when the disassociation of the principal was updated.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the entity. The value of this parameter depends on the value of the AssociationType parameter:</p>
+     * <br>
+     * <p>*   If the value of `AssociationType` is `Resource`, the value of this parameter is the ID of the resource.</p>
+     * <p>*   If the value of `AssociationType` is `Target`, the value of this parameter is the ID of the resource directory, folder, or member.</p>
+     */
     @NameInMap("ResourceShareAssociations")
     public java.util.List<DisassociateResourceShareResponseBodyResourceShareAssociations> resourceShareAssociations;
 
@@ -35,27 +47,65 @@ public class DisassociateResourceShareResponseBody extends TeaModel {
         @NameInMap("AssociationStatus")
         public String associationStatus;
 
+        /**
+         * <p>The association status. Valid values:</p>
+         * <br>
+         * <p>*   Associating: The entity is being associated.</p>
+         * <p>*   Associated: The entity is associated.</p>
+         * <p>*   Failed: The entity fails to be associated.</p>
+         * <p>*   Disassociating: The entity is being disassociated.</p>
+         * <p>*   Disassociated: The entity is disassociated.</p>
+         * <br>
+         * <p>>  The system deletes the records of entities in the `Failed` or `Disassociated` state within 48 hours to 96 hours.</p>
+         */
         @NameInMap("AssociationStatusMessage")
         public String associationStatusMessage;
 
         @NameInMap("AssociationType")
         public String associationType;
 
+        /**
+         * <p>The ID of the resource share.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The time when the disassociation of the entity was performed. The value of this parameter depends on the value of the AssociationType parameter:</p>
+         * <br>
+         * <p>*   If the value of `AssociationType` is `Resource`, the value of this parameter is the time when the resource was disassociated from the resource share.</p>
+         * <p>*   If the value of `AssociationType` is `Target`, the value of this parameter is the time when the principal was disassociated from the resource share.</p>
+         */
         @NameInMap("EntityId")
         public String entityId;
 
+        /**
+         * <p>The cause of the disassociation failure.</p>
+         */
         @NameInMap("EntityType")
         public String entityType;
 
+        /**
+         * <p>The association type. Valid values:</p>
+         * <br>
+         * <p>*   Resource</p>
+         * <p>*   Target</p>
+         */
         @NameInMap("ResourceShareId")
         public String resourceShareId;
 
+        /**
+         * <p>The type of the entity. The value of this parameter depends on the value of the AssociationType parameter:</p>
+         * <br>
+         * <p>*   If the value of AssociationType is Resource, the value of this parameter is the type of the resource. For more information about the types of resources that can be shared, see [Services that work with Resource Sharing](~~450526~~).</p>
+         * <p>*   If the value of AssociationType is Target, the value of this parameter is Account.</p>
+         */
         @NameInMap("ResourceShareName")
         public String resourceShareName;
 
+        /**
+         * <p>The name of the resource share.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
