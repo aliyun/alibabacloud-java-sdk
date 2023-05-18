@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetResourceTypeRequest extends TeaModel {
     /**
-     * <p>The attributes of the resource.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

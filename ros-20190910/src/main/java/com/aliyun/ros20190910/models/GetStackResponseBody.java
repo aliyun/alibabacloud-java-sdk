@@ -68,6 +68,9 @@ public class GetStackResponseBody extends TeaModel {
     @NameInMap("OperationInfo")
     public GetStackResponseBodyOperationInfo operationInfo;
 
+    @NameInMap("OrderIds")
+    public java.util.List<String> orderIds;
+
     /**
      * <p>The output parameters of the stack.</p>
      * <br>
@@ -350,6 +353,14 @@ public class GetStackResponseBody extends TeaModel {
     }
     public GetStackResponseBodyOperationInfo getOperationInfo() {
         return this.operationInfo;
+    }
+
+    public GetStackResponseBody setOrderIds(java.util.List<String> orderIds) {
+        this.orderIds = orderIds;
+        return this;
+    }
+    public java.util.List<String> getOrderIds() {
+        return this.orderIds;
     }
 
     public GetStackResponseBody setOutputs(java.util.List<java.util.Map<String, ?>> outputs) {

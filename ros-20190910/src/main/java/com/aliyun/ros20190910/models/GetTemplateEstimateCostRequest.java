@@ -35,6 +35,9 @@ public class GetTemplateEstimateCostRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("StackId")
+    public String stackId;
+
     /**
      * <p>The version of the template. This parameter takes effect only when the TemplateId parameter is specified.</p>
      */
@@ -109,6 +112,14 @@ public class GetTemplateEstimateCostRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public GetTemplateEstimateCostRequest setStackId(String stackId) {
+        this.stackId = stackId;
+        return this;
+    }
+    public String getStackId() {
+        return this.stackId;
     }
 
     public GetTemplateEstimateCostRequest setTemplateBody(String templateBody) {

@@ -11,7 +11,7 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The actual value of the resource property.</p>
+     * <p>The property differences of the resource.</p>
      */
     @NameInMap("ResourceDrifts")
     public java.util.List<ListStackResourceDriftsResponseBodyResourceDrifts> resourceDrifts;
@@ -88,11 +88,14 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
         @NameInMap("DifferenceType")
         public String differenceType;
 
+        /**
+         * <p>ListStackResourceDrifts</p>
+         */
         @NameInMap("ExpectedValue")
         public String expectedValue;
 
         /**
-         * <p>ListStackResourceDrifts</p>
+         * <p>__null__</p>
          */
         @NameInMap("PropertyPath")
         public String propertyPath;
@@ -141,23 +144,19 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
         public String actualProperties;
 
         /**
-         * <p>The actual resource properties in JSON format.</p>
+         * <p>The expected value of the resource property as defined in the template.</p>
          */
         @NameInMap("DriftDetectionTime")
         public String driftDetectionTime;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The query token value returned in this call.</p>
          */
         @NameInMap("ExpectedProperties")
         public String expectedProperties;
 
         /**
-         * <p>The drift type of the resource property. Valid values:</p>
-         * <br>
-         * <p>*   ADD: The value has been added to a resource property whose data type was Array or List.</p>
-         * <p>*   REMOVE: The property has been deleted from the current resource configuration.</p>
-         * <p>*   NOT_EQUAL: The current property value differs from the expected value defined in the stack template.</p>
+         * <p>The actual value of the resource property.</p>
          */
         @NameInMap("LogicalResourceId")
         public String logicalResourceId;
@@ -166,31 +165,35 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
         public ListStackResourceDriftsResponseBodyResourceDriftsModuleInfo moduleInfo;
 
         /**
-         * <p>The expected value of the resource property as defined in the template.</p>
+         * <p>The path of the resource property.</p>
          */
         @NameInMap("PhysicalResourceId")
         public String physicalResourceId;
 
         /**
-         * <p>__null__</p>
+         * <p>http://ros.aliyun-inc.com:8080/V2/ListStackResourceDrifts</p>
          */
         @NameInMap("PropertyDifferences")
         public java.util.List<ListStackResourceDriftsResponseBodyResourceDriftsPropertyDifferences> propertyDifferences;
 
         /**
-         * <p>http://ros.aliyun-inc.com:8080/V2/ListStackResourceDrifts</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("ResourceDriftStatus")
         public String resourceDriftStatus;
 
         /**
-         * <p>The query token value returned in this call.</p>
+         * <p>The actual resource properties in JSON format.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
-         * <p>The path of the resource property.</p>
+         * <p>The drift type of the resource property. Valid values:</p>
+         * <br>
+         * <p>*   ADD: The value has been added to a resource property whose data type was Array or List.</p>
+         * <p>*   REMOVE: The property has been deleted from the current resource configuration.</p>
+         * <p>*   NOT_EQUAL: The current property value differs from the expected value defined in the stack template.</p>
          */
         @NameInMap("StackId")
         public String stackId;

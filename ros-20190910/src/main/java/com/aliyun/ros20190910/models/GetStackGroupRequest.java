@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetStackGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the stack group.</p>
+     * <p>The name of the stack group. The name must be unique within a region.</p>
+     * <br>
+     * <p>The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). It must start with a digit or letter.</p>
      * <br>
      * <p>>  You must specify one of the StackGroupName and StackGroupId parameters.</p>
      */
@@ -13,13 +15,15 @@ public class GetStackGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The details of the stack group.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("StackGroupId")
     public String stackGroupId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the stack group.</p>
+     * <br>
+     * <p>>  You must specify one of the StackGroupName and StackGroupId parameters.</p>
      */
     @NameInMap("StackGroupName")
     public String stackGroupName;

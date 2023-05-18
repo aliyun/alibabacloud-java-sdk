@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListStackResourcesResponseBody extends TeaModel {
     /**
+     * <p>Details about resources.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
      * <p>The status of the resource. Valid values:</p>
      * <br>
      * <p>*   INIT_COMPLETE: The resource is in the pending creation state.</p>
@@ -23,12 +29,6 @@ public class ListStackResourcesResponseBody extends TeaModel {
      * <p>*   IMPORT_IN_PROGRESS: The resource is being imported.</p>
      * <p>*   IMPORT_FAILED: The resource fails to be imported.</p>
      * <p>*   IMPORT_COMPLETE: The resource is imported.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
-
-    /**
-     * <p>The logical ID of the resource. The logical ID is the resource name that is defined in the template.</p>
      */
     @NameInMap("Resources")
     public java.util.List<ListStackResourcesResponseBodyResources> resources;
@@ -85,8 +85,40 @@ public class ListStackResourcesResponseBody extends TeaModel {
     }
 
     public static class ListStackResourcesResponseBodyResources extends TeaModel {
+        /**
+         * <p>The name of the stack.</p>
+         * <br>
+         * <p>The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). The name must start with a digit or letter.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
+
+        /**
+         * <p>The type of the resource.</p>
+         */
+        @NameInMap("DriftDetectionTime")
+        public String driftDetectionTime;
+
+        /**
+         * <p>The time when the resource was updated. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         */
+        @NameInMap("LogicalResourceId")
+        public String logicalResourceId;
+
+        @NameInMap("ModuleInfo")
+        public ListStackResourcesResponseBodyResourcesModuleInfo moduleInfo;
+
+        /**
+         * <p>The most recent point in time when a successful drift detection operation was performed.</p>
+         */
+        @NameInMap("PhysicalResourceId")
+        public String physicalResourceId;
+
+        /**
+         * <p>The reason why the resource is in a specific state.</p>
+         */
+        @NameInMap("ResourceDriftStatus")
+        public String resourceDriftStatus;
 
         /**
          * <p>The drift status of the resource in the most recent successful drift detection. Valid values:</p>
@@ -96,38 +128,11 @@ public class ListStackResourcesResponseBody extends TeaModel {
          * <p>*   NOT_CHECKED: ROS did not check whether the actual configuration of the resource differs from its expected template configuration.</p>
          * <p>*   IN_SYNC: The actual configuration of the resource matches its expected template configuration.</p>
          */
-        @NameInMap("DriftDetectionTime")
-        public String driftDetectionTime;
-
-        /**
-         * <p>The ID of the stack.</p>
-         */
-        @NameInMap("LogicalResourceId")
-        public String logicalResourceId;
-
-        @NameInMap("ModuleInfo")
-        public ListStackResourcesResponseBodyResourcesModuleInfo moduleInfo;
-
-        /**
-         * <p>The type of the resource.</p>
-         */
-        @NameInMap("PhysicalResourceId")
-        public String physicalResourceId;
-
-        /**
-         * <p>The time when the resource was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
-         */
-        @NameInMap("ResourceDriftStatus")
-        public String resourceDriftStatus;
-
-        /**
-         * <p>The reason why the resource is in a specific state.</p>
-         */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
-         * <p>The most recent point in time when a successful drift detection operation was performed.</p>
+         * <p>The physical ID of the resource.</p>
          */
         @NameInMap("StackId")
         public String stackId;
@@ -136,21 +141,19 @@ public class ListStackResourcesResponseBody extends TeaModel {
         public String stackName;
 
         /**
-         * <p>The time when the resource was updated. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * <p>The logical ID of the resource. The logical ID is the resource name that is defined in the template.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The name of the stack.</p>
-         * <br>
-         * <p>The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). The name must start with a digit or letter.</p>
+         * <p>The time when the resource was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
          */
         @NameInMap("StatusReason")
         public String statusReason;
 
         /**
-         * <p>The physical ID of the resource.</p>
+         * <p>The ID of the stack.</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
