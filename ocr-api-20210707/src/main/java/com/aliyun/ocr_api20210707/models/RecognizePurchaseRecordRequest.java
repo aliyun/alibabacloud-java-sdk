@@ -4,6 +4,9 @@ package com.aliyun.ocr_api20210707.models;
 import com.aliyun.tea.*;
 
 public class RecognizePurchaseRecordRequest extends TeaModel {
+    @NameInMap("OutputMultiOrders")
+    public Boolean outputMultiOrders;
+
     @NameInMap("Url")
     public String url;
 
@@ -13,6 +16,14 @@ public class RecognizePurchaseRecordRequest extends TeaModel {
     public static RecognizePurchaseRecordRequest build(java.util.Map<String, ?> map) throws Exception {
         RecognizePurchaseRecordRequest self = new RecognizePurchaseRecordRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RecognizePurchaseRecordRequest setOutputMultiOrders(Boolean outputMultiOrders) {
+        this.outputMultiOrders = outputMultiOrders;
+        return this;
+    }
+    public Boolean getOutputMultiOrders() {
+        return this.outputMultiOrders;
     }
 
     public RecognizePurchaseRecordRequest setUrl(String url) {
