@@ -5,36 +5,31 @@ import com.aliyun.tea.*;
 
 public class ListStackResourceDriftsRequest extends TeaModel {
     /**
-     * <p>The type of the resource.</p>
+     * <p>The time when the resource drift detection operation was initiated.</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
 
     /**
-     * <p>The resource properties as defined in the template, in JSON format.</p>
+     * <p>The type of the resource.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The time when the resource drift detection operation was initiated.</p>
+     * <p>The physical ID of the resource.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The drift status of the resource. Valid values:</p>
-     * <br>
-     * <p>*   DELETED: The actual configuration of the resource differs from its expected template configuration because the resource had been deleted.</p>
-     * <p>*   MODIFIED: The actual configuration of the resource differs from its expected template configuration.</p>
-     * <p>*   NOT_CHECKED: ROS has not checked whether the actual configuration of the resource differs from its expected template configuration.</p>
-     * <p>*   IN_SYNC: The actual configuration of the resource matches its expected template configuration.</p>
+     * <p>The resource properties as defined in the template, in JSON format.</p>
      */
     @NameInMap("ResourceDriftStatus")
     public java.util.List<String> resourceDriftStatus;
 
     /**
-     * <p>The physical ID of the resource.</p>
+     * <p>The ID of the stack.</p>
      */
     @NameInMap("StackId")
     public String stackId;

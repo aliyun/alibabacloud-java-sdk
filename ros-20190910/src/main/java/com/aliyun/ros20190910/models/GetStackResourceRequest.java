@@ -5,10 +5,27 @@ import com.aliyun.tea.*;
 
 public class GetStackResourceRequest extends TeaModel {
     /**
-     * <p>The logical ID of the resource defined in the template.</p>
+     * <p>Specifies whether to query the resource properties. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
+
+    /**
+     * <p>The name of resource property N that you want to query.</p>
+     * <br>
+     * <p>>  Maximum value of N: 20.</p>
+     */
+    @NameInMap("LogicalResourceId")
+    public String logicalResourceId;
+
+    /**
+     * <p>The logical ID of the resource defined in the template.</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
 
     /**
      * <p>The status of the resource. Valid values:</p>
@@ -28,34 +45,17 @@ public class GetStackResourceRequest extends TeaModel {
      * <p>*   IMPORT_FAILED</p>
      * <p>*   IMPORT_COMPLETE</p>
      */
-    @NameInMap("LogicalResourceId")
-    public String logicalResourceId;
-
-    /**
-     * <p>The name of resource property N that you want to query.</p>
-     */
-    @NameInMap("RegionId")
-    public String regionId;
-
-    /**
-     * <p>The description of the resource.</p>
-     */
     @NameInMap("ResourceAttributes")
     public java.util.List<String> resourceAttributes;
 
     /**
      * <p>The name of resource property N that you want to query.</p>
-     * <br>
-     * <p>>  Maximum value of N: 20.</p>
      */
     @NameInMap("ShowResourceAttributes")
     public Boolean showResourceAttributes;
 
     /**
-     * <p>Specifies whether to query the resource properties. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <p>The ID of the region to which the stack belongs. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
      */
     @NameInMap("StackId")
     public String stackId;

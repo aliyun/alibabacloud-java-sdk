@@ -5,28 +5,33 @@ import com.aliyun.tea.*;
 
 public class GetStackResourceResponseBody extends TeaModel {
     /**
-     * <p>The list of the resource properties.</p>
+     * <p>The resource type.</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
-     * <p>The physical ID of the resource.</p>
+     * <p>The reason why the resource is in its current state.</p>
      */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The ID of the stack.</p>
+     */
     @NameInMap("DriftDetectionTime")
     public String driftDetectionTime;
 
     /**
-     * <p>The time when the last successful drift detection was performed on the stack.</p>
+     * <p>The time when the resource was updated.</p>
+     * <br>
+     * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
      */
     @NameInMap("LogicalResourceId")
     public String logicalResourceId;
 
     /**
-     * <p>The logical ID of the resource defined in the template.</p>
+     * <p>The list of the resource properties.</p>
      */
     @NameInMap("Metadata")
     public java.util.Map<String, ?> metadata;
@@ -35,34 +40,16 @@ public class GetStackResourceResponseBody extends TeaModel {
     public GetStackResourceResponseBodyModuleInfo moduleInfo;
 
     /**
-     * <p>The resource type.</p>
+     * <p>The metadata.</p>
      */
     @NameInMap("PhysicalResourceId")
     public String physicalResourceId;
 
     /**
-     * <p>The time when the resource was created.</p>
-     * <br>
-     * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+     * <p>The physical ID of the resource.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
-
-    /**
-     * <p>The time when the resource was updated.</p>
-     * <br>
-     * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
-     */
-    @NameInMap("ResourceAttributes")
-    public java.util.List<java.util.Map<String, ?>> resourceAttributes;
-
-    /**
-     * <p>The name of the stack.</p>
-     * <br>
-     * <p>The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). The name must start with a digit or letter.</p>
-     */
-    @NameInMap("ResourceDriftStatus")
-    public String resourceDriftStatus;
 
     /**
      * <p>The status of the resource in the last successful drift detection. Valid values:</p>
@@ -71,6 +58,18 @@ public class GetStackResourceResponseBody extends TeaModel {
      * <p>*   MODIFIED: The actual configuration of the resource differs from its expected template configuration.</p>
      * <p>*   NOT_CHECKED: ROS has not checked whether the actual configuration of the resource differs from its expected template configuration.</p>
      * <p>*   IN_SYNC: The actual configuration of the resource matches its expected template configuration.</p>
+     */
+    @NameInMap("ResourceAttributes")
+    public java.util.List<java.util.Map<String, ?>> resourceAttributes;
+
+    /**
+     * <p>The time when the last successful drift detection was performed on the stack.</p>
+     */
+    @NameInMap("ResourceDriftStatus")
+    public String resourceDriftStatus;
+
+    /**
+     * <p>The logical ID of the resource defined in the template.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -82,19 +81,23 @@ public class GetStackResourceResponseBody extends TeaModel {
     public String stackName;
 
     /**
-     * <p>The reason why the resource is in its current state.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>The metadata.</p>
+     * <p>The time when the resource was created.</p>
+     * <br>
+     * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
      */
     @NameInMap("StatusReason")
     public String statusReason;
 
     /**
-     * <p>The ID of the stack.</p>
+     * <p>The name of the stack.</p>
+     * <br>
+     * <p>The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). The name must start with a digit or letter.</p>
      */
     @NameInMap("UpdateTime")
     public String updateTime;
