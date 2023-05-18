@@ -4,12 +4,21 @@ package com.aliyun.resourcesharing20200110.models;
 import com.aliyun.tea.*;
 
 public class ListPermissionVersionsRequest extends TeaModel {
+    /**
+     * <p>The information about the permission.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The name of the permission.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("PermissionName")
     public String permissionName;
 

@@ -4,12 +4,24 @@ package com.aliyun.resourcesharing20200110.models;
 import com.aliyun.tea.*;
 
 public class ListPermissionVersionsResponseBody extends TeaModel {
+    /**
+     * <p>The version of the permission.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The creation time.</p>
+     */
     @NameInMap("Permissions")
     public java.util.List<ListPermissionVersionsResponseBodyPermissions> permissions;
 
+    /**
+     * <p>Indicates whether the version is the default version. Valid values:</p>
+     * <br>
+     * <p>*   false: The version is not the default version.</p>
+     * <p>*   true: The version is the default version.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -49,12 +61,26 @@ public class ListPermissionVersionsResponseBody extends TeaModel {
         @NameInMap("DefaultPermission")
         public Boolean defaultPermission;
 
+        /**
+         * <p>Indicates whether the permission is the default permission. Valid values:</p>
+         * <br>
+         * <p>*   false: The permission is not the default permission.</p>
+         * <p>*   true: The permission is the default permission.</p>
+         */
         @NameInMap("DefaultVersion")
         public Boolean defaultVersion;
 
+        /**
+         * <p>The update time.</p>
+         */
         @NameInMap("PermissionName")
         public String permissionName;
 
+        /**
+         * <p>The type of the shared resources.</p>
+         * <br>
+         * <p>For more information about the types of resources that can be shared, see [Services that work with Resource Sharing](~~450526~~).</p>
+         */
         @NameInMap("PermissionVersion")
         public String permissionVersion;
 

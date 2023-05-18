@@ -4,24 +4,49 @@ package com.aliyun.resourcesharing20200110.models;
 import com.aliyun.tea.*;
 
 public class ListSharedResourcesRequest extends TeaModel {
+    /**
+     * <p>The maximum number of entries to return for a single request.</p>
+     * <br>
+     * <p>Valid values: 1 to 100. Default value: 20.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The `token` that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;
 
+    /**
+     * <p>The owner of the resource shares. Valid values:</p>
+     * <br>
+     * <p>*   Self: your account. If you set the value to Self, the resources you share with other accounts are queried.</p>
+     * <p>*   OtherAccounts: another account. If you set the value to OtherAccounts, the resources other accounts share with you are queried.</p>
+     */
     @NameInMap("ResourceOwner")
     public String resourceOwner;
 
     @NameInMap("ResourceShareIds")
     public java.util.List<String> resourceShareIds;
 
+    /**
+     * <p>The type of the shared resources.</p>
+     * <br>
+     * <p>For more information about the types of resources that can be shared, see [Services that work with Resource Sharing](~~450526~~).</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The ID of the principal or resource owner.</p>
+     * <br>
+     * <p>*   If the value of `ResourceOwner` is `Self`, set this parameter to the ID of a principal.</p>
+     * <p>*   If the value of `ResourceOwner` is `OtherAccounts`, set this parameter to the ID of a resource owner.</p>
+     */
     @NameInMap("Target")
     public String target;
 

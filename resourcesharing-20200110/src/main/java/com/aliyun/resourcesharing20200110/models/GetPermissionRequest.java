@@ -4,9 +4,15 @@ package com.aliyun.resourcesharing20200110.models;
 import com.aliyun.tea.*;
 
 public class GetPermissionRequest extends TeaModel {
+    /**
+     * <p>The name of the permission.</p>
+     */
     @NameInMap("PermissionName")
     public String permissionName;
 
+    /**
+     * <p>The version of the permission.</p>
+     */
     @NameInMap("PermissionVersion")
     public String permissionVersion;
 

@@ -4,12 +4,27 @@ package com.aliyun.resourcesharing20200110.models;
 import com.aliyun.tea.*;
 
 public class ListResourceShareInvitationsResponseBody extends TeaModel {
+    /**
+     * <p>The status of the invitation. Valid values:</p>
+     * <br>
+     * <p>*   Pending: The invitation is waiting for confirmation.</p>
+     * <p>*   Accepted: The invitation is accepted.</p>
+     * <p>*   Cancelled: The invitation is canceled.</p>
+     * <p>*   Rejected: The invitation is rejected.</p>
+     * <p>*   Expired: The invitation has expired.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The time when the invitation was created. The time is displayed in UTC.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource share.</p>
+     */
     @NameInMap("ResourceShareInvitations")
     public java.util.List<ListResourceShareInvitationsResponseBodyResourceShareInvitations> resourceShareInvitations;
 
@@ -43,24 +58,36 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
     }
 
     public static class ListResourceShareInvitationsResponseBodyResourceShareInvitations extends TeaModel {
+        /**
+         * <p>The Alibaba Cloud account ID of the inviter.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
         @NameInMap("ReceiverAccountId")
         public String receiverAccountId;
 
+        /**
+         * <p>The Alibaba Cloud account ID of the invitee.</p>
+         */
         @NameInMap("ResourceShareId")
         public String resourceShareId;
 
         @NameInMap("ResourceShareInvitationId")
         public String resourceShareInvitationId;
 
+        /**
+         * <p>The ID of the invitation.</p>
+         */
         @NameInMap("ResourceShareName")
         public String resourceShareName;
 
         @NameInMap("SenderAccountId")
         public String senderAccountId;
 
+        /**
+         * <p>The name of the resource share.</p>
+         */
         @NameInMap("Status")
         public String status;
 
