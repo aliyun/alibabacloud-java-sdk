@@ -4,21 +4,12 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class CreateResellerUserQuotaRequest extends TeaModel {
-    /**
-     * <p>The amount. Unit: CNY. This parameter is required if you create a quota account.</p>
-     */
     @NameInMap("Amount")
     public String amount;
 
-    /**
-     * <p>The name of the currency.</p>
-     */
     @NameInMap("Currency")
     public String currency;
 
-    /**
-     * <p>The ID of business in an external system.</p>
-     */
     @NameInMap("OutBizId")
     public String outBizId;
 

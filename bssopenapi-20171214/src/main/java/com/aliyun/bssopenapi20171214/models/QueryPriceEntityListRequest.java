@@ -4,6 +4,9 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryPriceEntityListRequest extends TeaModel {
+    /**
+     * <p>The code of the service.</p>
+     */
     @NameInMap("CommodityCode")
     public String commodityCode;
 

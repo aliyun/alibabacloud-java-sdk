@@ -4,18 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryCostUnitResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public QueryCostUnitResponseBodyData data;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,15 +80,27 @@ public class QueryCostUnitResponseBody extends TeaModel {
     }
 
     public static class QueryCostUnitResponseBodyDataCostUnitDtoList extends TeaModel {
+        /**
+         * <p>The user ID of the cost center owner.</p>
+         */
         @NameInMap("OwnerUid")
         public Long ownerUid;
 
+        /**
+         * <p>The ID of the parent cost center. A value of -1 indicates the root cost center.</p>
+         */
         @NameInMap("ParentUnitId")
         public Long parentUnitId;
 
+        /**
+         * <p>The ID of the cost center.</p>
+         */
         @NameInMap("UnitId")
         public Long unitId;
 
+        /**
+         * <p>The name of the cost center.</p>
+         */
         @NameInMap("UnitName")
         public String unitName;
 
@@ -117,15 +144,27 @@ public class QueryCostUnitResponseBody extends TeaModel {
     }
 
     public static class QueryCostUnitResponseBodyData extends TeaModel {
+        /**
+         * <p>The cost centers.</p>
+         */
         @NameInMap("CostUnitDtoList")
         public java.util.List<QueryCostUnitResponseBodyDataCostUnitDtoList> costUnitDtoList;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNum")
         public Integer pageNum;
 
+        /**
+         * <p>The number of entries returned on each page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of returned entries.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

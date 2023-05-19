@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>bssopenapi20171214</artifactId>
-  <version>1.8.5</version>
+  <version>1.8.6</version>
   <packaging>jar</packaging>
   <name>bssopenapi20171214</name>
   <description>Alibaba Cloud BssOpenApi (20171214) SDK for Java
@@ -72,7 +72,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.2.0</version>
+      <version>0.2.1</version>
     </dependency>
   </dependencies>
   <build>

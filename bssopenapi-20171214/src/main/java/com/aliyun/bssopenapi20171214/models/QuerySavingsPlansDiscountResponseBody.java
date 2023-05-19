@@ -4,21 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>data</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public QuerySavingsPlansDiscountResponseBodyData data;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -68,30 +80,61 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
     }
 
     public static class QuerySavingsPlansDiscountResponseBodyDataItems extends TeaModel {
+        /**
+         * <p>The details of the service.</p>
+         */
         @NameInMap("CommodityName")
         public String commodityName;
 
+        /**
+         * <p>The contracted discount.</p>
+         */
         @NameInMap("ContractDiscountRate")
         public String contractDiscountRate;
 
+        /**
+         * <p>The cycle based on which queries were performed.</p>
+         */
         @NameInMap("Cycle")
         public String cycle;
 
+        /**
+         * <p>The discount provided by the official website.</p>
+         */
         @NameInMap("DiscountRate")
         public String discountRate;
 
+        /**
+         * <p>The name of the pricing module.</p>
+         */
         @NameInMap("ModuleName")
         public String moduleName;
 
+        /**
+         * <p>The payment mode. Valid values:</p>
+         * <br>
+         * <p>*   total: all upfront</p>
+         * <p>*   half: half upfront</p>
+         * <p>*   zero: no upfront</p>
+         */
         @NameInMap("PayMode")
         public String payMode;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The type of the resource.</p>
+         */
         @NameInMap("Spec")
         public String spec;
 
+        /**
+         * <p>The type of the savings plan.</p>
+         */
         @NameInMap("SpnType")
         public String spnType;
 
@@ -175,9 +218,15 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
     }
 
     public static class QuerySavingsPlansDiscountResponseBodyData extends TeaModel {
+        /**
+         * <p>The IP address of the request.</p>
+         */
         @NameInMap("HostId")
         public String hostId;
 
+        /**
+         * <p>The information about the discounts on saving plans.</p>
+         */
         @NameInMap("Items")
         public java.util.List<QuerySavingsPlansDiscountResponseBodyDataItems> items;
 

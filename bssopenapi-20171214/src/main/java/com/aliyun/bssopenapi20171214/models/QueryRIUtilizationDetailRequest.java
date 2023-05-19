@@ -4,54 +4,27 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryRIUtilizationDetailRequest extends TeaModel {
-    /**
-     * <p>The ID of the instance whose fees are deducted by using the RI. If this parameter is left empty, the usage details of all instances are queried.</p>
-     */
     @NameInMap("DeductedInstanceId")
     public String deductedInstanceId;
 
-    /**
-     * <p>The time when the RI expires. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
-     */
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <p>The instance type of the RI.</p>
-     */
     @NameInMap("InstanceSpec")
     public String instanceSpec;
 
-    /**
-     * <p>The number of the page to return. Default value: 1.</p>
-     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
-    /**
-     * <p>The number of entries to return on each page. Default value: 20. Maximum value: 300.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The code of the service to which the RI is applied. Default value: ecsRi. Valid values:</p>
-     * <br>
-     * <p>*   ecsRi: ECS RI.</p>
-     * <p>*   scu_bag: storage capacity unit (SCU).</p>
-     */
     @NameInMap("RICommodityCode")
     public String RICommodityCode;
 
-    /**
-     * <p>The ID of the RI. If this parameter is left empty, the usage details of all RIs are queried.</p>
-     */
     @NameInMap("RIInstanceId")
     public String RIInstanceId;
 
-    /**
-     * <p>The time when the RI was created. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
-     */
     @NameInMap("StartTime")
     public String startTime;
 

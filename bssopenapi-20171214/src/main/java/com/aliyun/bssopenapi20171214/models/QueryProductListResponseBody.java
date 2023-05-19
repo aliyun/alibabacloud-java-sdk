@@ -4,18 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryProductListResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The information about all Alibaba Cloud services.</p>
+     */
     @NameInMap("Data")
     public QueryProductListResponseBodyData data;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,15 +80,30 @@ public class QueryProductListResponseBody extends TeaModel {
     }
 
     public static class QueryProductListResponseBodyDataProductListProduct extends TeaModel {
+        /**
+         * <p>The code of the service.</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
+        /**
+         * <p>The name of the service.</p>
+         */
         @NameInMap("ProductName")
         public String productName;
 
+        /**
+         * <p>The type of the service.</p>
+         */
         @NameInMap("ProductType")
         public String productType;
 
+        /**
+         * <p>The billing method. Valid values:</p>
+         * <br>
+         * <p>*   Subscription: subscription</p>
+         * <p>*   PayAsYouGo: pay-as-you-go</p>
+         */
         @NameInMap("SubscriptionType")
         public String subscriptionType;
 
@@ -136,15 +166,27 @@ public class QueryProductListResponseBody extends TeaModel {
     }
 
     public static class QueryProductListResponseBodyData extends TeaModel {
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNum")
         public Integer pageNum;
 
+        /**
+         * <p>The number of entries returned on each page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The service definitions.</p>
+         */
         @NameInMap("ProductList")
         public QueryProductListResponseBodyDataProductList productList;
 
+        /**
+         * <p>The total number of services.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

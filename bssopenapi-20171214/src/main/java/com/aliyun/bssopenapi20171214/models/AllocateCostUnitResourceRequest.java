@@ -4,18 +4,39 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class AllocateCostUnitResourceRequest extends TeaModel {
+    /**
+     * <p>The ID of the source cost center.</p>
+     * <br>
+     * <p>*   A value of 0 indicates that the resources to be transferred have not been allocated to a cost center.</p>
+     * <p>*   A value greater than 0 indicates the ID of an existing cost center.</p>
+     */
     @NameInMap("FromUnitId")
     public Long fromUnitId;
 
+    /**
+     * <p>The user ID of the owner of the source cost center.</p>
+     */
     @NameInMap("FromUnitUserId")
     public Long fromUnitUserId;
 
+    /**
+     * <p>The resource instances to be transferred.</p>
+     */
     @NameInMap("ResourceInstanceList")
     public java.util.List<AllocateCostUnitResourceRequestResourceInstanceList> resourceInstanceList;
 
+    /**
+     * <p>The ID of the destination cost center.</p>
+     * <br>
+     * <p>*   A value of -1 indicates that the allocated resources are changed to unallocated.</p>
+     * <p>*   A value greater than 0 indicates the ID of an existing cost center.</p>
+     */
     @NameInMap("ToUnitId")
     public Long toUnitId;
 
+    /**
+     * <p>The user ID of the owner of the destination cost center.</p>
+     */
     @NameInMap("ToUnitUserId")
     public Long toUnitUserId;
 
@@ -65,15 +86,30 @@ public class AllocateCostUnitResourceRequest extends TeaModel {
     }
 
     public static class AllocateCostUnitResourceRequestResourceInstanceList extends TeaModel {
+        /**
+         * <p>The split item of the shared instance. This parameter is required only for shared instances.</p>
+         * <br>
+         * <p>*   Eight cloud services support bill splitting. The commodity codes of the eight services are oss, dcdn, snapshot, vod, cdn, live, cbwp, and pcdn.</p>
+         * <p>*   You can obtain the split item of a shared instance by calling QueryCostUnitResource operation to obtain all resource instances within a cost center.</p>
+         */
         @NameInMap("ApportionCode")
         public String apportionCode;
 
+        /**
+         * <p>The commodity code of the resource instance.</p>
+         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
+        /**
+         * <p>The ID of the resource instance.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The user ID of the resource instance owner.</p>
+         */
         @NameInMap("ResourceUserId")
         public Long resourceUserId;
 

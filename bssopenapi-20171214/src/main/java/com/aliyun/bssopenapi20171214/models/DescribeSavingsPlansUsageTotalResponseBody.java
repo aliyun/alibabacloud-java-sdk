@@ -4,33 +4,18 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
-    /**
-     * <p>The status code.</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The return data.</p>
-     */
     @NameInMap("Data")
     public DescribeSavingsPlansUsageTotalResponseBodyData data;
 
-    /**
-     * <p>The message returned.</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the operation was successful.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -80,17 +65,9 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
     }
 
     public static class DescribeSavingsPlansUsageTotalResponseBodyDataPeriodCoverage extends TeaModel {
-        /**
-         * <p>The usage.</p>
-         */
         @NameInMap("Percentage")
         public Float percentage;
 
-        /**
-         * <p>The period.</p>
-         * <br>
-         * <p>The value is in the format of yyyyMMddHH.</p>
-         */
         @NameInMap("Period")
         public String period;
 
@@ -118,27 +95,15 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
     }
 
     public static class DescribeSavingsPlansUsageTotalResponseBodyDataTotalUsage extends TeaModel {
-        /**
-         * <p>The total amount of the savings plan.</p>
-         */
         @NameInMap("PoolValue")
         public Float poolValue;
 
-        /**
-         * <p>The pay-as-you-go cost.</p>
-         */
         @NameInMap("PostpaidCost")
         public Float postpaidCost;
 
-        /**
-         * <p>The amount that is saved.</p>
-         */
         @NameInMap("SavedCost")
         public Float savedCost;
 
-        /**
-         * <p>The total usage.</p>
-         */
         @NameInMap("UsagePercentage")
         public Float usagePercentage;
 
@@ -182,15 +147,9 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
     }
 
     public static class DescribeSavingsPlansUsageTotalResponseBodyData extends TeaModel {
-        /**
-         * <p>The usage in different periods.</p>
-         */
         @NameInMap("PeriodCoverage")
         public java.util.List<DescribeSavingsPlansUsageTotalResponseBodyDataPeriodCoverage> periodCoverage;
 
-        /**
-         * <p>The usage summary.</p>
-         */
         @NameInMap("TotalUsage")
         public DescribeSavingsPlansUsageTotalResponseBodyDataTotalUsage totalUsage;
 

@@ -4,9 +4,6 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryResellerAvailableQuotaRequest extends TeaModel {
-    /**
-     * <p>You do not need to specify the parameter.</p>
-     */
     @NameInMap("ItemCodes")
     public String itemCodes;
 

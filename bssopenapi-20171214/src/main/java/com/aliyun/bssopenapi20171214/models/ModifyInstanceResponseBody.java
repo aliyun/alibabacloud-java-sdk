@@ -4,18 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public ModifyInstanceResponseBodyData data;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +80,15 @@ public class ModifyInstanceResponseBody extends TeaModel {
     }
 
     public static class ModifyInstanceResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the host.</p>
+         */
         @NameInMap("HostId")
         public String hostId;
 
+        /**
+         * <p>The ID of the order that was created.</p>
+         */
         @NameInMap("OrderId")
         public String orderId;
 

@@ -4,18 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data that is returned.</p>
+     */
     @NameInMap("Data")
     public DescribeCostBudgetsSummaryResponseBodyData data;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,21 +80,39 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeCostBudgetsSummaryResponseBodyDataItems extends TeaModel {
+        /**
+         * <p>The information about the budget. The BudgetCycleType parameter indicates the cycle of the budget. Valid values: daily, monthly, quarterly, and yearly. The TotalBudgetAmount parameter indicates the total budget. The BudgetMemo parameter indicates the remarks of the budget.</p>
+         */
         @NameInMap("Budget")
         public java.util.Map<String, ?> budget;
 
+        /**
+         * <p>The name of the budget.</p>
+         */
         @NameInMap("BudgetName")
         public String budgetName;
 
+        /**
+         * <p>The status of the budget.</p>
+         */
         @NameInMap("BudgetStatus")
         public String budgetStatus;
 
+        /**
+         * <p>The type of the budget.</p>
+         */
         @NameInMap("BudgetType")
         public String budgetType;
 
+        /**
+         * <p>The information about the estimate-to-actual analysis. The ActualConsumeSum parameter indicates the accumulated actual value. The ActualAddForecastedAmount parameter indicates the sum of accumulated actual value and predicted value. If the BudgetType parameter is set to cost, the sum of actual value and predicted value includes the actual cost incurred from the budget start date to the current date and the predicted cost from the current date to the budget end date. If the BudgetType parameter is set to asset, the sum of actual value and predicted value includes the actual usage or coverage from the budget start date to the budget end date. If the budget end date minus the current date is more than one year, the part that exceeds one year is not included. The ActualAndBudgetComparison parameter indicates the comparison between the actual value and the predicted value. The value of the ActualAndBudgetComparison parameter is calculated based on the following formula: Accumulated actual value/Total budget × 100%.</p>
+         */
         @NameInMap("CalculatedValues")
         public java.util.Map<String, ?> calculatedValues;
 
+        /**
+         * <p>The information about the billing cycle. The ConsumePeriodBegin parameter indicates the start date of the budget. The ConsumePeriodEnd parameter indicates the end date of the budget.</p>
+         */
         @NameInMap("ConsumePeriod")
         public java.util.Map<String, ?> consumePeriod;
 
@@ -139,18 +172,33 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeCostBudgetsSummaryResponseBodyData extends TeaModel {
+        /**
+         * <p>The site of the host.</p>
+         */
         @NameInMap("HostId")
         public String hostId;
 
+        /**
+         * <p>The data that is returned.</p>
+         */
         @NameInMap("Items")
         public java.util.List<DescribeCostBudgetsSummaryResponseBodyDataItems> items;
 
+        /**
+         * <p>The maximum number of entries that are returned.</p>
+         */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
+        /**
+         * <p>The token that is used to retrieve the next page</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 
+        /**
+         * <p>The total number of entries that are returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

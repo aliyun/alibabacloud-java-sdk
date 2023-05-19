@@ -7,12 +7,24 @@ public class DescribePricingModuleRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The service code. You can query the service code by calling the **QueryProductList** operation.</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 
+    /**
+     * <p>The type of the service. You can query the service type by calling the **QueryProductList** operation.</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 
+    /**
+     * <p>The billing method. Valid values:</p>
+     * <br>
+     * <p>*   Subscription: subscription</p>
+     * <p>*   PayAsYouGo: pay-as-you-go</p>
+     */
     @NameInMap("SubscriptionType")
     public String subscriptionType;
 

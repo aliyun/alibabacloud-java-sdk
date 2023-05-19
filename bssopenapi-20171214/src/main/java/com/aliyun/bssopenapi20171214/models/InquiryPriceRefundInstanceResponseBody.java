@@ -4,6 +4,9 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -13,12 +16,21 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
     @NameInMap("Data")
     public InquiryPriceRefundInstanceResponseBodyData data;
 
+    /**
+     * <p>The description of the execution result.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -68,15 +80,27 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
     }
 
     public static class InquiryPriceRefundInstanceResponseBodyData extends TeaModel {
+        /**
+         * <p>The currency.</p>
+         */
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <p>The site of the execution host.</p>
+         */
         @NameInMap("HostId")
         public String hostId;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The refundable amount.</p>
+         */
         @NameInMap("RefundAmount")
         public Double refundAmount;
 

@@ -4,21 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class RefundInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>data</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public RefundInstanceResponseBodyData data;
 
+    /**
+     * <p>The description of the execution result.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -68,9 +80,15 @@ public class RefundInstanceResponseBody extends TeaModel {
     }
 
     public static class RefundInstanceResponseBodyData extends TeaModel {
+        /**
+         * <p>The site of the execution host.</p>
+         */
         @NameInMap("HostId")
         public String hostId;
 
+        /**
+         * <p>The ID of the refund order that is returned only if the instance is unsubscribed from.</p>
+         */
         @NameInMap("OrderId")
         public Long orderId;
 

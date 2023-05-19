@@ -4,33 +4,63 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QuerySavingsPlansDiscountRequest extends TeaModel {
+    /**
+     * <p>The code of the service.</p>
+     */
     @NameInMap("CommodityCode")
     public String commodityCode;
 
+    /**
+     * <p>The cycle based on which queries are performed.</p>
+     */
     @NameInMap("Cycle")
     public String cycle;
 
+    /**
+     * <p>The identifier of the language.</p>
+     */
     @NameInMap("Locale")
     public String locale;
 
+    /**
+     * <p>The code of the pricing module.</p>
+     */
     @NameInMap("ModuleCode")
     public String moduleCode;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The payment mode.</p>
+     */
     @NameInMap("PayMode")
     public String payMode;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The type of the resource.</p>
+     */
     @NameInMap("Spec")
     public String spec;
 
+    /**
+     * <p>The type of the savings plan.</p>
+     */
     @NameInMap("SpnType")
     public String spnType;
 

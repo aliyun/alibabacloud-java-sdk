@@ -4,21 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QuerySkuPriceListResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data that is returned.</p>
+     */
     @NameInMap("Data")
     public QuerySkuPriceListResponseBodyData data;
 
+    /**
+     * <p>The message that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -68,15 +80,27 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
     }
 
     public static class QuerySkuPriceListResponseBodyDataSkuPricePageSkuPriceListCskuPriceListRangeList extends TeaModel {
+        /**
+         * <p>The code of the pricing factor.</p>
+         */
         @NameInMap("FactorCode")
         public String factorCode;
 
+        /**
+         * <p>The maximum value.</p>
+         */
         @NameInMap("Max")
         public String max;
 
+        /**
+         * <p>The minimum value.</p>
+         */
         @NameInMap("Min")
         public String min;
 
+        /**
+         * <p>The closure type of the interval.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -120,27 +144,51 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
     }
 
     public static class QuerySkuPriceListResponseBodyDataSkuPricePageSkuPriceListCskuPriceList extends TeaModel {
+        /**
+         * <p>The unique code of the SKU price.</p>
+         */
         @NameInMap("CskuCode")
         public String cskuCode;
 
+        /**
+         * <p>The currency.</p>
+         */
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <p>The price.</p>
+         */
         @NameInMap("Price")
         public String price;
 
+        /**
+         * <p>The pricing mode.</p>
+         */
         @NameInMap("PriceMode")
         public String priceMode;
 
+        /**
+         * <p>The pricing type.</p>
+         */
         @NameInMap("PriceType")
         public String priceType;
 
+        /**
+         * <p>The unit of the price.</p>
+         */
         @NameInMap("PriceUnit")
         public String priceUnit;
 
+        /**
+         * <p>If the PriceMode parameter is set to STEP_ACCUMULATION or STEP_ARRIVE, the value of this field exists and specifies the range. If the PriceMode parameter is set to NORMAL_PRICE, the value of this field is null.</p>
+         */
         @NameInMap("RangeList")
         public java.util.List<QuerySkuPriceListResponseBodyDataSkuPricePageSkuPriceListCskuPriceListRangeList> rangeList;
 
+        /**
+         * <p>The usage unit.</p>
+         */
         @NameInMap("UsageUnit")
         public String usageUnit;
 
@@ -216,15 +264,21 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
     }
 
     public static class QuerySkuPriceListResponseBodyDataSkuPricePageSkuPriceList extends TeaModel {
+        /**
+         * <p>The prices of the SKUs.</p>
+         */
         @NameInMap("CskuPriceList")
         public java.util.List<QuerySkuPriceListResponseBodyDataSkuPricePageSkuPriceListCskuPriceList> cskuPriceList;
 
         /**
-         * <p>sku code</p>
+         * <p>The code of the SKU.</p>
          */
         @NameInMap("SkuCode")
         public String skuCode;
 
+        /**
+         * <p>The values of the pricing factors.</p>
+         */
         @NameInMap("SkuFactorMap")
         public java.util.Map<String, String> skuFactorMap;
 
@@ -260,12 +314,21 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
     }
 
     public static class QuerySkuPriceListResponseBodyDataSkuPricePage extends TeaModel {
+        /**
+         * <p>The token that is used to query the next page.</p>
+         */
         @NameInMap("NextPageToken")
         public String nextPageToken;
 
+        /**
+         * <p>The SKUs.</p>
+         */
         @NameInMap("SkuPriceList")
         public java.util.List<QuerySkuPriceListResponseBodyDataSkuPricePageSkuPriceList> skuPriceList;
 
+        /**
+         * <p>The total number of SKUs.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -301,6 +364,9 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
     }
 
     public static class QuerySkuPriceListResponseBodyData extends TeaModel {
+        /**
+         * <p>The SKUs of the pricing object.</p>
+         */
         @NameInMap("SkuPricePage")
         public QuerySkuPriceListResponseBodyDataSkuPricePage skuPricePage;
 

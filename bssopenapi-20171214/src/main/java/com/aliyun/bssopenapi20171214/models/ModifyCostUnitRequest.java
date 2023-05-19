@@ -4,6 +4,9 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class ModifyCostUnitRequest extends TeaModel {
+    /**
+     * <p>The cost centers to be modified.</p>
+     */
     @NameInMap("UnitEntityList")
     public java.util.List<ModifyCostUnitRequestUnitEntityList> unitEntityList;
 
@@ -21,12 +24,21 @@ public class ModifyCostUnitRequest extends TeaModel {
     }
 
     public static class ModifyCostUnitRequestUnitEntityList extends TeaModel {
+        /**
+         * <p>The new name of the cost center.</p>
+         */
         @NameInMap("NewUnitName")
         public String newUnitName;
 
+        /**
+         * <p>The user ID of the cost center owner.</p>
+         */
         @NameInMap("OwnerUid")
         public Long ownerUid;
 
+        /**
+         * <p>The ID of the cost center.</p>
+         */
         @NameInMap("UnitId")
         public Long unitId;
 

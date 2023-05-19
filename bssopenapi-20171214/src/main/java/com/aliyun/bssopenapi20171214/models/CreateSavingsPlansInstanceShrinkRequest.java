@@ -3,7 +3,7 @@ package com.aliyun.bssopenapi20171214.models;
 
 import com.aliyun.tea.*;
 
-public class CreateSavingsPlansInstanceRequest extends TeaModel {
+public class CreateSavingsPlansInstanceShrinkRequest extends TeaModel {
     @NameInMap("CommodityCode")
     public String commodityCode;
 
@@ -14,7 +14,7 @@ public class CreateSavingsPlansInstanceRequest extends TeaModel {
     public String effectiveDate;
 
     @NameInMap("ExtendMap")
-    public java.util.Map<String, String> extendMap;
+    public String extendMapShrink;
 
     @NameInMap("PayMode")
     public String payMode;
@@ -37,12 +37,12 @@ public class CreateSavingsPlansInstanceRequest extends TeaModel {
     @NameInMap("Type")
     public String type;
 
-    public static CreateSavingsPlansInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateSavingsPlansInstanceRequest self = new CreateSavingsPlansInstanceRequest();
+    public static CreateSavingsPlansInstanceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateSavingsPlansInstanceShrinkRequest self = new CreateSavingsPlansInstanceShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateSavingsPlansInstanceRequest setCommodityCode(String commodityCode) {
+    public CreateSavingsPlansInstanceShrinkRequest setCommodityCode(String commodityCode) {
         this.commodityCode = commodityCode;
         return this;
     }
@@ -50,7 +50,7 @@ public class CreateSavingsPlansInstanceRequest extends TeaModel {
         return this.commodityCode;
     }
 
-    public CreateSavingsPlansInstanceRequest setDuration(String duration) {
+    public CreateSavingsPlansInstanceShrinkRequest setDuration(String duration) {
         this.duration = duration;
         return this;
     }
@@ -58,7 +58,7 @@ public class CreateSavingsPlansInstanceRequest extends TeaModel {
         return this.duration;
     }
 
-    public CreateSavingsPlansInstanceRequest setEffectiveDate(String effectiveDate) {
+    public CreateSavingsPlansInstanceShrinkRequest setEffectiveDate(String effectiveDate) {
         this.effectiveDate = effectiveDate;
         return this;
     }
@@ -66,15 +66,15 @@ public class CreateSavingsPlansInstanceRequest extends TeaModel {
         return this.effectiveDate;
     }
 
-    public CreateSavingsPlansInstanceRequest setExtendMap(java.util.Map<String, String> extendMap) {
-        this.extendMap = extendMap;
+    public CreateSavingsPlansInstanceShrinkRequest setExtendMapShrink(String extendMapShrink) {
+        this.extendMapShrink = extendMapShrink;
         return this;
     }
-    public java.util.Map<String, String> getExtendMap() {
-        return this.extendMap;
+    public String getExtendMapShrink() {
+        return this.extendMapShrink;
     }
 
-    public CreateSavingsPlansInstanceRequest setPayMode(String payMode) {
+    public CreateSavingsPlansInstanceShrinkRequest setPayMode(String payMode) {
         this.payMode = payMode;
         return this;
     }
@@ -82,7 +82,7 @@ public class CreateSavingsPlansInstanceRequest extends TeaModel {
         return this.payMode;
     }
 
-    public CreateSavingsPlansInstanceRequest setPoolValue(String poolValue) {
+    public CreateSavingsPlansInstanceShrinkRequest setPoolValue(String poolValue) {
         this.poolValue = poolValue;
         return this;
     }
@@ -90,7 +90,7 @@ public class CreateSavingsPlansInstanceRequest extends TeaModel {
         return this.poolValue;
     }
 
-    public CreateSavingsPlansInstanceRequest setPricingCycle(String pricingCycle) {
+    public CreateSavingsPlansInstanceShrinkRequest setPricingCycle(String pricingCycle) {
         this.pricingCycle = pricingCycle;
         return this;
     }
@@ -98,7 +98,7 @@ public class CreateSavingsPlansInstanceRequest extends TeaModel {
         return this.pricingCycle;
     }
 
-    public CreateSavingsPlansInstanceRequest setRegion(String region) {
+    public CreateSavingsPlansInstanceShrinkRequest setRegion(String region) {
         this.region = region;
         return this;
     }
@@ -106,7 +106,7 @@ public class CreateSavingsPlansInstanceRequest extends TeaModel {
         return this.region;
     }
 
-    public CreateSavingsPlansInstanceRequest setSpecType(String specType) {
+    public CreateSavingsPlansInstanceShrinkRequest setSpecType(String specType) {
         this.specType = specType;
         return this;
     }
@@ -114,7 +114,7 @@ public class CreateSavingsPlansInstanceRequest extends TeaModel {
         return this.specType;
     }
 
-    public CreateSavingsPlansInstanceRequest setSpecification(String specification) {
+    public CreateSavingsPlansInstanceShrinkRequest setSpecification(String specification) {
         this.specification = specification;
         return this;
     }
@@ -122,7 +122,7 @@ public class CreateSavingsPlansInstanceRequest extends TeaModel {
         return this.specification;
     }
 
-    public CreateSavingsPlansInstanceRequest setType(String type) {
+    public CreateSavingsPlansInstanceShrinkRequest setType(String type) {
         this.type = type;
         return this;
     }

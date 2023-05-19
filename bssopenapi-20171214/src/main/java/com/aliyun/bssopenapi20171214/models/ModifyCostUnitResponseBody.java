@@ -4,18 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class ModifyCostUnitResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ModifyCostUnitResponseBodyData> data;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +80,21 @@ public class ModifyCostUnitResponseBody extends TeaModel {
     }
 
     public static class ModifyCostUnitResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether the cost center was modified.</p>
+         */
         @NameInMap("IsSuccess")
         public Boolean isSuccess;
 
+        /**
+         * <p>The user ID of the cost center owner.</p>
+         */
         @NameInMap("OwnerUid")
         public Long ownerUid;
 
+        /**
+         * <p>The ID of the cost center.</p>
+         */
         @NameInMap("UnitId")
         public Long unitId;
 

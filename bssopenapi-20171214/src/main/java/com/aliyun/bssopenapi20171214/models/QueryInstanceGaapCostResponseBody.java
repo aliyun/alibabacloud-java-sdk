@@ -4,33 +4,18 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryInstanceGaapCostResponseBody extends TeaModel {
-    /**
-     * <p>The status code returned.</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The data returned.</p>
-     */
     @NameInMap("Data")
     public QueryInstanceGaapCostResponseBodyData data;
 
-    /**
-     * <p>The message returned.</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request is successful.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -80,332 +65,159 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
     }
 
     public static class QueryInstanceGaapCostResponseBodyDataModulesModule extends TeaModel {
-        /**
-         * <p>The accounting unit. This parameter is reserved and unavailable now.</p>
-         */
         @NameInMap("AccountingUnit")
         public String accountingUnit;
 
-        /**
-         * <p>The type of the bill. Valid values:</p>
-         * <br>
-         * <p>*   SubscriptionOrder: subscription order</p>
-         * <p>*   PayAsYouGoBill: pay-as-you-go bill</p>
-         * <p>*   Refund: refund</p>
-         * <p>*   Adjustment: reconciliation</p>
-         */
         @NameInMap("BillType")
         public String billType;
 
-        /**
-         * <p>The billing cycle, in the YYYY-MM format.</p>
-         */
         @NameInMap("BillingCycle")
         public String billingCycle;
 
-        /**
-         * <p>The type of the currency. Valid values:</p>
-         * <br>
-         * <p>*   CNY</p>
-         * <p>*   USD</p>
-         * <p>*   JPY</p>
-         */
         @NameInMap("Currency")
         public String currency;
 
-        /**
-         * <p>The amount deducted by using vouchers.</p>
-         */
         @NameInMap("DeductedByCashCoupons")
         public String deductedByCashCoupons;
 
-        /**
-         * <p>The amount deducted by using coupons.</p>
-         */
         @NameInMap("DeductedByCoupons")
         public String deductedByCoupons;
 
-        /**
-         * <p>The amount deducted by using prepaid cards.</p>
-         */
         @NameInMap("DeductedByPrepaidCard")
         public String deductedByPrepaidCard;
 
-        /**
-         * <p>The allocated amount deducted by using vouchers.</p>
-         */
         @NameInMap("GaapDeductedByCashCoupons")
         public String gaapDeductedByCashCoupons;
 
-        /**
-         * <p>The allocated amount deducted by using coupons.</p>
-         */
         @NameInMap("GaapDeductedByCoupons")
         public String gaapDeductedByCoupons;
 
-        /**
-         * <p>The allocated amount deducted by using prepaid cards.</p>
-         */
         @NameInMap("GaapDeductedByPrepaidCard")
         public String gaapDeductedByPrepaidCard;
 
-        /**
-         * <p>The allocated amount paid in cash.</p>
-         */
         @NameInMap("GaapPaymentAmount")
         public String gaapPaymentAmount;
 
-        /**
-         * <p>The allocated pretax amount.</p>
-         */
         @NameInMap("GaapPretaxAmount")
         public String gaapPretaxAmount;
 
-        /**
-         * <p>The allocated pretax amount paid with the local currency.</p>
-         */
         @NameInMap("GaapPretaxAmountLocal")
         public String gaapPretaxAmountLocal;
 
-        /**
-         * <p>The allocated pretax gross amount.</p>
-         */
         @NameInMap("GaapPretaxGrossAmount")
         public String gaapPretaxGrossAmount;
 
-        /**
-         * <p>The allocated pricing discount.</p>
-         */
         @NameInMap("GaapPricingDiscount")
         public String gaapPricingDiscount;
 
-        /**
-         * <p>The ID of the instance.</p>
-         */
         @NameInMap("InstanceID")
         public String instanceID;
 
-        /**
-         * <p>The amount deducted by using vouchers and allocated to the current month.</p>
-         */
         @NameInMap("MonthGaapDeductedByCashCoupons")
         public String monthGaapDeductedByCashCoupons;
 
-        /**
-         * <p>The amount deducted by using coupons and allocated to the current month.</p>
-         */
         @NameInMap("MonthGaapDeductedByCoupons")
         public String monthGaapDeductedByCoupons;
 
-        /**
-         * <p>The amount deducted by using prepaid cards and allocated to the current month.</p>
-         */
         @NameInMap("MonthGaapDeductedByPrepaidCard")
         public String monthGaapDeductedByPrepaidCard;
 
-        /**
-         * <p>The amount paid in cash and allocated to the current month.</p>
-         */
         @NameInMap("MonthGaapPaymentAmount")
         public String monthGaapPaymentAmount;
 
-        /**
-         * <p>The pretax amount allocated to the current month.</p>
-         */
         @NameInMap("MonthGaapPretaxAmount")
         public String monthGaapPretaxAmount;
 
-        /**
-         * <p>The pretax amount paid with the local currency and allocated to the current month (Alibaba Cloud International site).</p>
-         */
         @NameInMap("MonthGaapPretaxAmountLocal")
         public String monthGaapPretaxAmountLocal;
 
-        /**
-         * <p>The pretax gross amount allocated to the current month.</p>
-         */
         @NameInMap("MonthGaapPretaxGrossAmount")
         public String monthGaapPretaxGrossAmount;
 
-        /**
-         * <p>The pricing discount allocated to the current month.</p>
-         */
         @NameInMap("MonthGaapPricingDiscount")
         public String monthGaapPricingDiscount;
 
-        /**
-         * <p>The ID of the order.</p>
-         */
         @NameInMap("OrderId")
         public String orderId;
 
-        /**
-         * <p>The type of the order. Valid values:</p>
-         * <br>
-         * <p>*   New</p>
-         * <p>*   Renewal</p>
-         * <p>*   Upgrade</p>
-         * <p>*   Degrade</p>
-         */
         @NameInMap("OrderType")
         public String orderType;
 
-        /**
-         * <p>The ID of the bill owner.</p>
-         */
         @NameInMap("OwnerID")
         public String ownerID;
 
-        /**
-         * <p>The time when the bill was paid.</p>
-         */
         @NameInMap("PayTime")
         public String payTime;
 
-        /**
-         * <p>The account of the payer.</p>
-         */
         @NameInMap("PayerAccount")
         public String payerAccount;
 
-        /**
-         * <p>The amount paid in cash.</p>
-         */
         @NameInMap("PaymentAmount")
         public String paymentAmount;
 
-        /**
-         * <p>The type of the currency (Alibaba Cloud International site).</p>
-         */
         @NameInMap("PaymentCurrency")
         public String paymentCurrency;
 
-        /**
-         * <p>The pretax amount.</p>
-         */
         @NameInMap("PretaxAmount")
         public String pretaxAmount;
 
-        /**
-         * <p>The allocated pretax amount paid with the local currency (Alibaba Cloud International site).</p>
-         */
         @NameInMap("PretaxAmountLocal")
         public String pretaxAmountLocal;
 
-        /**
-         * <p>The pretax gross amount.</p>
-         */
         @NameInMap("PretaxGrossAmount")
         public String pretaxGrossAmount;
 
-        /**
-         * <p>The pricing discount.</p>
-         */
         @NameInMap("PricingDiscount")
         public String pricingDiscount;
 
-        /**
-         * <p>The code of the service.</p>
-         */
         @NameInMap("ProductCode")
         public String productCode;
 
-        /**
-         * <p>The type of the service.</p>
-         */
         @NameInMap("ProductType")
         public String productType;
 
-        /**
-         * <p>The ID of the region.</p>
-         */
         @NameInMap("Region")
         public String region;
 
-        /**
-         * <p>The resource group.</p>
-         */
         @NameInMap("ResourceGroup")
         public String resourceGroup;
 
-        /**
-         * <p>The ID of the sub-order.</p>
-         */
         @NameInMap("SubOrderId")
         public String subOrderId;
 
-        /**
-         * <p>The billing method. Valid values:</p>
-         * <br>
-         * <p>*   Subscription: the subscription billing method</p>
-         * <p>*   PayAsYouGo: the pay-as-you-go billing method</p>
-         */
         @NameInMap("SubscriptionType")
         public String subscriptionType;
 
-        /**
-         * <p>The tag.</p>
-         */
         @NameInMap("Tag")
         public String tag;
 
-        /**
-         * <p>The unallocated amount deducted by using vouchers.</p>
-         */
         @NameInMap("UnallocatedDeductedByCashCoupons")
         public String unallocatedDeductedByCashCoupons;
 
-        /**
-         * <p>The unallocated amount deducted by using coupons.</p>
-         */
         @NameInMap("UnallocatedDeductedByCoupons")
         public String unallocatedDeductedByCoupons;
 
-        /**
-         * <p>The unallocated amount deducted by using prepaid cards.</p>
-         */
         @NameInMap("UnallocatedDeductedByPrepaidCard")
         public String unallocatedDeductedByPrepaidCard;
 
-        /**
-         * <p>The unallocated amount paid in cash.</p>
-         */
         @NameInMap("UnallocatedPaymentAmount")
         public String unallocatedPaymentAmount;
 
-        /**
-         * <p>The unallocated pretax amount.</p>
-         */
         @NameInMap("UnallocatedPretaxAmount")
         public String unallocatedPretaxAmount;
 
-        /**
-         * <p>The unallocated pretax amount paid with the local currency.</p>
-         */
         @NameInMap("UnallocatedPretaxAmountLocal")
         public String unallocatedPretaxAmountLocal;
 
-        /**
-         * <p>The unallocated pretax gross amount.</p>
-         */
         @NameInMap("UnallocatedPretaxGrossAmount")
         public String unallocatedPretaxGrossAmount;
 
-        /**
-         * <p>The unallocated pricing discount.</p>
-         */
         @NameInMap("UnallocatedPricingDiscount")
         public String unallocatedPricingDiscount;
 
-        /**
-         * <p>The time when the service usage ended.</p>
-         */
         @NameInMap("UsageEndDate")
         public String usageEndDate;
 
-        /**
-         * <p>The time when the service usage started.</p>
-         */
         @NameInMap("UsageStartDate")
         public String usageStartDate;
 
@@ -852,33 +664,18 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
     }
 
     public static class QueryInstanceGaapCostResponseBodyData extends TeaModel {
-        /**
-         * <p>The ID of the host.</p>
-         */
         @NameInMap("HostId")
         public String hostId;
 
-        /**
-         * <p>The billing information.</p>
-         */
         @NameInMap("Modules")
         public QueryInstanceGaapCostResponseBodyDataModules modules;
 
-        /**
-         * <p>The page number of the returned page.</p>
-         */
         @NameInMap("PageNum")
         public Integer pageNum;
 
-        /**
-         * <p>The number of entries returned per page.</p>
-         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        /**
-         * <p>The total number of returned entries.</p>
-         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
