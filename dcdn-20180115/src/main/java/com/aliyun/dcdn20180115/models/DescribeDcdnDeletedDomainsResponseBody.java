@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnDeletedDomainsResponseBody extends TeaModel {
     /**
-     * <p>The list of accelerated domain names and the time each domain name was last modified.</p>
+     * <p>The accelerated domain name.</p>
      */
     @NameInMap("Domains")
     public DescribeDcdnDeletedDomainsResponseBodyDomains domains;
 
     /**
-     * <p>The page number of the returned page, which is the same as the **PageNumber** parameter in request parameters.</p>
+     * <p>The total number of domain names returned.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of domain names returned per page, which is the same as the **PageSize** parameter in request parameters.</p>
+     * <p>The list of accelerated domain names and the time each domain name was last modified.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The number of domain names returned per page, which is the same as the **PageSize** parameter in request parameters.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of domain names returned.</p>
+     * <p>The time when the accelerated domain name was last modified. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC+0.</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -81,13 +81,13 @@ public class DescribeDcdnDeletedDomainsResponseBody extends TeaModel {
 
     public static class DescribeDcdnDeletedDomainsResponseBodyDomainsPageData extends TeaModel {
         /**
-         * <p>The accelerated domain name.</p>
+         * <p>The total number of domain names returned.</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
-         * <p>The time when the accelerated domain name was last modified. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC+0.</p>
+         * <p>>  You can call this operation up to 10 times per second per account.</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;

@@ -13,10 +13,10 @@ public class DescribeDcdnDomainByCertificateRequest extends TeaModel {
     public String SSLPub;
 
     /**
-     * <p>Indicates the returned domain name list contains only domain names with HTTPS enabled or disabled.</p>
+     * <p>Specifies whether the domain name list to return contains only domain names with HTTPS enabled or disabled.</p>
      * <br>
      * <p>*   true: The list contains only domain names with HTTPS enabled.</p>
-     * <p>*   false: The list contains only domain names with HTTPS disabled..</p>
+     * <p>*   false: The list contains only domain names with HTTPS disabled.</p>
      */
     @NameInMap("SSLStatus")
     public Boolean SSLStatus;

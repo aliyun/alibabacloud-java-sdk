@@ -11,7 +11,7 @@ public class UploadStagingRoutineCodeRequest extends TeaModel {
     public String codeDescription;
 
     /**
-     * <p>The name of the routine. The name must be unique among the routines that belong to the same Alibaba Cloud account.</p>
+     * <p>The name of the routine. The name needs to be unique among the routines that belong to the same Alibaba Cloud account.</p>
      */
     @NameInMap("Name")
     public String name;

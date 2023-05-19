@@ -5,39 +5,37 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainRealTimeSrcHttpCodeDataRequest extends TeaModel {
     /**
-     * <p>The accelerated domain name. Separate multiple accelerated domain names with commas (,).</p>
+     * <p>The name of the region.</p>
+     * <br>
+     * <p>You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query regions.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The end of the time range to query.</p>
+     * <p>The beginning of the time range during which data was queried. </p>
      * <br>
-     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The name of the Internet service provider (ISP).</p>
-     * <br>
-     * <p>You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query ISPs.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("IspNameEn")
     public String ispNameEn;
 
     /**
-     * <p>The name of the region.</p>
-     * <br>
-     * <p>You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query regions.</p>
+     * <p>The accelerated domain name.</p>
      */
     @NameInMap("LocationNameEn")
     public String locationNameEn;
 
     /**
-     * <p>The beginning of the time range to query.</p>
+     * <p>The end of the time range during which data was queried.</p>
      * <br>
-     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

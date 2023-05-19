@@ -23,7 +23,7 @@ public class DescribeDcdnDomainBpsDataRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The time granularity for a query. Unit: seconds.</p>
+     * <p>The time granularity of the data entries. Unit: seconds.</p>
      * <br>
      * <p>The time granularity varies with the maximum time range per query. Valid values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see **Usage notes**.</p>
      */
@@ -33,7 +33,7 @@ public class DescribeDcdnDomainBpsDataRequest extends TeaModel {
     /**
      * <p>The name of the Internet service provider (ISP).</p>
      * <br>
-     * <p>You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query ISPs.</p>
+     * <p>You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query ISPs. If you do not specify an ISP, bandwidth data of all ISPs is queried.</p>
      */
     @NameInMap("IspNameEn")
     public String ispNameEn;
@@ -41,7 +41,7 @@ public class DescribeDcdnDomainBpsDataRequest extends TeaModel {
     /**
      * <p>The name of the region.</p>
      * <br>
-     * <p>You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query regions.</p>
+     * <p>You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query regions. If you do not specify a region, bandwidth data in all regions is queried.</p>
      */
     @NameInMap("LocationNameEn")
     public String locationNameEn;

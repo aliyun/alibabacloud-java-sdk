@@ -45,7 +45,7 @@ public class DescribeDcdnIpaDomainDetailResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>The status of the origin server.</p>
+         * <p>The status.</p>
          */
         @NameInMap("Enabled")
         public String enabled;
@@ -57,7 +57,7 @@ public class DescribeDcdnIpaDomainDetailResponseBody extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The priority of the origin server if multiple origin servers are specified.</p>
+         * <p>The priority.</p>
          */
         @NameInMap("Priority")
         public String priority;
@@ -65,7 +65,7 @@ public class DescribeDcdnIpaDomainDetailResponseBody extends TeaModel {
         /**
          * <p>The type of the origin server. Valid values:</p>
          * <br>
-         * <p>*   **ipaddr**: an IP address.</p>
+         * <p>*   **ipaddr**: an origin IP address</p>
          * <p>*   **domain**: a domain name.</p>
          * <p>*   **oss**: Object Storage Service (OSS) buckets are not supported.</p>
          */
@@ -73,7 +73,7 @@ public class DescribeDcdnIpaDomainDetailResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The weight of the origin server if multiple origin servers are specified.</p>
+         * <p>The weight of the origin server if multiple origin servers have been specified.</p>
          */
         @NameInMap("Weight")
         public String weight;
@@ -180,24 +180,24 @@ public class DescribeDcdnIpaDomainDetailResponseBody extends TeaModel {
         /**
          * <p>The status of the accelerated domain name. Valid values:</p>
          * <br>
-         * <p>*   **online**: The domain name is enabled.</p>
-         * <p>*   **offline**: The domain name is disabled.</p>
-         * <p>*   **configuring**: The domain name is being configured.</p>
-         * <p>*   **configure_failed**: The domain name failed to be configured.</p>
-         * <p>*   **checking**: The domain name is under review.</p>
-         * <p>*   **check_failed**: The domain name failed the review.</p>
+         * <p>*   **online**: enabled</p>
+         * <p>*   **offline**: disabled</p>
+         * <p>*   **configuring**: configuring</p>
+         * <p>*   **configure_failed**: configuration failed</p>
+         * <p>*   **checking**: reviewing</p>
+         * <p>*   **check_failed:** review failed</p>
          */
         @NameInMap("DomainStatus")
         public String domainStatus;
 
         /**
-         * <p>The time when the accelerated domain name was created.</p>
+         * <p>The creation time.</p>
          */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
         /**
-         * <p>The time when the accelerated domain name was last modified.</p>
+         * <p>The time when the domain name was last modified.</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
@@ -211,23 +211,23 @@ public class DescribeDcdnIpaDomainDetailResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the Security Socket Layer (SSL) certificate is enabled. Valid values:</p>
          * <br>
-         * <p>*   **on**: The SSL certificate is enabled.</p>
-         * <p>*   **off**: The SSL certificate is disabled.</p>
+         * <p>*   **on**</p>
+         * <p>*   **off**.</p>
          */
         @NameInMap("SSLProtocol")
         public String SSLProtocol;
 
         /**
-         * <p>Indicates the public key of the certificate if the HTTPS protocol is enabled.</p>
+         * <p>The public key of the certificate if HTTPS is enabled.</p>
          */
         @NameInMap("SSLPub")
         public String SSLPub;
 
         /**
-         * <p>The accelerated region. Valid values:</p>
+         * <p>The acceleration region. Valid values:</p>
          * <br>
          * <p>*   domestic: Chinese mainland</p>
-         * <p>*   overseas: global (excluding the Chinese mainland)</p>
+         * <p>*   overseas: outside the Chinese mainland</p>
          * <p>*   global: global</p>
          */
         @NameInMap("Scope")

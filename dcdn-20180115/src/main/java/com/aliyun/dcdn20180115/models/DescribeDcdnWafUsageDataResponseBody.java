@@ -5,25 +5,28 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnWafUsageDataResponseBody extends TeaModel {
     /**
-     * <p>The end of the time range during which data was queried.</p>
+     * <p>The operation that you want to perform. Set the value to **DescribeDcdnWafUsageData**.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Specifies how query results are grouped. By default, this parameter is empty. Valid values:</p>
+     * <br>
+     * <p>*   domain: Query results are grouped by accelerated domain name.</p>
+     * <p>*   An empty string: Query results are not grouped.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The beginning of the time range during which data was queried.</p>
+     * <p>The accelerated domain name.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The WAF information about the accelerated domain name.</p>
+     * <p>The number of monitored requests.</p>
      */
     @NameInMap("WafUsageData")
     public DescribeDcdnWafUsageDataResponseBodyWafUsageData wafUsageData;
@@ -67,37 +70,39 @@ public class DescribeDcdnWafUsageDataResponseBody extends TeaModel {
 
     public static class DescribeDcdnWafUsageDataResponseBodyWafUsageDataWafUsageDataItem extends TeaModel {
         /**
-         * <p>The number of allowed requests.</p>
+         * <p>The number of blocked requests.</p>
          */
         @NameInMap("AccessCnt")
         public Long accessCnt;
 
         /**
-         * <p>The number of blocked requests.</p>
+         * <p>The number of allowed requests.</p>
          */
         @NameInMap("BlockCnt")
         public Long blockCnt;
 
         /**
-         * <p>The accelerated domain name.</p>
+         * <p>The domain name that you want to query. If you do not specify an accelerated domain name, all accelerated domain names are queried by default.</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
-         * <p>The number of monitored requests.</p>
+         * <p>The end of the time range during which data was queried.</p>
          */
         @NameInMap("ObserveCnt")
         public Long observeCnt;
 
         /**
-         * <p>The number of used SeCUs.</p>
+         * <p>The time granularity for a query. Unit: seconds.</p>
+         * <br>
+         * <p>The time granularity varies with the maximum time range per query. Valid values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day).</p>
          */
         @NameInMap("SecCu")
         public Long secCu;
 
         /**
-         * <p>The timestamp of the data returned.</p>
+         * <p>The beginning of the time range during which data was queried.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

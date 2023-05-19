@@ -97,7 +97,7 @@ public class DescribeDcdnRefreshTasksResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The URL of the object to be refreshed.</p>
+         * <p>The URL of the object refreshed.</p>
          */
         @NameInMap("ObjectPath")
         public String objectPath;
@@ -113,7 +113,7 @@ public class DescribeDcdnRefreshTasksResponseBody extends TeaModel {
         public String objectType;
 
         /**
-         * <p>The progress of the task, in percentage.</p>
+         * <p>The progress of the task in percentage.</p>
          */
         @NameInMap("Process")
         public String process;
@@ -121,7 +121,7 @@ public class DescribeDcdnRefreshTasksResponseBody extends TeaModel {
         /**
          * <p>The status of the task.</p>
          * <br>
-         * <p>*   **Complete**: The task has completed.</p>
+         * <p>*   **Complete**: The task is complete.</p>
          * <p>*   **Refreshing**: The task is in progress.</p>
          * <p>*   **Failed**: The task failed.</p>
          */

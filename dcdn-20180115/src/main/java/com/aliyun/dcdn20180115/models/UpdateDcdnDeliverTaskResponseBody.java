@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDcdnDeliverTaskResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Updates a tracking task by task ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

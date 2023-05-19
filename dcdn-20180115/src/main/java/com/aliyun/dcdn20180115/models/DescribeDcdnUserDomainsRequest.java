@@ -13,7 +13,7 @@ public class DescribeDcdnUserDomainsRequest extends TeaModel {
     public String changeEndTime;
 
     /**
-     * <p>The start of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
      */
     @NameInMap("ChangeStartTime")
     public String changeStartTime;
@@ -22,7 +22,7 @@ public class DescribeDcdnUserDomainsRequest extends TeaModel {
      * <p>Specifies whether to display domain names that are under review, failed the review, or failed to be configured. Valid values:</p>
      * <br>
      * <p>*   true: displays domain names.</p>
-     * <p>*   false: does not display domain names.</p>
+     * <p>*   false: does not display detailed information.</p>
      */
     @NameInMap("CheckDomainShow")
     public Boolean checkDomainShow;
@@ -31,7 +31,7 @@ public class DescribeDcdnUserDomainsRequest extends TeaModel {
      * <p>The acceleration region. By default, all acceleration regions are queried.</p>
      * <br>
      * <p>*   **domestic**: Chinese mainland</p>
-     * <p>*   **overseas**: global (excluding the Chinese mainland)</p>
+     * <p>*   **overseas**: outside the Chinese mainland</p>
      * <p>*   **global**: global</p>
      */
     @NameInMap("Coverage")
@@ -49,7 +49,7 @@ public class DescribeDcdnUserDomainsRequest extends TeaModel {
      * <p>*   **fuzzy_match**: fuzzy match</p>
      * <p>*   **pre_match**: prefix match</p>
      * <p>*   **suf_match**: suffix match</p>
-     * <p>*   **full_match**: exact match</p>
+     * <p>*   **full_match** (default): exact match</p>
      * <br>
      * <p>> If you specify the domain names to query but do not set the DomainSearchType parameter, the exact match mode is used.</p>
      */
@@ -73,7 +73,7 @@ public class DescribeDcdnUserDomainsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Valid values: **1** to **100000**.</p>
+     * <p>The number of returned pages. Valid values: **1** to **100000**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -94,7 +94,7 @@ public class DescribeDcdnUserDomainsRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The tags of the domain names.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeDcdnUserDomainsRequestTag> tag;
@@ -210,13 +210,13 @@ public class DescribeDcdnUserDomainsRequest extends TeaModel {
 
     public static class DescribeDcdnUserDomainsRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag. Valid values of N: **1** to **20**. You can call the TagDcdnResources operation to set a tag for a domain name.</p>
+         * <p>The tag key. Valid values of N: **1** to **20**. You can call the TagDcdnResources operation to set a tag for a domain name.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag. Valid values of N: **1** to **20**.</p>
+         * <p>The tag value. Valid values of N: **1** to **20**.</p>
          */
         @NameInMap("Value")
         public String value;

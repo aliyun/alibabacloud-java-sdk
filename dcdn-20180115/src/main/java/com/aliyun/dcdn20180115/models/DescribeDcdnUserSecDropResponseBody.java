@@ -13,8 +13,8 @@ public class DescribeDcdnUserSecDropResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the information is found.</p>
      * <br>
-     * <p>*   Found: yes</p>
-     * <p>*   Not Found: no</p>
+     * <p>*   Found</p>
+     * <p>*   Not Found</p>
      */
     @NameInMap("Msg")
     public String msg;

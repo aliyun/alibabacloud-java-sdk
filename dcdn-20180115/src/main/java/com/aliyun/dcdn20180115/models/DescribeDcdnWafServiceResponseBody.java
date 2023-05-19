@@ -11,7 +11,7 @@ public class DescribeDcdnWafServiceResponseBody extends TeaModel {
     public String edition;
 
     /**
-     * <p>The activation status of WAF. Valid values:</p>
+     * <p>The status of WAF. Valid values:</p>
      * <br>
      * <p>*   on</p>
      * <p>*   off</p>
@@ -26,7 +26,7 @@ public class DescribeDcdnWafServiceResponseBody extends TeaModel {
     public String openingTime;
 
     /**
-     * <p>The billing method for requests.</p>
+     * <p>The metering method for requests.</p>
      */
     @NameInMap("RequestBillingType")
     public String requestBillingType;
@@ -38,7 +38,7 @@ public class DescribeDcdnWafServiceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The billing method for rules. You are charged for the number of SeCUs.</p>
+     * <p>The metering method for rules. You are charged for the number of SeCUs.</p>
      */
     @NameInMap("RuleBillingType")
     public String ruleBillingType;

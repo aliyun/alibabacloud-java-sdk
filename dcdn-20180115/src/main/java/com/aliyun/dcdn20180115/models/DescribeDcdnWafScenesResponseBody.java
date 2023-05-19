@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnWafScenesResponseBody extends TeaModel {
     /**
-     * <p>The types of the protection policies.</p>
+     * <p>>You can call this operation up to 20 times per second per account.</p>
      */
     @NameInMap("DefenseScenes")
     public java.util.List<DescribeDcdnWafScenesResponseBodyDefenseScenes> defenseScenes;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The type of the protection policy, which is the same as the DefenseScenes parameter in request parameters.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,19 +39,28 @@ public class DescribeDcdnWafScenesResponseBody extends TeaModel {
 
     public static class DescribeDcdnWafScenesResponseBodyDefenseScenes extends TeaModel {
         /**
-         * <p>The type of the protection policy, which is the same as the DefenseScenes parameter in request parameters.</p>
+         * <p>The types of the protection policies.</p>
          */
         @NameInMap("DefenseScene")
         public String defenseScene;
 
         /**
-         * <p>The total number of policies of this type that were configured.</p>
+         * <p>The total number of protection rules that were configured in this type of the policy.</p>
          */
         @NameInMap("PolicyCount")
         public Integer policyCount;
 
         /**
-         * <p>The total number of protection rules that were configured in this type of the policy.</p>
+         * <p>The types of the protection policies that you want to query. Separate multiple types with commas (,). Valid values:</p>
+         * <br>
+         * <p>*   waf_group: basic web protection</p>
+         * <p>*   custom_acl: custom protection</p>
+         * <p>*   whitelist: IP address whitelist</p>
+         * <p>*   ip_blacklist: IP address blacklist</p>
+         * <p>*   region_block: region blacklist</p>
+         * <p>*   bot: bot management</p>
+         * <br>
+         * <p>>  If you do not set this parameter, all types of protection policies are queried.</p>
          */
         @NameInMap("RuleCount")
         public Integer ruleCount;

@@ -101,31 +101,31 @@ public class DescribeDcdnDomainBpsDataResponseBody extends TeaModel {
         public Float bps;
 
         /**
-         * <p>The bandwidth that was consumed to deliver dynamic content over HTTP, in bit/s.</p>
+         * <p>The bandwidth that was consumed to deliver dynamic content over HTTP. Unit: bit/s.</p>
          */
         @NameInMap("DynamicHttpBps")
         public Float dynamicHttpBps;
 
         /**
-         * <p>The bandwidth that was consumed to deliver dynamic content over HTTPS, in bit/s.</p>
+         * <p>The bandwidth that was consumed to deliver dynamic content over HTTPS. Unit: bit/s.</p>
          */
         @NameInMap("DynamicHttpsBps")
         public Float dynamicHttpsBps;
 
         /**
-         * <p>The bandwidth that was consumed to deliver static content over HTTP, in bit/s.</p>
+         * <p>The bandwidth that was consumed to deliver static content over HTTP. Unit: bit/s.</p>
          */
         @NameInMap("StaticHttpBps")
         public Float staticHttpBps;
 
         /**
-         * <p>The bandwidth that was consumed to deliver static content over HTTPS, in bit/s.</p>
+         * <p>The bandwidth that was consumed to deliver static content over HTTPS. Unit: bit/s.</p>
          */
         @NameInMap("StaticHttpsBps")
         public Float staticHttpsBps;
 
         /**
-         * <p>The timestamp of the returned data.</p>
+         * <p>The timestamp of the data returned.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

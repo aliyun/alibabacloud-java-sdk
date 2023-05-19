@@ -41,8 +41,8 @@ public class CheckDcdnProjectExistResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the real-time log delivery project exists. Valid values:</p>
          * <br>
-         * <p>*   **false**: The real-time log delivery project does not exist.</p>
-         * <p>*   **true**: The real-time log delivery project exists.</p>
+         * <p>*   **false**</p>
+         * <p>*   **true**</p>
          */
         @NameInMap("Exist")
         public String exist;

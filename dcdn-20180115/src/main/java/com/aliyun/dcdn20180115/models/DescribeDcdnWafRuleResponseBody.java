@@ -41,15 +41,15 @@ public class DescribeDcdnWafRuleResponseBody extends TeaModel {
         /**
          * <p>The type of the protection policy. Valid values:</p>
          * <br>
-         * <p>- waf_group: basic web protection</p>
-         * <p>- custom_acl: custom</p>
-         * <p>- whitelist: whitelist</p>
+         * <p>*   waf_group: basic web protection</p>
+         * <p>*   custom_acl: custom protection</p>
+         * <p>*   whitelist: IP address whitelist</p>
          */
         @NameInMap("DefenseScene")
         public String defenseScene;
 
         /**
-         * <p>The time at which the protection rule was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the scaling group was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
@@ -81,8 +81,8 @@ public class DescribeDcdnWafRuleResponseBody extends TeaModel {
         /**
          * <p>The status of the protection rule. Valid values:</p>
          * <br>
-         * <p>- on</p>
-         * <p>- off</p>
+         * <p>*   on</p>
+         * <p>*   off</p>
          */
         @NameInMap("RuleStatus")
         public String ruleStatus;

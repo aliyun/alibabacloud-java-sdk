@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnWafUsageDataRequest extends TeaModel {
     /**
-     * <p>The domain name that you want to query. If you do not specify an accelerated domain name, all accelerated domain names are queried by default.</p>
+     * <p>The timestamp of the data returned.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -19,18 +19,13 @@ public class DescribeDcdnWafUsageDataRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The time granularity for a query. Unit: seconds.</p>
-     * <br>
-     * <p>The time granularity varies with the maximum time range per query. Valid values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day).</p>
+     * <p>The number of used SeCUs.</p>
      */
     @NameInMap("Interval")
     public String interval;
 
     /**
-     * <p>Specifies how query results are grouped. By default, this parameter is empty. Valid values:</p>
-     * <br>
-     * <p>*   domain: Query results are grouped by accelerated domain name.</p>
-     * <p>*   An empty string: Query results are not grouped.</p>
+     * <p>The WAF information about the accelerated domain name.</p>
      */
     @NameInMap("SplitBy")
     public String splitBy;

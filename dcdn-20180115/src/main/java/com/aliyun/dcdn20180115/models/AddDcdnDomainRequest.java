@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddDcdnDomainRequest extends TeaModel {
     /**
-     * <p>The URL that is used to check the accessibility of the origin server.</p>
+     * <p>The URL that is used for health checks.</p>
      */
     @NameInMap("CheckUrl")
     public String checkUrl;
@@ -34,7 +34,7 @@ public class AddDcdnDomainRequest extends TeaModel {
      * <p>The acceleration region. Valid values:</p>
      * <br>
      * <p>*   **domestic**: Chinese mainland</p>
-     * <p>*   **overseas**: global (excluding the Chinese mainland)</p>
+     * <p>*   **overseas**: outside the Chinese mainland</p>
      * <p>*   **global**: global</p>
      * <br>
      * <p>Default value: **domestic**.</p>

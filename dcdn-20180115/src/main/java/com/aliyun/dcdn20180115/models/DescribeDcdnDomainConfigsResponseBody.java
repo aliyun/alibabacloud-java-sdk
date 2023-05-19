@@ -4,15 +4,9 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainConfigsResponseBody extends TeaModel {
-    /**
-     * <p>The configurations of the domain name.</p>
-     */
     @NameInMap("DomainConfigs")
     public DescribeDcdnDomainConfigsResponseBodyDomainConfigs domainConfigs;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,15 +32,9 @@ public class DescribeDcdnDomainConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgsFunctionArg extends TeaModel {
-        /**
-         * <p>The name of the configuration.</p>
-         */
         @NameInMap("ArgName")
         public String argName;
 
-        /**
-         * <p>The value of the configuration.</p>
-         */
         @NameInMap("ArgValue")
         public String argValue;
 
@@ -93,37 +81,23 @@ public class DescribeDcdnDomainConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainConfigsResponseBodyDomainConfigsDomainConfig extends TeaModel {
-        /**
-         * <p>The ID of the configuration.</p>
-         */
         @NameInMap("ConfigId")
         public String configId;
 
-        /**
-         * <p>The configurations of the features.</p>
-         */
         @NameInMap("FunctionArgs")
         public DescribeDcdnDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgs functionArgs;
 
-        /**
-         * <p>The name of the feature.</p>
-         */
         @NameInMap("FunctionName")
         public String functionName;
 
-        /**
-         * <p>The ID of the advanced condition configuration.</p>
-         */
         @NameInMap("ParentId")
         public String parentId;
 
         /**
-         * <p>The status of the configuration. Valid values:</p>
-         * <br>
-         * <p>*   **success**</p>
-         * <p>*   **testing**</p>
-         * <p>*   **failed**</p>
-         * <p>*   **configuring**</p>
+         * <p>*   ****</p>
+         * <p>*   ****</p>
+         * <p>*   ****</p>
+         * <p>*   ****</p>
          */
         @NameInMap("Status")
         public String status;

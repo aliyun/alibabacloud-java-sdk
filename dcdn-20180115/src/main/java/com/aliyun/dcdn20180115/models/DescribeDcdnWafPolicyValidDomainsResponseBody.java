@@ -81,7 +81,7 @@ public class DescribeDcdnWafPolicyValidDomainsResponseBody extends TeaModel {
 
     public static class DescribeDcdnWafPolicyValidDomainsResponseBodyDomainsPolicies extends TeaModel {
         /**
-         * <p>The ID of the policy.</p>
+         * <p>The ID of the rule.</p>
          */
         @NameInMap("Id")
         public Long id;

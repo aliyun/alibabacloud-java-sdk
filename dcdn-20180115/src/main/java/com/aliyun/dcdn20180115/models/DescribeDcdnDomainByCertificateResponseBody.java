@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainByCertificateResponseBody extends TeaModel {
     /**
-     * <p>The certificate information of the domain name.</p>
+     * <p>The information about the certificate.</p>
      */
     @NameInMap("CertInfos")
     public DescribeDcdnDomainByCertificateResponseBodyCertInfos certInfos;
@@ -39,31 +39,31 @@ public class DescribeDcdnDomainByCertificateResponseBody extends TeaModel {
 
     public static class DescribeDcdnDomainByCertificateResponseBodyCertInfosCertInfo extends TeaModel {
         /**
-         * <p>Indicates whether the CA certificate has been revoked. Valid values:</p>
+         * <p>Indicates whether the SSL certificate is obsolete. Valid values:</p>
          * <br>
-         * <p>*   **yes**: The certificate has been revoked.</p>
-         * <p>*   **no**: The certificate is normal.</p>
+         * <p>*   **yes**: The SSL certificate is obsolete.</p>
+         * <p>*   **no**: The SSL certificate is working as expected.</p>
          */
         @NameInMap("CertCaIsLegacy")
         public String certCaIsLegacy;
 
         /**
-         * <p>The time when the certificate expires.</p>
+         * <p>The time at which the certificate expires.</p>
          */
         @NameInMap("CertExpireTime")
         public String certExpireTime;
 
         /**
-         * <p>Indicates whether the certificate is expired. Valid values:</p>
+         * <p>Indicates whether the SSL certificate is expired. Valid values:</p>
          * <br>
-         * <p>*   **yes**: The certificate is expired.</p>
-         * <p>*   **no**: The certificate is not expired.</p>
+         * <p>*   **yes**: The SSL certificate is expired.</p>
+         * <p>*   **no**: The SSL certificate is not expired.</p>
          */
         @NameInMap("CertExpired")
         public String certExpired;
 
         /**
-         * <p>The time at which the certificate started to take effect.</p>
+         * <p>The time at which the certificate became effective.</p>
          */
         @NameInMap("CertStartTime")
         public String certStartTime;
@@ -95,7 +95,7 @@ public class DescribeDcdnDomainByCertificateResponseBody extends TeaModel {
         public String domainNames;
 
         /**
-         * <p>The certificate authority CA that issued the certificate.</p>
+         * <p>The certificate authority (CA) that issued the certificate.</p>
          */
         @NameInMap("Issuer")
         public String issuer;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnWafDomainResponseBody extends TeaModel {
     /**
-     * <p>Details about the accelerated domain names.</p>
+     * <p>The accelerated domain name.</p>
      */
     @NameInMap("OutPutDomains")
     public java.util.List<DescribeDcdnWafDomainResponseBodyOutPutDomains> outPutDomains;

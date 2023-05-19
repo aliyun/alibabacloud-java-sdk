@@ -39,7 +39,7 @@ public class DescribeDcdnBlockedRegionsResponseBody extends TeaModel {
 
     public static class DescribeDcdnBlockedRegionsResponseBodyInfoListInfoItem extends TeaModel {
         /**
-         * <p>The district to which the country or region belongs.</p>
+         * <p>The larger region to which the country or region belongs.</p>
          */
         @NameInMap("Continent")
         public String continent;

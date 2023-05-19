@@ -17,7 +17,7 @@ public class DescribeDcdnWafPoliciesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The protection policies.</p>
+     * <p>The information about protection policies.</p>
      */
     @NameInMap("Policies")
     public java.util.List<DescribeDcdnWafPoliciesResponseBodyPolicies> policies;
@@ -81,13 +81,13 @@ public class DescribeDcdnWafPoliciesResponseBody extends TeaModel {
 
     public static class DescribeDcdnWafPoliciesResponseBodyPolicies extends TeaModel {
         /**
-         * <p>The type of the protection policy, which is the same as the DefenseScenes field in the QueryArgs parameter in request parameters.</p>
+         * <p>The type of the protection policy, which is the same as the DefenseScenes field in the QueryArgs parameter.</p>
          */
         @NameInMap("DefenseScene")
         public String defenseScene;
 
         /**
-         * <p>The number of domain names that use this protection policy.</p>
+         * <p>The number of domain names that use the protection policy.</p>
          */
         @NameInMap("DomainCount")
         public Integer domainCount;
@@ -111,19 +111,19 @@ public class DescribeDcdnWafPoliciesResponseBody extends TeaModel {
         public String policyName;
 
         /**
-         * <p>The status of the protection policy, which is the same as the PolicyStatus field in the QueryArgs parameter in request parameters.</p>
+         * <p>The status of the protection policy, which is the same as the PolicyStatus field in the QueryArgs parameter.</p>
          */
         @NameInMap("PolicyStatus")
         public String policyStatus;
 
         /**
-         * <p>Indicates whether this protection policy is the default policy, which is the same as the PolicyType field in the QueryArgs parameter in request parameters.</p>
+         * <p>Indicates whether this protection policy is the default policy, which is the same as the PolicyType field in the QueryArgs parameter.</p>
          */
         @NameInMap("PolicyType")
         public String policyType;
 
         /**
-         * <p>The number of protection rules in this protection policy.</p>
+         * <p>The number of protection rules in the protection policy.</p>
          */
         @NameInMap("RuleCount")
         public Long ruleCount;

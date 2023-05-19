@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class BatchSetDcdnDomainConfigsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>> </p>
+     * <p>*   You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,)</p>
+     * <p>*   You can call this operation up to 30 times per second per account.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

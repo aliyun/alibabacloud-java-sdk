@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class VerifyDcdnDomainOwnerResponseBody extends TeaModel {
     /**
-     * <p>The verification information.</p>
+     * <p>The verification result.</p>
      */
     @NameInMap("Content")
     public String content;

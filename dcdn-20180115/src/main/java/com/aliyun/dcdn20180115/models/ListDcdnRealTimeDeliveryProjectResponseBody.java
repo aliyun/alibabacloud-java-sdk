@@ -81,7 +81,7 @@ public class ListDcdnRealTimeDeliveryProjectResponseBody extends TeaModel {
         public String fieldName;
 
         /**
-         * <p>The name of the Log Service project</p>
+         * <p>The name of the project.</p>
          */
         @NameInMap("ProjectName")
         public String projectName;
@@ -93,7 +93,7 @@ public class ListDcdnRealTimeDeliveryProjectResponseBody extends TeaModel {
         public String SLSLogStore;
 
         /**
-         * <p>The name of the Log Service project.</p>
+         * <p>The name of the log file.</p>
          */
         @NameInMap("SLSProject")
         public String SLSProject;

@@ -4,21 +4,12 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnUserQuotaResponseBody extends TeaModel {
-    /**
-     * <p>The maximum number of URLs that can be blocked.</p>
-     */
     @NameInMap("BlockQuota")
     public Integer blockQuota;
 
-    /**
-     * <p>The remaining number of URLs that can be blocked.</p>
-     */
     @NameInMap("BlockRemain")
     public Integer blockRemain;
 
-    /**
-     * <p>The maximum number of accelerated domains.</p>
-     */
     @NameInMap("DomainQuota")
     public Integer domainQuota;
 
@@ -28,45 +19,24 @@ public class DescribeDcdnUserQuotaResponseBody extends TeaModel {
     @NameInMap("IgnoreParamsRemain")
     public Integer ignoreParamsRemain;
 
-    /**
-     * <p>The maximum number of URLs that can be prefetched.</p>
-     */
     @NameInMap("PreloadQuota")
     public Integer preloadQuota;
 
-    /**
-     * <p>The remaining number of URLs that can be prefetched.</p>
-     */
     @NameInMap("PreloadRemain")
     public Integer preloadRemain;
 
-    /**
-     * <p>The maximum number of directories that can be refreshed.</p>
-     */
     @NameInMap("RefreshDirQuota")
     public Integer refreshDirQuota;
 
-    /**
-     * <p>The remaining number of directories that can be refreshed.</p>
-     */
     @NameInMap("RefreshDirRemain")
     public Integer refreshDirRemain;
 
-    /**
-     * <p>The maximum number of URLs that can be refreshed.</p>
-     */
     @NameInMap("RefreshUrlQuota")
     public Integer refreshUrlQuota;
 
-    /**
-     * <p>The remaining number of URLs that can be refreshed.</p>
-     */
     @NameInMap("RefreshUrlRemain")
     public Integer refreshUrlRemain;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnUserConfigsResponseBody extends TeaModel {
     /**
-     * <p>The user configurations.</p>
+     * <p>>You can call this operation up to 30 times per second per account.</p>
      */
     @NameInMap("Configs")
     public java.util.List<DescribeDcdnUserConfigsResponseBodyConfigs> configs;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The configuration returned.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,9 +39,7 @@ public class DescribeDcdnUserConfigsResponseBody extends TeaModel {
 
     public static class DescribeDcdnUserConfigsResponseBodyConfigs extends TeaModel {
         /**
-         * <p>The name of the configuration.</p>
-         * <br>
-         * <p>The configuration that is specified by enterprise users and public service sectors.</p>
+         * <p>The configuration returned.</p>
          */
         @NameInMap("ArgName")
         public String argName;
@@ -61,7 +59,11 @@ public class DescribeDcdnUserConfigsResponseBody extends TeaModel {
         public String argValue;
 
         /**
-         * <p>The configuration returned.</p>
+         * <p>The configuration that you want to query. Valid values:</p>
+         * <br>
+         * <p>*   domain_business_control: user configurations</p>
+         * <p>*   bot_basic: the basic edition of bot traffic management, which supports authorized crawlers and provides threat intelligence</p>
+         * <p>*   bot_Advance: the advanced edition of bot traffic management, which supports authorized crawlers and AI intelligent protection and provides threat intelligence</p>
          */
         @NameInMap("FunctionName")
         public String functionName;

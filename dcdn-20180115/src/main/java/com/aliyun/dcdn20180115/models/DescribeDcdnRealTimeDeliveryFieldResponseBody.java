@@ -45,7 +45,7 @@ public class DescribeDcdnRealTimeDeliveryFieldResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The name of the field. For more information about the fields in real-time log entries, see [Fields in a real-time log](~~324199~~).</p>
+         * <p>The name of the field. For more information about fields in real-time log entries, see [Fields in a real-time log](~~324199~~).</p>
          */
         @NameInMap("FieldName")
         public String fieldName;

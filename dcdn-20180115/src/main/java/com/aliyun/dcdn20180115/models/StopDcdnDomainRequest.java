@@ -4,9 +4,6 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class StopDcdnDomainRequest extends TeaModel {
-    /**
-     * <p>The name of the accelerated domain to be disabled. You can specify only one domain name.</p>
-     */
     @NameInMap("DomainName")
     public String domainName;
 

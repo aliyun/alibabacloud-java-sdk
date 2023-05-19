@@ -5,17 +5,13 @@ import com.aliyun.tea.*;
 
 public class SetDcdnDomainStagingConfigRequest extends TeaModel {
     /**
-     * <p>The accelerated domain names. Separate multiple accelerated domain names with commas (,).</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The list of features. Specify the features in the following format:</p>
-     * <br>
-     * <p>`[{"functionArgs":[{"argName":"parameter key","argValue":"parameter value"},{"argName":"xx","argValue":"xx"}],"functionName": feature name"}]`</p>
-     * <br>
-     * <p>>  Separate multiple parameters with commas (,).</p>
+     * <p>>  The maximum number of times that users can call this operation per second is 30.</p>
      */
     @NameInMap("Functions")
     public String functions;

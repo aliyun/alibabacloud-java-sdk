@@ -5,33 +5,33 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnsecServiceResponseBody extends TeaModel {
     /**
-     * <p>The time when the renewed secure DCDN takes effect. The time is displayed in UTC.</p>
+     * <p>The time when the renewed service takes effect. The time is displayed in UTC.</p>
      */
     @NameInMap("ChangingAffectTime")
     public String changingAffectTime;
 
     /**
-     * <p>The new metering method for the renewed secure DCDN. Valid values:</p>
+     * <p>The new metering method for the renewed DCDN. Valid values:</p>
      * <br>
-     * <p>*   **PayByTraffic**: pay-by-data-transfer</p>
-     * <p>*   **PayByBandwidth**: pay-by-bandwidth</p>
-     * <p>*   **PayByBandwidth95**: pay-by-95th percentile bandwidth</p>
-     * <p>*   **PayByBandwidth_monthavg**: pay-by-monthly average bandwidth</p>
-     * <p>*   **PayByBandwidth_month4th**: pay-by-fourth peak bandwidth per month</p>
-     * <p>*   **PayByBandwidth_monthday95avg**: pay-by-monthly average 95th percentile bandwidth</p>
-     * <p>*   **PayByBandwidth_nighthalf95**: pay-by-95th percentile bandwidth (50% off during nighttime)</p>
+     * <p>*   **PayByTraffic**: pay by data transfer</p>
+     * <p>*   **PayByBandwidth**: pay by bandwidth</p>
+     * <p>*   **PayByBandwidth95**: pay by 95th percentile bandwidth</p>
+     * <p>*   **PayByBandwidth_monthavg**: pay by monthly average bandwidth</p>
+     * <p>*   **PayByBandwidth_month4th**: pay by fourth peak bandwidth per month</p>
+     * <p>*   **PayByBandwidth_monthday95avg**: pay by monthly average 95th percentile bandwidth</p>
+     * <p>*   **PayByBandwidth_nighthalf95**: pay by 95th percentile bandwidth (50% off during nighttime)</p>
      */
     @NameInMap("ChangingChargeType")
     public String changingChargeType;
 
     /**
-     * <p>The number of accelerated domain names that use secure DCDN.</p>
+     * <p>The number of accelerated domain names that use DCDN.</p>
      */
     @NameInMap("DomainNum")
     public String domainNum;
 
     /**
-     * <p>The time when secure DCDN expires.</p>
+     * <p>The service expiration time.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -51,19 +51,19 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
     /**
      * <p>The current metering method. Valid values:</p>
      * <br>
-     * <p>*   **PayByTraffic**: pay-by-data-transfer</p>
-     * <p>*   **PayByBandwidth**: pay-by-bandwidth</p>
-     * <p>*   **PayByBandwidth95**: pay-by-95th percentile bandwidth</p>
-     * <p>*   **PayByBandwidth_monthavg**: pay-by-monthly average bandwidth</p>
-     * <p>*   **PayByBandwidth_month4th**: pay-by-fourth peak bandwidth per month</p>
-     * <p>*   **PayByBandwidth_monthday95avg**: pay-by-monthly average 95th percentile bandwidth</p>
-     * <p>*   **PayByBandwidth_nighthalf95**: pay-by-95th percentile bandwidth (50% off during nighttime)</p>
+     * <p>*   **PayByTraffic**: pay by data transfer</p>
+     * <p>*   **PayByBandwidth**: pay by bandwidth</p>
+     * <p>*   **PayByBandwidth95**: pay by 95th percentile bandwidth</p>
+     * <p>*   **PayByBandwidth_monthavg**: pay by monthly average bandwidth</p>
+     * <p>*   **PayByBandwidth_month4th**: pay by fourth peak bandwidth per month</p>
+     * <p>*   **PayByBandwidth_monthday95avg**: pay by monthly average 95th percentile bandwidth</p>
+     * <p>*   **PayByBandwidth_nighthalf95**: pay by 95th percentile bandwidth (50% off during nighttime)</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
     /**
-     * <p>The lock status of secure DCDN.</p>
+     * <p>The lock status of DCDN.</p>
      */
     @NameInMap("OperationLocks")
     public DescribeDcdnsecServiceResponseBodyOperationLocks operationLocks;
@@ -81,13 +81,13 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
     public String requestType;
 
     /**
-     * <p>The time when secure DCDN was enabled.</p>
+     * <p>The service activation time.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The version of secure DCDN.</p>
+     * <p>The version number.</p>
      */
     @NameInMap("Version")
     public String version;
@@ -195,7 +195,7 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
 
     public static class DescribeDcdnsecServiceResponseBodyOperationLocksLockReason extends TeaModel {
         /**
-         * <p>The reason why secure DCDN was locked.</p>
+         * <p>The reason why the instance was locked.</p>
          */
         @NameInMap("LockReason")
         public String lockReason;

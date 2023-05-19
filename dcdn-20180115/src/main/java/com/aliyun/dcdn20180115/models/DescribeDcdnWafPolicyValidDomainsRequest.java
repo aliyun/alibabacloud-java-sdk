@@ -24,7 +24,7 @@ public class DescribeDcdnWafPolicyValidDomainsRequest extends TeaModel {
     public String domainNameLike;
 
     /**
-     * <p>The number of the page to return. Valid values: **1** to **100000**. Default value: **1**.</p>
+     * <p>The page number of the returned page. Valid values: **1** to **100000**. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;

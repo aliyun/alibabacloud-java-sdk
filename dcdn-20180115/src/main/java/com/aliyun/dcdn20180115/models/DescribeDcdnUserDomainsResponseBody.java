@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
     /**
-     * <p>The detailed information about each accelerated domain name. The returned information is displayed in the format that is specified by the PageData parameter.</p>
+     * <p>The array that consists of multiple PageData parameters. The details about each accelerated domain name are included in a separate PageData parameter.</p>
      */
     @NameInMap("Domains")
     public DescribeDcdnUserDomainsResponseBodyDomains domains;
@@ -215,7 +215,7 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
         public String domainStatus;
 
         /**
-         * <p>The time when the accelerated domain name was added.</p>
+         * <p>The time when the accelerated domain name was added to Dynamic Content Delivery Network (DCDN).</p>
          */
         @NameInMap("GmtCreated")
         public String gmtCreated;
@@ -233,7 +233,7 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>Indicates whether HTTPS is enabled.</p>
+         * <p>The status of HTTPS.</p>
          * <br>
          * <p>*   **on**</p>
          * <p>*   **off**</p>

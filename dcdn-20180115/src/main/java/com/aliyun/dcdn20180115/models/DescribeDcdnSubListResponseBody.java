@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnSubListResponseBody extends TeaModel {
     /**
-     * <p>The information about the custom report task.</p>
+     * <p>The information about the custom report.</p>
      */
     @NameInMap("Content")
     public String content;

@@ -112,8 +112,8 @@ public class DescribeDcdnWafSpecInfoResponseBody extends TeaModel {
          * <p>The type of the protection policy. Valid values:</p>
          * <br>
          * <p>*   waf_group: basic web protection</p>
-         * <p>*   custom_acl: custom protection</p>
-         * <p>*   whitelist: IP address whitelist</p>
+         * <p>*   custom_acl: custom</p>
+         * <p>*   whitelist: whitelist</p>
          * <p>*   ip_blacklist: IP address blacklist</p>
          * <p>*   region_block: region blacklist</p>
          * <p>*   bot: bot management</p>

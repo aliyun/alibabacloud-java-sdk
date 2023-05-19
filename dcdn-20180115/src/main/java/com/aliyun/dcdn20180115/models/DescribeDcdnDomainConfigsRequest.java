@@ -4,21 +4,12 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainConfigsRequest extends TeaModel {
-    /**
-     * <p>The ID of the configuration.</p>
-     */
     @NameInMap("ConfigId")
     public String configId;
 
-    /**
-     * <p>The accelerated domain name. You can specify only one domain name in each call.</p>
-     */
     @NameInMap("DomainName")
     public String domainName;
 
-    /**
-     * <p>The names of the features to query. Separate features with commas (,).</p>
-     */
     @NameInMap("FunctionNames")
     public String functionNames;
 
