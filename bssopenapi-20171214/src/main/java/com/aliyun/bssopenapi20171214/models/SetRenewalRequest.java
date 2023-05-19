@@ -4,27 +4,68 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class SetRenewalRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance. You can enable auto-renewal for up to 100 subscription instances at a time. Separate multiple instance IDs with commas (,).</p>
+     */
     @NameInMap("InstanceIDs")
     public String instanceIDs;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The code of the service.</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 
+    /**
+     * <p>The type of the service.</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 
+    /**
+     * <p>The auto-renewal period. Valid values:</p>
+     * <br>
+     * <p>*   1</p>
+     * <p>*   2</p>
+     * <p>*   3</p>
+     * <p>*   6</p>
+     * <p>*   12</p>
+     * <br>
+     * <p>>  This parameter is required if the RenewalStatus parameter is set to AutoRenewal.</p>
+     */
     @NameInMap("RenewalPeriod")
     public Integer renewalPeriod;
 
+    /**
+     * <p>The unit of the auto-renewal period. Valid values:</p>
+     * <br>
+     * <p>*   M: months</p>
+     * <p>*   Y: years</p>
+     * <br>
+     * <p>>  This parameter is required if the RenewalStatus parameter is set to AutoRenewal.</p>
+     */
     @NameInMap("RenewalPeriodUnit")
     public String renewalPeriodUnit;
 
+    /**
+     * <p>The status of renewal. Valid values:</p>
+     * <br>
+     * <p>*   AutoRenewal: The instance is automatically renewed.</p>
+     * <p>*   ManualRenewal: The instance is manually renewed.</p>
+     * <p>*   NotRenewal: The instance is not renewed.</p>
+     */
     @NameInMap("RenewalStatus")
     public String renewalStatus;
 
+    /**
+     * <p>The billing method. Valid values:</p>
+     * <br>
+     * <p>*   Subscription: subscription</p>
+     * <p>*   PayAsYouGo: pay-as-you-go</p>
+     */
     @NameInMap("SubscriptionType")
     public String subscriptionType;
 

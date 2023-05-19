@@ -4,42 +4,21 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryInstanceGaapCostRequest extends TeaModel {
-    /**
-     * <p>The billing cycle. Format: YYYY-MM.</p>
-     */
     @NameInMap("BillingCycle")
     public String billingCycle;
 
-    /**
-     * <p>The number of the page to return. Default value: 1.</p>
-     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
-    /**
-     * <p>The number of entries to return on each page. Default value: 20. Maximum value: 100.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The code of the service.</p>
-     */
     @NameInMap("ProductCode")
     public String productCode;
 
-    /**
-     * <p>The type of the service.</p>
-     */
     @NameInMap("ProductType")
     public String productType;
 
-    /**
-     * <p>The billing method. Valid values:</p>
-     * <br>
-     * <p>*   Subscription: the subscription billing method</p>
-     * <p>*   PayAsYouGo: the pay-as-you-go billing method</p>
-     */
     @NameInMap("SubscriptionType")
     public String subscriptionType;
 

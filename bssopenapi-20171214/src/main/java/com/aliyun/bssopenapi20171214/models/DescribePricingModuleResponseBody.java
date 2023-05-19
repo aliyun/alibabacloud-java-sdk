@@ -4,18 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class DescribePricingModuleResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public DescribePricingModuleResponseBodyData data;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,15 +80,32 @@ public class DescribePricingModuleResponseBody extends TeaModel {
     }
 
     public static class DescribePricingModuleResponseBodyDataAttributeListAttributeValuesAttributeValue extends TeaModel {
+        /**
+         * <p>The attribute value that corresponds to the module code.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The description of the module values.</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <p>The type of the attribute value that corresponds to the module code. Valid values:</p>
+         * <br>
+         * <p>*   single_float: single value</p>
+         * <p>*   range_float: range value</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The attribute value that corresponds to the module code.</p>
+         * <br>
+         * <p>>  If the Type parameter is set to range_float, the valid values of this parameter range from 1024 to 1024000. A value of 1024 indicates that the step size is 1024.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -136,15 +168,27 @@ public class DescribePricingModuleResponseBody extends TeaModel {
     }
 
     public static class DescribePricingModuleResponseBodyDataAttributeListAttribute extends TeaModel {
+        /**
+         * <p>The code of the attribute.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The name of the attribute.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the attribute.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The attribute values.</p>
+         */
         @NameInMap("Values")
         public DescribePricingModuleResponseBodyDataAttributeListAttributeValues values;
 
@@ -229,15 +273,34 @@ public class DescribePricingModuleResponseBody extends TeaModel {
         @NameInMap("ConfigList")
         public DescribePricingModuleResponseBodyDataModuleListModuleConfigList configList;
 
+        /**
+         * <p>The currency. Default value: CNY.</p>
+         */
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <p>The code of the pricing module.</p>
+         */
         @NameInMap("ModuleCode")
         public String moduleCode;
 
+        /**
+         * <p>The name of the pricing module.</p>
+         */
         @NameInMap("ModuleName")
         public String moduleName;
 
+        /**
+         * <p>The price type. Valid values:</p>
+         * <br>
+         * <p>*   Usage: usage price</p>
+         * <p>*   Hour: hourly price</p>
+         * <p>*   Day: daily price</p>
+         * <p>*   Week: weekly price</p>
+         * <p>*   Month: monthly price</p>
+         * <p>*   Year: annual price</p>
+         */
         @NameInMap("PriceType")
         public String priceType;
 
@@ -308,9 +371,15 @@ public class DescribePricingModuleResponseBody extends TeaModel {
     }
 
     public static class DescribePricingModuleResponseBodyData extends TeaModel {
+        /**
+         * <p>The module attributes.</p>
+         */
         @NameInMap("AttributeList")
         public DescribePricingModuleResponseBodyDataAttributeList attributeList;
 
+        /**
+         * <p>The pricing information of modules.</p>
+         */
         @NameInMap("ModuleList")
         public DescribePricingModuleResponseBodyDataModuleList moduleList;
 

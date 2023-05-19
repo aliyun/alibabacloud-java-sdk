@@ -4,21 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryPriceEntityListResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data that is returned.</p>
+     */
     @NameInMap("Data")
     public QueryPriceEntityListResponseBodyData data;
 
+    /**
+     * <p>The message that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -68,12 +80,21 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
     }
 
     public static class QueryPriceEntityListResponseBodyDataPriceEntityInfoListPriceFactorList extends TeaModel {
+        /**
+         * <p>The code of the factor.</p>
+         */
         @NameInMap("PriceFactorCode")
         public String priceFactorCode;
 
+        /**
+         * <p>The name of the factor.</p>
+         */
         @NameInMap("PriceFactorName")
         public String priceFactorName;
 
+        /**
+         * <p>The values of the factor.</p>
+         */
         @NameInMap("PriceFactorValueList")
         public java.util.List<String> priceFactorValueList;
 
@@ -109,12 +130,21 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
     }
 
     public static class QueryPriceEntityListResponseBodyDataPriceEntityInfoList extends TeaModel {
+        /**
+         * <p>The code of the billable item.</p>
+         */
         @NameInMap("PriceEntityCode")
         public String priceEntityCode;
 
+        /**
+         * <p>The name of the billable item.</p>
+         */
         @NameInMap("PriceEntityName")
         public String priceEntityName;
 
+        /**
+         * <p>The factors of the billable item.</p>
+         */
         @NameInMap("PriceFactorList")
         public java.util.List<QueryPriceEntityListResponseBodyDataPriceEntityInfoListPriceFactorList> priceFactorList;
 
@@ -150,6 +180,9 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
     }
 
     public static class QueryPriceEntityListResponseBodyData extends TeaModel {
+        /**
+         * <p>The information about the billable items.</p>
+         */
         @NameInMap("PriceEntityInfoList")
         public java.util.List<QueryPriceEntityListResponseBodyDataPriceEntityInfoList> priceEntityInfoList;
 

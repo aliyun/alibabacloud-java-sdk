@@ -4,6 +4,9 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class CreateCostUnitRequest extends TeaModel {
+    /**
+     * <p>The list of cost centers.</p>
+     */
     @NameInMap("UnitEntityList")
     public java.util.List<CreateCostUnitRequestUnitEntityList> unitEntityList;
 
@@ -21,12 +24,21 @@ public class CreateCostUnitRequest extends TeaModel {
     }
 
     public static class CreateCostUnitRequestUnitEntityList extends TeaModel {
+        /**
+         * <p>The user ID of the owner of the cost center.</p>
+         */
         @NameInMap("OwnerUid")
         public Long ownerUid;
 
+        /**
+         * <p>The ID of the parent cost center. A value of -1 indicates the root cost center.</p>
+         */
         @NameInMap("ParentUnitId")
         public Long parentUnitId;
 
+        /**
+         * <p>The name of the cost center.</p>
+         */
         @NameInMap("UnitName")
         public String unitName;
 

@@ -4,15 +4,27 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryCostUnitResourceRequest extends TeaModel {
+    /**
+     * <p>The user ID of the cost center owner.</p>
+     */
     @NameInMap("OwnerUid")
     public Long ownerUid;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the cost center.</p>
+     */
     @NameInMap("UnitId")
     public Long unitId;
 

@@ -4,18 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class AllocateCostUnitResourceResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public AllocateCostUnitResourceResponseBodyData data;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +80,24 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
     }
 
     public static class AllocateCostUnitResourceResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether resources are allocated to the specified cost center. Valid values:</p>
+         * <br>
+         * <p>*   true: The resources are allocated to the specified cost center.</p>
+         * <p>*   false: The resources fail to be allocated to the specified cost center.</p>
+         */
         @NameInMap("IsSuccess")
         public Boolean isSuccess;
 
+        /**
+         * <p>The ID of the destination cost center.</p>
+         */
         @NameInMap("ToUnitId")
         public Long toUnitId;
 
+        /**
+         * <p>The user ID of the owner of the destination cost center.</p>
+         */
         @NameInMap("ToUnitUserId")
         public Long toUnitUserId;
 

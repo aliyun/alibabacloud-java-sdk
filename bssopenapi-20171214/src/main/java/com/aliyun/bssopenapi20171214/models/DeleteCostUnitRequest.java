@@ -4,9 +4,15 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class DeleteCostUnitRequest extends TeaModel {
+    /**
+     * <p>The user ID of the cost center owner.</p>
+     */
     @NameInMap("OwnerUid")
     public Long ownerUid;
 
+    /**
+     * <p>The ID of the cost center. A value of -1 indicates the root cost center.</p>
+     */
     @NameInMap("UnitId")
     public Long unitId;
 

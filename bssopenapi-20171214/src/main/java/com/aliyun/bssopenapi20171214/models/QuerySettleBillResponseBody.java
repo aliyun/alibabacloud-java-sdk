@@ -4,33 +4,18 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QuerySettleBillResponseBody extends TeaModel {
-    /**
-     * <p>The status code returned.</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The data returned.</p>
-     */
     @NameInMap("Data")
     public QuerySettleBillResponseBodyData data;
 
-    /**
-     * <p>The message returned.</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request is successful.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -80,230 +65,108 @@ public class QuerySettleBillResponseBody extends TeaModel {
     }
 
     public static class QuerySettleBillResponseBodyDataItemsItem extends TeaModel {
-        /**
-         * <p>The amount deducted by using credit refunds.</p>
-         */
         @NameInMap("AdjustAmount")
         public Float adjustAmount;
 
-        /**
-         * <p>The amount paid after the tax is deducted.</p>
-         */
         @NameInMap("AfterTaxAmount")
         public Float afterTaxAmount;
 
-        /**
-         * <p>The ID of the account to which the bill belongs.</p>
-         */
         @NameInMap("BillAccountID")
         public String billAccountID;
 
-        /**
-         * <p>The name of the account to which the bill belongs.</p>
-         */
         @NameInMap("BillAccountName")
         public String billAccountName;
 
-        /**
-         * <p>The business type.</p>
-         */
         @NameInMap("BizType")
         public String bizType;
 
-        /**
-         * <p>The amount paid in cash. The amount that was deducted by using credit refunds is not included.</p>
-         */
         @NameInMap("CashAmount")
         public Float cashAmount;
 
-        /**
-         * <p>The code of the commodity. The commodity code is the same as that displayed in User Center.</p>
-         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
-        /**
-         * <p>The type of the currency.</p>
-         * <br>
-         * <p>*   CNY</p>
-         * <p>*   USD</p>
-         * <p>*   JPY</p>
-         */
         @NameInMap("Currency")
         public String currency;
 
-        /**
-         * <p>The amount deducted by using vouchers.</p>
-         */
         @NameInMap("DeductedByCashCoupons")
         public Float deductedByCashCoupons;
 
-        /**
-         * <p>The amount deducted by using coupons.</p>
-         */
         @NameInMap("DeductedByCoupons")
         public Float deductedByCoupons;
 
-        /**
-         * <p>The amount deducted by using prepaid cards.</p>
-         */
         @NameInMap("DeductedByPrepaidCard")
         public Float deductedByPrepaidCard;
 
-        /**
-         * <p>The discount amount.</p>
-         */
         @NameInMap("InvoiceDiscount")
         public Float invoiceDiscount;
 
-        /**
-         * <p>The type of the bill. Valid values:</p>
-         * <br>
-         * <p>*   Subscription</p>
-         * <p>*   OrderPayAsYouGoBill</p>
-         * <p>*   Refund</p>
-         * <p>*   Adjustment</p>
-         */
         @NameInMap("Item")
         public String item;
 
-        /**
-         * <p>The unsettled amount.</p>
-         */
         @NameInMap("OutstandingAmount")
         public Float outstandingAmount;
 
-        /**
-         * <p>The ID of the member. This parameter is returned in a multi-account payment scenario.</p>
-         */
         @NameInMap("OwnerID")
         public String ownerID;
 
-        /**
-         * <p>The amount paid in cash. The amount that was deducted by using credit refunds is included.</p>
-         */
         @NameInMap("PaymentAmount")
         public Float paymentAmount;
 
-        /**
-         * <p>The currency used for payment.</p>
-         */
         @NameInMap("PaymentCurrency")
         public String paymentCurrency;
 
-        /**
-         * <p>The time when the bill was paid.</p>
-         */
         @NameInMap("PaymentTime")
         public String paymentTime;
 
-        /**
-         * <p>The ID of the transaction.</p>
-         */
         @NameInMap("PaymentTransactionID")
         public String paymentTransactionID;
 
-        /**
-         * <p>The code of the service. The service code is the same as that displayed in User Center.</p>
-         */
         @NameInMap("PipCode")
         public String pipCode;
 
-        /**
-         * <p>The pretax amount.</p>
-         */
         @NameInMap("PretaxAmount")
         public Float pretaxAmount;
 
-        /**
-         * <p>The pretax amount paid in local currency.</p>
-         */
         @NameInMap("PretaxAmountLocal")
         public Float pretaxAmountLocal;
 
-        /**
-         * <p>The pretax gross amount.</p>
-         */
         @NameInMap("PretaxGrossAmount")
         public Float pretaxGrossAmount;
 
-        /**
-         * <p>The code of the service.</p>
-         */
         @NameInMap("ProductCode")
         public String productCode;
 
-        /**
-         * <p>The details of the service.</p>
-         */
         @NameInMap("ProductDetail")
         public String productDetail;
 
-        /**
-         * <p>The name of the service.</p>
-         */
         @NameInMap("ProductName")
         public String productName;
 
-        /**
-         * <p>The type of the service.</p>
-         */
         @NameInMap("ProductType")
         public String productType;
 
-        /**
-         * <p>The ID of the bill or order.</p>
-         */
         @NameInMap("RecordID")
         public String recordID;
 
-        /**
-         * <p>The round down discount.</p>
-         */
         @NameInMap("RoundDownDiscount")
         public String roundDownDiscount;
 
-        /**
-         * <p>The payment status of the bill. Valid values:</p>
-         * <br>
-         * <p>*   PayFinish: The bill is paid.</p>
-         * <p>*   PayUnclear: The bill is not cleared.</p>
-         * <p>*   PayUnsettle: The bill is not settled.</p>
-         * <p>*   NoSettle: The bill is free of settlement.</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The ID of the order corresponding to the bill.</p>
-         */
         @NameInMap("SubOrderId")
         public String subOrderId;
 
-        /**
-         * <p>The billing method. Valid values:</p>
-         * <br>
-         * <p>*   Subscription</p>
-         * <p>*   PayAsYouGo</p>
-         */
         @NameInMap("SubscriptionType")
         public String subscriptionType;
 
-        /**
-         * <p>The tax.</p>
-         */
         @NameInMap("Tax")
         public Float tax;
 
-        /**
-         * <p>The end time of the bill.</p>
-         */
         @NameInMap("UsageEndTime")
         public String usageEndTime;
 
-        /**
-         * <p>The start time of the bill.</p>
-         */
         @NameInMap("UsageStartTime")
         public String usageStartTime;
 
@@ -614,45 +477,24 @@ public class QuerySettleBillResponseBody extends TeaModel {
     }
 
     public static class QuerySettleBillResponseBodyData extends TeaModel {
-        /**
-         * <p>The ID of the account.</p>
-         */
         @NameInMap("AccountID")
         public String accountID;
 
-        /**
-         * <p>The name of the account.</p>
-         */
         @NameInMap("AccountName")
         public String accountName;
 
-        /**
-         * <p>The billing cycle, in the YYYY-MM format.</p>
-         */
         @NameInMap("BillingCycle")
         public String billingCycle;
 
-        /**
-         * <p>The details of the bills.</p>
-         */
         @NameInMap("Items")
         public QuerySettleBillResponseBodyDataItems items;
 
-        /**
-         * <p>The maximum number of entries returned.</p>
-         */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
-        /**
-         * <p>The position where the query stopped. If no value is returned for this parameter, all data has been queried.</p>
-         */
         @NameInMap("NextToken")
         public String nextToken;
 
-        /**
-         * <p>The total number of returned entries.</p>
-         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

@@ -729,8 +729,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createResourcePackageWithOptions(request, runtime);
     }
 
-    public CreateSavingsPlansInstanceResponse createSavingsPlansInstanceWithOptions(CreateSavingsPlansInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateSavingsPlansInstanceResponse createSavingsPlansInstanceWithOptions(CreateSavingsPlansInstanceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateSavingsPlansInstanceShrinkRequest request = new CreateSavingsPlansInstanceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extendMap)) {
+            request.extendMapShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extendMap, "ExtendMap", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.commodityCode)) {
             query.put("CommodityCode", request.commodityCode);
@@ -742,6 +748,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.effectiveDate)) {
             query.put("EffectiveDate", request.effectiveDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extendMapShrink)) {
+            query.put("ExtendMap", request.extendMapShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.payMode)) {
@@ -827,6 +837,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteCostUnitWithOptions(request, runtime);
     }
 
+    /**
+      * This operation is in beta testing and is only available for specific users in the whitelist. Excessive calls may result in performance issues. For example, the response times out.
+      *
+      * @param request DescribeCostBudgetsSummaryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeCostBudgetsSummaryResponse
+     */
     public DescribeCostBudgetsSummaryResponse describeCostBudgetsSummaryWithOptions(DescribeCostBudgetsSummaryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -867,6 +884,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCostBudgetsSummaryResponse());
     }
 
+    /**
+      * This operation is in beta testing and is only available for specific users in the whitelist. Excessive calls may result in performance issues. For example, the response times out.
+      *
+      * @param request DescribeCostBudgetsSummaryRequest
+      * @return DescribeCostBudgetsSummaryResponse
+     */
     public DescribeCostBudgetsSummaryResponse describeCostBudgetsSummary(DescribeCostBudgetsSummaryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeCostBudgetsSummaryWithOptions(request, runtime);
@@ -952,6 +975,79 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeInstanceAmortizedCostByAmortizationPeriodResponse describeInstanceAmortizedCostByAmortizationPeriod(DescribeInstanceAmortizedCostByAmortizationPeriodRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeInstanceAmortizedCostByAmortizationPeriodWithOptions(request, runtime);
+    }
+
+    public DescribeInstanceAmortizedCostByAmortizationPeriodDateResponse describeInstanceAmortizedCostByAmortizationPeriodDateWithOptions(DescribeInstanceAmortizedCostByAmortizationPeriodDateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.amortizationDateEnd)) {
+            body.put("AmortizationDateEnd", request.amortizationDateEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.amortizationDateStart)) {
+            body.put("AmortizationDateStart", request.amortizationDateStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.billOwnerIdList)) {
+            body.put("BillOwnerIdList", request.billOwnerIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.billUserIdList)) {
+            body.put("BillUserIdList", request.billUserIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.billingCycle)) {
+            body.put("BillingCycle", request.billingCycle);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.costUnitCode)) {
+            body.put("CostUnitCode", request.costUnitCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIdList)) {
+            body.put("InstanceIdList", request.instanceIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            body.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productDetail)) {
+            body.put("ProductDetail", request.productDetail);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subscriptionType)) {
+            body.put("SubscriptionType", request.subscriptionType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeInstanceAmortizedCostByAmortizationPeriodDate"),
+            new TeaPair("version", "2017-12-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInstanceAmortizedCostByAmortizationPeriodDateResponse());
+    }
+
+    public DescribeInstanceAmortizedCostByAmortizationPeriodDateResponse describeInstanceAmortizedCostByAmortizationPeriodDate(DescribeInstanceAmortizedCostByAmortizationPeriodDateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeInstanceAmortizedCostByAmortizationPeriodDateWithOptions(request, runtime);
     }
 
     public DescribeInstanceAmortizedCostByConsumePeriodResponse describeInstanceAmortizedCostByConsumePeriodWithOptions(DescribeInstanceAmortizedCostByConsumePeriodRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1302,9 +1398,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * 1\\. The queried coverage details are the same as those displayed in the table on the Coverage tab of the Manage Reserved Instances page in the Billing Management console.
-      * 2\\. You can call this operation to query the coverage details of RIs or SCUs.
-      * 3\\. You can call this operation to query coverage details at an hourly, daily, or monthly granularity.
+      * The amount of the resources deducted from a deduction plan.
       *
       * @param request DescribeResourceCoverageDetailRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1359,9 +1453,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * 1\\. The queried coverage details are the same as those displayed in the table on the Coverage tab of the Manage Reserved Instances page in the Billing Management console.
-      * 2\\. You can call this operation to query the coverage details of RIs or SCUs.
-      * 3\\. You can call this operation to query coverage details at an hourly, daily, or monthly granularity.
+      * The amount of the resources deducted from a deduction plan.
       *
       * @param request DescribeResourceCoverageDetailRequest
       * @return DescribeResourceCoverageDetailResponse
@@ -1372,8 +1464,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The queried total coverage data is the same as the aggregated data displayed on the Coverage tab of the Manage Reserved Instances page in the Billing Management console.
-      * You can call this operation to query the total coverage data of RIs or SCUs.
+      * Indicates whether the operation was successful.
       *
       * @param request DescribeResourceCoverageTotalRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1420,8 +1511,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The queried total coverage data is the same as the aggregated data displayed on the Coverage tab of the Manage Reserved Instances page in the Billing Management console.
-      * You can call this operation to query the total coverage data of RIs or SCUs.
+      * Indicates whether the operation was successful.
       *
       * @param request DescribeResourceCoverageTotalRequest
       * @return DescribeResourceCoverageTotalResponse
@@ -1738,6 +1828,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeSavingsPlansUsageTotalWithOptions(request, runtime);
     }
 
+    /**
+      * The code of the service.
+      *
+      * @param request DescribeSplitItemBillRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeSplitItemBillResponse
+     */
     public DescribeSplitItemBillResponse describeSplitItemBillWithOptions(DescribeSplitItemBillRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1810,6 +1907,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSplitItemBillResponse());
     }
 
+    /**
+      * The code of the service.
+      *
+      * @param request DescribeSplitItemBillRequest
+      * @return DescribeSplitItemBillResponse
+     */
     public DescribeSplitItemBillResponse describeSplitItemBill(DescribeSplitItemBillRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSplitItemBillWithOptions(request, runtime);
@@ -1903,7 +2006,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The system queries the IDs of customers of a VNO based on the AccessKey pair used in the request.
+      * The ID of the customer.
       *
       * @param request GetCustomerListRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1926,7 +2029,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The system queries the IDs of customers of a VNO based on the AccessKey pair used in the request.
+      * The ID of the customer.
       *
       * @return GetCustomerListResponse
      */
@@ -2183,6 +2286,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getSubscriptionPriceWithOptions(request, runtime);
     }
 
+    /**
+      * 1.  **Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.**
+      * 2.  Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.
+      * 3.  For more information, see [Rules for unsubscribing from resources](https://help.aliyun.com/knowledge_detail/116043.html?spm=a2c81.e1d666e.app.2.62ae11271Kd6iM).
+      *
+      * @param request InquiryPriceRefundInstanceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return InquiryPriceRefundInstanceResponse
+     */
     public InquiryPriceRefundInstanceResponse inquiryPriceRefundInstanceWithOptions(InquiryPriceRefundInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2219,6 +2331,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new InquiryPriceRefundInstanceResponse());
     }
 
+    /**
+      * 1.  **Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.**
+      * 2.  Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.
+      * 3.  For more information, see [Rules for unsubscribing from resources](https://help.aliyun.com/knowledge_detail/116043.html?spm=a2c81.e1d666e.app.2.62ae11271Kd6iM).
+      *
+      * @param request InquiryPriceRefundInstanceRequest
+      * @return InquiryPriceRefundInstanceResponse
+     */
     public InquiryPriceRefundInstanceResponse inquiryPriceRefundInstance(InquiryPriceRefundInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.inquiryPriceRefundInstanceWithOptions(request, runtime);
@@ -2847,6 +2967,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryCashCouponsWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation to query the information about a service based on the service code.
+      *
+      * @param request QueryCommodityListRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryCommodityListResponse
+     */
     public QueryCommodityListResponse queryCommodityListWithOptions(QueryCommodityListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -2867,6 +2994,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryCommodityListResponse());
     }
 
+    /**
+      * You can call this operation to query the information about a service based on the service code.
+      *
+      * @param request QueryCommodityListRequest
+      * @return QueryCommodityListResponse
+     */
     public QueryCommodityListResponse queryCommodityList(QueryCommodityListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryCommodityListWithOptions(request, runtime);
@@ -2983,6 +3116,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryCustomerAddressListWithOptions(request, runtime);
     }
 
+    /**
+      * The UID of the deducted instance.
+      *
+      * @param request QueryDPUtilizationDetailRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryDPUtilizationDetailResponse
+     */
     public QueryDPUtilizationDetailResponse queryDPUtilizationDetailWithOptions(QueryDPUtilizationDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3043,6 +3183,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDPUtilizationDetailResponse());
     }
 
+    /**
+      * The UID of the deducted instance.
+      *
+      * @param request QueryDPUtilizationDetailRequest
+      * @return QueryDPUtilizationDetailResponse
+     */
     public QueryDPUtilizationDetailResponse queryDPUtilizationDetail(QueryDPUtilizationDetailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryDPUtilizationDetailWithOptions(request, runtime);
@@ -3498,6 +3644,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryPrepaidCardsWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation to query the billable items of a service. A billable item is the minimum unit used to calculate costs.
+      *
+      * @param request QueryPriceEntityListRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryPriceEntityListResponse
+     */
     public QueryPriceEntityListResponse queryPriceEntityListWithOptions(QueryPriceEntityListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -3518,6 +3671,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryPriceEntityListResponse());
     }
 
+    /**
+      * You can call this operation to query the billable items of a service. A billable item is the minimum unit used to calculate costs.
+      *
+      * @param request QueryPriceEntityListRequest
+      * @return QueryPriceEntityListResponse
+     */
     public QueryPriceEntityListResponse queryPriceEntityList(QueryPriceEntityListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryPriceEntityListWithOptions(request, runtime);
@@ -4191,6 +4350,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryUserOmsDataWithOptions(request, runtime);
     }
 
+    /**
+      * 1.  Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.
+      * 2.  Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.
+      * 3.  For more information, see [Rules for unsubscribing from resources](https://help.aliyun.com/knowledge_detail/116043.html?spm=a2c81.e1d666e.app.2.62ae11271Kd6iM).
+      *
+      * @param request RefundInstanceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RefundInstanceResponse
+     */
     public RefundInstanceResponse refundInstanceWithOptions(RefundInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4231,11 +4399,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RefundInstanceResponse());
     }
 
+    /**
+      * 1.  Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.
+      * 2.  Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.
+      * 3.  For more information, see [Rules for unsubscribing from resources](https://help.aliyun.com/knowledge_detail/116043.html?spm=a2c81.e1d666e.app.2.62ae11271Kd6iM).
+      *
+      * @param request RefundInstanceRequest
+      * @return RefundInstanceResponse
+     */
     public RefundInstanceResponse refundInstance(RefundInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.refundInstanceWithOptions(request, runtime);
     }
 
+    /**
+      * A value of true indicates that the execution is complete.
+      * A value of false indicates that an error occurs during the execution.
+      *
+      * @param request ReleaseInstanceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ReleaseInstanceResponse
+     */
     public ReleaseInstanceResponse releaseInstanceWithOptions(ReleaseInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4284,6 +4468,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ReleaseInstanceResponse());
     }
 
+    /**
+      * A value of true indicates that the execution is complete.
+      * A value of false indicates that an error occurs during the execution.
+      *
+      * @param request ReleaseInstanceRequest
+      * @return ReleaseInstanceResponse
+     */
     public ReleaseInstanceResponse releaseInstance(ReleaseInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.releaseInstanceWithOptions(request, runtime);
@@ -4787,39 +4978,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.setResellerUserStatusWithOptions(request, runtime);
     }
 
-    /**
-      * Before you call this operation, take note of the following items:
-      * *   You can subscribe to only one type of bill at a time.
-      * *   The bills generated on the previous day are pushed on a daily basis the next day after you subscribe to the bills. The full-data bills for the previous month are pushed on the fourth day of each month. The monthly bills in the PDF format for the previous month are pushed on the fourth day of each month.
-      * *   The daily bills may be delayed. The delayed bills are pushed the next day after they are generated. The delayed bills may include the bills that should have been pushed on the previous day. We recommend that you query the full-data bills for the previous month at the beginning of each month.
-      * *   The bill subscriber must have the [AliyunConsumeDump2OSSRole](https://ram.console.aliyun.com/#/role/authorize?request=%7B%22Requests%22:%20%7B%22request1%22:%20%7B%22RoleName%22:%20%22AliyunConsumeDump2OSSRole%22,%20%22TemplateId%22:%20%22Dump2OSSRole%22%7D%7D,%20%22ReturnUrl%22:%20%22https:%2F%2Fusercenter2.aliyun.com%22,%20%22Service%22:%20%22Consume%22%7D) permission.
-      * *   The SubscribeBillToOSS operation has the same functionality as the Save Expense Details to OSS Bucket feature in User Center.
-      * *   To subscribe to the bills stored in an OSS bucket, make sure that the directory name specified for the OSS bucket conforms to the following naming rules:
-      * 1.  1.  The directory name can contain only UTF-8 characters and cannot contain emoticons.
-      * 2.  2.  Forward slashes (/) are used to separate paths and can be used to create subdirectories with ease. The directory name cannot start with a forward slash (/), a backslash (\\\\), or consecutive forward slashes (/).
-      * 3.  3.  The name of a subdirectory cannot be set to two consecutive periods (..).
-      * 4.  4.  The directory name must be 1 to 254 characters in length.
-      * *   File names:
-      *     *   **BillingItemDetailForBillingPeriod** (Detailed bills of billable items)
-      *         *   File name format for a daily push: `UID_BillingItemDetail_YYYYMMDD`. Example: `169**_BillingItemDetail_20190310`.
-      *         *   File name format for a full-data push at the beginning of the next month: `UID_BillingItemDetail_YYYYMM`. Example: `169**_BillingItemDetail_201903`.
-      *     *   **InstanceDetailForBillingPeriod** (Detailed bills of instances)
-      *         *   File name format for a daily push: `UID_InstanceDetail_YYYYMMDD`. Example: `169**_InstanceDetail_20190310`.
-      *         *   File name format for a full-data push at the beginning of the next month: `UID_InstanceDetail_YYYYMM`. Example: `169**_InstanceDetail_201903`.
-      *     *   **InstanceDetailMonthly** (Instance-based bills summarized by billing cycle)
-      *         *   File name format for a daily push: `UID_InstanceDetailMonthly_YYYYMM`. Example: `169**_InstanceDetailMonthly_201903`. A bill of this type contains the full data generated from the beginning of the month to the current day, and is updated every day until the fourth day of the next month.
-      *     *   **BillingItemDetailMonthly** (Billable item-based bills summarized by billing cycle)
-      *         *   File name format for a daily push: `UID_BillingItemDetailMonthly_YYYYMM`. Example: `169**_BillingItemDetailMonthly_201903`. A bill of this type contains the full data generated from the beginning of the month to the current day, and is updated every day until the fourth day of the next month.
-      *     *   **SplitItemDetailDaily** (Split bills summarized by day)
-      *         *   File name format for a daily push: `UID_SplitItemDetailDaily_YYYYMM`. Example: `169**_SplitItemDetailDaily_201903`. A bill of this type contains the full data generated from the beginning of the month to the current day, and is updated every day until the fourth day of the next month.
-      *     *   **MonthBill** (Monthly bill in the PDF format)
-      *         *   File name format for a monthly push: `UID_MonthBill_YYYYMM`. Example: `169**_MonthBill_201903`. The bill for the previous month is pushed on the fourth day of each month.
-      * *   The bills of the MonthBill type are PDF files, whereas the bills of other types are CSV files. If the number of data rows in a bill exceeds a threshold, the bill is automatically split into multiple CSV files. Then, the multiple CSV files are automatically merged and compressed into a ZIP file that has the same name format as the original file.
-      *
-      * @param request SubscribeBillToOSSRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return SubscribeBillToOSSResponse
-     */
     public SubscribeBillToOSSResponse subscribeBillToOSSWithOptions(SubscribeBillToOSSRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4868,38 +5026,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SubscribeBillToOSSResponse());
     }
 
-    /**
-      * Before you call this operation, take note of the following items:
-      * *   You can subscribe to only one type of bill at a time.
-      * *   The bills generated on the previous day are pushed on a daily basis the next day after you subscribe to the bills. The full-data bills for the previous month are pushed on the fourth day of each month. The monthly bills in the PDF format for the previous month are pushed on the fourth day of each month.
-      * *   The daily bills may be delayed. The delayed bills are pushed the next day after they are generated. The delayed bills may include the bills that should have been pushed on the previous day. We recommend that you query the full-data bills for the previous month at the beginning of each month.
-      * *   The bill subscriber must have the [AliyunConsumeDump2OSSRole](https://ram.console.aliyun.com/#/role/authorize?request=%7B%22Requests%22:%20%7B%22request1%22:%20%7B%22RoleName%22:%20%22AliyunConsumeDump2OSSRole%22,%20%22TemplateId%22:%20%22Dump2OSSRole%22%7D%7D,%20%22ReturnUrl%22:%20%22https:%2F%2Fusercenter2.aliyun.com%22,%20%22Service%22:%20%22Consume%22%7D) permission.
-      * *   The SubscribeBillToOSS operation has the same functionality as the Save Expense Details to OSS Bucket feature in User Center.
-      * *   To subscribe to the bills stored in an OSS bucket, make sure that the directory name specified for the OSS bucket conforms to the following naming rules:
-      * 1.  1.  The directory name can contain only UTF-8 characters and cannot contain emoticons.
-      * 2.  2.  Forward slashes (/) are used to separate paths and can be used to create subdirectories with ease. The directory name cannot start with a forward slash (/), a backslash (\\\\), or consecutive forward slashes (/).
-      * 3.  3.  The name of a subdirectory cannot be set to two consecutive periods (..).
-      * 4.  4.  The directory name must be 1 to 254 characters in length.
-      * *   File names:
-      *     *   **BillingItemDetailForBillingPeriod** (Detailed bills of billable items)
-      *         *   File name format for a daily push: `UID_BillingItemDetail_YYYYMMDD`. Example: `169**_BillingItemDetail_20190310`.
-      *         *   File name format for a full-data push at the beginning of the next month: `UID_BillingItemDetail_YYYYMM`. Example: `169**_BillingItemDetail_201903`.
-      *     *   **InstanceDetailForBillingPeriod** (Detailed bills of instances)
-      *         *   File name format for a daily push: `UID_InstanceDetail_YYYYMMDD`. Example: `169**_InstanceDetail_20190310`.
-      *         *   File name format for a full-data push at the beginning of the next month: `UID_InstanceDetail_YYYYMM`. Example: `169**_InstanceDetail_201903`.
-      *     *   **InstanceDetailMonthly** (Instance-based bills summarized by billing cycle)
-      *         *   File name format for a daily push: `UID_InstanceDetailMonthly_YYYYMM`. Example: `169**_InstanceDetailMonthly_201903`. A bill of this type contains the full data generated from the beginning of the month to the current day, and is updated every day until the fourth day of the next month.
-      *     *   **BillingItemDetailMonthly** (Billable item-based bills summarized by billing cycle)
-      *         *   File name format for a daily push: `UID_BillingItemDetailMonthly_YYYYMM`. Example: `169**_BillingItemDetailMonthly_201903`. A bill of this type contains the full data generated from the beginning of the month to the current day, and is updated every day until the fourth day of the next month.
-      *     *   **SplitItemDetailDaily** (Split bills summarized by day)
-      *         *   File name format for a daily push: `UID_SplitItemDetailDaily_YYYYMM`. Example: `169**_SplitItemDetailDaily_201903`. A bill of this type contains the full data generated from the beginning of the month to the current day, and is updated every day until the fourth day of the next month.
-      *     *   **MonthBill** (Monthly bill in the PDF format)
-      *         *   File name format for a monthly push: `UID_MonthBill_YYYYMM`. Example: `169**_MonthBill_201903`. The bill for the previous month is pushed on the fourth day of each month.
-      * *   The bills of the MonthBill type are PDF files, whereas the bills of other types are CSV files. If the number of data rows in a bill exceeds a threshold, the bill is automatically split into multiple CSV files. Then, the multiple CSV files are automatically merged and compressed into a ZIP file that has the same name format as the original file.
-      *
-      * @param request SubscribeBillToOSSRequest
-      * @return SubscribeBillToOSSResponse
-     */
     public SubscribeBillToOSSResponse subscribeBillToOSS(SubscribeBillToOSSRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.subscribeBillToOSSWithOptions(request, runtime);

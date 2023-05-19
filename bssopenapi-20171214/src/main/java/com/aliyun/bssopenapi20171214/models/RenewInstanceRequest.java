@@ -4,21 +4,41 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class RenewInstanceRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the instance</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The code of the service to which the instance belongs.</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 
+    /**
+     * <p>The type of the service.</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 
+    /**
+     * <p>The duration of the subscription renewal. Unit: months. Valid values:</p>
+     * <br>
+     * <p>*   1 to 9</p>
+     * <p>*   12</p>
+     * <p>*   24</p>
+     * <p>*   36</p>
+     */
     @NameInMap("RenewPeriod")
     public Integer renewPeriod;
 

@@ -4,87 +4,39 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QuerySettleBillRequest extends TeaModel {
-    /**
-     * <p>The ID of the member. If you specify a value for this parameter, you can query the bills of the specified member. If you leave this parameter empty, the bills of the current account are queried by default.</p>
-     */
     @NameInMap("BillOwnerId")
     public Long billOwnerId;
 
-    /**
-     * <p>The billing cycle, in the YYYY-MM format.</p>
-     */
     @NameInMap("BillingCycle")
     public String billingCycle;
 
-    /**
-     * <p>Specifies whether to display local currency information in bills.</p>
-     */
     @NameInMap("IsDisplayLocalCurrency")
     public Boolean isDisplayLocalCurrency;
 
-    /**
-     * <p>Specifies whether to filter out a bill whose pretax gross amount is 0. By default, a bill whose pretax gross amount is 0 is not filtered out.</p>
-     * <br>
-     * <p>*   true: filters out a bill whose pretax gross amount is 0.</p>
-     * <p>*   false: does not filter out a bill whose pretax gross amount is 0.</p>
-     */
     @NameInMap("IsHideZeroCharge")
     public Boolean isHideZeroCharge;
 
-    /**
-     * <p>The maximum number of entries to return. Default value: 20. Maximum value: 300.</p>
-     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    /**
-     * <p>The starting position of the query. If this parameter is left empty, the query starts from the beginning.</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The code of the service.</p>
-     */
     @NameInMap("ProductCode")
     public String productCode;
 
-    /**
-     * <p>The type of the service.</p>
-     */
     @NameInMap("ProductType")
     public String productType;
 
-    /**
-     * <p>The ID of the bill or order.</p>
-     */
     @NameInMap("RecordID")
     public String recordID;
 
-    /**
-     * <p>The billing method. Valid values:</p>
-     * <br>
-     * <p>*   Subscription: the subscription billing method</p>
-     * <p>*   PayAsYouGo: the pay-as-you-go billing method</p>
-     * <br>
-     * <p>**</p>
-     * <br>
-     * <p>****This parameter must be used together with the ProductCode parameter.</p>
-     */
     @NameInMap("SubscriptionType")
     public String subscriptionType;
 
-    /**
-     * <p>The type of the bill. Valid values:</p>
-     * <br>
-     * <p>*   SubscriptionOrder: subscription order</p>
-     * <p>*   PayAsYouGoBill: pay-as-you-go bill</p>
-     * <p>*   Refund: refund</p>
-     * <p>*   Adjustment: reconciliation</p>
-     */
     @NameInMap("Type")
     public String type;
 

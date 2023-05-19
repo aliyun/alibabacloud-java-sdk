@@ -4,18 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class GetOrderDetailResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public GetOrderDetailResponseBodyData data;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,84 +80,183 @@ public class GetOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetOrderDetailResponseBodyDataOrderListOrder extends TeaModel {
+        /**
+         * <p>The aftertaxt amount of the order.</p>
+         */
         @NameInMap("AfterTaxAmount")
         public String afterTaxAmount;
 
+        /**
+         * <p>The service code.</p>
+         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
+        /**
+         * <p>The configurations of the main service.</p>
+         */
         @NameInMap("Config")
         public String config;
 
+        /**
+         * <p>The time when the order was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The currency.</p>
+         */
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <p>The instance IDs.</p>
+         */
         @NameInMap("InstanceIDs")
         public String instanceIDs;
 
+        /**
+         * <p>The ID of the Resource Access Management (RAM) user who performs operations on the order. If no RAM user is involved, leave this parameter blank.</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <p>The ID of the order.</p>
+         */
         @NameInMap("OrderId")
         public String orderId;
 
+        /**
+         * <p>The type of the suborder. Valid values:</p>
+         * <br>
+         * <p>*   ProductSubOrder: the service suborder</p>
+         * <p>*   RefundSubOrder: the refund suborder</p>
+         */
         @NameInMap("OrderSubType")
         public String orderSubType;
 
+        /**
+         * <p>The type of the order. Valid values:</p>
+         * <br>
+         * <p>*   New: purchases an instance.</p>
+         * <p>*   Renew: renews an instance.</p>
+         * <p>*   Upgrade: upgrades the configurations of an instance.</p>
+         * <p>*   Refund: applies for a refund.</p>
+         * <p>*   Convert: switches the billing method.</p>
+         * <p>*   Downgrade: downgrades the configurations of an instance.</p>
+         * <p>*   ResizeDisk: resizes the disk.</p>
+         */
         @NameInMap("OrderType")
         public String orderType;
 
+        /**
+         * <p>The module information without standardized conversion.</p>
+         */
         @NameInMap("OriginalConfig")
         public String originalConfig;
 
+        /**
+         * <p>The currency of payment.</p>
+         */
         @NameInMap("PaymentCurrency")
         public String paymentCurrency;
 
+        /**
+         * <p>The status of payment. Valid values:</p>
+         * <br>
+         * <p>*   Unpaid: The order is not paid.</p>
+         * <p>*   Paid: The order is paid.</p>
+         * <p>*   Cancelled: The order is canceled.</p>
+         */
         @NameInMap("PaymentStatus")
         public String paymentStatus;
 
+        /**
+         * <p>The time of payment.</p>
+         */
         @NameInMap("PaymentTime")
         public String paymentTime;
 
+        /**
+         * <p>The pretax amount of the order.</p>
+         */
         @NameInMap("PretaxAmount")
         public String pretaxAmount;
 
+        /**
+         * <p>The pretax amount of the order in local currency.</p>
+         */
         @NameInMap("PretaxAmountLocal")
         public String pretaxAmountLocal;
 
+        /**
+         * <p>The pretax gross amount of the order.</p>
+         */
         @NameInMap("PretaxGrossAmount")
         public String pretaxGrossAmount;
 
+        /**
+         * <p>The code of the main service.</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
+        /**
+         * <p>The type of the main service.</p>
+         */
         @NameInMap("ProductType")
         public String productType;
 
+        /**
+         * <p>The number of main services.</p>
+         */
         @NameInMap("Quantity")
         public String quantity;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The ID of the associated order.</p>
+         */
         @NameInMap("RelatedOrderId")
         public String relatedOrderId;
 
+        /**
+         * <p>The ID of the suborder.</p>
+         */
         @NameInMap("SubOrderId")
         public String subOrderId;
 
+        /**
+         * <p>The billing method. Valid values:</p>
+         * <br>
+         * <p>*   Subscription: subscription</p>
+         * <p>*   PayAsYouGo: pay-as-you-go</p>
+         */
         @NameInMap("SubscriptionType")
         public String subscriptionType;
 
+        /**
+         * <p>The tax of the order.</p>
+         */
         @NameInMap("Tax")
         public String tax;
 
+        /**
+         * <p>The time when the service ends.</p>
+         */
         @NameInMap("UsageEndTime")
         public String usageEndTime;
 
+        /**
+         * <p>The time when the service starts.</p>
+         */
         @NameInMap("UsageStartTime")
         public String usageStartTime;
 
@@ -389,18 +503,33 @@ public class GetOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetOrderDetailResponseBodyData extends TeaModel {
+        /**
+         * <p>The hostname.</p>
+         */
         @NameInMap("HostName")
         public String hostName;
 
+        /**
+         * <p>The details of the order.</p>
+         */
         @NameInMap("OrderList")
         public GetOrderDetailResponseBodyDataOrderList orderList;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNum")
         public Integer pageNum;
 
+        /**
+         * <p>The number of entries returned on each page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of returned entries.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

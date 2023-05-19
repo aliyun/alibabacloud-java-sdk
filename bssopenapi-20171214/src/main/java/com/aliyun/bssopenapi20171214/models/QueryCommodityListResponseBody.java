@@ -4,12 +4,21 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryCommodityListResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public QueryCommodityListResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
@@ -19,6 +28,9 @@ public class QueryCommodityListResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the information about the service was queried.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -68,12 +80,21 @@ public class QueryCommodityListResponseBody extends TeaModel {
     }
 
     public static class QueryCommodityListResponseBodyDataCommodityList extends TeaModel {
+        /**
+         * <p>The payment type. Valid values: POSTPAY (pay-as-you-go) and PREPAY (subscription).</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <p>The code of the service, which is the same as that on the Billing Management page.</p>
+         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
+        /**
+         * <p>The name of the service.</p>
+         */
         @NameInMap("CommodityName")
         public String commodityName;
 
@@ -109,6 +130,9 @@ public class QueryCommodityListResponseBody extends TeaModel {
     }
 
     public static class QueryCommodityListResponseBodyData extends TeaModel {
+        /**
+         * <p>The information about the service.</p>
+         */
         @NameInMap("CommodityList")
         public java.util.List<QueryCommodityListResponseBodyDataCommodityList> commodityList;
 

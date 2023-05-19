@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The operation that you want to perform. Set the value to DescribeResourceCoverageTotal.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The information about the total coverage data of deduction plans.</p>
      */
     @NameInMap("Data")
     public DescribeResourceCoverageTotalResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The type of deduction plans whose total coverage data is queried. Valid values: RI and SCU.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The coverage rate of deduction plans within the specified period.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful.</p>
+     * <p>The beginning of the time range to query. The beginning is included in the time range. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -81,15 +81,13 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
 
     public static class DescribeResourceCoverageTotalResponseBodyDataPeriodCoverage extends TeaModel {
         /**
-         * <p>The coverage rate of deduction plans within the specified period.</p>
+         * <p>The returned data.</p>
          */
         @NameInMap("CoveragePercentage")
         public Float coveragePercentage;
 
         /**
-         * <p>The period.</p>
-         * <br>
-         * <p>The value is in the format of yyyyMMddHH.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("Period")
         public String period;
@@ -119,26 +117,17 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
 
     public static class DescribeResourceCoverageTotalResponseBodyDataTotalCoverage extends TeaModel {
         /**
-         * <p>The unit that is used to measure the resources deducted from deduction plans.</p>
+         * <p>Queries the total coverage data of reserved instances (RIs) or storage capacity units (SCUs).</p>
          */
         @NameInMap("CapacityUnit")
         public String capacityUnit;
 
-        /**
-         * <p>The total coverage rate of deduction plans.</p>
-         */
         @NameInMap("CoveragePercentage")
         public Float coveragePercentage;
 
-        /**
-         * <p>The total amount of the resources deducted from deduction plans.</p>
-         */
         @NameInMap("DeductQuantity")
         public Float deductQuantity;
 
-        /**
-         * <p>The total amount of resources consumed.</p>
-         */
         @NameInMap("TotalQuantity")
         public Float totalQuantity;
 
@@ -183,13 +172,13 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
 
     public static class DescribeResourceCoverageTotalResponseBodyData extends TeaModel {
         /**
-         * <p>The information about the coverage rate of deduction plans within a period.</p>
+         * <p>The ID of the account for which you want to query total coverage data. If you do not set this parameter, the data of the current Alibaba Cloud account and its RAM users is queried. To query the data of a RAM user, specify the ID of the RAM user.</p>
          */
         @NameInMap("PeriodCoverage")
         public java.util.List<DescribeResourceCoverageTotalResponseBodyDataPeriodCoverage> periodCoverage;
 
         /**
-         * <p>The information about the total coverage data of deduction plans.</p>
+         * <p>The unit that is used to measure the resources deducted from deduction plans.</p>
          */
         @NameInMap("TotalCoverage")
         public DescribeResourceCoverageTotalResponseBodyDataTotalCoverage totalCoverage;

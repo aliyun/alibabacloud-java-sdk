@@ -4,18 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class CreateCostUnitResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public CreateCostUnitResponseBodyData data;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,15 +80,27 @@ public class CreateCostUnitResponseBody extends TeaModel {
     }
 
     public static class CreateCostUnitResponseBodyDataCostUnitDtoList extends TeaModel {
+        /**
+         * <p>The user ID of the owner of the cost center.</p>
+         */
         @NameInMap("OwnerUid")
         public Long ownerUid;
 
+        /**
+         * <p>The ID of the parent cost center. A value of -1 indicates the root cost center.</p>
+         */
         @NameInMap("ParentUnitId")
         public Long parentUnitId;
 
+        /**
+         * <p>The ID of the cost center.</p>
+         */
         @NameInMap("UnitId")
         public Long unitId;
 
+        /**
+         * <p>The name of the cost center.</p>
+         */
         @NameInMap("UnitName")
         public String unitName;
 
@@ -117,6 +144,9 @@ public class CreateCostUnitResponseBody extends TeaModel {
     }
 
     public static class CreateCostUnitResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of cost center entities.</p>
+         */
         @NameInMap("CostUnitDtoList")
         public java.util.List<CreateCostUnitResponseBodyDataCostUnitDtoList> costUnitDtoList;
 

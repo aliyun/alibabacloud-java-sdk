@@ -4,15 +4,9 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class SetResellerUserAlarmThresholdRequest extends TeaModel {
-    /**
-     * <p>The alert rules corresponding to the specified alert type. If you leave this parameter empty, no alert threshold exists.</p>
-     */
     @NameInMap("AlarmThresholds")
     public String alarmThresholds;
 
-    /**
-     * <p>The type of the alert. Set the value to `quota_low_balance`.</p>
-     */
     @NameInMap("AlarmType")
     public String alarmType;
 

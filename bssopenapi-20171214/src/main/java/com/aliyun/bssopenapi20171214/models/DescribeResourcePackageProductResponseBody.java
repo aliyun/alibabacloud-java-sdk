@@ -4,39 +4,21 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class DescribeResourcePackageProductResponseBody extends TeaModel {
-    /**
-     * <p>The status code returned.</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The data returned.</p>
-     */
     @NameInMap("Data")
     public DescribeResourcePackageProductResponseBodyData data;
 
-    /**
-     * <p>The message returned.</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The ID of the order.</p>
-     */
     @NameInMap("OrderId")
     public Long orderId;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request is successful.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -94,15 +76,9 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
     }
 
     public static class DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypePropertiesProperty extends TeaModel {
-        /**
-         * <p>The name of the property.</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The value of the property.</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -149,26 +125,12 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
     }
 
     public static class DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurationsAvailableDuration extends TeaModel {
-        /**
-         * <p>The name of the validity period.</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The unit of the validity period for the resource plan. Valid values:</p>
-         * <br>
-         * <p>*   Month</p>
-         * <p>*   Year</p>
-         * <br>
-         * <p>Default value: Month.</p>
-         */
         @NameInMap("Unit")
         public String unit;
 
-        /**
-         * <p>The value of the validity period.</p>
-         */
         @NameInMap("Value")
         public Integer value;
 
@@ -223,21 +185,12 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
     }
 
     public static class DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecification extends TeaModel {
-        /**
-         * <p>The validity periods available for the resource plan.</p>
-         */
         @NameInMap("AvailableDurations")
         public DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurations availableDurations;
 
-        /**
-         * <p>The name of the specification.</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The value of the specification.</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -292,27 +245,15 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
     }
 
     public static class DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageType extends TeaModel {
-        /**
-         * <p>The code of the resource plan.</p>
-         */
         @NameInMap("Code")
         public String code;
 
-        /**
-         * <p>The name of the resource plan type.</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The properties of the resource plan.</p>
-         */
         @NameInMap("Properties")
         public DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeProperties properties;
 
-        /**
-         * <p>The specifications of the resource plan.</p>
-         */
         @NameInMap("Specifications")
         public DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecifications specifications;
 
@@ -375,27 +316,15 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
     }
 
     public static class DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackage extends TeaModel {
-        /**
-         * <p>The name of the resource plan.</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The types of the resource plans.</p>
-         */
         @NameInMap("PackageTypes")
         public DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypes packageTypes;
 
-        /**
-         * <p>The code of the service.</p>
-         */
         @NameInMap("ProductCode")
         public String productCode;
 
-        /**
-         * <p>The type of the service.</p>
-         */
         @NameInMap("ProductType")
         public String productType;
 
@@ -458,9 +387,6 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
     }
 
     public static class DescribeResourcePackageProductResponseBodyData extends TeaModel {
-        /**
-         * <p>The details about the resource plans.</p>
-         */
         @NameInMap("ResourcePackages")
         public DescribeResourcePackageProductResponseBodyDataResourcePackages resourcePackages;
 

@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The return data.</p>
+     * <p>The coverage in different periods.</p>
      */
     @NameInMap("Data")
     public DescribeSavingsPlansCoverageTotalResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Indicates whether the operation was successful.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful.</p>
+     * <p>The return data.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -81,15 +81,15 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
 
     public static class DescribeSavingsPlansCoverageTotalResponseBodyDataPeriodCoverage extends TeaModel {
         /**
-         * <p>The coverage.</p>
+         * <p>The period.</p>
+         * <br>
+         * <p>The value is in the format of yyyyMMddHH.</p>
          */
         @NameInMap("Percentage")
         public Float percentage;
 
         /**
-         * <p>The period.</p>
-         * <br>
-         * <p>The value is in the format of yyyyMMddHH.</p>
+         * <p>The coverage summary.</p>
          */
         @NameInMap("Period")
         public String period;
@@ -119,13 +119,13 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
 
     public static class DescribeSavingsPlansCoverageTotalResponseBodyDataTotalCoverage extends TeaModel {
         /**
-         * <p>The total coverage.</p>
+         * <p>The total deducted amount.</p>
          */
         @NameInMap("CoveragePercentage")
         public Float coveragePercentage;
 
         /**
-         * <p>The total deducted amount.</p>
+         * <p>Queries the coverage summary of savings plans.</p>
          */
         @NameInMap("DeductAmount")
         public Float deductAmount;
@@ -155,13 +155,13 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
 
     public static class DescribeSavingsPlansCoverageTotalResponseBodyData extends TeaModel {
         /**
-         * <p>The coverage in different periods.</p>
+         * <p>The coverage.</p>
          */
         @NameInMap("PeriodCoverage")
         public java.util.List<DescribeSavingsPlansCoverageTotalResponseBodyDataPeriodCoverage> periodCoverage;
 
         /**
-         * <p>The coverage summary.</p>
+         * <p>The total coverage.</p>
          */
         @NameInMap("TotalCoverage")
         public DescribeSavingsPlansCoverageTotalResponseBodyDataTotalCoverage totalCoverage;

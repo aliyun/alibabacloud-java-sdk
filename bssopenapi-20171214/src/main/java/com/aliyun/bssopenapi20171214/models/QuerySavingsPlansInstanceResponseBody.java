@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
     /**
-     * <p>The error code.</p>
+     * <p>The prepaid amount.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The return data.</p>
+     * <p>The commitment.</p>
      */
     @NameInMap("Data")
     public QuerySavingsPlansInstanceResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The details about the instances.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The return data.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful.</p>
+     * <p>The region.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -80,15 +80,9 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
     }
 
     public static class QuerySavingsPlansInstanceResponseBodyDataItemsTags extends TeaModel {
-        /**
-         * <p>The key of the tag.</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The value of the tag.</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -127,7 +121,11 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         public String allocationStatus;
 
         /**
-         * <p>The currency. Valid values: CNY and USD.</p>
+         * <p>The status of the instance. Valid values:</p>
+         * <br>
+         * <p>*   NORMAL: normal</p>
+         * <p>*   LIMIT: stopped due to overdue payment</p>
+         * <p>*   RELEASE: released</p>
          */
         @NameInMap("Currency")
         public String currency;
@@ -139,7 +137,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         public String deductCycleType;
 
         /**
-         * <p>The time when the instance expires. The time is in the format of yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The ID of the savings plan instance.</p>
          */
         @NameInMap("EndTime")
         public String endTime;
@@ -148,13 +146,13 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         public Long endTimestamp;
 
         /**
-         * <p>The instance family information. For an instance of the Elastic Compute Service (ECS) compute type, the value indicates the ECS instance family or the ECS instance family package.</p>
+         * <p>The value of the tag.</p>
          */
         @NameInMap("InstanceFamily")
         public String instanceFamily;
 
         /**
-         * <p>The ID of the savings plan instance.</p>
+         * <p>The time when the instance takes effect. The time is in the format of yyyy-MM-dd HH:mm:ss.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -165,45 +163,42 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         @NameInMap("LastBillUtilization")
         public String lastBillUtilization;
 
+        @NameInMap("PayMode")
+        public String payMode;
+
+        /**
+         * <p>The total amount that is saved.</p>
+         */
+        @NameInMap("PoolValue")
+        public String poolValue;
+
+        /**
+         * <p>The page number of the returned page.</p>
+         */
+        @NameInMap("PrepayFee")
+        public String prepayFee;
+
+        /**
+         * <p>The total number of entries.</p>
+         */
+        @NameInMap("Region")
+        public String region;
+
+        @NameInMap("RestPoolValue")
+        public String restPoolValue;
+
+        /**
+         * <p>The key of the tag.</p>
+         */
+        @NameInMap("SavingsType")
+        public String savingsType;
+
         /**
          * <p>The payment type. Valid values:</p>
          * <br>
          * <p>*   total: All Upfront</p>
          * <p>*   half: Partial Upfront</p>
          * <p>*   zero: No Upfront</p>
-         */
-        @NameInMap("PayMode")
-        public String payMode;
-
-        /**
-         * <p>The commitment.</p>
-         */
-        @NameInMap("PoolValue")
-        public String poolValue;
-
-        /**
-         * <p>The prepaid amount.</p>
-         */
-        @NameInMap("PrepayFee")
-        public String prepayFee;
-
-        /**
-         * <p>The region.</p>
-         */
-        @NameInMap("Region")
-        public String region;
-
-        /**
-         * <p>The type of the savings plan. Valid values:</p>
-         * <br>
-         * <p>*   universal: general-purpose</p>
-         * <p>*   ecs: ECS compute</p>
-         */
-        @NameInMap("SavingsType")
-        public String savingsType;
-
-        /**
-         * <p>The time when the instance takes effect. The time is in the format of yyyy-MM-dd HH:mm:ss.</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -212,29 +207,22 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         public Long startTimestamp;
 
         /**
-         * <p>The status of the instance. Valid values:</p>
-         * <br>
-         * <p>*   NORMAL: normal</p>
-         * <p>*   LIMIT: stopped due to overdue payment</p>
-         * <p>*   RELEASE: released</p>
+         * <p>The value of the tag to query.</p>
          */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The details about the tags.</p>
-         */
         @NameInMap("Tags")
         public java.util.List<QuerySavingsPlansInstanceResponseBodyDataItemsTags> tags;
 
         /**
-         * <p>The total amount that is saved.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("TotalSave")
         public String totalSave;
 
         /**
-         * <p>The total usage.</p>
+         * <p>The currency. Valid values: CNY and USD.</p>
          */
         @NameInMap("Utilization")
         public String utilization;
@@ -356,6 +344,14 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             return this.region;
         }
 
+        public QuerySavingsPlansInstanceResponseBodyDataItems setRestPoolValue(String restPoolValue) {
+            this.restPoolValue = restPoolValue;
+            return this;
+        }
+        public String getRestPoolValue() {
+            return this.restPoolValue;
+        }
+
         public QuerySavingsPlansInstanceResponseBodyDataItems setSavingsType(String savingsType) {
             this.savingsType = savingsType;
             return this;
@@ -416,25 +412,31 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
 
     public static class QuerySavingsPlansInstanceResponseBodyData extends TeaModel {
         /**
-         * <p>The details about the instances.</p>
+         * <p>The number of the page to return.</p>
          */
         @NameInMap("Items")
         public java.util.List<QuerySavingsPlansInstanceResponseBodyDataItems> items;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The type of the savings plan. Valid values:</p>
+         * <br>
+         * <p>*   universal: general-purpose</p>
+         * <p>*   ecs: ECS compute</p>
          */
         @NameInMap("PageNum")
         public Integer pageNum;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The key of the tag to query.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The language of the return data. Valid values:</p>
+         * <br>
+         * <p>*   ZH: Chinese</p>
+         * <p>*   EN: English</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

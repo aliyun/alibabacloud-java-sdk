@@ -4,18 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QuerySkuPriceListRequest extends TeaModel {
+    /**
+     * <p>The code of the service.</p>
+     */
     @NameInMap("CommodityCode")
     public String commodityCode;
 
+    /**
+     * <p>The token that is used to retrieve the next page. You do not need to set this parameter if you query coverage details for the first time. The response returns a token that you can use to query coverage details of the next page. If a null value is returned for the NextPageToken parameter, no more coverage details can be queried.</p>
+     */
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
+    /**
+     * <p>The number of entries to be returned on each page. Maximum value: 50.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The code of the pricing object.</p>
+     */
     @NameInMap("PriceEntityCode")
     public String priceEntityCode;
 
+    /**
+     * <p>The conditions of the pricing factors.</p>
+     */
     @NameInMap("PriceFactorConditionMap")
     public java.util.Map<String, java.util.List<String>> priceFactorConditionMap;
 

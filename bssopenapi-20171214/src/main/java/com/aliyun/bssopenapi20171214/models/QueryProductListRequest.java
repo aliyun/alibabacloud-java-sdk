@@ -4,12 +4,21 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryProductListRequest extends TeaModel {
+    /**
+     * <p>The page number of the page to return.</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: 20.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Specifies whether to return the total number of services. Default value: false.</p>
+     */
     @NameInMap("QueryTotalCount")
     public Boolean queryTotalCount;
 
