@@ -5,21 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeEsExecuteDataRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     * <br>
-     * <p>> The end time must be later than the start time.</p>
+     * <p>The name of the chart that shows the status of the script.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The ID of the rule. You can call the [DescribeCdnDomainConfigs](~~90924~~) operation to query script IDs.</p>
+     * <p>The value of each time and the column of each data entry.</p>
      */
     @NameInMap("RuleId")
     public String ruleId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The column names of the chart that shows the status of the script and the time of each data entry.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

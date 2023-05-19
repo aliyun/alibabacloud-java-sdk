@@ -4,39 +4,21 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainTrafficDataResponseBody extends TeaModel {
-    /**
-     * <p>The time interval between the data entries returned. Unit: seconds.</p>
-     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
-    /**
-     * <p>The accelerated domain name.</p>
-     */
     @NameInMap("DomainName")
     public String domainName;
 
-    /**
-     * <p>The end of the time range during which data was queried.</p>
-     */
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The start of the time range during which data was queried.</p>
-     */
     @NameInMap("StartTime")
     public String startTime;
 
-    /**
-     * <p>The amount of network traffic at each time interval. Unit: bytes.</p>
-     */
     @NameInMap("TrafficDataPerInterval")
     public DescribeDomainTrafficDataResponseBodyTrafficDataPerInterval trafficDataPerInterval;
 
@@ -94,45 +76,24 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule extends TeaModel {
-        /**
-         * <p>The amount of network traffic in the Chinese mainland.</p>
-         */
         @NameInMap("DomesticValue")
         public String domesticValue;
 
-        /**
-         * <p>The amount of HTTPS traffic on points of presence (POPs) in the Chinese mainland.</p>
-         */
         @NameInMap("HttpsDomesticValue")
         public String httpsDomesticValue;
 
-        /**
-         * <p>The amount of HTTPS traffic on POPs outside the Chinese mainland.</p>
-         */
         @NameInMap("HttpsOverseasValue")
         public String httpsOverseasValue;
 
-        /**
-         * <p>The total amount of HTTPS traffic on POPs.</p>
-         */
         @NameInMap("HttpsValue")
         public String httpsValue;
 
-        /**
-         * <p>The amount of network traffic outside the Chinese mainland.</p>
-         */
         @NameInMap("OverseasValue")
         public String overseasValue;
 
-        /**
-         * <p>The timestamp of the returned data.</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The total volume of traffic.</p>
-         */
         @NameInMap("Value")
         public String value;
 

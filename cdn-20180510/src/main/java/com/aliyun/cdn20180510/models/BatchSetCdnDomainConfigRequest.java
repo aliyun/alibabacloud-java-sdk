@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class BatchSetCdnDomainConfigRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the configuration.</p>
      */
     @NameInMap("DomainNames")
     public String domainNames;
 
     /**
-     * <p>The list of domain configurations.</p>
+     * <p>The domain name.</p>
      */
     @NameInMap("Functions")
     public String functions;

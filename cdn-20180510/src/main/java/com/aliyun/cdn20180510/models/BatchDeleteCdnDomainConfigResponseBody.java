@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchDeleteCdnDomainConfigResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Deletes configurations of multiple accelerated domain names at a time.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

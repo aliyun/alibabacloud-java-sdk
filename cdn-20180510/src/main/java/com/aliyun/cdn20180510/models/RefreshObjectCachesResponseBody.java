@@ -4,18 +4,9 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class RefreshObjectCachesResponseBody extends TeaModel {
-    /**
-     * <p>The refresh task ID. If multiple tasks are returned, the IDs are separated by commas (,). The task IDs are merged based on the following rules:</p>
-     * <br>
-     * <p>*   If the tasks are specified for the same accelerated domain name, submitted within the same second, and run to refresh content based on URLs instead of directories, the task IDs are merged into one task ID.</p>
-     * <p>*   If the number of tasks that are specified for the same accelerated domain name, submitted within the same second, and run to refresh content based on URLs instead of directories exceeds 2,000, every 2,000 task IDs are merged into one task ID.</p>
-     */
     @NameInMap("RefreshTaskId")
     public String refreshTaskId;
 
-    /**
-     * <p>The request ID.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

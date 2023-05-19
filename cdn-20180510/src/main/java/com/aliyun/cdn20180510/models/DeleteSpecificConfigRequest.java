@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteSpecificConfigRequest extends TeaModel {
     /**
-     * <p>The ID of the configuration. Separate multiple configuration IDs with commas (,). For more information about ConfigId, see [Usage notes on ConfigId](~~388994~~).</p>
+     * <p>The configuration IDs. Separate configuration IDs with commas (,). For more information about ConfigId, see [Usage notes on ConfigId](~~388994~~).</p>
      */
     @NameInMap("ConfigId")
     public String configId;
 
     /**
-     * <p>The accelerated domain name. You can specify only one domain name.</p>
+     * <p>The operation that you want to perform. Set the value to **DeleteSpecificConfig**.</p>
      */
     @NameInMap("DomainName")
     public String domainName;

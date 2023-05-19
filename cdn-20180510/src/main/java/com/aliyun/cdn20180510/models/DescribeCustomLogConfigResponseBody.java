@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomLogConfigResponseBody extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeCustomLogConfig**.</p>
+     * <p>The format of the log configuration.</p>
      */
     @NameInMap("Remark")
     public String remark;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the custom configuration.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>A sample log configuration.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("Sample")
     public String sample;
 
     /**
-     * <p>The format of the log configuration.</p>
+     * <p>>  The maximum number of times that each user can call this operation per second is 100.</p>
      */
     @NameInMap("Tag")
     public String tag;

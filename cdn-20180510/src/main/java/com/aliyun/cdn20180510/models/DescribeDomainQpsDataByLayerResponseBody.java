@@ -4,45 +4,24 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainQpsDataByLayerResponseBody extends TeaModel {
-    /**
-     * <p>The time interval between the data entries returned. Unit: seconds.</p>
-     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
-    /**
-     * <p>The accelerated domain name.</p>
-     */
     @NameInMap("DomainName")
     public String domainName;
 
-    /**
-     * <p>The end of the time range during which data was queried.</p>
-     */
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <p>The layer at which the data was collected.</p>
-     */
     @NameInMap("Layer")
     public String layer;
 
-    /**
-     * <p>The number of queries per second at each interval.</p>
-     */
     @NameInMap("QpsDataInterval")
     public DescribeDomainQpsDataByLayerResponseBodyQpsDataInterval qpsDataInterval;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The start of the time range during which data was queried.</p>
-     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -108,45 +87,24 @@ public class DescribeDomainQpsDataByLayerResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainQpsDataByLayerResponseBodyQpsDataIntervalDataModule extends TeaModel {
-        /**
-         * <p>The number of requests in the Chinese mainland.</p>
-         */
         @NameInMap("AccDomesticValue")
         public String accDomesticValue;
 
-        /**
-         * <p>The number of requests outside the Chinese mainland.</p>
-         */
         @NameInMap("AccOverseasValue")
         public String accOverseasValue;
 
-        /**
-         * <p>The total number of requests.</p>
-         */
         @NameInMap("AccValue")
         public String accValue;
 
-        /**
-         * <p>The number of queries per second in the Chinese mainland.</p>
-         */
         @NameInMap("DomesticValue")
         public String domesticValue;
 
-        /**
-         * <p>The number of queries per second outside the Chinese mainland.</p>
-         */
         @NameInMap("OverseasValue")
         public String overseasValue;
 
-        /**
-         * <p>The timestamp of the returned data.</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The total number of queries per second.</p>
-         */
         @NameInMap("Value")
         public String value;
 

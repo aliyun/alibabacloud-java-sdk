@@ -5,44 +5,42 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainTopClientIpVisitRequest extends TeaModel {
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The ranking of the client IP address returned.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
+
+    /**
+     * <p>A list of client IP addresses.</p>
+     */
+    @NameInMap("EndTime")
+    public String endTime;
 
     /**
      * <p>The maximum number of entries to return. Maximum value: 100.</p>
      * <br>
      * <p>Default value: 20. The default value 20 specifies that the top 20 data entries are returned.</p>
      */
-    @NameInMap("EndTime")
-    public String endTime;
-
-    /**
-     * <p>A list of client IP addresses.</p>
-     */
     @NameInMap("Limit")
     public String limit;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     * <br>
-     * <p>The end time must be later than the start time.</p>
+     * <p>The client IP address returned. Only IPv4 addressed are supported.</p>
      */
     @NameInMap("LocationNameEn")
     public String locationNameEn;
-
-    /**
-     * <p>The ID of the request.</p>
-     */
-    @NameInMap("SortBy")
-    public String sortBy;
 
     /**
      * <p>The method that is used to sort the client IP addresses. Valid values:</p>
      * <br>
      * <p>*   **traf**: by network traffic. This is the default value.</p>
      * <p>*   **acc**: by the number of requests.</p>
+     */
+    @NameInMap("SortBy")
+    public String sortBy;
+
+    /**
+     * <p>The operation that you want to perform. Set the value to **DescribeDomainTopClientIpVisit**.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

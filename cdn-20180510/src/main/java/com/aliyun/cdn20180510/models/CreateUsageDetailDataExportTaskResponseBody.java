@@ -4,27 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class CreateUsageDetailDataExportTaskResponseBody extends TeaModel {
-    /**
-     * <p>The end of the time range for which the data was queried.</p>
-     */
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The beginning of the time range for which the data was queried.</p>
-     */
     @NameInMap("StartTime")
     public String startTime;
 
-    /**
-     * <p>The ID of the task.</p>
-     */
     @NameInMap("TaskId")
     public String taskId;
 

@@ -4,9 +4,6 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class BatchSetCdnDomainServerCertificateResponseBody extends TeaModel {
-    /**
-     * <p>The name of the certificate.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

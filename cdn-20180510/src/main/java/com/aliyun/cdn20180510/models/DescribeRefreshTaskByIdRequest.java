@@ -5,12 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRefreshTaskByIdRequest extends TeaModel {
     /**
-     * <p>The status of the task. Valid values:</p>
-     * <br>
-     * <p>*   **Complete**: The task is complete.</p>
-     * <p>*   **Pending**: The task is pending.</p>
-     * <p>*   **Refreshing**: The task is running.</p>
-     * <p>*   **Failed**: The task failed.</p>
+     * <p>The path of the object refreshed by the refresh task.</p>
      */
     @NameInMap("TaskId")
     public String taskId;
