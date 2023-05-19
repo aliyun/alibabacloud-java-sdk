@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainTopReferVisitRequest extends TeaModel {
     /**
-     * <p>The beginning of the time range that was queried.</p>
+     * <p>The operation that you want to perform. Set the value to **DescribeDomainTopReferVisit**.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The accelerated domain name.</p>
+     * <p>The accelerated domain names. Separate multiple accelerated domain names with commas (,).</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -23,7 +23,7 @@ public class DescribeDomainTopReferVisitRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The number of visits to the web page.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

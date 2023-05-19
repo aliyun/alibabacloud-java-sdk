@@ -5,31 +5,23 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to remove all tags. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes.</p>
-     * <p>*   **false**: no.</p>
-     * <br>
-     * <p>Default value: **false**.</p>
+     * <p>The operation that you want to perform. Set the value to **UntagResources**.</p>
      */
     @NameInMap("All")
     public Boolean all;
 
     /**
-     * <p>The list of resource IDs. You can specify up to 50 resource IDs in the list.</p>
+     * <p>Removes tags from a resource.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resources from which you want to remove tags. Set this parameter to **DOMAIN**.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
-    /**
-     * <p>The list of tag keys. You can specify up to 20 tag keys in the list.</p>
-     */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 

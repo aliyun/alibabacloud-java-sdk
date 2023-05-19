@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainMultiUsageDataRequest extends TeaModel {
     /**
-     * <p>The beginning of the time range that was queried.</p>
+     * <p>The operation that you want to perform. Set the value to **DescribeDomainMultiUsageData**.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The information about requests collected every 5 minutes.</p>
+     * <p>The number of requests.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The information about requests collected every 5 minutes.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

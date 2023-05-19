@@ -5,19 +5,21 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainRealTimeReqHitRateDataRequest extends TeaModel {
     /**
-     * <p>The response parameters.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The timestamp. The time follows the ISO 8601 standard. The time is displayed in UTC.</p>
+     * <p>The response parameters.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The request hit ratio.</p>
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <br>
+     * <p>>  The end time must be later than the start time.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

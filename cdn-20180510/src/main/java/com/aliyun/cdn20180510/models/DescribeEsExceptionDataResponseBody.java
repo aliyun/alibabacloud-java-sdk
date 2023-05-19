@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeEsExceptionDataResponseBody extends TeaModel {
     /**
-     * <p>The content of the script for which an error was reported.</p>
+     * <p>Queries the executions errors of scripts in EdgeScript (ES).</p>
      */
     @NameInMap("Contents")
     public java.util.List<DescribeEsExceptionDataResponseBodyContents> contents;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The content of the script.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,9 +38,6 @@ public class DescribeEsExceptionDataResponseBody extends TeaModel {
     }
 
     public static class DescribeEsExceptionDataResponseBodyContentsPoints extends TeaModel {
-        /**
-         * <p>The data points.</p>
-         */
         @NameInMap("Points")
         public java.util.List<String> points;
 
@@ -60,21 +57,12 @@ public class DescribeEsExceptionDataResponseBody extends TeaModel {
     }
 
     public static class DescribeEsExceptionDataResponseBodyContents extends TeaModel {
-        /**
-         * <p>Information about the time column and the error column name.</p>
-         */
         @NameInMap("Columns")
         public java.util.List<String> columns;
 
-        /**
-         * <p>The name of the table that shows the errors of the script.</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The time columns and error column names.</p>
-         */
         @NameInMap("Points")
         public java.util.List<DescribeEsExceptionDataResponseBodyContentsPoints> points;
 

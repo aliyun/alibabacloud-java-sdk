@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDomainsByLogConfigIdResponseBody extends TeaModel {
     /**
-     * <p>The domain names.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("Domains")
     public ListDomainsByLogConfigIdResponseBodyDomains domains;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the custom configuration.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

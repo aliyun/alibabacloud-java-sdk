@@ -4,39 +4,21 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainHttpCodeDataResponseBody extends TeaModel {
-    /**
-     * <p>The time interval.</p>
-     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
-    /**
-     * <p>The accelerated domain name.</p>
-     */
     @NameInMap("DomainName")
     public String domainName;
 
-    /**
-     * <p>The end of the time range during which data was queried.</p>
-     */
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <p>The proportions of HTTP status codes at each time interval.</p>
-     */
     @NameInMap("HttpCodeData")
     public DescribeDomainHttpCodeDataResponseBodyHttpCodeData httpCodeData;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The beginning of the time range during which data was queried.</p>
-     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -94,21 +76,12 @@ public class DescribeDomainHttpCodeDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainHttpCodeDataResponseBodyHttpCodeDataUsageDataValueCodeProportionData extends TeaModel {
-        /**
-         * <p>The HTTP status code returned.</p>
-         */
         @NameInMap("Code")
         public String code;
 
-        /**
-         * <p>The count of each HTTP status code.</p>
-         */
         @NameInMap("Count")
         public String count;
 
-        /**
-         * <p>The proportion of the HTTP status code.</p>
-         */
         @NameInMap("Proportion")
         public String proportion;
 
@@ -163,15 +136,9 @@ public class DescribeDomainHttpCodeDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainHttpCodeDataResponseBodyHttpCodeDataUsageData extends TeaModel {
-        /**
-         * <p>The timestamp of the returned data.</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The information about the HTTP status codes.</p>
-         */
         @NameInMap("Value")
         public DescribeDomainHttpCodeDataResponseBodyHttpCodeDataUsageDataValue value;
 

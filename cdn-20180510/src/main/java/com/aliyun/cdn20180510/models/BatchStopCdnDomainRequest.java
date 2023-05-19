@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class BatchStopCdnDomainRequest extends TeaModel {
     /**
-     * <p>The names of the accelerated domain names. You can specify one or more domain names in each request. Separate multiple domain names with commas (,).</p>
+     * <p>*   After an accelerated domain name is disabled, Alibaba Cloud CDN retains its information and reroutes all the requests that are destined for the accelerated domain name to the origin.</p>
+     * <p>*   If you need to temporarily disable CDN acceleration for a domain name, we recommend that you call the StopDomain operation.</p>
+     * <p>*   You can call this operation up to 30 times per second per account.</p>
+     * <p>*   You can specify up to 50 domain names in each request.</p>
      */
     @NameInMap("DomainNames")
     public String domainNames;

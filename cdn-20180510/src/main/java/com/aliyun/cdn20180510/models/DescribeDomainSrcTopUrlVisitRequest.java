@@ -5,25 +5,27 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainSrcTopUrlVisitRequest extends TeaModel {
     /**
-     * <p>The number of visits to the URL.</p>
+     * <p>The accelerated domain name. Separate multiple accelerated domain names with commas (,).</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The accelerated domain name. Separate multiple accelerated domain names with commas (,).</p>
+     * <p>The proportion of visits to the URL.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>A list of frequently requested URLs.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <br>
+     * <p>>  If you do not set the StartTime parameter, the data within the previous day is queried.</p>
      */
     @NameInMap("SortBy")
     public String sortBy;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeDomainSrcTopUrlVisit**.</p>
+     * <p>A list of frequently requested URLs.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

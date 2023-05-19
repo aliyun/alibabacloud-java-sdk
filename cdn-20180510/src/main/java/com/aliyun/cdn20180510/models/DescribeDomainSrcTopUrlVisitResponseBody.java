@@ -5,36 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     * <br>
-     * <p>>  The end time must be later than the start time. The difference between the end time and the start time cannot exceed seven days.</p>
+     * <p>The amount of network traffic. Unit: bytes.</p>
      */
     @NameInMap("AllUrlList")
     public DescribeDomainSrcTopUrlVisitResponseBodyAllUrlList allUrlList;
 
     /**
-     * <p>The accelerated domain name.</p>
+     * <p>The proportion of network traffic consumed to access the URL.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
-     * <p>>  If you do not set the StartTime parameter, the data within the previous day is queried.</p>
+     * <p>>  The end time must be later than the start time. The difference between the end time and the start time cannot exceed seven days.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The proportion of visits to the URL.</p>
+     * <p>The accelerated domain name.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("Url200List")
     public DescribeDomainSrcTopUrlVisitResponseBodyUrl200List url200List;
 
@@ -118,34 +113,34 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
 
     public static class DescribeDomainSrcTopUrlVisitResponseBodyAllUrlListUrlList extends TeaModel {
         /**
-         * <p>The proportion of network traffic consumed to access the URL.</p>
+         * <p>The complete URL.</p>
          */
         @NameInMap("Flow")
         public String flow;
-
-        /**
-         * <p>The complete URL.</p>
-         */
-        @NameInMap("FlowProportion")
-        public Float flowProportion;
-
-        /**
-         * <p>The amount of network traffic. Unit: bytes.</p>
-         */
-        @NameInMap("UrlDetail")
-        public String urlDetail;
-
-        /**
-         * <p>The beginning of the time range that was queried.</p>
-         */
-        @NameInMap("VisitData")
-        public String visitData;
 
         /**
          * <p>The method that is used to sort the returned URLs.**** Valid values:</p>
          * <br>
          * <p>*   **traf**: by network traffic.</p>
          * <p>*   **pv**: by the number of page views. This is the default value.</p>
+         */
+        @NameInMap("FlowProportion")
+        public Float flowProportion;
+
+        /**
+         * <p>The beginning of the time range that was queried.</p>
+         */
+        @NameInMap("UrlDetail")
+        public String urlDetail;
+
+        /**
+         * <p>The ID of the request.</p>
+         */
+        @NameInMap("VisitData")
+        public String visitData;
+
+        /**
+         * <p>Queries frequently requested back-to-origin URLs of one or more accelerated domain names.</p>
          */
         @NameInMap("VisitProportion")
         public Float visitProportion;
@@ -217,9 +212,6 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainSrcTopUrlVisitResponseBodyUrl200ListUrlList extends TeaModel {
-        /**
-         * <p>Queries frequently requested back-to-origin URLs of one or more accelerated domain names.</p>
-         */
         @NameInMap("Flow")
         public String flow;
 

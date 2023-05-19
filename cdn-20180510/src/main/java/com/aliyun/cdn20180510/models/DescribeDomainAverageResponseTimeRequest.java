@@ -5,17 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainAverageResponseTimeRequest extends TeaModel {
     /**
-     * <p>The name of the Internet service provider (ISP) for your Alibaba Cloud CDN service. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query ISPs. If you do not set this parameter, all ISPs are queried.</p>
+     * <p>The operation that you want to perform. Set the value to **DescribeDomainAverageResponseTime**.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The time interval between the data entries. Unit: seconds. The value varies based on the values of the **StartTime** and **EndTime** parameters. Valid values:</p>
-     * <br>
-     * <p>*   If the time span between StartTime and EndTime is less than 3 days (3 days excluded), valid values are **300**, **3600**, and **86400**. Default value: **300**.</p>
-     * <p>*   If the time span between StartTime and EndTime is from 3 to 31 days (31 days excluded), valid values are **3600** and **86400**. Default value: **3600**.</p>
-     * <p>*   If the time range between StartTime and EndTime is 31 days or longer, the valid value is **86400**. Default value: **86400**.</p>
+     * <p>The name of the Internet service provider (ISP) for your Alibaba Cloud CDN service. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query ISPs. If you do not set this parameter, all ISPs are queried.</p>
      */
     @NameInMap("DomainType")
     public String domainType;
@@ -27,33 +23,39 @@ public class DescribeDomainAverageResponseTimeRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The beginning of the time range during which data was queried.</p>
+     * <p>The time interval between the data entries. Unit: seconds. The value varies based on the values of the **StartTime** and **EndTime** parameters. Valid values:</p>
+     * <br>
+     * <p>*   If the time span between StartTime and EndTime is less than 3 days (3 days excluded), valid values are **300**, **3600**, and **86400**. Default value: **300**.</p>
+     * <p>*   If the time span between StartTime and EndTime is from 3 to 31 days (31 days excluded), valid values are **3600** and **86400**. Default value: **3600**.</p>
+     * <p>*   If the time range between StartTime and EndTime is 31 days or longer, the valid value is **86400**. Default value: **86400**.</p>
      */
     @NameInMap("Interval")
     public String interval;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Specifies whether to automatically set the interval. If you set the value to 1, the value of the Interval parameter is automatically assigned based on the StartTime and EndTime parameters. You can set this parameter or the Interval parameter.</p>
      */
     @NameInMap("IspNameEn")
     public String ispNameEn;
 
     /**
-     * <p>The accelerated domain name.</p>
+     * <p>The average response time.</p>
      */
     @NameInMap("LocationNameEn")
     public String locationNameEn;
 
     /**
-     * <p>The name of the region. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query the most recent region list. If you do not set this parameter, all regions are queried.</p>
+     * <p>The end of the time range queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <br>
+     * <p>The end time must be later than the start time.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The end of the time range queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The accelerated domain name. Separate multiple accelerated domain names with commas (,).</p>
      * <br>
-     * <p>The end time must be later than the start time.</p>
+     * <p>By default, this operation queries the bandwidth values during back-to-origin routing for all accelerated domain names that belong to your Alibaba Cloud account.</p>
      */
     @NameInMap("TimeMerge")
     public String timeMerge;

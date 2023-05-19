@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
     /**
-     * <p>The billing history returned.</p>
+     * <p>Invalid Parameter StartTime.</p>
      */
     @NameInMap("BillHistoryData")
     public DescribeCdnUserBillHistoryResponseBodyBillHistoryData billHistoryData;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Invalid Parameter AliUid.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,47 +38,18 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingDataBillingDataItem extends TeaModel {
-        /**
-         * <p>The bandwidth. Unit: bit/s.</p>
-         */
         @NameInMap("Bandwidth")
         public Float bandwidth;
 
-        /**
-         * <p>The billable region. Valid values:</p>
-         * <br>
-         * <p>*   **CN**: Chinese mainland</p>
-         * <p>*   **OverSeas**: outside the Chinese mainland</p>
-         * <p>*   **AP1**: Asia Pacific 1</p>
-         * <p>*   **AP2**: Asia Pacific 2</p>
-         * <p>*   **AP3**: Asia Pacific 3</p>
-         * <p>*   **NA**: North America</p>
-         * <p>*   **SA**: South America</p>
-         * <p>*   **EU**: Europe</p>
-         * <p>*   **MEAA**: Middle East and Africa</p>
-         */
         @NameInMap("CdnRegion")
         public String cdnRegion;
 
-        /**
-         * <p>The billing method. Valid values:</p>
-         * <br>
-         * <p>*   **StaticHttp**: static HTTP requests</p>
-         * <p>*   **DynamicHttp**: dynamic HTTP requests</p>
-         * <p>*   **DynamicHttps**: dynamic HTTPS requests</p>
-         */
         @NameInMap("ChargeType")
         public String chargeType;
 
-        /**
-         * <p>The number of requests.</p>
-         */
         @NameInMap("Count")
         public Float count;
 
-        /**
-         * <p>The amount of network traffic. Unit: bytes.</p>
-         */
         @NameInMap("Flow")
         public Float flow;
 
@@ -149,26 +120,17 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItem extends TeaModel {
-        /**
-         * <p>The beginning of the time range that was queried.</p>
-         */
         @NameInMap("BillTime")
         public String billTime;
 
-        /**
-         * <p>The metering method.</p>
-         */
         @NameInMap("BillType")
         public String billType;
 
-        /**
-         * <p>The billable items.</p>
-         */
         @NameInMap("BillingData")
         public DescribeCdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingData billingData;
 
         /**
-         * <p>The dimension.</p>
+         * <p>Invalid Parameter EndTime.</p>
          */
         @NameInMap("Dimension")
         public String dimension;

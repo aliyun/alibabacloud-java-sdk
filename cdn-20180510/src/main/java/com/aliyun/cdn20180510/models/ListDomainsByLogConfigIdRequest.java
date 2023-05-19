@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDomainsByLogConfigIdRequest extends TeaModel {
     /**
-     * <p>The ID of the custom configuration.</p>
+     * <p>>  The maximum number of times that each user can call this operation per second is 100.</p>
      */
     @NameInMap("ConfigId")
     public String configId;

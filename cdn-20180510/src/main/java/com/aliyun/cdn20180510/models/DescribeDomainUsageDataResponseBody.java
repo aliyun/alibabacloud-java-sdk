@@ -4,51 +4,32 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainUsageDataResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the billable region where the data was collected.</p>
-     */
     @NameInMap("Area")
     public String area;
 
-    /**
-     * <p>The time interval between the data entries returned. Unit: seconds.</p>
-     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
-    /**
-     * <p>The accelerated domain name.</p>
-     */
     @NameInMap("DomainName")
     public String domainName;
 
-    /**
-     * <p>The end of the time range during which data was queried.</p>
-     */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The resource usage in a specific scenario.</p>
+     * <br>
+     * <p>> SpecialValue indicates the data usage in a specific scenario. If no special billable item is specified, ignore this parameter.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The beginning of the time range during which data was queried.</p>
-     */
     @NameInMap("StartTime")
     public String startTime;
 
-    /**
-     * <p>The type of content.</p>
-     */
     @NameInMap("Type")
     public String type;
 
-    /**
-     * <p>The resource usage that was collected at each interval.</p>
-     */
     @NameInMap("UsageDataPerInterval")
     public DescribeDomainUsageDataResponseBodyUsageDataPerInterval usageDataPerInterval;
 
@@ -122,31 +103,15 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainUsageDataResponseBodyUsageDataPerIntervalDataModule extends TeaModel {
-        /**
-         * <p>The time of the peak bandwidth value if the **Field** parameter in the request is set to **bps**. Otherwise, this parameter returns the same value as the **TimeStamp** parameter.</p>
-         */
         @NameInMap("PeakTime")
         public String peakTime;
 
-        /**
-         * <p>The resource usage in a specific scenario.</p>
-         * <br>
-         * <p>> SpecialValue indicates the data usage in a specific scenario. If no special billable item is specified, ignore this parameter.</p>
-         */
         @NameInMap("SpecialValue")
         public String specialValue;
 
-        /**
-         * <p>The timestamp of the data returned.</p>
-         * <br>
-         * <p>> **TimeStamp** indicates the timestamp of the data returned at each interval.</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The amount of resource usage.</p>
-         */
         @NameInMap("Value")
         public String value;
 

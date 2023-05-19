@@ -4,41 +4,21 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainRealTimeSrcTrafficDataResponseBody extends TeaModel {
-    /**
-     * <p>The time interval between the data entries returned. Unit: seconds.</p>
-     * <br>
-     * <p>Depending on the maximum time range per query, the value is 60 (1 minute), 300 (5 minutes), or 3600 (1 hour). For more information, see the "Time granularity" section in Usage notes.</p>
-     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
-    /**
-     * <p>The accelerated domain name.</p>
-     */
     @NameInMap("DomainName")
     public String domainName;
 
-    /**
-     * <p>The end of the time range for which the data was queried.</p>
-     */
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <p>The amount of back-to-origin traffic returned at each interval.</p>
-     */
     @NameInMap("RealTimeSrcTrafficDataPerInterval")
     public DescribeDomainRealTimeSrcTrafficDataResponseBodyRealTimeSrcTrafficDataPerInterval realTimeSrcTrafficDataPerInterval;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The start of the time range for which the data was queried.</p>
-     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -96,15 +76,9 @@ public class DescribeDomainRealTimeSrcTrafficDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainRealTimeSrcTrafficDataResponseBodyRealTimeSrcTrafficDataPerIntervalDataModule extends TeaModel {
-        /**
-         * <p>The timestamp of the data returned.</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The amount of traffic.</p>
-         */
         @NameInMap("Value")
         public String value;
 

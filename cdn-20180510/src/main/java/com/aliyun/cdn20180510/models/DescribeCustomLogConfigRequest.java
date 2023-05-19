@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomLogConfigRequest extends TeaModel {
     /**
-     * <p>The ID of the custom configuration.</p>
+     * <p>A sample log configuration.</p>
      */
     @NameInMap("ConfigId")
     public String configId;

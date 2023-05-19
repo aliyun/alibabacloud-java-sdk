@@ -5,26 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainRealTimeReqHitRateDataResponseBody extends TeaModel {
     /**
-     * <p>- The maximum number of times that each user can call this operation per second is 10.</p>
-     * <p>- If you do not set StartTime or EndTime, data collected within the last hour is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.</p>
-     * <p>- By default, requests in the Go programming language use the POST request method. You must manually change the request method to GET by declaring: request.Method="GET".</p>
-     * <p>- The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the request hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.</p>
-     * <br>
-     * <p>**Time granularity**</p>
-     * <br>
-     * <p>The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. </p>
-     * <br>
-     * <p>| Time granularity | Time range to query | Historical data available | Data delay |</p>
-     * <p>| ---------------- | ------------------- | ------------------------- | ---------- |</p>
-     * <p>| 1 minute | 1 hour | 7 days | 5 minutes |</p>
-     * <p>| 5 minutes | 3 Days | 93 days | 15 minutes |</p>
-     * <p>| 1 hour | 31 days | 186 days | 4 hours |</p>
+     * <p>The operation that you want to perform. Set the value to **DescribeDomainRealTimeReqHitRateData**.</p>
      */
     @NameInMap("Data")
     public DescribeDomainRealTimeReqHitRateDataResponseBodyData data;
 
     /**
-     * <p>624461</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -52,13 +39,13 @@ public class DescribeDomainRealTimeReqHitRateDataResponseBody extends TeaModel {
 
     public static class DescribeDomainRealTimeReqHitRateDataResponseBodyDataReqHitRateDataModel extends TeaModel {
         /**
-         * <p>You can specify multiple domain names and separate them with commas (,). You can specify at most 100 domain names in each call.</p>
+         * <p>The timestamp. The time follows the ISO 8601 standard. The time is displayed in UTC.</p>
          */
         @NameInMap("ReqHitRate")
         public Float reqHitRate;
 
         /**
-         * <p>The request hit ratio.</p>
+         * <p>Queries the request hit ratios for one or more accelerated domain names.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

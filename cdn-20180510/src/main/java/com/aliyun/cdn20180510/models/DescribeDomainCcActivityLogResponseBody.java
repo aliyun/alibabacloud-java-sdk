@@ -5,31 +5,38 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
     /**
-     * <p>The list of rate limiting logs.</p>
+     * <p>A custom rule name. Valid values:</p>
+     * <br>
+     * <p>*   Default mode: default_normal.</p>
+     * <p>*   Emergency mode: default_attack.</p>
+     * <br>
+     * <p>If you do not set this parameter, all events that triggered rate limiting are queried.</p>
      */
     @NameInMap("ActivityLog")
     public java.util.List<DescribeDomainCcActivityLogResponseBodyActivityLog> activityLog;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The period of time that rate limiting remains effective.</p>
      */
     @NameInMap("PageIndex")
     public Long pageIndex;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>Set the value to **DescribeDomainCcActivityLog**.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The name of the rule that was triggered</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The value of the object that triggered rate limiting.</p>
+     * <br>
+     * <p>If you do not set this parameter, the values of all events that triggered rate limiting are queried.</p>
      */
     @NameInMap("Total")
     public Long total;
@@ -81,43 +88,44 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
 
     public static class DescribeDomainCcActivityLogResponseBodyActivityLog extends TeaModel {
         /**
-         * <p>The action that was triggered.</p>
+         * <p>The object that triggered rate limiting.</p>
+         * <br>
+         * <p>If you do not set this parameter, all events that triggered rate limiting are queried.</p>
          */
         @NameInMap("Action")
         public String action;
 
         /**
-         * <p>The accelerated domain name.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>The name of the rule based on which rate limiting was triggered.</p>
-         */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
-         * <p>The timestamp of the data returned.</p>
+         * <p>The log entry of the event that triggered rate limiting.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         /**
-         * <p>The trigger of rate limiting.</p>
+         * <p>The number of entries returned per page.</p>
          */
         @NameInMap("TriggerObject")
         public String triggerObject;
 
         /**
-         * <p>The period of time during which rate limiting remains effective.</p>
+         * <p>The action that was triggered.</p>
          */
         @NameInMap("Ttl")
         public Long ttl;
 
         /**
-         * <p>The value of the trigger for rate limiting.</p>
+         * <p>The accelerated domain name. You can specify multiple domain names and separate them with commas (,).</p>
+         * <br>
+         * <p>If you do not specify a domain name, data of all domain names is queried.</p>
          */
         @NameInMap("Value")
         public String value;
