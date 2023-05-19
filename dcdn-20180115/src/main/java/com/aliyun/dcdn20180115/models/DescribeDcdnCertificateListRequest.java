@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnCertificateListRequest extends TeaModel {
     /**
-     * <p>The accelerated domain name. If you need to specify multiple accelerated domain names, separate them with commas (,).</p>
+     * <p>The accelerated domain name. Separate multiple accelerated domain names with commas (,).</p>
      * <br>
      * <p>By default, this operation queries the certificates of all accelerated domain names.</p>
      */

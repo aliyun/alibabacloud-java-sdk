@@ -7,7 +7,7 @@ public class DescribeDcdnDomainRealTimeSrcBpsDataResponseBody extends TeaModel {
     /**
      * <p>The time interval between the data entries returned. Unit: seconds.</p>
      * <br>
-     * <p>The time granularity varies with the maximum time range per query. Valid values: 60 (1 minute), 300 (5 minutes), and 3600(1 hour). For more information, see **Description**.</p>
+     * <p>The time granularity varies with the maximum time range per query. The returned value is 60 (1 minute), 300 (5 minutes), or 3600(1 hour). For more information, see **Usage notes**.</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
@@ -25,7 +25,7 @@ public class DescribeDcdnDomainRealTimeSrcBpsDataResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The back-to-origin bandwidth data returned at each time interval. Unit: bit/s.</p>
+     * <p>The origin bandwidth data returned at each time interval. Unit: bit/s.</p>
      */
     @NameInMap("RealTimeSrcBpsDataPerInterval")
     public DescribeDcdnDomainRealTimeSrcBpsDataResponseBodyRealTimeSrcBpsDataPerInterval realTimeSrcBpsDataPerInterval;
@@ -37,7 +37,7 @@ public class DescribeDcdnDomainRealTimeSrcBpsDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range during which data was queried.</p>
+     * <p>The start of the time range during which data was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -103,7 +103,7 @@ public class DescribeDcdnDomainRealTimeSrcBpsDataResponseBody extends TeaModel {
         public String timeStamp;
 
         /**
-         * <p>The bandwidth data during back-to-origin routing.</p>
+         * <p>The bandwidth value.</p>
          */
         @NameInMap("Value")
         public String value;

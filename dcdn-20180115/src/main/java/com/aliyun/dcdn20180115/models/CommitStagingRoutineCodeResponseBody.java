@@ -4,15 +4,9 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class CommitStagingRoutineCodeResponseBody extends TeaModel {
-    /**
-     * <p>The version number of the code.</p>
-     */
     @NameInMap("Content")
     public java.util.Map<String, ?> content;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

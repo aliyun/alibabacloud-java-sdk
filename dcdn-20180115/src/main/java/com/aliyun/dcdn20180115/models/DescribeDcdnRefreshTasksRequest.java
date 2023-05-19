@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnRefreshTasksRequest extends TeaModel {
     /**
-     * <p>The accelerated domain name. You can specify only one domain name in each call.</p>
+     * <p>The accelerated domain name. You can specify only one domain name in each request.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -13,7 +13,7 @@ public class DescribeDcdnRefreshTasksRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
-     * <p>>  The end time must be later than the start time.</p>
+     * <p>> The end time must be later than the start time.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -31,7 +31,7 @@ public class DescribeDcdnRefreshTasksRequest extends TeaModel {
      * <p>*   **directory**: directory-based refresh</p>
      * <p>*   **preload**: URL-based prefetch</p>
      * <br>
-     * <p>If you set the **DomainName** or **Status** parameter, you must also set this parameter.</p>
+     * <p>If you set **DomainName** or **Status**, you must also set this parameter.</p>
      */
     @NameInMap("ObjectType")
     public String objectType;
@@ -55,7 +55,7 @@ public class DescribeDcdnRefreshTasksRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The start of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -63,7 +63,7 @@ public class DescribeDcdnRefreshTasksRequest extends TeaModel {
     /**
      * <p>The status of the task.</p>
      * <br>
-     * <p>*   **Complete**: The task has completed.</p>
+     * <p>*   **Complete**: The task is complete.</p>
      * <p>*   **Refreshing**: The task is in progress.</p>
      * <p>*   **Failed**: The task failed.</p>
      */

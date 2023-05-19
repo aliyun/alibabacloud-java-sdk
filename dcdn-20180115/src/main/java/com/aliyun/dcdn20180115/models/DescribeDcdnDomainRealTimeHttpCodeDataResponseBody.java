@@ -35,7 +35,7 @@ public class DescribeDcdnDomainRealTimeHttpCodeDataResponseBody extends TeaModel
     public String requestId;
 
     /**
-     * <p>The start of the time range during which data was queried.</p>
+     * <p>The beginning of the time range during which data was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -101,7 +101,7 @@ public class DescribeDcdnDomainRealTimeHttpCodeDataResponseBody extends TeaModel
         public String code;
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The count of each HTTP status code.</p>
          */
         @NameInMap("Count")
         public String count;

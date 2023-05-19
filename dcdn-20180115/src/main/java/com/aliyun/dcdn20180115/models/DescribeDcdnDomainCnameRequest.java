@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainCnameRequest extends TeaModel {
     /**
-     * <p>The names of the accelerated domains. If you need to specify multiple accelerated domain names, separate them with commas (,).</p>
+     * <p>The accelerated domain name. Separate multiple domain names with commas (,).</p>
      */
     @NameInMap("DomainName")
     public String domainName;

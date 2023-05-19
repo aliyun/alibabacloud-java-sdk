@@ -11,10 +11,10 @@ public class VerifyDcdnDomainOwnerRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The verification method, value:</p>
+     * <p>The verification method. Valid values:</p>
      * <br>
-     * <p>*   dnsCheck: DNS verification</p>
-     * <p>*   fileCheck: File verification</p>
+     * <p>*   **dnsCheck**: by DNS record</p>
+     * <p>*   **fileCheck**: by verification file</p>
      */
     @NameInMap("VerifyType")
     public String verifyType;

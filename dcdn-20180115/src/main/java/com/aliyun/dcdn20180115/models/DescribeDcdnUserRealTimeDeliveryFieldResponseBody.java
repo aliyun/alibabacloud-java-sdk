@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnUserRealTimeDeliveryFieldResponseBody extends TeaModel {
     /**
-     * <p>The configuration results of the domain name.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Content")
     public DescribeDcdnUserRealTimeDeliveryFieldResponseBodyContent content;
@@ -51,10 +51,10 @@ public class DescribeDcdnUserRealTimeDeliveryFieldResponseBody extends TeaModel 
         public String fieldName;
 
         /**
-         * <p>Indicates whether a field was selected.</p>
+         * <p>Indicates whether the field was selected.</p>
          * <br>
-         * <p>*   **true**: The field was selected.</p>
-         * <p>*   **false**: The field was not selected.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("Selected")
         public Boolean selected;

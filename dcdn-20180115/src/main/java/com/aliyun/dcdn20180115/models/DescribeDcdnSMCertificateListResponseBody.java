@@ -4,15 +4,9 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnSMCertificateListResponseBody extends TeaModel {
-    /**
-     * <p>The type of the certificate information.</p>
-     */
     @NameInMap("CertificateListModel")
     public DescribeDcdnSMCertificateListResponseBodyCertificateListModel certificateListModel;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,27 +32,15 @@ public class DescribeDcdnSMCertificateListResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnSMCertificateListResponseBodyCertificateListModelCertList extends TeaModel {
-        /**
-         * <p>The ID of the certificate.</p>
-         */
         @NameInMap("CertIdentifier")
         public String certIdentifier;
 
-        /**
-         * <p>The name of the certificate.</p>
-         */
         @NameInMap("CertName")
         public String certName;
 
-        /**
-         * <p>The common name of the certificate.</p>
-         */
         @NameInMap("Common")
         public String common;
 
-        /**
-         * <p>The certificate authority (CA) that issued the certificate.</p>
-         */
         @NameInMap("Issuer")
         public String issuer;
 
@@ -102,15 +84,9 @@ public class DescribeDcdnSMCertificateListResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnSMCertificateListResponseBodyCertificateListModel extends TeaModel {
-        /**
-         * <p>A list of certificates.</p>
-         */
         @NameInMap("CertList")
         public java.util.List<DescribeDcdnSMCertificateListResponseBodyCertificateListModelCertList> certList;
 
-        /**
-         * <p>The number of certificates that are returned.</p>
-         */
         @NameInMap("Count")
         public Integer count;
 

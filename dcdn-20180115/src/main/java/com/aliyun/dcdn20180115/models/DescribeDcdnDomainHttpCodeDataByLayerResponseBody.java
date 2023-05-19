@@ -53,7 +53,7 @@ public class DescribeDcdnDomainHttpCodeDataByLayerResponseBody extends TeaModel 
 
     public static class DescribeDcdnDomainHttpCodeDataByLayerResponseBodyHttpCodeDataIntervalDataModule extends TeaModel {
         /**
-         * <p>The timestamp of the data returned.</p>
+         * <p>The timestamp of the returned data.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

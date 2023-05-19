@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnUserCertificateExpireCountResponseBody extends TeaModel {
     /**
-     * <p>The number of domain names whose SSL certificates are about to expires within 30 days.</p>
+     * <p>The number of domain names whose SSL certificates are about to expire within 30 days.</p>
      */
     @NameInMap("ExpireWithin30DaysCount")
     public Integer expireWithin30DaysCount;

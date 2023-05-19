@@ -11,13 +11,13 @@ public class TagDcdnResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resources from which you want to detach tags. Set this value to **DOMAIN**.</p>
+     * <p>The type of the resource. Set the value to **DOMAIN**.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>Details about the tags.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagDcdnResourcesRequestTag> tag;
@@ -53,7 +53,7 @@ public class TagDcdnResourcesRequest extends TeaModel {
 
     public static class TagDcdnResourcesRequestTag extends TeaModel {
         /**
-         * <p>The value of the tag. Valid values of N: **1** to **20**.</p>
+         * <p>The key of the tag. Valid values of N: **1** to **20**.</p>
          */
         @NameInMap("Key")
         public String key;

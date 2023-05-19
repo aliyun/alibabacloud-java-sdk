@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainDetailResponseBody extends TeaModel {
     /**
-     * <p>The detailed information about the accelerated domain name.</p>
+     * <p>The information about the accelerated domain name.</p>
      */
     @NameInMap("DomainDetail")
     public DescribeDcdnDomainDetailResponseBodyDomainDetail domainDetail;
@@ -39,35 +39,35 @@ public class DescribeDcdnDomainDetailResponseBody extends TeaModel {
 
     public static class DescribeDcdnDomainDetailResponseBodyDomainDetailSourcesSource extends TeaModel {
         /**
-         * <p>The origin address.</p>
+         * <p>The address of the origin server.</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
-         * <p>The status of the origin server.</p>
+         * <p>The status.</p>
          */
         @NameInMap("Enabled")
         public String enabled;
 
         /**
-         * <p>The port over which back-to-origin requests are transmitted. Ports 443 and 80 are supported.</p>
+         * <p>The port over which requests are redirected to the origin server. Ports 443 and 80 are supported.</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
-         * <p>The priority of the origin server.</p>
+         * <p>The priority.</p>
          */
         @NameInMap("Priority")
         public String priority;
 
         /**
-         * <p>The type of origin server. Valid values:</p>
+         * <p>The type of the origin server. Valid values:</p>
          * <br>
-         * <p>*   **ipaddr**: the IP address of the origin server.</p>
-         * <p>*   **domain**: the domain name of the origin server.</p>
-         * <p>*   **oss**: the URL of an Object Storage Service (OSS) bucket.</p>
+         * <p>*   **ipaddr**: an origin IP address</p>
+         * <p>*   **domain**: an origin domain name</p>
+         * <p>*   **oss**: the domain name of an Object Storage Service (OSS) bucket</p>
          */
         @NameInMap("Type")
         public String type;
@@ -174,24 +174,24 @@ public class DescribeDcdnDomainDetailResponseBody extends TeaModel {
         /**
          * <p>The status of the accelerated domain name. Valid values:</p>
          * <br>
-         * <p>*   **online**: The domain name is enabled.</p>
-         * <p>*   **offline**: The domain name is disabled.</p>
-         * <p>*   **configuring**: The domain name is being configured.</p>
-         * <p>*   **configure_failed**: The domain name has failed to be configured.</p>
-         * <p>*   **checking**: The domain name is under review.</p>
-         * <p>*   **check_failed**: The domain name has failed the review.</p>
+         * <p>*   **online**</p>
+         * <p>*   **offline**</p>
+         * <p>*   **configuring**</p>
+         * <p>*   **configure_failed**</p>
+         * <p>*   **checking**</p>
+         * <p>*   **check_failed**</p>
          */
         @NameInMap("DomainStatus")
         public String domainStatus;
 
         /**
-         * <p>The time when the accelerated domain name was created.</p>
+         * <p>The time when the domain name was added.</p>
          */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
         /**
-         * <p>The time when the accelerated domain name was last modified.</p>
+         * <p>The time when the domain name was last modified.</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
@@ -205,24 +205,24 @@ public class DescribeDcdnDomainDetailResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the Security Socket Layer (SSL) certificate is enabled. Valid values:</p>
          * <br>
-         * <p>*   **on**: **enabled**.</p>
-         * <p>*   **off**: **disabled**.</p>
+         * <p>*   **on**: **enabled**</p>
+         * <p>*   **off**: **disabled**</p>
          */
         @NameInMap("SSLProtocol")
         public String SSLProtocol;
 
         /**
-         * <p>Indicates the public key of the certificate if the HTTPS protocol is enabled.</p>
+         * <p>The public key of the certificate if HTTPS is enabled.</p>
          */
         @NameInMap("SSLPub")
         public String SSLPub;
 
         /**
-         * <p>The region where your acceleration service is deployed.</p>
+         * <p>The acceleration region. Default value: domestic. Valid values:</p>
          * <br>
-         * <p>*   **domestic**: Chinese mainland. This is the default value.</p>
-         * <p>*   **overseas**: outside the Chinese mainland.</p>
-         * <p>*   **global**: all the countries in the world.</p>
+         * <p>*   **domestic**: Chinese mainland</p>
+         * <p>*   **overseas**: global (excluding the Chinese mainland)</p>
+         * <p>*   **global**: global</p>
          */
         @NameInMap("Scope")
         public String scope;

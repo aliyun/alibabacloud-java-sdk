@@ -7,7 +7,7 @@ public class DescribeDcdnDomainIpaConnDataRequest extends TeaModel {
     /**
      * <p>The domain names accelerated by IPA. Separate multiple domain names with commas (,).</p>
      * <br>
-     * <p>>  If you do not specify this parameter, the merged data of all accelerated domain names is returned.</p>
+     * <p>> If you do not specify this parameter, the merged data of all accelerated domain names is returned.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -17,7 +17,7 @@ public class DescribeDcdnDomainIpaConnDataRequest extends TeaModel {
      * <br>
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
-     * <p>>  The end time must be later than the start time.</p>
+     * <p>> The end time must be later than the start time.</p>
      */
     @NameInMap("EndTime")
     public String endTime;

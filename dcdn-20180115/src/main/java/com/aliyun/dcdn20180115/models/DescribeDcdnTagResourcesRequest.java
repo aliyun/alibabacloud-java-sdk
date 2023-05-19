@@ -4,15 +4,21 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnTagResourcesRequest extends TeaModel {
+    /**
+     * <p>The tags of the instance.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resource. Set the value to **DOMAIN**.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeDcdnTagResourcesRequestTag> tag;
 
@@ -47,13 +53,13 @@ public class DescribeDcdnTagResourcesRequest extends TeaModel {
 
     public static class DescribeDcdnTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N. Valid values of N: **1** to **20**.</p>
+         * <p>The key of the tag.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N. Valid values of N: **1** to **20**.</p>
+         * <p>The value of the tag.</p>
          */
         @NameInMap("Value")
         public String value;

@@ -4,9 +4,6 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnSMCertificateListRequest extends TeaModel {
-    /**
-     * <p>The accelerated domain name whose SM certificates you want to query.</p>
-     */
     @NameInMap("DomainName")
     public String domainName;
 

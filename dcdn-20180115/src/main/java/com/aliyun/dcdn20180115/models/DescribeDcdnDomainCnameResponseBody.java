@@ -39,19 +39,19 @@ public class DescribeDcdnDomainCnameResponseBody extends TeaModel {
 
     public static class DescribeDcdnDomainCnameResponseBodyCnameDatasData extends TeaModel {
         /**
-         * <p>The CNAME.</p>
+         * <p>The CNAME assigned to the domain name.</p>
          */
         @NameInMap("Cname")
         public String cname;
 
         /**
-         * <p>The name of the accelerated domain returned.</p>
+         * <p>The accelerated domain name.</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
-         * <p>The configuration status of the CNAME record. If the operations returns 0 for the parameter, the configuration was successful. Otherwise, the configuration failed.</p>
+         * <p>The configuration status of the CNAME record. If the operation returns 0 for the parameter, the configuration was successful. Otherwise, the configuration failed.</p>
          */
         @NameInMap("Status")
         public Integer status;

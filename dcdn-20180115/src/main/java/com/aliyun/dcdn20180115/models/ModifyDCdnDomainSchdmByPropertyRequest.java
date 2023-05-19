@@ -15,7 +15,7 @@ public class ModifyDCdnDomainSchdmByPropertyRequest extends TeaModel {
      * <br>
      * <p>*   **domestic**: Chinese mainland</p>
      * <p>*   **overseas**: outside the Chinese mainland</p>
-     * <p>*   **global**: all the countries around the world</p>
+     * <p>*   **global**: global</p>
      */
     @NameInMap("Property")
     public String property;

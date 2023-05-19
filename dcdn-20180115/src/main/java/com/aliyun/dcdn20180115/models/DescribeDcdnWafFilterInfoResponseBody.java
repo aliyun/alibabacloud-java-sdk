@@ -75,23 +75,23 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
 
     public static class DescribeDcdnWafFilterInfoResponseBodyContentFieldsLogicalSymbol extends TeaModel {
         /**
-         * <p>The logical symbol that is displayed in the Dynamic Route for CDN (DCDN) console.</p>
+         * <p>The logical symbol that is displayed in the Dynamic Content Delivery Network (DCDN) console.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The maximum number of match contents that you can specify. The value of this parameter varies based on the value of the Type parameter. Valid values:</p>
+         * <p>The maximum number of match contents that can be returned. The value of this parameter varies based on the value of the Type parameter. Valid values:</p>
          * <br>
-         * <p>*   If the value of the Type parameter is **multi**, the value of this parameter is the maximum number of match contents.</p>
-         * <p>*   If the value of the Type parameter is **single**, the value of this parameter is 1.</p>
-         * <p>*   If the value of the Type parameter is **none**, the value of this parameter is 0.</p>
+         * <p>*   If **multi** is returned for the Type parameter, the value of this parameter indicates the maximum number of match contents.</p>
+         * <p>*   If **single** is returned for the Type parameter, the value of this parameter is 1.</p>
+         * <p>*   If **none** is returned for the Type parameter, the value of this parameter is 0.</p>
          */
         @NameInMap("MaxLength")
         public Integer maxLength;
 
         /**
-         * <p>The information about the regular expression.</p>
+         * <p>The regular expression.</p>
          */
         @NameInMap("Regexp")
         public DescribeDcdnWafFilterInfoResponseBodyContentFieldsLogicalSymbolRegexp regexp;
@@ -109,11 +109,11 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
         public String tip;
 
         /**
-         * <p>The number of match contents that you can specify. Valid values:</p>
+         * <p>The number of match contents. Valid values:</p>
          * <br>
-         * <p>*   multi: You can specify multiple match contents.</p>
-         * <p>*   single: You can specify only a match content.</p>
-         * <p>*   none: You cannot specify a match content.</p>
+         * <p>*   multi: multiple match contents</p>
+         * <p>*   single: one match content</p>
+         * <p>*   none: no match contents</p>
          */
         @NameInMap("Type")
         public String type;
@@ -175,13 +175,13 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
 
     public static class DescribeDcdnWafFilterInfoResponseBodyContentFields extends TeaModel {
         /**
-         * <p>The description of the match field. If this parameter is not returned or if this parameter is empty, the match field does not have a description.</p>
+         * <p>The description of the match field. This parameter is not returned or is empty if no match fields are found.</p>
          */
         @NameInMap("ExtendField")
         public String extendField;
 
         /**
-         * <p>The information about the logical symbol.</p>
+         * <p>The logical operator.</p>
          */
         @NameInMap("LogicalSymbol")
         public java.util.List<DescribeDcdnWafFilterInfoResponseBodyContentFieldsLogicalSymbol> logicalSymbol;
@@ -225,7 +225,7 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
 
     public static class DescribeDcdnWafFilterInfoResponseBodyContent extends TeaModel {
         /**
-         * <p>The type of the protection policy, which is the same as the DefenseScenes parameter in request parameters.</p>
+         * <p>The type of the protection policy. The value of this parameter is the same as that of the DefenseScenes parameter in the request.</p>
          */
         @NameInMap("DefenseScene")
         public String defenseScene;

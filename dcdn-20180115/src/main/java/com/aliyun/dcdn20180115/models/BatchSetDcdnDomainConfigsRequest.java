@@ -5,12 +5,6 @@ import com.aliyun.tea.*;
 
 public class BatchSetDcdnDomainConfigsRequest extends TeaModel {
     /**
-     * <p>The accelerated domain names. Specify multiple accelerated domain names with commas (,).</p>
-     */
-    @NameInMap("DomainNames")
-    public String domainNames;
-
-    /**
      * <p>The features that you want to configure. Format:</p>
      * <br>
      * <p>> </p>
@@ -33,6 +27,12 @@ public class BatchSetDcdnDomainConfigsRequest extends TeaModel {
      * <p>         "functionName": "Feature name"</p>
      * <p>            }</p>
      * <p>        ]</p>
+     */
+    @NameInMap("DomainNames")
+    public String domainNames;
+
+    /**
+     * <p>The ID of the request.</p>
      */
     @NameInMap("Functions")
     public String functions;

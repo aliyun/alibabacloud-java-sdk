@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnReportRequest extends TeaModel {
     /**
-     * <p>The region. You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query the most recent region list.</p>
+     * <p>The region. You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query regions.</p>
      * <br>
-     * <p>*   If you do not specify a region, all regions are queried.</p>
-     * <p>*   If you specify a region, data about the specified region is returned. You can specify one or more regions. Separate multiple regions with commas (,).</p>
+     * <p>*   If you do not specify a region, data in all regions is queried.</p>
+     * <p>*   If you specify a region, data in the specified region is returned. You can specify one or more regions. Separate regions with commas (,).</p>
      */
     @NameInMap("Area")
     public String area;
@@ -20,7 +20,7 @@ public class DescribeDcdnReportRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. The time in the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time must be in UTC+0.</p>
+     * <p>The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -33,13 +33,13 @@ public class DescribeDcdnReportRequest extends TeaModel {
      * <p>*   **4xx**: HTTP 4xx status codes</p>
      * <p>*   **5xx**: HTTP 5xx status codes</p>
      * <br>
-     * <p>If you do not specify an HTTP status code, all HTTP status codes are queried.</p>
+     * <p>If you do not specify an HTTP status code, data for all preceding HTTP status codes is queried.</p>
      */
     @NameInMap("HttpCode")
     public String httpCode;
 
     /**
-     * <p>Specifies whether the region is outside the Chinese mainland. Valid values:</p>
+     * <p>Specify whether the region is outside the Chinese mainland. Valid values:</p>
      * <br>
      * <p>*   **1**: outside the Chinese mainland</p>
      * <p>*   **0**: inside the Chinese mainland</p>
@@ -48,13 +48,13 @@ public class DescribeDcdnReportRequest extends TeaModel {
     public String isOverseas;
 
     /**
-     * <p>The ID of the operations report that you want to query. You can specify only one ID in each call. You can call the [DescribeDcdnSubList](~~270075~~) operation to query report IDs.</p>
+     * <p>The ID of the operations report that you want to query. You can enter only one ID in each call. You can call the [DescribeDcdnSubList](~~270075~~) operation to query report IDs.</p>
      */
     @NameInMap("ReportId")
     public Long reportId;
 
     /**
-     * <p>The start of the time range to query. The time in the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time must be in UTC+0.</p>
+     * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

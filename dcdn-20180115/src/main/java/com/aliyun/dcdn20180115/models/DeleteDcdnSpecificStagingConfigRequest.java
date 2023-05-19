@@ -13,7 +13,7 @@ public class DeleteDcdnSpecificStagingConfigRequest extends TeaModel {
     public String configId;
 
     /**
-     * <p>The name of the accelerated domain. You can specify only one domain name.</p>
+     * <p>The accelerated domain name. You can specify only one domain name in each call.</p>
      */
     @NameInMap("DomainName")
     public String domainName;

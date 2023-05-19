@@ -4,27 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnBgpTrafficDataResponseBody extends TeaModel {
-    /**
-     * <p>The BGP traffic at each time interval.</p>
-     */
     @NameInMap("BgpDataInterval")
     public java.util.List<DescribeDcdnBgpTrafficDataResponseBodyBgpDataInterval> bgpDataInterval;
 
-    /**
-     * <p>The end of the time range during which data was queried.</p>
-     */
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The start of the time range during which data was queried.</p>
-     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -66,21 +54,12 @@ public class DescribeDcdnBgpTrafficDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnBgpTrafficDataResponseBodyBgpDataInterval extends TeaModel {
-        /**
-         * <p>The inbound traffic. Unit: bytes.</p>
-         */
         @NameInMap("In")
         public Long in;
 
-        /**
-         * <p>The outbound traffic. Unit: bytes.</p>
-         */
         @NameInMap("Out")
         public Long out;
 
-        /**
-         * <p>The timestamp of the data returned.</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

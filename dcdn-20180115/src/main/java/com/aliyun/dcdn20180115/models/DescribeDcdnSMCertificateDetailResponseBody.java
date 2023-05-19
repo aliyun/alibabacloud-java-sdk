@@ -47,7 +47,7 @@ public class DescribeDcdnSMCertificateDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The subdomain name.</p>
+     * <p>The domain name on the additional certificate.</p>
      */
     @NameInMap("Sans")
     public String sans;

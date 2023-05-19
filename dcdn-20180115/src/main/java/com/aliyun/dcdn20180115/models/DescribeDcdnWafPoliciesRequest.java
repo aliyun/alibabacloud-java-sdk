@@ -11,19 +11,15 @@ public class DescribeDcdnWafPoliciesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of protection policies to return per page. Valid values: an integer from **1** to **500**. Default value: **20**.</p>
+     * <p>The number of protection policies to return on each page. Valid values: an integer from **1** to **500**. Default value: **20**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The query conditions. The value is a string in the JSON format.</p>
+     * <p>The query conditions. The value is a JSON string. The format is `QueryArgs={"PolicyIds":"The IDs of protection policies","RuleIds":"The IDs of protection rules","PolicyNameLike":"The name of the protection policy","DomainNames":"The protected domain names","PolicyType":"default","DefenseScenes":"waf_group","PolicyStatus":"on","OrderBy":"GmtModified","Desc":"false"}`</p>
      * <br>
-     * <p>Format:</p>
-     * <br>
-     * <p>    QueryArgs={"PolicyIds":"The ID of the proteuleIds":"Thection policy","R range of protection rule IDs","PolicyNameLike":"The name of the protection policy","DomainNames":"The protected domain names","PolicyType":"default","DefenseScenes":"waf_group","PolicyStatus":"on","OrderBy":"GmtModified","Desc":"false"}</p>
-     * <br>
-     * <p>>  If you do not set this parameter, all protection policies are queried.</p>
+     * <p>> If you do not set this parameter, all protection policies are queried.</p>
      */
     @NameInMap("QueryArgs")
     public String queryArgs;

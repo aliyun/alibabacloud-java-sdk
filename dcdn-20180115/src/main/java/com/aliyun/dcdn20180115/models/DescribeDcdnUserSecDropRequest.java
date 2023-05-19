@@ -7,8 +7,8 @@ public class DescribeDcdnUserSecDropRequest extends TeaModel {
     /**
      * <p>The date or month that you want to query.</p>
      * <br>
-     * <p>*   If data is collected every day, set the date in the format of yyyymmdd, such as 20201203.</p>
-     * <p>*   If data is collected every month, set the month in the format of yyyymm, such as 202012.</p>
+     * <p>*   If data is collected every day, set Data in the format of yyyymmdd, such as 20201203.</p>
+     * <p>*   If data is collected every month, set Data in the format of yyyymm, such as 202012.</p>
      */
     @NameInMap("Data")
     public String data;
@@ -28,7 +28,7 @@ public class DescribeDcdnUserSecDropRequest extends TeaModel {
      * <p>*   waf: WAF</p>
      * <p>*   tmd: rate limiting</p>
      * <p>*   robot: bot traffic recognition</p>
-     * <p>*   l4\_dm_drop: domain name blocking on Layer 4</p>
+     * <p>*   l4\_dm_drop: domain name blocking at Layer 4</p>
      */
     @NameInMap("SecFunc")
     public String secFunc;

@@ -4,32 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class UntagDcdnResourcesRequest extends TeaModel {
-    /**
-     * <p>Specifies whether to delete all tags. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
-     * <br>
-     * <p>Default value: **false**.</p>
-     */
     @NameInMap("All")
     public Boolean all;
 
-    /**
-     * <p>The ID of the resource. Valid values of N: **1** to **50**.</p>
-     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
-    /**
-     * <p>The type of the resources from which you want to detach tags. The resource type. Set this value to **DOMAIN**.</p>
-     */
     @NameInMap("ResourceType")
     public String resourceType;
 
-    /**
-     * <p>The key of a tag. Valid values of N: **1** to **20**.</p>
-     */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 

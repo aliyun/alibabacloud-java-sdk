@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainWebsocketBpsDataResponseBody extends TeaModel {
     /**
-     * <p>The bandwidth values returned at each interval.</p>
+     * <p>The bandwidth data returned at each interval.</p>
      */
     @NameInMap("BpsDataPerInterval")
     public DescribeDcdnDomainWebsocketBpsDataResponseBodyBpsDataPerInterval bpsDataPerInterval;
@@ -35,7 +35,7 @@ public class DescribeDcdnDomainWebsocketBpsDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range during which data was queried.</p>
+     * <p>The start of the time range during which data was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -95,7 +95,7 @@ public class DescribeDcdnDomainWebsocketBpsDataResponseBody extends TeaModel {
 
     public static class DescribeDcdnDomainWebsocketBpsDataResponseBodyBpsDataPerIntervalDataModule extends TeaModel {
         /**
-         * <p>The timestamp of the data returned.</p>
+         * <p>The timestamp of the returned data.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

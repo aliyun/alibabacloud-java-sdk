@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnUserBillHistoryResponseBody extends TeaModel {
     /**
-     * <p>The billing records.</p>
+     * <p>The billing history returned.</p>
      */
     @NameInMap("BillHistoryData")
     public DescribeDcdnUserBillHistoryResponseBodyBillHistoryData billHistoryData;
@@ -51,7 +51,7 @@ public class DescribeDcdnUserBillHistoryResponseBody extends TeaModel {
         public String cdnRegion;
 
         /**
-         * <p>The billing type. Valid values: **StaticHttp**, **DynamicHttp**, and **DynamicHttps**.</p>
+         * <p>The billing method of the disk. Valid values: Valid values: **StaticHttp**, **DynamicHttp**, and **DynamicHttps**.</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
@@ -63,7 +63,7 @@ public class DescribeDcdnUserBillHistoryResponseBody extends TeaModel {
         public Float count;
 
         /**
-         * <p>The traffic. Unit: byte.</p>
+         * <p>The amount of network traffic. Unit: bytes.</p>
          */
         @NameInMap("Flow")
         public Float flow;
@@ -136,19 +136,19 @@ public class DescribeDcdnUserBillHistoryResponseBody extends TeaModel {
 
     public static class DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItem extends TeaModel {
         /**
-         * <p>The start time of the billing cycle.</p>
+         * <p>The beginning of the time range that was queried.</p>
          */
         @NameInMap("BillTime")
         public String billTime;
 
         /**
-         * <p>The billing method.</p>
+         * <p>The metering method.</p>
          */
         @NameInMap("BillType")
         public String billType;
 
         /**
-         * <p>The billing data.</p>
+         * <p>The billable items.</p>
          */
         @NameInMap("BillingData")
         public DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingData billingData;

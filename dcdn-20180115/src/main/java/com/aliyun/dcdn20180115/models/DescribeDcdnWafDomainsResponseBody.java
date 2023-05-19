@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnWafDomainsResponseBody extends TeaModel {
     /**
-     * <p>The protected domain names.</p>
+     * <p>The protected domain name.</p>
      */
     @NameInMap("Domains")
     public java.util.List<DescribeDcdnWafDomainsResponseBodyDomains> domains;
