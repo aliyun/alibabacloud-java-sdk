@@ -11,7 +11,7 @@ public class ListCheckResultRequest extends TeaModel {
     public String checkKey;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -23,7 +23,7 @@ public class ListCheckResultRequest extends TeaModel {
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The asset type of the cloud service. Valid values:</p>
+     * <p>The asset type of the cloud services. Valid values:</p>
      * <br>
      * <p>*   **ECS**: Elastic Compute Service (ECS)</p>
      * <p>*   **SLB**: Server Load Balancer (SLB)</p>
@@ -61,11 +61,17 @@ public class ListCheckResultRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **cn-hangzhou**: International</p>
+     * <p>*   **ap-southeast-1**: Singapore</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -101,7 +107,7 @@ public class ListCheckResultRequest extends TeaModel {
     public java.util.List<Long> standardIds;
 
     /**
-     * <p>The status of check items. Separate multiple status with commas (,). Valid values:</p>
+     * <p>The statuses of check items. Separate multiple statuses with commas (,). Valid values:</p>
      * <br>
      * <p>*   **PASS**</p>
      * <p>*   **NOT_PASS**</p>
@@ -112,11 +118,14 @@ public class ListCheckResultRequest extends TeaModel {
     @NameInMap("Statuses")
     public java.util.List<String> statuses;
 
+    /**
+     * <p>The types of check standards.</p>
+     */
     @NameInMap("Types")
     public java.util.List<String> types;
 
     /**
-     * <p>The cloud service provider. Valid values:</p>
+     * <p>The cloud service providers. Valid value:</p>
      * <br>
      * <p>*   **ALIYUN**: Alibaba Cloud</p>
      */

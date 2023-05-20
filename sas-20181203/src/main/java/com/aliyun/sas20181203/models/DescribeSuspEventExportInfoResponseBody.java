@@ -4,74 +4,36 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
-    /**
-     * <p>The handling status for the exception. Valid values:</p>
-     * <br>
-     * <p>*   **processing**: in progress</p>
-     * <p>*   **success**: successful</p>
-     * <p>*   **failed**: failed</p>
-     * <p>*   **pending**: pending</p>
-     */
     @NameInMap("ExportStatus")
     public String exportStatus;
 
-    /**
-     * <p>The name of the exported file.</p>
-     */
     @NameInMap("FileName")
     public String fileName;
 
-    /**
-     * <p>The time when the export task was created.</p>
-     */
     @NameInMap("GmtCreate")
     public Long gmtCreate;
 
-    /**
-     * <p>The time when the export task was modified.</p>
-     */
     @NameInMap("GmtModified")
     public Long gmtModified;
 
-    /**
-     * <p>The ID of the export task.</p>
-     */
     @NameInMap("Id")
     public Integer id;
 
-    /**
-     * <p>The URL at which you can download the exported Excel file.</p>
-     */
     @NameInMap("Link")
     public String link;
 
-    /**
-     * <p>The progress percentage of the export task.</p>
-     */
     @NameInMap("Progress")
     public Integer progress;
 
-    /**
-     * <p>The exported parameters of exceptions.</p>
-     */
     @NameInMap("Properties")
     public String properties;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of exceptions exported.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    /**
-     * <p>The type of the export task. The value is fixed as suspiciousEvent.</p>
-     */
     @NameInMap("Type")
     public String type;
 

@@ -4,15 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListPrivateRegistryListResponseBody extends TeaModel {
-    /**
-     * <p>An array that consists of the image repositories.</p>
-     */
     @NameInMap("ImageRegistryInfos")
     public java.util.List<ListPrivateRegistryListResponseBodyImageRegistryInfos> imageRegistryInfos;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,125 +32,57 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
     }
 
     public static class ListPrivateRegistryListResponseBodyImageRegistryInfos extends TeaModel {
-        /**
-         * <p>The ID of the user.</p>
-         */
         @NameInMap("AliUid")
         public Long aliUid;
 
-        /**
-         * <p>The domain name of the image repository.</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>The ID of the image repository.</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <p>The information about the Jenkins environment.</p>
-         */
         @NameInMap("JenkinsEnv")
         public String jenkinsEnv;
 
-        /**
-         * <p>The network type. Valid values:</p>
-         * <br>
-         * <p>*   **1**: Internet</p>
-         * <p>*   **2**: VPC</p>
-         */
         @NameInMap("NetType")
         public Long netType;
 
-        /**
-         * <p>The password used to log on to the image repository.</p>
-         */
         @NameInMap("Password")
         public String password;
 
-        /**
-         * <p>The number of days during which assets can be retained.</p>
-         */
         @NameInMap("PersistenceDay")
         public Long persistenceDay;
 
-        /**
-         * <p>The type of the protocol. Valid values:</p>
-         * <br>
-         * <p>*   **1**: HTTP</p>
-         * <p>*   **2**: HTTPS</p>
-         */
         @NameInMap("ProtocolType")
         public Long protocolType;
 
-        /**
-         * <p>The region ID of the server.</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The IP address of the image repository.</p>
-         */
         @NameInMap("RegistryHostIp")
         public String registryHostIp;
 
-        /**
-         * <p>The alias of the image repository.</p>
-         */
         @NameInMap("RegistryName")
         public String registryName;
 
-        /**
-         * <p>The type of the image repository. Valid values:</p>
-         * <br>
-         * <p>*   **acr**: Container Registry</p>
-         * <p>*   **harbor**: Harbor</p>
-         * <p>*   **quay**: Quay</p>
-         * <p>*   **CI/CD**: Jenkins</p>
-         */
         @NameInMap("RegistryType")
         public String registryType;
 
-        /**
-         * <p>The version of the image repository. Valid values:</p>
-         * <br>
-         * <p>*   **V1**: V1.0</p>
-         * <p>*   **V2**: V2.0</p>
-         */
         @NameInMap("RegistryVersion")
         public String registryVersion;
 
-        /**
-         * <p>The authentication token of the user.</p>
-         */
         @NameInMap("Token")
         public String token;
 
-        /**
-         * <p>The number of images that can be scanned per hour.</p>
-         */
         @NameInMap("TransPerHour")
         public Integer transPerHour;
 
-        /**
-         * <p>The username used to log on to the image repository.</p>
-         */
         @NameInMap("UserName")
         public String userName;
 
-        /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
-         */
         @NameInMap("VpcId")
         public String vpcId;
 
-        /**
-         * <p>The whitelist of IP addresses.</p>
-         */
         @NameInMap("WhiteList")
         public String whiteList;
 

@@ -300,6 +300,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Os", request.os);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.proxyCluster)) {
+            query.put("ProxyCluster", request.proxyCluster);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.vendorName)) {
             query.put("VendorName", request.vendorName);
         }
@@ -400,7 +404,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Security Center provides asset importance tags and custom tags. You can call the AddTagWithUuid operation to add only a custom tag to assets.
+      * InternetIp
       *
       * @param request AddTagWithUuidRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -435,7 +439,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Security Center provides asset importance tags and custom tags. You can call the AddTagWithUuid operation to add only a custom tag to assets.
+      * InternetIp
       *
       * @param request AddTagWithUuidRequest
       * @return AddTagWithUuidResponse
@@ -1174,7 +1178,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The identifier of the file. Only MD5 hash values are supported.
+      * The key of the file that is stored in the Object Storage Service (OSS) bucket. You can call the [CreateFileDetectUploadUrl](~~CreateFileDetectUploadUrl~~) operation to query the keys of files.
       *
       * @param request CreateFileDetectRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1221,7 +1225,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The identifier of the file. Only MD5 hash values are supported.
+      * The key of the file that is stored in the Object Storage Service (OSS) bucket. You can call the [CreateFileDetectUploadUrl](~~CreateFileDetectUploadUrl~~) operation to query the keys of files.
       *
       * @param request CreateFileDetectRequest
       * @return CreateFileDetectResponse
@@ -1232,9 +1236,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to query the parameters that are required to upload a file for detection. If the value of the response parameter FileExist is true, the file that you want to upload for detection already exists in the cloud. In this case, you can directly push the file for detection. If the value of the response parameter FileExist is false, you must use the form upload method to upload the file to the specified Object Storage Service (OSS) bucket based on the response parameters of this operation.
-      * The form upload method is provided by OSS. For more information, see [Form upload](~~84788~~).
-      * The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only MD5 hash values are supported. Before you call this operation, calculate the MD5 hash value of the file.
+      * The signature that is used to upload the file.
       *
       * @param request CreateFileDetectUploadUrlRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1273,9 +1275,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to query the parameters that are required to upload a file for detection. If the value of the response parameter FileExist is true, the file that you want to upload for detection already exists in the cloud. In this case, you can directly push the file for detection. If the value of the response parameter FileExist is false, you must use the form upload method to upload the file to the specified Object Storage Service (OSS) bucket based on the response parameters of this operation.
-      * The form upload method is provided by OSS. For more information, see [Form upload](~~84788~~).
-      * The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only MD5 hash values are supported. Before you call this operation, calculate the MD5 hash value of the file.
+      * The signature that is used to upload the file.
       *
       * @param request CreateFileDetectUploadUrlRequest
       * @return CreateFileDetectUploadUrlResponse
@@ -4322,7 +4322,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can search for assets by using search conditions, such as the instance ID, instance name, virtual private cloud (VPC) ID, region, and public IP address. You can also configure a logical relationship between multiple search conditions to search for the assets that meet the search conditions.
+      * Indicates whether alerts are generated on the asset. Valid values:
+      * *   **YES**
+      * *   **NO**
       *
       * @param request DescribeCloudCenterInstancesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4385,7 +4387,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can search for assets by using search conditions, such as the instance ID, instance name, virtual private cloud (VPC) ID, region, and public IP address. You can also configure a logical relationship between multiple search conditions to search for the assets that meet the search conditions.
+      * Indicates whether alerts are generated on the asset. Valid values:
+      * *   **YES**
+      * *   **NO**
       *
       * @param request DescribeCloudCenterInstancesRequest
       * @return DescribeCloudCenterInstancesResponse
@@ -7211,7 +7215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * To query the information about the recently detected image vulnerabilities, call the [PublicCreateImageScanTask](~~PublicCreateImageScanTask~~) operation. Wait 1 to 5 minutes until the call is successful and call the DescribeImageVulList operation.
+      * The time at which the scan was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
       *
       * @param request DescribeImageVulListRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -7350,7 +7354,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * To query the information about the recently detected image vulnerabilities, call the [PublicCreateImageScanTask](~~PublicCreateImageScanTask~~) operation. Wait 1 to 5 minutes until the call is successful and call the DescribeImageVulList operation.
+      * The time at which the scan was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
       *
       * @param request DescribeImageVulListRequest
       * @return DescribeImageVulListResponse
@@ -9014,7 +9018,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated
-      * This operation is phased out. You can use the ListCheckInstanceResult operation.
+      * The number of entries returned on the current page.
       *
       * @param request DescribeRiskCheckItemResultRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -9067,7 +9071,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated
-      * This operation is phased out. You can use the ListCheckInstanceResult operation.
+      * The number of entries returned on the current page.
       *
       * @param request DescribeRiskCheckItemResultRequest
       * @return DescribeRiskCheckItemResultResponse
@@ -9080,7 +9084,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated
-      * This operation is phased out. You can use the ListCheckResult operation.
+      * The details about the check results.
       *
       * @param request DescribeRiskCheckResultRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -9157,7 +9161,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated
-      * This operation is phased out. You can use the ListCheckResult operation.
+      * The details about the check results.
       *
       * @param request DescribeRiskCheckResultRequest
       * @return DescribeRiskCheckResultResponse
@@ -9228,7 +9232,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated
-      * This operation is phased out. You can use the ListCheckStandard operation instead.
+      * Identity authentication and permissions
       *
       * @param request DescribeRiskItemTypeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -9269,7 +9273,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated
-      * This operation is phased out. You can use the ListCheckStandard operation instead.
+      * Identity authentication and permissions
       *
       * @param request DescribeRiskItemTypeRequest
       * @return DescribeRiskItemTypeResponse
@@ -9585,7 +9589,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated
-      * This operation is phased out. You can use the GetCheckConfig operation.
+      * The day of the week when the check tasks are performed. Multiple days can be specified. Multiple days are separated by commas (,).
+      * *   **1**: Monday
+      * *   **2**: Tuesday
+      * *   **3**: Wednesday
+      * *   **4**: Thursday
+      * *   **5**: Friday
+      * *   **6**: Saturday
+      * *   **7**: Sunday
       *
       * @param request DescribeSecurityCheckScheduleConfigRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -9626,7 +9637,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated
-      * This operation is phased out. You can use the GetCheckConfig operation.
+      * The day of the week when the check tasks are performed. Multiple days can be specified. Multiple days are separated by commas (,).
+      * *   **1**: Monday
+      * *   **2**: Tuesday
+      * *   **3**: Wednesday
+      * *   **4**: Thursday
+      * *   **5**: Friday
+      * *   **6**: Saturday
+      * *   **7**: Sunday
       *
       * @param request DescribeSecurityCheckScheduleConfigRequest
       * @return DescribeSecurityCheckScheduleConfigResponse
@@ -11169,7 +11187,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If you specify only the Action request parameter in your request, Security Center returns the list of all VPCs regardless of whether a honeypot is deployed on a VPC.
+      * The ID of the vSwitch.
       *
       * @param request DescribeVpcHoneyPotListRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -11220,7 +11238,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If you specify only the Action request parameter in your request, Security Center returns the list of all VPCs regardless of whether a honeypot is deployed on a VPC.
+      * The ID of the vSwitch.
       *
       * @param request DescribeVpcHoneyPotListRequest
       * @return DescribeVpcHoneyPotListResponse
@@ -11363,7 +11381,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If the value of ExportStatus is success, the URL at which you can download the exported Excel file is returned.
+      * The ID of the task.
       *
       * @param request DescribeVulExportInfoRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -11394,7 +11412,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If the value of ExportStatus is success, the URL at which you can download the exported Excel file is returned.
+      * The ID of the task.
       *
       * @param request DescribeVulExportInfoRequest
       * @return DescribeVulExportInfoResponse
@@ -14211,7 +14229,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > Before you call this operation, make sure that the Security Center agent on your servers is online and the servers can access Alibaba Cloud services.
+      * The HTTP status code returned.
       *
       * @param request InstallCloudMonitorRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -14258,7 +14276,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > Before you call this operation, make sure that the Security Center agent on your servers is online and the servers can access Alibaba Cloud services.
+      * The HTTP status code returned.
       *
       * @param request InstallCloudMonitorRequest
       * @return InstallCloudMonitorResponse
@@ -17308,9 +17326,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated
-      * This operation is phased out. You can use the following operations:
-      * \\-To **ignore a check item**, use the AddCheckResultWhiteList operation.
-      * \\-To **cancel ignoring a check item**, use the RemoveCheckResultWhiteList operation.
+      * The ID of the request, which is used to locate and troubleshoot issues.
       *
       * @param request ModifyRiskCheckStatusRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -17363,9 +17379,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated
-      * This operation is phased out. You can use the following operations:
-      * \\-To **ignore a check item**, use the AddCheckResultWhiteList operation.
-      * \\-To **cancel ignoring a check item**, use the RemoveCheckResultWhiteList operation.
+      * The ID of the request, which is used to locate and troubleshoot issues.
       *
       * @param request ModifyRiskCheckStatusRequest
       * @return ModifyRiskCheckStatusResponse
@@ -17378,9 +17392,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated
-      * This operation is phased out. You can use the following operations:
-      * \\-To **ignore a risk item**, use the AddCheckInstanceResultWhiteList operation.
-      * \\-To **cancel ignoring a risk item**, use the RemoveCheckInstanceResultWhiteList operation.
+      * The ID of the request, which is used to locate and troubleshoot issues.
       *
       * @param request ModifyRiskSingleResultStatusRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -17433,9 +17445,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated
-      * This operation is phased out. You can use the following operations:
-      * \\-To **ignore a risk item**, use the AddCheckInstanceResultWhiteList operation.
-      * \\-To **cancel ignoring a risk item**, use the RemoveCheckInstanceResultWhiteList operation.
+      * The ID of the request, which is used to locate and troubleshoot issues.
       *
       * @param request ModifyRiskSingleResultStatusRequest
       * @return ModifyRiskSingleResultStatusResponse
@@ -18069,7 +18079,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After you delete a directory that has web tamper proofing enabled on a server, files in the directory are no longer protected by web tamper proofing. The information about the websites that are hosted on the server may be maliciously modified by attackers. Proceed with caution.
+      * The ID of the request, which is used to locate and troubleshoot issues.
       *
       * @param request ModifyWebLockDeleteConfigRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -18112,7 +18122,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After you delete a directory that has web tamper proofing enabled on a server, files in the directory are no longer protected by web tamper proofing. The information about the websites that are hosted on the server may be maliciously modified by attackers. Proceed with caution.
+      * The ID of the request, which is used to locate and troubleshoot issues.
       *
       * @param request ModifyWebLockDeleteConfigRequest
       * @return ModifyWebLockDeleteConfigResponse

@@ -4,9 +4,6 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class SetRegistryScanDayNumRequest extends TeaModel {
-    /**
-     * <p>The cycle at which you want to scan your images. Unit: days.</p>
-     */
     @NameInMap("ScanDayNum")
     public Integer scanDayNum;
 

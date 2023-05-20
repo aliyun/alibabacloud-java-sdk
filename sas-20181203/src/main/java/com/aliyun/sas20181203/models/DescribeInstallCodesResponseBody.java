@@ -62,6 +62,9 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
         @NameInMap("Os")
         public String os;
 
+        @NameInMap("ProxyCluster")
+        public String proxyCluster;
+
         @NameInMap("VendorName")
         public String vendorName;
 
@@ -116,6 +119,14 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
         }
         public String getOs() {
             return this.os;
+        }
+
+        public DescribeInstallCodesResponseBodyInstallCodes setProxyCluster(String proxyCluster) {
+            this.proxyCluster = proxyCluster;
+            return this;
+        }
+        public String getProxyCluster() {
+            return this.proxyCluster;
         }
 
         public DescribeInstallCodesResponseBodyInstallCodes setVendorName(String vendorName) {

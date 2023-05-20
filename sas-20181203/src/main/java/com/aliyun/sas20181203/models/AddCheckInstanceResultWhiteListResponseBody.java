@@ -4,15 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class AddCheckInstanceResultWhiteListResponseBody extends TeaModel {
-    /**
-     * <p>The adding result.</p>
-     */
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

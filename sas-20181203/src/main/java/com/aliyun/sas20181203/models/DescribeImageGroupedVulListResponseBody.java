@@ -4,33 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageGroupedVulListResponseBody extends TeaModel {
-    /**
-     * <p>The page number of the returned page.</p>
-     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    /**
-     * <p>An array that consists of the image vulnerabilities.</p>
-     */
     @NameInMap("GroupedVulItems")
     public java.util.List<DescribeImageGroupedVulListResponseBodyGroupedVulItems> groupedVulItems;
 
-    /**
-     * <p>The number of entries returned per page. Default value: **20**.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of image system vulnerabilities.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -80,81 +65,41 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
     }
 
     public static class DescribeImageGroupedVulListResponseBodyGroupedVulItems extends TeaModel {
-        /**
-         * <p>The alias of the vulnerability.</p>
-         */
         @NameInMap("AliasName")
         public String aliasName;
 
-        /**
-         * <p>The number of vulnerabilities that have the high priority.</p>
-         */
         @NameInMap("AsapCount")
         public Integer asapCount;
 
+        /**
+         * <p>是否可支持修复。取值：</p>
+         * <p>- **yes**：支持修复</p>
+         * <p>- **no**： 不支持修复</p>
+         */
         @NameInMap("CanFix")
         public String canFix;
 
-        /**
-         * <p>The timestamp when the first scan was performed. Unit: milliseconds.</p>
-         */
         @NameInMap("GmtLast")
         public Long gmtLast;
 
-        /**
-         * <p>The timestamp when the last scan was performed. Unit: milliseconds.</p>
-         */
         @NameInMap("LastScanTime")
         public Long lastScanTime;
 
-        /**
-         * <p>The number of vulnerabilities that have the medium priority.</p>
-         */
         @NameInMap("LaterCount")
         public Integer laterCount;
 
-        /**
-         * <p>The name of the vulnerability.</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The number of vulnerabilities that have the low priority.</p>
-         */
         @NameInMap("NntfCount")
         public Integer nntfCount;
 
-        /**
-         * <p>The status of the vulnerability. Valid values:</p>
-         * <br>
-         * <p>*   **0**: unhandled</p>
-         * <p>*   **1**: handled</p>
-         * <p>*   **2**: verifying</p>
-         * <p>*   **3**: added to the whitelist</p>
-         */
         @NameInMap("Status")
         public Integer status;
 
-        /**
-         * <p>The tag of the vulnerability. Valid values:</p>
-         * <br>
-         * <p>*   Restart required</p>
-         * <p>*   Remote exploitation</p>
-         * <p>*   Exploit exists</p>
-         * <p>*   Exploitable</p>
-         * <p>*   Privilege escalation</p>
-         * <p>*   Code execution</p>
-         */
         @NameInMap("Tags")
         public String tags;
 
-        /**
-         * <p>The type of the vulnerability. Valid values:</p>
-         * <br>
-         * <p>*   **cve**: image system vulnerability</p>
-         * <p>*   **sca**: image application vulnerability</p>
-         */
         @NameInMap("Type")
         public String type;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCheckResultResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the check items.</p>
+     * <p>The check items.</p>
      */
     @NameInMap("Checks")
     public java.util.List<ListCheckResultResponseBodyChecks> checks;
@@ -151,7 +151,7 @@ public class ListCheckResultResponseBody extends TeaModel {
         public Long checkId;
 
         /**
-         * <p>An array that consists of the check policies.</p>
+         * <p>The check policies.</p>
          */
         @NameInMap("CheckPolicies")
         public java.util.List<ListCheckResultResponseBodyChecksCheckPolicies> checkPolicies;
@@ -165,29 +165,29 @@ public class ListCheckResultResponseBody extends TeaModel {
         /**
          * <p>The asset subtype of the cloud service. Valid values:</p>
          * <br>
-         * <p>*   If the **InstanceType** parameter is set to **ECS**, this parameter supports the following valid values:</p>
+         * <p>*   If **InstanceType** is set to **ECS**, this parameter supports the following valid values:</p>
          * <br>
          * <p>    *   **INSTANCE**</p>
          * <p>    *   **DISK**</p>
          * <p>    *   **SECURITY_GROUP**</p>
          * <br>
-         * <p>*   If the **InstanceType** parameter is set to **ACR**, this parameter supports the following valid values:</p>
+         * <p>*   If **InstanceType** is set to **ACR**, this parameter supports the following valid values:</p>
          * <br>
          * <p>    *   **REPOSITORY_ENTERPRISE**</p>
          * <p>    *   **REPOSITORY_PERSON**</p>
          * <br>
-         * <p>*   If the **InstanceType** parameter is set to **RAM**, this parameter supports the following valid values:</p>
+         * <p>*   If **InstanceType** is set to **RAM**, this parameter supports the following valid values:</p>
          * <br>
          * <p>    *   **ALIAS**</p>
          * <p>    *   **USER**</p>
          * <p>    *   **POLICY**</p>
          * <p>    *   **GROUP**</p>
          * <br>
-         * <p>*   If the **InstanceType** parameter is set to **WAF**, this parameter supports the following valid values:</p>
+         * <p>*   If **InstanceType** is set to **WAF**, this parameter supports the following valid values:</p>
          * <br>
          * <p>    *   **DOMAIN**</p>
          * <br>
-         * <p>*   If the **InstanceType** parameter is set to other values, this parameter supports the following valid values:</p>
+         * <p>*   If **InstanceType** is set to other values, this parameter supports the following valid values:</p>
          * <br>
          * <p>    *   **INSTANCE**</p>
          */
@@ -386,13 +386,13 @@ public class ListCheckResultResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;

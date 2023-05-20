@@ -5,29 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateHoneypotNodeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to allow honeypots to access the Internet. Valid values:</p>
-     * <br>
-     * <p>*   **true**: allows honeypots to access the Internet.</p>
-     * <p>*   **false**: does not allow honeypots to access the Internet.</p>
+     * <p>Creates a management node.</p>
      */
     @NameInMap("AllowHoneypotAccessInternet")
     public Boolean allowHoneypotAccessInternet;
 
     /**
-     * <p>The number of available probes.</p>
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      */
     @NameInMap("AvailableProbeNum")
     public Integer availableProbeNum;
 
     /**
-     * <p>The name of the management node.</p>
+     * <p>The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
      */
     @NameInMap("NodeName")
     public String nodeName;
 
-    /**
-     * <p>The CIDR blocks that are allowed to access the management node.</p>
-     */
     @NameInMap("SecurityGroupProbeIpList")
     public java.util.List<String> securityGroupProbeIpList;
 

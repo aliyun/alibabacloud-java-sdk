@@ -5,31 +5,35 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupPoliciesRequest extends TeaModel {
     /**
-     * <p>The number of entries returned per page. Default value: 10.</p>
+     * <p>The name of the anti-ransomware policy that you want to query.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The number of the page to return. Default value: 1.</p>
      */
     @NameInMap("MachineRemark")
     public String machineRemark;
 
     /**
-     * <p>The number of the page to return. Default value: 1.</p>
+     * <p>The type of the server. Valid values:</p>
+     * <br>
+     * <p>*   **OUT_CLOUD**: server not deployed on Alibaba Cloud</p>
+     * <p>*   **ALIYUN**: Elastic Compute Service (ECS) instance</p>
+     * <p>*   **TRIPARTITE**: simple application server</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The UUIDs that are returned based on the value of the MachineRemark request parameter.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The pagination information.</p>
+     * <p>The number of servers on which data backup is exceptional.</p>
      */
     @NameInMap("Status")
     public String status;

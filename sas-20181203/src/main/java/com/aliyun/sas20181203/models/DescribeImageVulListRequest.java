@@ -4,173 +4,81 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageVulListRequest extends TeaModel {
-    /**
-     * <p>The alias of the vulnerability.</p>
-     */
     @NameInMap("AliasName")
     public String aliasName;
 
-    /**
-     * <p>The ID of the cluster to which the container belongs.</p>
-     */
     @NameInMap("ClusterId")
     public String clusterId;
 
-    /**
-     * <p>The name of the cluster.</p>
-     */
     @NameInMap("ClusterName")
     public String clusterName;
 
-    /**
-     * <p>The ID of the container.</p>
-     */
     @NameInMap("ContainerId")
     public String containerId;
 
-    /**
-     * <p>The number of the page to return. Default value: **1**</p>
-     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    /**
-     * <p>Specifies whether the vulnerability is handled. Valid values:</p>
-     * <br>
-     * <p>*   **y**: handled</p>
-     * <p>*   **n**: unhandled</p>
-     */
     @NameInMap("Dealed")
     public String dealed;
 
-    /**
-     * <p>The digest of the image.</p>
-     */
     @NameInMap("Digest")
     public String digest;
 
-    /**
-     * <p>The name of the image.</p>
-     */
     @NameInMap("Image")
     public String image;
 
-    /**
-     * <p>The instance ID of the asset.</p>
-     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
-     */
     @NameInMap("Lang")
     public String lang;
 
-    /**
-     * <p>The name of the vulnerability.</p>
-     */
     @NameInMap("Name")
     public String name;
 
-    /**
-     * <p>The namespace.</p>
-     */
     @NameInMap("Namespace")
     public String namespace;
 
-    /**
-     * <p>The priority to fix the vulnerability. Valid values:</p>
-     * <br>
-     * <p>*   **asap**: high. You must fix the vulnerability at the earliest opportunity.</p>
-     * <p>*   **later**: medium. You can fix the vulnerability based on your business requirements.</p>
-     * <p>*   **nntf**: low. You can ignore the vulnerability.</p>
-     */
     @NameInMap("Necessity")
     public String necessity;
 
-    /**
-     * <p>The number of entries to return on each page. Default value: **10**</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The pod.</p>
-     */
     @NameInMap("Pod")
     public String pod;
 
-    /**
-     * <p>The region ID of the instance.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The ID of the image repository.</p>
-     */
     @NameInMap("RepoId")
     public String repoId;
 
-    /**
-     * <p>The instance ID of the image repository.</p>
-     */
     @NameInMap("RepoInstanceId")
     public String repoInstanceId;
 
-    /**
-     * <p>The name of the image repository.</p>
-     */
     @NameInMap("RepoName")
     public String repoName;
 
-    /**
-     * <p>The namespace to which the image repository belongs.</p>
-     */
     @NameInMap("RepoNamespace")
     public String repoNamespace;
 
-    /**
-     * <p>The region ID of the image repository.</p>
-     */
     @NameInMap("RepoRegionId")
     public String repoRegionId;
 
-    /**
-     * <p>The types of the assets that you want to scan.</p>
-     */
     @NameInMap("ScanRange")
     public java.util.List<String> scanRange;
 
-    /**
-     * <p>The status of the vulnerability. Valid values:</p>
-     * <br>
-     * <p>*   **1**: unfixed</p>
-     * <p>*   **4**: being fixed</p>
-     * <p>*   **7**: fixed</p>
-     */
     @NameInMap("StatusList")
     public String statusList;
 
-    /**
-     * <p>The tag that is added to the image.</p>
-     */
     @NameInMap("Tag")
     public String tag;
 
-    /**
-     * <p>The type of the vulnerability. Set the value to **cve**, which indicates image vulnerabilities.</p>
-     */
     @NameInMap("Type")
     public String type;
 
-    /**
-     * <p>The UUIDs of the assets. Separate multiple UUIDs with commas (,).</p>
-     */
     @NameInMap("Uuids")
     public String uuids;
 

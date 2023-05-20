@@ -5,21 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateVulAutoRepairConfigRequest extends TeaModel {
     /**
-     * <p>The reason why the vulnerability can be automatically fixed.</p>
+     * <p>The vulnerability that can be automatically fixed.</p>
      */
     @NameInMap("Reason")
     public String reason;
 
     /**
-     * <p>The type of the vulnerability. Valid values: </p>
-     * <p>- **cve**: Linux software vulnerability </p>
-     * <p>- **sys**: Windows system vulnerability</p>
+     * <p>The vulnerabilities that can be automatically fixed.</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
-     * <p>The vulnerabilities that can be automatically fixed.</p>
+     * <p>The alias of the vulnerability.</p>
      */
     @NameInMap("VulAutoRepairConfigList")
     public java.util.List<CreateVulAutoRepairConfigRequestVulAutoRepairConfigList> vulAutoRepairConfigList;
@@ -55,13 +53,13 @@ public class CreateVulAutoRepairConfigRequest extends TeaModel {
 
     public static class CreateVulAutoRepairConfigRequestVulAutoRepairConfigList extends TeaModel {
         /**
-         * <p>The alias of the vulnerability.</p>
+         * <p>The name of the vulnerability.</p>
          */
         @NameInMap("AliasName")
         public String aliasName;
 
         /**
-         * <p>The name of the vulnerability.</p>
+         * <p>The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
          */
         @NameInMap("Name")
         public String name;

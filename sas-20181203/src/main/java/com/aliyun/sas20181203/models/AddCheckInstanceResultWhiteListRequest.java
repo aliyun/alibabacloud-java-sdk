@@ -4,21 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class AddCheckInstanceResultWhiteListRequest extends TeaModel {
-    /**
-     * <p>The ID of the group to which the check item belongs.</p>
-     */
     @NameInMap("CheckGroupId")
     public String checkGroupId;
 
-    /**
-     * <p>The ID of the check item.</p>
-     */
     @NameInMap("CheckId")
     public Long checkId;
 
-    /**
-     * <p>The instance IDs of assets.</p>
-     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
