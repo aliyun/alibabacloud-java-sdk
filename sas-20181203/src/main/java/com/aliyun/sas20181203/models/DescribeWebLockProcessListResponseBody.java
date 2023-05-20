@@ -4,33 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebLockProcessListResponseBody extends TeaModel {
-    /**
-     * <p>The page number of the returned page.</p>
-     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    /**
-     * <p>An array that consists of details about the process.</p>
-     */
     @NameInMap("List")
     public java.util.List<DescribeWebLockProcessListResponseBodyList> list;
 
-    /**
-     * <p>The number of entries returned per page.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of processes.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -80,54 +65,27 @@ public class DescribeWebLockProcessListResponseBody extends TeaModel {
     }
 
     public static class DescribeWebLockProcessListResponseBodyList extends TeaModel {
-        /**
-         * <p>The number of entries returned on the current page.</p>
-         */
         @NameInMap("Count")
         public String count;
 
-        /**
-         * <p>The name of the server.</p>
-         */
         @NameInMap("InstanceName")
         public String instanceName;
 
-        /**
-         * <p>The public IP address of the server.</p>
-         */
         @NameInMap("InternetIp")
         public String internetIp;
 
-        /**
-         * <p>The private IP address of the server.</p>
-         */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
-        /**
-         * <p>The name of the process.</p>
-         */
         @NameInMap("ProcessName")
         public String processName;
 
-        /**
-         * <p>The path to the process.</p>
-         */
         @NameInMap("ProcessPath")
         public String processPath;
 
-        /**
-         * <p>Indicates whether the process is added to the process whitelist. Valid values:</p>
-         * <br>
-         * <p>*   **1**: The process is added to the process whitelist.</p>
-         * <p>*   **0**: The process is not added to the process whitelist.</p>
-         */
         @NameInMap("Status")
         public Integer status;
 
-        /**
-         * <p>The UUID of the server.</p>
-         */
         @NameInMap("Uuid")
         public String uuid;
 

@@ -4,24 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeAgentInstallStatusRequest extends TeaModel {
-    /**
-     * <p>The language of the content within the request and response. Valid value:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
-     */
     @NameInMap("Lang")
     public String lang;
 
-    /**
-     * <p>The source IP address of the request.</p>
-     */
     @NameInMap("SourceIp")
     public String sourceIp;
 
-    /**
-     * <p>The UUIDs of the servers. Separate multiple UUIDs with commas (,).</p>
-     */
     @NameInMap("Uuids")
     public String uuids;
 

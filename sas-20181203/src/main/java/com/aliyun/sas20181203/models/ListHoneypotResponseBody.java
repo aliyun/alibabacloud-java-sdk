@@ -5,46 +5,46 @@ import com.aliyun.tea.*;
 
 public class ListHoneypotResponseBody extends TeaModel {
     /**
-     * <p>The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * <p>The number of entries returned on the current page.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The error message returned.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>An array that consists of the information about the honeypots.</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("List")
     public java.util.List<ListHoneypotResponseBodyList> list;
-
-    /**
-     * <p>The error message returned.</p>
-     */
-    @NameInMap("Message")
-    public String message;
-
-    /**
-     * <p>The pagination information.</p>
-     */
-    @NameInMap("PageInfo")
-    public ListHoneypotResponseBodyPageInfo pageInfo;
-
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
      * <p>*   **true**: The request was successful.</p>
      * <p>*   **false**: The request failed.</p>
+     */
+    @NameInMap("Message")
+    public String message;
+
+    /**
+     * <p>The ID of the management node.</p>
+     */
+    @NameInMap("PageInfo")
+    public ListHoneypotResponseBodyPageInfo pageInfo;
+
+    /**
+     * <p>The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -112,55 +112,64 @@ public class ListHoneypotResponseBody extends TeaModel {
 
     public static class ListHoneypotResponseBodyList extends TeaModel {
         /**
-         * <p>The name of the management node.</p>
+         * <p>The ID of the honeypot.</p>
          */
         @NameInMap("ControlNodeName")
         public String controlNodeName;
 
         /**
-         * <p>The ID of the honeypot.</p>
+         * <p>PageResult</p>
          */
         @NameInMap("HoneypotId")
         public String honeypotId;
 
         /**
-         * <p>The display name of the honeypot image.</p>
+         * <p>An array that consists of the status information about the honeypot.</p>
          */
         @NameInMap("HoneypotImageDisplayName")
         public String honeypotImageDisplayName;
 
         /**
-         * <p>The ID of the honeypot image.</p>
+         * <p>The display name of the image that is used for the honeypot.</p>
          */
         @NameInMap("HoneypotImageId")
         public String honeypotImageId;
 
         /**
-         * <p>The name of the honeypot image.</p>
+         * <p>The name of the honeypot.</p>
          */
         @NameInMap("HoneypotImageName")
         public String honeypotImageName;
 
         /**
-         * <p>The name of the honeypot.</p>
+         * <p>The information about the honeypot.</p>
          */
         @NameInMap("HoneypotName")
         public String honeypotName;
 
         /**
-         * <p>The ID of the management node.</p>
+         * <p>The status of the honeypot. Valid values:</p>
+         * <br>
+         * <p>*   **starting**: enabling</p>
+         * <p>*   **running**: normal</p>
+         * <p>*   **exited**: disabled</p>
+         * <p>*   **upgrade**: updating</p>
+         * <p>*   **deleting**: deleting</p>
+         * <p>*   **resetting**: resetting</p>
+         * <p>*   **created**: created</p>
+         * <p>*   **stopping**: stopping</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
-         * <p>The ID of the custom configuration for the honeypot.</p>
+         * <p>The name of the management node.</p>
          */
         @NameInMap("PresetId")
         public String presetId;
 
         /**
-         * <p>An array that consists of the status information about the honeypot.</p>
+         * <p>The name of the image that is used for the honeypot.</p>
          */
         @NameInMap("State")
         public java.util.List<String> state;
@@ -246,25 +255,25 @@ public class ListHoneypotResponseBody extends TeaModel {
 
     public static class ListHoneypotResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>The number of entries returned per page.</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The ID of the image that is used for the honeypot.</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The pagination information.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The page number of the returned page.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

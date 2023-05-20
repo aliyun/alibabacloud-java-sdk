@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddCheckResultWhiteListRequest extends TeaModel {
     /**
-     * <p>The IDs of the check items.</p>
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      */
     @NameInMap("CheckIds")
     public java.util.List<Long> checkIds;

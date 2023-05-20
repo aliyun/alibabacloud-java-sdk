@@ -4,15 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogShipperStatusResponseBody extends TeaModel {
-    /**
-     * <p>The status information.</p>
-     */
     @NameInMap("LogShipperStatus")
     public DescribeLogShipperStatusResponseBodyLogShipperStatus logShipperStatus;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,66 +32,24 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeLogShipperStatusResponseBodyLogShipperStatus extends TeaModel {
-        /**
-         * <p>Indicates whether Security Center is authorized to access Log Service. Valid values:</p>
-         * <br>
-         * <p>*   **yes**</p>
-         * <p>*   **no**</p>
-         */
         @NameInMap("AuthStatus")
         public String authStatus;
 
-        /**
-         * <p>Indicates whether the log analysis feature is purchased. Valid values:</p>
-         * <br>
-         * <p>*   **yes**</p>
-         * <p>*   **no**</p>
-         */
         @NameInMap("BuyStatus")
         public String buyStatus;
 
-        /**
-         * <p>The status of the log analysis feature. Valid values:</p>
-         * <br>
-         * <p>*   **yes**: enabled</p>
-         * <p>*   **no**: disabled</p>
-         */
         @NameInMap("OpenStatus")
         public String openStatus;
 
-        /**
-         * <p>Indicates whether the pay-as-you-go billing method is used. Valid values:</p>
-         * <br>
-         * <p>*   **yes**</p>
-         * <p>*   **no**</p>
-         */
         @NameInMap("PostPaidOpenStatus")
         public String postPaidOpenStatus;
 
-        /**
-         * <p>Indicates whether the log analysis feature supports the pay-as-you-go billing method. Valid values:</p>
-         * <br>
-         * <p>*   **yes**</p>
-         * <p>*   **no**</p>
-         */
         @NameInMap("PostPaidSupportStatus")
         public String postPaidSupportStatus;
 
-        /**
-         * <p>The status of the dedicated Log Service project. Valid values:</p>
-         * <br>
-         * <p>*   **Normal**: normal</p>
-         * <p>*   **Disable**: disabled</p>
-         */
         @NameInMap("SlsProjectStatus")
         public String slsProjectStatus;
 
-        /**
-         * <p>Indicates whether Log Service is activated. Valid values:</p>
-         * <br>
-         * <p>*   **yes**</p>
-         * <p>*   **no**</p>
-         */
         @NameInMap("SlsServiceStatus")
         public String slsServiceStatus;
 

@@ -4,15 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetModuleConfigRequest extends TeaModel {
-    /**
-     * <p>The number of the page to return.</p>
-     */
     @NameInMap("CurrentPage")
     public String currentPage;
 
-    /**
-     * <p>The number of entries to return on each page. Default value: **10**.</p>
-     */
     @NameInMap("PageSize")
     public String pageSize;
 

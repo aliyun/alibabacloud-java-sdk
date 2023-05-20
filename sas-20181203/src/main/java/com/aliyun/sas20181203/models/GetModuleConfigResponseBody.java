@@ -4,33 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetModuleConfigResponseBody extends TeaModel {
-    /**
-     * <p>The response code returned.</p>
-     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <p>An array that consists of the configurations of the module.</p>
-     */
     @NameInMap("ModuleConfigList")
     public java.util.List<GetModuleConfigResponseBodyModuleConfigList> moduleConfigList;
 
-    /**
-     * <p>The pagination information.</p>
-     */
     @NameInMap("PageInfo")
     public GetModuleConfigResponseBodyPageInfo pageInfo;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request was successful.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -80,39 +65,21 @@ public class GetModuleConfigResponseBody extends TeaModel {
     }
 
     public static class GetModuleConfigResponseBodyModuleConfigListItems extends TeaModel {
-        /**
-         * <p>The ID of the server group to which the server belongs.</p>
-         */
         @NameInMap("GroupId")
         public Integer groupId;
 
-        /**
-         * <p>The instance ID of the server.</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The instance name of the server.</p>
-         */
         @NameInMap("InstanceName")
         public String instanceName;
 
-        /**
-         * <p>The IP address of the server.</p>
-         */
         @NameInMap("Ip")
         public String ip;
 
-        /**
-         * <p>The region in which the server resides.</p>
-         */
         @NameInMap("Region")
         public String region;
 
-        /**
-         * <p>The UUID of the server.</p>
-         */
         @NameInMap("Uuid")
         public String uuid;
 
@@ -172,21 +139,12 @@ public class GetModuleConfigResponseBody extends TeaModel {
     }
 
     public static class GetModuleConfigResponseBodyModuleConfigList extends TeaModel {
-        /**
-         * <p>The name of the configuration.</p>
-         */
         @NameInMap("ConfigName")
         public String configName;
 
-        /**
-         * <p>An array that consists of the configuration items.</p>
-         */
         @NameInMap("Items")
         public java.util.List<GetModuleConfigResponseBodyModuleConfigListItems> items;
 
-        /**
-         * <p>The name of the module.</p>
-         */
         @NameInMap("ModuleName")
         public String moduleName;
 
@@ -222,27 +180,15 @@ public class GetModuleConfigResponseBody extends TeaModel {
     }
 
     public static class GetModuleConfigResponseBodyPageInfo extends TeaModel {
-        /**
-         * <p>The number of entries returned on the current page.</p>
-         */
         @NameInMap("Count")
         public Integer count;
 
-        /**
-         * <p>The page number of the returned page.</p>
-         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        /**
-         * <p>The number of entries returned per page.</p>
-         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        /**
-         * <p>The total number of entries returned.</p>
-         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

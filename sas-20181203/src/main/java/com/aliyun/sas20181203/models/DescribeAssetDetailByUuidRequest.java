@@ -4,21 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeAssetDetailByUuidRequest extends TeaModel {
-    /**
-     * <p>The operating system version of the server.</p>
-     */
     @NameInMap("Lang")
     public String lang;
 
-    /**
-     * <p>The details of the CPU.</p>
-     */
     @NameInMap("SourceIp")
     public String sourceIp;
 
-    /**
-     * <p>The public IP address of the server.</p>
-     */
     @NameInMap("Uuid")
     public String uuid;
 

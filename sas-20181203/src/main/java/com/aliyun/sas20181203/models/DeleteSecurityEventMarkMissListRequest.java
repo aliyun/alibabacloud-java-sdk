@@ -4,9 +4,6 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DeleteSecurityEventMarkMissListRequest extends TeaModel {
-    /**
-     * <p>The IDs of custom defense rule.</p>
-     */
     @NameInMap("Ids")
     public java.util.List<Long> ids;
 

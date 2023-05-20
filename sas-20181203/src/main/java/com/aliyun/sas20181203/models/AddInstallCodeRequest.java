@@ -4,42 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class AddInstallCodeRequest extends TeaModel {
-    /**
-     * <p>6134</p>
-     */
     @NameInMap("ExpiredDate")
     public Long expiredDate;
 
-    /**
-     * <p>Specifies whether to create an image. Default value: **false**. Valid values:</p>
-     * <br>
-     * <p>*   **false**: does not create an image.</p>
-     * <p>*   **true**: creates an image.</p>
-     */
     @NameInMap("GroupId")
     public Long groupId;
 
-    /**
-     * <p>The operating system of the instance. Default value: **linux**. Valid values:</p>
-     * <br>
-     * <p>*   **linux**</p>
-     * <p>*   **windows**</p>
-     * <p>*   **windows-2003**</p>
-     */
     @NameInMap("OnlyImage")
     public Boolean onlyImage;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("Os")
     public String os;
 
-    /**
-     * <p>The ID of the asset group to which the you want to add the asset.</p>
-     * <br>
-     * <p>>  You can call the [DescribeAllGroups](~~describeallgroups~~) operation to query the IDs of asset groups.</p>
-     */
+    @NameInMap("ProxyCluster")
+    public String proxyCluster;
+
     @NameInMap("VendorName")
     public String vendorName;
 
@@ -78,6 +57,14 @@ public class AddInstallCodeRequest extends TeaModel {
     }
     public String getOs() {
         return this.os;
+    }
+
+    public AddInstallCodeRequest setProxyCluster(String proxyCluster) {
+        this.proxyCluster = proxyCluster;
+        return this;
+    }
+    public String getProxyCluster() {
+        return this.proxyCluster;
     }
 
     public AddInstallCodeRequest setVendorName(String vendorName) {

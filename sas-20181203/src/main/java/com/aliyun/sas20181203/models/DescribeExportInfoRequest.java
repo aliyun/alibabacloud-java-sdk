@@ -4,11 +4,6 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeExportInfoRequest extends TeaModel {
-    /**
-     * <p>The ID of the export task.</p>
-     * <br>
-     * <p>> You can call the [ExportRecord](~~ExportRecord~~) operation to query the IDs of export tasks.</p>
-     */
     @NameInMap("ExportId")
     public Long exportId;
 

@@ -5,26 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateHoneypotRequest extends TeaModel {
     /**
-     * <p>The ID of the honeypot image.</p>
-     * <br>
-     * <p>> You can call the [ListAvailableHoneypot](~~ListAvailableHoneypot~~) operation to query the IDs of images from the **HoneypotImageId** response parameter.</p>
+     * <p>The custom name of the honeypot.</p>
      */
     @NameInMap("HoneypotImageId")
     public String honeypotImageId;
 
     /**
-     * <p>The name of the honeypot image.</p>
-     * <br>
-     * <p>> You can call the [ListAvailableHoneypot](~~ListAvailableHoneypot~~) operation to query the names of images from the **HoneypotImageName** response parameter.</p>
+     * <p>The status code returned. The status code **200** indicates that the request was is successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
      */
     @NameInMap("HoneypotImageName")
     public String honeypotImageName;
-
-    /**
-     * <p>The custom name of the honeypot.</p>
-     */
-    @NameInMap("HoneypotName")
-    public String honeypotName;
 
     /**
      * <p>The custom configuration of the honeypot in the JSON format. The value contains the following fields:</p>
@@ -41,21 +31,27 @@ public class CreateHoneypotRequest extends TeaModel {
      * <br>
      * <p>*   **burp**: Burp-specific Defense. Valid values:</p>
      * <br>
-     * <p>    *   **open**: Enable</p>
-     * <p>    *   **close**: Disable</p>
+     * <p>    *   **open**: Enabled</p>
+     * <p>    *   **close**: Disabled</p>
      * <br>
      * <p>*   **portrait_option**: Source Tracing Configuration. Valid values:</p>
      * <br>
      * <p>    *   **false**: Disable</p>
      * <p>    *   **true**: Enable</p>
      */
+    @NameInMap("HoneypotName")
+    public String honeypotName;
+
+    /**
+     * <p>The name of the image that is used for the honeypot.</p>
+     * <br>
+     * <p>>  You can call the [ListAvailableHoneypot](~~ListAvailableHoneypot~~) operation to obtain the names of images from the **HoneypotImageName** response parameter.</p>
+     */
     @NameInMap("Meta")
     public String meta;
 
     /**
-     * <p>The ID of the management node.</p>
-     * <br>
-     * <p>> You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to query the IDs of management nodes.</p>
+     * <p>The error message returned.</p>
      */
     @NameInMap("NodeId")
     public String nodeId;

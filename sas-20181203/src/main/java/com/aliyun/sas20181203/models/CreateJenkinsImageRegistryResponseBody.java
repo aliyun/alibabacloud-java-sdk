@@ -4,27 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
-    /**
-     * <p>The result of creating the image repository.</p>
-     */
     @NameInMap("Data")
     public CreateJenkinsImageRegistryResponseBodyData data;
 
-    /**
-     * <p>The HTTP status code returned.</p>
-     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The time consumed. Unit: seconds.</p>
-     */
     @NameInMap("TimeCost")
     public Long timeCost;
 
@@ -66,119 +54,57 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
     }
 
     public static class CreateJenkinsImageRegistryResponseBodyData extends TeaModel {
-        /**
-         * <p>The blacklist.</p>
-         */
         @NameInMap("BlackList")
         public String blackList;
 
-        /**
-         * <p>The domain name of the image repository.</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>The creation time. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
-         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        /**
-         * <p>The update time. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
-         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        /**
-         * <p>The ID of the image repository.</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <p>The network type. Valid values:</p>
-         * <br>
-         * <p>*   **1**: Internet</p>
-         * <p>*   **2**: VPC</p>
-         */
         @NameInMap("NetType")
         public Integer netType;
 
-        /**
-         * <p>The password.</p>
-         */
         @NameInMap("Password")
         public String password;
 
-        /**
-         * <p>The number of days during which assets can be retained.</p>
-         */
         @NameInMap("PersistenceDay")
         public Integer persistenceDay;
 
-        /**
-         * <p>The type of the protocol. Valid values:</p>
-         * <br>
-         * <p>*   **1**: HTTP</p>
-         * <p>*   **2**: HTTPS</p>
-         */
         @NameInMap("ProtocolType")
         public Integer protocolType;
 
-        /**
-         * <p>The region ID of the image repository.</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The IP address of the image repository.</p>
-         */
         @NameInMap("RegistryHostIp")
         public String registryHostIp;
 
-        /**
-         * <p>The alias of the image repository.</p>
-         */
         @NameInMap("RegistryName")
         public String registryName;
 
-        /**
-         * <p>The type of the image repository. Valid values:</p>
-         * <br>
-         * <p>*   **CI/CD**: Jenkins</p>
-         */
         @NameInMap("RegistryType")
         public String registryType;
 
-        /**
-         * <p>The authentication token of the user.</p>
-         */
         @NameInMap("Token")
         public String token;
 
-        /**
-         * <p>The number of images that can be scanned per hour.</p>
-         */
         @NameInMap("TransPerHour")
         public Integer transPerHour;
 
-        /**
-         * <p>The username.</p>
-         */
         @NameInMap("UserName")
         public String userName;
 
-        /**
-         * <p>The ID of the VPC.</p>
-         */
         @NameInMap("VpcId")
         public String vpcId;
 
-        /**
-         * <p>The whitelist.</p>
-         */
         @NameInMap("WhiteList")
         public String whiteList;
 

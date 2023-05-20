@@ -5,20 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateVulAutoRepairConfigResponseBody extends TeaModel {
     /**
-     * <p>The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * <p>CreateVulAutoRepairConfig</p>
      */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The HTTP status code returned.</p>
-     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <p>The error message returned.</p>
-     */
     @NameInMap("Message")
     public String message;
 
@@ -29,10 +23,7 @@ public class CreateVulAutoRepairConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <p>Creates a list of vulnerabilities that can be automatically fixed. After the list is created, you can select the list when you create a vulnerability fixing task on the Playbook page.</p>
      */
     @NameInMap("Success")
     public Boolean success;

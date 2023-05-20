@@ -4,21 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackUpExportInfoResponseBody extends TeaModel {
-    /**
-     * <p>The data returned.</p>
-     */
     @NameInMap("Data")
     public java.util.List<DescribeBackUpExportInfoResponseBodyData> data;
 
-    /**
-     * <p>The pagination information.</p>
-     */
     @NameInMap("PageInfo")
     public DescribeBackUpExportInfoResponseBodyPageInfo pageInfo;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -52,61 +43,30 @@ public class DescribeBackUpExportInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeBackUpExportInfoResponseBodyData extends TeaModel {
-        /**
-         * <p>The number of exported entries.</p>
-         */
         @NameInMap("CurrentCount")
         public Integer currentCount;
 
-        /**
-         * <p>The name of the file.</p>
-         */
         @NameInMap("FileName")
         public String fileName;
 
-        /**
-         * <p>The time when the export task was created.</p>
-         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
-        /**
-         * <p>The ID of the export task.</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <p>The URL at which you can download the archived information.</p>
-         */
         @NameInMap("Link")
         public String link;
 
-        /**
-         * <p>The error message that is returned when the export task fails.</p>
-         */
         @NameInMap("Message")
         public String message;
 
-        /**
-         * <p>The progress percentage of the export task.</p>
-         */
         @NameInMap("Progress")
         public Integer progress;
 
-        /**
-         * <p>The status of the export task. Valid values:</p>
-         * <br>
-         * <p>*   **init**: The task is being initialized.</p>
-         * <p>*   **exporting**: The task is in progress.</p>
-         * <p>*   **success**: The task is complete.</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The total number of entries in the file.</p>
-         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -190,27 +150,15 @@ public class DescribeBackUpExportInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeBackUpExportInfoResponseBodyPageInfo extends TeaModel {
-        /**
-         * <p>The number of entries returned on the current page.</p>
-         */
         @NameInMap("Count")
         public Integer count;
 
-        /**
-         * <p>The page number of the returned page.</p>
-         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        /**
-         * <p>The number of entries returned per page.</p>
-         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        /**
-         * <p>The total number of entries returned.</p>
-         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

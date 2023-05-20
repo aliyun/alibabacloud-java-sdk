@@ -4,92 +4,39 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class AddPrivateRegistryRequest extends TeaModel {
-    /**
-     * <p>The domain name of the image repository.</p>
-     */
     @NameInMap("DomainName")
     public String domainName;
 
-    /**
-     * <p>The additional parameter of the image repository. This parameter is required when you set the RegistryType parameter to **quay**. Valid values:</p>
-     * <br>
-     * <p>*   **namespace**</p>
-     * <p>*   **authToken**</p>
-     */
     @NameInMap("ExtraParam")
     public String extraParam;
 
-    /**
-     * <p>The network type. Valid values:</p>
-     * <br>
-     * <p>*   **1**: Internet</p>
-     * <p>*   **2**: virtual private cloud (VPC)</p>
-     */
     @NameInMap("NetType")
     public Long netType;
 
-    /**
-     * <p>The password that is used to log on to the image repository.</p>
-     */
     @NameInMap("Password")
     public String password;
 
-    /**
-     * <p>The type of the protocol. Valid values:</p>
-     * <br>
-     * <p>*   **1**: HTTP</p>
-     * <p>*   **2**: HTTPS</p>
-     */
     @NameInMap("ProtocolType")
     public Long protocolType;
 
-    /**
-     * <p>The IP address of the image repository.</p>
-     */
     @NameInMap("RegistryHostIp")
     public String registryHostIp;
 
-    /**
-     * <p>The ID of the region.</p>
-     * <br>
-     * <p>> You can call the [ListImageRegistryRegions](~~ListImageRegistryRegions~~) operation to query the IDs of supported regions.</p>
-     */
     @NameInMap("RegistryRegionId")
     public String registryRegionId;
 
-    /**
-     * <p>The type of the private image repository. Valid values:</p>
-     * <br>
-     * <p>*   **harbor**</p>
-     * <p>*   **quay**</p>
-     */
     @NameInMap("RegistryType")
     public String registryType;
 
-    /**
-     * <p>The version of the image repository. Valid values:</p>
-     * <br>
-     * <p>*   **V1**</p>
-     * <p>*   **V2**</p>
-     */
     @NameInMap("RegistryVersion")
     public String registryVersion;
 
-    /**
-     * <p>The number of images that are scanned per hour.</p>
-     */
     @NameInMap("TransPerHour")
     public Integer transPerHour;
 
-    /**
-     * <p>The username that is used to log on to the image repository.</p>
-     */
     @NameInMap("UserName")
     public String userName;
 
-    /**
-     * <p>The ID of the VPC.</p>
-     */
     @NameInMap("VpcId")
     public String vpcId;
 
