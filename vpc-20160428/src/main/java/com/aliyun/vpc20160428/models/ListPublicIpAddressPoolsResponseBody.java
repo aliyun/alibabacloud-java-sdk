@@ -5,12 +5,6 @@ import com.aliyun.tea.*;
 
 public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of entries returned.</p>
-     */
-    @NameInMap("MaxResults")
-    public Integer maxResults;
-
-    /**
      * <p>The token that determines the start point of the next query. Valid values:</p>
      * <br>
      * <p>*   If **NextToken** is returned, it indicates that no additional results exist.</p>
@@ -20,7 +14,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The list of IP address pools.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("PublicIpAddressPoolList")
     public java.util.List<ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList> publicIpAddressPoolList;
@@ -32,7 +26,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The maximum number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -40,14 +34,6 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
     public static ListPublicIpAddressPoolsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListPublicIpAddressPoolsResponseBody self = new ListPublicIpAddressPoolsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListPublicIpAddressPoolsResponseBody setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
-        return this;
-    }
-    public Integer getMaxResults() {
-        return this.maxResults;
     }
 
     public ListPublicIpAddressPoolsResponseBody setNextToken(String nextToken) {
@@ -84,13 +70,13 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
 
     public static class ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolListTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The list of tags.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The key of the tag.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -120,25 +106,32 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
 
     public static class ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList extends TeaModel {
         /**
-         * <p>The time when the IP address pool was created. The time is displayed in `YYYY-MM-DDThh:mm:ssZ` format.</p>
+         * <p>The region ID of the IP address pool.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The description of the IP address pool.</p>
+         * <p>The status of the IP address pool. Valid values:</p>
+         * <br>
+         * <p>*   **Created**: The IP address pool is available.</p>
+         * <p>*   **Deleting**: The IP address pool is being deleted.</p>
+         * <p>*   **Modifying**: The IP address pool is being modified.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>Indicates whether the IP address pool has idle IP addresses. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>The number of occupied IP addresses in the public IP address pool.</p>
          */
         @NameInMap("IpAddressRemaining")
         public Boolean ipAddressRemaining;
+
+        /**
+         * <p>The time when the IP address pool was created. The time is displayed in `YYYY-MM-DDThh:mm:ssZ` format.</p>
+         */
+        @NameInMap("Isp")
+        public String isp;
 
         /**
          * <p>The line type.</p>
@@ -159,38 +152,29 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
          * <br>
          * <p>If your services are deployed in China East 1 Finance, **BGP_FinanceCloud** is returned.</p>
          */
-        @NameInMap("Isp")
-        public String isp;
-
-        /**
-         * <p>The name of the IP address pool.</p>
-         */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The Alibaba Cloud account to which the IP address pool belongs.</p>
+         * <p>Indicates whether the IP address pool has idle IP addresses. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
          */
         @NameInMap("OwnerId")
         public Long ownerId;
 
         /**
-         * <p>The ID of the IP address pool.</p>
+         * <p>The list of IP address pools.</p>
          */
         @NameInMap("PublicIpAddressPoolId")
         public String publicIpAddressPoolId;
 
         /**
-         * <p>The region ID of the IP address pool.</p>
+         * <p>The ID of the IP address pool.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
-
-        /**
-         * <p>The ID of the resource group to which the IP address pool belongs.</p>
-         */
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
 
         /**
          * <p>Indicates whether the IP address pool is shared.</p>
@@ -198,36 +182,41 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
          * <p>*   **Shared**: The IP address pool is shared.</p>
          * <p>*   An empty value indicates that the IP address pool is not shared.</p>
          */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
+         * <p>The Alibaba Cloud account to which the IP address pool belongs.</p>
+         */
         @NameInMap("ShareType")
         public String shareType;
 
         /**
-         * <p>The status of the IP address pool. Valid values:</p>
-         * <br>
-         * <p>*   **Created**: The IP address pool is available.</p>
-         * <p>*   **Deleting**: The IP address pool is being deleted.</p>
-         * <p>*   **Modifying**: The IP address pool is being modified.</p>
+         * <p>The name of the IP address pool.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The list of tags.</p>
+         * <p>The ID of the resource group to which the IP address pool belongs.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolListTags> tags;
 
         /**
-         * <p>The total number of IP addresses in the public IP address pool.</p>
+         * <p>The description of the IP address pool.</p>
          */
         @NameInMap("TotalIpNum")
         public Integer totalIpNum;
 
         /**
-         * <p>The number of occupied IP addresses in the public IP address pool.</p>
+         * <p>The total number of IP addresses in the public IP address pool.</p>
          */
         @NameInMap("UsedIpNum")
         public Integer usedIpNum;
+
+        @NameInMap("UserType")
+        public Boolean userType;
 
         public static ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList build(java.util.Map<String, ?> map) throws Exception {
             ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList self = new ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList();
@@ -344,6 +333,14 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         }
         public Integer getUsedIpNum() {
             return this.usedIpNum;
+        }
+
+        public ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList setUserType(Boolean userType) {
+            this.userType = userType;
+            return this;
+        }
+        public Boolean getUserType() {
+            return this.userType;
         }
 
     }

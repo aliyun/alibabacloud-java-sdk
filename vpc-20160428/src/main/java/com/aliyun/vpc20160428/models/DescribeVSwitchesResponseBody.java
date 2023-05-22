@@ -228,6 +228,9 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         @NameInMap("RouteTable")
         public DescribeVSwitchesResponseBodyVSwitchesVSwitchRouteTable routeTable;
 
+        @NameInMap("ShareType")
+        public String shareType;
+
         /**
          * <p>The number of available IP addresses in the vSwitch.</p>
          */
@@ -350,6 +353,14 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
         public DescribeVSwitchesResponseBodyVSwitchesVSwitchRouteTable getRouteTable() {
             return this.routeTable;
+        }
+
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setShareType(String shareType) {
+            this.shareType = shareType;
+            return this;
+        }
+        public String getShareType() {
+            return this.shareType;
         }
 
         public DescribeVSwitchesResponseBodyVSwitchesVSwitch setStatus(String status) {

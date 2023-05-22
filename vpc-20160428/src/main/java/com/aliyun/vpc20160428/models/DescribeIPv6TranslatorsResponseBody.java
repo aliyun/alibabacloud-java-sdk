@@ -4,18 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
+    /**
+     * <p>The list of IPv6 Translation Service instances.</p>
+     */
     @NameInMap("Ipv6Translators")
     public DescribeIPv6TranslatorsResponseBodyIpv6Translators ipv6Translators;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -84,48 +99,99 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
     }
 
     public static class DescribeIPv6TranslatorsResponseBodyIpv6TranslatorsIpv6Translator extends TeaModel {
+        /**
+         * <p>The IPv4 address allocated to the IPv6 Translation Service instance.</p>
+         */
         @NameInMap("AllocateIpv4Addr")
         public String allocateIpv4Addr;
 
+        /**
+         * <p>The IPv6 address allocated to the IPv6 Translation Service instance.</p>
+         */
         @NameInMap("AllocateIpv6Addr")
         public String allocateIpv6Addr;
 
+        /**
+         * <p>The bandwidth of the IPv6 Translation Service instance.</p>
+         */
         @NameInMap("AvailableBandwidth")
         public String availableBandwidth;
 
+        /**
+         * <p>The bandwidth of the IPv6 Translation Service instance. Unit: Mbit/s.</p>
+         */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
+        /**
+         * <p>The business status of the IPv6 Translation Service instance. Valid values:</p>
+         * <br>
+         * <p>*   **Normal**</p>
+         * <p>*   **FinancialLocked**</p>
+         */
         @NameInMap("BusinessStatus")
         public String businessStatus;
 
+        /**
+         * <p>The timestamp when the IPv6 Translation Service instance was created.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The description of the IPv6 Translation Service instance.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The timestamp when IPv6 Translation Service instance expires.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The IDs of IPv6 mapping entries of the IPv6 Translation Service instance.</p>
+         */
         @NameInMap("Ipv6TranslatorEntryIds")
         public DescribeIPv6TranslatorsResponseBodyIpv6TranslatorsIpv6TranslatorIpv6TranslatorEntryIds ipv6TranslatorEntryIds;
 
+        /**
+         * <p>The ID of the IPv6 Translation Service instance.</p>
+         */
         @NameInMap("Ipv6TranslatorId")
         public String ipv6TranslatorId;
 
+        /**
+         * <p>The name of the IPv6 Translation Service instance.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The billing method of the IPv6 Translation Service instance.</p>
+         * <br>
+         * <p>*   **Prepay**: subscription</p>
+         * <p>*   **Postpay**: pay-as-you-go</p>
+         */
         @NameInMap("PayType")
         public String payType;
 
+        /**
+         * <p>The region of the IPv6 Translation Service instance.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The specification of the IPv6 Translation Service instance.</p>
+         */
         @NameInMap("Spec")
         public String spec;
 
+        /**
+         * <p>The status of the IPv6 Translation Service instance.</p>
+         */
         @NameInMap("Status")
         public String status;
 

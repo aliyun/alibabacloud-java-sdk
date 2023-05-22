@@ -4,9 +4,19 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateDefaultVSwitchRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The last eight bits of the IPv6 CIDR block of the vSwitch. Valid values: **0** to **255**.</p>
+     */
     @NameInMap("Ipv6CidrBlock")
     public Integer ipv6CidrBlock;
 
@@ -16,6 +26,11 @@ public class CreateDefaultVSwitchRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the default vSwitch.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -25,6 +40,11 @@ public class CreateDefaultVSwitchRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The zone ID of the default vSwitch.</p>
+     * <br>
+     * <p>You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

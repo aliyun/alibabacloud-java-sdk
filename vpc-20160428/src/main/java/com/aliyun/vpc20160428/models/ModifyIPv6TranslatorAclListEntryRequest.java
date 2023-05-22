@@ -4,12 +4,23 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyIPv6TranslatorAclListEntryRequest extends TeaModel {
+    /**
+     * <p>The remarks of the ACL rule.</p>
+     * <br>
+     * <p>It must be 2 to 100 characters in length, and can contain digits, underscores (\_), and hyphens (-). It must start with a letter.</p>
+     */
     @NameInMap("AclEntryComment")
     public String aclEntryComment;
 
+    /**
+     * <p>The ID of the ACL rule to which the IP entry belongs.</p>
+     */
     @NameInMap("AclEntryId")
     public String aclEntryId;
 
+    /**
+     * <p>The ID of the ACL to which the IP entry belongs.</p>
+     */
     @NameInMap("AclId")
     public String aclId;
 
@@ -19,6 +30,9 @@ public class ModifyIPv6TranslatorAclListEntryRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region of the ACL.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

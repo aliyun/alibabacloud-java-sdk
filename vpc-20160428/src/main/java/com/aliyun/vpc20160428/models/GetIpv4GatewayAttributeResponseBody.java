@@ -5,10 +5,40 @@ import com.aliyun.tea.*;
 
 public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
     /**
-     * <p>The time when the IPv4 gateway was created.</p>
+     * <p>The tag list.</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
+
+    /**
+     * <p>The name of the IPv4 gateway.</p>
+     */
+    @NameInMap("Enabled")
+    public Boolean enabled;
+
+    /**
+     * <p>The ID of the route table associated with the IPv4 gateway.</p>
+     */
+    @NameInMap("Ipv4GatewayDescription")
+    public String ipv4GatewayDescription;
+
+    /**
+     * <p>The description of the IPv4 gateway.</p>
+     */
+    @NameInMap("Ipv4GatewayId")
+    public String ipv4GatewayId;
+
+    /**
+     * <p>The ID of the resource group to which the IPv4 gateway belongs.</p>
+     */
+    @NameInMap("Ipv4GatewayName")
+    public String ipv4GatewayName;
+
+    /**
+     * <p>The time when the IPv4 gateway was created.</p>
+     */
+    @NameInMap("Ipv4GatewayRouteTableId")
+    public String ipv4GatewayRouteTableId;
 
     /**
      * <p>Indicates whether the IPv4 gateway is activated. Valid values:</p>
@@ -16,66 +46,29 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
      * <p>*   **true**: yes</p>
      * <p>*   **false**: no</p>
      */
-    @NameInMap("Enabled")
-    public Boolean enabled;
-
-    /**
-     * <p>The description of the IPv4 gateway.</p>
-     */
-    @NameInMap("Ipv4GatewayDescription")
-    public String ipv4GatewayDescription;
-
-    /**
-     * <p>The ID of the IPv4 gateway.</p>
-     */
-    @NameInMap("Ipv4GatewayId")
-    public String ipv4GatewayId;
-
-    /**
-     * <p>The name of the IPv4 gateway.</p>
-     */
-    @NameInMap("Ipv4GatewayName")
-    public String ipv4GatewayName;
-
-    /**
-     * <p>The ID of the route table associated with the IPv4 gateway.</p>
-     */
-    @NameInMap("Ipv4GatewayRouteTableId")
-    public String ipv4GatewayRouteTableId;
-
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the resource group to which the IPv4 gateway belongs.</p>
+     * <p>The tag key.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The status of the IPv4 gateway. Valid values:</p>
-     * <br>
-     * <p>*   **Creating**</p>
-     * <p>*   **Created**</p>
-     * <p>*   **Modifying**</p>
-     * <p>*   **Deleting**</p>
-     * <p>*   **Deleted**</p>
-     * <p>*   **Activating**</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>The tag list.</p>
+     * <p>The tag value.</p>
      */
     @NameInMap("Tags")
     public java.util.List<GetIpv4GatewayAttributeResponseBodyTags> tags;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) with which the IPv4 gateway is associated.</p>
+     * <p>The ID of the IPv4 gateway.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -174,15 +167,9 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
     }
 
     public static class GetIpv4GatewayAttributeResponseBodyTags extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag value.</p>
-         */
         @NameInMap("Value")
         public String value;
 

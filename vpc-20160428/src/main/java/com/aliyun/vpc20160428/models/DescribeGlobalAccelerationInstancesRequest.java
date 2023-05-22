@@ -4,18 +4,39 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeGlobalAccelerationInstancesRequest extends TeaModel {
+    /**
+     * <p>The bandwidth type of the GA instance. Valid values:</p>
+     * <br>
+     * <p>*   **Sharing**</p>
+     * <p>*   **Exclusive** (default)</p>
+     */
     @NameInMap("BandwidthType")
     public String bandwidthType;
 
+    /**
+     * <p>The ID of the GA instance.</p>
+     */
     @NameInMap("GlobalAccelerationInstanceId")
     public String globalAccelerationInstanceId;
 
+    /**
+     * <p>Specifies whether to return information about pending orders. Valid values:</p>
+     * <br>
+     * <p>*   **false** (default)</p>
+     * <p>*   **true**</p>
+     */
     @NameInMap("IncludeReservationData")
     public Boolean includeReservationData;
 
+    /**
+     * <p>The public IP address of the GA instance.</p>
+     */
     @NameInMap("IpAddress")
     public String ipAddress;
 
+    /**
+     * <p>The name of the GA instance.</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -25,12 +46,21 @@ public class DescribeGlobalAccelerationInstancesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: **100**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID of the GA instance. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -40,12 +70,31 @@ public class DescribeGlobalAccelerationInstancesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the backend service instance.</p>
+     */
     @NameInMap("ServerId")
     public String serverId;
 
+    /**
+     * <p>The region of the backend service. Valid values:</p>
+     * <br>
+     * <p>*   **china-mainland**</p>
+     * <p>*   **north-america**</p>
+     * <p>*   **asia-pacific**</p>
+     * <p>*   **europe**</p>
+     */
     @NameInMap("ServiceLocation")
     public String serviceLocation;
 
+    /**
+     * <p>The status of the GA instance. Valid values:</p>
+     * <br>
+     * <p>*   **Available**</p>
+     * <p>*   **Inuse**</p>
+     * <p>*   **Associating**</p>
+     * <p>*   **Unassociating**</p>
+     */
     @NameInMap("Status")
     public String status;
 

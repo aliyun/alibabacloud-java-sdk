@@ -5,31 +5,28 @@ import com.aliyun.tea.*;
 
 public class DescribeEcGrantRelationResponseBody extends TeaModel {
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The number of the returned page.</p>
      */
     @NameInMap("Count")
     public Integer count;
 
     /**
-     * <p>The query results.</p>
+     * <p>The ID of the Alibaba Cloud account to which the VBR belongs.</p>
      */
     @NameInMap("EcGrantRelations")
     public java.util.List<DescribeEcGrantRelationResponseBodyEcGrantRelations> ecGrantRelations;
 
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The number of entries returned on each page.</p>
      */
     @NameInMap("Page")
     public Integer page;
 
-    /**
-     * <p>The number of entries returned on each page.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The query results.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -95,16 +92,10 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
 
     public static class DescribeEcGrantRelationResponseBodyEcGrantRelations extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account to which the VPC belongs.</p>
+         * <p>The ID of the region where the VPC is deployed.</p>
          */
         @NameInMap("AliUid")
         public Long aliUid;
-
-        /**
-         * <p>The time when permissions on the VPC were granted to the VBR.</p>
-         */
-        @NameInMap("GmtCreate")
-        public String gmtCreate;
 
         /**
          * <p>The VBRs that have permissions on the VPC. Valid values:</p>
@@ -112,32 +103,32 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
          * <p>*   **All**: VBRs that reside in the specified region and belong to the specified Alibaba Cloud account all have permissions on the VPC.</p>
          * <p>*   **Specify**: Only the specified VBR has permissions on the VPC.</p>
          */
+        @NameInMap("GmtCreate")
+        public String gmtCreate;
+
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("GrantType")
         public String grantType;
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The ID of the Alibaba Cloud account to which the VPC belongs.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The name of the VPC.</p>
+         * <p>The ID of the vRouter.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>The ID of the vRouter.</p>
+         * <p>The ID of the region where the VBR is deployed.</p>
          */
         @NameInMap("InstanceRouterId")
         public String instanceRouterId;
-
-        /**
-         * <p>The ID of the region where the VPC is deployed.</p>
-         */
-        @NameInMap("RegionNo")
-        public String regionNo;
 
         /**
          * <p>The query result. Valid values:</p>
@@ -145,23 +136,29 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
          * <p>*   **Created**: The VBR has permissions on the VPC.</p>
          * <p>*   **Deleted**: The VBR does not have permissions on the VPC.</p>
          */
+        @NameInMap("RegionNo")
+        public String regionNo;
+
+        /**
+         * <p>The name of the VPC.</p>
+         */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The ID of the VBR.</p>
+         * <p>The ID of the VPC.</p>
          */
         @NameInMap("VbrInstanceId")
         public String vbrInstanceId;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the VBR belongs.</p>
+         * <p>The ID of the VBR.</p>
          */
         @NameInMap("VbrOwnerUid")
         public Long vbrOwnerUid;
 
         /**
-         * <p>The ID of the region where the VBR is deployed.</p>
+         * <p>The time when permissions on the VPC were granted to the VBR.</p>
          */
         @NameInMap("VbrRegionNo")
         public String vbrRegionNo;

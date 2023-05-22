@@ -5,31 +5,28 @@ import com.aliyun.tea.*;
 
 public class CreateRouteEntriesResponseBody extends TeaModel {
     /**
-     * <p>The number of custom route entries that failed to be added.</p>
+     * <p>The destination CIDR block of the custom route entry that failed to be added.</p>
      */
     @NameInMap("FailedCount")
     public Integer failedCount;
 
     /**
-     * <p>The details about the custom route entry that failed to be added.</p>
+     * <p>The error code.</p>
      */
     @NameInMap("FailedRouteEntries")
     public java.util.List<CreateRouteEntriesResponseBodyFailedRouteEntries> failedRouteEntries;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the next hop of the custom route entry that failed to be added.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The ID of the custom route entry that was successfully added.</p>
-     */
     @NameInMap("RouteEntryIds")
     public java.util.List<String> routeEntryIds;
 
     /**
-     * <p>The number of custom route entries that were successfully added.</p>
+     * <p>The details about the custom route entry that failed to be added.</p>
      */
     @NameInMap("SuccessCount")
     public Integer successCount;
@@ -81,25 +78,19 @@ public class CreateRouteEntriesResponseBody extends TeaModel {
 
     public static class CreateRouteEntriesResponseBodyFailedRouteEntries extends TeaModel {
         /**
-         * <p>The destination CIDR block of the custom route entry that failed to be added.</p>
+         * <p>The error message.</p>
          */
         @NameInMap("DstCidrBlock")
         public String dstCidrBlock;
 
-        /**
-         * <p>The error code.</p>
-         */
         @NameInMap("FailedCode")
         public String failedCode;
 
-        /**
-         * <p>The error message.</p>
-         */
         @NameInMap("FailedMessage")
         public String failedMessage;
 
         /**
-         * <p>The ID of the next hop of the custom route entry that failed to be added.</p>
+         * <p>The ID of the custom route entry that was successfully added.</p>
          */
         @NameInMap("NextHop")
         public String nextHop;

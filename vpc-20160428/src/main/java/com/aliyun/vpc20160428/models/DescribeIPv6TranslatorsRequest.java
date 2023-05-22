@@ -4,18 +4,36 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeIPv6TranslatorsRequest extends TeaModel {
+    /**
+     * <p>The IPv4 address allocated to the IPv6 Translation Service instance.</p>
+     */
     @NameInMap("AllocateIpv4Addr")
     public String allocateIpv4Addr;
 
+    /**
+     * <p>The IPv6 address allocated to the IPv6 Translation Service instance.</p>
+     */
     @NameInMap("AllocateIpv6Addr")
     public String allocateIpv6Addr;
 
+    /**
+     * <p>The business status of the IPv6 Translation Service instance. Valid values:</p>
+     * <br>
+     * <p>*   **Normal**</p>
+     * <p>*   **FinancialLocked**</p>
+     */
     @NameInMap("BusinessStatus")
     public String businessStatus;
 
+    /**
+     * <p>The ID of the IPv6 Translation Service instance.</p>
+     */
     @NameInMap("Ipv6TranslatorId")
     public String ipv6TranslatorId;
 
+    /**
+     * <p>The name of the IPv6 Translation Service instance.</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -25,15 +43,30 @@ public class DescribeIPv6TranslatorsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The billing method of the IPv6 Translation Service instance. Valid values:</p>
+     * <br>
+     * <p>*   **Prepay**: subscription</p>
+     * <p>*   **Postpay**: pay-as-you-go</p>
+     */
     @NameInMap("PayType")
     public String payType;
 
+    /**
+     * <p>The region of the IPv6 Translation Service instance. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -43,9 +76,23 @@ public class DescribeIPv6TranslatorsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The specification of the IPv6 Translation Service instance. Set the value to **small**.</p>
+     */
     @NameInMap("Spec")
     public String spec;
 
+    /**
+     * <p>The status of the IPv6 Translation Service instance. Valid values:</p>
+     * <br>
+     * <p>*   **init**</p>
+     * <p>*   **provisioning**</p>
+     * <p>*   **active**</p>
+     * <p>*   **updating**</p>
+     * <p>*   **upgrading**</p>
+     * <p>*   **deleting**</p>
+     * <p>*   **deleted**</p>
+     */
     @NameInMap("Status")
     public String status;
 

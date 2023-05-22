@@ -4,6 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateIPv6TranslatorAclListRequest extends TeaModel {
+    /**
+     * <p>The ACL name.</p>
+     */
     @NameInMap("AclName")
     public String aclName;
 
@@ -16,6 +19,9 @@ public class CreateIPv6TranslatorAclListRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region of the IPv6 Translation Service instance. You can call the DescribeRegions operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

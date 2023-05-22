@@ -5,26 +5,47 @@ import com.aliyun.tea.*;
 
 public class ModifyFullNatEntryAttributeRequest extends TeaModel {
     /**
-     * <p>The backend IP address to be modified in FULLNAT address translation.</p>
+     * <p>The protocol of the packets that are forwarded by the port. Valid values:</p>
+     * <br>
+     * <p>*   **TCP**: TCP</p>
+     * <p>*   **UDP**: UDP</p>
      */
     @NameInMap("AccessIp")
     public String accessIp;
 
     /**
-     * <p>The backend port to be modified in FULLNAT port mapping. Valid values: **1** to **65535**.</p>
+     * <p>The new name of the FULLNAT entry.</p>
+     * <br>
+     * <p>The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("AccessPort")
     public String accessPort;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     * <p>The ID of the FULLNAT table to be modified.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
+
+    /**
+     * <p>The ID of the request.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
+     * <p>The region ID of the Virtual Private Cloud (VPC) NAT gateway to which the FULLNAT entry to be modified belongs.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
+    @NameInMap("FullNatEntryDescription")
+    public String fullNatEntryDescription;
+
+    /**
+     * <p>The NAT IP address to be modified.</p>
+     */
+    @NameInMap("FullNatEntryId")
+    public String fullNatEntryId;
 
     /**
      * <p>Specifies whether only to precheck this request. Valid values:</p>
@@ -32,60 +53,37 @@ public class ModifyFullNatEntryAttributeRequest extends TeaModel {
      * <p>*   **true**: prechecks the request but does not modify the FULLNAT entry. The system checks your AccessKey pair, the RAM user permissions, and the required parameters. If the request fails the precheck, an error code is returned. If the request passes the check, the `DryRunOperation` error code is returned.</p>
      * <p>*   **false**: sends the API request. After the request passes the check, a 2XX HTTP status code is returned and the FULLNAT entry is modified. This is the default value.</p>
      */
-    @NameInMap("DryRun")
-    public Boolean dryRun;
+    @NameInMap("FullNatEntryName")
+    public String fullNatEntryName;
+
+    /**
+     * <p>The ID of the elastic network interface (ENI) to be modified.</p>
+     */
+    @NameInMap("FullNatTableId")
+    public String fullNatTableId;
 
     /**
      * <p>The new description of the FULLNAT entry.</p>
      * <br>
      * <p>This parameter is optional. If you enter a description, the description must be 2 to 256 characters in length, and cannot start with `http://` or `https://`.</p>
      */
-    @NameInMap("FullNatEntryDescription")
-    public String fullNatEntryDescription;
-
-    /**
-     * <p>The ID of the FULLNAT entry to be modified.</p>
-     */
-    @NameInMap("FullNatEntryId")
-    public String fullNatEntryId;
-
-    /**
-     * <p>The new name of the FULLNAT entry.</p>
-     * <br>
-     * <p>The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`.</p>
-     */
-    @NameInMap("FullNatEntryName")
-    public String fullNatEntryName;
-
-    /**
-     * <p>The ID of the FULLNAT table to be modified.</p>
-     */
-    @NameInMap("FullNatTableId")
-    public String fullNatTableId;
-
-    /**
-     * <p>The protocol of the packets that are forwarded by the port. Valid values:</p>
-     * <br>
-     * <p>*   **TCP**: TCP</p>
-     * <p>*   **UDP**: UDP</p>
-     */
     @NameInMap("IpProtocol")
     public String ipProtocol;
 
     /**
-     * <p>The NAT IP address to be modified.</p>
+     * <p>The backend IP address to be modified in FULLNAT address translation.</p>
      */
     @NameInMap("NatIp")
     public String natIp;
 
     /**
-     * <p>The frontend port to be modified in FULLNAT port mapping. Valid values: **1** to **65535**.</p>
+     * <p>The backend port to be modified in FULLNAT port mapping. Valid values: **1** to **65535**.</p>
      */
     @NameInMap("NatIpPort")
     public String natIpPort;
 
     /**
-     * <p>The ID of the elastic network interface (ENI) to be modified.</p>
+     * <p>The frontend port to be modified in FULLNAT port mapping. Valid values: **1** to **65535**.</p>
      */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
@@ -96,11 +94,6 @@ public class ModifyFullNatEntryAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The region ID of the Virtual Private Cloud (VPC) NAT gateway to which the FULLNAT entry to be modified belongs.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

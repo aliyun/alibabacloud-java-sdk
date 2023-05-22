@@ -4,15 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class AllocateEipSegmentAddressResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the contiguous EIP group.</p>
-     */
     @NameInMap("EipSegmentInstanceId")
     public String eipSegmentInstanceId;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

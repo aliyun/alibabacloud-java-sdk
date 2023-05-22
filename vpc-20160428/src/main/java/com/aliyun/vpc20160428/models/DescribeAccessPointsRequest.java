@@ -4,6 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessPointsRequest extends TeaModel {
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -36,6 +39,14 @@ public class DescribeAccessPointsRequest extends TeaModel {
     public static DescribeAccessPointsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAccessPointsRequest self = new DescribeAccessPointsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeAccessPointsRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     public DescribeAccessPointsRequest setOwnerId(Long ownerId) {

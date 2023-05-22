@@ -4,12 +4,23 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateGlobalAccelerationInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the GA instance.</p>
+     */
     @NameInMap("GlobalAccelerationInstanceId")
     public String globalAccelerationInstanceId;
 
+    /**
+     * <p>The public IP address of the GA instance.</p>
+     * <br>
+     * <p>If **BandwidthType** is set to **Sharing**, this parameter is not returned.</p>
+     */
     @NameInMap("IpAddress")
     public String ipAddress;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

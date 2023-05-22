@@ -10,6 +10,11 @@ public class DescribeServerRelatedGlobalAccelerationInstancesRequest extends Tea
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the GA instance.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -19,9 +24,18 @@ public class DescribeServerRelatedGlobalAccelerationInstancesRequest extends Tea
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the backend service instance.</p>
+     */
     @NameInMap("ServerId")
     public String serverId;
 
+    /**
+     * <p>The type of the backend service instance. Valid values:</p>
+     * <br>
+     * <p>*   **EcsInstance** (default): Elastic Compute Service (ECS)</p>
+     * <p>*   **SlbInstance**: Server Load Balancer (SLB)</p>
+     */
     @NameInMap("ServerType")
     public String serverType;
 

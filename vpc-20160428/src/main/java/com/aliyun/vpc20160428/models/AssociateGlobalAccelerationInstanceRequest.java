@@ -4,15 +4,30 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class AssociateGlobalAccelerationInstanceRequest extends TeaModel {
+    /**
+     * <p>The ID of the backend server.</p>
+     */
     @NameInMap("BackendServerId")
     public String backendServerId;
 
+    /**
+     * <p>The region of the backend server. The region must belong to the service area of the GA instance.</p>
+     */
     @NameInMap("BackendServerRegionId")
     public String backendServerRegionId;
 
+    /**
+     * <p>The backend server type. Valid values:</p>
+     * <br>
+     * <p>*   **EcsInstance** (default): ECS instance</p>
+     * <p>*   **SlbInstance**: SLB instance</p>
+     */
     @NameInMap("BackendServerType")
     public String backendServerType;
 
+    /**
+     * <p>The ID of the GA instance.</p>
+     */
     @NameInMap("GlobalAccelerationInstanceId")
     public String globalAccelerationInstanceId;
 
@@ -22,6 +37,9 @@ public class AssociateGlobalAccelerationInstanceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the GA instance. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

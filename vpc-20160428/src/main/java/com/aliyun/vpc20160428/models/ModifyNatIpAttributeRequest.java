@@ -5,42 +5,40 @@ import com.aliyun.tea.*;
 
 public class ModifyNatIpAttributeRequest extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
+     * <p>The operation that you want to perform. Set the value to **ModifyNatIpAttribute**.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
      * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
      * <br>
      * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
      */
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    /**
-     * <p>Specifies whether only to precheck this request. Valid values:</p>
-     * <br>
-     * <p>*   **true**: sends the precheck request but does not modify the name or description of the NAT IP address. The system checks your AccessKey pair, the Resource Access Management (RAM) user permissions, and the required parameters. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): sends the request. If the request passes the precheck, a 2xx HTTP status code is returned and the name and description of the NAT IP address are modified.</p>
-     */
-    @NameInMap("DryRun")
-    public Boolean dryRun;
+    @NameInMap("NatIpDescription")
+    public String natIpDescription;
 
     /**
      * <p>The description of the NAT IP address that you want to modify.</p>
      * <br>
      * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.</p>
      */
-    @NameInMap("NatIpDescription")
-    public String natIpDescription;
-
-    /**
-     * <p>The ID of the NAT IP address that you want to modify.</p>
-     */
     @NameInMap("NatIpId")
     public String natIpId;
 
     /**
-     * <p>The name of the NAT IP address that you want to modify.</p>
+     * <p>Specifies whether only to precheck this request. Valid values:</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. It cannot start with `http://` or `https://`.</p>
+     * <p>*   **true**: sends the precheck request but does not modify the name or description of the NAT IP address. The system checks your AccessKey pair, the Resource Access Management (RAM) user permissions, and the required parameters. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): sends the request. If the request passes the precheck, a 2xx HTTP status code is returned and the name and description of the NAT IP address are modified.</p>
      */
     @NameInMap("NatIpName")
     public String natIpName;
@@ -52,9 +50,9 @@ public class ModifyNatIpAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the NAT gateway to which the NAT IP address that you want to modify belongs.</p>
+     * <p>The name of the NAT IP address that you want to modify.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. It cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

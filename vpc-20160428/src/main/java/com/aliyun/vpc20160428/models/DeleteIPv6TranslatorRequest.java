@@ -4,9 +4,17 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteIPv6TranslatorRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the IPv6 Translation Service instance.</p>
+     */
     @NameInMap("Ipv6TranslatorId")
     public String ipv6TranslatorId;
 
@@ -16,6 +24,9 @@ public class DeleteIPv6TranslatorRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the IPv6 Translation Service instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -73,6 +73,9 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     @NameInMap("RouteTable")
     public DescribeVSwitchAttributesResponseBodyRouteTable routeTable;
 
+    @NameInMap("ShareType")
+    public String shareType;
+
     /**
      * <p>The status of the vSwitch. Valid values:</p>
      * <br>
@@ -203,6 +206,14 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     }
     public DescribeVSwitchAttributesResponseBodyRouteTable getRouteTable() {
         return this.routeTable;
+    }
+
+    public DescribeVSwitchAttributesResponseBody setShareType(String shareType) {
+        this.shareType = shareType;
+        return this;
+    }
+    public String getShareType() {
+        return this.shareType;
     }
 
     public DescribeVSwitchAttributesResponseBody setStatus(String status) {

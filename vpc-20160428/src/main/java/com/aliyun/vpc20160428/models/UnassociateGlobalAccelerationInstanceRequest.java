@@ -4,9 +4,19 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class UnassociateGlobalAccelerationInstanceRequest extends TeaModel {
+    /**
+     * <p>The ID of the GA instance.</p>
+     */
     @NameInMap("GlobalAccelerationInstanceId")
     public String globalAccelerationInstanceId;
 
+    /**
+     * <p>The backend server type. Valid values:</p>
+     * <br>
+     * <p>*   **RemoteEcsInstance**: Elastic Compute Service (ECS) instance</p>
+     * <p>*   **RemoteSlbInstance**: Server Load Balancer (SLB) instance</p>
+     * <p>*   **RemoteEniInstance**: elastic network interface (ENI)</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
@@ -16,6 +26,11 @@ public class UnassociateGlobalAccelerationInstanceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the GA instance.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

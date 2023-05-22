@@ -4,15 +4,32 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyIPv6TranslatorBandwidthRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable auto-payment for the instance. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false** (default)</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <p>The maximum bandwidth of the IPv6 Translation Service instance. Valid values: **1** to **200**. Unit: Mbit/s.</p>
+     */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the IPv6 Translation Service instance.</p>
+     */
     @NameInMap("Ipv6TranslatorId")
     public String ipv6TranslatorId;
 
@@ -22,6 +39,9 @@ public class ModifyIPv6TranslatorBandwidthRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region of the IPv6 Translation Service instance. You can call the **DescribeRegions** operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

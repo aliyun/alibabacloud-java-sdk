@@ -4,15 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateNatIpCidrResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the NAT CIDR block.</p>
-     */
     @NameInMap("NatIpCidrId")
     public String natIpCidrId;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

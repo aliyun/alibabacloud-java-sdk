@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class AssociateNetworkAclRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The ID of the network ACL.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
      */
     @NameInMap("NetworkAclId")
     public String networkAclId;
@@ -24,7 +24,7 @@ public class AssociateNetworkAclRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the network ACL. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The operation that you want to perform. Set the value to **AssociateNetworkAcl**.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -101,15 +101,13 @@ public class AssociateNetworkAclRequest extends TeaModel {
 
     public static class AssociateNetworkAclRequestResource extends TeaModel {
         /**
-         * <p>The ID of the resource with which you want to associate the network ACL.</p>
+         * <p>The region ID of the network ACL. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The type of resource with which you want to associate the network ACL. Set the value to **VSwitch**.</p>
-         * <br>
-         * <p>Valid values of **N**: **0** to **29**. You can associate a network ACL with up to 30 vSwitches.</p>
+         * <p>The ID of the network ACL.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;

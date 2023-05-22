@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
     /**
-     * <p>The details about the network ACL.</p>
+     * <p>The protocol. Valid values:</p>
+     * <br>
+     * <p>*   **icmp**: ICMP</p>
+     * <p>*   **gre**: GRE</p>
+     * <p>*   **tcp**: TCP</p>
+     * <p>*   **udp**: UDP</p>
+     * <p>*   **all**: all protocols</p>
      */
     @NameInMap("NetworkAclAttribute")
     public DescribeNetworkAclAttributesResponseBodyNetworkAclAttribute networkAclAttribute;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The source CIDR block.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,57 +44,24 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkAclAttributesResponseBodyNetworkAclAttributeEgressAclEntriesEgressAclEntry extends TeaModel {
-        /**
-         * <p>The description of the outbound rule.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The destination CIDR block.</p>
-         */
         @NameInMap("DestinationCidrIp")
         public String destinationCidrIp;
 
-        /**
-         * <p>The ID of the outbound rule.</p>
-         */
         @NameInMap("NetworkAclEntryId")
         public String networkAclEntryId;
 
-        /**
-         * <p>The name of the outbound rule.</p>
-         */
         @NameInMap("NetworkAclEntryName")
         public String networkAclEntryName;
 
-        /**
-         * <p>The action to be performed on network traffic that matches the rule. Valid values:</p>
-         * <br>
-         * <p>- **accept**: allows network traffic.</p>
-         * <p>- **drop**: blocks network traffic.</p>
-         */
         @NameInMap("Policy")
         public String policy;
 
-        /**
-         * <p>The destination port range of the outbound traffic. </p>
-         * <br>
-         * <p>- If **Protocol** of the outbound rule is set to **all**, **icmp**, or **gre**, the port range is **-1/-1**, which indicates all ports.</p>
-         * <p>- If **Protocol** of the outbound rule is set to **tcp** or **udp**, the port range is in the following format: **1/200** or **80/80**, which indicates port 1 to port 200, or port 80. Valid values for a port: **1** to **65535**.</p>
-         */
         @NameInMap("Port")
         public String port;
 
-        /**
-         * <p>The protocol. Valid values:</p>
-         * <br>
-         * <p>- **icmp**: ICMP</p>
-         * <p>- **gre**: GRE</p>
-         * <p>- **tcp**: TCP</p>
-         * <p>- **udp**: UDP</p>
-         * <p>- **all**: all protocols</p>
-         */
         @NameInMap("Protocol")
         public String protocol;
 
@@ -176,55 +149,44 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
 
     public static class DescribeNetworkAclAttributesResponseBodyNetworkAclAttributeIngressAclEntriesIngressAclEntry extends TeaModel {
         /**
-         * <p>The description of the inbound rule.</p>
+         * <p>The tag list.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The ID of the inbound rule.</p>
+         * <p>The status of the associated resource. Valid values:</p>
+         * <br>
+         * <p>- **BINDED**: The resource is associated with the network ACL.</p>
+         * <p>- **BINDING**: The resource is being associated with the network ACL.</p>
+         * <p>- **UNBINDING**: The resource is disassociated from the network ACL.</p>
          */
         @NameInMap("NetworkAclEntryId")
         public String networkAclEntryId;
 
         /**
-         * <p>The name of the inbound rule.</p>
+         * <p>The type of resource with which you want to associate the network ACL. The value is set to **VSwitch**.</p>
          */
         @NameInMap("NetworkAclEntryName")
         public String networkAclEntryName;
 
         /**
-         * <p>The action to be performed on network traffic that matches the rule. Valid values:</p>
-         * <br>
-         * <p>*   **accept**: allows network traffic.</p>
-         * <p>*   **drop**: blocks network traffic.</p>
+         * <p>The ID of the associated resource.</p>
          */
         @NameInMap("Policy")
         public String policy;
 
-        /**
-         * <p>The destination port range of the inbound traffic.</p>
-         * <br>
-         * <p>*   If **Protocol** of the inbound rule is set to **all**, **icmp**, or **gre**, the port range is **-1/-1**, which indicates all ports.</p>
-         * <p>*   If **Protocol** of the inbound rule is set to **tcp** or **udp**, the port range is in the following format: **1/200** or **80/80**, which indicates port 1 to port 200, or port 80. Valid values for a port: **1** to **65535**.</p>
-         */
         @NameInMap("Port")
         public String port;
 
         /**
-         * <p>The protocol. Valid values:</p>
-         * <br>
-         * <p>*   **icmp**: ICMP</p>
-         * <p>*   **gre**: GRE</p>
-         * <p>*   **tcp**: TCP</p>
-         * <p>*   **udp**: UDP</p>
-         * <p>*   **all**: all protocols</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("Protocol")
         public String protocol;
 
         /**
-         * <p>The source CIDR block.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("SourceCidrIp")
         public String sourceCidrIp;
@@ -312,25 +274,12 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkAclAttributesResponseBodyNetworkAclAttributeResourcesResource extends TeaModel {
-        /**
-         * <p>The ID of the associated resource.</p>
-         */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        /**
-         * <p>The type of resource with which you want to associate the network ACL. The value is set to **VSwitch**.</p>
-         */
         @NameInMap("ResourceType")
         public String resourceType;
 
-        /**
-         * <p>The status of the associated resource. Valid values:</p>
-         * <br>
-         * <p>- **BINDED**: The resource is associated with the network ACL.</p>
-         * <p>- **BINDING**: The resource is being associated with the network ACL.</p>
-         * <p>- **UNBINDING**: The resource is disassociated from the network ACL.</p>
-         */
         @NameInMap("Status")
         public String status;
 
@@ -385,15 +334,9 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkAclAttributesResponseBodyNetworkAclAttributeTagsTag extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag value.</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -441,76 +384,76 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
 
     public static class DescribeNetworkAclAttributesResponseBodyNetworkAclAttribute extends TeaModel {
         /**
-         * <p>The time when the network ACL was created.</p>
+         * <p>The ID of the outbound rule.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The description of the network ACL.</p>
+         * <p>The name of the outbound rule.</p>
          */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The information about the outbound rules of the network ACL.</p>
-         */
         @NameInMap("EgressAclEntries")
         public DescribeNetworkAclAttributesResponseBodyNetworkAclAttributeEgressAclEntries egressAclEntries;
 
         /**
-         * <p>The information about the inbound rules of the network ACL.</p>
+         * <p>The details about the resource that is associated with the network ACL.</p>
          */
         @NameInMap("IngressAclEntries")
         public DescribeNetworkAclAttributesResponseBodyNetworkAclAttributeIngressAclEntries ingressAclEntries;
 
         /**
-         * <p>The ID of the network ACL.</p>
+         * <p>The description of the outbound rule.</p>
          */
         @NameInMap("NetworkAclId")
         public String networkAclId;
 
         /**
-         * <p>The name of the network ACL.</p>
+         * <p>The action to be performed on network traffic that matches the rule. Valid values:</p>
+         * <br>
+         * <p>- **accept**: allows network traffic.</p>
+         * <p>- **drop**: blocks network traffic.</p>
          */
         @NameInMap("NetworkAclName")
         public String networkAclName;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the network ACL belongs.</p>
+         * <p>The protocol. Valid values:</p>
+         * <br>
+         * <p>- **icmp**: ICMP</p>
+         * <p>- **gre**: GRE</p>
+         * <p>- **tcp**: TCP</p>
+         * <p>- **udp**: UDP</p>
+         * <p>- **all**: all protocols</p>
          */
         @NameInMap("OwnerId")
         public Long ownerId;
 
         /**
-         * <p>The region ID of the network ACL.</p>
+         * <p>The destination CIDR block.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The details about the resource that is associated with the network ACL.</p>
-         */
         @NameInMap("Resources")
         public DescribeNetworkAclAttributesResponseBodyNetworkAclAttributeResources resources;
 
         /**
-         * <p>The status of the associated resource. Valid values:</p>
+         * <p>The destination port range of the inbound traffic.</p>
          * <br>
-         * <p>*   **Available**</p>
-         * <p>*   **Modifying**</p>
+         * <p>*   If **Protocol** of the inbound rule is set to **all**, **icmp**, or **gre**, the port range is **-1/-1**, which indicates all ports.</p>
+         * <p>*   If **Protocol** of the inbound rule is set to **tcp** or **udp**, the port range is in the following format: **1/200** or **80/80**, which indicates port 1 to port 200, or port 80. Valid values for a port: **1** to **65535**.</p>
          */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The tag list.</p>
-         */
         @NameInMap("Tags")
         public DescribeNetworkAclAttributesResponseBodyNetworkAclAttributeTags tags;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC) with which the network ACL is associated.</p>
+         * <p>The information about the outbound rules of the network ACL.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
