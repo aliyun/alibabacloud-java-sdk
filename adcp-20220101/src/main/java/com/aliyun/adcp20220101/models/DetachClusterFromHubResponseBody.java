@@ -5,26 +5,20 @@ import com.aliyun.tea.*;
 
 public class DetachClusterFromHubResponseBody extends TeaModel {
     /**
-     * <p>The ID of the master instance.</p>
+     * <p>Zhishi</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
-    /**
-     * <p>The IDs of the clusters that are disassociated from the master instance.</p>
-     */
     @NameInMap("ManagedClusterIds")
     public java.util.List<String> managedClusterIds;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>You can call the DetachClusterFromHub operation to disassociate clusters from a master instance.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The ID of the task.</p>
-     */
     @NameInMap("TaskId")
     public String taskId;
 

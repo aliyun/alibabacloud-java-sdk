@@ -4,9 +4,15 @@ package com.aliyun.adcp20220101.models;
 import com.aliyun.tea.*;
 
 public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
+    /**
+     * <p>The number of policy instances of each policy type.</p>
+     */
     @NameInMap("Policies")
     public DescribePolicyInstancesStatusResponseBodyPolicies policies;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyInstancesStatusResponseBodyPoliciesPolicyInstancesPolicyClusters extends TeaModel {
+        /**
+         * <p>The ID of the associated cluster.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The status of the deployment.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -62,21 +74,39 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyInstancesStatusResponseBodyPoliciesPolicyInstances extends TeaModel {
+        /**
+         * <p>The type of the policy.</p>
+         */
         @NameInMap("PolicyCategory")
         public String policyCategory;
 
+        /**
+         * <p>The associated clusters in which the policy instances are deployed.</p>
+         */
         @NameInMap("PolicyClusters")
         public java.util.List<DescribePolicyInstancesStatusResponseBodyPoliciesPolicyInstancesPolicyClusters> policyClusters;
 
+        /**
+         * <p>The description of the policy.</p>
+         */
         @NameInMap("PolicyDescription")
         public String policyDescription;
 
+        /**
+         * <p>The number of policy instances that are deployed. If this parameter is empty, no policy instance is deployed.</p>
+         */
         @NameInMap("PolicyInstancesCount")
         public Long policyInstancesCount;
 
+        /**
+         * <p>The name of the policy.</p>
+         */
         @NameInMap("PolicyName")
         public String policyName;
 
+        /**
+         * <p>The severity level of the policy.</p>
+         */
         @NameInMap("PolicySeverity")
         public String policySeverity;
 
@@ -136,9 +166,15 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyInstancesStatusResponseBodyPoliciesSeverityInfo extends TeaModel {
+        /**
+         * <p>The number of policy instances.</p>
+         */
         @NameInMap("SeverityCount")
         public String severityCount;
 
+        /**
+         * <p>The severity level.</p>
+         */
         @NameInMap("SeverityType")
         public String severityType;
 
@@ -166,9 +202,15 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyInstancesStatusResponseBodyPolicies extends TeaModel {
+        /**
+         * <p>The number of policy instances of each policy type.</p>
+         */
         @NameInMap("PolicyInstances")
         public java.util.List<DescribePolicyInstancesStatusResponseBodyPoliciesPolicyInstances> policyInstances;
 
+        /**
+         * <p>The number of policy instances that are deployed in the cluster.</p>
+         */
         @NameInMap("SeverityInfo")
         public java.util.List<DescribePolicyInstancesStatusResponseBodyPoliciesSeverityInfo> severityInfo;
 

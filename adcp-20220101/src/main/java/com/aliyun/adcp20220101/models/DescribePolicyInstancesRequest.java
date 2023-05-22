@@ -4,9 +4,15 @@ package com.aliyun.adcp20220101.models;
 import com.aliyun.tea.*;
 
 public class DescribePolicyInstancesRequest extends TeaModel {
+    /**
+     * <p>The ID of the master instance.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The name of the policy.</p>
+     */
     @NameInMap("PolicyName")
     public String policyName;
 

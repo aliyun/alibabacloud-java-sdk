@@ -10,6 +10,9 @@ public class GrantUserPermissionRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    @NameInMap("IsRamRole")
+    public Boolean isRamRole;
+
     /**
      * <p>The namespace to which the permissions are scoped. By default, this parameter is empty when you set role_type to cluster.</p>
      */
@@ -51,6 +54,14 @@ public class GrantUserPermissionRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public GrantUserPermissionRequest setIsRamRole(Boolean isRamRole) {
+        this.isRamRole = isRamRole;
+        return this;
+    }
+    public Boolean getIsRamRole() {
+        return this.isRamRole;
     }
 
     public GrantUserPermissionRequest setNamespace(String namespace) {

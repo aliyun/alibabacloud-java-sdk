@@ -4,6 +4,9 @@ package com.aliyun.adcp20220101.models;
 import com.aliyun.tea.*;
 
 public class DescribePolicyDetailsRequest extends TeaModel {
+    /**
+     * <p>The name of the policy.</p>
+     */
     @NameInMap("PolicyName")
     public String policyName;
 
