@@ -85,6 +85,12 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
+        /**
+         * <p>数据集加速实例的最大挂载点个数。</p>
+         */
+        @NameInMap("MaxEndpoint")
+        public Integer maxEndpoint;
+
         @NameInMap("MaxSlot")
         public Integer maxSlot;
 
@@ -97,8 +103,20 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("PaymentType")
         public String paymentType;
 
+        /**
+         * <p>数据集加速实例的资源提供者类型。</p>
+         */
+        @NameInMap("ProviderType")
+        public String providerType;
+
         @NameInMap("Status")
         public InstanceStatus status;
+
+        /**
+         * <p>数据集加速实例的存储类型。</p>
+         */
+        @NameInMap("StorageType")
+        public String storageType;
 
         @NameInMap("Tags")
         public java.util.List<ListInstancesResponseBodyInstancesTags> tags;
@@ -149,6 +167,14 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.gmtModifiedTime;
         }
 
+        public ListInstancesResponseBodyInstances setMaxEndpoint(Integer maxEndpoint) {
+            this.maxEndpoint = maxEndpoint;
+            return this;
+        }
+        public Integer getMaxEndpoint() {
+            return this.maxEndpoint;
+        }
+
         public ListInstancesResponseBodyInstances setMaxSlot(Integer maxSlot) {
             this.maxSlot = maxSlot;
             return this;
@@ -181,12 +207,28 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.paymentType;
         }
 
+        public ListInstancesResponseBodyInstances setProviderType(String providerType) {
+            this.providerType = providerType;
+            return this;
+        }
+        public String getProviderType() {
+            return this.providerType;
+        }
+
         public ListInstancesResponseBodyInstances setStatus(InstanceStatus status) {
             this.status = status;
             return this;
         }
         public InstanceStatus getStatus() {
             return this.status;
+        }
+
+        public ListInstancesResponseBodyInstances setStorageType(String storageType) {
+            this.storageType = storageType;
+            return this;
+        }
+        public String getStorageType() {
+            return this.storageType;
         }
 
         public ListInstancesResponseBodyInstances setTags(java.util.List<ListInstancesResponseBodyInstancesTags> tags) {

@@ -209,6 +209,12 @@ public class ListSlotsResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>数据集加速槽的读写类型。</p>
+         */
+        @NameInMap("IoType")
+        public String ioType;
+
         @NameInMap("LifeCycle")
         public SlotLifeCycle lifeCycle;
 
@@ -287,6 +293,14 @@ public class ListSlotsResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public ListSlotsResponseBodySlots setIoType(String ioType) {
+            this.ioType = ioType;
+            return this;
+        }
+        public String getIoType() {
+            return this.ioType;
         }
 
         public ListSlotsResponseBodySlots setLifeCycle(SlotLifeCycle lifeCycle) {

@@ -4,6 +4,9 @@ package com.aliyun.paielasticdatasetaccelerator20220801.models;
 import com.aliyun.tea.*;
 
 public class CreateEndpointRequest extends TeaModel {
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     @NameInMap("Name")
     public String name;
 
@@ -19,6 +22,14 @@ public class CreateEndpointRequest extends TeaModel {
     public static CreateEndpointRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateEndpointRequest self = new CreateEndpointRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateEndpointRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public CreateEndpointRequest setName(String name) {

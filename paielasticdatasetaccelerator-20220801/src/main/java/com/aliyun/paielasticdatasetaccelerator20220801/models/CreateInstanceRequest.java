@@ -10,6 +10,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("MaxEndpoint")
+    public String maxEndpoint;
+
     @NameInMap("MaxSlot")
     public String maxSlot;
 
@@ -18,6 +21,12 @@ public class CreateInstanceRequest extends TeaModel {
 
     @NameInMap("PaymentType")
     public String paymentType;
+
+    @NameInMap("ProviderType")
+    public String providerType;
+
+    @NameInMap("StorageType")
+    public String storageType;
 
     @NameInMap("Tags")
     public java.util.List<CreateInstanceRequestTags> tags;
@@ -46,6 +55,14 @@ public class CreateInstanceRequest extends TeaModel {
         return this.description;
     }
 
+    public CreateInstanceRequest setMaxEndpoint(String maxEndpoint) {
+        this.maxEndpoint = maxEndpoint;
+        return this;
+    }
+    public String getMaxEndpoint() {
+        return this.maxEndpoint;
+    }
+
     public CreateInstanceRequest setMaxSlot(String maxSlot) {
         this.maxSlot = maxSlot;
         return this;
@@ -68,6 +85,22 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getPaymentType() {
         return this.paymentType;
+    }
+
+    public CreateInstanceRequest setProviderType(String providerType) {
+        this.providerType = providerType;
+        return this;
+    }
+    public String getProviderType() {
+        return this.providerType;
+    }
+
+    public CreateInstanceRequest setStorageType(String storageType) {
+        this.storageType = storageType;
+        return this;
+    }
+    public String getStorageType() {
+        return this.storageType;
     }
 
     public CreateInstanceRequest setTags(java.util.List<CreateInstanceRequestTags> tags) {
