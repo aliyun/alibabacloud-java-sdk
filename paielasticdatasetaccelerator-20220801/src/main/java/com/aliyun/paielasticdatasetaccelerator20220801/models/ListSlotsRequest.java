@@ -4,6 +4,12 @@ package com.aliyun.paielasticdatasetaccelerator20220801.models;
 import com.aliyun.tea.*;
 
 public class ListSlotsRequest extends TeaModel {
+    /**
+     * <p>加速槽所对应的数据集加速挂载点的唯一标识符。</p>
+     */
+    @NameInMap("EndpointIds")
+    public String endpointIds;
+
     @NameInMap("InstanceIds")
     public String instanceIds;
 
@@ -31,9 +37,23 @@ public class ListSlotsRequest extends TeaModel {
     @NameInMap("StorageType")
     public String storageType;
 
+    /**
+     * <p>数据集加速槽的数据存储路径（URI）。</p>
+     */
+    @NameInMap("StorageUri")
+    public String storageUri;
+
     public static ListSlotsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSlotsRequest self = new ListSlotsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListSlotsRequest setEndpointIds(String endpointIds) {
+        this.endpointIds = endpointIds;
+        return this;
+    }
+    public String getEndpointIds() {
+        return this.endpointIds;
     }
 
     public ListSlotsRequest setInstanceIds(String instanceIds) {
@@ -106,6 +126,14 @@ public class ListSlotsRequest extends TeaModel {
     }
     public String getStorageType() {
         return this.storageType;
+    }
+
+    public ListSlotsRequest setStorageUri(String storageUri) {
+        this.storageUri = storageUri;
+        return this;
+    }
+    public String getStorageUri() {
+        return this.storageUri;
     }
 
 }

@@ -49,6 +49,12 @@ public class ListEndpointsResponseBody extends TeaModel {
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
+        /**
+         * <p>所属加速实例的ID。</p>
+         */
+        @NameInMap("InstanceId")
+        public String instanceId;
+
         @NameInMap("Name")
         public String name;
 
@@ -92,6 +98,14 @@ public class ListEndpointsResponseBody extends TeaModel {
         }
         public String getGmtModifiedTime() {
             return this.gmtModifiedTime;
+        }
+
+        public ListEndpointsResponseBodyEndpoints setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public ListEndpointsResponseBodyEndpoints setName(String name) {

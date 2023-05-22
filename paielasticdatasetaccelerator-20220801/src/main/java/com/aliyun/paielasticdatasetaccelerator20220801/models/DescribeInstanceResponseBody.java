@@ -16,6 +16,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    @NameInMap("MaxEndpoint")
+    public Integer maxEndpoint;
+
     @NameInMap("MaxSlot")
     public Integer maxSlot;
 
@@ -28,11 +31,17 @@ public class DescribeInstanceResponseBody extends TeaModel {
     @NameInMap("PaymentType")
     public String paymentType;
 
+    @NameInMap("ProviderType")
+    public String providerType;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Status")
     public InstanceStatus status;
+
+    @NameInMap("StorageType")
+    public String storageType;
 
     @NameInMap("Tags")
     public java.util.List<DescribeInstanceResponseBodyTags> tags;
@@ -83,6 +92,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         return this.gmtModifiedTime;
     }
 
+    public DescribeInstanceResponseBody setMaxEndpoint(Integer maxEndpoint) {
+        this.maxEndpoint = maxEndpoint;
+        return this;
+    }
+    public Integer getMaxEndpoint() {
+        return this.maxEndpoint;
+    }
+
     public DescribeInstanceResponseBody setMaxSlot(Integer maxSlot) {
         this.maxSlot = maxSlot;
         return this;
@@ -115,6 +132,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         return this.paymentType;
     }
 
+    public DescribeInstanceResponseBody setProviderType(String providerType) {
+        this.providerType = providerType;
+        return this;
+    }
+    public String getProviderType() {
+        return this.providerType;
+    }
+
     public DescribeInstanceResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -129,6 +154,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
     public InstanceStatus getStatus() {
         return this.status;
+    }
+
+    public DescribeInstanceResponseBody setStorageType(String storageType) {
+        this.storageType = storageType;
+        return this;
+    }
+    public String getStorageType() {
+        return this.storageType;
     }
 
     public DescribeInstanceResponseBody setTags(java.util.List<DescribeInstanceResponseBodyTags> tags) {

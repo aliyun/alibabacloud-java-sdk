@@ -7,6 +7,12 @@ public class ListEndpointsRequest extends TeaModel {
     @NameInMap("EndpointIds")
     public String endpointIds;
 
+    /**
+     * <p>所属加速实例的ID。</p>
+     */
+    @NameInMap("InstanceIds")
+    public String instanceIds;
+
     @NameInMap("Name")
     public String name;
 
@@ -39,6 +45,14 @@ public class ListEndpointsRequest extends TeaModel {
     }
     public String getEndpointIds() {
         return this.endpointIds;
+    }
+
+    public ListEndpointsRequest setInstanceIds(String instanceIds) {
+        this.instanceIds = instanceIds;
+        return this;
+    }
+    public String getInstanceIds() {
+        return this.instanceIds;
     }
 
     public ListEndpointsRequest setName(String name) {
