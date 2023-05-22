@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnUserTagsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The key of the returned tag.</p>
      */
     @NameInMap("Tags")
     public java.util.List<DescribeDcdnUserTagsResponseBodyTags> tags;
@@ -39,14 +39,11 @@ public class DescribeDcdnUserTagsResponseBody extends TeaModel {
 
     public static class DescribeDcdnUserTagsResponseBodyTags extends TeaModel {
         /**
-         * <p>The key of the returned tag.</p>
+         * <p>The value of the returned tag.</p>
          */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The value of the returned tag.</p>
-         */
         @NameInMap("Value")
         public java.util.List<String> value;
 

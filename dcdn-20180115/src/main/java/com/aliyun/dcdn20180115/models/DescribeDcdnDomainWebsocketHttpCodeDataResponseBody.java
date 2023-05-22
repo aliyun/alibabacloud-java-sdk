@@ -23,7 +23,7 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
     public String endTime;
 
     /**
-     * <p>The HTTP status codes.</p>
+     * <p>The HTTP status code.</p>
      */
     @NameInMap("HttpCodeDataPerInterval")
     public DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyHttpCodeDataPerInterval httpCodeDataPerInterval;
@@ -35,7 +35,7 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
     public String requestId;
 
     /**
-     * <p>The beginning of the time range during which data was queried.</p>
+     * <p>The start of the time range during which data was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -95,13 +95,13 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
 
     public static class DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyHttpCodeDataPerIntervalDataModuleWebsocketHttpCodeHttpCodeDataModule extends TeaModel {
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The HTTP status code returned.</p>
          */
         @NameInMap("Code")
         public Integer code;
 
         /**
-         * <p>The total number of times that the HTTP status code was returned.</p>
+         * <p>The total number of entries returned.</p>
          */
         @NameInMap("Count")
         public Float count;
@@ -164,13 +164,13 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
 
     public static class DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyHttpCodeDataPerIntervalDataModule extends TeaModel {
         /**
-         * <p>The timestamp of the data returned.</p>
+         * <p>The timestamp of the returned data.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         /**
-         * <p>The information about the HTTP status codes.</p>
+         * <p>The proportions of the HTTP status codes.</p>
          */
         @NameInMap("WebsocketHttpCode")
         public DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyHttpCodeDataPerIntervalDataModuleWebsocketHttpCode websocketHttpCode;

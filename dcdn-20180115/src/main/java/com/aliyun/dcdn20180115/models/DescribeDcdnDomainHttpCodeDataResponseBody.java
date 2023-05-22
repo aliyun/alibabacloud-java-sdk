@@ -4,39 +4,21 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainHttpCodeDataResponseBody extends TeaModel {
-    /**
-     * <p>The time interval between the data entries returned. Unit: seconds.</p>
-     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
-    /**
-     * <p>The proportions of HTTP status codes at each time interval.</p>
-     */
     @NameInMap("DataPerInterval")
     public DescribeDcdnDomainHttpCodeDataResponseBodyDataPerInterval dataPerInterval;
 
-    /**
-     * <p>The accelerated domain name.</p>
-     */
     @NameInMap("DomainName")
     public String domainName;
 
-    /**
-     * <p>The end of the time range during which data was queried.</p>
-     */
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The start of the time range during which data was queried.</p>
-     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -94,21 +76,12 @@ public class DescribeDcdnDomainHttpCodeDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainHttpCodeDataResponseBodyDataPerIntervalDataModuleHttpCodeDataPerIntervalHttpCodeDataModule extends TeaModel {
-        /**
-         * <p>The HTTP status code returned.</p>
-         */
         @NameInMap("Code")
         public Integer code;
 
-        /**
-         * <p>The total number of entries.</p>
-         */
         @NameInMap("Count")
         public Float count;
 
-        /**
-         * <p>The proportion of the HTTP status code.</p>
-         */
         @NameInMap("Proportion")
         public Float proportion;
 
@@ -163,15 +136,9 @@ public class DescribeDcdnDomainHttpCodeDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainHttpCodeDataResponseBodyDataPerIntervalDataModule extends TeaModel {
-        /**
-         * <p>The proportions of the HTTP status codes.</p>
-         */
         @NameInMap("HttpCodeDataPerInterval")
         public DescribeDcdnDomainHttpCodeDataResponseBodyDataPerIntervalDataModuleHttpCodeDataPerInterval httpCodeDataPerInterval;
 
-        /**
-         * <p>The timestamp of the returned data.</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

@@ -4,28 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class ModifyDcdnWafPolicyDomainsRequest extends TeaModel {
-    /**
-     * <p>The domain names that you want to bind to the protection policy. You can specify up to 50 domain names. Separate multiple domain names with commas (,).</p>
-     * <br>
-     * <p>> You can configure only one of the **BindDomains** and **UnbindDomains** parameters.</p>
-     */
     @NameInMap("BindDomains")
     public String bindDomains;
 
     @NameInMap("Method")
     public Integer method;
 
-    /**
-     * <p>The ID of the protection policy. You can specify only one ID in each request.</p>
-     */
     @NameInMap("PolicyId")
     public Long policyId;
 
-    /**
-     * <p>The domain names that you want to unbind from the protection policy. You can specify up to 50 domain names. Separate multiple domain names with commas (,).</p>
-     * <br>
-     * <p>> You can configure only one of the **BindDomains** and **UnbindDomains** parameters.</p>
-     */
     @NameInMap("UnbindDomains")
     public String unbindDomains;
 

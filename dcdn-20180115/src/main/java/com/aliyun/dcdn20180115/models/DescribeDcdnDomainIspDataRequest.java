@@ -5,23 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainIspDataRequest extends TeaModel {
     /**
-     * <p>The accelerated domain name. You can specify only one domain name in each request.</p>
-     * <br>
-     * <p>If you do not specify an accelerated domain name, the data of all accelerated domain names that belong to your account is queried.</p>
+     * <p>The beginning of the time range during which data was queried.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     * <br>
-     * <p>>  The end time must be later than the start time.</p>
+     * <p>The accelerated domain name.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

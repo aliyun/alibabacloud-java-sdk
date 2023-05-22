@@ -7,7 +7,7 @@ public class DescribeDcdnDomainIpaBpsDataRequest extends TeaModel {
     /**
      * <p>The accelerated domain name.</p>
      * <br>
-     * <p>Separate multiple domain names with commas (,). If you do not specify a value for this parameter, all accelerated domain names are queried.</p>
+     * <p>Separate multiple domain names with commas (,). If you leave this parameter empty, all accelerated domain names are queried.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -17,13 +17,13 @@ public class DescribeDcdnDomainIpaBpsDataRequest extends TeaModel {
      * <br>
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
-     * <p>>  The end time must be later than the start time.</p>
+     * <p>> The end time must be later than the start time.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>Specify whether to implement padding with zeros. Valid values:</p>
+     * <p>Specifies whether to implement padding with zeros. Valid values:</p>
      * <br>
      * <p>*   **true**</p>
      * <p>*   **false**</p>
@@ -32,12 +32,12 @@ public class DescribeDcdnDomainIpaBpsDataRequest extends TeaModel {
     public String fixTimeGap;
 
     /**
-     * <p>The time granularity for a query. Unit: seconds.</p>
+     * <p>The time granularity of data entries. Unit: seconds.</p>
      * <br>
-     * <p>The value varies based on the values of the **StartTime** and **EndTime** parameters. Valid values:</p>
+     * <p>The time granularity varies with the time range specified by **StartTime** and **EndTime**.</p>
      * <br>
-     * <p>*   If the time range between StartTime and EndTime is less than 3 days, the valid values are **300**, **3600**, and **86400**. If you do not specify a value for this parameter, **300** is used.</p>
-     * <p>*   If the time range between StartTime and EndTime is from 3 to 31 days (31 days excluded), the valid values are **3600** and **86400**. Default value: **3600**.</p>
+     * <p>*   If the time range between StartTime and EndTime is less than 3 days, the valid values are **300**, **3600**, and **86400**. If you leave this parameter empty, **300** is used.</p>
+     * <p>*   If the time range between StartTime and EndTime is greater than or equal to 3 days and less than 31 days, the valid values are **3600** and **86400**. Default value: **3600**.</p>
      * <p>*   If the time range between StartTime and EndTime is 31 days or longer, the valid value is **86400**. Default value: **86400**.</p>
      */
     @NameInMap("Interval")
@@ -68,7 +68,7 @@ public class DescribeDcdnDomainIpaBpsDataRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>Specifies whether to automatically set the interval. If you set **TimeMerge** to **1**, the value of the **Interval** parameter is automatically assigned based on the **startTime** and **endTime** parameters. You can set either this parameter or the **Interval** parameter.</p>
+     * <p>Specifies whether to automatically set the interval. If you set **TimeMerge** to **1**, the value of the **Interval** parameter is automatically assigned based on the **startTime** and **endTime** parameters. You can specify either this parameter or the **Interval** parameter.</p>
      */
     @NameInMap("TimeMerge")
     public String timeMerge;

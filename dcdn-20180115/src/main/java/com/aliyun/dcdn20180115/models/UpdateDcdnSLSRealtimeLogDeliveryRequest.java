@@ -17,13 +17,13 @@ public class UpdateDcdnSLSRealtimeLogDeliveryRequest extends TeaModel {
     public String dataCenter;
 
     /**
-     * <p>The domain names. You can specify one or more domain names. Separate multiple domain names with commas (,).</p>
+     * <p>The domain names from which logs were collected. You can specify one or more domain names. Separate multiple domain names with commas (,).</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The name of the real-time log delivery project.</p>
+     * <p>The name of the project.</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
@@ -35,13 +35,13 @@ public class UpdateDcdnSLSRealtimeLogDeliveryRequest extends TeaModel {
     public String SLSLogStore;
 
     /**
-     * <p>The name of the Log Service project.</p>
+     * <p>The name of the log file.</p>
      */
     @NameInMap("SLSProject")
     public String SLSProject;
 
     /**
-     * <p>The region to which logs are delivered.</p>
+     * <p>The region to which logs were delivered.</p>
      */
     @NameInMap("SLSRegion")
     public String SLSRegion;

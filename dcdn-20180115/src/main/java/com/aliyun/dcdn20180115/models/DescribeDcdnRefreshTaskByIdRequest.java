@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnRefreshTaskByIdRequest extends TeaModel {
     /**
-     * <p>The ID of the task that you want to query. You can query task IDs by performing the following operations:</p>
+     * <p>The ID of the task that you want to query. The following signature algorithms require different message digest algorithms:</p>
      * <br>
      * <p>*   Perform the [RefreshDcdnObjectCaches](~~130620~~) operation to query refresh task IDs.</p>
      * <p>*   Perform the [PreloadDcdnObjectCaches](~~130636~~) operation to query prefetch task IDs.</p>
      * <br>
-     * <p>>  You can specify at most 10 task IDs in each call. Separate IDs with commas (,).</p>
+     * <p>> You can specify at most 10 task IDs in each call. Separate IDs with commas (,).</p>
      */
     @NameInMap("TaskId")
     public String taskId;

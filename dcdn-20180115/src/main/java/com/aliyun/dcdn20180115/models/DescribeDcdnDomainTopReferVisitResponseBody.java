@@ -17,7 +17,7 @@ public class DescribeDcdnDomainTopReferVisitResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The start of the time range during which the data is collected.</p>
+     * <p>The start of the time range during which data was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -67,13 +67,13 @@ public class DescribeDcdnDomainTopReferVisitResponseBody extends TeaModel {
 
     public static class DescribeDcdnDomainTopReferVisitResponseBodyTopReferListReferList extends TeaModel {
         /**
-         * <p>The network traffic. Unit: bytes.</p>
+         * <p>The amount of network traffic. Unit: bytes.</p>
          */
         @NameInMap("Flow")
         public String flow;
 
         /**
-         * <p>The proportion of the network traffic.</p>
+         * <p>The proportion of network traffic consumed to access the URL.</p>
          */
         @NameInMap("FlowProportion")
         public Float flowProportion;
@@ -91,7 +91,7 @@ public class DescribeDcdnDomainTopReferVisitResponseBody extends TeaModel {
         public String visitData;
 
         /**
-         * <p>The proportion of the visits.</p>
+         * <p>The proportion of visits to the URL.</p>
          */
         @NameInMap("VisitProportion")
         public Float visitProportion;

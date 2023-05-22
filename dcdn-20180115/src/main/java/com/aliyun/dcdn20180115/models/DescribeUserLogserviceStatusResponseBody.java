@@ -7,8 +7,8 @@ public class DescribeUserLogserviceStatusResponseBody extends TeaModel {
     /**
      * <p>Indicates whether Log Service is activated.</p>
      * <br>
-     * <p>*   true: activated</p>
-     * <p>*   false: not activated</p>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("Enabled")
     public Boolean enabled;
@@ -16,17 +16,17 @@ public class DescribeUserLogserviceStatusResponseBody extends TeaModel {
     /**
      * <p>Indicates whether your Log Service has overdue payments.</p>
      * <br>
-     * <p>*   true: Your Log Service has overdue payments.</p>
-     * <p>*   false: Your Log Service does not have overdue payments.</p>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("InDebt")
     public Boolean inDebt;
 
     /**
-     * <p>Indicates whether the overdue payments of Log Service have passed the grace period.</p>
+     * <p>Indicates whether an overdue payment of your Log Service has passed the grace period.</p>
      * <br>
-     * <p>*   true: The overdue payments of Log Service have passed the grace period.</p>
-     * <p>*   false: The overdue payments of Log Service have not passed the grace period.</p>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("InDebtOverdue")
     public Boolean inDebtOverdue;
@@ -34,8 +34,8 @@ public class DescribeUserLogserviceStatusResponseBody extends TeaModel {
     /**
      * <p>Indicates whether Log Service is available.</p>
      * <br>
-     * <p>*   true: available</p>
-     * <p>*   false: unavailable</p>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("OnService")
     public Boolean onService;

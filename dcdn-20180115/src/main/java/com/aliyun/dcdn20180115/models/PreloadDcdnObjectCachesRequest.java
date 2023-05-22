@@ -8,15 +8,15 @@ public class PreloadDcdnObjectCachesRequest extends TeaModel {
      * <p>The acceleration region in which you want to prefetch content. If you do not specify a region, the value overseas is used.</p>
      * <br>
      * <p>*   **domestic**: Chinese mainland</p>
-     * <p>*   **overseas**: global (excluding the Chinese mainland)</p>
+     * <p>*   **overseas**: outside the Chinese mainland</p>
      */
     @NameInMap("Area")
     public String area;
 
     /**
-     * <p>Specifies whether to prefetch content to POPs. Default value: false. Valid values:</p>
+     * <p>Specifies whether to prefetch content to POPs. Valid values:</p>
      * <br>
-     * <p>*   **true**: prefetches content to POPs that include L2 POPs.</p>
+     * <p>*   **true**: prefetches content to nodes that include L2 DCDN nodes.</p>
      * <p>*   **false**: prefetches content to L2 POPs or L3 POPs.</p>
      */
     @NameInMap("L2Preload")
@@ -35,7 +35,7 @@ public class PreloadDcdnObjectCachesRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The custom header for prefetch in JSON format.</p>
+     * <p>The custom header for prefetch in the JSON format.</p>
      */
     @NameInMap("WithHeader")
     public String withHeader;

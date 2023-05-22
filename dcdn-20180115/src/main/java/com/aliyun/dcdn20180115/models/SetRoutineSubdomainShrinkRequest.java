@@ -9,12 +9,9 @@ public class SetRoutineSubdomainShrinkRequest extends TeaModel {
      * <br>
      * <p>The parameters are in the following format:</p>
      * <br>
-     * <p>```</p>
-     * <br>
-     * <p>Subdomains: [</p>
-     * <p>    "subdomain-test"</p>
-     * <p>]</p>
-     * <p>```</p>
+     * <p>    Subdomains: [</p>
+     * <p>        "subdomain-test"</p>
+     * <p>    ]</p>
      */
     @NameInMap("Subdomains")
     public String subdomainsShrink;

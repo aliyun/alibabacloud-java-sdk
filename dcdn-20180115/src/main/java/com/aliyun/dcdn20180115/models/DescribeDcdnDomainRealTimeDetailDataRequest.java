@@ -5,7 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainRealTimeDetailDataRequest extends TeaModel {
     /**
-     * <p>The accelerated domain name. Separate multiple accelerated domain names with commas (,).</p>
+     * <p>Specifies whether to return a summary value of **LocationNameEn** and **IspNameEn**. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     * <br>
+     * <p>The default value is **false**.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -19,32 +24,6 @@ public class DescribeDcdnDomainRealTimeDetailDataRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The type of the information that you want to query. Separate multiple types with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   **qps**: queries per second</p>
-     * <p>*   **bps**: bandwidth</p>
-     * <p>*   **http_code**: HTTP status code</p>
-     */
-    @NameInMap("Field")
-    public String field;
-
-    /**
-     * <p>The name of the ISP. You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query the ISP name.</p>
-     * <br>
-     * <p>If you do not specify a value for this parameter, all ISPs are queried.</p>
-     */
-    @NameInMap("IspNameEn")
-    public String ispNameEn;
-
-    /**
-     * <p>The name of the region. You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query the region name.</p>
-     * <br>
-     * <p>If you do not specify a value for this parameter, all regions are queried.</p>
-     */
-    @NameInMap("LocationNameEn")
-    public String locationNameEn;
-
-    /**
      * <p>Specifies whether to return a summary value. Valid values:</p>
      * <br>
      * <p>*   **true**: yes</p>
@@ -52,16 +31,35 @@ public class DescribeDcdnDomainRealTimeDetailDataRequest extends TeaModel {
      * <br>
      * <p>The default value is **false**.</p>
      */
+    @NameInMap("Field")
+    public String field;
+
+    /**
+     * <p>The information returned.</p>
+     */
+    @NameInMap("IspNameEn")
+    public String ispNameEn;
+
+    /**
+     * <p>The type of the information that you want to query. Separate multiple types with commas (,). Valid values:</p>
+     * <br>
+     * <p>*   **qps**: queries per second</p>
+     * <p>*   **bps**: bandwidth</p>
+     * <p>*   **http_code**: HTTP status code</p>
+     */
+    @NameInMap("LocationNameEn")
+    public String locationNameEn;
+
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Merge")
     public String merge;
 
     /**
-     * <p>Specifies whether to return a summary value of **LocationNameEn** and **IspNameEn**. Valid values:</p>
+     * <p>The name of the region. You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query the region name.</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
-     * <br>
-     * <p>The default value is **false**.</p>
+     * <p>If you do not specify a value for this parameter, all regions are queried.</p>
      */
     @NameInMap("MergeLocIsp")
     public String mergeLocIsp;

@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainUvDataResponseBody extends TeaModel {
     /**
-     * <p>The data collection interval. Unit: second.</p>
+     * <p>The time interval between the data entries returned. Unit: seconds.</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
 
     /**
-     * <p>The name of the accelerated domain for which the data was returned.</p>
+     * <p>The accelerated domain name.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The end of the time range during which the data was collected.</p>
+     * <p>The end of the time range during which data was queried.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -29,7 +29,7 @@ public class DescribeDcdnDomainUvDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range during which the data was collected.</p>
+     * <p>The start of the time range during which data was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

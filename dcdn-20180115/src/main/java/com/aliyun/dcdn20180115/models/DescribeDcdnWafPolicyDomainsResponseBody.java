@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnWafPolicyDomainsResponseBody extends TeaModel {
     /**
-     * <p>The accelerated domain names.</p>
+     * <p>The ID of the protection policy. You can specify only one ID in each request.</p>
      */
     @NameInMap("Domains")
     public java.util.List<DescribeDcdnWafPolicyDomainsResponseBodyDomains> domains;
 
     /**
-     * <p>The page number of the returned page, which is the same as the PageNumber parameter in request parameters.</p>
+     * <p>>You can call this operation up to 20 times per second per account.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of domain names returned per page, which is the same as the PageSize parameter in request parameters.</p>
+     * <p>The accelerated domain names.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The accelerated domain name that was protected by the specified protection policy.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

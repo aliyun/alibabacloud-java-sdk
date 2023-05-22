@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainIpaTrafficDataRequest extends TeaModel {
     /**
-     * <p>The name of the accelerated domain name.</p>
+     * <p>The accelerated domain name.</p>
      * <br>
-     * <p>You can specify one or more accelerated domain names. Separate them with commas (,). By default, all accelerated domain names that belong to your Alibaba Cloud account are queried.</p>
+     * <p>Separate multiple domain names with commas (,). If you do not specify a value for this parameter, data for all accelerated domain names is queried.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -15,9 +15,9 @@ public class DescribeDcdnDomainIpaTrafficDataRequest extends TeaModel {
     /**
      * <p>The end of the time range to query.</p>
      * <br>
-     * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
-     * <p>>  The end time must be later than the start time.</p>
+     * <p>> The end time must be later than the start time.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -25,28 +25,28 @@ public class DescribeDcdnDomainIpaTrafficDataRequest extends TeaModel {
     /**
      * <p>Specify whether to implement padding with zeros. Valid values:</p>
      * <br>
-     * <p>*   **true**: Yes</p>
-     * <p>*   **false**: No</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("FixTimeGap")
     public String fixTimeGap;
 
     /**
-     * <p>The time interval between the data entries returned. Unit: seconds.</p>
+     * <p>The time granularity of data entries. Unit: seconds.</p>
      * <br>
-     * <p>The valid values vary based on the values of the **StartTime** and **EndTime** parameters. Valid values:</p>
+     * <p>The time granularity varies with the time range specified by **StartTime** and **EndTime**.</p>
      * <br>
-     * <p>*   If the time range between StartTime and EndTime is less than 3 days, valid values are **300**, **3600**, and **86400**. Default value: **300**.</p>
-     * <p>*   If the time range between StartTime and EndTime is from 3 to 31 days (31 days excluded), valid values are **3600** and **86400**. Default value: **3600**.</p>
+     * <p>*   If the time range between StartTime and EndTime is less than 3 days, the valid values are **300**, **3600**, and **86400**. If you do not specify a value for this parameter, **300** is used.</p>
+     * <p>*   If the time range between StartTime and EndTime is greater than or equal to 3 days and less than 31 days, the valid values are **3600** and **86400**. Default value: **3600**.</p>
      * <p>*   If the time range between StartTime and EndTime is 31 days or longer, the valid value is **86400**. Default value: **86400**.</p>
      */
     @NameInMap("Interval")
     public String interval;
 
     /**
-     * <p>The name of the Internet service provider (ISP) for Dynamic Route for CDN (DCDN).</p>
+     * <p>The name of the Internet service provider (ISP).</p>
      * <br>
-     * <p>You can call the [DescribeCdnRegionAndIsp](~~207199~~) operation to query the most recent ISP list. If you do not specify an ISP, all ISPs are queried.</p>
+     * <p>You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query ISPs.</p>
      */
     @NameInMap("IspNameEn")
     public String ispNameEn;
@@ -54,7 +54,7 @@ public class DescribeDcdnDomainIpaTrafficDataRequest extends TeaModel {
     /**
      * <p>The name of the region.</p>
      * <br>
-     * <p>You can call the [DescribeCdnRegionAndIsp](~~207199~~) operation to query the most recent region list. If you do not specify a region, all regions are queried.</p>
+     * <p>You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query regions.</p>
      */
     @NameInMap("LocationNameEn")
     public String locationNameEn;
@@ -62,13 +62,13 @@ public class DescribeDcdnDomainIpaTrafficDataRequest extends TeaModel {
     /**
      * <p>The beginning of the time range to query.</p>
      * <br>
-     * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC+0.</p>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>Specify whether to automatically calculate the value of the **Interval** parameter. If you set the **TimeMerge** parameter to **1**, the value of the **Interval** parameter is automatically assigned based on the **StartTime** and **EndTime** parameters. You can set this parameter or the **Interval** parameter.</p>
+     * <p>Specifies whether to automatically calculate the value of the **interval**. If the **timeMerge** parameter is set to **1**, the value of **inteval** is calculated based on **StartTime** and **EndTime**. You can set either this parameter or the **interval** parameter.</p>
      */
     @NameInMap("TimeMerge")
     public String timeMerge;

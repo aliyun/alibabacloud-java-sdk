@@ -7,7 +7,7 @@ public class ModifyDcdnWafRuleRequest extends TeaModel {
     /**
      * <p>The new configurations of the protection rule.</p>
      * <br>
-     * <p>>  After you modify the configurations of the protection rule, the previous configurations are overwritten.</p>
+     * <p>> After you modify the configurations of the protection rule, the previous configurations are overwritten.</p>
      */
     @NameInMap("RuleConfig")
     public String ruleConfig;

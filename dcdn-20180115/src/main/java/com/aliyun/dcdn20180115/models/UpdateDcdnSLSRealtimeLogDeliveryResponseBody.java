@@ -45,13 +45,13 @@ public class UpdateDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
         public String desc;
 
         /**
-         * <p>The domain name for which the real-time log delivery project was updated.</p>
+         * <p>The domain name.</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
-         * <p>The region from which logs were collected.</p>
+         * <p>The name of the region.</p>
          */
         @NameInMap("Region")
         public String region;

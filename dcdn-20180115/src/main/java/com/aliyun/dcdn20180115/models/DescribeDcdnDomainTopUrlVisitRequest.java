@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainTopUrlVisitRequest extends TeaModel {
     /**
-     * <p>The accelerated domain name. You can specify only one domain name in each call.</p>
+     * <p>The accelerated domain name. You can specify only one domain name in each request.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The method that is used to sort the web pages. Valid values:</p>
+     * <p>The sorting method. Valid values:</p>
      * <br>
-     * <p>*   **traf**: by network traffic.</p>
-     * <p>*   **pv**: by the number of visits.</p>
+     * <p>*   **traf**: by network traffic</p>
+     * <p>*   **pv**: by the number of visits</p>
      * <br>
-     * <p>Default value: **pv**.</p>
+     * <p>Default value: **pv**</p>
      */
     @NameInMap("SortBy")
     public String sortBy;
@@ -28,7 +28,7 @@ public class DescribeDcdnDomainTopUrlVisitRequest extends TeaModel {
      * <br>
      * <p>To query the data on a specified day, use the format: yyyy-MM-ddT16:00:00Z.</p>
      * <br>
-     * <p>>  If you do not set this parameter, the data within the last 24 hours is queried.</p>
+     * <p>> If you do not specify this parameter, the data in the last 24 hours is queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

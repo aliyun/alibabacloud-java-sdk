@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnWafRulesResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page, which is the same as the PageNumber parameter in request parameters.</p>
+     * <p>The page number of the returned page. The value of this parameter is the same as that of the PageNumber parameter in the request.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of protection rules returned per page, which is the same as the PageSize parameter in request parameters.</p>
+     * <p>The number of protection rules returned per page. The value of this parameter is the same as that of the PageSize parameter in the request.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -81,13 +81,13 @@ public class DescribeDcdnWafRulesResponseBody extends TeaModel {
 
     public static class DescribeDcdnWafRulesResponseBodyRules extends TeaModel {
         /**
-         * <p>The type of the protection policy, which is the same as the DefenseScenes field in the QueryArgs parameter.</p>
+         * <p>The type of the protection policy. The value of this parameter is the same as that of the DefenseScene field in QueryArgst.</p>
          */
         @NameInMap("DefenseScene")
         public String defenseScene;
 
         /**
-         * <p>The modification time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the protection policy was last modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
@@ -117,7 +117,7 @@ public class DescribeDcdnWafRulesResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The status of the protection rule, which is the same as the RuleStatus field in the QueryArgs parameter.</p>
+         * <p>The status of the protection rule. The value of this parameter is the same as that of the RuleStatus field in QueryArgst.</p>
          */
         @NameInMap("RuleStatus")
         public String ruleStatus;

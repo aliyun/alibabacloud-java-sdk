@@ -17,7 +17,7 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
     public Long domainOnlineCount;
 
     /**
-     * <p>The end of the time range during which the data was collected.</p>
+     * <p>The end of the time range during which data was queried.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -29,7 +29,7 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range during which the data was collected.</p>
+     * <p>The beginning of the time range during which data was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -95,13 +95,13 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
 
     public static class DescribeDcdnTopDomainsByFlowResponseBodyTopDomainsTopDomain extends TeaModel {
         /**
-         * <p>The name of the accelerated domain.</p>
+         * <p>The domain name.</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
-         * <p>The peak bandwidth.</p>
+         * <p>The peak bandwidth value.</p>
          */
         @NameInMap("MaxBps")
         public Long maxBps;
@@ -113,25 +113,25 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
         public String maxBpsTime;
 
         /**
-         * <p>The ranking of the domains.</p>
+         * <p>The ranking of the accelerated domain name.</p>
          */
         @NameInMap("Rank")
         public Long rank;
 
         /**
-         * <p>The number of visits to the URL that was queried.</p>
+         * <p>The number of visits to the URL.</p>
          */
         @NameInMap("TotalAccess")
         public Long totalAccess;
 
         /**
-         * <p>The total amount of network traffic.</p>
+         * <p>The total volume of traffic.</p>
          */
         @NameInMap("TotalTraffic")
         public String totalTraffic;
 
         /**
-         * <p>The proportion of the network traffic that was consumed for accessing the URL.</p>
+         * <p>The proportion of network traffic consumed to access the URL.</p>
          */
         @NameInMap("TrafficPercent")
         public String trafficPercent;

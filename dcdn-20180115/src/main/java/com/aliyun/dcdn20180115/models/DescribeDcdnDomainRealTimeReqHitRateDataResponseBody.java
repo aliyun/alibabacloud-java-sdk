@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainRealTimeReqHitRateDataResponseBody extends TeaModel {
     /**
-     * <p>The list of request hit ratios.</p>
+     * <p>The list of byte hit ratios.</p>
      */
     @NameInMap("Data")
     public DescribeDcdnDomainRealTimeReqHitRateDataResponseBodyData data;
@@ -45,7 +45,7 @@ public class DescribeDcdnDomainRealTimeReqHitRateDataResponseBody extends TeaMod
         public Float reqHitRate;
 
         /**
-         * <p>The timestamp of the data returned. The time follows the ISO 8601 standard. The time is displayed in UTC.</p>
+         * <p>The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

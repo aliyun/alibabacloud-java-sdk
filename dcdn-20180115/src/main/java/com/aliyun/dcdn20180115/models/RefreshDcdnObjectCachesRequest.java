@@ -11,7 +11,7 @@ public class RefreshDcdnObjectCachesRequest extends TeaModel {
     public String objectPath;
 
     /**
-     * <p>The refresh type. Default value: File. Valid values:</p>
+     * <p>The refresh type. Valid values:</p>
      * <br>
      * <p>*   **File**: URL</p>
      * <p>*   **Directory**: directory</p>

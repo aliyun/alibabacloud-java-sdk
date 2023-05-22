@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetDcdnKvRequest extends TeaModel {
     /**
-     * <p>The name of the key that you want to query.</p>
+     * <p>The name of the namespace.</p>
      */
     @NameInMap("Key")
     public String key;
 
     /**
-     * <p>The name of the namespace.</p>
+     * <p>Queries the value of the key in a key-value pair.</p>
      */
     @NameInMap("Namespace")
     public String namespace;

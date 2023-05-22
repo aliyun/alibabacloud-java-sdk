@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeRoutineCanaryEnvsResponseBody extends TeaModel {
     /**
-     * <p>The canary release environments that are supported by the edge routine.</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("Content")
     public java.util.Map<String, ?> content;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The operation that you want to perform. Set the value to **DescribeRoutineCanaryEnvs**.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

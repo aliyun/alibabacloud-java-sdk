@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnWafPolicyDomainsRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Valid values: **1** to **100000**. Default value: **1**.</p>
+     * <p>The page number of the returned page, which is the same as the PageNumber parameter in request parameters.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of domain names to return per page. Valid values: an integer from **1** to **500**. Default value: **20**.</p>
+     * <p>The total number of domain names returned.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the protection policy. You can specify only one ID in each request.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("PolicyId")
     public Long policyId;

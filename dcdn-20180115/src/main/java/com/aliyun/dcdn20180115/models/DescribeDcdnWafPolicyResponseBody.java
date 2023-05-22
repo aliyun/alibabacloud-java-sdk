@@ -42,7 +42,7 @@ public class DescribeDcdnWafPolicyResponseBody extends TeaModel {
          * <p>The type of the protection policy. Valid values:</p>
          * <br>
          * <p>*   waf_group: basic web protection</p>
-         * <p>*   custom_acl: custom</p>
+         * <p>*   custom_acl: custom protection</p>
          * <p>*   whitelist: whitelist</p>
          */
         @NameInMap("DefenseScene")
@@ -84,14 +84,14 @@ public class DescribeDcdnWafPolicyResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the current policy is the default policy. Valid values:</p>
          * <br>
-         * <p>*   default: The current policy is the default policy.</p>
-         * <p>*   custom: The current policy is not the default policy.</p>
+         * <p>*   default</p>
+         * <p>*   custom</p>
          */
         @NameInMap("PolicyType")
         public String policyType;
 
         /**
-         * <p>The protection rule configurations corresponding to the protection policy. The configurations only support Bot management. For more information, see [Configure protection rules](~~423350~~).</p>
+         * <p>The protection rule configurations that are defined in the protection policy. The configurations only support bot management. For more information, see [Configure protection rules](~~423350~~).</p>
          */
         @NameInMap("RuleConfigs")
         public String ruleConfigs;

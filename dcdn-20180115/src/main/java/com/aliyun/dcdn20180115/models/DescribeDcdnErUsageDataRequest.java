@@ -7,19 +7,19 @@ public class DescribeDcdnErUsageDataRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
-     * <p>>  The end time must be later than the start time.</p>
+     * <p>> The end time must be later than the start time.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The ID of the ER.</p>
+     * <p>The ID of the routine.</p>
      */
     @NameInMap("RoutineID")
     public String routineID;
 
     /**
-     * <p>The specification of the ER. Valid values:</p>
+     * <p>The specification of the routine. Valid values:</p>
      * <br>
      * <p>*   5ms</p>
      * <p>*   50ms</p>
@@ -29,9 +29,9 @@ public class DescribeDcdnErUsageDataRequest extends TeaModel {
     public String spec;
 
     /**
-     * <p>Specifies how the results are grouped. If you set this parameter to routine, the returned results are grouped based on the ER ID. If you set this parameter to spec, the returned results are grouped based on the ER specification.</p>
+     * <p>Specifies how the results are grouped. If you set this parameter to routine, the returned results are grouped based on the routine ID. If you set this parameter to spec, the returned results are grouped based on the routine specification.</p>
      * <br>
-     * <p>>  If you leave this parameter empty, the returned results are not grouped.</p>
+     * <p>> If you leave this parameter empty, the returned results are not grouped.</p>
      */
     @NameInMap("SplitBy")
     public String splitBy;

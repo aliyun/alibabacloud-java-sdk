@@ -13,8 +13,8 @@ public class DescribeDcdnUserResourcePackageRequest extends TeaModel {
     /**
      * <p>The status of the resource plan. Valid values:</p>
      * <br>
-     * <p>*   **valid**: The resource plan is valid.</p>
-     * <p>*   **closed**: The resource plan is expired.</p>
+     * <p>*   **valid**: valid</p>
+     * <p>*   **closed**: expired</p>
      * <p>*   If you leave this parameter empty, all resource plans are queried.</p>
      */
     @NameInMap("Status")

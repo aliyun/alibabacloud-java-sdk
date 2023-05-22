@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDcdnDomainResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The information about the addresses of origin servers.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

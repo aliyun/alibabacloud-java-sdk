@@ -11,9 +11,7 @@ public class BatchSetDcdnIpaDomainConfigsRequest extends TeaModel {
     public String domainNames;
 
     /**
-     * <p>The list of features.</p>
-     * <br>
-     * <p>    [{"functionArgs":[{"argName":"Parameter name","argValue":"Parameter value"}],"functionName":"Feature name"}]</p>
+     * <p>The list of features. `[{"functionArgs":[{"argName":"parameter name","argValue":"parameter value"}],"functionName":"feature name"}]`</p>
      */
     @NameInMap("Functions")
     public String functions;

@@ -5,48 +5,22 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainQpsDataByLayerRequest extends TeaModel {
     /**
-     * <p>The accelerated domain name. You can specify multiple domain names and separate them with commas (,). You can specify up to 500 domain names in each request. The query results of multiple domain names are aggregated.</p>
-     * <br>
-     * <p>If you do not specify a domain name, data of all domain names is queried.</p>
+     * <p>The QPS returned at each time interval.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     * <br>
-     * <p>>  The end time must be later than the start time.</p>
+     * <p>The number of queries per second outside the Chinese mainland.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The time interval between the data entries to return. Unit: seconds.</p>
-     * <br>
-     * <p>The time granularity varies with the maximum time range per query. Valid values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see **Description**.</p>
+     * <p>The layer at which the data was collected.</p>
      */
     @NameInMap("Interval")
     public String interval;
-
-    /**
-     * <p>The name of the ISP. You can call the DescribeDcdnRegionAndIsp operation to query the ISP name. If you do not specify a value for this parameter, all ISPs are queried.</p>
-     */
-    @NameInMap("IspNameEn")
-    public String ispNameEn;
-
-    /**
-     * <p>The layers at which you want to query the QPS. The network layer supports IPv4 and IPv6. The application layer supports http, https, and quic. You can also set the value to all.</p>
-     * <br>
-     * <p>Default value: all.</p>
-     */
-    @NameInMap("Layer")
-    public String layer;
-
-    /**
-     * <p>The name of the region. You can call the DescribeDcdnRegionAndIsp operation to query the region name. If you do not specify a value for this parameter, all regions are queried.</p>
-     */
-    @NameInMap("LocationNameEn")
-    public String locationNameEn;
 
     /**
      * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
@@ -54,6 +28,26 @@ public class DescribeDcdnDomainQpsDataByLayerRequest extends TeaModel {
      * <p>The minimum data granularity is 5 minutes.</p>
      * <br>
      * <p>If you do not set this parameter, data in the last 24 hours is queried.</p>
+     */
+    @NameInMap("IspNameEn")
+    public String ispNameEn;
+
+    /**
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <br>
+     * <p>>  The end time must be later than the start time.</p>
+     */
+    @NameInMap("Layer")
+    public String layer;
+
+    /**
+     * <p>The accelerated domain name.</p>
+     */
+    @NameInMap("LocationNameEn")
+    public String locationNameEn;
+
+    /**
+     * <p>The number of requests in the Chinese mainland.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

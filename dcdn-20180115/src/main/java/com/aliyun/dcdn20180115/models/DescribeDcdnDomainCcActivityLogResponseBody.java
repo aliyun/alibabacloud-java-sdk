@@ -99,7 +99,7 @@ public class DescribeDcdnDomainCcActivityLogResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The timestamp of the data.</p>
+         * <p>The timestamp of the returned data.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteRoutineResponseBody extends TeaModel {
     /**
-     * <p>Returns ""Status": "OK"".</p>
+     * <p>The message returned, such as ""Status": "OK"".</p>
      */
     @NameInMap("Content")
     public java.util.Map<String, ?> content;

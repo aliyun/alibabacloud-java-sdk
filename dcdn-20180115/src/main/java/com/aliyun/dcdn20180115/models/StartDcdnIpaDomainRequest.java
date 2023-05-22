@@ -4,9 +4,6 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class StartDcdnIpaDomainRequest extends TeaModel {
-    /**
-     * <p>The name of the accelerated domain to be enabled. You can specify only one accelerated domain name at a time.</p>
-     */
     @NameInMap("DomainName")
     public String domainName;
 

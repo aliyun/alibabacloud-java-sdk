@@ -21,7 +21,7 @@ public class DescribeDcdnDomainCcActivityLogRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The page number of the returned page. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
@@ -33,7 +33,7 @@ public class DescribeDcdnDomainCcActivityLogRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The name of the rule. Valid values</p>
+     * <p>The name of the rule.</p>
      * <br>
      * <p>*   default_normal in normal mode</p>
      * <p>*   default_attack in emergency mode</p>
@@ -47,7 +47,7 @@ public class DescribeDcdnDomainCcActivityLogRequest extends TeaModel {
     /**
      * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
-     * <p>The resolution of the queried data is 5 minutes.</p>
+     * <p>The minimum data granularity is 5 minutes.</p>
      * <br>
      * <p>If you leave this parameter empty, the data collected over the last 24 hours is queried.</p>
      */

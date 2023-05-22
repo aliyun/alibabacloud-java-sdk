@@ -5,31 +5,39 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnRefreshTasksResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The status of the task.</p>
+     * <br>
+     * <p>*   **Complete**: The task has completed.</p>
+     * <p>*   **Refreshing**: The task is in progress.</p>
+     * <p>*   **Failed**: The task failed.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The time when the task was created. The time is displayed in UTC.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Details about tasks.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Details about tasks.</p>
+     * <p>The progress of the task, in percentage.</p>
      */
     @NameInMap("Tasks")
     public DescribeDcdnRefreshTasksResponseBodyTasks tasks;
 
     /**
-     * <p>The number of tasks.</p>
+     * <p>The type of the task.</p>
+     * <br>
+     * <p>*   **file**: URL-based refresh</p>
+     * <p>*   **path**: directory-based refresh</p>
+     * <p>*   **preload**: URL-based prefetch</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -81,26 +89,10 @@ public class DescribeDcdnRefreshTasksResponseBody extends TeaModel {
 
     public static class DescribeDcdnRefreshTasksResponseBodyTasksTask extends TeaModel {
         /**
-         * <p>The time when the task was created. The time is displayed in UTC.</p>
+         * <p>The URL of the object to be refreshed.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
-
-        /**
-         * <p>The type of error returned when the refresh or prefetch task has failed.</p>
-         * <br>
-         * <p>*   **InternalError**: An internal error occurred.</p>
-         * <p>*   **OriginTimeout**: The response from the origin server timed out.</p>
-         * <p>*   **OriginReturn StatusCode 5XX**: The origin server returned a 5XX error.</p>
-         */
-        @NameInMap("Description")
-        public String description;
-
-        /**
-         * <p>The URL of the object refreshed.</p>
-         */
-        @NameInMap("ObjectPath")
-        public String objectPath;
 
         /**
          * <p>The type of the task.</p>
@@ -109,27 +101,47 @@ public class DescribeDcdnRefreshTasksResponseBody extends TeaModel {
          * <p>*   **path**: directory-based refresh</p>
          * <p>*   **preload**: URL-based prefetch</p>
          */
+        @NameInMap("Description")
+        public String description;
+
+        /**
+         * <p>The status of the task.</p>
+         * <br>
+         * <p>*   **Complete**: The task has completed.</p>
+         * <p>*   **Refreshing**: The task is in progress.</p>
+         * <p>*   **Failed**: The task failed.</p>
+         */
+        @NameInMap("ObjectPath")
+        public String objectPath;
+
+        /**
+         * <p>The ID of the task.</p>
+         */
         @NameInMap("ObjectType")
         public String objectType;
 
         /**
-         * <p>The progress of the task in percentage.</p>
+         * <p>> </p>
+         * <p>*   You can query the status information by task ID or URL.</p>
+         * <p>*   You can set both the **TaskId** parameter and the **ObjectPath** parameter to query. If you set neither the **TaskId** parameter nor the **ObjectPath** parameter, the data in the last 3 days on the first page is returned. By default, a maximum of 20 entries can be displayed on each page.</p>
+         * <p>*   If you specify the **DomainName** or **Status** parameter, you must also specify the **ObjectType** parameter.</p>
+         * <p>*   You can call this operation up to 10 times per second per account.</p>
          */
         @NameInMap("Process")
         public String process;
 
         /**
-         * <p>The status of the task.</p>
+         * <p>The type of error returned when the refresh or prefetch task has failed.</p>
          * <br>
-         * <p>*   **Complete**: The task is complete.</p>
-         * <p>*   **Refreshing**: The task is in progress.</p>
-         * <p>*   **Failed**: The task failed.</p>
+         * <p>*   **InternalError**: An internal error occurred.</p>
+         * <p>*   **OriginTimeout**: The response from the origin server timed out.</p>
+         * <p>*   **OriginReturn StatusCode 5XX**: The origin server returned a 5XX error.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The URL of the object to be refreshed.</p>
          */
         @NameInMap("TaskId")
         public String taskId;

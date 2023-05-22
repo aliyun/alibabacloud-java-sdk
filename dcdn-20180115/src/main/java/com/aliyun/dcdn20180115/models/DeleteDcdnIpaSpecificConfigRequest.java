@@ -11,7 +11,7 @@ public class DeleteDcdnIpaSpecificConfigRequest extends TeaModel {
     public String configId;
 
     /**
-     * <p>The accelerated domain name. You can specify only one domain name in each call.</p>
+     * <p>The accelerated domain name. You can specify only one domain name in each request.</p>
      */
     @NameInMap("DomainName")
     public String domainName;

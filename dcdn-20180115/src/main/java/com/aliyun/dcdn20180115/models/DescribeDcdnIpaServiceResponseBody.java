@@ -13,13 +13,13 @@ public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
     /**
      * <p>The new billing method to take effect. Valid values:</p>
      * <br>
-     * <p>*   **PayByTraffic**</p>
-     * <p>*   **PayByBandwidth**</p>
-     * <p>*   **PayByBandwidth95**</p>
-     * <p>*   **PayByBandwidth_monthavg**</p>
-     * <p>*   **PayByBandwidth_month4th**</p>
-     * <p>*   **PayByBandwidth_monthday95avg**</p>
-     * <p>*   **PayByBandwidth_nighthalf95**</p>
+     * <p>*   **PayByTraffic**: pay-by-data-transfer</p>
+     * <p>*   **PayByBandwidth**: pay-by-bandwidth</p>
+     * <p>*   **PayByBandwidth95**: pay-by-95th percentile bandwidth</p>
+     * <p>*   **PayByBandwidth_monthavg**: pay-by-monthly average bandwidth</p>
+     * <p>*   **PayByBandwidth_month4th**: pay-by-fourth peak bandwidth per month</p>
+     * <p>*   **PayByBandwidth_monthday95avg**: pay-by-monthly average 95th percentile bandwidth</p>
+     * <p>*   **PayByBandwidth_nighthalf95**: pay-by-95th percentile bandwidth (50% off during nighttime)</p>
      */
     @NameInMap("ChangingChargeType")
     public String changingChargeType;
@@ -31,27 +31,27 @@ public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The current billing method. Valid values:</p>
+     * <p>The billing method of the instance. Valid values:</p>
      * <br>
-     * <p>*   **PayByTraffic**</p>
-     * <p>*   **PayByBandwidth**</p>
-     * <p>*   **PayByBandwidth95**</p>
-     * <p>*   **PayByBandwidth_monthavg**</p>
-     * <p>*   **PayByBandwidth_month4th**</p>
-     * <p>*   **PayByBandwidth_monthday95avg**</p>
-     * <p>*   **PayByBandwidth_nighthalf95**</p>
+     * <p>*   **PayByTraffic**: pay-by-data-transfer</p>
+     * <p>*   **PayByBandwidth**: pay-by-bandwidth</p>
+     * <p>*   **PayByBandwidth95**: pay-by-95th percentile bandwidth</p>
+     * <p>*   **PayByBandwidth_monthavg**: pay-by-monthly average bandwidth</p>
+     * <p>*   **PayByBandwidth_month4th**: pay-by-fourth peak bandwidth per month</p>
+     * <p>*   **PayByBandwidth_monthday95avg**: pay-by-monthly average 95th percentile bandwidth</p>
+     * <p>*   **PayByBandwidth_nighthalf95**: pay-by-95th percentile bandwidth (50% off during nighttime)</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
     /**
-     * <p>The time when the IPA service was activated. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format.</p>
+     * <p>The time when the DCDN service was activated. The time follows the ISO 8601 standard.</p>
      */
     @NameInMap("OpeningTime")
     public String openingTime;
 
     /**
-     * <p>The lock status of the IPA service.</p>
+     * <p>The lock status of secure DCDN.</p>
      */
     @NameInMap("OperationLocks")
     public DescribeDcdnIpaServiceResponseBodyOperationLocks operationLocks;
@@ -125,7 +125,7 @@ public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
 
     public static class DescribeDcdnIpaServiceResponseBodyOperationLocksLockReason extends TeaModel {
         /**
-         * <p>The reason why the IPA service was locked. A value of **financial** indicates that your account has an overdue payment.</p>
+         * <p>The reason why the instance is locked. For example, a value of **financial** indicates that an overdue payment exists.</p>
          */
         @NameInMap("LockReason")
         public String lockReason;

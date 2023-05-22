@@ -60,7 +60,7 @@ public class DescribeDcdnUserResourcePackageResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The time when the resource plan expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The expiration time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          */
         @NameInMap("EndTime")
         public String endTime;
@@ -81,7 +81,7 @@ public class DescribeDcdnUserResourcePackageResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The time when the resource plan takes effect. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The validation time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -89,8 +89,8 @@ public class DescribeDcdnUserResourcePackageResponseBody extends TeaModel {
         /**
          * <p>The status of the resource plan. Valid values:</p>
          * <br>
-         * <p>*   **valid**: The resource plan is valid.</p>
-         * <p>*   **closed**: The resource package is expired.</p>
+         * <p>*   **valid**: valid</p>
+         * <p>*   **closed**: expired</p>
          */
         @NameInMap("Status")
         public String status;

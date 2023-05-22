@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnWafLogsRequest extends TeaModel {
     /**
-     * <p>The accelerated domain name. You can specify only one domain name.</p>
+     * <p>The accelerated domain name. You can specify only one domain name in each request.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The end of the time range to query the logs.</p>
+     * <p>The end of the time range to query.</p>
      * <br>
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      */
@@ -19,7 +19,7 @@ public class DescribeDcdnWafLogsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The number of the page to return. Valid values: positive integers.</p>
+     * <p>The number of the page to return. Valid values: an integer greater than 0.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
@@ -31,7 +31,7 @@ public class DescribeDcdnWafLogsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The beginning of the time range to query the logs.</p>
+     * <p>The beginning of the time range to query.</p>
      * <br>
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      */

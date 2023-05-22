@@ -17,7 +17,7 @@ public class DescribeDcdnDomainIpaTrafficDataResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range that was queried.</p>
+     * <p>The end of the time range during which data was queried.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -29,13 +29,13 @@ public class DescribeDcdnDomainIpaTrafficDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range that was queried.</p>
+     * <p>The start of the time range during which data was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The monitoring data of network traffic that was collected at each interval.</p>
+     * <p>The network traffic that was collected at each interval.</p>
      */
     @NameInMap("TrafficDataPerInterval")
     public DescribeDcdnDomainIpaTrafficDataResponseBodyTrafficDataPerInterval trafficDataPerInterval;
@@ -101,7 +101,7 @@ public class DescribeDcdnDomainIpaTrafficDataResponseBody extends TeaModel {
         public Float ipaTraffic;
 
         /**
-         * <p>The timestamp of the data returned.</p>
+         * <p>The timestamp of the returned data.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
