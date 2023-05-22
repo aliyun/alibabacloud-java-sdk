@@ -5,25 +5,50 @@ import com.aliyun.tea.*;
 
 public class GetApplicationResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The deployment result.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The details of the application.</p>
+     * <p>The ID of the resource group.</p>
      */
     @NameInMap("Data")
     public GetApplicationResponseBodyData data;
 
     /**
-     * <p>The message returned for the request.</p>
+     * <p>Possible application states:</p>
+     * <br>
+     * <p>*   Creating: The application is being created.</p>
+     * <p>*   Modified: The application has been modified.</p>
+     * <p>*   Verifying: The application is being verified.</p>
+     * <p>*   Verified_Failure: The application failed to pass the verification.</p>
+     * <p>*   Verified_Success: The application has passed the verification.</p>
+     * <p>*   Valuating: Fees are being calculated for the application.</p>
+     * <p>*   Valuating_Failure: Fees failed to be calculated for the application.</p>
+     * <p>*   Valuating_Success: Fees are calculated for the application.</p>
+     * <p>*   Deploying: The application is being deployed.</p>
+     * <p>*   Deployed_Failure: The application failed to be deployed.</p>
+     * <p>*   Partially_Deployed_Success: Some resources of the application are deployed.</p>
+     * <p>*   Deployed_Success: The application is deployed.</p>
+     * <p>*   Destroying: The application is being released.</p>
+     * <p>*   Delayed_Destroy: The application release is delayed.</p>
+     * <p>*   Destroyed_Failure: The application failed to be released.</p>
+     * <p>*   Partially_Destroyed_Success: Some resources of the application are released.</p>
+     * <p>*   Destroyed_Success: The application is released.</p>
+     * <p>*   Revised: The application architecture is adjusted.</p>
+     * <p>*   Verifying_In_Revision: The application resources are being verified during architecture adjustment.</p>
+     * <p>*   Verified_Failure_In_Revision: The application resources failed to pass the verification during architecture adjustment.</p>
+     * <p>*   Verified_Success_In_Revision: The application resources are verified during architecture adjustment.</p>
+     * <p>*   Valuating_In_Revision: Fees are being calculated for the application during architecture adjustment.</p>
+     * <p>*   Valuating_Failure_In_Revision: Fees failed to be calculated for the application during architecture adjustment.</p>
+     * <p>*   Valuating_Success_In_Revision: Fees are calculated for the application during architecture adjustment.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the application.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -67,43 +92,43 @@ public class GetApplicationResponseBody extends TeaModel {
 
     public static class GetApplicationResponseBodyDataChecklist extends TeaModel {
         /**
-         * <p>The resource tag.</p>
+         * <p>The message returned for verification.</p>
          */
         @NameInMap("Lifecycle")
         public String lifecycle;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The verification results returned.</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
-         * <p>The message returned for verification.</p>
+         * <p>The name of the instance.</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
-         * <p>The service code.</p>
+         * <p>The error message that is returned when a price query fails.</p>
          */
         @NameInMap("ResourceCode")
         public String resourceCode;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>ECS instance sold out</p>
          */
         @NameInMap("ResourceName")
         public String resourceName;
 
         /**
-         * <p>The verification result.</p>
+         * <p>The service code.</p>
          */
         @NameInMap("Result")
         public String result;
 
         /**
-         * <p>The resource specification.</p>
+         * <p>The verification result.</p>
          */
         @NameInMap("Specification")
         public String specification;
@@ -173,79 +198,79 @@ public class GetApplicationResponseBody extends TeaModel {
 
     public static class GetApplicationResponseBodyDataPriceList extends TeaModel {
         /**
-         * <p>The billing method.</p>
+         * <p>The price unit.</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
-         * <p>The quantity.</p>
+         * <p>The original price.</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The ID of the resource group to which the application belongs.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>The resource tag.</p>
+         * <p>The ID of the region.</p>
          */
         @NameInMap("Lifecycle")
         public String lifecycle;
 
         /**
-         * <p>The unit price.</p>
+         * <p>The service code.</p>
          */
         @NameInMap("OnePrice")
         public Float onePrice;
 
         /**
-         * <p>The original price.</p>
+         * <p>The billing results.</p>
          */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
         /**
-         * <p>The service duration.</p>
+         * <p>The name of the instance.</p>
          */
         @NameInMap("Period")
         public Float period;
 
         /**
-         * <p>The total price.</p>
+         * <p>The quantity.</p>
          */
         @NameInMap("Price")
         public Float price;
 
         /**
-         * <p>The price unit.</p>
+         * <p>The unit price.</p>
          */
         @NameInMap("PriceUnit")
         public String priceUnit;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>USD/Hour</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
-         * <p>The error message that is returned when a price query fails.</p>
+         * <p>The instance type.</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
-         * <p>The service code.</p>
+         * <p>The time when the application was created.</p>
          */
         @NameInMap("ResourceCode")
         public String resourceCode;
 
         /**
-         * <p>The instance type.</p>
+         * <p>The total price.</p>
          */
         @NameInMap("Specification")
         public String specification;
@@ -363,49 +388,49 @@ public class GetApplicationResponseBody extends TeaModel {
 
     public static class GetApplicationResponseBodyDataResourceList extends TeaModel {
         /**
-         * <p>The billing method.</p>
+         * <p>The service code.</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
-         * <p>The resource tag.</p>
+         * <p>The billing method.</p>
          */
         @NameInMap("Lifecycle")
         public String lifecycle;
 
         /**
-         * <p>The deployment result.</p>
+         * <p>The ID of the instance.</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
-         * <p>The service code.</p>
+         * <p>The status of the application.</p>
          */
         @NameInMap("ResourceCode")
         public String resourceCode;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The resource deployment result.</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The resources.</p>
          */
         @NameInMap("ResourceName")
         public String resourceName;
 
         /**
-         * <p>The resource type.</p>
+         * <p>The name of the instance.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
-         * <p>The resource deployment result.</p>
+         * <p>The resource tag.</p>
          */
         @NameInMap("Status")
         public String status;
@@ -483,79 +508,79 @@ public class GetApplicationResponseBody extends TeaModel {
 
     public static class GetApplicationResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The description of the application.</p>
          */
         @NameInMap("ApplicationId")
         public String applicationId;
 
         /**
-         * <p>The verification results returned.</p>
+         * <p>The resource tag.</p>
          */
         @NameInMap("Checklist")
         public java.util.List<GetApplicationResponseBodyDataChecklist> checklist;
 
         /**
-         * <p>The time when the application was created.</p>
+         * <p>The URL of the application topology image.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The description of the application.</p>
+         * <p>The message returned for the request.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The message returned for deployment.</p>
+         * <p>The resource type.</p>
          */
         @NameInMap("Error")
         public String error;
 
         /**
-         * <p>The URL of the image in the database.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("ImageURL")
         public String imageURL;
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The URL of the image in the database.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The billing results.</p>
+         * <p>The ID of the template associated with the application.</p>
          */
         @NameInMap("PriceList")
         public java.util.List<GetApplicationResponseBodyDataPriceList> priceList;
 
         /**
-         * <p>The ID of the resource group to which the application belongs.</p>
+         * <p>1411182597819805/topo-MCEXDI5EL2OM10NY.json</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The resources.</p>
+         * <p>The resource specification.</p>
          */
         @NameInMap("ResourceList")
         public java.util.List<GetApplicationResponseBodyDataResourceList> resourceList;
 
         /**
-         * <p>The status of the application.</p>
+         * <p>Verification passed</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The ID of the template associated with the application.</p>
+         * <p>CADT application</p>
          */
         @NameInMap("TemplateId")
         public String templateId;
 
         /**
-         * <p>The URL of the application topology image.</p>
+         * <p>The ID of the application.</p>
          */
         @NameInMap("TopoURL")
         public String topoURL;

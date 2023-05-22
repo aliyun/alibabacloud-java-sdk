@@ -4,21 +4,12 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class GetTemplateRequest extends TeaModel {
-    /**
-     * <p>The region in which the template resides.</p>
-     */
     @NameInMap("Region")
     public String region;
 
-    /**
-     * <p>The ID of the resource group.</p>
-     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    /**
-     * <p>The ID of the template.</p>
-     */
     @NameInMap("TemplateId")
     public String templateId;
 
