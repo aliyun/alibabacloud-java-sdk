@@ -4,39 +4,21 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainTrafficDataResponseBody extends TeaModel {
-    /**
-     * <p>The time interval between the data entries returned. Unit: seconds.</p>
-     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
-    /**
-     * <p>The accelerated domain name.</p>
-     */
     @NameInMap("DomainName")
     public String domainName;
 
-    /**
-     * <p>The end of the time range during which data was queried.</p>
-     */
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The beginning of the time range during which data was queried.</p>
-     */
     @NameInMap("StartTime")
     public String startTime;
 
-    /**
-     * <p>The network traffic returned at each time interval. Unit: bytes.</p>
-     */
     @NameInMap("TrafficDataPerInterval")
     public DescribeDcdnDomainTrafficDataResponseBodyTrafficDataPerInterval trafficDataPerInterval;
 
@@ -94,39 +76,21 @@ public class DescribeDcdnDomainTrafficDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule extends TeaModel {
-        /**
-         * <p>The network traffic that was consumed to deliver dynamic content over HTTP.</p>
-         */
         @NameInMap("DynamicHttpTraffic")
         public Float dynamicHttpTraffic;
 
-        /**
-         * <p>The network traffic that was consumed to deliver dynamic content over HTTPS.</p>
-         */
         @NameInMap("DynamicHttpsTraffic")
         public Float dynamicHttpsTraffic;
 
-        /**
-         * <p>The network traffic that was consumed to deliver static content over HTTP.</p>
-         */
         @NameInMap("StaticHttpTraffic")
         public Float staticHttpTraffic;
 
-        /**
-         * <p>The network traffic that was consumed to deliver static content over HTTPS.</p>
-         */
         @NameInMap("StaticHttpsTraffic")
         public Float staticHttpsTraffic;
 
-        /**
-         * <p>The timestamp of the returned data.</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The total amount of network traffic.</p>
-         */
         @NameInMap("Traffic")
         public Float traffic;
 

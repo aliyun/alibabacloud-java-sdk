@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainUvDataRequest extends TeaModel {
     /**
-     * <p>The name of the accelerated domain. You can specify only one domain name.</p>
+     * <p>The accelerated domain name. You can specify only one domain name in each request.</p>
      * <br>
-     * <p>By default, all the accelerated domains are queried.</p>
+     * <p>If you do not specify a domain name, this operation queries UV data of all accelerated domain names in your account.</p>
      */
     @NameInMap("DomainName")
     public String domainName;

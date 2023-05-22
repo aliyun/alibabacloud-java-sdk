@@ -11,7 +11,7 @@ public class DescribeDcdnDomainIpaBpsDataResponseBody extends TeaModel {
     public DescribeDcdnDomainIpaBpsDataResponseBodyBpsDataPerInterval bpsDataPerInterval;
 
     /**
-     * <p>The time interval at which data is collected. Unit: seconds.</p>
+     * <p>The time interval at which data was collected. Unit: seconds.</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;

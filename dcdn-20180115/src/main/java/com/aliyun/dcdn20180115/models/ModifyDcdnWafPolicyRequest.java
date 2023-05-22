@@ -13,7 +13,7 @@ public class ModifyDcdnWafPolicyRequest extends TeaModel {
     /**
      * <p>The new name of the protection policy.</p>
      * <br>
-     * <p>>  You must specify PolicyName or PolicyStatus.</p>
+     * <p>> You must specify PolicyName or PolicyStatus.</p>
      */
     @NameInMap("PolicyName")
     public String policyName;
@@ -24,7 +24,7 @@ public class ModifyDcdnWafPolicyRequest extends TeaModel {
      * <p>*   **on**</p>
      * <p>*   **off**</p>
      * <br>
-     * <p>>  You must specify PolicyName or PolicyStatus.</p>
+     * <p>> You must specify PolicyName or PolicyStatus.</p>
      */
     @NameInMap("PolicyStatus")
     public String policyStatus;

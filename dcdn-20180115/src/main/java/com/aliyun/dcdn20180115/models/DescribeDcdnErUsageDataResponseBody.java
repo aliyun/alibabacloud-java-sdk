@@ -11,7 +11,7 @@ public class DescribeDcdnErUsageDataResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The list of the returned data.</p>
+     * <p>The list of the data returned.</p>
      */
     @NameInMap("ErAccData")
     public DescribeDcdnErUsageDataResponseBodyErAccData erAccData;
@@ -23,7 +23,7 @@ public class DescribeDcdnErUsageDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range during which data was queried.</p>
+     * <p>The start of the time range during which data was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -67,19 +67,19 @@ public class DescribeDcdnErUsageDataResponseBody extends TeaModel {
 
     public static class DescribeDcdnErUsageDataResponseBodyErAccDataErAccItem extends TeaModel {
         /**
-         * <p>The number of ER requests.</p>
+         * <p>The number of requests.</p>
          */
         @NameInMap("ErAcc")
         public Long erAcc;
 
         /**
-         * <p>The ID of the ER. This parameter is returned only when SplitBy is set to routine.</p>
+         * <p>The ID of the routine. This parameter is returned only when SplitBy is set to routine.</p>
          */
         @NameInMap("Routine")
         public String routine;
 
         /**
-         * <p>The specification of the ER. This parameter is returned only when SplitBy is set to spec.</p>
+         * <p>The specification of the routine. This parameter is returned only when SplitBy is set to spec.</p>
          */
         @NameInMap("Spec")
         public String spec;

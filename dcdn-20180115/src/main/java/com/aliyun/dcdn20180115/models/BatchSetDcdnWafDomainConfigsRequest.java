@@ -13,7 +13,7 @@ public class BatchSetDcdnWafDomainConfigsRequest extends TeaModel {
     /**
      * <p>The protection status of the domain name. Valid values: on, off, and empty string.</p>
      * <br>
-     * <p>*   When you add a domain name, the value of this parameter is **on**, and the value of ClientIpTag takes effect.</p>
+     * <p>*   When you add a domain name, the value of this parameter is **on**, and the value of ClientIpTag takes effect, which is empty if the default header is selected and is the value specified by the user if a custom header is selected.</p>
      * <p>*   When you delete a domain name, the value of this parameter is **off**, and the value of ClientIpTag does not take effect.</p>
      * <p>*   When you only modify the value of ClientIpTag, the value of DefenseStatus is an empty string.</p>
      */

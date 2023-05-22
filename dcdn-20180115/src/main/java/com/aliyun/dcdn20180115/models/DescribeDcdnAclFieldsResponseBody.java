@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnAclFieldsResponseBody extends TeaModel {
     /**
-     * <p>The details about the rules.</p>
+     * <p>Details about the rules.</p>
      */
     @NameInMap("Content")
     public java.util.List<DescribeDcdnAclFieldsResponseBodyContent> content;
@@ -39,7 +39,7 @@ public class DescribeDcdnAclFieldsResponseBody extends TeaModel {
 
     public static class DescribeDcdnAclFieldsResponseBodyContent extends TeaModel {
         /**
-         * <p>The rules and policies that were configured. The JSON string must be decoded.</p>
+         * <p>The rules and policies that were configured. The JSON string is decoded.</p>
          */
         @NameInMap("Fields")
         public String fields;

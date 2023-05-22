@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddDcdnIpaDomainRequest extends TeaModel {
     /**
-     * <p>The URL that is used to check the accessibility of the origin server.</p>
+     * <p>The URL that is used for health checks.</p>
      */
     @NameInMap("CheckUrl")
     public String checkUrl;
@@ -30,7 +30,9 @@ public class AddDcdnIpaDomainRequest extends TeaModel {
      * <p>*   **udp**</p>
      * <p>*   **tcp**</p>
      * <br>
-     * <p>>  Example: `{"protocol":"udp"}`.</p>
+     * <p>**</p>
+     * <br>
+     * <p>**Description** For example: `{"protocol":"udp"}`.</p>
      */
     @NameInMap("Protocol")
     public String protocol;
@@ -42,10 +44,10 @@ public class AddDcdnIpaDomainRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The acceleration region. Valid values:</p>
+     * <p>The acceleration region. Default value: domestic. Valid values:</p>
      * <br>
      * <p>*   **domestic**: Chinese mainland</p>
-     * <p>*   **overseas**: global (excluding the Chinese mainland)</p>
+     * <p>*   **overseas**: outside the Chinese mainland</p>
      * <p>*   **global**: global</p>
      */
     @NameInMap("Scope")
@@ -61,7 +63,7 @@ public class AddDcdnIpaDomainRequest extends TeaModel {
     public String sources;
 
     /**
-     * <p>The top-level domain name.</p>
+     * <p>The top-level domain.</p>
      */
     @NameInMap("TopLevelDomain")
     public String topLevelDomain;

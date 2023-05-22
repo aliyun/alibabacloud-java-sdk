@@ -53,7 +53,7 @@ public class DescribeDcdnRefreshTaskByIdResponseBody extends TeaModel {
 
     public static class DescribeDcdnRefreshTaskByIdResponseBodyTasks extends TeaModel {
         /**
-         * <p>The time when the task was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the task was created. The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -63,7 +63,7 @@ public class DescribeDcdnRefreshTaskByIdResponseBody extends TeaModel {
          * <br>
          * <p>*   **Internal Error**: An internal error occurred.</p>
          * <p>*   **Origin Timeout**: The response from the origin server timed out.</p>
-         * <p>*   **Origin Return StatusCode 5XX**: The origin server returned an HTTP 5xx status code.</p>
+         * <p>*   **Origin Return StatusCode 5XX**: The origin server returned a 5XX error.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -78,7 +78,7 @@ public class DescribeDcdnRefreshTaskByIdResponseBody extends TeaModel {
          * <p>The type of the refresh or prefetch task. Valid values:</p>
          * <br>
          * <p>*   **file**: refreshes an individual file.</p>
-         * <p>*   **directory**: refreshes files under a specified directory.</p>
+         * <p>*   **directory**: refreshes files under the specified directory.</p>
          * <p>*   **preload**: prefetches an individual file.</p>
          */
         @NameInMap("ObjectType")
@@ -93,10 +93,10 @@ public class DescribeDcdnRefreshTaskByIdResponseBody extends TeaModel {
         /**
          * <p>The status of the task. Valid values:</p>
          * <br>
-         * <p>*   **Complete**: The task has completed.</p>
+         * <p>*   **Complete**: The task is complete.</p>
          * <p>*   **Pending**: The task is pending.</p>
-         * <p>*   **Refreshing**: The task is in progress.</p>
-         * <p>*   **Failed**: The task has failed.</p>
+         * <p>*   **Refreshing**: The task is running.</p>
+         * <p>*   **Failed**: The task failed.</p>
          */
         @NameInMap("Status")
         public String status;

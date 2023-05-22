@@ -107,7 +107,7 @@ public class DescribeDcdnDomainHitRateDataResponseBody extends TeaModel {
         public Float reqHitRate;
 
         /**
-         * <p>The timestamp of the data returned.</p>
+         * <p>The timestamp of the returned data.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

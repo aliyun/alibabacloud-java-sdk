@@ -13,7 +13,7 @@ public class DescribeDcdnDomainRealTimeTrafficDataRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The end time must be later than the start time.</p>
      * <br>
-     * <p>>  If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.</p>
+     * <p>> If you do not specify StartTime or EndTime, data within the last hour is queried. If you specify both StartTime and EndTime, data within the specified time range is queried.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -21,7 +21,7 @@ public class DescribeDcdnDomainRealTimeTrafficDataRequest extends TeaModel {
     /**
      * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
-     * <p>>  If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.</p>
+     * <p>> If you do not specify StartTime or EndTime, data within the last hour is queried. If you specify both StartTime and EndTime, data within the specified time range is queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

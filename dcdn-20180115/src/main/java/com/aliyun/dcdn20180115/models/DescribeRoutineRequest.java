@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRoutineRequest extends TeaModel {
     /**
-     * <p>The name of the routine. The name must be unique among the routines that belong to the same Alibaba Cloud account.</p>
+     * <p>The metadata of the routine. The next table describes the fields.</p>
      */
     @NameInMap("Name")
     public String name;

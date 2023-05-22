@@ -11,12 +11,12 @@ public class DescribeDcdnDomainTopReferVisitRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The method that is used to sort the web pages. Valid values:</p>
+     * <p>The method that is used to arrange the returned application information. Valid values:</p>
      * <br>
-     * <p>*   **traf**: by network traffic.</p>
-     * <p>*   **pv**: by the number of visits.</p>
+     * <p>*   **traf**: by network traffic</p>
+     * <p>*   **pv**: by the number of visits</p>
      * <br>
-     * <p>Default value**: pv**.</p>
+     * <p>Default value: **pv**.</p>
      */
     @NameInMap("SortBy")
     public String sortBy;
@@ -26,7 +26,7 @@ public class DescribeDcdnDomainTopReferVisitRequest extends TeaModel {
      * <br>
      * <p>To query the data on a specified day, use the yyyy-MM-ddT16:00:00Z format.</p>
      * <br>
-     * <p>If you do not specify this parameter, data collected within the last 24 hours is queried by default.</p>
+     * <p>If you leave this parameter empty, data collected in the last 24 hours is queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

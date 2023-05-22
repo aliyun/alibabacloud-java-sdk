@@ -11,13 +11,13 @@ public class DescribeUserDcdnIpaStatusResponseBody extends TeaModel {
     public Boolean enabled;
 
     /**
-     * <p>Indicates whether your IPA service has overdue payments.</p>
+     * <p>Indicates whether you have overdue payments.</p>
      */
     @NameInMap("InDebt")
     public Boolean inDebt;
 
     /**
-     * <p>Indicates whether an overdue bill has been paid within a specified period.</p>
+     * <p>Indicates whether the grace period for your overdue payments expired.</p>
      */
     @NameInMap("InDebtOverdue")
     public Boolean inDebtOverdue;

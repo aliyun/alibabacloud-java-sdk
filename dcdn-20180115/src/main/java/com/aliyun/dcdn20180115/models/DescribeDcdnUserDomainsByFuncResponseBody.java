@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnUserDomainsByFuncResponseBody extends TeaModel {
     /**
-     * <p>The detailed information about each accelerated domain name. The returned information is displayed in the format that is specified by the PageData parameter.</p>
+     * <p>The array that consists of multiple PageData parameters. The details about each accelerated domain name are included in a separate PageData parameter.</p>
      */
     @NameInMap("Domains")
     public DescribeDcdnUserDomainsByFuncResponseBodyDomains domains;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The number of the returned page.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
@@ -23,7 +23,7 @@ public class DescribeDcdnUserDomainsByFuncResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -198,18 +198,18 @@ public class DescribeDcdnUserDomainsByFuncResponseBody extends TeaModel {
         /**
          * <p>The status of the accelerated domain name. Valid values:</p>
          * <br>
-         * <p>*   **online**: enabled</p>
-         * <p>*   **offline**: disabled</p>
-         * <p>*   **configuring**: configuring</p>
-         * <p>*   **configure_failed**: configuration failed</p>
-         * <p>*   **checking**: reviewing</p>
-         * <p>*   **check_failed**: failed the review</p>
+         * <p>*   **online**</p>
+         * <p>*   **offline**</p>
+         * <p>*   **configuring**</p>
+         * <p>*   **configure_failed**</p>
+         * <p>*   **checking**</p>
+         * <p>*   **check_failed**</p>
          */
         @NameInMap("DomainStatus")
         public String domainStatus;
 
         /**
-         * <p>The time when the accelerated domain name was added.</p>
+         * <p>The time when the accelerated domain name was added to Dynamic Content Delivery Network (DCDN).</p>
          */
         @NameInMap("GmtCreated")
         public String gmtCreated;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainWebsocketHttpCodeDataRequest extends TeaModel {
     /**
-     * <p>The accelerated domain name. Separate multiple accelerated domain names with commas (,).</p>
+     * <p>The accelerated domain name. You can specify multiple accelerated domain names and separate them with commas (,).</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -13,17 +13,17 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataRequest extends TeaModel {
     /**
      * <p>The end of the time range to query.</p>
      * <br>
-     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
      * <br>
-     * <p>>  The end time must be later than the start time.</p>
+     * <p>> The end time must be later than the start time.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The time interval between the data entries to return. Unit: seconds.</p>
+     * <p>The time granularity for a query. Unit: seconds.</p>
      * <br>
-     * <p>The time granularity varies with the maximum time range per query. Valid values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see **Description**.</p>
+     * <p>The time granularity varies with the maximum time range per query. Valid values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see **Usage notes**.</p>
      */
     @NameInMap("Interval")
     public String interval;
@@ -47,7 +47,7 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataRequest extends TeaModel {
     /**
      * <p>The beginning of the time range to query.</p>
      * <br>
-     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

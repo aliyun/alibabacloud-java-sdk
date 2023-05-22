@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetDcdnKvResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The value of the key.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The value of the key.</p>
+     * <p>The name of the key that you want to query.</p>
      */
     @NameInMap("Value")
     public String value;

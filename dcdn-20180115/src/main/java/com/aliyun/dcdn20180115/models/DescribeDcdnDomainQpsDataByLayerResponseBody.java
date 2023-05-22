@@ -5,43 +5,45 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
     /**
-     * <p>The time interval between the data entries returned. Unit: seconds.</p>
+     * <p>The end of the time range during which data was queried.</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
 
     /**
-     * <p>The accelerated domain name.</p>
+     * <p>The name of the ISP. You can call the DescribeDcdnRegionAndIsp operation to query the ISP name. If you do not specify a value for this parameter, all ISPs are queried.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The end of the time range during which data was queried.</p>
+     * <p>The layers at which you want to query the QPS. The network layer supports IPv4 and IPv6. The application layer supports http, https, and quic. You can also set the value to all.</p>
+     * <br>
+     * <p>Default value: all.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The layer at which the data was collected.</p>
+     * <p>The operation that you want to perform. Set the value to **DescribeDcdnDomainQpsDataByLayer**.</p>
      */
     @NameInMap("Layer")
     public String layer;
 
     /**
-     * <p>The QPS returned at each time interval.</p>
+     * <p>The name of the region. You can call the DescribeDcdnRegionAndIsp operation to query the region name. If you do not specify a value for this parameter, all regions are queried.</p>
      */
     @NameInMap("QpsDataInterval")
     public DescribeDcdnDomainQpsDataByLayerResponseBodyQpsDataInterval qpsDataInterval;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The timestamp of the data returned.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The beginning of the time range during which data was queried.</p>
+     * <p>The total number of requests.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -109,43 +111,47 @@ public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
 
     public static class DescribeDcdnDomainQpsDataByLayerResponseBodyQpsDataIntervalDataModule extends TeaModel {
         /**
-         * <p>The number of requests in the Chinese mainland.</p>
+         * <p>The number of requests outside the Chinese mainland.</p>
          */
         @NameInMap("AccDomesticValue")
         public String accDomesticValue;
 
         /**
-         * <p>The number of requests outside the Chinese mainland.</p>
+         * <p>The beginning of the time range during which data was queried.</p>
          */
         @NameInMap("AccOverseasValue")
         public String accOverseasValue;
 
         /**
-         * <p>The total number of requests.</p>
+         * <p>The number of queries per second in the Chinese mainland.</p>
          */
         @NameInMap("AccValue")
         public String accValue;
 
         /**
-         * <p>The number of queries per second in the Chinese mainland.</p>
+         * <p>The time interval between the data entries returned. Unit: seconds.</p>
          */
         @NameInMap("DomesticValue")
         public String domesticValue;
 
         /**
-         * <p>The number of queries per second outside the Chinese mainland.</p>
+         * <p>The total number of queries per second.</p>
          */
         @NameInMap("OverseasValue")
         public String overseasValue;
 
         /**
-         * <p>The timestamp of the data returned.</p>
+         * <p>The time interval between the data entries to return. Unit: seconds.</p>
+         * <br>
+         * <p>The time granularity varies with the maximum time range per query. Valid values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see **Description**.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         /**
-         * <p>The total number of queries per second.</p>
+         * <p>The accelerated domain name. You can specify multiple domain names and separate them with commas (,). You can specify up to 500 domain names in each request. The query results of multiple domain names are aggregated.</p>
+         * <br>
+         * <p>If you do not specify a domain name, data of all domain names is queried.</p>
          */
         @NameInMap("Value")
         public String value;

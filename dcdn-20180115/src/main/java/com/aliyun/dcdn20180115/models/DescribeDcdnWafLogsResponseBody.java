@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnWafLogsResponseBody extends TeaModel {
     /**
-     * <p>Details about domain logs.</p>
+     * <p>Details about logs returned.</p>
      */
     @NameInMap("DomainLogDetails")
     public java.util.List<DescribeDcdnWafLogsResponseBodyDomainLogDetails> domainLogDetails;
@@ -185,7 +185,7 @@ public class DescribeDcdnWafLogsResponseBody extends TeaModel {
         public java.util.List<DescribeDcdnWafLogsResponseBodyDomainLogDetailsLogInfos> logInfos;
 
         /**
-         * <p>The page information. The page information is indicated by the PageInfoDetail parameter.</p>
+         * <p>The page information.</p>
          */
         @NameInMap("PageInfos")
         public DescribeDcdnWafLogsResponseBodyDomainLogDetailsPageInfos pageInfos;

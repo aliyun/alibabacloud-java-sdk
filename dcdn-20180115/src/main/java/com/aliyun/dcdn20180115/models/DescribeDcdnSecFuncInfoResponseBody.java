@@ -29,7 +29,7 @@ public class DescribeDcdnSecFuncInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The return value for HTTP requests.</p>
+     * <p>The return value for HTTP requests. Valid values:</p>
      * <br>
      * <p>*   0: OK.</p>
      * <p>*   Values other than 0: an error.</p>

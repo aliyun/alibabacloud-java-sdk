@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnHttpsDomainListResponseBody extends TeaModel {
     /**
-     * <p>The certificate information about the domain name.</p>
+     * <p>The time when the certificate became effective.</p>
      */
     @NameInMap("CertInfos")
     public DescribeDcdnHttpsDomainListResponseBodyCertInfos certInfos;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The returned primary domain name of the certificate.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The number of entries to return on each page. Valid values: **1 to 500**. Default value: **20**.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -53,58 +53,49 @@ public class DescribeDcdnHttpsDomainListResponseBody extends TeaModel {
 
     public static class DescribeDcdnHttpsDomainListResponseBodyCertInfosCertInfo extends TeaModel {
         /**
-         * <p>The returned primary domain name of the certificate.</p>
+         * <p>The certificate information about the domain name.</p>
          */
         @NameInMap("CertCommonName")
         public String certCommonName;
 
         /**
-         * <p>The time when the certificate expires.</p>
+         * <p>The name of the certificate.</p>
          */
         @NameInMap("CertExpireTime")
         public String certExpireTime;
 
         /**
-         * <p>The name of the certificate.</p>
+         * <p>The accelerated domain name for which the certificate information was queried.</p>
          */
         @NameInMap("CertName")
         public String certName;
 
         /**
-         * <p>The time when the certificate became effective.</p>
+         * <p>The time when the certificate expires.</p>
          */
         @NameInMap("CertStartTime")
         public String certStartTime;
 
         /**
-         * <p>The status of the certificate. Valid values:</p>
-         * <br>
-         * <p>*   **ok**: The certificate is working as expected.</p>
-         * <p>*   **mismatch**: The certificate does not match the specified domain name.</p>
-         * <p>*   **expired**: The certificate has expired.</p>
-         * <p>*   **expire_soon**: The certificate is about to expire.</p>
+         * <p>The number of pages to return. Valid values: **1 to 100000**.</p>
          */
         @NameInMap("CertStatus")
         public String certStatus;
 
         /**
-         * <p>The type of the certificate. Valid values:</p>
-         * <br>
-         * <p>*   **free**: A free certificate.</p>
-         * <p>*   **cas**: A certificate that is purchased through Alibaba Cloud SSL Certificates Service.</p>
-         * <p>*   **upload**: A user-uploaded certificate.</p>
+         * <p>The operation that you want to perform. Set the value to **DescribeDcdnHttpsDomainList**.</p>
          */
         @NameInMap("CertType")
         public String certType;
 
         /**
-         * <p>The time when the certificate was updated.</p>
+         * <p>The keyword used for search.</p>
          */
         @NameInMap("CertUpdateTime")
         public String certUpdateTime;
 
         /**
-         * <p>The accelerated domain name for which the certificate information was queried.</p>
+         * <p>The time when the certificate was updated.</p>
          */
         @NameInMap("DomainName")
         public String domainName;

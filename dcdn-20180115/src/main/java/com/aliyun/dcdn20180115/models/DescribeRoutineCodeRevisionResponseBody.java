@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRoutineCodeRevisionResponseBody extends TeaModel {
     /**
-     * <p>The JavaScript code returned.</p>
+     * <p>The information about the JavaScript code version.</p>
      */
     @NameInMap("Content")
     public java.util.Map<String, ?> content;

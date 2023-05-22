@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainRealTimeDetailDataResponseBody extends TeaModel {
     /**
-     * <p>The information returned.</p>
+     * <p>DescribeDcdnDomainRealTimeDetailData</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Queries traffic data and the number of visits of each ISP in each region. Data is collected every minute. The maximum time range to query for this operation is 10 minutes.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

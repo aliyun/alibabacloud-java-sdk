@@ -4,15 +4,9 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class CreateSlrAndSlsProjectResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The information about Log Service.</p>
-     */
     @NameInMap("SlsInfo")
     public CreateSlrAndSlsProjectResponseBodySlsInfo slsInfo;
 
@@ -38,27 +32,15 @@ public class CreateSlrAndSlsProjectResponseBody extends TeaModel {
     }
 
     public static class CreateSlrAndSlsProjectResponseBodySlsInfo extends TeaModel {
-        /**
-         * <p>The endpoint of Log Service.</p>
-         */
         @NameInMap("EndPoint")
         public String endPoint;
 
-        /**
-         * <p>The Logstore of Log Service.</p>
-         */
         @NameInMap("LogStore")
         public String logStore;
 
-        /**
-         * <p>The project of Log Service.</p>
-         */
         @NameInMap("Project")
         public String project;
 
-        /**
-         * <p>The region where Log Service resides.</p>
-         */
         @NameInMap("Region")
         public String region;
 

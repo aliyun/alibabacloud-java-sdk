@@ -41,7 +41,7 @@ public class DescribeDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
         /**
          * <p>The type of the collected logs. Default value: cdn_log_access_l1. Valid values:</p>
          * <br>
-         * <p>*   **cdn_log_access_l1**: access logs of Dynamic Route for CDN (DCDN) points of presence (POPs)</p>
+         * <p>*   **cdn_log_access_l1**: access logs of Dynamic Content Delivery Network (DCDN) points of presence (POPs)</p>
          * <p>*   **cdn_log_origin**: back-to-origin logs</p>
          * <p>*   **cdn_log_er**: EdgeRoutine logs</p>
          */
@@ -67,7 +67,7 @@ public class DescribeDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
         public String fieldName;
 
         /**
-         * <p>The name of the Log Service project</p>
+         * <p>The name of the project.</p>
          */
         @NameInMap("ProjectName")
         public String projectName;
@@ -79,7 +79,7 @@ public class DescribeDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
         public String SLSLogStore;
 
         /**
-         * <p>The name of the Log Service project.</p>
+         * <p>The name of the log file.</p>
          */
         @NameInMap("SLSProject")
         public String SLSProject;
@@ -99,8 +99,8 @@ public class DescribeDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
         /**
          * <p>The status of real-time logs.</p>
          * <br>
-         * <p>*   **success**: The transcoded stream is uploaded.</p>
-         * <p>*   **fail**: The transcoded stream fails to be uploaded.</p>
+         * <p>*   **success**</p>
+         * <p>*   **fail**</p>
          */
         @NameInMap("Status")
         public String status;

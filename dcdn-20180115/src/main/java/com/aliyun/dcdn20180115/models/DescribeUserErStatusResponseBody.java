@@ -7,8 +7,8 @@ public class DescribeUserErStatusResponseBody extends TeaModel {
     /**
      * <p>Indicates whether ER is activated.</p>
      * <br>
-     * <p>*   true: activated</p>
-     * <p>*   false: not activated</p>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("Enabled")
     public Boolean enabled;
@@ -16,8 +16,8 @@ public class DescribeUserErStatusResponseBody extends TeaModel {
     /**
      * <p>Indicates whether ER has an overdue payment.</p>
      * <br>
-     * <p>*   true: has an overdue payment</p>
-     * <p>*   false: does not have an overdue payment</p>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("InDebt")
     public Boolean inDebt;
@@ -25,8 +25,8 @@ public class DescribeUserErStatusResponseBody extends TeaModel {
     /**
      * <p>Indicates whether an overdue payment of ER has passed the grace period.</p>
      * <br>
-     * <p>*   true: has passed the grace period</p>
-     * <p>*   false: has not passed the grace period</p>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("InDebtOverdue")
     public Boolean inDebtOverdue;
@@ -34,8 +34,8 @@ public class DescribeUserErStatusResponseBody extends TeaModel {
     /**
      * <p>Indicates whether ER is available.</p>
      * <br>
-     * <p>*   true: available</p>
-     * <p>*   false: unavailable</p>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("OnService")
     public Boolean onService;

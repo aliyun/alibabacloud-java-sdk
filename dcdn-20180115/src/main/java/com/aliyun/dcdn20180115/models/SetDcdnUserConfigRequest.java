@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetDcdnUserConfigRequest extends TeaModel {
     /**
-     * <p>The configuration parameters of the features.</p>
+     * <p>The configuration parameters of the feature.</p>
      */
     @NameInMap("Configs")
     public String configs;

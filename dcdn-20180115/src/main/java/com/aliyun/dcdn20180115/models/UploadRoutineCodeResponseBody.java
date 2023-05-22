@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UploadRoutineCodeResponseBody extends TeaModel {
     /**
-     * <p>The content returned that includes the code version number and information about code upload.</p>
+     * <p>The content returned, such as the code version number and information about the code upload.</p>
      */
     @NameInMap("Content")
     public java.util.Map<String, ?> content;

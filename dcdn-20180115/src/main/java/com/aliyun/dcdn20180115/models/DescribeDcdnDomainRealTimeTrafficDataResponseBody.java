@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainRealTimeTrafficDataResponseBody extends TeaModel {
     /**
-     * <p>The time interval between the data entries returned. Unit: seconds.</p>
+     * <p>The time interval between the data entries. Unit: seconds.</p>
      * <br>
-     * <p>The time granularity varies with the maximum time range per query. Valid values: 60 (1 minute), 300 (5 minutes), and 3600 (1 hour). For more information, see **Description**.</p>
+     * <p>The time granularity varies with the maximum time range per query. Valid values: 60 (1 minute), 300 (5 minutes), and 3600(1 hour). For more information, see **Usage notes**.</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
@@ -25,7 +25,7 @@ public class DescribeDcdnDomainRealTimeTrafficDataResponseBody extends TeaModel 
     public String endTime;
 
     /**
-     * <p>The amount of back-to-origin network traffic returned at each interval.</p>
+     * <p>The amount of back-to-origin traffic returned at each interval.</p>
      */
     @NameInMap("RealTimeTrafficDataPerInterval")
     public DescribeDcdnDomainRealTimeTrafficDataResponseBodyRealTimeTrafficDataPerInterval realTimeTrafficDataPerInterval;
@@ -103,9 +103,9 @@ public class DescribeDcdnDomainRealTimeTrafficDataResponseBody extends TeaModel 
         public String timeStamp;
 
         /**
-         * <p>The amount of back-to-origin network traffic.</p>
+         * <p>The traffic value at each time interval.</p>
          * <br>
-         * <p>>  The network traffic is measured in bytes.</p>
+         * <p>> The network traffic is measured in bytes.</p>
          */
         @NameInMap("Value")
         public String value;

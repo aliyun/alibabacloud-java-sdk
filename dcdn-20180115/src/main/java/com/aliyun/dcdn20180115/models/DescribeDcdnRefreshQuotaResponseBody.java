@@ -5,25 +5,27 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnRefreshQuotaResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of URLs that can be blocked.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("BlockQuota")
     public String blockQuota;
 
     /**
-     * <p>The remaining number of URLs that can be blocked each day.</p>
+     * <p>The remaining number of URLs that can be refreshed each day.</p>
      */
     @NameInMap("BlockRemain")
     public String blockRemain;
 
     /**
-     * <p>The maximum number of directories that can be refreshed each day.</p>
+     * <p>> </p>
+     * <p>*   You can call the **RefreshDcdnObjectCaches** operation to refresh content and call the **PreloadDcdnObjectCaches** operation to prefetch content.</p>
+     * <p>*   You can call this operation up to 20 times per second.</p>
      */
     @NameInMap("DirQuota")
     public String dirQuota;
 
     /**
-     * <p>The remaining number of directories that can be refreshed each day.</p>
+     * <p>The maximum number of URLs that can be prefetched each day.</p>
      */
     @NameInMap("DirRemain")
     public String dirRemain;
@@ -35,43 +37,43 @@ public class DescribeDcdnRefreshQuotaResponseBody extends TeaModel {
     public String ignoreParamsRemain;
 
     /**
-     * <p>The maximum number of URLs that can be prefetched each day.</p>
+     * <p>The maximum number of URLs that can be blocked.</p>
      */
     @NameInMap("PreloadQuota")
     public String preloadQuota;
 
     /**
-     * <p>The remaining number of URLs that can be prefetched each day.</p>
+     * <p>The maximum number of directories that can be refreshed each day.</p>
      */
     @NameInMap("PreloadRemain")
     public String preloadRemain;
 
     /**
-     * <p>The maximum number of URLs or directories that can be refreshed by using regular expressions each day.</p>
+     * <p>The maximum number of URLs that can be refreshed each day.</p>
      */
     @NameInMap("RegexQuota")
     public String regexQuota;
 
     /**
-     * <p>The remaining number of URLs or directories that can be refreshed by using regular expressions each day.</p>
+     * <p>The remaining number of directories that can be refreshed each day.</p>
      */
     @NameInMap("RegexRemain")
     public String regexRemain;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The maximum number of URLs that can be refreshed each day.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The maximum number of URLs that can be refreshed each day.</p>
+     * <p>The remaining number of URLs that can be blocked each day.</p>
      */
     @NameInMap("UrlQuota")
     public String urlQuota;
 
     /**
-     * <p>The remaining number of URLs that can be refreshed each day.</p>
+     * <p>The maximum number of URLs or directories that can be refreshed by using regular expressions each day.</p>
      */
     @NameInMap("UrlRemain")
     public String urlRemain;

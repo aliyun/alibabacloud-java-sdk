@@ -10,21 +10,15 @@ public class UpdateDcdnSubTaskRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
-    /**
-     * <p>The end time of the operations report. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The IDs of operations reports that you want to update. Separate IDs with commas (,). You can call the [DescribeDcdnSubList](~~270075~~) operation to query report IDs.</p>
+     * <p>The operation that you want to perform. Set the value to **UpdateDcdnSubTask**.</p>
      */
     @NameInMap("ReportIds")
     public String reportIds;
 
-    /**
-     * <p>The start time of the operations report. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     */
     @NameInMap("StartTime")
     public String startTime;
 

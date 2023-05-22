@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnWafDomainDetailRequest extends TeaModel {
     /**
-     * <p>The accelerated domain name. You can specify only one domain name in each request. Exact match is supported.</p>
+     * <p>The types of the protection policies.</p>
      */
     @NameInMap("DomainName")
     public String domainName;

@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnWafDomainDetailResponseBody extends TeaModel {
     /**
-     * <p>The information about the accelerated domain name.</p>
+     * <p>The IDs of the protection policies. Multiple IDs are separated by commas (,).</p>
      */
     @NameInMap("Domain")
     public DescribeDcdnWafDomainDetailResponseBodyDomain domain;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The type of the protection policy. Valid values:</p>
+     * <br>
+     * <p>*   waf_group: basic web protection</p>
+     * <p>*   custom_acl: custom protection</p>
+     * <p>*   whitelist: IP address whitelist</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,25 +42,12 @@ public class DescribeDcdnWafDomainDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnWafDomainDetailResponseBodyDomainDefenseScenes extends TeaModel {
-        /**
-         * <p>The type of the protection policy. Valid values:</p>
-         * <br>
-         * <p>*   waf_group: basic web protection</p>
-         * <p>*   custom_acl: custom protection</p>
-         * <p>*   whitelist: IP address whitelist</p>
-         */
         @NameInMap("DefenseScene")
         public String defenseScene;
 
-        /**
-         * <p>The ID of the protection policy. If multiple IDs exist, only one ID is returned.</p>
-         */
         @NameInMap("PolicyId")
         public Long policyId;
 
-        /**
-         * <p>The IDs of the protection policies. Multiple IDs are separated by commas (,).</p>
-         */
         @NameInMap("PolicyIds")
         public String policyIds;
 
@@ -92,15 +83,9 @@ public class DescribeDcdnWafDomainDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnWafDomainDetailResponseBodyDomain extends TeaModel {
-        /**
-         * <p>The types of the protection policies.</p>
-         */
         @NameInMap("DefenseScenes")
         public java.util.List<DescribeDcdnWafDomainDetailResponseBodyDomainDefenseScenes> defenseScenes;
 
-        /**
-         * <p>The accelerated domain name.</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 

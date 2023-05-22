@@ -11,13 +11,13 @@ public class DescribeUserDcdnStatusResponseBody extends TeaModel {
     public Boolean enabled;
 
     /**
-     * <p>Indicates whether the DCDN service has overdue payments.</p>
+     * <p>Indicates whether your account has overdue payments.</p>
      */
     @NameInMap("InDebt")
     public Boolean inDebt;
 
     /**
-     * <p>Indicates whether an overdue bill has been paid within the specified period.</p>
+     * <p>Indicates whether the grace period for your overdue payments expired.</p>
      */
     @NameInMap("InDebtOverdue")
     public Boolean inDebtOverdue;
