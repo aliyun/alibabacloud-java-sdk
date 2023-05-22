@@ -5,26 +5,23 @@ import com.aliyun.tea.*;
 
 public class AttachClusterToHubResponseBody extends TeaModel {
     /**
-     * <p>The ID of the master instance.</p>
+     * <p>You can call the AttachClusterToHub operation to associate an Container Service for Kubernetes (ACK) cluster with a master instance of ACK One.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>A list of the IDs of the clusters that you want to associate with the master instance.</p>
+     * <p>Zhishi</p>
      */
     @NameInMap("ManagedClusterIds")
     public java.util.List<String> managedClusterIds;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Example 1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The ID of the task.</p>
-     */
     @NameInMap("TaskId")
     public String taskId;
 

@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DetachClusterFromHubRequest extends TeaModel {
     /**
-     * <p>The ID of the master instance.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>A JSON string that can be parsed into a string array. The string specifies the clusters that you want to disassociate from the master instance.</p>
+     * <p>The operation that you want to perform. Set the value to **DetachClusterFromHub**.</p>
      */
     @NameInMap("ClusterIds")
     public String clusterIds;
 
     /**
-     * <p>Specifies whether to only disassociate the clusters from Service Mesh (ASM) instances. Valid values: - true: only disassociates the clusters from ASM instances. - false: disassociates the clusters from the master instance and ASM instances.</p>
+     * <p>Example 1</p>
      */
     @NameInMap("DetachFromMesh")
     public Boolean detachFromMesh;

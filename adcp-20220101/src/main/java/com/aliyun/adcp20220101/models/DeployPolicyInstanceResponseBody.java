@@ -4,6 +4,9 @@ package com.aliyun.adcp20220101.models;
 import com.aliyun.tea.*;
 
 public class DeployPolicyInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

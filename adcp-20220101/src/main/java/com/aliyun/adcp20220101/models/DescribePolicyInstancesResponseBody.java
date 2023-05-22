@@ -4,9 +4,15 @@ package com.aliyun.adcp20220101.models;
 import com.aliyun.tea.*;
 
 public class DescribePolicyInstancesResponseBody extends TeaModel {
+    /**
+     * <p>A list of policy instances.</p>
+     */
     @NameInMap("Policies")
     public java.util.List<DescribePolicyInstancesResponseBodyPolicies> policies;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,33 +38,70 @@ public class DescribePolicyInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyInstancesResponseBodyPolicies extends TeaModel {
+        /**
+         * <p>The ID of the associated cluster.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The name of the policy instance.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The action of the policy. Valid values:</p>
+         * <br>
+         * <p>*   deny: blocks deployments that match the policy.</p>
+         * <p>*   warn: generates alerts for deployments that match the policy.</p>
+         */
         @NameInMap("PolicyAction")
         public String policyAction;
 
+        /**
+         * <p>The type of the policy.</p>
+         */
         @NameInMap("PolicyCategory")
         public String policyCategory;
 
+        /**
+         * <p>The description of the policy.</p>
+         */
         @NameInMap("PolicyDescription")
         public String policyDescription;
 
+        /**
+         * <p>The name of the policy.</p>
+         */
         @NameInMap("PolicyName")
         public String policyName;
 
+        /**
+         * <p>The parameters of the policy instance.</p>
+         */
         @NameInMap("PolicyParameters")
         public java.util.Map<String, String> policyParameters;
 
+        /**
+         * <p>The applicable scope of the policy instance.</p>
+         * <br>
+         * <p>A value of \* indicates all namespaces. This is the default value.</p>
+         * <br>
+         * <p>Multiple namespaces are separated by commas (,).</p>
+         */
         @NameInMap("PolicyScope")
         public String policyScope;
 
+        /**
+         * <p>The severity level of the policy.</p>
+         */
         @NameInMap("PolicySeverity")
         public String policySeverity;
 
+        /**
+         * <p>The total number of deployments that match the policy in the associated cluster, including the deployments that are blocked and the deployments that have triggered alerting.</p>
+         */
         @NameInMap("TotalViolations")
         public Long totalViolations;
 

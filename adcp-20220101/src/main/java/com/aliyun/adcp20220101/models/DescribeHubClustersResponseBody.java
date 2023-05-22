@@ -4,15 +4,9 @@ package com.aliyun.adcp20220101.models;
 import com.aliyun.tea.*;
 
 public class DescribeHubClustersResponseBody extends TeaModel {
-    /**
-     * <p>The list of the master instances returned.</p>
-     */
     @NameInMap("Clusters")
     public java.util.List<DescribeHubClustersResponseBodyClusters> clusters;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,24 +32,12 @@ public class DescribeHubClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeHubClustersResponseBodyClustersApiServer extends TeaModel {
-        /**
-         * <p>The ID of the elastic IP address (EIP).</p>
-         */
         @NameInMap("ApiServerEipId")
         public String apiServerEipId;
 
-        /**
-         * <p>Indicates whether the API server is accessible over the Internet. Valid values:</p>
-         * <br>
-         * <p>*   true: The API server is accessible over the Internet.</p>
-         * <p>*   false: The API server is inaccessible over the Internet.</p>
-         */
         @NameInMap("EnabledPublic")
         public Boolean enabledPublic;
 
-        /**
-         * <p>The ID of the Server Load Balancer (SLB) instance that is associated with the Kubernetes API server.</p>
-         */
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
@@ -91,73 +73,33 @@ public class DescribeHubClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeHubClustersResponseBodyClustersClusterInfo extends TeaModel {
-        /**
-         * <p>The ID of the master instance.</p>
-         */
         @NameInMap("ClusterId")
         public String clusterId;
 
-        /**
-         * <p>The specification of the master instance.</p>
-         * <br>
-         * <p>*   ack.pro.small: ACK Pro cluster</p>
-         */
         @NameInMap("ClusterSpec")
         public String clusterSpec;
 
-        /**
-         * <p>The time when the master instance was created.</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        /**
-         * <p>The error message returned when the master instance failed to be created.</p>
-         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        /**
-         * <p>The name of the master instance.</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The configurations of the master instance.</p>
-         */
         @NameInMap("Profile")
         public String profile;
 
-        /**
-         * <p>The ID of the region in which the master instance resides.</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The status of the master instance. Valid values:</p>
-         * <br>
-         * <p>*   initial: The master instance is being initialized.</p>
-         * <p>*   failed: The master instance failed to be created.</p>
-         * <p>*   running: The master instance is running</p>
-         * <p>*   inactive: The master instance is pending.</p>
-         * <p>*   deleting: The master instance is being deleted.</p>
-         * <p>*   delete_failed: The master instance failed to be deleted.</p>
-         * <p>*   deleted: The master instance is deleted.</p>
-         */
         @NameInMap("State")
         public String state;
 
-        /**
-         * <p>The last time when the master instance was updated.</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
-        /**
-         * <p>The Kubernetes version of the master instance.</p>
-         */
         @NameInMap("Version")
         public String version;
 
@@ -249,31 +191,15 @@ public class DescribeHubClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeHubClustersResponseBodyClustersConditions extends TeaModel {
-        /**
-         * <p>The error message of the deletion condition.</p>
-         */
         @NameInMap("Message")
         public String message;
 
-        /**
-         * <p>The reason for the deletion condition.</p>
-         */
         @NameInMap("Reason")
         public String reason;
 
-        /**
-         * <p>The status of the deletion condition. Valid values:</p>
-         * <br>
-         * <p>*   True: The master instance cannot be deleted.</p>
-         * <p>*   False: The master instance can be deleted.</p>
-         * <p>*   Unknow: Whether the master instance can be deleted is unknown.</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The type of deletion condition.</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -317,15 +243,9 @@ public class DescribeHubClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeHubClustersResponseBodyClustersEndpoints extends TeaModel {
-        /**
-         * <p>The internal endpoint of the API server.</p>
-         */
         @NameInMap("IntranetApiServerEndpoint")
         public String intranetApiServerEndpoint;
 
-        /**
-         * <p>The public endpoint of the API server.</p>
-         */
         @NameInMap("PublicApiServerEndpoint")
         public String publicApiServerEndpoint;
 
@@ -353,24 +273,12 @@ public class DescribeHubClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeHubClustersResponseBodyClustersLogConfig extends TeaModel {
-        /**
-         * <p>Indicates whether audit logging is enabled. Valid values:</p>
-         * <br>
-         * <p>*   true: Audit logging is enabled.</p>
-         * <p>*   false: Audit logging is disabled.</p>
-         */
         @NameInMap("EnableLog")
         public Boolean enableLog;
 
-        /**
-         * <p>The name of the project of Log Service.</p>
-         */
         @NameInMap("LogProject")
         public String logProject;
 
-        /**
-         * <p>The number of days that logs are retained by Log Service.</p>
-         */
         @NameInMap("LogStoreTTL")
         public String logStoreTTL;
 
@@ -406,18 +314,9 @@ public class DescribeHubClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeHubClustersResponseBodyClustersMeshConfig extends TeaModel {
-        /**
-         * <p>Indicates whether ASM is enabled. Valid values:</p>
-         * <br>
-         * <p>*   true: ASM is enabled.</p>
-         * <p>*   false: ASM is disabled.</p>
-         */
         @NameInMap("EnableMesh")
         public Boolean enableMesh;
 
-        /**
-         * <p>The ID of the ASM instance.</p>
-         */
         @NameInMap("MeshId")
         public String meshId;
 
@@ -445,27 +344,15 @@ public class DescribeHubClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeHubClustersResponseBodyClustersNetwork extends TeaModel {
-        /**
-         * <p>The domain name of the master instance.</p>
-         */
         @NameInMap("ClusterDomain")
         public String clusterDomain;
 
-        /**
-         * <p>The security group IDs of the master instance.</p>
-         */
         @NameInMap("SecurityGroupIDs")
         public java.util.List<String> securityGroupIDs;
 
-        /**
-         * <p>The IDs of the vSwitches to which the master instance is connected.</p>
-         */
         @NameInMap("VSwitches")
         public java.util.List<String> vSwitches;
 
-        /**
-         * <p>The ID of the virtual private cloud (VPC) to which the master instance belongs.</p>
-         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -509,45 +396,24 @@ public class DescribeHubClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeHubClustersResponseBodyClusters extends TeaModel {
-        /**
-         * <p>The details of the Kubernetes API server.</p>
-         */
         @NameInMap("ApiServer")
         public DescribeHubClustersResponseBodyClustersApiServer apiServer;
 
-        /**
-         * <p>The details of the master instance.</p>
-         */
         @NameInMap("ClusterInfo")
         public DescribeHubClustersResponseBodyClustersClusterInfo clusterInfo;
 
-        /**
-         * <p>The list of the deletion conditions of the master instance.</p>
-         */
         @NameInMap("Conditions")
         public java.util.List<DescribeHubClustersResponseBodyClustersConditions> conditions;
 
-        /**
-         * <p>The endpoint of the master instance.</p>
-         */
         @NameInMap("Endpoints")
         public DescribeHubClustersResponseBodyClustersEndpoints endpoints;
 
-        /**
-         * <p>The logging configurations.</p>
-         */
         @NameInMap("LogConfig")
         public DescribeHubClustersResponseBodyClustersLogConfig logConfig;
 
-        /**
-         * <p>The configurations of Alibaba Cloud Service Mesh (ASM).</p>
-         */
         @NameInMap("MeshConfig")
         public DescribeHubClustersResponseBodyClustersMeshConfig meshConfig;
 
-        /**
-         * <p>The network configurations of the master instance.</p>
-         */
         @NameInMap("Network")
         public DescribeHubClustersResponseBodyClustersNetwork network;
 

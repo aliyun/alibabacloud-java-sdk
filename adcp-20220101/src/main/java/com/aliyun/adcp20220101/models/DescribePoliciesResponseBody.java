@@ -4,9 +4,15 @@ package com.aliyun.adcp20220101.models;
 import com.aliyun.tea.*;
 
 public class DescribePoliciesResponseBody extends TeaModel {
+    /**
+     * <p>A list of policies.</p>
+     */
     @NameInMap("Policies")
     public java.util.List<DescribePoliciesResponseBodyPolicies> policies;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class DescribePoliciesResponseBody extends TeaModel {
     }
 
     public static class DescribePoliciesResponseBodyPolicies extends TeaModel {
+        /**
+         * <p>The policy type.</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The names of the policies of each policy type.</p>
+         */
         @NameInMap("Names")
         public java.util.List<String> names;
 

@@ -724,6 +724,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClusterId", request.clusterId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.isRamRole)) {
+            query.put("IsRamRole", request.isRamRole);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
             query.put("Namespace", request.namespace);
         }

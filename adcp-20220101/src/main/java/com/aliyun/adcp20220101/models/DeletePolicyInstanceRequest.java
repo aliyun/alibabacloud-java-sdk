@@ -4,12 +4,21 @@ package com.aliyun.adcp20220101.models;
 import com.aliyun.tea.*;
 
 public class DeletePolicyInstanceRequest extends TeaModel {
+    /**
+     * <p>The ID of the master instance.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>A array of JSON strings. The JSON strings in the array indicate the IDs of the associated clusters for which the policy is deleted.</p>
+     */
     @NameInMap("ClusterIds")
     public java.util.List<String> clusterIds;
 
+    /**
+     * <p>The name of the policy.</p>
+     */
     @NameInMap("PolicyName")
     public String policyName;
 

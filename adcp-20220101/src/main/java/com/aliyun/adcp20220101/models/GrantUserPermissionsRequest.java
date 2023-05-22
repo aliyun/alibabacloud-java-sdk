@@ -35,6 +35,9 @@ public class GrantUserPermissionsRequest extends TeaModel {
         @NameInMap("ClusterId")
         public String clusterId;
 
+        @NameInMap("IsRamRole")
+        public Boolean isRamRole;
+
         @NameInMap("Namespace")
         public String namespace;
 
@@ -55,6 +58,14 @@ public class GrantUserPermissionsRequest extends TeaModel {
         }
         public String getClusterId() {
             return this.clusterId;
+        }
+
+        public GrantUserPermissionsRequestPermissions setIsRamRole(Boolean isRamRole) {
+            this.isRamRole = isRamRole;
+            return this;
+        }
+        public Boolean getIsRamRole() {
+            return this.isRamRole;
         }
 
         public GrantUserPermissionsRequestPermissions setNamespace(String namespace) {

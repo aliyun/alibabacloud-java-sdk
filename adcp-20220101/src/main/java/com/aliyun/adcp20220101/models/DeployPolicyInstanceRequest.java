@@ -4,18 +4,36 @@ package com.aliyun.adcp20220101.models;
 import com.aliyun.tea.*;
 
 public class DeployPolicyInstanceRequest extends TeaModel {
+    /**
+     * <p>The ID of the master instance.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>An array of JSON strings. The JSON strings in the array indicate the IDs of the associated clusters in which the policy instance is deployed.</p>
+     */
     @NameInMap("ClusterIds")
     public java.util.List<String> clusterIds;
 
+    /**
+     * <p>A list of namespaces.</p>
+     */
     @NameInMap("Namespaces")
     public java.util.List<String> namespaces;
 
+    /**
+     * <p>The action of the policy. Valid values:</p>
+     * <br>
+     * <p>*   deny: blocks deployments that match the policy.</p>
+     * <p>*   warn: generates alerts for deployments that match the policy.</p>
+     */
     @NameInMap("PolicyAction")
     public String policyAction;
 
+    /**
+     * <p>The name of the policy.</p>
+     */
     @NameInMap("PolicyName")
     public String policyName;
 
