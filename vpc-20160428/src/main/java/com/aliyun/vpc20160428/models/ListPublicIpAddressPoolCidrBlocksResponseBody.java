@@ -5,12 +5,6 @@ import com.aliyun.tea.*;
 
 public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of entries returned. Valid values: **10** to **100**. Default value: **10**.</p>
-     */
-    @NameInMap("MaxResults")
-    public Integer maxResults;
-
-    /**
      * <p>The token that is used for the next query. Valid values:</p>
      * <br>
      * <p>*   If **NextToken** was not returned, it indicates that no additional results exist.</p>
@@ -20,7 +14,7 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The information about the CIDR blocks.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("PublicIpPoolCidrBlockList")
     public java.util.List<ListPublicIpAddressPoolCidrBlocksResponseBodyPublicIpPoolCidrBlockList> publicIpPoolCidrBlockList;
@@ -32,7 +26,7 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The maximum number of entries returned. Valid values: **10** to **100**. Default value: **10**.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -40,14 +34,6 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
     public static ListPublicIpAddressPoolCidrBlocksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListPublicIpAddressPoolCidrBlocksResponseBody self = new ListPublicIpAddressPoolCidrBlocksResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListPublicIpAddressPoolCidrBlocksResponseBody setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
-        return this;
-    }
-    public Integer getMaxResults() {
-        return this.maxResults;
     }
 
     public ListPublicIpAddressPoolCidrBlocksResponseBody setNextToken(String nextToken) {
@@ -84,22 +70,34 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
 
     public static class ListPublicIpAddressPoolCidrBlocksResponseBodyPublicIpPoolCidrBlockList extends TeaModel {
         /**
-         * <p>The CIDR blocks.</p>
+         * <p>The ID of the IP address pool.</p>
          */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
         /**
-         * <p>The time when the CIDR block was created. The time is displayed in `YYYY-MM-DDThh:mm:ssZ` format.</p>
+         * <p>The CIDR blocks.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The ID of the IP address pool.</p>
+         * <p>The information about the CIDR blocks.</p>
          */
         @NameInMap("PublicIpAddressPoolId")
         public String publicIpAddressPoolId;
+
+        /**
+         * <p>The time when the CIDR block was created. The time is displayed in `YYYY-MM-DDThh:mm:ssZ` format.</p>
+         */
+        @NameInMap("Status")
+        public String status;
+
+        /**
+         * <p>The total number of available IP addresses in the CIDR block.</p>
+         */
+        @NameInMap("TotalIpNum")
+        public Integer totalIpNum;
 
         /**
          * <p>The status of the CIDR block in the IP address pool. Valid values:</p>
@@ -107,18 +105,6 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
          * <p>*   **Created**: available</p>
          * <p>*   **Deleting**: being deleted</p>
          * <p>*   **Modifying**: being modified</p>
-         */
-        @NameInMap("Status")
-        public String status;
-
-        /**
-         * <p>The total number of occupied IP addresses in the CIDR block.</p>
-         */
-        @NameInMap("TotalIpNum")
-        public Integer totalIpNum;
-
-        /**
-         * <p>The total number of available IP addresses in the CIDR block.</p>
          */
         @NameInMap("UsedIpNum")
         public Integer usedIpNum;

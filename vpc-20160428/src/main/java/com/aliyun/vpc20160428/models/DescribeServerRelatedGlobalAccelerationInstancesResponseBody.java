@@ -4,9 +4,15 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeServerRelatedGlobalAccelerationInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The list of GA instances.</p>
+     */
     @NameInMap("GlobalAccelerationInstances")
     public DescribeServerRelatedGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstances globalAccelerationInstances;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,27 @@ public class DescribeServerRelatedGlobalAccelerationInstancesResponseBody extend
     }
 
     public static class DescribeServerRelatedGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance extends TeaModel {
+        /**
+         * <p>The ID of the GA instance.</p>
+         */
         @NameInMap("GlobalAccelerationInstanceId")
         public String globalAccelerationInstanceId;
 
+        /**
+         * <p>The public IP address of the GA instance.</p>
+         */
         @NameInMap("IpAddress")
         public String ipAddress;
 
+        /**
+         * <p>The region ID of the GA instance.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The IP address of the backend service.</p>
+         */
         @NameInMap("ServerIpAddress")
         public String serverIpAddress;
 

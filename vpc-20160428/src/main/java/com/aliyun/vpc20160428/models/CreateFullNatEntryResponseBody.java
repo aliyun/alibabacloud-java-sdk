@@ -4,15 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateFullNatEntryResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the FULLNAT entry.</p>
-     */
     @NameInMap("FullNatEntryId")
     public String fullNatEntryId;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

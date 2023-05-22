@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class UnassociateNetworkAclRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
-     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, the system uses the value of **RequestId** as **ClientToken**. The value of **RequestId** may be different for each API request.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The ID of the network ACL that you want to disassociate from a resource.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, the system uses the value of **RequestId** as **ClientToken**. The value of **RequestId** may be different for each API request.</p>
      */
     @NameInMap("NetworkAclId")
     public String networkAclId;
@@ -24,7 +24,7 @@ public class UnassociateNetworkAclRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the network ACL. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The operation that you want to perform. Set the value to **UnassociateNetworkAcl**.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -101,15 +101,13 @@ public class UnassociateNetworkAclRequest extends TeaModel {
 
     public static class UnassociateNetworkAclRequestResource extends TeaModel {
         /**
-         * <p>The ID of the resource from which you want to disassociate the network ACL.</p>
+         * <p>The region ID of the network ACL. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The type of the resource from which you want to disassociate the network ACL. Set the value to **VSwitch**.</p>
-         * <br>
-         * <p>Valid values of **N**: 0 to 29. You can disassociate a network ACL from at most 30 resources at a time.</p>
+         * <p>The ID of the network ACL that you want to disassociate from a resource.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;

@@ -5,22 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdatePublicIpAddressPoolAttributeRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. The value of **RequestId** may be different for each API request.</p>
+     * <p>The region ID of the IP address pool that you want to modify.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
-
-    /**
-     * <p>The description of the IP address pool.</p>
-     * <br>
-     * <p>This parameter is optional. If you enter a description, the description must be 2 to 256 characters in length, and cannot start with http:// or https://.</p>
-     */
-    @NameInMap("Description")
-    public String description;
 
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
@@ -28,13 +16,21 @@ public class UpdatePublicIpAddressPoolAttributeRequest extends TeaModel {
      * <p>*   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
      * <p>*   **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
      */
+    @NameInMap("Description")
+    public String description;
+
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The name of the IP address pool.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>This parameter is optional. If you enter a name, the name must be 1 to 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. The value of **RequestId** may be different for each API request.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -46,14 +42,13 @@ public class UpdatePublicIpAddressPoolAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the IP address pool.</p>
+     * <p>The description of the IP address pool.</p>
+     * <br>
+     * <p>This parameter is optional. If you enter a description, the description must be 2 to 256 characters in length, and cannot start with http:// or https://.</p>
      */
     @NameInMap("PublicIpAddressPoolId")
     public String publicIpAddressPoolId;
 
-    /**
-     * <p>The region ID of the IP address pool that you want to modify.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

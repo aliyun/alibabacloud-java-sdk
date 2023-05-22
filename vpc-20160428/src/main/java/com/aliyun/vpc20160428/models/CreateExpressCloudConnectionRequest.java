@@ -4,24 +4,51 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateExpressCloudConnectionRequest extends TeaModel {
+    /**
+     * <p>The bandwidth for ECC, which corresponds to the bandwidth for the underlying circuit.</p>
+     * <br>
+     * <p>Unit: Mbit/s.</p>
+     */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
+    /**
+     * <p>The email address of the contact who applies for ECC.</p>
+     */
     @NameInMap("ContactMail")
     public String contactMail;
 
+    /**
+     * <p>The phone number of the contact who applies for ECC.</p>
+     */
     @NameInMap("ContactTel")
     public String contactTel;
 
+    /**
+     * <p>The description of ECC.</p>
+     * <br>
+     * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The ID card number of the contact who applies for ECC.</p>
+     */
     @NameInMap("IDCardNo")
     public String IDCardNo;
 
+    /**
+     * <p>The Internet service provider (ISP) for the data center.</p>
+     */
     @NameInMap("IdcSP")
     public String idcSP;
 
+    /**
+     * <p>The name of the ECC instance.</p>
+     * <br>
+     * <p>The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter but cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -31,18 +58,41 @@ public class CreateExpressCloudConnectionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The city where the data center is located.</p>
+     */
     @NameInMap("PeerCity")
     public String peerCity;
 
+    /**
+     * <p>The geographical location of the data center.</p>
+     * <br>
+     * <p>> It must be accurate to house number-floor-room number-server rack number.</p>
+     */
     @NameInMap("PeerLocation")
     public String peerLocation;
 
+    /**
+     * <p>The port of the Express Connect circuit. Valid values:</p>
+     * <br>
+     * <p>*   100Base-T</p>
+     * <p>*   1000Base-T</p>
+     * <p>*   1000Base-LX</p>
+     * <p>*   10GBase-T</p>
+     * <p>*   10GBase-LR</p>
+     */
     @NameInMap("PortType")
     public String portType;
 
+    /**
+     * <p>The ID of the standby Express Connect circuit.</p>
+     */
     @NameInMap("RedundantEccId")
     public String redundantEccId;
 
+    /**
+     * <p>The region ID of the ECC instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

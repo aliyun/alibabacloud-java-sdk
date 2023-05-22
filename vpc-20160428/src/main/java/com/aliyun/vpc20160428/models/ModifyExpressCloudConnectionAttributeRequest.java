@@ -4,18 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyExpressCloudConnectionAttributeRequest extends TeaModel {
+    /**
+     * <p>The BGP autonomous system number (ASN) to be configured for the Smart Access Gateway (SAG) device.</p>
+     */
     @NameInMap("BgpAs")
     public String bgpAs;
 
+    /**
+     * <p>The peer IP address when the SAG device is connected to the cloud.</p>
+     */
     @NameInMap("CeIp")
     public String ceIp;
 
+    /**
+     * <p>Descriptions of ECC.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The ID of the ECC instance.</p>
+     */
     @NameInMap("EccId")
     public String eccId;
 
+    /**
+     * <p>The name of the ECC instance.</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -25,9 +40,15 @@ public class ModifyExpressCloudConnectionAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The on-premises IP address when the SAG device is connected to the cloud.</p>
+     */
     @NameInMap("PeIp")
     public String peIp;
 
+    /**
+     * <p>The region ID of the ECC instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

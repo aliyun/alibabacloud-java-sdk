@@ -43,6 +43,12 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     @NameInMap("CustomerGatewayId")
     public String customerGatewayId;
 
+    @NameInMap("DisasterRecoveryInternetIp")
+    public String disasterRecoveryInternetIp;
+
+    @NameInMap("DisasterRecoveryZoneNo")
+    public String disasterRecoveryZoneNo;
+
     /**
      * <p>Indicates whether IPsec negotiations immediately start.</p>
      * <br>
@@ -73,6 +79,9 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
      */
     @NameInMap("EnableNatTraversal")
     public Boolean enableNatTraversal;
+
+    @NameInMap("EnableTunnelsBgp")
+    public Boolean enableTunnelsBgp;
 
     /**
      * <p>The configurations of Phase 1 negotiations.</p>
@@ -264,6 +273,22 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         return this.customerGatewayId;
     }
 
+    public DescribeVpnConnectionResponseBody setDisasterRecoveryInternetIp(String disasterRecoveryInternetIp) {
+        this.disasterRecoveryInternetIp = disasterRecoveryInternetIp;
+        return this;
+    }
+    public String getDisasterRecoveryInternetIp() {
+        return this.disasterRecoveryInternetIp;
+    }
+
+    public DescribeVpnConnectionResponseBody setDisasterRecoveryZoneNo(String disasterRecoveryZoneNo) {
+        this.disasterRecoveryZoneNo = disasterRecoveryZoneNo;
+        return this;
+    }
+    public String getDisasterRecoveryZoneNo() {
+        return this.disasterRecoveryZoneNo;
+    }
+
     public DescribeVpnConnectionResponseBody setEffectImmediately(Boolean effectImmediately) {
         this.effectImmediately = effectImmediately;
         return this;
@@ -286,6 +311,14 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     }
     public Boolean getEnableNatTraversal() {
         return this.enableNatTraversal;
+    }
+
+    public DescribeVpnConnectionResponseBody setEnableTunnelsBgp(Boolean enableTunnelsBgp) {
+        this.enableTunnelsBgp = enableTunnelsBgp;
+        return this;
+    }
+    public Boolean getEnableTunnelsBgp() {
+        return this.enableTunnelsBgp;
     }
 
     public DescribeVpnConnectionResponseBody setIkeConfig(DescribeVpnConnectionResponseBodyIkeConfig ikeConfig) {

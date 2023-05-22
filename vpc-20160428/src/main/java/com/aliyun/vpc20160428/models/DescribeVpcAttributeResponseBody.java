@@ -5,51 +5,108 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcAttributeResponseBody extends TeaModel {
     /**
-     * <p>The list of Cloud Enterprise Network (CEN) instances to which the VPC is attached.</p>
+     * <p>The type of the IPv6 CIDR block. Valid values:</p>
      * <br>
-     * <p>If the VPC is not attached to a CEN instance, the parameter is not returned.</p>
+     * <p>- **BGP** (default): an IPv6 CIDR block provided by Alibaba Cloud over Border Gateway Protocol (BGP)</p>
+     * <p>- **ChinaMobile**: an IPv6 CIDR block provided by China Mobile (single ISP)</p>
+     * <p>- **ChinaUnicom**: an IPv6 CIDR block provided by China Unicom (single ISP)</p>
+     * <p>- **ChinaTelecom**: an IPv6 CIDR block provided by China Telecom (single ISP)</p>
+     * <br>
+     * <p>>  If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, valid values are: **ChinaTelecom**, **ChinaUnicom**, and **ChinaMobile**.</p>
      */
     @NameInMap("AssociatedCens")
     public DescribeVpcAttributeResponseBodyAssociatedCens associatedCens;
 
     /**
-     * <p>The IPv4 CIDR block of the VPC.</p>
+     * <p>The secondary IPv4 CIDR block of the VPC.</p>
      */
     @NameInMap("CidrBlock")
     public String cidrBlock;
 
     /**
-     * <p>Indicates whether the ClassicLink feature is enabled. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false** (default): no</p>
+     * <p>The description of the VPC.</p>
      */
     @NameInMap("ClassicLinkEnabled")
     public Boolean classicLinkEnabled;
 
-    /**
-     * <p>The list of resources deployed in the VPC.</p>
-     */
     @NameInMap("CloudResources")
     public DescribeVpcAttributeResponseBodyCloudResources cloudResources;
 
     /**
-     * <p>The time when the VPC was created.</p>
+     * <p>The ID of the vRouter that belongs to the VPC.</p>
      */
     @NameInMap("CreationTime")
     public String creationTime;
 
     /**
-     * <p>The description of the VPC.</p>
+     * <p>The ID of the Alibaba Cloud account to which the CEN instance belongs.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The ID of the DHCP options set.</p>
+     * <p>The status of the CEN instance to which the VPC is attached.</p>
+     * <br>
+     * <p>**Attached** is returned only if the VPC is attached to a CEN instance.</p>
      */
     @NameInMap("DhcpOptionsSetId")
     public String dhcpOptionsSetId;
+
+    /**
+     * <p>The user CIDR block. Multiple CIDR blocks are separated by commas (,). At most three CIDR blocks are returned.</p>
+     */
+    @NameInMap("DhcpOptionsSetStatus")
+    public String dhcpOptionsSetStatus;
+
+    @NameInMap("Ipv4GatewayId")
+    public String ipv4GatewayId;
+
+    /**
+     * <p>The list of resources deployed in the VPC.</p>
+     */
+    @NameInMap("Ipv6CidrBlock")
+    public String ipv6CidrBlock;
+
+    @NameInMap("Ipv6CidrBlocks")
+    public DescribeVpcAttributeResponseBodyIpv6CidrBlocks ipv6CidrBlocks;
+
+    /**
+     * <p>The ID of the request.</p>
+     */
+    @NameInMap("IsDefault")
+    public Boolean isDefault;
+
+    /**
+     * <p>The ID of the resource group.</p>
+     */
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    /**
+     * <p>The ID of the DHCP options set.</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
+
+    /**
+     * <p>The list of Cloud Enterprise Network (CEN) instances to which the VPC is attached.</p>
+     * <br>
+     * <p>If the VPC is not attached to a CEN instance, the parameter is not returned.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
+     * <p>The ID of the CEN instance to which the VPC is attached.</p>
+     */
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    /**
+     * <p>The information about the IPv6 CIDR blocks of the VPC.</p>
+     */
+    @NameInMap("SecondaryCidrBlocks")
+    public DescribeVpcAttributeResponseBodySecondaryCidrBlocks secondaryCidrBlocks;
 
     /**
      * <p>The status of the DHCP options set. Valid values:</p>
@@ -59,110 +116,45 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
      * <p>*   **Deleted**: deleted</p>
      * <p>*   **Pending**: being configured</p>
      */
-    @NameInMap("DhcpOptionsSetStatus")
-    public String dhcpOptionsSetStatus;
-
-    /**
-     * <p>The ID of the IPv4 gateway.</p>
-     */
-    @NameInMap("Ipv4GatewayId")
-    public String ipv4GatewayId;
-
-    /**
-     * <p>The IPv6 CIDR block of the VPC.</p>
-     */
-    @NameInMap("Ipv6CidrBlock")
-    public String ipv6CidrBlock;
-
-    /**
-     * <p>The information about the IPv6 CIDR blocks of the VPC.</p>
-     */
-    @NameInMap("Ipv6CidrBlocks")
-    public DescribeVpcAttributeResponseBodyIpv6CidrBlocks ipv6CidrBlocks;
-
-    /**
-     * <p>Indicates whether the VPC is the default VPC. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false** (default): no</p>
-     */
-    @NameInMap("IsDefault")
-    public Boolean isDefault;
-
-    /**
-     * <p>The ID of the Alibaba Cloud account to which the VPC belongs.</p>
-     */
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    /**
-     * <p>The region ID of the VPC.</p>
-     */
-    @NameInMap("RegionId")
-    public String regionId;
-
-    /**
-     * <p>The ID of the request.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
-
-    /**
-     * <p>The ID of the resource group.</p>
-     */
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
-    /**
-     * <p>The secondary IPv4 CIDR block of the VPC.</p>
-     */
-    @NameInMap("SecondaryCidrBlocks")
-    public DescribeVpcAttributeResponseBodySecondaryCidrBlocks secondaryCidrBlocks;
-
-    /**
-     * <p>The status of the VPC. Valid values:</p>
-     * <br>
-     * <p>*   **Available**: available</p>
-     * <p>*   **Pending**: being configured</p>
-     */
     @NameInMap("Status")
     public String status;
 
-    /**
-     * <p>Indicates whether the VPC supports IPv4 gateways. </p>
-     * <br>
-     * <p>- **true**: yes</p>
-     * <p>- **false**: no</p>
-     */
     @NameInMap("SupportIpv4Gateway")
     public Boolean supportIpv4Gateway;
 
+    @NameInMap("Tags")
+    public DescribeVpcAttributeResponseBodyTags tags;
+
     /**
-     * <p>The user CIDR block. Multiple CIDR blocks are separated by commas (,). At most three CIDR blocks are returned.</p>
+     * <p>The type of resources deployed in the VPC. Valid values:</p>
+     * <br>
+     * <p>- **VSwitch**: vSwitches</p>
+     * <p>- **VRouter**: vRouters</p>
+     * <p>- **RouteTable**: route tables</p>
      */
     @NameInMap("UserCidrs")
     public DescribeVpcAttributeResponseBodyUserCidrs userCidrs;
 
     /**
-     * <p>The ID of the vRouter that belongs to the VPC.</p>
+     * <p>The list of vSwitches deployed in the VPC.</p>
      */
     @NameInMap("VRouterId")
     public String VRouterId;
 
     /**
-     * <p>The list of vSwitches deployed in the VPC.</p>
+     * <p>The number of resources deployed in the VPC.</p>
      */
     @NameInMap("VSwitchIds")
     public DescribeVpcAttributeResponseBodyVSwitchIds vSwitchIds;
 
     /**
-     * <p>The ID of the VPC.</p>
+     * <p>The IPv4 CIDR block of the VPC.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
-     * <p>The name of the VPC.</p>
+     * <p>The IPv6 CIDR block of the VPC.</p>
      */
     @NameInMap("VpcName")
     public String vpcName;
@@ -324,6 +316,14 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         return this.supportIpv4Gateway;
     }
 
+    public DescribeVpcAttributeResponseBody setTags(DescribeVpcAttributeResponseBodyTags tags) {
+        this.tags = tags;
+        return this;
+    }
+    public DescribeVpcAttributeResponseBodyTags getTags() {
+        return this.tags;
+    }
+
     public DescribeVpcAttributeResponseBody setUserCidrs(DescribeVpcAttributeResponseBodyUserCidrs userCidrs) {
         this.userCidrs = userCidrs;
         return this;
@@ -366,21 +366,22 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
 
     public static class DescribeVpcAttributeResponseBodyAssociatedCensAssociatedCen extends TeaModel {
         /**
-         * <p>The ID of the CEN instance to which the VPC is attached.</p>
+         * <p>Indicates whether the VPC supports IPv4 gateways. </p>
+         * <br>
+         * <p>- **true**: yes</p>
+         * <p>- **false**: no</p>
          */
         @NameInMap("CenId")
         public String cenId;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the CEN instance belongs.</p>
+         * <p>The IPv6 CIDR block of the VPC.</p>
          */
         @NameInMap("CenOwnerId")
         public Long cenOwnerId;
 
         /**
-         * <p>The status of the CEN instance to which the VPC is attached.</p>
-         * <br>
-         * <p>**Attached** is returned only if the VPC is attached to a CEN instance.</p>
+         * <p>The ID of the IPv4 gateway.</p>
          */
         @NameInMap("CenStatus")
         public String cenStatus;
@@ -436,19 +437,9 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcAttributeResponseBodyCloudResourcesCloudResourceSetType extends TeaModel {
-        /**
-         * <p>The number of resources deployed in the VPC.</p>
-         */
         @NameInMap("ResourceCount")
         public Integer resourceCount;
 
-        /**
-         * <p>The type of resources deployed in the VPC. Valid values:</p>
-         * <br>
-         * <p>- **VSwitch**: vSwitches</p>
-         * <p>- **VRouter**: vRouters</p>
-         * <p>- **RouteTable**: route tables</p>
-         */
         @NameInMap("ResourceType")
         public String resourceType;
 
@@ -495,22 +486,9 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcAttributeResponseBodyIpv6CidrBlocksIpv6CidrBlock extends TeaModel {
-        /**
-         * <p>The IPv6 CIDR block of the VPC.</p>
-         */
         @NameInMap("Ipv6CidrBlock")
         public String ipv6CidrBlock;
 
-        /**
-         * <p>The type of the IPv6 CIDR block. Valid values:</p>
-         * <br>
-         * <p>- **BGP** (default): an IPv6 CIDR block provided by Alibaba Cloud over Border Gateway Protocol (BGP)</p>
-         * <p>- **ChinaMobile**: an IPv6 CIDR block provided by China Mobile (single ISP)</p>
-         * <p>- **ChinaUnicom**: an IPv6 CIDR block provided by China Unicom (single ISP)</p>
-         * <p>- **ChinaTelecom**: an IPv6 CIDR block provided by China Telecom (single ISP)</p>
-         * <br>
-         * <p>>  If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, valid values are: **ChinaTelecom**, **ChinaUnicom**, and **ChinaMobile**.</p>
-         */
         @NameInMap("Ipv6Isp")
         public String ipv6Isp;
 
@@ -571,6 +549,55 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
         public java.util.List<String> getSecondaryCidrBlock() {
             return this.secondaryCidrBlock;
+        }
+
+    }
+
+    public static class DescribeVpcAttributeResponseBodyTagsTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeVpcAttributeResponseBodyTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVpcAttributeResponseBodyTagsTag self = new DescribeVpcAttributeResponseBodyTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVpcAttributeResponseBodyTagsTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeVpcAttributeResponseBodyTagsTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeVpcAttributeResponseBodyTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeVpcAttributeResponseBodyTagsTag> tag;
+
+        public static DescribeVpcAttributeResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVpcAttributeResponseBodyTags self = new DescribeVpcAttributeResponseBodyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVpcAttributeResponseBodyTags setTag(java.util.List<DescribeVpcAttributeResponseBodyTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeVpcAttributeResponseBodyTagsTag> getTag() {
+            return this.tag;
         }
 
     }

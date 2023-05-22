@@ -5,37 +5,17 @@ import com.aliyun.tea.*;
 
 public class AllocateEipAddressProRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable automatic payment. Valid values:</p>
+     * <p>The billing method of the specified EIP. Valid values:</p>
      * <br>
-     * <p>*   **false**: disables automatic payment. After an order is generated, you must go to the Order Center to complete the payment.</p>
-     * <p>*   **true**: enabled. Payments are automatically completed.</p>
+     * <p>*   **PrePaid**: subscription</p>
+     * <p>*   **PostPaid** (default): pay-as-you-go</p>
      * <br>
-     * <p>When **InstanceChargeType** is set to **PrePaid**, this parameter is required. When **InstanceChargeType** is set to **PostPaid**, this parameter is not required.</p>
+     * <p>When **InstanceChargeType** is set to **PrePaid**, you must set **InternetChargeType** to **PayByBandwidth**.</p>
+     * <br>
+     * <p>When **InstanceChargeType** is set to **PostPaid**, you must set **InternetChargeType** to **PayByBandwidth** or **PayByTraffic**.</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
-
-    /**
-     * <p>The maximum bandwidth of the specified EIP. Unit: Mbit/s.</p>
-     * <br>
-     * <p>*   When **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByBandwidth**, valid values for **Bandwidth** are **1** to **500**.</p>
-     * <p>*   When **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByTraffic**, valid values for **Bandwidth** are **1** to **200**.</p>
-     * <p>*   When **InstanceChargeType** is set to **PrePaid**, valid values for **Bandwidth** are **1** to **1000**.</p>
-     * <br>
-     * <p>Default value: **5**. Unit: Mbit/s.</p>
-     */
-    @NameInMap("Bandwidth")
-    public String bandwidth;
-
-    /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
-     */
-    @NameInMap("ClientToken")
-    public String clientToken;
 
     /**
      * <p>The line type. Valid values:</p>
@@ -56,62 +36,35 @@ public class AllocateEipAddressProRequest extends TeaModel {
      * <br>
      * <p>*   If your services are deployed in China East 1 Finance, this parameter is required and you must set the value to **BGP_FinanceCloud**.</p>
      */
+    @NameInMap("Bandwidth")
+    public String bandwidth;
+
+    /**
+     * <p>The ID of the IP address pool.</p>
+     * <br>
+     * <p>The EIP is allocated from the IP address pool.</p>
+     * <br>
+     * <p>You cannot use the IP address pool feature by default. To use this feature, apply for the privilege in the Quota Center console. For more information, see [Request a quota increase in the Quota Center console](~~108213~~).</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
+     * <p>Specifies whether to enable automatic payment. Valid values:</p>
+     * <br>
+     * <p>*   **false**: disables automatic payment. After an order is generated, you must go to the Order Center to complete the payment.</p>
+     * <p>*   **true**: enabled. Payments are automatically completed.</p>
+     * <br>
+     * <p>When **InstanceChargeType** is set to **PrePaid**, this parameter is required. When **InstanceChargeType** is set to **PostPaid**, this parameter is not required.</p>
+     */
     @NameInMap("ISP")
     public String ISP;
 
     /**
-     * <p>The billing method of the specified EIP. Valid values:</p>
-     * <br>
-     * <p>*   **PrePaid**: subscription</p>
-     * <p>*   **PostPaid** (default): pay-as-you-go</p>
-     * <br>
-     * <p>When **InstanceChargeType** is set to **PrePaid**, you must set **InternetChargeType** to **PayByBandwidth**.</p>
-     * <br>
-     * <p>When **InstanceChargeType** is set to **PostPaid**, you must set **InternetChargeType** to **PayByBandwidth** or **PayByTraffic**.</p>
+     * <p>The ID of the resource group to which the EIP belongs.</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
-
-    /**
-     * <p>The ID of the EIP.</p>
-     * <br>
-     * <p>Set **IpAddress** or **InstanceId**. If you leave both parameters empty, the system randomly allocates an EIP.</p>
-     */
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    /**
-     * <p>The metering method of the specified EIP. Valid values:</p>
-     * <br>
-     * <p>*   **PayByBandwidth** (default): pay-by-bandwidth</p>
-     * <p>*   **PayByTraffic**: pay-by-data-transfer</p>
-     * <br>
-     * <p>When **InstanceChargeType** is set to **PrePaid**, you must set **InternetChargeType** to **PayByBandwidth**.</p>
-     * <br>
-     * <p>When **InstanceChargeType** is set to **PostPaid**, you must set **InternetChargeType** to **PayByBandwidth** or **PayByTraffic**.</p>
-     */
-    @NameInMap("InternetChargeType")
-    public String internetChargeType;
-
-    /**
-     * <p>The IP address of the EIP that you want to request.</p>
-     * <br>
-     * <p>Set **IpAddress** or **InstanceId**. If you leave both parameters empty, the system randomly allocates an EIP.</p>
-     */
-    @NameInMap("IpAddress")
-    public String ipAddress;
-
-    /**
-     * <p>The network type. Set the value to **public**, which specifies the Internet.</p>
-     */
-    @NameInMap("Netmode")
-    public String netmode;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
 
     /**
      * <p>The subscription duration of the bandwidth plan.</p>
@@ -123,8 +76,30 @@ public class AllocateEipAddressProRequest extends TeaModel {
      * <br>
      * <p>Ignore this parameter when **InstanceChargeType** is set to **PostPaid**.</p>
      */
-    @NameInMap("Period")
-    public Integer period;
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     */
+    @NameInMap("InternetChargeType")
+    public String internetChargeType;
+
+    /**
+     * <p>The maximum bandwidth of the specified EIP. Unit: Mbit/s.</p>
+     * <br>
+     * <p>*   When **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByBandwidth**, valid values for **Bandwidth** are **1** to **500**.</p>
+     * <p>*   When **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByTraffic**, valid values for **Bandwidth** are **1** to **200**.</p>
+     * <p>*   When **InstanceChargeType** is set to **PrePaid**, valid values for **Bandwidth** are **1** to **1000**.</p>
+     * <br>
+     * <p>Default value: **5**. Unit: Mbit/s.</p>
+     */
+    @NameInMap("IpAddress")
+    public String ipAddress;
 
     /**
      * <p>The billing cycle of the subscription EIP. Valid values:</p>
@@ -134,29 +109,55 @@ public class AllocateEipAddressProRequest extends TeaModel {
      * <br>
      * <p>When **InstanceChargeType** is set to **PrePaid**, this parameter is required. When **InstanceChargeType** is set to **PostPaid**, this parameter is not required.</p>
      */
+    @NameInMap("Netmode")
+    public String netmode;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    /**
+     * <p>The network type. Set the value to **public**, which specifies the Internet.</p>
+     */
+    @NameInMap("Period")
+    public Integer period;
+
+    /**
+     * <p>The metering method of the specified EIP. Valid values:</p>
+     * <br>
+     * <p>*   **PayByBandwidth** (default): pay-by-bandwidth</p>
+     * <p>*   **PayByTraffic**: pay-by-data-transfer</p>
+     * <br>
+     * <p>When **InstanceChargeType** is set to **PrePaid**, you must set **InternetChargeType** to **PayByBandwidth**.</p>
+     * <br>
+     * <p>When **InstanceChargeType** is set to **PostPaid**, you must set **InternetChargeType** to **PayByBandwidth** or **PayByTraffic**.</p>
+     */
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
     /**
-     * <p>The ID of the IP address pool.</p>
-     * <br>
-     * <p>The EIP is allocated from the IP address pool.</p>
-     * <br>
-     * <p>You cannot use the IP address pool feature by default. To use this feature, apply for the privilege in the Quota Center console. For more information, see [Request a quota increase in the Quota Center console](~~108213~~).</p>
+     * <p>The order number. This parameter is returned only when **InstanceChargeType** is set to **PrePaid**.</p>
      */
     @NameInMap("PublicIpAddressPoolId")
     public String publicIpAddressPoolId;
 
     /**
-     * <p>The ID of the region where you want to request a specified EIP.</p>
+     * <p>The ID of the EIP.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>Set **IpAddress** or **InstanceId**. If you leave both parameters empty, the system randomly allocates an EIP.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the EIP belongs.</p>
+     * <p>The edition of Anti-DDoS.</p>
+     * <br>
+     * <p>*   If you do not set this parameter, Anti-DDoS Origin Basic is used by default.</p>
+     * <p>*   If you set the value to **AntiDDoS_Enhanced**, Anti-DDoS Pro/Premium is used.</p>
+     * <br>
+     * <p>You can configure Anti-DDoS for at most 10 EIPs.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

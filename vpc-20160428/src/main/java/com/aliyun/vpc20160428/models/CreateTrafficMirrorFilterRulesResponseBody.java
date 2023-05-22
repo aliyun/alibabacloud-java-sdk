@@ -4,20 +4,17 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateTrafficMirrorFilterRulesResponseBody extends TeaModel {
-    /**
-     * <p>The list of outbound rules.</p>
-     */
     @NameInMap("EgressRules")
     public java.util.List<CreateTrafficMirrorFilterRulesResponseBodyEgressRules> egressRules;
 
     /**
-     * <p>The list of inbound rules.</p>
+     * <p>The list of outbound rules.</p>
      */
     @NameInMap("IngressRules")
     public java.util.List<CreateTrafficMirrorFilterRulesResponseBodyIngressRules> ingressRules;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the inbound rule.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -52,9 +49,6 @@ public class CreateTrafficMirrorFilterRulesResponseBody extends TeaModel {
     }
 
     public static class CreateTrafficMirrorFilterRulesResponseBodyEgressRules extends TeaModel {
-        /**
-         * <p>The ID of the outbound rule.</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -75,7 +69,7 @@ public class CreateTrafficMirrorFilterRulesResponseBody extends TeaModel {
 
     public static class CreateTrafficMirrorFilterRulesResponseBodyIngressRules extends TeaModel {
         /**
-         * <p>The ID of the inbound rule.</p>
+         * <p>The ID of the outbound rule.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;

@@ -4,33 +4,74 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyIPv6TranslatorEntryRequest extends TeaModel {
+    /**
+     * <p>The ID of the associated ACL.</p>
+     */
     @NameInMap("AclId")
     public String aclId;
 
+    /**
+     * <p>Specifies whether to enable access control lists (ACLs). Valid values:</p>
+     * <br>
+     * <p>*   **on**</p>
+     * <p>*   **off**</p>
+     */
     @NameInMap("AclStatus")
     public String aclStatus;
 
+    /**
+     * <p>The ACL type. Valid values:</p>
+     * <br>
+     * <p>*   **white**: a whitelist. IPv6 addresses in the ACL are allowed to access backend services.</p>
+     * <p>*   **black**: a blacklist. IPv6 addresses in the ACL are not allowed to access backend services.</p>
+     */
     @NameInMap("AclType")
     public String aclType;
 
+    /**
+     * <p>The port that is used by the IPv6 address allocated to the IPv6 Translation Service instance.</p>
+     */
     @NameInMap("AllocateIpv6Port")
     public Integer allocateIpv6Port;
 
+    /**
+     * <p>The public IPv4 address that needs to provide IPv6 services.</p>
+     */
     @NameInMap("BackendIpv4Addr")
     public String backendIpv4Addr;
 
+    /**
+     * <p>The port of the public IPv4 address that needs to provide IPv6 services.</p>
+     */
     @NameInMap("BackendIpv4Port")
     public Integer backendIpv4Port;
 
+    /**
+     * <p>The maximum bandwidth specified in the IPv6 mapping entry. Unit: Mbit/s. Valid values:</p>
+     * <br>
+     * <p>*   **-1** (default): does not limit the maximum bandwidth specified in the IPv6 mapping entry.</p>
+     * <p>*   **1** to **200**: changes the maximum bandwidth specified in the IPv6 mapping entry.</p>
+     * <br>
+     * <p>> The sum of maximum bandwidth values specified in all IPv6 entries cannot exceed the maximum bandwidth supported by the instance.</p>
+     */
     @NameInMap("EntryBandwidth")
     public Integer entryBandwidth;
 
+    /**
+     * <p>The description of the IPv6 mapping entry. It must be 2 to 100 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. It cannot start with http:// or [https://](https://。).</p>
+     */
     @NameInMap("EntryDescription")
     public String entryDescription;
 
+    /**
+     * <p>The name of the IPv6 mapping entry. It must be 2 to 100 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. It cannot start with http:// or [https://](https://。).</p>
+     */
     @NameInMap("EntryName")
     public String entryName;
 
+    /**
+     * <p>The ID of the IPv6 mapping entry.</p>
+     */
     @NameInMap("Ipv6TranslatorEntryId")
     public String ipv6TranslatorEntryId;
 
@@ -40,6 +81,9 @@ public class ModifyIPv6TranslatorEntryRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region of the IPv6 Translation Service instance. You can call the DescribeRegions operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -49,6 +93,12 @@ public class ModifyIPv6TranslatorEntryRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The protocol. Valid values:</p>
+     * <br>
+     * <p>*   **tcp**</p>
+     * <p>*   **udp**</p>
+     */
     @NameInMap("TransProtocol")
     public String transProtocol;
 

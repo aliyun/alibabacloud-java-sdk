@@ -4,9 +4,15 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateIPv6TranslatorEntryResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the IPv6 Translation Service instance.</p>
+     */
     @NameInMap("Ipv6TranslatorEntryId")
     public String ipv6TranslatorEntryId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

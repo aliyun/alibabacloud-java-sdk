@@ -5,37 +5,6 @@ import com.aliyun.tea.*;
 
 public class UnassociateEipAddressRequest extends TeaModel {
     /**
-     * <p>The ID of the EIP that you want to disassociate.</p>
-     */
-    @NameInMap("AllocationId")
-    public String allocationId;
-
-    /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** might be different for each API request.</p>
-     */
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    /**
-     * <p>Specifies whether to disassociate the EIP from a NAT gateway if a DNAT or SNAT entry is added to the NAT gateway. Valid values:</p>
-     * <br>
-     * <p>*   **false** (default): does not disassociate the EIP from a NAT gateway if a DNAT or SNAT entry is added to the NAT gateway.</p>
-     * <p>*   **true**: disassociates the EIP from a NAT gateway if a DNAT or SNAT entry is added to the NAT gateway.</p>
-     */
-    @NameInMap("Force")
-    public Boolean force;
-
-    /**
-     * <p>The ID of the instance from which you want to disassociate the EIP.</p>
-     */
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    /**
      * <p>The type of instance from which you want to disassociate the EIP. Valid values:</p>
      * <br>
      * <p>*   **EcsInstance** (default): an Elastic Compute Service (ECS) instance in a virtual private cloud (VPC)</p>
@@ -43,6 +12,31 @@ public class UnassociateEipAddressRequest extends TeaModel {
      * <p>*   **NetworkInterface**: a secondary elastic network interface (ENI) in a VPC</p>
      * <p>*   **Nat**: a NAT gateway</p>
      * <p>*   **HaVip**: a high-availability virtual IP address (HAVIP)</p>
+     */
+    @NameInMap("AllocationId")
+    public String allocationId;
+
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
+     * <p>The ID of the EIP that you want to disassociate.</p>
+     */
+    @NameInMap("Force")
+    public Boolean force;
+
+    /**
+     * <p>The private IP address of the ECS instance or the secondary ENI from which you want to disassociate the EIP.</p>
+     */
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** might be different for each API request.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -54,15 +48,13 @@ public class UnassociateEipAddressRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The private IP address of the ECS instance or the secondary ENI from which you want to disassociate the EIP.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
     /**
-     * <p>The ID of the region to which the EIP belongs.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The ID of the instance from which you want to disassociate the EIP.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

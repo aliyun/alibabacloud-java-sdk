@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class DescribeVpnGatewaysRequest extends TeaModel {
     /**
-     * <p>The payment status of the VPN gateway. Valid values:</p>
-     * <br>
-     * <p>*   **Normal:** The VPN gateway is running as expected.</p>
-     * <p>*   **FinancialLocked**: The VPN gateway is locked due to overdue payments.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("BusinessStatus")
     public String businessStatus;
 
     /**
-     * <p>Specifies whether to return information about the pending orders. Valid values:</p>
+     * <p>The type of the VPN gateway.</p>
      * <br>
-     * <p>*   **false** (default): no</p>
-     * <p>*   **true**: yes</p>
+     * <p>The value is set to **Normal**, which indicates a standard NAT gateway.</p>
      */
     @NameInMap("IncludeReservationData")
     public Boolean includeReservationData;
@@ -29,21 +25,23 @@ public class DescribeVpnGatewaysRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.</p>
+     * <p>The list of VPN gateways.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the VPN gateway.</p>
+     * <p>The tag key. The tag key cannot be an empty string.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent list of regions.</p>
+     * <p>It can be at most 64 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+     * <br>
+     * <p>You can specify at most 20 tag keys in each call.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -55,13 +53,7 @@ public class DescribeVpnGatewaysRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The status of the VPN gateway. Valid values: </p>
-     * <br>
-     * <p>- **init**: The VPN gateway is being initialized.</p>
-     * <p>- **provisioning**: The VPN gateway is being prepared.</p>
-     * <p>- **active**: The VPN gateway is running as expected.</p>
-     * <p>- **updating**: The VPN gateway is being updated.</p>
-     * <p>- **deleting**: The VPN gateway is being deleted.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("Status")
     public String status;
@@ -70,13 +62,17 @@ public class DescribeVpnGatewaysRequest extends TeaModel {
     public java.util.List<DescribeVpnGatewaysRequestTag> tag;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) to which the VPN gateway belongs.</p>
+     * <p>The tag value.</p>
+     * <br>
+     * <p>The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+     * <br>
+     * <p>Each tag key corresponds to one tag value. You can specify at most 20 tag values in each call.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
-     * <p>The ID of the VPN gateway.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;
@@ -192,21 +188,16 @@ public class DescribeVpnGatewaysRequest extends TeaModel {
 
     public static class DescribeVpnGatewaysRequestTag extends TeaModel {
         /**
-         * <p>The tag key. The tag key cannot be an empty string.</p>
+         * <p>The status of the pending order.</p>
          * <br>
-         * <p>It can be at most 64 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
-         * <br>
-         * <p>You can specify at most 20 tag keys in each call.</p>
+         * <p>*   **1**: indicates that the order for renewal or the order for renewal with a specification change has not taken effect.</p>
+         * <p>*   **2**: indicates that the order for a temporary upgrade has taken effect. After the temporary upgrade expires, the system restores the VPN gateway to its previous specifications. In this case, **ReservationIpsec**, **ReservationMaxConnections**, **ReservationSpec**, and **ReservationSsl** indicate the previous specification.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value.</p>
-         * <br>
-         * <p>The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
-         * <br>
-         * <p>Each tag key corresponds to one tag value. You can specify at most 20 tag values in each call.</p>
+         * <p>The ID of the VPC to which the VPN gateway belongs.</p>
          */
         @NameInMap("Value")
         public String value;

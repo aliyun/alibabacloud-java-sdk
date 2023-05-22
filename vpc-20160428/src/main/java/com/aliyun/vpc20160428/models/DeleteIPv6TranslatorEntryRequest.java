@@ -4,12 +4,25 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteIPv6TranslatorEntryRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the IPv6 mapping entry to be deleted.</p>
+     */
     @NameInMap("Ipv6TranslatorEntryId")
     public String ipv6TranslatorEntryId;
 
+    /**
+     * <p>The ID of the IPv6 Translation Service instance.</p>
+     * <br>
+     * <p>> If you do not specify **Ipv6TranslatorEntryId**, all mapping entries in the specified instance are deleted.</p>
+     */
     @NameInMap("Ipv6TranslatorId")
     public String ipv6TranslatorId;
 
@@ -19,6 +32,9 @@ public class DeleteIPv6TranslatorEntryRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region of the IPv6 Translation Service instance. You can call the **DescribeRegions** operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -25,6 +25,9 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    @NameInMap("AutoRenew")
+    public Boolean autoRenew;
+
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
@@ -236,6 +239,14 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     }
     public Boolean getAutoPay() {
         return this.autoPay;
+    }
+
+    public CreateRouterInterfaceRequest setAutoRenew(Boolean autoRenew) {
+        this.autoRenew = autoRenew;
+        return this;
+    }
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
     }
 
     public CreateRouterInterfaceRequest setClientToken(String clientToken) {

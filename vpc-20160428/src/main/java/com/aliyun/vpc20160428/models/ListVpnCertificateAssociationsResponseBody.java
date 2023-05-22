@@ -4,18 +4,36 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <br>
+     * <p>*   If **NextToken** is empty, no next page exists.</p>
+     * <p>*   If **NextToken** is not empty, the value indicates the token that is used for the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The association information.</p>
+     */
     @NameInMap("VpnCertificateRelations")
     public java.util.List<ListVpnCertificateAssociationsResponseBodyVpnCertificateRelations> vpnCertificateRelations;
 
@@ -65,18 +83,38 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
     }
 
     public static class ListVpnCertificateAssociationsResponseBodyVpnCertificateRelations extends TeaModel {
+        /**
+         * <p>The time when the certificate was associated.</p>
+         * <br>
+         * <p>The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("AssociationTime")
         public String associationTime;
 
+        /**
+         * <p>The certificate ID.</p>
+         */
         @NameInMap("CertificateId")
         public String certificateId;
 
+        /**
+         * <p>The certificate type.</p>
+         * <br>
+         * <p>*   **Encryption**</p>
+         * <p>*   **Signature**</p>
+         */
         @NameInMap("CertificateType")
         public String certificateType;
 
+        /**
+         * <p>The ID of the region where the VPN gateway is created.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the VPN gateway.</p>
+         */
         @NameInMap("VpnGatewayId")
         public String vpnGatewayId;
 

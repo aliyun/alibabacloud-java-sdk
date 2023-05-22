@@ -4,21 +4,44 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class GrantInstanceToVbrRequest extends TeaModel {
+    /**
+     * <p>The VBRs that need to acquire permissions on the VPC. Valid values:</p>
+     * <br>
+     * <p>*   **All**: Permissions on the VPC are granted to all VBRs that belong to the specified region and Alibaba Cloud account. In this case, you can leave **VbrInstanceIds** empty.</p>
+     * <p>*   **Specify**: Permissions on the VPC are granted to the specified VBRs. **VbrInstanceIds** must be assigned a value.</p>
+     */
     @NameInMap("GrantType")
     public String grantType;
 
+    /**
+     * <p>The ID of the VPC.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the region where the VPC is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The information about the VBRs.</p>
+     */
     @NameInMap("VbrInstanceIds")
     public java.util.List<String> vbrInstanceIds;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account to which the VBR belongs.</p>
+     */
     @NameInMap("VbrOwnerUid")
     public Long vbrOwnerUid;
 
+    /**
+     * <p>The ID of the region where the VBR is deployed.</p>
+     */
     @NameInMap("VbrRegionNo")
     public String vbrRegionNo;
 

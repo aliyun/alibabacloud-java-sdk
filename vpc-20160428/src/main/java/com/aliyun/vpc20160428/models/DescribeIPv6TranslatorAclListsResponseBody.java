@@ -4,18 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
+    /**
+     * <p>The list of network ACLs.</p>
+     */
     @NameInMap("Ipv6TranslatorAcls")
     public DescribeIPv6TranslatorAclListsResponseBodyIpv6TranslatorAcls ipv6TranslatorAcls;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +80,15 @@ public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
     }
 
     public static class DescribeIPv6TranslatorAclListsResponseBodyIpv6TranslatorAclsIPv6TranslatorAcl extends TeaModel {
+        /**
+         * <p>The ACL ID.</p>
+         */
         @NameInMap("AclId")
         public String aclId;
 
+        /**
+         * <p>The ACL name.</p>
+         */
         @NameInMap("AclName")
         public String aclName;
 

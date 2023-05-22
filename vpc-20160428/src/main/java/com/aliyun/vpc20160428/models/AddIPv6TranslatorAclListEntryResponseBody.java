@@ -4,9 +4,15 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class AddIPv6TranslatorAclListEntryResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the ACL entry.</p>
+     */
     @NameInMap("AclEntryId")
     public String aclEntryId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

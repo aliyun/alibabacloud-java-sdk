@@ -4,6 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeIPv6TranslatorAclListAttributesRequest extends TeaModel {
+    /**
+     * <p>The ACL ID.</p>
+     */
     @NameInMap("AclId")
     public String aclId;
 
@@ -13,12 +16,21 @@ public class DescribeIPv6TranslatorAclListAttributesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region of the ACL.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

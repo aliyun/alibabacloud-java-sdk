@@ -5,21 +5,26 @@ import com.aliyun.tea.*;
 
 public class CreateVirtualBorderRouterRequest extends TeaModel {
     /**
-     * <p>The bandwidth of the VBR. Unit: Mbit/s.</p>
-     * <br>
-     * <p>*   When you create a VBR for a dedicated connection, valid values are **50**, **100**, **200**, **300**, **400**, **500**, **1000**, **2048**, **5120**, **8192**, **10240**, **20480**, **40960**, **50120**, **61440**, and **102400**.</p>
-     * <p>*   You do not need to set this parameter when you create a VBR for a hosted connection. The bandwidth is already configured when the hosted connection is created.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("Bandwidth")
     public Long bandwidth;
 
     /**
-     * <p>The circuit code of the Express Connect circuit. The circuit code is provided by the connectivity provider.</p>
+     * <p>The IP address of the gateway device in the data center. Only the owner of the VBR can set or modify this parameter.</p>
      * <br>
-     * <p>>  Only the owner of the Express Connect circuit can set this parameter.</p>
+     * <p>When you create a VBR for the owner of the Express Connect circuit, this parameter is required.</p>
      */
     @NameInMap("CircuitCode")
     public String circuitCode;
+
+    /**
+     * <p>The IPv6 address of the VBR. Only the owner of the VBR can set or modify this parameter.</p>
+     * <br>
+     * <p>When you create a VBR for the owner of the Express Connect circuit, this parameter is required.</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
@@ -28,46 +33,33 @@ public class CreateVirtualBorderRouterRequest extends TeaModel {
      * <br>
      * <p>>  If you do not set this parameter, the system automatically sets **ClientToken** to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
      */
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    /**
-     * <p>The description of the VBR.</p>
-     * <br>
-     * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.</p>
-     */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>Specifies whether to enable IPv6. Valid values:</p>
-     * <br>
-     * <p>*   **true**: enables IPv6.</p>
-     * <p>*   **false** (default): disables IPv6.</p>
+     * <p>The ID of the VBR.</p>
      */
     @NameInMap("EnableIpv6")
     public Boolean enableIpv6;
 
     /**
-     * <p>The IP address of the VBR. Only the owner of the VBR can set or modify this parameter.</p>
+     * <p>The subnet mask of the IP addresses of the VBR and the gateway device in the data center.</p>
      * <br>
-     * <p>When you create a VBR for the owner of the Express Connect circuit, this parameter is required.</p>
+     * <p>The two IP addresses must fall within the same subnet.</p>
      */
     @NameInMap("LocalGatewayIp")
     public String localGatewayIp;
 
     /**
-     * <p>The IPv6 address of the VBR. Only the owner of the VBR can set or modify this parameter.</p>
+     * <p>The subnet mask of the IPv6 addresses of the VBR and the gateway device in the data center.</p>
      * <br>
-     * <p>When you create a VBR for the owner of the Express Connect circuit, this parameter is required.</p>
+     * <p>The two IPv6 addresses must fall within the same subnet.</p>
      */
     @NameInMap("LocalIpv6GatewayIp")
     public String localIpv6GatewayIp;
 
     /**
-     * <p>The name of the VBR.</p>
-     * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The operation that you want to perform. Set the value to **CreateVirtualBorderRouter**.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -79,49 +71,51 @@ public class CreateVirtualBorderRouterRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The IP address of the gateway device in the data center. Only the owner of the VBR can set or modify this parameter.</p>
+     * <p>The description of the VBR.</p>
      * <br>
-     * <p>When you create a VBR for the owner of the Express Connect circuit, this parameter is required.</p>
+     * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("PeerGatewayIp")
     public String peerGatewayIp;
 
     /**
-     * <p>The IPv6 address of the gateway device in the data center. Only the owner of the VBR can set or modify this parameter.</p>
+     * <p>Specifies whether to enable IPv6. Valid values:</p>
      * <br>
-     * <p>When you create a VBR for the owner of the Express Connect circuit, this parameter is required.</p>
+     * <p>*   **true**: enables IPv6.</p>
+     * <p>*   **false** (default): disables IPv6.</p>
      */
     @NameInMap("PeerIpv6GatewayIp")
     public String peerIpv6GatewayIp;
 
     /**
-     * <p>The subnet mask of the IPv6 addresses of the VBR and the gateway device in the data center.</p>
+     * <p>The bandwidth of the VBR. Unit: Mbit/s.</p>
      * <br>
-     * <p>The two IPv6 addresses must fall within the same subnet.</p>
+     * <p>*   When you create a VBR for a dedicated connection, valid values are **50**, **100**, **200**, **300**, **400**, **500**, **1000**, **2048**, **5120**, **8192**, **10240**, **20480**, **40960**, **50120**, **61440**, and **102400**.</p>
+     * <p>*   You do not need to set this parameter when you create a VBR for a hosted connection. The bandwidth is already configured when the hosted connection is created.</p>
      */
     @NameInMap("PeeringIpv6SubnetMask")
     public String peeringIpv6SubnetMask;
 
     /**
-     * <p>The subnet mask of the IP addresses of the VBR and the gateway device in the data center.</p>
+     * <p>The name of the VBR.</p>
      * <br>
-     * <p>The two IP addresses must fall within the same subnet.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
      */
     @NameInMap("PeeringSubnetMask")
     public String peeringSubnetMask;
 
     /**
-     * <p>The ID of the Express Connect circuit.</p>
+     * <p>The VLAN ID of the VBR. Valid values: **0 to 2999**.</p>
      * <br>
-     * <p>You can create a VBR for a dedicated connection or a hosted connection.</p>
+     * <p>>  Only the owner of the Express Connect circuit can set this parameter. The VLAN IDs of two VBRs of the same the Express Connect circuit must be different.</p>
      */
     @NameInMap("PhysicalConnectionId")
     public String physicalConnectionId;
 
     /**
-     * <p>The region ID of the Express Connect circuit.</p>
+     * <p>The account ID of the VBR owner.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The default value is the ID of the current Alibaba Cloud account.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -133,17 +127,17 @@ public class CreateVirtualBorderRouterRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The account ID of the VBR owner.</p>
+     * <p>The circuit code of the Express Connect circuit. The circuit code is provided by the connectivity provider.</p>
      * <br>
-     * <p>The default value is the ID of the current Alibaba Cloud account.</p>
+     * <p>>  Only the owner of the Express Connect circuit can set this parameter.</p>
      */
     @NameInMap("VbrOwnerId")
     public Long vbrOwnerId;
 
     /**
-     * <p>The VLAN ID of the VBR. Valid values: **0 to 2999**.</p>
+     * <p>The IP address of the VBR. Only the owner of the VBR can set or modify this parameter.</p>
      * <br>
-     * <p>>  Only the owner of the Express Connect circuit can set this parameter. The VLAN IDs of two VBRs of the same the Express Connect circuit must be different.</p>
+     * <p>When you create a VBR for the owner of the Express Connect circuit, this parameter is required.</p>
      */
     @NameInMap("VlanId")
     public Integer vlanId;

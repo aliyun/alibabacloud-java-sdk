@@ -5,59 +5,6 @@ import com.aliyun.tea.*;
 
 public class AssociateVpcCidrBlockRequest extends TeaModel {
     /**
-     * <p>The IPv6 CIDR block.</p>
-     * <br>
-     * <p>>  You must set one of the **SecondaryCidrBlock** and **Ipv6CidrBlock** parameters.</p>
-     */
-    @NameInMap("IPv6CidrBlock")
-    public String IPv6CidrBlock;
-
-    /**
-     * <p>The IP version. Valid values:</p>
-     * <br>
-     * <p>*   **IPV4**: IPv4</p>
-     * <p>*   **IPV6**: IPv6. If you set **IpVersion** to **IPV6** and do not set **SecondaryCidrBlock**, you can add IPv6 CIDR blocks to the VPC.</p>
-     */
-    @NameInMap("IpVersion")
-    public String ipVersion;
-
-    @NameInMap("IpamPoolId")
-    public String ipamPoolId;
-
-    /**
-     * <p>The type of the IPv6 CIDR block. Valid values:</p>
-     * <br>
-     * <p>*   **BGP** (default): Alibaba Cloud Border Gateway Protocol (BGP) IPv6</p>
-     * <p>*   **ChinaMobile**: China Mobile (single line)</p>
-     * <p>*   **ChinaUnicom**: China Unicom (single line)</p>
-     * <p>*   **ChinaTelecom**: China Telecom (single line)</p>
-     * <br>
-     * <p>>  If your Alibaba Cloud account is allowed to use single-ISP bandwidth, valid values are: **ChinaTelecom**, **ChinaUnicom**, and **ChinaMobile**.</p>
-     */
-    @NameInMap("Ipv6Isp")
-    public String ipv6Isp;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    /**
-     * <p>The region ID of the VPC to which you want to add a secondary CIDR block.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
-     */
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    /**
      * <p>The secondary IPv4 CIDR block. Take note of the following requirements:</p>
      * <br>
      * <p>*   You can specify one of the following standard IPv4 CIDR blocks or their subnets as the secondary IPv4 CIDR block: 192.168.0.0/16, 172.16.0.0/12, and 10.0.0.0/8.</p>
@@ -70,11 +17,66 @@ public class AssociateVpcCidrBlockRequest extends TeaModel {
      * <br>
      * <p>>  You must set one of the **SecondaryCidrBlock** and **Ipv6CidrBlock** parameters.</p>
      */
+    @NameInMap("IPv6CidrBlock")
+    public String IPv6CidrBlock;
+
+    /**
+     * <p>The type of the IPv6 CIDR block. Valid values:</p>
+     * <br>
+     * <p>*   **BGP** (default): Alibaba Cloud Border Gateway Protocol (BGP) IPv6</p>
+     * <p>*   **ChinaMobile**: China Mobile (single line)</p>
+     * <p>*   **ChinaUnicom**: China Unicom (single line)</p>
+     * <p>*   **ChinaTelecom**: China Telecom (single line)</p>
+     * <br>
+     * <p>>  If your Alibaba Cloud account is allowed to use single-ISP bandwidth, valid values are: **ChinaTelecom**, **ChinaUnicom**, and **ChinaMobile**.</p>
+     */
+    @NameInMap("IpVersion")
+    public String ipVersion;
+
+    @NameInMap("IpamPoolId")
+    public String ipamPoolId;
+
+    /**
+     * <p>The IPv6 CIDR block.</p>
+     * <br>
+     * <p>>  You must set one of the **SecondaryCidrBlock** and **Ipv6CidrBlock** parameters.</p>
+     */
+    @NameInMap("Ipv6Isp")
+    public String ipv6Isp;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    /**
+     * <p>*   The following list describes the limits on the maximum number of secondary CIDR blocks that can be added:</p>
+     * <br>
+     * <p>    *   You can add up to five secondary IPv4 CIDR blocks to each VPC.</p>
+     * <p>    *   You can add up to three secondary IPv6 CIDR blocks to each VPC.</p>
+     * <br>
+     * <p>*   You cannot repeatedly call the **AssociateVpcCidrBlock** operation to add secondary CIDR blocks to a VPC within the specified period of time.</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    /**
+     * <p>The ID of the VPC.</p>
+     */
     @NameInMap("SecondaryCidrBlock")
     public String secondaryCidrBlock;
 
     /**
-     * <p>The ID of the VPC.</p>
+     * <p>The region ID of the VPC to which you want to add a secondary CIDR block.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

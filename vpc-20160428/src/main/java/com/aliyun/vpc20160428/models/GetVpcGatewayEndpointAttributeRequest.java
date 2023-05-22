@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetVpcGatewayEndpointAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the gateway endpoint.</p>
+     * <p>The description of the gateway endpoint.</p>
      */
     @NameInMap("EndpointId")
     public String endpointId;
@@ -17,9 +17,7 @@ public class GetVpcGatewayEndpointAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the gateway endpoint.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The name of the endpoint service.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

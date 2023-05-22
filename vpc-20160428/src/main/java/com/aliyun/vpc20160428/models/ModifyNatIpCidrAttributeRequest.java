@@ -5,48 +5,43 @@ import com.aliyun.tea.*;
 
 public class ModifyNatIpCidrAttributeRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.</p>
+     * <p>The ID of the Virtual Private Cloud (VPC) NAT gateway to which the NAT CIDR block belongs.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
-
-    /**
-     * <p>Specifies whether to check the request without performing the operation. Valid values:</p>
-     * <br>
-     * <p>*   **true**: checks the request but does not modify information about the NAT CIDR block. The system checks whether your AccessKey pair is valid, whether RAM users are granted required permissions, and whether the required parameters are set. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false**: sends the request. This is the default value. If the request passes the check, a 2xx HTTP status code is returned and information about the NAT CIDR block is modified.</p>
-     */
-    @NameInMap("DryRun")
-    public Boolean dryRun;
-
-    /**
-     * <p>The ID of the Virtual Private Cloud (VPC) NAT gateway to which the NAT CIDR block belongs.</p>
-     */
-    @NameInMap("NatGatewayId")
-    public String natGatewayId;
-
-    /**
-     * <p>The NAT CIDR block whose name and description you want to modify.</p>
-     */
-    @NameInMap("NatIpCidr")
-    public String natIpCidr;
 
     /**
      * <p>The new description of the NAT CIDR block.</p>
      * <br>
      * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.</p>
      */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
+     * <p>The operation that you want to perform. Set the value to **ModifyNatIpCidrAttribute**.</p>
+     */
+    @NameInMap("NatGatewayId")
+    public String natGatewayId;
+
+    /**
+     * <p>The ID of the request.</p>
+     */
+    @NameInMap("NatIpCidr")
+    public String natIpCidr;
+
+    /**
+     * <p>The NAT CIDR block whose name and description you want to modify.</p>
+     */
     @NameInMap("NatIpCidrDescription")
     public String natIpCidrDescription;
 
     /**
-     * <p>The new name of the NAT CIDR block.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.</p>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.</p>
      */
     @NameInMap("NatIpCidrName")
     public String natIpCidrName;
@@ -58,9 +53,10 @@ public class ModifyNatIpCidrAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the NAT gateway to which the NAT CIDR block belongs.</p>
+     * <p>Specifies whether to check the request without performing the operation. Valid values:</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>*   **true**: checks the request but does not modify information about the NAT CIDR block. The system checks whether your AccessKey pair is valid, whether RAM users are granted required permissions, and whether the required parameters are set. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false**: sends the request. This is the default value. If the request passes the check, a 2xx HTTP status code is returned and information about the NAT CIDR block is modified.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

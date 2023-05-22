@@ -4,18 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class UpdateVirtualPhysicalConnectionResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the VLAN ID of the hosted connection is changed. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The VLAN ID of the hosted connection is changed.</p>
-     * <p>*   **false**: The VLAN ID of the hosted connection is not changed.</p>
-     */
     @NameInMap("Success")
     public String success;
 
