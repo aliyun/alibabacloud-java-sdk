@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetApplicationRequest extends TeaModel {
     /**
-     * <p>The ID of the application.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("ApplicationId")
     public String applicationId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>Queries the basic information, verification results, billing results, and deployment results of an application.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
