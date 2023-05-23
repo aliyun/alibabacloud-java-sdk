@@ -1,3 +1,6 @@
+2023-05-23 Version: 1.0.6
+- Support list assignment api.
+
 2023-04-26 Version: 1.0.5
 - support benefit management
 
