@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>yuqing20220301</artifactId>
-  <version>1.2.2</version>
+  <version>1.2.3</version>
   <packaging>jar</packaging>
   <name>yuqing20220301</name>
   <description>Alibaba Cloud Yuqing (20220301) SDK for Java

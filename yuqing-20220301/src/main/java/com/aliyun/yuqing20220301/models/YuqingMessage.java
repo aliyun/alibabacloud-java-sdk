@@ -143,7 +143,7 @@ public class YuqingMessage extends TeaModel {
     public Integer finEventCount;
 
     @NameInMap("financeEventList")
-    public YuqingFinanceEvent financeEventList;
+    public java.util.List<YuqingFinanceEvent> financeEventList;
 
     @NameInMap("highlightKeywords")
     public java.util.List<String> highlightKeywords;
@@ -578,11 +578,11 @@ public class YuqingMessage extends TeaModel {
         return this.finEventCount;
     }
 
-    public YuqingMessage setFinanceEventList(YuqingFinanceEvent financeEventList) {
+    public YuqingMessage setFinanceEventList(java.util.List<YuqingFinanceEvent> financeEventList) {
         this.financeEventList = financeEventList;
         return this;
     }
-    public YuqingFinanceEvent getFinanceEventList() {
+    public java.util.List<YuqingFinanceEvent> getFinanceEventList() {
         return this.financeEventList;
     }
 
