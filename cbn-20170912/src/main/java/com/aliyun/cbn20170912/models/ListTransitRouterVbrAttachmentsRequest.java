@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterVbrAttachmentsRequest extends TeaModel {
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The IDs of the CEN instances.</p>
      */
     @NameInMap("CenId")
     public String cenId;
@@ -17,7 +17,7 @@ public class ListTransitRouterVbrAttachmentsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the query.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

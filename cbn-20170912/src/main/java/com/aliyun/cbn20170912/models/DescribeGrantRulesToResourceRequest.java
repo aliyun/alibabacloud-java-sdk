@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGrantRulesToResourceRequest extends TeaModel {
     /**
-     * <p>*   If you do not set **MaxResults**, it indicates that you do not need to query results in batches. The value of **MaxResults** indicates the total number of entries.</p>
-     * <p>*   If you specify a value for **MaxResults**, it indicates that you need to query results in batches. The value of **MaxResults** indicates the number of entries to return in each batch. Valid values: **1** to **100**. The value of **MaxResults** in the response indicates the number of entries in the current batch. We recommend that you set **MaxResults** to **20**.</p>
+     * <p>The operation that you want to perform. Set the value to **DescribeGrantRulesToResource**.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
@@ -27,25 +26,23 @@ public class DescribeGrantRulesToResourceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The type of the network instance. Valid values:</p>
-     * <br>
-     * <p>*   **VPC**: virtual private cloud (VPC)</p>
-     * <p>*   **ExpressConnect**: virtual border router (VBR)</p>
-     * <p>*   **VPN**: IPsec-VPN connection</p>
+     * <p>The ID of the CEN instance.</p>
      */
     @NameInMap("ProductType")
     public String productType;
 
     /**
-     * <p>The ID of the region where the network instance is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     * <p>The ID of the network instance.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the network instance.</p>
+     * <p>The type of the network instance. Valid values:</p>
+     * <br>
+     * <p>*   **VPC**: virtual private cloud (VPC)</p>
+     * <p>*   **ExpressConnect**: virtual border router (VBR)</p>
+     * <p>*   **VPN**: IPsec-VPN connection</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;

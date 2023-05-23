@@ -4,33 +4,18 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
-    /**
-     * <p>The page number of the returned page.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries returned per page.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The list of regions.</p>
-     */
     @NameInMap("RegionIds")
     public DescribeGeographicRegionMembershipResponseBodyRegionIds regionIds;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of entries returned.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -80,11 +65,6 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
     }
 
     public static class DescribeGeographicRegionMembershipResponseBodyRegionIdsRegionId extends TeaModel {
-        /**
-         * <p>The ID of the region.</p>
-         * <br>
-         * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 

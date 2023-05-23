@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterPeerAttachmentsRequest extends TeaModel {
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
-     * <p>The number of entries to return per page. The default value is **20**. The maximum value is **100**.</p>
+     * <p>The number of entries returned per page. Default value: **20**. Maximum value: **100**.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
      * <br>
-     * <p>*   If this is your first query or no next query is to be sent, ignore this parameter.</p>
-     * <p>*   If a next query is to be sent, set the value to the value of **NextToken** that is returned from the last call.</p>
+     * <p>*   You do not need to specify this parameter for the first request.</p>
+     * <p>*   You must specify the token that is obtained from the previous query as the value of **NextToken**.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -46,13 +46,15 @@ public class ListTransitRouterPeerAttachmentsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The information about the tag.</p>
+     * <br>
+     * <p>You can specify at most 20 tags in each call.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTransitRouterPeerAttachmentsRequestTag> tag;
 
     /**
-     * <p>The ID of the cross-region connection.</p>
+     * <p>The ID of the inter-region connection.</p>
      */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
@@ -158,9 +160,9 @@ public class ListTransitRouterPeerAttachmentsRequest extends TeaModel {
 
     public static class ListTransitRouterPeerAttachmentsRequestTag extends TeaModel {
         /**
-         * <p>The tag keys of the resources. </p>
+         * <p>The tag key.</p>
          * <br>
-         * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.  </p>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
          * <br>
          * <p>You can specify at most 20 tag keys.</p>
          */
@@ -168,11 +170,11 @@ public class ListTransitRouterPeerAttachmentsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag values of the resources. </p>
+         * <p>The tag value.</p>
          * <br>
-         * <p>The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.  </p>
+         * <p>The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
          * <br>
-         * <p>Each tag key has a unique tag value. You can specify at most 20 tag values in each call.</p>
+         * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
          */
         @NameInMap("Value")
         public String value;

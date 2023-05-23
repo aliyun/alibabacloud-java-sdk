@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterMulticastDomainsRequest extends TeaModel {
     /**
-     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     * <p>The tags of the multicast domain.</p>
      */
     @NameInMap("CenId")
     public String cenId;
@@ -19,16 +19,13 @@ public class ListTransitRouterMulticastDomainsRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **20**.</p>
+     * <p>The ID of the multicast domain.</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
-     * <br>
-     * <p>*   If this is your first query or no next query is to be sent, ignore this parameter.</p>
-     * <p>*   If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -40,9 +37,7 @@ public class ListTransitRouterMulticastDomainsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the transit router is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     * <p>The ID of the transit router.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -54,13 +49,13 @@ public class ListTransitRouterMulticastDomainsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags of the resources.</p>
+     * <p>The information about the multicast domain.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTransitRouterMulticastDomainsRequestTag> tag;
 
     /**
-     * <p>The ID of the transit router.</p>
+     * <p>The description of the multicast domain.</p>
      */
     @NameInMap("TransitRouterId")
     public String transitRouterId;
@@ -174,21 +169,13 @@ public class ListTransitRouterMulticastDomainsRequest extends TeaModel {
 
     public static class ListTransitRouterMulticastDomainsRequestTag extends TeaModel {
         /**
-         * <p>The tag keys of the resources. </p>
-         * <br>
-         * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.  </p>
-         * <br>
-         * <p>You can specify at most 20 tag keys.</p>
+         * <p>$.parameters[7].schema.description</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag values of the resources. </p>
-         * <br>
-         * <p>The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.  </p>
-         * <br>
-         * <p>Each tag key has a unique tag value. You can specify at most 20 tag values in each call.</p>
+         * <p>$.parameters[7].schema.example</p>
          */
         @NameInMap("Value")
         public String value;

@@ -4,25 +4,12 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class TempUpgradeCenBandwidthPackageSpecRequest extends TeaModel {
-    /**
-     * <p>The maximum bandwidth value to which you want to upgrade the bandwidth plan. Unit: Mbit/s.</p>
-     * <br>
-     * <p>Valid values: **2** to **10000**.</p>
-     */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
-    /**
-     * <p>The ID of the bandwidth plan.</p>
-     */
     @NameInMap("CenBandwidthPackageId")
     public String cenBandwidthPackageId;
 
-    /**
-     * <p>The time when the temporary upgrade ends.</p>
-     * <br>
-     * <p>Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
-     */
     @NameInMap("EndTime")
     public String endTime;
 

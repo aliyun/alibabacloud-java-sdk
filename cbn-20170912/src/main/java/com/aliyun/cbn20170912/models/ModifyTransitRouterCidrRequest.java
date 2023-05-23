@@ -5,51 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifyTransitRouterCidrRequest extends TeaModel {
     /**
-     * <p>The new CIDR block of the transit router.</p>
+     * <p>The ID of the region where the transit router is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
      */
     @NameInMap("Cidr")
     public String cidr;
-
-    /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</p>
-     */
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    /**
-     * <p>The new description of the transit router CIDR block.</p>
-     * <br>
-     * <p>The description must be 1 to 256 characters in length.</p>
-     */
-    @NameInMap("Description")
-    public String description;
-
-    /**
-     * <p>Specifies whether only to precheck the request. Valid values:</p>
-     * <br>
-     * <p>*   **true**: checks the request but does not modify the CIDR block. The system checks the required parameters, the request format, and the service limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false**: sends the request. If the request passes the precheck, the CIDR block of the transit router is modified.</p>
-     */
-    @NameInMap("DryRun")
-    public Boolean dryRun;
-
-    /**
-     * <p>The new name of the transit router CIDR block.</p>
-     * <br>
-     * <p>The name must be 1 to 128 characters in length.</p>
-     */
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
 
     /**
      * <p>Specifies whether to allow the system to automatically add routes that point to the CIDR block to the route table of the transit router.</p>
@@ -64,13 +25,43 @@ public class ModifyTransitRouterCidrRequest extends TeaModel {
      * <br>
      * <p>*   **false**: no</p>
      */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
+     * <p>The new CIDR block of the transit router.</p>
+     */
+    @NameInMap("Description")
+    public String description;
+
+    /**
+     * <p>The ID of the request.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
+     * <p>The ID of the transit router CIDR block.</p>
+     * <br>
+     * <p>You can call [ListTransitRouterCidr](~~462772~~) to query the ID of a transit route CIDR block.</p>
+     */
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    /**
+     * <p>The operation that you want to perform. Set the value to **ModifyTransitRouterCidr**.</p>
+     */
     @NameInMap("PublishCidrRoute")
     public Boolean publishCidrRoute;
 
     /**
-     * <p>The ID of the region where the transit router is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     * <p>The ID of the transit router.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -82,15 +73,20 @@ public class ModifyTransitRouterCidrRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the transit router CIDR block.</p>
+     * <p>Specifies whether only to precheck the request. Valid values:</p>
      * <br>
-     * <p>You can call [ListTransitRouterCidr](~~462772~~) to query the ID of a transit route CIDR block.</p>
+     * <p>*   **true**: checks the request but does not modify the CIDR block. The system checks the required parameters, the request format, and the service limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false**: sends the request. If the request passes the precheck, the CIDR block of the transit router is modified.</p>
      */
     @NameInMap("TransitRouterCidrId")
     public String transitRouterCidrId;
 
     /**
-     * <p>The ID of the transit router.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</p>
      */
     @NameInMap("TransitRouterId")
     public String transitRouterId;

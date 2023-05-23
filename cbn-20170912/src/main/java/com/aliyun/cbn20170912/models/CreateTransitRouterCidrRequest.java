@@ -5,42 +5,39 @@ import com.aliyun.tea.*;
 
 public class CreateTransitRouterCidrRequest extends TeaModel {
     /**
-     * <p>The CIDR block that you want to create for the transit router.</p>
+     * <p>The operation that you want to perform. Set the value to **CreateTransitRouterCidr**.</p>
      */
     @NameInMap("Cidr")
     public String cidr;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>Specifies whether to allow the system to automatically add a route that points to the CIDR block to the route table of the transit router.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <p>*   **true** (default): yes</p>
      * <br>
-     * <p>>  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</p>
+     * <p>    A value of true specifies that after you create a private VPN connection and enable route learning for the connection, the system automatically adds a blackhole route to the route table of the transit router to which the VPN connection is attached. The destination CIDR block of the blackhole route is the CIDR block of the transit router. The CIDR block of the transit router refers to the CIDR block from which gateway IP addresses are allocated to IPsec-VPN connections. The blackhole route is advertised only to the route table of the virtual border router (VBR) that is connected to the transit router.</p>
+     * <br>
+     * <p>*   **false**: no</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The description of the CIDR block.</p>
+     * <p>The name of the CIDR block.</p>
      * <br>
-     * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>Specifies whether only to precheck the request. Valid values:</p>
-     * <br>
-     * <p>*   **true**: prechecks the request but does not create the CIDR block. The system checks the required parameters, the request format, and the service limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): sends the request. After the request passes the precheck, the CIDR block is created.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The name of the CIDR block.</p>
-     * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <p>The CIDR block that you want to create for the transit router.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -52,13 +49,9 @@ public class CreateTransitRouterCidrRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Specifies whether to allow the system to automatically add a route that points to the CIDR block to the route table of the transit router.</p>
+     * <p>The description of the CIDR block.</p>
      * <br>
-     * <p>*   **true** (default): yes</p>
-     * <br>
-     * <p>    A value of true specifies that after you create a private VPN connection and enable route learning for the connection, the system automatically adds a blackhole route to the route table of the transit router to which the VPN connection is attached. The destination CIDR block of the blackhole route is the CIDR block of the transit router. The CIDR block of the transit router refers to the CIDR block from which gateway IP addresses are allocated to IPsec-VPN connections. The blackhole route is advertised only to the route table of the virtual border router (VBR) that is connected to the transit router.</p>
-     * <br>
-     * <p>*   **false**: no</p>
+     * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("PublishCidrRoute")
     public Boolean publishCidrRoute;

@@ -35,8 +35,8 @@ public class AttachCenChildInstanceRequest extends TeaModel {
     /**
      * <p>The type of the network instance. Valid values:</p>
      * <br>
-     * <p>*   **VPC**: virtual private cloud (VPC)</p>
-     * <p>*   **VBR**: virtual border router (VBR)</p>
+     * <p>*   **VPC**: VPC</p>
+     * <p>*   **VBR**: VBR</p>
      * <p>*   **CCN**: CCN instance</p>
      */
     @NameInMap("ChildInstanceType")

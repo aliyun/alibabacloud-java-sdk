@@ -5,30 +5,17 @@ import com.aliyun.tea.*;
 
 public class RevokeInstanceFromTransitRouterRequest extends TeaModel {
     /**
-     * <p>Enter the ID of the Cloud Enterprise Network (CEN) instance to which the transit router belongs.</p>
+     * <p>Revokes the permissions that a transit router uses to connect to network instances that belong to another Alibaba Cloud account.</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
-    /**
-     * <p>The ID of the Alibaba Cloud account to which the CEN instance belongs.</p>
-     */
     @NameInMap("CenOwnerId")
     public Long cenOwnerId;
 
-    /**
-     * <p>The ID of the network instance.</p>
-     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    /**
-     * <p>The type of the network instance. Valid values:</p>
-     * <br>
-     * <p>*   **VPC**: VPC</p>
-     * <p>*   **ExpressConnect**: VBR</p>
-     * <p>*   **VPN**: IPsec-VPN connection</p>
-     */
     @NameInMap("InstanceType")
     public String instanceType;
 
@@ -38,11 +25,6 @@ public class RevokeInstanceFromTransitRouterRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The ID of the region where the network instance is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

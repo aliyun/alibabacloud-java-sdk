@@ -11,10 +11,10 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <p>The token that determines the start point of the next query. Valid values:</p>
      * <br>
-     * <p>- If **NextToken** was not returned, it indicates that no additional results exist.</p>
-     * <p>- If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.</p>
+     * <p>*   If **NextToken** is not returned, it indicates that no additional results exist.</p>
+     * <p>*   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -84,13 +84,13 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
 
     public static class ListTransitRouterVpnAttachmentsResponseBodyTransitRouterAttachmentsTags extends TeaModel {
         /**
-         * <p>The key of tag.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -120,9 +120,9 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
 
     public static class ListTransitRouterVpnAttachmentsResponseBodyTransitRouterAttachmentsZones extends TeaModel {
         /**
-         * <p>The zone ID. </p>
+         * <p>The ID of the zone.</p>
          * <br>
-         * <p>You can call [DescribeZones](https://www.alibabacloud.com/help/en/virtual-private-cloud/latest/describezones) to query zones by ID.</p>
+         * <p>You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
@@ -144,7 +144,7 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
 
     public static class ListTransitRouterVpnAttachmentsResponseBodyTransitRouterAttachments extends TeaModel {
         /**
-         * <p>Indicates whether to allow the transit router to automatically advertise routes to the IPsec connection. Valid values:</p>
+         * <p>Specifies whether to allow the transit router to automatically advertise routes to the IPsec-VPN connection. Valid values:</p>
          * <br>
          * <p>*   **true**: yes</p>
          * <p>*   **false**: no</p>
@@ -156,15 +156,15 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
         public String cenId;
 
         /**
-         * <p>The billing method of the VPC connection.</p>
+         * <p>The billing method of the VPN attachment.</p>
          * <br>
-         * <p>Valid value: **POSTPAY**, which is the default value and specifies the pay-as-you-go billing method.</p>
+         * <p>The value is POSTPAY, which is the default value and specifies the pay-as-you-go billing method.</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
-         * <p>The time when the VPN attachment was created. </p>
+         * <p>The time when the VPN attachment was created.</p>
          * <br>
          * <p>The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.</p>
          */
@@ -172,7 +172,7 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The type of resource to which the transit router is connected. </p>
+         * <p>The type of resource to which the transit router is connected.</p>
          * <br>
          * <p>Valid value: **VPN**, which indicates that an IPsec-VPN connection is attached to the transit router.</p>
          */
@@ -180,18 +180,18 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The status of the VPN attachment. Valid values: </p>
+         * <p>The status of the VPN attachment. Valid values:</p>
          * <br>
-         * <p>- **Attached**: The VPC attachment has been created on the transit router.</p>
-         * <p>- **Attaching**: The VPC attachment is being created on the transit router.</p>
-         * <p>- **Detaching**: The VPC attachment is being deleted from the transit router.</p>
-         * <p>- **Detached**: The local transit router is disconnected from the peer transit router.</p>
+         * <p>*   **Attached**: The VPC attachment has been created on the transit router.</p>
+         * <p>*   **Attaching**: The VPN attachment is being created on the transit router.</p>
+         * <p>*   **Detaching**: The VPN attachment is being deleted from the transit router.</p>
+         * <p>*   **Detached**: The VPN attachment is deleted from the transit router.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The tags.</p>
+         * <p>A list of tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListTransitRouterVpnAttachmentsResponseBodyTransitRouterAttachmentsTags> tags;
@@ -227,15 +227,15 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
         public String vpnId;
 
         /**
-         * <p>The ID of the Alibaba Cloud account that owns the IPsec-VPN connection.</p>
+         * <p>The ID of the Alibaba Cloud account to which the IPsec-VPN connection belongs.</p>
          */
         @NameInMap("VpnOwnerId")
         public Long vpnOwnerId;
 
         /**
-         * <p>The ID of the region to which the IPsec-VPN connection belongs. </p>
+         * <p>The ID of the region to which the IPsec-VPN connection belongs.</p>
          * <br>
-         * <p>You can call the [DescribeRegions](https://www.alibabacloud.com/help/en/virtual-private-cloud/latest/describeregions) operation to query the most recent region list.</p>
+         * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
          */
         @NameInMap("VpnRegionId")
         public String vpnRegionId;

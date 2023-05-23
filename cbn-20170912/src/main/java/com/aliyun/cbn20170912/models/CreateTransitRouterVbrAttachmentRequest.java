@@ -30,7 +30,7 @@ public class CreateTransitRouterVbrAttachmentRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run to check information such as the permissions and the instance status. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Default values:</p>
      * <br>
      * <p>*   **false** (default): performs a dry run and sends the request.</p>
      * <p>*   **true**: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.</p>
@@ -45,7 +45,7 @@ public class CreateTransitRouterVbrAttachmentRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the VBR is deployed.</p>
+     * <p>The region ID of the VBR.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */

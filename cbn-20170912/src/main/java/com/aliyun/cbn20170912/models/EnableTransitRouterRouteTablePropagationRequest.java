@@ -7,7 +7,7 @@ public class EnableTransitRouterRouteTablePropagationRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
      * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
      */
@@ -15,10 +15,10 @@ public class EnableTransitRouterRouteTablePropagationRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to check the request but not perform the operation. The system checks the permissions and the status of the specified instances. Valid values:</p>
+     * <p>Specifies whether to perform a dry run to check information such as the permissions and the instance status. Valid values:</p>
      * <br>
-     * <p>*   **false** (default): sends the request. If the request passes the precheck, the route learning correlation is created.</p>
-     * <p>*   **true**: sends a request for precheck only. No route learning correlation is created after the request passes the precheck. If you use this value, the system checks whether the required parameters are set, and whether the request syntax is valid. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the system returns the ID of the request.</p>
+     * <p>*   **false** (default): performs a dry run and sends the request.</p>
+     * <p>*   **true**: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;

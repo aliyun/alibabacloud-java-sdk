@@ -25,7 +25,7 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends TeaModel {
     public String childInstanceRegionId;
 
     /**
-     * <p>The ID of the route table of the network instance.</p>
+     * <p>The ID of the route table of the network instance. If you do not specify a route table ID, the system queries the routes in the system route tables of the VPCs by default.</p>
      */
     @NameInMap("ChildInstanceRouteTableId")
     public String childInstanceRouteTableId;

@@ -5,24 +5,30 @@ import com.aliyun.tea.*;
 
 public class DeleteTransitRouterPeerAttachmentRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>The client token that you want to use to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run to check information such as the permissions and instance status. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <br>
      * <p>*   **false** (default): performs a dry run and sends the request.</p>
-     * <p>*   **true**: performs a dry run. The system checks the required parameters and the request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.</p>
+     * <p>*   **true**: performs a dry run. The system checks the required parameters and request syntax. If the request fails to pass the check, an error message is returned. If the request passes the dry run, the system returns the ID of the request.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>Specifies whether to forcefully delete the inter-region connection. Valid values:</p>
+     * <br>
+     * <p>*   **false** (default): Check for relevant resources, including associated forwarding and route learning, before deleting the inter-region connection. If such a resource exists, the VPC connection is not deleted and an error message is returned.</p>
+     * <p>*   **true**: Delete the inter-region connection and all relevant resources.</p>
+     */
     @NameInMap("Force")
     public Boolean force;
 

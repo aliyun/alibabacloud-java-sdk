@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCensRequest extends TeaModel {
     /**
-     * <p>The list of the filter conditions.</p>
+     * <p>The key of the tag.</p>
      */
     @NameInMap("Filter")
     public java.util.List<DescribeCensRequestFilter> filter;
@@ -23,7 +23,11 @@ public class DescribeCensRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.</p>
+     * <p>The value of the filter condition.</p>
+     * <br>
+     * <p>This parameter sets the value of a filter **key**. You can specify multiple values for a filter **key**. The logical operator among multiple filter values is **OR**. If a CEN instance matches one or more of the values that you specify, the CEN instance matches the filter condition.</p>
+     * <br>
+     * <p>You can specify at most five values in each filter condition.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -38,7 +42,7 @@ public class DescribeCensRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeCensRequestTag> tag;
@@ -122,20 +126,15 @@ public class DescribeCensRequest extends TeaModel {
 
     public static class DescribeCensRequestFilter extends TeaModel {
         /**
-         * <p>The filter condition. Valid values:</p>
-         * <br>
-         * <p>*   **CenId**: the ID of a CEN instance.</p>
-         * <p>*   **Name**: the name of a CEN instance.</p>
-         * <br>
-         * <p>By default, the logical operator among filter conditions is **AND**. Information about a CEN instance is returned only if the CEN instance matches all filter conditions.</p>
-         * <br>
-         * <p>You can specify at most five filter conditions in each call.</p>
+         * <p>The name of the CEN instance.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The values of the filter condition.</p>
+         * <p>The time when the CEN instance was created.</p>
+         * <br>
+         * <p>The time follows the ISO8601 standard in the `YYYY-MM-DDThh:mmZ` format. The time is displayed in UTC.</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;
@@ -165,21 +164,13 @@ public class DescribeCensRequest extends TeaModel {
 
     public static class DescribeCensRequestTag extends TeaModel {
         /**
-         * <p>The tag keys of the resources.</p>
-         * <br>
-         * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
-         * <br>
-         * <p>You can specify at most 20 tag keys.</p>
+         * <p>The list of the filter conditions.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag values of the resources.</p>
-         * <br>
-         * <p>The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
-         * <br>
-         * <p>Each tag key has a unique tag value. You can specify at most 20 tag values in each call.</p>
+         * <p>The description of the CEN instance.</p>
          */
         @NameInMap("Value")
         public String value;

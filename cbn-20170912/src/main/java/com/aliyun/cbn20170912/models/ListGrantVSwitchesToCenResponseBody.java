@@ -4,33 +4,18 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListGrantVSwitchesToCenResponseBody extends TeaModel {
-    /**
-     * <p>The page number of the returned page.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries returned per page.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of entries returned.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    /**
-     * <p>A list of vSwitches.</p>
-     */
     @NameInMap("VSwitches")
     public java.util.List<ListGrantVSwitchesToCenResponseBodyVSwitches> vSwitches;
 
@@ -80,24 +65,15 @@ public class ListGrantVSwitchesToCenResponseBody extends TeaModel {
     }
 
     public static class ListGrantVSwitchesToCenResponseBodyVSwitches extends TeaModel {
-        /**
-         * <p>The ID of the vSwitch.</p>
-         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         @NameInMap("VSwitchName")
         public String vSwitchName;
 
-        /**
-         * <p>The ID of the VPC to which the vSwitch belongs.</p>
-         */
         @NameInMap("VpcId")
         public String vpcId;
 
-        /**
-         * <p>The ID of the zone where the vSwitch is deployed.</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 

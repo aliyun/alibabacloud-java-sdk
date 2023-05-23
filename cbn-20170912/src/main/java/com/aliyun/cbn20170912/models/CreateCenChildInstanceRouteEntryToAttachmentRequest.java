@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCenChildInstanceRouteEntryToAttachmentRequest extends TeaModel {
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
      */
     @NameInMap("CenId")
     public String cenId;
@@ -13,7 +13,7 @@ public class CreateCenChildInstanceRouteEntryToAttachmentRequest extends TeaMode
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
      * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
      */
@@ -27,10 +27,10 @@ public class CreateCenChildInstanceRouteEntryToAttachmentRequest extends TeaMode
     public String destinationCidrBlock;
 
     /**
-     * <p>Specifies whether to check the request but not perform the operation. The system checks the permissions and the status of the specified instances. Valid values:</p>
+     * <p>Specifies whether to perform a dry run to check information such as the permissions and the instance status. Valid values:</p>
      * <br>
-     * <p>*   **false**: performs a precheck. The route is added to the network instance after the request passes the precheck. This is the default value.</p>
-     * <p>*   **true**: performs a precheck. The route is not added to the network instance. If you use this value, the system checks the required parameters and the request syntax. If the request fails to pass the precheck, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false**: performs a dry run and sends the request.</p>
+     * <p>*   **true**: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
      * <br>
      * <p>>  This parameter is not in use.</p>
      */

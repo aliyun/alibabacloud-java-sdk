@@ -4,15 +4,30 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends TeaModel {
+    /**
+     * <p>The ID of the CEN instance.</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 
+    /**
+     * <p>The ID of the route table configured on the network instance.</p>
+     */
     @NameInMap("ChildInstanceRouteTableId")
     public String childInstanceRouteTableId;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: **20**.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <br>
+     * <p>*   If this is your first query and no subsequent queries are to be sent, ignore this parameter.</p>
+     * <p>*   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -28,12 +43,21 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends TeaMode
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The filter condition for the destination CIDR block.</p>
+     */
     @NameInMap("RouteFilter")
     public java.util.List<ListCenChildInstanceRouteEntriesToAttachmentRequestRouteFilter> routeFilter;
 
+    /**
+     * <p>Specifies whether to host the route. If you leave the parameter empty, the route is not hosted. A value of TR specifies that the route is hosted on a transit router.</p>
+     */
     @NameInMap("ServiceType")
     public String serviceType;
 
+    /**
+     * <p>The ID of the network instance connection.</p>
+     */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
 
@@ -131,9 +155,17 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends TeaMode
     }
 
     public static class ListCenChildInstanceRouteEntriesToAttachmentRequestRouteFilter extends TeaModel {
+        /**
+         * <p>The match mode of the route.</p>
+         * <br>
+         * <p>*   **prefix-exact-match**: exact match.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The destination CIDR blocks.</p>
+         */
         @NameInMap("Value")
         public java.util.List<String> value;
 

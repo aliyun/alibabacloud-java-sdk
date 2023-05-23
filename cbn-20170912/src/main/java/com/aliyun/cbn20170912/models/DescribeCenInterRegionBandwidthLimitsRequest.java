@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCenInterRegionBandwidthLimitsRequest extends TeaModel {
     /**
-     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     * <p>The operation that you want to perform. Set the value to **DescribeCenInterRegionBandwidthLimits**.</p>
      */
     @NameInMap("CenId")
     public String cenId;
@@ -17,13 +17,15 @@ public class DescribeCenInterRegionBandwidthLimitsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The connected areas.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page. Default value: **10**. Valid values: **1** to **50**.</p>
+     * <p>The ID of the local region.</p>
+     * <br>
+     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

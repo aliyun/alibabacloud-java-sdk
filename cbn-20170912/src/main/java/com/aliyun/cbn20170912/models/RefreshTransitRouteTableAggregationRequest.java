@@ -4,13 +4,6 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class RefreshTransitRouteTableAggregationRequest extends TeaModel {
-    /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
-     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId may be different for each request.</p>
-     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -26,15 +19,9 @@ public class RefreshTransitRouteTableAggregationRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The destination CIDR block of the aggregate route.</p>
-     */
     @NameInMap("TransitRouteTableAggregationCidr")
     public String transitRouteTableAggregationCidr;
 
-    /**
-     * <p>The ID of the route table of the Enterprise Edition transit router.</p>
-     */
     @NameInMap("TransitRouteTableId")
     public String transitRouteTableId;
 

@@ -11,10 +11,10 @@ public class ListTransitRouterRouteEntriesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
      * <br>
-     * <p>- If this is your first query or no subsequent query is to be sent, ignore this parameter.</p>
-     * <p>- If a subsequent query is to be sent, set the value to the value of **NextToken** that was returned from the last call.</p>
+     * <p>*   You do not need to specify this parameter for the first request.</p>
+     * <p>*   You must specify the token that is obtained from the previous query as the value of **NextToken**.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -45,23 +45,23 @@ public class ListTransitRouterRouteEntriesRequest extends TeaModel {
     public String transitRouterRouteEntryDestinationCidrBlock;
 
     /**
-     * <p>The IDs of the route entries.</p>
+     * <p>The route entry ID.</p>
      * <br>
-     * <p>You can query at most 20 route entries in each call.</p>
+     * <p>You can specify at most 20 route IDs in each call.</p>
      * <br>
-     * <p>>  You can call this operation to query only static routes.</p>
+     * <p>>  You can use only this parameter to query static routes.</p>
      */
     @NameInMap("TransitRouterRouteEntryIds")
     public java.util.List<String> transitRouterRouteEntryIds;
 
     /**
-     * <p>The names of the routes.</p>
+     * <p>The route name.</p>
      * <br>
-     * <p>The name must be 1 to 128 characters in length, and can contain letters, digits, and the following special characters: `, . ; / @ \_ -`. You can also leave the name empty.</p>
+     * <p>The name must be 0 to 128 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -.</p>
      * <br>
-     * <p>You can query multiple route entries in each call. Maximum value of **N**: **20**.</p>
+     * <p>You can specify at most 20 route names in each call.</p>
      * <br>
-     * <p>>  You can call this operation to query only static routes.</p>
+     * <p>>  You can use only this parameter to query static routes.</p>
      */
     @NameInMap("TransitRouterRouteEntryNames")
     public java.util.List<String> transitRouterRouteEntryNames;
@@ -85,11 +85,11 @@ public class ListTransitRouterRouteEntriesRequest extends TeaModel {
     public String transitRouterRouteEntryOriginResourceType;
 
     /**
-     * <p>The status of the route. Valid values: Valid values:</p>
+     * <p>The status of the route. Valid values:</p>
      * <br>
-     * <p>- **Creating**: The route is being created.</p>
-     * <p>- **Active**: The rule is available.</p>
-     * <p>- **Deleting**: The rule is being deleted.</p>
+     * <p>*   **Creating**: The route is being created.</p>
+     * <p>*   **Active**: The route is available.</p>
+     * <p>*   **Deleting**: The route is being deleted.</p>
      */
     @NameInMap("TransitRouterRouteEntryStatus")
     public String transitRouterRouteEntryStatus;

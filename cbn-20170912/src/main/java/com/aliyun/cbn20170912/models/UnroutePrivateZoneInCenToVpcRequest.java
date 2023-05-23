@@ -4,17 +4,9 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class UnroutePrivateZoneInCenToVpcRequest extends TeaModel {
-    /**
-     * <p>The ID of the region where PrivateZone is accessed.</p>
-     * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
-     */
     @NameInMap("AccessRegionId")
     public String accessRegionId;
 
-    /**
-     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
-     */
     @NameInMap("CenId")
     public String cenId;
 

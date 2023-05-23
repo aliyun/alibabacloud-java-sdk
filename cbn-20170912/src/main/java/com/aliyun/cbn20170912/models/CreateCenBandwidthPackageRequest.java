@@ -15,9 +15,20 @@ public class CreateCenBandwidthPackageRequest extends TeaModel {
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <p>Specifies whether to enable the auto-renewal feature. Valid values:</p>
+     * <br>
+     * <p>*   **true**: enables auto-renewal.</p>
+     * <p>*   **false** (default): disables auto-renewal.</p>
+     * <br>
+     * <p>> Only subscription bandwidth plans support auto-renewal.</p>
+     */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
+    /**
+     * <p>The auto-renewal duration. Unit: months. Valid values: **0** to **2147483647**. Default value: **1**.</p>
+     */
     @NameInMap("AutoRenewDuration")
     public Integer autoRenewDuration;
 
@@ -28,7 +39,7 @@ public class CreateCenBandwidthPackageRequest extends TeaModel {
     public Integer bandwidth;
 
     /**
-     * <p>The billing method of the bandwidth plan. Valid value: **PREPAY**, which indicates that the billing method is pay-as-you-go.</p>
+     * <p>The billing method of the bandwidth plan. Set the value to **PREPAY**, which indicates that the billing method is pay-as-you-go.</p>
      */
     @NameInMap("BandwidthPackageChargeType")
     public String bandwidthPackageChargeType;
@@ -36,7 +47,7 @@ public class CreateCenBandwidthPackageRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate a token, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -91,7 +102,7 @@ public class CreateCenBandwidthPackageRequest extends TeaModel {
      * <p>*   If **PricingCycle** is set to **Month**, set **Period** to a value from **1** to **3** or **6**.</p>
      * <p>*   If **PricingCycle** is set to **Year**, set **Period** to a value from **1** to **3**.</p>
      * <br>
-     * <p>>  This parameter is required when **BandwidthPackageChargeType** is set to **PREPAY**.</p>
+     * <p>> This parameter is required when **BandwidthPackageChargeType** is set to **PREPAY**.</p>
      */
     @NameInMap("Period")
     public Integer period;
@@ -112,7 +123,9 @@ public class CreateCenBandwidthPackageRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The information about the tags.</p>
+     * <br>
+     * <p>You can specify at most 20 tags in each call.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateCenBandwidthPackageRequestTag> tag;
@@ -260,9 +273,9 @@ public class CreateCenBandwidthPackageRequest extends TeaModel {
 
     public static class CreateCenBandwidthPackageRequestTag extends TeaModel {
         /**
-         * <p>The tag keys of the resources.</p>
+         * <p>The tag key.</p>
          * <br>
-         * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>The tag keys cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
          * <br>
          * <p>You can specify at most 20 tag keys.</p>
          */
@@ -270,11 +283,11 @@ public class CreateCenBandwidthPackageRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag values of the resources.</p>
+         * <p>The tag value.</p>
          * <br>
-         * <p>The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         * <p>The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
          * <br>
-         * <p>Each tag key has a unique tag value. You can specify at most 20 tag values in each call.</p>
+         * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
          */
         @NameInMap("Value")
         public String value;

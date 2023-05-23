@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel {
     /**
-     * <p>The list of cross-region connections.</p>
+     * <p>The ID of the peer region.</p>
      */
     @NameInMap("CenInterRegionBandwidthLimits")
     public DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimits cenInterRegionBandwidthLimits;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The ID of the CEN instance.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of the page to return. Default value: **1**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The bandwidth limit of the cross-region connection. Unit: Mbit/s.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The list of cross-region connections.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -80,49 +80,26 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
     }
 
     public static class DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimitsCenInterRegionBandwidthLimit extends TeaModel {
-        /**
-         * <p>The bandwidth limit of the cross-region connection. Unit: Mbit/s.</p>
-         */
         @NameInMap("BandwidthLimit")
         public Long bandwidthLimit;
 
-        /**
-         * <p>The ID of the bandwidth plan.</p>
-         */
         @NameInMap("BandwidthPackageId")
         public String bandwidthPackageId;
 
-        /**
-         * <p>The ID of the CEN instance.</p>
-         */
         @NameInMap("CenId")
         public String cenId;
 
-        /**
-         * <p>The connected areas.</p>
-         */
         @NameInMap("GeographicSpanId")
         public String geographicSpanId;
 
-        /**
-         * <p>The ID of the local region.</p>
-         * <br>
-         * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
-         */
         @NameInMap("LocalRegionId")
         public String localRegionId;
 
-        /**
-         * <p>The ID of the peer region.</p>
-         */
         @NameInMap("OppositeRegionId")
         public String oppositeRegionId;
 
         /**
-         * <p>The status of the bandwidth of the cross-region connection. Valid values:</p>
-         * <br>
-         * <p>*   **Active**: The bandwidth limit of the cross-region connection is effective.</p>
-         * <p>*   **Modifying**: The bandwidth limit of the cross-region connection is being changed.</p>
+         * <p>Queries the bandwidth limits of cross-region connections.</p>
          */
         @NameInMap("Status")
         public String status;

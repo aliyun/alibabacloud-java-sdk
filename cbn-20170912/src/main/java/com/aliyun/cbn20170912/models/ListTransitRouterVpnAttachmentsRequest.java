@@ -17,10 +17,10 @@ public class ListTransitRouterVpnAttachmentsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <p>The token that determines the start point of the next query. Valid values:</p>
      * <br>
-     * <p>- If this is your first query or no subsequent query is to be sent, ignore this parameter.</p>
-     * <p>- If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
+     * <p>*   If this is your first query and no subsequent queries are to be sent, ignore this parameter.</p>
+     * <p>*   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -46,7 +46,9 @@ public class ListTransitRouterVpnAttachmentsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags of the resources.</p>
+     * <p>The information about the tags that are added to the CEN instance.</p>
+     * <br>
+     * <p>You can query at most 20 tags in each call.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTransitRouterVpnAttachmentsRequestTag> tag;
@@ -158,9 +160,9 @@ public class ListTransitRouterVpnAttachmentsRequest extends TeaModel {
 
     public static class ListTransitRouterVpnAttachmentsRequestTag extends TeaModel {
         /**
-         * <p>The tag keys of the resources. </p>
+         * <p>The tag key.</p>
          * <br>
-         * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.  </p>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
          * <br>
          * <p>You can specify at most 20 tag keys.</p>
          */
@@ -168,11 +170,11 @@ public class ListTransitRouterVpnAttachmentsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag values of the resources. </p>
+         * <p>The tag value.</p>
          * <br>
-         * <p>The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.  </p>
+         * <p>The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
          * <br>
-         * <p>Each tag key has a unique tag value. You can specify at most 20 tag values in each call.</p>
+         * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
          */
         @NameInMap("Value")
         public String value;

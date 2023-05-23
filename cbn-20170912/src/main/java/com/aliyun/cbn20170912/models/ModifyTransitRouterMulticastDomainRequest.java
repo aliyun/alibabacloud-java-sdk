@@ -5,21 +5,11 @@ import com.aliyun.tea.*;
 
 public class ModifyTransitRouterMulticastDomainRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
-    /**
-     * <p>Specifies whether only to precheck the request. Valid values:</p>
-     * <br>
-     * <p>*   **true**: prechecks the request but does not modify the name or description of the multicast domain. The system checks the required parameters, the request format, and the service limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): sends the request. If the request passes the precheck, the name and description of the multicast domain are modified.</p>
-     * <br>
-     * <p>>  This parameter is not in use.</p>
-     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -35,24 +25,22 @@ public class ModifyTransitRouterMulticastDomainRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The new description of the multicast domain.</p>
-     * <br>
-     * <p>The description must be 0 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (\_), and hyphens (-).</p>
-     */
     @NameInMap("TransitRouterMulticastDomainDescription")
     public String transitRouterMulticastDomainDescription;
 
     /**
-     * <p>The ID of the multicast domain.</p>
+     * <p>The operation that you want to perform. Set the value to **ModifyTransitRouterMulticastDomain**.</p>
      */
     @NameInMap("TransitRouterMulticastDomainId")
     public String transitRouterMulticastDomainId;
 
     /**
-     * <p>The new name of the multicast domain.</p>
+     * <p>Specifies whether only to precheck the request. Valid values:</p>
      * <br>
-     * <p>The name must be 0 to 128 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (\_), and hyphens (-).</p>
+     * <p>*   **true**: prechecks the request but does not modify the name or description of the multicast domain. The system checks the required parameters, the request format, and the service limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): sends the request. If the request passes the precheck, the name and description of the multicast domain are modified.</p>
+     * <br>
+     * <p>>  This parameter is not in use.</p>
      */
     @NameInMap("TransitRouterMulticastDomainName")
     public String transitRouterMulticastDomainName;

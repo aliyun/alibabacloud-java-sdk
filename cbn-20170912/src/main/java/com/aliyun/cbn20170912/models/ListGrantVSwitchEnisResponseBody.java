@@ -4,21 +4,12 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListGrantVSwitchEnisResponseBody extends TeaModel {
-    /**
-     * <p>The list of ENIs.</p>
-     */
     @NameInMap("GrantVSwitchEnis")
     public java.util.List<ListGrantVSwitchEnisResponseBodyGrantVSwitchEnis> grantVSwitchEnis;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The number of entries returned.</p>
-     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -52,38 +43,18 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
     }
 
     public static class ListGrantVSwitchEnisResponseBodyGrantVSwitchEnis extends TeaModel {
-        /**
-         * <p>The description of the ENI.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the ENI.</p>
-         */
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
-        /**
-         * <p>Indicates whether the ENI is created by a transit router. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
-         * <br>
-         * <p>ENIs that are created by transit routers cannot be used as multicast sources or members.</p>
-         */
         @NameInMap("TransitRouterFlag")
         public Boolean transitRouterFlag;
 
-        /**
-         * <p>The ID of the vSwitch.</p>
-         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
-        /**
-         * <p>The ID of the VPC.</p>
-         */
         @NameInMap("VpcId")
         public String vpcId;
 

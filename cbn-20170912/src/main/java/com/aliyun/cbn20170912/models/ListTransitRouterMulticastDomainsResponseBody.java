@@ -5,34 +5,44 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>$.parameters[8].schema.example</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** is empty, it indicates that no next query is to be sent.</p>
-     * <p>*   If **NextToken** is not empty, the value indicates the token that is used for the next query.</p>
+     * <p>$.parameters[8].schema.enumValueTitles</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>$.parameters[7].schema.enumValueTitles</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The number of entries returned.</p>
+     * <p>$.parameters[8].schema.description</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
     /**
-     * <p>The information about the multicast domain.</p>
+     * <p>{</p>
+     * <p>    "RequestId": "8A0F93D1-FD6C-56FC-B6D2-668FC92D12D2",</p>
+     * <p>    "TotalCount": 1,</p>
+     * <p>    "MaxResults": 20,</p>
+     * <p>    "NextToken": "FFmyTO70tTpLG6I3FmYAXGKPd****",</p>
+     * <p>    "TransitRouterMulticastDomains": [</p>
+     * <p>        {</p>
+     * <p>            "TransitRouterMulticastDomainId": "tr-mcast-domain-3r3bvbypxqheej****",</p>
+     * <p>            "TransitRouterMulticastDomainName": "nametest",</p>
+     * <p>            "TransitRouterMulticastDomainDescription": "desctest",</p>
+     * <p>            "Status": "Active"</p>
+     * <p>        }</p>
+     * <p>    ]</p>
+     * <p>}</p>
      */
     @NameInMap("TransitRouterMulticastDomains")
     public java.util.List<ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomains> transitRouterMulticastDomains;
@@ -83,15 +93,9 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
     }
 
     public static class ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsTags extends TeaModel {
-        /**
-         * <p>The tag key of the multicast domain.</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag value of the multicast domain.</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -120,39 +124,42 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
 
     public static class ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomains extends TeaModel {
         /**
-         * <p>The status of the multicast domain.</p>
-         * <br>
-         * <p>Valid value: **Active**, which indicates that the multicast domain is available.</p>
+         * <p>WB656982</p>
          */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The tags of the multicast domain.</p>
-         */
         @NameInMap("Tags")
         public java.util.List<ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsTags> tags;
 
-        /**
-         * <p>The ID of the transit router.</p>
-         */
         @NameInMap("TransitRouterId")
         public String transitRouterId;
 
         /**
-         * <p>The description of the multicast domain.</p>
+         * <p>ListTransitRouterMulticastDomains</p>
          */
         @NameInMap("TransitRouterMulticastDomainDescription")
         public String transitRouterMulticastDomainDescription;
 
         /**
-         * <p>The ID of the multicast domain.</p>
+         * <p><ListTransitRouterMulticastDomainsResponse></p>
+         * <p>    <RequestId>8A0F93D1-FD6C-56FC-B6D2-668FC92D12D2</RequestId></p>
+         * <p>    <TotalCount>1</TotalCount></p>
+         * <p>    <MaxResults>20</MaxResults></p>
+         * <p>    <NextToken>FFmyTO70tTpLG6I3FmYAXGKPd****</NextToken></p>
+         * <p>    <TransitRouterMulticastDomains></p>
+         * <p>        <TransitRouterMulticastDomainId>tr-mcast-domain-3r3bvbypxqheej****</TransitRouterMulticastDomainId></p>
+         * <p>        <TransitRouterMulticastDomainName>nametest</TransitRouterMulticastDomainName></p>
+         * <p>        <TransitRouterMulticastDomainDescription>desctest</TransitRouterMulticastDomainDescription></p>
+         * <p>        <Status>Active</Status></p>
+         * <p>    </TransitRouterMulticastDomains></p>
+         * <p></ListTransitRouterMulticastDomainsResponse></p>
          */
         @NameInMap("TransitRouterMulticastDomainId")
         public String transitRouterMulticastDomainId;
 
         /**
-         * <p>The name of the multicast domain.</p>
+         * <p>Queries the information about a multicast domain.</p>
          */
         @NameInMap("TransitRouterMulticastDomainName")
         public String transitRouterMulticastDomainName;

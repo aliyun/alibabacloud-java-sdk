@@ -4,9 +4,6 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListGrantVSwitchesToCenRequest extends TeaModel {
-    /**
-     * <p>The ID of the CEN instance.</p>
-     */
     @NameInMap("CenId")
     public String cenId;
 
@@ -16,23 +13,12 @@ public class ListGrantVSwitchesToCenRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The number of the page to return. Default value: **1**.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The ID of the region where the VPC is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -42,20 +28,9 @@ public class ListGrantVSwitchesToCenRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The ID of the VPC.</p>
-     */
     @NameInMap("VpcId")
     public String vpcId;
 
-    /**
-     * <p>The ID of the zone where the instance resides.</p>
-     * <br>
-     * <p>*   If you specify a zone ID, the system queries the information about the vSwitches in the specified zone.</p>
-     * <p>*   If you do not specify a zone ID, the system queries the information about the vSwitches in all zones.</p>
-     * <br>
-     * <p>You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.</p>
-     */
     @NameInMap("ZoneId")
     public String zoneId;
 

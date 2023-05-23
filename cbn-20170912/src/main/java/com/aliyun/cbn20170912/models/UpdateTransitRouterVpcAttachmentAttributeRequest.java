@@ -5,9 +5,18 @@ import com.aliyun.tea.*;
 
 public class UpdateTransitRouterVpcAttachmentAttributeRequest extends TeaModel {
     /**
+     * <p>是否允许企业版转发路由器自动发布路由到VPC实例。</p>
+     * <br>
+     * <p>- **false**（默认值）：否。</p>
+     * <p>- **true**：是。</p>
+     */
+    @NameInMap("AutoPublishRouteEnabled")
+    public Boolean autoPublishRouteEnabled;
+
+    /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.</p>
      * <br>
      * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
      */
@@ -60,6 +69,14 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends TeaModel {
     public static UpdateTransitRouterVpcAttachmentAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateTransitRouterVpcAttachmentAttributeRequest self = new UpdateTransitRouterVpcAttachmentAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateTransitRouterVpcAttachmentAttributeRequest setAutoPublishRouteEnabled(Boolean autoPublishRouteEnabled) {
+        this.autoPublishRouteEnabled = autoPublishRouteEnabled;
+        return this;
+    }
+    public Boolean getAutoPublishRouteEnabled() {
+        return this.autoPublishRouteEnabled;
     }
 
     public UpdateTransitRouterVpcAttachmentAttributeRequest setClientToken(String clientToken) {

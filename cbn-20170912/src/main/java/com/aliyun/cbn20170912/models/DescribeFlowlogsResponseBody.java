@@ -5,28 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeFlowlogsResponseBody extends TeaModel {
     /**
-     * <p>A list of flow logs.</p>
+     * <p>The status of the flow log. Valid values:</p>
+     * <br>
+     * <p>*   **Active**: The flow log is enabled.</p>
+     * <p>*   **Inactive**: The flow log is disabled.</p>
      */
     @NameInMap("FlowLogs")
     public DescribeFlowlogsResponseBodyFlowLogs flowLogs;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
-
-    /**
-     * <p>The ID of the request.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
 
     /**
      * <p>Indicates whether the call is successful. Valid values:</p>
@@ -34,11 +31,17 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
      * <p>*   **true**: yes</p>
      * <p>*   **false**: no</p>
      */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
+     * <p>The information about the flow log.</p>
+     */
     @NameInMap("Success")
     public String success;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>A list of flow logs.</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -97,15 +100,9 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
     }
 
     public static class DescribeFlowlogsResponseBodyFlowLogsFlowLogTagsTag extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag value.</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -153,78 +150,70 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
 
     public static class DescribeFlowlogsResponseBodyFlowLogsFlowLog extends TeaModel {
         /**
-         * <p>The ID of the CEN instance.</p>
+         * <p>The ID of the region where the flow log is deployed.</p>
          */
         @NameInMap("CenId")
         public String cenId;
 
         /**
-         * <p>The time when the flow log was created.</p>
-         * <br>
-         * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The description of the flow log.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The description of the flow log.</p>
+         * <p>The ID of the CEN instance.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The ID of the flow log.</p>
+         * <p>The time window for collecting log data. Unit: seconds. Valid values: **60** and **600**. Default value: **600**.</p>
          */
         @NameInMap("FlowLogId")
         public String flowLogId;
 
         /**
-         * <p>The name of the flow log.</p>
+         * <p>The name of the project where the flow log is stored.</p>
          */
         @NameInMap("FlowLogName")
         public String flowLogName;
 
         /**
-         * <p>The time window for collecting log data. Unit: seconds. Valid values: **60** and **600**. Default value: **600**.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("Interval")
         public Long interval;
 
         /**
-         * <p>The name of the Logstore where the flow log is stored.</p>
+         * <p>The ID of the flow log.</p>
          */
         @NameInMap("LogStoreName")
         public String logStoreName;
 
         /**
-         * <p>The name of the project where the flow log is stored.</p>
+         * <p>The name of the Logstore where the flow log is stored.</p>
          */
         @NameInMap("ProjectName")
         public String projectName;
 
         /**
-         * <p>The ID of the region where the flow log is deployed.</p>
+         * <p>The ID of the network instance connection.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The status of the flow log. Valid values:</p>
-         * <br>
-         * <p>*   **Active**: The flow log is enabled.</p>
-         * <p>*   **Inactive**: The flow log is disabled.</p>
+         * <p>The name of the flow log.</p>
          */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>A list of tags.</p>
-         */
         @NameInMap("Tags")
         public DescribeFlowlogsResponseBodyFlowLogsFlowLogTags tags;
 
         /**
-         * <p>The ID of the network instance connection.</p>
+         * <p>A list of tags.</p>
          */
         @NameInMap("TransitRouterAttachmentId")
         public String transitRouterAttachmentId;

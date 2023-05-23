@@ -50,9 +50,9 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends TeaModel {
     public String trafficQosPolicyName;
 
     /**
-     * <p>A list of QoS queues.</p>
+     * <p>The information about the QoS queue.</p>
      * <br>
-     * <p>Each QoS policy supports up to three queues.</p>
+     * <p>You can call this operation to create at most three QoS queues. To create more queues, you must call the CreateCenInterRegionTrafficQosQueue operation.</p>
      */
     @NameInMap("TrafficQosQueues")
     public java.util.List<CreateCenInterRegionTrafficQosPolicyRequestTrafficQosQueues> trafficQosQueues;
@@ -164,7 +164,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends TeaModel {
 
     public static class CreateCenInterRegionTrafficQosPolicyRequestTrafficQosQueues extends TeaModel {
         /**
-         * <p>The differentiated services code point (DSCP) value that matches the current queue.</p>
+         * <p>The DSCP value that matches the current queue.</p>
          * <br>
          * <p>Each QoS policy supports up to three queues. You can specify at most 60 DSCP values for each queue. Separate DSCP values with commas (,).</p>
          */
@@ -196,7 +196,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends TeaModel {
          * <br>
          * <p>Each QoS policy supports up to three queues. You can specify a percentage of bandwidth resources for each queue.</p>
          * <br>
-         * <p>If you enter **1**, it indicates that the current queue can consume at most 1% of the bandwidth resources.</p>
+         * <p>If you enter **1**, it indicates that the current queue can consume at most \*\*1%\*\* of the bandwidth resources.</p>
          * <br>
          * <p>>  The sum of the percentage values of all the queues in a QoS policy cannot exceed 100%.</p>
          */
