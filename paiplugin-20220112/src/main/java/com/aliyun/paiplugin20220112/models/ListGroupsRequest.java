@@ -4,24 +4,45 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class ListGroupsRequest extends TeaModel {
+    /**
+     * <p>人群名称过滤。</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>分页数，从1开始，默认为1。</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>分页大小，默认为10。</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>是否包含手机号过滤。</p>
+     */
     @NameInMap("PhoneNumber")
     public Boolean phoneNumber;
 
+    /**
+     * <p>人群备注过滤。</p>
+     */
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <p>来源过滤。</p>
+     */
     @NameInMap("Source")
     public Integer source;
 
+    /**
+     * <p>审核状态过滤。</p>
+     */
     @NameInMap("Status")
     public Integer status;
 

@@ -4,27 +4,53 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class ListTrainingJobsRequest extends TeaModel {
+    /**
+     * <p>归属运营活动过滤。</p>
+     */
     @NameInMap("CampaignId")
     public String campaignId;
 
     @NameInMap("CampaignName")
     public String campaignName;
 
+    /**
+     * <p>训练任务名称过滤。</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>分页数，从1开始，默认为1。</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>分页大小，默认为10。</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>训练任务备注过滤。</p>
+     */
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <p>训练任务状态过滤。</p>
+     * <p>- 0: 队列中。</p>
+     * <p>- 1: 已提交。</p>
+     * <p>- 2: 运行中。</p>
+     * <p>- 3: 成功。</p>
+     * <p>- 4: 失败。</p>
+     */
     @NameInMap("Status")
     public Integer status;
 
+    /**
+     * <p>归属训练计划过滤。</p>
+     */
     @NameInMap("TrainingScheduleId")
     public String trainingScheduleId;
 

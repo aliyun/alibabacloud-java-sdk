@@ -4,21 +4,39 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class CreateTrainingJobRequest extends TeaModel {
+    /**
+     * <p>关联算法ID。</p>
+     */
     @NameInMap("Algorithm")
     public String algorithm;
 
+    /**
+     * <p>关联运营活动ID。</p>
+     */
     @NameInMap("CampaignId")
     public String campaignId;
 
+    /**
+     * <p>训练数据路径，指定路径前需确保已在控制台完成一键授权。</p>
+     */
     @NameInMap("DataPath")
     public String dataPath;
 
+    /**
+     * <p>训练任务名称。</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>备注。</p>
+     */
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <p>用户配置。</p>
+     */
     @NameInMap("UserConfig")
     public String userConfig;
 

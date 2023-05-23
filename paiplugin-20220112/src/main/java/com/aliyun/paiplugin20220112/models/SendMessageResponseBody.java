@@ -4,15 +4,27 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class SendMessageResponseBody extends TeaModel {
+    /**
+     * <p>返回数据。</p>
+     */
     @NameInMap("Data")
     public SendMessageResponseBodyData data;
 
+    /**
+     * <p>错误码。</p>
+     */
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
+    /**
+     * <p>错误信息。</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>请求ID。</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +66,15 @@ public class SendMessageResponseBody extends TeaModel {
     }
 
     public static class SendMessageResponseBodyDataMessages extends TeaModel {
+        /**
+         * <p>短信Id，可使用ListMessages查询短信状态。</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>手机号码。</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
@@ -84,9 +102,15 @@ public class SendMessageResponseBody extends TeaModel {
     }
 
     public static class SendMessageResponseBodyData extends TeaModel {
+        /**
+         * <p>短信结果列表，列表中手机号的顺序与输入请求手机号顺序一一对应。</p>
+         */
         @NameInMap("Messages")
         public java.util.List<SendMessageResponseBodyDataMessages> messages;
 
+        /**
+         * <p>短信批处理Id，可使用ListMessages查询短信状态。</p>
+         */
         @NameInMap("RequestId")
         public String requestId;
 

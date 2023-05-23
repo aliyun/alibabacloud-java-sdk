@@ -4,15 +4,27 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class GetInferenceJobResponseBody extends TeaModel {
+    /**
+     * <p>返回数据。</p>
+     */
     @NameInMap("Data")
     public GetInferenceJobResponseBodyData data;
 
+    /**
+     * <p>错误码。</p>
+     */
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
+    /**
+     * <p>错误信息。</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>请求ID。</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,45 +66,87 @@ public class GetInferenceJobResponseBody extends TeaModel {
     }
 
     public static class GetInferenceJobResponseBodyData extends TeaModel {
+        /**
+         * <p>关联算法。</p>
+         */
         @NameInMap("Algorithm")
         public String algorithm;
 
+        /**
+         * <p>关联运营活动Id。</p>
+         */
         @NameInMap("CampaignId")
         public String campaignId;
 
+        /**
+         * <p>创建时间 (UTC+8)。</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <p>预测数据路径。</p>
+         */
         @NameInMap("DataPath")
         public String dataPath;
 
+        /**
+         * <p>关联人群Id，如果任务失败则人群无效。</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>预测任务日志。</p>
+         */
         @NameInMap("History")
         public String history;
 
+        /**
+         * <p>预测任务Id。</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>预测任务名称。</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>备注。</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <p>预测任务状态。</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>输出数据路径，需要为空目录。</p>
+         */
         @NameInMap("TargetPath")
         public String targetPath;
 
+        /**
+         * <p>关联训练任务。</p>
+         */
         @NameInMap("TrainingJobId")
         public String trainingJobId;
 
+        /**
+         * <p>更新时间 (UTC+8)。</p>
+         */
         @NameInMap("UpdatedTime")
         public String updatedTime;
 
+        /**
+         * <p>用户配置。</p>
+         */
         @NameInMap("UserConfig")
         public String userConfig;
 

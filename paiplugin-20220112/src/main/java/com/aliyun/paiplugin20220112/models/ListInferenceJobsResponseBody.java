@@ -4,15 +4,27 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class ListInferenceJobsResponseBody extends TeaModel {
+    /**
+     * <p>返回数据。</p>
+     */
     @NameInMap("Data")
     public ListInferenceJobsResponseBodyData data;
 
+    /**
+     * <p>错误码。</p>
+     */
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
+    /**
+     * <p>错误信息。</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>请求ID。</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,48 +66,98 @@ public class ListInferenceJobsResponseBody extends TeaModel {
     }
 
     public static class ListInferenceJobsResponseBodyDataInferenceJobs extends TeaModel {
+        /**
+         * <p>关联算法。</p>
+         */
         @NameInMap("Algorithm")
         public String algorithm;
 
+        /**
+         * <p>关联运营活动ID。</p>
+         */
         @NameInMap("CampaignId")
         public String campaignId;
 
+        /**
+         * <p>创建时间 (UTC+8)。</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <p>预测数据路径，当预测人群数据分布在多个csv文件时可指定目录，指定路径前需确保已在控制台完成一键授权。</p>
+         */
         @NameInMap("DataPath")
         public String dataPath;
 
+        /**
+         * <p>预测人群，人群来源必须为多列csv，当同时指定DataPath与GroupId时，以GroupId为准。</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>预测任务日志。</p>
+         */
         @NameInMap("History")
         public String history;
 
+        /**
+         * <p>预测任务ID。</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>预测任务名称。</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>备注。</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <p>预测任务状态。</p>
+         * <p>- 0: 队列中。</p>
+         * <p>- 1: 已提交。</p>
+         * <p>- 2: 运行中。</p>
+         * <p>- 3: 成功。</p>
+         * <p>- 4: 失败。</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>关联目标人群ID，如果任务失败则人群无效。</p>
+         */
         @NameInMap("TargetGroupId")
         public String targetGroupId;
 
+        /**
+         * <p>输出数据路径，需要为空目录，指定路径前需确保已在控制台完成一键授权。</p>
+         */
         @NameInMap("TargetPath")
         public String targetPath;
 
+        /**
+         * <p>关联训练任务。</p>
+         */
         @NameInMap("TrainingJobId")
         public String trainingJobId;
 
+        /**
+         * <p>更新时间 (UTC+8)。</p>
+         */
         @NameInMap("UpdatedTime")
         public String updatedTime;
 
+        /**
+         * <p>用户配置。</p>
+         */
         @NameInMap("UserConfig")
         public String userConfig;
 
@@ -227,15 +289,27 @@ public class ListInferenceJobsResponseBody extends TeaModel {
     }
 
     public static class ListInferenceJobsResponseBodyData extends TeaModel {
+        /**
+         * <p>预测任务列表。</p>
+         */
         @NameInMap("InferenceJobs")
         public java.util.List<ListInferenceJobsResponseBodyDataInferenceJobs> inferenceJobs;
 
+        /**
+         * <p>分页数，从1开始，默认为1。</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>分页大小，默认为10。</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>总预测任务数量。</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

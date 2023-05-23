@@ -4,15 +4,27 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class UpdateReportUrlResponseBody extends TeaModel {
+    /**
+     * <p>返回数据。</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>错误码。</p>
+     */
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
+    /**
+     * <p>错误信息。</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>请求ID。</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

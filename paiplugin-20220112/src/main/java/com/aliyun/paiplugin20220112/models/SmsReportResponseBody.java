@@ -4,9 +4,15 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class SmsReportResponseBody extends TeaModel {
+    /**
+     * <p>应答编码。</p>
+     */
     @NameInMap("code")
     public Integer code;
 
+    /**
+     * <p>描述信息。</p>
+     */
     @NameInMap("msg")
     public String msg;
 

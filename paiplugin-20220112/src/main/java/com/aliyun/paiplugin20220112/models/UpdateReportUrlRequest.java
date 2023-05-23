@@ -4,6 +4,9 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class UpdateReportUrlRequest extends TeaModel {
+    /**
+     * <p>可公开访问的地址。</p>
+     */
     @NameInMap("Url")
     public String url;
 

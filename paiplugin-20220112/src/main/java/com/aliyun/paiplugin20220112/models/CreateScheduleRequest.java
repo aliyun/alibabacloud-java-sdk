@@ -4,42 +4,107 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class CreateScheduleRequest extends TeaModel {
+    @NameInMap("AISendEndDate")
+    public String AISendEndDate;
+
+    @NameInMap("AISendStartDate")
+    public String AISendStartDate;
+
+    /**
+     * <p>终止时间（UTC+8）。</p>
+     */
     @NameInMap("EndTime")
     public Integer endTime;
 
+    /**
+     * <p>执行时间 (UTC+8)，为空立即执行。</p>
+     */
     @NameInMap("ExecuteTime")
     public String executeTime;
 
+    /**
+     * <p>人群ID。</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>触达计划名称。</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("PaymentType")
+    public String paymentType;
+
+    /**
+     * <p>重复周期，按重复周期与重复周期单位执行。</p>
+     */
     @NameInMap("RepeatCycle")
     public Integer repeatCycle;
 
+    /**
+     * <p>重复周期单位，若指定执行时间，则重复周期生效。</p>
+     * <p>- 0: 从不（默认）。</p>
+     * <p>- 1: 小时。</p>
+     * <p>- 2: 天。</p>
+     * <p>- 3: 周。</p>
+     * <p>- 4: 月。</p>
+     */
     @NameInMap("RepeatCycleUnit")
     public Integer repeatCycleUnit;
 
+    /**
+     * <p>重复次数。</p>
+     * <p>- 0: 不设终止时间（默认）。</p>
+     * <p>- N: 重复N次后终止。</p>
+     */
     @NameInMap("RepeatTimes")
     public Integer repeatTimes;
 
+    /**
+     * <p>签名。</p>
+     */
     @NameInMap("SignName")
     public String signName;
 
+    /**
+     * <p>签名ID，或指定签名。</p>
+     */
     @NameInMap("SignatureId")
     public String signatureId;
 
+    /**
+     * <p>模板Code。</p>
+     */
     @NameInMap("TemplateCode")
     public String templateCode;
 
+    /**
+     * <p>模板ID，或指定模板Code。</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
     public static CreateScheduleRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateScheduleRequest self = new CreateScheduleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateScheduleRequest setAISendEndDate(String AISendEndDate) {
+        this.AISendEndDate = AISendEndDate;
+        return this;
+    }
+    public String getAISendEndDate() {
+        return this.AISendEndDate;
+    }
+
+    public CreateScheduleRequest setAISendStartDate(String AISendStartDate) {
+        this.AISendStartDate = AISendStartDate;
+        return this;
+    }
+    public String getAISendStartDate() {
+        return this.AISendStartDate;
     }
 
     public CreateScheduleRequest setEndTime(Integer endTime) {
@@ -72,6 +137,14 @@ public class CreateScheduleRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateScheduleRequest setPaymentType(String paymentType) {
+        this.paymentType = paymentType;
+        return this;
+    }
+    public String getPaymentType() {
+        return this.paymentType;
     }
 
     public CreateScheduleRequest setRepeatCycle(Integer repeatCycle) {
