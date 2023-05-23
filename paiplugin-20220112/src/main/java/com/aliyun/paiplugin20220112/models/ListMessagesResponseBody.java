@@ -4,15 +4,27 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class ListMessagesResponseBody extends TeaModel {
+    /**
+     * <p>返回数据。</p>
+     */
     @NameInMap("Data")
     public ListMessagesResponseBodyData data;
 
+    /**
+     * <p>错误码。</p>
+     */
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
+    /**
+     * <p>错误信息。</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>请求ID。</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,36 +66,75 @@ public class ListMessagesResponseBody extends TeaModel {
     }
 
     public static class ListMessagesResponseBodyDataMessages extends TeaModel {
+        /**
+         * <p>短信错误码。</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>关联人群Id，未关联则为空。</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>短信序列号。</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>外部拓展字段。</p>
+         */
         @NameInMap("OutId")
         public String outId;
 
+        /**
+         * <p>手机号码。</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
+        /**
+         * <p>关联触达计划Id，未关联则为空。</p>
+         */
         @NameInMap("ScheduleId")
         public String scheduleId;
 
+        /**
+         * <p>签名名称。</p>
+         */
         @NameInMap("Signature")
         public String signature;
 
+        /**
+         * <p>短信发送状态。</p>
+         * <p>- 0 : 发送中。</p>
+         * <p>- 1 : 发送成功。</p>
+         * <p>- 2 : 发送失败。</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>模板号。</p>
+         */
         @NameInMap("TemplateCode")
         public String templateCode;
 
+        /**
+         * <p>模板参数。</p>
+         */
         @NameInMap("TemplateParams")
         public String templateParams;
 
+        /**
+         * <p>模板类型。</p>
+         * <p>- 0 : 验证码。</p>
+         * <p>- 1 : 短信通知。</p>
+         * <p>- 2 : 推广短信。</p>
+         */
         @NameInMap("TemplateType")
         public Integer templateType;
 
@@ -183,15 +234,27 @@ public class ListMessagesResponseBody extends TeaModel {
     }
 
     public static class ListMessagesResponseBodyData extends TeaModel {
+        /**
+         * <p>短信列表。</p>
+         */
         @NameInMap("Messages")
         public java.util.List<ListMessagesResponseBodyDataMessages> messages;
 
+        /**
+         * <p>分页数，从1开始，默认为1。</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>分页大小，默认为10。</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>短信数量。</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

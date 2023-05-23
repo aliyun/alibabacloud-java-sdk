@@ -4,6 +4,9 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class SmsUpRequest extends TeaModel {
+    /**
+     * <p>请求参数的主体信息。</p>
+     */
     @NameInMap("body")
     public java.util.List<SmsUpRequestBody> body;
 
@@ -21,21 +24,39 @@ public class SmsUpRequest extends TeaModel {
     }
 
     public static class SmsUpRequestBody extends TeaModel {
+        /**
+         * <p>发送内容。</p>
+         */
         @NameInMap("content")
         public String content;
 
+        /**
+         * <p>上行短信扩展号码，系统后台自动生成，不支持自定义传入。</p>
+         */
         @NameInMap("dest_code")
         public String destCode;
 
+        /**
+         * <p>手机号码。</p>
+         */
         @NameInMap("phone_number")
         public String phoneNumber;
 
+        /**
+         * <p>发送时间。</p>
+         */
         @NameInMap("send_time")
         public String sendTime;
 
+        /**
+         * <p>序列号。</p>
+         */
         @NameInMap("sequence_id")
         public Integer sequenceId;
 
+        /**
+         * <p>签名信息。</p>
+         */
         @NameInMap("sign_name")
         public String signName;
 

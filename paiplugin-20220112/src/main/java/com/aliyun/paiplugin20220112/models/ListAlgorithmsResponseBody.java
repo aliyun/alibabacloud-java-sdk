@@ -4,15 +4,27 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class ListAlgorithmsResponseBody extends TeaModel {
+    /**
+     * <p>返回数据。</p>
+     */
     @NameInMap("Data")
     public ListAlgorithmsResponseBodyData data;
 
+    /**
+     * <p>错误码。</p>
+     */
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
+    /**
+     * <p>错误信息。</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>请求ID。</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +66,15 @@ public class ListAlgorithmsResponseBody extends TeaModel {
     }
 
     public static class ListAlgorithmsResponseBodyDataAlgorithms extends TeaModel {
+        /**
+         * <p>算法Id。</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>算法名称。</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -84,15 +102,27 @@ public class ListAlgorithmsResponseBody extends TeaModel {
     }
 
     public static class ListAlgorithmsResponseBodyData extends TeaModel {
+        /**
+         * <p>算法列表。</p>
+         */
         @NameInMap("Algorithms")
         public java.util.List<ListAlgorithmsResponseBodyDataAlgorithms> algorithms;
 
+        /**
+         * <p>分页数，从1开始，默认为1。</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>分页大小，默认为10。</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>总算法数量。</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

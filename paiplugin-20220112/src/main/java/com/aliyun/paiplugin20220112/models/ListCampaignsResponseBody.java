@@ -4,15 +4,27 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class ListCampaignsResponseBody extends TeaModel {
+    /**
+     * <p>返回数据。</p>
+     */
     @NameInMap("Data")
     public ListCampaignsResponseBodyData data;
 
+    /**
+     * <p>错误码。</p>
+     */
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
+    /**
+     * <p>错误信息。</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>请求ID。</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,18 +66,33 @@ public class ListCampaignsResponseBody extends TeaModel {
     }
 
     public static class ListCampaignsResponseBodyDataCampaigns extends TeaModel {
+        /**
+         * <p>创建时间 (UTC+8)。</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <p>运营活动Id。</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>运营活动名称。</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>备注。</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <p>更新时间 (UTC+8)。</p>
+         */
         @NameInMap("UpdatedTime")
         public String updatedTime;
 
@@ -117,15 +144,27 @@ public class ListCampaignsResponseBody extends TeaModel {
     }
 
     public static class ListCampaignsResponseBodyData extends TeaModel {
+        /**
+         * <p>运营活动列表。</p>
+         */
         @NameInMap("Campaigns")
         public java.util.List<ListCampaignsResponseBodyDataCampaigns> campaigns;
 
+        /**
+         * <p>分页数，从1开始，默认为1。</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>分页大小，默认为10。</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>总运营活动数量。</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

@@ -4,15 +4,27 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class ListMessageMetricsResponseBody extends TeaModel {
+    /**
+     * <p>返回数据。</p>
+     */
     @NameInMap("Data")
     public ListMessageMetricsResponseBodyData data;
 
+    /**
+     * <p>错误码。</p>
+     */
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
+    /**
+     * <p>错误信息。</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>请求ID。</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,21 +66,39 @@ public class ListMessageMetricsResponseBody extends TeaModel {
     }
 
     public static class ListMessageMetricsResponseBodyDataMetrics extends TeaModel {
+        /**
+         * <p>发送日期。</p>
+         */
         @NameInMap("Date")
         public String date;
 
+        /**
+         * <p>发送失败。</p>
+         */
         @NameInMap("Fail")
         public Integer fail;
 
+        /**
+         * <p>发送中。</p>
+         */
         @NameInMap("Pending")
         public Integer pending;
 
+        /**
+         * <p>发送成功率。</p>
+         */
         @NameInMap("Rate")
         public Float rate;
 
+        /**
+         * <p>发送成功。</p>
+         */
         @NameInMap("Success")
         public Integer success;
 
+        /**
+         * <p>总计短信数量。</p>
+         */
         @NameInMap("Total")
         public Integer total;
 
@@ -128,15 +158,27 @@ public class ListMessageMetricsResponseBody extends TeaModel {
     }
 
     public static class ListMessageMetricsResponseBodyData extends TeaModel {
+        /**
+         * <p>分页返回的统计数据条目列表。</p>
+         */
         @NameInMap("Metrics")
         public java.util.List<ListMessageMetricsResponseBodyDataMetrics> metrics;
 
+        /**
+         * <p>分页数，从1开始，默认为1。</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>分页大小，默认为10。</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>总统计数据条目数量。</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

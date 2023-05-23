@@ -4,15 +4,27 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class CreateTemplateResponseBody extends TeaModel {
+    /**
+     * <p>返回数据。</p>
+     */
     @NameInMap("Data")
     public CreateTemplateResponseBodyData data;
 
+    /**
+     * <p>错误码。</p>
+     */
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
+    /**
+     * <p>错误信息。</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>请求ID。</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,36 +66,81 @@ public class CreateTemplateResponseBody extends TeaModel {
     }
 
     public static class CreateTemplateResponseBodyData extends TeaModel {
+        /**
+         * <p>模板内容。</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>创建时间 (UTC+8)。</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <p>申请说明。</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>模板ID。</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>模板名称。</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>审核意见。</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
+        /**
+         * <p>签名。</p>
+         */
+        @NameInMap("Signature")
+        public String signature;
+
+        /**
+         * <p>签名ID。</p>
+         */
         @NameInMap("SignatureId")
         public String signatureId;
 
+        /**
+         * <p>审核状态。</p>
+         * <p>- 0 : 审核中。</p>
+         * <p>- 1 : 审核通过。</p>
+         * <p>- 2 : 审核不通过。</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>模板Code。</p>
+         */
         @NameInMap("TemplateCode")
         public String templateCode;
 
+        /**
+         * <p>模板类型。</p>
+         * <p>- 0 : 验证码。</p>
+         * <p>- 1 : 短信通知。</p>
+         * <p>- 2 : 推广短信。</p>
+         */
         @NameInMap("Type")
         public Integer type;
 
+        /**
+         * <p>更新时间 (UTC+8)。</p>
+         */
         @NameInMap("UpdatedTime")
         public String updatedTime;
 
@@ -138,6 +195,14 @@ public class CreateTemplateResponseBody extends TeaModel {
         }
         public String getReason() {
             return this.reason;
+        }
+
+        public CreateTemplateResponseBodyData setSignature(String signature) {
+            this.signature = signature;
+            return this;
+        }
+        public String getSignature() {
+            return this.signature;
         }
 
         public CreateTemplateResponseBodyData setSignatureId(String signatureId) {

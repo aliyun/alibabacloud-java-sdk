@@ -4,15 +4,27 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class ListSchedulesRequest extends TeaModel {
+    /**
+     * <p>触达计划名称过滤。</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>分页数，从1开始，默认为1。</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>分页大小，默认为10。</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>发送状态过滤。</p>
+     */
     @NameInMap("Status")
     public Integer status;
 

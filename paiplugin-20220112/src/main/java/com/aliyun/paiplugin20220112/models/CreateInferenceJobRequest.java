@@ -4,27 +4,51 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class CreateInferenceJobRequest extends TeaModel {
+    /**
+     * <p>关联算法。</p>
+     */
     @NameInMap("Algorithm")
     public String algorithm;
 
+    /**
+     * <p>关联运营活动Id。</p>
+     */
     @NameInMap("CampaignId")
     public String campaignId;
 
+    /**
+     * <p>预测数据路径。</p>
+     */
     @NameInMap("DataPath")
     public String dataPath;
 
+    /**
+     * <p>预测任务名称。</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>备注。</p>
+     */
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <p>输出数据路径，需要为空目录。</p>
+     */
     @NameInMap("TargetPath")
     public String targetPath;
 
+    /**
+     * <p>关联训练任务。</p>
+     */
     @NameInMap("TrainingJobId")
     public String trainingJobId;
 
+    /**
+     * <p>用户配置。</p>
+     */
     @NameInMap("UserConfig")
     public String userConfig;
 
