@@ -77,6 +77,9 @@ public class GetVideoTaskInfoResponseBody extends TeaModel {
         @NameInMap("VideoUrl")
         public String videoUrl;
 
+        /**
+         * <p>字粒度的时间戳文件，特定任务支持</p>
+         */
         @NameInMap("WordSubtitlesUrl")
         public String wordSubtitlesUrl;
 
