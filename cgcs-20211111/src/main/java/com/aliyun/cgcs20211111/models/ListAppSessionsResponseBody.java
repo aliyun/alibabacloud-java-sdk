@@ -110,6 +110,9 @@ public class ListAppSessionsResponseBody extends TeaModel {
         @NameInMap("PlatformSessionId")
         public String platformSessionId;
 
+        @NameInMap("ProjectId")
+        public String projectId;
+
         @NameInMap("Status")
         public String status;
 
@@ -156,6 +159,14 @@ public class ListAppSessionsResponseBody extends TeaModel {
         }
         public String getPlatformSessionId() {
             return this.platformSessionId;
+        }
+
+        public ListAppSessionsResponseBodyAppSessions setProjectId(String projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+        public String getProjectId() {
+            return this.projectId;
         }
 
         public ListAppSessionsResponseBodyAppSessions setStatus(String status) {

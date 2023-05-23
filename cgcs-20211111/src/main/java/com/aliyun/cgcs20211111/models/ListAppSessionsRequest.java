@@ -19,6 +19,9 @@ public class ListAppSessionsRequest extends TeaModel {
     @NameInMap("PlatformSessionIds")
     public java.util.List<String> platformSessionIds;
 
+    @NameInMap("ProjectId")
+    public String projectId;
+
     public static ListAppSessionsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAppSessionsRequest self = new ListAppSessionsRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class ListAppSessionsRequest extends TeaModel {
     }
     public java.util.List<String> getPlatformSessionIds() {
         return this.platformSessionIds;
+    }
+
+    public ListAppSessionsRequest setProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public String getProjectId() {
+        return this.projectId;
     }
 
 }
