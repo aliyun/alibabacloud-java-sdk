@@ -7,6 +7,9 @@ public class GetArtifactRequest extends TeaModel {
     @NameInMap("ArtifactId")
     public String artifactId;
 
+    @NameInMap("ArtifactName")
+    public String artifactName;
+
     @NameInMap("ArtifactVersion")
     public String artifactVersion;
 
@@ -21,6 +24,14 @@ public class GetArtifactRequest extends TeaModel {
     }
     public String getArtifactId() {
         return this.artifactId;
+    }
+
+    public GetArtifactRequest setArtifactName(String artifactName) {
+        this.artifactName = artifactName;
+        return this;
+    }
+    public String getArtifactName() {
+        return this.artifactName;
     }
 
     public GetArtifactRequest setArtifactVersion(String artifactVersion) {
