@@ -25,6 +25,9 @@ public class CreateHotelShrinkRequest extends TeaModel {
     @NameInMap("RelatedPk")
     public String relatedPk;
 
+    /**
+     * <p>酒店关联产品列表</p>
+     */
     @NameInMap("RelatedPks")
     public String relatedPksShrink;
 

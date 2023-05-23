@@ -3344,6 +3344,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("RoomNo", request.roomNo);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sn)) {
+            body.put("Sn", request.sn);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.uuid)) {
             body.put("Uuid", request.uuid);
         }

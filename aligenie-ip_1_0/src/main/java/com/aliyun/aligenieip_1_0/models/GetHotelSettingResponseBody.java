@@ -84,9 +84,15 @@ public class GetHotelSettingResponseBody extends TeaModel {
     }
 
     public static class GetHotelSettingResponseBodyResultNightMode extends TeaModel {
+        /**
+         * <p>夜间模式下的默认亮度</p>
+         */
         @NameInMap("DefaultBright")
         public String defaultBright;
 
+        /**
+         * <p>夜间模式下的默认音量</p>
+         */
         @NameInMap("DefaultVolume")
         public String defaultVolume;
 
