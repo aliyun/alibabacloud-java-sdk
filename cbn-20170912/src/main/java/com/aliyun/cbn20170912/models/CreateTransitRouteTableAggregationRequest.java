@@ -7,7 +7,7 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
      * <p>>  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</p>
      */
@@ -62,6 +62,11 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
     @NameInMap("TransitRouteTableAggregationName")
     public String transitRouteTableAggregationName;
 
+    /**
+     * <p>The scope of networks that you want to advertise the aggregate route.</p>
+     * <br>
+     * <p>Set the value to **VPC**, which specified that the aggregate route is advertised to VPCs that are in associated forwarding relationship with a route table of the Enterprise Edition transit router and have route synchronization enabled.</p>
+     */
     @NameInMap("TransitRouteTableAggregationScope")
     public String transitRouteTableAggregationScope;
 

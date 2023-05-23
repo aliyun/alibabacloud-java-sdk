@@ -4,20 +4,9 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DeleteTransitRouterMulticastDomainRequest extends TeaModel {
-    /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can only contain ASCII characters.</p>
-     */
     @NameInMap("ClientToken")
     public String clientToken;
 
-    /**
-     * <p>Specifies whether only to precheck the API request. Valid values:</p>
-     * <br>
-     * <p>*   **true**: prechecks the request but does not delete the multicast domain. The system checks the required parameters, the request format, and the service limits. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): sends the request. After the request passes the precheck, the multicast domain is deleted.</p>
-     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -33,9 +22,6 @@ public class DeleteTransitRouterMulticastDomainRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The ID of the multicast domain.</p>
-     */
     @NameInMap("TransitRouterMulticastDomainId")
     public String transitRouterMulticastDomainId;
 

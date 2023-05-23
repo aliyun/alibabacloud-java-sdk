@@ -4,29 +4,15 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class SetCenInterRegionBandwidthLimitRequest extends TeaModel {
-    /**
-     * <p>The maximum bandwidth value of the inter-region connection. Unit: Mbit/s.</p>
-     */
     @NameInMap("BandwidthLimit")
     public Long bandwidthLimit;
 
-    /**
-     * <p>The ID of the CEN instance.</p>
-     */
     @NameInMap("CenId")
     public String cenId;
 
-    /**
-     * <p>The ID of the local region.</p>
-     * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query regions where you can attach network instances to a CEN instance.</p>
-     */
     @NameInMap("LocalRegionId")
     public String localRegionId;
 
-    /**
-     * <p>The ID of the peer region.</p>
-     */
     @NameInMap("OppositeRegionId")
     public String oppositeRegionId;
 

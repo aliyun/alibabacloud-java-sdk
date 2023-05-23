@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTransitRouterVpnAttachmentAttributeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to allow the transit router to automatically advertise routes to the IPsec connection. Valid values:</p>
+     * <p>Specifies whether to allow the transit router to automatically advertise routes to the IPsec-VPN attachment. Valid values:</p>
      * <br>
      * <p>*   **true**: yes</p>
      * <p>*   **false**: no</p>
@@ -16,18 +16,18 @@ public class UpdateTransitRouterVpnAttachmentAttributeRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether only to precheck the request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <br>
-     * <p>*   **true**: prechecks the request but does not modify the configurations. The system checks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): checks the request. If the request passes the check, the configurations are modified.</p>
+     * <p>*   **true**:performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): performs a dry run and sends the request.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -45,7 +45,7 @@ public class UpdateTransitRouterVpnAttachmentAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The new description of the VPN connection.</p>
+     * <p>The new description of the VPN attachment.</p>
      * <br>
      * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.</p>
      */
@@ -53,13 +53,13 @@ public class UpdateTransitRouterVpnAttachmentAttributeRequest extends TeaModel {
     public String transitRouterAttachmentDescription;
 
     /**
-     * <p>The ID of the VPN connection.</p>
+     * <p>The ID of the VPN attachment.</p>
      */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
 
     /**
-     * <p>The name of the VPN connection.</p>
+     * <p>The name of the VPN attachment.</p>
      * <br>
      * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.</p>
      */

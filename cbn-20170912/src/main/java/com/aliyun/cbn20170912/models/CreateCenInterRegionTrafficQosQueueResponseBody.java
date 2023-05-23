@@ -4,15 +4,9 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class CreateCenInterRegionTrafficQosQueueResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the queue.</p>
-     */
     @NameInMap("QosQueueId")
     public String qosQueueId;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

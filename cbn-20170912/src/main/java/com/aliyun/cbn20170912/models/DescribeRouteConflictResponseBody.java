@@ -4,33 +4,18 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeRouteConflictResponseBody extends TeaModel {
-    /**
-     * <p>The page number of the returned page.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries returned per page.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The array of conflicting routes.</p>
-     */
     @NameInMap("RouteConflicts")
     public DescribeRouteConflictResponseBodyRouteConflicts routeConflicts;
 
-    /**
-     * <p>The total number of entries returned.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -80,40 +65,18 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
     }
 
     public static class DescribeRouteConflictResponseBodyRouteConflictsRouteConflict extends TeaModel {
-        /**
-         * <p>The destination CIDR block of the conflicting route.</p>
-         */
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
-        /**
-         * <p>The ID of the peer network instance on which conflicting routes are found.</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The type of the peer network instance on which conflicting routes are found.</p>
-         * <br>
-         * <p>*   **VPC**</p>
-         * <p>*   **VBR**</p>
-         * <p>*   **CCN**</p>
-         */
         @NameInMap("InstanceType")
         public String instanceType;
 
-        /**
-         * <p>The region ID of the peer network instance on which conflicting routes are found is deployed.</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The cause of the route error. Valid values:</p>
-         * <br>
-         * <p>*   **conflict**: Routes have the same destination CIDR block.</p>
-         * <p>*   **overflow**: The number of routes in the route table configured on another network instance has reached the upper limit.</p>
-         */
         @NameInMap("Status")
         public String status;
 

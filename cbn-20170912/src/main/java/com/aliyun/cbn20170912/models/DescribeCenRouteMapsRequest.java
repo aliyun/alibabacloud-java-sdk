@@ -5,15 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeCenRouteMapsRequest extends TeaModel {
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The number of the page to return. Default value: **1**.</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
-     * <p>The ID of the region where the routing policy is applied.</p>
+     * <p>The match method that is used to match routes based on the AS path.</p>
      * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     * <p>*   **Include**: fuzzy match. A route is a match if the AS path of the route overlaps with the AS path specified in the match condition.</p>
+     * <p>*   **Complete**: exact match. A route is a match only if the AS path of the route is the same as the AS path specified in the match condition.</p>
      */
     @NameInMap("CenRegionId")
     public String cenRegionId;
@@ -25,13 +26,15 @@ public class DescribeCenRouteMapsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The route table ID of the transit router with which the routing policy is associated.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**.</p>
+     * <p>The IDs of the destination network instances to which the routes belong.</p>
+     * <br>
+     * <p>>  The destination network instance IDs are valid only when the routing policy is applied to scenarios where routes are advertised from the gateway in the current region to network instances in the current region.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -43,27 +46,25 @@ public class DescribeCenRouteMapsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the routing policy.</p>
+     * <p>Indicates whether the destination network instance IDs are excluded.</p>
+     * <br>
+     * <p>*   **false** (default): A route is a match if its destination network instance ID is in the list specified by **DestinationInstanceIds.N**.</p>
+     * <p>*   **true**: A route is a match if its destination network instance ID is not in the list specified by **DestinationInstanceIds.N**.</p>
      */
     @NameInMap("RouteMapId")
     public String routeMapId;
 
     /**
-     * <p>The route table ID of the transit router with which the routing policy is associated.</p>
+     * <p>The priority of the routing policy that you want to associate with the current one.</p>
      */
     @NameInMap("TransitRouterRouteTableId")
     public String transitRouterRouteTableId;
 
     /**
-     * <p>The direction in which the routing policy is applied. Valid values:</p>
+     * <p>The match method that is used to match routes based on the community.</p>
      * <br>
-     * <p>*   **RegionIn**: Routes are advertised to the gateways in the regions that are connected by the CEN instance.</p>
-     * <br>
-     * <p>    For example, routes are advertised from network instances deployed in the current region or other regions to the gateway deployed in the current region.</p>
-     * <br>
-     * <p>*   **RegionOut**: Routes are advertised from the gateways in the regions that are connected by the CEN instance.</p>
-     * <br>
-     * <p>    For example, routes are advertised from the gateway deployed in the current region to network instances deployed in the current region, or to gateways deployed in other regions.</p>
+     * <p>*   **Include**: fuzzy match. A route is a match if the community of the route overlaps with the community specified in the match condition.</p>
+     * <p>*   **Complete**: exact match. A route is a match only if the community of the route is the same as the community specified in the match condition.</p>
      */
     @NameInMap("TransmitDirection")
     public String transmitDirection;

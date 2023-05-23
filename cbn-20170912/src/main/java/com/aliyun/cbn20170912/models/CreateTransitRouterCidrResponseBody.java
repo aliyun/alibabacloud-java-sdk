@@ -4,15 +4,9 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class CreateTransitRouterCidrResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The ID of the transit router CIDR block.</p>
-     */
     @NameInMap("TransitRouterCidrId")
     public String transitRouterCidrId;
 

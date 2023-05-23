@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the query.</p>
+     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -29,7 +29,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>A list of VBR connections.</p>
+     * <p>The queried VBR connections.</p>
      */
     @NameInMap("TransitRouterAttachments")
     public java.util.List<ListTransitRouterVbrAttachmentsResponseBodyTransitRouterAttachments> transitRouterAttachments;
@@ -125,6 +125,9 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         @NameInMap("AutoPublishRouteEnabled")
         public Boolean autoPublishRouteEnabled;
 
+        /**
+         * <p>The ID of the CEN instance.</p>
+         */
         @NameInMap("CenId")
         public String cenId;
 
@@ -139,8 +142,8 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         /**
          * <p>The type of resource to which the transit router is connected. Valid values:</p>
          * <br>
-         * <p>*   **VPC**: virtual private cloud (VPC)</p>
-         * <p>*   **CCN**: CCN instance</p>
+         * <p>*   **VPC**: VPC</p>
+         * <p>*   **CCN**: Cloud Connect Network (CCN) instance</p>
          * <p>*   **VBR**: VBR</p>
          * <p>*   **TR**: transit router</p>
          */
@@ -189,7 +192,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         public String transitRouterId;
 
         /**
-         * <p>The ID of the VBR.</p>
+         * <p>The VBR ID.</p>
          */
         @NameInMap("VbrId")
         public String vbrId;
@@ -201,7 +204,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         public Long vbrOwnerId;
 
         /**
-         * <p>The ID of the region where the VBR is deployed.</p>
+         * <p>The region ID of the VBR.</p>
          */
         @NameInMap("VbrRegionId")
         public String vbrRegionId;

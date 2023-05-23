@@ -4,15 +4,9 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class CreateTransitRouterRouteTableResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The ID of the custom route table.</p>
-     */
     @NameInMap("TransitRouterRouteTableId")
     public String transitRouterRouteTableId;
 

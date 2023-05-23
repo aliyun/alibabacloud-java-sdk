@@ -29,7 +29,7 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
     public String privateZoneDnsServers;
 
     /**
-     * <p>The configuration details of PrivateZone.</p>
+     * <p>The detailed configuration of PrivateZone.</p>
      */
     @NameInMap("PrivateZoneInfos")
     public DescribeCenPrivateZoneRoutesResponseBodyPrivateZoneInfos privateZoneInfos;
@@ -121,7 +121,7 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
         public String hostRegionId;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC) that is associated with PrivateZone.</p>
+         * <p>The ID of the VPC that is associated with PrivateZone.</p>
          */
         @NameInMap("HostVpcId")
         public String hostVpcId;

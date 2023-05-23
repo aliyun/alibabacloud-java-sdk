@@ -4,15 +4,9 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class CreateCenRouteMapResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The ID of the routing policy.</p>
-     */
     @NameInMap("RouteMapId")
     public String routeMapId;
 

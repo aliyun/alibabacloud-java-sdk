@@ -4,9 +4,6 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListGrantVSwitchEnisRequest extends TeaModel {
-    /**
-     * <p>The ID of the CEN instance to which the VPC is attached.</p>
-     */
     @NameInMap("CenId")
     public String cenId;
 
@@ -22,17 +19,9 @@ public class ListGrantVSwitchEnisRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The ID of a vSwitch in the VPC.</p>
-     * <br>
-     * <p>You can specify only one vSwitch in each call.</p>
-     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
-    /**
-     * <p>The ID of the VPC.</p>
-     */
     @NameInMap("VpcId")
     public String vpcId;
 

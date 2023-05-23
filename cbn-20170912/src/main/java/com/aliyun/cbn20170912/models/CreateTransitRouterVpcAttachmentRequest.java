@@ -5,13 +5,22 @@ import com.aliyun.tea.*;
 
 public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     /**
+     * <p>是否使企业版转发路由器自动发布路由到VPC实例。</p>
+     * <br>
+     * <p>- **false**（默认值）：否。</p>
+     * <p>- **true**：是。</p>
+     */
+    @NameInMap("AutoPublishRouteEnabled")
+    public Boolean autoPublishRouteEnabled;
+
+    /**
      * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
-     * <p>The billing method. Valid values: The default value is **POSTPAY**, which specifies the pay-as-you-go billing method.</p>
+     * <p>The billing method. The default value is **POSTPAY**, which specifies the pay-as-you-go billing method.</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
@@ -27,7 +36,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run to check information such as the permissions and the instance status. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <br>
      * <p>*   **false** (default): performs a dry run and sends the request.</p>
      * <p>*   **true**: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
@@ -74,7 +83,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     /**
      * <p>The name of the VPC connection.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain digits, underscores (\_), and hyphens (-). It must start with a letter.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.</p>
      */
     @NameInMap("TransitRouterAttachmentName")
     public String transitRouterAttachmentName;
@@ -100,9 +109,9 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     public Long vpcOwnerId;
 
     /**
-     * <p>A vSwitch in a zone of the Enterprise Edition transit router.</p>
+     * <p>A zone that supports Enterprise Edition transit routers.</p>
      * <br>
-     * <p>You can specify at most 10 vSwitches in each call.</p>
+     * <p>You can specify at most 10 zones.</p>
      */
     @NameInMap("ZoneMappings")
     public java.util.List<CreateTransitRouterVpcAttachmentRequestZoneMappings> zoneMappings;
@@ -110,6 +119,14 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     public static CreateTransitRouterVpcAttachmentRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTransitRouterVpcAttachmentRequest self = new CreateTransitRouterVpcAttachmentRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateTransitRouterVpcAttachmentRequest setAutoPublishRouteEnabled(Boolean autoPublishRouteEnabled) {
+        this.autoPublishRouteEnabled = autoPublishRouteEnabled;
+        return this;
+    }
+    public Boolean getAutoPublishRouteEnabled() {
+        return this.autoPublishRouteEnabled;
     }
 
     public CreateTransitRouterVpcAttachmentRequest setCenId(String cenId) {
@@ -286,7 +303,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
 
     public static class CreateTransitRouterVpcAttachmentRequestZoneMappings extends TeaModel {
         /**
-         * <p>A vSwitch in a zone of the Enterprise Edition transit router.</p>
+         * <p>A vSwitch that is deployed in the zone that supports Enterprise Edition transit routers.</p>
          * <br>
          * <p>You can specify vSwitches for at most 10 zones in each call.</p>
          */
@@ -294,7 +311,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The ID of the zone supported by Enterprise Edition transit routers.</p>
+         * <p>The ID of the zone that supports Enterprise Edition transit routers.</p>
          * <br>
          * <p>You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.</p>
          * <br>

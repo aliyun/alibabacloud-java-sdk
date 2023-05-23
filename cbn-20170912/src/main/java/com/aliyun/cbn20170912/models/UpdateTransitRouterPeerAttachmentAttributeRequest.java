@@ -34,9 +34,7 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends TeaModel 
     /**
      * <p>The ID of the bandwidth plan that is used to allocate bandwidth to the inter-region connection.</p>
      * <br>
-     * <p>**</p>
-     * <br>
-     * <p>If you set **BandwidthType** to DataTransfer, you do not need to set this parameter.</p>
+     * <p>> If you set **BandwidthType** to **DataTransfer**, you do not need to set this parameter.</p>
      */
     @NameInMap("CenBandwidthPackageId")
     public String cenBandwidthPackageId;
@@ -44,7 +42,7 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends TeaModel 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must ensure that it is unique among all requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
      * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
      */
@@ -52,7 +50,7 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends TeaModel 
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run to check information such as the permissions and the instance status. Valid values:</p>
+     * <p>Specifies whether to perform a dry run to check information such as the permissions and the instance status. Default values:</p>
      * <br>
      * <p>*   **false** (default): performs a dry run and sends the request.</p>
      * <p>*   **true**: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.</p>

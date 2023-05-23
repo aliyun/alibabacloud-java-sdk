@@ -4,14 +4,11 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
-    /**
-     * <p>A list of zones.</p>
-     */
     @NameInMap("AvailableZones")
     public java.util.List<String> availableZones;
 
     /**
-     * <p>A list of primary zones.</p>
+     * <p>ListTransitRouterAvailableResource</p>
      */
     @NameInMap("MasterZones")
     public java.util.List<String> masterZones;
@@ -23,13 +20,14 @@ public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of zone IDs.</p>
-     * <br>
-     * <p>You can call [DescribeZones](~~36064~~) to query zones by ID.</p>
+     * <p>The operation that you want to perform. Set the value to **ListTransitRouterAvailableResource**.</p>
      */
     @NameInMap("SlaveZones")
     public java.util.List<String> slaveZones;
 
+    /**
+     * <p>是否为支持组播功能的可用区信息。</p>
+     */
     @NameInMap("SupportMulticast")
     public Boolean supportMulticast;
 

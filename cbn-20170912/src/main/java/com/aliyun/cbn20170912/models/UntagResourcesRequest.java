@@ -4,14 +4,6 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
-    /**
-     * <p>Specifies whether to remove all tags. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false** (default): no</p>
-     * <br>
-     * <p>> This parameter is valid only when the **TagKey.N** parameter is empty.</p>
-     */
     @NameInMap("All")
     public Boolean all;
 
@@ -21,17 +13,9 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The ID of the region where the resource is deployed.</p>
-     * <br>
-     * <p>You can ignore this parameter if ResourceType is set to Cen or BandwidthPackage.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The ID of the resource. Valid values of **N**: **1** to **50**.</p>
-     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
@@ -41,39 +25,9 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The resource type. Valid value:</p>
-     * <br>
-     * <p>**Cen**: Cloud Enterprise Network (CEN) instance</p>
-     * <br>
-     * <p>**BandwidthPackage**: bandwidth plan</p>
-     * <br>
-     * <p>**TransitRouter**: transit router</p>
-     * <br>
-     * <p>**TransitRouterVpcAttachment**: virtual private cloud (VPC) connection</p>
-     * <br>
-     * <p>**TransitRouterVbrAttachment**: virtual border router (VBR) connection</p>
-     * <br>
-     * <p>**TransitRouterPeerAttachment**: inter-region connection</p>
-     * <br>
-     * <p>**TransitRouterVpnAttachment**: VPN connection</p>
-     * <br>
-     * <p>**TransitRouterRouteTable**: route table</p>
-     * <br>
-     * <p>**Flowlog**: flow log</p>
-     * <br>
-     * <p>**TransitRouterMulticastDomain**: multicast domain</p>
-     */
     @NameInMap("ResourceType")
     public String resourceType;
 
-    /**
-     * <p>The tag key.</p>
-     * <br>
-     * <p>The tag key cannot exceed 64 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
-     * <br>
-     * <p>If multiple tag keys are specified, the logical relation among these tag keys is **AND**. Valid values of **N**: **1** to **20**.</p>
-     */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 

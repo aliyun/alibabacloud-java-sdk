@@ -11,28 +11,28 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
     public DescribeGrantRulesToCenResponseBodyGrantRules grantRules;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
 
     /**
-     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
      * <br>
-     * <p>- If **NextToken** was not returned, it indicates that no additional results exist.</p>
-     * <p>- If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.</p>
+     * <p>*   If **NextToken** is empty, no next page exists.</p>
+     * <p>*   If a value of **NextToken** was returned in the previous query, specify the value to obtain the next set of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The number of entries returned.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -84,7 +84,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
 
     public static class DescribeGrantRulesToCenResponseBodyGrantRulesGrantRule extends TeaModel {
         /**
-         * <p>The ID of the CEN instance.</p>
+         * <p>The CEN instance ID.</p>
          */
         @NameInMap("CenId")
         public String cenId;
@@ -96,7 +96,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         public Long cenOwnerId;
 
         /**
-         * <p>The ID of the network instance.</p>
+         * <p>The network instance ID.</p>
          */
         @NameInMap("ChildInstanceId")
         public String childInstanceId;
@@ -108,7 +108,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         public Long childInstanceOwnerId;
 
         /**
-         * <p>The ID of the region where the network instance is deployed.</p>
+         * <p>The region ID of the network instance.</p>
          */
         @NameInMap("ChildInstanceRegionId")
         public String childInstanceRegionId;
@@ -116,10 +116,10 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         /**
          * <p>The type of the network instance. Valid values:</p>
          * <br>
-         * <p>*   **VPC**: VPC</p>
-         * <p>*   **VBR**: VBR</p>
-         * <p>*   **CCN**: CCN instance</p>
-         * <p>*   **VPN**: IPsec-VPN connection</p>
+         * <p>*   **VPC**</p>
+         * <p>*   **VBR**</p>
+         * <p>*   **CCN**</p>
+         * <p>*   **VPN**</p>
          */
         @NameInMap("ChildInstanceType")
         public String childInstanceType;

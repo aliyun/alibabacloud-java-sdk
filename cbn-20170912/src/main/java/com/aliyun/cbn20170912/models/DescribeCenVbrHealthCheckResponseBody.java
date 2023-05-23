@@ -5,31 +5,41 @@ import com.aliyun.tea.*;
 
 public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The health check configuration of the VBR.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>Indicates whether probing is enabled. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <br>
+     * <p>    If probing is enabled, the system does not switch to another route when the detected route is not reachable.</p>
+     * <br>
+     * <p>*   **false**: no</p>
+     * <br>
+     * <p>    If probing is disabled and a redundant route is specified, the system switches to the redundant route when the detected route is not reachable.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the CEN instance.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The ID of the Alibaba Cloud account that owns the VBR.</p>
+     * <br>
+     * <p>>  The parameter is required if the VBR and the CEN instance belong to different Alibaba Cloud accounts.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
     /**
-     * <p>The health check configuration of the VBR.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("VbrHealthChecks")
     public DescribeCenVbrHealthCheckResponseBodyVbrHealthChecks vbrHealthChecks;
@@ -81,34 +91,17 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
 
     public static class DescribeCenVbrHealthCheckResponseBodyVbrHealthChecksVbrHealthCheck extends TeaModel {
         /**
-         * <p>The ID of the CEN instance.</p>
+         * <p>The number of probe packets that are sent during the health check.</p>
          */
         @NameInMap("CenId")
         public String cenId;
 
-        /**
-         * <p>The time interval at which probe packets are sent during the health check. Unit: seconds.</p>
-         */
         @NameInMap("HealthCheckInterval")
         public Integer healthCheckInterval;
 
-        /**
-         * <p>Indicates whether probing is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <br>
-         * <p>    If probing is enabled, the system does not switch to another route when the detected route is not reachable.</p>
-         * <br>
-         * <p>*   **false**: no</p>
-         * <br>
-         * <p>    If probing is disabled and a redundant route is specified, the system switches to the redundant route when the detected route is not reachable.</p>
-         */
         @NameInMap("HealthCheckOnly")
         public Boolean healthCheckOnly;
 
-        /**
-         * <p>The source IP address of the health check.</p>
-         */
         @NameInMap("HealthCheckSourceIp")
         public String healthCheckSourceIp;
 
@@ -119,19 +112,19 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
         public String healthCheckTargetIp;
 
         /**
-         * <p>The number of probe packets that are sent during the health check.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("HealthyThreshold")
         public Integer healthyThreshold;
 
         /**
-         * <p>The ID of the VBR.</p>
+         * <p>The source IP address of the health check.</p>
          */
         @NameInMap("VbrInstanceId")
         public String vbrInstanceId;
 
         /**
-         * <p>The ID of the region where the VBR is deployed.</p>
+         * <p>The number of entries returned per page.</p>
          */
         @NameInMap("VbrInstanceRegionId")
         public String vbrInstanceRegionId;

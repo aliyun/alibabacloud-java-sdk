@@ -4,24 +4,12 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
-    /**
-     * <p>The token that determines the start point of the query. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** was not returned, it indicates that no additional results exist.</p>
-     * <p>*   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>A list of queues.</p>
-     */
     @NameInMap("TrafficQosQueues")
     public java.util.List<ListCenInterRegionTrafficQosQueuesResponseBodyTrafficQosQueues> trafficQosQueues;
 
@@ -55,63 +43,30 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
     }
 
     public static class ListCenInterRegionTrafficQosQueuesResponseBodyTrafficQosQueues extends TeaModel {
-        /**
-         * <p>The differentiated services code point (DSCP) value that matches the current queue.</p>
-         */
         @NameInMap("Dscps")
         public java.util.List<Integer> dscps;
 
-        /**
-         * <p>The percentage of bandwidth resources that can be allocated to the current queue.</p>
-         * <br>
-         * <p>Each QoS policy supports up to three queues. You can specify a percentage of bandwidth resources for each queue.</p>
-         * <br>
-         * <p>For example, a value of **1** indicates that 1 percent of bandwidth resources can be allocated to the queue.</p>
-         */
         @NameInMap("RemainBandwidthPercent")
         public Integer remainBandwidthPercent;
 
-        /**
-         * <p>The status of the queue. Valid values:</p>
-         * <br>
-         * <p>**Creating**: The queue is being created. **Active**: The queue is available. **Deleting**: The queue is being deleted.</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The ID of the QoS policy.</p>
-         */
         @NameInMap("TrafficQosPolicyId")
         public String trafficQosPolicyId;
 
-        /**
-         * <p>The description of the queue.</p>
-         */
         @NameInMap("TrafficQosQueueDescription")
         public String trafficQosQueueDescription;
 
-        /**
-         * <p>The ID of the queue.</p>
-         */
         @NameInMap("TrafficQosQueueId")
         public String trafficQosQueueId;
 
-        /**
-         * <p>The name of the queue.</p>
-         */
         @NameInMap("TrafficQosQueueName")
         public String trafficQosQueueName;
 
-        /**
-         * <p>The ID of the inter-region connection.</p>
-         */
         @NameInMap("TransitRouterAttachmentId")
         public String transitRouterAttachmentId;
 
-        /**
-         * <p>The ID of the transit router.</p>
-         */
         @NameInMap("TransitRouterId")
         public String transitRouterId;
 

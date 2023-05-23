@@ -4,11 +4,6 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class CheckTransitRouterServiceRequest extends TeaModel {
-    /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
-     * <p>You can use the client to generate a token, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
-     */
     @NameInMap("ClientToken")
     public String clientToken;
 

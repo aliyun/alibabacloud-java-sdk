@@ -4,22 +4,9 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class UpdateTransitRouterRouteTableRequest extends TeaModel {
-    /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
-     */
     @NameInMap("ClientToken")
     public String clientToken;
 
-    /**
-     * <p>Specifies whether to perform a dry run. Default values:</p>
-     * <br>
-     * <p>*   **false** (default): performs a dry run and sends the request.</p>
-     * <p>*   **true**: performs a dry run. The system checks the required parameters and the request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -38,25 +25,12 @@ public class UpdateTransitRouterRouteTableRequest extends TeaModel {
     @NameInMap("RouteTableOptions")
     public UpdateTransitRouterRouteTableRequestRouteTableOptions routeTableOptions;
 
-    /**
-     * <p>The description of the route table.</p>
-     * <br>
-     * <p>The description must be 2 to 256 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -. You can also leave the description empty.</p>
-     */
     @NameInMap("TransitRouterRouteTableDescription")
     public String transitRouterRouteTableDescription;
 
-    /**
-     * <p>The ID of the route table of the Enterprise Edition transit router.</p>
-     */
     @NameInMap("TransitRouterRouteTableId")
     public String transitRouterRouteTableId;
 
-    /**
-     * <p>The name of the route table.</p>
-     * <br>
-     * <p>The name must be 1 to 128 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -. You can also leave the name empty.</p>
-     */
     @NameInMap("TransitRouterRouteTableName")
     public String transitRouterRouteTableName;
 

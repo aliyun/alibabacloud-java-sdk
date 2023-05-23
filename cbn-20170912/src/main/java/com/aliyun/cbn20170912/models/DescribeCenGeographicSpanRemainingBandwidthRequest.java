@@ -11,7 +11,7 @@ public class DescribeCenGeographicSpanRemainingBandwidthRequest extends TeaModel
     public String cenId;
 
     /**
-     * <p>The ID of one of the areas connected by the bandwidth plan. Valid values:</p>
+     * <p>The ID of one of the connected areas of the bandwidth plan. Valid values:</p>
      * <br>
      * <p>*   **China**: Chinese mainland</p>
      * <p>*   **North-America**: North America</p>

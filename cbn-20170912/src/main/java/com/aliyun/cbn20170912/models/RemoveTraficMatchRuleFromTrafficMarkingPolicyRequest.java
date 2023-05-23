@@ -5,20 +5,13 @@ import com.aliyun.tea.*;
 
 public class RemoveTraficMatchRuleFromTrafficMarkingPolicyRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. </p>
-     * <br>
-     * <p>You can use the client to generate the value, but you must ensure that it is unique among all requests. The client token can contain only ASCII characters.  </p>
-     * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether only to precheck the request. Valid values:</p>
-     * <br>
-     * <p>- **true**: prechecks the request but does not delete the traffic classification rules. The system checks the required parameters, the request format, and the service limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
-     * <p>- **false** (default): sends the request and deletes the specified traffic classification rules after the request passes the precheck.</p>
+     * <p>The operation that you want to perform. Set the value to **RemoveTraficMatchRuleFromTrafficMarkingPolicy**.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -35,18 +28,11 @@ public class RemoveTraficMatchRuleFromTrafficMarkingPolicyRequest extends TeaMod
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The IDs of the traffic classification rules.</p>
-     * <br>
-     * <p>You can specify at most 20 traffic classification rules.</p>
-     * <br>
-     * <p>You can call the ListTrafficMarkingPolicies operation to query the IDs of traffic classification rules in a specified traffic marking policy.</p>
-     */
     @NameInMap("TrafficMarkRuleIds")
     public java.util.List<String> trafficMarkRuleIds;
 
     /**
-     * <p>The ID of the traffic marking policy.</p>
+     * <p>Deletes specified traffic classification rules from a traffic marking policy.</p>
      */
     @NameInMap("TrafficMarkingPolicyId")
     public String trafficMarkingPolicyId;

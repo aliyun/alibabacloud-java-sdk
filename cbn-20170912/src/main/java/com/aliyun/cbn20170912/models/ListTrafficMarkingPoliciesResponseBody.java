@@ -4,36 +4,18 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
-    /**
-     * <p>The number of entries returned on each page.</p>
-     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    /**
-     * <p>The token that determines the start point of the query.</p>
-     * <br>
-     * <p>*   If **NextToken** was not returned in the previous query, it indicates that no additional results exist.</p>
-     * <p>*   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The number of entries returned.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    /**
-     * <p>The list of traffic marking policies.</p>
-     */
     @NameInMap("TrafficMarkingPolicies")
     public java.util.List<ListTrafficMarkingPoliciesResponseBodyTrafficMarkingPolicies> trafficMarkingPolicies;
 
@@ -83,70 +65,33 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListTrafficMarkingPoliciesResponseBodyTrafficMarkingPoliciesTrafficMatchRules extends TeaModel {
-        /**
-         * <p>The destination CIDR block used to match data packets.</p>
-         */
         @NameInMap("DstCidr")
         public String dstCidr;
 
-        /**
-         * <p>The destination port range used to match data packets.</p>
-         */
         @NameInMap("DstPortRange")
         public java.util.List<Integer> dstPortRange;
 
-        /**
-         * <p>The DSCP value used to match data packets.</p>
-         */
         @NameInMap("MatchDscp")
         public Integer matchDscp;
 
-        /**
-         * <p>The protocol used to match data packets.</p>
-         * <br>
-         * <p>> Traffic marking policies support multiple protocols. For more information, see the documentation of CEN.</p>
-         */
         @NameInMap("Protocol")
         public String protocol;
 
-        /**
-         * <p>The source CIDR block used to match data packets.</p>
-         */
         @NameInMap("SrcCidr")
         public String srcCidr;
 
-        /**
-         * <p>The source port range used to match data packets.</p>
-         */
         @NameInMap("SrcPortRange")
         public java.util.List<Integer> srcPortRange;
 
-        /**
-         * <p>The description of the traffic classification rule.</p>
-         */
         @NameInMap("TrafficMatchRuleDescription")
         public String trafficMatchRuleDescription;
 
-        /**
-         * <p>The ID of the traffic classification rule.</p>
-         */
         @NameInMap("TrafficMatchRuleId")
         public String trafficMatchRuleId;
 
-        /**
-         * <p>The name of the traffic classification rule.</p>
-         */
         @NameInMap("TrafficMatchRuleName")
         public String trafficMatchRuleName;
 
-        /**
-         * <p>The status of the traffic classification rule. Valid values:</p>
-         * <br>
-         * <p>*   **Creating**: The rule is being created.</p>
-         * <p>*   **Active**: The rule is available.</p>
-         * <p>*   **Deleting**: The rule is being deleted.</p>
-         * <p>*   **Deleted**: The rule is deleted.</p>
-         */
         @NameInMap("TrafficMatchRuleStatus")
         public String trafficMatchRuleStatus;
 
@@ -238,59 +183,27 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListTrafficMarkingPoliciesResponseBodyTrafficMarkingPolicies extends TeaModel {
-        /**
-         * <p>The differentiated services code point (DSCP) value of the traffic marking policy.</p>
-         */
         @NameInMap("MarkingDscp")
         public Integer markingDscp;
 
-        /**
-         * <p>The priority of the traffic marking policy.</p>
-         * <br>
-         * <p>A smaller value indicates a higher priority.</p>
-         */
         @NameInMap("Priority")
         public Integer priority;
 
-        /**
-         * <p>The description of the traffic marking policy.</p>
-         */
         @NameInMap("TrafficMarkingPolicyDescription")
         public String trafficMarkingPolicyDescription;
 
-        /**
-         * <p>The ID of the traffic marking policy.</p>
-         */
         @NameInMap("TrafficMarkingPolicyId")
         public String trafficMarkingPolicyId;
 
-        /**
-         * <p>The name of the traffic marking policy.</p>
-         */
         @NameInMap("TrafficMarkingPolicyName")
         public String trafficMarkingPolicyName;
 
-        /**
-         * <p>The status of the traffic marking policy. Valid values:</p>
-         * <br>
-         * <p>*   **Creating**: The policy is being created.</p>
-         * <p>*   **Active**: The policy is available.</p>
-         * <p>*   **Modifying**: The policy is being modified</p>
-         * <p>*   **Deleting**: The policy is being deleted.</p>
-         * <p>*   **Deleted**: The policy is deleted.</p>
-         */
         @NameInMap("TrafficMarkingPolicyStatus")
         public String trafficMarkingPolicyStatus;
 
-        /**
-         * <p>The list of traffic classification rules.</p>
-         */
         @NameInMap("TrafficMatchRules")
         public java.util.List<ListTrafficMarkingPoliciesResponseBodyTrafficMarkingPoliciesTrafficMatchRules> trafficMatchRules;
 
-        /**
-         * <p>The ID of the transit router.</p>
-         */
         @NameInMap("TransitRouterId")
         public String transitRouterId;
 
