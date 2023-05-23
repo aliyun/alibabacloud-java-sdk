@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>cgcs20211111</artifactId>
-  <version>2.5.1</version>
+  <version>2.7.5</version>
   <packaging>jar</packaging>
   <name>cgcs20211111</name>
   <description>Alibaba Cloud CGCS (20211111) SDK for Java
@@ -51,7 +51,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.2.0</version>
+      <version>0.2.1</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
