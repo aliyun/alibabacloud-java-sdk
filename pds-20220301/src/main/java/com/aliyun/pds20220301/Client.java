@@ -2155,6 +2155,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listAddressGroupsWithOptions(request, headers, runtime);
     }
 
+    public ListAssignmentResponse listAssignmentWithOptions(String domainId, ListAssignmentRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("domain_id", domainId);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            body.put("limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.manageResourceId)) {
+            body.put("manage_resource_id", request.manageResourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.manageResourceType)) {
+            body.put("manage_resource_type", request.manageResourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.marker)) {
+            body.put("marker", request.marker);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAssignment"),
+            new TeaPair("version", "2022-03-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/role/list_assignment"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new ListAssignmentResponse());
+    }
+
+    public ListAssignmentResponse listAssignment(String domainId, ListAssignmentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listAssignmentWithOptions(domainId, request, headers, runtime);
+    }
+
     public ListDeltaResponse listDeltaWithOptions(ListDeltaRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
