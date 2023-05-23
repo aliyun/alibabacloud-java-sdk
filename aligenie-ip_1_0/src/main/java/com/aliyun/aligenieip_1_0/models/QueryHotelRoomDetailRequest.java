@@ -13,6 +13,14 @@ public class QueryHotelRoomDetailRequest extends TeaModel {
     @NameInMap("RoomNo")
     public String roomNo;
 
+    /**
+     * <p>设备sn信息</p>
+     * <p>注：若在mac uuid sn全都输入的情况下 按照输入正确的内容查询 若全输入都是正确的 则 按照 uuid > mac > sn 优先级查询</p>
+     * <p>传入mac uuid sn其中一个 则酒店id和房间号可不传</p>
+     */
+    @NameInMap("Sn")
+    public String sn;
+
     @NameInMap("Uuid")
     public String uuid;
 
@@ -43,6 +51,14 @@ public class QueryHotelRoomDetailRequest extends TeaModel {
     }
     public String getRoomNo() {
         return this.roomNo;
+    }
+
+    public QueryHotelRoomDetailRequest setSn(String sn) {
+        this.sn = sn;
+        return this;
+    }
+    public String getSn() {
+        return this.sn;
     }
 
     public QueryHotelRoomDetailRequest setUuid(String uuid) {
