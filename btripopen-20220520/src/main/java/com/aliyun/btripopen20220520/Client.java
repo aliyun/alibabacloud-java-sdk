@@ -3369,6 +3369,96 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.groupUserSaveWithOptions(request, headers, runtime);
     }
 
+    public HotelAskingPriceResponse hotelAskingPriceWithOptions(HotelAskingPriceRequest tmpReq, HotelAskingPriceHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        HotelAskingPriceShrinkRequest request = new HotelAskingPriceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.shids)) {
+            request.shidsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.shids, "shids", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.adultNum)) {
+            query.put("adult_num", request.adultNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.btripUserId)) {
+            query.put("btrip_user_id", request.btripUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.checkInDate)) {
+            query.put("check_in_date", request.checkInDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.checkOutDate)) {
+            query.put("check_out_date", request.checkOutDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cityCode)) {
+            query.put("city_code", request.cityCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cityName)) {
+            query.put("city_name", request.cityName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dir)) {
+            query.put("dir", request.dir);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hotelStar)) {
+            query.put("hotel_star", request.hotelStar);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isProtocol)) {
+            query.put("is_protocol", request.isProtocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paymentType)) {
+            query.put("payment_type", request.paymentType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shidsShrink)) {
+            query.put("shids", request.shidsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortCode)) {
+            query.put("sort_code", request.sortCode);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "HotelAskingPrice"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dtb-hotel/v1/hotels/action/asking-price"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new HotelAskingPriceResponse());
+    }
+
+    public HotelAskingPriceResponse hotelAskingPrice(HotelAskingPriceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        HotelAskingPriceHeaders headers = new HotelAskingPriceHeaders();
+        return this.hotelAskingPriceWithOptions(request, headers, runtime);
+    }
+
     public HotelBillSettlementQueryResponse hotelBillSettlementQueryWithOptions(HotelBillSettlementQueryRequest request, HotelBillSettlementQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
