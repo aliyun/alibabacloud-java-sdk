@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>aiearth_engine20220609</artifactId>
-  <version>1.0.4</version>
+  <version>1.0.5</version>
   <packaging>jar</packaging>
   <name>aiearth_engine20220609</name>
   <description>Alibaba Cloud AIEarth-Engine (20220609) SDK for Java
