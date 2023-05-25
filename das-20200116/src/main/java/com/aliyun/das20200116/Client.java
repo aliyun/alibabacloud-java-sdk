@@ -1712,6 +1712,143 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getDasProServiceUsageWithOptions(request, runtime);
     }
 
+    public GetDasSQLLogHotDataResponse getDasSQLLogHotDataWithOptions(GetDasSQLLogHotDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountName)) {
+            body.put("AccountName", request.accountName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.childDBInstanceIDs)) {
+            body.put("ChildDBInstanceIDs", request.childDBInstanceIDs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBName)) {
+            body.put("DBName", request.DBName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.end)) {
+            body.put("End", request.end);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fail)) {
+            body.put("Fail", request.fail);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hostAddress)) {
+            body.put("HostAddress", request.hostAddress);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logicalOperator)) {
+            body.put("LogicalOperator", request.logicalOperator);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxLatancy)) {
+            body.put("MaxLatancy", request.maxLatancy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxRecordsPerPage)) {
+            body.put("MaxRecordsPerPage", request.maxRecordsPerPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxRows)) {
+            body.put("MaxRows", request.maxRows);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxScanRows)) {
+            body.put("MaxScanRows", request.maxScanRows);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxSpillCnt)) {
+            body.put("MaxSpillCnt", request.maxSpillCnt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minLatancy)) {
+            body.put("MinLatancy", request.minLatancy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minRows)) {
+            body.put("MinRows", request.minRows);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minScanRows)) {
+            body.put("MinScanRows", request.minScanRows);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minSpillCnt)) {
+            body.put("MinSpillCnt", request.minSpillCnt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumbers)) {
+            body.put("PageNumbers", request.pageNumbers);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryKeyword)) {
+            body.put("QueryKeyword", request.queryKeyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.role)) {
+            body.put("Role", request.role);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortKey)) {
+            body.put("SortKey", request.sortKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortMethod)) {
+            body.put("SortMethod", request.sortMethod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sqlType)) {
+            body.put("SqlType", request.sqlType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.start)) {
+            body.put("Start", request.start);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.state)) {
+            body.put("State", request.state);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.threadID)) {
+            body.put("ThreadID", request.threadID);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.traceId)) {
+            body.put("TraceId", request.traceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transactionId)) {
+            body.put("TransactionId", request.transactionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDasSQLLogHotData"),
+            new TeaPair("version", "2020-01-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDasSQLLogHotDataResponse());
+    }
+
+    public GetDasSQLLogHotDataResponse getDasSQLLogHotData(GetDasSQLLogHotDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDasSQLLogHotDataWithOptions(request, runtime);
+    }
+
     public GetEndpointSwitchTaskResponse getEndpointSwitchTaskWithOptions(GetEndpointSwitchTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
