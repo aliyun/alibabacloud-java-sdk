@@ -8,11 +8,7 @@ public class TagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resource. Tags are bound to API groups, plug-ins, and applications. You can use tags to manage cloud resources by group. Valid values:</p>
-     * <br>
-     * <p>*   **apiGroup**</p>
-     * <p>*   **plugin**</p>
-     * <p>*   **app**</p>
+     * <p>The operation that you want to perform. Set the value to **TagResources**.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -62,17 +58,13 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N.</p>
-         * <br>
-         * <p>Valid values of N: `1 to 20.`</p>
+         * <p>Adds tags to resources.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N.</p>
-         * <br>
-         * <p>Valid values of N: `1 to 20.`</p>
+         * <p>TagResources</p>
          */
         @NameInMap("Value")
         public String value;

@@ -4,9 +4,6 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DeleteDatasetRequest extends TeaModel {
-    /**
-     * <p>The ID of the dataset.</p>
-     */
     @NameInMap("DatasetId")
     public String datasetId;
 

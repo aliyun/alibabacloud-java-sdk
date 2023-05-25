@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDomainResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Unbinds a custom domain name from a specified API group.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

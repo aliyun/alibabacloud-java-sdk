@@ -4,20 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class AddAccessControlListEntryRequest extends TeaModel {
-    /**
-     * <p>The ACL settings.</p>
-     * <br>
-     * <p>*   entry: the entries that you want to add to the ACL. You can add CIDR blocks. Separate multiple CIDR blocks with commas (,).</p>
-     * <p>*   comment: the description of the ACL.</p>
-     * <br>
-     * <p>> You can add at most 50 IP addresses or CIDR blocks to an ACL in each call. If the IP address or CIDR block that you want to add to an ACL already exists, the IP address or CIDR block is not added. The entries that you add must be CIDR blocks.</p>
-     */
     @NameInMap("AclEntrys")
     public String aclEntrys;
 
-    /**
-     * <p>The ID of the access control list (ACL).</p>
-     */
     @NameInMap("AclId")
     public String aclId;
 

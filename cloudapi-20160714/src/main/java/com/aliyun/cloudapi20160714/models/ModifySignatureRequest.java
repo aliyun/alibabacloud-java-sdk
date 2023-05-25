@@ -8,25 +8,25 @@ public class ModifySignatureRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The ID of the signature key that you want to manage.</p>
+     * <p>The new Key value of the key. The value must be 6 to 20 characters in length and can contain letters, digits, and underscores (\_). It must start with a letter.</p>
      */
     @NameInMap("SignatureId")
     public String signatureId;
 
     /**
-     * <p>The new Key value of the key. The value must be 6 to 20 characters in length and can contain letters, digits, and underscores (\_). It must start with a letter.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("SignatureKey")
     public String signatureKey;
 
     /**
-     * <p>The new name of the key. The name must be 4 to 50 characters in length and can contain letters, digits, and underscores (\_). It must start with a letter.</p>
+     * <p>The new Secret value of the key. The value must be 6 to 30 characters in length and can contain letters, digits, and special characters. Special characters include underscores (\_), at signs (@), number signs (#), exclamation points (!), and asterisks (\*). The value must start with a letter.</p>
      */
     @NameInMap("SignatureName")
     public String signatureName;
 
     /**
-     * <p>The new Secret value of the key. The value must be 6 to 30 characters in length and can contain letters, digits, and special characters. Special characters include underscores (\_), at signs (@), number signs (#), exclamation points (!), and asterisks (\*). The value must start with a letter.</p>
+     * <p>The ID of the key.</p>
      */
     @NameInMap("SignatureSecret")
     public String signatureSecret;

@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeTrafficControlsByApiRequest extends TeaModel {
     /**
-     * <p>The ID of the API.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("ApiId")
     public String apiId;
 
     /**
-     * <p>The ID of the group to which the API to be queried belongs.</p>
+     * <p>The runtime environment of the API. Valid values:</p>
+     * <br>
+     * <p>*   **RELEASE**</p>
+     * <p>*   **TEST**</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -20,10 +23,7 @@ public class DescribeTrafficControlsByApiRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The runtime environment of the API. Valid values:</p>
-     * <br>
-     * <p>*   **RELEASE**</p>
-     * <p>*   **TEST**</p>
+     * <p>The returned throttling policy information. It is an array consisting of TrafficControlItem data.</p>
      */
     @NameInMap("StageName")
     public String stageName;

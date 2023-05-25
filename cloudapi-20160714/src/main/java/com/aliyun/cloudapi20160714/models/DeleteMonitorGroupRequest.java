@@ -4,15 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DeleteMonitorGroupRequest extends TeaModel {
-    /**
-     * <p>The ID of the monitoring group.</p>
-     */
     @NameInMap("GroupId")
     public String groupId;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RawMonitorGroupId")
     public Long rawMonitorGroupId;
 

@@ -5,25 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeApisRequest extends TeaModel {
     /**
-     * <p>The ID of the API.</p>
+     * <p>The API ID.</p>
      */
     @NameInMap("ApiId")
     public String apiId;
 
+    /**
+     * <p>The HTTP method of the API request.</p>
+     */
     @NameInMap("ApiMethod")
     public String apiMethod;
 
     /**
-     * <p>The name of the API operation. The name is used for fuzzy match.</p>
+     * <p>The API name. The name is used for fuzzy match.</p>
      */
     @NameInMap("ApiName")
     public String apiName;
 
+    /**
+     * <p>The request path of the API.</p>
+     */
     @NameInMap("ApiPath")
     public String apiPath;
 
     /**
-     * <p>The ID of the category.</p>
+     * <p>The category ID.</p>
      */
     @NameInMap("CatalogId")
     public String catalogId;
@@ -35,7 +41,7 @@ public class DescribeApisRequest extends TeaModel {
     public Boolean enableTagAuth;
 
     /**
-     * <p>The ID of the API group.</p>
+     * <p>The API group ID.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -47,7 +53,7 @@ public class DescribeApisRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
+     * <p>The number of entries to return on each page. Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -59,19 +65,22 @@ public class DescribeApisRequest extends TeaModel {
     public String stageName;
 
     /**
-     * <p>The tag of objects that match the rule. You can specify multiple tags.</p>
+     * <p>The tags of objects that match the rule.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeApisRequestTag> tag;
 
+    /**
+     * <p>Specifies whether to filter unpublished APIs.</p>
+     */
     @NameInMap("UnDeployed")
     public Boolean unDeployed;
 
     /**
-     * <p>Specifies whether to make the API public. Valid values:</p>
+     * <p>Specifies whether the API is public. Valid values:</p>
      * <br>
-     * <p>*   **PUBLIC: Make the API public. If you set this parameter to PUBLIC, this API is displayed on the APIs page for all users after the API is published to the production environment.**</p>
-     * <p>*   **PRIVATE: Make the API private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.</p>
+     * <p>*   **PUBLIC**: The API is public. If you publish the definition of a public API to the production environment, the definition is displayed on the APIs page for all users.</p>
+     * <p>*   **PRIVATE**: The API is private. If you publish an API group that contains a private API in Alibaba Cloud Marketplace, the API is not displayed in Alibaba Cloud Marketplace.</p>
      */
     @NameInMap("Visibility")
     public String visibility;
@@ -201,7 +210,7 @@ public class DescribeApisRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("Value")
         public String value;

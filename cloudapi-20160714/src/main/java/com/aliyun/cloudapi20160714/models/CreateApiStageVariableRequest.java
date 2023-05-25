@@ -4,39 +4,24 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class CreateApiStageVariableRequest extends TeaModel {
-    /**
-     * <p>The ID of the runtime environment.</p>
-     */
     @NameInMap("GroupId")
     public String groupId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    /**
-     * <p>The name of the variable to be added. This parameter is case-sensitive.</p>
-     */
     @NameInMap("StageId")
     public String stageId;
 
     @NameInMap("StageRouteModel")
     public String stageRouteModel;
 
-    /**
-     * <p>The value of the variable.</p>
-     */
     @NameInMap("SupportRoute")
     public Boolean supportRoute;
 
-    /**
-     * <p>Specifies whether routing is supported.</p>
-     */
     @NameInMap("VariableName")
     public String variableName;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("VariableValue")
     public String variableValue;
 

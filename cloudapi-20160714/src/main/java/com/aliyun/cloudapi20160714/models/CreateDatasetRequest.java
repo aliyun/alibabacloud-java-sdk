@@ -4,19 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class CreateDatasetRequest extends TeaModel {
-    /**
-     * <p>Dataset Name</p>
-     */
     @NameInMap("DatasetName")
     public String datasetName;
 
-    /**
-     * <p>The type of the dataset. Valid values:</p>
-     * <br>
-     * <p>*   JWT_BLOCKING: a JSON Web Token (JWT) blacklist</p>
-     * <p>*   IP_WHITELIST_CIDR : an IP address whitelist</p>
-     * <p>*   PARAMETER_ACCESS : parameter-based access control</p>
-     */
     @NameInMap("DatasetType")
     public String datasetType;
 

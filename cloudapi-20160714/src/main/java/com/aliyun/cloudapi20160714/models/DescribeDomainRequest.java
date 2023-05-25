@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainRequest extends TeaModel {
     /**
-     * <p>The private key of the SSL certificate.</p>
+     * <p>The custom domain name.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The custom domain name.</p>
+     * <p>The private key of the SSL certificate.</p>
      */
     @NameInMap("GroupId")
     public String groupId;

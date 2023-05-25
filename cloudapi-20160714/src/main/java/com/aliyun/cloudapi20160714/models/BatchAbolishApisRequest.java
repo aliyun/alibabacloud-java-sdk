@@ -4,9 +4,6 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class BatchAbolishApisRequest extends TeaModel {
-    /**
-     * <p>The ID of the environment.</p>
-     */
     @NameInMap("Api")
     public java.util.List<BatchAbolishApisRequestApi> api;
 
@@ -35,27 +32,15 @@ public class BatchAbolishApisRequest extends TeaModel {
     }
 
     public static class BatchAbolishApisRequestApi extends TeaModel {
-        /**
-         * <p>The name of the environment.</p>
-         */
         @NameInMap("ApiUid")
         public String apiUid;
 
-        /**
-         * <p>The ID of the API.</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <p>The ID of the API group.</p>
-         */
         @NameInMap("StageId")
         public String stageId;
 
-        /**
-         * <p>The ID of the operation.</p>
-         */
         @NameInMap("StageName")
         public String stageName;
 

@@ -4,33 +4,18 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApisByAppResponseBody extends TeaModel {
-    /**
-     * <p>The authorization information of the API.</p>
-     */
     @NameInMap("AppApiRelationInfos")
     public DescribeApisByAppResponseBodyAppApiRelationInfos appApiRelationInfos;
 
-    /**
-     * <p>The page number of the returned page.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries returned on each page.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of entries returned.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -80,84 +65,42 @@ public class DescribeApisByAppResponseBody extends TeaModel {
     }
 
     public static class DescribeApisByAppResponseBodyAppApiRelationInfosAppApiRelationInfo extends TeaModel {
-        /**
-         * <p>The ID of the API operation.</p>
-         */
         @NameInMap("ApiId")
         public String apiId;
 
-        /**
-         * <p>The name of the API operation.</p>
-         */
         @NameInMap("ApiName")
         public String apiName;
 
-        /**
-         * <p>The validity period of the authorization.</p>
-         */
         @NameInMap("AuthVaildTime")
         public String authVaildTime;
 
-        /**
-         * <p>The source of the authorization.</p>
-         */
         @NameInMap("AuthorizationSource")
         public String authorizationSource;
 
-        /**
-         * <p>The time when the authorization was created.</p>
-         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
-        /**
-         * <p>The description of authorization.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the API group.</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <p>The name of the API group.</p>
-         */
         @NameInMap("GroupName")
         public String groupName;
 
-        /**
-         * <p>The request HTTP method for the API.</p>
-         */
         @NameInMap("Method")
         public String method;
 
-        /**
-         * <p>The authorizer. Valid values:</p>
-         * <br>
-         * <p>*   **PROVIDER:** the API owner</p>
-         * <p>*   **CONSUMER:** the API caller</p>
-         */
         @NameInMap("Operator")
         public String operator;
 
-        /**
-         * <p>The API request path.</p>
-         */
         @NameInMap("Path")
         public String path;
 
-        /**
-         * <p>The ID of the region.</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The name of the environment.</p>
-         */
         @NameInMap("StageName")
         public String stageName;
 

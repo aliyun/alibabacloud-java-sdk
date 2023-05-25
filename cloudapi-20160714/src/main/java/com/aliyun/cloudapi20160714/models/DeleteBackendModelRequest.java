@@ -4,28 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DeleteBackendModelRequest extends TeaModel {
-    /**
-     * <p>The ID of the backend service.</p>
-     */
     @NameInMap("BackendId")
     public String backendId;
 
-    /**
-     * <p>The ID of the backend model.</p>
-     */
     @NameInMap("BackendModelId")
     public String backendModelId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    /**
-     * <p>The name of the runtime environment. Valid values:</p>
-     * <br>
-     * <p>*   **RELEASE**</p>
-     * <p>*   **PRE**</p>
-     * <p>*   **TEST**</p>
-     */
     @NameInMap("StageName")
     public String stageName;
 

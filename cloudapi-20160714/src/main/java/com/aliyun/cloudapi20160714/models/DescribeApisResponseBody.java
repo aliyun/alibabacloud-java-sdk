@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApisResponseBody extends TeaModel {
     /**
-     * <p>The returned API definition. It is an array that consists of ApiSummary data.</p>
+     * <p>The queried API definitions.</p>
      */
     @NameInMap("ApiSummarys")
     public DescribeApisResponseBodyApiSummarys apiSummarys;
@@ -23,7 +23,7 @@ public class DescribeApisResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -80,12 +80,25 @@ public class DescribeApisResponseBody extends TeaModel {
     }
 
     public static class DescribeApisResponseBodyApiSummarysApiSummaryDeployedInfosDeployedInfo extends TeaModel {
+        /**
+         * <p>The deployment status. Valid values: DEPLOYED and NONDEPLOYED.</p>
+         */
         @NameInMap("DeployedStatus")
         public String deployedStatus;
 
+        /**
+         * <p>The deployed version.</p>
+         */
         @NameInMap("EffectiveVersion")
         public String effectiveVersion;
 
+        /**
+         * <p>Stage Name:</p>
+         * <br>
+         * <p>*   **RELEASE**: production environment</p>
+         * <p>*   **PRE**: staging environment</p>
+         * <p>*   **TEST**: test environment</p>
+         */
         @NameInMap("StageName")
         public String stageName;
 
@@ -140,9 +153,15 @@ public class DescribeApisResponseBody extends TeaModel {
     }
 
     public static class DescribeApisResponseBodyApiSummarysApiSummaryTagListTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -190,70 +209,82 @@ public class DescribeApisResponseBody extends TeaModel {
 
     public static class DescribeApisResponseBodyApiSummarysApiSummary extends TeaModel {
         /**
-         * <p>The ID of the API.</p>
+         * <p>The API ID.</p>
          */
         @NameInMap("ApiId")
         public String apiId;
 
+        /**
+         * <p>The HTTP method of the API request.</p>
+         */
         @NameInMap("ApiMethod")
         public String apiMethod;
 
         /**
-         * <p>The name of the API operation.</p>
+         * <p>The API name.</p>
          */
         @NameInMap("ApiName")
         public String apiName;
 
+        /**
+         * <p>The request path of the API.</p>
+         */
         @NameInMap("ApiPath")
         public String apiPath;
 
         /**
-         * <p>The creation time (UTC) of the query task.</p>
+         * <p>The time when the API was created. The time is displayed in UTC.</p>
          */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <p>The API publishing statuses.</p>
+         */
         @NameInMap("DeployedInfos")
         public DescribeApisResponseBodyApiSummarysApiSummaryDeployedInfos deployedInfos;
 
         /**
-         * <p>The description of the API.</p>
+         * <p>The API description.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The ID of the API group.</p>
+         * <p>The API group ID.</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
-         * <p>The name of the group to which the API belongs.</p>
+         * <p>The name of the API group to which the API belongs.</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
-         * <p>The modification time (UTC) of the API.</p>
+         * <p>The time when the API was modified. The time is displayed in UTC.</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
         /**
-         * <p>The ID of the region in which the API resides.</p>
+         * <p>The ID of the region to which the API belongs.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The tags that are added to the APIs.</p>
+         */
         @NameInMap("TagList")
         public DescribeApisResponseBodyApiSummarysApiSummaryTagList tagList;
 
         /**
          * <p>Indicates whether the API is public. Valid values:</p>
          * <br>
-         * <p>*   **PUBLIC**</p>
-         * <p>*   **PRIVATE**</p>
+         * <p>*   **PUBLIC**: The API is public.</p>
+         * <p>*   **PRIVATE**: The API is private.</p>
          */
         @NameInMap("Visibility")
         public String visibility;

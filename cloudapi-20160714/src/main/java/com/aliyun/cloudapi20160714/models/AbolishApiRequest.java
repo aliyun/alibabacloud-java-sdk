@@ -4,27 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class AbolishApiRequest extends TeaModel {
-    /**
-     * <p>The name of the runtime environment. Valid values:</p>
-     * <br>
-     * <p>*   **RELEASE**</p>
-     * <p>*   **TEST**</p>
-     */
     @NameInMap("ApiId")
     public String apiId;
 
-    /**
-     * <p>The ID of the specified API.</p>
-     */
     @NameInMap("GroupId")
     public String groupId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("StageName")
     public String stageName;
 

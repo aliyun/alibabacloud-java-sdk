@@ -7,9 +7,6 @@ public class DescribeDatasetInfoResponseBody extends TeaModel {
     @NameInMap("DatasetInfo")
     public DescribeDatasetInfoResponseBodyDatasetInfo datasetInfo;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,37 +32,18 @@ public class DescribeDatasetInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDatasetInfoResponseBodyDatasetInfo extends TeaModel {
-        /**
-         * <p>The creation time (UTC) of the dataset.</p>
-         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
-        /**
-         * <p>The ID of the dataset.</p>
-         */
         @NameInMap("DatasetId")
         public String datasetId;
 
-        /**
-         * <p>The name of the dataset.</p>
-         */
         @NameInMap("DatasetName")
         public String datasetName;
 
-        /**
-         * <p>The type of the dataset. Valid values:</p>
-         * <br>
-         * <p>*   JWT_BLOCKING: a JSON Web Token (JWT) blacklist</p>
-         * <p>*   IP_WHITELIST_CIDR : an IP address whitelist</p>
-         * <p>*   PARAMETER_ACCESS : parameter-based access control</p>
-         */
         @NameInMap("DatasetType")
         public String datasetType;
 
-        /**
-         * <p>The last modification time (UTC) of the dataset.</p>
-         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 

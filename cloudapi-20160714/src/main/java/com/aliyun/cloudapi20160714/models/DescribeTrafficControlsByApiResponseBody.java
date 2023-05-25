@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeTrafficControlsByApiResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the throttling policy.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The returned throttling policy information. It is an array consisting of TrafficControlItem data.</p>
+     * <p>The binding time of the policy.</p>
      */
     @NameInMap("TrafficControlItems")
     public DescribeTrafficControlsByApiResponseBodyTrafficControlItems trafficControlItems;
@@ -39,19 +39,19 @@ public class DescribeTrafficControlsByApiResponseBody extends TeaModel {
 
     public static class DescribeTrafficControlsByApiResponseBodyTrafficControlItemsTrafficControlItem extends TeaModel {
         /**
-         * <p>The binding time of the policy.</p>
+         * <p>*   This API is intended for API providers.</p>
          */
         @NameInMap("BoundTime")
         public String boundTime;
 
         /**
-         * <p>The ID of the throttling policy.</p>
+         * <p>The name of the throttling policy.</p>
          */
         @NameInMap("TrafficControlItemId")
         public String trafficControlItemId;
 
         /**
-         * <p>The name of the throttling policy.</p>
+         * <p>Queries the throttling policy that is bound to a specific API.</p>
          */
         @NameInMap("TrafficControlItemName")
         public String trafficControlItemName;

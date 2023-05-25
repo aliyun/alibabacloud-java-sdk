@@ -4,15 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeDeployApiTaskResponseBody extends TeaModel {
-    /**
-     * <p>The result returned.</p>
-     */
     @NameInMap("DeployedResults")
     public DescribeDeployApiTaskResponseBodyDeployedResults deployedResults;
 
-    /**
-     * <p>The result returned.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,36 +32,18 @@ public class DescribeDeployApiTaskResponseBody extends TeaModel {
     }
 
     public static class DescribeDeployApiTaskResponseBodyDeployedResultsDeployedResult extends TeaModel {
-        /**
-         * <p>The deployment status of the API.</p>
-         */
         @NameInMap("ApiUid")
         public String apiUid;
 
-        /**
-         * <p>auditing</p>
-         */
         @NameInMap("DeployedStatus")
         public String deployedStatus;
 
-        /**
-         * <p>The runtime environment of the API. Valid values:</p>
-         * <br>
-         * <p>*   **RELEASE**</p>
-         * <p>*   **TEST**</p>
-         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
-        /**
-         * <p>The ID of the API.</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <p>The ID of the API group.</p>
-         */
         @NameInMap("StageName")
         public String stageName;
 

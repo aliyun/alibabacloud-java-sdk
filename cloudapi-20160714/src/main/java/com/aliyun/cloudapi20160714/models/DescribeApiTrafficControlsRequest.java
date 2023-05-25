@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeApiTrafficControlsRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
      */
     @NameInMap("ApiIds")
     public String apiIds;
 
     /**
-     * <p>The IDs of APIs that you want to query. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.</p>
+     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -32,7 +32,7 @@ public class DescribeApiTrafficControlsRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The ID of the API group that you want to query.</p>
+     * <p>The IDs of APIs that you want to query. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.</p>
      */
     @NameInMap("StageName")
     public String stageName;

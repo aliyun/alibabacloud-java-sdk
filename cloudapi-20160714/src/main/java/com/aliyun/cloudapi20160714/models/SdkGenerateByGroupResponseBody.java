@@ -4,15 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class SdkGenerateByGroupResponseBody extends TeaModel {
-    /**
-     * <p>The download link of the SDK.</p>
-     */
     @NameInMap("DownloadLink")
     public String downloadLink;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,15 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackendInfoResponseBody extends TeaModel {
-    /**
-     * <p>The information about the backend service.</p>
-     */
     @NameInMap("BackendInfo")
     public DescribeBackendInfoResponseBodyBackendInfo backendInfo;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,27 +32,15 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEventBridgeConfig extends TeaModel {
-        /**
-         * <p>The region ID of the event bus in EventBridge.</p>
-         */
         @NameInMap("EventBridgeRegionId")
         public String eventBridgeRegionId;
 
-        /**
-         * <p>The name of the event bus.</p>
-         */
         @NameInMap("EventBus")
         public String eventBus;
 
-        /**
-         * <p>The event source.</p>
-         */
         @NameInMap("EventSource")
         public String eventSource;
 
-        /**
-         * <p>The ARN of the RAM role to be assumed by API Gateway to access EventBridge.</p>
-         */
         @NameInMap("RoleArn")
         public String roleArn;
 
@@ -102,51 +84,27 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigFunctionComputeConfig extends TeaModel {
-        /**
-         * <p>The root path of the Function Compute service.</p>
-         */
         @NameInMap("FcBaseUrl")
         public String fcBaseUrl;
 
-        /**
-         * <p>The region ID of the Function Compute service.</p>
-         */
         @NameInMap("FcRegionId")
         public String fcRegionId;
 
-        /**
-         * <p>The type of the Function Compute service.</p>
-         */
         @NameInMap("FcType")
         public String fcType;
 
-        /**
-         * <p>The function name defined in Function Compute.</p>
-         */
         @NameInMap("FunctionName")
         public String functionName;
 
-        /**
-         * <p>The backend service path.</p>
-         */
         @NameInMap("OnlyBusinessPath")
         public Boolean onlyBusinessPath;
 
-        /**
-         * <p>The alias of the function.</p>
-         */
         @NameInMap("Qualifier")
         public String qualifier;
 
-        /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role to be assumed by API Gateway to access Function Compute.</p>
-         */
         @NameInMap("RoleArn")
         public String roleArn;
 
-        /**
-         * <p>The service name defined in Function Compute.</p>
-         */
         @NameInMap("ServiceName")
         public String serviceName;
 
@@ -293,15 +251,9 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigOssConfig extends TeaModel {
-        /**
-         * <p>The name of the OSS bucket.</p>
-         */
         @NameInMap("BucketName")
         public String bucketName;
 
-        /**
-         * <p>The region ID of the Object Storage Service (OSS) bucket.</p>
-         */
         @NameInMap("OssRegionId")
         public String ossRegionId;
 
@@ -329,39 +281,21 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigVpcConfig extends TeaModel {
-        /**
-         * <p>The ID of the Elastic Compute Service (ECS) or Server Load Balancer (SLB) instance in the VPC.</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The name of the VPC Configuration.</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The port number that corresponds to the instance.</p>
-         */
         @NameInMap("Port")
         public Long port;
 
-        /**
-         * <p>The ID of the VPC access authorization.</p>
-         */
         @NameInMap("VpcAccessId")
         public String vpcAccessId;
 
-        /**
-         * <p>The ID of the VPC.</p>
-         */
         @NameInMap("VpcId")
         public String vpcId;
 
-        /**
-         * <p>http/https</p>
-         */
         @NameInMap("VpcScheme")
         public String vpcScheme;
 
@@ -432,42 +366,27 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfig extends TeaModel {
-        /**
-         * <p>The information about the backend service that is EventBridge.</p>
-         */
         @NameInMap("EventBridgeConfig")
         public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEventBridgeConfig eventBridgeConfig;
 
-        /**
-         * <p>The information about the backend service whose type is FC_EVENT or FC_HTTP.</p>
-         */
         @NameInMap("FunctionComputeConfig")
         public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigFunctionComputeConfig functionComputeConfig;
+
+        @NameInMap("HttpTargetHostName")
+        public String httpTargetHostName;
 
         @NameInMap("MockConfig")
         public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfig mockConfig;
 
-        /**
-         * <p>The information about the backend service whose type is OSS.</p>
-         */
         @NameInMap("OssConfig")
         public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigOssConfig ossConfig;
 
-        /**
-         * <p>The URL of the backend service.</p>
-         */
         @NameInMap("ServiceAddress")
         public String serviceAddress;
 
-        /**
-         * <p>The type of the backend service.</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <p>The information about the virtual private cloud (VPC). This parameter is available only for backend services whose type is VPC.</p>
-         */
         @NameInMap("VpcConfig")
         public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigVpcConfig vpcConfig;
 
@@ -490,6 +409,14 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         }
         public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigFunctionComputeConfig getFunctionComputeConfig() {
             return this.functionComputeConfig;
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfig setHttpTargetHostName(String httpTargetHostName) {
+            this.httpTargetHostName = httpTargetHostName;
+            return this;
+        }
+        public String getHttpTargetHostName() {
+            return this.httpTargetHostName;
         }
 
         public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfig setMockConfig(DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfig mockConfig) {
@@ -535,45 +462,24 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeBackendInfoResponseBodyBackendInfoBackendModels extends TeaModel {
-        /**
-         * <p>The backend configurations.</p>
-         */
         @NameInMap("BackendConfig")
         public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfig backendConfig;
 
-        /**
-         * <p>The ID of the backend service in the environment.</p>
-         */
         @NameInMap("BackendModelId")
         public String backendModelId;
 
-        /**
-         * <p>The description of the backend service.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The time when the backend service was created.</p>
-         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        /**
-         * <p>The time when the backend service was modified.</p>
-         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        /**
-         * <p>The ID of the environment.</p>
-         */
         @NameInMap("StageModeId")
         public String stageModeId;
 
-        /**
-         * <p>The name of the environment.</p>
-         */
         @NameInMap("StageName")
         public String stageName;
 
@@ -641,45 +547,24 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeBackendInfoResponseBodyBackendInfo extends TeaModel {
-        /**
-         * <p>The ID of the backend service.</p>
-         */
         @NameInMap("BackendId")
         public String backendId;
 
-        /**
-         * <p>The time when the backend service was created.</p>
-         */
         @NameInMap("BackendModels")
         public java.util.List<DescribeBackendInfoResponseBodyBackendInfoBackendModels> backendModels;
 
-        /**
-         * <p>The name of the backend service.</p>
-         */
         @NameInMap("BackendName")
         public String backendName;
 
-        /**
-         * <p>The type of the backend service.</p>
-         */
         @NameInMap("BackendType")
         public String backendType;
 
-        /**
-         * <p>The time when the backend service was created.</p>
-         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
-        /**
-         * <p>The description of the backend service.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The time when the backend service was modified.</p>
-         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 

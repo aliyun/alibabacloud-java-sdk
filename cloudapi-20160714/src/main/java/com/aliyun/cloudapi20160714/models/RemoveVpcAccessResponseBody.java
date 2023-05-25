@@ -4,15 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class RemoveVpcAccessResponseBody extends TeaModel {
-    /**
-     * <p>API operations</p>
-     */
     @NameInMap("Apis")
     public RemoveVpcAccessResponseBodyApis apis;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -44,15 +38,9 @@ public class RemoveVpcAccessResponseBody extends TeaModel {
         @NameInMap("ApiId")
         public String apiId;
 
-        /**
-         * <p>The ID of the API group.</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <p>The ID of the runtime environment.</p>
-         */
         @NameInMap("StageId")
         public String stageId;
 

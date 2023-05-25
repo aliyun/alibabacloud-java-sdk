@@ -4,9 +4,6 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class ModifyApiResponseBody extends TeaModel {
-    /**
-     * <p>ModifyApi</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

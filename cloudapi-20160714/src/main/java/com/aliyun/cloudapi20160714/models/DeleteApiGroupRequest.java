@@ -4,18 +4,12 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DeleteApiGroupRequest extends TeaModel {
-    /**
-     * <p>The object tags that match the lifecycle rule. You can specify multiple tags.</p>
-     */
     @NameInMap("GroupId")
     public String groupId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    /**
-     * <p>The key of the tag.</p>
-     */
     @NameInMap("Tag")
     public java.util.List<DeleteApiGroupRequestTag> tag;
 
@@ -49,15 +43,9 @@ public class DeleteApiGroupRequest extends TeaModel {
     }
 
     public static class DeleteApiGroupRequestTag extends TeaModel {
-        /**
-         * <p>The value of the tag.</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The ID of the request.</p>
-         */
         @NameInMap("Value")
         public String value;
 

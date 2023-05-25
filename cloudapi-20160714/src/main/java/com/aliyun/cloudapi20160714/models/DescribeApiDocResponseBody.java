@@ -4,128 +4,63 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApiDocResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the API.</p>
-     */
     @NameInMap("ApiId")
     public String apiId;
 
-    /**
-     * <p>The name of the API operation.</p>
-     */
     @NameInMap("ApiName")
     public String apiName;
 
-    /**
-     * <p>The authentication method. Valid values: APP and ANONYMOUS. APP indicates that only Alibaba Cloud applications can call the API. ANONYMOUS indicates that anonymous users can call the API.</p>
-     */
     @NameInMap("AuthType")
     public String authType;
 
-    /**
-     * <p>The publishing time.</p>
-     */
     @NameInMap("DeployedTime")
     public String deployedTime;
 
-    /**
-     * <p>The description of the API.</p>
-     */
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <p>*   If the value of **DisableInternet** is set to **true**, API calls are limited within the VPC.</p>
-     * <p>*   If the value of **DisableInternet** is set to **false**, the limit is lifted. The default value is false when you create an API.</p>
-     */
     @NameInMap("DisableInternet")
     public Boolean disableInternet;
 
-    /**
-     * <p>The sample error codes returned by the backend service.</p>
-     */
     @NameInMap("ErrorCodeSamples")
     public DescribeApiDocResponseBodyErrorCodeSamples errorCodeSamples;
 
-    /**
-     * <p>The sample error response from the backend service.</p>
-     */
     @NameInMap("FailResultSample")
     public String failResultSample;
 
-    /**
-     * <p>*   If the value of **ForceNonceCheck** is set to **true**, X-Ca-Nonce must be checked during the request. This is the unique identifier of the request and is identified by UUID. After receiving this parameter, API Gateway verifies the validity of this parameter. The same value can be used only once within 15 minutes. This helps prevent replay attacks.</p>
-     * <p>*   If the value of **ForceNonceCheck** is set to **false**, the X-Ca-Nonce is not checked. The default value is false when you create an API.</p>
-     */
     @NameInMap("ForceNonceCheck")
     public Boolean forceNonceCheck;
 
-    /**
-     * <p>The ID of the API group.</p>
-     */
     @NameInMap("GroupId")
     public String groupId;
 
-    /**
-     * <p>The name of the group to which the API belongs.</p>
-     */
     @NameInMap("GroupName")
     public String groupName;
 
-    /**
-     * <p>The region ID of the API group.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The returned API frontend definition information. It is an array consisting of RequestConfig data.</p>
-     */
     @NameInMap("RequestConfig")
     public DescribeApiDocResponseBodyRequestConfig requestConfig;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The returned frontend request parameters.</p>
-     */
     @NameInMap("RequestParameters")
     public DescribeApiDocResponseBodyRequestParameters requestParameters;
 
-    /**
-     * <p>The return descriptions of the API.</p>
-     */
     @NameInMap("ResultDescriptions")
     public DescribeApiDocResponseBodyResultDescriptions resultDescriptions;
 
-    /**
-     * <p>The sample response.</p>
-     */
     @NameInMap("ResultSample")
     public String resultSample;
 
-    /**
-     * <p>The format of the return value.</p>
-     */
     @NameInMap("ResultType")
     public String resultType;
 
-    /**
-     * <p>The name of the runtime environment. Valid values:</p>
-     * <br>
-     * <p>*   **RELEASE**</p>
-     * <p>*   **TEST**</p>
-     */
     @NameInMap("StageName")
     public String stageName;
 
-    /**
-     * <p>Indicates whether the API is public. Valid values: PUBLIC and PRIVATE.</p>
-     */
     @NameInMap("Visibility")
     public String visibility;
 
@@ -295,21 +230,12 @@ public class DescribeApiDocResponseBody extends TeaModel {
     }
 
     public static class DescribeApiDocResponseBodyErrorCodeSamplesErrorCodeSample extends TeaModel {
-        /**
-         * <p>The error code.</p>
-         */
         @NameInMap("Code")
         public String code;
 
-        /**
-         * <p>The description of the error code.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The error message.</p>
-         */
         @NameInMap("Message")
         public String message;
 
@@ -364,45 +290,21 @@ public class DescribeApiDocResponseBody extends TeaModel {
     }
 
     public static class DescribeApiDocResponseBodyRequestConfig extends TeaModel {
-        /**
-         * <p>This parameter takes effect only when the RequestMode parameter is set to MAPPING.********</p>
-         * <br>
-         * <p>The format in which data is transmitted to the server for POST and PUT requests. Valid values: FORM and STREAM. FORM indicates that data is transmitted in the key-value pair format. STREAM indicates that data is transmitted as byte streams.</p>
-         */
         @NameInMap("BodyFormat")
         public String bodyFormat;
 
-        /**
-         * <p>The description of the request body.</p>
-         */
         @NameInMap("PostBodyDescription")
         public String postBodyDescription;
 
-        /**
-         * <p>The HTTP method that was used to make the request. Valid values: GET, POST, DELETE, PUT, HEADER, TRACE, PATCH, CONNECT, and OPTIONS.</p>
-         */
         @NameInMap("RequestHttpMethod")
         public String requestHttpMethod;
 
-        /**
-         * <p>The request mode. Valid values:</p>
-         * <br>
-         * <p>*   MAPPING: Parameters are mapped. Unknown parameters are filtered out.</p>
-         * <p>*   PASSTHROUGH: Parameters are passed through.</p>
-         * <p>*   MAPPING_PASSTHROUGH: Parameters are mapped. Unknown parameters are passed through.</p>
-         */
         @NameInMap("RequestMode")
         public String requestMode;
 
-        /**
-         * <p>The API request path. If the complete API URL is `http://api.a.com:8080/object/add?key1=value1&key2=value2`, the API request path is ` /object/add  `.</p>
-         */
         @NameInMap("RequestPath")
         public String requestPath;
 
-        /**
-         * <p>The protocol types supported by the API. Valid values: HTTP and HTTPS. Separate multiple values with commas (,), such as "HTTP,HTTPS".</p>
-         */
         @NameInMap("RequestProtocol")
         public String requestProtocol;
 
@@ -462,51 +364,27 @@ public class DescribeApiDocResponseBody extends TeaModel {
     }
 
     public static class DescribeApiDocResponseBodyRequestParametersRequestParameter extends TeaModel {
-        /**
-         * <p>The name of the API parameter.</p>
-         */
         @NameInMap("ApiParameterName")
         public String apiParameterName;
 
-        /**
-         * <p>The type of the array element.</p>
-         */
         @NameInMap("ArrayItemsType")
         public String arrayItemsType;
 
-        /**
-         * <p>The default value.</p>
-         */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
-        /**
-         * <p>The example value.</p>
-         */
         @NameInMap("DemoValue")
         public String demoValue;
 
-        /**
-         * <p>Description</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The order in the document.</p>
-         */
         @NameInMap("DocOrder")
         public Integer docOrder;
 
-        /**
-         * <p>Indicates whether the document is public. Valid values: PUBLIC and PRIVATE.</p>
-         */
         @NameInMap("DocShow")
         public String docShow;
 
-        /**
-         * <p>The hash values that can be entered when ParameterType is set to Int, Long, Float, Double, or String. Different values are separated with commas (,), such as 1,2,3,4,9 or A,B,C,E,F.</p>
-         */
         @NameInMap("EnumValue")
         public String enumValue;
 
@@ -516,51 +394,27 @@ public class DescribeApiDocResponseBody extends TeaModel {
         @NameInMap("JsonScheme")
         public String jsonScheme;
 
-        /**
-         * <p>The parameter location. Valid values: BODY, HEAD, QUERY, and PATH.</p>
-         */
         @NameInMap("Location")
         public String location;
 
-        /**
-         * <p>The maximum length.</p>
-         */
         @NameInMap("MaxLength")
         public Long maxLength;
 
-        /**
-         * <p>The maximum value.</p>
-         */
         @NameInMap("MaxValue")
         public Long maxValue;
 
-        /**
-         * <p>The minimum length.</p>
-         */
         @NameInMap("MinLength")
         public Long minLength;
 
-        /**
-         * <p>The minimum value.</p>
-         */
         @NameInMap("MinValue")
         public Long minValue;
 
-        /**
-         * <p>The type of the parameter.</p>
-         */
         @NameInMap("ParameterType")
         public String parameterType;
 
-        /**
-         * <p>The regular expression used for parameter validation when ParameterType is set to String.</p>
-         */
         @NameInMap("RegularExpression")
         public String regularExpression;
 
-        /**
-         * <p>Indicates whether the parameter is required.</p>
-         */
         @NameInMap("Required")
         public String required;
 
@@ -727,9 +581,6 @@ public class DescribeApiDocResponseBody extends TeaModel {
     }
 
     public static class DescribeApiDocResponseBodyResultDescriptionsResultDescription extends TeaModel {
-        /**
-         * <p>The description of the API.</p>
-         */
         @NameInMap("Description")
         public String description;
 
@@ -742,9 +593,6 @@ public class DescribeApiDocResponseBody extends TeaModel {
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>Indicates whether the parameter is required.</p>
-         */
         @NameInMap("Mandatory")
         public Boolean mandatory;
 

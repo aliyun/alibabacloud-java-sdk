@@ -4,34 +4,18 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstancesRequest extends TeaModel {
-    /**
-     * <p>Specifies whether tag authorization is enabled.</p>
-     */
     @NameInMap("EnableTagAuthorization")
     public Boolean enableTagAuthorization;
 
-    /**
-     * <p>The ID of the instance. If you do not specify this parameter, all instances are queried.</p>
-     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    /**
-     * <p>The language that is used to return the description of the system policy. Valid values:</p>
-     * <br>
-     * <p>*   en: English</p>
-     * <p>*   zh: Chinese</p>
-     * <p>*   ja: Japanese</p>
-     */
     @NameInMap("Language")
     public String language;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    /**
-     * <p>The tags that are bound to the instance.</p>
-     */
     @NameInMap("Tag")
     public java.util.List<DescribeInstancesRequestTag> tag;
 
@@ -81,15 +65,9 @@ public class DescribeInstancesRequest extends TeaModel {
     }
 
     public static class DescribeInstancesRequestTag extends TeaModel {
-        /**
-         * <p>The key of the tag.</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The values of the tag.</p>
-         */
         @NameInMap("Value")
         public String value;
 

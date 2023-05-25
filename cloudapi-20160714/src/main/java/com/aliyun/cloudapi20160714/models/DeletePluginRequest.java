@@ -4,18 +4,12 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DeletePluginRequest extends TeaModel {
-    /**
-     * <p>The ID of the plug-in to be deleted.</p>
-     */
     @NameInMap("PluginId")
     public String pluginId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    /**
-     * <p>The tag of objects that match the rule. You can specify multiple tags.</p>
-     */
     @NameInMap("Tag")
     public java.util.List<DeletePluginRequestTag> tag;
 
@@ -49,19 +43,9 @@ public class DeletePluginRequest extends TeaModel {
     }
 
     public static class DeletePluginRequestTag extends TeaModel {
-        /**
-         * <p>The key of the tag.</p>
-         * <br>
-         * <p>N can be an integer from 1 to 20.``</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The value of the tag.</p>
-         * <br>
-         * <p>N can be an integer from 1 to 20.``</p>
-         */
         @NameInMap("Value")
         public String value;
 

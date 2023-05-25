@@ -4,48 +4,27 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class SetDomainCertificateRequest extends TeaModel {
-    /**
-     * <p>Content of the CA certificate</p>
-     */
     @NameInMap("CaCertificateBody")
     public String caCertificateBody;
 
-    /**
-     * <p>For more information, see the following request examples</p>
-     */
     @NameInMap("CertificateBody")
     public String certificateBody;
 
-    /**
-     * <p>The content of the certificate.</p>
-     */
     @NameInMap("CertificateName")
     public String certificateName;
 
-    /**
-     * <p>For more information, see the following request examples</p>
-     */
     @NameInMap("CertificatePrivateKey")
     public String certificatePrivateKey;
 
-    /**
-     * <p>The name of the SSL certificate.</p>
-     */
     @NameInMap("DomainName")
     public String domainName;
 
-    /**
-     * <p>The custom domain name.</p>
-     */
     @NameInMap("GroupId")
     public String groupId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("SslVerifyDepth")
     public String sslVerifyDepth;
 

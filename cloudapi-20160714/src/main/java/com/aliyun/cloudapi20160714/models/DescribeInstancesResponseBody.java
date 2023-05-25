@@ -4,33 +4,18 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstancesResponseBody extends TeaModel {
-    /**
-     * <p>The details of the instances.</p>
-     */
     @NameInMap("Instances")
     public DescribeInstancesResponseBodyInstances instances;
 
-    /**
-     * <p>The page number of the returned page.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of items returned per page.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of entries.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -80,15 +65,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceAttributeInstanceSpecAttributesSpecAttribute extends TeaModel {
-        /**
-         * <p>The variable name.</p>
-         */
         @NameInMap("LocalName")
         public String localName;
 
-        /**
-         * <p>The variable value.</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -135,18 +114,33 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceAttributeNetworkInterfaceAttributesNetworkInterfaceAttribute extends TeaModel {
+        /**
+         * <p>vSwitch的网段。</p>
+         */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
+        /**
+         * <p>弹性网卡ID</p>
+         */
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
+        /**
+         * <p>安全组的ID，同一个安全组内的服务可以互相访问。</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        /**
+         * <p>虚拟交换机ID</p>
+         */
         @NameInMap("VswitchId")
         public String vswitchId;
 
+        /**
+         * <p>可用区ID</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -217,69 +211,44 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceAttribute extends TeaModel {
-        /**
-         * <p>The ID of the access control policy.</p>
-         */
         @NameInMap("AclId")
         public String aclId;
 
-        /**
-         * <p>The name of the access control policy.</p>
-         */
         @NameInMap("AclName")
         public String aclName;
 
-        /**
-         * <p>Indicates whether access control is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **on**: yes</p>
-         * <p>*   **off**: no</p>
-         */
         @NameInMap("AclStatus")
         public String aclStatus;
 
-        /**
-         * <p>The type of the access control policy. Valid values:</p>
-         * <br>
-         * <p>*   black: blacklist</p>
-         * <p>*   white: whitelist</p>
-         */
         @NameInMap("AclType")
         public String aclType;
 
-        /**
-         * <p>The outbound IP address.</p>
-         */
         @NameInMap("ClassicEgressAddress")
         public String classicEgressAddress;
 
+        /**
+         * <p>VPC融合类型专享实例联通的用户VPC ID</p>
+         */
         @NameInMap("ConnectVpcId")
         public String connectVpcId;
 
-        /**
-         * <p>The time when the instance was created.</p>
-         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <p>专享实例类型</p>
+         * <p>- vpc_connect：VPC融合类型专享实例</p>
+         * <p>- normal：传统类型专享实例</p>
+         */
         @NameInMap("DedicatedInstanceType")
         public String dedicatedInstanceType;
 
-        /**
-         * <p>Indicates whether outbound IPv6 is supported.</p>
-         */
         @NameInMap("EgressIpv6Enable")
         public Boolean egressIpv6Enable;
 
-        /**
-         * <p>The time when the instance expires.</p>
-         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
-        /**
-         * <p>The HTTPS security policy.</p>
-         */
         @NameInMap("HttpsPolicies")
         public String httpsPolicies;
 
@@ -295,135 +264,83 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("IPV6AclType")
         public String IPV6AclType;
 
-        /**
-         * <p>The billing method of the instance. Valid values:</p>
-         * <br>
-         * <p>*   PrePaid: subscription</p>
-         * <p>*   PayAsYouGo: pay-as-you-go</p>
-         */
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
+        /**
+         * <p>专享实例所在网段</p>
+         * <p>- 172.16.0.0/12</p>
+         * <p>- 192.168.0.0/16</p>
+         */
         @NameInMap("InstanceCidrBlock")
         public String instanceCidrBlock;
 
-        /**
-         * <p>The ID of the instance.</p>
-         */
+        @NameInMap("InstanceClusterId")
+        public String instanceClusterId;
+
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The name of the instance.</p>
-         */
         @NameInMap("InstanceName")
         public String instanceName;
 
-        /**
-         * <p>The records per second (RPS) limit on the instance.</p>
-         */
         @NameInMap("InstanceRpsLimit")
         public Integer instanceRpsLimit;
 
-        /**
-         * <p>The specifications of the instance.</p>
-         */
         @NameInMap("InstanceSpec")
         public String instanceSpec;
 
-        /**
-         * <p>The specifications of the instance.</p>
-         */
         @NameInMap("InstanceSpecAttributes")
         public DescribeInstancesResponseBodyInstancesInstanceAttributeInstanceSpecAttributes instanceSpecAttributes;
 
-        /**
-         * <p>The instance type.</p>
-         * <br>
-         * <p>*   VPC_SHARED: shared instance (VPC)</p>
-         * <p>*   VPC_DEDICATED: dedicated instance (VPC)</p>
-         */
         @NameInMap("InstanceType")
         public String instanceType;
 
-        /**
-         * <p>The outbound public IP address.</p>
-         */
         @NameInMap("InternetEgressAddress")
         public String internetEgressAddress;
 
         @NameInMap("IntranetSegments")
         public String intranetSegments;
 
+        /**
+         * <p>VPC融合类型专享实例连通的用户VPC内的网络信息</p>
+         */
         @NameInMap("NetworkInterfaceAttributes")
         public DescribeInstancesResponseBodyInstancesInstanceAttributeNetworkInterfaceAttributes networkInterfaceAttributes;
 
-        /**
-         * <p>The region where the instance is located.</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The instance status.</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>Indicates whether IPv6 is supported.</p>
-         */
         @NameInMap("SupportIpv6")
         public Boolean supportIpv6;
 
-        /**
-         * <p>The ID of the user\"s VPC.</p>
-         */
         @NameInMap("UserVpcId")
         public String userVpcId;
 
-        /**
-         * <p>The ID of the user interaction machine.</p>
-         */
         @NameInMap("UserVswitchId")
         public String userVswitchId;
 
         @NameInMap("VipTypeList")
         public String vipTypeList;
 
-        /**
-         * <p>The outbound CIDR block of the VPC.</p>
-         */
         @NameInMap("VpcEgressAddress")
         public String vpcEgressAddress;
 
-        /**
-         * <p>Indicates whether VPC is enabled.</p>
-         */
         @NameInMap("VpcIntranetEnable")
         public Boolean vpcIntranetEnable;
 
-        /**
-         * <p>The ID of the Alibaba Cloud account to which the VPC belongs.</p>
-         */
         @NameInMap("VpcOwnerId")
         public Long vpcOwnerId;
 
-        /**
-         * <p>Indicates whether VPC SLB is enabled.</p>
-         */
         @NameInMap("VpcSlbIntranetEnable")
         public Boolean vpcSlbIntranetEnable;
 
-        /**
-         * <p>The zone ID.</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 
-        /**
-         * <p>The zone.</p>
-         */
         @NameInMap("ZoneLocalName")
         public String zoneLocalName;
 
@@ -566,6 +483,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getInstanceCidrBlock() {
             return this.instanceCidrBlock;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceAttribute setInstanceClusterId(String instanceClusterId) {
+            this.instanceClusterId = instanceClusterId;
+            return this;
+        }
+        public String getInstanceClusterId() {
+            return this.instanceClusterId;
         }
 
         public DescribeInstancesResponseBodyInstancesInstanceAttribute setInstanceId(String instanceId) {

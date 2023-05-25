@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveAppsAuthoritiesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Revokes the access permissions on a specified API from multiple applications. In this case, multiple applications map to a single API.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -4,43 +4,29 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class ImportSwaggerRequest extends TeaModel {
-    /**
-     * <p>The Swagger text content.</p>
-     */
     @NameInMap("Data")
     public String data;
 
     /**
-     * <p>The Swagger text format:</p>
-     * <br>
-     * <p>*   json</p>
-     * <p>*   yaml</p>
+     * <p>382271</p>
      */
     @NameInMap("DataFormat")
     public String dataFormat;
 
-    /**
-     * <p>The pre-inspection.</p>
-     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The global conditions.</p>
+     * <p>Creates an API by importing Swagger-compliant data.</p>
      */
     @NameInMap("GlobalCondition")
     public java.util.Map<String, ?> globalCondition;
 
-    /**
-     * <p>The ID of the API group to which the Swagger is imported.</p>
-     */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>Specifies whether to overwrite the existing API.</p>
-     * <br>
-     * <p>APIs with the same HTTP request type and backend request path are considered the same.</p>
+     * <p>8e274ec61cf6468e83b68371956831cb</p>
      */
     @NameInMap("Overwrite")
     public Boolean overwrite;

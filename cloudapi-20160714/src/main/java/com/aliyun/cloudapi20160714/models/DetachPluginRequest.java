@@ -4,34 +4,18 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DetachPluginRequest extends TeaModel {
-    /**
-     * <p>The ID of the API.</p>
-     */
     @NameInMap("ApiId")
     public String apiId;
 
-    /**
-     * <p>The ID of the API group to which the API belongs.</p>
-     */
     @NameInMap("GroupId")
     public String groupId;
 
-    /**
-     * <p>The ID of the plug-in.</p>
-     */
     @NameInMap("PluginId")
     public String pluginId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    /**
-     * <p>The name of the runtime environment. Valid values:</p>
-     * <br>
-     * <p>*   **RELEASE**</p>
-     * <p>*   **PRE: the pre-release environment**</p>
-     * <p>*   **TEST**</p>
-     */
     @NameInMap("StageName")
     public String stageName;
 

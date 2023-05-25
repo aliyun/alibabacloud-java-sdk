@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteModelRequest extends TeaModel {
     /**
-     * <p>The ID of the API group to which the model belongs.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The name of the model.</p>
+     * <p>The ID of the API group to which the model belongs.</p>
      */
     @NameInMap("ModelName")
     public String modelName;

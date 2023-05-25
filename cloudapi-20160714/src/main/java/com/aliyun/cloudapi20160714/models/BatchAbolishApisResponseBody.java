@@ -4,15 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class BatchAbolishApisResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("OperationId")
     public String operationId;
 
-    /**
-     * <p>auditing</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

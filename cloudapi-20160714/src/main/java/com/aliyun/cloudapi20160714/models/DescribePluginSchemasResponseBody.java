@@ -4,15 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribePluginSchemasResponseBody extends TeaModel {
-    /**
-     * <p>The plug-in modes.</p>
-     */
     @NameInMap("PluginSchemas")
     public DescribePluginSchemasResponseBodyPluginSchemas pluginSchemas;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,33 +32,18 @@ public class DescribePluginSchemasResponseBody extends TeaModel {
     }
 
     public static class DescribePluginSchemasResponseBodyPluginSchemasPluginSchema extends TeaModel {
-        /**
-         * <p>The plug-in description.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the document.</p>
-         */
         @NameInMap("DocumentId")
         public String documentId;
 
-        /**
-         * <p>The name of the plug-in.</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>Indicates whether classification is supported.</p>
-         */
         @NameInMap("SupportClassic")
         public Boolean supportClassic;
 
-        /**
-         * <p>The plug-in title.</p>
-         */
         @NameInMap("Title")
         public String title;
 

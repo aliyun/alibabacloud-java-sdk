@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeSignaturesByApiRequest extends TeaModel {
     /**
-     * <p>The runtime environment. Valid values:</p>
-     * <br>
-     * <p>*   **RELEASE**</p>
-     * <p>*   **TEST**</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("ApiId")
     public String apiId;
 
     /**
-     * <p>The ID of the API.</p>
+     * <p>The runtime environment. Valid values:</p>
+     * <br>
+     * <p>*   **RELEASE**</p>
+     * <p>*   **TEST**</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -23,7 +23,7 @@ public class DescribeSignaturesByApiRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The returned signature key information. It is an array consisting of SignatureItem data.</p>
      */
     @NameInMap("StageName")
     public String stageName;

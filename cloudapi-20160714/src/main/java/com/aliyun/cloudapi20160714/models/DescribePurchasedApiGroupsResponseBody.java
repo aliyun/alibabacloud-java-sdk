@@ -4,33 +4,18 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The total number of entries returned.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The attributes of the API group.</p>
-     */
     @NameInMap("PurchasedApiGroupAttributes")
     public DescribePurchasedApiGroupsResponseBodyPurchasedApiGroupAttributes purchasedApiGroupAttributes;
 
-    /**
-     * <p>The number of entries returned on each page.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The attributes of the API group.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -80,63 +65,33 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribePurchasedApiGroupsResponseBodyPurchasedApiGroupAttributesPurchasedApiGroupAttribute extends TeaModel {
-        /**
-         * <p>The ID of the region where the API group is located.</p>
-         */
         @NameInMap("BillingType")
         public String billingType;
 
-        /**
-         * <p>The name of the API group.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The description of the API group.</p>
-         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
-        /**
-         * <p>The maximum number of calls.</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <p>The ID of the API group.</p>
-         */
         @NameInMap("GroupName")
         public String groupName;
 
-        /**
-         * <p>The current number of calls.</p>
-         */
         @NameInMap("InvokeTimesMax")
         public Long invokeTimesMax;
 
-        /**
-         * <p>The billing method.</p>
-         */
         @NameInMap("InvokeTimesNow")
         public Long invokeTimesNow;
 
-        /**
-         * <p>The time when the API group expires.</p>
-         */
         @NameInMap("PurchasedTime")
         public String purchasedTime;
 
-        /**
-         * <p>auditing</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The time when the API group was purchased.</p>
-         */
         @NameInMap("Status")
         public String status;
 

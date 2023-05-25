@@ -4,27 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class ModifyBackendRequest extends TeaModel {
-    /**
-     * <p>The ID of the backend service.</p>
-     */
     @NameInMap("BackendId")
     public String backendId;
 
-    /**
-     * <p>The name of the backend service.</p>
-     */
     @NameInMap("BackendName")
     public String backendName;
 
-    /**
-     * <p>The type of the backend service.</p>
-     */
     @NameInMap("BackendType")
     public String backendType;
 
-    /**
-     * <p>The description of the backend service.</p>
-     */
     @NameInMap("Description")
     public String description;
 

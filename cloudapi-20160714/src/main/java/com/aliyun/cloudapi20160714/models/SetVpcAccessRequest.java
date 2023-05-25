@@ -4,42 +4,24 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class SetVpcAccessRequest extends TeaModel {
-    /**
-     * <p>The description.</p>
-     */
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <p>The ID of an ECS or SLB instance in the VPC.</p>
-     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    /**
-     * <p>The unique custom name for authorization.</p>
-     */
     @NameInMap("Name")
     public String name;
 
-    /**
-     * <p>The port number that corresponds to the instance.</p>
-     */
     @NameInMap("Port")
     public Integer port;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    /**
-     * <p>The ID of the VPC. The VPC must be an available one that belongs to the same account as the API.</p>
-     */
     @NameInMap("VpcId")
     public String vpcId;
 
-    /**
-     * <p>The host of the backend service.</p>
-     */
     @NameInMap("VpcTargetHostName")
     public String vpcTargetHostName;
 

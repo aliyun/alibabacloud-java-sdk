@@ -4,34 +4,18 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class ModifyAppRequest extends TeaModel {
-    /**
-     * <p>The ID of the app.</p>
-     */
     @NameInMap("AppId")
     public Long appId;
 
-    /**
-     * <p>The value must be 4 to 26 characters in length and can contain letters, digits, and underscores (\_). It must start with a letter.</p>
-     * <br>
-     * <p>This parameter is required only when you want to modify the value.</p>
-     */
     @NameInMap("AppName")
     public String appName;
 
-    /**
-     * <p>The description of the app. The description can contain a maximum of 180 characters in length.</p>
-     * <br>
-     * <p>This parameter is required only when you want to modify the value.</p>
-     */
     @NameInMap("Description")
     public String description;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    /**
-     * <p>The tag of objects that match the rule. You can specify multiple tags.</p>
-     */
     @NameInMap("Tag")
     public java.util.List<ModifyAppRequestTag> tag;
 
@@ -81,19 +65,9 @@ public class ModifyAppRequest extends TeaModel {
     }
 
     public static class ModifyAppRequestTag extends TeaModel {
-        /**
-         * <p>The value of the tag.</p>
-         * <br>
-         * <p>N can be an integer from 1 to 20.``</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The value of the tag.</p>
-         * <br>
-         * <p>N can be an integer from 1 to 20.``</p>
-         */
         @NameInMap("Value")
         public String value;
 

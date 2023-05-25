@@ -4,63 +4,36 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeDeployedApisRequest extends TeaModel {
-    /**
-     * <p>The name of the API. The name is used for fuzzy match.</p>
-     */
     @NameInMap("ApiId")
     public String apiId;
 
     @NameInMap("ApiMethod")
     public String apiMethod;
 
-    /**
-     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
-     */
     @NameInMap("ApiName")
     public String apiName;
 
     @NameInMap("ApiPath")
     public String apiPath;
 
-    /**
-     * <p>The list of tags.</p>
-     */
     @NameInMap("EnableTagAuth")
     public Boolean enableTagAuth;
 
-    /**
-     * <p>The name of the runtime environment. Valid values:</p>
-     * <br>
-     * <p>*   **RELEASE**</p>
-     * <p>*   **TEST**</p>
-     */
     @NameInMap("GroupId")
     public String groupId;
 
-    /**
-     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>Specifies whether to enable tag verification.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    /**
-     * <p>The ID of the API.</p>
-     */
     @NameInMap("StageName")
     public String stageName;
 
-    /**
-     * <p>The tag key.</p>
-     */
     @NameInMap("Tag")
     public java.util.List<DescribeDeployedApisRequestTag> tag;
 
@@ -158,15 +131,9 @@ public class DescribeDeployedApisRequest extends TeaModel {
     }
 
     public static class DescribeDeployedApisRequestTag extends TeaModel {
-        /**
-         * <p>The tag value.</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The page number of the returned page.</p>
-         */
         @NameInMap("Value")
         public String value;
 

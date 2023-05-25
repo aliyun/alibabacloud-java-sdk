@@ -4,43 +4,21 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class CreatePluginRequest extends TeaModel {
-    /**
-     * <p>The description of the plug-in. The description can contain a maximum of 200 characters in length.</p>
-     */
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <p>The plug-in definition statement, which can be in JSON or YAML format.</p>
-     */
     @NameInMap("PluginData")
     public String pluginData;
 
-    /**
-     * <p>The name of the plug-in. The name must be 4 to 50 characters in length and can contain letters, digits, and underscores (\_). However, it cannot start with an underscore.</p>
-     */
     @NameInMap("PluginName")
     public String pluginName;
 
-    /**
-     * <p>The type of the plug-in. Valid values:</p>
-     * <br>
-     * <p>*   **ipControl: IP address-based access control**</p>
-     * <p>*   **trafficControl: throttling**</p>
-     * <p>*   **backendSignature: backend signature**</p>
-     * <p>*   **jwtAuth** :JWT (OpenId Connect) authentication</p>
-     * <p>*   **cors** :cross-origin resource sharing (CORS)</p>
-     * <p>*   **caching**</p>
-     */
     @NameInMap("PluginType")
     public String pluginType;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    /**
-     * <p>The tag of objects that match the rule. You can specify multiple tags.</p>
-     */
     @NameInMap("Tag")
     public java.util.List<CreatePluginRequestTag> tag;
 
@@ -98,19 +76,9 @@ public class CreatePluginRequest extends TeaModel {
     }
 
     public static class CreatePluginRequestTag extends TeaModel {
-        /**
-         * <p>The key of the tag.</p>
-         * <br>
-         * <p>N can be an integer from 1 to 20.``</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The value of the tag.</p>
-         * <br>
-         * <p>N can be an integer from 1 to 20.``</p>
-         */
         @NameInMap("Value")
         public String value;
 

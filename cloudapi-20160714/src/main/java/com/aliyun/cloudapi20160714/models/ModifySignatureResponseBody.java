@@ -5,19 +5,22 @@ import com.aliyun.tea.*;
 
 public class ModifySignatureResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The name of the key.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the key.</p>
+     * <p>*   This API is intended for API providers.</p>
+     * <p>*   This API operation modifies the name, Key value, and Secret value of an existing signature key.</p>
+     * <p>*   Note that the modification takes effect immediately. If the key has been bound to an API, you must adjust the backend signature verification based on the new key accordingly.</p>
+     * <p>*   The QPS limit on this operation is 50 per user.</p>
      */
     @NameInMap("SignatureId")
     public String signatureId;
 
     /**
-     * <p>The name of the key.</p>
+     * <p>Modifies a backend signature key.</p>
      */
     @NameInMap("SignatureName")
     public String signatureName;
