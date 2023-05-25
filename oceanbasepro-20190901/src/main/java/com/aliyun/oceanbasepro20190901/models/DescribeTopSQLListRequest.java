@@ -5,97 +5,94 @@ import com.aliyun.tea.*;
 
 public class DescribeTopSQLListRequest extends TeaModel {
     /**
-     * <p>The name of the database.</p>
+     * <p>The number of block index cache hits.</p>
      */
     @NameInMap("DbName")
     public String dbName;
 
     /**
-     * <p>The end time of the time range for querying TOP SQL statements.   </p>
-     * <p>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+     * <p>The SQL type.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The filter condition.</p>
+     * <p>The average number of logical reads of the SQL statement during the specified period of time.   </p>
+     * <p>The value covers the numbers of reads of different caches and the number of disk I/Os. It is an important metric for measuring the SQL filtering performance.   </p>
+     * <br>
+     * <p>> <br> A higher ratio of the number of logical reads to the number of returned rows indicates poorer filtering performance. General causes include non-standard content written by SQL statements, non-standard table indexes created, and non-standard SQL execution plans.</p>
      */
     @NameInMap("FilterCondition")
     public java.util.Map<String, ?> filterCondition;
 
     /**
-     * <p>The IP address of the node.</p>
+     * <p>The number of failures.</p>
      */
     @NameInMap("NodeIp")
     public String nodeIp;
 
     /**
-     * <p>The number of the page to return.    </p>
-     * <p>- Start value: 1   </p>
-     * <p>- Default value: 1</p>
+     * <p>The queuing time, in ms.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of rows to return on each page.   </p>
-     * <p>- Maximum value: 100   </p>
-     * <p>- Default value: 10</p>
+     * <p>The number of row cache hits.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>SQLID.</p>
+     * <p>The I/O wait time, in ms.</p>
      */
     @NameInMap("SQLId")
     public String SQLId;
 
     /**
-     * <p>The search keyword.</p>
+     * <p>The number of retries.</p>
      */
     @NameInMap("SearchKeyWord")
     public String searchKeyWord;
 
     /**
-     * <p>The search parameter.</p>
+     * <p>SQLID.</p>
      */
     @NameInMap("SearchParameter")
     public String searchParameter;
 
     /**
-     * <p>The search rule.</p>
+     * <p>The IP address of the client.</p>
      */
     @NameInMap("SearchRule")
     public String searchRule;
 
     /**
-     * <p>The search value.</p>
+     * <p>The number of Bloom filter cache hits.</p>
      */
     @NameInMap("SearchValue")
     public String searchValue;
 
     /**
-     * <p>The sorted column.</p>
+     * <p>The number of rows read from the disk.</p>
      */
     @NameInMap("SortColumn")
     public String sortColumn;
 
     /**
-     * <p>The sorting rule.</p>
+     * <p>The list of top SQL statements.</p>
      */
     @NameInMap("SortOrder")
     public String sortOrder;
 
     /**
-     * <p>The start time of the time range for querying TOP SQL statements.   </p>
-     * <p>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+     * <p>The maximum response time, in ms.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The ID of the tenant.</p>
+     * <p>The average CPU time, in ms.</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

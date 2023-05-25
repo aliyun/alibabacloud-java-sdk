@@ -4,23 +4,12 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class CreateTenantReadOnlyConnectionRequest extends TeaModel {
-    /**
-     * <p>The ID of the OceanBase cluster.</p>
-     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    /**
-     * <p>The ID of the tenant.</p>
-     */
     @NameInMap("TenantId")
     public String tenantId;
 
-    /**
-     * <p>The ID of the zone.  </p>
-     * <br>
-     * <p>For more information, see AvailableZones in DescribeInstance.</p>
-     */
     @NameInMap("ZoneId")
     public String zoneId;
 

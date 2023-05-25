@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowSQLListResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The SQL text.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The list of slow SQL statements.</p>
+     * <p>The sorting rule.</p>
      */
     @NameInMap("SlowSQLList")
     public java.util.List<DescribeSlowSQLListResponseBodySlowSQLList> slowSQLList;
 
     /**
-     * <p>The total count.</p>
+     * <p>The name of the database.</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -53,241 +53,243 @@ public class DescribeSlowSQLListResponseBody extends TeaModel {
 
     public static class DescribeSlowSQLListResponseBodySlowSQLList extends TeaModel {
         /**
-         * <p>The number of rows affected.</p>
+         * <p>The username.</p>
          */
         @NameInMap("AffectedRows")
         public Long affectedRows;
 
         /**
-         * <p>The wait time of the client.</p>
+         * <p>The average response time.</p>
          */
         @NameInMap("AppWaitTime")
         public Float appWaitTime;
 
         /**
-         * <p>The number of block cache hits.</p>
+         * <p>The wait time in concurrent execution.</p>
          */
         @NameInMap("BlockCacheHit")
         public Long blockCacheHit;
 
         /**
-         * <p>The number of block index cache hits.</p>
+         * <p>The request ID.</p>
          */
         @NameInMap("BlockIndexCacheHit")
         public Long blockIndexCacheHit;
 
-        /**
-         * <p>The number of Bloom filter cache hits.</p>
-         */
         @NameInMap("BloomFilterCacheHit")
         public Long bloomFilterCacheHit;
 
         /**
-         * <p>The IP address of the client.</p>
+         * <p>```</p>
+         * <p>http(s)://[Endpoint]/?Action=DescribeSlowSQLList</p>
+         * <p>&TenantId=t2mr3oae0****</p>
+         * <p>&StartTime=2021-06-13 15:40:43</p>
+         * <p>&EndTime=2021-09-13 15:40:43</p>
+         * <p>&DbName=testdb</p>
+         * <p>&SearchKeyWord=update</p>
+         * <p>&SearchParameter=cputime</p>
+         * <p>&SearchRule=></p>
+         * <p>&SearchValue=0.01</p>
+         * <p>&SQLId=8D6E84****0B8FB1823D199E2CA1****</p>
+         * <p>&NodeIp=i-bp18qljorblo8es*****</p>
+         * <p>&PageNumber=10</p>
+         * <p>&PageSize=1</p>
+         * <p>&SortColumn=cputime</p>
+         * <p>&SortOrder=desc</p>
+         * <p>&Common request parameters</p>
+         * <p>```</p>
          */
         @NameInMap("ClientIp")
         public String clientIp;
 
         /**
-         * <p>The wait time in concurrent execution.</p>
+         * <p>The sorted column.</p>
          */
         @NameInMap("ConcurrencyWaitTime")
         public Float concurrencyWaitTime;
 
         /**
-         * <p>The average CPU time.</p>
+         * <p>The wait event.</p>
          */
         @NameInMap("CpuTime")
         public Float cpuTime;
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The search value.</p>
          */
         @NameInMap("DbName")
         public String dbName;
 
         /**
-         * <p>The time to wait for decoding.</p>
+         * <p>The time spent in hard parsing.</p>
          */
         @NameInMap("DecodeTime")
         public Float decodeTime;
 
         /**
-         * <p>The number of physical reads.</p>
+         * <p>The IP address of the client.</p>
          */
         @NameInMap("DiskRead")
         public Long diskRead;
 
         /**
-         * <p>The average response time.</p>
+         * <p>The search rule.</p>
          */
         @NameInMap("ElapsedTime")
         public Float elapsedTime;
 
         /**
-         * <p>The wait event.</p>
+         * <p>The number of row cache hits.</p>
          */
         @NameInMap("Event")
         public String event;
 
         /**
-         * <p>The number of executions per second.</p>
+         * <p>The total count.</p>
          */
         @NameInMap("ExecPerSecond")
         public Float execPerSecond;
 
         /**
-         * <p>The internal execution time.</p>
+         * <p>The number of block cache hits.</p>
          */
         @NameInMap("ExecuteTime")
         public Float executeTime;
 
         /**
-         * <p>The number of executions.</p>
+         * <p>The IP address of the node.</p>
          */
         @NameInMap("Executions")
         public Long executions;
 
         /**
-         * <p>The number of failures.</p>
+         * <p>{"name":"DescribeSlowSQLList","product":"OceanBasePro","version":"2019-09-01","path":"/","deprecated":0,"method":"GET|POST","protocol":"HTTP|HTTPS","hidden":0,"timeout":10000,"parameter_type":"Single","params":"[{\"name\":\"Action\",\"position\":\"Query\",\"required\":true,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"description\":\"\",\"example\":\"DescribeSlowSQLList\"},{\"name\":\"TenantId\",\"position\":\"Body\",\"required\":true,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\"t2mr3oae0****\"},{\"name\":\"StartTime\",\"position\":\"Body\",\"required\":true,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\"2021-06-13T15:40:43Z\"},{\"name\":\"EndTime\",\"position\":\"Body\",\"required\":true,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\"2021-09-13T15:40:43Z\"},{\"name\":\"DbName\",\"position\":\"Body\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\"testdb\"},{\"name\":\"SearchKeyWord\",\"position\":\"Body\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\"update\"},{\"name\":\"SearchParameter\",\"position\":\"Body\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\"cputime\"},{\"name\":\"SearchRule\",\"position\":\"Body\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\">\"},{\"name\":\"SearchValue\",\"position\":\"Body\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\"0.01\"},{\"name\":\"SQLId\",\"position\":\"Body\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\"8D6E84****0B8FB1823D199E2CA1****\"},{\"name\":\"NodeIp\",\"position\":\"Body\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\"i-bp18qljorblo8es*****\"},{\"name\":\"PageNumber\",\"position\":\"Body\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Integer\",\"title\":\"\",\"description\":\"\",\"example\":\"10\"},{\"name\":\"PageSize\",\"position\":\"Body\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Integer\",\"title\":\"\",\"description\":\"\",\"example\":\"1\"},{\"name\":\"FilterCondition\",\"position\":\"Body\",\"style\":\"json\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\"[dbName:sys]\"},{\"name\":\"SortColumn\",\"position\":\"Body\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\"cputime\"},{\"name\":\"SortOrder\",\"position\":\"Body\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\"desc\"}]","response_headers":"[]","response":"{\"type\":\"Object\",\"children\":[{\"name\":\"TotalCount\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Long\",\"title\":\"\",\"description\":\"\",\"example\":\"2\"},{\"name\":\"RequestId\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\"473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E\"},{\"name\":\"SlowSQLList\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Array\",\"subType\":\"Object\",\"description\":\"  \",\"children\":[{\"name\":\"Key\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Long\",\"description\":\"\",\"example\":\"1\"},{\"name\":\"ExecPerSecond\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Float\",\"description\":\"\",\"example\":\"163.0\"},{\"name\":\"SQLText\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"description\":\"\",\"example\":\"SELECT  ****   FROM ****   WHERE **** = ? AND **** = ?   ORDER BY **** ASC\"},{\"name\":\"MaxCpuTime\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Float\",\"description\":\"\",\"example\":\"257.967\"},{\"name\":\"BlockCacheHit\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Long\",\"description\":\"\",\"example\":\"14\"},{\"name\":\"DecodeTime\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Float\",\"description\":\"\",\"example\":\"0.0\"},{\"name\":\"RemotePlans\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Long\",\"description\":\"\",\"example\":\"0\"},{\"name\":\"RPCCount\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Long\",\"description\":\"\",\"example\":\"0\"},{\"name\":\"NetWaitTime\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Float\",\"description\":\"\",\"example\":\"0.0\"},{\"name\":\"DiskRead\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Long\",\"description\":\"\",\"example\":\"0\"},{\"name\":\"NodeIp\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"description\":\"\",\"example\":\"i-bp18qljorblo8es*****\"},{\"name\":\"ConcurrencyWaitTime\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Float\",\"description\":\"\",\"example\":\"0.0\"},{\"name\":\"MemstoreReadRowCount\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Long\",\"description\":\"\",\"example\":\"527\"},{\"name\":\"DbName\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"description\":\"\",\"example\":\"testdb\"},{\"name\":\"AppWaitTime\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Float\",\"description\":\"\",\"example\":\"0.0\"},{\"name\":\"ElapsedTime\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Float\",\"description\":\"\",\"example\":\"76.382\"},{\"name\":\"MissPlans\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Long\",\"description\":\"\",\"example\":\"0\"},{\"name\":\"AffectedRows\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Long\",\"description\":\"\",\"example\":\"0\"},{\"name\":\"ScheduleTime\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Float\",\"description\":\"\",\"example\":\"0.0\"},{\"name\":\"Event\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"description\":\"\",\"example\":\"mysql response wait client\"},{\"name\":\"TotalWaitTime\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Float\",\"description\":\"\",\"example\":\"10.966\"},{\"name\":\"ReturnRows\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Long\",\"description\":\"\",\"example\":\"1\"},{\"name\":\"ExecuteTime\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Float\",\"description\":\"\",\"example\":\"61.044\"},{\"name\":\"UserName\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"description\":\"\",\"example\":\"tester\"},{\"name\":\"Executions\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Long\",\"description\":\"\",\"example\":\"89403\"},{\"name\":\"GetPlanTime\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Float\",\"description\":\"\",\"example\":\"0.052\"},{\"name\":\"CpuTime\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Float\",\"description\":\"\",\"example\":\"50.13\"},{\"name\":\"MaxElapsedTime\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Float\",\"description\":\"\",\"example\":\"260.044\"},{\"name\":\"SQLType\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Long\",\"description\":\"\",\"example\":\"1\"},{\"name\":\"BlockIndexCacheHit\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Long\",\"description\":\"\",\"example\":\"4\"},{\"name\":\"RetryCount\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Long\",\"description\":\"\",\"example\":\"0\"},{\"name\":\"SQLId\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"description\":\"SQLID。\",\"example\":\"8D6E84****0B8FB1823D199E2CA1****\"},{\"name\":\"ClientIp\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"description\":\"\",\"example\":\"1*2.***.1*3.***\"},{\"name\":\"BloomFilterCacheHit\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Long\",\"description\":\"\",\"example\":\"0\"},{\"name\":\"IOWaitTime\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Float\",\"description\":\"\",\"example\":\"0.0\"},{\"name\":\"FailTimes\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Long\",\"description\":\"\",\"example\":\"0\"},{\"name\":\"QueueTime\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Float\",\"description\":\"\",\"example\":\"15.275\"},{\"name\":\"RowCacheHit\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Long\",\"description\":\"\",\"example\":\"0\"},{\"name\":\"LogicalRead\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Long\",\"description\":\"\",\"example\":\"19\"},{\"name\":\"SsstoreReadRowCount\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Long\",\"description\":\"\",\"example\":\"43086\"}],\"title\":\"\"}],\"title\":\"\",\"description\":\"\"}","errors":"{}"}</p>
          */
         @NameInMap("FailTimes")
         public Long failTimes;
 
         /**
-         * <p>The time spent in hard parsing.</p>
+         * <p>The number of Bloom filter cache hits.</p>
          */
         @NameInMap("GetPlanTime")
         public Float getPlanTime;
 
         /**
-         * <p>The I/O wait time.</p>
+         * <p>You can call this operation to query the list of slow SQL statements</p>
          */
         @NameInMap("IOWaitTime")
         public Float IOWaitTime;
 
         /**
-         * <p>The sequence number of the returned SQL statement.</p>
+         * <p>The scheduling duration.</p>
          */
         @NameInMap("Key")
         public Long key;
 
-        /**
-         * <p>The number of logical reads.</p>
-         */
         @NameInMap("LogicalRead")
         public Long logicalRead;
 
         /**
-         * <p>The maximum CPU time.</p>
+         * <p>The name of the database.</p>
          */
         @NameInMap("MaxCpuTime")
         public Float maxCpuTime;
 
         /**
-         * <p>The maximum response time.</p>
+         * <p>The sequence number of the returned SQL statement.</p>
          */
         @NameInMap("MaxElapsedTime")
         public Float maxElapsedTime;
 
         /**
-         * <p>The number of rows read from the memory.</p>
+         * <p>The number of logical reads.</p>
          */
         @NameInMap("MemstoreReadRowCount")
         public Long memstoreReadRowCount;
 
         /**
-         * <p>The number of plan misses.</p>
+         * <p>The number of RPCs.</p>
          */
         @NameInMap("MissPlans")
         public Long missPlans;
 
         /**
-         * <p>The network latency.</p>
+         * <p>The search parameter.</p>
          */
         @NameInMap("NetWaitTime")
         public Float netWaitTime;
 
         /**
-         * <p>The IP address of the node.</p>
+         * <p>The number of failures.</p>
          */
         @NameInMap("NodeIp")
         public String nodeIp;
 
-        /**
-         * <p>The queuing time.</p>
-         */
         @NameInMap("QueueTime")
         public Float queueTime;
 
         /**
-         * <p>The number of RPCs.</p>
+         * <p>The maximum response time.</p>
          */
         @NameInMap("RPCCount")
         public Long RPCCount;
 
         /**
-         * <p>The number of remote plans.</p>
+         * <p>The search keyword.</p>
          */
         @NameInMap("RemotePlans")
         public Long remotePlans;
 
         /**
-         * <p>The number of retries.</p>
+         * <p>The number of physical reads.</p>
          */
         @NameInMap("RetryCount")
         public Long retryCount;
 
         /**
-         * <p>The number of rows returned.</p>
+         * <p>The wait time of the client.</p>
          */
         @NameInMap("ReturnRows")
         public Long returnRows;
 
-        /**
-         * <p>The number of row cache hits.</p>
-         */
         @NameInMap("RowCacheHit")
         public Long rowCacheHit;
 
         /**
-         * <p>SQLID.</p>
+         * <p>Example 1</p>
          */
         @NameInMap("SQLId")
         public String SQLId;
 
         /**
-         * <p>The SQL text.</p>
+         * <p>The network latency.</p>
          */
         @NameInMap("SQLText")
         public String SQLText;
 
         /**
-         * <p>The SQL type.</p>
+         * <p>SQLID.</p>
          */
         @NameInMap("SQLType")
         public Long SQLType;
 
         /**
-         * <p>The scheduling duration.</p>
+         * <p>The internal execution time.</p>
          */
         @NameInMap("ScheduleTime")
         public Float scheduleTime;
 
-        /**
-         * <p>The number of rows read from the disk.</p>
-         */
         @NameInMap("SsstoreReadRowCount")
         public Long ssstoreReadRowCount;
 
         /**
-         * <p>The internal wait time.</p>
+         * <p>The SQL ID, which uniquely identifies an SQL statement.</p>
          */
         @NameInMap("TotalWaitTime")
         public Float totalWaitTime;
 
         /**
-         * <p>The username.</p>
+         * <p>The number of executions.</p>
          */
         @NameInMap("UserName")
         public String userName;

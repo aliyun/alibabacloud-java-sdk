@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeTenantZonesReadRequest extends TeaModel {
     /**
-     * <p>The ID of the OceanBase cluster.</p>
+     * <p>The zone information of the tenant.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the tenant.</p>
+     * <p>The return result of the request.</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

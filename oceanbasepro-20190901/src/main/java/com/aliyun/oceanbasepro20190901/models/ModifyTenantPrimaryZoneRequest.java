@@ -5,13 +5,20 @@ import com.aliyun.tea.*;
 
 public class ModifyTenantPrimaryZoneRequest extends TeaModel {
     /**
-     * <p>The ID of the OceanBase cluster.</p>
+     * <p>The primary zone of the tenant.    </p>
+     * <p>It is one of the zones in which the cluster is deployed.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The availability zone where the primary node is located.</p>
+     * <p>```</p>
+     * <p>http(s)://[Endpoint]/?Action=ModifyTenantPrimaryZone</p>
+     * <p>&TenantId=ob2mr3oae0****</p>
+     * <p>&InstanceId=ob317v4uif****</p>
+     * <p>&PrimaryZone=cn-hangzhou-h</p>
+     * <p>&Common request parameters</p>
+     * <p>```</p>
      */
     @NameInMap("MasterIntranetAddressZone")
     public String masterIntranetAddressZone;
@@ -23,26 +30,25 @@ public class ModifyTenantPrimaryZoneRequest extends TeaModel {
     public String modifyType;
 
     /**
-     * <p>The primary zone of the tenant.    </p>
-     * <p>It is one of the zones in which the cluster is deployed.</p>
+     * <p>The ID of the vSwitch.</p>
      */
     @NameInMap("PrimaryZone")
     public String primaryZone;
 
     /**
-     * <p>The deployment type of the primary zone.</p>
+     * <p>Example 1</p>
      */
     @NameInMap("PrimaryZoneDeployType")
     public String primaryZoneDeployType;
 
     /**
-     * <p>The ID of the tenant.</p>
+     * <p>The return result of the request.</p>
      */
     @NameInMap("TenantId")
     public String tenantId;
 
     /**
-     * <p>The ID of the vSwitch.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("UserVSwitchId")
     public String userVSwitchId;

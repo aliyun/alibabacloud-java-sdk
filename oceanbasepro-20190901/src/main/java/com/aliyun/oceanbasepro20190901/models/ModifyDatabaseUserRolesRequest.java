@@ -5,26 +5,25 @@ import com.aliyun.tea.*;
 
 public class ModifyDatabaseUserRolesRequest extends TeaModel {
     /**
-     * <p>The name of the database.    </p>
-     * <p>You cannot use reserved keywords, such as test and mysql.</p>
+     * <p>The ID of the tenant.</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
 
     /**
-     * <p>The ID of the OceanBase cluster.</p>
+     * <p>The account information.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the tenant.</p>
+     * <p>A list of usernames and their respective roles.</p>
      */
     @NameInMap("TenantId")
     public String tenantId;
 
     /**
-     * <p>A list of usernames and their respective roles.</p>
+     * <p>The ID of the OceanBase cluster.</p>
      */
     @NameInMap("Users")
     public String users;

@@ -5,25 +5,26 @@ import com.aliyun.tea.*;
 
 public class ModifyTenantResourceRequest extends TeaModel {
     /**
-     * <p>The information about the CPU resources of the tenant.</p>
+     * <p>The memory size of the tenant, in GB.</p>
      */
     @NameInMap("Cpu")
     public Integer cpu;
 
     /**
-     * <p>The ID of the OceanBase cluster.</p>
+     * <p>The operation that you want to perform.   </p>
+     * <p>Set the value to **ModifyTenantResource**.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The memory size of the tenant, in GB.</p>
+     * <p>The ID of the tenant.</p>
      */
     @NameInMap("Memory")
     public Integer memory;
 
     /**
-     * <p>The ID of the tenant.</p>
+     * <p>The information about the CPU resources of the tenant.</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

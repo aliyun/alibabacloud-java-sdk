@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class ModifyTenantUserStatusResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>Example 1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The list of database accounts in the tenant.</p>
-     */
     @NameInMap("TenantUser")
     public java.util.List<ModifyTenantUserStatusResponseBodyTenantUser> tenantUser;
 
@@ -38,23 +35,12 @@ public class ModifyTenantUserStatusResponseBody extends TeaModel {
     }
 
     public static class ModifyTenantUserStatusResponseBodyTenantUser extends TeaModel {
-        /**
-         * <p>The ID of the tenant.</p>
-         */
         @NameInMap("TenantId")
         public String tenantId;
 
-        /**
-         * <p>The name of the account.</p>
-         */
         @NameInMap("UserName")
         public String userName;
 
-        /**
-         * <p>The status of the database account. Valid values:   </p>
-         * <p>- LOCKED: The account is locked. </p>
-         * <p>- ONLINE: The account is unlocked.</p>
-         */
         @NameInMap("UserStatus")
         public String userStatus;
 

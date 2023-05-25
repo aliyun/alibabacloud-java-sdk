@@ -15,22 +15,22 @@ public class CreateInstanceRequest extends TeaModel {
 
     /**
      * <p>The automatic renewal period of the instance. This parameter is required when the AutoRenew parameter is set to true. Valid values:  </p>
-     * <p>- If the PeriodUnit parameter is set to Week: 1, 2, and 3.   </p>
-     * <p>- If the PeriodUnit parameter is set to Month: 1, 2, 3, 6, and 12.</p>
+     * <p>- If the PeriodUnit parameter is set to Year: "1", "2", and "3".   </p>
+     * <p>- If the PeriodUnit parameter is set to Month: "1", "2", "3", "6", and "12".</p>
      */
     @NameInMap("AutoRenewPeriod")
     public Long autoRenewPeriod;
 
     /**
      * <p>The billing method of the instance. Valid values:  </p>
-     * <p>-PrePay: the subscription billing method. You must ensure that the remaining balance or credit balance of your account can cover the cost of the subscription. Otherwise, you will receive an InvalidPayMethod error. </p>
+     * <p>- PrePay: the subscription billing method. You must ensure that the remaining balance or credit balance of your account can cover the cost of the subscription. Otherwise, you will receive an InvalidPayMethod error. </p>
      * <p>- PostPay: the pay-as-you-go billing method. This is the default value. By default, fees are charged on an hourly basis.</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
-     * <p>The size of the storage space, in GB.    </p>
+     * <p>The size of the storage space,in GB.    </p>
      * <p>The limits on the storage space vary with the cluster specifications:   </p>
      * <p>- 8C32GB: 100 GB to 10000 GB   </p>
      * <p>- 14C70GB: 200 GB to 10000 GB   </p>
@@ -41,6 +41,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("DiskSize")
     public Long diskSize;
 
+    /**
+     * <p>The return result of the request.</p>
+     */
     @NameInMap("DiskType")
     public String diskType;
 
@@ -48,7 +51,7 @@ public class CreateInstanceRequest extends TeaModel {
      * <p>The specifications of the cluster.     </p>
      * <p>You can specify one of the following four plans:   </p>
      * <p> - 8C32GB: indicates 8 CPU cores and 32 GB of memory.    </p>
-     * <p> - 14C70GB: indicates 14 CPU cores and 70 GB of memory. This is the default value.     </p>
+     * <p> - 14C70GB: indicates 14 CPU cores and 70 GB of memory. This is the default value.</p>
      * <p>- 30C180GB: indicates 30 CPU cores and 180 GB of memory.     </p>
      * <p>- 62C400GB: indicates 62 CPU cores and 400 GB of memory.</p>
      */
@@ -63,23 +66,25 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>OceanBase Server version number.</p>
+     */
     @NameInMap("ObVersion")
     public String obVersion;
 
     /**
      * <p>The valid duration of the purchased resources. The unit is specified by the PeriodUnit parameter.   </p>
-     * <p>This parameter is valid and required only when the InstanceChargeType parameter is set to PrePaid.   </p>
-     * <p>If the DedicatedHostId parameter is specified, the subscription period of the instance must be shorter than that of the dedicated host.   </p>
-     * <p>Valid values:    </p>
-     * <p>- If the PeriodUnit parameter is set to Week: 1, 2, 3, and 4.   </p>
-     * <p>- If the PeriodUnit parameter is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</p>
+     * <p>This parameter is valid and required only when the InstanceChargeType parameter is set to PrePaid.      </p>
+     * <p>Valid values:     </p>
+     * <p>- When the PeriodUnit parameter is set to Month: "1", "2", "3", "4", "5", "6", "7", "8", "9". </p>
+     * <p>- When the PeriodUnit parameter is set to Year: "1", "2", "3".</p>
      */
     @NameInMap("Period")
     public Long period;
 
     /**
      * <p>The unit of the valid duration of the purchased resources.     </p>
-     * <p>Valid value for subscription: Month.   </p>
+     * <p>Valid value for subscription: Month or Year.</p>
      * <p>Default value: Month for subscription, and Hour for pay-as-you-go.</p>
      */
     @NameInMap("PeriodUnit")
@@ -93,14 +98,16 @@ public class CreateInstanceRequest extends TeaModel {
 
     /**
      * <p>The series of the OceanBase cluster. Valid values:    </p>
-     * <p>normal: the high availability edition. This is the default value.</p>
+     * <p>- normal: Standard Cluster Edition (Cloud Disk). This is the default value.</p>
+     * <p>- normal_ssd: Standard Cluster Edition (Local Disk).</p>
+     * <p>- history: History Database Cluster Edition.</p>
      */
     @NameInMap("Series")
     public String series;
 
     /**
      * <p>The ID of the zone to which the instance belongs.   </p>
-     * <p>For more information about how to obtain the list of zones, see [DescribeZones](https://www.alibabacloud.com/help/zh/doc-detail/25610.htm).</p>
+     * <p>For more information about how to obtain the list of zones, see [DescribeZones](~~25610~~).</p>
      */
     @NameInMap("Zones")
     public String zones;

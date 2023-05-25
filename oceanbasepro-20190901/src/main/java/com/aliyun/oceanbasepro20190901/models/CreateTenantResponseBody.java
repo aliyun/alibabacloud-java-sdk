@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateTenantResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>WB01144930</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the tenant.</p>
+     * <p>You can call this operation to create a tenant.</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

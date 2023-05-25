@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class ReleaseOmsOpenAPIProjectRequest extends TeaModel {
     /**
-     * <p>The page number, which takes effect in a pagination query.</p>
+     * <p>The total count, which takes effect in a pagination query.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The page size, which takes effect in a pagination query.</p>
+     * <p>Contact the administrator.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The project ID.</p>
+     * <p>The error level. Valid values: CRITICAL, ERROR, and WARN.</p>
      */
     @NameInMap("ProjectId")
     public String projectId;
 
     /**
-     * <p>The ID of the migration instance. Generally, if you want to create a project on a public cloud, you must first purchase a migration instance.</p>
+     * <p>Indicates whether the call is successful.</p>
      */
     @NameInMap("WorkerGradeId")
     public String workerGradeId;

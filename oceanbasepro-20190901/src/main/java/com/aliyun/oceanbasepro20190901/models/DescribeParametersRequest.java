@@ -5,21 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeParametersRequest extends TeaModel {
     /**
-     * <p>The type of the parameter.    </p>
-     * <p>Valid values: CLUSTER and TENANT.</p>
+     * <p>It is an online CLI tool that allows you to quickly retrieve and debug APIs. It can dynamically generate executable SDK code samples.</p>
      */
     @NameInMap("Dimension")
     public String dimension;
 
     /**
-     * <p>The resource ID of the parameter type.   </p>
-     * <p>You can leave this parameter unspecified when you call this operation to query cluster parameters. In the case of tenant parameters, pass the tenant ID.</p>
+     * <p>Alibaba Cloud CLI</p>
      */
     @NameInMap("DimensionValue")
     public String dimensionValue;
 
     /**
-     * <p>The ID of the OceanBase cluster.</p>
+     * <p>498529</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DeleteTenantUsersRequest extends TeaModel {
     /**
-     * <p>The ID of the OceanBase cluster.</p>
+     * <p>Example 1</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the tenant.</p>
+     * <p>$.parameters[4].schema.enumValueTitles</p>
      */
     @NameInMap("TenantId")
     public String tenantId;
 
     /**
-     * <p>A list of usernames and their respective roles.</p>
+     * <p>$.parameters[2].schema.example</p>
      */
     @NameInMap("Users")
     public String users;

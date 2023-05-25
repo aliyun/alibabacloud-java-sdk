@@ -4,21 +4,12 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeTenantMetricsResponseBody extends TeaModel {
-    /**
-     * <p>The request ID.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The metrics of the tenant.</p>
-     */
     @NameInMap("TenantMetrics")
     public String tenantMetrics;
 
-    /**
-     * <p>The total count.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

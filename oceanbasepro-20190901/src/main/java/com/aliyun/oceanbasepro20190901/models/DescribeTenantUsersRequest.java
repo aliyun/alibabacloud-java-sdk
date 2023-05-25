@@ -5,34 +5,32 @@ import com.aliyun.tea.*;
 
 public class DescribeTenantUsersRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.    </p>
-     * <p>Start value: 1. Default value: 1.</p>
+     * <p>The database privileges of the account.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of rows to return on each page.    </p>
-     * <p>Maximum value: 100. Default value: 10.</p>
+     * <p>The return result of the request.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The search keyword.</p>
+     * <p>The return result of the request.</p>
      */
     @NameInMap("SearchKey")
     public String searchKey;
 
     /**
-     * <p>The ID of the tenant.</p>
+     * <p>The return result of the request.</p>
      */
     @NameInMap("TenantId")
     public String tenantId;
 
     /**
-     * <p>The name of the database account.    </p>
-     * <p>You cannot use reserved keywords, such as SYS and root.</p>
+     * <p>The operation that you want to perform.   </p>
+     * <p>Set the value to **DescribeTenantUsers**.</p>
      */
     @NameInMap("UserName")
     public String userName;

@@ -5,23 +5,26 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailableCpuResourceRequest extends TeaModel {
     /**
-     * <p>The ID of the OceanBase cluster.</p>
+     * <p>The CPU resources available.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The type of the privilege modification operation.   </p>
-     * <p> Valid values:  </p>
-     * <p>update: updates all privileges. This is the default value.  </p>
-     * <p>add: adds a privilege.   </p>
-     * <p>delete: deletes a privilege.</p>
+     * <p>```</p>
+     * <p>http(s)://[Endpoint]/?Action=DescribeAvailableCpuResource</p>
+     * <p>&InstanceId=ob317v4uif****</p>
+     * <p>&TenantId=ob2mr3oae0****</p>
+     * <p>&ModifyType=update</p>
+     * <p>&Common request parameters</p>
+     * <p>```</p>
      */
     @NameInMap("ModifyType")
     public String modifyType;
 
     /**
-     * <p>The ID of the tenant.</p>
+     * <p>The operation that you want to perform.   </p>
+     * <p>Set the value to **DescribeAvailableCpuResource**.</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

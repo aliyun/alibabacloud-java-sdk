@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeTimeZonesResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>DescribeTimeZones</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The time zones supported by the tenant.</p>
+     * <p>The description of the time zone.</p>
      */
     @NameInMap("TimeZones")
     public DescribeTimeZonesResponseBodyTimeZones timeZones;
@@ -39,13 +39,14 @@ public class DescribeTimeZonesResponseBody extends TeaModel {
 
     public static class DescribeTimeZonesResponseBodyTimeZonesList extends TeaModel {
         /**
-         * <p>The description of the time zone.</p>
+         * <p>Example 1</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The name of the time zone.</p>
+         * <p>The operation that you want to perform.   </p>
+         * <p>Set the value to **DescribeTimeZones**.</p>
          */
         @NameInMap("TimeZone")
         public String timeZone;
@@ -74,9 +75,6 @@ public class DescribeTimeZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeTimeZonesResponseBodyTimeZones extends TeaModel {
-        /**
-         * <p>The default time zone.</p>
-         */
         @NameInMap("Default")
         public String _default;
 

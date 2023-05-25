@@ -4,14 +4,11 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class ModifyDatabaseUserRolesResponseBody extends TeaModel {
-    /**
-     * <p>The request ID.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The account information.</p>
+     * <p>The name of the database.</p>
      */
     @NameInMap("TenantUser")
     public ModifyDatabaseUserRolesResponseBodyTenantUser tenantUser;
@@ -38,20 +35,9 @@ public class ModifyDatabaseUserRolesResponseBody extends TeaModel {
     }
 
     public static class ModifyDatabaseUserRolesResponseBodyTenantUserUsers extends TeaModel {
-        /**
-         * <p>The role of the account.   </p>
-         * <p>In MySQL mode, a role is a database-level role. Valid values:</p>
-         * <p>- ReadWrite: a role that has the read and write privileges, namely ALL PRIVILEGES.</p>
-         * <p>- ReadOnly: a role that has only the read-only privilege SELECT. </p>
-         * <p>- DDL: a role that has the DDL privileges such as CREATE, DROP, ALTER, SHOW VIEW, and CREATE VIEW. </p>
-         * <p>- DML: a role that has the DML privileges such as SELECT, INSERT, UPDATE, DELETE, and SHOW VIEW.</p>
-         */
         @NameInMap("Role")
         public String role;
 
-        /**
-         * <p>The name of the account.</p>
-         */
         @NameInMap("UserName")
         public String userName;
 
@@ -80,20 +66,14 @@ public class ModifyDatabaseUserRolesResponseBody extends TeaModel {
 
     public static class ModifyDatabaseUserRolesResponseBodyTenantUser extends TeaModel {
         /**
-         * <p>The name of the database.</p>
+         * <p>Example 1</p>
          */
         @NameInMap("DatabaseName")
         public String databaseName;
 
-        /**
-         * <p>The ID of the tenant.</p>
-         */
         @NameInMap("TenantId")
         public String tenantId;
 
-        /**
-         * <p>The accounts that have privileges on the database.</p>
-         */
         @NameInMap("Users")
         public java.util.List<ModifyDatabaseUserRolesResponseBodyTenantUserUsers> users;
 

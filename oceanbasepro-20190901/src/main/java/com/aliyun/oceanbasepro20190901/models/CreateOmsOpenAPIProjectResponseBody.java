@@ -4,69 +4,36 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class CreateOmsOpenAPIProjectResponseBody extends TeaModel {
-    /**
-     * <p>The suggestions (old).</p>
-     */
     @NameInMap("Advice")
     public String advice;
 
-    /**
-     * <p>The error code (old).</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The time spent in processing the request, in seconds.</p>
-     */
     @NameInMap("Cost")
     public String cost;
 
-    /**
-     * <p>The project creation details.</p>
-     */
     @NameInMap("Data")
     public String data;
 
-    /**
-     * <p>The error details.</p>
-     */
     @NameInMap("ErrorDetail")
     public CreateOmsOpenAPIProjectResponseBodyErrorDetail errorDetail;
 
-    /**
-     * <p>The error description (old).</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The page number, which takes effect in a pagination query.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The page size, which takes effect in a pagination query.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The request ID.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the call is successful.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
-    /**
-     * <p>The total count, which takes effect in a pagination query.</p>
-     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -164,27 +131,15 @@ public class CreateOmsOpenAPIProjectResponseBody extends TeaModel {
     }
 
     public static class CreateOmsOpenAPIProjectResponseBodyErrorDetail extends TeaModel {
-        /**
-         * <p>The error code (new).</p>
-         */
         @NameInMap("Code")
         public String code;
 
-        /**
-         * <p>Valid values: CRITICAL, ERROR, and WARN.</p>
-         */
         @NameInMap("Level")
         public String level;
 
-        /**
-         * <p>The error description (new).</p>
-         */
         @NameInMap("Message")
         public String message;
 
-        /**
-         * <p>The suggestions (new).</p>
-         */
         @NameInMap("Proposal")
         public String proposal;
 

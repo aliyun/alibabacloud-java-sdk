@@ -4,62 +4,41 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class CreateOmsOpenAPIProjectRequest extends TeaModel {
-    /**
-     * <p>The business system identifier, which is optional and is a specific field of the Post message.</p>
-     */
     @NameInMap("BusinessName")
     public String businessName;
 
-    /**
-     * <p>The settings of the destination data source.</p>
-     */
     @NameInMap("DestConfig")
     public CreateOmsOpenAPIProjectRequestDestConfig destConfig;
 
-    /**
-     * <p>A collection of label IDs.</p>
-     */
     @NameInMap("LabelIds")
     public java.util.List<String> labelIds;
 
     /**
-     * <p>The page number, which takes effect in a pagination query.</p>
+     * <p>页序号，分页查询时生效</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The page size, which takes effect in a pagination query.</p>
+     * <p>页大小，分页查询时生效</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The name of the project.</p>
-     */
     @NameInMap("ProjectName")
     public String projectName;
 
-    /**
-     * <p>The settings of the source data source.</p>
-     */
     @NameInMap("SourceConfig")
     public CreateOmsOpenAPIProjectRequestSourceConfig sourceConfig;
 
-    /**
-     * <p>The mappings for the synchronization objects.</p>
-     */
     @NameInMap("TransferMapping")
     public CreateOmsOpenAPIProjectRequestTransferMapping transferMapping;
 
-    /**
-     * <p>The settings of synchronization steps.</p>
-     */
     @NameInMap("TransferStepConfig")
     public CreateOmsOpenAPIProjectRequestTransferStepConfig transferStepConfig;
 
     /**
-     * <p>The ID of the migration instance. Generally, if you want to create a project on a public cloud, you must first purchase a migration instance.</p>
+     * <p>实例规格 ID，创建项目时生效</p>
      */
     @NameInMap("WorkerGradeId")
     public String workerGradeId;
@@ -150,75 +129,39 @@ public class CreateOmsOpenAPIProjectRequest extends TeaModel {
     }
 
     public static class CreateOmsOpenAPIProjectRequestDestConfig extends TeaModel {
-        /**
-         * <p>Specifies whether to enable message tracing when the destination data source is RocketMQ.</p>
-         */
         @NameInMap("EnableMsgTrace")
         public Boolean enableMsgTrace;
 
-        /**
-         * <p>The ID of the data source.</p>
-         */
         @NameInMap("EndpointId")
         public String endpointId;
 
-        /**
-         * <p>The type of the data source. Valid values: `MYSQL`, `MARIADB`, `OB_MYSQL`, `OB_MYSQL_CE`, `OB_ORACLE`, `ORACLE`, `DB2_LUW`, `KAFKA`, `ROCKETMQ`, `DATAHUB`, `SYBASE`, `LOGPROXY`, `ADB`, `DBP_OP_ROUTE`, `DMS`, `IDB`, and `TIDB`.</p>
-         */
         @NameInMap("EndpointType")
         public String endpointType;
 
-        /**
-         * <p>The tag of the Post message when the destination data source is RocketMQ.</p>
-         */
         @NameInMap("MsgTags")
         public String msgTags;
 
-        /**
-         * <p>The partitioned index, which must be specified if the destination data source is a message queue system, such as Kafka, DataHub, or RocketMQ, and the partitioning mode is set to ONE.</p>
-         */
         @NameInMap("Partition")
         public Integer partition;
 
-        /**
-         * <p>The partitioning mode, which must be specified if the destination data source is a message queue system, such as Kafka, DataHub, or RocketMQ. Valid values: ONE, HASH, and TABLE.</p>
-         */
         @NameInMap("PartitionMode")
         public String partitionMode;
 
-        /**
-         * <p>The producer group of the Post message when the destination data source is RocketMQ.</p>
-         */
         @NameInMap("ProducerGroup")
         public String producerGroup;
 
-        /**
-         * <p>The timeout period for a single Post message when the destination data source is RocketMQ.</p>
-         */
         @NameInMap("SendMsgTimeout")
         public Long sendMsgTimeout;
 
-        /**
-         * <p>Specifies whether to enable message sequencing when the destination data source is DataHub.</p>
-         */
         @NameInMap("SequenceEnable")
         public Boolean sequenceEnable;
 
-        /**
-         * <p>The start time of the sequence, which must be specified if the destination data source is DataHub and message sequencing is enabled. The value is a timestamp in seconds.</p>
-         */
         @NameInMap("SequenceStartTimestamp")
         public Long sequenceStartTimestamp;
 
-        /**
-         * <p>The text serialization type, which must be specified if the destination data source is a message queue system, such as Kafka, DataHub, or RocketMQ. Valid values: Default, Canal, Dataworks, SharePlex, and DefaultExtendColumnType.</p>
-         */
         @NameInMap("SerializerType")
         public String serializerType;
 
-        /**
-         * <p>The type of the topic to which the Post message belongs when the destination data source is DataHub. Valid values: Tuple and Blob.</p>
-         */
         @NameInMap("TopicType")
         public String topicType;
 
@@ -326,75 +269,39 @@ public class CreateOmsOpenAPIProjectRequest extends TeaModel {
     }
 
     public static class CreateOmsOpenAPIProjectRequestSourceConfig extends TeaModel {
-        /**
-         * <p>Specifies whether to enable message tracing when the destination data source is RocketMQ.</p>
-         */
         @NameInMap("EnableMsgTrace")
         public Boolean enableMsgTrace;
 
-        /**
-         * <p>The ID of the data source.</p>
-         */
         @NameInMap("EndpointId")
         public String endpointId;
 
-        /**
-         * <p>The type of the data source. Valid values: `MYSQL`, `MARIADB`, `OB_MYSQL`, `OB_MYSQL_CE`, `OB_ORACLE`, `ORACLE`, `DB2_LUW`, `KAFKA`, `ROCKETMQ`, `DATAHUB`, `SYBASE`, `LOGPROXY`, `ADB`, `DBP_OP_ROUTE`, `DMS`, `IDB`, and `TIDB`.</p>
-         */
         @NameInMap("EndpointType")
         public String endpointType;
 
-        /**
-         * <p>The tag of the Post message when the destination data source is RocketMQ.</p>
-         */
         @NameInMap("MsgTags")
         public String msgTags;
 
-        /**
-         * <p>The partitioned index, which must be specified if the destination data source is a message queue system, such as Kafka, DataHub, or RocketMQ, and the partitioning mode is set to ONE.</p>
-         */
         @NameInMap("Partition")
         public Integer partition;
 
-        /**
-         * <p>The partitioning mode, which must be specified if the destination data source is a message queue system, such as Kafka, DataHub, or RocketMQ. Valid values: ONE, HASH, and TABLE.</p>
-         */
         @NameInMap("PartitionMode")
         public String partitionMode;
 
-        /**
-         * <p>The producer group of the Post message when the destination data source is RocketMQ.</p>
-         */
         @NameInMap("ProducerGroup")
         public String producerGroup;
 
-        /**
-         * <p>The timeout period for a single Post message when the destination data source is RocketMQ.</p>
-         */
         @NameInMap("SendMsgTimeout")
         public Long sendMsgTimeout;
 
-        /**
-         * <p>Specifies whether to enable message sequencing when the destination data source is DataHub.</p>
-         */
         @NameInMap("SequenceEnable")
         public Boolean sequenceEnable;
 
-        /**
-         * <p>The start time of the sequence, which must be specified if the destination data source is DataHub and message sequencing is enabled. The value is a timestamp in seconds.</p>
-         */
         @NameInMap("SequenceStartTimestamp")
         public Long sequenceStartTimestamp;
 
-        /**
-         * <p>The text serialization type, which must be specified if the destination data source is a message queue system, such as Kafka, DataHub, or RocketMQ. Valid values: Default, Canal, Dataworks, SharePlex, and DefaultExtendColumnType.</p>
-         */
         @NameInMap("SerializerType")
         public String serializerType;
 
-        /**
-         * <p>The type of the topic to which the Post message belongs when the destination data source is DataHub. Valid values: Tuple and Blob.</p>
-         */
         @NameInMap("TopicType")
         public String topicType;
 
@@ -502,27 +409,15 @@ public class CreateOmsOpenAPIProjectRequest extends TeaModel {
     }
 
     public static class CreateOmsOpenAPIProjectRequestTransferMappingDatabasesTablesAdbTableSchema extends TeaModel {
-        /**
-         * <p>The list of distribution key columns.</p>
-         */
         @NameInMap("DistributedKeys")
         public java.util.List<String> distributedKeys;
 
-        /**
-         * <p>The lifecycle of the table.</p>
-         */
         @NameInMap("PartitionLifeCycle")
         public Integer partitionLifeCycle;
 
-        /**
-         * <p>The partitioning expression.</p>
-         */
         @NameInMap("PartitionStatement")
         public String partitionStatement;
 
-        /**
-         * <p>The list of primary key columns.</p>
-         */
         @NameInMap("PrimaryKeys")
         public java.util.List<String> primaryKeys;
 
@@ -566,51 +461,27 @@ public class CreateOmsOpenAPIProjectRequest extends TeaModel {
     }
 
     public static class CreateOmsOpenAPIProjectRequestTransferMappingDatabasesTables extends TeaModel {
-        /**
-         * <p>The schema of the ADB table. If the destination data source is ADB, you need to configure additional information for schema synchronization.</p>
-         */
         @NameInMap("AdbTableSchema")
         public CreateOmsOpenAPIProjectRequestTransferMappingDatabasesTablesAdbTableSchema adbTableSchema;
 
-        /**
-         * <p>The list of filter columns, which are the columns to be synchronized.</p>
-         */
         @NameInMap("FilterColumns")
         public java.util.List<String> filterColumns;
 
-        /**
-         * <p>The name of the mapped-to table or topic. If the destination data source is a database, this parameter specifies the name of the mapped-to table. If the destination data source is a message queue system, this parameter specifies the name of the mapped-to topic.</p>
-         */
         @NameInMap("MappedName")
         public String mappedName;
 
-        /**
-         * <p>The list of sharding key columns. This parameter applies to scenarios where the destination data source is a message queue system.</p>
-         */
         @NameInMap("ShardColumns")
         public java.util.List<String> shardColumns;
 
-        /**
-         * <p>The ID of the table. This parameter takes effect when the source data source is IDB.</p>
-         */
         @NameInMap("TableId")
         public String tableId;
 
-        /**
-         * <p>The name of the table.</p>
-         */
         @NameInMap("TableName")
         public String tableName;
 
-        /**
-         * <p>Valid values: DATABASE and TABLE.</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <p>The row filter conditions.</p>
-         */
         @NameInMap("WhereClause")
         public String whereClause;
 
@@ -686,39 +557,21 @@ public class CreateOmsOpenAPIProjectRequest extends TeaModel {
     }
 
     public static class CreateOmsOpenAPIProjectRequestTransferMappingDatabases extends TeaModel {
-        /**
-         * <p>The ID of the database. This parameter takes effect when the source data source is IDB.</p>
-         */
         @NameInMap("DatabaseId")
         public String databaseId;
 
-        /**
-         * <p>The name of the database.</p>
-         */
         @NameInMap("DatabaseName")
         public String databaseName;
 
-        /**
-         * <p>The mapped-to database. This parameter takes effect when the destination data source is a database.</p>
-         */
         @NameInMap("MappedName")
         public String mappedName;
 
-        /**
-         * <p>The settings for the target table objects in the current database.</p>
-         */
         @NameInMap("Tables")
         public java.util.List<CreateOmsOpenAPIProjectRequestTransferMappingDatabasesTables> tables;
 
-        /**
-         * <p>The mapped-to tenant. This parameter takes effect when the source data source is OceanBase Database.</p>
-         */
         @NameInMap("TenantName")
         public String tenantName;
 
-        /**
-         * <p>Valid values: DATABASE and TABLE.</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -778,15 +631,9 @@ public class CreateOmsOpenAPIProjectRequest extends TeaModel {
     }
 
     public static class CreateOmsOpenAPIProjectRequestTransferMapping extends TeaModel {
-        /**
-         * <p>The table mapping in the source data source, which is a conventional mapping scheme and takes effect only when Mode is set to NORMAL.</p>
-         */
         @NameInMap("Databases")
         public java.util.List<CreateOmsOpenAPIProjectRequestTransferMappingDatabases> databases;
 
-        /**
-         * <p>The mapping type. Valid values: \"NORMAL\" and \"WHITE_AND_BLACK_LIST\".</p>
-         */
         @NameInMap("Mode")
         public String mode;
 
@@ -814,33 +661,18 @@ public class CreateOmsOpenAPIProjectRequest extends TeaModel {
     }
 
     public static class CreateOmsOpenAPIProjectRequestTransferStepConfigIncrSyncStepTransferConfig extends TeaModel {
-        /**
-         * <p>The list of data types of incremental data synchronized in incremental synchronization.</p>
-         */
         @NameInMap("RecordTypeList")
         public java.util.List<String> recordTypeList;
 
-        /**
-         * <p>The start time for incremental synchronization. The value is a timestamp in seconds.</p>
-         */
         @NameInMap("StartTimestamp")
         public Long startTimestamp;
 
-        /**
-         * <p>The retention time of logs when incremental synchronization is enabled and the incremental log pull component is Store.</p>
-         */
         @NameInMap("StoreLogKeptHour")
         public Long storeLogKeptHour;
 
-        /**
-         * <p>Specifies whether to enable intra-transaction sequencing when incremental synchronization is enabled and the incremental log pull component is Store.</p>
-         */
         @NameInMap("StoreTransactionEnabled")
         public Boolean storeTransactionEnabled;
 
-        /**
-         * <p>Valid values: STRUCT, FULL, and INCR.</p>
-         */
         @NameInMap("TransferStepType")
         public String transferStepType;
 
@@ -892,27 +724,15 @@ public class CreateOmsOpenAPIProjectRequest extends TeaModel {
     }
 
     public static class CreateOmsOpenAPIProjectRequestTransferStepConfig extends TeaModel {
-        /**
-         * <p>Specifies whether to enable full migration.</p>
-         */
         @NameInMap("EnableFullSync")
         public Boolean enableFullSync;
 
-        /**
-         * <p>Specifies whether to enable incremental synchronization.</p>
-         */
         @NameInMap("EnableIncrSync")
         public Boolean enableIncrSync;
 
-        /**
-         * <p>Specifies whether to enable schema synchronization.</p>
-         */
         @NameInMap("EnableStructSync")
         public Boolean enableStructSync;
 
-        /**
-         * <p>The settings of incremental synchronization steps.</p>
-         */
         @NameInMap("IncrSyncStepTransferConfig")
         public CreateOmsOpenAPIProjectRequestTransferStepConfigIncrSyncStepTransferConfig incrSyncStepTransferConfig;
 

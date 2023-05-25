@@ -5,13 +5,14 @@ import com.aliyun.tea.*;
 
 public class ModifyParametersResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The operation that you want to perform.   </p>
+     * <p>Set the value to **ModifyParameters**.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The modification results.</p>
+     * <p>Example 1</p>
      */
     @NameInMap("Results")
     public ModifyParametersResponseBodyResults results;
@@ -38,17 +39,9 @@ public class ModifyParametersResponseBody extends TeaModel {
     }
 
     public static class ModifyParametersResponseBodyResults extends TeaModel {
-        /**
-         * <p>The cause of the modification failure.</p>
-         */
         @NameInMap("Message")
         public String message;
 
-        /**
-         * <p>Indicates whether the parameter has been modified. Valid values:   </p>
-         * <p>true: The modification is successful. </p>
-         * <p>false: The modification failed.</p>
-         */
         @NameInMap("Success")
         public Boolean success;
 

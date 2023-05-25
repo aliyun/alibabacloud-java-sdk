@@ -4,11 +4,14 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceResponseBody extends TeaModel {
+    /**
+     * <p>实例ID</p>
+     */
     @NameInMap("Data")
     public CreateInstanceResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Response parameters</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -35,9 +38,15 @@ public class CreateInstanceResponseBody extends TeaModel {
     }
 
     public static class CreateInstanceResponseBodyData extends TeaModel {
+        /**
+         * <p>订单ID。该参数只有创建包年包月ECS实例（请求参数InstanceChargeType=PrePaid）时有返回值。</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>资源组ID</p>
+         */
         @NameInMap("OrderId")
         public String orderId;
 

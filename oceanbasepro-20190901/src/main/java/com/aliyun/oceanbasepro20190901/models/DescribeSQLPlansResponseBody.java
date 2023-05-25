@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeSQLPlansResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The return result of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The information about the execution plan.</p>
+     * <p>master</p>
      */
     @NameInMap("SQLPlans")
     public java.util.List<DescribeSQLPlansResponseBodySQLPlans> SQLPlans;
@@ -39,97 +39,91 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
 
     public static class DescribeSQLPlansResponseBodySQLPlans extends TeaModel {
         /**
-         * <p>The average execution duration, in ms.</p>
+         * <p>The time when the plan was bound.</p>
          */
         @NameInMap("AvgExecutionMS")
         public Float avgExecutionMS;
 
         /**
-         * <p>The average execution duration when the database uses this execution plan, in ms.</p>
+         * <p>The time when the plan was loaded for the first time, in UTC +0.</p>
          */
         @NameInMap("AvgExecutionTimeMS")
         public Long avgExecutionTimeMS;
 
-        /**
-         * <p>The time when the plan was loaded for the first time, .</p>
-         */
         @NameInMap("FirstLoadTime")
         public Long firstLoadTime;
 
         /**
-         * <p>The time when the plan was loaded for the first time, in UTC +0.</p>
+         * <p>Example 1</p>
          */
         @NameInMap("FirstLoadTimeUTCString")
         public String firstLoadTimeUTCString;
 
         /**
-         * <p>The number of hits.</p>
+         * <p>It is an Alibaba Cloud asset management and configuration tool, with which you can manage multiple Alibaba Cloud products and services by using commands. It is easy to use and a good helper in migration to cloud.</p>
          */
         @NameInMap("HitCount")
         public Integer hitCount;
 
         /**
-         * <p>The major compaction version.</p>
+         * <p>The unique identifier of the SQL execution plan in the diagnostic system.</p>
          */
         @NameInMap("MergedVersion")
         public Integer mergedVersion;
 
         /**
-         * <p>The IP address of the node.</p>
+         * <p>The complete execution plan of the SQL statement.</p>
          */
         @NameInMap("NodeIp")
         public String nodeIp;
 
         /**
-         * <p>The outline data.</p>
+         * <p>The information about the plan.</p>
          */
         @NameInMap("OutlineData")
         public String outlineData;
 
         /**
-         * <p>OutlineID.</p>
+         * <p>SQLID.</p>
          */
         @NameInMap("OutlineId")
         public Long outlineId;
 
         /**
-         * <p>The time when the plan was bound.</p>
+         * <p>The ID of the SQL execution plan in the database.</p>
          */
         @NameInMap("OutlineTime")
         public Long outlineTime;
 
         /**
-         * <p>The time when the plan was bound, in UTC +0.</p>
+         * <p>The major compaction version.</p>
          */
         @NameInMap("OutlineTimeUTCString")
         public String outlineTimeUTCString;
 
         /**
-         * <p>The complete execution plan of the SQL statement.</p>
+         * <p>The information about the execution plan.</p>
          */
         @NameInMap("PlanFull")
         public String planFull;
 
         /**
-         * <p>The ID of the SQL execution plan in the database.</p>
+         * <p>OutlineID.</p>
          */
         @NameInMap("PlanId")
         public Integer planId;
 
-        /**
-         * <p>The information about the plan.</p>
-         */
         @NameInMap("PlanInfo")
         public String planInfo;
 
         /**
-         * <p>The unique identifier of the SQL execution plan in the diagnostic system.</p>
+         * <p>The return result of the request.</p>
          */
         @NameInMap("PlanUnionHash")
         public String planUnionHash;
 
         /**
-         * <p>The query SQL statement.</p>
+         * <p>The request ID.</p>
          */
         @NameInMap("QuerySQL")
         public String querySQL;

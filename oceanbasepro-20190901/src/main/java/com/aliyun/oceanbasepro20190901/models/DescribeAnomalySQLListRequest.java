@@ -5,56 +5,56 @@ import com.aliyun.tea.*;
 
 public class DescribeAnomalySQLListRequest extends TeaModel {
     /**
-     * <p>The language of the returned data.   </p>
-     * <p>Default value: CN for a China site and EN for an International site.</p>
+     * <p>The search value.</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>The name of the database.</p>
+     * <p>{</p>
+     * <p>  "UserName":testUser</p>
+     * <p>}</p>
      */
     @NameInMap("DbName")
     public String dbName;
 
     /**
-     * <p>The end time of the time range for querying suspicious SQL statements.   </p>
-     * <p>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+     * <p>zh-CN</p>
      */
     @NameInMap("EndTime")
     public String endTime;
-
-    /**
-     * <p>The filter condition.   </p>
-     * <p>> <br> - All fields in OceanBase Database support filtering. <br> - You can write the key-value pair of a parameter in a JSON string in the JSON format to filter the parameter.</p>
-     */
-    @NameInMap("FilterCondition")
-    public java.util.Map<String, ?> filterCondition;
-
-    /**
-     * <p>The IP address of the node.</p>
-     */
-    @NameInMap("NodeIp")
-    public String nodeIp;
 
     /**
      * <p>The number of the page to return.    </p>
      * <p>- Start value: 1   </p>
      * <p>- Default value: 1</p>
      */
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("FilterCondition")
+    public java.util.Map<String, ?> filterCondition;
 
     /**
      * <p>The number of rows to return on each page.    </p>
      * <p>- Maximum value: 100   </p>
      * <p>- Default value: 10</p>
      */
+    @NameInMap("NodeIp")
+    public String nodeIp;
+
+    /**
+     * <p>desc</p>
+     */
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    /**
+     * <p>The start time of the time range for querying suspicious SQL statements.   </p>
+     * <p>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>SQLID.</p>
+     * <p>1</p>
      */
     @NameInMap("SQLId")
     public String SQLId;
@@ -66,45 +66,44 @@ public class DescribeAnomalySQLListRequest extends TeaModel {
     public String searchKeyWord;
 
     /**
-     * <p>The search parameter.</p>
+     * <p>The ID of the tenant.</p>
      */
     @NameInMap("SearchParameter")
     public String searchParameter;
 
     /**
-     * <p>The search rule.   </p>
-     * <p>Valid values: "=", ">", ">=", "<", and "<="</p>
+     * <p>Utilization above threshold</p>
      */
     @NameInMap("SearchRule")
     public String searchRule;
 
     /**
-     * <p>The search value.</p>
+     * <p>10</p>
      */
     @NameInMap("SearchValue")
     public String searchValue;
 
     /**
-     * <p>The sorted column.</p>
+     * <p>The end time of the time range for querying suspicious SQL statements.   </p>
+     * <p>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
      */
     @NameInMap("SortColumn")
     public String sortColumn;
 
     /**
-     * <p>The sorting rule.</p>
+     * <p>The request time, in ms.</p>
      */
     @NameInMap("SortOrder")
     public String sortOrder;
 
     /**
-     * <p>The start time of the time range for querying suspicious SQL statements.   </p>
-     * <p>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+     * <p>The total count.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The ID of the tenant.</p>
+     * <p>Alibaba Cloud CLI</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

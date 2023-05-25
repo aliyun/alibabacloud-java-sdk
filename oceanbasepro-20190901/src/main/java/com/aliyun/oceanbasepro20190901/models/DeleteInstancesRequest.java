@@ -4,21 +4,9 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DeleteInstancesRequest extends TeaModel {
-    /**
-     * <p>The backup retention strategy for cluster deletion. Valid values:  </p>
-     * <p>- receive_all: retains all backup sets.   </p>
-     * <p>- delete_all: deletes all backup sets.   </p>
-     * <p>- receive_last: retains the last backup set.    </p>
-     * <br>
-     * <p>> <br>Default value: delete_all.</p>
-     */
     @NameInMap("BackupRetainMode")
     public String backupRetainMode;
 
-    /**
-     * <p>The ID of the cluster to be deleted.   </p>
-     * <p>The value is a string in the JSON format.</p>
-     */
     @NameInMap("InstanceIds")
     public String instanceIds;
 

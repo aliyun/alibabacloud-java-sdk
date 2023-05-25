@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class DescribeParametersHistoryResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The number of the page to return.    </p>
+     * <p>- Start value: 1   </p>
+     * <p>- Default value: 1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The list of parameter modification records.</p>
+     * <p>The time when the parameter modification took effect.</p>
      */
     @NameInMap("Respond")
     public java.util.List<DescribeParametersHistoryResponseBodyRespond> respond;
@@ -39,47 +41,50 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
 
     public static class DescribeParametersHistoryResponseBodyRespondParameters extends TeaModel {
         /**
-         * <p>The time when the parameter modification was initiated.</p>
+         * <p>The request ID.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The resource ID of the parameter type.    </p>
-         * <p>- When you called this operation to query the modification history of cluster parameters, the value is DEFAULT_DIMENSION_VALUE.   </p>
-         * <p>- When you called this operation to query the modification history of tenant parameters, the value is the tenant ID.</p>
+         * <p>```</p>
+         * <p>http(s)://[Endpoint]/?Action=DescribeParametersHistory</p>
+         * <p>&InstanceId=ob317v4uif****</p>
+         * <p>&Dimension=TENANT</p>
+         * <p>&DimensionValue=ob2mr3oae0****</p>
+         * <p>&StartTime=2021-06-13 15:40:43</p>
+         * <p>&EndTime=2021-09-13 15:40:43</p>
+         * <p>&PageSize=10</p>
+         * <p>&PageNumber=1</p>
+         * <p>&Common request parameters</p>
+         * <p>```</p>
          */
         @NameInMap("DimensionValue")
         public String dimensionValue;
 
         /**
-         * <p>The name of the parameter.</p>
+         * <p>You can call this operation to query the modification history of cluster or tenant parameters.</p>
          */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The value of the parameter after the modification.</p>
-         */
         @NameInMap("NewValue")
         public String newValue;
 
         /**
-         * <p>The parameter value before modification.</p>
+         * <p>The start time of the time range for querying the parameter modification history.</p>
          */
         @NameInMap("OldValue")
         public String oldValue;
 
         /**
-         * <p>The modification status. Valid values:    </p>
-         * <p>- APPLIED: The modification was successful.   </p>
-         * <p>- SCHEDULING: The modification was to be made.</p>
+         * <p>-</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The time when the parameter modification took effect.</p>
+         * <p>The name of the parameter.</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
@@ -149,19 +154,21 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
 
     public static class DescribeParametersHistoryResponseBodyRespond extends TeaModel {
         /**
-         * <p>The number of returned entries on each page.</p>
+         * <p>The end time for the query of parameter modification history.</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
-         * <p>The parameter modification history.</p>
+         * <p>The number of rows to return on each page.   </p>
+         * <p>- Maximum value: 100   </p>
+         * <p>- Default value: 10</p>
          */
         @NameInMap("Parameters")
         public java.util.List<DescribeParametersHistoryResponseBodyRespondParameters> parameters;
 
         /**
-         * <p>The number of parameter modification records.</p>
+         * <p>The list of parameter modification records.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

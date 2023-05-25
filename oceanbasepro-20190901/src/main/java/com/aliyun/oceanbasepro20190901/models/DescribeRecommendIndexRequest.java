@@ -5,19 +5,22 @@ import com.aliyun.tea.*;
 
 public class DescribeRecommendIndexRequest extends TeaModel {
     /**
-     * <p>The ID of the OceanBase cluster.</p>
+     * <p>The return result of the request.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>You can obtain the SQL ID from the return value of the DescribeSlowSQLList or DescribeTopSQLList operation.</p>
+     * <p>The ID of the OceanBase cluster.</p>
      */
     @NameInMap("SQLId")
     public String SQLId;
 
     /**
-     * <p>The ID of the tenant.</p>
+     * <p>The index recommended for the SQL statement after calculation by the diagnostic system.   </p>
+     * <p>- If the recommended index is the primary key, PRIMARY is returned.  </p>
+     * <p>- If an index created by the user is recommended, the index name is returned.   </p>
+     * <p>The system recommends only one index for an SQL statement. You can call the DescribeIndexes operation to view the indexes of a table.</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

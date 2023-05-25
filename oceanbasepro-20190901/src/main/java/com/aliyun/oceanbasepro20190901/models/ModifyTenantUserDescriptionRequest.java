@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyTenantUserDescriptionRequest extends TeaModel {
     /**
-     * <p>The description of the database.</p>
+     * <p>The operation that you want to perform.   </p>
+     * <p>Set the value to **ModifyTenantUserDescription**.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -23,8 +24,7 @@ public class ModifyTenantUserDescriptionRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>The name of the database account.   </p>
-     * <p>You cannot use reserved keywords, such as SYS and root.</p>
+     * <p>The description of the database.</p>
      */
     @NameInMap("UserName")
     public String userName;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceCreatableZoneRequest extends TeaModel {
     /**
-     * <p>The ID of the OceanBase cluster.</p>
+     * <p>The ID of the zone.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

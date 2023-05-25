@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceTopologyResponseBody extends TeaModel {
     /**
-     * <p>The topology of the cluster.</p>
+     * <p>The number of CPU cores used by the node.</p>
      */
     @NameInMap("InstanceTopology")
     public DescribeInstanceTopologyResponseBodyInstanceTopology instanceTopology;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The information about the CPU resources of the node.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -46,56 +46,50 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         public Boolean enableCancelMigrateUnit;
 
         /**
-         * <p>Indicates whether migration can be performed.</p>
+         * <p>The return result of the request.</p>
          */
         @NameInMap("EnableMigrateUnit")
         public Boolean enableMigrateUnit;
 
         /**
-         * <p>Indicates whether the migration is manually performed.</p>
+         * <p>The return result of the request.</p>
          */
         @NameInMap("ManualMigrate")
         public Boolean manualMigrate;
 
         /**
-         * <p>The ID of the OBServer where the resource unit resides.</p>
+         * <p>It is an online CLI tool that allows you to quickly retrieve and debug APIs. It can dynamically generate executable SDK code samples.</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
-         * <p>The number of CPU cores of the resource unit.</p>
+         * <p>Alibaba Cloud CLI</p>
          */
         @NameInMap("UnitCpu")
         public Float unitCpu;
 
         /**
-         * <p>The data size of the unit.</p>
+         * <p>The operation that you want to perform.   </p>
+         * <p>Set the value to **DescribeInstanceTopology**.</p>
          */
         @NameInMap("UnitDataSize")
         public Long unitDataSize;
 
         /**
-         * <p>The ID of the resource unit.</p>
+         * <p>The topology of the cluster.</p>
          */
         @NameInMap("UnitId")
         public String unitId;
 
         /**
-         * <p>The memory size of the resource unit, in GB.</p>
+         * <p>The ID of the tenant.</p>
          */
         @NameInMap("UnitMemory")
         public Float unitMemory;
 
         /**
-         * <p>The status of the resource unit. Valid values:    </p>
-         * <br>
-         * <p>- ONLINE: The resource unit is running.</p>
-         * <p>- IMMIGRATING: The resource unit is being immigrated.</p>
-         * <p>- EMIGRATING: The resource unit is being emigrated.</p>
-         * <p>- CANCEL_EMIGRATING: Resource node immigration is being canceled.</p>
-         * <p>- CANCEL_EMIGRATING: Resource node emigration is being canceled.</p>
-         * <p>- DELETING: The resource unit is being deleted.</p>
+         * <p>You can call this operation to query the topology of an OceanBase cluster.</p>
          */
         @NameInMap("UnitStatus")
         public String unitStatus;
@@ -181,27 +175,25 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
     public static class DescribeInstanceTopologyResponseBodyInstanceTopologyTenantsTenantZones extends TeaModel {
         /**
-         * <p>Indicates whether the zone is the primary zone.</p>
+         * <p>The maximum disk usage, in percentage.</p>
          */
         @NameInMap("IsPrimaryTenantZone")
         public String isPrimaryTenantZone;
 
         /**
-         * <p>The ID of the zone.</p>
+         * <p>The server with the highest disk usage.</p>
          */
         @NameInMap("TenantZoneId")
         public String tenantZoneId;
 
         /**
-         * <p>The role to access the zone. Valid values:   </p>
-         * <p> - ReadWrite: a role that has the read and write privileges.</p>
-         * <p> - ReadOnly: a role that has only the read-only privilege.</p>
+         * <p>The information of zones.</p>
          */
         @NameInMap("TenantZoneRole")
         public String tenantZoneRole;
 
         /**
-         * <p>The information about resource units.</p>
+         * <p>The information about the storage resources.</p>
          */
         @NameInMap("Units")
         public java.util.List<DescribeInstanceTopologyResponseBodyInstanceTopologyTenantsTenantZonesUnits> units;
@@ -247,75 +239,61 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
     public static class DescribeInstanceTopologyResponseBodyInstanceTopologyTenants extends TeaModel {
         /**
-         * <p>The deployment type of the primary zone.</p>
+         * <p>The server with the highest disk usage.</p>
          */
         @NameInMap("PrimaryZoneDeployType")
         public String primaryZoneDeployType;
 
         /**
-         * <p>The number of CPU cores of the tenant.</p>
+         * <p>The information about the memory resources of the node.</p>
          */
         @NameInMap("TenantCpu")
         public Float tenantCpu;
 
         /**
-         * <p>The deployment type of the tenant.   </p>
-         * <p>- multiple: multi-IDC deployment   </p>
-         * <p>- single: single-IDC deployment   </p>
-         * <p>- dual: dual-IDC deployment</p>
+         * <p>The name of the tenant.</p>
          */
         @NameInMap("TenantDeployType")
         public String tenantDeployType;
 
         /**
-         * <p>The ID of the tenant.</p>
+         * <p>The size of used memory of the node, in GB.</p>
          */
         @NameInMap("TenantId")
         public String tenantId;
 
         /**
-         * <p>The memory size of the tenant, in GB.</p>
+         * <p>The total storage space of the node, in GB.</p>
          */
         @NameInMap("TenantMemory")
         public Float tenantMemory;
 
         /**
-         * <p>The tenant mode. Valid values:   </p>
-         * <p>- Oracle   </p>
-         * <p>- MySQL</p>
+         * <p>The size of used storage space of the node, in GB.</p>
          */
         @NameInMap("TenantMode")
         public String tenantMode;
 
         /**
-         * <p>The name of the tenant.</p>
+         * <p>The total memory size of the node, in GB.</p>
          */
         @NameInMap("TenantName")
         public String tenantName;
 
         /**
-         * <p>The status of the tenant.   </p>
-         * <p>- PENDING_CREATE: The tenant is being created.   </p>
-         * <p>- RESTORE: The tenant is being recovered.   </p>
-         * <p>- ONLINE: The tenant is running.   </p>
-         * <p>- SPEC_MODIFYING: The specification of the tenant is being modified.   </p>
-         * <p>- ALLOCATING_INTERNET_ADDRESS: An Internet address is being allocated.   </p>
-         * <p>- PENDING_OFFLINE_INTERNET_ADDRESS: The Internet address is being disabled.   </p>
-         * <p>- PRIMARY_ZONE_MODIFYING: The tenant is switching to a new primary zone.   </p>
-         * <p>- PARAMETER_MODIFYING: Parameters are being modified.   </p>
-         * <p>- WHITE_LIST_MODIFYING: The whitelist is being modified.</p>
+         * <p>The size of used memory of the node, in GB.</p>
          */
         @NameInMap("TenantStatus")
         public String tenantStatus;
 
         /**
-         * <p>The number of resource units in the tenant.</p>
+         * <p>The number of CPU cores of the tenant.</p>
          */
         @NameInMap("TenantUnitNum")
         public Integer tenantUnitNum;
 
         /**
-         * <p>The zone information of the tenant.</p>
+         * <p>The information about the storage resources of the node.</p>
          */
         @NameInMap("TenantZones")
         public java.util.List<DescribeInstanceTopologyResponseBodyInstanceTopologyTenantsTenantZones> tenantZones;
@@ -409,13 +387,13 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
     public static class DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResourceCpu extends TeaModel {
         /**
-         * <p>The total number of CPU cores for the node.</p>
+         * <p>The size of used storage space of the node, in GB.</p>
          */
         @NameInMap("TotalCpu")
         public Integer totalCpu;
 
         /**
-         * <p>The number of CPU cores used by the node.</p>
+         * <p>Indicates whether migration can be performed.</p>
          */
         @NameInMap("UsedCpu")
         public Float usedCpu;
@@ -445,13 +423,22 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
     public static class DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResourceDiskSize extends TeaModel {
         /**
-         * <p>The total storage space of the node, in GB.</p>
+         * <p>The deployment type of the primary zone.</p>
          */
         @NameInMap("TotalDiskSize")
         public Double totalDiskSize;
 
         /**
-         * <p>The size of used storage space of the node, in GB.</p>
+         * <p>The status of the tenant.   </p>
+         * <p>- PENDING_CREATE: The tenant is being created.   </p>
+         * <p>- RESTORE: The tenant is being recovered.   </p>
+         * <p>- ONLINE: The tenant is running.   </p>
+         * <p>- SPEC_MODIFYING: The specification of the tenant is being modified.   </p>
+         * <p>- ALLOCATING_INTERNET_ADDRESS: An Internet address is being allocated.   </p>
+         * <p>- PENDING_OFFLINE_INTERNET_ADDRESS: The Internet address is being disabled.   </p>
+         * <p>- PRIMARY_ZONE_MODIFYING: The tenant is switching to a new primary zone.   </p>
+         * <p>- PARAMETER_MODIFYING: Parameters are being modified.   </p>
+         * <p>- WHITE_LIST_MODIFYING: The whitelist is being modified.</p>
          */
         @NameInMap("UsedDiskSize")
         public Double usedDiskSize;
@@ -481,13 +468,13 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
     public static class DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResourceMemory extends TeaModel {
         /**
-         * <p>The total memory size of the node, in GB.</p>
+         * <p>The ID of the replica node.</p>
          */
         @NameInMap("TotalMemory")
         public Long totalMemory;
 
         /**
-         * <p>The size of used memory of the node, in GB.</p>
+         * <p>The information of node resources.</p>
          */
         @NameInMap("UsedMemory")
         public Float usedMemory;
@@ -517,19 +504,21 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
     public static class DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResource extends TeaModel {
         /**
-         * <p>The information about the CPU resources of the node.</p>
+         * <p>The memory size of the tenant, in GB.</p>
          */
         @NameInMap("Cpu")
         public DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResourceCpu cpu;
 
         /**
-         * <p>The information about the storage resources of the node.</p>
+         * <p>The information about the CPU resources of the node.</p>
          */
         @NameInMap("DiskSize")
         public DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResourceDiskSize diskSize;
 
         /**
-         * <p>The information about the memory resources of the node.</p>
+         * <p>The role to access the zone. Valid values:   </p>
+         * <p> - ReadWrite: a role that has the read and write privileges.</p>
+         * <p> - ReadOnly: a role that has only the read-only privilege.</p>
          */
         @NameInMap("Memory")
         public DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResourceMemory memory;
@@ -567,25 +556,25 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
     public static class DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodes extends TeaModel {
         /**
-         * <p>The ID of the replica node.</p>
+         * <p>The information of zones.</p>
          */
         @NameInMap("NodeCopyId")
         public Long nodeCopyId;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The ID of the resource unit.</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
-         * <p>The information of node resources.</p>
+         * <p>The ID of the node.</p>
          */
         @NameInMap("NodeResource")
         public java.util.List<DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResource> nodeResource;
 
         /**
-         * <p>The status of the node.</p>
+         * <p>The ID of the OBServer where the resource unit resides.</p>
          */
         @NameInMap("NodeStatus")
         public String nodeStatus;
@@ -630,14 +619,11 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceTopologyResponseBodyInstanceTopologyZonesZoneResourceDiskSize extends TeaModel {
-        /**
-         * <p>The server with the highest disk usage.</p>
-         */
         @NameInMap("MaxDiskUsedObServer")
         public java.util.List<String> maxDiskUsedObServer;
 
         /**
-         * <p>The maximum disk usage, in percentage.</p>
+         * <p>DescribeInstanceTopology</p>
          */
         @NameInMap("MaxDiskUsedPercent")
         public Double maxDiskUsedPercent;
@@ -666,9 +652,6 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceTopologyResponseBodyInstanceTopologyZonesZoneResource extends TeaModel {
-        /**
-         * <p>The information about the storage resources of the node.</p>
-         */
         @NameInMap("DiskSize")
         public DescribeInstanceTopologyResponseBodyInstanceTopologyZonesZoneResourceDiskSize diskSize;
 
@@ -689,31 +672,31 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
     public static class DescribeInstanceTopologyResponseBodyInstanceTopologyZones extends TeaModel {
         /**
-         * <p>The information of the nodes.</p>
+         * <p>The ID of the region.</p>
          */
         @NameInMap("Nodes")
         public java.util.List<DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodes> nodes;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The zone information of the cluster.</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
-         * <p>The storage capacity of the zone.</p>
+         * <p>The information about the memory resources of the node.</p>
          */
         @NameInMap("ZoneDisk")
         public String zoneDisk;
 
         /**
-         * <p>The ID of the zone.</p>
+         * <p>The information of the tenant.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
 
         /**
-         * <p>The information of zones.</p>
+         * <p>Example 1</p>
          */
         @NameInMap("ZoneResource")
         public DescribeInstanceTopologyResponseBodyInstanceTopologyZonesZoneResource zoneResource;
@@ -767,13 +750,13 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
     public static class DescribeInstanceTopologyResponseBodyInstanceTopology extends TeaModel {
         /**
-         * <p>The information of the tenant.</p>
+         * <p>The total number of CPU cores for the node.</p>
          */
         @NameInMap("Tenants")
         public java.util.List<DescribeInstanceTopologyResponseBodyInstanceTopologyTenants> tenants;
 
         /**
-         * <p>The zone information of the cluster.</p>
+         * <p>The information about resource units.</p>
          */
         @NameInMap("Zones")
         public java.util.List<DescribeInstanceTopologyResponseBodyInstanceTopologyZones> zones;

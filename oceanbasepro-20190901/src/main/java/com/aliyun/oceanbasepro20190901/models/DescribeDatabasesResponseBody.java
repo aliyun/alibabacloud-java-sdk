@@ -5,19 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeDatabasesResponseBody extends TeaModel {
     /**
-     * <p>The list of databases in the tenant.</p>
+     * <p>The ID of the tenant.</p>
      */
     @NameInMap("Databases")
     public java.util.List<DescribeDatabasesResponseBodyDatabases> databases;
 
-    /**
-     * <p>The request ID.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of databases in the tenant.</p>
+     * <p>The search keyword.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -52,9 +49,6 @@ public class DescribeDatabasesResponseBody extends TeaModel {
     }
 
     public static class DescribeDatabasesResponseBodyDatabasesTables extends TeaModel {
-        /**
-         * <p>The name of the database table.</p>
-         */
         @NameInMap("TableName")
         public String tableName;
 
@@ -75,18 +69,13 @@ public class DescribeDatabasesResponseBody extends TeaModel {
 
     public static class DescribeDatabasesResponseBodyDatabasesUsers extends TeaModel {
         /**
-         * <p>The role of the account.    </p>
-         * <p>In MySQL mode, a role is a database-level role. Valid values:  </p>
-         * <p>- ReadWrite: a role that has the read and write privileges, namely ALL PRIVILEGES.  </p>
-         * <p>- ReadOnly: a role that has only the read-only privilege SELECT.   </p>
-         * <p>- DDL: a role that has the DDL privileges such as CREATE, DROP, ALTER, SHOW VIEW, and CREATE VIEW.   </p>
-         * <p>- DML: a role that has the DML privileges such as SELECT, INSERT, UPDATE, DELETE, and SHOW VIEW.</p>
+         * <p>The request ID.</p>
          */
         @NameInMap("Role")
         public String role;
 
         /**
-         * <p>The name of the account.</p>
+         * <p>Example 1</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -133,37 +122,39 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         public String collation;
 
         /**
-         * <p>The time when the database was created.</p>
+         * <p>Specifies whether to return the information of tables in the database.   </p>
+         * <p>Default value: false.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The actual data size, in GB.</p>
-         */
         @NameInMap("DataSize")
         public Double dataSize;
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The number of the page to return.   </p>
+         * <p>- Start value: 1   </p>
+         * <p>- Default value: 1</p>
          */
         @NameInMap("DatabaseName")
         public String databaseName;
 
         /**
-         * <p>The database type.</p>
+         * <p>The return result of the request.</p>
          */
         @NameInMap("DbType")
         public String dbType;
 
         /**
-         * <p>The description of the database.</p>
+         * <p>The name of the database.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The encoding standard of the database. Encoding standards such as utf8mb4 and GBK are supported.</p>
+         * <p>The status of the database. Valid values:    </p>
+         * <p>- ONLINE: The database is running.  </p>
+         * <p>- DELETING: The database is being deleted.</p>
          */
         @NameInMap("Encoding")
         public String encoding;
@@ -171,34 +162,23 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The storage space required, in GB.</p>
-         */
         @NameInMap("RequiredSize")
         public Double requiredSize;
 
         /**
-         * <p>The status of the database. Valid values:    </p>
-         * <p>- ONLINE: The database is running.  </p>
-         * <p>- DELETING: The database is being deleted.</p>
+         * <p>The list of databases in the tenant.</p>
          */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The information about the database tables.</p>
-         */
         @NameInMap("Tables")
         public java.util.List<DescribeDatabasesResponseBodyDatabasesTables> tables;
 
-        /**
-         * <p>The ID of the tenant.</p>
-         */
         @NameInMap("TenantId")
         public String tenantId;
 
         /**
-         * <p>The accounts that have privileges on the database.</p>
+         * <p>The name of the database table.</p>
          */
         @NameInMap("Users")
         public java.util.List<DescribeDatabasesResponseBodyDatabasesUsers> users;

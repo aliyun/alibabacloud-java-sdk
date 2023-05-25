@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyTenantUserStatusRequest extends TeaModel {
     /**
-     * <p>The ID of the OceanBase cluster.</p>
+     * <p>The operation that you want to perform.   </p>
+     * <p>Set the value to **ModifyTenantUserStatus**.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -17,8 +18,7 @@ public class ModifyTenantUserStatusRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>The name of the database account.    </p>
-     * <p>You cannot use reserved keywords, such as SYS and root.</p>
+     * <p>The list of database accounts in the tenant.</p>
      */
     @NameInMap("UserName")
     public String userName;

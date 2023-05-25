@@ -10,14 +10,11 @@ public class DescribeSecurityIpGroupsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The information of the IP address whitelist group.</p>
-     */
     @NameInMap("SecurityIpGroups")
     public java.util.List<DescribeSecurityIpGroupsResponseBodySecurityIpGroups> securityIpGroups;
 
     /**
-     * <p>The number of whitelist groups returned.</p>
+     * <p>Example 1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -52,16 +49,9 @@ public class DescribeSecurityIpGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityIpGroupsResponseBodySecurityIpGroups extends TeaModel {
-        /**
-         * <p>The name of the security group.</p>
-         */
         @NameInMap("SecurityIpGroupName")
         public String securityIpGroupName;
 
-        /**
-         * <p>The list of IP addresses and CIDR blocks in the whitelist.   </p>
-         * <p>It is a JSON array. Each object in the array is an IP address or CIDR block.</p>
-         */
         @NameInMap("SecurityIps")
         public String securityIps;
 

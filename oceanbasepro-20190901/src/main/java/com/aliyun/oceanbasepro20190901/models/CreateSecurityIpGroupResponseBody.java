@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateSecurityIpGroupResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The IP addresses or CIDR blocks in the IP address whitelist group.   </p>
+     * <p>The return values of SecurityIps are strings that are separated with commas (,).</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The information of the whitelist group.</p>
+     * <p>The operation that you want to perform.   </p>
+     * <p>Set the value to **CreateSecurityIpGroup**.</p>
      */
     @NameInMap("SecurityIpGroup")
     public CreateSecurityIpGroupResponseBodySecurityIpGroup securityIpGroup;
@@ -39,21 +41,23 @@ public class CreateSecurityIpGroupResponseBody extends TeaModel {
 
     public static class CreateSecurityIpGroupResponseBodySecurityIpGroup extends TeaModel {
         /**
-         * <p>The ID of the OceanBase cluster.</p>
+         * <p>```</p>
+         * <p>http(s)://[Endpoint]/?Action=CreateSecurityIpGroup</p>
+         * <p>&InstanceId=ob317v4uif****</p>
+         * <p>&SecurityIps=192.168.1.1,192.168.0.0.1/8</p>
+         * <p>&SecurityIpGroupName=pay_online</p>
+         * <p>&Common request parameters</p>
+         * <p>```</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The name of the whitelist group.</p>
+         * <p>You can call this operation to create an IP address whitelist group.</p>
          */
         @NameInMap("SecurityIpGroupName")
         public String securityIpGroupName;
 
-        /**
-         * <p>The IP addresses or CIDR blocks in the IP address whitelist group.   </p>
-         * <p>The return values of SecurityIps are strings that are separated with commas (,).</p>
-         */
         @NameInMap("SecurityIps")
         public String securityIps;
 

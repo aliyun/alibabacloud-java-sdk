@@ -5,37 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowSQLHistoryListRequest extends TeaModel {
     /**
-     * <p>The end time of the time range for querying the execution history of the slow SQL statement.   </p>
-     * <p>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+     * <p>The number of RPCs.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The number of the page to return.    </p>
-     * <p>- Start value: 1   </p>
-     * <p>- Default value: 1</p>
+     * <p>The maximum response time.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of rows to return on each page.  </p>
-     * <p>- Maximum value: 100   </p>
-     * <p>- Default value: 10</p>
+     * <p>The number of plan misses.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The SQL ID, which uniquely identifies an SQL statement.</p>
+     * <p>The wait time for network.</p>
      */
     @NameInMap("SQLId")
     public String SQLId;
 
     /**
-     * <p>The start time of the time range for querying the execution history of the slow SQL statement.   </p>
-     * <p>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+     * <p>The I/O wait time.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

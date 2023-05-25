@@ -5,15 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowSQLListShrinkRequest extends TeaModel {
     /**
-     * <p>The name of the database.</p>
+     * <p>It is an online CLI tool that allows you to quickly retrieve and debug APIs. It can dynamically generate executable SDK code samples.</p>
      */
     @NameInMap("DbName")
     public String dbName;
 
-    /**
-     * <p>The end time of the time range for querying slow SQL statements.   </p>
-     * <p>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
-     */
     @NameInMap("EndTime")
     public String endTime;
 
@@ -24,78 +20,77 @@ public class DescribeSlowSQLListShrinkRequest extends TeaModel {
     public String filterConditionShrink;
 
     /**
-     * <p>The IP address of the database node.</p>
+     * <p>The number of plan misses.</p>
      */
     @NameInMap("NodeIp")
     public String nodeIp;
-
-    /**
-     * <p>The number of rows to return on each page.  </p>
-     * <p>- Maximum value: 100  </p>
-     * <p>- Default value: 10</p>
-     */
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
 
     /**
      * <p>The number of the page to return.    </p>
      * <p>- Start value: 1   </p>
      * <p>- Default value: 1</p>
      */
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    /**
+     * <p>The return result of the request.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The SQL ID, which uniquely identifies an SQL statement.</p>
+     * <p>The internal wait time.</p>
      */
     @NameInMap("SQLId")
     public String SQLId;
 
     /**
-     * <p>The search keyword.</p>
+     * <p>Alibaba Cloud CLI</p>
      */
     @NameInMap("SearchKeyWord")
     public String searchKeyWord;
 
     /**
-     * <p>The search parameter.</p>
+     * <p>The IP address of the database node.</p>
      */
     @NameInMap("SearchParameter")
     public String searchParameter;
 
     /**
-     * <p>The search rule.</p>
+     * <p>The queuing time.</p>
      */
     @NameInMap("SearchRule")
     public String searchRule;
 
     /**
-     * <p>The search value.</p>
+     * <p>The list of slow SQL statements.</p>
      */
     @NameInMap("SearchValue")
     public String searchValue;
 
     /**
-     * <p>The sorted column.</p>
+     * <p>The number of rows to return on each page.  </p>
+     * <p>- Maximum value: 100  </p>
+     * <p>- Default value: 10</p>
      */
     @NameInMap("SortColumn")
     public String sortColumn;
 
     /**
-     * <p>The sorting rule.</p>
+     * <p>The average CPU time.</p>
      */
     @NameInMap("SortOrder")
     public String sortOrder;
 
     /**
-     * <p>The start time of the time range for querying slow SQL statements.   </p>
-     * <p>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+     * <p>The list of slow SQL statements.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The ID of the tenant.</p>
+     * <p>The number of logical reads.</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

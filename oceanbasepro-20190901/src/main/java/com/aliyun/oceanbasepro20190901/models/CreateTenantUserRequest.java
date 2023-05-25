@@ -10,6 +10,9 @@ public class CreateTenantUserRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>加密方式。</p>
+     */
     @NameInMap("EncryptionType")
     public String encryptionType;
 
@@ -20,18 +23,7 @@ public class CreateTenantUserRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The role of the user account.   </p>
-     * <br>
-     * <p>- In Oracle mode, this parameter is left unspecified.    </p>
-     * <p>- In MySQL mode, the super administrator account has ALL PRIVILEGES, and you can leave this parameter unspecified.   </p>
-     * <p> </p>
-     * <p>You need to specify the account information for a general user account. By default, the account information is a JSON array that contains the information of the role and the schema (Oracle mode) or database (MySQL mode). Valid values:  </p>
-     * <br>
-     * <p>- ReadWrite: a role that has the read and write privileges, namely ALL PRIVILEGES.    </p>
-     * <p>- ReadOnly: a role that has only the read-only privilege SELECT.   </p>
-     * <p>- DDL: a role that has DDL privileges such as CREATE, DROP, ALTER, SHOW VIEW, and CREATE VIEW.   </p>
-     * <p>   </p>
-     * <p>- DML: a role that has DML privileges such as SELECT, INSERT, UPDATE, DELETE, and SHOW VIEW.</p>
+     * <p>The role of the user account.  In Oracle mode, this parameter unspecified is left unspecified.  In MySQL mode, the super administrator account has ALL PRIVILEGES, and you can leave this parameter unspecified.  You need to specify the account information for a general user account. By default, the account information is a JSON array that contains the information of the role and the schema (Oracle mode) or database (MySQL mode).  Valid values: ReadWrite: a role that has the read and write privileges, namely ALL PRIVILEGES. ReadOnly: a role that has only the read-only privilege SELECT. DDL: a role that has DDL privileges such as CREATE, DROP, ALTER, SHOW VIEW, and CREATE VIEW. DML: a role that has DML privileges such as SELECT, INSERT, UPDATE, DELETE, and SHOW VIEW.</p>
      */
     @NameInMap("Roles")
     public String roles;
@@ -43,25 +35,19 @@ public class CreateTenantUserRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>The name of the database account.   </p>
-     * <p>You cannot use reserved keywords, such as SYS and root.</p>
+     * <p>The name of the database account.  You cannot use reserved keywords, such as SYS and root.</p>
      */
     @NameInMap("UserName")
     public String userName;
 
     /**
-     * <p>The password of the database account. </p>
-     * <br>
-     * <p>> <br>It must be 10 to 32 characters in length and contain three types of the following characters: uppercase letters, lowercase letters, digits, and special characters. The special characters are ! @ # $ % ^ & \ * ( ) _ + - =</p>
+     * <p>The password of the database account.  It must be 10 to 32 characters in length and contain three types of the following characters: uppercase letters, lowercase letters, digits, and special characters. The special characters are ! @ # $ % \ ^ \ & \ * ( ) _ + - =</p>
      */
     @NameInMap("UserPassword")
     public String userPassword;
 
     /**
-     * <p>The type of the database account. Valid values:   </p>
-     * <br>
-     * <p>- Admin: the super administrator account.   </p>
-     * <p>- Normal: a general account.</p>
+     * <p>The type of the database account. Valid values: Admin: the super administrator account. Normal: a general account.</p>
      */
     @NameInMap("UserType")
     public String userType;

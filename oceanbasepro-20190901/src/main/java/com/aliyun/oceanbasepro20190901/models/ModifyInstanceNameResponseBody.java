@@ -11,7 +11,8 @@ public class ModifyInstanceNameResponseBody extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The operation that you want to perform.   </p>
+     * <p>Set the value to **ModifyInstanceName**.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,27 +5,35 @@ import com.aliyun.tea.*;
 
 public class ModifyTenantUserPasswordRequest extends TeaModel {
     /**
-     * <p>The ID of the OceanBase cluster.</p>
+     * <p>加密方式。</p>
      */
+    @NameInMap("EncryptionType")
+    public String encryptionType;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the tenant.</p>
+     * <p>```</p>
+     * <p>http(s)://[Endpoint]/?Action=ModifyTenantUserPassword</p>
+     * <p>&UserName=pay_test</p>
+     * <p>&TenantId=ob2mr3oae0****</p>
+     * <p>&UserPassword=!Aliyun4Oceanbase</p>
+     * <p>&InstanceId=ob317v4uif****</p>
+     * <p>&Common request parameters</p>
+     * <p>```</p>
      */
     @NameInMap("TenantId")
     public String tenantId;
 
     /**
-     * <p>The name of the database account.    </p>
-     * <p>You cannot use reserved keywords, such as SYS and root.</p>
+     * <p>The ID of the OceanBase cluster.</p>
      */
     @NameInMap("UserName")
     public String userName;
 
     /**
-     * <p>The password of the database account.    </p>
-     * <p>It must be 10 to 32 characters in length and contain three types of the following characters: uppercase letters, lowercase letters, digits, and special characters. The special characters are ! @ # $ % \ ^ \ & \ * ( ) _ + - =</p>
+     * <p>You can call this operation to change the logon password of a specified account in a tenant.</p>
      */
     @NameInMap("UserPassword")
     public String userPassword;
@@ -33,6 +41,14 @@ public class ModifyTenantUserPasswordRequest extends TeaModel {
     public static ModifyTenantUserPasswordRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyTenantUserPasswordRequest self = new ModifyTenantUserPasswordRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyTenantUserPasswordRequest setEncryptionType(String encryptionType) {
+        this.encryptionType = encryptionType;
+        return this;
+    }
+    public String getEncryptionType() {
+        return this.encryptionType;
     }
 
     public ModifyTenantUserPasswordRequest setInstanceId(String instanceId) {

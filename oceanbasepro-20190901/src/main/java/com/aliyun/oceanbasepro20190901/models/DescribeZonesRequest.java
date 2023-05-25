@@ -5,17 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeZonesRequest extends TeaModel {
     /**
-     * <p>The deployment type of the cluster. Valid values:   </p>
-     * <p>- multiple: multi-IDC deployment   </p>
-     * <p>- single: single-IDC deployment   </p>
-     * <p>- dual: dual-IDC deployment</p>
+     * <p>The operation that you want to perform.   </p>
+     * <p>Set the value to **DescribeZones**.</p>
      */
     @NameInMap("DeployType")
     public String deployType;
 
     /**
-     * <p>The series of the OceanBase cluster. Valid values:   </p>
-     * <p>NORMAL: the high availability version. This is the default value.</p>
+     * <p>The deployment mode.</p>
      */
     @NameInMap("Series")
     public String series;

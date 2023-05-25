@@ -4,62 +4,41 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class CreateOmsOpenAPIProjectShrinkRequest extends TeaModel {
-    /**
-     * <p>The business system identifier, which is optional and is a specific field of the Post message.</p>
-     */
     @NameInMap("BusinessName")
     public String businessName;
 
-    /**
-     * <p>The settings of the destination data source.</p>
-     */
     @NameInMap("DestConfig")
     public String destConfigShrink;
 
-    /**
-     * <p>A collection of label IDs.</p>
-     */
     @NameInMap("LabelIds")
     public String labelIdsShrink;
 
     /**
-     * <p>The page number, which takes effect in a pagination query.</p>
+     * <p>页序号，分页查询时生效</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The page size, which takes effect in a pagination query.</p>
+     * <p>页大小，分页查询时生效</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The name of the project.</p>
-     */
     @NameInMap("ProjectName")
     public String projectName;
 
-    /**
-     * <p>The settings of the source data source.</p>
-     */
     @NameInMap("SourceConfig")
     public String sourceConfigShrink;
 
-    /**
-     * <p>The mappings for the synchronization objects.</p>
-     */
     @NameInMap("TransferMapping")
     public String transferMappingShrink;
 
-    /**
-     * <p>The settings of synchronization steps.</p>
-     */
     @NameInMap("TransferStepConfig")
     public String transferStepConfigShrink;
 
     /**
-     * <p>The ID of the migration instance. Generally, if you want to create a project on a public cloud, you must first purchase a migration instance.</p>
+     * <p>实例规格 ID，创建项目时生效</p>
      */
     @NameInMap("WorkerGradeId")
     public String workerGradeId;

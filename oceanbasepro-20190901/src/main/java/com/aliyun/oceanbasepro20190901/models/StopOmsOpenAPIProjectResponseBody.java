@@ -5,68 +5,56 @@ import com.aliyun.tea.*;
 
 public class StopOmsOpenAPIProjectResponseBody extends TeaModel {
     /**
-     * <p>The suggestions (old).</p>
+     * <p>Indicates whether the project is paused.</p>
      */
     @NameInMap("Advice")
     public String advice;
 
     /**
-     * <p>The error code (old).</p>
+     * <p>The page size, which takes effect in a pagination query.</p>
      */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The time spent in processing the request, in seconds.</p>
-     */
     @NameInMap("Cost")
     public String cost;
 
-    /**
-     * <p>Indicates whether the project is paused.</p>
-     */
     @NameInMap("Data")
     public Boolean data;
 
     /**
-     * <p>The error details.</p>
+     * <p>A system error occurred.</p>
      */
     @NameInMap("ErrorDetail")
     public StopOmsOpenAPIProjectResponseBodyErrorDetail errorDetail;
 
     /**
-     * <p>The error description (old).</p>
+     * <p>The page size, which takes effect in a pagination query.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The page number, which takes effect in a pagination query.</p>
+     * <p>Pause a data synchronization project</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The page size, which takes effect in a pagination query.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>A system error occurred.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful.</p>
+     * <p>The ID of the migration instance. Generally, if you want to create a project on a public cloud, you must first purchase a migration instance.</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
-    /**
-     * <p>The total count, which takes effect in a pagination query.</p>
-     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -165,25 +153,25 @@ public class StopOmsOpenAPIProjectResponseBody extends TeaModel {
 
     public static class StopOmsOpenAPIProjectResponseBodyErrorDetail extends TeaModel {
         /**
-         * <p>The error code (new).</p>
+         * <p>The time spent in processing the request, in seconds.</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
-         * <p>The error level. Valid values: CRITICAL, ERROR, and WARN.</p>
+         * <p>The error code (old).</p>
          */
         @NameInMap("Level")
         public String level;
 
         /**
-         * <p>The error description (new).</p>
+         * <p>The project ID.</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The suggestions (new).</p>
+         * <p>The error description (new).</p>
          */
         @NameInMap("Proposal")
         public String proposal;

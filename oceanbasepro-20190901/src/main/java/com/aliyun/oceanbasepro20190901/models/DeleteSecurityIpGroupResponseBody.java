@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteSecurityIpGroupResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>Example 1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The information of the deleted IP whitelist group.</p>
-     */
     @NameInMap("SecurityIpGroup")
     public DeleteSecurityIpGroupResponseBodySecurityIpGroup securityIpGroup;
 
@@ -38,15 +35,9 @@ public class DeleteSecurityIpGroupResponseBody extends TeaModel {
     }
 
     public static class DeleteSecurityIpGroupResponseBodySecurityIpGroup extends TeaModel {
-        /**
-         * <p>The ID of the OceanBase cluster.</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The name of the deleted IP address whitelist group.</p>
-         */
         @NameInMap("SecurityIpGroupName")
         public String securityIpGroupName;
 

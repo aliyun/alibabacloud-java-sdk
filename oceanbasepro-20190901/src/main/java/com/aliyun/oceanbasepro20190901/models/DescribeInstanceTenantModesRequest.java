@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceTenantModesRequest extends TeaModel {
     /**
-     * <p>The ID of the OceanBase cluster.</p>
+     * <p>The operation that you want to perform.   </p>
+     * <p>Set the value to **DescribeInstanceTenantModes**.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

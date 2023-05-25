@@ -5,42 +5,37 @@ import com.aliyun.tea.*;
 
 public class DescribeTenantsRequest extends TeaModel {
     /**
-     * <p>The ID of the OceanBase cluster.</p>
+     * <p>The number of used disks of the tenant.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The number of the page to return.   </p>
-     * <p>Start value: 1</p>
-     * <p>- Default value: 1</p>
+     * <p>It is an online CLI tool that allows you to quickly retrieve and debug APIs. It can dynamically generate executable SDK code samples.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of rows to return on each page.   </p>
-     * <p>- Maximum value: 100.</p>
-     * <p>- Default value: 10</p>
+     * <p>You can call this operation to query the tenants in an OceanBase cluster.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The search keyword.</p>
+     * <p>The primary zone of the tenant.</p>
      */
     @NameInMap("SearchKey")
     public String searchKey;
 
     /**
-     * <p>The ID of the tenant.</p>
+     * <p>Alibaba Cloud CLI</p>
      */
     @NameInMap("TenantId")
     public String tenantId;
 
     /**
-     * <p>The name of the tenant.   </p>
-     * <p>It must start with a letter or an underscore (_), and contain 2 to 20 characters, which can be uppercase letters, lowercase letters, digits, and underscores (_).  It cannot be set to sys.</p>
+     * <p>The information of tenants.</p>
      */
     @NameInMap("TenantName")
     public String tenantName;
