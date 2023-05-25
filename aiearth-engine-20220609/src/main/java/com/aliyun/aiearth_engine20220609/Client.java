@@ -139,6 +139,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("BandNo", request.bandNo);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.compress)) {
+            body.put("Compress", request.compress);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dataId)) {
             body.put("DataId", request.dataId);
         }
@@ -198,6 +202,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetJobsResponse getJobs(GetJobsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getJobsWithOptions(request, runtime);
+    }
+
+    public GetUserTokenResponse getUserTokenWithOptions(GetUserTokenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.forceCreate)) {
+            body.put("ForceCreate", request.forceCreate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetUserToken"),
+            new TeaPair("version", "2022-06-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserTokenResponse());
+    }
+
+    public GetUserTokenResponse getUserToken(GetUserTokenRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getUserTokenWithOptions(request, runtime);
     }
 
     public ListDatasResponse listDatasWithOptions(ListDatasRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {

@@ -7,6 +7,9 @@ public class DownloadDataRequest extends TeaModel {
     @NameInMap("BandNo")
     public String bandNo;
 
+    @NameInMap("Compress")
+    public Boolean compress;
+
     @NameInMap("DataId")
     public String dataId;
 
@@ -21,6 +24,14 @@ public class DownloadDataRequest extends TeaModel {
     }
     public String getBandNo() {
         return this.bandNo;
+    }
+
+    public DownloadDataRequest setCompress(Boolean compress) {
+        this.compress = compress;
+        return this;
+    }
+    public Boolean getCompress() {
+        return this.compress;
     }
 
     public DownloadDataRequest setDataId(String dataId) {
