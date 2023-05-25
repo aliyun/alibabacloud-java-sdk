@@ -10,6 +10,9 @@ public class StopAppSessionRequest extends TeaModel {
     @NameInMap("PlatformSessionId")
     public String platformSessionId;
 
+    /**
+     * <p>停止容器参数。此参数将透传到Agent。</p>
+     */
     @NameInMap("StopParam")
     public java.util.List<StopAppSessionRequestStopParam> stopParam;
 
@@ -43,9 +46,16 @@ public class StopAppSessionRequest extends TeaModel {
     }
 
     public static class StopAppSessionRequestStopParam extends TeaModel {
+        /**
+         * <p>目前支持的枚举值包括：</p>
+         * <p>- reason：停止原因。</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>key对应的取值。</p>
+         */
         @NameInMap("Value")
         public Object value;
 

@@ -65,9 +65,15 @@ public class ListAppSessionsResponseBody extends TeaModel {
     }
 
     public static class ListAppSessionsResponseBodyAppSessionsBizInfo extends TeaModel {
+        /**
+         * <p>会话启动时间</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>会话停止时间</p>
+         */
         @NameInMap("StopTime")
         public String stopTime;
 
@@ -101,6 +107,9 @@ public class ListAppSessionsResponseBody extends TeaModel {
         @NameInMap("AppVersion")
         public String appVersion;
 
+        /**
+         * <p>业务特定的信息，如会话启动/停止时间。</p>
+         */
         @NameInMap("BizInfo")
         public ListAppSessionsResponseBodyAppSessionsBizInfo bizInfo;
 
