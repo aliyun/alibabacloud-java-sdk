@@ -5,34 +5,39 @@ import com.aliyun.tea.*;
 
 public class DescribeManagedInstancesRequest extends TeaModel {
     /**
-     * <p>The ID of the activation code.</p>
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1.</p>
+     * <br>
+     * <p>Default value: 1.</p>
      */
     @NameInMap("ActivationId")
     public String activationId;
 
     /**
-     * <p>The ID of managed instance N. Valid values of N: 1 to 50.</p>
+     * <p>The tags that are added to the resource.</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
     /**
-     * <p>The internal or public IP address of the managed instance.</p>
+     * <p>The name of the managed instance.</p>
      */
     @NameInMap("InstanceIp")
     public String instanceIp;
 
     /**
-     * <p>The name of the managed instance.</p>
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Maximum value: 50.</p>
+     * <br>
+     * <p>Default value: 10.</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
-     * <p>The operating system type of the managed instance. Valid values:</p>
-     * <br>
-     * <p>*   windows</p>
-     * <p>*   linux</p>
+     * <p>The ID of the activation code.</p>
      */
     @NameInMap("OsType")
     public String osType;
@@ -44,29 +49,19 @@ public class DescribeManagedInstancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return.</p>
-     * <br>
-     * <p>Pages start from page 1.</p>
-     * <br>
-     * <p>Default value: 1.</p>
+     * <p>The instance IDs. Valid values of N: 1 to 50.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
-     * <br>
-     * <p>Maximum value: 50.</p>
-     * <br>
-     * <p>Default value: 10.</p>
+     * <p>The instance ID. Valid values of N: 1 to 50.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The region ID of the managed instance. The following regions are supported: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), and China (Hong Kong).</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The internal or public IP address of the managed instance.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -78,7 +73,11 @@ public class DescribeManagedInstancesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags of the managed instance.</p>
+     * <p>The key of tag N that is added to the instance. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
+     * <br>
+     * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.</p>
+     * <br>
+     * <p>The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeManagedInstancesRequestTag> tag;
@@ -194,19 +193,13 @@ public class DescribeManagedInstancesRequest extends TeaModel {
 
     public static class DescribeManagedInstancesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the managed instance. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.</p>
-         * <br>
-         * <p>The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>The number of entries returned per page.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N of the managed instance. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
-         * <br>
-         * <p>It can be up to 128 characters in length and cannot contain `http://` or `https://`.</p>
+         * <p>The request ID.</p>
          */
         @NameInMap("Value")
         public String value;

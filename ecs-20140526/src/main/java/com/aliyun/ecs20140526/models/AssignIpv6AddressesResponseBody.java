@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssignIpv6AddressesResponseBody extends TeaModel {
     /**
-     * <p>> 该参数正在邀测中，暂未开放使用。</p>
+     * <p>> This parameter is in invitational preview and is unavailable for general users.</p>
      */
     @NameInMap("Ipv6PrefixSets")
     public AssignIpv6AddressesResponseBodyIpv6PrefixSets ipv6PrefixSets;
@@ -17,13 +17,13 @@ public class AssignIpv6AddressesResponseBody extends TeaModel {
     public AssignIpv6AddressesResponseBodyIpv6Sets ipv6Sets;
 
     /**
-     * <p>The ID of the ENI.</p>
+     * <p>The ENI ID.</p>
      */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

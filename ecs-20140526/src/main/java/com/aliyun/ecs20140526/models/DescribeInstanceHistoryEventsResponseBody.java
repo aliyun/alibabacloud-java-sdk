@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
     /**
-     * <p>Details about the instance system events.</p>
+     * <p>Details about historical system events of the instance.</p>
      */
     @NameInMap("InstanceSystemEventSet")
     public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSet instanceSystemEventSet;
@@ -164,7 +164,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
          * <p>*   cloud: basic disk</p>
          * <p>*   cloud_efficiency: ultra disk</p>
          * <p>*   cloud_ssd: standard SSD</p>
-         * <p>*   cloud_essd: enhanced SSD (ESSD) cloud_auto: ESSD AutoPL disk</p>
+         * <p>*   cloud_essd: enhanced SSD (ESSD)</p>
          * <p>*   local_ssd_pro: I/O-intensive local disk.</p>
          * <p>*   local_hdd_pro: throughput-intensive local disk</p>
          * <p>*   ephemeral: retired local disk</p>
@@ -314,7 +314,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         public String hostType;
 
         /**
-         * <p>Details about the inactive cloud disks or local disks that have been released and must be cleared.</p>
+         * <p>Details about the inactive disks that have been released and must be cleared.</p>
          */
         @NameInMap("InactiveDisks")
         public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeInactiveDisks inactiveDisks;
@@ -507,7 +507,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The scheduled start time of the system event. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The start time of the scheduled execution of the system event. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("NotBefore")
         public String notBefore;
@@ -519,7 +519,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         public String reason;
 
         /**
-         * <p>The type of the resource. Valid values:</p>
+         * <p>The type of a resource. Valid values:</p>
          * <br>
          * <p>*   instance: ECS instance</p>
          * <p>*   ddh: dedicated host</p>

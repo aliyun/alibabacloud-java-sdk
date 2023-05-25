@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifySnapshotAttributeRequest extends TeaModel {
     /**
-     * <p>The description of the snapshot. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
+     * <p>The description of the snapshot. The description must be 2 to 256 characters in length and cannot start with [http:// or https://](http://https://。).</p>
      */
     @NameInMap("Description")
     public String description;
@@ -14,7 +14,7 @@ public class ModifySnapshotAttributeRequest extends TeaModel {
      * <p>Specifies whether to disable the instant access feature. Valid values:</p>
      * <br>
      * <p>*   true: disables the instant access feature.</p>
-     * <p>*   false: enables the instant access feature.</p>
+     * <p>*   false: does not disable the instant access feature.</p>
      * <br>
      * <p>Default value: false.</p>
      */
@@ -40,9 +40,9 @@ public class ModifySnapshotAttributeRequest extends TeaModel {
     public String snapshotId;
 
     /**
-     * <p>The name of the snapshot. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with http:// or https://.</p>
+     * <p>The name of the snapshot. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with [http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).](http://https://。、（:）、（\_）（-）。)</p>
      * <br>
-     * <p>It cannot start with auto because snapshots whose names start with auto are recognized as automatic snapshots.</p>
+     * <p>The name cannot start with auto because snapshots whose names start with auto are recognized as automatic snapshots.</p>
      */
     @NameInMap("SnapshotName")
     public String snapshotName;

@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceNetworkSpecResponseBody extends TeaModel {
     /**
-     * <p>The ID of the order.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

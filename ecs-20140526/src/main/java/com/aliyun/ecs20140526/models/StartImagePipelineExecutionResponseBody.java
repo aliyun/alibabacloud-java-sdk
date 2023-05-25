@@ -11,7 +11,7 @@ public class StartImagePipelineExecutionResponseBody extends TeaModel {
     public String executionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

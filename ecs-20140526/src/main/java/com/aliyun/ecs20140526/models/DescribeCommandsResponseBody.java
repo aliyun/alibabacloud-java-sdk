@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeCommandsResponseBody extends TeaModel {
     /**
-     * <p>Details about the commands.</p>
+     * <p>The time when the command was created.</p>
      */
     @NameInMap("Commands")
     public DescribeCommandsResponseBodyCommands commands;
 
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The total number of the commands.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The number of the returned page.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of the commands.</p>
+     * <p>Details about the commands.</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -100,19 +100,19 @@ public class DescribeCommandsResponseBody extends TeaModel {
 
     public static class DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinition extends TeaModel {
         /**
-         * <p>The default value of the custom parameter.</p>
+         * <p>The name of the custom parameter.</p>
          */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
         /**
-         * <p>The description of the custom parameter.</p>
+         * <p>Download path of the Cloud Assistant client installation package</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The name of the custom parameter.</p>
+         * <p>The valid values of the custom enumeration parameter.</p>
          */
         @NameInMap("ParameterName")
         public String parameterName;
@@ -124,12 +124,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
         public DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinitionPossibleValues possibleValues;
 
         /**
-         * <p>Indicates whether the custom parameter is required. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
-         * <br>
-         * <p>Default value: false.</p>
+         * <p>The description of the custom parameter.</p>
          */
         @NameInMap("Required")
         public Boolean required;
@@ -221,14 +216,11 @@ public class DescribeCommandsResponseBody extends TeaModel {
 
     public static class DescribeCommandsResponseBodyCommandsCommandTagsTag extends TeaModel {
         /**
-         * <p>The tag key of the command.</p>
+         * <p>The tag value of the command.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The tag value of the command.</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -276,55 +268,55 @@ public class DescribeCommandsResponseBody extends TeaModel {
 
     public static class DescribeCommandsResponseBodyCommandsCommand extends TeaModel {
         /**
-         * <p>The category of the common command.</p>
+         * <p>Indicates whether the common command is of the latest version. If multiple common commands from the same provider (`Provider`) belong to the same category and have the same name, these commands are different versions of the same command. This parameter is not returned for the Cloud Assistant commands that you created.</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
-         * <p>The Base64-encoded command content.</p>
+         * <p>The category of the common command.</p>
          */
         @NameInMap("CommandContent")
         public String commandContent;
 
         /**
-         * <p>The ID of the command.</p>
+         * <p>The working directory of the command on the Elastic Compute Service (ECS) instance.</p>
          */
         @NameInMap("CommandId")
         public String commandId;
 
         /**
-         * <p>The time when the command was created.</p>
+         * <p>The type of the command.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The description of the command.</p>
+         * <p>The version of the common command. If multiple common commands from the same provider (`Provider`) belong to the same category and have the same name, these commands are different versions of the same command. This parameter is not returned for the Cloud Assistant commands that you created.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>Indicates whether the custom parameter feature was enabled for the command.</p>
+         * <p>The custom parameter names that are parsed from the command content specified when the command was created. If the custom parameter feature is not enabled, an empty list is returned.</p>
          */
         @NameInMap("EnableParameter")
         public Boolean enableParameter;
 
         /**
-         * <p>The number of tasks created by using the command.</p>
+         * <p>The ID of the command.</p>
          */
         @NameInMap("InvokeTimes")
         public Integer invokeTimes;
 
         /**
-         * <p>Indicates whether the common command is of the latest version. If multiple common commands from the same provider (`Provider`) belong to the same category and have the same name, these commands are of different versions of the same command. This parameter is not returned for the Cloud Assistant commands that you created.</p>
+         * <p>The name of the command.</p>
          */
         @NameInMap("Latest")
         public Boolean latest;
 
         /**
-         * <p>The name of the command.</p>
+         * <p>Indicates whether the custom parameter feature was enabled for the command.</p>
          */
         @NameInMap("Name")
         public String name;
@@ -336,13 +328,13 @@ public class DescribeCommandsResponseBody extends TeaModel {
         public DescribeCommandsResponseBodyCommandsCommandParameterDefinitions parameterDefinitions;
 
         /**
-         * <p>The custom parameter names that are parsed from the command content specified when the command was being created. If the custom parameter feature is not enabled, an empty list is returned.</p>
+         * <p>The custom parameter names that are parsed from the command content specified when the command was created. If the custom parameter feature is disabled, an empty list is returned.</p>
          */
         @NameInMap("ParameterNames")
         public DescribeCommandsResponseBodyCommandsCommandParameterNames parameterNames;
 
         /**
-         * <p>The provider of the common command.</p>
+         * <p>The Base64-encoded command content.</p>
          */
         @NameInMap("Provider")
         public String provider;
@@ -354,25 +346,25 @@ public class DescribeCommandsResponseBody extends TeaModel {
         public DescribeCommandsResponseBodyCommandsCommandTags tags;
 
         /**
-         * <p>The timeout period.</p>
+         * <p>The number of tasks created by using the command.</p>
          */
         @NameInMap("Timeout")
         public Long timeout;
 
         /**
-         * <p>The type of the command.</p>
+         * <p>The timeout period.</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The version of the common command. If multiple common commands from the same provider (`Provider`) belong to the same category and have the same name, these commands are of different versions of the same command. This parameter is not returned for the Cloud Assistant commands that you created.</p>
+         * <p>The provider of the common command.</p>
          */
         @NameInMap("Version")
         public Integer version;
 
         /**
-         * <p>The working directory of the command on the Elastic Compute Service (ECS) instance.</p>
+         * <p>The description of the command.</p>
          */
         @NameInMap("WorkingDir")
         public String workingDir;

@@ -83,7 +83,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
         public AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSetIpv4PrefixSet ipv4PrefixSet;
 
         /**
-         * <p>The ID of the ENI.</p>
+         * <p>The ENI ID.</p>
          */
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;

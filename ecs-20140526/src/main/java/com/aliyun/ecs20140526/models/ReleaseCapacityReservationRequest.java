@@ -8,7 +8,7 @@ public class ReleaseCapacityReservationRequest extends TeaModel {
     public ReleaseCapacityReservationRequestPrivatePoolOptions privatePoolOptions;
 
     /**
-     * <p>Specifies whether to check the validity of the request. Set the value to false. Capacity reservations are directly released.</p>
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Set the value to false. This indicates that the system directly releases the capacity reservation.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -20,7 +20,7 @@ public class ReleaseCapacityReservationRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the capacity reservation. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
+     * <p>The region ID of the capacity reservation. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

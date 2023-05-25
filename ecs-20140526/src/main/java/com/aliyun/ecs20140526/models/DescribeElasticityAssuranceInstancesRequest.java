@@ -18,7 +18,7 @@ public class DescribeElasticityAssuranceInstancesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token used to start the next query. Set the value to the NextToken value obtained from the response to the previous request.</p>
+     * <p>The token used to start the query. Set the value to the NextToken value obtained from the response to the preceding request.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

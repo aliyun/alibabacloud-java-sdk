@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeInvocationsRequest extends TeaModel {
     /**
-     * <p>The ID of the command. You can call the [DescribeCommands](~~64843~~) operation to query all available command IDs.</p>
+     * <p>The command ID. You can call the [DescribeCommands](~~64843~~) operation to query all available command IDs.</p>
      */
     @NameInMap("CommandId")
     public String commandId;
 
     /**
-     * <p>The name of the command.</p>
+     * <p>The command name.</p>
      */
     @NameInMap("CommandName")
     public String commandName;
 
     /**
-     * <p>The type of the command. If this parameter and `InstanceId` are both specified, this parameter does not take effect.</p>
+     * <p>The command type. If this parameter and `InstanceId` are both specified, this parameter does not take effect.</p>
      */
     @NameInMap("CommandType")
     public String commandType;
@@ -39,19 +39,19 @@ public class DescribeInvocationsRequest extends TeaModel {
      * <p>*   true: The command outputs are returned. When this parameter is set to true, you must specify `InvokeId`, `InstanceId`, or both.</p>
      * <p>*   false: The command outputs are not returned.</p>
      * <br>
-     * <p>Default value: false.</p>
+     * <p>Default value: false</p>
      */
     @NameInMap("IncludeOutput")
     public Boolean includeOutput;
 
     /**
-     * <p>The ID of the instance. When you specify this parameter, the system queries all the execution records of all the commands that run on the instance.</p>
+     * <p>The ID of instance N. When you specify this parameter, the system queries all the execution records of all the commands that run on the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the command task.</p>
+     * <p>The command task ID.</p>
      */
     @NameInMap("InvokeId")
     public String invokeId;
@@ -91,9 +91,9 @@ public class DescribeInvocationsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number of the page to return.</p>
      * <br>
-     * <p>Page start from page 1.</p>
+     * <p>Page numbers start from 1.</p>
      * <br>
      * <p>Default value: 1.</p>
      */
@@ -101,7 +101,7 @@ public class DescribeInvocationsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries to return per page.</p>
      * <br>
      * <p>Maximum value: 50.</p>
      * <br>
@@ -111,7 +111,7 @@ public class DescribeInvocationsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -119,7 +119,7 @@ public class DescribeInvocationsRequest extends TeaModel {
     /**
      * <p>The execution mode of the command. Valid values:</p>
      * <br>
-     * <p>*   Once: The command is immediately run.</p>
+     * <p>*   Once: immediately runs the command.</p>
      * <p>*   Period: The command is run on a schedule.</p>
      * <p>*   NextRebootOnly: The command is automatically run the next time the instance starts.</p>
      * <p>*   EveryReboot: The command is automatically run every time the instance starts.</p>
@@ -142,15 +142,15 @@ public class DescribeInvocationsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags of the command.</p>
+     * <p>The tags that are added to the command.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeInvocationsRequestTag> tag;
 
     /**
-     * <p>Specifies whether to query the commands that are to be automatically run. Valid values:</p>
+     * <p>Specifies whether to query commands that are to be automatically run. Valid values:</p>
      * <br>
-     * <p>*   true: queries the commands that meet the following requirements: The commands are run by calling the `RunCommand` or `InvokeCommand` operation with `RepeatMode` set to `Period`, `NextRebootOnly`, or `EveryReboot`. The executions of the commands are not canceled and not complete or are not stopped and not complete.</p>
+     * <p>*   true: queries commands that meet the following requirements: The commands are run by calling the `RunCommand` or `InvokeCommand` operation with `RepeatMode` set to `Period`, `NextRebootOnly`, or `EveryReboot`. The executions of the commands are not canceled and not complete or are not stopped and not complete.</p>
      * <br>
      * <p>*   false: queries commands that meet the following requirements:</p>
      * <br>
@@ -321,17 +321,17 @@ public class DescribeInvocationsRequest extends TeaModel {
 
     public static class DescribeInvocationsRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the command task. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
+         * <p>The key of tag N of the command. You can specify up to 20 tag keys for the command. The tag key cannot be an empty string.</p>
          * <br>
          * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.</p>
          * <br>
-         * <p>The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N of the command. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.</p>
+         * <p>The value of tag N of the command. You can specify up to 20 tag values for the command. The tag value can be an empty string. It can be up to 128 characters in length and cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Value")
         public String value;

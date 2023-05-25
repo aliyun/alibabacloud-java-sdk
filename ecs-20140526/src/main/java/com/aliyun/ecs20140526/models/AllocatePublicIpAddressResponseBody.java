@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AllocatePublicIpAddressResponseBody extends TeaModel {
     /**
-     * <p>The public IP address of the instance.</p>
+     * <p>The public IP address.</p>
      */
     @NameInMap("IpAddress")
     public String ipAddress;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

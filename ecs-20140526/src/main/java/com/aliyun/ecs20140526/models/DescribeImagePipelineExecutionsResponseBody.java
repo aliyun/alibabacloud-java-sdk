@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
     /**
-     * <p>Details of the image build task.</p>
+     * <p>The details of the image creation task.</p>
      */
     @NameInMap("ImagePipelineExecution")
     public DescribeImagePipelineExecutionsResponseBodyImagePipelineExecution imagePipelineExecution;
 
     /**
-     * <p>The maximum number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The query token returned in this call. For information about how to use this return value, see the Description section in this topic.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists. For information about how to use the returned value, see the "Usage notes" section in this topic.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -81,13 +81,13 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
 
     public static class DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSetTagsTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>> This parameter is unavailable.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>> This parameter is unavailable.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -136,19 +136,19 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
 
     public static class DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSet extends TeaModel {
         /**
-         * <p>The time when the image build task was created.</p>
+         * <p>The time when the image creation task was created.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The ID of the image build task.</p>
+         * <p>The ID of the image creation task.</p>
          */
         @NameInMap("ExecutionId")
         public String executionId;
 
         /**
-         * <p>The ID of the image to be created by using the image build task.</p>
+         * <p>The ID of the image.</p>
          */
         @NameInMap("ImageId")
         public String imageId;
@@ -160,13 +160,13 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         public String imagePipelineId;
 
         /**
-         * <p>The execution result of the image build task.</p>
+         * <p>The data that is returned.</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The last time when the image build task was updated.</p>
+         * <p>The last modification time of the image creation task.</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
@@ -178,21 +178,21 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The status of the image build task. Valid values:</p>
+         * <p>The status of the image creation task. Valid values:</p>
          * <br>
-         * <p>*   BUILDING: The image was being built.</p>
-         * <p>*   DISTRIBUTING: The image was being distributed.</p>
-         * <p>*   RELEASING: The image was being recycled.</p>
-         * <p>*   SUCCESS: The image was built.</p>
-         * <p>*   FAILED: The image failed to be built.</p>
-         * <p>*   CANCELLING: The image build task was being canceled.</p>
-         * <p>*   CANCELLED: The image build task was cancelled.</p>
+         * <p>*   BUILDING</p>
+         * <p>*   DISTRIBUTING</p>
+         * <p>*   RELEASING</p>
+         * <p>*   SUCCESS</p>
+         * <p>*   FAILED</p>
+         * <p>*   CANCELLING</p>
+         * <p>*   CANCELED</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The list of tag key-value pairs.</p>
+         * <p>> This parameter is unavailable.</p>
          */
         @NameInMap("Tags")
         public DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSetTags tags;

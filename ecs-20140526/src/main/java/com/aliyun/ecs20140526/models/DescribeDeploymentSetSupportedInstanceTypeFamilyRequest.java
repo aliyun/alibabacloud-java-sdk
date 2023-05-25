@@ -22,6 +22,9 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyRequest extends Tea
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Strategy")
+    public String strategy;
+
     public static DescribeDeploymentSetSupportedInstanceTypeFamilyRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDeploymentSetSupportedInstanceTypeFamilyRequest self = new DescribeDeploymentSetSupportedInstanceTypeFamilyRequest();
         return TeaModel.build(map, self);
@@ -65,6 +68,14 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyRequest extends Tea
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DescribeDeploymentSetSupportedInstanceTypeFamilyRequest setStrategy(String strategy) {
+        this.strategy = strategy;
+        return this;
+    }
+    public String getStrategy() {
+        return this.strategy;
     }
 
 }

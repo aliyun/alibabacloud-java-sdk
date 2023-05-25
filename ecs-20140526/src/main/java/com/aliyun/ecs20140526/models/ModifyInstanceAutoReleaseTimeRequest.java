@@ -7,9 +7,9 @@ public class ModifyInstanceAutoReleaseTimeRequest extends TeaModel {
     /**
      * <p>The automatic release time of the instance. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
-     * <p>*   If the value of seconds (`ss`) is not `00`, the time is automatically rounded to the nearest minute based on the value of minutes (`mm`).</p>
+     * <p>*   If the value of `ss` is not `00`, the time is automatically rounded down to the the value of `mm`.</p>
      * <p>*   The specified time must be at least 30 minutes later than the current time.</p>
-     * <p>*   The specified time can be at most three years from the current time.</p>
+     * <p>*   The specified time is up to three years from the current time.</p>
      * <br>
      * <p>If `AutoReleaseTime` is not specified, the automatic release feature is disabled and the instance will not be automatically released.</p>
      */
@@ -17,7 +17,7 @@ public class ModifyInstanceAutoReleaseTimeRequest extends TeaModel {
     public String autoReleaseTime;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the ECS instance to configure automatic release.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

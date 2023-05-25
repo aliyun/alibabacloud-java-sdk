@@ -11,19 +11,19 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
     public DescribeClassicLinkInstancesResponseBodyLinks links;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -81,7 +81,7 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
 
     public static class DescribeClassicLinkInstancesResponseBodyLinksLink extends TeaModel {
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDedicatedHostsResponseBody extends TeaModel {
     /**
-     * <p>Details about the dedicated hosts.</p>
+     * <p>The details of the dedicated hosts.</p>
      */
     @NameInMap("DedicatedHosts")
     public DescribeDedicatedHostsResponseBodyDedicatedHosts dedicatedHosts;
@@ -182,7 +182,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity extends TeaModel {
         /**
-         * <p>The amount of available space on the local disks. Unit: GiB.</p>
+         * <p>The available space of the local disks. Unit: GiB.</p>
          */
         @NameInMap("AvailableLocalStorage")
         public Integer availableLocalStorage;
@@ -349,7 +349,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstancesInstance extends TeaModel {
         /**
-         * <p>The ID of the ECS instance created on the dedicated host.</p>
+         * <p>The ID of the ECS instance that is created on the dedicated host.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -358,7 +358,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         public Long instanceOwnerId;
 
         /**
-         * <p>The instance type of the ECS instance created on the dedicated host.</p>
+         * <p>The instance type of the ECS instance that is created on the dedicated host.</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
@@ -426,13 +426,13 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostNetworkAttributes extends TeaModel {
         /**
-         * <p>The timeout period of the UDP session that was established between Server Load Balancer (SLB) and the dedicated host. Unit: seconds. Valid value: 60.</p>
+         * <p>The timeout period of the UDP session that is established between Server Load Balancer (SLB) and the dedicated host. Unit: seconds. Valid value: 60.</p>
          */
         @NameInMap("SlbUdpTimeout")
         public Integer slbUdpTimeout;
 
         /**
-         * <p>The timeout period of the UDP session that was established between a user and an Alibaba Cloud service on the dedicated host. Unit: seconds. Valid value: 60.</p>
+         * <p>The timeout period of the UDP session that is established between a user and an Alibaba Cloud service on the dedicated host. Unit: seconds. Valid value: 60.</p>
          */
         @NameInMap("UdpTimeout")
         public Integer udpTimeout;
@@ -462,10 +462,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostOperationLocksOperationLock extends TeaModel {
         /**
-         * <p>The reason why the dedicated host was locked. Valid values:</p>
+         * <p>The reason why the dedicated host is locked. Valid values:</p>
          * <br>
-         * <p>- financial: The dedicated host was locked due to overdue payments.</p>
-         * <p>- security: The dedicated host was locked due to security reasons.</p>
+         * <p>*   financial: The dedicated host is locked due to overdue payments.</p>
+         * <p>*   security: The dedicated host is locked due to security reasons.</p>
          */
         @NameInMap("LockReason")
         public String lockReason;
@@ -563,13 +563,13 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostTagsTag extends TeaModel {
         /**
-         * <p>The tag key of the dedicated host.</p>
+         * <p>The key of tag N of the dedicated host.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The tag value of the dedicated host.</p>
+         * <p>The value of tag N of the dedicated host.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -621,23 +621,23 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSchedulerOptions schedulerOptions;
 
         /**
-         * <p>The policy used to migrate the instances deployed on the dedicated host when the dedicated host fails. Valid values:</p>
+         * <p>The policy that is used to migrate the instances deployed on the dedicated host when the dedicated host fails. Valid values:</p>
          * <br>
          * <p>*   Migrate: The instances are migrated to another physical server. Instances that are not in the Stopped state when the dedicated host fails are restarted after migration.</p>
-         * <p>*   Stop: The instances are stopped. If the dedicated host cannot be repaired, the instances are migrated to another physical server and restarted.</p>
+         * <p>*   Stop: The instances are stopped. If the dedicated host cannot be repaired, the instances are migrated to another physical machine and then restarted.</p>
          * <br>
-         * <p>If the dedicated host has cloud disks attached, the default value is Migrate. If the dedicated host has local disks attached, the default value is Stop.</p>
+         * <p>If cloud disks are attached to the dedicated host, the default value of this parameter is Migrate. If local disks are attched to the dedicated host, the default value of this parameter is Stop.</p>
          */
         @NameInMap("ActionOnMaintenance")
         public String actionOnMaintenance;
 
         /**
-         * <p>Indicates whether the dedicated host was added to the resource pool for automatic deployment. Valid values:</p>
+         * <p>Indicates whether the dedicated host is added to the resource pool for automatic deployment. Valid values:</p>
          * <br>
-         * <p>*   on: The dedicated host was added to the resource pool for automatic deployment.</p>
-         * <p>*   off: The dedicated host was not added to the resource pool for automatic deployment.</p>
+         * <p>*   on: The dedicated host is added to the resource pool for automatic deployment.</p>
+         * <p>*   off: The dedicated host is not added to the resource pool for automatic deployment.</p>
          * <br>
-         * <p>For more information about automatic deployment, see the "[Automatic deployment](~~118938~~)" section in the Functions and features topic.</p>
+         * <p>For more information about automatic deployment, see the "Automatic deployment" section in [Functions and features](~~118938~~).</p>
          */
         @NameInMap("AutoPlacement")
         public String autoPlacement;
@@ -730,7 +730,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostHostDetailInfo hostDetailInfo;
 
         /**
-         * <p>Details about the ECS instances that were created on the dedicated host.</p>
+         * <p>The ECS instances that are created on the dedicated host.</p>
          */
         @NameInMap("Instances")
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstances instances;
@@ -748,7 +748,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostNetworkAttributes networkAttributes;
 
         /**
-         * <p>The reasons why the resources of the dedicated host were locked.</p>
+         * <p>The reasons why the resources of the dedicated host are locked.</p>
          */
         @NameInMap("OperationLocks")
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostOperationLocks operationLocks;
@@ -787,29 +787,29 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         public Integer sockets;
 
         /**
-         * <p>The service state of the dedicated host. Valid values:</p>
+         * <p>The service status of the dedicated host. Valid values:</p>
          * <br>
-         * <p>*   Available: The dedicated host is running normally.</p>
-         * <p>*   UnderAssessment: The dedicated host is at risk, which may cause issues to ECS instances on the dedicated host.</p>
-         * <p>*   PermanentFailure: The dedicated host has permanent failures and is unusable.</p>
+         * <p>*   Available: The dedicated host is running as expected.</p>
+         * <p>*   UnderAssessment: The dedicated host is available. However, the dedicated host has potential risks that may cause the ECS instances on the dedicated host to fail.</p>
+         * <p>*   PermanentFailure: The dedicated host has permanent failures and cannot be used.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The custom ECS instance families supported by the dedicated host.</p>
+         * <p>The custom ECS instance families that are supported by the dedicated host.</p>
          */
         @NameInMap("SupportedCustomInstanceTypeFamilies")
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedCustomInstanceTypeFamilies supportedCustomInstanceTypeFamilies;
 
         /**
-         * <p>The ECS instance families supported by the dedicated host.</p>
+         * <p>The ECS instance families that are supported by the dedicated host.</p>
          */
         @NameInMap("SupportedInstanceTypeFamilies")
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedInstanceTypeFamilies supportedInstanceTypeFamilies;
 
         /**
-         * <p>The ECS instance types supported by the dedicated host.</p>
+         * <p>The ECS instance types that are supported by the dedicated host.</p>
          */
         @NameInMap("SupportedInstanceTypesList")
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedInstanceTypesList supportedInstanceTypesList;

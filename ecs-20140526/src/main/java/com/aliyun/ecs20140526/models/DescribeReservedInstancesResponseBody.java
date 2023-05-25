@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeReservedInstancesResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The returned page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -17,7 +17,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -81,7 +81,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
 
     public static class DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocksOperationLock extends TeaModel {
         /**
-         * <p>The reason why the reserved instance was locked.</p>
+         * <p>The reason why the instance is locked.</p>
          */
         @NameInMap("LockReason")
         public String lockReason;
@@ -122,13 +122,13 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
 
     public static class DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTagsTag extends TeaModel {
         /**
-         * <p>The tag key of the reserved instance.</p>
+         * <p>The key of the reserved instance tag N.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The tag value of the reserved instance.</p>
+         * <p>The value of the reserved instance tag N.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -177,7 +177,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
 
     public static class DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance extends TeaModel {
         /**
-         * <p>Indicates the sharing status of the reserved instance when the AllocationType parameter is set to Shared. Valid values:</p>
+         * <p>Indicates the allocation status of the reserved instance when the AllocationType parameter is set to Shared. Valid values:</p>
          * <br>
          * <p>*   allocated: The reserved instance is allocated to another account.</p>
          * <p>*   beAllocated: The reserved instance is allocated by another account.</p>
@@ -186,19 +186,19 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         public String allocationStatus;
 
         /**
-         * <p>The time when the reserved instance was created.</p>
+         * <p>The creation time.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The description of the reserved instance.</p>
+         * <p>The description.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The time when the reserved instance expires.</p>
+         * <p>The expiration time.</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
@@ -216,7 +216,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The payment option of the reserved instance.</p>
+         * <p>The payment options for the reserved instance.</p>
          */
         @NameInMap("OfferingType")
         public String offeringType;
@@ -228,64 +228,64 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocks operationLocks;
 
         /**
-         * <p>The operating system of the reserved instance. Valid values:</p>
+         * <p>The operating system of the image used by the instance. Valid values:</p>
          * <br>
-         * <p>- Windows: Windows Server operating systems</p>
-         * <p>- Linux: Linux and Unix-like operating systems</p>
+         * <p>*   Windows: Windows Server operating system</p>
+         * <p>*   Linux: Linux and UNIX-like operating system</p>
          */
         @NameInMap("Platform")
         public String platform;
 
         /**
-         * <p>The region ID of the reserved instance.</p>
+         * <p>The ID of the region where the instance resides.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The ID of the reserved instance.</p>
+         * <p>The reserved instance ID.</p>
          */
         @NameInMap("ReservedInstanceId")
         public String reservedInstanceId;
 
         /**
-         * <p>The name of the reserved instance.</p>
+         * <p>The name.</p>
          */
         @NameInMap("ReservedInstanceName")
         public String reservedInstanceName;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The scope of the reserved instance.</p>
+         * <p>Indicates range.</p>
          */
         @NameInMap("Scope")
         public String scope;
 
         /**
-         * <p>The time when the reserved instance took effect.</p>
+         * <p>The validation time.</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
-         * <p>The status of the reserved instance.</p>
+         * <p>The status.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>Details about the tags of the reserved instance.</p>
+         * <p>Details about the reserved instance tags.</p>
          */
         @NameInMap("Tags")
         public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTags tags;
 
         /**
-         * <p>The zone ID of the reserved instance.</p>
+         * <p>The zone ID.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

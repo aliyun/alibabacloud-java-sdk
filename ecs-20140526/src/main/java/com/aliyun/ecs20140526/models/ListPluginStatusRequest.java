@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPluginStatusRequest extends TeaModel {
     /**
-     * <p>The IDs of ECS instances. You can specify up to 50 instance IDs in each request.</p>
+     * <p>The instance IDs. You can specify up to 50 instance IDs in a request. Valid values of N: 1 to 50.</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
@@ -13,11 +13,13 @@ public class ListPluginStatusRequest extends TeaModel {
     /**
      * <p>The name of the Cloud Assistant plug-in. The name supports all character sets and must be 1 to 255 characters in length.</p>
      * <br>
-     * <p>* If this parameter is not specified, the states of all Cloud Assistant plug-ins that are installed on the specified ECS instances are queried.</p>
+     * <p>*   If this parameter is not specified, the states of all Cloud Assistant plug-ins that are installed on the specified ECS instances are queried.</p>
      * <br>
-     * <p>    > If this parameter is not specified, only a single instance ID can be specified.</p>
+     * <p>    **</p>
      * <br>
-     * <p>* If this parameter is specified, the state of the specified Cloud Assistant plug-in is queried.</p>
+     * <p>    **Note**If this parameter is not specified, only a single instance ID can be specified.</p>
+     * <br>
+     * <p>*   If this parameter is specified, the state of the specified Cloud Assistant plug-in is queried.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -29,7 +31,7 @@ public class ListPluginStatusRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number of the returned page.</p>
      * <br>
      * <p>*   Pages start from page 1.</p>
      * <p>*   Default value: 1.</p>
@@ -40,14 +42,14 @@ public class ListPluginStatusRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page.</p>
      * <br>
-     * <p>*   Maximum value: 50.</p>
+     * <p>*   Valid values: 1 to 50.</p>
      * <p>*   Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The region ID of the ECS instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

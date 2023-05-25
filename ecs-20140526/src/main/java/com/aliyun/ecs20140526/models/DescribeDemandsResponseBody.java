@@ -4,39 +4,21 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDemandsResponseBody extends TeaModel {
-    /**
-     * <p>The filing tickets whose regions meet the filter condition.</p>
-     */
     @NameInMap("Demands")
     public DescribeDemandsResponseBodyDemands demands;
 
-    /**
-     * <p>The page number of the returned page.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries returned per page.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The ID of the region.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The number of queried filing tickets.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -94,30 +76,18 @@ public class DescribeDemandsResponseBody extends TeaModel {
     }
 
     public static class DescribeDemandsResponseBodyDemandsDemandSupplyInfosSupplyInfo extends TeaModel {
-        /**
-         * <p>The number of delivered instances.</p>
-         */
         @NameInMap("Amount")
         public Integer amount;
 
-        /**
-         * <p>The end time when the filed resources are delivered and available. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-         */
+        @NameInMap("PrivatePoolId")
+        public String privatePoolId;
+
         @NameInMap("SupplyEndTime")
         public String supplyEndTime;
 
-        /**
-         * <p>The start time when the filed resources are delivered and available. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-         */
         @NameInMap("SupplyStartTime")
         public String supplyStartTime;
 
-        /**
-         * <p>The delivery status of the filed resource. Valid values:</p>
-         * <br>
-         * <p>*   Delivered: The filed resource is delivered.</p>
-         * <p>*   Delivering: The filed resource is being delivered.</p>
-         */
         @NameInMap("SupplyStatus")
         public String supplyStatus;
 
@@ -132,6 +102,14 @@ public class DescribeDemandsResponseBody extends TeaModel {
         }
         public Integer getAmount() {
             return this.amount;
+        }
+
+        public DescribeDemandsResponseBodyDemandsDemandSupplyInfosSupplyInfo setPrivatePoolId(String privatePoolId) {
+            this.privatePoolId = privatePoolId;
+            return this;
+        }
+        public String getPrivatePoolId() {
+            return this.privatePoolId;
         }
 
         public DescribeDemandsResponseBodyDemandsDemandSupplyInfosSupplyInfo setSupplyEndTime(String supplyEndTime) {
@@ -180,132 +158,60 @@ public class DescribeDemandsResponseBody extends TeaModel {
     }
 
     public static class DescribeDemandsResponseBodyDemandsDemand extends TeaModel {
-        /**
-         * <p>The number of instances available for the filed resources.</p>
-         */
         @NameInMap("AvailableAmount")
         public Integer availableAmount;
 
-        /**
-         * <p>The feedback on the denied request for filing resources.</p>
-         */
         @NameInMap("Comment")
         public String comment;
 
-        /**
-         * <p>The number of instances to be delivered in the filed resources.</p>
-         */
         @NameInMap("DeliveringAmount")
         public Integer deliveringAmount;
 
-        /**
-         * <p>The description of the filing ticket.</p>
-         */
         @NameInMap("DemandDescription")
         public String demandDescription;
 
-        /**
-         * <p>The ID of the filing ticket.</p>
-         */
         @NameInMap("DemandId")
         public String demandId;
 
-        /**
-         * <p>The name of the filing ticket.</p>
-         */
         @NameInMap("DemandName")
         public String demandName;
 
-        /**
-         * <p>The status of the filing ticket or resource consumption. Valid values:</p>
-         * <br>
-         * <p>*   Creating: The filing ticket is being created.</p>
-         * <p>*   Active: The filed resources are being supplied.</p>
-         * <p>*   Expired: The filing ticket expires.</p>
-         * <p>*   Finished: The filed resources are consumed.</p>
-         * <p>*   Refused: The filing request is denied. For reasons why the request is denied, see the `Comment` parameter in the response.</p>
-         * <p>*   Cancelled: The filing request is canceled. After the filing request is canceled, the delivery status of the resources becomes invalid.</p>
-         */
         @NameInMap("DemandStatus")
         public String demandStatus;
 
-        /**
-         * <p>The time when the filing ticket was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-         */
         @NameInMap("DemandTime")
         public String demandTime;
 
-        /**
-         * <p>The expected end time for the purchase of the filed resources. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-         */
         @NameInMap("EndTime")
         public String endTime;
 
-        /**
-         * <p>The billing method of the filed resources. Valid values:</p>
-         * <br>
-         * <p>*   Prepaid: subscription</p>
-         * <p>*   Postpaid: pay-as-you-go</p>
-         */
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
-        /**
-         * <p>The instance type of the filed instance.</p>
-         */
         @NameInMap("InstanceType")
         public String instanceType;
 
-        /**
-         * <p>The instance family of the filed instance.</p>
-         */
         @NameInMap("InstanceTypeFamily")
         public String instanceTypeFamily;
 
-        /**
-         * <p>The usage duration of the filed resource.</p>
-         */
         @NameInMap("Period")
         public Integer period;
 
-        /**
-         * <p>The unit of the usage duration of the filed resource. Valid values:</p>
-         * <br>
-         * <p>*   Hour</p>
-         * <p>*   Day</p>
-         * <p>*   Week</p>
-         * <p>*   Month</p>
-         */
         @NameInMap("PeriodUnit")
         public String periodUnit;
 
-        /**
-         * <p>The expected start time for the purchase of the filed resources. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-         */
         @NameInMap("StartTime")
         public String startTime;
 
-        /**
-         * <p>Details about the delivery status of the filed resources.</p>
-         */
         @NameInMap("SupplyInfos")
         public DescribeDemandsResponseBodyDemandsDemandSupplyInfos supplyInfos;
 
-        /**
-         * <p>The number of filed instances.</p>
-         */
         @NameInMap("TotalAmount")
         public Integer totalAmount;
 
-        /**
-         * <p>The number of consumed instances.</p>
-         */
         @NameInMap("UsedAmount")
         public Integer usedAmount;
 
-        /**
-         * <p>The ID of the zone where the filed resource resides.</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 

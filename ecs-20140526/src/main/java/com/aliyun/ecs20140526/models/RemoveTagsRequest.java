@@ -7,9 +7,15 @@ public class RemoveTagsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The key of tag N of the resource. Valid values of N: 1 to 20. It cannot be an empty string. The tag key can be up to 64 characters in length and cannot contain http:// or https://. It cannot start with acs: or aliyun.</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
@@ -19,9 +25,17 @@ public class RemoveTagsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The key of tag N of the resource.</p>
+     * <br>
+     * <p>>  We recommend that you use the Tag.N.Key parameter to ensure future compatibility.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The value of tag N of the resource. Valid values of N: 1 to 20. It can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://. It cannot start with acs: or aliyun.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<RemoveTagsRequestTag> tag;
 
@@ -87,9 +101,17 @@ public class RemoveTagsRequest extends TeaModel {
     }
 
     public static class RemoveTagsRequestTag extends TeaModel {
+        /**
+         * <p>The value of tag N of the resource.</p>
+         * <br>
+         * <p>>  We recommend that you use the Tag.N.Value parameter to ensure future compatibility.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N of the resource. Valid values of N: 1 to 20. It can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://. It cannot start with acs: or aliyun.</p>
+         */
         @NameInMap("Value")
         public String value;
 

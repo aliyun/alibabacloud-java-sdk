@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceMonitorDataRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. If the value of seconds (`ss`) is not `00`, the time is rounded up to the next minute.</p>
+     * <p>The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (`ss`) is not `00`, the time is rounded up to the next minute.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -23,7 +23,7 @@ public class DescribeInstanceMonitorDataRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The interval at which to retrieve monitored data. Unit: seconds. Valid values:</p>
+     * <p>The interval at which to retrieve monitoring data. Unit: seconds. Valid values:</p>
      * <br>
      * <p>*   60</p>
      * <p>*   600</p>

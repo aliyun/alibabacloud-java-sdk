@@ -5,49 +5,49 @@ import com.aliyun.tea.*;
 
 public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable auto-renewal for the reserved instance. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal for the reserved instance. Default value: false. Valid values:</p>
      * <br>
-     * <p>true: enables auto-renewal for the reserved instance. false: disables auto-renewal for the reserved instance. This is the default value.</p>
+     * <p>true: enables auto-renewal for the reserved instance. false: does not enable auto-renewal for the reserved instance.</p>
      */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
     /**
-     * <p>The auto-renewal term of the reserved instance. Unit: months. This parameter takes effect only if you set the AutoRenew parameter to true.</p>
+     * <p>The auto-renewal duration of the reserved instance. Unit: months. This parameter takes effect only when AutoRenew is set to true.</p>
      * <br>
      * <p>Valid values: 1, 12, 36, and 60.</p>
      * <br>
-     * <p>Default value if you set the PeriodUnit parameter to Month: 1.</p>
+     * <p>Default value when PeriodUnit is set to Month: 1.</p>
      * <br>
-     * <p>Default value if you set the PeriodUnit parameter to Year: 12.</p>
+     * <p>Default value when PeriodUnit is set to Year: 12.</p>
      */
     @NameInMap("AutoRenewPeriod")
     public Integer autoRenewPeriod;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. **The token can contain only ASCII characters and cannot exceed 64 characters in length.** For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The description of the reserved instance. The description must be 2 to 256 characters in length and cannot start with [http:// or https://](http://https://。).</p>
+     * <p>The description of the reserved instance. The description can be 2 to 256 characters in length and cannot start with [http:// or https://](http://https://。).</p>
      * <br>
-     * <p>By default, this parameter is left empty.</p>
+     * <p>This parameter is left empty by default.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The number of pay-as-you-go instances of the same instance type to which the reserved instance can be matched at the same time. Valid values: 1 to 50.</p>
+     * <p>The number of pay-as-you-go instances of the same instance type that the reserved instance can match at the same time. Valid values: 1 to 50.</p>
      * <br>
-     * <p>For example, if you set the InstanceAmount parameter to 3 and the InstanceType parameter to ecs.g5.large, the reserved instance can be matched to three ecs.g5.large pay-as-you-go instances at the same time.</p>
+     * <p>For example, if you set the InstanceAmount parameter to 3 and the InstanceType parameter to ecs.g5.large, the reserved instance can be matched three ecs.g5.large pay-as-you-go instances at the same time.</p>
      */
     @NameInMap("InstanceAmount")
     public Integer instanceAmount;
 
     /**
-     * <p>The type of the reserved instance. For more information, see [Instance families](~~25378~~).</p>
+     * <p>The type of the reserved instance. For more information, see [Instance family](~~25378~~).</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -71,7 +71,7 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The term of the reserved instance.</p>
+     * <p>The validity period of the reserved instance.</p>
      * <br>
      * <p>Valid values: 1 and 3.</p>
      * <br>
@@ -81,7 +81,7 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the term of the reserved instance.</p>
+     * <p>The unit of the validity period of the reserved instance.</p>
      * <br>
      * <p>Valid value: Year.</p>
      * <br>
@@ -91,7 +91,7 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The operating system of the image that is used by the instance. Valid values:</p>
+     * <p>The operating system of the image used by the instance. Valid values:</p>
      * <br>
      * <p>*   Windows: Windows Server operating system</p>
      * <p>*   Linux: Linux and UNIX-like operating system</p>
@@ -102,19 +102,19 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     public String platform;
 
     /**
-     * <p>The region ID of the reserved instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The name of the reserved instance. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The name of the reserved instance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
      */
     @NameInMap("ReservedInstanceName")
     public String reservedInstanceName;
 
     /**
-     * <p>The ID of the resource group to which the reserved instance belongs.</p>
+     * <p>The ID of the resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -126,7 +126,7 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The scope of the reserved instance. Valid values:</p>
+     * <p>The scope of reserved instance N. Valid values:</p>
      * <br>
      * <p>*   Region: regional</p>
      * <p>*   Zone: zonal</p>
@@ -137,13 +137,13 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     public String scope;
 
     /**
-     * <p>The tags of the reserved instance.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<PurchaseReservedInstancesOfferingRequestTag> tag;
 
     /**
-     * <p>The zone ID of the instance. If you set the `Scope` parameter to `Zone`, you must specify this parameter. You can call the [DescribeZones](~~25610~~) operation to query the most recent list of zones.</p>
+     * <p>The zone ID of the instance. This parameter is required when `Scope` is set to `Zone`. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -315,7 +315,7 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
 
     public static class PurchaseReservedInstancesOfferingRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the reserved instance. Valid values of N: 1 to 20. The tag value cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.</p>
+         * <p>The key of tag N of the reserved instance. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.</p>
          */
         @NameInMap("Key")
         public String key;

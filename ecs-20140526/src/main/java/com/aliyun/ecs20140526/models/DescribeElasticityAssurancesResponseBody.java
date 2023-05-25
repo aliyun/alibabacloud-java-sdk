@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeElasticityAssurancesResponseBody extends TeaModel {
     /**
-     * <p>Details about the elasticity assurances.</p>
+     * <p>An array that consists of the details about the elasticity assurances.</p>
      */
     @NameInMap("ElasticityAssuranceSet")
     public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSet elasticityAssuranceSet;
@@ -81,13 +81,13 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
 
     public static class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource extends TeaModel {
         /**
-         * <p>The instance type.</p>
+         * <p>The type of the instance.</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
-         * <p>The total number of instances for which capacity of an instance type is reserved.</p>
+         * <p>The total number of instances of an instance type for which capacity is reserved.</p>
          */
         @NameInMap("TotalAmount")
         public Integer totalAmount;
@@ -99,7 +99,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         public Integer usedAmount;
 
         /**
-         * <p>The zone ID.</p>
+         * <p>The ID of the zone in which the instance is located.</p>
          */
         @NameInMap("zoneId")
         public String zoneId;
@@ -219,7 +219,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
 
     public static class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem extends TeaModel {
         /**
-         * <p>Details about the allocated resources.</p>
+         * <p>An array that consists of the details about the allocated resources.</p>
          */
         @NameInMap("AllocatedResources")
         public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResources allocatedResources;
@@ -237,13 +237,13 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The billing method of the instances to be created by using the elasticity assurance. Set the value to PostPaid. Only pay-as-you-go instances can be created by using elasticity assurances.</p>
+         * <p>The billing method of the instance. Set the value to PostPaid. Only pay-as-you-go instances can be created by using elasticity assurances.</p>
          */
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
         /**
-         * <p>>  This parameter is unavailable.</p>
+         * <p>> This parameter is unavailable for public use.</p>
          */
         @NameInMap("LatestStartTime")
         public String latestStartTime;
@@ -257,8 +257,8 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         /**
          * <p>The type of the private pool associated with the elasticity assurance. Valid values:</p>
          * <br>
-         * <p>- Open: open private pool</p>
-         * <p>- Target: targeted private pool</p>
+         * <p>*   Open: open private pool</p>
+         * <p>*   Target: targeted private pool</p>
          */
         @NameInMap("PrivatePoolOptionsMatchCriteria")
         public String privatePoolOptionsMatchCriteria;
@@ -270,13 +270,13 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         public String privatePoolOptionsName;
 
         /**
-         * <p>The region ID of the elasticity assurance.</p>
+         * <p>The ID of the region to which the elasticity assurance belongs.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The ID of the resource group to which the elasticity assurance belongs.</p>
+         * <p>The ID of the resource group to which the elasticity assurance is assigned.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -290,8 +290,8 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         /**
          * <p>Indicates when the elasticity assurance takes effect. Valid values:</p>
          * <br>
-         * <p>- Now: The elasticity assurance takes effect as soon as it is created.</p>
-         * <p>- Later: The elasticity assurance takes effect at the specified time.</p>
+         * <p>*   Now: The elasticity assurance takes effect as soon as it is created.</p>
+         * <p>*   Later: The elasticity assurance takes effect at the specified time.</p>
          */
         @NameInMap("StartTimeType")
         public String startTimeType;
@@ -299,16 +299,16 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         /**
          * <p>The state of the elasticity assurance. Valid values:</p>
          * <br>
-         * <p>- Preparing: The elasticity assurance is being prepared.</p>
-         * <p>- Prepared: The elasticity assurance is to take effect.</p>
-         * <p>- Active: The elasticity assurance is in effect.</p>
-         * <p>- Released: The elasticity assurance is released.</p>
+         * <p>*   Preparing: The elasticity assurance is being prepared.</p>
+         * <p>*   Prepared: The elasticity assurance has not taken effect.</p>
+         * <p>*   Active: The elasticity assurance is in effect.</p>
+         * <p>*   Released: The elasticity assurance is released.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The tags of the elasticity assurance.</p>
+         * <p>The tags of the elasticity assurances.</p>
          */
         @NameInMap("Tags")
         public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemTags tags;
@@ -320,7 +320,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         public String totalAssuranceTimes;
 
         /**
-         * <p>>  This parameter is unavailable.</p>
+         * <p>> This parameter is unavailable for public use.</p>
          */
         @NameInMap("UsedAssuranceTimes")
         public Integer usedAssuranceTimes;

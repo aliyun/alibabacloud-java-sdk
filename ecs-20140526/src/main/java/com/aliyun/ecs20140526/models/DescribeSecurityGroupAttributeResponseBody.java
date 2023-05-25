@@ -14,7 +14,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
      * <p>The access control policy of the security group. Valid values:</p>
      * <br>
      * <p>*   Accept: All instances in the security group can communicate with each other.</p>
-     * <p>*   drop: All instances in the security group are isolated from each other.</p>
+     * <p>*   Drop: All instances in the security group are isolated from each other.</p>
      */
     @NameInMap("InnerAccessPolicy")
     public String innerAccessPolicy;
@@ -26,7 +26,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
     public DescribeSecurityGroupAttributeResponseBodyPermissions permissions;
 
     /**
-     * <p>The region ID of the security group.</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -126,7 +126,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
 
     public static class DescribeSecurityGroupAttributeResponseBodyPermissionsPermission extends TeaModel {
         /**
-         * <p>The time when the security group rule was created. The time is displayed in UTC.</p>
+         * <p>The time at which the security group rule was created. The time is displayed in UTC.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -138,7 +138,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The destination CIDR blocks for outbound access control.</p>
+         * <p>The destination CIDR block for outbound access control.</p>
          */
         @NameInMap("DestCidrIp")
         public String destCidrIp;
@@ -198,7 +198,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         public String ipv6SourceCidrIp;
 
         /**
-         * <p>The type of the network.</p>
+         * <p>The network type.</p>
          */
         @NameInMap("NicType")
         public String nicType;
@@ -252,7 +252,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         public String sourceGroupOwnerAccount;
 
         /**
-         * <p>The source port number range.</p>
+         * <p>The source port range.</p>
          */
         @NameInMap("SourcePortRange")
         public String sourcePortRange;

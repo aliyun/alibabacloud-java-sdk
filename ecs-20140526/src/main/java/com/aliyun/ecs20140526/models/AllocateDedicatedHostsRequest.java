@@ -10,13 +10,13 @@ public class AllocateDedicatedHostsRequest extends TeaModel {
     /**
      * <p>The policy used to migrate the instances deployed on the dedicated host when the dedicated host fails or needs to be repaired online. Valid values:</p>
      * <br>
-     * <p>*   Migrate: Instances are migrated to another physical server and restarted.</p>
+     * <p>*   Migrate: The instances are migrated to another physical server and restarted.</p>
      * <br>
-     * <p>    If the dedicated host is attached with cloud disks, the default value is Migrate.</p>
+     * <p>    If cloud disks are attached to the dedicated host, the default value is Migrate.</p>
      * <br>
-     * <p>*   Stop: The instances are stopped. If the dedicated host cannot be repaired, the instances are migrated to another physical server and restarted.</p>
+     * <p>*   Stop: The instances are stopped. If the dedicated host cannot be repaired, the instances are migrated to another physical machine and then restarted.</p>
      * <br>
-     * <p>    If the dedicated host is attached with local disks, the default value is Stop.</p>
+     * <p>    If local disks are attached to the dedicated host, the default value is Stop.</p>
      */
     @NameInMap("ActionOnMaintenance")
     public String actionOnMaintenance;
@@ -24,22 +24,26 @@ public class AllocateDedicatedHostsRequest extends TeaModel {
     /**
      * <p>Specifies whether to add the dedicated host to the resource pool for automatic deployment. If you create an ECS instance on a dedicated host without specifying the **DedicatedHostId** parameter, Alibaba Cloud selects a dedicated host from the resource pool to host the instance. For more information, see [Automatic deployment](~~118938~~). Valid values:</p>
      * <br>
-     * <p>*   on: The dedicated host is added to the resource pool for automatic deployment.</p>
-     * <p>*   off: The dedicated host is not added to the resource pool for automatic deployment.</p>
+     * <p>*   on: adds the dedicated host to the resource pool for automatic deployment.</p>
+     * <p>*   off: does not add the dedicated host to the resource pool for automatic deployment.</p>
      * <br>
      * <p>Default value: on.</p>
      * <br>
-     * <p>>  If you do not want to add the dedicated host to the resource pool for automatic deployment, set the value to off.</p>
+     * <p>> If you do not want to add the dedicated host to the resource pool for automatic deployment, set this parameter to off.</p>
      */
     @NameInMap("AutoPlacement")
     public String autoPlacement;
 
     /**
-     * <p>The automatic release time of the dedicated host. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The time when to automatically release the dedicated host. Specify the time in the `ISO 8601` standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
-     * <p>> *   It must be at least half an hour later than the current time.</p>
-     * <p>> *   It must be at most three years later than the current time.</p>
-     * <p>> *   If the value of seconds (ss) is not 00, it is automatically set to 00.</p>
+     * <p>> </p>
+     * <br>
+     * <p>*   It must be at least half an hour later than the current time.</p>
+     * <br>
+     * <p>*   It must be at most three years later than the current time.</p>
+     * <br>
+     * <p>*   If the value of seconds (ss) is not 00, it is automatically set to 00.</p>
      */
     @NameInMap("AutoReleaseTime")
     public String autoReleaseTime;
@@ -47,32 +51,34 @@ public class AllocateDedicatedHostsRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically renew the subscription dedicated host.</p>
      * <br>
-     * <p>>  The **AutoRenew** parameter takes effect only when the **ChargeType** parameter is set to PrePaid.</p>
+     * <p>> The **AutoRenew** parameter takes effect only when the **ChargeType** parameter is set to PrePaid.</p>
      * <br>
-     * <p>Default value: false.</p>
+     * <p>Default value: false</p>
      */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
     /**
-     * <p>The auto-renewal period of the dedicated host. Unit: months. Valid values: 1, 2, 3, 6, and 12.</p>
+     * <p>The auto-renewal duration of the dedicated host. The **AutoRenewPeriod** parameter takes effect and is required only when the **AutoRenew** parameter is set to true. Valid values:</p>
      * <br>
-     * <p>>  The **AutoRenewPeriod** parameter takes effect and is required only when the **AutoRenew** parameter is set to true.</p>
+     * <p>Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, and 12.</p>
      */
     @NameInMap("AutoRenewPeriod")
     public Integer autoRenewPeriod;
 
     /**
-     * <p>The billing method of the dedicated host. Default value: PostPaid. Valid values:</p>
+     * <p>The billing method of the dedicated host. Valid values:</p>
      * <br>
-     * <p>*   PrePaid: subscription. If you set this parameter to PrePaid, make sure that you have sufficient account balance or credit. Otherwise, InvalidPayMethod is returned.</p>
+     * <p>*   PrePaid: subscription. If you set this parameter to PrePaid, make sure that you have sufficient account balance or credits. Otherwise, `InvalidPayMethod` is returned.</p>
      * <p>*   PostPaid: pay-as-you-go.</p>
+     * <br>
+     * <p>Default value: PostPaid.</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate a client token. Make sure that a unique client token is used for each request. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -86,7 +92,7 @@ public class AllocateDedicatedHostsRequest extends TeaModel {
     public Float cpuOverCommitRatio;
 
     /**
-     * <p>The ID of the dedicated host cluster to which to assign the dedicated host.</p>
+     * <p>The ID of the dedicated host cluster in which to create the dedicated host.</p>
      */
     @NameInMap("DedicatedHostClusterId")
     public String dedicatedHostClusterId;
@@ -98,13 +104,13 @@ public class AllocateDedicatedHostsRequest extends TeaModel {
     public String dedicatedHostName;
 
     /**
-     * <p>The type of the dedicated host. You can call the [DescribeDedicatedHostTypes](~~134240~~) operation to obtain the most recent list of dedicated host types.</p>
+     * <p>The dedicated host type. You can call the [DescribeDedicatedHostTypes](~~134240~~) operation to query the most recent list of dedicated host types.</p>
      */
     @NameInMap("DedicatedHostType")
     public String dedicatedHostType;
 
     /**
-     * <p>The description of the dedicated host. The description must be 2 to 256 characters in length, and cannot start with `http://` or `https://`.</p>
+     * <p>The description of the dedicated host. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -112,7 +118,7 @@ public class AllocateDedicatedHostsRequest extends TeaModel {
     /**
      * <p>The minimum number of dedicated hosts to create. Valid values: 1 to 100.</p>
      * <br>
-     * <p>>  If the number of available dedicated hosts is less than the minimum number of dedicated hosts to create, the dedicated hosts fail to be created.</p>
+     * <p>> If the number of available dedicated hosts is less than the minimum number of dedicated hosts to create, the dedicated hosts fail to be created.</p>
      */
     @NameInMap("MinQuantity")
     public Integer minQuantity;
@@ -124,16 +130,16 @@ public class AllocateDedicatedHostsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The subscription period of the dedicated host. The `Period` parameter is required and takes effect only when the `ChargeType` parameter is set to `PrePaid`. Valid values:</p>
+     * <p>The subscription duration of the dedicated host. The `Period` parameter is required and takes effect only when the `ChargeType` parameter is set to `PrePaid`. Valid values:</p>
      * <br>
-     * <p>*   Valid values when the PeriodUnit parameter is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, and 9.</p>
+     * <p>*   Valid values when the PeriodUnit parameter is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</p>
      * <p>*   Valid values when the PeriodUnit parameter is set to Year: 1, 2, 3, 4, and 5.</p>
      */
     @NameInMap("Period")
     public Integer period;
 
     /**
-     * <p>The unit of the subscription period of the dedicated host. Valid values:</p>
+     * <p>The unit of the subscription duration of the dedicated host. Valid values:</p>
      * <br>
      * <p>*   Month</p>
      * <p>*   Year</p>
@@ -146,13 +152,13 @@ public class AllocateDedicatedHostsRequest extends TeaModel {
     /**
      * <p>The number of dedicated hosts that you want to create. Valid values: 1 to 100.</p>
      * <br>
-     * <p>Default: 1.</p>
+     * <p>Default value: 1.</p>
      */
     @NameInMap("Quantity")
     public Integer quantity;
 
     /**
-     * <p>The ID of the region in which to create the dedicated host. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the dedicated host. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -170,7 +176,7 @@ public class AllocateDedicatedHostsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The list of the tags that you want to add. It can be up to 20.</p>
+     * <p>The tags of the command.</p>
      */
     @NameInMap("Tag")
     public java.util.List<AllocateDedicatedHostsRequestTag> tag;
@@ -426,17 +432,17 @@ public class AllocateDedicatedHostsRequest extends TeaModel {
 
     public static class AllocateDedicatedHostsRequestTag extends TeaModel {
         /**
-         * <p>The key of tag to be added to the dedicated host.</p>
+         * <p>The key of tag N to add to the dedicated host. Valid values of N: 1 to 20.</p>
          * <br>
-         * <p>The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain `http://` or `https://`.</p>
+         * <p>The tag value cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag to the dedicated host.</p>
+         * <p>The value of tag N to add to the dedicated host. Valid values of N: 1 to 20.</p>
          * <br>
-         * <p>The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with acs: or contain `http://` or `https://`.</p>
+         * <p>The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain `http://` or `https://`.</p>
          */
         @NameInMap("Value")
         public String value;

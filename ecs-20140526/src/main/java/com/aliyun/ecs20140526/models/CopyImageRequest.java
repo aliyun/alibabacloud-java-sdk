@@ -11,13 +11,13 @@ public class CopyImageRequest extends TeaModel {
     public String destinationDescription;
 
     /**
-     * <p>The name of the image copy. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `acs:` or `aliyun`. The name cannot contain `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The name of the image copy. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `acs:` or `aliyun`. The name cannot contain `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).</p>
      */
     @NameInMap("DestinationImageName")
     public String destinationImageName;
 
     /**
-     * <p>The ID of the destination region to which to copy the source image.</p>
+     * <p>The ID of the destination region to which the source custom image is copied.</p>
      */
     @NameInMap("DestinationRegionId")
     public String destinationRegionId;
@@ -37,13 +37,13 @@ public class CopyImageRequest extends TeaModel {
     public Boolean encrypted;
 
     /**
-     * <p>The ID of the source image.</p>
+     * <p>The ID of the source custom image.</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
-     * <p>The ID of the key to use to encrypt the image copy.</p>
+     * <p>The ID of the key used to encrypt the image copy.</p>
      */
     @NameInMap("KMSKeyId")
     public String KMSKeyId;
@@ -55,15 +55,15 @@ public class CopyImageRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the source image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the source custom image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which to assign the image copy. If you do not specify this parameter, the image copy is assigned to the default resource group.</p>
+     * <p>The ID of the resource group to which the image copy belongs. If you do not specify this parameter, the image copy belongs to the default resource group.</p>
      * <br>
-     * <p>> If you call the CopyImage operation as a Resource Access Management (RAM) user who is not authorized to manage the default resource group and do not specify the `ResourceGroupId` parameter, the `Forbbiden: User not authorized to operate on the specified resource` error message is returned. You must specify the ID of a resource group that the RAM user is authorized to manage or authorize the RAM user to manage the default resource group before you call the CreateImage operation again.</p>
+     * <p>> If you call the CopyImage operation as a Resource Access Management (RAM) user who is not authorized to manage the default resource group and do not specify the `ResourceGroupId` parameter, the `Forbidden: User not authorized to operate on the specified resource` error message is returned. You must specify the ID of a resource group that the RAM user is authorized to manage or authorize the RAM user to manage the default resource group before you call the CreateImage operation again.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -75,7 +75,7 @@ public class CopyImageRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags to add to the image copy.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CopyImageRequestTag> tag;
@@ -199,13 +199,13 @@ public class CopyImageRequest extends TeaModel {
 
     public static class CopyImageRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the image copy. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>The key of tag N of the image copy. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N to add to the image copy. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with `acs:` or contain `http://` or `https://`.</p>
+         * <p>The value of tag N of the image copy. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:`. It cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Value")
         public String value;

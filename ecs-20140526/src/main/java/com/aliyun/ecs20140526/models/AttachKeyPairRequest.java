@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AttachKeyPairRequest extends TeaModel {
     /**
-     * <p>The IDs of instances to which you want to attach the SSH key pair. The value can be a JSON array that consists of up to 50 instance IDs. Separate multiple instance IDs with commas (,).</p>
+     * <p>The IDs of instances to which you want to bind the SSH key pair. The value can be a JSON array that consists of up to 50 instance IDs. Separate multiple instance IDs with commas (,).</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;
@@ -20,7 +20,7 @@ public class AttachKeyPairRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the SSH key pair. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the SSH key pair. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

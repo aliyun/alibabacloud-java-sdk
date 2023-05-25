@@ -59,13 +59,13 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The type of the resource. The ResourceType parameter can only be set to instance, which indicates that only instances are supported.</p>
+     * <p>The resource type. The value of ResourceType can only be instance, which indicates that only instances are supported.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The severity level of the diagnostic report. The value of this parameter is determined by the highest severity level of all diagnostic metrics. Valid values:</p>
+     * <p>The severity level of the diagnostic report. The value of this parameter is determined by the metric with the highest severity level among all diagnostic metrics. Valid values:</p>
      * <br>
      * <p>*   Unknown: The diagnostic has not started, failed to run, or exited unexpectedly without a diagnosis.</p>
      * <p>*   Normal: No exceptions were detected.</p>
@@ -290,7 +290,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
 
     public static class DescribeDiagnosticReportAttributesResponseBodyMetricResultsMetricResult extends TeaModel {
         /**
-         * <p>Details about the diagnosed issues.</p>
+         * <p>An array that consists of the details about the diagnosed issues.</p>
          */
         @NameInMap("Issues")
         public DescribeDiagnosticReportAttributesResponseBodyMetricResultsMetricResultIssues issues;

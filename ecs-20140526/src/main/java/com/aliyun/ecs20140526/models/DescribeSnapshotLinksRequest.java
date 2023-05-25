@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeSnapshotLinksRequest extends TeaModel {
     /**
-     * <p>The IDs of disks. The value is a JSON array that consists of up to 100 disk IDs. Separate the disk IDs with commas (,).</p>
+     * <p>The disk IDs. You can specify a JSON array that contains a maximum of 100 disk IDs. Separate the disk IDs with commas (,).</p>
      */
     @NameInMap("DiskIds")
     public String diskIds;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -23,15 +23,15 @@ public class DescribeSnapshotLinksRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1.</p>
+     * <p>The page number. Pages start from page 1.</p>
      * <br>
-     * <p>Default value: 1</p>
+     * <p>Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
+     * <p>The number of entries per page. Valid values: 1 to 100.</p>
      * <br>
      * <p>Default value: 10.</p>
      */
@@ -51,7 +51,7 @@ public class DescribeSnapshotLinksRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The IDs of snapshot chains. The value is a JSON array that consists of up to 100 snapshot chain IDs. Separate the snapshot chain IDs with commas (,).</p>
+     * <p>The snapshot chain IDs. You can specify a JSON array that contains a maximum of 100 snapshot chain IDs. Separate the snapshot chain IDs with commas (,).</p>
      */
     @NameInMap("SnapshotLinkIds")
     public String snapshotLinkIds;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateSnapshotResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the snapshot.</p>
+     * <p>The snapshot ID.</p>
      */
     @NameInMap("SnapshotId")
     public String snapshotId;

@@ -11,7 +11,7 @@ public class ReplaceSystemDiskResponseBody extends TeaModel {
     public String diskId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworkInterfacePermissionsRequest extends TeaModel {
     /**
-     * <p>The ID of the ENI. You must specify `NetworkInterfaceId` or `NetworkInterfacePermissionId.N` to determine the query range.</p>
+     * <p>The ID of ENI N. You must specify `NetworkInterfaceId` or `NetworkInterfacePermissionId.N` to determine the query range.</p>
      */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
@@ -23,7 +23,7 @@ public class DescribeNetworkInterfacePermissionsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * <br>
      * <p>Pages start from page 1.</p>
      * <br>
@@ -33,7 +33,7 @@ public class DescribeNetworkInterfacePermissionsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <br>
      * <p>Maximum value: 100.</p>
      * <br>

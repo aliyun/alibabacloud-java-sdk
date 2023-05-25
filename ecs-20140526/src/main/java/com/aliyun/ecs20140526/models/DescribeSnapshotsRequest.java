@@ -8,17 +8,15 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public java.util.List<DescribeSnapshotsRequestFilter> filter;
 
     /**
-     * <p>The type of the snapshot. Valid values:</p>
+     * <p>The snapshot type. Valid values:</p>
      * <br>
-     * <p>*   Standard: normal snapshot</p>
-     * <p>*   Flash: local snapshot</p>
+     * <p>*   Standard: the normal snapshot.</p>
+     * <p>*   Flash: the local snapshot.</p>
      * <br>
      * <p>The local snapshot feature is replaced by the instant access feature. When you specify this parameter, take note of the following items:</p>
      * <br>
      * <p>*   If you have used local snapshots before December 14, 2020, you can use this parameter.</p>
      * <p>*   If you have not used local snapshots before December 14, 2020, you cannot use this parameter.</p>
-     * <br>
-     * <p>For more information, see [Snapshot service upgrade and addition of a new billable item on December 14, 2020](https://help.aliyun.com/noticelist/articleid/1060755542.html).</p>
      * <br>
      * <p>> This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
      */
@@ -26,16 +24,16 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String category;
 
     /**
-     * <p>The ID of the disk.</p>
+     * <p>The disk ID.</p>
      */
     @NameInMap("DiskId")
     public String diskId;
 
     /**
-     * <p>Specifies whether to perform a dry run. Default value: false. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <br>
-     * <p>*   true: performs a dry run. The system checks your AccessKey pair, the permissions of the RAM user, and the required parameters. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</p>
-     * <p>*   false: performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * <p>*   true: performs only a dry run. The system checks whether your AccessKey pair is valid, whether RAM users are granted permissions, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</p>
+     * <p>*   false (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -47,7 +45,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public Boolean encrypted;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -59,7 +57,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String KMSKeyId;
 
     /**
-     * <p>The maximum number of entries to return on each page. Maximum value: 100.</p>
+     * <p>The number of entries per page. Valid values: 1 to 100.</p>
      * <br>
      * <p>Default value: 10.</p>
      */
@@ -67,7 +65,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token used to start the query. Set the value to the NextToken value obtained from the response to the previous request.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -79,15 +77,15 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1.</p>
+     * <p>The page number. Pages start from page 1.</p>
      * <br>
-     * <p>Default value: 1</p>
+     * <p>Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: 100.</p>
+     * <p>The number of entries per page. Valid values: 1 to 100.</p>
      * <br>
      * <p>Default value: 10.</p>
      */
@@ -101,9 +99,9 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the snapshot belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
+     * <p>The ID of the resource group to which the snapshot belongs. When you use this property to filter resources, the number of resources that are contained in the specified resource group cannot exceed 1,000.</p>
      * <br>
-     * <p>> Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+     * <p>> Resources in the default resource group are displayed in the response regardless of whether you specify this parameter.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -121,32 +119,32 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String snapshotIds;
 
     /**
-     * <p>The ID of the snapshot chain. The value is a JSON array that consists of up to 100 snapshot chain IDs. Separate the snapshot chain IDs with commas (,).</p>
+     * <p>The ID of the snapshot chain.</p>
      */
     @NameInMap("SnapshotLinkId")
     public String snapshotLinkId;
 
     /**
-     * <p>The name of the snapshot.</p>
+     * <p>The snapshot name.</p>
      */
     @NameInMap("SnapshotName")
     public String snapshotName;
 
     /**
-     * <p>The type of the snapshot. Valid values:</p>
+     * <p>The snapshot type. Valid values:</p>
      * <br>
-     * <p>*   auto: automatic snapshot</p>
-     * <p>*   user: manual snapshot</p>
-     * <p>*   all: This parameter indicates all snapshot types.</p>
+     * <p>*   auto: automatic snapshot.</p>
+     * <p>*   user: manual snapshot.</p>
+     * <p>*   all (default): This parameter indicates all snapshot types.</p>
      */
     @NameInMap("SnapshotType")
     public String snapshotType;
 
     /**
-     * <p>The type of the source disk for which the snapshot was created. Valid values:</p>
+     * <p>The type of the source disk for which you want to create the snapshot. Valid values:</p>
      * <br>
-     * <p>*   System: system disk</p>
-     * <p>*   data: data disk</p>
+     * <p>*   System: the system disk.</p>
+     * <p>*   data: the data disk.</p>
      * <br>
      * <p>> The value of this parameter is case-insensitive.</p>
      */
@@ -154,18 +152,18 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String sourceDiskType;
 
     /**
-     * <p>The state of the snapshot. Default value: all. Valid values:</p>
+     * <p>The snapshot status. Valid values:</p>
      * <br>
      * <p>*   progressing: The snapshot is being created.</p>
      * <p>*   accomplished: The snapshot is created.</p>
      * <p>*   failed: The snapshot fails to be created.</p>
-     * <p>*   all: This parameter indicates all snapshot states.</p>
+     * <p>*   all (default): This parameter indicates all snapshot states.</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>The tags of the snapshot.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeSnapshotsRequestTag> tag;
@@ -174,7 +172,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
      * <p>Specifies whether the snapshot has been used to create custom images or disks. Valid values:</p>
      * <br>
      * <p>*   image: The snapshot has been used to create custom images.</p>
-     * <p>*   disk: The snapshot is used to create disks.</p>
+     * <p>*   disk: The snapshot has been used to create disks.</p>
      * <p>*   image_disk: The snapshot has been used to create both custom images and data disks.</p>
      * <p>*   none: The snapshot has not been used to create custom images or disks.</p>
      */
@@ -388,13 +386,13 @@ public class DescribeSnapshotsRequest extends TeaModel {
 
     public static class DescribeSnapshotsRequestFilter extends TeaModel {
         /**
-         * <p>The key of filter 1 used to query resources. Set the value to `CreationStartTime`. You can specify a time by setting both `Filter.1.Key` and `Filter.1.Value` to query resources that were created after the time.</p>
+         * <p>The key of filter 1 that is used to query resources. Set the value to `CreationStartTime`. You can specify a time by setting both `Filter.1.Key` and `Filter.1.Value` to query resources that were created after the time.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the filter that is used to query resources. If you specify this parameter, you must also specify the `Filter.1.Key` parameter. Specify the time in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.</p>
+         * <p>The value of the filter that is used to query resources. If you specify this parameter, you must also specify the `Filter.1.Key` parameter. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.</p>
          */
         @NameInMap("Value")
         public String value;

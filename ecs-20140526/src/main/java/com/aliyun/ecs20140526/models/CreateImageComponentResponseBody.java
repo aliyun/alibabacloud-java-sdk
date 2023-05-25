@@ -4,15 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateImageComponentResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the image component.</p>
-     */
     @NameInMap("ImageComponentId")
     public String imageComponentId;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

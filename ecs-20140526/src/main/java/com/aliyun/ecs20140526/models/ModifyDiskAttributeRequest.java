@@ -5,33 +5,33 @@ import com.aliyun.tea.*;
 
 public class ModifyDiskAttributeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the performance burst feature for disk N. Valid values:</p>
+     * <p>Specifies whether to enable the performance burst feature for data disk N. Valid values:</p>
      * <br>
-     * <p>*   true: enables the performance burst feature.</p>
-     * <p>*   false: disables the performance burst feature.</p>
+     * <p>*   true: encrypts the disk.</p>
+     * <p>*   false: does not encrypt the disk.</p>
      */
     @NameInMap("BurstingEnabled")
     public Boolean burstingEnabled;
 
     /**
-     * <p>Specifies whether to delete the automatic snapshots of the disk when the disk is released. By default, this parameter is left empty, which specifies that the current value remains unchanged.</p>
+     * <p>Specifies whether to delete the automatic snapshots of the disk when the disk is released. This parameter is empty by default, which indicates that the current value remains unchanged.</p>
      */
     @NameInMap("DeleteAutoSnapshot")
     public Boolean deleteAutoSnapshot;
 
     /**
-     * <p>Specifies whether to release the disk together with the associated instance. By default, this parameter is left empty, which specifies that the current value remains unchanged.</p>
+     * <p>Specifies whether to release the disk along with its associated instance. This parameter is empty by default, which indicates that the current value remains unchanged.</p>
      * <br>
-     * <p>If you set the `DeleteWithInstance` parameter to `false` in one of the following cases, an error is returned:</p>
+     * <p>An error is returned if you set `DeleteWithInstance` to `false` in one of the following cases:</p>
      * <br>
      * <p>*   The disk is a local disk.</p>
-     * <p>*   The disk is a basic disk and not removable. If the Portable attribute of a disk is set to false, the disk is not removable.</p>
+     * <p>*   The disk is a basic disk and is not removable. If the Portable attribute of a disk is set to false, the disk is not removable.</p>
      */
     @NameInMap("DeleteWithInstance")
     public Boolean deleteWithInstance;
 
     /**
-     * <p>The description of the disk. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>The description of the disk. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -39,34 +39,34 @@ public class ModifyDiskAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the disk.</p>
      * <br>
-     * <p>>  You can specify the `DiskId` parameter or the `DiskIds.N` parameter, but you cannot specify both parameters at the same time.</p>
+     * <p>> You can specify the `DiskId` parameter or the `DiskIds.N` parameter, but you cannot specify both parameters at the same time.</p>
      */
     @NameInMap("DiskId")
     public String diskId;
 
     /**
-     * <p>The IDs of the disks whose attributes you want to modify. Valid values of N: 0 to 100.</p>
+     * <p>The ID of disk N. Valid values of N: 0 to 100.</p>
      * <br>
-     * <p>>  You can specify the `DiskId` parameter or the `DiskIds.N` parameter, but you cannot specify both parameters at the same time.</p>
+     * <p>> You can specify the `DiskId` parameter or the `DiskIds.N` parameter, but you cannot specify both parameters at the same time.</p>
      */
     @NameInMap("DiskIds")
     public java.util.List<String> diskIds;
 
     /**
-     * <p>The name of the disk. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The name of the disk. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
      */
     @NameInMap("DiskName")
     public String diskName;
 
     /**
-     * <p>Specifies whether to enable the automatic snapshot policy feature for the disk.</p>
+     * <p>Specifies whether to enable the automatic snapshot policy feature for the cloud disk.</p>
      * <br>
-     * <p>*   true: enables the automatic snapshot policy feature for the disk.</p>
-     * <p>*   false: disables the automatic snapshot policy feature for the disk.</p>
+     * <p>*   true: enables the automatic snapshot policy feature for the cloud disk.</p>
+     * <p>*   false: disables the automatic snapshot policy feature for the cloud disk.</p>
      * <br>
-     * <p>By default, this parameter is left empty, which specifies that the current value remains unchanged.</p>
+     * <p>This parameter is empty by default, which indicates that the current value remains unchanged.</p>
      * <br>
-     * <p>> : By default, the automatic snapshot policy feature is enabled for new disks. You need to only apply an automatic snapshot policy to a disk for the policy to take effect.</p>
+     * <p>> By default, the automatic snapshot policy feature is enabled for new disks. You need to only apply an automatic snapshot policy to a disk for the policy to take effect.</p>
      */
     @NameInMap("EnableAutoSnapshot")
     public Boolean enableAutoSnapshot;
@@ -78,7 +78,7 @@ public class ModifyDiskAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

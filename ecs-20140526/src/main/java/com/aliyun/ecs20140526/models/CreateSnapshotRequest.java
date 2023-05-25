@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class CreateSnapshotRequest extends TeaModel {
     /**
-     * <p>The category of the snapshot. Valid values:</p>
+     * <p>The snapshot type. Valid values:</p>
      * <br>
-     * <p>*   Standard: regular snapshot</p>
+     * <p>*   Standard: normal snapshot</p>
      * <p>*   Flash: local snapshot</p>
      * <br>
-     * <p>>  This parameter will be removed in the future. We recommend that you use the `InstantAccess` parameter to ensure future compatibility. This parameter and the `InstantAccess` parameter cannot be specified at the same time. For more information, see the "Description" section of this topic.</p>
+     * <p>> This parameter will be removed in the future. We recommend that you use the `InstantAccess` parameter to ensure future compatibility. This parameter and the `InstantAccess` parameter cannot be specified at the same time. For more information, see the "Description" section of this topic.</p>
      */
     @NameInMap("Category")
     public String category;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. **The token can only contain ASCII characters and cannot exceed 64 characters in length.** For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique across requests. **The token can contain only ASCII characters and cannot exceed 64 characters in length.** For more information, see [How to ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -30,7 +30,7 @@ public class CreateSnapshotRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the disk.</p>
+     * <p>The cloud disk ID.</p>
      */
     @NameInMap("DiskId")
     public String diskId;
@@ -38,25 +38,25 @@ public class CreateSnapshotRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the instant access feature. Valid values:</p>
      * <br>
-     * <p>*   true: enables the instant access feature. The feature can be enabled only for enhanced SSDs (ESSDs).</p>
+     * <p>*   true: enables the instant access feature. This feature can be enabled only for enhanced SSDs (ESSDs).</p>
      * <br>
      * <p>    **</p>
      * <br>
-     * <p>    **Note** After the instant access feature is enabled, an instant access snapshot is created and can be used to roll back disks or create disks across zones even if the snapshot is being created. The feature ensures that a new snapshot of an ESSD becomes available for use within 5 seconds regardless of the ESSD size.</p>
+     * <p>    **Note**After the instant access feature is enabled, an instant access (IA) snapshot is created and can be used to roll back disks or create disks across zones even when the snapshot is being created. This feature ensures that a new ESSD snapshot is available for use as soon as possible regardless of its size.</p>
      * <br>
-     * <p>*   false: disables the instant access feature. In this case, regular snapshots are created.</p>
+     * <p>*   false: does not enable the instant access feature. If InstantAccess is set to false, a normal snapshot is created.</p>
      * <br>
      * <p>Default value: false.</p>
      * <br>
-     * <p>>  This parameter and the `Category` parameter cannot be specified at the same time. For more information, see the "Description" section of this topic.</p>
+     * <p>> This parameter and the `Category` parameter cannot be specified at the same time. For more information, see the "Description" section of this topic.</p>
      */
     @NameInMap("InstantAccess")
     public Boolean instantAccess;
 
     /**
-     * <p>The validity period of the instant access feature. When the validity period ends, the feature is disabled and the instant access snapshot is automatically released. This parameter takes effect only if you set the `InstantAccess` parameter to true. Unit: days. Valid values: 1 to 65535.</p>
+     * <p>The validity period of the instant access feature. When the validity period ends, the feature is disabled and the IA snapshot is automatically released. This parameter takes effect only when `InstantAccess` is set to true. Unit: days. Valid values: 1 to 65535.</p>
      * <br>
-     * <p>By default, the value of this parameter is the same as the value of the `RetentionDays` parameter.</p>
+     * <p>By default, the value of this parameter is the same as that of `RetentionDays`.</p>
      */
     @NameInMap("InstantAccessRetentionDays")
     public Integer instantAccessRetentionDays;
@@ -68,7 +68,7 @@ public class CreateSnapshotRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the resource group to which you want to assign the snapshot.</p>
+     * <p>The ID of the resource group to which to assign the snapshot.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -82,13 +82,13 @@ public class CreateSnapshotRequest extends TeaModel {
     /**
      * <p>The retention period of the snapshot. Valid values: 1 to 65536. Unit: days. The snapshot is automatically released when its retention period expires.</p>
      * <br>
-     * <p>By default, this parameter is left empty, which specifies that the snapshot is not automatically released.</p>
+     * <p>This parameter is empty by default, which indicates that the snapshot is not automatically released.</p>
      */
     @NameInMap("RetentionDays")
     public Integer retentionDays;
 
     /**
-     * <p>The name of the snapshot. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The snapshot name. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
      * <br>
      * <p>The name cannot start with `auto` because snapshots whose names start with auto are recognized as automatic snapshots.</p>
      */
@@ -96,13 +96,13 @@ public class CreateSnapshotRequest extends TeaModel {
     public String snapshotName;
 
     /**
-     * <p>>  This parameter is unavailable.</p>
+     * <p>> This parameter is unavailable for public use.</p>
      */
     @NameInMap("StorageLocationArn")
     public String storageLocationArn;
 
     /**
-     * <p>The tags that you want to add to the snapshot.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateSnapshotRequestTag> tag;
@@ -234,13 +234,13 @@ public class CreateSnapshotRequest extends TeaModel {
 
     public static class CreateSnapshotRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N that you want to add to the snapshot. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key must be 1 to 128 characters in length. The tag key cannot start with acs: or aliyun and cannot contain [http:// or https://.](http://https://。)</p>
+         * <p>The key of tag N that you want to add to the snapshot. Valid values of N: 1 to 20. The tag value cannot be an empty string. The tag key must be 1 to 128 characters in length. It cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N that you want to add to the snapshot. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with acs: or contain [http:// or https://.](http://https://。)</p>
+         * <p>The value of tag N that you want to add to the snapshot. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain [http:// or https://.](http://https://。)</p>
          */
         @NameInMap("Value")
         public String value;

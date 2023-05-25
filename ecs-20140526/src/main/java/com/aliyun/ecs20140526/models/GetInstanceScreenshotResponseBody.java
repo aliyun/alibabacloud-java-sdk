@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class GetInstanceScreenshotResponseBody extends TeaModel {
     /**
-     * <p>The ID of the instance</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The JPG-formatted instance screenshot, which is encoded in Base64.</p>
+     * <p>The Base64-encoded instance screenshot in the JPG format.</p>
      */
     @NameInMap("Screenshot")
     public String screenshot;

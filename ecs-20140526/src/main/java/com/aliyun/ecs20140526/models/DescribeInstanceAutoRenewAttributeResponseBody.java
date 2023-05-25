@@ -11,19 +11,19 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
     public DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributes instanceRenewAttributes;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -93,7 +93,7 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
         public Integer duration;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -109,7 +109,7 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
          * <br>
          * <p>*   AutoRenewal: Auto-renewal is enabled for the instance.</p>
          * <p>*   Normal: Auto-renewal is disabled for the instance.</p>
-         * <p>*   NotRenewal: The instance is not to be renewed. The system sends no more expiration reminders, but sends only a non-renewal reminder three days before the expiration date. For an instance that is not to be renewed, you can call the [ModifyInstanceAutoRenewAttribute](~~52843~~) operation to change its auto-renewal state to `Normal`. Then, you can manually renew the instance or enable auto-renewal for the instance.</p>
+         * <p>*   NotRenewal: The instance is not to be renewed. The system no longer sends expiration reminders, but sends only a non-renewal reminder three days before the expiration date. For an instance that is not to be renewed, you can call the [ModifyInstanceAutoRenewAttribute](~~52843~~) operation to change its auto-renewal state to `Normal`. Then, you can manually renew the instance or enable auto-renewal for the instance.</p>
          */
         @NameInMap("RenewalStatus")
         public String renewalStatus;

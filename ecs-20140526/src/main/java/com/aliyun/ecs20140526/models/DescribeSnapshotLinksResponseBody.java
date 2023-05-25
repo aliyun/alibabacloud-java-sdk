@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeSnapshotLinksResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Details about the snapshot chains.</p>
+     * <p>The details about the snapshot chains.</p>
      */
     @NameInMap("SnapshotLinks")
     public DescribeSnapshotLinksResponseBodySnapshotLinks snapshotLinks;
 
     /**
-     * <p>The total number of snapshot chains.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -81,15 +81,15 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
 
     public static class DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink extends TeaModel {
         /**
-         * <p>The category of the snapshot.</p>
+         * <p>The type of the snapshot.</p>
          * <br>
-         * <p>> This parameter will be removed in the future. We recommend that you use the `InstantAccess` parameter to ensure future compatibility.</p>
+         * <p>> This parameter will be removed in the future. We recommend that you configure `InstantAccess` to ensure compatibility.</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -101,10 +101,10 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>Indicates whether the instant access feature was enabled. Valid values:</p>
+         * <p>Indicates whether the instant access feature is enabled. Valid values:</p>
          * <br>
-         * <p>*   true: The instant access feature was enabled. This feature can be enabled only for enhanced SSDs (ESSDs).</p>
-         * <p>*   false: The instant access feature was disabled. The snapshot is a normal snapshot for which the instant access feature was disabled.</p>
+         * <p>*   true: The instant access feature is enabled. This feature can be enabled only for enhanced SSDs (ESSDs).</p>
+         * <p>*   false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.</p>
          */
         @NameInMap("InstantAccess")
         public Boolean instantAccess;
@@ -116,13 +116,13 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the snapshot chain.</p>
+         * <p>The snapshot chain IDs.</p>
          */
         @NameInMap("SnapshotLinkId")
         public String snapshotLinkId;
 
         /**
-         * <p>The ID of the source disk. This parameter is retained even if the source disk is deleted.</p>
+         * <p>The source disk ID. This parameter is retained even if the source disk is deleted.</p>
          */
         @NameInMap("SourceDiskId")
         public String sourceDiskId;

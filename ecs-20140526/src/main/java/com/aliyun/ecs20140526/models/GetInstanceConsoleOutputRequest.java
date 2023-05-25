@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInstanceConsoleOutputRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -17,16 +17,16 @@ public class GetInstanceConsoleOutputRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>Specifies whether to remove symbols from the returned command output. Valid values:</p>
+     * <p>Specifies whether to remove formatting symbols from the returned command output. Valid values:</p>
      * <br>
-     * <p>*   true: removes the symbols</p>
-     * <p>*   false: does not remove the symbols</p>
+     * <p>*   true</p>
+     * <p>*   false</p>
      * <br>
      * <p>Default value: false.</p>
      */

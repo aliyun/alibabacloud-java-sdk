@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLaunchTemplatesResponseBody extends TeaModel {
     /**
-     * <p>Details about the launch templates.</p>
+     * <p>The information about the launch templates.</p>
      */
     @NameInMap("LaunchTemplateSets")
     public DescribeLaunchTemplatesResponseBodyLaunchTemplateSets launchTemplateSets;
@@ -81,13 +81,13 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
 
     public static class DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTagsTag extends TeaModel {
         /**
-         * <p>The tag key of the launch template.</p>
+         * <p>The key of tag N of the launch template.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The tag value of the launch template.</p>
+         * <p>The value of tag N of the launch template.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

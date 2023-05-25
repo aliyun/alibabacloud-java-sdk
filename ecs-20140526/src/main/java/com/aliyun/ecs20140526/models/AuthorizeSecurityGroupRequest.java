@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AuthorizeSecurityGroupRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among the requests. The **ClientToken** value can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -29,7 +29,7 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
     public String ipProtocol;
 
     /**
-     * <p>This parameter is deprecated. Use `Permissions.N.Ipv6SourceCidrIp` to specify the source IPv6 CIDR block.</p>
+     * <p>This parameter is deprecated. Use `Permissions.N.Ipv6DestCidrIp` to specify the destination IPv6 CIDR block.</p>
      */
     @NameInMap("Ipv6DestCidrIp")
     public String ipv6DestCidrIp;
@@ -53,13 +53,13 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Security group rules. Valid values of N: 1 to 100.</p>
+     * <p>The inbound rules that you want to add to the security group. Valid values of N: 1 to 100.</p>
      */
     @NameInMap("Permissions")
     public java.util.List<AuthorizeSecurityGroupRequestPermissions> permissions;
 
     /**
-     * <p>This parameter is deprecated. Use `Permissions.N.Policy` to specify whether to accept inbound access.</p>
+     * <p>This parameter is deprecated. Use `Permissions.N.Policy` to specify whether to allow inbound access.</p>
      */
     @NameInMap("Policy")
     public String policy;
@@ -77,7 +77,7 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
     public String priority;
 
     /**
-     * <p>The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
+     * <p>The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -89,7 +89,7 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the security group to which the instance belongs.</p>
+     * <p>The ID of the security group to which you want to add inbound rules.</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
@@ -125,7 +125,7 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
     public String sourcePortRange;
 
     /**
-     * <p>This parameter is deprecated. Use `Permissions.N.SourcePrefixListId` to specify the ID of the source prefix list.</p>
+     * <p>This parameter is deprecated. Use `Permissions.N.SourcePrefixListId`to specify the ID of the source prefix list.</p>
      */
     @NameInMap("SourcePrefixListId")
     public String sourcePrefixListId;
@@ -331,7 +331,7 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
         /**
          * <p>The destination IPv4 CIDR block. CIDR blocks and IPv4 addresses are supported.</p>
          * <br>
-         * <p>This parameter is specified to meet quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).</p>
+         * <p>This parameter is supported by quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).</p>
          * <br>
          * <p>Valid values of N: 1 to 100.</p>
          */
@@ -339,7 +339,7 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
         public String destCidrIp;
 
         /**
-         * <p>The transport layer protocol of the security group rule. These values are case-insensitive. Valid values:</p>
+         * <p>The transport layer protocol of the security group rule. The value of this parameter is not case-sensitive. Valid values:</p>
          * <br>
          * <p>*   TCP</p>
          * <p>*   UDP</p>
@@ -356,34 +356,34 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
         /**
          * <p>The destination IPv6 CIDR block. CIDR blocks and IPv6 addresses are supported.</p>
          * <br>
-         * <p>This parameter is specified to meet quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).</p>
+         * <p>This parameter is supported by quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).</p>
          * <br>
          * <p>Valid values of N: 1 to 100.</p>
          * <br>
-         * <p>> This parameter takes effect only when the destination is ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot specify both this parameter and the `DestCidrIp` parameter.</p>
+         * <p>> This parameter takes effect only when the destinations are ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot specify this parameter and `DestCidrIp` at the same time.</p>
          */
         @NameInMap("Ipv6DestCidrIp")
         public String ipv6DestCidrIp;
 
         /**
-         * <p>The source IPv6 CIDR block for the security group rule. CIDR blocks and IPv6 addresses are supported.</p>
+         * <p>The source IPv6 CIDR block of the security group rule. CIDR blocks and IPv6 addresses are supported.</p>
          * <br>
          * <p>Valid values of N: 1 to 100.</p>
          * <br>
-         * <p>> This parameter takes effect only when the source is ECS instances that reside in virtual private clouds (VPCs) and support IPv6 CIDR blocks. You cannot specify both this parameter and the `SourceCidrIp` parameter.</p>
+         * <p>> This parameter takes effect only when the sources are ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot specify this parameter and `SourceCidrIp` at the same time.</p>
          */
         @NameInMap("Ipv6SourceCidrIp")
         public String ipv6SourceCidrIp;
 
         /**
-         * <p>The network interface controller (NIC) type of the security group rule when the security group is in the classic network. Valid values:</p>
+         * <p>The network interface card (NIC) type of the security group rule when the security group is in the classic network. Valid values:</p>
          * <br>
-         * <p>*   internet: public NIC</p>
-         * <p>*   intranet: internal NIC</p>
+         * <p>*   internet</p>
+         * <p>*   intranet</p>
          * <br>
-         * <p>If the security group is in a VPC, this parameter is set to intranet by default and cannot be changed.</p>
+         * <p>If the security group is in a VPC, the value of this parameter is fixed to intranet.</p>
          * <br>
-         * <p>If you specify only DestGroupId when you configure access between security groups, this parameter must be set to intranet.</p>
+         * <p>If you specify only DestGroupId when you configure access between security groups, you must set this parameter to intranet.</p>
          * <br>
          * <p>Default value: internet.</p>
          * <br>
@@ -396,7 +396,7 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
          * <p>The authorization policy. Valid values:</p>
          * <br>
          * <p>*   accept: allows access.</p>
-         * <p>*   drop: denies access and returns no responses. In this case, the request times out or the connection cannot be established.</p>
+         * <p>*   drop: denies access and does not return responses. In this case, the request times out or the connection cannot be established.</p>
          * <br>
          * <p>Default value: accept.</p>
          * <br>
@@ -406,14 +406,14 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
         public String policy;
 
         /**
-         * <p>The range of destination ports that correspond to the transport layer protocol for the security group rule. Valid values:</p>
+         * <p>The range of destination ports that correspond to the transport layer protocol of the security group rule. Valid values:</p>
          * <br>
-         * <p>*   If the Permissions.N.IpProtocol parameter is set to TCP or UDP, the port number range is 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.</p>
-         * <p>*   If the Permissions.N.IpProtocol parameter is set to ICMP, the port number range is -1/-1, which indicates all ports.</p>
-         * <p>*   If the Permissions.N.IpProtocol parameter is set to GRE, the port number range is -1/-1, which indicates all ports.</p>
-         * <p>*   If the Permissions.N.IpProtocol parameter is set to ALL, the port number range is -1/-1, which indicates all ports.</p>
+         * <p>*   If you set Permissions.N.IpProtocol to TCP or UDP, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</p>
+         * <p>*   If you set Permissions.N.IpProtocol to ICMP, the port number range is -1/-1.</p>
+         * <p>*   If you set Permissions.N.IpProtocol to GRE, the port number range is -1/-1.</p>
+         * <p>*   If you set Permissions.N.IpProtocol to ALL, the port number range is -1/-1.</p>
          * <br>
-         * <p>For more information, see [Typical applications of commonly used ports](~~40724~~).</p>
+         * <p>For more information, see [Common ports used by applications](~~40724~~).</p>
          * <br>
          * <p>Valid values of N: 1 to 100.</p>
          */
@@ -421,7 +421,7 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
         public String portRange;
 
         /**
-         * <p>The priority of the security group rule. A smaller value indicates a higher priority. Valid values: 1 to 100.</p>
+         * <p>The priority of the security group rule. A smaller value specifies a higher priority. Valid values: 1 to 100.</p>
          * <br>
          * <p>Default value: 1.</p>
          * <br>
@@ -431,7 +431,7 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
         public String priority;
 
         /**
-         * <p>The source IPv4 CIDR block for the security group rule. CIDR blocks and IPv4 addresses are supported.</p>
+         * <p>The source IPv4 CIDR block of the security group rule. CIDR blocks and IPv4 addresses are supported.</p>
          * <br>
          * <p>Valid values of N: 1 to 100.</p>
          */
@@ -439,18 +439,18 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
         public String sourceCidrIp;
 
         /**
-         * <p>The ID of the source security group.</p>
+         * <p>The ID of the source security group that you want to reference in the security group rule.</p>
          * <br>
-         * <p>*   At least one of `SourceGroupId`, `SourceCidrIp`, `Ipv6SourceCidrIp`, and `SourcePrefixListId` must be specified.</p>
-         * <p>*   If `SourceGroupId` is specified and `SourceCidrIp` or `Ipv6SourceCidrIp` is not specified, `NicType` must be set to `intranet`.</p>
-         * <p>*   If both `SourceGroupId` and `SourceCidrIp` are specified, `SourceCidrIp` takes precedence.</p>
+         * <p>*   Specify at least one of the following parameters: `SourceGroupId`, `SourceCidrIp`, `Ipv6SourceCidrIp`, and `SourcePrefixListId`.</p>
+         * <p>*   If you specify `SourceGroupId` but do not specify `SourceCidrIp` or `Ipv6SourceCidrIp`, you must set `NicType` to `intranet`.</p>
+         * <p>*   If you specify `SourceGroupId` and `SourceCidrIp`, `SourceCidrIp` takes precedence.</p>
          * <br>
          * <p>Valid values of N: 1 to 100.</p>
          * <br>
-         * <p>Take note of the following items:</p>
+         * <p>When you specify this parameter, take note of the following items:</p>
          * <br>
-         * <p>*   Security groups cannot be referenced as authorization objects in rules of advanced security groups.</p>
-         * <p>*   Up to 20 security groups can be referenced as authorization objects in the rules of each basic security group.</p>
+         * <p>*   You cannot reference security groups as sources or destinations in the rules of advanced security groups.</p>
+         * <p>*   You can reference up to 20 security groups as sources or destinations in the rules of each basic security group.</p>
          */
         @NameInMap("SourceGroupId")
         public String sourceGroupId;
@@ -458,8 +458,8 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
         /**
          * <p>The Alibaba Cloud account that manages the source security group when you set a security group rule across accounts.</p>
          * <br>
-         * <p>*   If both `SourceGroupOwnerAccount` and `SourceGroupOwnerId` are not specified, access permissions are configured for another security group managed by your account.</p>
-         * <p>*   If `SourceCidrIp` is specified, the `SourceGroupOwnerAccount` parameter is invalid.</p>
+         * <p>*   If `SourceGroupOwnerAccount` and `SourceGroupOwnerId` are empty, access permissions are configured for another security group that is managed by your account.</p>
+         * <p>*   If you specify `SourceCidrIp`, `SourceGroupOwnerAccount` becomes invalid.</p>
          * <br>
          * <p>Valid values of N: 1 to 100.</p>
          */
@@ -469,8 +469,8 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account that manages the source security group when you set a security group rule across accounts.</p>
          * <br>
-         * <p>*   If both `SourceGroupOwnerAccount` and `SourceGroupOwnerId` are not specified, access permissions are configured for another security group managed by your account.</p>
-         * <p>*   If `SourceCidrIp` is specified, the `SourceGroupOwnerAccount` parameter is invalid.</p>
+         * <p>*   If both `SourceGroupOwnerAccount` and `SourceGroupOwnerId` are empty, access permissions are configured for another security group managed by your account.</p>
+         * <p>*   If you specify `SourceCidrIp`, `SourceGroupOwnerAccount` becomes invalid.</p>
          * <br>
          * <p>Valid values of N: 1 to 100.</p>
          */
@@ -478,14 +478,14 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
         public Long sourceGroupOwnerId;
 
         /**
-         * <p>The range of source ports that correspond to the transport layer protocol for the security group rule. Valid values:</p>
+         * <p>The range of source ports that correspond to the transport layer protocol of the security group rule. Valid values:</p>
          * <br>
-         * <p>*   If the Permissions.N.IpProtocol parameter is set to TCP or UDP, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</p>
-         * <p>*   If the Permissions.N.IpProtocol parameter is set to ICMP, the port number range is -1/-1, which indicates all ports.</p>
-         * <p>*   If the Permissions.N.IpProtocol parameter is set to GRE, the port number range is -1/-1, which indicates all ports.</p>
-         * <p>*   If the Permissions.N.IpProtocol parameter is set to ALL, the port number range is -1/-1, which indicates all ports.</p>
+         * <p>*   If you set Permissions.N.IpProtocol to TCP or UDP, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</p>
+         * <p>*   If you set Permissions.N.IpProtocol to ICMP, the port number range is -1/-1.</p>
+         * <p>*   If you set Permissions.N.IpProtocol to GRE, the port number range is -1/-1.</p>
+         * <p>*   If you set Permissions.N.IpProtocol to ALL, the port number range is -1/-1.</p>
          * <br>
-         * <p>This parameter is specified to meet quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).</p>
+         * <p>This parameter is supported by quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).</p>
          * <br>
          * <p>Valid values of N: 1 to 100.</p>
          */
@@ -493,14 +493,13 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
         public String sourcePortRange;
 
         /**
-         * <p>The ID of the source prefix list. You can call the [DescribePrefixLists](~~205046~~) operation to query the IDs of available prefix lists.</p>
+         * <p>The ID of the source prefix list that you want to reference in the security group rule. You can call the [DescribePrefixLists](~~205046~~) operation to query the IDs of available prefix lists.</p>
          * <br>
          * <p>Valid values of N: 1 to 100.</p>
          * <br>
-         * <p>Take note of the following items:</p>
-         * <br>
-         * <p>*   If a security group is in the classic network, you cannot reference prefix lists in the security group rules. For information about the limits on security groups and prefix lists, see the "Security group limits" section in [Limits](~~25412#SecurityGroupQuota1~~).</p>
-         * <p>*   If you specify the `SourceCidrIp`, `Ipv6SourceCidrIp`, or `SourceGroupId` parameter, this parameter is ignored.</p>
+         * <p>When you specify this parameter, take note of the following items:</p>
+         * <p>*   If the security group is of the classic network type, you cannot reference prefix lists in the security group rules. For information about the limits on security groups and prefix lists, see the "Security group limits" section in [Limits](~~25412#SecurityGroupQuota1~~).</p>
+         * <p>*   If you specify `SourceCidrIp`, `Ipv6SourceCidrIp`, or `SourceGroupId`, this parameter is ignored.</p>
          */
         @NameInMap("SourcePrefixListId")
         public String sourcePrefixListId;

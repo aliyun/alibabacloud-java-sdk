@@ -11,7 +11,7 @@ public class DisableActivationResponseBody extends TeaModel {
     public DisableActivationResponseBodyActivation activation;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,7 +39,7 @@ public class DisableActivationResponseBody extends TeaModel {
 
     public static class DisableActivationResponseBodyActivation extends TeaModel {
         /**
-         * <p>The ID of the activation code.</p>
+         * <p>The activation code ID.</p>
          */
         @NameInMap("ActivationId")
         public String activationId;
@@ -75,19 +75,19 @@ public class DisableActivationResponseBody extends TeaModel {
         public Integer instanceCount;
 
         /**
-         * <p>The default instance name prefix.</p>
+         * <p>The default prefix of the instance name.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>The IP addresses of hosts that are allowed to use the activation code.</p>
+         * <p>The IP addresses of the hosts that can use the activation code.</p>
          */
         @NameInMap("IpAddressRange")
         public String ipAddressRange;
 
         /**
-         * <p>The number of instances that were registered.</p>
+         * <p>The number of registered instances.</p>
          */
         @NameInMap("RegisteredCount")
         public Integer registeredCount;

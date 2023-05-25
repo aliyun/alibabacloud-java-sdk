@@ -5,32 +5,33 @@ import com.aliyun.tea.*;
 
 public class ModifyDiskSpecRequest extends TeaModel {
     /**
-     * <p>The new category of the disk. Valid values:</p>
+     * <p>The new category of the disk. Default value: PL1. Valid values:</p>
      * <br>
-     * <p>*   cloud_essd: ESSD</p>
-     * <p>*   cloud_ssd: standard SSD</p>
-     * <p>*   cloud_efficiency: ultra disk</p>
+     * <p>*   cloud_essd: ESSD.</p>
+     * <p>*   cloud_auto: ESSD AutoPL disk.</p>
+     * <p>*   cloud_ssd: The system creates an SSD.</p>
+     * <p>*   cloud_efficiency: The system creates an ultra disk.</p>
      * <br>
      * <p>This parameter is empty by default, which indicates that the disk category is not changed.</p>
      * <br>
-     * <p>>  The preceding values are listed in descending order of disk performance. The disk cannot be downgraded if it is a subscription disk.</p>
+     * <p>> The preceding values are listed in descending order of disk performance. The performance level of a subscription cloud disk cannot be downgraded.</p>
      */
     @NameInMap("DiskCategory")
     public String diskCategory;
 
     /**
-     * <p>The ID of the disk.</p>
+     * <p>The disk ID.</p>
      */
     @NameInMap("DiskId")
     public String diskId;
 
     /**
-     * <p>Specifies whether to check the validity of the request without actually making the request. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run without performing the actual request. Default value: PL1. Valid values:</p>
      * <br>
-     * <p>*   true: The validity of the request is checked but the request is not made. Check items include the required parameters, request format, service limits, and available ECS resources. If the check fails, the corresponding error message is returned. If the check succeeds, the `DryRunOperation` error code is returned.</p>
+     * <p>*   true: performs only a dry run. The system checks the required parameters, request syntax, service limits, and available ECS resources. If the request fails the dry run, the corresponding error message is returned. If the check succeeds, the `DryRunOperation` error code is returned.</p>
      * <p>*   false: The validity of the request is checked. If the check succeeds, a 2xx HTTP status code is returned and the request is made.</p>
      * <br>
-     * <p>Default value: false.</p>
+     * <p>Default value: false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -41,28 +42,31 @@ public class ModifyDiskSpecRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>磁盘性能控制参数集合</p>
+     */
     @NameInMap("PerformanceControlOptions")
     public ModifyDiskSpecRequestPerformanceControlOptions performanceControlOptions;
 
     /**
-     * <p>The new performance level of the ESSD. Valid values:</p>
+     * <p>The new performance level of the ESSD. Default value: PL1. Valid values:</p>
      * <br>
-     * <p>*   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</p>
-     * <p>*   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</p>
-     * <p>*   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</p>
-     * <p>*   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</p>
+     * <p>*   PL0: An ESSD can deliver up to 10,000 random read/write IOPS.</p>
+     * <p>*   PL1: An ESSD can deliver up to 50,000 random read/write IOPS.</p>
+     * <p>*   PL2: An ESSD can deliver up to 100,000 random read/write IOPS.</p>
+     * <p>*   PL3: An ESSD delivers up to 1,000,000 random read/write IOPS.</p>
      * <br>
-     * <p>Default value: PL1.</p>
+     * <p>Default value: PL1</p>
      */
     @NameInMap("PerformanceLevel")
     public String performanceLevel;
 
     /**
-     * <p>是否修改ESSD AutoPL云盘预配置读写IOPS。取值范围：0~min{50000, 1000*容量-基准性能}。</p>
+     * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}</p>
      * <br>
-     * <p>基准性能=min{1,800+50*容量, 50,000}</p>
+     * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}</p>
      * <br>
-     * <p>> 当DiskCategory取值为cloud_auto时才支持设置该参数。更多信息，请参见[ESSD AutoPL云盘](~~368372~~)和[修改ESSD AutoPL云盘预配置信息](~~413275~~)。</p>
+     * <p>> This parameter is available only if you set DiskCategory to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).</p>
      */
     @NameInMap("ProvisionedIops")
     public Long provisionedIops;
@@ -159,12 +163,35 @@ public class ModifyDiskSpecRequest extends TeaModel {
     }
 
     public static class ModifyDiskSpecRequestPerformanceControlOptions extends TeaModel {
+        /**
+         * <p>目标云盘IOPS。仅支持修改专属存储集群云盘IOPS。</p>
+         * <br>
+         * <p>取值范围：900~单盘最大IOPS，步长100。</p>
+         * <br>
+         * <br>
+         * <p>更多信息，请参见[云盘性能](~~25382~~)。</p>
+         */
         @NameInMap("IOPS")
         public Integer IOPS;
 
+        /**
+         * <p>重置云盘性能，仅支持专属存储集群云盘。</p>
+         * <br>
+         * <p>设置该参数后，PerformanceControlOptions.IOPS和PerformanceControlOptions.Throughput参数不生效。</p>
+         * <br>
+         * <br>
+         * <p>目前仅支持设置为All（重置云盘IOPS和吞吐量到初始值）。</p>
+         */
         @NameInMap("Recover")
         public String recover;
 
+        /**
+         * <p>目标云盘吞吐量，仅支持修改专属存储集群云盘吞吐量，单位MB/s。</p>
+         * <br>
+         * <p>取值范围：60~单盘最大吞吐量。</p>
+         * <br>
+         * <p>更多信息，请参见[云盘性能](~~25382~~)。</p>
+         */
         @NameInMap("Throughput")
         public Integer throughput;
 

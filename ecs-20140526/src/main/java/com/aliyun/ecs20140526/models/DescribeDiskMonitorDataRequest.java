@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDiskMonitorDataRequest extends TeaModel {
     /**
-     * <p>The ID of the disk.</p>
+     * <p>The disk ID.</p>
      */
     @NameInMap("DiskId")
     public String diskId;
 
     /**
-     * <p>The end of the time range in which you want to query the monitoring data. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.</p>
+     * <p>The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -23,7 +23,7 @@ public class DescribeDiskMonitorDataRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The interval at which to retrieve the monitoring data. Unit: seconds. Valid values:</p>
+     * <p>The interval at which you want to query the monitoring data. Unit: seconds. Valid values:</p>
      * <br>
      * <p>*   60</p>
      * <p>*   600</p>
@@ -41,7 +41,7 @@ public class DescribeDiskMonitorDataRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The start of the time range in which you want to query the monitoring data. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.</p>
+     * <p>The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

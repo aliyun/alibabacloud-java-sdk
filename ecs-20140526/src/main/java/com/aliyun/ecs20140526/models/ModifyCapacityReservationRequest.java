@@ -8,7 +8,7 @@ public class ModifyCapacityReservationRequest extends TeaModel {
     public ModifyCapacityReservationRequestPrivatePoolOptions privatePoolOptions;
 
     /**
-     * <p>The description of the capacity reservation. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>The description of the capacity reservation. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -22,16 +22,16 @@ public class ModifyCapacityReservationRequest extends TeaModel {
     /**
      * <p>The release mode of the capacity reservation. Valid values:</p>
      * <br>
-     * <p>*   Limited: The capacity reservation is released at the specified time. You must also specify the `EndTime` parameter.</p>
-     * <p>*   Unlimited: You must manually release the capacity reservation. You can release capacity reservations at any time.</p>
+     * <p>*   Limited: The capacity reservation is automatically released at the specified point in time. If you configure this parameter, you must also configure `EndTime`.</p>
+     * <p>*   Unlimited: The capacity reservation must be manually released. You can release it anytime.</p>
      */
     @NameInMap("EndTimeType")
     public String endTimeType;
 
     /**
-     * <p>The total number of instances reserved by the capacity reservation. Valid values: the number of created instances to 1000.</p>
+     * <p>The total number of instances for which capacity is reserved. Valid values: the number of used instances to 1000.</p>
      * <br>
-     * <p>>  When you increase the number of instances reserved, the increase may fail due to insufficient resources.</p>
+     * <p>> When you increase the number of instances, the increase may fail due to insufficient resources.</p>
      */
     @NameInMap("InstanceAmount")
     public Integer instanceAmount;
@@ -43,12 +43,12 @@ public class ModifyCapacityReservationRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The operating system type of the instance reserved. Valid values:</p>
+     * <p>The operating system of the image used by the instance. Valid values:</p>
      * <br>
-     * <p>*   Windows: Windows Server operating systems</p>
-     * <p>*   Linux: Linux and Unix-like operating systems</p>
+     * <p>*   Windows</p>
+     * <p>*   Linux</p>
      * <br>
-     * <p>>  This parameter is unavailable.</p>
+     * <p>> This parameter is unavailable.</p>
      */
     @NameInMap("Platform")
     public String platform;
@@ -66,9 +66,9 @@ public class ModifyCapacityReservationRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The effective mode of the capacity reservation. The capacity reservation can be set only to take effect immediately. You do not need to pass in a value for the parameter.</p>
+     * <p>The mode in which the capacity reservation takes effect. Only immediate capacity reservations are supported. You do not need to specify a value for this parameter.</p>
      * <br>
-     * <p>>  The capacity reservation takes effect immediately when this parameter is left empty.</p>
+     * <p>> If you do not specify a value for this parameter, the capacity reservation immediately takes effect.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -176,13 +176,13 @@ public class ModifyCapacityReservationRequest extends TeaModel {
 
     public static class ModifyCapacityReservationRequestPrivatePoolOptions extends TeaModel {
         /**
-         * <p>The ID of the capacity reservation.</p>
+         * <p>The capacity reservation ID.</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
-         * <p>The name of the capacity reservation. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+         * <p>The name of the capacity reservation. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
          */
         @NameInMap("Name")
         public String name;

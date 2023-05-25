@@ -81,13 +81,13 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
 
     public static class DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTagsTag extends TeaModel {
         /**
-         * <p>The tag key of the SCU.</p>
+         * <p>The key of tag N.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The tag value of the SCU.</p>
+         * <p>The value of tag N.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

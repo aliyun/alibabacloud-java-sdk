@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyManagedInstanceResponseBody extends TeaModel {
     /**
-     * <p>Details about the managed instance.</p>
+     * <p>Details of the managed instance.</p>
      */
     @NameInMap("Instance")
     public ModifyManagedInstanceResponseBodyInstance instance;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

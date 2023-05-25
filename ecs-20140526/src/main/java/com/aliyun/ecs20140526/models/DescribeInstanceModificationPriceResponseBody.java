@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
     /**
-     * <p>Details about the prices and discount rules.</p>
+     * <p>$.parameters[4].schema.enumValueTitles</p>
      */
     @NameInMap("PriceInfo")
     public DescribeInstanceModificationPriceResponseBodyPriceInfo priceInfo;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>$.parameters[4].schema.example</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,31 +38,21 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceModificationPriceResponseBodyPriceInfoPrice extends TeaModel {
-        /**
-         * <p>The currency unit. </p>
-         * <br>
-         * <p>Alibaba Cloud China site (aliyun.com): CNY. </p>
-         * <br>
-         * <p>Alibaba Cloud International site (alibabacloud.com): USD.</p>
-         */
         @NameInMap("Currency")
         public String currency;
 
         /**
-         * <p>The discount.</p>
+         * <p>WB01405484</p>
          */
         @NameInMap("DiscountPrice")
         public Float discountPrice;
 
         /**
-         * <p>The original price.</p>
+         * <p>DescribeInstanceModificationPrice</p>
          */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
-        /**
-         * <p>The transaction price, which is equal to the original price minus the discount.</p>
-         */
         @NameInMap("TradePrice")
         public Float tradePrice;
 
@@ -107,13 +97,13 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
 
     public static class DescribeInstanceModificationPriceResponseBodyPriceInfoRulesRule extends TeaModel {
         /**
-         * <p>The description of the promotion rule.</p>
+         * <p>$.parameters[5].schema.example</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The ID of the promotion rule.</p>
+         * <p>$.parameters[5].schema.enumValueTitles</p>
          */
         @NameInMap("RuleId")
         public Long ruleId;
@@ -162,13 +152,13 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
 
     public static class DescribeInstanceModificationPriceResponseBodyPriceInfo extends TeaModel {
         /**
-         * <p>The price.</p>
+         * <p>Queries the pricing information about newly attached subscription data disks or about the new instance types when you upgrade the configurations of unexpired subscription Elastic Compute Service (ECS) instances.</p>
          */
         @NameInMap("Price")
         public DescribeInstanceModificationPriceResponseBodyPriceInfoPrice price;
 
         /**
-         * <p>Details about the promotion rules.</p>
+         * <p>$.parameters[5].schema.description</p>
          */
         @NameInMap("Rules")
         public DescribeInstanceModificationPriceResponseBodyPriceInfoRules rules;

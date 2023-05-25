@@ -5,21 +5,21 @@ import com.aliyun.tea.*;
 
 public class CreateDiskResponseBody extends TeaModel {
     /**
-     * <p>The ID of the disk.</p>
+     * <p>The cloud disk ID.</p>
      */
     @NameInMap("DiskId")
     public String diskId;
 
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
      * <br>
-     * <p>>  This parameter is returned only when you create a subscription disk.</p>
+     * <p>> The order ID is returned only when you create a subscription disk.</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -11,13 +11,13 @@ public class ModifyLaunchTemplateDefaultVersionRequest extends TeaModel {
     public Long defaultVersionNumber;
 
     /**
-     * <p>The ID of the launch template. You must set LaunchTemplateId or LaunchTemplateName to specify a launch template.</p>
+     * <p>The ID of the launch template. You must configure LaunchTemplateId or LaunchTemplateName to specify a launch template.</p>
      */
     @NameInMap("LaunchTemplateId")
     public String launchTemplateId;
 
     /**
-     * <p>The name of the launch template. You must set LaunchTemplateId or LaunchTemplateName to specify a launch template.</p>
+     * <p>The name of the launch template. You must configure LaunchTemplateId or LaunchTemplateName to specify a launch template.</p>
      */
     @NameInMap("LaunchTemplateName")
     public String launchTemplateName;

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteInstanceRequest extends TeaModel {
     /**
-     * <p>Specifies whether to forcefully release the instance in the **Running** (`Running`) state. Valid values:</p>
+     * <p>Specifies whether to forcefully release the instance in the `Running` state. Valid values:****</p>
      * <br>
-     * <p>*   true: forcefully releases the instance in the **Running** (`Running`) state. When the Force parameter is set to true, this operation is equivalent to the power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.</p>
-     * <p>*   false: normally releases the instance. This value is valid only for instances in the **Stopped** (`Stopped`) state.</p>
+     * <p>*   true: forcefully releases the instance in the `Running` state.**** This operation is equivalent to performing a hard shut-down. Cache data that is not written to persistent storage will be lost.</p>
+     * <p>*   false: normally releases the instance. This value is valid only for instances in the `Stopped` state.****</p>
      * <br>
      * <p>Default value: false.</p>
      */
@@ -16,7 +16,7 @@ public class DeleteInstanceRequest extends TeaModel {
     public Boolean force;
 
     /**
-     * <p>The ID of the instance that you want to release.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -34,7 +34,7 @@ public class DeleteInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to release the expired subscription instance.</p>
+     * <p>Specifies whether to release an expired subscription instance.</p>
      * <br>
      * <p>Default value: false.</p>
      */

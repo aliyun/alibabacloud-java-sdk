@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AttachClassicLinkVpcRequest extends TeaModel {
     /**
-     * <p>The ID of the classic network-type instance. You can call the [DescribeInstances](~~25506~~) operation to query available instances.</p>
+     * <p>The ID of the instance that is deployed in the classic network. You can call the [DescribeInstances](~~25506~~) operation to query available instances.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

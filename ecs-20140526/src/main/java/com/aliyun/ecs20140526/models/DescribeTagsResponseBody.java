@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeTagsResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -23,7 +23,7 @@ public class DescribeTagsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The tags that match all the filter conditions.</p>
+     * <p>The tags that match all filter conditions.</p>
      */
     @NameInMap("Tags")
     public DescribeTagsResponseBodyTags tags;
@@ -263,13 +263,13 @@ public class DescribeTagsResponseBody extends TeaModel {
         public DescribeTagsResponseBodyTagsTagResourceTypeCount resourceTypeCount;
 
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

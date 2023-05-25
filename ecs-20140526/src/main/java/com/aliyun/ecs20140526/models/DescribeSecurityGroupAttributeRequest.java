@@ -7,9 +7,9 @@ public class DescribeSecurityGroupAttributeRequest extends TeaModel {
     /**
      * <p>The direction in which the security group rule is applied. Valid values:</p>
      * <br>
-     * <p>*   egress: outbound</p>
-     * <p>*   ingress: inbound</p>
-     * <p>*   all: outbound and inbound</p>
+     * <p>*   egress: outbound.</p>
+     * <p>*   ingress: inbound.</p>
+     * <p>*   all: outbound and inbound.</p>
      * <br>
      * <p>Default value: all.</p>
      */
@@ -17,18 +17,22 @@ public class DescribeSecurityGroupAttributeRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>The network interface type of the security group rule.</p>
+     * <p>The network interface card (NIC) type of the security group rule.</p>
      * <br>
-     * <p>*   Default value for rules of security groups in the classic network: internet. Valid values for rules of security groups in the classic network:</p>
+     * <p>*   Valid values for rules of security groups in the classic network:</p>
      * <br>
-     * <p>    *   internet</p>
+     * <p>    *   internet (default)</p>
      * <p>    *   intranet</p>
      * <br>
-     * <p>    > You can query security group rules of only one network interface type in a single call. To query security group rules of both network interface types, call the operation twice.</p>
+     * <p>    **</p>
      * <br>
-     * <p>*   When the security group is in a virtual private cloud (VPC), set the value to intranet. This is also the default value.</p>
+     * <p>    **Note**You can query security group rules of only one NIC type in a single call. To query security group rules of both NIC types, call the operation twice.</p>
      * <br>
-     * <p>    > If you set this parameter to internet or leave this parameter empty, the intranet value is automatically used.</p>
+     * <p>*   If the security group is in a virtual private cloud (VPC), set the value to intranet. This is also the default value.</p>
+     * <br>
+     * <p>    **</p>
+     * <br>
+     * <p>    **Note**If you set this parameter to internet or leave this parameter empty, the value of intranet is automatically used.</p>
      */
     @NameInMap("NicType")
     public String nicType;

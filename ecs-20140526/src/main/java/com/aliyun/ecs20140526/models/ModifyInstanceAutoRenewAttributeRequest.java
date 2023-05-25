@@ -13,16 +13,16 @@ public class ModifyInstanceAutoRenewAttributeRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The auto-renewal period for the instance.</p>
+     * <p>The auto-renewal period of the instance.</p>
      * <br>
      * <p>*   Valid values of `Duration` when `PeriodUnit` is set to `Year`: 1, 2, 3, 4, and 5.</p>
-     * <p>*   Valid values of `Duration` when `PeriodUnit` is set to `Month` : 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
+     * <p>*   Valid values of `Duration` when `PeriodUnit` is set to `Month`: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
      */
     @NameInMap("Duration")
     public Integer duration;
 
     /**
-     * <p>The ID of the instance You can specify IDs of up to 100 subscription instances. Separate the instance IDs with commas (,).</p>
+     * <p>The ID of the instance. You can specify up to 100 subscription instance IDs. Separate the instance IDs with commas (,).</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -34,28 +34,28 @@ public class ModifyInstanceAutoRenewAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The unit of the renewal period (`Duration`). Default value: Month. Valid values:</p>
+     * <p>The unit of the renewal period (`Duration`). Valid values:</p>
      * <br>
-     * <p>*   Month</p>
+     * <p>*   Month (default)</p>
      * <p>*   Year</p>
      */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The auto-renewal state of the instance. Valid values:</p>
+     * <p>The auto-renewal status of the instance. Valid values:</p>
      * <br>
      * <p>*   AutoRenewal: Auto-renewal is enabled for the instance.</p>
      * <p>*   Normal: Auto-renewal is disabled for the instance.</p>
-     * <p>*   NotRenewal: The instance is not renewed. The system no longer sends an expiration notification. Notifications for renewal are sent three days before the expiration time of the instance. You can change the value of this parameter from NotRenewal to `Normal` for an instance, and then manually renew the instance. Alternatively, you can set the RenewalStatus parameter to AutoRenewal.</p>
+     * <p>*   NotRenewal: The instance is not renewed. The system no longer sends an expiration notification but sends only a renewal notification three days before the instance expires. You can change the value of this parameter from NotRenewal to `Normal` for an instance, and then manually renew the instance. Alternatively, you can set the RenewalStatus parameter to AutoRenewal.</p>
      * <br>
-     * <p>> `RenewalStatus` takes precedence over `AutoRenew`. If you do not specify `RenewalStatus`, the `AutoRenew` parameter is used by default.</p>
+     * <p>> `RenewalStatus` takes precedence over `AutoRenew`. If you do not specify `RenewalStatus`, `AutoRenew` is used by default.</p>
      */
     @NameInMap("RenewalStatus")
     public String renewalStatus;

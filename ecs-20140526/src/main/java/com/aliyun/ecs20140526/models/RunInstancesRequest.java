@@ -231,6 +231,9 @@ public class RunInstancesRequest extends TeaModel {
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <p>镜像相关属性信息。</p>
+     */
     @NameInMap("ImageOptions")
     public RunInstancesRequestImageOptions imageOptions;
 
@@ -388,6 +391,9 @@ public class RunInstancesRequest extends TeaModel {
     @NameInMap("NetworkInterfaceQueueNumber")
     public Integer networkInterfaceQueueNumber;
 
+    /**
+     * <p>网络相关属性参数。</p>
+     */
     @NameInMap("NetworkOptions")
     public RunInstancesRequestNetworkOptions networkOptions;
 
@@ -1963,6 +1969,13 @@ public class RunInstancesRequest extends TeaModel {
     }
 
     public static class RunInstancesRequestImageOptions extends TeaModel {
+        /**
+         * <p>使用该镜像的实例是否支持使用ecs-user用户登录。可能值：</p>
+         * <br>
+         * <p>- true：是</p>
+         * <br>
+         * <p>- false：否</p>
+         */
         @NameInMap("LoginAsNonRoot")
         public Boolean loginAsNonRoot;
 
@@ -2031,6 +2044,14 @@ public class RunInstancesRequest extends TeaModel {
         @NameInMap("Ipv6AddressCount")
         public Long ipv6AddressCount;
 
+        /**
+         * <p>网卡指定的物理网卡索引。</p>
+         * <br>
+         * <p>您需要注意：</p>
+         * <p>- 只有特定实例规格支持指定物理网卡索引。</p>
+         * <p>- NetworkInterface.N.InstanceType取值为Primary时，对于支持物理网卡的实例规格，如果设置此参数，只能设置为0。</p>
+         * <p>- NetworkInterface.N.InstanceType取值为Secondary或者空值，对于支持物理网卡的实例规格，此参数可以依据实例规格设置。更多信息，请参见[实例规格族](~~25378~~)。</p>
+         */
         @NameInMap("NetworkCardIndex")
         public Integer networkCardIndex;
 
@@ -2247,6 +2268,17 @@ public class RunInstancesRequest extends TeaModel {
     }
 
     public static class RunInstancesRequestNetworkOptions extends TeaModel {
+        /**
+         * <p>实例是否开启Jumbo frame特性。参数取值范围：</p>
+         * <br>
+         * <p>- false：不开启Jumbo frame, 该实例下的所有网卡（包括主网卡及辅助网卡）MTU取值为1500。</p>
+         * <br>
+         * <p>- true：开启Jumbo frame, 该实例下的所有网卡（包括主网卡及辅助网卡）的MTU取值为8500。</p>
+         * <br>
+         * <p>默认值：true。</p>
+         * <br>
+         * <p>>只有八代以上部分实例规格支持开启Jumbo frame特性，更多信息，请参见[ECS实例MTU](~~200512~~)。</p>
+         */
         @NameInMap("EnableJumboFrame")
         public Boolean enableJumboFrame;
 

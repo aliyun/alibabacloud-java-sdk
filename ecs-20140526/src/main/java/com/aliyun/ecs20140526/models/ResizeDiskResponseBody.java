@@ -7,7 +7,7 @@ public class ResizeDiskResponseBody extends TeaModel {
     /**
      * <p>The ID of the order.</p>
      * <br>
-     * <p>>  This parameter is returned only when subscription disks are resized.</p>
+     * <p>> This parameter is returned only when you resize subscription disks.</p>
      */
     @NameInMap("OrderId")
     public String orderId;

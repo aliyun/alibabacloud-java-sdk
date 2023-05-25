@@ -4,15 +4,45 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class RebootInstancesRequest extends TeaModel {
+    /**
+     * <p>The batch operation mode. Valid values:</p>
+     * <br>
+     * <p>*   AllTogether: In this mode, if all instances are restarted, a success message is returned. If one or more instance fails the verification, all instances fail to restart and an error message is returned.</p>
+     * <p>*   SuccessFirst: In this mode, each instance is restarted separately. The response contains the operation results of each instance.</p>
+     * <br>
+     * <p>Default value: AllTogether.</p>
+     */
     @NameInMap("BatchOptimization")
     public String batchOptimization;
 
+    /**
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid Values:</p>
+     * <br>
+     * <p>*   true: performs only a dry run. The system checks the request for potential issues, including required parameters, request syntax, and instance status. If the request passes the dry run, `DRYRUN.SUCCESS` is returned. Otherwise, an error message is returned.</p>
+     * <br>
+     * <p>> If you set `BatchOptimization` to `SuccessFirst` and `DryRun` to \"true\", only `DRYRUN.SUCCESS` is returned regardless of whether the request passes the dry run.</p>
+     * <br>
+     * <p>*   false: performs a dry run and performs the actual request. If the request passes the dry run, the instance is restarted.</p>
+     * <br>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>Specifies whether to forcibly restart the instance. Valid values:</p>
+     * <br>
+     * <p>*   true: restarts the instance in a forceful manner. This operation is equivalent to the typical power-off operation. Cache data that is not written to storage in the instance is lost.</p>
+     * <p>*   false: restarts the instance in a normal manner.</p>
+     * <br>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("ForceReboot")
     public Boolean forceReboot;
 
+    /**
+     * <p>The IDs of instances. You can specify up to 100 instance IDs.</p>
+     */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
@@ -22,6 +52,9 @@ public class RebootInstancesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

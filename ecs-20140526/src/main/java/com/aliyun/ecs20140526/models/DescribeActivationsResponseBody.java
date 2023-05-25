@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeActivationsResponseBody extends TeaModel {
     /**
-     * <p>Details of the activation codes and their usage information.</p>
+     * <p>The number of instances that were deregistered.</p>
      */
     @NameInMap("ActivationList")
     public java.util.List<DescribeActivationsResponseBodyActivationList> activationList;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>Details about the activation code and its usage information.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The time when the activation code was created.</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -111,64 +111,67 @@ public class DescribeActivationsResponseBody extends TeaModel {
 
     public static class DescribeActivationsResponseBodyActivationList extends TeaModel {
         /**
-         * <p>The ID of the activation code.</p>
+         * <p>Information about the tags of the activation code.</p>
          */
         @NameInMap("ActivationId")
         public String activationId;
 
         /**
-         * <p>The time when the activation code was created.</p>
+         * <p>The maximum number of times that the activation code can be used to register managed instances.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The number of instances that were deregistered.</p>
+         * <p>The description of the activation code.</p>
          */
         @NameInMap("DeregisteredCount")
         public Integer deregisteredCount;
 
         /**
-         * <p>The description of the activation code.</p>
+         * <p>The default instance name prefix.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>Indicates whether the activation code was disabled.</p>
+         * <p>The validity period of the activation code. Unit: hours.</p>
          */
         @NameInMap("Disabled")
         public Boolean disabled;
 
         /**
-         * <p>The maximum number of times that the activation code can be used to register managed instances.</p>
+         * <p>The number of registered instances.</p>
          */
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
         /**
-         * <p>The default instance name prefix.</p>
+         * <p>The IP addresses of the hosts that can use the activation code.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>The IP address range of hosts that are allowed to use the activation code.</p>
+         * <p>The ID of the activation code.</p>
          */
         @NameInMap("IpAddressRange")
         public String ipAddressRange;
 
         /**
-         * <p>The number of instances that were registered.</p>
+         * <p>Indicates whether the activation code is disabled.</p>
          */
         @NameInMap("RegisteredCount")
         public Integer registeredCount;
 
+        /**
+         * <p>The key of tag N of the activation code.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<DescribeActivationsResponseBodyActivationListTags> tags;
 
         /**
-         * <p>The validity period of the activation code. Unit: hours.</p>
+         * <p>An array that consists of the tags of the activation code.</p>
          */
         @NameInMap("TimeToLiveInHours")
         public Long timeToLiveInHours;

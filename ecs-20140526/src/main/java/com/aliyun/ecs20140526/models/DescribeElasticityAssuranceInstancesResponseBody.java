@@ -23,7 +23,7 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -81,7 +81,7 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
 
     public static class DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItemInstanceIdSet extends TeaModel {
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
