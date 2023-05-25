@@ -7,6 +7,9 @@ public class GetQueryOptimizeSolutionRequest extends TeaModel {
     @NameInMap("Engine")
     public String engine;
 
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     @NameInMap("RuleIds")
     public String ruleIds;
 
@@ -24,6 +27,14 @@ public class GetQueryOptimizeSolutionRequest extends TeaModel {
     }
     public String getEngine() {
         return this.engine;
+    }
+
+    public GetQueryOptimizeSolutionRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public GetQueryOptimizeSolutionRequest setRuleIds(String ruleIds) {

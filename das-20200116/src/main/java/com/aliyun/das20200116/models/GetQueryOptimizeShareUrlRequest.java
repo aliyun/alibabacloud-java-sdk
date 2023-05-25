@@ -3,9 +3,9 @@ package com.aliyun.das20200116.models;
 
 import com.aliyun.tea.*;
 
-public class GetQueryOptimizeDataStatsRequest extends TeaModel {
+public class GetQueryOptimizeShareUrlRequest extends TeaModel {
     @NameInMap("Asc")
-    public String asc;
+    public Boolean asc;
 
     @NameInMap("DbNames")
     public String dbNames;
@@ -23,16 +23,16 @@ public class GetQueryOptimizeDataStatsRequest extends TeaModel {
     public String logicalOperator;
 
     @NameInMap("OnlyOptimizedSql")
-    public String onlyOptimizedSql;
+    public Boolean onlyOptimizedSql;
 
     @NameInMap("OrderBy")
     public String orderBy;
 
     @NameInMap("PageNo")
-    public String pageNo;
+    public Integer pageNo;
 
     @NameInMap("PageSize")
-    public String pageSize;
+    public Integer pageSize;
 
     @NameInMap("Region")
     public String region;
@@ -47,25 +47,25 @@ public class GetQueryOptimizeDataStatsRequest extends TeaModel {
     public String tagNames;
 
     @NameInMap("Time")
-    public String time;
+    public Long time;
 
     @NameInMap("User")
     public String user;
 
-    public static GetQueryOptimizeDataStatsRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetQueryOptimizeDataStatsRequest self = new GetQueryOptimizeDataStatsRequest();
+    public static GetQueryOptimizeShareUrlRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetQueryOptimizeShareUrlRequest self = new GetQueryOptimizeShareUrlRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetQueryOptimizeDataStatsRequest setAsc(String asc) {
+    public GetQueryOptimizeShareUrlRequest setAsc(Boolean asc) {
         this.asc = asc;
         return this;
     }
-    public String getAsc() {
+    public Boolean getAsc() {
         return this.asc;
     }
 
-    public GetQueryOptimizeDataStatsRequest setDbNames(String dbNames) {
+    public GetQueryOptimizeShareUrlRequest setDbNames(String dbNames) {
         this.dbNames = dbNames;
         return this;
     }
@@ -73,7 +73,7 @@ public class GetQueryOptimizeDataStatsRequest extends TeaModel {
         return this.dbNames;
     }
 
-    public GetQueryOptimizeDataStatsRequest setEngine(String engine) {
+    public GetQueryOptimizeShareUrlRequest setEngine(String engine) {
         this.engine = engine;
         return this;
     }
@@ -81,7 +81,7 @@ public class GetQueryOptimizeDataStatsRequest extends TeaModel {
         return this.engine;
     }
 
-    public GetQueryOptimizeDataStatsRequest setInstanceIds(String instanceIds) {
+    public GetQueryOptimizeShareUrlRequest setInstanceIds(String instanceIds) {
         this.instanceIds = instanceIds;
         return this;
     }
@@ -89,7 +89,7 @@ public class GetQueryOptimizeDataStatsRequest extends TeaModel {
         return this.instanceIds;
     }
 
-    public GetQueryOptimizeDataStatsRequest setKeywords(String keywords) {
+    public GetQueryOptimizeShareUrlRequest setKeywords(String keywords) {
         this.keywords = keywords;
         return this;
     }
@@ -97,7 +97,7 @@ public class GetQueryOptimizeDataStatsRequest extends TeaModel {
         return this.keywords;
     }
 
-    public GetQueryOptimizeDataStatsRequest setLogicalOperator(String logicalOperator) {
+    public GetQueryOptimizeShareUrlRequest setLogicalOperator(String logicalOperator) {
         this.logicalOperator = logicalOperator;
         return this;
     }
@@ -105,15 +105,15 @@ public class GetQueryOptimizeDataStatsRequest extends TeaModel {
         return this.logicalOperator;
     }
 
-    public GetQueryOptimizeDataStatsRequest setOnlyOptimizedSql(String onlyOptimizedSql) {
+    public GetQueryOptimizeShareUrlRequest setOnlyOptimizedSql(Boolean onlyOptimizedSql) {
         this.onlyOptimizedSql = onlyOptimizedSql;
         return this;
     }
-    public String getOnlyOptimizedSql() {
+    public Boolean getOnlyOptimizedSql() {
         return this.onlyOptimizedSql;
     }
 
-    public GetQueryOptimizeDataStatsRequest setOrderBy(String orderBy) {
+    public GetQueryOptimizeShareUrlRequest setOrderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
     }
@@ -121,23 +121,23 @@ public class GetQueryOptimizeDataStatsRequest extends TeaModel {
         return this.orderBy;
     }
 
-    public GetQueryOptimizeDataStatsRequest setPageNo(String pageNo) {
+    public GetQueryOptimizeShareUrlRequest setPageNo(Integer pageNo) {
         this.pageNo = pageNo;
         return this;
     }
-    public String getPageNo() {
+    public Integer getPageNo() {
         return this.pageNo;
     }
 
-    public GetQueryOptimizeDataStatsRequest setPageSize(String pageSize) {
+    public GetQueryOptimizeShareUrlRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
-    public String getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 
-    public GetQueryOptimizeDataStatsRequest setRegion(String region) {
+    public GetQueryOptimizeShareUrlRequest setRegion(String region) {
         this.region = region;
         return this;
     }
@@ -145,7 +145,7 @@ public class GetQueryOptimizeDataStatsRequest extends TeaModel {
         return this.region;
     }
 
-    public GetQueryOptimizeDataStatsRequest setRules(String rules) {
+    public GetQueryOptimizeShareUrlRequest setRules(String rules) {
         this.rules = rules;
         return this;
     }
@@ -153,7 +153,7 @@ public class GetQueryOptimizeDataStatsRequest extends TeaModel {
         return this.rules;
     }
 
-    public GetQueryOptimizeDataStatsRequest setSqlIds(String sqlIds) {
+    public GetQueryOptimizeShareUrlRequest setSqlIds(String sqlIds) {
         this.sqlIds = sqlIds;
         return this;
     }
@@ -161,7 +161,7 @@ public class GetQueryOptimizeDataStatsRequest extends TeaModel {
         return this.sqlIds;
     }
 
-    public GetQueryOptimizeDataStatsRequest setTagNames(String tagNames) {
+    public GetQueryOptimizeShareUrlRequest setTagNames(String tagNames) {
         this.tagNames = tagNames;
         return this;
     }
@@ -169,15 +169,15 @@ public class GetQueryOptimizeDataStatsRequest extends TeaModel {
         return this.tagNames;
     }
 
-    public GetQueryOptimizeDataStatsRequest setTime(String time) {
+    public GetQueryOptimizeShareUrlRequest setTime(Long time) {
         this.time = time;
         return this;
     }
-    public String getTime() {
+    public Long getTime() {
         return this.time;
     }
 
-    public GetQueryOptimizeDataStatsRequest setUser(String user) {
+    public GetQueryOptimizeShareUrlRequest setUser(String user) {
         this.user = user;
         return this;
     }

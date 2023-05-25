@@ -13,6 +13,9 @@ public class GetQueryOptimizeDataTrendRequest extends TeaModel {
     @NameInMap("InstanceIds")
     public String instanceIds;
 
+    @NameInMap("Region")
+    public String region;
+
     @NameInMap("Start")
     public String start;
 
@@ -46,6 +49,14 @@ public class GetQueryOptimizeDataTrendRequest extends TeaModel {
     }
     public String getInstanceIds() {
         return this.instanceIds;
+    }
+
+    public GetQueryOptimizeDataTrendRequest setRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    public String getRegion() {
+        return this.region;
     }
 
     public GetQueryOptimizeDataTrendRequest setStart(String start) {
