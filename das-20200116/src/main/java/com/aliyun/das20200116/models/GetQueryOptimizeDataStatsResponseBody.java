@@ -149,6 +149,9 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
         @NameInMap("SqlType")
         public String sqlType;
 
+        @NameInMap("User")
+        public String user;
+
         public static GetQueryOptimizeDataStatsResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             GetQueryOptimizeDataStatsResponseBodyDataList self = new GetQueryOptimizeDataStatsResponseBodyDataList();
             return TeaModel.build(map, self);
@@ -296,6 +299,14 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
         }
         public String getSqlType() {
             return this.sqlType;
+        }
+
+        public GetQueryOptimizeDataStatsResponseBodyDataList setUser(String user) {
+            this.user = user;
+            return this;
+        }
+        public String getUser() {
+            return this.user;
         }
 
     }

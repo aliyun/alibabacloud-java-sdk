@@ -16,6 +16,9 @@ public class GetSqlOptimizeAdviceRequest extends TeaModel {
     @NameInMap("InstanceIds")
     public String instanceIds;
 
+    @NameInMap("Region")
+    public String region;
+
     @NameInMap("StartDt")
     public String startDt;
 
@@ -54,6 +57,14 @@ public class GetSqlOptimizeAdviceRequest extends TeaModel {
     }
     public String getInstanceIds() {
         return this.instanceIds;
+    }
+
+    public GetSqlOptimizeAdviceRequest setRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    public String getRegion() {
+        return this.region;
     }
 
     public GetSqlOptimizeAdviceRequest setStartDt(String startDt) {

@@ -31,6 +31,9 @@ public class GetQueryOptimizeExecErrorStatsRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
+    @NameInMap("Region")
+    public String region;
+
     @NameInMap("Time")
     public String time;
 
@@ -109,6 +112,14 @@ public class GetQueryOptimizeExecErrorStatsRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public GetQueryOptimizeExecErrorStatsRequest setRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    public String getRegion() {
+        return this.region;
     }
 
     public GetQueryOptimizeExecErrorStatsRequest setTime(String time) {

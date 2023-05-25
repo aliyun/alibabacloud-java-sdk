@@ -86,6 +86,9 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
         @NameInMap("isSpare")
         public Boolean isSpare;
 
+        @NameInMap("migrationPredictRemainingTime")
+        public Long migrationPredictRemainingTime;
+
         @NameInMap("port")
         public Integer port;
 
@@ -172,6 +175,14 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
         }
         public Boolean getIsSpare() {
             return this.isSpare;
+        }
+
+        public GetDasProServiceUsageResponseBodyData setMigrationPredictRemainingTime(Long migrationPredictRemainingTime) {
+            this.migrationPredictRemainingTime = migrationPredictRemainingTime;
+            return this;
+        }
+        public Long getMigrationPredictRemainingTime() {
+            return this.migrationPredictRemainingTime;
         }
 
         public GetDasProServiceUsageResponseBodyData setPort(Integer port) {

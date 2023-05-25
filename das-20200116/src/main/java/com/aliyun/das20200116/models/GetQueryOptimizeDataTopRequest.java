@@ -10,6 +10,9 @@ public class GetQueryOptimizeDataTopRequest extends TeaModel {
     @NameInMap("InstanceIds")
     public String instanceIds;
 
+    @NameInMap("Region")
+    public String region;
+
     @NameInMap("TagNames")
     public String tagNames;
 
@@ -38,6 +41,14 @@ public class GetQueryOptimizeDataTopRequest extends TeaModel {
     }
     public String getInstanceIds() {
         return this.instanceIds;
+    }
+
+    public GetQueryOptimizeDataTopRequest setRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    public String getRegion() {
+        return this.region;
     }
 
     public GetQueryOptimizeDataTopRequest setTagNames(String tagNames) {

@@ -10,6 +10,9 @@ public class GetQueryOptimizeRuleListRequest extends TeaModel {
     @NameInMap("InstanceIds")
     public String instanceIds;
 
+    @NameInMap("Region")
+    public String region;
+
     @NameInMap("TagNames")
     public String tagNames;
 
@@ -32,6 +35,14 @@ public class GetQueryOptimizeRuleListRequest extends TeaModel {
     }
     public String getInstanceIds() {
         return this.instanceIds;
+    }
+
+    public GetQueryOptimizeRuleListRequest setRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    public String getRegion() {
+        return this.region;
     }
 
     public GetQueryOptimizeRuleListRequest setTagNames(String tagNames) {
