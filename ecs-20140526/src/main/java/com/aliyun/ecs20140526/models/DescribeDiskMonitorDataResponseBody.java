@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDiskMonitorDataResponseBody extends TeaModel {
     /**
-     * <p>Details about the monitoring data of the disk.</p>
+     * <p>The details about the monitoring data of the disk.</p>
      */
     @NameInMap("MonitorData")
     public DescribeDiskMonitorDataResponseBodyMonitorData monitorData;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -71,7 +71,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         public Integer BPSWrite;
 
         /**
-         * <p>The ID of the disk.</p>
+         * <p>The disk ID.</p>
          */
         @NameInMap("DiskId")
         public String diskId;
@@ -107,7 +107,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         public Integer latencyWrite;
 
         /**
-         * <p>The timestamp of the monitoring data. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The timestamp to query the monitoring data. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

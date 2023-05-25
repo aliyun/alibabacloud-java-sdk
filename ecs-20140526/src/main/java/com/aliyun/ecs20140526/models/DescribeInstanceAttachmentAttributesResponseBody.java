@@ -11,19 +11,19 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
     public DescribeInstanceAttachmentAttributesResponseBodyInstances instances;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -87,7 +87,7 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The ID of the private pool. When the value of `PrivatePoolOptionsMatchCriteria` is `Open`, the value of PrivatePoolOptionsId is the ID of a private pool that is automatically matched to the instance.</p>
+         * <p>The ID of the private pool. If the value of `PrivatePoolOptionsMatchCriteria` is `Open`, the value of PrivatePoolOptionsId is the ID of the private pool that is automatically matched to the instance.</p>
          */
         @NameInMap("PrivatePoolOptionsId")
         public String privatePoolOptionsId;

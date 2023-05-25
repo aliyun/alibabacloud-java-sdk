@@ -17,13 +17,13 @@ public class DescribeInvocationsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries returned on each page.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -95,7 +95,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         /**
          * <p>The code that indicates why the command failed to be sent or run. Valid values:</p>
          * <br>
-         * <p>*   If this parameter is empty, the execution is normal.</p>
+         * <p>*   If this parameter is empty, the command is run normally.</p>
          * <p>*   InstanceNotExists: The instance does not exist or was released.</p>
          * <p>*   InstanceReleased: The instance was released while the command was being run.</p>
          * <p>*   InstanceNotRunning: The instance was not in the Running state while the command started to be run.</p>
@@ -156,7 +156,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         public String finishTime;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -209,7 +209,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         public String invocationStatus;
 
         /**
-         * <p>The output of the command.</p>
+         * <p>The command output.</p>
          */
         @NameInMap("Output")
         public String output;
@@ -456,37 +456,37 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         public String commandContent;
 
         /**
-         * <p>The description of the command.</p>
+         * <p>The command description.</p>
          */
         @NameInMap("CommandDescription")
         public String commandDescription;
 
         /**
-         * <p>The ID of the command.</p>
+         * <p>The command ID.</p>
          */
         @NameInMap("CommandId")
         public String commandId;
 
         /**
-         * <p>The name of the command.</p>
+         * <p>The command name.</p>
          */
         @NameInMap("CommandName")
         public String commandName;
 
         /**
-         * <p>The type of the command.</p>
+         * <p>The command type.</p>
          */
         @NameInMap("CommandType")
         public String commandType;
 
         /**
-         * <p>The ID of the container.</p>
+         * <p>The container ID.</p>
          */
         @NameInMap("ContainerId")
         public String containerId;
 
         /**
-         * <p>The name of the container.</p>
+         * <p>The container name.</p>
          */
         @NameInMap("ContainerName")
         public String containerName;
@@ -540,7 +540,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         public String invocationStatus;
 
         /**
-         * <p>The ID of the command task.</p>
+         * <p>The command task ID.</p>
          */
         @NameInMap("InvokeId")
         public String invokeId;
@@ -566,12 +566,12 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         public String parameters;
 
         /**
-         * <p>The execution mode of the command. Valid values:</p>
+         * <p>Indicates the execution mode of the command. Valid values:</p>
          * <br>
-         * <p>*   Once: The command is immediately run.</p>
+         * <p>*   Once: immediately runs the command.</p>
          * <p>*   Period: The command is run on a schedule.</p>
          * <p>*   NextRebootOnly: The command is automatically run the next time the instance starts.</p>
-         * <p>*   EveryReboot: The command is automatically run every time the instance starts.</p>
+         * <p>*   EveryReboot: automatically runs the command every time the instance starts.</p>
          */
         @NameInMap("RepeatMode")
         public String repeatMode;

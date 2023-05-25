@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeSnapshotsResponseBody extends TeaModel {
     /**
-     * <p>The token used to start the next query.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.If NextToken is empty, no next page exists.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -150,7 +150,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
     public static class DescribeSnapshotsResponseBodySnapshotsSnapshot extends TeaModel {
         /**
-         * <p>The category of the snapshot.</p>
+         * <p>The snapshot type.</p>
          * <br>
          * <p>>  This parameter will be removed in the future. We recommend that you use the `InstantAccess` parameter to ensure future compatibility.</p>
          */
@@ -176,10 +176,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public Boolean encrypted;
 
         /**
-         * <p>Indicates whether the instant access feature was enabled. Valid values:</p>
+         * <p>Indicates whether the instant access feature is enabled. Valid values:</p>
          * <br>
-         * <p>*   true: The instant access feature was enabled. This feature can be enabled only for enhanced SSDs (ESSDs).</p>
-         * <p>*   false: The instant access feature was disabled. The snapshot is a normal snapshot for which the instant access feature was disabled.</p>
+         * <p>*   true: The instant access feature is enabled. This feature can be enabled only for enhanced SSDs (ESSDs).</p>
+         * <p>*   false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.</p>
          */
         @NameInMap("InstantAccess")
         public Boolean instantAccess;
@@ -187,7 +187,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         /**
          * <p>The validity period of the instant access feature. The instant access feature is automatically disabled when the specified period expires.</p>
          * <br>
-         * <p>By default, the value of this parameter is the same as that of `RetentionDays`.</p>
+         * <p>By default, the value of this parameter is the same as the value of the `RetentionDays` parameter.</p>
          */
         @NameInMap("InstantAccessRetentionDays")
         public Integer instantAccessRetentionDays;
@@ -211,7 +211,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String productCode;
 
         /**
-         * <p>The progress of the snapshot creation task. Unit: percent (%).</p>
+         * <p>The progress of the snapshot creation task in percentage.</p>
          */
         @NameInMap("Progress")
         public String progress;
@@ -235,7 +235,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public Integer retentionDays;
 
         /**
-         * <p>The ID of the snapshot.</p>
+         * <p>The snapshot ID.</p>
          */
         @NameInMap("SnapshotId")
         public String snapshotId;
@@ -255,9 +255,9 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         /**
          * <p>The type of snapshot. Valid values:</p>
          * <br>
-         * <p>*   auto or timer: automatic snapshot</p>
-         * <p>*   user: manual snapshot</p>
-         * <p>*   all: all snapshot types</p>
+         * <p>*   auto or timer: automatic snapshot.</p>
+         * <p>*   user: manual snapshot.</p>
+         * <p>*   all: all snapshot types.</p>
          */
         @NameInMap("SnapshotType")
         public String snapshotType;
@@ -304,7 +304,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String sourceStorageType;
 
         /**
-         * <p>The state of the snapshot. Valid values:</p>
+         * <p>The snapshot status. Valid values:</p>
          * <br>
          * <p>*   progressing</p>
          * <p>*   accomplished</p>

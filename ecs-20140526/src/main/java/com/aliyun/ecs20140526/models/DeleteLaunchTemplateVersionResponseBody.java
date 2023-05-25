@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
+    /**
+     * <p>实例启动模板版本。</p>
+     */
     @NameInMap("LaunchTemplateVersions")
     public DeleteLaunchTemplateVersionResponseBodyLaunchTemplateVersions launchTemplateVersions;
 
@@ -35,9 +38,15 @@ public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
     }
 
     public static class DeleteLaunchTemplateVersionResponseBodyLaunchTemplateVersionsLaunchTemplateVersion extends TeaModel {
+        /**
+         * <p>实例启动模板ID。</p>
+         */
         @NameInMap("LaunchTemplateId")
         public String launchTemplateId;
 
+        /**
+         * <p>实例启动模板版本号。</p>
+         */
         @NameInMap("LaunchTemplateVersionNumber")
         public Long launchTemplateVersionNumber;
 

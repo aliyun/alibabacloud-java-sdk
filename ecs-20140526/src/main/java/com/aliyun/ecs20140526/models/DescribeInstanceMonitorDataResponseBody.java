@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
     /**
-     * <p>The monitoring data about the instance.</p>
+     * <p>The monitoring data of the instance.</p>
      */
     @NameInMap("MonitorData")
     public DescribeInstanceMonitorDataResponseBodyMonitorData monitorData;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,13 +39,13 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
 
     public static class DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData extends TeaModel {
         /**
-         * <p>The read bandwidth of the disks (system disk and data disks). Unit: Byte/s.</p>
+         * <p>The read bandwidth of the cloud disks (system disk and data disks). Unit: Byte/s.</p>
          */
         @NameInMap("BPSRead")
         public Integer BPSRead;
 
         /**
-         * <p>The write bandwidth of the disks (system disk and data disks). Unit: Byte/s.</p>
+         * <p>The write bandwidth of the cloud disks (system disk and data disks). Unit: Byte/s.</p>
          */
         @NameInMap("BPSWrite")
         public Integer BPSWrite;
@@ -75,19 +75,19 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
         public Float CPUCreditUsage;
 
         /**
-         * <p>The unpaid excess credits.</p>
+         * <p>The unpaid overdrawn CPU credits.</p>
          */
         @NameInMap("CPUNotpaidSurplusCreditUsage")
         public Float CPUNotpaidSurplusCreditUsage;
 
         /**
-         * <p>The number of read I/O operations per second on the disks (system disk and data disks).</p>
+         * <p>The number of read I/O operations per second on the cloud disks (system disk and data disks).</p>
          */
         @NameInMap("IOPSRead")
         public Integer IOPSRead;
 
         /**
-         * <p>The number of write I/O operations per second on the disks (system disk and data disks).</p>
+         * <p>The number of write I/O operations per second on the cloud disks (system disk and data disks).</p>
          */
         @NameInMap("IOPSWrite")
         public Integer IOPSWrite;
@@ -105,13 +105,13 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
         public Integer internetBandwidth;
 
         /**
-         * <p>The public data traffic received by the instance during the period specified by the `Period` parameter, which starts from the time specified by the `TimeStamp` parameter. Unit: Kbit/s.</p>
+         * <p>The public data traffic received by the instance during the period that is specified by the `Period` parameter. The period starts from the point in time that is specified by the `TimeStamp` parameter. Unit: Kbit/s.</p>
          */
         @NameInMap("InternetRX")
         public Integer internetRX;
 
         /**
-         * <p>The public data traffic sent by the instance during the period specified by the `Period` parameter, which starts from the time specified by the `TimeStamp` parameter. Unit: Kbit/s.</p>
+         * <p>The public data traffic sent by the instance during the period that is specified by the `Period` parameter. The period starts from the point in time that is specified by the `TimeStamp` parameter. Unit: Kbit/s.</p>
          */
         @NameInMap("InternetTX")
         public Integer internetTX;
@@ -123,13 +123,13 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
         public Integer intranetBandwidth;
 
         /**
-         * <p>The internal data traffic received by the instance during the period specified by the `Period` parameter, which starts from the time specified by the `TimeStamp` parameter. Unit: Kbit/s.</p>
+         * <p>The internal data traffic received by the instance during the period that is specified by the `Period` parameter. The period starts from the point in time that is specified by the `TimeStamp` parameter. Unit: Kbit/s.</p>
          */
         @NameInMap("IntranetRX")
         public Integer intranetRX;
 
         /**
-         * <p>The internal data traffic sent by the instance during the period specified by the `Period` parameter, which starts from the time specified by the `TimeStamp` parameter. Unit: Kbit/s.</p>
+         * <p>The internal data traffic sent by the instance during the period that is specified by the `Period` parameter. The period starts from the point in time that is specified by the `TimeStamp` parameter. Unit: Kbit/s.</p>
          */
         @NameInMap("IntranetTX")
         public Integer intranetTX;

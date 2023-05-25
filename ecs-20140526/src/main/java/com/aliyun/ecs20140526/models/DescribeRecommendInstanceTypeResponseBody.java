@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
     /**
-     * <p>Details about the recommended instance types.</p>
+     * <p>The details of the recommended instance types.</p>
      */
     @NameInMap("Data")
     public DescribeRecommendInstanceTypeResponseBodyData data;
@@ -150,13 +150,13 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
 
     public static class DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeZonesZone extends TeaModel {
         /**
-         * <p>Details about network types of instance types.</p>
+         * <p>The details of network types of instance types.</p>
          */
         @NameInMap("NetworkTypes")
         public DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeZonesZoneNetworkTypes networkTypes;
 
         /**
-         * <p>The ID of the zone in which the instance type is available.</p>
+         * <p>The ID of the zone where the instance type is available.</p>
          */
         @NameInMap("ZoneNo")
         public String zoneNo;
@@ -259,7 +259,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         public String zoneId;
 
         /**
-         * <p>Details about zones where the instance types resides.</p>
+         * <p>The details of the zones where the instance types resides.</p>
          */
         @NameInMap("Zones")
         public DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeZones zones;

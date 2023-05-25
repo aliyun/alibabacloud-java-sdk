@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSnapshotMonitorDataRequest extends TeaModel {
     /**
-     * <p>The type of the snapshot. Valid values:</p>
+     * <p>The snapshot type. Valid values:</p>
      * <br>
      * <p>*   Standard: normal snapshot</p>
      * <p>*   Flash: local snapshot</p>
@@ -34,13 +34,13 @@ public class DescribeSnapshotMonitorDataRequest extends TeaModel {
      * <p>*   600</p>
      * <p>*   3600</p>
      * <br>
-     * <p>Default value: 60</p>
+     * <p>Default value: 60.</p>
      */
     @NameInMap("Period")
     public Integer period;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateCapacityReservationResponseBody extends TeaModel {
     /**
-     * <p>The ID of the capacity reservation.</p>
+     * <p>The capacity reservation ID.</p>
      */
     @NameInMap("PrivatePoolOptionsId")
     public String privatePoolOptionsId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

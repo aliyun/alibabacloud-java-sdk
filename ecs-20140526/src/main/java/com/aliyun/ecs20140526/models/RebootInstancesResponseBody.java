@@ -4,9 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class RebootInstancesResponseBody extends TeaModel {
+    /**
+     * <p>Details about the responses returned for the instances, which contain the state of each instance before and after the operation is called, and the results of the operation .</p>
+     */
     @NameInMap("InstanceResponses")
     public RebootInstancesResponseBodyInstanceResponses instanceResponses;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +38,33 @@ public class RebootInstancesResponseBody extends TeaModel {
     }
 
     public static class RebootInstancesResponseBodyInstanceResponsesInstanceResponse extends TeaModel {
+        /**
+         * <p>The error code returned for the instance. A return value of 200 indicates success. For more information, see the "Error codes" section in this topic.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The current state of the instance.</p>
+         */
         @NameInMap("CurrentStatus")
         public String currentStatus;
 
+        /**
+         * <p>The instance ID.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The error message for this instance operation. The return value \"Success\" indicates that this operation is successful. For more information, see the "Error codes" section in this topic.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The state of the instance before the operation is called.</p>
+         */
         @NameInMap("PreviousStatus")
         public String previousStatus;
 

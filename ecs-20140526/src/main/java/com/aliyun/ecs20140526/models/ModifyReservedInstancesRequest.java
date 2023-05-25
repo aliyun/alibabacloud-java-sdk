@@ -115,7 +115,7 @@ public class ModifyReservedInstancesRequest extends TeaModel {
         /**
          * <p>The name of reserved instance N. Valid values of N: 1 to 100.</p>
          * <br>
-         * <p>The name must be 2 to 128 characters in length. It must start with a letter but cannot start with [http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).](http://https://。、（:）、（\_）（-）。)</p>
+         * <p>The name must be 2 to 128 characters in length. It must start with a letter but cannot start with [http:// or https://. It can contain letters, digits, colons (.), underscores (\_), and hyphens (-).](http://https://。、（:）、（\_）（-）。)</p>
          */
         @NameInMap("ReservedInstanceName")
         public String reservedInstanceName;
@@ -123,8 +123,8 @@ public class ModifyReservedInstancesRequest extends TeaModel {
         /**
          * <p>The scope of reserved instance N. Valid values:</p>
          * <br>
-         * <p>*   Region: regional.</p>
-         * <p>*   Zone: zonal.</p>
+         * <p>*   Region</p>
+         * <p>*   Zone</p>
          * <br>
          * <p>Valid values of N: 1 to 100.</p>
          * <br>
@@ -138,7 +138,7 @@ public class ModifyReservedInstancesRequest extends TeaModel {
          * <br>
          * <p>This parameter is required when `Scope` is set to `Zone`.</p>
          * <br>
-         * <p>You can call the [DescribeZones](~~25609~~) operation to query the most recent list of zones.</p>
+         * <p>You can call the [DescribeZones](~~25609~~) operation to query the most recent zone list.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

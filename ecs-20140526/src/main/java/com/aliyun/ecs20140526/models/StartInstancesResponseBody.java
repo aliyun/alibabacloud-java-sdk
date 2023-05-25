@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartInstancesResponseBody extends TeaModel {
     /**
-     * <p>The information about the ECS instance. The information contains the status of each instance before and after the operation is called and the operation results.</p>
+     * <p>The information about the ECS instance, such as the status of each instance before and after the operation is called and the operation results.</p>
      */
     @NameInMap("InstanceResponses")
     public StartInstancesResponseBodyInstanceResponses instanceResponses;
@@ -39,7 +39,7 @@ public class StartInstancesResponseBody extends TeaModel {
 
     public static class StartInstancesResponseBodyInstanceResponsesInstanceResponse extends TeaModel {
         /**
-         * <p>The error code that is returned for the operation on the ECS instance. A return value of 200 indicates that the operation is successful. For more information, see the "Error codes" section in this topic.</p>
+         * <p>The error code that is returned for the operation on the ECS instance. The value 200 indicates that the operation is successful. For more information, see the "Error codes" section in this topic.</p>
          */
         @NameInMap("Code")
         public String code;
@@ -57,7 +57,7 @@ public class StartInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The error message that is returned for the operation on the ECS instance. A return value of success indicates that the operation is successful. For more information, see the "Error codes" section in this topic.</p>
+         * <p>The error message that is returned for the operation on the ECS instance. The value success indicates that the operation is successful. For more information, see the "Error codes" section in this topic.</p>
          */
         @NameInMap("Message")
         public String message;

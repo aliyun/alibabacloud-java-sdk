@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceStatusRequest extends TeaModel {
     /**
-     * <p>The cluster ID of the instance.</p>
+     * <p>The cluster ID of the instances.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The IDs of the instances.</p>
+     * <p>The IDs of the instances. When you use this parameter to specify multiple instance IDs, separate the IDs with commas(,). Example: `InstanceId.1=i-bp1j4i2jdf3owlhe****, InstanceId.2=i-bp1j4i2jdf3o1234****`.</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
@@ -23,7 +23,7 @@ public class DescribeInstanceStatusRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * <br>
      * <p>Pages start from page 1.</p>
      * <br>
@@ -33,7 +33,7 @@ public class DescribeInstanceStatusRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 50.</p>
+     * <p>The number of entries per page. Valid values: 1 to 50.</p>
      * <br>
      * <p>Default value: 10.</p>
      */
@@ -41,7 +41,7 @@ public class DescribeInstanceStatusRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instances. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -53,7 +53,7 @@ public class DescribeInstanceStatusRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The zone ID of the instance. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.</p>
+     * <p>The zone ID of the instances. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

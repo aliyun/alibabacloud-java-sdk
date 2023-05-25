@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateImageRequest extends TeaModel {
     /**
-     * <p>The system architecture of the system disk. If you specify a data disk snapshot to create the system disk of the custom image, use the Architecture parameter to specify the system architecture of the system disk. Valid values:</p>
+     * <p>The system architecture of the system disk. If you specify a data disk snapshot to create the system disk of the custom image, you must use Architecture to specify the system architecture of the system disk. Valid values:</p>
      * <br>
      * <p>*   i386</p>
      * <p>*   x86\_64</p>
@@ -17,47 +17,47 @@ public class CreateImageRequest extends TeaModel {
     public String architecture;
 
     /**
-     * <p>The boot mode of the custom image. Valid values:</p>
+     * <p>The boot mode of the image. Valid values:</p>
      * <br>
      * <p>*   BIOS</p>
      * <p>*   UEFI</p>
      * <br>
-     * <p>> You must be familiar with the boot modes that are supported by the specified image. When you use this parameter to change the boot mode of the image, specify a boot mode that is supported by the image to ensure that instances that use this image can start as expected.</p>
+     * <p>> You must be familiar with the boot modes supported by the specified image. When you use this parameter to change the boot mode of the image, specify a boot mode supported by the image to ensure that instances that use this image can be started as expected.</p>
      */
     @NameInMap("BootMode")
     public String bootMode;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. **The token can contain only ASCII characters and cannot exceed 64 characters in length.** For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The value of **ClientToken** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The description of the custom image. The description must be 2 to 256 characters in length and cannot start with [http:// or https://.](http://https://。)</p>
+     * <p>The image description. The description must be 2 to 256 characters in length and cannot start with [http:// or https://.](http://https://。)</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The mode that you want to use to check the source image. If you do not specify this parameter, the source image is not checked. You can check only Linux images. Set the value to Standard, which specifies the standard check mode.</p>
+     * <p>The mode that you want to use to check the source image. If you do not specify this parameter, the source image is not checked. Only Linux images can be checked. Set the value to Standard, which indicates standard check mode.</p>
      * <br>
      * <p>The following items are checked in standard check mode:</p>
      * <br>
      * <p>*   Virtio: whether the virtio driver is installed.</p>
-     * <p>*   Fstab: whether the mounting configurations in the fstab file are valid.</p>
-     * <p>*   Grub: whether the GRand Unified Bootloader (GRUB) configurations are valid.</p>
+     * <p>*   Fstab: whether mounting configurations in the fstab file are correct.</p>
+     * <p>*   Grub: whether GRand Unified Bootloader (GRUB) configurations are correct.</p>
      * <p>*   SystemImage: whether the image is valid. Do not import images that are in the ISO format or empty.</p>
      * <p>*   CloudInit: whether cloud-init is installed.</p>
-     * <p>*   NVMe: whether the NVMe driver is installed.</p>
+     * <p>*   NVMe: whether the Non-Volatile Memory Express (NVMe) driver is installed.</p>
      * <p>*   Selinux: whether SElinux is enabled.</p>
      * <p>*   OnlineResizeFS: whether the root partition can be automatically resized.</p>
-     * <p>*   Dhcp: whether Dynamic Host Configuration Protocol (DHCP) is enabled for network interfaces.</p>
+     * <p>*   Dhcp: whether Dynamic Host Configuration Protocol (DHCP) is enabled for network interface controllers (NICs).</p>
      * <p>*   RtcTimeMode: the RTC time mode.</p>
-     * <p>*   Platform: the platform. Example: Linux or Windows.</p>
+     * <p>*   Platform: the platform. Examples: Linux and Windows.</p>
      * <p>*   OSVersion: the operating system version. Example: Centos 7.9.</p>
-     * <p>*   Architecture: the architecture. Example: ARM or x86\_64.</p>
-     * <p>*   BootMode: the boot mode. Example: UEFI or Legacy.</p>
+     * <p>*   Architecture: the architecture. Examples: ARM and x86\_64.</p>
+     * <p>*   BootMode: the boot mode. Examples: UEFI and Legacy.</p>
      * <p>*   KernelVersion: the kernel version.</p>
      * <p>*   CloudAssistant: whether the Cloud Assistant client is installed.</p>
      * <p>*   SecurityCenterAgent: whether the Security Center agent is installed.</p>
@@ -66,33 +66,33 @@ public class CreateImageRequest extends TeaModel {
     public String detectionStrategy;
 
     /**
-     * <p>The information about the custom image.</p>
+     * <p>The custom images.</p>
      */
     @NameInMap("DiskDeviceMapping")
     public java.util.List<CreateImageRequestDiskDeviceMapping> diskDeviceMapping;
 
     /**
-     * <p>The name of the family of the custom image. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with acs: or aliyun. The name cannot contain [http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).](http://https://。、（:）、（\_）（-）。)</p>
+     * <p>The name of the image family. The name must be 2 to 128 characters in length and can contain digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter and cannot start with acs: or aliyun. It cannot contain [http:// or https://.](http://https://。、（:）、（\_）（-）。)</p>
      */
     @NameInMap("ImageFamily")
     public String imageFamily;
 
     /**
-     * <p>The name of the custom image. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with [http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).](http://https://。、（:）、（\_）（-）。)</p>
+     * <p>The image name. The name must be 2 to 128 characters in length and can contain digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with [http:// or https://.](http://https://。、（:）、（\_）（-）。)</p>
      */
     @NameInMap("ImageName")
     public String imageName;
 
     /**
-     * <p>The version of the custom image.</p>
+     * <p>The image version.</p>
      * <br>
-     * <p>> If you specify an instance by using the `InstanceId` parameter and the instance uses an Alibaba Cloud Marketplace image or a custom image that is created from an Alibaba Cloud Marketplace image, you must leave this parameter empty or set this parameter to the value of the ImageVersion parameter of the instance.</p>
+     * <p>> If you specify an instance by configuring `InstanceId`, and the instance uses an Alibaba Cloud Marketplace image or a custom image that is created from an Alibaba Cloud Marketplace image, you must leave this parameter empty or set this parameter to the value of ImageVersion of the instance.</p>
      */
     @NameInMap("ImageVersion")
     public String imageVersion;
 
     /**
-     * <p>The ID of the instance that is used to create the custom image.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -104,7 +104,7 @@ public class CreateImageRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The distribution of the operating system for the system disk in the custom image. If you specify a data disk snapshot to create the system disk of the custom image, use the Platform parameter to specify the distribution of the operating system for the system disk. Valid values:</p>
+     * <p>The distribution of the operating system for the system disk in the custom image. If you specify a data disk snapshot to create the system disk of the custom image, you must use Platform to specify the distribution of the operating system for the system disk. Valid values:</p>
      * <br>
      * <p>*   CentOS</p>
      * <p>*   Ubuntu</p>
@@ -125,15 +125,15 @@ public class CreateImageRequest extends TeaModel {
     public String platform;
 
     /**
-     * <p>The region ID of the custom image that you want to create. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the custom image that you want to create. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which you want to assign the custom image. If you do not specify this parameter, the image is assigned to the default resource group.</p>
+     * <p>The ID of the resource group to which you want to assign the custom image. If you leave this parameter empty, the image is assigned to the default resource group.</p>
      * <br>
-     * <p>> If you call the CreateImage operation as a RAM user who is not authorized to manage the default resource group and you do not specify the `ResourceGroupId` parameter, the `Forbidden: User not authorized to operate on the specified resource` error message is returned. You must specify the ID of a resource group that the RAM user is authorized to manage or authorize the RAM user to manage the default resource group before you call the CreateImage operation again.</p>
+     * <p>> If you call the CreateImage operation as a RAM user who is not authorized to manage the default resource group and leave `ResourceGroupId` empty, the `Forbidden: User not authorized to operate on the specified resource` error message is returned. Before you call the CreateImage operation again, you must specify the ID of a resource group that the RAM user is authorized to manage or authorize the RAM user to manage the default resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -151,7 +151,7 @@ public class CreateImageRequest extends TeaModel {
     public String snapshotId;
 
     /**
-     * <p>The tags that you want to add to the custom image.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateImageRequestTag> tag;
@@ -317,8 +317,8 @@ public class CreateImageRequest extends TeaModel {
         /**
          * <p>The device name of disk N in the custom image. Valid values:</p>
          * <br>
-         * <p>*   For disks other than basic disks, such as standard SSDs, ultra disks, and enhanced SSDs (ESSDs), the valid values range from /dev/vda to /dev/vdz in alphabetical order.</p>
-         * <p>*   For basic disks, the valid values range from /dev/xvda to /dev/xvdz in alphabetical order.</p>
+         * <p>*   For disks other than basic disks, such as standard SSDs, ultra disks, and enhanced SSDs (ESSDs), the valid values range from /dev/vda to /dev/vdz in ascending alphabetical order.</p>
+         * <p>*   For basic disks, the valid values are in alphabetical order from /dev/xvda to /dev/xvdz.</p>
          */
         @NameInMap("Device")
         public String device;
@@ -333,14 +333,14 @@ public class CreateImageRequest extends TeaModel {
         public String diskType;
 
         /**
-         * <p>The size of disk N in the custom image. Unit: GiB. The valid values and default value of the DiskDeviceMapping.N.Size parameter vary based on the value of the DiskDeviceMapping.N.SnapshotId parameter.</p>
+         * <p>The size of disk N in the custom image. Unit: GiB. The valid values and default value of DiskDeviceMapping.N.Size depend on the value of DiskDeviceMapping.N.SnapshotId.</p>
          * <br>
-         * <p>*   If no corresponding snapshot IDs are specified in the value of the DiskDeviceMapping.N.SnapshotId parameter, the DiskDeviceMapping.N.Size parameter has the following valid values and default values:</p>
+         * <p>*   If no corresponding snapshot IDs are specified in the DiskDeviceMapping.N.SnapshotId value, the following valid values and default values are available for DiskDeviceMapping.N.Size:</p>
          * <br>
-         * <p>    *   For basic disks, the valid values range from 5 to 2000, and the default value is 5.</p>
-         * <p>    *   For other disks, the valid values range from 20 to 32768, and the default value is 20.</p>
+         * <p>    *   For basic disks, the valid values are 5 to 2000, and the default value is 5.</p>
+         * <p>    *   For other types of disk, the valid values are 20 to 32768, and the default value is 20.</p>
          * <br>
-         * <p>*   If a corresponding snapshot ID is specified in the value of the DiskDeviceMapping.N.SnapshotId parameter, the value of the DiskDeviceMapping.N.Size parameter must be greater than or equal to the size of the specified snapshot. The default value of the DiskDeviceMapping.N.Size parameter is the size of the specified snapshot.</p>
+         * <p>*   If a corresponding snapshot ID is specified in the DiskDeviceMapping.N.SnapshotId value, the value of DiskDeviceMapping.N.Size must be greater than or equal to the size of the specified snapshot. The default value of DiskDeviceMapping.N.Size is the size of the specified snapshot.</p>
          */
         @NameInMap("Size")
         public Integer size;
@@ -392,13 +392,13 @@ public class CreateImageRequest extends TeaModel {
 
     public static class CreateImageRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the custom image. You can specify up to 20 tag keys for a custom image. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.</p>
+         * <p>The key of tag N of the custom image. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with `aliyun` or `acs:`. The tag key cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N of the custom image. You can specify up to 20 tag values for a custom image. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:`. The tag value cannot contain `http://` or `https://`.</p>
+         * <p>The value of tag N of the custom image. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:`. The tag value cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Value")
         public String value;

@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class AttachNetworkInterfaceRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>网卡指定的物理网卡索引。</p>
+     * <p>The index of the network interface controller (NIC).</p>
      * <br>
-     * <p>>NetworkCardIndex 取值与实例规格族有关。如果实例规格不支持NetworkCard则不能指定；如果支持，取值请参见[实例规格族](~~25378~~)。</p>
+     * <p>> The value of this parameter varies based on the instance family of the specified instance. If the instance type of the specified instance does not support NICs, leave this parameter empty. If the instance type of the specified instance supports NICs, set this parameter to a valid value. For information about the valid values of this parameter, see [Instance families](~~25378~~).</p>
      */
     @NameInMap("NetworkCardIndex")
     public Integer networkCardIndex;
@@ -45,13 +45,13 @@ public class AttachNetworkInterfaceRequest extends TeaModel {
     /**
      * <p>The ID of the trunk ENI.</p>
      * <br>
-     * <p>> This parameter is unavailable for use.</p>
+     * <p>> This parameter is unavailable.</p>
      */
     @NameInMap("TrunkNetworkInstanceId")
     public String trunkNetworkInstanceId;
 
     /**
-     * <p>> This parameter is no longer used.</p>
+     * <p>> This parameter is no longer supported.</p>
      */
     @NameInMap("WaitForNetworkConfigurationReady")
     public Boolean waitForNetworkConfigurationReady;

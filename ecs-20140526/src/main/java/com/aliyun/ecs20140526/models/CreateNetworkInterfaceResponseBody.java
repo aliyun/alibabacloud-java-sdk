@@ -11,19 +11,19 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>> This parameter is in invitational preview and is unavailable for general users.</p>
+     * <p>> This parameter is in invitational preview and is unavailable.</p>
      */
     @NameInMap("Ipv4PrefixSets")
     public CreateNetworkInterfaceResponseBodyIpv4PrefixSets ipv4PrefixSets;
 
     /**
-     * <p>> This parameter is in invitational preview and is unavailable for general users.</p>
+     * <p>> This parameter is in invitational preview and is unavailable.</p>
      */
     @NameInMap("Ipv6PrefixSets")
     public CreateNetworkInterfaceResponseBodyIpv6PrefixSets ipv6PrefixSets;
 
     /**
-     * <p>The IPv6 addresses of the ENI.</p>
+     * <p>The IPv6 addresses assigned to the ENI.</p>
      */
     @NameInMap("Ipv6Sets")
     public CreateNetworkInterfaceResponseBodyIpv6Sets ipv6Sets;
@@ -35,7 +35,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public String macAddress;
 
     /**
-     * <p>The ID of the ENI.</p>
+     * <p>The ENI ID.</p>
      */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
@@ -59,13 +59,13 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public String privateIpAddress;
 
     /**
-     * <p>Details about the private IP addresses of the ENI.</p>
+     * <p>Details about the private IP addresses.</p>
      */
     @NameInMap("PrivateIpSets")
     public CreateNetworkInterfaceResponseBodyPrivateIpSets privateIpSets;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -125,7 +125,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The zone ID of the ENI.</p>
+     * <p>The ID of the zone in which the ENI resides.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -305,7 +305,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
 
     public static class CreateNetworkInterfaceResponseBodyIpv4PrefixSetsIpv4PrefixSet extends TeaModel {
         /**
-         * <p>> This parameter is in invitational preview and is unavailable for general users.</p>
+         * <p>> This parameter is in invitational preview and is unavailable.</p>
          */
         @NameInMap("Ipv4Prefix")
         public String ipv4Prefix;
@@ -346,7 +346,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
 
     public static class CreateNetworkInterfaceResponseBodyIpv6PrefixSetsIpv6PrefixSet extends TeaModel {
         /**
-         * <p>> This parameter is in invitational preview and is unavailable for general users.</p>
+         * <p>> This parameter is in invitational preview and is unavailable.</p>
          */
         @NameInMap("Ipv6Prefix")
         public String ipv6Prefix;
@@ -434,7 +434,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         public Boolean primary;
 
         /**
-         * <p>The private IP address of the ENI.</p>
+         * <p>The private IP address of the instance to which the ENI is attached.</p>
          */
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
@@ -502,13 +502,13 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
 
     public static class CreateNetworkInterfaceResponseBodyTagsTag extends TeaModel {
         /**
-         * <p>The tag key of the ENI.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The tag value of the ENI.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

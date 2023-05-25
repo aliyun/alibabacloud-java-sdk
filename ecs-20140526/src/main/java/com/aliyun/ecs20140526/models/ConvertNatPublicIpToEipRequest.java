@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConvertNatPublicIpToEipRequest extends TeaModel {
     /**
-     * <p>The ID of the instance whose public IP address you want to convert to an EIP.</p>
+     * <p>The ID of the instance whose public IP address you want to convert into an EIP.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

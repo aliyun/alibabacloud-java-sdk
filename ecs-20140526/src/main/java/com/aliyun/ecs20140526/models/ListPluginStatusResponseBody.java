@@ -23,7 +23,7 @@ public class ListPluginStatusResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -101,19 +101,19 @@ public class ListPluginStatusResponseBody extends TeaModel {
         /**
          * <p>The state of the Cloud Assistant plug-in. Valid values:</p>
          * <br>
-         * <p>* NotInstalled: The plug-in is not installed.</p>
-         * <p>* Installed: The one-time plug-in is installed.</p>
-         * <p>* Running: The long-running plug-in is running.</p>
-         * <p>* Stopped: The long-running plug-in is not running.</p>
-         * <p>* Crashed: The plug-in is abnormal.</p>
-         * <p>* Removed: The plug-in is uninstalled.</p>
-         * <p>* Unknown: The state of the plug-in is unknown.</p>
+         * <p>*   NotInstalled</p>
+         * <p>*   Installed</p>
+         * <p>*   Running</p>
+         * <p>*   Stopped</p>
+         * <p>*   Crashed</p>
+         * <p>*   Removed</p>
+         * <p>*   Unknown</p>
          */
         @NameInMap("PluginStatus")
         public String pluginStatus;
 
         /**
-         * <p>The version of the plug-in</p>
+         * <p>The version of the plug-in.</p>
          */
         @NameInMap("PluginVersion")
         public String pluginVersion;
@@ -186,13 +186,13 @@ public class ListPluginStatusResponseBody extends TeaModel {
 
     public static class ListPluginStatusResponseBodyInstancePluginStatusSetInstancePluginStatus extends TeaModel {
         /**
-         * <p>The ID of the ECS instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>Details about the Cloud Assistant plug-in.</p>
+         * <p>The states of the Cloud Assistant plug-ins.</p>
          */
         @NameInMap("PluginStatusSet")
         public ListPluginStatusResponseBodyInstancePluginStatusSetInstancePluginStatusPluginStatusSet pluginStatusSet;

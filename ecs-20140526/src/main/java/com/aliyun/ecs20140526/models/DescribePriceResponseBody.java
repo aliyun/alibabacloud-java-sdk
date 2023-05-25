@@ -11,7 +11,7 @@ public class DescribePriceResponseBody extends TeaModel {
     public DescribePriceResponseBodyPriceInfo priceInfo;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -106,7 +106,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Float originalPrice;
 
         /**
-         * <p>The name of the resource.</p>
+         * <p>The resource name.</p>
          */
         @NameInMap("Resource")
         public String resource;
@@ -193,9 +193,9 @@ public class DescribePriceResponseBody extends TeaModel {
         /**
          * <p>The currency unit.</p>
          * <br>
-         * <p>Alibaba Cloud China site (aliyun.com): CNY</p>
+         * <p>Alibaba Cloud China site (aliyun.com): CNY.</p>
          * <br>
-         * <p>Alibaba Cloud International site (alibabacloud.com): USD</p>
+         * <p>Alibaba Cloud International site (alibabacloud.com): USD.</p>
          */
         @NameInMap("Currency")
         public String currency;
@@ -203,7 +203,7 @@ public class DescribePriceResponseBody extends TeaModel {
         /**
          * <p>Details about the price.</p>
          * <br>
-         * <p>> This parameter is in invitational preview and unavailable.</p>
+         * <p>> This parameter is in invitational preview and is unavailable for public use.</p>
          */
         @NameInMap("DetailInfos")
         public DescribePriceResponseBodyPriceInfoPriceDetailInfos detailInfos;
@@ -227,7 +227,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Float reservedInstanceHourPrice;
 
         /**
-         * <p>The transaction price, which is equal to the original price minus the discount.</p>
+         * <p>The transaction price of the order. The transaction price is equal to the original price minus the discount.</p>
          */
         @NameInMap("TradePrice")
         public Float tradePrice;
@@ -295,7 +295,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the promotion rule.</p>
+         * <p>The ID of the pricing rule.</p>
          */
         @NameInMap("RuleId")
         public Long ruleId;

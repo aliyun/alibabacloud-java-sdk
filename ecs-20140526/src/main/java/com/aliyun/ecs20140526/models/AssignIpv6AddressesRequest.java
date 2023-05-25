@@ -8,7 +8,7 @@ public class AssignIpv6AddressesRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>IPv6 address N to assign to the ENI. Valid values of N: 1 to 10.</p>
+     * <p>The IPv6 addresses that you want to assign to the ENI. You can specify up to 10 IPv6 addresses.</p>
      * <br>
      * <p>Example: Ipv6Address.1=2001:db8:1234:1a00::\*\*\*\*</p>
      * <br>
@@ -18,27 +18,27 @@ public class AssignIpv6AddressesRequest extends TeaModel {
     public java.util.List<String> ipv6Address;
 
     /**
-     * <p>The number of IPv6 addresses to randomly generate for the ENI. Valid values: 1 to 10.</p>
+     * <p>The number of IPv6 addresses that you want to generate at random for the ENI. Valid values: 1 to 10.</p>
      * <br>
-     * <p>>  You must specify `Ipv6Addresses.N` or `Ipv6AddressCount` but cannot specify both.</p>
+     * <p>> You must specify `Ipv6Addresses.N` or `Ipv6AddressCount` but cannot specify both.</p>
      */
     @NameInMap("Ipv6AddressCount")
     public Integer ipv6AddressCount;
 
     /**
-     * <p>> 该参数正在邀测中，暂未开放使用。</p>
+     * <p>> This parameter is in invitational preview and is unavailable for general users.</p>
      */
     @NameInMap("Ipv6Prefix")
     public java.util.List<String> ipv6Prefix;
 
     /**
-     * <p>> 该参数正在邀测中，暂未开放使用。</p>
+     * <p>> This parameter is in invitational preview and is unavailable for general users.</p>
      */
     @NameInMap("Ipv6PrefixCount")
     public Integer ipv6PrefixCount;
 
     /**
-     * <p>The ID of the ENI.</p>
+     * <p>The ENI ID.</p>
      */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;

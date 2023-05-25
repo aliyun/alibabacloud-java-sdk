@@ -8,17 +8,17 @@ public class DescribeCapacityReservationInstancesRequest extends TeaModel {
     public DescribeCapacityReservationInstancesRequestPrivatePoolOptions privatePoolOptions;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <br>
      * <p>Maximum value: 100.</p>
      * <br>
-     * <p>Default value: 10</p>
+     * <p>Default value: 10.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token used to start the next query. Set the value to the NextToken value obtained from the response to the previous request.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

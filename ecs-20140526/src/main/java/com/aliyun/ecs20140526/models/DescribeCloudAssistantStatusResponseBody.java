@@ -23,7 +23,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -81,7 +81,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
 
     public static class DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSetInstanceCloudAssistantStatus extends TeaModel {
         /**
-         * <p>The number of tasks that Cloud Assistant was running on the instance.</p>
+         * <p>The number of tasks that were run by Cloud Assistant on the instance.</p>
          */
         @NameInMap("ActiveTaskCount")
         public Long activeTaskCount;
@@ -96,25 +96,25 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
         public String cloudAssistantStatus;
 
         /**
-         * <p>The version number of the Cloud Assistant client. This parameter is empty if the Cloud Assistant client is not installed or is not running.</p>
+         * <p>The version number of the Cloud Assistant client. If the Cloud Assistant client is not installed or is not running, this parameter is left empty.</p>
          */
         @NameInMap("CloudAssistantVersion")
         public String cloudAssistantVersion;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The number of tasks that Cloud Assistant completed on the instance.</p>
+         * <p>The number of tasks that were completed by Cloud Assistant on the instance.</p>
          */
         @NameInMap("InvocationCount")
         public Long invocationCount;
 
         /**
-         * <p>The most recent heartbeat time of Cloud Assistant. The value is updated once every minute.</p>
+         * <p>The most recent heartbeat time value of Cloud Assistant. The value is updated once every minute.</p>
          */
         @NameInMap("LastHeartbeatTime")
         public String lastHeartbeatTime;
@@ -135,7 +135,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
         public String OSType;
 
         /**
-         * <p>Indicates whether Cloud Assistant supports Session Manager on the instance. If Cloud Assistant does not support Session Manager on the instance, an early Cloud Assistant version may be installed on the instance or Session Manager may not be supported in the specified region.</p>
+         * <p>Indicates whether Cloud Assistant supports Session Manager on the instance. If Cloud Assistant does not support Session Manager, the Cloud Assistant running on the instance may be of an early version or Session Manager may not be supported in the specified region.</p>
          */
         @NameInMap("SupportSessionManager")
         public Boolean supportSessionManager;

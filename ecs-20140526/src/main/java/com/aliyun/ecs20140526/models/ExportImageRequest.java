@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExportImageRequest extends TeaModel {
     /**
-     * <p>The format in which to export the custom image. Valid values:</p>
+     * <p>The format in which you want to export the custom image. Valid values:</p>
      * <br>
      * <p>*   raw</p>
      * <p>*   vhd</p>
@@ -19,19 +19,19 @@ public class ExportImageRequest extends TeaModel {
     public String imageFormat;
 
     /**
-     * <p>The ID of the custom image.</p>
+     * <p>The custom image ID.</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
-     * <p>The OSS bucket to which to export the custom image.</p>
+     * <p>The OSS bucket in which you want to store the exported custom image.</p>
      */
     @NameInMap("OSSBucket")
     public String OSSBucket;
 
     /**
-     * <p>The prefix of the object as which to store the custom image in the OSS bucket. The prefix must be 1 to 30 characters in length and can contain digits and letters.</p>
+     * <p>The prefix for the name of the OSS object in which you want to store the exported custom image. The prefix must be 1 to 30 characters in length and can contain digits and letters.</p>
      */
     @NameInMap("OSSPrefix")
     public String OSSPrefix;
@@ -52,7 +52,7 @@ public class ExportImageRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The name of the RAM role to use to export the custom image.</p>
+     * <p>The name of the RAM role that you want to use to export the custom image.</p>
      */
     @NameInMap("RoleName")
     public String roleName;

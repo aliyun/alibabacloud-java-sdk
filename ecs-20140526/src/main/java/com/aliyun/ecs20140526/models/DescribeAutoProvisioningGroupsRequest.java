@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAutoProvisioningGroupsRequest extends TeaModel {
     /**
-     * <p>The IDs of auto provisioning groups. You can specify up to 20 auto provisioning group IDs.</p>
+     * <p>The ID of the auto provisioning group. You can specify up to 20 IDs.</p>
      */
     @NameInMap("AutoProvisioningGroupId")
     public java.util.List<String> autoProvisioningGroupId;
@@ -17,7 +17,7 @@ public class DescribeAutoProvisioningGroupsRequest extends TeaModel {
     public String autoProvisioningGroupName;
 
     /**
-     * <p>The statuses of auto provisioning groups.</p>
+     * <p>The status of the auto provisioning group.</p>
      */
     @NameInMap("AutoProvisioningGroupStatus")
     public java.util.List<String> autoProvisioningGroupStatus;

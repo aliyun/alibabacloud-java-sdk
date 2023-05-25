@@ -22,13 +22,13 @@ public class ModifyImageSharePermissionRequest extends TeaModel {
      * <p>*   true: publishes the custom image as a community image.</p>
      * <p>*   false: unpublishes a community image. The unpublish operation takes effect only on community images.</p>
      * <br>
-     * <p>Default value: false</p>
+     * <p>Default value: false.</p>
      */
     @NameInMap("IsPublic")
     public Boolean isPublic;
 
     /**
-     * <p>> This parameter is in invitational preview and is unavailable to general users.</p>
+     * <p>> This parameter is in invitational preview and is not publicly available.</p>
      */
     @NameInMap("LaunchPermission")
     public String launchPermission;

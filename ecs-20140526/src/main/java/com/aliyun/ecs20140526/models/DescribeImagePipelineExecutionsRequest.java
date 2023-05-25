@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     /**
-     * <p>The ID of the image build task.</p>
+     * <p>The ID of the image creation task.</p>
      */
     @NameInMap("ExecutionId")
     public String executionId;
@@ -17,7 +17,7 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     public String imagePipelineId;
 
     /**
-     * <p>The maximum number of entries to return on each page. Valid values: 1 to 500.</p>
+     * <p>The number of entries per page. Valid values: 1 to 500.</p>
      * <br>
      * <p>Default value: 50.</p>
      */
@@ -25,7 +25,7 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The query token. Set the value to the `NextToken` value that was returned when you last called the DescribeImagePipelineExecutions operation. Leave this parameter empty when you call this operation for the first time.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -37,7 +37,7 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the image build task. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -49,23 +49,23 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The status of the image build task. You can specify multiple values at the same time. Separate the values with commas (,). Example format: `BUILDING,DISTRIBUTING`. Valid values: </p>
+     * <p>The status of the image creation task. You can specify multiple values at the same time. Separate the values with commas (,). Example: `BUILDING,DISTRIBUTING`. Valid values:</p>
      * <br>
-     * <p>- BUILDING: The image is being built.</p>
-     * <p>- DISTRIBUTING: The image is being distributed.</p>
-     * <p>- RELEASING: The image is being recycled.</p>
-     * <p>- SUCCESS: The image is built.</p>
-     * <p>- FAILED: The image fails to be built.</p>
-     * <p>- CANCELLING: The image build task is being canceled.</p>
-     * <p>- CANCELLED: The image build task is canceled.</p>
+     * <p>*   BUILDING</p>
+     * <p>*   DISTRIBUTING</p>
+     * <p>*   RELEASING</p>
+     * <p>*   SUCCESS</p>
+     * <p>*   FAILED</p>
+     * <p>*   CANCELLING</p>
+     * <p>*   CANCELLED</p>
      * <br>
-     * <p>>  You cannot query the image build tasks in all status by leaving this parameter empty.</p>
+     * <p>> If you want to query the image creation tasks in all states, specify all values.</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>> This parameter is deprecated.</p>
+     * <p>> This parameter is unavailable.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeImagePipelineExecutionsRequestTag> tag;
@@ -165,13 +165,13 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
 
     public static class DescribeImagePipelineExecutionsRequestTag extends TeaModel {
         /**
-         * <p>> This parameter is deprecated.</p>
+         * <p>> This parameter is unavailable.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>> This parameter is deprecated.</p>
+         * <p>> This parameter is unavailable.</p>
          */
         @NameInMap("Value")
         public String value;

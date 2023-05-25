@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class StopInstancesRequest extends TeaModel {
     /**
-     * <p>The batch operation mode. Valid values:</p>
+     * <p>Specifies the batch operation mode. Valid values:</p>
      * <br>
-     * <p>*   AllTogether: In this mode, if all instances are stopped, a success message is returned. If an instance fails the verification, all instances fail to stop and an error message is returned.</p>
+     * <p>*   AllTogether: In this mode, a success message is returned if all specified instances are stopped. If one or more of the specified instances fail the check when you set the DryRun parameter to false, none of the specified instances can be stopped and an error message is returned.</p>
      * <p>*   SuccessFirst: In this mode, each instance is separately stopped. The response contains the operation results for each instance.</p>
      * <br>
      * <p>Default value: AllTogether.</p>
@@ -16,13 +16,13 @@ public class StopInstancesRequest extends TeaModel {
     public String batchOptimization;
 
     /**
-     * <p>Specifies whether to check the validity of the request without actually making the request. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid Values:</p>
      * <br>
-     * <p>*   true: The validity of the request is checked, but the request is not made. Check items include the request format, instance status, and whether the required parameters are specified. If the check fails, the corresponding error message is returned. If the check succeeds, `DRYRUN.SUCCESS` is returned.</p>
+     * <p>*   true: performs a dry run, but the request is not made. The system checks the request for potential issues, including required parameters, request syntax, and instance status. If the request passes the dry run, `DRYRUN.SUCCESS` is returned. Otherwise, an error message is returned.</p>
      * <br>
-     * <p>    > If you set `BatchOptimization` to `SuccessFirst` and `DryRun` to true, only `DRYRUN.SUCCESS` is returned regardless of whether the check succeeds.</p>
+     * <p>> If you set `BatchOptimization` to `SuccessFirst` and `DryRun` to true, only `DRYRUN.SUCCESS` is returned regardless of whether the request passes the dry run.</p>
      * <br>
-     * <p>*   false: The validity of the request is checked, and the request is made if the check succeeds.</p>
+     * <p>*   false: performs a dry run and sends the request. If the request passes the dry run, the operation is performed.</p>
      * <br>
      * <p>Default value: false.</p>
      */
@@ -32,7 +32,7 @@ public class StopInstancesRequest extends TeaModel {
     /**
      * <p>Specifies whether to forcibly stop the instance. Valid values:</p>
      * <br>
-     * <p>*   true: forcibly stops the instance. This operation is equivalent to the typical power-off operation. Cache data that is not written to storage in the instance will be lost.</p>
+     * <p>*   true: forcibly stops the instance. This operation is equivalent to the power-off operation in common scenarios. Cache data that is not written to storage devices on the instance is lost.</p>
      * <p>*   false: normally stops the instance.</p>
      * <br>
      * <p>Default value: false.</p>
@@ -41,7 +41,7 @@ public class StopInstancesRequest extends TeaModel {
     public Boolean forceStop;
 
     /**
-     * <p>The list of instance ID.</p>
+     * <p>The IDs of instances.</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
@@ -67,10 +67,10 @@ public class StopInstancesRequest extends TeaModel {
     /**
      * <p>The stop mode of the pay-as-you-go instance. Valid values:</p>
      * <br>
-     * <p>*   StopCharging: economical mode. For information about how `StopCharging` takes effect, see the "Prerequisites" section in [Economical mode](~~63353~~).</p>
-     * <p>*   KeepCharging: standard mode. After the instances are stopped in standard mode, you continue to be charged for them.</p>
+     * <p>*   StopCharging: economical mode. For information about the conditions on which `StopCharging` takes effect, see the "Conditions for enabling economical mode" section in [Economical mode](~~63353~~).</p>
+     * <p>*   KeepCharging: standard mode. You continue to be charged for instances that are stopped in standard mode.</p>
      * <br>
-     * <p>Default value: If the prerequisites required for enabling the economical mode are met and you have enabled this mode in the ECS console, the default value is `StopCharging`. For more information, see "Enable the economical mode" in [Economical mode](~~63353#default~~). Otherwise, the default value is `KeepCharging`.</p>
+     * <p>Default value: If the conditions for enabling the economical mode are met and you have enabled this mode in the ECS console, the default value is [StopCharging](~~63353#default~~). For more information, see the "Enable economical mode" section in `Economical mode`. Otherwise, the default value is `KeepCharging`.</p>
      */
     @NameInMap("StoppedMode")
     public String stoppedMode;

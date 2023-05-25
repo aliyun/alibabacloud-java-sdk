@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AttachKeyPairResponseBody extends TeaModel {
     /**
-     * <p>The number of instances to which the key pair fails to be attached.</p>
+     * <p>The number of instances to which the key pair fails to be bound.</p>
      */
     @NameInMap("FailCount")
     public String failCount;
 
     /**
-     * <p>The name of the key pair.</p>
+     * <p>The names of the key pairs.</p>
      */
     @NameInMap("KeyPairName")
     public String keyPairName;
@@ -29,7 +29,7 @@ public class AttachKeyPairResponseBody extends TeaModel {
     public AttachKeyPairResponseBodyResults results;
 
     /**
-     * <p>The total number of instances to which the SSH key pair is attached.</p>
+     * <p>The total number of instances to which the SSH key pair is bound.</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -87,7 +87,7 @@ public class AttachKeyPairResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -99,7 +99,7 @@ public class AttachKeyPairResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>Indicates whether the operation was successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          */
         @NameInMap("Success")
         public String success;

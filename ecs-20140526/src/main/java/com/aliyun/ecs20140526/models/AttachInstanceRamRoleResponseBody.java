@@ -11,7 +11,7 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
     public AttachInstanceRamRoleResponseBodyAttachInstanceRamRoleResults attachInstanceRamRoleResults;
 
     /**
-     * <p>The number of the instances to which the instance RAM role failed to be attached.</p>
+     * <p>The number of instances to which the instance RAM role failed to be attached.</p>
      */
     @NameInMap("FailCount")
     public Integer failCount;
@@ -23,7 +23,7 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
     public String ramRoleName;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

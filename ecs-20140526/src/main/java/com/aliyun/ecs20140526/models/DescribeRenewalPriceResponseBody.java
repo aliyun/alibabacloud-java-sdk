@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRenewalPriceResponseBody extends TeaModel {
     /**
-     * <p>Details about the prices and discount rules.</p>
+     * <p>Details about the prices and promotion rules.</p>
      */
     @NameInMap("PriceInfo")
     public DescribeRenewalPriceResponseBodyPriceInfo priceInfo;

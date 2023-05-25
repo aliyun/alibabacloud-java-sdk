@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class ImportImageResponseBody extends TeaModel {
     /**
-     * <p>The ID of the image.</p>
+     * <p>The image ID.</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
-     * <p>The ID of the region where the instance resides.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the image import task.</p>
+     * <p>The image import task ID.</p>
      */
     @NameInMap("TaskId")
     public String taskId;

@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class ModifyDiskChargeTypeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically complete the payment. Valid values:</p>
+     * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <br>
-     * <p>*   true: The payment is automatically completed. Maintain a sufficient account balance. Otherwise, your order becomes invalid and is canceled.</p>
+     * <p>*   true (default): The payment is automatically completed. Make sure that the balance in your account is sufficient. Otherwise, your order becomes invalid and is canceled.</p>
      * <p>*   false: An order is generated but no payment is made. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.**** For more information, see [How to ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The new billing method of the disk. Default value: PrePaid. Valid values:</p>
+     * <p>The new billing method of the disk. Valid values:</p>
      * <br>
-     * <p>*   PrePaid: changes the billing method from pay-as-you-go to subscription.</p>
-     * <p>*   PostPaid: changes the billing method from subscription to pay-as-you-go.</p>
+     * <p>*   PrePaid (default): subscription.</p>
+     * <p>*   PostPaid: pay-as-you-go.</p>
      */
     @NameInMap("DiskChargeType")
     public String diskChargeType;

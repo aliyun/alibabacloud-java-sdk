@@ -94,17 +94,17 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
 
     public static class DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgress extends TeaModel {
         /**
-         * <p>The error code. This parameter is empty when the operation was successful.</p>
+         * <p>The error code. This parameter is empty when the operation is successful.</p>
          * <br>
-         * <p>For information about error codes and error messages, visit the [API error center](https://error-center.alibabacloud.com/status/product/Ecs).</p>
+         * <p>For information about error codes and error messages, visit the [API error center](https://error-center.aliyun.com/status/product/Ecs).</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
-         * <p>The error message. This parameter is empty when the operation was successful.</p>
+         * <p>The error message. This parameter is empty when the operation is successful.</p>
          * <br>
-         * <p>For information about error codes and error messages, visit the [API error center](https://error-center.alibabacloud.com/status/product/Ecs).</p>
+         * <p>For information about error codes and error messages, visit the [API error center](https://error-center.aliyun.com/status/product/Ecs).</p>
          */
         @NameInMap("ErrorMsg")
         public String errorMsg;

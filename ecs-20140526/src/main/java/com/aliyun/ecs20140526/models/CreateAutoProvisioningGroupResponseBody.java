@@ -11,13 +11,13 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
     public String autoProvisioningGroupId;
 
     /**
-     * <p>Details about the instances created by the auto provisioning group. The values of parameters in this array are returned only when AutoProvisioningGroupType is set to `instant`.</p>
+     * <p>Details about the instances created by the auto provisioning group. The values of the parameters in this array are returned only when the AutoProvisioningGroupType parameter is set to `instant`.</p>
      */
     @NameInMap("LaunchResults")
     public CreateAutoProvisioningGroupResponseBodyLaunchResults launchResults;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -90,7 +90,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
         public CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResultInstanceIds instanceIds;
 
         /**
-         * <p>The instance type of the instance.</p>
+         * <p>The instance type.</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
@@ -100,7 +100,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
          * <br>
          * <p>*   NoSpot: The instance is created as a regular pay-as-you-go instance.</p>
          * <p>*   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.</p>
-         * <p>*   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.</p>
+         * <p>*   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.</p>
          */
         @NameInMap("SpotStrategy")
         public String spotStrategy;

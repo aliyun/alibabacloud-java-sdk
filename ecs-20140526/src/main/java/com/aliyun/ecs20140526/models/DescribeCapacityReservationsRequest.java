@@ -8,10 +8,10 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
     public DescribeCapacityReservationsRequestPrivatePoolOptions privatePoolOptions;
 
     /**
-     * <p>The billing method of instances to be created by using the capacity reservation. Valid values:</p>
+     * <p>The billing method of the instance. Valid values:</p>
      * <br>
-     * <p>*   PostPaid: pay-as-you-go</p>
-     * <p>*   PrePaid: subscription</p>
+     * <p>*   PostPaid: pay-as-you-go.</p>
+     * <p>*   PrePaid: subscription.</p>
      * <br>
      * <p>Default value: PostPaid.</p>
      */
@@ -25,9 +25,9 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The maximum number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <br>
-     * <p>Maximum value: 100.</p>
+     * <p>Valid values: 1 to 100</p>
      * <br>
      * <p>Default value: 10.</p>
      */
@@ -35,7 +35,7 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token used to start the next query. Set the value to the NextToken value obtained from the response to the previous request.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of the NextToken parameter.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -47,11 +47,11 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The operating system type of instances to be created by using the capacity reservation. Valid values:</p>
+     * <p>The operating system of the instance. Valid values:</p>
      * <br>
-     * <p>*   windows: Windows operating systems</p>
-     * <p>*   linux: Linux operating systems</p>
-     * <p>*   all: all operating system types</p>
+     * <p>*   windows: Windows operating systems.</p>
+     * <p>*   linux: Linux operating systems.</p>
+     * <p>*   all: all operating system types.</p>
      * <br>
      * <p>Default value: all.</p>
      */
@@ -65,9 +65,9 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the capacity reservation belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.  </p>
+     * <p>The ID of the resource group to which the capacity reservation belongs. If you specify this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
      * <br>
-     * <p>>  Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+     * <p>> Resources in the default resource group are displayed in the response regardless of whether you specify this parameter.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -254,15 +254,15 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
 
     public static class DescribeCapacityReservationsRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the capacity reservation. Valid values of N: 1 to 20.</p>
+         * <p>The key of tag N. Valid values of N: 1 to 20.</p>
          * <br>
-         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.</p>
+         * <p>If you specify a single tag to query resources, up to 1,000 resources with this tag are returned in the response. If you specify multiple tags to query resources, up to 1,000 resources with all these tags are returned in the response. To query more than 1,000 resources with the specified tags, call the [ListTagResources](~~110425~~) operation.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N of the capacity reservation. Valid values of N: 1 to 20.</p>
+         * <p>The value of tag N. Valid values of N: 1 to 20.</p>
          */
         @NameInMap("Value")
         public String value;

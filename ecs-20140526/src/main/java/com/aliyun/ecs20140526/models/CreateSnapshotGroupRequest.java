@@ -11,18 +11,18 @@ public class CreateSnapshotGroupRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of disk N for which you want to create snapshots. You can specify multiple disk IDs across instances within the same zone. Valid values of N: 1 to 16. A single snapshot-consistent group can contain snapshots of up to 16 disks and cannot exceed 32 TiB in size.</p>
+     * <p>The ID of cloud disk N for which you want to create snapshots. You can specify multiple cloud disk IDs across instances within the same zone. Valid values of N: 1 to 16. A single snapshot-consistent group can contain snapshots of up to 16 cloud disks whose total disk size does not exceed 32 TiB.</p>
      * <br>
      * <p>Take note of the following items:</p>
      * <br>
-     * <p>*   You cannot specify both DiskId.N and `ExcludeDiskId.N`.</p>
-     * <p>*   If `InstanceId` is set, you can use DiskId.N to specify only disks attached to the instance specified by InstanceId, and you cannot use DiskId.N to specify disks attached to multiple instances.</p>
+     * <p>*   You cannot specify both DiskId.N and `ExcludeDiskId.N` in the same request.</p>
+     * <p>*   If `InstanceId` is set, you can use DiskId.N to specify only cloud disks attached to the instance specified by InstanceId, and you cannot use DiskId.N to specify cloud disks attached to multiple instances.</p>
      */
     @NameInMap("DiskId")
     public java.util.List<String> diskId;
 
     /**
-     * <p>The ID of disk N for which you do not need to create snapshots. After this parameter is specified, the created snapshot-consistent group does not contain snapshots of the disk. Valid values of N: 1 to 16.</p>
+     * <p>The ID of cloud disk N for which you do not want to create snapshots. If this parameter is specified, the created snapshot-consistent group does not contain snapshots of the cloud disk. Valid values of N: 1 to 16.</p>
      * <br>
      * <p>This parameter is empty by default, which indicates that snapshots are created for all the disks of the instance.</p>
      * <br>
@@ -32,13 +32,13 @@ public class CreateSnapshotGroupRequest extends TeaModel {
     public java.util.List<String> excludeDiskId;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>Specify whether to enable the instant access feature. Valid values:</p>
+     * <p>Specifies whether to enable the instant access feature. Valid values:</p>
      * <br>
      * <p>*   true</p>
      * <p>*   false</p>
@@ -49,17 +49,17 @@ public class CreateSnapshotGroupRequest extends TeaModel {
     public Boolean instantAccess;
 
     /**
-     * <p>Specify the number of days for which the instant access feature is available. Unit: days. Valid values: 1 to 65535.</p>
+     * <p>The number of days for which the instant access feature is available. Unit: days. Valid values: 1 to 65535.</p>
      * <br>
-     * <p>This parameter takes effect only when `InstantAccess` is set to true. The instant access feature is automatically disabled when the specified duration of the instant access feature expires.</p>
+     * <p>This parameter takes effect only when `InstantAccess` is set to true. The instant access feature is automatically disabled when the specified duration ends.</p>
      * <br>
-     * <p>This parameter is empty by default, which indicates that the instant access feature expires when snapshots are released.</p>
+     * <p>This parameter is empty by default, which indicates that the expiration time of the instant access feature is determined by the time when snapshots are released.</p>
      */
     @NameInMap("InstantAccessRetentionDays")
     public Integer instantAccessRetentionDays;
 
     /**
-     * <p>The name of the snapshot-consistent group. The name must be 2 to 128 characters in length, and contain letters, digits, periods (.), underscores (\_), hyphens (-), and colons (:). It must start with a letter and cannot start with `http://` or `https://`.</p>
+     * <p>The name of the snapshot-consistent group. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), hyphens (-), and colons (:). It must start with a letter and cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -89,13 +89,13 @@ public class CreateSnapshotGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>> This parameter is unavailable.</p>
+     * <p>> This parameter is unavailable for public use.</p>
      */
     @NameInMap("StorageLocationArn")
     public String storageLocationArn;
 
     /**
-     * <p>The tags of the command.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateSnapshotGroupRequestTag> tag;
@@ -227,7 +227,7 @@ public class CreateSnapshotGroupRequest extends TeaModel {
 
     public static class CreateSnapshotGroupRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the snapshot-consistent group. Valid values of N: 1 to 20. The tag value cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>The key of tag N of the snapshot-consistent group. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Key")
         public String key;

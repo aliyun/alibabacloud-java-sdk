@@ -11,7 +11,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
     public DeregisterManagedInstanceResponseBodyInstance instance;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -87,7 +87,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
         public Long invocationCount;
 
         /**
-         * <p>The last Cloud Assistant task execution time.</p>
+         * <p>The time when the Cloud Assistant task was last executed.</p>
          */
         @NameInMap("LastInvokedTime")
         public String lastInvokedTime;

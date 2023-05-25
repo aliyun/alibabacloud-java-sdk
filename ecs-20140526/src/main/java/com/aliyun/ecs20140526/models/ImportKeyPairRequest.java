@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImportKeyPairRequest extends TeaModel {
     /**
-     * <p>The name of the key pair. The name must be unique. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The name of the key pair. The name must be unique. It must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
      */
     @NameInMap("KeyPairName")
     public String keyPairName;
@@ -20,13 +20,13 @@ public class ImportKeyPairRequest extends TeaModel {
     public String publicKeyBody;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the key pair belongs.</p>
+     * <p>The ID of the enterprise resource group to which the SSH key pair belongs.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -114,13 +114,13 @@ public class ImportKeyPairRequest extends TeaModel {
 
     public static class ImportKeyPairRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the key pair. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length. The tag key cannot start with `acs:` or `aliyun` or contain `http://` or `https://`.</p>
+         * <p>The key of tag N to add to the key pair. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with acs: or aliyun and cannot contain [http:// or https://.](http://https://。)</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N of the key pair. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or contain `http://` or `https://`.</p>
+         * <p>The value of tag N to add to the key pair. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain [http:// or https://](http://https://。).</p>
          */
         @NameInMap("Value")
         public String value;

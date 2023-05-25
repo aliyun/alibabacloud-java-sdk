@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDiskRequest extends TeaModel {
     /**
-     * <p>The ID of the disk to be released.</p>
+     * <p>The ID of the disk that you want to release.</p>
      */
     @NameInMap("DiskId")
     public String diskId;
@@ -13,21 +13,12 @@ public class DeleteDiskRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    /**
-     * <p>RAM 用户的虚拟账号ID。</p>
-     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>资源主账号的账号名称。</p>
-     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
-    /**
-     * <p>资源主账号的ID，亦即UID。</p>
-     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 

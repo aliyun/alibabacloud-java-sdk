@@ -7,8 +7,8 @@ public class ModifyInstanceMetadataOptionsRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the access channel for instance metadata. Valid values:</p>
      * <br>
-     * <p>*   enabled: enables the access channel for instance metadata.</p>
-     * <p>*   disabled: disables the access channel for instance metadata.</p>
+     * <p>*   enabled</p>
+     * <p>*   disabled</p>
      * <br>
      * <p>Default value: enabled.</p>
      * <br>
@@ -18,16 +18,16 @@ public class ModifyInstanceMetadataOptionsRequest extends TeaModel {
     public String httpEndpoint;
 
     /**
-     * <p>> This parameter is in invitational preview and is unavailable to general users.</p>
+     * <p>> This parameter is in invitational preview and is not publicly available.</p>
      */
     @NameInMap("HttpPutResponseHopLimit")
     public Integer httpPutResponseHopLimit;
 
     /**
-     * <p>Specifies whether to forcefully use the security-enhanced mode (IMDSv2) to access instance metadata. Valid values:</p>
+     * <p>Specifies whether to forcibly use the security hardening mode (IMDSv2) to access instance metadata. Valid values:</p>
      * <br>
-     * <p>*   optional: does not forcefully use the security-enhanced mode (IMDSv2).</p>
-     * <p>*   required: forcefully uses the security-enhanced mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.</p>
+     * <p>*   optional: does not forcibly use the security hardening mode (IMDSv2).</p>
+     * <p>*   required: forcibly uses the security hardening mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.</p>
      * <br>
      * <p>Default value: optional.</p>
      * <br>
@@ -42,6 +42,9 @@ public class ModifyInstanceMetadataOptionsRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>> This parameter is in invitational preview and is not publicly available.</p>
+     */
     @NameInMap("InstanceMetadataTags")
     public String instanceMetadataTags;
 
@@ -49,7 +52,7 @@ public class ModifyInstanceMetadataOptionsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

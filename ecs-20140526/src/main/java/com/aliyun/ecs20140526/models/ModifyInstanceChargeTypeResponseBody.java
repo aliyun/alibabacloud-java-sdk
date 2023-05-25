@@ -11,13 +11,13 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
     public ModifyInstanceChargeTypeResponseBodyFeeOfInstances feeOfInstances;
 
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,7 +53,7 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
 
     public static class ModifyInstanceChargeTypeResponseBodyFeeOfInstancesFeeOfInstance extends TeaModel {
         /**
-         * <p>The unit of currency used on the bill.</p>
+         * <p>The unit of currency for the bill.</p>
          * <br>
          * <p>Alibaba Cloud China site (aliyun.com): CNY.</p>
          * <br>
@@ -63,13 +63,13 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
         public String currency;
 
         /**
-         * <p>The cost value.</p>
+         * <p>The charged amount.</p>
          */
         @NameInMap("Fee")
         public String fee;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;

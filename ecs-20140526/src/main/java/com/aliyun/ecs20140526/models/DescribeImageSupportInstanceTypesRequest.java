@@ -4,19 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageSupportInstanceTypesRequest extends TeaModel {
-    /**
-     * <p>The scenario in which the instance type is used. Default value: CreateEcs. Valid values:</p>
-     * <br>
-     * <p>*   CreateEcs: instance creation</p>
-     * <p>*   Upgrade: instance type upgrade</p>
-     * <p>*   Downgrade: instance type downgrade</p>
-     * <p>*   RenewDowngrade: renewal and configuration downgrade</p>
-     */
     @NameInMap("ActionType")
     public String actionType;
 
     /**
-     * <p>The list of filters to querying resources.</p>
+     * <p>The filters used to filter instance types.</p>
      */
     @NameInMap("Filter")
     public java.util.List<DescribeImageSupportInstanceTypesRequestFilter> filter;
@@ -105,16 +97,16 @@ public class DescribeImageSupportInstanceTypesRequest extends TeaModel {
 
     public static class DescribeImageSupportInstanceTypesRequestFilter extends TeaModel {
         /**
-         * <p>The key of filter. Only the image ID can be used to filter instance types. Valid values:</p>
+         * <p>The key of filter N. Only the image ID can be used to filter instance types. Valid values:</p>
          * <br>
-         * <p>* imagId: image ID</p>
-         * <p>* filter: image ID</p>
+         * <p>*   imagId: image ID</p>
+         * <p>*   filter: image ID</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of filter.</p>
+         * <p>The value of filter N.</p>
          */
         @NameInMap("Value")
         public String value;

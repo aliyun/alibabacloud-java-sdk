@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTagsRequest extends TeaModel {
     /**
-     * <p>> This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+     * <p>> This parameter will be deprecated in the future. We recommend that you use other parameters to ensure future compatibility.</p>
      */
     @NameInMap("Category")
     public String category;
@@ -14,9 +14,9 @@ public class DescribeTagsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * <br>
-     * <p>Pages start from page 1.</p>
+     * <p>Page starts from page 1.</p>
      * <br>
      * <p>Default value: 1.</p>
      */
@@ -24,9 +24,9 @@ public class DescribeTagsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <br>
-     * <p>Maximum value: 100.</p>
+     * <p>Valid values: 1 to 100.</p>
      * <br>
      * <p>Default value: 50.</p>
      */
@@ -34,13 +34,13 @@ public class DescribeTagsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
+     * <p>The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource. For example, when ResourceType is set to instance, this parameter is interpreted as the ID of the instance (InstanceId).</p>
+     * <p>The ID of the resource to which the tags are added. If the resource is an instance, the value of this parameter is the ID of the instance.</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
@@ -52,28 +52,28 @@ public class DescribeTagsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource to which the tag is added. Valid values:</p>
+     * <p>The type of the resource to which the tags are added. Valid values:</p>
      * <br>
-     * <p>*   instance: Elastic Compute Service (ECS) instance</p>
-     * <p>*   disk: disk</p>
-     * <p>*   snapshot: snapshot</p>
-     * <p>*   image: image</p>
-     * <p>*   securitygroup: security group</p>
-     * <p>*   volume: storage volume</p>
-     * <p>*   eni: elastic network interface (ENI)</p>
-     * <p>*   ddh: dedicated host</p>
-     * <p>*   keypair: SSH key pair</p>
-     * <p>*   launchtemplate: launch template</p>
-     * <p>*   reservedinstance: reserved instance</p>
-     * <p>*   snapshotpolicy: automatic snapshot policy</p>
+     * <p>*   instance: Elastic Compute Service (ECS) instance.</p>
+     * <p>*   disk: disk.</p>
+     * <p>*   snapshot: snapshot.</p>
+     * <p>*   image: image.</p>
+     * <p>*   securitygroup: security group.</p>
+     * <p>*   volume: storage volume.</p>
+     * <p>*   eni: elastic network interface (ENI).</p>
+     * <p>*   ddh: dedicated host.</p>
+     * <p>*   keypair: SSH key pair.</p>
+     * <p>*   launchtemplate: launch template.</p>
+     * <p>*   reservedinstance: reserved instance.</p>
+     * <p>*   snapshotpolicy: automatic snapshot policy.</p>
      * <br>
-     * <p>All values must be lowercase.</p>
+     * <p>All values must be in lowercase letters.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The tags of the resource.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeTagsRequestTag> tag;
@@ -165,13 +165,13 @@ public class DescribeTagsRequest extends TeaModel {
 
     public static class DescribeTagsRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>The key of tag N of the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with acs: or aliyun. It cannot contain [http:// or https://.](http://https://。)</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N of the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>The value of tag N of the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain [http:// or https://.](http://https://。)</p>
          */
         @NameInMap("Value")
         public String value;

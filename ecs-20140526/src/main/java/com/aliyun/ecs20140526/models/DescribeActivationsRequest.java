@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class DescribeActivationsRequest extends TeaModel {
     /**
-     * <p>The ID of the activation code.</p>
+     * <p>The page number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1.</p>
+     * <br>
+     * <p>Default value: 1.</p>
      */
     @NameInMap("ActivationId")
     public String activationId;
 
     /**
-     * <p>The default instance name prefix.</p>
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Maximum value: 50.</p>
+     * <br>
+     * <p>Default value: 10.</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
@@ -23,29 +31,19 @@ public class DescribeActivationsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the page to return.</p>
-     * <br>
-     * <p>Pages start from page 1.</p>
-     * <br>
-     * <p>Default value: 1.</p>
+     * <p>An array that consists of the tags of the activation code.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
-     * <br>
-     * <p>Maximum value: 50.</p>
-     * <br>
-     * <p>Default value: 10.</p>
+     * <p>The information about the tag of the activation code.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The region ID of the activation code. The following regions are supported: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), and China (Hong Kong).</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The default instance name prefix.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -56,6 +54,13 @@ public class DescribeActivationsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The key of tag N of the activation code. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
+     * <br>
+     * <p>Up to 1,000 resources that have the specified tags can be returned in the response. To query more than 1,000 resources that have the specified tags, call the [ListTagResources](~~110425~~) operation.</p>
+     * <br>
+     * <p>The tag key is up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeActivationsRequestTag> tag;
 
@@ -145,9 +150,15 @@ public class DescribeActivationsRequest extends TeaModel {
     }
 
     public static class DescribeActivationsRequestTag extends TeaModel {
+        /**
+         * <p>The number of entries to return on each page.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The ID of the request.</p>
+         */
         @NameInMap("Value")
         public String value;
 

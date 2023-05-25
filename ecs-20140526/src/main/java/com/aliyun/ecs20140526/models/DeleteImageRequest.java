@@ -24,6 +24,9 @@ public class DeleteImageRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    /**
+     * <p>RAM用户的虚拟账号ID。</p>
+     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -33,9 +36,15 @@ public class DeleteImageRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>资源主账号的账号名称。</p>
+     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <p>资源主账号的ID，亦即UID。</p>
+     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 

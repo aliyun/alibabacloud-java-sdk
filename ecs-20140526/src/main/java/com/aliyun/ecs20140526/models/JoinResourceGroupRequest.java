@@ -17,13 +17,13 @@ public class JoinResourceGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which you want to assign the resource.</p>
+     * <p>The ID of the resource group to which you want to add the instance.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the resource. The value of this parameter varies based on the resource type. For example, when ResourceType is set to instance, the ResourceId refers to InstanceId.</p>
+     * <p>The ID of the resource. For example, if you set ResourceType to instance, set this parameter to the ID of the instance.</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
@@ -38,7 +38,7 @@ public class JoinResourceGroupRequest extends TeaModel {
      * <p>The type of the ECS resource. Valid values:</p>
      * <br>
      * <p>*   instance: instance</p>
-     * <p>*   disk: Elastic Block Storage device</p>
+     * <p>*   disk: Elastic Block Storage (EBS) device</p>
      * <p>*   snapshot: snapshot</p>
      * <p>*   image: image</p>
      * <p>*   securitygroup: security group</p>

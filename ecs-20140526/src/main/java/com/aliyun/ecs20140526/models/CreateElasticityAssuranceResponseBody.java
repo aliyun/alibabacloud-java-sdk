@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateElasticityAssuranceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
      */
     @NameInMap("OrderId")
     public String orderId;
@@ -17,7 +17,7 @@ public class CreateElasticityAssuranceResponseBody extends TeaModel {
     public String privatePoolOptionsId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

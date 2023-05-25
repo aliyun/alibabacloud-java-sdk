@@ -11,7 +11,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
     public String failCount;
 
     /**
-     * <p>The names of the key pairs.</p>
+     * <p>The name of the key pair.</p>
      */
     @NameInMap("KeyPairName")
     public String keyPairName;
@@ -29,7 +29,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
     public DetachKeyPairResponseBodyResults results;
 
     /**
-     * <p>The total number of instances from which you attempted to unbind the SSH key pair.</p>
+     * <p>The total number of instances from which you want to unbind the SSH key pair.</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -81,7 +81,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
 
     public static class DetachKeyPairResponseBodyResultsResult extends TeaModel {
         /**
-         * <p>The operation status code returned. 200 indicates that the operation was successful.</p>
+         * <p>The operation status code that is returned. 200 indicates that the operation is successful.</p>
          */
         @NameInMap("Code")
         public String code;
@@ -93,13 +93,13 @@ public class DetachKeyPairResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The result of the operation. For example, when the value of `Code` is 200, the value of `Message` is `successful`.</p>
+         * <p>The result of the operation. For example, if the value of `Code` is 200, the value of `Message` is `successful`.</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>Indicates whether the operation was successful.</p>
+         * <p>Indicates whether the operation is successful.</p>
          */
         @NameInMap("Success")
         public String success;

@@ -8,13 +8,13 @@ public class AddTagsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the resource on which you want to add or overwrite tags. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource. When ResourceType is set to instance, this parameter can be interpreted as InstanceId.</p>
+     * <p>The ID of the resource. When the resources are instances, this parameter can be interpreted as InstanceId.</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
@@ -41,7 +41,7 @@ public class AddTagsRequest extends TeaModel {
      * <p>*   reservedinstance: reserved instance</p>
      * <p>*   snapshotpolicy: automatic snapshot policy</p>
      * <br>
-     * <p>All these values are lowercase.</p>
+     * <p>All values must be lowercase.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

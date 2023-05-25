@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DeleteInstancesRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The value of **ClientToken** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.**** For more information, see [How to ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. Default value: false. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run. Valid values:</p>
      * <br>
-     * <p>*   true: performs a dry run. The system checks the AccessKey pair, the permissions of the RAM user, and the required parameters. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DRYRUN.SUCCESS error code is returned.</p>
-     * <p>*   false: performs a dry run and sends the request. If the request passes the dry run, a 2XX HTTP status code is returned and the operation is performed.</p>
+     * <p>*   true: performs only a dry run. The system checks the request for potential issues, including the AccessKey pair, the permissions of the RAM user, and the required parameters. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DRYRUN.SUCCESS error code is returned.</p>
+     * <p>*   false (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to forcefully release the instance that is in the **Running** (`Running`) state. Default value: false. Valid values:</p>
+     * <p>Specifies whether to forcefully release the instance that is in the **Running** (`Running`) state. Valid values:</p>
      * <br>
-     * <p>*   true: forcefully releases the instance that is in the **Running** (`Running`) state. When the Force parameter is set to true, this operation is equivalent to the power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be recovered.</p>
-     * <p>*   false: normally releases the instance. This value is valid only for instances that are in the **Stopped** (`Stopped`) state.</p>
+     * <p>*   true: forcefully releases the instance that is in the **Running** (`Running`) state. When the Force parameter is set to true, this operation is equivalent to the power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.</p>
+     * <p>*   false (default): normally releases the instance. This value is valid only for instances that are in the **Stopped** (`Stopped`) state.</p>
      */
     @NameInMap("Force")
     public Boolean force;
 
     /**
-     * <p>The IDs of instances. You can specify up to 100 instance IDs in a single request.</p>
+     * <p>The instance IDs. You can specify up to 100 instance IDs in a request.</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
@@ -41,7 +41,7 @@ public class DeleteInstancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -53,7 +53,7 @@ public class DeleteInstancesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to release the expired subscription instance.</p>
+     * <p>Specifies whether to release an expired subscription instance.</p>
      * <br>
      * <p>Default value: false.</p>
      */

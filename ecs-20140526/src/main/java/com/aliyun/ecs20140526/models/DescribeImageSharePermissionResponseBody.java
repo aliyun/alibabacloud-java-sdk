@@ -128,6 +128,9 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         @NameInMap("AliyunId")
         public String aliyunId;
 
+        @NameInMap("SharedTime")
+        public String sharedTime;
+
         public static DescribeImageSharePermissionResponseBodyAccountsAccount build(java.util.Map<String, ?> map) throws Exception {
             DescribeImageSharePermissionResponseBodyAccountsAccount self = new DescribeImageSharePermissionResponseBodyAccountsAccount();
             return TeaModel.build(map, self);
@@ -139,6 +142,14 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         }
         public String getAliyunId() {
             return this.aliyunId;
+        }
+
+        public DescribeImageSharePermissionResponseBodyAccountsAccount setSharedTime(String sharedTime) {
+            this.sharedTime = sharedTime;
+            return this;
+        }
+        public String getSharedTime() {
+            return this.sharedTime;
         }
 
     }

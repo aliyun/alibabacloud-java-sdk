@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRenewalPriceRequest extends TeaModel {
     /**
-     * <p>The synchronized expiration date. If you set this parameter, the price for renewing a specified instance to the specified synchronized expiration date is queried. Valid values: 1 to 28.</p>
+     * <p>The synchronized expiration date. If you specify this parameter, the price for renewing a specified instance to the specified synchronized expiration date is queried. Valid values: 1 to 28.</p>
      * <br>
      * <p>For information about how to synchronize the expiration dates of instances, see [Synchronize the expiration dates of instances](~~108486~~).</p>
      * <br>
@@ -23,8 +23,8 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     /**
      * <p>The renewal period. Valid values:</p>
      * <br>
-     * <p>*   Valid values when `PriceUnit` is set to `Month`: 1, 2, 3, 4, 5, 6, 7, 8, and 9.</p>
-     * <p>*   Valid values when `PriceUnit` is set to `Year`: 1, 2, 3.</p>
+     * <p>*   Valid values when the `PriceUnit` parameter is set to `Month`: 1, 2, 3, 4, 5, 6, 7, 8, and 9.</p>
+     * <p>*   Valid values when the `PriceUnit` parameter is set to `Year`: 1, 2, 3.</p>
      * <br>
      * <p>Default value: 1.</p>
      * <br>
@@ -45,13 +45,13 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     public String priceUnit;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource. When the `ResourceType` parameter is set to`  instance `, `ResourceId` is interpreted as `InstanceId`.</p>
+     * <p>The ID of the resource. If the `ResourceType` parameter is set to`  instance `, the value of the `ResourceId` parameter is the ID of the specified instance.``</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;

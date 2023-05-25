@@ -7,7 +7,7 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
     /**
      * <p>The allocation type. Valid values:</p>
      * <br>
-     * <p>*   Normal: queries SCUs within the current Alibaba Cloud account.</p>
+     * <p>*   Normal: queries SCUs that belong to the current Alibaba Cloud account.</p>
      * <p>*   Shared: queries SCUs shared between the Alibaba Cloud account and RAM users.</p>
      * <br>
      * <p>Default value: Normal.</p>
@@ -66,19 +66,24 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The statuses of SCUs.</p>
+     * <p>The state of SCUs. You can specify 1 to 4 types of state. Valid values:</p>
+     * <br>
+     * <p>*   Creating: The SCUs are being created.</p>
+     * <p>*   Active: The SCUs are in effect.</p>
+     * <p>*   Expired: The SCUs have expired.</p>
+     * <p>*   Pending: The SCUs have not taken effect.</p>
      */
     @NameInMap("Status")
     public java.util.List<String> status;
 
     /**
-     * <p>The IDs of the SCUs. You can enter at most 100 SCU IDs.</p>
+     * <p>One or multiple SCU IDs. You can specify 1 to 100 SCU IDs.</p>
      */
     @NameInMap("StorageCapacityUnitId")
     public java.util.List<String> storageCapacityUnitId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tags of the SCUs.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeStorageCapacityUnitsRequestTag> tag;
@@ -194,13 +199,13 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
 
     public static class DescribeStorageCapacityUnitsRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the SCU. N indicates that you can set multiple tag keys to query. Valid values of N: 1 to 20.</p>
+         * <p>The key of tag N of the SCU. N is the identifier for the tag, which you can use to set and query the tag. Valid values of N: 1 to 20.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N of the SCU. N indicates that you can set multiple tag values to query and corresponds to N of `Tag.N.Key`. Valid values of N: 1 to 20.</p>
+         * <p>The value of tag N of the SCU. N is the identifier for the tag, which you can use to set and query the tag. The value of N must coincide with `Tag.N.Key`. Valid values of N: 1 to 20.</p>
          */
         @NameInMap("Value")
         public String value;

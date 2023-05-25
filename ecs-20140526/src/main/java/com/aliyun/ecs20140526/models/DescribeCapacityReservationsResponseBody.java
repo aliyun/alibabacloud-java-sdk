@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCapacityReservationsResponseBody extends TeaModel {
     /**
-     * <p>Details about the capacity reservations.</p>
+     * <p>Details of the capacity reservations.</p>
      */
     @NameInMap("CapacityReservationSet")
     public DescribeCapacityReservationsResponseBodyCapacityReservationSet capacityReservationSet;
@@ -17,13 +17,13 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token used to start the next query.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.If NextToken is empty, no next page exists.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -164,13 +164,13 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
 
     public static class DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemTagsTag extends TeaModel {
         /**
-         * <p>The tag key of the capacity reservation.</p>
+         * <p>The key of the tag.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The tag value of the capacity reservation.</p>
+         * <p>The value of the tag.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -219,7 +219,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
 
     public static class DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem extends TeaModel {
         /**
-         * <p>Details about the allocated resources.</p>
+         * <p>Details of the allocated resources.</p>
          */
         @NameInMap("AllocatedResources")
         public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResources allocatedResources;
@@ -240,25 +240,25 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
          * <p>The release mode of the capacity reservation. Valid values:</p>
          * <br>
          * <p>*   Limited: The capacity reservation is automatically released at the specified time.</p>
-         * <p>*   Unlimited: The capacity reservation is manually released. You can release it at anytime.</p>
+         * <p>*   Unlimited: The capacity reservation is manually released. You can release the capacity reservation anytime.</p>
          */
         @NameInMap("EndTimeType")
         public String endTimeType;
 
         /**
-         * <p>The billing method of instances to be created by using the capacity reservation. Valid values:</p>
+         * <p>The billing method of instances in the capacity reservation. Valid values:</p>
          * <br>
-         * <p>*   PostPaid: pay-as-you-go</p>
-         * <p>*   PrePaid: subscription</p>
+         * <p>*   PostPaid: pay-as-you-go.</p>
+         * <p>*   PrePaid: subscription.</p>
          */
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
         /**
-         * <p>The operating system type of instances to be created by using the capacity reservation. Valid values:</p>
+         * <p>The operating system type of the instances. Valid values:</p>
          * <br>
-         * <p>*   windows</p>
-         * <p>*   linux</p>
+         * <p>*   windows: Windows operating systems.</p>
+         * <p>*   linux: Linux operating systems.</p>
          */
         @NameInMap("Platform")
         public String platform;
@@ -270,10 +270,10 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         public String privatePoolOptionsId;
 
         /**
-         * <p>The type of the private pool associated with the capacity reservation. Valid values:</p>
+         * <p>The type of the private pool generated after the capacity reservation takes effect. Valid values:</p>
          * <br>
-         * <p>*   Open: open private pool</p>
-         * <p>*   Target: targeted private pool</p>
+         * <p>*   Open: open private pool.</p>
+         * <p>*   Target: targeted private pool.</p>
          */
         @NameInMap("PrivatePoolOptionsMatchCriteria")
         public String privatePoolOptionsMatchCriteria;
@@ -317,8 +317,8 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         /**
          * <p>The mode in which the capacity reservation takes effect. Valid values:</p>
          * <br>
-         * <p>- Now: The capacity reservation takes effect as soon as it is created.</p>
-         * <p>- Later: The capacity reservation takes effect at the specified time.</p>
+         * <p>*   Now: The capacity reservation takes effect as soon as it is created.</p>
+         * <p>*   Later: The capacity reservation takes effect at the specified time.</p>
          */
         @NameInMap("StartTimeType")
         public String startTimeType;
@@ -342,7 +342,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemTags tags;
 
         /**
-         * <p>>  This parameter is currently in invitational preview and unavailable for general users.</p>
+         * <p>> This parameter is in invitational preview and is not publicly available.</p>
          */
         @NameInMap("TimeSlot")
         public String timeSlot;

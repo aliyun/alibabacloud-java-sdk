@@ -11,7 +11,7 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
     public DescribeSnapshotMonitorDataResponseBodyMonitorData monitorData;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,13 +39,13 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
 
     public static class DescribeSnapshotMonitorDataResponseBodyMonitorDataDataPoint extends TeaModel {
         /**
-         * <p>The total size of the snapshots. Unit: bytes.</p>
+         * <p>The snapshot size. Unit: bytes.</p>
          */
         @NameInMap("Size")
         public Long size;
 
         /**
-         * <p>The timestamp that corresponds to a snapshot size.</p>
+         * <p>The timestamp that corresponds to the snapshot size.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
