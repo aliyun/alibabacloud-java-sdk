@@ -5,23 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the OceanBase cluster.</p>
+     * <p>The size of the data disk, in GB.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The number of the page to return. </p>
-     * <p>- Start value: 1  </p>
-     * <p>- Default value: 1</p>
+     * <p>The information about the storage resources of the cluster.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of rows to return on each page.   </p>
-     * <p>- Maximum value: 100   </p>
-     * <p>- Default value: 10</p>
+     * <p>The server with the highest disk usage.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

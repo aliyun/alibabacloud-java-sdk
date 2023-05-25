@@ -5,67 +5,64 @@ import com.aliyun.tea.*;
 
 public class SearchOmsOpenAPIMonitorMetricResponseBody extends TeaModel {
     /**
-     * <p>The suggestions (old).</p>
+     * <p>The ID of the migration instance. Generally, if you want to create a project on a public cloud, you must first purchase a migration instance.</p>
      */
     @NameInMap("Advice")
     public String advice;
 
     /**
-     * <p>The error code (old).</p>
+     * <p>The business data returned.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The time spent in processing the request, in seconds.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("Cost")
     public String cost;
 
-    /**
-     * <p>The business data returned.</p>
-     */
     @NameInMap("Data")
     public java.util.List<SearchOmsOpenAPIMonitorMetricResponseBodyData> data;
 
     /**
-     * <p>The error details.</p>
+     * <p>A system error occurred.</p>
      */
     @NameInMap("ErrorDetail")
     public SearchOmsOpenAPIMonitorMetricResponseBodyErrorDetail errorDetail;
 
     /**
-     * <p>The error description (old).</p>
+     * <p>The suggestions (old).</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The page number, which takes effect in a pagination query.</p>
+     * <p>The error code (new).</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The page size, which takes effect in a pagination query.</p>
+     * <p>The page number, which takes effect in a pagination query.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The time spent in processing the request, in seconds.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful.</p>
+     * <p>The total count, which takes effect in a pagination query.</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The total count, which takes effect in a pagination query.</p>
+     * <p>The error details.</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -164,15 +161,9 @@ public class SearchOmsOpenAPIMonitorMetricResponseBody extends TeaModel {
     }
 
     public static class SearchOmsOpenAPIMonitorMetricResponseBodyDataDataPoints extends TeaModel {
-        /**
-         * <p>A millisecond-level timestamp.</p>
-         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
-        /**
-         * <p>The value corresponding to the time.</p>
-         */
         @NameInMap("Value")
         public Double value;
 
@@ -206,9 +197,6 @@ public class SearchOmsOpenAPIMonitorMetricResponseBody extends TeaModel {
         @NameInMap("DataPoints")
         public java.util.List<SearchOmsOpenAPIMonitorMetricResponseBodyDataDataPoints> dataPoints;
 
-        /**
-         * <p>The name of the metric.</p>
-         */
         @NameInMap("Metric")
         public String metric;
 
@@ -251,25 +239,25 @@ public class SearchOmsOpenAPIMonitorMetricResponseBody extends TeaModel {
 
     public static class SearchOmsOpenAPIMonitorMetricResponseBodyErrorDetail extends TeaModel {
         /**
-         * <p>The error code (new).</p>
+         * <p>The information about the object.</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
-         * <p>The error level. Valid values: CRITICAL, ERROR, and WARN.</p>
+         * <p>The error code (old).</p>
          */
         @NameInMap("Level")
         public String level;
 
         /**
-         * <p>The error description (new).</p>
+         * <p>The ID of the project to query.</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The suggestions (new).</p>
+         * <p>The error description (new).</p>
          */
         @NameInMap("Proposal")
         public String proposal;

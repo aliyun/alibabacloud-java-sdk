@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class DescribeParametersResponseBody extends TeaModel {
     /**
-     * <p>The information of parameters.</p>
+     * <p>Indicates whether a restart is required for changes to the parameter to take effect. Valid values:   </p>
+     * <p>- true: A restart is required.   </p>
+     * <p>- false: A restart is not required.</p>
      */
     @NameInMap("Parameters")
     public java.util.List<DescribeParametersResponseBodyParameters> parameters;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The return result of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,19 +41,25 @@ public class DescribeParametersResponseBody extends TeaModel {
 
     public static class DescribeParametersResponseBodyParameters extends TeaModel {
         /**
-         * <p>The valid value range of the parameter.  It is an array with two string elements, which represents a range. The first element represents the minimum value and the second element represents the maximum value.</p>
+         * <p>DescribeParameters</p>
          */
         @NameInMap("AcceptableValue")
         public java.util.List<String> acceptableValue;
 
         /**
-         * <p>The current value of the parameter.</p>
+         * <p>The ID of the OceanBase cluster.</p>
          */
         @NameInMap("CurrentValue")
         public String currentValue;
 
         /**
-         * <p>The default value of the parameter.</p>
+         * <p>```</p>
+         * <p>http(s)://[Endpoint]/?Action=DescribeParameters</p>
+         * <p>&InstanceId=ob317v4uif****</p>
+         * <p>&Dimension=TENANT</p>
+         * <p>&DimensionValue=ob2mr3oae0****</p>
+         * <p>&Common request parameters</p>
+         * <p>```</p>
          */
         @NameInMap("DefaultValue")
         public String defaultValue;
@@ -63,32 +71,50 @@ public class DescribeParametersResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The name of the parameter.</p>
+         * <p>The request ID.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>Indicates whether a restart is required for changes to the parameter to take effect. Valid values:   </p>
-         * <p>- true: A restart is required.   </p>
-         * <p>- false: A restart is not required.</p>
+         * <p>The name of the parameter.</p>
          */
         @NameInMap("NeedReboot")
         public Boolean needReboot;
 
         /**
-         * <p>The invalid value range of the parameter.    </p>
-         * <p>It is an array with two string elements, which represents a range. The first element represents the minimum value and the second element represents the maximum value.</p>
+         * <p>参数是否只读</p>
+         */
+        @NameInMap("Readonly")
+        public Boolean readonly;
+
+        /**
+         * <p>{</p>
+         * <p>    "RequestId": "EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C",</p>
+         * <p>    "Parameters": [</p>
+         * <p>        {</p>
+         * <p>            "Description": "The maximum delay allowed in weak-consistency reads.",</p>
+         * <p>            "ValueType": "CAPACITY",</p>
+         * <p>            "CurrentValue": "600",</p>
+         * <p>            "NeedReboot": false,</p>
+         * <p>            "Name": "connect_timeout",</p>
+         * <p>            "DefaultValue": "600s",</p>
+         * <p>            "RejectedValue": [</p>
+         * <p>                "1s"</p>
+         * <p>            ],</p>
+         * <p>            "AcceptableValue": [</p>
+         * <p>                "1s"</p>
+         * <p>            ]</p>
+         * <p>        }</p>
+         * <p>    ]</p>
+         * <p>}</p>
          */
         @NameInMap("RejectedValue")
         public java.util.List<String> rejectedValue;
 
         /**
-         * <p>The type of the parameter value.    Valid values:   </p>
-         * <p>- ENUM: an enumeration value.   </p>
-         * <p>- RANGE: a value range.   </p>
-         * <p>- TIME: a time value.   </p>
-         * <p>- CAPACITY: a storage capacity, in KB, MB, or GB.</p>
+         * <p>The invalid value range of the parameter.    </p>
+         * <p>It is an array with two string elements, which represents a range. The first element represents the minimum value and the second element represents the maximum value.</p>
          */
         @NameInMap("ValueType")
         public String valueType;
@@ -144,6 +170,14 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
         public Boolean getNeedReboot() {
             return this.needReboot;
+        }
+
+        public DescribeParametersResponseBodyParameters setReadonly(Boolean readonly) {
+            this.readonly = readonly;
+            return this;
+        }
+        public Boolean getReadonly() {
+            return this.readonly;
         }
 
         public DescribeParametersResponseBodyParameters setRejectedValue(java.util.List<String> rejectedValue) {

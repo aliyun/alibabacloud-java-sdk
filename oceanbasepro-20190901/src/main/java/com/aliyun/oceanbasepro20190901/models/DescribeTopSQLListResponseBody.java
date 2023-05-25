@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeTopSQLListResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>Alibaba Cloud CLI</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The list of top SQL statements.</p>
+     * <p>The I/O wait time, in ms.</p>
      */
     @NameInMap("TopSQLList")
     public java.util.List<DescribeTopSQLListResponseBodyTopSQLList> topSQLList;
 
     /**
-     * <p>The total count.</p>
+     * <p>It is an online CLI tool that allows you to quickly retrieve and debug APIs. It can dynamically generate executable SDK code samples.</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -53,244 +53,260 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
 
     public static class DescribeTopSQLListResponseBodyTopSQLList extends TeaModel {
         /**
-         * <p>The number of rows affected.</p>
+         * <p>The internal wait time, in ms.</p>
          */
         @NameInMap("AffectedRows")
         public Long affectedRows;
 
         /**
-         * <p>The wait time of the client, in ms.</p>
+         * <p>The wait time in concurrent execution, in ms.</p>
          */
         @NameInMap("AppWaitTime")
         public Float appWaitTime;
 
         /**
-         * <p>The number of block cache hits.</p>
+         * <p>The average CPU time, in ms.</p>
          */
         @NameInMap("BlockCacheHit")
         public Long blockCacheHit;
 
         /**
-         * <p>The number of block index cache hits.</p>
+         * <p>$.parameters[16].schema.example</p>
          */
         @NameInMap("BlockIndexCacheHit")
         public Long blockIndexCacheHit;
 
         /**
-         * <p>The number of Bloom filter cache hits.</p>
+         * <p>$.parameters[14].schema.enumValueTitles</p>
          */
         @NameInMap("BloomFilterCacheHit")
         public Long bloomFilterCacheHit;
 
         /**
-         * <p>The IP address of the client.</p>
+         * <p>$.parameters[14].schema.description</p>
          */
         @NameInMap("ClientIp")
         public String clientIp;
 
         /**
-         * <p>The wait time in concurrent execution, in ms.</p>
+         * <p>The number of rows returned.</p>
          */
         @NameInMap("ConcurrencyWaitTime")
         public Float concurrencyWaitTime;
 
         /**
-         * <p>The average CPU time, in ms.</p>
+         * <p>The maximum CPU time, in ms.</p>
          */
         @NameInMap("CpuTime")
         public Float cpuTime;
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The number of remote plans.</p>
          */
         @NameInMap("DbName")
         public String dbName;
 
         /**
-         * <p>The time to wait for decoding, in ms.</p>
+         * <p>The number of rows to return on each page.   </p>
+         * <p>- Maximum value: 100   </p>
+         * <p>- Default value: 10</p>
          */
         @NameInMap("DecodeTime")
         public Float decodeTime;
 
         /**
-         * <p>The number of physical reads.</p>
+         * <p>The IP address of the client.</p>
          */
         @NameInMap("DiskRead")
         public Long diskRead;
 
         /**
-         * <p>The average response time, in ms.</p>
+         * <p>The sorting rule.</p>
          */
         @NameInMap("ElapsedTime")
         public Float elapsedTime;
 
         /**
-         * <p>The wait event.</p>
+         * <p>The number of rows read from the disk.</p>
          */
         @NameInMap("Event")
         public String event;
 
         /**
-         * <p>The number of executions per second.</p>
+         * <p>The operation that you want to perform.   </p>
+         * <p>Set the value to **DescribeTopSQLList**.</p>
          */
         @NameInMap("ExecPerSecond")
         public Float execPerSecond;
 
         /**
-         * <p>The internal execution time, in ms.</p>
+         * <p>The number of rows read from the memory.</p>
          */
         @NameInMap("ExecuteTime")
         public Float executeTime;
 
         /**
-         * <p>The number of executions.</p>
+         * <p>The number of executions per second.</p>
          */
         @NameInMap("Executions")
         public Long executions;
 
         /**
-         * <p>The number of failures.</p>
+         * <p>$.parameters[12].schema.description</p>
          */
         @NameInMap("FailTimes")
         public Long failTimes;
 
         /**
-         * <p>The time spent in hard parsing, in ms.</p>
+         * <p>The queuing time, in ms.</p>
          */
         @NameInMap("GetPlanTime")
         public Float getPlanTime;
 
         /**
-         * <p>The I/O wait time, in ms.</p>
+         * <p>$.parameters[15].schema.example</p>
          */
         @NameInMap("IOWaitTime")
         public Float IOWaitTime;
 
         /**
-         * <p>The sequence number of the returned SQL statement.</p>
+         * <p>The name of the database.</p>
          */
         @NameInMap("Key")
         public Long key;
 
         /**
-         * <p>The average number of logical reads of the SQL statement during the specified period of time.   </p>
-         * <p>The value covers the numbers of reads of different caches and the number of disk I/Os. It is an important metric for measuring the SQL filtering performance.   </p>
-         * <br>
-         * <p>> <br> A higher ratio of the number of logical reads to the number of returned rows indicates poorer filtering performance. General causes include non-standard content written by SQL statements, non-standard table indexes created, and non-standard SQL execution plans.</p>
+         * <p>You can call this operation to query SQL execution performance data collected by the diagnostic system.</p>
          */
         @NameInMap("LogicalRead")
         public Long logicalRead;
 
         /**
-         * <p>The maximum CPU time, in ms.</p>
+         * <p>SQLID.</p>
          */
         @NameInMap("MaxCpuTime")
         public Float maxCpuTime;
 
         /**
-         * <p>The maximum response time, in ms.</p>
+         * <p>The sequence number of the returned SQL statement.</p>
          */
         @NameInMap("MaxElapsedTime")
         public Float maxElapsedTime;
 
         /**
-         * <p>The number of rows read from the memory.</p>
+         * <p>The name of the database.</p>
          */
         @NameInMap("MemstoreReadRowCount")
         public Long memstoreReadRowCount;
 
         /**
-         * <p>The number of plan misses.</p>
+         * <p>The total count.</p>
          */
         @NameInMap("MissPlans")
         public Long missPlans;
 
         /**
-         * <p>The network latency, in ms.</p>
+         * <p>The end time of the time range for querying TOP SQL statements.   </p>
+         * <p>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
          */
         @NameInMap("NetWaitTime")
         public Float netWaitTime;
 
         /**
-         * <p>The IP address of the node.</p>
+         * <p>The username.</p>
          */
         @NameInMap("NodeIp")
         public String nodeIp;
 
         /**
-         * <p>The queuing time, in ms.</p>
+         * <p>$.parameters[12].schema.enumValueTitles</p>
          */
         @NameInMap("QueueTime")
         public Float queueTime;
 
         /**
-         * <p>The number of RPCs.</p>
+         * <p>The start time of the time range for querying TOP SQL statements.   </p>
+         * <p>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
          */
         @NameInMap("RPCCount")
         public Long RPCCount;
 
         /**
-         * <p>The number of remote plans.</p>
+         * <p>The return result of the request.</p>
          */
         @NameInMap("RemotePlans")
         public Long remotePlans;
 
         /**
-         * <p>The number of retries.</p>
+         * <p>$.parameters[13].schema.description</p>
          */
         @NameInMap("RetryCount")
         public Long retryCount;
 
         /**
-         * <p>The number of rows returned.</p>
+         * <p>The wait event.</p>
          */
         @NameInMap("ReturnRows")
         public Long returnRows;
 
         /**
-         * <p>The number of row cache hits.</p>
+         * <p>```</p>
+         * <p>http(s)://[Endpoint]/?Action=DescribeTopSQLList</p>
+         * <p>&TenantId=t2mr3oae0****</p>
+         * <p>&StartTime=2021-06-13 15:40:43</p>
+         * <p>&EndTime=2021-09-13 15:40:43</p>
+         * <p>&DbName=testdb</p>
+         * <p>&SearchKeyWord=update</p>
+         * <p>&SearchParameter=cputime</p>
+         * <p>&SearchRule=></p>
+         * <p>&SearchValue=0.01</p>
+         * <p>&SQLId=8D6E84****0B8FB1823D199E2CA1****</p>
+         * <p>&NodeIp=i-bp19y05uq6xpacyqnlrc</p>
+         * <p>&PageNumber=1</p>
+         * <p>&PageSize=10</p>
+         * <p>&SortColumn=cputime</p>
+         * <p>&SortOrder=desc</p>
+         * <p>&Common request parameters</p>
+         * <p>```</p>
          */
         @NameInMap("RowCacheHit")
         public Long rowCacheHit;
 
         /**
-         * <p>SQLID.</p>
+         * <p>$.parameters[13].schema.example</p>
          */
         @NameInMap("SQLId")
         public String SQLId;
 
         /**
-         * <p>The SQL text.</p>
+         * <p>The list of top SQL statements.</p>
          */
         @NameInMap("SQLText")
         public String SQLText;
 
         /**
-         * <p>The SQL type.</p>
+         * <p>The request ID.</p>
          */
         @NameInMap("SQLType")
         public Long SQLType;
 
         /**
-         * <p>The scheduling duration, in ms.</p>
+         * <p>The search keyword.</p>
          */
         @NameInMap("ScheduleTime")
         public Float scheduleTime;
 
-        /**
-         * <p>The number of rows read from the disk.</p>
-         */
         @NameInMap("SsstoreReadRowCount")
         public Long ssstoreReadRowCount;
 
         /**
-         * <p>The internal wait time, in ms.</p>
+         * <p>-</p>
          */
         @NameInMap("TotalWaitTime")
         public Float totalWaitTime;
 
         /**
-         * <p>The username.</p>
+         * <p>The number of Bloom filter cache hits.</p>
          */
         @NameInMap("UserName")
         public String userName;

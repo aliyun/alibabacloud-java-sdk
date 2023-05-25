@@ -4,21 +4,9 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeTenantUserRolesResponseBody extends TeaModel {
-    /**
-     * <p>The request ID.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The list of roles of the user.   </p>
-     * <p>Valid values: </p>
-     * <br>
-     * <p>ReadWrite: a role that has the read and write privileges, namely ALL PRIVILEGES.</p>
-     * <p>ReadOnly: a role that has only the read-only privilege SELECT.</p>
-     * <p>DDL: a role that has DDL privileges such as CREATE, DROP, ALTER, SHOW VIEW, and CREATE VIEW.</p>
-     * <p>DML: a role that has DML privileges such as SELECT, INSERT, UPDATE, DELETE, and SHOW VIEW.</p>
-     */
     @NameInMap("Role")
     public java.util.List<String> role;
 

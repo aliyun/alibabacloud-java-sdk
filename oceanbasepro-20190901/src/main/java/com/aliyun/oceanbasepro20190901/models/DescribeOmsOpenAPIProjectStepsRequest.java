@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeOmsOpenAPIProjectStepsRequest extends TeaModel {
     /**
-     * <p>The page number, which takes effect in a pagination query.</p>
+     * <p>The read RT baseline of the source data source.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The page size, which takes effect in a pagination query.</p>
+     * <p>The read/write RPS baseline of the destination data source.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The project ID.</p>
+     * <p>The read/write RT baseline of the destination data source.</p>
      */
     @NameInMap("ProjectId")
     public String projectId;
 
     /**
-     * <p>The ID of the migration instance. Generally, if you want to create a project on a public cloud, you must first purchase a migration instance.</p>
+     * <p>The read RT baseline of the source data source.</p>
      */
     @NameInMap("WorkerGradeId")
     public String workerGradeId;

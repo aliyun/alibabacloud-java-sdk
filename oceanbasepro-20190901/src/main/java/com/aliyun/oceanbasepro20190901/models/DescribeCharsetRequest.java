@@ -5,9 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeCharsetRequest extends TeaModel {
     /**
-     * <p>The tenant mode.    </p>
-     * <p>Valid values: Oracle and MySQL.   </p>
-     * <p>For more information, see [DescribeInstanceTenantModes](~~410354~~).</p>
+     * <p>实例的系列  - normal（默认）：标准集群版（云盘）  - normal_ssd：标准集群版（本地盘） - history：历史库集群版。</p>
+     */
+    @NameInMap("Series")
+    public String series;
+
+    /**
+     * <p>The return result of the request.</p>
      */
     @NameInMap("TenantMode")
     public String tenantMode;
@@ -15,6 +19,14 @@ public class DescribeCharsetRequest extends TeaModel {
     public static DescribeCharsetRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCharsetRequest self = new DescribeCharsetRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCharsetRequest setSeries(String series) {
+        this.series = series;
+        return this;
+    }
+    public String getSeries() {
+        return this.series;
     }
 
     public DescribeCharsetRequest setTenantMode(String tenantMode) {

@@ -4,15 +4,9 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableCpuResourceResponseBody extends TeaModel {
-    /**
-     * <p>The CPU resources available.</p>
-     */
     @NameInMap("Data")
     public java.util.List<DescribeAvailableCpuResourceResponseBodyData> data;
 
-    /**
-     * <p>The request ID.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,21 +32,12 @@ public class DescribeAvailableCpuResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableCpuResourceResponseBodyData extends TeaModel {
-        /**
-         * <p>The maximum number of CPU cores per resource unit.</p>
-         */
         @NameInMap("MaxCpu")
         public Long maxCpu;
 
-        /**
-         * <p>The minimum number of CPU cores per resource unit.</p>
-         */
         @NameInMap("MinCpu")
         public Long minCpu;
 
-        /**
-         * <p>The number of resource units in the tenant.</p>
-         */
         @NameInMap("UnitNum")
         public Long unitNum;
 

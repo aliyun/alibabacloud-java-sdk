@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeTenantsResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the tenant.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The information of tenants.</p>
+     * <p>The ID of the OceanBase cluster.</p>
      */
     @NameInMap("Tenants")
     public java.util.List<DescribeTenantsResponseBodyTenants> tenants;
 
     /**
-     * <p>The total number of tenants in the specified OceanBase cluster.</p>
+     * <p>The total memory size of the tenant, in GB.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -65,45 +65,40 @@ public class DescribeTenantsResponseBody extends TeaModel {
         public Integer cpu;
 
         /**
-         * <p>The time when the tenant was created.</p>
+         * <p>The number of CPU cores in each resource unit of the tenant.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The data replica distribution mode of the tenant.   </p>
-         * <br>
-         * <p>- For the high availability version, N-N-N indicates the three-zone mode, and N-N indicates the dual-zone or single-zone mode.</p>
-         * <p>- For the basic version, N indicates the single-zone mode. </p>
-         * <br>
-         * <p>> <br>N represents the number of nodes in a single zone.</p>
+         * <p>The search keyword.</p>
          */
         @NameInMap("DeployMode")
         public String deployMode;
 
         /**
-         * <p>The deployment type of the tenant. <br></p>
-         * <p>- multiple: multi-IDC deployment</p>
-         * <p>- single: single-IDC deployment</p>
-         * <p>- dual: dual-IDC deployment</p>
+         * <p>The name of the tenant.   </p>
+         * <p>It must start with a letter or an underscore (_), and contain 2 to 20 characters, which can be uppercase letters, lowercase letters, digits, and underscores (_).  It cannot be set to sys.</p>
          */
         @NameInMap("DeployType")
         public String deployType;
 
         /**
-         * <p>The description of the tenant.</p>
+         * <p>Example 1</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The total memory size of the tenant, in GB.</p>
+         * <p>The number of the page to return.   </p>
+         * <p>Start value: 1</p>
+         * <p>- Default value: 1</p>
          */
         @NameInMap("Mem")
         public Integer mem;
 
         /**
-         * <p>The primary zone of the tenant.</p>
+         * <p>The return result of the request.</p>
          */
         @NameInMap("PrimaryZone")
         public String primaryZone;
@@ -124,52 +119,60 @@ public class DescribeTenantsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the tenant.</p>
+         * <p>You can call this operation to query the tenants in an OceanBase cluster.</p>
          */
         @NameInMap("TenantId")
         public String tenantId;
 
         /**
-         * <p>The tenant mode.   </p>
-         * <p>Valid values:   </p>
-         * <p>Oracle</p>
-         * <p>MySQL</p>
+         * <p>{</p>
+         * <p>    "TotalCount": 1,</p>
+         * <p>    "RequestId": "EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C",</p>
+         * <p>    "Tenants": [</p>
+         * <p>        {</p>
+         * <p>            "VpcId": "vpc-bp1d2q3mhg9i23ofi****",</p>
+         * <p>            "Status": "ONLINE",</p>
+         * <p>            "PrimaryZone": "cn-hangzhou-i",</p>
+         * <p>            "DeployType": "multiple",</p>
+         * <p>            "DeployMode": "1-1-1",</p>
+         * <p>            "CreateTime": "2021-09-17 15:52:17.0",</p>
+         * <p>            "TenantName": "pay_online",</p>
+         * <p>            "Mem": 20,</p>
+         * <p>            "Cpu": 10,</p>
+         * <p>            "Description": "PayCore business database",</p>
+         * <p>            "TenantMode": "Oracle",</p>
+         * <p>            "TenantId": "t33h8y08k****",</p>
+         * <p>            "UnitCpu": 5,</p>
+         * <p>            "UnitMem": 10,</p>
+         * <p>            "UnitNum": 2,</p>
+         * <p>            "UsedDiskSize": 10</p>
+         * <p>        }</p>
+         * <p>    ]</p>
+         * <p>}</p>
          */
         @NameInMap("TenantMode")
         public String tenantMode;
 
         /**
-         * <p>The name of the tenant.</p>
+         * <p>The information of tenants.</p>
          */
         @NameInMap("TenantName")
         public String tenantName;
 
-        /**
-         * <p>The number of CPU cores in each resource unit of the tenant.</p>
-         */
         @NameInMap("UnitCpu")
         public Integer unitCpu;
 
-        /**
-         * <p>The memory size of each resource unit of the tenant, in GB.</p>
-         */
         @NameInMap("UnitMem")
         public Integer unitMem;
 
-        /**
-         * <p>The number of resource units in the tenant.</p>
-         */
         @NameInMap("UnitNum")
         public Integer unitNum;
 
-        /**
-         * <p>The number of used disks of the tenant.</p>
-         */
         @NameInMap("UsedDiskSize")
         public Double usedDiskSize;
 
         /**
-         * <p>The ID of the VPC.   <br>If no suitable VPC is available, create a VPC as prompted. For more information, see "What is a VPC".</p>
+         * <p>The time when the tenant was created.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

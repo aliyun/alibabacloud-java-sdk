@@ -4,87 +4,53 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class CreateOmsMysqlDataSourceRequest extends TeaModel {
-    /**
-     * <p>The description of the data source.   </p>
-     * <p>It must be 2 to 256 characters in length. The default value is null.</p>
-     */
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <p>The ID of the database gateway instance.   </p>
-     * <br>
-     * <p>> <br>If Type is set to DG, this parameter is required.</p>
-     */
     @NameInMap("DgDatabaseId")
     public String dgDatabaseId;
 
-    /**
-     * <p>The ID of the ECS instance of the data source.   </p>
-     * <br>
-     * <p>> <br>If Type is set to RDS, POLARDB, or DG, this parameter is required.</p>
-     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    /**
-     * <p>The IP address of the data source.   </p>
-     * <br>
-     * <p>> <br>If Type is set to INTERNET or VPC, this parameter is required.</p>
-     */
     @NameInMap("Ip")
     public String ip;
 
     /**
-     * <p>The name of the data source.   </p>
-     * <p>It must be 2 to 128 characters in length and can contain letters, digits, underscores (_), periods (.), and hyphens (-).   </p>
-     * <br>
-     * <p>> <br>Invalid characters, such as slashes (/), are not allowed.</p>
+     * <p>```</p>
+     * <p>http(s)://[Endpoint]/?Action=CreateOmsMysqlDataSource</p>
+     * <p>&Name=oms-mysql</p>
+     * <p>&Type=INTERNET</p>
+     * <p>&VpcId=vpc-12345abcde*******</p>
+     * <p>&InstanceId=pc-12ab34cd56******</p>
+     * <p>&DgDatabaseId=dg-yhss6sdlaff****</p>
+     * <p>&Ip=10.0.****</p>
+     * <p>&Port=3306</p>
+     * <p>&Schema=test</p>
+     * <p>&Username=omsTestUser</p>
+     * <p>&Password=YWJjZDEyM0Ah</p>
+     * <p>&Description=MySQL data source for OMS testing</p>
+     * <p>&Common request parameters</p>
+     * <p>```</p>
      */
     @NameInMap("Name")
     public String name;
 
-    /**
-     * <p>The password of the username that is used to access the database. It must be Base64 encoded.   </p>
-     * <p>For example, for the password abcd123@!, the Base64-encoded value is YWJjZDEyM0Ah.</p>
-     */
     @NameInMap("Password")
     public String password;
 
-    /**
-     * <p>The port number of the data source.   </p>
-     * <br>
-     * <p>> <br>If Type is set to INTERNET or VPC, this parameter is required.</p>
-     */
     @NameInMap("Port")
     public String port;
 
-    /**
-     * <p>The name of the database.   </p>
-     * <br>
-     * <p>> <br>If you specify this parameter, subsequent migration or synchronization operations will take effect on this database only.</p>
-     */
     @NameInMap("Schema")
     public String schema;
 
-    /**
-     * <p>The type of the MySQL data source.   </p>
-     * <p>Valid values: INTERNET, VPC, RDS, POLARDB, and DG.</p>
-     */
     @NameInMap("Type")
     public String type;
 
-    /**
-     * <p>The username that is used to access the database.</p>
-     */
     @NameInMap("Username")
     public String username;
 
-    /**
-     * <p>The ID of the VPC to which the data source belongs.   </p>
-     * <br>
-     * <p>> <br>If Type is set to VPC, this parameter is required.</p>
-     */
     @NameInMap("VpcId")
     public String vpcId;
 

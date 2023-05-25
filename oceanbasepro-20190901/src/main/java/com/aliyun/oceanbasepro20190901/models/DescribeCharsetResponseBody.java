@@ -5,13 +5,18 @@ import com.aliyun.tea.*;
 
 public class DescribeCharsetResponseBody extends TeaModel {
     /**
-     * <p>The list of character sets.</p>
+     * <p>```</p>
+     * <p>http(s)://[Endpoint]/?Action=DescribeCharset</p>
+     * <p>&TenantMode=Oracle</p>
+     * <p>&Common request parameters</p>
+     * <p>```</p>
      */
     @NameInMap("Charset")
     public java.util.List<DescribeCharsetResponseBodyCharset> charset;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The operation that you want to perform.   </p>
+     * <p>Set the value to **DescribeCharset**.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,14 +44,11 @@ public class DescribeCharsetResponseBody extends TeaModel {
 
     public static class DescribeCharsetResponseBodyCharset extends TeaModel {
         /**
-         * <p>The character set name.</p>
+         * <p>DescribeCharset</p>
          */
         @NameInMap("Charset")
         public String charset;
 
-        /**
-         * <p>The collation set.</p>
-         */
         @NameInMap("Collations")
         public java.util.List<String> collations;
 

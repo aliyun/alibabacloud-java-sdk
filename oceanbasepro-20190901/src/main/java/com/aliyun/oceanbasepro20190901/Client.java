@@ -157,7 +157,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * To call this operation, you must add the IP address of the OceanBase Migration Service (OMS) server to the whitelist of the Alibaba Cloud database instance, the security rules of the ECS instance, or the security settings of your self-managed database (usually the firewall of your self-managed database) to ensure that OMS can successfully access your database instance. To obtain the IP address of the OMS server, go to the OMS data source management page in the OMS console.
+      * The description of the data source.   
+      * It must be 2 to 256 characters in length. The default value is null.
       *
       * @param request CreateOmsMysqlDataSourceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -228,7 +229,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * To call this operation, you must add the IP address of the OceanBase Migration Service (OMS) server to the whitelist of the Alibaba Cloud database instance, the security rules of the ECS instance, or the security settings of your self-managed database (usually the firewall of your self-managed database) to ensure that OMS can successfully access your database instance. To obtain the IP address of the OMS server, go to the OMS data source management page in the OMS console.
+      * The description of the data source.   
+      * It must be 2 to 256 characters in length. The default value is null.
       *
       * @param request CreateOmsMysqlDataSourceRequest
       * @return CreateOmsMysqlDataSourceResponse
@@ -567,9 +569,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, ensure that the following requirements are met:
-      * - The cluster is in the Running state.
-      * - The cluster is a primary cluster and the billing method is pay-as-you-go.
+      * Alibaba Cloud provides SDKs in different languages to help you quickly integrate Alibaba Cloud products and services by using APIs. We recommend that you use an SDK to call APIs. In this way, you do not need to sign for verification.
       *
       * @param request DeleteInstancesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -604,9 +604,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, ensure that the following requirements are met:
-      * - The cluster is in the Running state.
-      * - The cluster is a primary cluster and the billing method is pay-as-you-go.
+      * Alibaba Cloud provides SDKs in different languages to help you quickly integrate Alibaba Cloud products and services by using APIs. We recommend that you use an SDK to call APIs. In this way, you do not need to sign for verification.
       *
       * @param request DeleteInstancesRequest
       * @return DeleteInstancesResponse
@@ -936,6 +934,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeCharsetResponse describeCharsetWithOptions(DescribeCharsetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.series)) {
+            body.put("Series", request.series);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tenantMode)) {
             body.put("TenantMode", request.tenantMode);
         }
@@ -2306,6 +2308,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeZonesWithOptions(request, runtime);
     }
 
+    public KillProcessListResponse killProcessListWithOptions(KillProcessListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionList)) {
+            body.put("SessionList", request.sessionList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "KillProcessList"),
+            new TeaPair("version", "2019-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new KillProcessListResponse());
+    }
+
+    public KillProcessListResponse killProcessList(KillProcessListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.killProcessListWithOptions(request, runtime);
+    }
+
     public ModifyDatabaseDescriptionResponse modifyDatabaseDescriptionWithOptions(ModifyDatabaseDescriptionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2777,6 +2816,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyTenantUserPasswordResponse modifyTenantUserPasswordWithOptions(ModifyTenantUserPasswordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.encryptionType)) {
+            body.put("EncryptionType", request.encryptionType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             body.put("InstanceId", request.instanceId);
         }
@@ -3236,5 +3279,42 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StopOmsOpenAPIProjectResponse stopOmsOpenAPIProject(StopOmsOpenAPIProjectRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopOmsOpenAPIProjectWithOptions(request, runtime);
+    }
+
+    public SwitchoverInstanceResponse switchoverInstanceWithOptions(SwitchoverInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.forced)) {
+            body.put("Forced", request.forced);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetInstanceId)) {
+            body.put("TargetInstanceId", request.targetInstanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SwitchoverInstance"),
+            new TeaPair("version", "2019-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SwitchoverInstanceResponse());
+    }
+
+    public SwitchoverInstanceResponse switchoverInstance(SwitchoverInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.switchoverInstanceWithOptions(request, runtime);
     }
 }

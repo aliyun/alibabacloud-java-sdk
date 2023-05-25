@@ -5,26 +5,23 @@ import com.aliyun.tea.*;
 
 public class ModifyDatabaseDescriptionRequest extends TeaModel {
     /**
-     * <p>The name of the database.    </p>
-     * <p>You cannot use reserved keywords, such as test and mysql.</p>
+     * <p>Example 1</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    /**
-     * <p>The description of the database.</p>
-     */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The ID of the OceanBase cluster.</p>
+     * <p>The description of the database.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the tenant.</p>
+     * <p>The operation that you want to perform.   </p>
+     * <p>Set the value to **ModifyDatabaseDescription**.</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

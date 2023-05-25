@@ -5,14 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceNameRequest extends TeaModel {
     /**
-     * <p>The ID of the OceanBase cluster.</p>
+     * <p>It is an Alibaba Cloud asset management and configuration tool, with which you can manage multiple Alibaba Cloud products and services by using commands. It is easy to use and a good helper in migration to cloud.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The name of the OceanBase cluster.   </p>
-     * <p>It must be 1 to 20 characters in length.</p>
+     * <p>The ID of the OceanBase cluster.</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;

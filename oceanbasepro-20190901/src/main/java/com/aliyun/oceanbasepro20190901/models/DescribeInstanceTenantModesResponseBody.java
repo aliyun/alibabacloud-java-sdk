@@ -4,15 +4,9 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceTenantModesResponseBody extends TeaModel {
-    /**
-     * <p>The information of tenants.</p>
-     */
     @NameInMap("InstanceModes")
     public java.util.List<String> instanceModes;
 
-    /**
-     * <p>The request ID.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

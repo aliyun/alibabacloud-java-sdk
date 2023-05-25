@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeTenantZonesReadResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>Indicates whether a read-only connection needs to be created for the zone.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The zone information of the tenant.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("TenantZones")
     public java.util.List<DescribeTenantZonesReadResponseBodyTenantZones> tenantZones;
@@ -39,32 +39,20 @@ public class DescribeTenantZonesReadResponseBody extends TeaModel {
 
     public static class DescribeTenantZonesReadResponseBodyTenantZones extends TeaModel {
         /**
-         * <p>Indicates whether the zone can be set as the primary zone.</p>
+         * <p>Example 1</p>
          */
         @NameInMap("IsElectable")
         public Boolean isElectable;
 
-        /**
-         * <p>Indicates whether the zone is the primary zone.</p>
-         */
         @NameInMap("IsPrimary")
         public Boolean isPrimary;
 
-        /**
-         * <p>Indicates whether a read-only connection has been created.</p>
-         */
         @NameInMap("IsReadOnlyAddressMaster")
         public Boolean isReadOnlyAddressMaster;
 
-        /**
-         * <p>Indicates whether a read-only connection needs to be created for the zone.</p>
-         */
         @NameInMap("IsReadable")
         public String isReadable;
 
-        /**
-         * <p>The ID of the zone.</p>
-         */
         @NameInMap("Zone")
         public String zone;
 

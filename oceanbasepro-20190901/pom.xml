@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>oceanbasepro20190901</artifactId>
-  <version>1.1.4</version>
+  <version>1.1.5</version>
   <packaging>jar</packaging>
   <name>oceanbasepro20190901</name>
   <description>Alibaba Cloud OceanBasePro (20190901) SDK for Java

@@ -5,49 +5,43 @@ import com.aliyun.tea.*;
 
 public class DescribeParametersHistoryRequest extends TeaModel {
     /**
-     * <p>The type of the parameter.   </p>
-     * <p>Valid values: CLUSTER and TENANT.</p>
+     * <p>The value of the parameter after the modification.</p>
      */
     @NameInMap("Dimension")
     public String dimension;
 
     /**
-     * <p>The resource ID of the parameter type.   </p>
-     * <p>You can leave this parameter unspecified when you call this operation to query the modification history of cluster parameters. In the case of tenant parameters, pass the tenant ID.</p>
+     * <p>The list of parameter modification records.</p>
      */
     @NameInMap("DimensionValue")
     public String dimensionValue;
 
     /**
-     * <p>The end time for the query of parameter modification history.</p>
+     * <p>Alibaba Cloud provides SDKs in different languages to help you quickly integrate Alibaba Cloud products and services by using APIs. We recommend that you use an SDK to call APIs. In this way, you do not need to sign for verification.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The ID of the OceanBase cluster.</p>
+     * <p>The name of the parameter.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The number of the page to return.    </p>
-     * <p>- Start value: 1   </p>
-     * <p>- Default value: 1</p>
+     * <p>Default value: 10.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of rows to return on each page.   </p>
-     * <p>- Maximum value: 100   </p>
-     * <p>- Default value: 10</p>
+     * <p>It is an Alibaba Cloud asset management and configuration tool, with which you can manage multiple Alibaba Cloud products and services by using commands. It is easy to use and a good helper in migration to cloud.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The start time of the time range for querying the parameter modification history.</p>
+     * <p>You can call this operation to query the modification history of cluster or tenant parameters.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
