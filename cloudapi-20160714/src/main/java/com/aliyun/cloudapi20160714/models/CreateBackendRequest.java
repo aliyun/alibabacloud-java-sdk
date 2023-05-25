@@ -4,27 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class CreateBackendRequest extends TeaModel {
-    /**
-     * <p>The name of the backend service.</p>
-     */
     @NameInMap("BackendName")
     public String backendName;
 
-    /**
-     * <p>The type of the backend service. Valid values: `HTTP, VPC, FC_EVENT, FC_HTTP, OSS, and MOCK`.</p>
-     */
     @NameInMap("BackendType")
     public String backendType;
 
-    /**
-     * <p>Specifies whether to create a role associated with EventBridge.</p>
-     */
     @NameInMap("CreateEventBridgeServiceLinkedRole")
     public Boolean createEventBridgeServiceLinkedRole;
 
-    /**
-     * <p>The description of the backend service.</p>
-     */
     @NameInMap("Description")
     public String description;
 

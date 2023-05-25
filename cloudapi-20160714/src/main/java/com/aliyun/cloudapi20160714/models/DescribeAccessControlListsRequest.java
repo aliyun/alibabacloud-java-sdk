@@ -4,24 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessControlListsRequest extends TeaModel {
-    /**
-     * <p>The name of the access control policy.</p>
-     */
     @NameInMap("AclName")
     public String aclName;
 
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
 
-    /**
-     * <p>The page number of the current page.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries to return on each page.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

@@ -4,33 +4,18 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class ImportSwaggerResponseBody extends TeaModel {
-    /**
-     * <p>The APIs that failed to be created based on the Swagger-compliant data imported this time.</p>
-     */
     @NameInMap("Failed")
     public ImportSwaggerResponseBodyFailed failed;
 
-    /**
-     * <p>The models that failed to be imported based on the Swagger-compliant data imported this time.</p>
-     */
     @NameInMap("ModelFailed")
     public ImportSwaggerResponseBodyModelFailed modelFailed;
 
-    /**
-     * <p>The models that were imported based on the Swagger-compliant data imported this time.</p>
-     */
     @NameInMap("ModelSuccess")
     public ImportSwaggerResponseBodyModelSuccess modelSuccess;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The APIs that were created based on the Swagger-compliant data imported this time.</p>
-     */
     @NameInMap("Success")
     public ImportSwaggerResponseBodySuccess success;
 
@@ -80,21 +65,12 @@ public class ImportSwaggerResponseBody extends TeaModel {
     }
 
     public static class ImportSwaggerResponseBodyFailedApiImportSwaggerFailed extends TeaModel {
-        /**
-         * <p>The error message returned.</p>
-         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
-        /**
-         * <p>The HTTP method of the API.</p>
-         */
         @NameInMap("HttpMethod")
         public String httpMethod;
 
-        /**
-         * <p>The request path of the API.</p>
-         */
         @NameInMap("Path")
         public String path;
 
@@ -149,21 +125,12 @@ public class ImportSwaggerResponseBody extends TeaModel {
     }
 
     public static class ImportSwaggerResponseBodyModelFailedApiImportModelFailed extends TeaModel {
-        /**
-         * <p>The error message.</p>
-         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
-        /**
-         * <p>The ID of the API group.</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <p>The name of the model.</p>
-         */
         @NameInMap("ModelName")
         public String modelName;
 
@@ -218,27 +185,15 @@ public class ImportSwaggerResponseBody extends TeaModel {
     }
 
     public static class ImportSwaggerResponseBodyModelSuccessApiImportModelSuccess extends TeaModel {
-        /**
-         * <p>The ID of the API group.</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <p>The name of the model.</p>
-         */
         @NameInMap("ModelName")
         public String modelName;
 
-        /**
-         * <p>The model operation.</p>
-         */
         @NameInMap("ModelOperation")
         public String modelOperation;
 
-        /**
-         * <p>The UID of the model.</p>
-         */
         @NameInMap("ModelUid")
         public String modelUid;
 
@@ -301,27 +256,15 @@ public class ImportSwaggerResponseBody extends TeaModel {
     }
 
     public static class ImportSwaggerResponseBodySuccessApiImportSwaggerSuccess extends TeaModel {
-        /**
-         * <p>Specifies that the operation is CREATE or MODIFY.</p>
-         */
         @NameInMap("ApiOperation")
         public String apiOperation;
 
-        /**
-         * <p>The UID of the imported API.</p>
-         */
         @NameInMap("ApiUid")
         public String apiUid;
 
-        /**
-         * <p>The HTTP method of the API.</p>
-         */
         @NameInMap("HttpMethod")
         public String httpMethod;
 
-        /**
-         * <p>The request path of the API.</p>
-         */
         @NameInMap("Path")
         public String path;
 

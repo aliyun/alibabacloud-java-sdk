@@ -4,38 +4,18 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DryRunSwaggerRequest extends TeaModel {
-    /**
-     * <p>The Swagger text content.</p>
-     */
     @NameInMap("Data")
     public String data;
 
-    /**
-     * <p>The Swagger text format:</p>
-     * <br>
-     * <p>*   json</p>
-     * <p>*   yaml</p>
-     */
     @NameInMap("DataFormat")
     public String dataFormat;
 
-    /**
-     * <p>The global condition.</p>
-     */
     @NameInMap("GlobalCondition")
     public java.util.Map<String, ?> globalCondition;
 
-    /**
-     * <p>The ID of the API group.</p>
-     */
     @NameInMap("GroupId")
     public String groupId;
 
-    /**
-     * <p>Specifies whether to overwrite the existing API.</p>
-     * <br>
-     * <p>APIs with the same HTTP request type and backend request path are considered the same.</p>
-     */
     @NameInMap("Overwrite")
     public Boolean overwrite;
 

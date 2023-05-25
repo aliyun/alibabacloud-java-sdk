@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteIpControlRequest extends TeaModel {
     /**
-     * <p>The ID of the ACL. The ID is unique.</p>
+     * <p>*   This operation is intended for API providers.</p>
+     * <p>*   If the ACL is bound to an API, you must unbind the ACL from the API before you can delete the ACL. Otherwise, an error is returned.</p>
+     * <p>*   If you call this operation on an ACL that does not exist, a success message is returned.</p>
      */
     @NameInMap("IpControlId")
     public String ipControlId;

@@ -4,9 +4,6 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApiGroupVpcWhitelistRequest extends TeaModel {
-    /**
-     * <p>The ID of the API group.</p>
-     */
     @NameInMap("GroupId")
     public String groupId;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAllTrafficSpecialControlResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Deletes all custom special policies of a specified throttling policy.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

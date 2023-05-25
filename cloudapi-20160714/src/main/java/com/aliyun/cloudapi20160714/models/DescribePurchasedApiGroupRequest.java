@@ -4,12 +4,6 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribePurchasedApiGroupRequest extends TeaModel {
-    /**
-     * <p>The status of the API group.</p>
-     * <br>
-     * <p>*   **NORMAL**: The API group is normal.</p>
-     * <p>*   **DELETE**: The API group is deleted.</p>
-     */
     @NameInMap("GroupId")
     public String groupId;
 

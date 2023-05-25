@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeSignaturesByApiResponseBody extends TeaModel {
     /**
-     * <p>The returned signature key information. It is an array consisting of SignatureItem data.</p>
+     * <p>The time when the key was bound.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The time when the key was bound.</p>
+     * <p>The ID of the backend signature key.</p>
      */
     @NameInMap("Signatures")
     public DescribeSignaturesByApiResponseBodySignatures signatures;
@@ -39,19 +39,19 @@ public class DescribeSignaturesByApiResponseBody extends TeaModel {
 
     public static class DescribeSignaturesByApiResponseBodySignaturesSignatureItem extends TeaModel {
         /**
-         * <p>The ID of the backend signature key.</p>
+         * <p>The name of the backend signature key.</p>
          */
         @NameInMap("BoundTime")
         public String boundTime;
 
         /**
-         * <p>The name of the backend signature key.</p>
+         * <p>*   This API is intended for API providers.</p>
          */
         @NameInMap("SignatureId")
         public String signatureId;
 
         /**
-         * <p>*   This API is intended for API providers.</p>
+         * <p>Queries the backend signature keys that are bound to a specified API.</p>
          */
         @NameInMap("SignatureName")
         public String signatureName;

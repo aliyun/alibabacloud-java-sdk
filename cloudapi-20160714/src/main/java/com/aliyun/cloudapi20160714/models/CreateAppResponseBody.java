@@ -4,21 +4,12 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class CreateAppResponseBody extends TeaModel {
-    /**
-     * <p>The unique ID of the application.</p>
-     */
     @NameInMap("AppId")
     public Long appId;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the tag exists. If the value is **true**, the tag exists. If the value is **false**, the tag does not exist.</p>
-     */
     @NameInMap("TagStatus")
     public Boolean tagStatus;
 

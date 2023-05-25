@@ -4,15 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class CreateBackendResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the backend service.</p>
-     */
     @NameInMap("BackendId")
     public String backendId;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

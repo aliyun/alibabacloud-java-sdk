@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddTrafficSpecialControlResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Adds a custom special policy to a specified throttling policy.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveSignatureApisResponseBody extends TeaModel {
     /**
-     * <p>*   This API is intended for API providers.</p>
-     * <p>*   The operation takes effect immediately. The request sent from API Gateway to the backend service does not contain the signature string. The corresponding verification step can be removed from the backend.</p>
+     * <p>Unbinds a backend signature key from APIs.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class SetSignatureApisRequest extends TeaModel {
     /**
-     * <p>The name of the runtime environment. Valid values:</p>
-     * <br>
-     * <p>*   **RELEASE**</p>
-     * <p>*   **PRE**</p>
-     * <p>*   **TEST**</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("ApiIds")
     public String apiIds;
 
     /**
-     * <p>The API ID for the specified operation. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.</p>
+     * <p>The name of the runtime environment. Valid values:</p>
+     * <br>
+     * <p>*   **RELEASE**</p>
+     * <p>*   **PRE**</p>
+     * <p>*   **TEST**</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -24,13 +24,14 @@ public class SetSignatureApisRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The ID of the API group to which the API that you want to manage belongs.</p>
+     * <p>The API ID for the specified operation. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.</p>
      */
     @NameInMap("SignatureId")
     public String signatureId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>*   This API is intended for API providers.</p>
+     * <p>*   This operation allows you to bind a signature key to an API. You can bind signature keys for up to 100 APIs at a time.</p>
      */
     @NameInMap("StageName")
     public String stageName;

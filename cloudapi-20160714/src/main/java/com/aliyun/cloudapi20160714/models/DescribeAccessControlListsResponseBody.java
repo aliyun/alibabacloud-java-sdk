@@ -4,33 +4,18 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessControlListsResponseBody extends TeaModel {
-    /**
-     * <p>The ACLs.</p>
-     */
     @NameInMap("Acls")
     public DescribeAccessControlListsResponseBodyAcls acls;
 
-    /**
-     * <p>The page number of the current page.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries returned on each page.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of entries returned.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -80,15 +65,9 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
     }
 
     public static class DescribeAccessControlListsResponseBodyAclsAcl extends TeaModel {
-        /**
-         * <p>The ID of the access control policy.</p>
-         */
         @NameInMap("AclId")
         public String aclId;
 
-        /**
-         * <p>The name of the access control policy.</p>
-         */
         @NameInMap("AclName")
         public String aclName;
 

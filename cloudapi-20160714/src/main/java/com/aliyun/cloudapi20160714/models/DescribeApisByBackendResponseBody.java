@@ -4,33 +4,18 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApisByBackendResponseBody extends TeaModel {
-    /**
-     * <p>The ID of API.</p>
-     */
     @NameInMap("ApiInfoList")
     public DescribeApisByBackendResponseBodyApiInfoList apiInfoList;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The total number of entries returned.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The number of entries to return on each page.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The information about the returned API list.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -80,45 +65,24 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
     }
 
     public static class DescribeApisByBackendResponseBodyApiInfoListApiInfo extends TeaModel {
-        /**
-         * <p>The description of the API.</p>
-         */
         @NameInMap("ApiId")
         public String apiId;
 
-        /**
-         * <p>auditing</p>
-         */
         @NameInMap("ApiName")
         public String apiName;
 
-        /**
-         * <p>The name of the API group.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The request path of the API.</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <p>The ID of the API group.</p>
-         */
         @NameInMap("GroupName")
         public String groupName;
 
-        /**
-         * <p>The name of the API.</p>
-         */
         @NameInMap("Method")
         public String method;
 
-        /**
-         * <p>The request method of the API.</p>
-         */
         @NameInMap("Path")
         public String path;
 

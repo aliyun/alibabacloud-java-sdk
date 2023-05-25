@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeTrafficControlsResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The returned throttling policy information. It is an array consisting of TrafficControl data.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The total number of returned entries.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The default throttling value for each user.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
     /**
-     * <p>The returned throttling policy information. It is an array consisting of TrafficControl data.</p>
+     * <p>The default throttling value for each API.</p>
      */
     @NameInMap("TrafficControls")
     public DescribeTrafficControlsResponseBodyTrafficControls trafficControls;
@@ -81,13 +81,15 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
 
     public static class DescribeTrafficControlsResponseBodyTrafficControlsTrafficControlSpecialPoliciesSpecialPolicySpecialsSpecial extends TeaModel {
         /**
-         * <p>The AppId or user account corresponding to SpecialType.</p>
+         * <p>Queries custom throttling policies and their details. Conditional queries are supported.</p>
          */
         @NameInMap("SpecialKey")
         public String specialKey;
 
         /**
-         * <p>The throttling value.</p>
+         * <p>*   This API is intended for API providers.</p>
+         * <p>*   This API can be used to query all existing throttling policies (including special throttling policies) and their details.</p>
+         * <p>*   You can specify query conditions. For example, you can query the throttling policies bound to a specified API or in a specified environment.</p>
          */
         @NameInMap("TrafficValue")
         public Integer trafficValue;
@@ -136,16 +138,13 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
 
     public static class DescribeTrafficControlsResponseBodyTrafficControlsTrafficControlSpecialPoliciesSpecialPolicy extends TeaModel {
         /**
-         * <p>The type of the special throttling policy. Valid values:</p>
-         * <br>
-         * <p>*   **APP**</p>
-         * <p>*   **USER**</p>
+         * <p>The throttling value.</p>
          */
         @NameInMap("SpecialType")
         public String specialType;
 
         /**
-         * <p>The returned information about a special throttling policy. It is an array consisting of Special data.</p>
+         * <p>The AppId or user account corresponding to SpecialType.</p>
          */
         @NameInMap("Specials")
         public DescribeTrafficControlsResponseBodyTrafficControlsTrafficControlSpecialPoliciesSpecialPolicySpecials specials;
@@ -194,52 +193,31 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
 
     public static class DescribeTrafficControlsResponseBodyTrafficControlsTrafficControl extends TeaModel {
         /**
-         * <p>The default throttling value for each API.</p>
+         * <p>The description of the throttling policy.</p>
          */
         @NameInMap("ApiDefault")
         public Integer apiDefault;
 
         /**
-         * <p>The default throttling value for each app.</p>
+         * <p>The creation time (UTC) of the throttling policy.</p>
          */
         @NameInMap("AppDefault")
         public Integer appDefault;
 
         /**
-         * <p>The creation time (UTC) of the throttling policy.</p>
+         * <p>The type of the special throttling policy. Valid values:</p>
+         * <br>
+         * <p>*   **APP**</p>
+         * <p>*   **USER**</p>
          */
         @NameInMap("CreatedTime")
         public String createdTime;
 
         /**
-         * <p>The description of the throttling policy.</p>
+         * <p>The name of the throttling policy.</p>
          */
         @NameInMap("Description")
         public String description;
-
-        /**
-         * <p>The last modification time (UTC) of the throttling policy.</p>
-         */
-        @NameInMap("ModifiedTime")
-        public String modifiedTime;
-
-        /**
-         * <p>The returned information about a special throttling policy. It is an array consisting of SpecialPolicy data.</p>
-         */
-        @NameInMap("SpecialPolicies")
-        public DescribeTrafficControlsResponseBodyTrafficControlsTrafficControlSpecialPolicies specialPolicies;
-
-        /**
-         * <p>The ID of the throttling policy.</p>
-         */
-        @NameInMap("TrafficControlId")
-        public String trafficControlId;
-
-        /**
-         * <p>The name of the throttling policy.</p>
-         */
-        @NameInMap("TrafficControlName")
-        public String trafficControlName;
 
         /**
          * <p>The unit to be used in the throttling policy. Valid values:</p>
@@ -248,11 +226,35 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
          * <p>*   HOUR</p>
          * <p>*   DAY</p>
          */
+        @NameInMap("ModifiedTime")
+        public String modifiedTime;
+
+        /**
+         * <p>The returned information about a special throttling policy. It is an array consisting of Special data.</p>
+         */
+        @NameInMap("SpecialPolicies")
+        public DescribeTrafficControlsResponseBodyTrafficControlsTrafficControlSpecialPolicies specialPolicies;
+
+        /**
+         * <p>The returned information about a special throttling policy. It is an array consisting of SpecialPolicy data.</p>
+         */
+        @NameInMap("TrafficControlId")
+        public String trafficControlId;
+
+        /**
+         * <p>The ID of the throttling policy.</p>
+         */
+        @NameInMap("TrafficControlName")
+        public String trafficControlName;
+
+        /**
+         * <p>The default throttling value for each app.</p>
+         */
         @NameInMap("TrafficControlUnit")
         public String trafficControlUnit;
 
         /**
-         * <p>The default throttling value for each user.</p>
+         * <p>The last modification time (UTC) of the throttling policy.</p>
          */
         @NameInMap("UserDefault")
         public Integer userDefault;

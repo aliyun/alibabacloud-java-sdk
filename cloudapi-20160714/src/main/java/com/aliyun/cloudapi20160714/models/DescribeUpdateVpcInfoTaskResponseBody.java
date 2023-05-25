@@ -4,15 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeUpdateVpcInfoTaskResponseBody extends TeaModel {
-    /**
-     * <p>The result of the task.</p>
-     */
     @NameInMap("ApiUpdateVpcInfoResults")
     public DescribeUpdateVpcInfoTaskResponseBodyApiUpdateVpcInfoResults apiUpdateVpcInfoResults;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,51 +32,27 @@ public class DescribeUpdateVpcInfoTaskResponseBody extends TeaModel {
     }
 
     public static class DescribeUpdateVpcInfoTaskResponseBodyApiUpdateVpcInfoResultsApiUpdateVpcInfoResult extends TeaModel {
-        /**
-         * <p>The name of the API.</p>
-         */
         @NameInMap("ApiName")
         public String apiName;
 
-        /**
-         * <p>The ID of the API.</p>
-         */
         @NameInMap("ApiUid")
         public String apiUid;
 
-        /**
-         * <p>The error message.</p>
-         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
-        /**
-         * <p>The ID of the API group.</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <p>The name of the API group.</p>
-         */
         @NameInMap("GroupName")
         public String groupName;
 
-        /**
-         * <p>The ID of the stage.</p>
-         */
         @NameInMap("StageId")
         public String stageId;
 
-        /**
-         * <p>The environment to which the API is published.</p>
-         */
         @NameInMap("StageName")
         public String stageName;
 
-        /**
-         * <p>The update status.</p>
-         */
         @NameInMap("UpdateStatus")
         public String updateStatus;
 

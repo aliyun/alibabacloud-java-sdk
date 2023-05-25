@@ -5,31 +5,34 @@ import com.aliyun.tea.*;
 
 public class DescribeApisByTrafficControlResponseBody extends TeaModel {
     /**
-     * <p>The returned API information. It is an array consisting of ApiInfo data.</p>
+     * <p>Indicates whether the API is public. Valid values:</p>
+     * <br>
+     * <p>*   **PUBLIC**</p>
+     * <p>*   **PRIVATE**</p>
      */
     @NameInMap("ApiInfos")
     public DescribeApisByTrafficControlResponseBodyApiInfos apiInfos;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The returned API information. It is an array consisting of ApiInfo data.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The total number of returned entries.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The binding time of the API.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -81,46 +84,35 @@ public class DescribeApisByTrafficControlResponseBody extends TeaModel {
 
     public static class DescribeApisByTrafficControlResponseBodyApiInfosApiInfo extends TeaModel {
         /**
-         * <p>The ID of the API.</p>
+         * <p>Description</p>
          */
         @NameInMap("ApiId")
         public String apiId;
 
         /**
-         * <p>The name of the API</p>
+         * <p>*   This API is intended for API providers.</p>
+         * <p>*   You can specify PageNumber to obtain the result on the specified page.</p>
          */
         @NameInMap("ApiName")
         public String apiName;
 
         /**
-         * <p>The binding time of the API.</p>
+         * <p>The ID of the API.</p>
          */
         @NameInMap("BoundTime")
         public String boundTime;
 
         /**
-         * <p>The description of the API.</p>
+         * <p>The name of the group to which an API belongs.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The ID of the API group.</p>
+         * <p>The name of the API</p>
          */
         @NameInMap("GroupId")
         public String groupId;
-
-        /**
-         * <p>The name of the group to which an API belongs.</p>
-         */
-        @NameInMap("GroupName")
-        public String groupName;
-
-        /**
-         * <p>The region where the API is located.</p>
-         */
-        @NameInMap("RegionId")
-        public String regionId;
 
         /**
          * <p>The name of the runtime environment. Valid values:</p>
@@ -128,14 +120,23 @@ public class DescribeApisByTrafficControlResponseBody extends TeaModel {
          * <p>*   **RELEASE**</p>
          * <p>*   **TEST**</p>
          */
+        @NameInMap("GroupName")
+        public String groupName;
+
+        /**
+         * <p>Queries the APIs to which a specified throttling policy is bound.</p>
+         */
+        @NameInMap("RegionId")
+        public String regionId;
+
+        /**
+         * <p>The region where the API is located.</p>
+         */
         @NameInMap("StageName")
         public String stageName;
 
         /**
-         * <p>Indicates whether the API is public. Valid values:</p>
-         * <br>
-         * <p>*   **PUBLIC**</p>
-         * <p>*   **PRIVATE**</p>
+         * <p>The description of the API.</p>
          */
         @NameInMap("Visibility")
         public String visibility;

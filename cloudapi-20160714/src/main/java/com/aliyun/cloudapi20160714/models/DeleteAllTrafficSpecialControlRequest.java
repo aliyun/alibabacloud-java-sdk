@@ -8,7 +8,7 @@ public class DeleteAllTrafficSpecialControlRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The ID of the throttling policy.</p>
+     * <p>*   This API is intended for API providers.</p>
      */
     @NameInMap("TrafficControlId")
     public String trafficControlId;

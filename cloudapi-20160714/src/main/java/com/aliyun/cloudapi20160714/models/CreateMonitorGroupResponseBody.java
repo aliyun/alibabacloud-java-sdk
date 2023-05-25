@@ -4,15 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class CreateMonitorGroupResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("MonitorGroupId")
     public Long monitorGroupId;
 
-    /**
-     * <p>auditing</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

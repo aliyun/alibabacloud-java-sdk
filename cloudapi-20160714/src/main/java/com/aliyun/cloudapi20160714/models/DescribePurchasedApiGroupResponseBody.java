@@ -4,51 +4,27 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribePurchasedApiGroupResponseBody extends TeaModel {
-    /**
-     * <p>The region where the API group is located.</p>
-     */
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <p>The list of domain names.</p>
-     */
     @NameInMap("Domains")
     public DescribePurchasedApiGroupResponseBodyDomains domains;
 
-    /**
-     * <p>The name of the API group.</p>
-     */
     @NameInMap("GroupId")
     public String groupId;
 
-    /**
-     * <p>The description of the API group.</p>
-     */
     @NameInMap("GroupName")
     public String groupName;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("PurchasedTime")
     public String purchasedTime;
 
-    /**
-     * <p>The list of domain names.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The ID of the API group.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The time when the API group was purchased.</p>
-     */
     @NameInMap("Status")
     public String status;
 
@@ -122,9 +98,6 @@ public class DescribePurchasedApiGroupResponseBody extends TeaModel {
     }
 
     public static class DescribePurchasedApiGroupResponseBodyDomainsDomainItem extends TeaModel {
-        /**
-         * <p>auditing</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 

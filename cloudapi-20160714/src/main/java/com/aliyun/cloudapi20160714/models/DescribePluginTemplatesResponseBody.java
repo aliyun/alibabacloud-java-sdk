@@ -4,15 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribePluginTemplatesResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The templates.</p>
-     */
     @NameInMap("Templates")
     public DescribePluginTemplatesResponseBodyTemplates templates;
 
@@ -38,33 +32,18 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribePluginTemplatesResponseBodyTemplatesTemplate extends TeaModel {
-        /**
-         * <p>The description.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The document anchor point.</p>
-         */
         @NameInMap("DocumentAnchor")
         public String documentAnchor;
 
-        /**
-         * <p>The ID of the document.</p>
-         */
         @NameInMap("DocumentId")
         public String documentId;
 
-        /**
-         * <p>The sample.</p>
-         */
         @NameInMap("Sample")
         public String sample;
 
-        /**
-         * <p>The title of the plug-in template title.</p>
-         */
         @NameInMap("Title")
         public String title;
 

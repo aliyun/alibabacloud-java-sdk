@@ -4,27 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApiMarketAttributesResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("ApiId")
     public String apiId;
 
-    /**
-     * <p>Indicates whether fees are charged.</p>
-     */
     @NameInMap("MarketChargingMode")
     public String marketChargingMode;
 
-    /**
-     * <p>auditing</p>
-     */
     @NameInMap("NeedCharging")
     public String needCharging;
 
-    /**
-     * <p>The billing mode used by the Alibaba Cloud Marketplace.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

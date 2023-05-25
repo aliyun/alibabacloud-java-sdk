@@ -4,48 +4,27 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcAccessesRequest extends TeaModel {
-    /**
-     * <p>The ID of the instance.</p>
-     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    /**
-     * <p>The unique custom name for authorization.</p>
-     */
     @NameInMap("Name")
     public String name;
 
-    /**
-     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The service port.</p>
-     */
     @NameInMap("Port")
     public String port;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    /**
-     * <p>The ID of the VPC authorization.</p>
-     */
     @NameInMap("VpcAccessId")
     public String vpcAccessId;
 
-    /**
-     * <p>The ID of the VPC.</p>
-     */
     @NameInMap("VpcId")
     public String vpcId;
 

@@ -4,18 +4,12 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DeleteAppRequest extends TeaModel {
-    /**
-     * <p>The ID of the application.</p>
-     */
     @NameInMap("AppId")
     public Long appId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    /**
-     * <p>The tags. Up to 20 elements are allowed.</p>
-     */
     @NameInMap("Tag")
     public java.util.List<DeleteAppRequestTag> tag;
 
@@ -49,15 +43,9 @@ public class DeleteAppRequest extends TeaModel {
     }
 
     public static class DeleteAppRequestTag extends TeaModel {
-        /**
-         * <p>The key of the tag.</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The value of the tag.</p>
-         */
         @NameInMap("Value")
         public String value;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyIpControlPolicyItemResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Modifies a policy in an access control list (ACL).</p>
      */
     @NameInMap("RequestId")
     public String requestId;

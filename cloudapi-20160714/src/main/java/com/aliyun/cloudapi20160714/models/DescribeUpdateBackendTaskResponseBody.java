@@ -4,15 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeUpdateBackendTaskResponseBody extends TeaModel {
-    /**
-     * <p>The update result of the API.</p>
-     */
     @NameInMap("ApiUpdateBackendResults")
     public DescribeUpdateBackendTaskResponseBodyApiUpdateBackendResults apiUpdateBackendResults;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,57 +32,30 @@ public class DescribeUpdateBackendTaskResponseBody extends TeaModel {
     }
 
     public static class DescribeUpdateBackendTaskResponseBodyApiUpdateBackendResultsApiUpdateBackendResult extends TeaModel {
-        /**
-         * <p>The name of the API.</p>
-         */
         @NameInMap("ApiName")
         public String apiName;
 
-        /**
-         * <p>The ID of the API.</p>
-         */
         @NameInMap("ApiUid")
         public String apiUid;
 
-        /**
-         * <p>The ID of the backend service.</p>
-         */
         @NameInMap("BackendId")
         public String backendId;
 
-        /**
-         * <p>The information about the rows that fail to be updated.</p>
-         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
-        /**
-         * <p>The ID of the API group.</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <p>The name of the API group.</p>
-         */
         @NameInMap("GroupName")
         public String groupName;
 
-        /**
-         * <p>The ID of the runtime environment.</p>
-         */
         @NameInMap("StageId")
         public String stageId;
 
-        /**
-         * <p>The name of the environment.</p>
-         */
         @NameInMap("StageName")
         public String stageName;
 
-        /**
-         * <p>The update result of the API.</p>
-         */
         @NameInMap("UpdateStatus")
         public String updateStatus;
 

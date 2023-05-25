@@ -4,19 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribePluginTemplatesRequest extends TeaModel {
-    /**
-     * <p>The language that is used to return the description of the system policy. Valid values:</p>
-     * <br>
-     * <p>*   en: English</p>
-     * <p>*   zh-CN: Chinese.</p>
-     * <p>*   ja: Japanese</p>
-     */
     @NameInMap("Language")
     public String language;
 
-    /**
-     * <p>The name of the plug-in.</p>
-     */
     @NameInMap("PluginName")
     public String pluginName;
 

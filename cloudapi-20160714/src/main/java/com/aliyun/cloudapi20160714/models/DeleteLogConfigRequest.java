@@ -4,9 +4,6 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DeleteLogConfigRequest extends TeaModel {
-    /**
-     * <p>The log type. Valid values: **log** and **survey**.</p>
-     */
     @NameInMap("LogType")
     public String logType;
 

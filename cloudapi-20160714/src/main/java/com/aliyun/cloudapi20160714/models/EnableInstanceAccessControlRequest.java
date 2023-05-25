@@ -4,27 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class EnableInstanceAccessControlRequest extends TeaModel {
-    /**
-     * <p>The ID of the access control policy.</p>
-     */
     @NameInMap("AclId")
     public String aclId;
 
-    /**
-     * <p>The type of the access control policy. Valid values:</p>
-     * <br>
-     * <p>*   black: blacklist</p>
-     * <p>*   white: whitelist</p>
-     */
     @NameInMap("AclType")
     public String aclType;
 
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
 
-    /**
-     * <p>The ID of the instance.</p>
-     */
     @NameInMap("InstanceId")
     public String instanceId;
 

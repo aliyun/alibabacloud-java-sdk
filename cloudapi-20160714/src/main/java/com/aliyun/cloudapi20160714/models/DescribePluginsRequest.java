@@ -4,42 +4,24 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribePluginsRequest extends TeaModel {
-    /**
-     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The ID of the plug-in.</p>
-     */
     @NameInMap("PluginId")
     public String pluginId;
 
-    /**
-     * <p>The name of the plug-in.</p>
-     */
     @NameInMap("PluginName")
     public String pluginName;
 
-    /**
-     * <p>The business type of the plug-in.</p>
-     */
     @NameInMap("PluginType")
     public String pluginType;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    /**
-     * <p>The tag of objects that match the lifecycle rule. You can specify multiple tags.</p>
-     */
     @NameInMap("Tag")
     public java.util.List<DescribePluginsRequestTag> tag;
 
@@ -105,19 +87,9 @@ public class DescribePluginsRequest extends TeaModel {
     }
 
     public static class DescribePluginsRequestTag extends TeaModel {
-        /**
-         * <p>The key of the tag.</p>
-         * <br>
-         * <p>N can be an integer from 1 to 20.``</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The value of the tag.</p>
-         * <br>
-         * <p>N can be an integer from 1 to 20.``</p>
-         */
         @NameInMap("Value")
         public String value;
 

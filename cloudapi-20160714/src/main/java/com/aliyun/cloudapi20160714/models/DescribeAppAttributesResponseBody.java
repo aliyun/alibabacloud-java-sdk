@@ -4,33 +4,18 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeAppAttributesResponseBody extends TeaModel {
-    /**
-     * <p>The name of the app.</p>
-     */
     @NameInMap("Apps")
     public DescribeAppAttributesResponseBodyApps apps;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The total number of returned entries.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The number of entries returned per page.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The returned application information. It is an array that consists of AppAttribute data.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -80,15 +65,9 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeAppAttributesResponseBodyAppsAppAttributeTagsTagInfo extends TeaModel {
-        /**
-         * <p>The value of the tag.</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>auditing</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -135,39 +114,21 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeAppAttributesResponseBodyAppsAppAttribute extends TeaModel {
-        /**
-         * <p>The tags.</p>
-         */
         @NameInMap("AppId")
         public Long appId;
 
-        /**
-         * <p>The modification time (UTC) of the app.</p>
-         */
         @NameInMap("AppName")
         public String appName;
 
-        /**
-         * <p>The ID of the app.</p>
-         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
-        /**
-         * <p>The creation time (UTC) of the app.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The description of the app.</p>
-         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
-        /**
-         * <p>The key of the tag.</p>
-         */
         @NameInMap("Tags")
         public DescribeAppAttributesResponseBodyAppsAppAttributeTags tags;
 

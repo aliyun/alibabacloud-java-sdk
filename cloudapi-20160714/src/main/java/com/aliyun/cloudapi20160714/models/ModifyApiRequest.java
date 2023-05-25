@@ -4,188 +4,87 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class ModifyApiRequest extends TeaModel {
-    /**
-     * <p>The returned description of the API.</p>
-     */
     @NameInMap("AllowSignatureMethod")
     public String allowSignatureMethod;
 
-    /**
-     * <p>The name of the API. The name must be unique within the API group. The name must be 4 to 50 characters in length. It must start with a letter and can contain letters, digits, and underscores (\_).</p>
-     */
     @NameInMap("ApiId")
     public String apiId;
 
-    /**
-     * <p>The description of the API. The description can be up to 180 characters in length.</p>
-     */
     @NameInMap("ApiName")
     public String apiName;
 
-    /**
-     * <p>Specifies whether to enable backend services.</p>
-     */
     @NameInMap("AppCodeAuthType")
     public String appCodeAuthType;
 
-    /**
-     * <p>The configuration items of API requests sent by API Gateway to the backend service.</p>
-     */
     @NameInMap("AuthType")
     public String authType;
 
-    /**
-     * <p>auditing</p>
-     */
     @NameInMap("BackendEnable")
     public Boolean backendEnable;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("BackendId")
     public String backendId;
 
-    /**
-     * <p>The mappings between parameters of requests sent by the consumer to API Gateway and parameters of requests sent by API Gateway to the backend service.</p>
-     */
     @NameInMap("ConstantParameters")
     public String constantParameters;
 
-    /**
-     * <p>Specifies whether the API is public. Valid values:</p>
-     * <br>
-     * <p>*   **PUBLIC**: Make the API public. If you set this parameter to PUBLIC, this API is displayed on the APIs page for all users after the API is published to the production environment.</p>
-     * <p>*   **PRIVATE**: Make the API private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.</p>
-     */
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <p>The ID of the backend service.</p>
-     */
     @NameInMap("DisableInternet")
     public Boolean disableInternet;
 
-    /**
-     * <p>The configuration items of the third-party OpenID Connect authentication method.</p>
-     */
     @NameInMap("ErrorCodeSamples")
     public String errorCodeSamples;
 
-    /**
-     * <p>The returned description of the API.</p>
-     */
     @NameInMap("FailResultSample")
     public String failResultSample;
 
-    /**
-     * <p>The AppCode authentication type supported. Valid values:</p>
-     * <br>
-     * <p>*   DEFAULT: supported after being made available in Alibaba Cloud Marketplace</p>
-     * <p>*   DISABLE: not supported</p>
-     * <p>*   HEADER : supported only in the Header parameter</p>
-     * <p>*   HEADER_QUERY: supported in the Header or Query parameter</p>
-     */
     @NameInMap("ForceNonceCheck")
     public Boolean forceNonceCheck;
 
-    /**
-     * <p>The ID of the API.</p>
-     */
     @NameInMap("GroupId")
     public String groupId;
 
-    /**
-     * <p>The type of the two-way communication API. Valid values:</p>
-     * <br>
-     * <p>*   **COMMON**: general APIs</p>
-     * <p>*   **REGISTER**: registered APIs</p>
-     * <p>*   **UNREGISTER**: unregistered APIs</p>
-     * <p>*   **NOTIFY**: downstream notification</p>
-     */
     @NameInMap("OpenIdConnectConfig")
     public String openIdConnectConfig;
 
-    /**
-     * <p>The parameters of API requests sent by the consumer to API Gateway.</p>
-     */
     @NameInMap("RequestConfig")
     public String requestConfig;
 
-    /**
-     * <p>System parameter</p>
-     */
     @NameInMap("RequestParameters")
     public String requestParameters;
 
-    /**
-     * <p>*   Specifies whether to set DisableInternet to **true** to limit API calls to within the VPC.</p>
-     * <p>*   If you set DisableInternet to **false**, the limit if lifted.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, the original value is used.</p>
-     */
     @NameInMap("ResultBodyModel")
     public String resultBodyModel;
 
-    /**
-     * <p>The client-side request signature method of the API. Valid values:</p>
-     * <br>
-     * <p>*   HmacSHA256</p>
-     * <p>*   HmacSHA1,HmacSHA256</p>
-     */
     @NameInMap("ResultDescriptions")
     public String resultDescriptions;
 
-    /**
-     * <p>The sample error codes returned by the backend service.</p>
-     */
     @NameInMap("ResultSample")
     public String resultSample;
 
-    /**
-     * <p>The sample error response from the backend service.</p>
-     */
     @NameInMap("ResultType")
     public String resultType;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    /**
-     * <p>\[{"ParameterType":"Number","Required":"OPTIONAL","isHide":false,"ApiParameterName":"age","DefaultValue":"20","DemoValue":"20","Description":"age","MinValue":18,"MaxValue":100,"Location":"Head"},{"ParameterType":"String","Required":"OPTIONAL","isHide":false,"ApiParameterName":"sex","DefaultValue":"boy","DemoValue":"boy","Description":"gender","EnumValue":"boy,girl","Location":"Query"},{"ParameterType":"Number","Required":"REQUIRED","isHide":false,"ApiParameterName":"userId","MaxLength":10,"MinValue":10000000,"MaxValue":100000000,"Location":"Path"},{"ApiParameterName":"CaClientIp","ParameterLocation":{"name":"Head","orderNumber":0},"Location":"Head","ParameterType":"String","Required":"REQUIRED","Description":"Client IP"},{"ApiParameterName":"constance","ParameterLocation":{"name":"Head","orderNumber":0},"Location":"Head","ParameterType":"String","Required":"REQUIRED","DefaultValue":"constance","Description":"constance"}]</p>
-     */
     @NameInMap("ServiceConfig")
     public String serviceConfig;
 
-    /**
-     * <p>The format of the response from the backend service. Valid values: JSON, TEXT, BINARY, XML, and HTML. This value is used only to generate documents. It does not affect the returned results.</p>
-     */
     @NameInMap("ServiceParameters")
     public String serviceParameters;
 
-    /**
-     * <p>The sample response from the backend service.</p>
-     */
     @NameInMap("ServiceParametersMap")
     public String serviceParametersMap;
 
-    /**
-     * <p>The parameters of API requests sent by API Gateway to the backend service.</p>
-     */
     @NameInMap("SystemParameters")
     public String systemParameters;
 
-    /**
-     * <p>The configuration items of API requests sent by the consumer to API Gateway.</p>
-     */
     @NameInMap("Visibility")
     public String visibility;
 
-    /**
-     * <p>*   Specifies whether to set **ForceNonceCheck** to **true** to force the check of X-Ca-Nonce during the request. This is the unique identifier of the request and is generally identified by UUID. After receiving this parameter, API Gateway verifies the validity of this parameter. The same value can be used only once within 15 minutes. This helps prevent replay attacks.</p>
-     * <p>*   If you set **ForceNonceCheck** to **false**, the check is not performed. If you do not set this parameter, the original value is used.</p>
-     */
     @NameInMap("WebSocketApiType")
     public String webSocketApiType;
 

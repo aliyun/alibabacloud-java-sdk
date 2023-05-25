@@ -4,44 +4,24 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceRequest extends TeaModel {
-    /**
-     * <p>Specifies whether payment is automatically made during renewal. Valid values:</p>
-     * <br>
-     * <p>*   **True**: Automatic payment is enabled. Make sure that your Alibaba Cloud account has adequate balance.</p>
-     * <p>*   **False**: Automatic payment is disabled. You have to manually pay in the console. Log on to the console. In the upper-right corner, choose **Expenses > User Center**. In the left-side navigation pane, click **Orders**. On the page that appears, find your order and complete the payment.</p>
-     * <br>
-     * <p>Default value: **False**.</p>
-     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
-    /**
-     * <p>The billing method of the instance.</p>
-     */
     @NameInMap("ChargeType")
     public String chargeType;
 
     @NameInMap("Duration")
     public Integer duration;
 
-    /**
-     * <p>The HTTPS policy.</p>
-     */
     @NameInMap("HttpsPolicy")
     public String httpsPolicy;
 
     @NameInMap("InstanceCidr")
     public String instanceCidr;
 
-    /**
-     * <p>The name of the instance.</p>
-     */
     @NameInMap("InstanceName")
     public String instanceName;
 
-    /**
-     * <p>The specifications of the instance.</p>
-     */
     @NameInMap("InstanceSpec")
     public String instanceSpec;
 
@@ -54,18 +34,12 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<CreateInstanceRequestTag> tag;
 
-    /**
-     * <p>The password.</p>
-     */
     @NameInMap("Token")
     public String token;
 
     @NameInMap("UserVpcId")
     public String userVpcId;
 
-    /**
-     * <p>The zone.</p>
-     */
     @NameInMap("ZoneId")
     public String zoneId;
 

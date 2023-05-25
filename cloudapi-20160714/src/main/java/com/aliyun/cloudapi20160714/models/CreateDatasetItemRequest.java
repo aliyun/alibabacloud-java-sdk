@@ -4,30 +4,18 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class CreateDatasetItemRequest extends TeaModel {
-    /**
-     * <p>The ID of the dataset.</p>
-     */
     @NameInMap("DatasetId")
     public String datasetId;
 
-    /**
-     * <p>The description of the data entry. The description cannot be more than 180 characters in length.</p>
-     */
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <p>The time in UTC when the data entry expires. The time is in the **yyyy-MM-ddTHH:mm:ssZ** format. If this parameter is empty, the data entry does not expire.</p>
-     */
     @NameInMap("ExpiredTime")
     public String expiredTime;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    /**
-     * <p>The value of the data entry. The value corresponds to the dataset type.</p>
-     */
     @NameInMap("Value")
     public String value;
 

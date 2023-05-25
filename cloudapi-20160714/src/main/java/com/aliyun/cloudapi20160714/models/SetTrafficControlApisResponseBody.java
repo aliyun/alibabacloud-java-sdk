@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetTrafficControlApisResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Binds a throttling policy to APIs.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

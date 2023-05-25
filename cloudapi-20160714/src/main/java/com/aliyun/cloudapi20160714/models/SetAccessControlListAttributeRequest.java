@@ -4,15 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class SetAccessControlListAttributeRequest extends TeaModel {
-    /**
-     * <p>The ID of the ACL.</p>
-     */
     @NameInMap("AclId")
     public String aclId;
 
-    /**
-     * <p>The name of the ACL.</p>
-     */
     @NameInMap("AclName")
     public String aclName;
 

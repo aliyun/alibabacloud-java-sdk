@@ -4,15 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class SdkGenerateByAppRequest extends TeaModel {
-    /**
-     * <p>The ID of the app. This ID is unique.</p>
-     */
     @NameInMap("AppId")
     public Long appId;
 
-    /**
-     * <p>The programming language in which the SDK is generated.</p>
-     */
     @NameInMap("Language")
     public String language;
 

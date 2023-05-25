@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SwitchApiResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Switches the definition of an API in a specified runtime environment to a historical version.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to delete all tags. This parameter is valid only when the **TagKey.N**parameter is not specified. Default value: false. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("All")
     public Boolean all;
@@ -17,11 +14,9 @@ public class UntagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resource. Tags are bound to API groups, plug-ins, and applications. You can use tags to manage cloud resources by group. Valid values:</p>
+     * <p>The key of tag N.</p>
      * <br>
-     * <p>*   **apiGroup**</p>
-     * <p>*   **plugin**</p>
-     * <p>*   **app**</p>
+     * <p>Valid values of N: `1 to 20.`</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

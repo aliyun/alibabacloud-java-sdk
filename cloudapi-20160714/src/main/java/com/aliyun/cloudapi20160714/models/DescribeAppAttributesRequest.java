@@ -4,65 +4,33 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeAppAttributesRequest extends TeaModel {
-    /**
-     * <p>The app key that is used to make an API call.</p>
-     */
     @NameInMap("AppCode")
     public String appCode;
 
-    /**
-     * <p>The name of the app.</p>
-     */
     @NameInMap("AppId")
     public Long appId;
 
-    /**
-     * <p>The order. Valid values: asc and desc. Default value: desc.</p>
-     * <br>
-     * <p>*   asc: The apps are displayed in ascending order of modification time.</p>
-     * <p>*   desc: The apps are displayed in descending order of modification time.</p>
-     */
     @NameInMap("AppKey")
     public String appKey;
 
-    /**
-     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
-     */
     @NameInMap("AppName")
     public String appName;
 
-    /**
-     * <p>The tag of objects that match the rule. You can specify multiple tags.</p>
-     */
     @NameInMap("EnableTagAuth")
     public Boolean enableTagAuth;
 
-    /**
-     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The AppCode of the app.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    /**
-     * <p>Specifies whether to enable tag verification.</p>
-     */
     @NameInMap("Sort")
     public String sort;
 
-    /**
-     * <p>The key of the tag.</p>
-     * <br>
-     * <p>N can be an integer from 1 to 20.``</p>
-     */
     @NameInMap("Tag")
     public java.util.List<DescribeAppAttributesRequestTag> tag;
 
@@ -152,17 +120,9 @@ public class DescribeAppAttributesRequest extends TeaModel {
     }
 
     public static class DescribeAppAttributesRequestTag extends TeaModel {
-        /**
-         * <p>The key of the tag.</p>
-         * <br>
-         * <p>N can be an integer from 1 to 20.``</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The page number of the returned page.</p>
-         */
         @NameInMap("Value")
         public String value;
 

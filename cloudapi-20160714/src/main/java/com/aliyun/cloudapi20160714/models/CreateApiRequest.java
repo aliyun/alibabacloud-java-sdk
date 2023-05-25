@@ -20,9 +20,9 @@ public class CreateApiRequest extends TeaModel {
     public String apiName;
 
     /**
-     * <p>If **AuthType** is set to **APP**, the valid values are:</p>
+     * <p>If the **AuthType** parameter is set to **APP**, the valid values are:</p>
      * <br>
-     * <p>*   **DEFAULT**: The default value that is used if no other values are passed. This value means that the setting of the group is used.</p>
+     * <p>*   **DEFAULT**: The default value that is used if no other values are passed. This value indicates that the settings of the group are used.</p>
      * <p>*   **DISABLE**: The authentication is disabled.</p>
      * <p>*   **HEADER**: AppCode can be placed in the Header parameter for authentication.</p>
      * <p>*   **HEADER_QUERY**: AppCode can be placed in the Header or Query parameter for authentication.</p>
@@ -189,10 +189,10 @@ public class CreateApiRequest extends TeaModel {
     /**
      * <p>The type of the two-way communication API.</p>
      * <br>
-     * <p>*   **COMMON**: normal APIs</p>
-     * <p>*   **REGISTER**: registered APIs</p>
-     * <p>*   **UNREGISTER**: unregistered APIs</p>
-     * <p>*   **NOTIFY**: downstream notification APIs</p>
+     * <p>*   **COMMON**: common API</p>
+     * <p>*   **REGISTER**: registered API</p>
+     * <p>*   **UNREGISTER**: unregistered API</p>
+     * <p>*   **NOTIFY**: downstream notification API</p>
      */
     @NameInMap("WebSocketApiType")
     public String webSocketApiType;

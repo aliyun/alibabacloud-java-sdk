@@ -10,6 +10,9 @@ public class ResetAppSecretRequest extends TeaModel {
     @NameInMap("AppKey")
     public String appKey;
 
+    @NameInMap("NewAppKey")
+    public String newAppKey;
+
     /**
      * <p>The new key of the application. To improve compatibility, we recommend that you use other parameters.</p>
      */
@@ -30,6 +33,14 @@ public class ResetAppSecretRequest extends TeaModel {
     }
     public String getAppKey() {
         return this.appKey;
+    }
+
+    public ResetAppSecretRequest setNewAppKey(String newAppKey) {
+        this.newAppKey = newAppKey;
+        return this;
+    }
+    public String getNewAppKey() {
+        return this.newAppKey;
     }
 
     public ResetAppSecretRequest setNewAppSecret(String newAppSecret) {

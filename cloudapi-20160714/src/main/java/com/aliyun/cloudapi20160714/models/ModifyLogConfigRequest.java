@@ -4,24 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class ModifyLogConfigRequest extends TeaModel {
-    /**
-     * <p>The log type. Valid values: **log** and **survey**.</p>
-     */
     @NameInMap("LogType")
     public String logType;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    /**
-     * <p>The name of the Logstore in Log Service.</p>
-     */
     @NameInMap("SlsLogStore")
     public String slsLogStore;
 
-    /**
-     * <p>The name of the Log Service project.</p>
-     */
     @NameInMap("SlsProject")
     public String slsProject;
 

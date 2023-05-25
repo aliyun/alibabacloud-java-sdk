@@ -4,27 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackendListRequest extends TeaModel {
-    /**
-     * <p>The name of the backend service. You can use \* to perform fuzzy queries.</p>
-     */
     @NameInMap("BackendName")
     public String backendName;
 
-    /**
-     * <p>The type of the backend service.</p>
-     */
     @NameInMap("BackendType")
     public String backendType;
 
-    /**
-     * <p>The number of the current page.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries to return on each page.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

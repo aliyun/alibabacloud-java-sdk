@@ -4,15 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribePurchasedApiGroupsRequest extends TeaModel {
-    /**
-     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The page number of the returned page.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

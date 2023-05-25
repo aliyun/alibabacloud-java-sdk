@@ -4,33 +4,18 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeHistoryApisResponseBody extends TeaModel {
-    /**
-     * <p>The returned API information. It is an array consisting of ApiHisItem data.</p>
-     */
     @NameInMap("ApiHisItems")
     public DescribeHistoryApisResponseBodyApiHisItems apiHisItems;
 
-    /**
-     * <p>The page number of the returned page.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries to return on each page. Maximum value: 50. Default value: 10.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of returned entries.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -80,66 +65,33 @@ public class DescribeHistoryApisResponseBody extends TeaModel {
     }
 
     public static class DescribeHistoryApisResponseBodyApiHisItemsApiHisItem extends TeaModel {
-        /**
-         * <p>The ID of the API.</p>
-         */
         @NameInMap("ApiId")
         public String apiId;
 
-        /**
-         * <p>The name of the API.</p>
-         */
         @NameInMap("ApiName")
         public String apiName;
 
-        /**
-         * <p>The publising time (UTC) of the API.</p>
-         */
         @NameInMap("DeployedTime")
         public String deployedTime;
 
-        /**
-         * <p>The description of the API.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the API group.</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <p>The name of the group to which the API belongs.</p>
-         */
         @NameInMap("GroupName")
         public String groupName;
 
-        /**
-         * <p>The historical version of the API definition.</p>
-         */
         @NameInMap("HistoryVersion")
         public String historyVersion;
 
-        /**
-         * <p>The ID of the region.</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The name of the runtime environment. Valid values:</p>
-         * <br>
-         * <p>*   **RELEASE**</p>
-         * <p>*   **TEST.</p>
-         */
         @NameInMap("StageName")
         public String stageName;
 
-        /**
-         * <p>Indicates whether an API version is effective. Valid values: ONLINE and OFFLINE.</p>
-         */
         @NameInMap("Status")
         public String status;
 

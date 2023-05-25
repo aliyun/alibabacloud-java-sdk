@@ -4,24 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class SetWildcardDomainPatternsRequest extends TeaModel {
-    /**
-     * <p>The wildcard domain name mode.</p>
-     */
     @NameInMap("DomainName")
     public String domainName;
 
-    /**
-     * <p>The custom domain name.</p>
-     */
     @NameInMap("GroupId")
     public String groupId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("WildcardDomainPatterns")
     public String wildcardDomainPatterns;
 

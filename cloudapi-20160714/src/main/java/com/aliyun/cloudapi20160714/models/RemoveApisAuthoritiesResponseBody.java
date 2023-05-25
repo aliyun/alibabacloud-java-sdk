@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveApisAuthoritiesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Revokes the access permissions on multiple APIs from a specified app.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

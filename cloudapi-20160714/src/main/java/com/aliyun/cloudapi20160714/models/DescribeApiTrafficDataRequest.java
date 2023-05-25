@@ -4,40 +4,21 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApiTrafficDataRequest extends TeaModel {
-    /**
-     * <p>The ID of the API group.</p>
-     */
     @NameInMap("ApiId")
     public String apiId;
 
-    /**
-     * <p>The environment. Valid values:</p>
-     * <br>
-     * <p>*   **RELEASE**</p>
-     * <p>*   **TEST**: the test environment</p>
-     * <p>*   PRE: the pre-release environment</p>
-     */
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <p>The start time in UTC. Format: YYYY-MM-DDThh:mm:ssZ</p>
-     */
     @NameInMap("GroupId")
     public String groupId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("StageName")
     public String stageName;
 
-    /**
-     * <p>The end time in UTC. Format: YYYY-MM-DDThh:mm:ssZ</p>
-     */
     @NameInMap("StartTime")
     public String startTime;
 

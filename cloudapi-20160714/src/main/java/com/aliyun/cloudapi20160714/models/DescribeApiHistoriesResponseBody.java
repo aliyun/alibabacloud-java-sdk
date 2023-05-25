@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeApiHistoriesResponseBody extends TeaModel {
     /**
-     * <p>The returned API information. It is an array consisting of ApiHisItem data.</p>
+     * <p>The ID of the API.</p>
      */
     @NameInMap("ApiHisItems")
     public DescribeApiHistoriesResponseBodyApiHisItems apiHisItems;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The returned API information. It is an array consisting of ApiHisItem data.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The total number of returned entries.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>Indicates whether an API version is effective. Valid values: ONLINE and OFFLINE.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -81,52 +81,28 @@ public class DescribeApiHistoriesResponseBody extends TeaModel {
 
     public static class DescribeApiHistoriesResponseBodyApiHisItemsApiHisItem extends TeaModel {
         /**
-         * <p>The ID of the API.</p>
+         * <p>Creates an object</p>
          */
         @NameInMap("ApiId")
         public String apiId;
 
         /**
-         * <p>The name of the API.</p>
+         * <p>The region where the API is located.</p>
          */
         @NameInMap("ApiName")
         public String apiName;
 
         /**
-         * <p>The publishing time (UTC) of the API.</p>
+         * <p>The historical version of the API.</p>
          */
         @NameInMap("DeployedTime")
         public String deployedTime;
 
         /**
-         * <p>The description of the API.</p>
+         * <p>The name of the group to which an API belongs.</p>
          */
         @NameInMap("Description")
         public String description;
-
-        /**
-         * <p>The ID of the API group.</p>
-         */
-        @NameInMap("GroupId")
-        public String groupId;
-
-        /**
-         * <p>The name of the group to which an API belongs.</p>
-         */
-        @NameInMap("GroupName")
-        public String groupName;
-
-        /**
-         * <p>The historical version of the API.</p>
-         */
-        @NameInMap("HistoryVersion")
-        public String historyVersion;
-
-        /**
-         * <p>The region where the API is located.</p>
-         */
-        @NameInMap("RegionId")
-        public String regionId;
 
         /**
          * <p>The name of the runtime environment. Valid values:</p>
@@ -134,11 +110,35 @@ public class DescribeApiHistoriesResponseBody extends TeaModel {
          * <p>*   **RELEASE**</p>
          * <p>*   **TEST.</p>
          */
+        @NameInMap("GroupId")
+        public String groupId;
+
+        /**
+         * <p>The publishing time (UTC) of the API.</p>
+         */
+        @NameInMap("GroupName")
+        public String groupName;
+
+        /**
+         * <p>CreateObject</p>
+         */
+        @NameInMap("HistoryVersion")
+        public String historyVersion;
+
+        /**
+         * <p>Queries the historical versions of a specified API.</p>
+         */
+        @NameInMap("RegionId")
+        public String regionId;
+
+        /**
+         * <p>The name of the API.</p>
+         */
         @NameInMap("StageName")
         public String stageName;
 
         /**
-         * <p>Indicates whether an API version is effective. Valid values: ONLINE and OFFLINE.</p>
+         * <p>The description of the API.</p>
          */
         @NameInMap("Status")
         public String status;

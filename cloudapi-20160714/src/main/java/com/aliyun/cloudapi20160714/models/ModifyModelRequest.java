@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class ModifyModelRequest extends TeaModel {
     /**
-     * <p>The description of the new model definition.</p>
+     * <p>The new definition of the model.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The ID of the API group to which the model belongs.</p>
+     * <p>The new name of the model.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The name of the model.</p>
+     * <p>The description of the new model definition.</p>
      */
     @NameInMap("ModelName")
     public String modelName;
 
     /**
-     * <p>The new name of the model.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("NewModelName")
     public String newModelName;
 
     /**
-     * <p>The new definition of the model.</p>
+     * <p>The ID of the API group to which the model belongs.</p>
      */
     @NameInMap("Schema")
     public String schema;

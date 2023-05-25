@@ -4,57 +4,30 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApiGroupsRequest extends TeaModel {
-    /**
-     * <p>The ID of the instance.</p>
-     */
     @NameInMap("EnableTagAuth")
     public Boolean enableTagAuth;
 
-    /**
-     * <p>The keyword that can be specified in the name of the API group.</p>
-     */
     @NameInMap("GroupId")
     public String groupId;
 
-    /**
-     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
-     */
     @NameInMap("GroupName")
     public String groupName;
 
-    /**
-     * <p>The order. Valid values: asc and desc. Default value: desc.</p>
-     * <br>
-     * <p>*   asc: The API groups are displayed in ascending order of modification time.</p>
-     * <p>*   desc: The API groups are displayed in descending order of modification time.</p>
-     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    /**
-     * <p>The number of entries to return on each page. Maximum value: 50. Default value: 10.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>Specifies whether to enable tag verification.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    /**
-     * <p>The list of tags.</p>
-     */
     @NameInMap("Sort")
     public String sort;
 
-    /**
-     * <p>The key of the tag.</p>
-     */
     @NameInMap("Tag")
     public java.util.List<DescribeApiGroupsRequestTag> tag;
 
@@ -136,15 +109,9 @@ public class DescribeApiGroupsRequest extends TeaModel {
     }
 
     public static class DescribeApiGroupsRequestTag extends TeaModel {
-        /**
-         * <p>The value of the tag.</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The number of pages to return the results on.</p>
-         */
         @NameInMap("Value")
         public String value;
 

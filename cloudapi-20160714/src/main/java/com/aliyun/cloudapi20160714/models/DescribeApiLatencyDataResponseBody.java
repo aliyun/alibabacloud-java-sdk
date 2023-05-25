@@ -4,15 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApiLatencyDataResponseBody extends TeaModel {
-    /**
-     * <p>The value corresponding to the monitoring metric.</p>
-     */
     @NameInMap("CallLatencys")
     public DescribeApiLatencyDataResponseBodyCallLatencys callLatencys;
 
-    /**
-     * <p>The returned information about API call latency. It is an array consisting of MonitorItem data.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,15 +32,9 @@ public class DescribeApiLatencyDataResponseBody extends TeaModel {
     }
 
     public static class DescribeApiLatencyDataResponseBodyCallLatencysMonitorItem extends TeaModel {
-        /**
-         * <p>auditing</p>
-         */
         @NameInMap("ItemTime")
         public String itemTime;
 
-        /**
-         * <p>The time of the monitoring metric. The time format follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
-         */
         @NameInMap("ItemValue")
         public String itemValue;
 

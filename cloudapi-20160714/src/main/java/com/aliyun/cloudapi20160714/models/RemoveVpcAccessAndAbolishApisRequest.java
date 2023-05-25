@@ -4,30 +4,18 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class RemoveVpcAccessAndAbolishApisRequest extends TeaModel {
-    /**
-     * <p>The ID of the ECS or SLB instance in the VPC.</p>
-     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    /**
-     * <p>Specifies whether batch work is required.</p>
-     */
     @NameInMap("NeedBatchWork")
     public Boolean needBatchWork;
 
-    /**
-     * <p>The service port.</p>
-     */
     @NameInMap("Port")
     public Integer port;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    /**
-     * <p>The ID of the VPC to be operated.</p>
-     */
     @NameInMap("VpcId")
     public String vpcId;
 

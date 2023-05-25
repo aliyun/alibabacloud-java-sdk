@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeApiRequest extends TeaModel {
     /**
-     * <p>The ID of the API.</p>
+     * <p>Description</p>
      */
     @NameInMap("ApiId")
     public String apiId;
 
     /**
-     * <p>The ID of the API.</p>
+     * <p>System parameters sent by API Gateway to the backend service</p>
      */
     @NameInMap("GroupId")
     public String groupId;

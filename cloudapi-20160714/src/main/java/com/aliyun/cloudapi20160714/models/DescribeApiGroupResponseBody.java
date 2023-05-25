@@ -500,6 +500,12 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         @NameInMap("CertificateName")
         public String certificateName;
 
+        @NameInMap("CertificateValidEnd")
+        public Long certificateValidEnd;
+
+        @NameInMap("CertificateValidStart")
+        public Long certificateValidStart;
+
         /**
          * <p>The type of the custom domain name.</p>
          */
@@ -593,6 +599,22 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
         public String getCertificateName() {
             return this.certificateName;
+        }
+
+        public DescribeApiGroupResponseBodyCustomDomainsDomainItem setCertificateValidEnd(Long certificateValidEnd) {
+            this.certificateValidEnd = certificateValidEnd;
+            return this;
+        }
+        public Long getCertificateValidEnd() {
+            return this.certificateValidEnd;
+        }
+
+        public DescribeApiGroupResponseBodyCustomDomainsDomainItem setCertificateValidStart(Long certificateValidStart) {
+            this.certificateValidStart = certificateValidStart;
+            return this;
+        }
+        public Long getCertificateValidStart() {
+            return this.certificateValidStart;
         }
 
         public DescribeApiGroupResponseBodyCustomDomainsDomainItem setCustomDomainType(String customDomainType) {

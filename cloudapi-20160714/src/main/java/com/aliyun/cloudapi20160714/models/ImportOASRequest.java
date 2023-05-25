@@ -14,59 +14,30 @@ public class ImportOASRequest extends TeaModel {
     @NameInMap("AuthType")
     public String authType;
 
-    /**
-     * <p>The name of the backend service.</p>
-     */
     @NameInMap("BackendName")
     public String backendName;
 
-    /**
-     * <p>The OAS-compliant text file or OSS object URL.</p>
-     */
     @NameInMap("Data")
     public String data;
 
-    /**
-     * <p>The ID of the API group.</p>
-     */
     @NameInMap("GroupId")
     public String groupId;
 
-    /**
-     * <p>Specifies whether to ignore alerts.</p>
-     */
     @NameInMap("IgnoreWarning")
     public Boolean ignoreWarning;
 
-    /**
-     * <p>The OAS version.</p>
-     */
     @NameInMap("OASVersion")
     public String OASVersion;
 
-    /**
-     * <p>Specifies whether to overwrite an existing API.</p>
-     * <br>
-     * <p>If an existing API has the same HTTP request type and backend request path as the API to be imported, the existing API is overwritten.</p>
-     */
     @NameInMap("Overwrite")
     public Boolean overwrite;
 
-    /**
-     * <p>The request mode. Valid values:</p>
-     * <br>
-     * <p>*   MAPPING: Parameters are mapped. Unknown parameters are filtered out.</p>
-     * <p>*   PASSTHROUGH: Parameters are passed through.</p>
-     */
     @NameInMap("RequestMode")
     public String requestMode;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    /**
-     * <p>Specifies whether to directly import the API without performing a precheck.</p>
-     */
     @NameInMap("SkipDryRun")
     public Boolean skipDryRun;
 
