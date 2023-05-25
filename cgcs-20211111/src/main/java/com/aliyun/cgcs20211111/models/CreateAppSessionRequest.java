@@ -4,6 +4,9 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class CreateAppSessionRequest extends TeaModel {
+    /**
+     * <p>适配文件ID。此功能灰度开放，如未约定使用请勿传入。</p>
+     */
     @NameInMap("AdapterFileId")
     public String adapterFileId;
 
@@ -28,6 +31,9 @@ public class CreateAppSessionRequest extends TeaModel {
     @NameInMap("EnablePostpaid")
     public Boolean enablePostpaid;
 
+    /**
+     * <p>项目ID。如果已将应用关联到项目，创建会话时需填写正确的项目ID。</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 

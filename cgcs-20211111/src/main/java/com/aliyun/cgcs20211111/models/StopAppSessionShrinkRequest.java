@@ -10,6 +10,9 @@ public class StopAppSessionShrinkRequest extends TeaModel {
     @NameInMap("PlatformSessionId")
     public String platformSessionId;
 
+    /**
+     * <p>停止容器参数。此参数将透传到Agent。</p>
+     */
     @NameInMap("StopParam")
     public String stopParamShrink;
 

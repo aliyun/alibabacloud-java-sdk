@@ -1073,6 +1073,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.releaseCapacityByBatchWithOptions(request, runtime);
     }
 
+    public SendBizCocChangeCallbackResponse sendBizCocChangeCallbackWithOptions(SendBizCocChangeCallbackRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.platformSessionId)) {
+            query.put("PlatformSessionId", request.platformSessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.result)) {
+            query.put("Result", request.result);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SendBizCocChangeCallback"),
+            new TeaPair("version", "2021-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SendBizCocChangeCallbackResponse());
+    }
+
+    public SendBizCocChangeCallbackResponse sendBizCocChangeCallback(SendBizCocChangeCallbackRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.sendBizCocChangeCallbackWithOptions(request, runtime);
+    }
+
     public StopAppSessionResponse stopAppSessionWithOptions(StopAppSessionRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         StopAppSessionShrinkRequest request = new StopAppSessionShrinkRequest();
