@@ -10,9 +10,6 @@ public class ListTensorboardsRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <p>JobId</p>
-     */
     @NameInMap("JobId")
     public String jobId;
 
@@ -40,9 +37,6 @@ public class ListTensorboardsRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
-    /**
-     * <p>TensorboardId</p>
-     */
     @NameInMap("TensorboardId")
     public String tensorboardId;
 
