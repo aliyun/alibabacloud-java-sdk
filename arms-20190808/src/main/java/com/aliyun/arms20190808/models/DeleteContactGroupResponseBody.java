@@ -4,18 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteContactGroupResponseBody extends TeaModel {
-    /**
-     * <p>Indicates whether the alert contact group was deleted.</p>
-     * <br>
-     * <p>*   `true`: yes</p>
-     * <p>*   `false`: no</p>
-     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

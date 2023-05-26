@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeletePrometheusAlertRuleRequest extends TeaModel {
     /**
-     * <p>The ID of the alert rule. You can call the ListPrometheusAlertRules operation to query the ID of the alert rule.</p>
+     * <p>Indicates whether the alert rule was deleted. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The alert rule was deleted.</p>
+     * <p>*   `false`: The alert rule failed to be deleted.</p>
      */
     @NameInMap("AlertId")
     public Long alertId;

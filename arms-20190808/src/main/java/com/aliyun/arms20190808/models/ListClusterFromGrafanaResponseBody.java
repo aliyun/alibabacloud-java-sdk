@@ -11,7 +11,7 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
     public java.util.List<ListClusterFromGrafanaResponseBodyPromClusterList> promClusterList;
 
     /**
-     * <p>The ID of the request. You can query logs and troubleshoot issues based on the ID.</p>
+     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,13 +39,17 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
 
     public static class ListClusterFromGrafanaResponseBodyPromClusterList extends TeaModel {
         /**
-         * <p>The status of the Prometheus agent on the cluster.</p>
+         * <p>The status of the Prometheus agent on the cluster. Valid values:</p>
+         * <br>
+         * <p>*   INSTALL_FAILED: The Prometheus agent failed to be installed.</p>
+         * <p>*   INSTALL_SUCCEED: The Prometheus agent was installed.</p>
+         * <p>*   NOT_REGISTER: You have not registered an Alibaba Cloud account.</p>
          */
         @NameInMap("AgentStatus")
         public String agentStatus;
 
         /**
-         * <p>The ID of cluster.</p>
+         * <p>The cluster ID.</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
@@ -57,13 +61,13 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
         public String clusterName;
 
         /**
-         * <p>The type of the instance.</p>
+         * <p>The type of the cluster.</p>
          */
         @NameInMap("ClusterType")
         public String clusterType;
 
         /**
-         * <p>The ID of the controller.</p>
+         * <p>The controller ID.</p>
          */
         @NameInMap("ControllerId")
         public String controllerId;
@@ -114,7 +118,7 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
         public Integer nodeNum;
 
         /**
-         * <p>The custom parameters.</p>
+         * <p>The custom parameter.</p>
          */
         @NameInMap("Options")
         public String options;
@@ -126,7 +130,7 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
         public String pluginsJsonArray;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;

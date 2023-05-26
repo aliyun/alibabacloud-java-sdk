@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateOrUpdateContactGroupResponseBody extends TeaModel {
     /**
-     * <p>The object.</p>
+     * <p>The information about the alert contact group.</p>
      */
     @NameInMap("AlertContactGroup")
     public CreateOrUpdateContactGroupResponseBodyAlertContactGroup alertContactGroup;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

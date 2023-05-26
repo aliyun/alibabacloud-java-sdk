@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class SendTTSVerifyLinkRequest extends TeaModel {
     /**
-     * <p>The ID of the alert contact.</p>
+     * <p>Indicates whether the mobile phone number verification text message was successfully sent.</p>
+     * <br>
+     * <p>*   `true`: Sent successfully</p>
+     * <p>*   `false`: Failed to send</p>
      */
     @NameInMap("ContactId")
     public Long contactId;
 
-    /**
-     * <p>The mobile number of the alert contact.</p>
-     */
     @NameInMap("Phone")
     public String phone;
 

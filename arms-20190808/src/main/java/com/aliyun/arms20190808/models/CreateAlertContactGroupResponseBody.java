@@ -4,15 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateAlertContactGroupResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the alert contact group.</p>
-     */
     @NameInMap("ContactGroupId")
     public String contactGroupId;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

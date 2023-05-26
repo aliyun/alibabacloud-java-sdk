@@ -4,15 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListIntegrationResponseBody extends TeaModel {
-    /**
-     * <p>The pagination information.</p>
-     */
     @NameInMap("PageInfo")
     public ListIntegrationResponseBodyPageInfo pageInfo;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,64 +32,30 @@ public class ListIntegrationResponseBody extends TeaModel {
     }
 
     public static class ListIntegrationResponseBodyPageInfoIntegrationsIntegrationDetail extends TeaModel {
-        /**
-         * <p>Indicates whether alert events are automatically cleared. Valid values:</p>
-         * <br>
-         * <p>*   true (default)</p>
-         * <p>*   false</p>
-         */
         @NameInMap("AutoRecover")
         public Boolean autoRecover;
 
-        /**
-         * <p>The description of the alert integration.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The fields whose values are deduplicated.</p>
-         */
         @NameInMap("DuplicateKey")
         public String duplicateKey;
 
-        /**
-         * <p>The extended mapped fields of the alert source.</p>
-         */
         @NameInMap("ExtendedFieldRedefineRules")
         public java.util.List<java.util.Map<String, ?>> extendedFieldRedefineRules;
 
-        /**
-         * <p>The predefined mapped fields of the alert source.</p>
-         */
         @NameInMap("FieldRedefineRules")
         public java.util.List<java.util.Map<String, ?>> fieldRedefineRules;
 
-        /**
-         * <p>The field for clearing alert events. The system queries alert events based on the field of alert clearing events and clears the alert events.</p>
-         * <br>
-         * <p>> Only the Log Service alert integration supports the parameter.</p>
-         */
         @NameInMap("InitiativeRecoverField")
         public String initiativeRecoverField;
 
-        /**
-         * <p>The value of the field for clearing alert events. The system queries alert events based on the field of alert clearing events and clears the alert events.</p>
-         * <br>
-         * <p>> Only the Log Service alert integration supports the parameter.</p>
-         */
         @NameInMap("InitiativeRecoverValue")
         public String initiativeRecoverValue;
 
-        /**
-         * <p>The time when alert events are automatically cleared. Unit: seconds. Default value: 300.</p>
-         */
         @NameInMap("RecoverTime")
         public Long recoverTime;
 
-        /**
-         * <p>The total number of alert events and the number of abnormal alert events in the last hour.</p>
-         */
         @NameInMap("Stat")
         public java.util.List<Long> stat;
 
@@ -179,63 +139,30 @@ public class ListIntegrationResponseBody extends TeaModel {
     }
 
     public static class ListIntegrationResponseBodyPageInfoIntegrations extends TeaModel {
-        /**
-         * <p>The endpoint of the alert integration.</p>
-         */
         @NameInMap("ApiEndpoint")
         public String apiEndpoint;
 
-        /**
-         * <p>The time when the alert integration was created.</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The information about the alert events.</p>
-         */
         @NameInMap("IntegrationDetail")
         public ListIntegrationResponseBodyPageInfoIntegrationsIntegrationDetail integrationDetail;
 
-        /**
-         * <p>The ID of the alert integration.</p>
-         */
         @NameInMap("IntegrationId")
         public Long integrationId;
 
-        /**
-         * <p>The name of the alert integration.</p>
-         */
         @NameInMap("IntegrationName")
         public String integrationName;
 
-        /**
-         * <p>The service of the alert integration. Valid values:</p>
-         * <br>
-         * <p>*   CLOUD_MONITOR: CloudMonitor</p>
-         * <p>*   LOG_SERVICE: Log Service</p>
-         */
         @NameInMap("IntegrationProductType")
         public String integrationProductType;
 
-        /**
-         * <p>The activity of the alert integration</p>
-         */
         @NameInMap("Liveness")
         public String liveness;
 
-        /**
-         * <p>The authentication token of the alert integration.</p>
-         */
         @NameInMap("ShortToken")
         public String shortToken;
 
-        /**
-         * <p>Indicates whether the alert integration was enabled. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
-         */
         @NameInMap("State")
         public Boolean state;
 
@@ -319,27 +246,15 @@ public class ListIntegrationResponseBody extends TeaModel {
     }
 
     public static class ListIntegrationResponseBodyPageInfo extends TeaModel {
-        /**
-         * <p>The information about each alert integration.</p>
-         */
         @NameInMap("Integrations")
         public java.util.List<ListIntegrationResponseBodyPageInfoIntegrations> integrations;
 
-        /**
-         * <p>The page number of the returned page.</p>
-         */
         @NameInMap("Page")
         public Long page;
 
-        /**
-         * <p>The number of alert integrations returned per page.</p>
-         */
         @NameInMap("Size")
         public Long size;
 
-        /**
-         * <p>The total number of alert integrations.</p>
-         */
         @NameInMap("Total")
         public Long total;
 

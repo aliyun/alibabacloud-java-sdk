@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class QueryPromInstallStatusResponseBody extends TeaModel {
     /**
-     * <p>The struct returned.</p>
+     * <p>The returned struct.</p>
      */
     @NameInMap("Data")
     public QueryPromInstallStatusResponseBodyData data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -41,7 +41,7 @@ public class QueryPromInstallStatusResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the call was successful. Valid values:</p>
          * <br>
-         * <p>true: The call was successful. false: The call failed.</p>
+         * <p>true: The call was successful. false: The call fails.</p>
          */
         @NameInMap("isControllerInstalled")
         public Boolean isControllerInstalled;

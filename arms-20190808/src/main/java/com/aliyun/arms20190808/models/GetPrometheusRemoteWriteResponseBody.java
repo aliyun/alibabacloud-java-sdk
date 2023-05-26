@@ -5,34 +5,34 @@ import com.aliyun.tea.*;
 
 public class GetPrometheusRemoteWriteResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+     * <p>The status code. A value of 200 indicates that the request is successful.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The returned information about the remote write configuration item of the Prometheus instance.</p>
+     * <p>The queried remote write configuration.</p>
      */
     @NameInMap("Data")
     public GetPrometheusRemoteWriteResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
-     * <p>*   `true`: The request is successful.</p>
-     * <p>*   `false`: The request fails.</p>
+     * <p>*   `true`</p>
+     * <p>*   `false`</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -90,13 +90,13 @@ public class GetPrometheusRemoteWriteResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The remote write configuration item that you queried.</p>
+         * <p>The name of the remote write configuration.</p>
          */
         @NameInMap("RemoteWriteName")
         public String remoteWriteName;
 
         /**
-         * <p>The information about the queried remote write configuration item of the Prometheus instance. The information is displayed in the YAML format.</p>
+         * <p>The remote write configuration. The configuration is displayed in the YAML format.</p>
          */
         @NameInMap("RemoteWriteYaml")
         public String remoteWriteYaml;

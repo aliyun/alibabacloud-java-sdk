@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchTraceAppByNameRequest extends TeaModel {
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -13,9 +13,7 @@ public class SearchTraceAppByNameRequest extends TeaModel {
     /**
      * <p>The name of the application.</p>
      * <br>
-     * <p>**</p>
-     * <br>
-     * <p>**Description**If you do not specify this parameter, all application tasks in the specified region are queried.</p>
+     * <p>> If you do not specify this parameter, all application monitoring tasks in the specified region are queried.</p>
      */
     @NameInMap("TraceAppName")
     public String traceAppName;

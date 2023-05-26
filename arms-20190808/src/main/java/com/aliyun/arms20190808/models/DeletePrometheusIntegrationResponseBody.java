@@ -4,12 +4,21 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeletePrometheusIntegrationResponseBody extends TeaModel {
+    /**
+     * <p>The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The success or failure information.</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 

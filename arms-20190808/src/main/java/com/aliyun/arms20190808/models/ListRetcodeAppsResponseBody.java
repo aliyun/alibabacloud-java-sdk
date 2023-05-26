@@ -11,7 +11,7 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about monitored applications.</p>
+     * <p>The list of applications monitored by Browser Monitoring.</p>
      */
     @NameInMap("RetcodeApps")
     public java.util.List<ListRetcodeAppsResponseBodyRetcodeApps> retcodeApps;
@@ -87,7 +87,7 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The alias of the application.</p>
+         * <p>The alias of the application monitored by Browser Monitoring.</p>
          */
         @NameInMap("NickName")
         public String nickName;
@@ -118,7 +118,7 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
         public String retcodeAppType;
 
         /**
-         * <p>The list of tags.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListRetcodeAppsResponseBodyRetcodeAppsTags> tags;

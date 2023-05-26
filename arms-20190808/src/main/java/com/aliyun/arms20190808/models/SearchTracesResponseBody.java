@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchTracesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -69,7 +69,7 @@ public class SearchTracesResponseBody extends TeaModel {
         public Long timestamp;
 
         /**
-         * <p>The ID of the trace.</p>
+         * <p>The trace ID.</p>
          */
         @NameInMap("TraceID")
         public String traceID;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDashboardsResponseBody extends TeaModel {
     /**
-     * <p>The information about the Grafana dashboards.</p>
+     * <p>The information about the Grafana dashboard.</p>
      */
     @NameInMap("DashboardVos")
     public java.util.List<ListDashboardsResponseBodyDashboardVos> dashboardVos;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -113,7 +113,7 @@ public class ListDashboardsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Indicates whether the Grafana dashboard had a new version that was available for upgrade.</p>
+         * <p>Indicates whether the Grafana dashboard has a new version that was available for upgrade.</p>
          */
         @NameInMap("NeedUpdate")
         public Boolean needUpdate;
@@ -349,7 +349,7 @@ public class ListDashboardsResponseBody extends TeaModel {
         public String httpsUrl;
 
         /**
-         * <p>The information about the Grafana dashboard.</p>
+         * <p>The information about the Grafana dashboards.</p>
          */
         @NameInMap("I18nChild")
         public ListDashboardsResponseBodyDashboardVosI18nChild i18nChild;
@@ -388,7 +388,7 @@ public class ListDashboardsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Indicates whether the Grafana dashboard had a new version that was available for upgrade.</p>
+         * <p>Indicates whether the Grafana dashboard has a new version that was available for upgrade.</p>
          */
         @NameInMap("NeedUpdate")
         public Boolean needUpdate;
@@ -400,7 +400,7 @@ public class ListDashboardsResponseBody extends TeaModel {
         public java.util.List<String> tags;
 
         /**
-         * <p>The timestamp when the Grafana dashboard was created.</p>
+         * <p>The timestamp generated when the Grafana dashboard was created. Unit: seconds</p>
          */
         @NameInMap("Time")
         public String time;

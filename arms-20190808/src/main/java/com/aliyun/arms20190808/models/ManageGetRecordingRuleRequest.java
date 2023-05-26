@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ManageGetRecordingRuleRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The ID of the user.</p>
+     * <p>The user ID.</p>
      */
     @NameInMap("QueryUserId")
     public String queryUserId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

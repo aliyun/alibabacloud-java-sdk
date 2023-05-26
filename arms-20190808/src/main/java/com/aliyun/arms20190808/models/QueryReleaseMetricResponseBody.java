@@ -4,15 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class QueryReleaseMetricResponseBody extends TeaModel {
-    /**
-     * <p>The returned metric data.</p>
-     */
     @NameInMap("Data")
     public String data;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

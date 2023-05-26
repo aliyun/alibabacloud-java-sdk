@@ -4,14 +4,20 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class RemoveAliClusterIdsFromPrometheusGlobalViewResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     /**
      * <p>The returned struct.</p>
      */
     @NameInMap("Data")
     public RemoveAliClusterIdsFromPrometheusGlobalViewResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
     /**
-     * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -21,12 +27,28 @@ public class RemoveAliClusterIdsFromPrometheusGlobalViewResponseBody extends Tea
         return TeaModel.build(map, self);
     }
 
+    public RemoveAliClusterIdsFromPrometheusGlobalViewResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
     public RemoveAliClusterIdsFromPrometheusGlobalViewResponseBody setData(RemoveAliClusterIdsFromPrometheusGlobalViewResponseBodyData data) {
         this.data = data;
         return this;
     }
     public RemoveAliClusterIdsFromPrometheusGlobalViewResponseBodyData getData() {
         return this.data;
+    }
+
+    public RemoveAliClusterIdsFromPrometheusGlobalViewResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public RemoveAliClusterIdsFromPrometheusGlobalViewResponseBody setRequestId(String requestId) {
@@ -51,10 +73,10 @@ public class RemoveAliClusterIdsFromPrometheusGlobalViewResponseBody extends Tea
         public String msg;
 
         /**
-         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <br>
-         * <p>*   `true`: The call was successful.</p>
-         * <p>*   `false`: The call failed.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("Success")
         public Boolean success;

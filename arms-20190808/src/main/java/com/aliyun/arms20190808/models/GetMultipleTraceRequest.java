@@ -4,27 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetMultipleTraceRequest extends TeaModel {
-    /**
-     * <p>The end time of the trace. The value is a timestamp. Unit: milliseconds.</p>
-     */
     @NameInMap("EndTime")
     public Long endTime;
 
-    /**
-     * <p>The ID of the region.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The start time of the trace. The value is a timestamp. Unit: milliseconds.</p>
-     */
     @NameInMap("StartTime")
     public Long startTime;
 
-    /**
-     * <p>The lists of trace IDs.</p>
-     */
     @NameInMap("TraceIDs")
     public java.util.List<String> traceIDs;
 

@@ -5,22 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListSilencePoliciesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to query the details of a silence policy. Valid values:</p>
-     * <br>
-     * <p>*   `true`: Details of the silence policy are queried.</p>
-     * <p>*   `false`: Details of the silence policy are not queried.</p>
+     * <p>The operation that you want to perform. Set the value to **ListSilencePolicies**.</p>
      */
     @NameInMap("IsDetail")
     public Boolean isDetail;
 
     /**
-     * <p>The name of the silence policy.</p>
+     * <p>An array of matching condition objects.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The number of pages to return.</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("Page")
     public Long page;
@@ -29,7 +26,7 @@ public class ListSilencePoliciesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The ID of the silence policy.</p>
      */
     @NameInMap("Size")
     public Long size;

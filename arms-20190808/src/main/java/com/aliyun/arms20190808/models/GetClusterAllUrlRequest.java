@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetClusterAllUrlRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The ID of the region. Default value: cn-hangzhou.</p>
+     * <p>The region ID. Default value: cn-hangzhou.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

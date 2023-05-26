@@ -5,35 +5,26 @@ import com.aliyun.tea.*;
 
 public class DescribeContactGroupsRequest extends TeaModel {
     /**
-     * <p>The name of the alert contact group.</p>
+     * <p>The ID of the alert contact.</p>
      */
     @NameInMap("ContactGroupName")
     public String contactGroupName;
 
-    /**
-     * <p>The ID of the alert contact group.</p>
-     */
     @NameInMap("GroupIds")
     public String groupIds;
 
-    /**
-     * <p>Specifies whether to return all the alert contacts in the queried alert contact group. Valid values:</p>
-     * <br>
-     * <p>*   `false`: does not return all alert contacts.</p>
-     * <p>*   `true`: returns all alert contacts.</p>
-     */
     @NameInMap("IsDetail")
     public Boolean isDetail;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The ID of the alert contact group.</p>
      */
     @NameInMap("Page")
     public Long page;
 
-    /**
-     * <p>The number of contact groups displayed on each page.</p>
-     */
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Size")
     public Long size;
 
@@ -72,6 +63,14 @@ public class DescribeContactGroupsRequest extends TeaModel {
     }
     public Long getPage() {
         return this.page;
+    }
+
+    public DescribeContactGroupsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeContactGroupsRequest setSize(Long size) {

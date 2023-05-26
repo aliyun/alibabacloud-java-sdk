@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteNotificationPolicyRequest extends TeaModel {
     /**
-     * <p>The ID of the notification policy.</p>
+     * <p>Deletes a notification policy based on its ID.</p>
      */
     @NameInMap("Id")
     public Long id;

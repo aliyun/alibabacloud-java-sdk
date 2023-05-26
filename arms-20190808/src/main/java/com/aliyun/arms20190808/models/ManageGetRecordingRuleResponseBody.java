@@ -4,14 +4,20 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ManageGetRecordingRuleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     /**
      * <p>The returned message.</p>
      */
     @NameInMap("Data")
     public String data;
 
+    @NameInMap("Message")
+    public String message;
+
     /**
-     * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -21,12 +27,28 @@ public class ManageGetRecordingRuleResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ManageGetRecordingRuleResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
     public ManageGetRecordingRuleResponseBody setData(String data) {
         this.data = data;
         return this;
     }
     public String getData() {
         return this.data;
+    }
+
+    public ManageGetRecordingRuleResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public ManageGetRecordingRuleResponseBody setRequestId(String requestId) {

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
     /**
-     * <p>The object of the alert rule.</p>
+     * <p>The details of the alert rule.</p>
      */
     @NameInMap("AlertRule")
     public CreateOrUpdateAlertRuleResponseBodyAlertRule alertRule;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,7 +39,7 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
 
     public static class CreateOrUpdateAlertRuleResponseBodyAlertRuleAlertRuleContentAlertRuleItems extends TeaModel {
         /**
-         * <p>The aggregation method of the alert condition.</p>
+         * <p>The aggregation method of the alert condition. Valid values:</p>
          * <br>
          * <p>*   AVG: calculates the average value</p>
          * <p>*   SUM: calculates the total value</p>
@@ -62,14 +62,14 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         public Float n;
 
         /**
-         * <p>The comparison operator that is used to compare the metric value with the threshold.</p>
+         * <p>The comparison operator that was used to compare the metric value with the threshold. Valid values:</p>
          * <br>
          * <p>*   CURRENT_GTE: greater than or equal to</p>
          * <p>*   CURRENT_LTE: less than or equal to</p>
-         * <p>*   PREVIOUS_UP: the minute-to-minute increase percentage</p>
-         * <p>*   PREVIOUS_DOWN: the minute-to-minute decrease percentage</p>
-         * <p>*   HOH_UP: the increase percentage compared with the previous hour</p>
-         * <p>*   HOH_DOWN: the decrease percentage compared with the previous hour</p>
+         * <p>*   PREVIOUS_UP: the increase percentage compared with the last period</p>
+         * <p>*   PREVIOUS_DOWN: the decrease percentage compared with the last period</p>
+         * <p>*   HOH_UP: the increase percentage compared with the last hour</p>
+         * <p>*   HOH_DOWN: the decrease percentage compared with the last hour</p>
          * <p>*   DOD_UP: the increase percentage compared with the last day</p>
          * <p>*   DOD_DOWN: the decrease percentage compared with the last day</p>
          */
@@ -137,7 +137,7 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         public java.util.List<CreateOrUpdateAlertRuleResponseBodyAlertRuleAlertRuleContentAlertRuleItems> alertRuleItems;
 
         /**
-         * <p>The relationship between multiple alert conditions specified for the Application Monitoring or Browser Monitoring alert rule.</p>
+         * <p>The relationship between multiple alert conditions that were specified for the Application Monitoring or Browser Monitoring alert rule. Valid values:</p>
          * <br>
          * <p>*   OR: meets any of the specified conditions.</p>
          * <p>*   AND: meets all the specified conditions.</p>
@@ -212,22 +212,22 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The logical operator of the filter condition. </p>
+         * <p>The logical operator of the filter condition. Valid values:</p>
          * <br>
-         * <p>- =: equal to</p>
-         * <p>- not: not equal to</p>
+         * <p>*   \=: equal to</p>
+         * <p>*   not: not equal to</p>
          */
         @NameInMap("Opt")
         public String opt;
 
         /**
-         * <p>Indicates whether this filter condition is displayed on the frontend.</p>
+         * <p>Indicates whether this filter condition was displayed on the frontend.</p>
          */
         @NameInMap("Show")
         public Boolean show;
 
         /**
-         * <p>This field is used only to distinguish the type of Browser Monitoring logs. Other filter conditions do not include this field.</p>
+         * <p>The log type of Browser Monitoring. This field was not included in other filter conditions.</p>
          */
         @NameInMap("T")
         public String t;
@@ -299,7 +299,7 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         public String filterOpt;
 
         /**
-         * <p>The value of the filter condition.</p>
+         * <p>The details of the filter condition.</p>
          */
         @NameInMap("FilterValues")
         public java.util.List<String> filterValues;
@@ -343,13 +343,13 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         public java.util.List<CreateOrUpdateAlertRuleResponseBodyAlertRuleFiltersCustomSLSFilters> customSLSFilters;
 
         /**
-         * <p>The value of the aggregation dimension.</p>
+         * <p>The information of the aggregation dimension.</p>
          */
         @NameInMap("CustomSLSGroupByDimensions")
         public java.util.List<String> customSLSGroupByDimensions;
 
         /**
-         * <p>The value of the custom filter condition.</p>
+         * <p>The details of the custom filter condition.</p>
          */
         @NameInMap("CustomSLSWheres")
         public java.util.List<String> customSLSWheres;
@@ -401,13 +401,13 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
 
     public static class CreateOrUpdateAlertRuleResponseBodyAlertRuleLabels extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -435,22 +435,52 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
 
     }
 
+    public static class CreateOrUpdateAlertRuleResponseBodyAlertRuleTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateOrUpdateAlertRuleResponseBodyAlertRuleTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateOrUpdateAlertRuleResponseBodyAlertRuleTags self = new CreateOrUpdateAlertRuleResponseBodyAlertRuleTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateOrUpdateAlertRuleResponseBodyAlertRuleTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateOrUpdateAlertRuleResponseBodyAlertRuleTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class CreateOrUpdateAlertRuleResponseBodyAlertRule extends TeaModel {
         /**
-         * <p>The alert check type of the Prometheus alert rule. </p>
+         * <p>The alert check type of the Prometheus alert rule. Valid values:</p>
          * <br>
-         * <p>- STATIC: a static threshold value.</p>
-         * <p>- CUSTOM: a custom PromQL statement.</p>
+         * <p>*   STATIC: a static threshold value.</p>
+         * <p>*   CUSTOM: a custom PromQL statement.</p>
          */
         @NameInMap("AlertCheckType")
         public String alertCheckType;
 
         /**
-         * <p>The alert contact group ID of the Prometheus alert rule. </p>
+         * <p>The alert contact group ID of the Prometheus alert rule. Valid values:</p>
          * <br>
-         * <p>- -1: custom PromQL</p>
-         * <p>- 1: Kubernetes load</p>
-         * <p>- 15: Kubernetes node</p>
+         * <p>*   \-1: custom PromQL</p>
+         * <p>*   1: Kubernetes load</p>
+         * <p>*   15: Kubernetes node</p>
          */
         @NameInMap("AlertGroup")
         public Long alertGroup;
@@ -474,23 +504,23 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         public CreateOrUpdateAlertRuleResponseBodyAlertRuleAlertRuleContent alertRuleContent;
 
         /**
-         * <p>The status of the alert rule.</p>
+         * <p>The status of the alert rule. Valid values:</p>
          * <br>
          * <p>*   RUNNING</p>
          * <p>*   STOPPED</p>
          * <p>*   PAUSED</p>
          * <br>
-         * <p>>  The **PAUSED** status indicates that the alert rule is abnormal and is actively paused by the system. The alert rule may be paused because that it is not unique or the associated cluster has been deleted.</p>
+         * <p>> The **PAUSED** status indicates that the alert rule was abnormal and was paused by the system. The alert rule might be paused because it was not unique or the associated cluster was deleted.</p>
          */
         @NameInMap("AlertStatus")
         public String alertStatus;
 
         /**
-         * <p>The type of the alert rule. Valid values:</p>
+         * <p>The type of the alert rule.</p>
          * <br>
-         * <p>*   APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring</p>
-         * <p>*   BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring</p>
-         * <p>*   PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Prometheus Service</p>
+         * <p>*   APPLICATION_MONITORING_ALERT_RULE: an alert rule of Application Monitoring</p>
+         * <p>*   BROWSER_MONITORING_ALERT_RULE: an alert rule of Browser Monitoring</p>
+         * <p>*   PROMETHEUS_MONITORING_ALERT_RULE: an alert rule of Prometheus Service</p>
          */
         @NameInMap("AlertType")
         public String alertType;
@@ -502,7 +532,7 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         public java.util.List<CreateOrUpdateAlertRuleResponseBodyAlertRuleAnnotations> annotations;
 
         /**
-         * <p>Indicates whether the alert rule is applied to new applications that are created in Application Monitoring or Browser Monitoring.</p>
+         * <p>Indicates whether the alert rule was applied to new applications that were created in Application Monitoring or Browser Monitoring. Valid values:</p>
          * <br>
          * <p>*   `true`: yes</p>
          * <p>*   `false`: no</p>
@@ -517,7 +547,7 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The time when the alert rule was created.</p>
+         * <p>The timestamp generated when the alert rule was created. Unit: seconds.</p>
          */
         @NameInMap("CreatedTime")
         public Long createdTime;
@@ -529,7 +559,7 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         public String duration;
 
         /**
-         * <p>The extended field.</p>
+         * <p>The extended fields.</p>
          */
         @NameInMap("Extend")
         public String extend;
@@ -547,13 +577,13 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         public java.util.List<CreateOrUpdateAlertRuleResponseBodyAlertRuleLabels> labels;
 
         /**
-         * <p>The level of the Prometheus alert rule. </p>
+         * <p>The severity level of the Prometheus alert rule.</p>
          * <br>
-         * <p>- P1: Alert notifications are sent for major issues that affect the availability of core business, have huge impact, and may lead to serious consequences.</p>
-         * <p>- P2: Alert notifications are sent for service errors that affect the system availability with relatively limited impact.</p>
-         * <p>- P3: Alert notifications are sent for issues that may cause service errors or negative effects, or alert notifications for services that are relatively less important.</p>
-         * <p>- P4: Alert notifications are sent for low-priority issues that do not affect your business.</p>
-         * <p>- Default: Alert notifications are sent without distinguishing between alert levels.</p>
+         * <p>*   P1: Alert notifications are sent for major issues that affect the availability of core business, have a huge impact, and may lead to serious consequences.</p>
+         * <p>*   P2: Alert notifications are sent for service errors that affect the system availability with relatively limited impact.</p>
+         * <p>*   P3: Alert notifications are sent for issues that may cause service errors or negative effects, or alert notifications for services that are relatively less important.</p>
+         * <p>*   P4: Alert notifications are sent for low-priority issues that do not affect your business.</p>
+         * <p>*   Default: Alert notifications are sent regardless of alert levels.</p>
          */
         @NameInMap("Level")
         public String level;
@@ -577,7 +607,7 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         public String notifyStrategy;
 
         /**
-         * <p>The PID of the application.</p>
+         * <p>The process ID (PID) that was associated with the Application Monitoring or Browser Monitoring alert rule.</p>
          */
         @NameInMap("Pids")
         public java.util.List<String> pids;
@@ -589,13 +619,16 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         public String promQL;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("Tags")
+        public java.util.List<CreateOrUpdateAlertRuleResponseBodyAlertRuleTags> tags;
+
         /**
-         * <p>The time when the alert rule was updated.</p>
+         * <p>The timestamp generated when the alert rule was updated. Unit: seconds.</p>
          */
         @NameInMap("UpdatedTime")
         public Long updatedTime;
@@ -785,6 +818,14 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public CreateOrUpdateAlertRuleResponseBodyAlertRule setTags(java.util.List<CreateOrUpdateAlertRuleResponseBodyAlertRuleTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<CreateOrUpdateAlertRuleResponseBodyAlertRuleTags> getTags() {
+            return this.tags;
         }
 
         public CreateOrUpdateAlertRuleResponseBodyAlertRule setUpdatedTime(Long updatedTime) {

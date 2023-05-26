@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetRetcodeShareUrlResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Queries the logon-free URL of a Browser Monitoring application.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The logon-free URL of the application.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("Url")
     public String url;

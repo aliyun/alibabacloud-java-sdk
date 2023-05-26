@@ -5,16 +5,13 @@ import com.aliyun.tea.*;
 
 public class OpenXtraceDefaultSLRResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Activates the service-linked role AliyunServiceRoleForXtrace for Tracing Analysis.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

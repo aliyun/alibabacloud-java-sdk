@@ -17,7 +17,7 @@ public class OpenVClusterRequest extends TeaModel {
     public Integer length;
 
     /**
-     * <p>The name of the cloud service. This parameter is required if you set the ClusterType parameter to `cloud-product-prometheus`. Valid values: influxdb, mongodb, and DLA.</p>
+     * <p>The name of the cloud service. This parameter must be specified when ClusterType is set to `cloud-product-prometheus`. Valid values: influxdb, mongodb, and DLA. You cannot specify multiple service names.</p>
      */
     @NameInMap("Product")
     public String product;
@@ -29,7 +29,7 @@ public class OpenVClusterRequest extends TeaModel {
     public Boolean recreateSwitch;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

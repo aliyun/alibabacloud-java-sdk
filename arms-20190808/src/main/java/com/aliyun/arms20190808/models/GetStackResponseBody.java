@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetStackResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -93,7 +93,7 @@ public class GetStackResponseBody extends TeaModel {
         public String exception;
 
         /**
-         * <p>The extended information.</p>
+         * <p>The information about the array object.</p>
          */
         @NameInMap("ExtInfo")
         public GetStackResponseBodyStackInfoExtInfo extInfo;
@@ -105,7 +105,7 @@ public class GetStackResponseBody extends TeaModel {
         public String line;
 
         /**
-         * <p>RPC ID。</p>
+         * <p>The ID of the RPC mode.</p>
          */
         @NameInMap("RpcId")
         public String rpcId;

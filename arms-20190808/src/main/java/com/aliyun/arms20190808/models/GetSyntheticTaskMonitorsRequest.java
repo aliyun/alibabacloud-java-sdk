@@ -4,9 +4,6 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetSyntheticTaskMonitorsRequest extends TeaModel {
-    /**
-     * <p>The ID of the region in which the application is located.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,8 +4,23 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetCloudClusterAllUrlResponseBody extends TeaModel {
+    /**
+     * <p>状态码。200为成功，其他状态码为异常。</p>
+     */
+    @NameInMap("Code")
+    public Integer code;
+
+    /**
+     * <p>An array object.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetCloudClusterAllUrlResponseBodyData> data;
+
+    /**
+     * <p>详细信息。</p>
+     */
+    @NameInMap("Message")
+    public String message;
 
     /**
      * <p>Id of the request</p>
@@ -13,9 +28,23 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>操作是否成功：true：操作成功                                 false：操作失败</p>
+     */
+    @NameInMap("Success")
+    public Boolean success;
+
     public static GetCloudClusterAllUrlResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetCloudClusterAllUrlResponseBody self = new GetCloudClusterAllUrlResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetCloudClusterAllUrlResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public GetCloudClusterAllUrlResponseBody setData(java.util.List<GetCloudClusterAllUrlResponseBodyData> data) {
@@ -26,6 +55,14 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
         return this.data;
     }
 
+    public GetCloudClusterAllUrlResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public GetCloudClusterAllUrlResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -34,34 +71,72 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetCloudClusterAllUrlResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class GetCloudClusterAllUrlResponseBodyDataRemoteUrl extends TeaModel {
+        /**
+         * <p>Indicates whether authentication is enabled.</p>
+         */
         @NameInMap("AuthToken")
         public Boolean authToken;
 
+        /**
+         * <p>The internal URL for Grafana.</p>
+         */
         @NameInMap("GrafanaUrl")
         public String grafanaUrl;
 
+        /**
+         * <p>The public URL for Grafana.</p>
+         */
         @NameInMap("InternetGrafanaUrl")
         public String internetGrafanaUrl;
 
+        /**
+         * <p>The public URL for Pushgateway.</p>
+         */
         @NameInMap("InternetPushGatewayUrl")
         public String internetPushGatewayUrl;
 
+        /**
+         * <p>The public URL for remote read.</p>
+         */
         @NameInMap("InternetRemoteReadUrl")
         public String internetRemoteReadUrl;
 
+        /**
+         * <p>The public URL for remote write.</p>
+         */
         @NameInMap("InternetRemoteWriteUrl")
         public String internetRemoteWriteUrl;
 
+        /**
+         * <p>The internal URL for Pushgateway.</p>
+         */
         @NameInMap("PushGatewayUrl")
         public String pushGatewayUrl;
 
+        /**
+         * <p>The internal URL for remote read.</p>
+         */
         @NameInMap("RemoteReadUrl")
         public String remoteReadUrl;
 
+        /**
+         * <p>The internal URL for remote write.</p>
+         */
         @NameInMap("RemoteWriteUrl")
         public String remoteWriteUrl;
 
+        /**
+         * <p>The token value used for authentication.</p>
+         */
         @NameInMap("Token")
         public String token;
 
@@ -153,12 +228,21 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
     }
 
     public static class GetCloudClusterAllUrlResponseBodyData extends TeaModel {
+        /**
+         * <p>The identifier of the cloud service.</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
+        /**
+         * <p>The region ID.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The URLs for remote read and write. The value is a JSON string.</p>
+         */
         @NameInMap("RemoteUrl")
         public GetCloudClusterAllUrlResponseBodyDataRemoteUrl remoteUrl;
 

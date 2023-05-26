@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     /**
-     * <p>The alert check type of the Prometheus alert rule.</p>
+     * <p>The alert check type of the Prometheus alert rule. Valid values:</p>
      * <br>
      * <p>*   STATIC: a static threshold value. If you set the parameter to STATIC, you must specify the **MetricsKey** parameter. For more information, see the **Correspondence between AlertGroup and MetricsKey for Prometheus Service** table.</p>
      * <p>*   CUSTOM: a custom PromQL statement. If you set the parameter to CUSTOM, you must specify the **PromQL**, **Duration**, and **Message** parameters to create a Prometheus alert rule.</p>
@@ -14,7 +14,7 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     public String alertCheckType;
 
     /**
-     * <p>The alert contact group ID of the Prometheus alert rule.</p>
+     * <p>The alert contact group ID of the Prometheus alert rule. Valid values:</p>
      * <br>
      * <p>*   \-1: custom PromQL</p>
      * <p>*   1: Kubernetes load</p>
@@ -41,15 +41,27 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     /**
      * <p>The content of the Application Monitoring or Browser Monitoring alert rule. The following code provides an example of the **AlertRuleContent** parameter. For more information about the meaning of each field, see the supplementary description.</p>
      * <br>
-     * <p>`{ "Condition": "OR", "AlertRuleItems": [ { "Operator": "CURRENT_LTE", "MetricKey": "appstat.jvm.threadcount", "Value": 1000, "Aggregate": "AVG", "N": 1 } ] }`</p>
+     * <p>```json</p>
+     * <p>{ </p>
+     * <p>    "Condition": "OR", </p>
+     * <p>     "AlertRuleItems": [ </p>
+     * <p>             { "Operator": "CURRENT_LTE",</p>
+     * <p>                 "MetricKey": "appstat.jvm.threadcount", </p>
+     * <p>                 "Value": 1000, </p>
+     * <p>                 "Aggregate": "AVG",</p>
+     * <p>                  "N": 1</p>
+     * <p>            } </p>
+     * <p>       ]  </p>
+     * <p>  }</p>
+     * <p>```</p>
      * <br>
-     * <p>>  The conditional fields vary depending on the values of the **MetricsType** and **AlertRuleItems.MetricKey** parameters. For more information about the types of metrics supported by Application Monitoring and Browser Monitoring and the alert rule fields corresponding to each metric, see the supplementary description.</p>
+     * <p>> The conditional fields vary depending on the values of the **MetricsType** and **AlertRuleItems.MetricKey** parameters. For more information about the types of metrics supported by Application Monitoring and Browser Monitoring and the alert rule fields corresponding to each metric, see the supplementary description.</p>
      */
     @NameInMap("AlertRuleContent")
     public String alertRuleContent;
 
     /**
-     * <p>The status of the alert rule.</p>
+     * <p>The status of the alert rule. Valid values:</p>
      * <br>
      * <p>*   RUNNING (default)</p>
      * <p>*   STOPPED</p>
@@ -58,11 +70,20 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     public String alertStatus;
 
     /**
-     * <p>The type of the alert rule. Valid values:</p>
+     * <p>The type of the alert rule.</p>
      * <br>
-     * <p>*   APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring</p>
-     * <p>*   BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring</p>
-     * <p>*   PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Prometheus Service</p>
+     * <p>*   APPLICATION_MONITORING_ALERT_RULE: an alert rule of Application Monitoring</p>
+     * <p>*   BROWSER_MONITORING_ALERT_RULE: an alert rule of Browser Monitoring</p>
+     * <p>*   PROMETHEUS_MONITORING_ALERT_RULE: an alert rule of Prometheus Service</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   PROMETHEUS_MONITORING_ALERT_RULE</p>
+     * <p>*   APPLICATION_MONITORING_ALERT_RULE</p>
+     * <p>*   BROWSER_MONITORING_ALERT_RULE</p>
+     * <p>*   prometheus monitoring alert</p>
+     * <p>*   application monitoring alert</p>
+     * <p>*   browser monitoring alert</p>
      */
     @NameInMap("AlertType")
     public String alertType;
@@ -74,7 +95,7 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     public String annotations;
 
     /**
-     * <p>Specifies whether to apply the alert rule to new applications that are created in Application Monitoring or Browser Monitoring.</p>
+     * <p>Specifies whether to apply the alert rule to new applications that are created in Application Monitoring or Browser Monitoring. Valid values:</p>
      * <br>
      * <p>*   `true`: yes</p>
      * <p>*   `false`: no</p>
@@ -95,21 +116,15 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     public Long duration;
 
     /**
-     * <p>The filter conditions of the Application Monitoring or Browser Monitoring alert rule.</p>
+     * <p>The filter conditions of the Application Monitoring or Browser Monitoring alert rule. The name must meet the following format requirements:</p>
      * <br>
-     * <p>Format:</p>
-     * <br>
-     * <p>```</p>
-     * <br>
-     * <p>"DimFilters": [ </p>
-     * <p>{ </p>
-     * <p> "FilterOpt": "ALL",</p>
-     * <p> "FilterValues": [],         //The value of the filter condition. </p>
-     * <p> "FilterKey": "rootIp"     //The Key of the filter condition. </p>
-     * <p>}</p>
-     * <p>]</p>
-     * <p>                                </p>
-     * <p>```</p>
+     * <p>    "DimFilters": [ </p>
+     * <p>    { </p>
+     * <p>     "FilterOpt": "ALL",</p>
+     * <p>     "FilterValues": [],         // The value of the filter condition. </p>
+     * <p>     "FilterKey": "rootIp"     // The key of the filter condition. </p>
+     * <p>    }</p>
+     * <p>    ]</p>
      * <br>
      * <p>Valid values of **FilterOpt**:</p>
      * <br>
@@ -127,13 +142,13 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     public String labels;
 
     /**
-     * <p>The level of the Prometheus alert rule.</p>
+     * <p>The severity level of the Prometheus alert rule.</p>
      * <br>
-     * <p>*   P1: Alert notifications are sent for major issues that affect the availability of core business, have huge impact, and may lead to serious consequences.</p>
+     * <p>*   P1: Alert notifications are sent for major issues that affect the availability of core business, have a huge impact, and may lead to serious consequences.</p>
      * <p>*   P2: Alert notifications are sent for service errors that affect the system availability with relatively limited impact.</p>
      * <p>*   P3: Alert notifications are sent for issues that may cause service errors or negative effects, or alert notifications for services that are relatively less important.</p>
      * <p>*   P4: Alert notifications are sent for low-priority issues that do not affect your business.</p>
-     * <p>*   Default: Alert notifications are sent without distinguishing between alert levels.</p>
+     * <p>*   Default: Alert notifications are sent regardless of alert levels.</p>
      */
     @NameInMap("Level")
     public String level;
@@ -147,13 +162,13 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     /**
      * <p>The alert metrics. If you set the **AlertCheckType** parameter to **STATIC** when you create a Prometheus alert rule, you must specify the **MetricsKey** parameter.</p>
      * <br>
-     * <p>>  Alert metrics vary depending on the value of the **AlertGroup** parameter. For more information about the correspondence between **AlertGroup** and **MetricsKey**, see the supplementary description.</p>
+     * <p>> Alert metrics vary depending on the value of the **AlertGroup** parameter. For more information about the correspondence between **AlertGroup** and **MetricsKey**, see the supplementary description.</p>
      */
     @NameInMap("MetricsKey")
     public String metricsKey;
 
     /**
-     * <p>The metric type of the Application Monitoring or Browser Monitoring alert rule. For more information, see the following tables.</p>
+     * <p>The metric type of the Application Monitoring or Browser Monitoring alert rule. For more information, see the following table.</p>
      */
     @NameInMap("MetricsType")
     public String metricsType;
@@ -161,7 +176,7 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     /**
      * <p>The notification policy.</p>
      * <br>
-     * <p>*   If you set this parameter to null, no notification policy is specified. After you create an alert rule, you can create a notification policy and specify match rules and match conditions. For example, you can specify an alert rule name as the match condition. When the alert rule is triggered, an alert event is generated and an alert notification is sent to the contacts or contact groups that are specified in the notification policy.</p>
+     * <p>*   If you set this parameter to null, no notification policy is specified. After you create an alert rule, you can create a notification policy and specify match rules and match conditions. For example, you can specify the name of the alert rule as the match condition. If the alert rule is triggered, an alert event is generated and an alert notification is sent to the contacts or contact groups that are specified in the notification policy.</p>
      * <p>*   To specify a notification policy, set this parameter to the ID of the notification policy. Application Real-Time Monitoring Service (ARMS) automatically adds a match rule to the notification policy and specifies the ID of the alert rule as the match condition. The name of the alert rule is also displayed. This way, the alert events that are generated based on the alert rule can be matched by the specified notification policy.</p>
      */
     @NameInMap("NotifyStrategy")
@@ -180,10 +195,13 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     public String promQL;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("Tags")
+    public java.util.List<CreateOrUpdateAlertRuleRequestTags> tags;
 
     public static CreateOrUpdateAlertRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateOrUpdateAlertRuleRequest self = new CreateOrUpdateAlertRuleRequest();
@@ -356,6 +374,44 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateOrUpdateAlertRuleRequest setTags(java.util.List<CreateOrUpdateAlertRuleRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateOrUpdateAlertRuleRequestTags> getTags() {
+        return this.tags;
+    }
+
+    public static class CreateOrUpdateAlertRuleRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateOrUpdateAlertRuleRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateOrUpdateAlertRuleRequestTags self = new CreateOrUpdateAlertRuleRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateOrUpdateAlertRuleRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateOrUpdateAlertRuleRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

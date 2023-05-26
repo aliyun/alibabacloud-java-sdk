@@ -7,10 +7,10 @@ public class ListTraceAppsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned for the request. Valid values:</p>
      * <br>
-     * <p>*   `2XX: The request is successful.`</p>
-     * <p>*   `3XX: A redirection message is returned.`</p>
-     * <p>*   `4XX: The request is invalid.`</p>
-     * <p>*   `5XX: A server error occurs.`</p>
+     * <p>*   `2XX`: The request is successful.</p>
+     * <p>*   `3XX`: A redirection message is returned.</p>
+     * <p>*   `4XX`: The request is invalid.</p>
+     * <p>*   `5XX`: A server error occurs.</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -22,7 +22,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -37,7 +37,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The list of application monitoring tasks.</p>
+     * <p>The list of Application Monitoring tasks.</p>
      */
     @NameInMap("TraceApps")
     public java.util.List<ListTraceAppsResponseBodyTraceApps> traceApps;
@@ -125,7 +125,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
 
     public static class ListTraceAppsResponseBodyTraceApps extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          */
         @NameInMap("AppId")
         public Long appId;
@@ -143,31 +143,31 @@ public class ListTraceAppsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The tags of the application.</p>
+         * <p>The labels of the application.</p>
          */
         @NameInMap("Labels")
         public java.util.List<String> labels;
 
         /**
-         * <p>The PID of the application.</p>
+         * <p>The process identifier (PID) of the application.</p>
          */
         @NameInMap("Pid")
         public String pid;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>Indicates whether the application was displayed in the Application Real-Time Monitoring Service (ARMS) console. Valid values:</p>
+         * <p>Indicates whether the application is displayed in the Application Real-Time Monitoring Service (ARMS) console. Valid values:</p>
          * <br>
          * <p>*   `true`: yes</p>
          * <p>*   `false`: no</p>
@@ -182,7 +182,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The list of tags.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListTraceAppsResponseBodyTraceAppsTags> tags;
@@ -203,7 +203,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
         public Long updateTime;
 
         /**
-         * <p>The ID of the user.</p>
+         * <p>The user ID.</p>
          */
         @NameInMap("UserId")
         public String userId;

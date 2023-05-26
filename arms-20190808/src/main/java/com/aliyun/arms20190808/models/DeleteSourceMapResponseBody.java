@@ -4,18 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteSourceMapResponseBody extends TeaModel {
-    /**
-     * <p>Indicates whether the SourceMap files are deleted. Valid values:</p>
-     * <br>
-     * <p>*   success: The SourceMap files are deleted.</p>
-     * <p>*   false: The SourceMap files fail to be deleted.</p>
-     */
     @NameInMap("Data")
     public String data;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

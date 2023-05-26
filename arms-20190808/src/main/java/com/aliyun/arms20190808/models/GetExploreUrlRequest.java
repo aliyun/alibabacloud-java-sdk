@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class GetExploreUrlRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The query language corresponding to the data source.</p>
+     * <p>The query statement that corresponds to the data source.</p>
      */
     @NameInMap("Expression")
     public String expression;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDispatchRuleRequest extends TeaModel {
     /**
-     * <p>The ID of the dispatch policy.</p>
+     * <p>The value of the tag.</p>
      */
     @NameInMap("Id")
     public String id;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The operation that you want to perform. Set the value to DescribeDispatchRule.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -5,34 +5,31 @@ import com.aliyun.tea.*;
 
 public class UpdateIntegrationRequest extends TeaModel {
     /**
-     * <p>The endpoint of the alert integration.</p>
+     * <p>https://alerts.aliyuncs.com/api/v1/integrations/custom/ymQBN******</p>
      */
     @NameInMap("ApiEndpoint")
     public String apiEndpoint;
 
     /**
-     * <p>Specifies whether to automatically clear alert events. Valid values:</p>
-     * <br>
-     * <p>*   true (default)</p>
-     * <p>*   false</p>
+     * <p>The name of the alert integration.</p>
      */
     @NameInMap("AutoRecover")
     public Boolean autoRecover;
 
     /**
-     * <p>The description of the alert integration.</p>
+     * <p>Test</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The fields whose values are deduplicated.</p>
+     * <p>The Information about the alert integration.</p>
      */
     @NameInMap("DuplicateKey")
     public String duplicateKey;
 
     /**
-     * <p>The extended mapped fields are mapped to the fields of ARMS alerts. For more information, see the description of the ExtendedFieldRedefineRules parameter.</p>
+     * <p>The ID of the alert integration.</p>
      */
     @NameInMap("ExtendedFieldRedefineRules")
     public String extendedFieldRedefineRules;
@@ -44,71 +41,92 @@ public class UpdateIntegrationRequest extends TeaModel {
     public String fieldRedefineRules;
 
     /**
-     * <p>The field for clearing alert events. The system queries alert events based on the field of alert clearing events and clears the alert events.</p>
-     * <br>
-     * <p>> Only the Log Service alert integration supports the parameter.</p>
+     * <p>The predefined mapped fields are mapped to the fields of ARMS alerts. The predefined mapped fields were generated when the alert integration was created.</p>
      */
     @NameInMap("InitiativeRecoverField")
     public String initiativeRecoverField;
 
     /**
-     * <p>The value of the field for clearing alert events. The system queries alert events based on the field of alert clearing events and clears the alert events.</p>
-     * <br>
-     * <p>> Only the Log Service alert integration supports the parameter.</p>
+     * <p>The fields whose values are deduplicated.</p>
      */
     @NameInMap("InitiativeRecoverValue")
     public String initiativeRecoverValue;
 
     /**
-     * <p>The ID of the alert integration.</p>
+     * <p>The name of the alert integration.</p>
      */
     @NameInMap("IntegrationId")
     public Long integrationId;
 
     /**
-     * <p>The name of the alert integration.</p>
+     * <p>The field for clearing alert events. The system queries alert events based on the field of alert clearing events and clears the alert events.</p>
+     * <br>
+     * <p>> Only Log Service supports this parameter.</p>
      */
     @NameInMap("IntegrationName")
     public String integrationName;
 
     /**
-     * <p>The service of the alert integration. Valid values:</p>
-     * <br>
-     * <p>*   CLOUD_MONITOR: CloudMonitor</p>
-     * <p>*   LOG_SERVICE: Log Service</p>
+     * <p>ok</p>
      */
     @NameInMap("IntegrationProductType")
     public String integrationProductType;
 
     /**
-     * <p>The activity of the alert integration</p>
+     * <p>true</p>
      */
     @NameInMap("Liveness")
     public String liveness;
 
     /**
-     * <p>The period of time within which alert events are automatically cleared. Unit: seconds. Default value: 300.</p>
+     * <p>\[ { "redefineType":"EXTRACT", "matchExpression":null, "fieldName":"alertname", "expression":null, "mappingRuleList":\[ ], "name":"Alert name", "integrationId":1234, "jsonPath":"$.alertName", "id":10001, "fieldType":"LABEL" }, { "redefineType":"MAP", "matchExpression":null, "fieldName":"severity", "expression":null, "mappingRuleList":\[ { "mappingValue":"critical", "mappingName":"P1", "mappingType":"MAP", "originValue":"CRITICAL" }, { "mappingValue":"error", "mappingName":"P2", "mappingType":"MAP", "originValue":"WARN" }, { "mappingValue":"warning", "mappingName":"P3", "mappingType":"MAP", "originValue":"INFO" } ], "name":"Alert level", "integrationId":1234, "jsonPath":"$.triggerLevel", "id":10002, "fieldType":"LABEL" }, { "redefineType":"EXTRACT", "matchExpression":null, "fieldName":"message", "expression":"{{$labels.namespace}} / {{$labels.dimensions}} Alert content {{ $labels.alertname }}, Current value {{$value}}.", "mappingRuleList":\[ ], "name":"Alert description", "integrationId":1234, "jsonPath":null, "id":10003, "fieldType":"ANNOTATION" }, { "redefineType":"EXTRACT", "matchExpression":null, "fieldName":"value", "expression":null, "mappingRuleList":\[ ], "name":"Alert sample value", "integrationId":1234, "jsonPath":"$.curValue", "id":10004, "fieldType":"ANNOTATION" }, { "redefineType":"EXTRACT", "matchExpression":null, "fieldName":"source", "expression":null, "mappingRuleList":\[ ], "name":"Source", "integrationId":1234, "jsonPath":null, "id":10007, "fieldType":"LABEL" }, { "redefineType":"ADD", "matchExpression":null, "fieldName":"generatorUrl", "expression":"https://cloudmonitor.console.aliyun.com/index.htm#/alarmInfo/name={{$labels.ruleId}}\&searchValue=\&searchType=name\&searchProduct=/history/all/searchKey:{{$labels.ruleId}},startTime:{{sub $startsAt 300000}},endTime:{{$endsAt}}", "mappingRuleList":\[ ], "name":"Event URL", "integrationId":1234, "jsonPath":"https://cloudmonitor.console.aliyun.com/index.htm#/alarmInfo/name={{$labels.ruleId}}\&searchValue=\&searchType=name\&searchProduct=/history/all/searchKey:{{$labels.ruleId}},startTime:{{sub $startsAt 300000}},endTime:{{$endsAt}}", "id":10012, "fieldType":"GENERATE_URL" } ]</p>
      */
     @NameInMap("RecoverTime")
     public Long recoverTime;
 
     /**
-     * <p>The authentication token of the alert integration.</p>
+     * <p>The activity of the alert integration</p>
      */
     @NameInMap("ShortToken")
     public String shortToken;
 
     /**
-     * <p>The total number of alert events and the number of abnormal alert events in the last hour.</p>
+     * <p>[</p>
+     * <p>    {</p>
+     * <p>        "redefineType":"EXTRACT",</p>
+     * <p>        "matchExpression":null,</p>
+     * <p>        "fieldName":"dimensions",</p>
+     * <p>        "expression":null,</p>
+     * <p>        "mappingRuleList":[</p>
+     * <br>
+     * <p>        ],</p>
+     * <p>        "name":"dimensions",</p>
+     * <p>        "integrationId":1234,</p>
+     * <p>        "jsonPath":"$.dimensions",</p>
+     * <p>        "id":10013,</p>
+     * <p>        "fieldType":"LABEL"</p>
+     * <p>    },</p>
+     * <p>    {</p>
+     * <p>        "redefineType":"EXTRACT",</p>
+     * <p>        "matchExpression":null,</p>
+     * <p>        "fieldName":"expression",</p>
+     * <p>        "expression":null,</p>
+     * <p>        "mappingRuleList":[</p>
+     * <br>
+     * <p>        ],</p>
+     * <p>        "name":"expression",</p>
+     * <p>        "integrationId":1234,</p>
+     * <p>        "jsonPath":"$.expression",</p>
+     * <p>        "id":10014,</p>
+     * <p>        "fieldType":"LABEL"</p>
+     * <p>    }</p>
+     * <p>]</p>
      */
     @NameInMap("Stat")
     public String stat;
 
     /**
-     * <p>Indicates whether the alert integration was enabled. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <p>1234</p>
      */
     @NameInMap("State")
     public Boolean state;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class SearchTraceAppByPageResponseBody extends TeaModel {
     /**
-     * <p>The returned page information.</p>
+     * <p>The information about the array object.</p>
      */
     @NameInMap("PageBean")
     public SearchTraceAppByPageResponseBodyPageBean pageBean;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,13 +39,13 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
 
     public static class SearchTraceAppByPageResponseBodyPageBeanTraceAppsTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -75,7 +75,7 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
 
     public static class SearchTraceAppByPageResponseBodyPageBeanTraceApps extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          */
         @NameInMap("AppId")
         public Long appId;
@@ -87,13 +87,13 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The timestamp generated when the monitoring task was created.</p>
+         * <p>The timestamp generated when the task was created.</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
-         * <p>The list of application aliases.</p>
+         * <p>The aliases of the application.</p>
          */
         @NameInMap("Labels")
         public java.util.List<String> labels;
@@ -105,13 +105,13 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
         public String pid;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -119,14 +119,14 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the application is displayed in the Application Real-Time Monitoring Service (ARMS) console. Valid values:</p>
          * <br>
-         * <p>*   `true`: The application is displayed in the ARMS console.</p>
-         * <p>*   `false`: The application is not displayed in the ARMS console.</p>
+         * <p>*   `true`: yes</p>
+         * <p>*   `false`: no</p>
          */
         @NameInMap("Show")
         public Boolean show;
 
         /**
-         * <p>The tags.</p>
+         * <p>A list of tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<SearchTraceAppByPageResponseBodyPageBeanTraceAppsTags> tags;
@@ -134,20 +134,20 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
         /**
          * <p>The type of the monitoring task. Valid values:</p>
          * <br>
-         * <p>*   `TRACE`: application monitoring</p>
-         * <p>*   `RETCODE`: browser monitoring</p>
+         * <p>*   `TRACE`: Application Monitoring</p>
+         * <p>*   `RETCODE`: Browser Monitoring</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The timestamp generated when the monitoring task was updated.</p>
+         * <p>The timestamp generated when the task information was updated.</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
         /**
-         * <p>The ID of the user.</p>
+         * <p>The user ID.</p>
          */
         @NameInMap("UserId")
         public String userId;
@@ -269,13 +269,13 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of returned entries.</p>
+         * <p>The total number of entries returned.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
         /**
-         * <p>The information about the task that monitors the application.</p>
+         * <p>The information about the monitoring task.</p>
          */
         @NameInMap("TraceApps")
         public java.util.List<SearchTraceAppByPageResponseBodyPageBeanTraceApps> traceApps;

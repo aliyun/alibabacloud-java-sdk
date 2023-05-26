@@ -14,7 +14,7 @@ public class DeleteSilencePolicyResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The operation that you want to perform. Set the value to **DeleteSilencePolicy**.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

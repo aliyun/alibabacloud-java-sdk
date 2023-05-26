@@ -74,20 +74,22 @@ public class CreateOrUpdateNotificationPolicyRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>An array of notification rule objects. Sample statement:</p>
+     * <p>An array of notification rule objects. Format:</p>
      * <br>
-     * <p>```</p>
-     * <br>
-     * <p>{ </p>
-     * <p> "notifyStartTime":"00:00",      // The start time of the notification window. </p>
-     * <p> "notifyEndTime":"23:59",       // The end time of the notification window. </p>
-     * <p> "notifyChannels":["dingTalk", "email", "sms", "tts", "webhook"],       // The notification methods. Valid values: dingTalk, email, sms, tts, and webhook. </p>
-     * <p> "notifyObjects":[{       // An array of notification contact objects. </p>
-     * <p> "notifyObjectType":"CONTACT",       // The type of the notification contact. Valid values: CONTACT (individual contacts), CONTACT_GROUP (contact groups), DING_ROBOT (the instant message robot), and CONTACT_SCHEDULE (the person on duty based on an established schedule). </p>
-     * <p> "notifyObjectId":123,       // The ID of the notification contact. </p>
-     * <p> "notifyObjectName":"test"       // The name of the notification contact. </p>
-     * <p> }]</p>
-     * <p>```</p>
+     * <p>    { </p>
+     * <p>     "notifyStartTime":"00:00",      // The start time of the notification window. </p>
+     * <p>     "notifyEndTime":"23:59",       // The end time of the notification window. </p>
+     * <p>     "notifyChannels":["dingTalk", "email", "sms", "tts", "webhook"],       // The notification methods. Valid values: dingTalk, email, sms, tts, and webhook. </p>
+     * <p>     "notifyObjects":[{       // An array of notification objects. </p>
+     * <p>     "notifyObjectType":"CONTACT",       // The type of the notification object. Valid values: CONTACT (contact), CONTACT_GROUP (contact group), ARMS_CONTACT (ARMS contact), ARMS_CONTACT_GROUP (ARMS contact group), DING_ROBOT_GROUP (DingTalk, Lark, WeCom, or IM chatbot), and CONTACT_SCHEDULE (user on duty defined by a schedule). </p>
+     * <p>     "notifyObjectId":123,       // The ID of the notification object. </p>
+     * <p>     "notifyObjectName":"test"       // The name of the notification object. </p>
+     * <p>     "notifyChannels": [ // The notification methods specified for a contact. Valid values: email, sms, and tts.</p>
+     * <p>                    "email",		</p>
+     * <p>                    "sms",</p>
+     * <p>                    "tts"</p>
+     * <p>                ],</p>
+     * <p>     }]</p>
      */
     @NameInMap("NotifyRule")
     public String notifyRule;

@@ -4,42 +4,24 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListPrometheusAlertRulesRequest extends TeaModel {
-    /**
-     * <p>The ID of the cluster.</p>
-     */
     @NameInMap("ClusterId")
     public String clusterId;
 
-    /**
-     * <p>The tag match conditions that are described in a JSON string. For more information about this parameter, see the **Additional description of the MatchExpressions parameter** section.</p>
-     */
     @NameInMap("MatchExpressions")
     public String matchExpressions;
 
-    /**
-     * <p>The name of the alert rule.</p>
-     */
     @NameInMap("Name")
     public String name;
 
-    /**
-     * <p>The region ID of the instance.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>Specifies whether the alert rule is enabled. Valid values:</p>
-     * <br>
-     * <p>*   `1`: enables the alert rule.</p>
-     * <p>*   `0`: disables the alert rule.</p>
-     */
     @NameInMap("Status")
     public Integer status;
 
-    /**
-     * <p>The type of the alert rule.</p>
-     */
+    @NameInMap("Tags")
+    public java.util.List<ListPrometheusAlertRulesRequestTags> tags;
+
     @NameInMap("Type")
     public String type;
 
@@ -88,12 +70,50 @@ public class ListPrometheusAlertRulesRequest extends TeaModel {
         return this.status;
     }
 
+    public ListPrometheusAlertRulesRequest setTags(java.util.List<ListPrometheusAlertRulesRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<ListPrometheusAlertRulesRequestTags> getTags() {
+        return this.tags;
+    }
+
     public ListPrometheusAlertRulesRequest setType(String type) {
         this.type = type;
         return this;
     }
     public String getType() {
         return this.type;
+    }
+
+    public static class ListPrometheusAlertRulesRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListPrometheusAlertRulesRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            ListPrometheusAlertRulesRequestTags self = new ListPrometheusAlertRulesRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListPrometheusAlertRulesRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListPrometheusAlertRulesRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

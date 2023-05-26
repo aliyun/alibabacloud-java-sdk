@@ -4,18 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteIMRobotResponseBody extends TeaModel {
-    /**
-     * <p>Indicates whether the IM bot was successfully deleted.</p>
-     * <br>
-     * <p>*   `true`: The specified data is deleted.</p>
-     * <p>*   `false`: The specified data fails to be deleted.</p>
-     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

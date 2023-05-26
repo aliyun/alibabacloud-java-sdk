@@ -17,13 +17,13 @@ public class BindPrometheusGrafanaInstanceRequest extends TeaModel {
     public String grafanaInstanceId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>Prometheus实例的资源组ID。</p>
+     * <p>The ID of the resource group to which the Prometheus instance belongs.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

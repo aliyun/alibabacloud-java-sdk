@@ -4,33 +4,18 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeletePrometheusRemoteWriteResponseBody extends TeaModel {
-    /**
-     * <p>The status code or error code.</p>
-     */
     @NameInMap("Code")
     public Integer code;
 
-    /**
-     * <p>The Remote Write configuration items that were deleted. If the request fails, an error message is reported.</p>
-     */
     @NameInMap("Data")
     public String data;
 
-    /**
-     * <p>The message returned.</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the call was successful: true: The call was successful. false: The call failed.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 

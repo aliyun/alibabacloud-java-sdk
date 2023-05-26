@@ -11,19 +11,19 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String newResourceGroupId;
 
     /**
-     * <p>The ID of the region in which the resource is deployed.</p>
+     * <p>The region ID of the resource.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the Application Real-Time Monitoring Service (ARMS) resource that you want to move to a specific resource group.</p>
+     * <p>The resource ID.</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
 
     /**
-     * <p>The type of the ARMS resource that you want to move to a specific resource group.</p>
+     * <p>The resource type.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

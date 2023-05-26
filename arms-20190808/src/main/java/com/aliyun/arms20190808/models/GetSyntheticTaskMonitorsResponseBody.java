@@ -4,34 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
-    /**
-     * <p>The status code returned.</p>
-     * <br>
-     * <p>*   1001: The request was successful.</p>
-     * <p>*   1002: The request failed.</p>
-     * <p>*   1003: Parameter errors occurred.</p>
-     * <p>*   1004: Authentication failed.</p>
-     * <p>*   1006: The task does not exist.</p>
-     * <p>*   1099: Internal errors occurred.</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The details of the monitoring point.</p>
-     */
     @NameInMap("Data")
     public java.util.List<GetSyntheticTaskMonitorsResponseBodyData> data;
 
-    /**
-     * <p>The message that is returned when the request failed.</p>
-     */
     @NameInMap("Msg")
     public String msg;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -73,51 +54,24 @@ public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
     }
 
     public static class GetSyntheticTaskMonitorsResponseBodyData extends TeaModel {
-        /**
-         * <p>The task status.</p>
-         * <br>
-         * <p>*   0: active</p>
-         * <p>*   1: busy</p>
-         */
         @NameInMap("Busy")
         public Long busy;
 
-        /**
-         * <p>The name of the city to which the monitoring point belongs.</p>
-         */
         @NameInMap("City")
         public String city;
 
-        /**
-         * <p>The ID of the city to which the monitoring point belongs.</p>
-         */
         @NameInMap("CityCode")
         public Long cityCode;
 
-        /**
-         * <p>The client type:</p>
-         * <br>
-         * <p>*   1: IDC</p>
-         * <p>*   2: Last mile</p>
-         */
         @NameInMap("ClientType")
         public Long clientType;
 
-        /**
-         * <p>The region to which the monitoring point belongs.</p>
-         */
         @NameInMap("District")
         public String district;
 
-        /**
-         * <p>The ID of the carrier.</p>
-         */
         @NameInMap("NetServiceId")
         public Long netServiceId;
 
-        /**
-         * <p>The name of the carrier.</p>
-         */
         @NameInMap("NetServiceName")
         public String netServiceName;
 

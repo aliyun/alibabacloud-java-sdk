@@ -5,58 +5,61 @@ import com.aliyun.tea.*;
 
 public class InstallManagedPrometheusRequest extends TeaModel {
     /**
-     * <p>The ID of the ASK cluster.</p>
+     * <p>The response object.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>集群名称。ClusterType为ecs时，必填。</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
-     * <p>The type of the cluster. Only ASK clusters are supported.</p>
+     * <p>The response content. In most cases, the installation status of the Prometheus agent is returned.</p>
      */
     @NameInMap("ClusterType")
     public String clusterType;
 
     /**
-     * <p>集群绑定的托管版Grafana工作区Id。为空或"free"时，绑定到共享版Grafana。</p>
+     * <p>success=false</p>
      */
     @NameInMap("GrafanaInstanceId")
     public String grafanaInstanceId;
 
     /**
-     * <p>The parameter is not supported.</p>
+     * <p>__null__</p>
      */
     @NameInMap("KubeConfig")
     public String kubeConfig;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The parameter is not supported.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Prometheus实例的资源组ID。</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The security group to which the ASK cluster belongs.</p>
+     * <p>The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     /**
-     * <p>The vSwitch of the ASK cluster.</p>
+     * <p>The error message returned if the Prometheus agent failed to be installed.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
-     * <p>The VPC of the ASK cluster.</p>
+     * <p>Indicates whether the Prometheus agent was installed.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSilencePolicyRequest extends TeaModel {
     /**
-     * <p>The ID of the silence policy.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("Id")
     public Long id;

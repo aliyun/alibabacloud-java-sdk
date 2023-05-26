@@ -13,14 +13,14 @@ public class SearchAlertHistoriesRequest extends TeaModel {
     /**
      * <p>The type of the alert rule. Valid values:</p>
      * <br>
-     * <p>*   `1`: custom alert rules to monitor drill-down data sets</p>
-     * <p>*   `3`: custom alert rules to monitor tiled data sets</p>
-     * <p>*   `4`: alert rules to monitor the frontend, including the default frontend alert rules</p>
-     * <p>*   `5`: alert rules to monitor applications, including the default application alert rules</p>
-     * <p>*   `6`: the default frontend alert rules</p>
-     * <p>*   `7`: the default application alert rules</p>
-     * <p>*   `8`: Tracing Analysis alert rules</p>
-     * <p>*   `101`: Prometheus alert rules</p>
+     * <p>*   `1`: a custom alert rule that is used to monitor drill-down data sets</p>
+     * <p>*   `3`: a custom alert rule that is used to monitor tiled data sets</p>
+     * <p>*   `4`: an alert rule that is used to monitor web pages, including the default alert rule for browser monitoring</p>
+     * <p>*   `5`: an alert rule that is used to monitor applications, including the default alert rule for application monitoring</p>
+     * <p>*   `6`: the default alert rule for browser monitoring</p>
+     * <p>*   `7`: the default alert rule for application monitoring</p>
+     * <p>*   `8`: a Tracing Analysis alert rule</p>
+     * <p>*   `101`: a Prometheus alert rule</p>
      */
     @NameInMap("AlertType")
     public Integer alertType;
@@ -32,7 +32,7 @@ public class SearchAlertHistoriesRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The end of the time range to query. Specify a UNIX timestamp of the LONG data type, in milliseconds. The default value is the current time.</p>
+     * <p>The end of the time range to query. The value is a UNIX timestamp of the LONG data type. Unit: milliseconds. The default value is the current time.</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
@@ -50,7 +50,7 @@ public class SearchAlertHistoriesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. Specify a UNIX timestamp of the LONG data type, in milliseconds. The default value is 10 minutes before the current time.</p>
+     * <p>The beginning of the time range to query. The value is a UNIX timestamp of the LONG data type. Unit: milliseconds. The default value is 10 minutes before the current time.</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

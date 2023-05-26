@@ -4,14 +4,20 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class AddAliClusterIdsToPrometheusGlobalViewResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     /**
-     * <p>The returned struct.</p>
+     * <p>The information about the array object.</p>
      */
     @NameInMap("Data")
     public AddAliClusterIdsToPrometheusGlobalViewResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
     /**
-     * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -21,12 +27,28 @@ public class AddAliClusterIdsToPrometheusGlobalViewResponseBody extends TeaModel
         return TeaModel.build(map, self);
     }
 
+    public AddAliClusterIdsToPrometheusGlobalViewResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
     public AddAliClusterIdsToPrometheusGlobalViewResponseBody setData(AddAliClusterIdsToPrometheusGlobalViewResponseBodyData data) {
         this.data = data;
         return this;
     }
     public AddAliClusterIdsToPrometheusGlobalViewResponseBodyData getData() {
         return this.data;
+    }
+
+    public AddAliClusterIdsToPrometheusGlobalViewResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public AddAliClusterIdsToPrometheusGlobalViewResponseBody setRequestId(String requestId) {

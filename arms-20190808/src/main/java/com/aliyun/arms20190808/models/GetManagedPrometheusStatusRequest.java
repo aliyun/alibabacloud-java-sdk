@@ -5,19 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetManagedPrometheusStatusRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>__null__</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
-    /**
-     * <p>The type of the cluster. Set the value to ask.</p>
-     */
     @NameInMap("ClusterType")
     public String clusterType;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>code!=200</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -25,9 +22,6 @@ public class GetManagedPrometheusStatusRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    /**
-     * <p>ClusterType为“ecs”时，必填。</p>
-     */
     @NameInMap("VpcId")
     public String vpcId;
 

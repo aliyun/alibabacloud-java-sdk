@@ -4,99 +4,36 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListAlertsRequest extends TeaModel {
-    /**
-     * <p>The name of the alert rule.</p>
-     */
     @NameInMap("AlertName")
     public String alertName;
 
-    /**
-     * <p>The ID of the notification policy.</p>
-     */
     @NameInMap("DispatchRuleId")
     public Long dispatchRuleId;
 
-    /**
-     * <p>The end time of the alert sending history that you want to query. Specify the time in the `YYYY-MM-DD HH:mm:ss` format.</p>
-     */
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <p>The type of the integration. Valid values:</p>
-     * <br>
-     * <p>*   ARMS</p>
-     * <p>*   CLOUD_MONITOR</p>
-     * <p>*   MSE</p>
-     * <p>*   ARMS_CLOUD_DIALTEST</p>
-     * <p>*   PROMETHEUS</p>
-     * <p>*   LOG_SERVICE</p>
-     * <p>*   CUSTOM</p>
-     * <p>*   ARMS_PROMETHEUS</p>
-     * <p>*   ARMS_APP_MON</p>
-     * <p>*   ARMS_FRONT_MON</p>
-     * <p>*   ARMS_CUSTOM</p>
-     * <p>*   XTRACE</p>
-     * <p>*   GRAFANA</p>
-     * <p>*   ZABBIX</p>
-     * <p>*   SKYWALKING</p>
-     * <p>*   EVENT_BRIDGE</p>
-     * <p>*   NAGIOS</p>
-     * <p>*   OPENFALCON</p>
-     * <p>*   ARMS_INSIGHTS</p>
-     */
     @NameInMap("IntegrationType")
     public String integrationType;
 
-    /**
-     * <p>The number of the page to return.</p>
-     */
     @NameInMap("Page")
     public Long page;
 
-    /**
-     * <p>The severity level of the alert. Valid values: P6, P5, P4, P3, P2, and P1. The preceding values are listed in ascending order of severity.</p>
-     */
     @NameInMap("Severity")
     public String severity;
 
-    /**
-     * <p>Specifies whether to query the activities that correspond to alerts. Valid values:</p>
-     * <br>
-     * <p>*   `false` (default value): The activities are not queried.</p>
-     * <p>*   `true`: The activities in the last three days are queried.</p>
-     */
     @NameInMap("ShowActivities")
     public Boolean showActivities;
 
-    /**
-     * <p>Specifies whether to query the events that correspond to alerts. Valid values:</p>
-     * <br>
-     * <p>*   `false` (default value): The events are not queried.</p>
-     * <p>*   `true`: The events are queried.</p>
-     */
     @NameInMap("ShowEvents")
     public Boolean showEvents;
 
-    /**
-     * <p>The number of alerts to return on each page.</p>
-     */
     @NameInMap("Size")
     public Long size;
 
-    /**
-     * <p>The start time of the alert sending history that you want to query. Specify the time in the `YYYY-MM-DD HH:mm:ss` format.</p>
-     */
     @NameInMap("StartTime")
     public String startTime;
 
-    /**
-     * <p>The status of the alert. Valid values:</p>
-     * <br>
-     * <p>*   0: The alert is waiting to be handled.</p>
-     * <p>*   1: The alert is being handled.</p>
-     * <p>*   2: The alert is handled.</p>
-     */
     @NameInMap("State")
     public Long state;
 

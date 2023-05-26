@@ -4,12 +4,21 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetPrometheusIntegrationResponseBody extends TeaModel {
+    /**
+     * <p>The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned struct.</p>
+     */
     @NameInMap("Data")
     public GetPrometheusIntegrationResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
@@ -57,54 +66,105 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
     }
 
     public static class GetPrometheusIntegrationResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether the exporter can be deleted.</p>
+         */
         @NameInMap("CanDelete")
         public Boolean canDelete;
 
+        /**
+         * <p>Indicates whether the exporter can be edited.</p>
+         */
         @NameInMap("CanEditor")
         public Boolean canEditor;
 
+        /**
+         * <p>The ID of the Prometheus instance.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The name of the container.</p>
+         */
         @NameInMap("ContainerName")
         public String containerName;
 
+        /**
+         * <p>The description of the exporter.</p>
+         */
         @NameInMap("Describe")
         public String describe;
 
+        /**
+         * <p>The type of the exporter.</p>
+         */
         @NameInMap("ExporterType")
         public String exporterType;
 
+        /**
+         * <p>The exporter ID.</p>
+         */
         @NameInMap("InstanceId")
         public Long instanceId;
 
+        /**
+         * <p>The name of the exporter.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The integration type.</p>
+         */
         @NameInMap("IntegrationType")
         public String integrationType;
 
+        /**
+         * <p>The namespace.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>Indicates whether an upgrade is required.</p>
+         */
         @NameInMap("NeedUpgrade")
         public Boolean needUpgrade;
 
+        /**
+         * <p>The configurations of the exporter. The value is a JSON string.</p>
+         */
         @NameInMap("Param")
         public String param;
 
+        /**
+         * <p>Indicates whether the description is displayed.</p>
+         */
         @NameInMap("ShowDescribe")
         public Boolean showDescribe;
 
+        /**
+         * <p>Indicates whether the exporter logs are displayed.</p>
+         */
         @NameInMap("ShowLog")
         public String showLog;
 
+        /**
+         * <p>The status of the exporter.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The monitored IP address.</p>
+         */
         @NameInMap("Target")
         public String target;
 
+        /**
+         * <p>The version number.</p>
+         */
         @NameInMap("Version")
         public String version;
 

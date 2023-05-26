@@ -17,19 +17,19 @@ public class SearchTraceAppByPageRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The tags.</p>
+     * <p>A list of tags.</p>
      */
     @NameInMap("Tags")
     public java.util.List<SearchTraceAppByPageRequestTags> tags;
@@ -95,13 +95,13 @@ public class SearchTraceAppByPageRequest extends TeaModel {
 
     public static class SearchTraceAppByPageRequestTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("Value")
         public String value;

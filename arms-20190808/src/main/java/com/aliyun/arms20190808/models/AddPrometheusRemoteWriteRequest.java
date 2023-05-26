@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AddPrometheusRemoteWriteRequest extends TeaModel {
     /**
-     * <p>The ID of the Prometheus instance.</p>
+     * <p>The ID of the Prometheus instance. Only aliyun-cs and ecs instances are supported.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

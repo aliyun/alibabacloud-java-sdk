@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckServiceStatusRequest extends TeaModel {
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

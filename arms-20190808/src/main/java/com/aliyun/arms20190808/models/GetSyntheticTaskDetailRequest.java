@@ -4,9 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetSyntheticTaskDetailRequest extends TeaModel {
+    /**
+     * <p>地域ID。默认为cn-hangzhou。</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>云拨测任务ID。</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

@@ -4,9 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetSyntheticTaskDetailResponseBody extends TeaModel {
+    /**
+     * <p>请求ID。</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>任务详情。</p>
+     */
     @NameInMap("TaskDetail")
     public GetSyntheticTaskDetailResponseBodyTaskDetail taskDetail;
 
@@ -309,21 +315,45 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
     }
 
     public static class GetSyntheticTaskDetailResponseBodyTaskDetailExtendInterval extends TeaModel {
+        /**
+         * <p>拨测执行周期。</p>
+         * <br>
+         * <p>- -1：每天</p>
+         * <p>- 0：周日</p>
+         * <p>- 1：周一</p>
+         * <p>- 2：周二</p>
+         * <p>- 3：周三</p>
+         * <p>- 4：周四</p>
+         * <p>- 5：周五</p>
+         * <p>- 6：周六</p>
+         */
         @NameInMap("Days")
         public java.util.List<Long> days;
 
+        /**
+         * <p>当天结束分钟数。</p>
+         */
         @NameInMap("EndMinute")
         public Long endMinute;
 
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>当天结束小时数。</p>
+         */
         @NameInMap("Endhour")
         public Long endhour;
 
+        /**
+         * <p>当天开始拨测时间的小时数。</p>
+         */
         @NameInMap("StartHour")
         public Long startHour;
 
+        /**
+         * <p>当天开始拨测时间的分钟数。</p>
+         */
         @NameInMap("StartMinute")
         public Long startMinute;
 
@@ -394,6 +424,9 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
     }
 
     public static class GetSyntheticTaskDetailResponseBodyTaskDetailMonitorList extends TeaModel {
+        /**
+         * <p>城市编码。</p>
+         */
         @NameInMap("CityCode")
         public Long cityCode;
 
@@ -1261,12 +1294,36 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         @NameInMap("CommonParam")
         public GetSyntheticTaskDetailResponseBodyTaskDetailCommonParam commonParam;
 
+        /**
+         * <p>文件下载任务。</p>
+         */
         @NameInMap("Download")
         public GetSyntheticTaskDetailResponseBodyTaskDetailDownload download;
 
+        /**
+         * <p>自定义扩展频率。</p>
+         */
         @NameInMap("ExtendInterval")
         public GetSyntheticTaskDetailResponseBodyTaskDetailExtendInterval extendInterval;
 
+        /**
+         * <p>拨测频率，单位为分钟。可选频率如下：</p>
+         * <br>
+         * <p>- 1</p>
+         * <p>- 5</p>
+         * <p>- 10</p>
+         * <p>- 15</p>
+         * <p>- 20</p>
+         * <p>- 30</p>
+         * <p>- 60</p>
+         * <p>- 120</p>
+         * <p>- 180</p>
+         * <p>- 240</p>
+         * <p>- 360</p>
+         * <p>- 480</p>
+         * <p>- 720</p>
+         * <p>- 1440</p>
+         */
         @NameInMap("IntervalTime")
         public Long intervalTime;
 
@@ -1291,15 +1348,24 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         @NameInMap("Protocol")
         public GetSyntheticTaskDetailResponseBodyTaskDetailProtocol protocol;
 
+        /**
+         * <p>云拨测任务ID。</p>
+         */
         @NameInMap("TaskId")
         public Long taskId;
 
+        /**
+         * <p>任务名称。</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
         @NameInMap("TaskType")
         public Long taskType;
 
+        /**
+         * <p>拨测地址。</p>
+         */
         @NameInMap("Url")
         public String url;
 

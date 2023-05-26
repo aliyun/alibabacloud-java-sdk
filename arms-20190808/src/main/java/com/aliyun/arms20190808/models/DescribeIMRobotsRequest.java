@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeIMRobotsRequest extends TeaModel {
     /**
-     * <p>The number of pages to query.</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("Page")
     public Long page;
 
     /**
-     * <p>The ID of the IM bot.</p>
+     * <p>The chatbot IDs.</p>
      */
     @NameInMap("RobotIds")
     public String robotIds;
 
     /**
-     * <p>The name of the IM robot.</p>
+     * <p>The name of the IM chatbot.</p>
      */
     @NameInMap("RobotName")
     public String robotName;
 
     /**
-     * <p>The number of IM robots displayed on each page.</p>
+     * <p>The number of IM chatbots to return on each page.</p>
      */
     @NameInMap("Size")
     public Long size;

@@ -59,7 +59,7 @@ public class CreateOrUpdateContactRequest extends TeaModel {
     public Long reissueSendNotice;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

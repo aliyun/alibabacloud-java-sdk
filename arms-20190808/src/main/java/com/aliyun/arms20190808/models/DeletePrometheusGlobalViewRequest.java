@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeletePrometheusGlobalViewRequest extends TeaModel {
     /**
-     * <p>The ID of the aggregation instance.</p>
+     * <p>The ID of the global aggregation instance.</p>
      */
     @NameInMap("GlobalViewClusterId")
     public String globalViewClusterId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

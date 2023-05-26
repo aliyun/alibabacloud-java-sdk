@@ -29,13 +29,13 @@ public class SearchTracesRequest extends TeaModel {
     public String operationName;
 
     /**
-     * <p>The ID of the application.</p>
+     * <p>The application ID.</p>
      */
     @NameInMap("Pid")
     public String pid;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -68,7 +68,7 @@ public class SearchTracesRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<SearchTracesRequestTag> tag;
@@ -204,7 +204,7 @@ public class SearchTracesRequest extends TeaModel {
 
     public static class SearchTracesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag. The following system preset fields are provided:</p>
+         * <p>The tag key. The following system preset fields are provided:</p>
          * <br>
          * <p>*   serverApp: the name of the server application.</p>
          * <p>*   clientApp: the name of the client application.</p>

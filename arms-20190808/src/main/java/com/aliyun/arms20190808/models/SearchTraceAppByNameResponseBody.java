@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class SearchTraceAppByNameResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The information about the application monitoring task.</p>
+     * <p>The information about the monitoring task.</p>
      */
     @NameInMap("TraceApps")
     public java.util.List<SearchTraceAppByNameResponseBodyTraceApps> traceApps;
@@ -75,7 +75,7 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
 
     public static class SearchTraceAppByNameResponseBodyTraceApps extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          */
         @NameInMap("AppId")
         public Long appId;
@@ -87,25 +87,25 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The timestamp generated when the monitoring task was created.</p>
+         * <p>The timestamp generated when the task was created.</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
-         * <p>The list of application aliases.</p>
+         * <p>The aliases of the application.</p>
          */
         @NameInMap("Labels")
         public java.util.List<String> labels;
 
         /**
-         * <p>The PID of the application.</p>
+         * <p>The process identifier (PID) of the application.</p>
          */
         @NameInMap("Pid")
         public String pid;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -126,7 +126,7 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
         public Boolean show;
 
         /**
-         * <p>The list of tags.</p>
+         * <p>A list of tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<SearchTraceAppByNameResponseBodyTraceAppsTags> tags;
@@ -141,13 +141,13 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The timestamp generated when the monitoring task was updated.</p>
+         * <p>The timestamp generated when the task information was updated.</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
         /**
-         * <p>The ID of the user.</p>
+         * <p>The user ID.</p>
          */
         @NameInMap("UserId")
         public String userId;

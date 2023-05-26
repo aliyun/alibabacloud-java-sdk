@@ -5,39 +5,28 @@ import com.aliyun.tea.*;
 
 public class GetAppApiByPageResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code returned for the request. Valid values:</p>
-     * <br>
-     * <p>*   2XX: The request is successful.</p>
-     * <p>*   3XX: A redirection message is returned.</p>
-     * <p>*   4XX: The request is invalid.</p>
-     * <p>*   5XX: A server error occurs.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
-    /**
-     * <p>The struct returned.</p>
-     */
     @NameInMap("Data")
     public GetAppApiByPageResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The struct returned.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The call is successful.</p>
-     * <p>*   `false`: The call fails.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -88,27 +77,15 @@ public class GetAppApiByPageResponseBody extends TeaModel {
     }
 
     public static class GetAppApiByPageResponseBodyData extends TeaModel {
-        /**
-         * <p>The information about the API operation.</p>
-         */
         @NameInMap("Items")
         public java.util.List<java.util.Map<String, ?>> items;
 
-        /**
-         * <p>The page number of the returned page.</p>
-         */
         @NameInMap("Page")
         public Integer page;
 
-        /**
-         * <p>The number of entries returned per page.</p>
-         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        /**
-         * <p>The total number of entries returned.</p>
-         */
         @NameInMap("Total")
         public String total;
 

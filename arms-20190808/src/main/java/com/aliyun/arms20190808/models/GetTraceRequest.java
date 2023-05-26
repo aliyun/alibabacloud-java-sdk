@@ -13,7 +13,7 @@ public class GetTraceRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -27,7 +27,7 @@ public class GetTraceRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The ID of the trace. You can log on to the ARMS console and obtain the trace ID on the **Trace Query** page or **Interface Snapshot** tab.</p>
+     * <p>The trace ID. You can log on to the ARMS console and obtain the trace ID on the **Trace Query** page or **Interface Snapshot** tab.</p>
      */
     @NameInMap("TraceID")
     public String traceID;

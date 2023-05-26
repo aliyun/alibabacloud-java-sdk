@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The value of the matching condition.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>An array of silence policy objects.</p>
+     * <p>An array of matching condition objects.</p>
      */
     @NameInMap("SilencePolicy")
     public CreateOrUpdateSilencePolicyResponseBodySilencePolicy silencePolicy;
@@ -38,28 +38,12 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateSilencePolicyResponseBodySilencePolicyMatchingRulesMatchingConditions extends TeaModel {
-        /**
-         * <p>The key of the matching condition.</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The logical operator of the matching condition. Valid values:</p>
-         * <br>
-         * <p>*   `eq`: equal to.</p>
-         * <p>*   `neq`: not equal to.</p>
-         * <p>*   `in`: contains.</p>
-         * <p>*   `nin`: does not contain.</p>
-         * <p>*   `re`: regular expression match.</p>
-         * <p>*   `nre`: regular expression mismatch.</p>
-         */
         @NameInMap("Operator")
         public String operator;
 
-        /**
-         * <p>The value of the matching condition.</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -95,9 +79,6 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateSilencePolicyResponseBodySilencePolicyMatchingRules extends TeaModel {
-        /**
-         * <p>An array of matching condition objects.</p>
-         */
         @NameInMap("MatchingConditions")
         public java.util.List<CreateOrUpdateSilencePolicyResponseBodySilencePolicyMatchingRulesMatchingConditions> matchingConditions;
 
@@ -118,19 +99,26 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
 
     public static class CreateOrUpdateSilencePolicyResponseBodySilencePolicy extends TeaModel {
         /**
-         * <p>The ID of the silence policy.</p>
+         * <p>The logical operator of the matching condition. Valid values:</p>
+         * <br>
+         * <p>*   `eq`: equal to.</p>
+         * <p>*   `neq`: not equal to.</p>
+         * <p>*   `in`: contains.</p>
+         * <p>*   `nin`: does not contain.</p>
+         * <p>*   `re`: regular expression match.</p>
+         * <p>*   `nre`: regular expression mismatch.</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
-         * <p>An array of matching rule objects.</p>
+         * <p>The key of the matching condition.</p>
          */
         @NameInMap("MatchingRules")
         public java.util.List<CreateOrUpdateSilencePolicyResponseBodySilencePolicyMatchingRules> matchingRules;
 
         /**
-         * <p>The name of the silence policy.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("Name")
         public String name;

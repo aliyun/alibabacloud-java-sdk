@@ -5,52 +5,22 @@ import com.aliyun.tea.*;
 
 public class SearchTracesByPageRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. Unit: milliseconds.</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
-     * <p>The filter conditions.</p>
+     * <p>The key that is used to filter the query results.</p>
      */
     @NameInMap("ExclusionFilters")
     public java.util.List<SearchTracesByPageRequestExclusionFilters> exclusionFilters;
 
     /**
-     * <p>The minimum amount of time consumed by traces. Unit: milliseconds.</p>
+     * <p>The ID of the request.</p>
      */
-    @NameInMap("MinDuration")
-    public Long minDuration;
-
-    /**
-     * <p>The name of the traced span.</p>
-     */
-    @NameInMap("OperationName")
-    public String operationName;
-
-    /**
-     * <p>The number of the page to return.</p>
-     */
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    /**
-     * <p>The number of entries to return on each page. Maximum value: 100.</p>
-     */
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    /**
-     * <p>The ID of the application.</p>
-     */
-    @NameInMap("Pid")
-    public String pid;
-
-    /**
-     * <p>The ID of the region.</p>
-     */
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("IsError")
+    public Boolean isError;
 
     /**
      * <p>Specifies whether to sort the query results in chronological order or reverse chronological order. Default value: `false`.</p>
@@ -58,29 +28,76 @@ public class SearchTracesByPageRequest extends TeaModel {
      * <p>*   `true`: sorts the query results in reverse chronological order.</p>
      * <p>*   `false`: sorts the query results in chronological order.</p>
      */
+    @NameInMap("MinDuration")
+    public Long minDuration;
+
+    /**
+     * <p>The minimum amount of time consumed by traces. Unit: milliseconds.</p>
+     */
+    @NameInMap("OperationName")
+    public String operationName;
+
+    /**
+     * <p>The number of entries to return on each page. Maximum value: 100.</p>
+     */
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    /**
+     * <p>The ID of the application.</p>
+     */
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    /**
+     * <p>The filter conditions.</p>
+     */
+    @NameInMap("Pid")
+    public String pid;
+
+    /**
+     * <p>The name of the application.</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
+
+    /**
+     * <p>The IP address of the host where the application resides.</p>
+     */
     @NameInMap("Reverse")
     public Boolean reverse;
 
     /**
-     * <p>The IP address of the host where the application resides.</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("ServiceIp")
     public String serviceIp;
 
     /**
-     * <p>The name of the application.</p>
+     * <p>The name of the traced span.</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;
 
     /**
-     * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+     * <p>The end of the time range to query. Unit: milliseconds.</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tag key. The following system preset fields are provided:</p>
+     * <br>
+     * <p>*   traceId: the ID of the trace.</p>
+     * <p>*   serverApp: the name of the server application.</p>
+     * <p>*   clientApp: the name of the client application.</p>
+     * <p>*   service: the name of the operation.</p>
+     * <p>*   rpc: the type of the call.</p>
+     * <p>*   msOfSpan: the duration exceeds a specific value.</p>
+     * <p>*   clientIp: the IP address of the client.</p>
+     * <p>*   serverIp: the IP address of the server.</p>
+     * <p>*   isError: specifies whether the call is abnormal.</p>
+     * <p>*   hasTprof: contains only thread profiling.</p>
      */
     @NameInMap("Tags")
     public java.util.List<SearchTracesByPageRequestTags> tags;
@@ -104,6 +121,14 @@ public class SearchTracesByPageRequest extends TeaModel {
     }
     public java.util.List<SearchTracesByPageRequestExclusionFilters> getExclusionFilters() {
         return this.exclusionFilters;
+    }
+
+    public SearchTracesByPageRequest setIsError(Boolean isError) {
+        this.isError = isError;
+        return this;
+    }
+    public Boolean getIsError() {
+        return this.isError;
     }
 
     public SearchTracesByPageRequest setMinDuration(Long minDuration) {
@@ -196,13 +221,13 @@ public class SearchTracesByPageRequest extends TeaModel {
 
     public static class SearchTracesByPageRequestExclusionFilters extends TeaModel {
         /**
-         * <p>The key that is used to filter the query results.</p>
+         * <p>The value of the key that is used to filter the query results.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the key that is used to filter the query results.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -232,24 +257,13 @@ public class SearchTracesByPageRequest extends TeaModel {
 
     public static class SearchTracesByPageRequestTags extends TeaModel {
         /**
-         * <p>The key of the tag. The following system preset fields are provided:</p>
-         * <br>
-         * <p>*   traceId: the ID of the trace.</p>
-         * <p>*   serverApp: the name of the server application.</p>
-         * <p>*   clientApp: the name of the client application.</p>
-         * <p>*   service: the name of the operation.</p>
-         * <p>*   rpc: the type of the call.</p>
-         * <p>*   msOfSpan: the duration exceeds a specific value.</p>
-         * <p>*   clientIp: the IP address of the client.</p>
-         * <p>*   serverIp: the IP address of the server.</p>
-         * <p>*   isError: specifies whether the call is abnormal.</p>
-         * <p>*   hasTprof: contains only thread profiling.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>Map</p>
          */
         @NameInMap("Value")
         public String value;

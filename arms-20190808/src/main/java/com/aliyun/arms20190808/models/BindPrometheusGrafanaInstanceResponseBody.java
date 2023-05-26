@@ -5,25 +5,28 @@ import com.aliyun.tea.*;
 
 public class BindPrometheusGrafanaInstanceResponseBody extends TeaModel {
     /**
-     * <p>The status code returned. 200 indicates that the Prometheus agent was installed. Otherwise, the Prometheus agent fails to be installed.</p>
+     * <p>The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("Data")
     public Boolean data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      */
     @NameInMap("RequestId")
     public String requestId;

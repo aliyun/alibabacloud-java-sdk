@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListEventBridgeIntegrationsRequest extends TeaModel {
     /**
-     * <p>The name of the EventBridge integration.</p>
+     * <p>The number of entries that are returned on each page.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The operation that you want to perform. Set the value to **ListEventBridgeIntegrations**.</p>
      */
     @NameInMap("Page")
     public Long page;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("Size")
     public Long size;

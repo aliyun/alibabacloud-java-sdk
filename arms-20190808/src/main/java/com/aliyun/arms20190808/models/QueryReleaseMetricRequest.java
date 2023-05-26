@@ -4,51 +4,27 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class QueryReleaseMetricRequest extends TeaModel {
-    /**
-     * <p>The ID of the change order.</p>
-     */
     @NameInMap("ChangeOrderId")
     public String changeOrderId;
 
-    /**
-     * <p>The time when the change order was created.</p>
-     */
     @NameInMap("CreateTime")
     public Long createTime;
 
-    /**
-     * <p>The type of the metric that you want to query.</p>
-     */
     @NameInMap("MetricType")
     public String metricType;
 
-    /**
-     * <p>The ID of the Enterprise Distributed Application Service (EDAS) or Kubernetes application.</p>
-     */
     @NameInMap("Pid")
     public String pid;
 
-    /**
-     * <p>This parameter is not in use.</p>
-     */
     @NameInMap("ProxyUserId")
     public String proxyUserId;
 
-    /**
-     * <p>The end time of the version release.</p>
-     */
     @NameInMap("ReleaseEndTime")
     public Long releaseEndTime;
 
-    /**
-     * <p>The start time of the version release.</p>
-     */
     @NameInMap("ReleaseStartTime")
     public Long releaseStartTime;
 
-    /**
-     * <p>The service that you want to query.</p>
-     */
     @NameInMap("Service")
     public String service;
 

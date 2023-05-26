@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class ListPrometheusRemoteWritesResponseBody extends TeaModel {
     /**
-     * <p>The status code returned. 200 indicates that the Prometheus agent was installed. Otherwise, the Prometheus agent fails to be installed.</p>
+     * <p>The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The list of Remote Write configuration items.</p>
+     * <p>The queried remote write configurations.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListPrometheusRemoteWritesResponseBodyData> data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful: true: The call was successful. false: The call failed.</p>
+     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -87,13 +87,13 @@ public class ListPrometheusRemoteWritesResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The Remote Write configuration item.</p>
+         * <p>The name of the remote write configuration.</p>
          */
         @NameInMap("RemoteWriteName")
         public String remoteWriteName;
 
         /**
-         * <p>The details about the Remote Write configuration item. The value is in the YAML format.</p>
+         * <p>The remote write configuration. The configuration is displayed in the YAML format.</p>
          */
         @NameInMap("RemoteWriteYaml")
         public String remoteWriteYaml;

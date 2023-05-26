@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeWebhookContactsRequest extends TeaModel {
     /**
-     * <p>The ID of the contact for webhook alerts.</p>
+     * <p>The alert recovery template.</p>
      */
     @NameInMap("ContactIds")
     public String contactIds;
 
     /**
-     * <p>The number of pages to query.</p>
+     * <p>Webhook alert contacts.</p>
      */
     @NameInMap("Page")
     public Long page;
 
     /**
-     * <p>The number of webhook alert contacts displayed on each page.</p>
+     * <p>The alert notification template.</p>
      */
     @NameInMap("Size")
     public Long size;
 
     /**
-     * <p>The name of the webhook alert contact.</p>
+     * <p>Webhook alert contact details.</p>
      */
     @NameInMap("WebhookName")
     public String webhookName;
