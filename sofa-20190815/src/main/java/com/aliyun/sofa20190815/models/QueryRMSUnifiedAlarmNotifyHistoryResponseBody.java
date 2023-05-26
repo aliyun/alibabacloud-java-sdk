@@ -116,6 +116,9 @@ public class QueryRMSUnifiedAlarmNotifyHistoryResponseBody extends TeaModel {
         @NameInMap("AlarmRuleName")
         public String alarmRuleName;
 
+        @NameInMap("AlarmRuleUuid")
+        public String alarmRuleUuid;
+
         @NameInMap("AlarmSilenceTime")
         public Long alarmSilenceTime;
 
@@ -124,6 +127,12 @@ public class QueryRMSUnifiedAlarmNotifyHistoryResponseBody extends TeaModel {
 
         @NameInMap("AlarmTargetDeleted")
         public Boolean alarmTargetDeleted;
+
+        @NameInMap("AlarmTargetIdentify")
+        public String alarmTargetIdentify;
+
+        @NameInMap("AlarmTargetType")
+        public String alarmTargetType;
 
         @NameInMap("AlarmTime")
         public Long alarmTime;
@@ -235,6 +244,14 @@ public class QueryRMSUnifiedAlarmNotifyHistoryResponseBody extends TeaModel {
             return this.alarmRuleName;
         }
 
+        public QueryRMSUnifiedAlarmNotifyHistoryResponseBodyAlarmNotifyHistories setAlarmRuleUuid(String alarmRuleUuid) {
+            this.alarmRuleUuid = alarmRuleUuid;
+            return this;
+        }
+        public String getAlarmRuleUuid() {
+            return this.alarmRuleUuid;
+        }
+
         public QueryRMSUnifiedAlarmNotifyHistoryResponseBodyAlarmNotifyHistories setAlarmSilenceTime(Long alarmSilenceTime) {
             this.alarmSilenceTime = alarmSilenceTime;
             return this;
@@ -257,6 +274,22 @@ public class QueryRMSUnifiedAlarmNotifyHistoryResponseBody extends TeaModel {
         }
         public Boolean getAlarmTargetDeleted() {
             return this.alarmTargetDeleted;
+        }
+
+        public QueryRMSUnifiedAlarmNotifyHistoryResponseBodyAlarmNotifyHistories setAlarmTargetIdentify(String alarmTargetIdentify) {
+            this.alarmTargetIdentify = alarmTargetIdentify;
+            return this;
+        }
+        public String getAlarmTargetIdentify() {
+            return this.alarmTargetIdentify;
+        }
+
+        public QueryRMSUnifiedAlarmNotifyHistoryResponseBodyAlarmNotifyHistories setAlarmTargetType(String alarmTargetType) {
+            this.alarmTargetType = alarmTargetType;
+            return this;
+        }
+        public String getAlarmTargetType() {
+            return this.alarmTargetType;
         }
 
         public QueryRMSUnifiedAlarmNotifyHistoryResponseBodyAlarmNotifyHistories setAlarmTime(Long alarmTime) {

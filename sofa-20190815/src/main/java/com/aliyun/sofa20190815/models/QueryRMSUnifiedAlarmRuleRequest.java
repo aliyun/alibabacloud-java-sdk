@@ -28,6 +28,9 @@ public class QueryRMSUnifiedAlarmRuleRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>datasource</p>
+     */
     @NameInMap("RefDatasourceType")
     public String refDatasourceType;
 

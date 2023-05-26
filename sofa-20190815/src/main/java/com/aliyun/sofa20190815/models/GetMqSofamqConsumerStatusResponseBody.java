@@ -290,6 +290,9 @@ public class GetMqSofamqConsumerStatusResponseBody extends TeaModel {
         @NameInMap("Connection")
         public String connection;
 
+        /**
+         * <p>PUSH/PULL</p>
+         */
         @NameInMap("ConsumeType")
         public String consumeType;
 

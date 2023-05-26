@@ -7,6 +7,9 @@ public class ListMqSofamqWarnHistoryRequest extends TeaModel {
     @NameInMap("Cell")
     public String cell;
 
+    /**
+     * <p>Group ID</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 

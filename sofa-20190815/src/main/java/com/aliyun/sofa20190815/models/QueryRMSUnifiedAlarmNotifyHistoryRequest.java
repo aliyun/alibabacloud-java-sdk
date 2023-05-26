@@ -22,6 +22,9 @@ public class QueryRMSUnifiedAlarmNotifyHistoryRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Long currentPage;
 
+    @NameInMap("DashboardQueryParamJsonStr")
+    public String dashboardQueryParamJsonStr;
+
     @NameInMap("EndTime")
     public Long endTime;
 
@@ -97,6 +100,14 @@ public class QueryRMSUnifiedAlarmNotifyHistoryRequest extends TeaModel {
     }
     public Long getCurrentPage() {
         return this.currentPage;
+    }
+
+    public QueryRMSUnifiedAlarmNotifyHistoryRequest setDashboardQueryParamJsonStr(String dashboardQueryParamJsonStr) {
+        this.dashboardQueryParamJsonStr = dashboardQueryParamJsonStr;
+        return this;
+    }
+    public String getDashboardQueryParamJsonStr() {
+        return this.dashboardQueryParamJsonStr;
     }
 
     public QueryRMSUnifiedAlarmNotifyHistoryRequest setEndTime(Long endTime) {
