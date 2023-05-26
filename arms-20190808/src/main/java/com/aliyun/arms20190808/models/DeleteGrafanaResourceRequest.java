@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DeleteGrafanaResourceRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The name of the cluster.</p>
+     * <p>The instance name.</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

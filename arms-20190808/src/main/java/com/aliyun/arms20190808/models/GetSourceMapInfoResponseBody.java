@@ -4,15 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetSourceMapInfoResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The details of the SourceMap files.</p>
-     */
     @NameInMap("SourceMapList")
     public java.util.List<GetSourceMapInfoResponseBodySourceMapList> sourceMapList;
 
@@ -38,33 +32,18 @@ public class GetSourceMapInfoResponseBody extends TeaModel {
     }
 
     public static class GetSourceMapInfoResponseBodySourceMapList extends TeaModel {
-        /**
-         * <p>The ID of the SourceMap file.</p>
-         */
         @NameInMap("Fid")
         public String fid;
 
-        /**
-         * <p>The name of the SourceMap file.</p>
-         */
         @NameInMap("FileName")
         public String fileName;
 
-        /**
-         * <p>The size of the file. Unit: KB.</p>
-         */
         @NameInMap("Size")
         public String size;
 
-        /**
-         * <p>The timestamp when the file was uploaded.</p>
-         */
         @NameInMap("UploadTime")
         public String uploadTime;
 
-        /**
-         * <p>The version of the file.</p>
-         */
         @NameInMap("Version")
         public String version;
 

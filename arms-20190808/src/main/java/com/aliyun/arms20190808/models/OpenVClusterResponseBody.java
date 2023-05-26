@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class OpenVClusterResponseBody extends TeaModel {
     /**
-     * <p>The response parameters in the JSON format.</p>
+     * <p>The cluster ID.</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
-     * <p>The ID of the request. You can query logs and troubleshoot issues based on the ID.</p>
+     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

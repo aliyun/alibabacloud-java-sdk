@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChangeResourceGroupResponseBody extends TeaModel {
     /**
-     * <p>Interface status or pop error code.</p>
+     * <p>The status code or error code.</p>
      */
     @NameInMap("Code")
     public String code;
@@ -23,7 +23,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -73,7 +73,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The resource ID.</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;

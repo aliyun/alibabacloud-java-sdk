@@ -23,7 +23,7 @@ public class AddAliClusterIdsToPrometheusGlobalViewRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

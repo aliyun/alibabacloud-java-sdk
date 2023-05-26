@@ -5,28 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListInsightsEventsRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The details of the event.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The details of the event.</p>
+     * <p>Average response-time spikes of application services.</p>
      */
     @NameInMap("InsightsTypes")
     public String insightsTypes;
-
-    /**
-     * <p>The end of the time range to query. The value is a timestamp.</p>
-     */
-    @NameInMap("Pid")
-    public String pid;
-
-    /**
-     * <p>The ID of the application.</p>
-     */
-    @NameInMap("RegionId")
-    public String regionId;
 
     /**
      * <p>The types of the events that you want to query. Separate multiple event types with commas (,). If you do not specify this parameter, all events are queried.</p>
@@ -35,6 +23,18 @@ public class ListInsightsEventsRequest extends TeaModel {
      * <p>*   topErrorIncrease: the top five API error-rate spike events with the highest traffic.</p>
      * <p>*   topRtIncrease: API response-time spike events. Examples: HTTP API response-time spike events and Dubbo API response-time spike events.</p>
      * <p>*   rtIncrease: the top five API response-time spike events with the highest traffic.</p>
+     */
+    @NameInMap("Pid")
+    public String pid;
+
+    /**
+     * <p>The end of the time range to query. The value is a timestamp.</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
+
+    /**
+     * <p>The ID of the request.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

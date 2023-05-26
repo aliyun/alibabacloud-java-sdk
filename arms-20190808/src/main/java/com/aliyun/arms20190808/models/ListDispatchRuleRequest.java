@@ -4,25 +4,12 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListDispatchRuleRequest extends TeaModel {
-    /**
-     * <p>The name of the notification policy to be queried. Fuzzy match is supported.</p>
-     */
     @NameInMap("Name")
     public String name;
 
-    /**
-     * <p>The ID of the region.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>*   The type of notification policies to be queried. Valid values: `false`: notification policies created in Application Real-Time Monitoring Service (ARMS). This is the default value.</p>
-     * <br>
-     * <p>*   `true`: notification policies created in an external system.</p>
-     * <br>
-     * <p>> You cannot use the ARMS console to modify the dispatch rules of a notification policy that is created in an external system.</p>
-     */
     @NameInMap("System")
     public Boolean system;
 

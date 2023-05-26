@@ -11,7 +11,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
     public GetOnCallSchedulesDetailResponseBodyData data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

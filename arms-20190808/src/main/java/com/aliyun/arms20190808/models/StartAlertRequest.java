@@ -4,15 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class StartAlertRequest extends TeaModel {
-    /**
-     * <p>The ID of the alert rule. You can call the SearchAlertRules operation and view the `Id` parameter in the response. For more information, see [SearchAlertRules](~~175825~~).</p>
-     */
     @NameInMap("AlertId")
     public String alertId;
 
-    /**
-     * <p>The ID of the region. Set the value to `cn-hangzhou`.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,6 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class UpdatePrometheusIntegrationRequest extends TeaModel {
+    /**
+     * <p>arms-hz-central</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
@@ -16,6 +19,9 @@ public class UpdatePrometheusIntegrationRequest extends TeaModel {
     @NameInMap("Param")
     public String param;
 
+    /**
+     * <p>success=false</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

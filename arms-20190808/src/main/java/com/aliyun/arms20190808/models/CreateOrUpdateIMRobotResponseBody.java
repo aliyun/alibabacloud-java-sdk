@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
     /**
-     * <p>Returns an AlertRobot object.</p>
+     * <p>The information about the IM chatbot.</p>
      */
     @NameInMap("AlertRobot")
     public CreateOrUpdateIMRobotResponseBodyAlertRobot alertRobot;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -45,16 +45,16 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
         public String cardTemplate;
 
         /**
-         * <p>Specifies whether to send daily statistics.</p>
+         * <p>Indicates whether daily statistics are sent. Valid values:</p>
          * <br>
-         * <p>*   `false` (default): does not send statistics.</p>
-         * <p>*   `true`: sends statistics.</p>
+         * <p>*   `false` (default): Daily statistics are not sent.</p>
+         * <p>*   `true`: Daily statistics are sent.</p>
          */
         @NameInMap("DailyNoc")
         public Boolean dailyNoc;
 
         /**
-         * <p>The time when the daily statistics are sent. ARMS Alert Management sends the total number of alerts generated today, the number of resolved alerts, and the number of pending alerts at the specified time point.</p>
+         * <p>The point in time at which the daily statistics are sent. The information that ARMS sends at the specified points in time includes the total number of alerts generated on the current day, the number of cleared alerts, and the number of alerts to be cleared.</p>
          */
         @NameInMap("DailyNocTime")
         public String dailyNocTime;
@@ -66,19 +66,19 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
         public Boolean enableOutgoing;
 
         /**
-         * <p>The webhook address of the IM bot.</p>
+         * <p>The webhook URL of the IM chatbot.</p>
          */
         @NameInMap("RobotAddress")
         public String robotAddress;
 
         /**
-         * <p>The ID of the IM bot.</p>
+         * <p>The ID of the IM chatbot.</p>
          */
         @NameInMap("RobotId")
         public Float robotId;
 
         /**
-         * <p>The name of the IM robot.</p>
+         * <p>The name of the IM chatbot.</p>
          */
         @NameInMap("RobotName")
         public String robotName;
@@ -90,10 +90,10 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
         public String token;
 
         /**
-         * <p>IM Robot Type:</p>
+         * <p>The type of the IM chatbot. Valid values:</p>
          * <br>
-         * <p>*   `dingding`: DingTalk robot.</p>
-         * <p>*   `wechat`: Enterprise WeChat Robot.</p>
+         * <p>*   `dingding`: DingTalk chatbot</p>
+         * <p>*   `wechat`: WeCom chatbot</p>
          */
         @NameInMap("Type")
         public String type;

@@ -4,34 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateSyntheticTaskResponseBody extends TeaModel {
-    /**
-     * <p>The status code returned.</p>
-     * <br>
-     * <p>*   1001: The request was successful.</p>
-     * <p>*   1002: The request failed.</p>
-     * <p>*   1003: Parameter errors occurred.</p>
-     * <p>*   1004: Authentication failed.</p>
-     * <p>*   1006: The task does not exist.</p>
-     * <p>*   1099: Internal errors occurred.</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The information about the synthetic monitoring task.</p>
-     */
     @NameInMap("Data")
     public CreateSyntheticTaskResponseBodyData data;
 
-    /**
-     * <p>The message that is returned when the task failed to be created.</p>
-     */
     @NameInMap("Msg")
     public String msg;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -73,9 +54,6 @@ public class CreateSyntheticTaskResponseBody extends TeaModel {
     }
 
     public static class CreateSyntheticTaskResponseBodyData extends TeaModel {
-        /**
-         * <p>The ID of the synthetic monitoring task.</p>
-         */
         @NameInMap("TaskId")
         public Long taskId;
 

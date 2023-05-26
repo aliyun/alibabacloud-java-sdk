@@ -4,27 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class AddPrometheusGlobalViewByAliClusterIdsRequest extends TeaModel {
-    /**
-     * <p>The IDs of clusters. Separate multiple IDs with commas (,).</p>
-     */
     @NameInMap("ClusterIds")
     public String clusterIds;
 
-    /**
-     * <p>The name of the global aggregation instance.</p>
-     */
     @NameInMap("GroupName")
     public String groupName;
 
-    /**
-     * <p>The identifier to identify the service if custom dashboards are created for the specified clusters.</p>
-     */
     @NameInMap("ProductCode")
     public String productCode;
 
-    /**
-     * <p>The ID of the region.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

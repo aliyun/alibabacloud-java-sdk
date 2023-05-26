@@ -4,15 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class InstallCmsExporterResponseBody extends TeaModel {
-    /**
-     * <p>Indicates whether the request was successful.</p>
-     */
     @NameInMap("Data")
     public String data;
 
-    /**
-     * <p>The ID of the request. You can query logs and troubleshoot issues based on the ID.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

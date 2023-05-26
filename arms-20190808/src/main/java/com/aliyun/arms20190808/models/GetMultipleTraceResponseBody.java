@@ -4,15 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetMultipleTraceResponseBody extends TeaModel {
-    /**
-     * <p>The details of traces.</p>
-     */
     @NameInMap("MultiCallChainInfos")
     public java.util.List<GetMultipleTraceResponseBodyMultiCallChainInfos> multiCallChainInfos;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,15 +32,9 @@ public class GetMultipleTraceResponseBody extends TeaModel {
     }
 
     public static class GetMultipleTraceResponseBodyMultiCallChainInfosSpansLogEventListTagEntryList extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag value.</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -74,15 +62,9 @@ public class GetMultipleTraceResponseBody extends TeaModel {
     }
 
     public static class GetMultipleTraceResponseBodyMultiCallChainInfosSpansLogEventList extends TeaModel {
-        /**
-         * <p>The tags of the trace.</p>
-         */
         @NameInMap("TagEntryList")
         public java.util.List<GetMultipleTraceResponseBodyMultiCallChainInfosSpansLogEventListTagEntryList> tagEntryList;
 
-        /**
-         * <p>The time when the log was generated. The value is a timestamp.</p>
-         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
@@ -110,15 +92,9 @@ public class GetMultipleTraceResponseBody extends TeaModel {
     }
 
     public static class GetMultipleTraceResponseBodyMultiCallChainInfosSpansTagEntryList extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag value.</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -146,113 +122,45 @@ public class GetMultipleTraceResponseBody extends TeaModel {
     }
 
     public static class GetMultipleTraceResponseBodyMultiCallChainInfosSpans extends TeaModel {
-        /**
-         * <p>The amount of time consumed by the trace. Unit: milliseconds.</p>
-         */
         @NameInMap("Duration")
         public Long duration;
 
-        /**
-         * <p>Indicates whether a method stack was provided.</p>
-         * <br>
-         * <p>*   `true`: A method stack was provided.</p>
-         * <p>*   `false`: No method stack was provided.</p>
-         */
         @NameInMap("HaveStack")
         public Boolean haveStack;
 
-        /**
-         * <p>The log events in the trace.</p>
-         */
         @NameInMap("LogEventList")
         public java.util.List<GetMultipleTraceResponseBodyMultiCallChainInfosSpansLogEventList> logEventList;
 
-        /**
-         * <p>The name of the traced span.</p>
-         */
         @NameInMap("OperationName")
         public String operationName;
 
-        /**
-         * <p>The ID of the parent span.</p>
-         */
         @NameInMap("ParentSpanId")
         public String parentSpanId;
 
-        /**
-         * <p>The status code returned.</p>
-         */
         @NameInMap("ResultCode")
         public String resultCode;
 
-        /**
-         * <p>The ID of the RPC mode.</p>
-         */
         @NameInMap("RpcId")
         public String rpcId;
 
-        /**
-         * <p>The type of the remote procedure call (RPC) mode.</p>
-         * <br>
-         * <p>*   0: HTTP entry</p>
-         * <p>*   25: HTTP call</p>
-         * <p>*   1: High-speed Service Framework (HSF) call</p>
-         * <p>*   2: HSF provision</p>
-         * <p>*   40: on-premises API call</p>
-         * <p>*   60: MySQL call</p>
-         * <p>*   62: Oracle call</p>
-         * <p>*   63: PostgreSQL call</p>
-         * <p>*   70: Redis call</p>
-         * <p>*   4: Taobao Distributed Data Layer (TDDL) call</p>
-         * <p>*   5: Tair call</p>
-         * <p>*   13: MetaQ message sending</p>
-         * <p>*   252: MetaQ message receiving</p>
-         * <p>*   3: notification sending</p>
-         * <p>*   254: notification receiving</p>
-         * <p>*   7: Apache Dubbo call</p>
-         * <p>*   8: Apache Dubbo provision</p>
-         * <p>*   19: SOFARPC call</p>
-         * <p>*   18: SOFARPC provision</p>
-         * <p>*   11: Distributed Service Framework (DSF) call</p>
-         * <p>*   12: DSF provision</p>
-         * <p>*   \-1: unknown call</p>
-         */
         @NameInMap("RpcType")
         public Integer rpcType;
 
-        /**
-         * <p>The IP address of the host where the application resides.</p>
-         */
         @NameInMap("ServiceIp")
         public String serviceIp;
 
-        /**
-         * <p>The name of the application.</p>
-         */
         @NameInMap("ServiceName")
         public String serviceName;
 
-        /**
-         * <p>The ID of the span.</p>
-         */
         @NameInMap("SpanId")
         public String spanId;
 
-        /**
-         * <p>The tags of the trace.</p>
-         */
         @NameInMap("TagEntryList")
         public java.util.List<GetMultipleTraceResponseBodyMultiCallChainInfosSpansTagEntryList> tagEntryList;
 
-        /**
-         * <p>The timestamp.</p>
-         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
-        /**
-         * <p>The ID of the trace.</p>
-         */
         @NameInMap("TraceID")
         public String traceID;
 
@@ -376,15 +284,9 @@ public class GetMultipleTraceResponseBody extends TeaModel {
     }
 
     public static class GetMultipleTraceResponseBodyMultiCallChainInfos extends TeaModel {
-        /**
-         * <p>The details of the trace.</p>
-         */
         @NameInMap("Spans")
         public java.util.List<GetMultipleTraceResponseBodyMultiCallChainInfosSpans> spans;
 
-        /**
-         * <p>The ID of the trace.</p>
-         */
         @NameInMap("TraceID")
         public String traceID;
 

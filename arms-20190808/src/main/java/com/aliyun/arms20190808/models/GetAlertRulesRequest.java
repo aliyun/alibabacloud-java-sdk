@@ -4,77 +4,35 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetAlertRulesRequest extends TeaModel {
-    /**
-     * <p>The unique identifiers (IDs) of alert rules.</p>
-     * <br>
-     * <p>*   If you do not specify this parameter, the API operation does not filter alert rules based on their IDs.</p>
-     * <p>*   If you specify this parameter, the API operation returns only the information of the specified alert rules. Other filter conditions also take effect.</p>
-     * <br>
-     * <p>> When you call the GetAlertRules operation, you can specify other request parameters to obtain the AlertIds parameter from the response. Then, you can specify the AlertIds parameter to query the specified alert rules.</p>
-     */
     @NameInMap("AlertIds")
     public String alertIds;
 
-    /**
-     * <p>The names of alert rules. When you create alert rules of the new version, you cannot specify duplicate names. However, existing alert rules may have duplicate names. Therefore, the **AlertName** parameter does not uniquely identify an alert rule.</p>
-     * <br>
-     * <p>*   If you do not specify this parameter, the API operation does not filter alert rules based on their names.</p>
-     * <p>*   If you specify this parameter, the API operation returns only the information of the specified alert rules. Other filter conditions also take effect.</p>
-     */
     @NameInMap("AlertNames")
     public String alertNames;
 
-    /**
-     * <p>The status of the alert rule. Valid values:</p>
-     * <br>
-     * <p>*   RUNNING</p>
-     * <p>*   STOPPED</p>
-     * <p>*   PAUSED</p>
-     * <br>
-     * <p>> The **PAUSED** status indicates that the alert rule was abnormal and was paused by the system. The alert rule might be paused because it was not unique or the associated cluster was deleted.</p>
-     */
     @NameInMap("AlertStatus")
     public String alertStatus;
 
-    /**
-     * <p>The type of the alert rule. Valid values:</p>
-     * <br>
-     * <p>*   APPLICATION_MONITORING_ALERT_RULE: an alert rule of Application Monitoring</p>
-     * <p>*   BROWSER_MONITORING_ALERT_RULE: an alert rule of Browser Monitoring</p>
-     * <p>*   PROMETHEUS_MONITORING_ALERT_RULE: an alert rule of Prometheus Service</p>
-     */
     @NameInMap("AlertType")
     public String alertType;
 
-    /**
-     * <p>The cluster ID of the Prometheus alert rule.</p>
-     */
     @NameInMap("ClusterId")
     public String clusterId;
 
-    /**
-     * <p>The number of the page to return.</p>
-     */
     @NameInMap("Page")
     public Long page;
 
-    /**
-     * <p>You do not need to configure this parameter.</p>
-     */
     @NameInMap("ProductCode")
     public String productCode;
 
-    /**
-     * <p>The region ID.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The number of alert rules to return on each page.</p>
-     */
     @NameInMap("Size")
     public Long size;
+
+    @NameInMap("Tags")
+    public java.util.List<GetAlertRulesRequestTags> tags;
 
     public static GetAlertRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAlertRulesRequest self = new GetAlertRulesRequest();
@@ -151,6 +109,44 @@ public class GetAlertRulesRequest extends TeaModel {
     }
     public Long getSize() {
         return this.size;
+    }
+
+    public GetAlertRulesRequest setTags(java.util.List<GetAlertRulesRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<GetAlertRulesRequestTags> getTags() {
+        return this.tags;
+    }
+
+    public static class GetAlertRulesRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetAlertRulesRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            GetAlertRulesRequestTags self = new GetAlertRulesRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAlertRulesRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetAlertRulesRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

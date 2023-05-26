@@ -4,15 +4,27 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class AppendInstancesToPrometheusGlobalViewRequest extends TeaModel {
+    /**
+     * <p>The list of global aggregation instances. The value is a JSON string.</p>
+     */
     @NameInMap("Clusters")
     public String clusters;
 
+    /**
+     * <p>The ID of the global aggregation instance.</p>
+     */
     @NameInMap("GlobalViewClusterId")
     public String globalViewClusterId;
 
+    /**
+     * <p>The name of the global aggregation instance.</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

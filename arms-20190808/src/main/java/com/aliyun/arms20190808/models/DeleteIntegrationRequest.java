@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteIntegrationRequest extends TeaModel {
     /**
-     * <p>The ID of the Container Service for Kubernetes cluster.</p>
+     * <p>The ID of the ACK cluster.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -17,7 +17,7 @@ public class DeleteIntegrationRequest extends TeaModel {
     public String integration;
 
     /**
-     * <p>The region ID of the ARMS instance.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

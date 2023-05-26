@@ -649,7 +649,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ***
+      * The ID of the request.
       *
       * @param request ConfigAppRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -692,7 +692,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ***
+      * The ID of the request.
       *
       * @param request ConfigAppRequest
       * @return ConfigAppResponse
@@ -703,7 +703,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation is no longer maintained. To create or modify an alert contact, call the CreateOrUpdateContact operation provided by the new version of the Alert Management module.
+      * The ID of the request.
       *
       * @param request CreateAlertContactRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -758,7 +758,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation is no longer maintained. To create or modify an alert contact, call the CreateOrUpdateContact operation provided by the new version of the Alert Management module.
+      * The ID of the request.
       *
       * @param request CreateAlertContactRequest
       * @return CreateAlertContactResponse
@@ -768,13 +768,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createAlertContactWithOptions(request, runtime);
     }
 
-    /**
-      * ************
-      *
-      * @param request CreateAlertContactGroupRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateAlertContactGroupResponse
-     */
     public CreateAlertContactGroupResponse createAlertContactGroupWithOptions(CreateAlertContactGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -807,12 +800,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAlertContactGroupResponse());
     }
 
-    /**
-      * ************
-      *
-      * @param request CreateAlertContactGroupRequest
-      * @return CreateAlertContactGroupResponse
-     */
     public CreateAlertContactGroupResponse createAlertContactGroup(CreateAlertContactGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createAlertContactGroupWithOptions(request, runtime);
@@ -981,6 +968,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             body.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            body.put("Tags", request.tags);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1398,13 +1389,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createOrUpdateWebhookContactWithOptions(request, runtime);
     }
 
-    /**
-      * > We recommend that you call the [CreateOrUpdateAlertRule](~~411960~~) operation to create a Prometheus alert rule.
-      *
-      * @param request CreatePrometheusAlertRuleRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreatePrometheusAlertRuleResponse
-     */
     public CreatePrometheusAlertRuleResponse createPrometheusAlertRuleWithOptions(CreatePrometheusAlertRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1448,6 +1432,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            query.put("Tags", request.tags);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
             query.put("Type", request.type);
         }
@@ -1469,15 +1457,129 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePrometheusAlertRuleResponse());
     }
 
-    /**
-      * > We recommend that you call the [CreateOrUpdateAlertRule](~~411960~~) operation to create a Prometheus alert rule.
-      *
-      * @param request CreatePrometheusAlertRuleRequest
-      * @return CreatePrometheusAlertRuleResponse
-     */
     public CreatePrometheusAlertRuleResponse createPrometheusAlertRule(CreatePrometheusAlertRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createPrometheusAlertRuleWithOptions(request, runtime);
+    }
+
+    public CreatePrometheusInstanceResponse createPrometheusInstanceWithOptions(CreatePrometheusInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allSubClustersSuccess)) {
+            query.put("AllSubClustersSuccess", request.allSubClustersSuccess);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterName)) {
+            query.put("ClusterName", request.clusterName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterType)) {
+            query.put("ClusterType", request.clusterType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.grafanaInstanceId)) {
+            query.put("GrafanaInstanceId", request.grafanaInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityGroupId)) {
+            query.put("SecurityGroupId", request.securityGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subClustersJson)) {
+            query.put("SubClustersJson", request.subClustersJson);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            query.put("Tags", request.tags);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
+            query.put("VSwitchId", request.vSwitchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreatePrometheusInstance"),
+            new TeaPair("version", "2019-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePrometheusInstanceResponse());
+    }
+
+    public CreatePrometheusInstanceResponse createPrometheusInstance(CreatePrometheusInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createPrometheusInstanceWithOptions(request, runtime);
+    }
+
+    public CreatePrometheusMonitoringResponse createPrometheusMonitoringWithOptions(CreatePrometheusMonitoringRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configYaml)) {
+            body.put("ConfigYaml", request.configYaml);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreatePrometheusMonitoring"),
+            new TeaPair("version", "2019-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePrometheusMonitoringResponse());
+    }
+
+    public CreatePrometheusMonitoringResponse createPrometheusMonitoring(CreatePrometheusMonitoringRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createPrometheusMonitoringWithOptions(request, runtime);
     }
 
     public CreateRetcodeAppResponse createRetcodeAppWithOptions(CreateRetcodeAppRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1730,13 +1832,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.delAuthTokenWithOptions(request, runtime);
     }
 
-    /**
-      * ********
-      *
-      * @param request DeleteAlertContactRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteAlertContactResponse
-     */
     public DeleteAlertContactResponse deleteAlertContactWithOptions(DeleteAlertContactRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1765,24 +1860,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAlertContactResponse());
     }
 
-    /**
-      * ********
-      *
-      * @param request DeleteAlertContactRequest
-      * @return DeleteAlertContactResponse
-     */
     public DeleteAlertContactResponse deleteAlertContact(DeleteAlertContactRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteAlertContactWithOptions(request, runtime);
     }
 
-    /**
-      * ********
-      *
-      * @param request DeleteAlertContactGroupRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteAlertContactGroupResponse
-     */
     public DeleteAlertContactGroupResponse deleteAlertContactGroupWithOptions(DeleteAlertContactGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1811,12 +1893,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAlertContactGroupResponse());
     }
 
-    /**
-      * ********
-      *
-      * @param request DeleteAlertContactGroupRequest
-      * @return DeleteAlertContactGroupResponse
-     */
     public DeleteAlertContactGroupResponse deleteAlertContactGroup(DeleteAlertContactGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteAlertContactGroupWithOptions(request, runtime);
@@ -1851,13 +1927,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteAlertRuleWithOptions(request, runtime);
     }
 
-    /**
-      * The current operation is no longer maintained. Call the DeleteAlertRule operation of Alert Management (New) to delete alert rules.
-      *
-      * @param request DeleteAlertRulesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteAlertRulesResponse
-     */
     public DeleteAlertRulesResponse deleteAlertRulesWithOptions(DeleteAlertRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1886,12 +1955,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAlertRulesResponse());
     }
 
-    /**
-      * The current operation is no longer maintained. Call the DeleteAlertRule operation of Alert Management (New) to delete alert rules.
-      *
-      * @param request DeleteAlertRulesRequest
-      * @return DeleteAlertRulesResponse
-     */
     public DeleteAlertRulesResponse deleteAlertRules(DeleteAlertRulesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteAlertRulesWithOptions(request, runtime);
@@ -1988,13 +2051,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteContactGroupWithOptions(request, runtime);
     }
 
-    /**
-      * ********
-      *
-      * @param request DeleteDispatchRuleRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteDispatchRuleResponse
-     */
     public DeleteDispatchRuleResponse deleteDispatchRuleWithOptions(DeleteDispatchRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2023,12 +2079,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDispatchRuleResponse());
     }
 
-    /**
-      * ********
-      *
-      * @param request DeleteDispatchRuleRequest
-      * @return DeleteDispatchRuleResponse
-     */
     public DeleteDispatchRuleResponse deleteDispatchRule(DeleteDispatchRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDispatchRuleWithOptions(request, runtime);
@@ -2323,6 +2373,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeletePrometheusIntegrationResponse deletePrometheusIntegration(DeletePrometheusIntegrationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deletePrometheusIntegrationWithOptions(request, runtime);
+    }
+
+    public DeletePrometheusMonitoringResponse deletePrometheusMonitoringWithOptions(DeletePrometheusMonitoringRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.monitoringName)) {
+            query.put("MonitoringName", request.monitoringName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeletePrometheusMonitoring"),
+            new TeaPair("version", "2019-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeletePrometheusMonitoringResponse());
+    }
+
+    public DeletePrometheusMonitoringResponse deletePrometheusMonitoring(DeletePrometheusMonitoringRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deletePrometheusMonitoringWithOptions(request, runtime);
     }
 
     public DeletePrometheusRemoteWriteResponse deletePrometheusRemoteWriteWithOptions(DeletePrometheusRemoteWriteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2630,6 +2721,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Page", request.page);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.size)) {
             query.put("Size", request.size);
         }
@@ -2677,6 +2772,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.phone)) {
             query.put("Phone", request.phone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.size)) {
@@ -2866,6 +2965,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeWebhookContactsWithOptions(request, runtime);
     }
 
+    public EnableMetricResponse enableMetricWithOptions(EnableMetricRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dropMetric)) {
+            query.put("DropMetric", request.dropMetric);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableMetric"),
+            new TeaPair("version", "2019-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableMetricResponse());
+    }
+
+    public EnableMetricResponse enableMetric(EnableMetricRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.enableMetricWithOptions(request, runtime);
+    }
+
     public GetAgentDownloadUrlResponse getAgentDownloadUrlWithOptions(GetAgentDownloadUrlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -2928,6 +3064,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.size)) {
             query.put("Size", request.size);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            query.put("Tags", request.tags);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3294,7 +3434,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * None.
+      * The ID of the request.
       *
       * @param request GetPrometheusApiTokenRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3325,7 +3465,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * None.
+      * The ID of the request.
       *
       * @param request GetPrometheusApiTokenRequest
       * @return GetPrometheusApiTokenResponse
@@ -3368,6 +3508,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getPrometheusGlobalViewWithOptions(request, runtime);
     }
 
+    public GetPrometheusInstanceResponse getPrometheusInstanceWithOptions(GetPrometheusInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetPrometheusInstance"),
+            new TeaPair("version", "2019-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPrometheusInstanceResponse());
+    }
+
+    public GetPrometheusInstanceResponse getPrometheusInstance(GetPrometheusInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getPrometheusInstanceWithOptions(request, runtime);
+    }
+
     public GetPrometheusIntegrationResponse getPrometheusIntegrationWithOptions(GetPrometheusIntegrationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3407,6 +3580,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetPrometheusIntegrationResponse getPrometheusIntegration(GetPrometheusIntegrationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getPrometheusIntegrationWithOptions(request, runtime);
+    }
+
+    public GetPrometheusMonitoringResponse getPrometheusMonitoringWithOptions(GetPrometheusMonitoringRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.monitoringName)) {
+            query.put("MonitoringName", request.monitoringName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetPrometheusMonitoring"),
+            new TeaPair("version", "2019-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPrometheusMonitoringResponse());
+    }
+
+    public GetPrometheusMonitoringResponse getPrometheusMonitoring(GetPrometheusMonitoringRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getPrometheusMonitoringWithOptions(request, runtime);
     }
 
     public GetPrometheusRemoteWriteResponse getPrometheusRemoteWriteWithOptions(GetPrometheusRemoteWriteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3920,7 +4134,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  You can call the **ImportAppAlertRules** operation to import only the alert rules that are generated by Application Real-Time Monitoring Service (ARMS) for application monitoring and browser monitoring. This operation cannot be used to import custom alert rules, alert rules for Prometheus monitoring, or default emergency alert rules.
+      * The ID of the region where the associated applications reside.
       *
       * @param request ImportAppAlertRulesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3971,7 +4185,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  You can call the **ImportAppAlertRules** operation to import only the alert rules that are generated by Application Real-Time Monitoring Service (ARMS) for application monitoring and browser monitoring. This operation cannot be used to import custom alert rules, alert rules for Prometheus monitoring, or default emergency alert rules.
+      * The ID of the region where the associated applications reside.
       *
       * @param request ImportAppAlertRulesRequest
       * @return ImportAppAlertRulesResponse
@@ -4027,7 +4241,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call the API operation to install a Prometheus agent to monitor a serverless Kubernetes (ASK) cluster. You can manage the agent in Application Real-Time Monitoring Service (ARMS), but you cannot view the agent in the ASK cluster.
+      * $.parameters[5].schema.example
       *
       * @param request InstallManagedPrometheusRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4094,7 +4308,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call the API operation to install a Prometheus agent to monitor a serverless Kubernetes (ASK) cluster. You can manage the agent in Application Real-Time Monitoring Service (ARMS), but you cannot view the agent in the ASK cluster.
+      * $.parameters[5].schema.example
       *
       * @param request InstallManagedPrometheusRequest
       * @return InstallManagedPrometheusResponse
@@ -4334,7 +4548,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ********
+      * None.
       *
       * @param request ListDashboardsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4393,7 +4607,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ********
+      * None.
       *
       * @param request ListDashboardsRequest
       * @return ListDashboardsResponse
@@ -4718,6 +4932,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Status", request.status);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            query.put("Tags", request.tags);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
             query.put("Type", request.type);
         }
@@ -4806,9 +5024,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listPrometheusGlobalViewWithOptions(request, runtime);
     }
 
+    public ListPrometheusInstanceByTagAndResourceGroupIdResponse listPrometheusInstanceByTagAndResourceGroupIdWithOptions(ListPrometheusInstanceByTagAndResourceGroupIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.listAsConsole)) {
+            query.put("ListAsConsole", request.listAsConsole);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListPrometheusInstanceByTagAndResourceGroupId"),
+            new TeaPair("version", "2019-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPrometheusInstanceByTagAndResourceGroupIdResponse());
+    }
+
+    public ListPrometheusInstanceByTagAndResourceGroupIdResponse listPrometheusInstanceByTagAndResourceGroupId(ListPrometheusInstanceByTagAndResourceGroupIdRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listPrometheusInstanceByTagAndResourceGroupIdWithOptions(request, runtime);
+    }
+
     public ListPrometheusInstancesResponse listPrometheusInstancesWithOptions(ListPrometheusInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterType)) {
+            query.put("ClusterType", request.clusterType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -4876,6 +5139,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listPrometheusIntegrationWithOptions(request, runtime);
     }
 
+    public ListPrometheusMonitoringResponse listPrometheusMonitoringWithOptions(ListPrometheusMonitoringRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListPrometheusMonitoring"),
+            new TeaPair("version", "2019-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPrometheusMonitoringResponse());
+    }
+
+    public ListPrometheusMonitoringResponse listPrometheusMonitoring(ListPrometheusMonitoringRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listPrometheusMonitoringWithOptions(request, runtime);
+    }
+
     public ListPrometheusRemoteWritesResponse listPrometheusRemoteWritesWithOptions(ListPrometheusRemoteWritesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4910,7 +5210,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ***
+      * ****
       *
       * @param request ListRetcodeAppsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4949,7 +5249,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ***
+      * ****
       *
       * @param request ListRetcodeAppsRequest
       * @return ListRetcodeAppsResponse
@@ -5193,17 +5493,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.openArmsDefaultSLRWithOptions(request, runtime);
     }
 
-    /**
-      * The **OpenArmsServiceSecondVersion** operation supports the following sub-service editions:
-      * *   Application Monitoring: Basic Edition
-      * *   Browser Monitoring: Basic Edition
-      * *   Synthetic Monitoring: Pro Edition (pay-as-you-go)
-      * *   Prometheus Service: Pro Edition
-      *
-      * @param request OpenArmsServiceSecondVersionRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return OpenArmsServiceSecondVersionResponse
-     */
     public OpenArmsServiceSecondVersionResponse openArmsServiceSecondVersionWithOptions(OpenArmsServiceSecondVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5232,16 +5521,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new OpenArmsServiceSecondVersionResponse());
     }
 
-    /**
-      * The **OpenArmsServiceSecondVersion** operation supports the following sub-service editions:
-      * *   Application Monitoring: Basic Edition
-      * *   Browser Monitoring: Basic Edition
-      * *   Synthetic Monitoring: Pro Edition (pay-as-you-go)
-      * *   Prometheus Service: Pro Edition
-      *
-      * @param request OpenArmsServiceSecondVersionRequest
-      * @return OpenArmsServiceSecondVersionResponse
-     */
     public OpenArmsServiceSecondVersionResponse openArmsServiceSecondVersion(OpenArmsServiceSecondVersionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.openArmsServiceSecondVersionWithOptions(request, runtime);
@@ -5600,7 +5879,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation is no longer maintained. To query alert contacts, call the DescribeContacts operation provided by the new version of Alert Management.
+      * The ID of the resource group.
       *
       * @param request SearchAlertContactRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5655,7 +5934,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation is no longer maintained. To query alert contacts, call the DescribeContacts operation provided by the new version of Alert Management.
+      * The ID of the resource group.
       *
       * @param request SearchAlertContactRequest
       * @return SearchAlertContactResponse
@@ -5666,7 +5945,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The operation is no longer maintained. Call the DescribeContactGroups operation in the alert management module to query alert contact groups.
+      * The mobile number of the alert contact.
       *
       * @param request SearchAlertContactGroupRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5717,7 +5996,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The operation is no longer maintained. Call the DescribeContactGroups operation in the alert management module to query alert contact groups.
+      * The mobile number of the alert contact.
       *
       * @param request SearchAlertContactGroupRequest
       * @return SearchAlertContactGroupResponse
@@ -5728,7 +6007,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ********
+      * This operation is no longer maintained. To query alert records, call the ListAlerts operation provided by the new version of Alert Management.
       *
       * @param request SearchAlertHistoriesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5783,7 +6062,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ********
+      * This operation is no longer maintained. To query alert records, call the ListAlerts operation provided by the new version of Alert Management.
       *
       * @param request SearchAlertHistoriesRequest
       * @return SearchAlertHistoriesResponse
@@ -5794,7 +6073,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The current operation is no longer maintained. You can call the GetAlertRules operation of Alert Management (New) to query existing alert rules.
+      * Queries alert rules.
       *
       * @param request SearchAlertRulesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5861,7 +6140,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The current operation is no longer maintained. You can call the GetAlertRules operation of Alert Management (New) to query existing alert rules.
+      * Queries alert rules.
       *
       * @param request SearchAlertRulesRequest
       * @return SearchAlertRulesResponse
@@ -5872,7 +6151,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Alert event records are different from alert notification records. Alert events are recorded every minute after an alert rule filters data. Alert events can be classified based on whether they are triggered or not. If a triggered event is not in the silence period, an alert notification is sent.
+      * The operation that you want to perform. Set the value to `SearchEvents`.
       *
       * @param request SearchEventsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5939,7 +6218,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Alert event records are different from alert notification records. Alert events are recorded every minute after an alert rule filters data. Alert events can be classified based on whether they are triggered or not. If a triggered event is not in the silence period, an alert notification is sent.
+      * The operation that you want to perform. Set the value to `SearchEvents`.
       *
       * @param request SearchEventsRequest
       * @return SearchEventsResponse
@@ -6190,6 +6469,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ExclusionFilters", request.exclusionFilters);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.isError)) {
+            query.put("IsError", request.isError);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.minDuration)) {
             query.put("MinDuration", request.minDuration);
         }
@@ -6257,7 +6540,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After receiving the mobile phone number verification SMS, please complete the mobile phone number verification according to the SMS prompt. Only verified mobile phone numbers can use the notification method of the phone in the notification policy.
+      * The operation that you want to perform. Set the value to **SendTTSVerifyLink**.
       *
       * @param request SendTTSVerifyLinkRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6292,7 +6575,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After receiving the mobile phone number verification SMS, please complete the mobile phone number verification according to the SMS prompt. Only verified mobile phone numbers can use the notification method of the phone in the notification policy.
+      * The operation that you want to perform. Set the value to **SendTTSVerifyLink**.
       *
       * @param request SendTTSVerifyLinkRequest
       * @return SendTTSVerifyLinkResponse
@@ -6475,8 +6758,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.syncRecordingRulesWithOptions(request, runtime);
     }
 
+    public TagResourcesResponse tagResourcesWithOptions(TagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            query.put("ResourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TagResources"),
+            new TeaPair("version", "2019-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourcesResponse());
+    }
+
+    public TagResourcesResponse tagResources(TagResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.tagResourcesWithOptions(request, runtime);
+    }
+
     /**
-      * You can call the API operation to uninstall a Prometheus agent only from a serverless Kubernetes (ASK) cluster.
+      * The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.
       *
       * @param request UninstallManagedPrometheusRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6523,7 +6843,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call the API operation to uninstall a Prometheus agent only from a serverless Kubernetes (ASK) cluster.
+      * The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.
       *
       * @param request UninstallManagedPrometheusRequest
       * @return UninstallManagedPrometheusResponse
@@ -6566,8 +6886,49 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.uninstallPromClusterWithOptions(request, runtime);
     }
 
+    public UntagResourcesResponse untagResourcesWithOptions(UntagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.all)) {
+            query.put("All", request.all);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            query.put("ResourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagKey)) {
+            query.put("TagKey", request.tagKey);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UntagResources"),
+            new TeaPair("version", "2019-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UntagResourcesResponse());
+    }
+
+    public UntagResourcesResponse untagResources(UntagResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.untagResourcesWithOptions(request, runtime);
+    }
+
     /**
-      * This operation is no longer maintained. To create or modify an alert contact, call the CreateOrUpdateContact operation provided by the new version of Alert Management.
+      * The ID of the request.
       *
       * @param request UpdateAlertContactRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6622,7 +6983,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation is no longer maintained. To create or modify an alert contact, call the CreateOrUpdateContact operation provided by the new version of Alert Management.
+      * The ID of the request.
       *
       * @param request UpdateAlertContactRequest
       * @return UpdateAlertContactResponse
@@ -6840,13 +7201,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateIntegrationWithOptions(request, runtime);
     }
 
-    /**
-      * The UpdatePrometheusAlertRule operation is no longer maintained. Call the CreateOrUpdateAlertRule operation to create or modify alert rules.
-      *
-      * @param request UpdatePrometheusAlertRuleRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpdatePrometheusAlertRuleResponse
-     */
     public UpdatePrometheusAlertRuleResponse updatePrometheusAlertRuleWithOptions(UpdatePrometheusAlertRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6894,6 +7248,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            query.put("Tags", request.tags);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
             query.put("Type", request.type);
         }
@@ -6915,15 +7273,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdatePrometheusAlertRuleResponse());
     }
 
-    /**
-      * The UpdatePrometheusAlertRule operation is no longer maintained. Call the CreateOrUpdateAlertRule operation to create or modify alert rules.
-      *
-      * @param request UpdatePrometheusAlertRuleRequest
-      * @return UpdatePrometheusAlertRuleResponse
-     */
     public UpdatePrometheusAlertRuleResponse updatePrometheusAlertRule(UpdatePrometheusAlertRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updatePrometheusAlertRuleWithOptions(request, runtime);
+    }
+
+    public UpdatePrometheusGlobalViewResponse updatePrometheusGlobalViewWithOptions(UpdatePrometheusGlobalViewRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allSubClustersSuccess)) {
+            query.put("AllSubClustersSuccess", request.allSubClustersSuccess);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subClustersJson)) {
+            query.put("SubClustersJson", request.subClustersJson);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdatePrometheusGlobalView"),
+            new TeaPair("version", "2019-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdatePrometheusGlobalViewResponse());
+    }
+
+    public UpdatePrometheusGlobalViewResponse updatePrometheusGlobalView(UpdatePrometheusGlobalViewRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updatePrometheusGlobalViewWithOptions(request, runtime);
     }
 
     public UpdatePrometheusIntegrationResponse updatePrometheusIntegrationWithOptions(UpdatePrometheusIntegrationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -6971,6 +7368,98 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updatePrometheusIntegrationWithOptions(request, runtime);
     }
 
+    public UpdatePrometheusMonitoringResponse updatePrometheusMonitoringWithOptions(UpdatePrometheusMonitoringRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.monitoringName)) {
+            query.put("MonitoringName", request.monitoringName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configYaml)) {
+            body.put("ConfigYaml", request.configYaml);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdatePrometheusMonitoring"),
+            new TeaPair("version", "2019-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdatePrometheusMonitoringResponse());
+    }
+
+    public UpdatePrometheusMonitoringResponse updatePrometheusMonitoring(UpdatePrometheusMonitoringRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updatePrometheusMonitoringWithOptions(request, runtime);
+    }
+
+    public UpdatePrometheusMonitoringStatusResponse updatePrometheusMonitoringStatusWithOptions(UpdatePrometheusMonitoringStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.monitoringName)) {
+            query.put("MonitoringName", request.monitoringName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdatePrometheusMonitoringStatus"),
+            new TeaPair("version", "2019-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdatePrometheusMonitoringStatusResponse());
+    }
+
+    public UpdatePrometheusMonitoringStatusResponse updatePrometheusMonitoringStatus(UpdatePrometheusMonitoringStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updatePrometheusMonitoringStatusWithOptions(request, runtime);
+    }
+
     public UpdatePrometheusRemoteWriteResponse updatePrometheusRemoteWriteWithOptions(UpdatePrometheusRemoteWriteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7015,7 +7504,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation is no longer maintained. Call the CreateOrUpdateWebhookContact operation in the new alter management module to create or modify a webhook alert contact.
+      * The ID of the request.
       *
       * @param request UpdateWebhookRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -7078,7 +7567,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation is no longer maintained. Call the CreateOrUpdateWebhookContact operation in the new alter management module to create or modify a webhook alert contact.
+      * The ID of the request.
       *
       * @param request UpdateWebhookRequest
       * @return UpdateWebhookResponse

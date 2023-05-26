@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class SearchEventsRequest extends TeaModel {
     /**
-     * <p>The ID of the alert rule. You can call the SearchAlertRules operation and view the `Id` parameter in the response. For more information, see [SearchAlertRules](~~175825~~).</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("AlertId")
     public Long alertId;
 
     /**
-     * <p>The type of the alert rule. Valid values:</p>
+     * <p>The total number of entries returned.</p>
+     */
+    @NameInMap("AlertType")
+    public Integer alertType;
+
+    /**
+     * <p>The type of the alert rule. This parameter is not returned. Valid values:</p>
      * <br>
      * <p>*   `1`: custom alert rules to monitor drill-down data sets</p>
      * <p>*   `3`: custom alert rules to monitor tiled data sets</p>
@@ -22,29 +28,14 @@ public class SearchEventsRequest extends TeaModel {
      * <p>*   `8`: Tracing Analysis alert rules</p>
      * <p>*   `101`: Prometheus alert rules</p>
      */
-    @NameInMap("AlertType")
-    public Integer alertType;
-
-    /**
-     * <p>The type of the application that is associated with the alert rule. Valid values:</p>
-     * <br>
-     * <p>*   `TRACE`: application monitoring</p>
-     * <p>*   `RETCODE`: frontend monitoring</p>
-     */
     @NameInMap("AppType")
     public String appType;
 
     /**
-     * <p>The number of the page to return. Default value: `1`.</p>
+     * <p>The ID of the alert rule. You can call the SearchAlertRules operation and view the `Id` parameter in the response. For more information, see [SearchAlertRules](~~175825~~).</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
-
-    /**
-     * <p>The end of the time range to query. Specify a UNIX timestamp of the LONG data type, in milliseconds. The default value is the current time.</p>
-     */
-    @NameInMap("EndTime")
-    public Long endTime;
 
     /**
      * <p>Specifies whether the alert event is triggered. If you do not set this parameter, all alert events are queried. Valid values:</p>
@@ -52,29 +43,41 @@ public class SearchEventsRequest extends TeaModel {
      * <p>*   `1`: The event is triggered.</p>
      * <p>*   `0`: The event is not triggered.</p>
      */
+    @NameInMap("EndTime")
+    public Long endTime;
+
+    /**
+     * <p>The timestamp when the event occurred.</p>
+     */
     @NameInMap("IsTrigger")
     public Integer isTrigger;
 
     /**
-     * <p>The number of entries to return on each page. Default value: `10`.</p>
+     * <p>The information about the alert events.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The process identifier (PID) of the application that is associated with the alert rule.</p>
+     * <p>The type of the application that is associated with the alert rule. Valid values:</p>
+     * <br>
+     * <p>*   `TRACE`: application monitoring</p>
+     * <p>*   `RETCODE`: frontend monitoring</p>
      */
     @NameInMap("Pid")
     public String pid;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>Specifies whether the alert event is triggered. If you do not set this parameter, all alert events are queried. Valid values:</p>
+     * <br>
+     * <p>*   `1`: The event is triggered.</p>
+     * <p>*   `0`: The event is not triggered.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. Specify a UNIX timestamp of the LONG data type, in milliseconds. The default value is 10 minutes before the current time.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

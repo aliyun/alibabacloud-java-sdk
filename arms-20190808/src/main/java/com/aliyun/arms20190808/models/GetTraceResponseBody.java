@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTraceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -161,8 +161,8 @@ public class GetTraceResponseBody extends TeaModel {
         /**
          * <p>Indicates whether a method stack was provided.</p>
          * <br>
-         * <p>- `true`: A method stack was provided.</p>
-         * <p>- `false` : No method stack was provided.</p>
+         * <p>*   `true`: A method stack was provided.</p>
+         * <p>*   `false`: No method stack was provided.</p>
          */
         @NameInMap("HaveStack")
         public Boolean haveStack;
@@ -186,19 +186,42 @@ public class GetTraceResponseBody extends TeaModel {
         public String parentSpanId;
 
         /**
-         * <p>The returned code.</p>
+         * <p>The status code.</p>
          */
         @NameInMap("ResultCode")
         public String resultCode;
 
         /**
-         * <p>The ID of the remote procedure call (RPC) mode.</p>
+         * <p>The ID of the RPC mode.</p>
          */
         @NameInMap("RpcId")
         public String rpcId;
 
         /**
          * <p>The type of the remote procedure call (RPC) mode.</p>
+         * <br>
+         * <p>*   0: HTTP entry</p>
+         * <p>*   25: HTTP call</p>
+         * <p>*   1: High-speed Service Framework (HSF) call</p>
+         * <p>*   2: HSF provision</p>
+         * <p>*   40: on-premises API call</p>
+         * <p>*   60: MySQL call</p>
+         * <p>*   62: Oracle call</p>
+         * <p>*   63: PostgreSQL call</p>
+         * <p>*   70: Redis call</p>
+         * <p>*   4: Taobao Distributed Data Layer (TDDL) call</p>
+         * <p>*   5: Tair call</p>
+         * <p>*   13: MetaQ message sending</p>
+         * <p>*   252: MetaQ message receiving</p>
+         * <p>*   3: notification sending</p>
+         * <p>*   254: notification receiving</p>
+         * <p>*   7: Apache Dubbo call</p>
+         * <p>*   8: Apache Dubbo provision</p>
+         * <p>*   19: SOFARPC call</p>
+         * <p>*   18: SOFARPC provision</p>
+         * <p>*   11: Distributed Service Framework (DSF) call</p>
+         * <p>*   12: DSF provision</p>
+         * <p>*   \-1: unknown call</p>
          */
         @NameInMap("RpcType")
         public Integer rpcType;
@@ -216,7 +239,7 @@ public class GetTraceResponseBody extends TeaModel {
         public String serviceName;
 
         /**
-         * <p>Span ID。</p>
+         * <p>The span ID.</p>
          */
         @NameInMap("SpanId")
         public String spanId;
@@ -228,13 +251,13 @@ public class GetTraceResponseBody extends TeaModel {
         public java.util.List<GetTraceResponseBodySpansTagEntryList> tagEntryList;
 
         /**
-         * <p>The timestamp when the span was generated.</p>
+         * <p>The timestamp generated when the span was generated.</p>
          */
         @NameInMap("Timestamp")
         public Long timestamp;
 
         /**
-         * <p>The ID of the trace.</p>
+         * <p>The trace ID.</p>
          */
         @NameInMap("TraceID")
         public String traceID;

@@ -4,75 +4,39 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreatePrometheusAlertRuleRequest extends TeaModel {
-    /**
-     * <p>The name of the alert rule.</p>
-     */
     @NameInMap("AlertName")
     public String alertName;
 
-    /**
-     * <p>The annotations that are described in a JSON string. You must specify the name and value of each annotation.</p>
-     */
     @NameInMap("Annotations")
     public String annotations;
 
-    /**
-     * <p>The ID of the cluster.</p>
-     */
     @NameInMap("ClusterId")
     public String clusterId;
 
-    /**
-     * <p>The ID of the notification policy. This parameter is required if the **NotifyType** parameter is set to `DISPATCH_RULE`.</p>
-     */
     @NameInMap("DispatchRuleId")
     public Long dispatchRuleId;
 
-    /**
-     * <p>The duration of the alert. Valid values: 1 to 1440. Unit: minutes.</p>
-     */
     @NameInMap("Duration")
     public String duration;
 
-    /**
-     * <p>The expression of the alert rule. The expression must follow the PromQL syntax.</p>
-     */
     @NameInMap("Expression")
     public String expression;
 
-    /**
-     * <p>The tags that are described in a JSON string. You must specify the name and value of each tag.</p>
-     */
     @NameInMap("Labels")
     public String labels;
 
-    /**
-     * <p>The content of the alert notification. Tags can be referenced in the {{$labels.xxx}} format.</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The method that is used to send alert notifications. Valid values:</p>
-     * <br>
-     * <p>*   `ALERT_MANAGER`: Alert notifications are sent by Operation Center. This is the default value.</p>
-     * <p>*   `DISPATCH_RULE`: Alert notifications are sent based on the specified notification policy.</p>
-     */
     @NameInMap("NotifyType")
     public String notifyType;
 
-    /**
-     * <p>The ID of the region.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The type of the alert rule. Valid values:</p>
-     * <br>
-     * <p>*   99: custom alert</p>
-     * <p>*   101: Prometheus Service alert</p>
-     */
+    @NameInMap("Tags")
+    public java.util.List<CreatePrometheusAlertRuleRequestTags> tags;
+
     @NameInMap("Type")
     public String type;
 
@@ -161,12 +125,50 @@ public class CreatePrometheusAlertRuleRequest extends TeaModel {
         return this.regionId;
     }
 
+    public CreatePrometheusAlertRuleRequest setTags(java.util.List<CreatePrometheusAlertRuleRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreatePrometheusAlertRuleRequestTags> getTags() {
+        return this.tags;
+    }
+
     public CreatePrometheusAlertRuleRequest setType(String type) {
         this.type = type;
         return this;
     }
     public String getType() {
         return this.type;
+    }
+
+    public static class CreatePrometheusAlertRuleRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreatePrometheusAlertRuleRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreatePrometheusAlertRuleRequestTags self = new CreatePrometheusAlertRuleRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreatePrometheusAlertRuleRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreatePrometheusAlertRuleRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

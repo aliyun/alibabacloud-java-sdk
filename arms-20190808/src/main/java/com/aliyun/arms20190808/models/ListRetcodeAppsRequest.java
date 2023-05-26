@@ -17,7 +17,7 @@ public class ListRetcodeAppsRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tags")
     public java.util.List<ListRetcodeAppsRequestTags> tags;

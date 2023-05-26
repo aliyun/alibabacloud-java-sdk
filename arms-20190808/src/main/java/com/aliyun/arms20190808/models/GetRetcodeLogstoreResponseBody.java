@@ -4,15 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetRetcodeLogstoreResponseBody extends TeaModel {
-    /**
-     * <p>The returned struct.</p>
-     */
     @NameInMap("Data")
     public GetRetcodeLogstoreResponseBodyData data;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,21 +32,12 @@ public class GetRetcodeLogstoreResponseBody extends TeaModel {
     }
 
     public static class GetRetcodeLogstoreResponseBodyDataRetcodeSLSConfig extends TeaModel {
-        /**
-         * <p>The Log Service Logstore.</p>
-         */
         @NameInMap("Logstore")
         public String logstore;
 
-        /**
-         * <p>The Log Service project.</p>
-         */
         @NameInMap("Project")
         public String project;
 
-        /**
-         * <p>The ID of the region where Log Service resides.</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
@@ -88,21 +73,12 @@ public class GetRetcodeLogstoreResponseBody extends TeaModel {
     }
 
     public static class GetRetcodeLogstoreResponseBodyData extends TeaModel {
-        /**
-         * <p>The content of the log.</p>
-         */
         @NameInMap("Message")
         public String message;
 
-        /**
-         * <p>The information about Log Service.</p>
-         */
         @NameInMap("RetcodeSLSConfig")
         public GetRetcodeLogstoreResponseBodyDataRetcodeSLSConfig retcodeSLSConfig;
 
-        /**
-         * <p>Indicates the status of the request.</p>
-         */
         @NameInMap("Status")
         public String status;
 

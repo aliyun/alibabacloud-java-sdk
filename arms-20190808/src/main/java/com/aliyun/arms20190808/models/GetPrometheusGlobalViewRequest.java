@@ -4,9 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetPrometheusGlobalViewRequest extends TeaModel {
+    /**
+     * <p>The ID of the global aggregation instance.</p>
+     */
     @NameInMap("GlobalViewClusterId")
     public String globalViewClusterId;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

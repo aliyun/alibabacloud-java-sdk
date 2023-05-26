@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListEscalationPoliciesResponseBody extends TeaModel {
     /**
-     * <p>The objects that were returned.</p>
+     * <p>The returned objects.</p>
      */
     @NameInMap("PageBean")
     public ListEscalationPoliciesResponseBodyPageBean pageBean;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

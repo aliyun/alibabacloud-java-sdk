@@ -4,18 +4,33 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class AddPrometheusGlobalViewRequest extends TeaModel {
+    /**
+     * <p>The queried global aggregation instances. The value is a JSON string.</p>
+     */
     @NameInMap("Clusters")
     public String clusters;
 
+    /**
+     * <p>The name of the aggregation instance.</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource group ID.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The list of tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<AddPrometheusGlobalViewRequestTag> tag;
 
@@ -65,9 +80,15 @@ public class AddPrometheusGlobalViewRequest extends TeaModel {
     }
 
     public static class AddPrometheusGlobalViewRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -4,9 +4,21 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class AppendInstancesToPrometheusGlobalViewResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
+    /**
+     * <p>The information about the array object.</p>
+     */
     @NameInMap("Data")
     public AppendInstancesToPrometheusGlobalViewResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
+    /**
+     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -15,12 +27,28 @@ public class AppendInstancesToPrometheusGlobalViewResponseBody extends TeaModel 
         return TeaModel.build(map, self);
     }
 
+    public AppendInstancesToPrometheusGlobalViewResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
     public AppendInstancesToPrometheusGlobalViewResponseBody setData(AppendInstancesToPrometheusGlobalViewResponseBodyData data) {
         this.data = data;
         return this;
     }
     public AppendInstancesToPrometheusGlobalViewResponseBodyData getData() {
         return this.data;
+    }
+
+    public AppendInstancesToPrometheusGlobalViewResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public AppendInstancesToPrometheusGlobalViewResponseBody setRequestId(String requestId) {
@@ -32,12 +60,24 @@ public class AppendInstancesToPrometheusGlobalViewResponseBody extends TeaModel 
     }
 
     public static class AppendInstancesToPrometheusGlobalViewResponseBodyData extends TeaModel {
+        /**
+         * <p>The Info-level information.</p>
+         */
         @NameInMap("Info")
         public String info;
 
+        /**
+         * <p>The additional information.</p>
+         */
         @NameInMap("Msg")
         public String msg;
 
+        /**
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <br>
+         * <p>*   `true`: The call was successful.</p>
+         * <p>*   `false`: The call failed.</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 

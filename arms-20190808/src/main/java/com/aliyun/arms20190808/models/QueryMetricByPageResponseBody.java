@@ -16,7 +16,7 @@ public class QueryMetricByPageResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The struct returned.</p>
+     * <p>The information about the array object.</p>
      */
     @NameInMap("Data")
     public QueryMetricByPageResponseBodyData data;
@@ -28,7 +28,7 @@ public class QueryMetricByPageResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

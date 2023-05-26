@@ -7,14 +7,14 @@ public class DeleteEventBridgeIntegrationResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the EventBridge integration is deleted.</p>
      * <br>
-     * <p>*   `true`: The EventBridge integration is deleted.</p>
-     * <p>*   `false`: The EventBridge integration fails to be deleted.</p>
+     * <p>*   `true`</p>
+     * <p>*   `false`</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

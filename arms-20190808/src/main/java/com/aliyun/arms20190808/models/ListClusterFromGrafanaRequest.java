@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListClusterFromGrafanaRequest extends TeaModel {
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

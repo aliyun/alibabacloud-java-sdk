@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The returned WebhookContact object.</p>
+     * <p>The returned webhook alert contact.</p>
      */
     @NameInMap("WebhookContact")
     public CreateOrUpdateWebhookContactResponseBodyWebhookContact webhookContact;
@@ -39,7 +39,7 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
 
     public static class CreateOrUpdateWebhookContactResponseBodyWebhookContactWebhook extends TeaModel {
         /**
-         * <p>The header of the HTTP request.</p>
+         * <p>The HTTP request headers.</p>
          */
         @NameInMap("BizHeaders")
         public String bizHeaders;
@@ -57,7 +57,7 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
         public String body;
 
         /**
-         * <p>The HTTP request method. Valid values:</p>
+         * <p>The HTTP request method.</p>
          * <br>
          * <p>*   Post</p>
          * <p>*   Get</p>
@@ -66,7 +66,7 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
         public String method;
 
         /**
-         * <p>The alert recovery template.</p>
+         * <p>The notification template for clearing alerts.</p>
          */
         @NameInMap("RecoverBody")
         public String recoverBody;
@@ -134,13 +134,13 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
 
     public static class CreateOrUpdateWebhookContactResponseBodyWebhookContact extends TeaModel {
         /**
-         * <p>The returned Webhook object.</p>
+         * <p>The information about the webhook alert contact.</p>
          */
         @NameInMap("Webhook")
         public CreateOrUpdateWebhookContactResponseBodyWebhookContactWebhook webhook;
 
         /**
-         * <p>The ID of the contact for webhook alerts.</p>
+         * <p>The ID of the webhook alert contact.</p>
          */
         @NameInMap("WebhookId")
         public Float webhookId;

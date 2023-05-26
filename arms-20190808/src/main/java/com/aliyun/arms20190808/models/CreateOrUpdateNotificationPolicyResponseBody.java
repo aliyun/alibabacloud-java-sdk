@@ -168,6 +168,12 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
 
     public static class CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyNotifyRuleNotifyObjects extends TeaModel {
         /**
+         * <p>通知对象为联系人时的单独的联系方式</p>
+         */
+        @NameInMap("NotifyChannels")
+        public java.util.List<String> notifyChannels;
+
+        /**
          * <p>The ID of the notification contact.</p>
          */
         @NameInMap("NotifyObjectId")
@@ -193,6 +199,14 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
         public static CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyNotifyRuleNotifyObjects build(java.util.Map<String, ?> map) throws Exception {
             CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyNotifyRuleNotifyObjects self = new CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyNotifyRuleNotifyObjects();
             return TeaModel.build(map, self);
+        }
+
+        public CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyNotifyRuleNotifyObjects setNotifyChannels(java.util.List<String> notifyChannels) {
+            this.notifyChannels = notifyChannels;
+            return this;
+        }
+        public java.util.List<String> getNotifyChannels() {
+            return this.notifyChannels;
         }
 
         public CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyNotifyRuleNotifyObjects setNotifyObjectId(Long notifyObjectId) {

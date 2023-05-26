@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DelAuthTokenResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

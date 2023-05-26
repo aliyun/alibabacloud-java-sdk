@@ -5,15 +5,6 @@ import com.aliyun.tea.*;
 
 public class CreateOrUpdateSilencePolicyRequest extends TeaModel {
     /**
-     * <p>The ID of the silence policy.</p>
-     * <br>
-     * <p>*   If you do not specify this parameter, a new silence policy is created.</p>
-     * <p>*   If you specify this parameter, the specified silence policy is modified.</p>
-     */
-    @NameInMap("Id")
-    public Long id;
-
-    /**
      * <p>The matching rules. Sample statement:</p>
      * <br>
      * <p>```</p>
@@ -31,6 +22,12 @@ public class CreateOrUpdateSilencePolicyRequest extends TeaModel {
      * <p>	 ]</p>
      * <p>```</p>
      */
+    @NameInMap("Id")
+    public Long id;
+
+    /**
+     * <p>The operation that you want to perform. Set the value to **CreateOrUpdateSilencePolicy**.</p>
+     */
     @NameInMap("MatchingRules")
     public String matchingRules;
 
@@ -40,9 +37,6 @@ public class CreateOrUpdateSilencePolicyRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    /**
-     * <p>The ID of the region.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

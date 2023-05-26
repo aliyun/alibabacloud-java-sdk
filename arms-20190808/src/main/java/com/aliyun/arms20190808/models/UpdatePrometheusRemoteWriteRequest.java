@@ -11,7 +11,7 @@ public class UpdatePrometheusRemoteWriteRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -23,7 +23,7 @@ public class UpdatePrometheusRemoteWriteRequest extends TeaModel {
     public String remoteWriteName;
 
     /**
-     * <p>The details about the Remote Write configuration item. The value is in the YAML format.</p>
+     * <p>The remote write configuration. Specify the value in the YAML format.</p>
      */
     @NameInMap("RemoteWriteYaml")
     public String remoteWriteYaml;

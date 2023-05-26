@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetTraceAppResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The returned struct.</p>
+     * <p>The information about the array object.</p>
      */
     @NameInMap("TraceApp")
     public GetTraceAppResponseBodyTraceApp traceApp;
@@ -75,7 +75,7 @@ public class GetTraceAppResponseBody extends TeaModel {
 
     public static class GetTraceAppResponseBodyTraceApp extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          */
         @NameInMap("AppId")
         public Long appId;
@@ -87,7 +87,7 @@ public class GetTraceAppResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The timestamp generated when the monitoring task was created.</p>
+         * <p>The timestamp generated when the task was created.</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
@@ -99,13 +99,13 @@ public class GetTraceAppResponseBody extends TeaModel {
         public java.util.List<String> labels;
 
         /**
-         * <p>The PID of the application.</p>
+         * <p>The process identifier (PID) of the application.</p>
          */
         @NameInMap("Pid")
         public String pid;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -117,10 +117,10 @@ public class GetTraceAppResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>Indicates whether the application was displayed in the Application Real-Time Monitoring Service (ARMS) console. Valid values:</p>
+         * <p>Indicates whether the application is displayed in the Application Real-Time Monitoring Service (ARMS) console. Valid values:</p>
          * <br>
-         * <p>*   `true`: The application was displayed in the ARMS console.</p>
-         * <p>*   `false`: The application was not displayed in the ARMS console.</p>
+         * <p>*   `true`: yes</p>
+         * <p>*   `false`: no</p>
          */
         @NameInMap("Show")
         public Boolean show;
@@ -132,7 +132,7 @@ public class GetTraceAppResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The list of tags.</p>
+         * <p>A list of key-value pairs.</p>
          */
         @NameInMap("Tags")
         public java.util.List<GetTraceAppResponseBodyTraceAppTags> tags;
@@ -147,13 +147,13 @@ public class GetTraceAppResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The timestamp generated when the monitoring task was updated.</p>
+         * <p>The timestamp generated when the task information was updated.</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
         /**
-         * <p>The ID of the user.</p>
+         * <p>The user ID.</p>
          */
         @NameInMap("UserId")
         public String userId;

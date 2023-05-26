@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeIMRobotsResponseBody extends TeaModel {
     /**
-     * <p>Paging object.</p>
+     * <p>The returned objects.</p>
      */
     @NameInMap("PageBean")
     public DescribeIMRobotsResponseBodyPageBean pageBean;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,9 +38,15 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
     }
 
     public static class DescribeIMRobotsResponseBodyPageBeanAlertIMRobotsDispatchRules extends TeaModel {
+        /**
+         * <p>The ID of the notification policy.</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>The name of the notification policy.</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -68,56 +74,62 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
     }
 
     public static class DescribeIMRobotsResponseBodyPageBeanAlertIMRobots extends TeaModel {
+        /**
+         * <p>The time when the IM chatbot was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>Specifies whether to send daily statistics.</p>
+         * <p>Indicates whether daily statistics are sent. Valid values:</p>
          * <br>
-         * <p>*   `false` (default): does not send statistics.</p>
-         * <p>*   `true`: sends statistics.</p>
+         * <p>*   `false` (default): Daily statistics are not sent.</p>
+         * <p>*   `true`: Daily statistics are sent.</p>
          */
         @NameInMap("DailyNoc")
         public Boolean dailyNoc;
 
         /**
-         * <p>The time when the daily statistics are sent. ARMS Alert Management sends the total number of alerts generated today, the number of resolved alerts, and the number of pending alerts at the specified time point.</p>
+         * <p>The point in time at which the daily statistics are sent. The information that ARMS sends at the specified points in time includes the total number of alerts generated on the current day, the number of cleared alerts, and the number of alerts to be cleared.</p>
          */
         @NameInMap("DailyNocTime")
         public String dailyNocTime;
 
         /**
-         * <p>The signature key of DingTalk. If you specify a signature key, DingTalk authentication is performed with the key. Otherwise, a whitelist is used for authentication by default. The keyword of the whitelist is **Alert**.</p>
+         * <p>The signature key of DingTalk. If you specify a signature key, DingTalk authentication is performed by using the signature key. If you do not specify a signature key, a whitelist is used for authentication by default. The keyword of the whitelist is **Alert**.</p>
          */
         @NameInMap("DingSignKey")
         public String dingSignKey;
 
+        /**
+         * <p>The notification policies.</p>
+         */
         @NameInMap("DispatchRules")
         public java.util.List<DescribeIMRobotsResponseBodyPageBeanAlertIMRobotsDispatchRules> dispatchRules;
 
         /**
-         * <p>The webhook address of the IM bot.</p>
+         * <p>The webhook URL of the IM chatbot.</p>
          */
         @NameInMap("RobotAddr")
         public String robotAddr;
 
         /**
-         * <p>The ID of the IM bot.</p>
+         * <p>The ID of the IM chatbot.</p>
          */
         @NameInMap("RobotId")
         public Float robotId;
 
         /**
-         * <p>The name of the IM robot.</p>
+         * <p>The name of the IM chatbot.</p>
          */
         @NameInMap("RobotName")
         public String robotName;
 
         /**
-         * <p>IM Robot Type:</p>
+         * <p>The type of the IM chatbot. Valid values:</p>
          * <br>
-         * <p>*   `dingding`: DingTalk robot.</p>
-         * <p>*   `wechat`: Enterprise WeChat Robot.</p>
+         * <p>*   `dingding`: DingTalk chatbot</p>
+         * <p>*   `wechat`: WeCom chatbot</p>
          */
         @NameInMap("Type")
         public String type;
@@ -203,25 +215,25 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
 
     public static class DescribeIMRobotsResponseBodyPageBean extends TeaModel {
         /**
-         * <p>The details of the IM robot.</p>
+         * <p>The queried IM chatbots.</p>
          */
         @NameInMap("AlertIMRobots")
         public java.util.List<DescribeIMRobotsResponseBodyPageBeanAlertIMRobots> alertIMRobots;
 
         /**
-         * <p>The number of pages to query.</p>
+         * <p>The page number of the returned page.</p>
          */
         @NameInMap("Page")
         public Long page;
 
         /**
-         * <p>Number of IM robots per page.</p>
+         * <p>The number of IM chatbots returned per page.</p>
          */
         @NameInMap("Size")
         public Long size;
 
         /**
-         * <p>The total number of IM robots queried.</p>
+         * <p>The total number of queried IM chatbots.</p>
          */
         @NameInMap("Total")
         public Long total;

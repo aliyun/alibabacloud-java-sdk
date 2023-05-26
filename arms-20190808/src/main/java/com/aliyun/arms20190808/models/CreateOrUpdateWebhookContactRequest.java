@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateOrUpdateWebhookContactRequest extends TeaModel {
     /**
-     * <p>The header of the HTTP request.</p>
+     * <p>The HTTP request headers.</p>
      */
     @NameInMap("BizHeaders")
     public String bizHeaders;
@@ -17,13 +17,13 @@ public class CreateOrUpdateWebhookContactRequest extends TeaModel {
     public String bizParams;
 
     /**
-     * <p>The notification template that is sent when an alert is triggered. This parameter is required when the **Method** is set to **Post**. You can use `$content` placeholders to output the notification content. The notification content cannot exceed 500 characters in length. For more information, see [Notification template variables](~~251834~~).</p>
+     * <p>The notification template that is sent when an alert is triggered. This parameter is required if the **Method** parameter is set to **Post**. You can use the `$content` placeholder to specify the notification content. The content cannot exceed 500 characters in length. For more information, see [Variable description of a notification template](~~251834~~).\\</p>
      */
     @NameInMap("Body")
     public String body;
 
     /**
-     * <p>The HTTP request method. Valid values:</p>
+     * <p>The HTTP request method.</p>
      * <br>
      * <p>*   Post</p>
      * <p>*   Get</p>
@@ -32,22 +32,22 @@ public class CreateOrUpdateWebhookContactRequest extends TeaModel {
     public String method;
 
     /**
-     * <p>The notification template that is sent when the alert resumes. This parameter is required when the **Method** is set to **Post**. You can use `$content` placeholders to output the notification content. The notification content cannot exceed 500 characters in length. For more information, see [Notification template variables](~~251834~~).</p>
+     * <p>The notification template that is sent when an alert is resolved. This parameter is required if the **Method** parameter is set to **Post**. You can use the `$content` placeholder to specify the notification content. The content cannot exceed 500 characters in length. For more information, see [Variable description of a notification template](~~251834~~).</p>
      */
     @NameInMap("RecoverBody")
     public String recoverBody;
 
     /**
-     * <p>The URL of the request method.</p>
+     * <p>The URL of the HTTP request **method**.</p>
      */
     @NameInMap("Url")
     public String url;
 
     /**
-     * <p>The ID of the contact for webhook alerts.</p>
+     * <p>The ID of the webhook alert contact.</p>
      * <br>
      * <p>*   If you do not specify this parameter, a new webhook alert contact is created.</p>
-     * <p>*   Enter information that represents modifying the contact information of the specified Webhook alert.</p>
+     * <p>*</p>
      */
     @NameInMap("WebhookId")
     public Long webhookId;

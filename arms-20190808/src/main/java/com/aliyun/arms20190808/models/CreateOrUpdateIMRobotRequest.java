@@ -5,28 +5,28 @@ import com.aliyun.tea.*;
 
 public class CreateOrUpdateIMRobotRequest extends TeaModel {
     /**
-     * <p>The configurations of the alert card template.</p>
+     * <p>The configurations of the alert card template. For more information about the parameters in the template, see the following section.</p>
      */
     @NameInMap("CardTemplate")
     public String cardTemplate;
 
     /**
-     * <p>Specifies whether to send daily statistics.</p>
+     * <p>Specifies whether to send daily statistics. Valid values:</p>
      * <br>
-     * <p>*   `false` (default): does not send statistics.</p>
-     * <p>*   `true`: sends statistics. After you select `true`, **DailyNocTime** parameters are required.</p>
+     * <p>*   `false` (default): Daily statistics are not sent.</p>
+     * <p>*   `true`: Daily statistics are sent. If you set the value to `true`, the **DailyNocTime** parameter is required.</p>
      */
     @NameInMap("DailyNoc")
     public Boolean dailyNoc;
 
     /**
-     * <p>The time point at which the daily statistics are sent. Separate multiple sending time points with commas (,). The time point is in the HH:SS format. ARMS Alert Management sends the total number of alerts generated today, the number of resolved alerts, and the number of pending alerts at the specified time point.</p>
+     * <p>The points in time at which the daily statistics are sent. Separate multiple points in time with commas (,). The points in time are in the HH:SS format. The information that ARMS sends at the specified points in time includes the total number of alerts generated on the current day, the number of cleared alerts, and the number of alerts to be cleared.</p>
      */
     @NameInMap("DailyNocTime")
     public String dailyNocTime;
 
     /**
-     * <p>The signature key of DingTalk. If you specify a signature key, DingTalk authentication is performed with the key. Otherwise, a whitelist is used for authentication by default. The keyword of the whitelist is** Alert**.</p>
+     * <p>The signature key of DingTalk. If you specify a signature key, DingTalk authentication is performed by using the signature key. If you do not specify a signature key, a whitelist is used for authentication by default. The keyword of the whitelist is **Alert**.</p>
      */
     @NameInMap("DingSignKey")
     public String dingSignKey;
@@ -38,22 +38,22 @@ public class CreateOrUpdateIMRobotRequest extends TeaModel {
     public Boolean enableOutgoing;
 
     /**
-     * <p>The webhook address of the IM bot.</p>
+     * <p>The webhook URL of the IM chatbot.</p>
      */
     @NameInMap("RobotAddress")
     public String robotAddress;
 
     /**
-     * <p>The ID of the IM bot.</p>
+     * <p>The ID of the IM chatbot.</p>
      * <br>
-     * <p>*   If you do not specify this parameter, a new IM bot is created.</p>
-     * <p>*   Enter information that represents modifying the specified IM bot.</p>
+     * <p>*   If you do not specify the parameter, a new IM chatbot is created.</p>
+     * <p>*</p>
      */
     @NameInMap("RobotId")
     public Long robotId;
 
     /**
-     * <p>The name of the IM robot.</p>
+     * <p>The name of the IM chatbot.</p>
      */
     @NameInMap("RobotName")
     public String robotName;
@@ -65,10 +65,10 @@ public class CreateOrUpdateIMRobotRequest extends TeaModel {
     public String token;
 
     /**
-     * <p>IM Robot Type:</p>
+     * <p>The type of the IM chatbot. Valid values:</p>
      * <br>
-     * <p>*   `dingding`: DingTalk robot.</p>
-     * <p>*   `wechat`: Enterprise WeChat Robot.</p>
+     * <p>*   `dingding`: DingTalk chatbot</p>
+     * <p>*   `wechat`: WeCom chatbot</p>
      */
     @NameInMap("Type")
     public String type;

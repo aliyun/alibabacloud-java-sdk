@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListPrometheusInstancesRequest extends TeaModel {
     /**
-     * <p>The ID of the region.</p>
+     * <p>实例类型</p>
+     */
+    @NameInMap("ClusterType")
+    public String clusterType;
+
+    /**
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>Specifies whether to obtain global aggregation instances. Valid values:</p>
+     * <p>Specifies whether to query global aggregation instances. Valid values:</p>
      * <br>
      * <p>*   true</p>
      * <p>*   false</p>
@@ -22,6 +28,14 @@ public class ListPrometheusInstancesRequest extends TeaModel {
     public static ListPrometheusInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPrometheusInstancesRequest self = new ListPrometheusInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListPrometheusInstancesRequest setClusterType(String clusterType) {
+        this.clusterType = clusterType;
+        return this;
+    }
+    public String getClusterType() {
+        return this.clusterType;
     }
 
     public ListPrometheusInstancesRequest setRegionId(String regionId) {

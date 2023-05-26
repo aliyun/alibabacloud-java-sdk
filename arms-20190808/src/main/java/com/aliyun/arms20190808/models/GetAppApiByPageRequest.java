@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetAppApiByPageRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The end of the time range to query. Unit: milliseconds.</p>
+     * <p>The operation that you want to perform. Set the value to `GetAppApiByPage`.</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
@@ -23,25 +23,30 @@ public class GetAppApiByPageRequest extends TeaModel {
     public Integer intervalMills;
 
     /**
-     * <p>The process identifier (PID) of the application. For more information about how to obtain the PID, see [Obtain the PID of an application](https://www.alibabacloud.com/help/zh/doc-detail/186100.htm?spm=a2cdw.13409063.0.0.7a72281f0bkTfx#title-imy-7gj-qhr).</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("PId")
     public String PId;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The process identifier (PID) of the application. For more information about how to obtain the PID, see [Obtain the PID of an application](https://www.alibabacloud.com/help/zh/doc-detail/186100.htm?spm=a2cdw.13409063.0.0.7a72281f0bkTfx#title-imy-7gj-qhr).</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+     * <p>The HTTP status code returned for the request. Valid values:</p>
+     * <br>
+     * <p>*   2XX: The request is successful.</p>
+     * <p>*   3XX: A redirection message is returned.</p>
+     * <p>*   4XX: The request is invalid.</p>
+     * <p>*   5XX: A server error occurs.</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

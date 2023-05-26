@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAgentDownloadUrlRequest extends TeaModel {
     /**
-     * <p>The ID of the region.</p>
+     * <p>The download URL of the ARMS agent.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

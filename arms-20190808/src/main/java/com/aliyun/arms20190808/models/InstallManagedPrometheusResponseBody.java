@@ -4,33 +4,18 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class InstallManagedPrometheusResponseBody extends TeaModel {
-    /**
-     * <p>The status code returned. 200 indicates that the Prometheus agent was installed. Otherwise, the Prometheus agent fails to be installed.</p>
-     */
     @NameInMap("Code")
     public Integer code;
 
-    /**
-     * <p>The content of the response. The installation status of the Prometheus agent was returned.</p>
-     */
     @NameInMap("Data")
     public String data;
 
-    /**
-     * <p>The error message returned if the Prometheus agent fails to be installed.</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the Prometheus agent was installed.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 

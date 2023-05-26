@@ -11,19 +11,19 @@ public class RemoveAliClusterIdsFromPrometheusGlobalViewRequest extends TeaModel
     public String clusterIds;
 
     /**
-     * <p>The ID of the aggregation instance.</p>
+     * <p>The ID of the global aggregation instance.</p>
      */
     @NameInMap("GlobalViewClusterId")
     public String globalViewClusterId;
 
     /**
-     * <p>The name of the aggregation instance.</p>
+     * <p>The name of the global aggregation instance.</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

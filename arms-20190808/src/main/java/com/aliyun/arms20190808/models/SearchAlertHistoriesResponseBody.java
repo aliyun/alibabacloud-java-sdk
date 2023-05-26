@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchAlertHistoriesResponseBody extends TeaModel {
     /**
-     * <p>The struct returned.</p>
+     * <p>The returned struct.</p>
      */
     @NameInMap("PageBean")
     public SearchAlertHistoriesResponseBodyPageBean pageBean;
@@ -51,7 +51,7 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
         public Integer alarmResponseCode;
 
         /**
-         * <p>The webhook URL used for the alert contact, such as that of a DingTalk chatbot.</p>
+         * <p>The webhook URL, such as the webhook URL of a DingTalk chatbot.</p>
          */
         @NameInMap("AlarmSources")
         public String alarmSources;
@@ -65,14 +65,14 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
         /**
          * <p>The type of the alert rule. Default value: 4. Valid values:</p>
          * <br>
-         * <p>*   `1`: custom alert rules to monitor drill-down data sets</p>
-         * <p>*   `3`: custom alert rules to monitor tiled data sets</p>
-         * <p>*   `4`: alert rules to monitor the frontend, including the default frontend alert rules</p>
-         * <p>*   `5`: alert rules to monitor applications, including the default application alert rules</p>
-         * <p>*   `6`: the default frontend alert rules</p>
-         * <p>*   `7`: the default application alert rules</p>
-         * <p>*   `8`: Tracing Analysis alert rules</p>
-         * <p>*   `101`: Prometheus alert rules</p>
+         * <p>*   `1`: a custom alert rule that is used to monitor drill-down data sets</p>
+         * <p>*   `3`: a custom alert rule that is used to monitor tiled data sets</p>
+         * <p>*   `4`: an alert rule that is used to monitor web pages, including the default alert rule for browser monitoring</p>
+         * <p>*   `5`: an alert rule that is used to monitor applications, including the default alert rule for application monitoring</p>
+         * <p>*   `6`: the default alert rule for browser monitoring</p>
+         * <p>*   `7`: the default alert rule for application monitoring</p>
+         * <p>*   `8`: a Tracing Analysis alert rule</p>
+         * <p>*   `101`: a Prometheus alert rule</p>
          */
         @NameInMap("AlarmType")
         public Integer alarmType;
@@ -90,19 +90,19 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The mobile number of the alert contact.</p>
+         * <p>The mobile phone number of the alert contact.</p>
          */
         @NameInMap("Phones")
         public String phones;
 
         /**
-         * <p>An internal parameter.</p>
+         * <p>The internal fields.</p>
          */
         @NameInMap("StrategyId")
         public String strategyId;
 
         /**
-         * <p>An internal parameter.</p>
+         * <p>The internal fields.</p>
          */
         @NameInMap("Target")
         public String target;
@@ -228,7 +228,7 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of returned entries.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
