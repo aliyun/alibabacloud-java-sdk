@@ -10,9 +10,15 @@ public class UpdatePrometheusMonitoringRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>Monitoring configuration yaml string.</p>
+     */
     @NameInMap("ConfigYaml")
     public String configYaml;
 
+    /**
+     * <p>The Monitoring Name.</p>
+     */
     @NameInMap("MonitoringName")
     public String monitoringName;
 
@@ -22,6 +28,11 @@ public class UpdatePrometheusMonitoringRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The type of the monitoring configuration. </p>
+     * <p>Valid values for a Prometheus instance for Container Service: ServiceMonitor, PodMonitor, CustomJob, and Probe. </p>
+     * <p>Valid values for a Prometheus instance for ECS: CustomJob and Probe.</p>
+     */
     @NameInMap("Type")
     public String type;
 

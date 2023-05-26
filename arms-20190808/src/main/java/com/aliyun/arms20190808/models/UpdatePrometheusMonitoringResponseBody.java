@@ -4,12 +4,21 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class UpdatePrometheusMonitoringResponseBody extends TeaModel {
+    /**
+     * <p>The status code or error code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The result returned.</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 

@@ -23,13 +23,17 @@ public class CreatePrometheusMonitoringRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The status of the monitoring configuration. Valid values: run and stop. Default value: run.</p>
+     * <p>The status of the monitoring configuration. Valid values: run and stop. </p>
+     * <p>When not transmitted, the default value: run.</p>
+     * <p>Probe does not support status, this field set empty.</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>The type of the monitoring configuration. Valid values for a Prometheus instance for Container Service: ServiceMonitor, PodMonitor, CustomJob, and Probe. Valid values for a Prometheus instance for ECS: CustomJob and Probe.</p>
+     * <p>The type of the monitoring configuration. </p>
+     * <p>Valid values for a Prometheus instance for Container Service: ServiceMonitor, PodMonitor, CustomJob, and Probe. </p>
+     * <p>Valid values for a Prometheus instance for ECS: CustomJob and Probe.</p>
      */
     @NameInMap("Type")
     public String type;
