@@ -95,6 +95,9 @@ public class QueryMqSofamqGroupSubDetailResponseBody extends TeaModel {
     }
 
     public static class QueryMqSofamqGroupSubDetailResponseBodyData extends TeaModel {
+        /**
+         * <p>Group ID</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 

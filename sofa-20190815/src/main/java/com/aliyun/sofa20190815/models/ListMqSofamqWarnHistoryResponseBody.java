@@ -63,6 +63,9 @@ public class ListMqSofamqWarnHistoryResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>Group ID</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 

@@ -128,6 +128,9 @@ public class GetMqSofamqTraceResultResponseBody extends TeaModel {
     }
 
     public static class GetMqSofamqTraceResultResponseBodyDataTraceListSubList extends TeaModel {
+        /**
+         * <p>cell name</p>
+         */
         @NameInMap("Cell")
         public String cell;
 
