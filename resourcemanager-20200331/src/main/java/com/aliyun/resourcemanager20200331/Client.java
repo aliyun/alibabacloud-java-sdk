@@ -8,7 +8,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "central";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("ap-northeast-1", "resourcemanager.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("ap-south-1", "resourcemanager.ap-south-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "resourcemanager.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "resourcemanager.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "resourcemanager.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "resourcemanager.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("cn-beijing", "resourcemanager.cn-beijing.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "resourcemanager.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "resourcemanager.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "resourcemanager.cn-hangzhou-finance.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "resourcemanager.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "resourcemanager.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "resourcemanager.cn-north-2-gov-1.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "resourcemanager.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "resourcemanager.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "resourcemanager.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "resourcemanager.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "resourcemanager.cn-shenzhen-finance-1.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "resourcemanager.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "resourcemanager.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("eu-central-1", "resourcemanager.eu-central-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "resourcemanager.eu-west-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "resourcemanager.me-east-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "resourcemanager.us-east-1.aliyuncs.com"),
+            new TeaPair("us-west-1", "resourcemanager.us-west-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("resourcemanager", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
