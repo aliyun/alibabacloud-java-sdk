@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
     /**
-     * <p>The details of the access control policies.</p>
+     * <p>The information about the access control policies.</p>
      */
     @NameInMap("Policys")
     public java.util.List<DescribeVpcFirewallControlPolicyResponseBodyPolicys> policys;
@@ -17,7 +17,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of the access control policies that are returned.</p>
+     * <p>The total number of access control policies returned.</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -114,7 +114,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         public String destPortGroup;
 
         /**
-         * <p>The ports in the destination port address book of the access control policy.</p>
+         * <p>An array that consists of the ports in the destination port address book of the access control policy.</p>
          */
         @NameInMap("DestPortGroupPorts")
         public java.util.List<String> destPortGroupPorts;
@@ -133,13 +133,13 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
          * <br>
          * <p>*   If **DestinationType** is set to `net`, the value of this parameter is a CIDR block.</p>
          * <p>*   If **DestinationType** is set to `domain`, the value of this parameter is a domain name.</p>
-         * <p>*   If **DestinationType** is set to `group`, the value of this parameter is the name of an address book name.</p>
+         * <p>*   If **DestinationType** is set to `group`, the value of this parameter is an address book name.</p>
          */
         @NameInMap("Destination")
         public String destination;
 
         /**
-         * <p>The CIDR blocks in the destination address book of the access control policy.</p>
+         * <p>An array that consists of the CIDR blocks in the destination address book of the access control policy.</p>
          */
         @NameInMap("DestinationGroupCidrs")
         public java.util.List<String> destinationGroupCidrs;
@@ -213,7 +213,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The CIDR blocks in the source address book of the access control policy.</p>
+         * <p>An array that consists of the CIDR blocks in the source address book of the access control policy.</p>
          */
         @NameInMap("SourceGroupCidrs")
         public java.util.List<String> sourceGroupCidrs;

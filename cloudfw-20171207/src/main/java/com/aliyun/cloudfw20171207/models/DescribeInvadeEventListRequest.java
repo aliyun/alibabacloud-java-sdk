@@ -25,13 +25,13 @@ public class DescribeInvadeEventListRequest extends TeaModel {
     /**
      * <p>The number of the page to return.</p>
      * <br>
-     * <p>Pages start from page 1. Default value: 1.</p>
+     * <p>Default value: 1.</p>
      */
     @NameInMap("CurrentPage")
     public String currentPage;
 
     /**
-     * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds. If you do not specify this parameter, the query ends at the current time.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -55,10 +55,10 @@ public class DescribeInvadeEventListRequest extends TeaModel {
     public String eventUuid;
 
     /**
-     * <p>Specifies whether to ignore the breach awareness event. Valid values:</p>
+     * <p>Specifies whether the breach awareness event is ignored. Valid values:</p>
      * <br>
-     * <p>*   **true**: ignores the breach awareness event.</p>
-     * <p>*   **false**: does not ignore the breach awareness event.</p>
+     * <p>*   **true**: The breach awareness event is ignored.</p>
+     * <p>*   **false**: The breach awareness event is not ignored.</p>
      */
     @NameInMap("IsIgnore")
     public String isIgnore;
@@ -87,13 +87,13 @@ public class DescribeInvadeEventListRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The list of process statuses.</p>
+     * <p>The handling status of breach awareness events.</p>
      */
     @NameInMap("ProcessStatusList")
     public java.util.List<Integer> processStatusList;
 
     /**
-     * <p>The list of risk levels.</p>
+     * <p>The risk levels.</p>
      */
     @NameInMap("RiskLevel")
     public java.util.List<Integer> riskLevel;
@@ -102,10 +102,11 @@ public class DescribeInvadeEventListRequest extends TeaModel {
      * <p>The source IP address of the request.</p>
      */
     @NameInMap("SourceIp")
+    @Deprecated
     public String sourceIp;
 
     /**
-     * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds. If you do not specify this parameter, the query starts from 30 days before the current time.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

@@ -11,7 +11,7 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
      * <p>*   **drop**: blocks the traffic.</p>
      * <p>*   **log**: monitors the traffic.</p>
      * <br>
-     * <p>>  If you do not specify this parameter, access control policies are queried based on all actions.</p>
+     * <p>> If you do not specify this parameter, access control policies are queried based on all actions.</p>
      */
     @NameInMap("AclAction")
     public String aclAction;
@@ -37,7 +37,7 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The destination address in the access control policy. Fuzzy match is supported.</p>
      * <br>
-     * <p>>  The value of this parameter can be a CIDR block, a domain name, or an address book name.</p>
+     * <p>> The value of this parameter can be a CIDR block or an address book name.</p>
      */
     @NameInMap("Destination")
     public String destination;
@@ -75,13 +75,13 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
      * <p>*   **ICMP**</p>
      * <p>*   **ANY**: all protocol types</p>
      * <br>
-     * <p>>  If you do not specify this parameter, access control policies are queried based on all protocol types.</p>
+     * <p>> If you do not specify this parameter, access control policies of all protocol types are queried.</p>
      */
     @NameInMap("Proto")
     public String proto;
 
     /**
-     * <p>Indicates whether the access control policy is enabled. By default, an access control policy is enabled after the policy is created. Valid values:</p>
+     * <p>Specifies whether the access control policy is enabled. By default, an access control policy is enabled after the policy is created. Valid values:</p>
      * <br>
      * <p>*   **true**: The access control policy is enabled.</p>
      * <p>*   **false**: The access control policy is disabled.</p>
@@ -92,7 +92,7 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The source address in the access control policy. Fuzzy match is supported.</p>
      * <br>
-     * <p>>  The value of this parameter can be a CIDR block or an address book name.</p>
+     * <p>> The value of this parameter can be a CIDR block or an address book name.</p>
      */
     @NameInMap("Source")
     public String source;
@@ -103,7 +103,7 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
      * <p>*   If the VPC firewall protects the traffic between two VPCs that are connected by using a CEN instance, the value of this parameter must be the ID of the CEN instance.</p>
      * <p>*   If the VPC firewall protects the traffic between two VPCs that are connected by using an Express Connect circuit, the value of this parameter must be the instance ID of the VPC firewall.</p>
      * <br>
-     * <p>>  You can call the [DescribeVpcFirewallAclGroupList](~~159760~~) operation to query the IDs.</p>
+     * <p>> You can call the [DescribeVpcFirewallAclGroupList](~~159760~~) operation to query the ID.</p>
      */
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;

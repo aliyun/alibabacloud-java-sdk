@@ -50,6 +50,7 @@ public class ModifyVpcFirewallDefaultIPSConfigRequest extends TeaModel {
      * <p>The source IP address of the request.</p>
      */
     @NameInMap("SourceIp")
+    @Deprecated
     public String sourceIp;
 
     /**

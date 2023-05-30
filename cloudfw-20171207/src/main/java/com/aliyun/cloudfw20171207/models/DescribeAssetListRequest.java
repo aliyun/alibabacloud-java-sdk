@@ -29,7 +29,7 @@ public class DescribeAssetListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The UID of the member that is added in Cloud Firewall.</p>
+     * <p>The UID of the member that is added to Cloud Firewall.</p>
      */
     @NameInMap("MemberUid")
     public Long memberUid;
@@ -44,9 +44,9 @@ public class DescribeAssetListRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The ID of the region in which Cloud Firewall is supported.</p>
+     * <p>The region ID of your Cloud Firewall.</p>
      * <br>
-     * <p>>  For more information about the regions in which Cloud Firewall is supported, see [Supported regions](~~195657~~).</p>
+     * <p>> For more information about the regions, see [Supported regions](~~195657~~).</p>
      */
     @NameInMap("RegionNo")
     public String regionNo;
@@ -60,7 +60,7 @@ public class DescribeAssetListRequest extends TeaModel {
      * <p>*   **EcsPublicIP**: the public IP address of an ECS instance</p>
      * <p>*   **EIP**: the EIP</p>
      * <p>*   **EniEIP**: the EIP of an elastic network interface (ENI)</p>
-     * <p>*   **NatEIP**: the EIP of a Network Address Translation (NAT) gateway</p>
+     * <p>*   **NatEIP**: the EIP of a NAT gateway</p>
      * <p>*   **SlbEIP**: the EIP of a Server Load Balancer (SLB) instance</p>
      * <p>*   **SlbPublicIP**: the public IP address of an SLB instance</p>
      * <p>*   **NatPublicIP**: the public IP address of a NAT gateway</p>
@@ -70,7 +70,7 @@ public class DescribeAssetListRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The instance ID or the IP address of the asset.</p>
+     * <p>The instance ID or IP address of the asset.</p>
      */
     @NameInMap("SearchItem")
     public String searchItem;
@@ -79,9 +79,7 @@ public class DescribeAssetListRequest extends TeaModel {
      * <p>The status of the security group policy. Valid values:</p>
      * <br>
      * <p>*   **pass**: delivered</p>
-     * <br>
      * <p>*   **block**: undelivered</p>
-     * <br>
      * <p>*   **unsupport**: unsupported</p>
      * <br>
      * <p>> If you do not specify this parameter, the assets on which security group policies in all states take effect are queried.</p>
@@ -97,7 +95,7 @@ public class DescribeAssetListRequest extends TeaModel {
      * <p>*   **closed**: The firewall is disabled.</p>
      * <p>*   **closing**: The firewall is being disabled.</p>
      * <br>
-     * <p>>  If you do not specify this parameter, the assets that are configured for firewalls in all states are queried.</p>
+     * <p>> If you do not specify this parameter, the assets that are configured for firewalls in all states are queried.</p>
      */
     @NameInMap("Status")
     public String status;
@@ -112,7 +110,7 @@ public class DescribeAssetListRequest extends TeaModel {
      * <p>The edition of Cloud Firewall. Valid values:</p>
      * <br>
      * <p>*   **buy**: a paid edition (default)</p>
-     * <p>*   **free**: a free edition</p>
+     * <p>*   **free**: Free Edition</p>
      */
     @NameInMap("UserType")
     public String userType;
