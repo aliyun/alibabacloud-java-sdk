@@ -5,22 +5,16 @@ import com.aliyun.tea.*;
 
 public class UpdateTriggerRequest extends TeaModel {
     /**
-     * <p>The description of the trigger.</p>
+     * <p>The ID of your Alibaba Cloud account.</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The role that is used by the event source such as OSS to invoke the function. For more information, see [Overview](~~53102~~).</p>
+     * <p>The version or alias of the service.</p>
      */
     @NameInMap("invocationRole")
     public String invocationRole;
-
-    /**
-     * <p>The version or alias of the service.</p>
-     */
-    @NameInMap("qualifier")
-    public String qualifier;
 
     /**
      * <p>The configurations of the trigger. The configurations vary based on the trigger type. For more information about the format, see the following topics:</p>
@@ -32,6 +26,12 @@ public class UpdateTriggerRequest extends TeaModel {
      * <p>*   Tablestore trigger: Specify the **SourceArn** parameter and leave this parameter empty.</p>
      * <p>*   Alibaba Cloud CDN event trigger: [CDNEventsTriggerConfig](~~struct:CDNEventsTriggerConfig~~).</p>
      * <p>*   MNS topic trigger: [MnsTopicTriggerConfig](~~struct:MnsTopicTriggerConfig~~).</p>
+     */
+    @NameInMap("qualifier")
+    public String qualifier;
+
+    /**
+     * <p>The description of the trigger.</p>
      */
     @NameInMap("triggerConfig")
     public String triggerConfig;

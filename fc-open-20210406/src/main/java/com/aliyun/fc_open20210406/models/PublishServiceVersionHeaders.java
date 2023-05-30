@@ -26,7 +26,7 @@ public class PublishServiceVersionHeaders extends TeaModel {
     public String xFcDate;
 
     /**
-     * <p>The trace ID of the invocation request of Function Compute.</p>
+     * <p>2020-12-1210:00:00</p>
      */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;

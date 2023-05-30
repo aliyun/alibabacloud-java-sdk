@@ -8,7 +8,7 @@ public class ListInstancesHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>The ID of your Alibaba Cloud account.</p>
+     * <p>Queries the available instances of a function.</p>
      */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;

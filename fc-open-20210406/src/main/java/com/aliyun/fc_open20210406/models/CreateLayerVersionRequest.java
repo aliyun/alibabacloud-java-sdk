@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateLayerVersionRequest extends TeaModel {
     /**
-     * <p>The code of the layer.</p>
+     * <p>The name of the layer.</p>
      */
     @NameInMap("Code")
     public Code code;
 
     /**
-     * <p>The list of runtime environments that are supported by the layer.</p>
+     * <p>The name of the runtime. Valid values: **nodejs14**, **nodejs12**, **nodejs10**, **nodejs8**, **nodejs6**, **python3.9**, **python3**, **python2.7**, **java11**, **java8**, **php7.2**, **go1**, **dotnetcore2.1** and **custom**.</p>
      */
     @NameInMap("compatibleRuntime")
     public java.util.List<String> compatibleRuntime;
 
     /**
-     * <p>The description of the layer.</p>
+     * <p>The name of the layer.</p>
      */
     @NameInMap("description")
     public String description;

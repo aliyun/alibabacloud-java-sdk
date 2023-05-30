@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListProvisionConfigsResponseBody extends TeaModel {
     /**
-     * <p>The token used to obtain more results.</p>
+     * <p>The qualifier of the service to which resources belong. The qualifier must be aliasName and used together with the serviceName parameter.</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
-     * <p>The information about provisioned instances.</p>
+     * <p>The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.</p>
      */
     @NameInMap("provisionConfigs")
     public java.util.List<ListProvisionConfigsResponseBodyProvisionConfigs> provisionConfigs;
@@ -38,44 +38,46 @@ public class ListProvisionConfigsResponseBody extends TeaModel {
     }
 
     public static class ListProvisionConfigsResponseBodyProvisionConfigs extends TeaModel {
-        /**
-         * <p>Specifies whether to always allocate CPU to a function instance.</p>
-         */
         @NameInMap("alwaysAllocateCPU")
         public Boolean alwaysAllocateCPU;
 
         /**
-         * <p>The actual number of provisioned instances.</p>
+         * <p>The expected number of provisioned instances.</p>
          */
         @NameInMap("current")
         public Long current;
 
         /**
-         * <p>The error message returned if a provisioned instance fails to be created.</p>
+         * <p>139490</p>
          */
         @NameInMap("currentError")
         public String currentError;
 
         /**
-         * <p>The description of the resource.</p>
+         * <p>Details about the scheduled scaling policy. You can use the scheduled scaling policy to flexibly configure provisioned instances. You can specify the number of provisioned instances to the desired value at the scheduled time. This way, the number of provisioned instances can meet the concurrency requirements of your business.</p>
          */
         @NameInMap("resource")
         public String resource;
 
         /**
-         * <p>The configurations of scheduled auto scaling.</p>
+         * <p>The ID of your Alibaba Cloud account.</p>
          */
         @NameInMap("scheduledActions")
         public java.util.List<ScheduledActions> scheduledActions;
 
         /**
-         * <p>The expected number of provisioned instances.</p>
+         * <p>The configuration of metric-based auto scaling. Provisioned instances are scaled in or out every minute based on the concurrency utilization of provisioned instances. </p>
+         * <br>
+         * <p>- If the metric value exceeds the value of the metricTarget parameter, the system scales out provisioned instances based on a progressive policy to make the metric value closer to the value of the metricTarget parameter. </p>
+         * <p>- When the metric value is smaller than the value of the metricTarget parameter, the system scales in provisioned instances based on a conservative policy to make the metric value close to the value of the metricTarget parameter. </p>
+         * <br>
+         * <p>After you specify the maximum and minimum numbers of provisioned instances, the system scales in or out provisioned instances within the range from the minimum number to the maximum number. If the number of provisioned instances is beyond the range, the scaling stops.</p>
          */
         @NameInMap("target")
         public Long target;
 
         /**
-         * <p>The configurations of metric-based auto scaling.</p>
+         * <p>Example 1</p>
          */
         @NameInMap("targetTrackingPolicies")
         public java.util.List<TargetTrackingPolicies> targetTrackingPolicies;

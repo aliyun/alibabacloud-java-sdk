@@ -5,16 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetResourceTagsResponseBody extends TeaModel {
     /**
-     * <p>The ARN of the resource. </p>
-     * <br>
-     * <p>> You can use the value of this parameter to query the information about the resource, such as the account, service, and region information of the resource.</p>
+     * <p>147258</p>
      */
     @NameInMap("resourceArn")
     public String resourceArn;
 
-    /**
-     * <p>The tag dictionary.</p>
-     */
     @NameInMap("tags")
     public java.util.Map<String, String> tags;
 

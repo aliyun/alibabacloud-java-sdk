@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListStatefulAsyncInvocationFunctionsResponseBody extends TeaModel {
     /**
-     * <p>The details of returned data.</p>
+     * <p>The trace ID of the request for Function Compute API.</p>
      */
     @NameInMap("data")
     public java.util.List<AsyncConfigMeta> data;
 
     /**
-     * <p>The token used to obtain more results. If this parameter is left empty, all the results are returned.</p>
+     * <p>2022-01-28 18:04:38</p>
      */
     @NameInMap("nextToken")
     public String nextToken;

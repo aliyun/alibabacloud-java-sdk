@@ -8,19 +8,19 @@ public class GetLayerVersionHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>The ID of your Alibaba Cloud account.</p>
+     * <p>This parameter is returned only when the information about a specific layer version is queried.</p>
      */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
     /**
-     * <p>The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.</p>
+     * <p>The location of the layer code.</p>
      */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
     /**
-     * <p>The trace ID of the request for Function Compute API.</p>
+     * <p>The structure of the layer code.</p>
      */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;

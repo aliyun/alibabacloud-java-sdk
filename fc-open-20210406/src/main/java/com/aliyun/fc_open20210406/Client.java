@@ -1340,14 +1340,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getFunctionWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
-    /**
-      * StatefulAsyncInvocation indicates whether the asynchronous task feature is enabled. If the value of StatefulAsyncInvocation is true, the asynchronous task feature is enabled. All asynchronous invocations change to asynchronous task mode.
-      *
-      * @param request GetFunctionAsyncInvokeConfigRequest
-      * @param headers GetFunctionAsyncInvokeConfigHeaders
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return GetFunctionAsyncInvokeConfigResponse
-     */
     public GetFunctionAsyncInvokeConfigResponse getFunctionAsyncInvokeConfigWithOptions(String serviceName, String functionName, GetFunctionAsyncInvokeConfigRequest request, GetFunctionAsyncInvokeConfigHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1390,12 +1382,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetFunctionAsyncInvokeConfigResponse());
     }
 
-    /**
-      * StatefulAsyncInvocation indicates whether the asynchronous task feature is enabled. If the value of StatefulAsyncInvocation is true, the asynchronous task feature is enabled. All asynchronous invocations change to asynchronous task mode.
-      *
-      * @param request GetFunctionAsyncInvokeConfigRequest
-      * @return GetFunctionAsyncInvokeConfigResponse
-     */
     public GetFunctionAsyncInvokeConfigResponse getFunctionAsyncInvokeConfig(String serviceName, String functionName, GetFunctionAsyncInvokeConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         GetFunctionAsyncInvokeConfigHeaders headers = new GetFunctionAsyncInvokeConfigHeaders();
@@ -1684,7 +1670,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * StatefulAsyncInvocation: asynchronous task. Asynchronous tasks allow you to manage the states on the basis of common asynchronous invocations, which is more suitable for task scenarios.
+      * The version or alias of the service to which the asynchronous task belongs.
       *
       * @param request GetStatefulAsyncInvocationRequest
       * @param headers GetStatefulAsyncInvocationHeaders
@@ -1746,7 +1732,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * StatefulAsyncInvocation: asynchronous task. Asynchronous tasks allow you to manage the states on the basis of common asynchronous invocations, which is more suitable for task scenarios.
+      * The version or alias of the service to which the asynchronous task belongs.
       *
       * @param request GetStatefulAsyncInvocationRequest
       * @return GetStatefulAsyncInvocationResponse
@@ -1829,6 +1815,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
             realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcStatefulAsyncInvocationEnable)) {
+            realHeaders.put("X-Fc-Stateful-Async-Invocation-Enable", com.aliyun.teautil.Common.toJSONString(headers.xFcStatefulAsyncInvocationEnable));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcStatefulAsyncInvocationId)) {
@@ -2032,14 +2022,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listEventSourcesWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
-    /**
-      * StatefulAsyncInvocation indicates whether the asynchronous task feature is enabled. If StatefulAsyncInvocation is set to true, the asynchronous task is enabled. All asynchronous invocations to the function corresponding to this configuration change to asynchronous task mode.
-      *
-      * @param request ListFunctionAsyncInvokeConfigsRequest
-      * @param headers ListFunctionAsyncInvokeConfigsHeaders
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListFunctionAsyncInvokeConfigsResponse
-     */
     public ListFunctionAsyncInvokeConfigsResponse listFunctionAsyncInvokeConfigsWithOptions(String serviceName, String functionName, ListFunctionAsyncInvokeConfigsRequest request, ListFunctionAsyncInvokeConfigsHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2098,12 +2080,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListFunctionAsyncInvokeConfigsResponse());
     }
 
-    /**
-      * StatefulAsyncInvocation indicates whether the asynchronous task feature is enabled. If StatefulAsyncInvocation is set to true, the asynchronous task is enabled. All asynchronous invocations to the function corresponding to this configuration change to asynchronous task mode.
-      *
-      * @param request ListFunctionAsyncInvokeConfigsRequest
-      * @return ListFunctionAsyncInvokeConfigsResponse
-     */
     public ListFunctionAsyncInvokeConfigsResponse listFunctionAsyncInvokeConfigs(String serviceName, String functionName, ListFunctionAsyncInvokeConfigsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         ListFunctionAsyncInvokeConfigsHeaders headers = new ListFunctionAsyncInvokeConfigsHeaders();
@@ -2175,8 +2151,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ListInstances operation allows you to query the available instances of a function.
-      * Available instances are instances that are processing requests or can be scheduled to process requests. Available instances queried by the ListInstances operation are the same as those that can be used when you call the InvokeFunction operation with the same values specified for the `serviceName`, `functionName`, and `qualifier` parameters.
+      * The maximum number of resources to return. Valid values: \\[0,1000].
+      * The number of returned resources is less than or equal to the specified number.
       *
       * @param request ListInstancesRequest
       * @param headers ListInstancesHeaders
@@ -2226,8 +2202,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ListInstances operation allows you to query the available instances of a function.
-      * Available instances are instances that are processing requests or can be scheduled to process requests. Available instances queried by the ListInstances operation are the same as those that can be used when you call the InvokeFunction operation with the same values specified for the `serviceName`, `functionName`, and `qualifier` parameters.
+      * The maximum number of resources to return. Valid values: \\[0,1000].
+      * The number of returned resources is less than or equal to the specified number.
       *
       * @param request ListInstancesRequest
       * @return ListInstancesResponse
@@ -2651,7 +2627,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * StatefulAsyncInvocation: asynchronous task. Asynchronous tasks allow you to manage the states on the basis of common asynchronous invocations, which is more suitable for task scenarios.
+      * The metadata of the service and function to which the asynchronous task belongs.
       *
       * @param request ListStatefulAsyncInvocationFunctionsRequest
       * @param headers ListStatefulAsyncInvocationFunctionsHeaders
@@ -2705,7 +2681,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * StatefulAsyncInvocation: asynchronous task. Asynchronous tasks allow you to manage the states on the basis of common asynchronous invocations, which is more suitable for task scenarios.
+      * The metadata of the service and function to which the asynchronous task belongs.
       *
       * @param request ListStatefulAsyncInvocationFunctionsRequest
       * @return ListStatefulAsyncInvocationFunctionsResponse
@@ -2717,7 +2693,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * StatefulAsyncInvocation: asynchronous task. Asynchronous tasks allow you to manage the states on the basis of common asynchronous invocations, which is more suitable for task scenarios.
+      * The name of the service to which the asynchronous task belongs.
       *
       * @param request ListStatefulAsyncInvocationsRequest
       * @param headers ListStatefulAsyncInvocationsHeaders
@@ -2811,7 +2787,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * StatefulAsyncInvocation: asynchronous task. Asynchronous tasks allow you to manage the states on the basis of common asynchronous invocations, which is more suitable for task scenarios.
+      * The name of the service to which the asynchronous task belongs.
       *
       * @param request ListStatefulAsyncInvocationsRequest
       * @return ListStatefulAsyncInvocationsResponse
@@ -3028,7 +3004,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * StatefulAsyncInvocation specifies the configurations of the asynchronous task. Asynchronous tasks allow you to manage the states on the basis of common asynchronous invocations, which is more suitable for task scenarios.
+      * The maximum validity period of messages.
       *
       * @param request PutFunctionAsyncInvokeConfigRequest
       * @param headers PutFunctionAsyncInvokeConfigHeaders
@@ -3096,7 +3072,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * StatefulAsyncInvocation specifies the configurations of the asynchronous task. Asynchronous tasks allow you to manage the states on the basis of common asynchronous invocations, which is more suitable for task scenarios.
+      * The maximum validity period of messages.
       *
       * @param request PutFunctionAsyncInvokeConfigRequest
       * @return PutFunctionAsyncInvokeConfigResponse

@@ -5,71 +5,55 @@ import com.aliyun.tea.*;
 
 public class ListStatefulAsyncInvocationsRequest extends TeaModel {
     /**
-     * <p>- **true**: returns the invocationPayload parameter in the response. </p>
-     * <p>- **false**: does not return the invocationPayload parameter in the response. </p>
-     * <br>
-     * <p>> The `invocationPayload` parameter indicates the input parameters of an asynchronous task.</p>
+     * <p>You can search for API operations, call and debug API operations online, and dynamically generate executable sample code for SDKs.</p>
      */
     @NameInMap("includePayload")
     public Boolean includePayload;
 
     /**
-     * <p>The name prefix of the asynchronous invocation. The names of returned resources must contain the prefix. For example, if invocationidPrefix is set to job, the names of returned resources must start with job.</p>
+     * <p>Alibaba Cloud provides SDKs for multiple programming languages to help you integrate Alibaba Cloud services by using APIs. We recommend that you use an SDK to call API operations. This frees you from manual signature verification.</p>
      */
     @NameInMap("invocationIdPrefix")
     public String invocationIdPrefix;
 
     /**
-     * <p>The maximum number of asynchronous invocations to return. Valid values: [1, 100]. Default value: 50.</p>
+     * <p>The list of events that trigger the asynchronous task.</p>
      */
     @NameInMap("limit")
     public Integer limit;
 
     /**
-     * <p>The token used to obtain more results. If the number of resources exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.</p>
+     * <p>The ID of the instance that is used to run the asynchronous task.</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
-     * <p>The version or alias of the service to which the asynchronous task belongs.</p>
+     * <p>The number of retries after the asynchronous task fails.</p>
      */
     @NameInMap("qualifier")
     public String qualifier;
 
     /**
-     * <p>The order in which the returned asynchronous invocations are sorted. Valid values:</p>
-     * <br>
-     * <p>- **asc**: in ascending order </p>
-     * <p>- **desc**: in descending order</p>
+     * <p>StatefulAsyncInvocation: asynchronous task. Asynchronous tasks allow you to manage the states on the basis of common asynchronous invocations, which is more suitable for task scenarios.</p>
      */
     @NameInMap("sortOrderByTime")
     public String sortOrderByTime;
 
     /**
-     * <p>The start time of the asynchronous task.</p>
+     * <p>The structure of the asynchronous task.</p>
      */
     @NameInMap("startedTimeBegin")
     public Long startedTimeBegin;
 
     /**
-     * <p>The end time of the asynchronous task.</p>
+     * <p>The latest version of Function Compute API.</p>
      */
     @NameInMap("startedTimeEnd")
     public Long startedTimeEnd;
 
     /**
-     * <p>The status of the asynchronous task. </p>
-     * <br>
-     * <p>- **Enqueued**: The asynchronous invocation is enqueued and is waiting to be executed. </p>
-     * <p>- **Succeeded**: The invocation is successful. </p>
-     * <p>- **Failed**: The invocation fails. </p>
-     * <p>- **Running**: The invocation is being executed. </p>
-     * <p>- **Stopped**: The invocation is terminated. </p>
-     * <p>- **Stopping**: The invocation is being terminated. </p>
-     * <p>- **Invalid**: The invocation is invalid and not executed due to specific reasons. For example, the function is deleted. </p>
-     * <p>- **Expired**: The maximum validity period of messages is specified for asynchronous invocation. The invocation is discarded and not executed because the specified maximum validity period of messages expires. </p>
-     * <p>- **Retrying**: The asynchronous invocation is being retried due to an execution error.</p>
+     * <p>The request ID of the asynchronous task.</p>
      */
     @NameInMap("status")
     public String status;

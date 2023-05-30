@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteFunctionAsyncInvokeConfigRequest extends TeaModel {
     /**
-     * <p>The qualifier.</p>
+     * <p>Deletes the asynchronous invocation configurations of a function in a service.</p>
      */
     @NameInMap("qualifier")
     public String qualifier;

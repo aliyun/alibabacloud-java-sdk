@@ -8,43 +8,37 @@ public class GetStatefulAsyncInvocationHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>The ID of your Alibaba Cloud account.</p>
+     * <p>The list of events that trigger the asynchronous task.</p>
      */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
     /**
-     * <p>The CRC-64 value of the function code package. This value is used to check data integrity. The value is automatically calculated by the tool.</p>
+     * <p>The structure of the asynchronous task.</p>
      */
     @NameInMap("X-Fc-Code-Checksum")
     public String xFcCodeChecksum;
 
     /**
-     * <p>The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.</p>
+     * <p>Alibaba Cloud provides SDKs for multiple programming languages to help you integrate Alibaba Cloud services by using APIs. We recommend that you use an SDK to call API operations. This frees you from manual signature verification.</p>
      */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
     /**
-     * <p>The invocation method. </p>
-     * <br>
-     * <p>- **Sync**: synchronous invocation </p>
-     * <p>- **Async**: asynchronous invocation</p>
+     * <p>StatefulAsyncInvocation: asynchronous task. Asynchronous tasks allow you to manage the states on the basis of common asynchronous invocations, which is more suitable for task scenarios.</p>
      */
     @NameInMap("X-Fc-Invocation-Type")
     public String xFcInvocationType;
 
     /**
-     * <p>The method used to return logs. Valid values: </p>
-     * <br>
-     * <p>- **Tail**: returns the last 4 KB of logs that are generated for the current request. </p>
-     * <p>- **None**: does not return logs for the current request. This is the default value.</p>
+     * <p>The latest version of Function Compute API.</p>
      */
     @NameInMap("X-Fc-Log-Type")
     public String xFcLogType;
 
     /**
-     * <p>The trace ID of the invocation request of Function Compute.</p>
+     * <p>You can search for API operations, call and debug API operations online, and dynamically generate executable sample code for SDKs.</p>
      */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;

@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateAliasRequest extends TeaModel {
     /**
-     * <p>The canary release version to which the alias points and the weight of the canary release version.</p>
+     * <p>The additional version to which the alias points and the weight of the additional version.</p>
      * <br>
-     * <p>*   The canary release version takes effect only when the function is invoked.</p>
+     * <p>*   The additional version takes effect only when the function is invoked.</p>
      * <p>*   The value consists of a version number and a specific weight. For example, 2:0.05 indicates that when a function is invoked, Version 2 is the canary release version, 5% of the traffic is distributed to the canary release version, and 95% of the traffic is distributed to the major version.</p>
      */
     @NameInMap("additionalVersionWeight")
     public java.util.Map<String, Float> additionalVersionWeight;
 
     /**
-     * <p>The name of the alias.  The name contains only letters, digits, hyphens (-), and underscores (\_). The name must be 1 to 128 characters in length and cannot start with a digit or hyphen (-).  The name cannot be **LATEST**.</p>
+     * <p>The name of the alias. The name can contain letters, digits, underscores (\_), and hyphens (-) only. The name cannot start with a digit or a hyphen (-). The name must be 1 to 128 characters in length. The name cannot be set to **LATEST**</p>
      */
     @NameInMap("aliasName")
     public String aliasName;

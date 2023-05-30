@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class PublishServiceVersionResponseBody extends TeaModel {
     /**
-     * <p>The time when the service version was created.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("createdTime")
     public String createdTime;
 
     /**
-     * <p>The description of the service version.</p>
+     * <p>The creation time.</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The time when the service version was last modified.</p>
+     * <p>The description of the service version.</p>
      */
     @NameInMap("lastModifiedTime")
     public String lastModifiedTime;
 
     /**
-     * <p>The version of the service.</p>
+     * <p>The last update time.</p>
      */
     @NameInMap("versionId")
     public String versionId;

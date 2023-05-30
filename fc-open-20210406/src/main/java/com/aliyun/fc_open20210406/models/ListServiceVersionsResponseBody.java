@@ -5,21 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListServiceVersionsResponseBody extends TeaModel {
     /**
-     * <p>The order in which the returned versions are sorted. Valid values:</p>
-     * <p>  - **FORWARD**: in ascending order. </p>
-     * <p>  - **BACKWARD**: in descending order. This is the default value.</p>
+     * <p>The information about the version.</p>
      */
     @NameInMap("direction")
     public String direction;
 
     /**
-     * <p>The token used to obtain more results. If the number of resources exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.</p>
+     * <p>$.parameters[9].schema.description</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
-     * <p>The list of versions.</p>
+     * <p>$.parameters[9].schema.enumValueTitles</p>
      */
     @NameInMap("versions")
     public java.util.List<ListServiceVersionsResponseBodyVersions> versions;
@@ -55,26 +53,23 @@ public class ListServiceVersionsResponseBody extends TeaModel {
 
     public static class ListServiceVersionsResponseBodyVersions extends TeaModel {
         /**
-         * <p>The time when the service version was created.</p>
+         * <p>$.parameters[10].schema.enumValueTitles</p>
          */
         @NameInMap("createdTime")
         public String createdTime;
 
         /**
-         * <p>The description of the service version.</p>
+         * <p>Queries all the versions of a service.</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>The time when the service version was last modified.</p>
+         * <p>Xiaoqi</p>
          */
         @NameInMap("lastModifiedTime")
         public String lastModifiedTime;
 
-        /**
-         * <p>The version of the service.</p>
-         */
         @NameInMap("versionId")
         public String versionId;
 

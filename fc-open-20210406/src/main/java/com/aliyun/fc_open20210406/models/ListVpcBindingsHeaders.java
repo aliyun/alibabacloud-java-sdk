@@ -8,19 +8,19 @@ public class ListVpcBindingsHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>The ID of your Alibaba Cloud account.</p>
+     * <p>The time when Function Compute API is called. Specify the time in the yyyy-mm-ddhh:mm:ss format.</p>
      */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
     /**
-     * <p>The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.</p>
+     * <p>Example 1</p>
      */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
     /**
-     * <p>The custom request ID.</p>
+     * <p>Queries the list of VPCs.</p>
      */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;

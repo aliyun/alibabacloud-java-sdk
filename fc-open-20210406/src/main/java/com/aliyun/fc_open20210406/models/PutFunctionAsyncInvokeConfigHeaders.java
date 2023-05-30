@@ -8,19 +8,19 @@ public class PutFunctionAsyncInvokeConfigHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>The ID of your Alibaba Cloud account.</p>
+     * <p>The name of the service.</p>
      */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
     /**
-     * <p>The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.</p>
+     * <p>The creation time.</p>
      */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
     /**
-     * <p>The trace ID of the invocation request of Function Compute.</p>
+     * <p>The maximum number of retries allowed after an asynchronous invocation fails. Default value: 3. Valid values: 0 to 8.</p>
      */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;

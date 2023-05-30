@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEventSourcesResponseBody extends TeaModel {
     /**
-     * <p>The information about event sources.</p>
+     * <p>Queries all the event sources of a function.</p>
      */
     @NameInMap("eventSources")
     public java.util.List<ListEventSourcesResponseBodyEventSources> eventSources;
@@ -24,14 +24,11 @@ public class ListEventSourcesResponseBody extends TeaModel {
     }
 
     public static class ListEventSourcesResponseBodyEventSources extends TeaModel {
-        /**
-         * <p>The time when the event source was created.</p>
-         */
         @NameInMap("createdTime")
         public String createdTime;
 
         /**
-         * <p>The ARN of the event source.</p>
+         * <p>Jianyi</p>
          */
         @NameInMap("sourceArn")
         public String sourceArn;
