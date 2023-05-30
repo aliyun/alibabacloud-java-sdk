@@ -11,19 +11,19 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
     public java.util.List<DescribeInvadeEventListResponseBodyEventList> eventList;
 
     /**
-     * <p>The ratio of high-risk events.</p>
+     * <p>The percentage of high-risk events.</p>
      */
     @NameInMap("HighLevelPercent")
     public Integer highLevelPercent;
 
     /**
-     * <p>The ratio of low-risk events.</p>
+     * <p>The percentage of low-risk events.</p>
      */
     @NameInMap("LowLevelPercent")
     public Integer lowLevelPercent;
 
     /**
-     * <p>The ratio of medium-risk events.</p>
+     * <p>The percentage of medium-risk events.</p>
      */
     @NameInMap("MiddleLevelPercent")
     public Integer middleLevelPercent;
@@ -109,17 +109,17 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
         /**
          * <p>The type of the affected asset. Valid values:</p>
          * <br>
-         * <p>* **BastionHostIP**: the egress IP address of a bastion host</p>
-         * <p>* **BastionHostIngressIP**: the ingress IP address of a bastion host</p>
-         * <p>* **EcsEIP**: the elastic IP address (EIP) of an Elastic Compute Service (ECS) instance</p>
-         * <p>* **EcsPublicIP**: the public IP address of an ECS instance</p>
-         * <p>* **EIP**: the EIP</p>
-         * <p>* **EniEIP**: the EIP of an elastic network interface (ENI)</p>
-         * <p>* **NatEIP**: the EIP of a NAT gateway</p>
-         * <p>* **SlbEIP**: the EIP of a Server Load Balancer (SLB) instance</p>
-         * <p>* **SlbPublicIP**: the public IP address of an SLB instance</p>
-         * <p>* **NatPublicIP**: the public IP address of a NAT gateway</p>
-         * <p>* **HAVIP**: the high-availability virtual IP address (HAVIP)</p>
+         * <p>*   **BastionHostIP**: the egress IP address of a bastion host</p>
+         * <p>*   **BastionHostIngressIP**: the ingress IP address of a bastion host</p>
+         * <p>*   **EcsEIP**: the elastic IP address (EIP) of an Elastic Compute Service (ECS) instance</p>
+         * <p>*   **EcsPublicIP**: the public IP address of an ECS instance</p>
+         * <p>*   **EIP**: the EIP</p>
+         * <p>*   **EniEIP**: the EIP of an elastic network interface (ENI)</p>
+         * <p>*   **NatEIP**: the EIP of a NAT gateway</p>
+         * <p>*   **SlbEIP**: the EIP of a Server Load Balancer (SLB) instance</p>
+         * <p>*   **SlbPublicIP**: the public IP address of an SLB instance</p>
+         * <p>*   **NatPublicIP**: the public IP address of a NAT gateway</p>
+         * <p>*   **HAVIP**: the high-availability virtual IP address (HAVIP)</p>
          */
         @NameInMap("AssetsType")
         public String assetsType;
@@ -202,17 +202,17 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
         /**
          * <p>The type of the affected asset. Valid values:</p>
          * <br>
-         * <p>* **BastionHostIP**: the egress IP address of a bastion host</p>
-         * <p>* **BastionHostIngressIP**: the ingress IP address of a bastion host</p>
-         * <p>* **EcsEIP**: the EIP of an ECS instance</p>
-         * <p>* **EcsPublicIP**: the public IP address of an ECS instance</p>
-         * <p>* **EIP**: the EIP</p>
-         * <p>* **EniEIP**: the EIP of an ENI</p>
-         * <p>* **NatEIP**: the EIP of a NAT gateway</p>
-         * <p>* **SlbEIP**: the EIP of an SLB instance</p>
-         * <p>* **SlbPublicIP**: the public IP address of an SLB instance</p>
-         * <p>* **NatPublicIP**: the public IP address of a NAT gateway</p>
-         * <p>* **HAVIP**: the HAVIP</p>
+         * <p>*   **BastionHostIP**: the egress IP address of a bastion host</p>
+         * <p>*   **BastionHostIngressIP**: the ingress IP address of a bastion host</p>
+         * <p>*   **EcsEIP**: the EIP of an ECS instance</p>
+         * <p>*   **EcsPublicIP**: the public IP address of an ECS instance</p>
+         * <p>*   **EIP**: the EIP</p>
+         * <p>*   **EniEIP**: the EIP of an ENI</p>
+         * <p>*   **NatEIP**: the EIP of a NAT gateway</p>
+         * <p>*   **SlbEIP**: the EIP of an SLB instance</p>
+         * <p>*   **SlbPublicIP**: the public IP address of an SLB instance</p>
+         * <p>*   **NatPublicIP**: the public IP address of a NAT gateway</p>
+         * <p>*   **HAVIP**: the HAVIP</p>
          */
         @NameInMap("PublicIpType")
         public String publicIpType;

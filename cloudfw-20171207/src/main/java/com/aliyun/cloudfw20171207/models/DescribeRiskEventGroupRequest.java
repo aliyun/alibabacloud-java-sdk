@@ -118,7 +118,7 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     public String noLocation;
 
     /**
-     * <p>The order in which you want to sort the results. Valid values:</p>
+     * <p>The order in which you want to sort the query results. Valid values:</p>
      * <br>
      * <p>*   **asc**: the ascending order.</p>
      * <p>*   **desc**: the descending order. This is the default value.</p>

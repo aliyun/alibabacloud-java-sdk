@@ -38,6 +38,7 @@ public class DeleteControlPolicyRequest extends TeaModel {
      * <p>The source IP address of the traffic.</p>
      */
     @NameInMap("SourceIp")
+    @Deprecated
     public String sourceIp;
 
     public static DeleteControlPolicyRequest build(java.util.Map<String, ?> map) throws Exception {

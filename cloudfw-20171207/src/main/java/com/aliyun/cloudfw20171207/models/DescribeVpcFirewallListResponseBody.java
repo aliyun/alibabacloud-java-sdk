@@ -17,7 +17,7 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>An array that consists of the details about the VPC firewalls.</p>
+     * <p>An array that consists of the details about the VPC firewall.</p>
      */
     @NameInMap("VpcFirewalls")
     public java.util.List<DescribeVpcFirewallListResponseBodyVpcFirewalls> vpcFirewalls;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRiskEventGroupResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the details of the intrusion events.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("DataList")
     public java.util.List<DescribeRiskEventGroupResponseBodyDataList> dataList;
@@ -181,7 +181,7 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
 
     public static class DescribeRiskEventGroupResponseBodyDataListVpcDstInfo extends TeaModel {
         /**
-         * <p>The ID of the ECS instance.</p>
+         * <p>The ID of instance N on which you want to run the command.</p>
          */
         @NameInMap("EcsInstanceId")
         public String ecsInstanceId;
@@ -259,7 +259,7 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
 
     public static class DescribeRiskEventGroupResponseBodyDataListVpcSrcInfo extends TeaModel {
         /**
-         * <p>The ID of the ECS instance.</p>
+         * <p>The ID of instance N on which you want to run the command.</p>
          */
         @NameInMap("EcsInstanceId")
         public String ecsInstanceId;

@@ -44,6 +44,7 @@ public class ModifyControlPolicyPositionRequest extends TeaModel {
      * <p>The source IP address of the request.</p>
      */
     @NameInMap("SourceIp")
+    @Deprecated
     public String sourceIp;
 
     public static ModifyControlPolicyPositionRequest build(java.util.Map<String, ?> map) throws Exception {

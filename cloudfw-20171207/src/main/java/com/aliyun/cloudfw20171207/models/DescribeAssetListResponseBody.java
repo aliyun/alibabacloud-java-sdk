@@ -55,19 +55,19 @@ public class DescribeAssetListResponseBody extends TeaModel {
         /**
          * <p>The UID of the Alibaba Cloud account.</p>
          * <br>
-         * <p>>  The value of this parameter indicates the management account to which the member is added.</p>
+         * <p>> The value of this parameter indicates the management account to which the member is added.</p>
          */
         @NameInMap("AliUid")
         public Long aliUid;
 
         /**
-         * <p>The instance ID of the asset that is bound to Cloud Firewall.</p>
+         * <p>The instance ID of the asset.</p>
          */
         @NameInMap("BindInstanceId")
         public String bindInstanceId;
 
         /**
-         * <p>The instance name of the asset that is bound to Cloud Firewall.</p>
+         * <p>The instance name of the asset.</p>
          */
         @NameInMap("BindInstanceName")
         public String bindInstanceName;
@@ -99,7 +99,7 @@ public class DescribeAssetListResponseBody extends TeaModel {
         public Integer ipVersion;
 
         /**
-         * <p>The UID of the member that is added in Cloud Firewall.</p>
+         * <p>The UID of the member that is added to Cloud Firewall.</p>
          */
         @NameInMap("MemberUid")
         public Long memberUid;
@@ -116,8 +116,8 @@ public class DescribeAssetListResponseBody extends TeaModel {
         /**
          * <p>The remarks of the asset. Valid values:</p>
          * <br>
-         * <p>*   **REGION\_NOT\_SUPPORT**: The region is not supported.</p>
-         * <p>*   **NETWORK\_NOT\_SUPPORT**: The network is not supported.</p>
+         * <p>*   **REGION_NOT_SUPPORT**: The region is not supported.</p>
+         * <p>*   **NETWORK_NOT_SUPPORT**: The network is not supported.</p>
          */
         @NameInMap("Note")
         public String note;
@@ -179,7 +179,7 @@ public class DescribeAssetListResponseBody extends TeaModel {
          * <p>*   **middle**: medium</p>
          * <p>*   **hight**: high</p>
          * <br>
-         * <p>>  The value of this parameter is returned only when the UserType parameter is set to free.</p>
+         * <p>> The value of this parameter is returned only when the UserType parameter is set to free.</p>
          */
         @NameInMap("RiskLevel")
         public String riskLevel;
@@ -195,7 +195,7 @@ public class DescribeAssetListResponseBody extends TeaModel {
         public String sgStatus;
 
         /**
-         * <p>The time when the status of the security group was last checked. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time when the status of the security group policy was last checked. The value is a UNIX timestamp. Unit: seconds.</p>
          */
         @NameInMap("SgStatusTime")
         public Long sgStatusTime;

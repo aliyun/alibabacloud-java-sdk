@@ -41,6 +41,7 @@ public class PutDisableFwSwitchRequest extends TeaModel {
      * <p>The source IP address of the request.</p>
      */
     @NameInMap("SourceIp")
+    @Deprecated
     public String sourceIp;
 
     public static PutDisableFwSwitchRequest build(java.util.Map<String, ?> map) throws Exception {

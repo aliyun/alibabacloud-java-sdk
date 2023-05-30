@@ -7,40 +7,40 @@ public class AddControlPolicyRequest extends TeaModel {
     /**
      * <p>The action that Cloud Firewall performs on the traffic. Valid values:</p>
      * <br>
-     * <p>* **accept**: allows the traffic.</p>
-     * <p>* **drop**: denies the traffic.</p>
-     * <p>* **log**: monitors the traffic.</p>
+     * <p>*   **accept**: allows the traffic.</p>
+     * <p>*   **drop**: denies the traffic.</p>
+     * <p>*   **log**: monitors the traffic.</p>
      */
     @NameInMap("AclAction")
     public String aclAction;
 
     /**
-     * <p>The type of the application that the access control policy supports. Valid values:</p>
+     * <p>The application type supported by the access control policy. Valid values:</p>
      * <br>
-     * <p>* **FTP**</p>
-     * <p>* **HTTP**</p>
-     * <p>* **HTTPS**</p>
-     * <p>* **Memcache**</p>
-     * <p>* **MongoDB**</p>
-     * <p>* **MQTT**</p>
-     * <p>* **MySQL**</p>
-     * <p>* **RDP**</p>
-     * <p>* **Redis**</p>
-     * <p>* **SMTP**</p>
-     * <p>* **SMTPS**</p>
-     * <p>* **SSH**</p>
-     * <p>* **SSL_No_Cert**</p>
-     * <p>* **SSL**</p>
-     * <p>* **VNC**</p>
-     * <p>* **ANY**: all types of applications</p>
+     * <p>*   **FTP**</p>
+     * <p>*   **HTTP**</p>
+     * <p>*   **HTTPS**</p>
+     * <p>*   **Memcache**</p>
+     * <p>*   **MongoDB**</p>
+     * <p>*   **MQTT**</p>
+     * <p>*   **MySQL**</p>
+     * <p>*   **RDP**</p>
+     * <p>*   **Redis**</p>
+     * <p>*   **SMTP**</p>
+     * <p>*   **SMTPS**</p>
+     * <p>*   **SSH**</p>
+     * <p>*   **SSL_No_Cert**</p>
+     * <p>*   **SSL**</p>
+     * <p>*   **VNC**</p>
+     * <p>*   **ANY**</p>
      * <br>
-     * <p>> The value of this parameter depends on the value of Proto. If Proto is set to TCP, you can set ApplicationName to any valid value. If Proto is set to UDP, ICMP, or ANY, you can set ApplicationName only to ANY.</p>
+     * <p>> The value of this parameter is based on the value of Proto. If Proto is set to TCP, you can set ApplicationName to any valid value. If Proto is set to UDP, ICMP, or ANY, you can set ApplicationName only to ANY. You must specify at least one of the ApplicationNameList and ApplicationName parameters.</p>
      */
     @NameInMap("ApplicationName")
     public String applicationName;
 
     /**
-     * <p>The types of the application that the access control policy supports.</p>
+     * <p>The application types supported by the access control policy.</p>
      */
     @NameInMap("ApplicationNameList")
     public java.util.List<String> applicationNameList;
@@ -54,15 +54,15 @@ public class AddControlPolicyRequest extends TeaModel {
     /**
      * <p>The destination port in the access control policy. Valid values:</p>
      * <br>
-     * <p>* If Proto is set to ICMP, the value of DestPort is empty.</p>
+     * <p>*   If Proto is set to ICMP, DestPort is automatically left empty.</p>
      * <br>
      * <p>> If Proto is set to ICMP, access control does not take effect on the destination port.</p>
      * <br>
-     * <p>* If Proto is set to TCP, UDP, or ANY and DestPortType is set to group, the value of DestPort is empty.</p>
+     * <p>*   If Proto is set to TCP, UDP, or ANY and DestPortType is set to group, DestPort is empty.</p>
      * <br>
-     * <p>> If DestPortType is set to group, you do not need to specify the destination port number. All ports that the access control policy controls are included in the destination port address book.</p>
+     * <p>> If DestPortType is set to group, you do not need to specify the destination port number. All ports on which the access control policy takes effect are included in the destination port address book.</p>
      * <br>
-     * <p>* If Proto is set to TCP, UDP, or ANY and DestPortType is set to port, the value of DestPort is the destination port number.</p>
+     * <p>*   If Proto is set to TCP, UDP, or ANY and DestPortType is set to port, the value of DestPort is the destination port number.</p>
      */
     @NameInMap("DestPort")
     public String destPort;
@@ -70,7 +70,7 @@ public class AddControlPolicyRequest extends TeaModel {
     /**
      * <p>The name of the destination port address book in the access control policy.</p>
      * <br>
-     * <p>>  If DestPortType is set to group, you must specify the name of the destination port address book.</p>
+     * <p>> If DestPortType is set to group, you must specify the name of the destination port address book.</p>
      */
     @NameInMap("DestPortGroup")
     public String destPortGroup;
@@ -91,19 +91,19 @@ public class AddControlPolicyRequest extends TeaModel {
      * <br>
      * <p>Valid values:</p>
      * <br>
-     * <p>* If DestinationType is set to net, the value of this parameter is a CIDR block.</p>
+     * <p>*   If DestinationType is set to net, the value of this parameter is a CIDR block.</p>
      * <br>
      * <p>    Example: 1.2.XX.XX/24</p>
      * <br>
-     * <p>* If DestinationType is set to group, the value of this parameter is an address book.</p>
+     * <p>*   If DestinationType is set to group, the value of this parameter is an address book name.</p>
      * <br>
      * <p>    Example: db_group</p>
      * <br>
-     * <p>* If DestinationType is set to domain, the value of this parameter is a domain name.</p>
+     * <p>*   If DestinationType is set to domain, the value of this parameter is a domain name.</p>
      * <br>
      * <p>    Example: \*.aliyuncs.com</p>
      * <br>
-     * <p>* If DestinationType is set to location, the value of this parameter is a location.</p>
+     * <p>*   If DestinationType is set to location, the value of this parameter is a location.</p>
      * <br>
      * <p>    Example: \["BJ11", "ZB"]</p>
      */
@@ -113,10 +113,10 @@ public class AddControlPolicyRequest extends TeaModel {
     /**
      * <p>The type of the destination address in the access control policy. Valid values:</p>
      * <br>
-     * <p>* **net**: destination CIDR block</p>
-     * <p>* **group**: destination address book</p>
-     * <p>* **domain**: destination domain name</p>
-     * <p>* **location**: destination location</p>
+     * <p>*   **net**: CIDR block</p>
+     * <p>*   **group**: address book</p>
+     * <p>*   **domain**: domain name</p>
+     * <p>*   **location**: location</p>
      */
     @NameInMap("DestinationType")
     public String destinationType;
@@ -124,19 +124,19 @@ public class AddControlPolicyRequest extends TeaModel {
     /**
      * <p>The direction of the traffic to which the access control policy applies. Valid values:</p>
      * <br>
-     * <p>* **in**: inbound traffic</p>
-     * <p>* **out**: outbound traffic</p>
+     * <p>*   **in**: inbound traffic</p>
+     * <p>*   **out**: outbound traffic</p>
      */
     @NameInMap("Direction")
     public String direction;
 
     /**
-     * <p>The IP version of the address in the access control policy.</p>
+     * <p>The IP version supported by the access control policy.</p>
      * <br>
      * <p>Valid values:</p>
      * <br>
-     * <p>* **4**: IPv4</p>
-     * <p>* **6**: IPv6</p>
+     * <p>*   **4**: IPv4</p>
+     * <p>*   **6**: IPv6</p>
      */
     @NameInMap("IpVersion")
     public String ipVersion;
@@ -144,34 +144,34 @@ public class AddControlPolicyRequest extends TeaModel {
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
      * <br>
-     * <p>* **zh**: Chinese (default)</p>
-     * <p>* **en**: English</p>
+     * <p>*   **zh**: Chinese (default)</p>
+     * <p>*   **en**: English</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The priority of the access control policy. The priority value starts from 1. A small priority value indicates a high priority.</p>
+     * <p>The priority of the access control policy. The priority value starts from 1. A smaller priority value indicates a higher priority.</p>
      */
     @NameInMap("NewOrder")
     public String newOrder;
 
     /**
-     * <p>The type of the protocol in the access control policy. Valid values:</p>
+     * <p>The protocol type supported by the access control policy. Valid values:</p>
      * <br>
-     * <p>* **ANY**: any protocol type</p>
-     * <p>* **TCP**</p>
-     * <p>* **UDP**</p>
-     * <p>* **ICMP**</p>
+     * <p>*   **ANY**</p>
+     * <p>*   **TCP**</p>
+     * <p>*   **UDP**</p>
+     * <p>*   **ICMP**</p>
      */
     @NameInMap("Proto")
     public String proto;
 
     /**
-     * <p>Specifies whether the access control policy is enabled. By default, an access control policy is enabled after it is created. Valid values:</p>
+     * <p>Specifies whether to enable the access control policy. By default, an access control policy is enabled after the policy is created. Valid values:</p>
      * <br>
-     * <p>*   **true**: The access control policy is enabled.</p>
-     * <p>*   **false**: The access control policy is disabled.</p>
+     * <p>*   **true**: enables the access control policy.</p>
+     * <p>*   **false**: disables the access control policy.</p>
      */
     @NameInMap("Release")
     public String release;
@@ -179,15 +179,15 @@ public class AddControlPolicyRequest extends TeaModel {
     /**
      * <p>The source address in the access control policy. Valid values:</p>
      * <br>
-     * <p>* If SourceType is set to net, the value of this parameter is a CIDR block.</p>
+     * <p>*   If SourceType is set to net, the value of this parameter is a CIDR block.</p>
      * <br>
      * <p>    Example: 1.1.XX.XX/24</p>
      * <br>
-     * <p>* If SourceType is set to group, the value of this parameter is an address book.</p>
+     * <p>*   If SourceType is set to group, the value of this parameter is an address book name.</p>
      * <br>
      * <p>    Example: db_group</p>
      * <br>
-     * <p>* If SourceType is set to location, the value of this parameter is a location.</p>
+     * <p>*   If SourceType is set to location, the value of this parameter is a location.</p>
      * <br>
      * <p>    Example: \["BJ11", "ZB"]</p>
      */
@@ -198,14 +198,15 @@ public class AddControlPolicyRequest extends TeaModel {
      * <p>The source IP address of the request.</p>
      */
     @NameInMap("SourceIp")
+    @Deprecated
     public String sourceIp;
 
     /**
-     * <p>The type of the source address book in the access control policy. Valid values:</p>
+     * <p>The type of the source address in the access control policy. Valid values:</p>
      * <br>
-     * <p>* **net**: source CIDR block</p>
-     * <p>* **group**: source address book</p>
-     * <p>* **location**: source location</p>
+     * <p>*   **net**: CIDR block</p>
+     * <p>*   **group**: address book</p>
+     * <p>*   **location**: location</p>
      */
     @NameInMap("SourceType")
     public String sourceType;

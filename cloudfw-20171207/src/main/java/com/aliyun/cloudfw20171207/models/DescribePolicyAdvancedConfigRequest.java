@@ -17,6 +17,7 @@ public class DescribePolicyAdvancedConfigRequest extends TeaModel {
      * <p>The source IP address of the request.</p>
      */
     @NameInMap("SourceIp")
+    @Deprecated
     public String sourceIp;
 
     public static DescribePolicyAdvancedConfigRequest build(java.util.Map<String, ?> map) throws Exception {
