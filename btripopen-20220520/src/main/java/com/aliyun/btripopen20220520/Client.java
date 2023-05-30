@@ -4935,11 +4935,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.invoiceSearchWithOptions(request, headers, runtime);
     }
 
-    public IsvRuleSaveResponse isvRuleSaveWithOptions(IsvRuleSaveRequest request, IsvRuleSaveHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public IsvRuleSaveResponse isvRuleSaveWithOptions(IsvRuleSaveRequest tmpReq, IsvRuleSaveHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        IsvRuleSaveShrinkRequest request = new IsvRuleSaveShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.bookuserList)) {
+            request.bookuserListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.bookuserList, "bookuser_list", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.bookType)) {
             body.put("book_type", request.bookType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bookuserListShrink)) {
+            body.put("bookuser_list", request.bookuserListShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
