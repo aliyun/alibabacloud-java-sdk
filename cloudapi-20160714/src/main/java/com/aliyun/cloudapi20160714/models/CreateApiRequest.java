@@ -52,9 +52,6 @@ public class CreateApiRequest extends TeaModel {
     @NameInMap("BackendId")
     public String backendId;
 
-    /**
-     * <p>The parameters of the API.</p>
-     */
     @NameInMap("ConstantParameters")
     public String constantParameters;
 
@@ -71,17 +68,9 @@ public class CreateApiRequest extends TeaModel {
     @NameInMap("DisableInternet")
     public Boolean disableInternet;
 
-    /**
-     * <p>The sample error codes returned by the backend service.</p>
-     * <br>
-     * <p>For more information, see [ErrorCodeSample](~~44392~~).</p>
-     */
     @NameInMap("ErrorCodeSamples")
     public String errorCodeSamples;
 
-    /**
-     * <p>The sample error response from the backend service.</p>
-     */
     @NameInMap("FailResultSample")
     public String failResultSample;
 
@@ -112,11 +101,6 @@ public class CreateApiRequest extends TeaModel {
     @NameInMap("RequestConfig")
     public String requestConfig;
 
-    /**
-     * <p>The parameters of API requests sent by the consumer to API Gateway.</p>
-     * <br>
-     * <p>For more information, see [RequestParameter](~~43986~~).</p>
-     */
     @NameInMap("RequestParameters")
     public String requestParameters;
 
@@ -126,15 +110,9 @@ public class CreateApiRequest extends TeaModel {
     @NameInMap("ResultBodyModel")
     public String resultBodyModel;
 
-    /**
-     * <p>The return description of the API.</p>
-     */
     @NameInMap("ResultDescriptions")
     public String resultDescriptions;
 
-    /**
-     * <p>The sample response from the backend service.</p>
-     */
     @NameInMap("ResultSample")
     public String resultSample;
 
@@ -155,25 +133,12 @@ public class CreateApiRequest extends TeaModel {
     @NameInMap("ServiceConfig")
     public String serviceConfig;
 
-    /**
-     * <p>The parameters of API requests sent by API Gateway to the backend service.</p>
-     * <br>
-     * <p>For more information, see [ServiceParameter](~~43988~~).</p>
-     */
     @NameInMap("ServiceParameters")
     public String serviceParameters;
 
-    /**
-     * <p>The mappings between parameters of requests sent by the consumer to API Gateway and parameters of requests sent by API Gateway to the backend service.</p>
-     * <br>
-     * <p>For more information, see [ServiceParameterMap](~~43989~~).</p>
-     */
     @NameInMap("ServiceParametersMap")
     public String serviceParametersMap;
 
-    /**
-     * <p>The common parameters of APIs in JSON format.</p>
-     */
     @NameInMap("SystemParameters")
     public String systemParameters;
 
