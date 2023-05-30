@@ -4,67 +4,8 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class CreateSecretResponseBody extends TeaModel {
-    /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the secret.</p>
-     */
     @NameInMap("Arn")
     public String arn;
-
-    /**
-     * <p>Indicates whether automatic rotation is enabled. Valid values:</p>
-     * <br>
-     * <p>*   Enabled: indicates that automatic rotation is enabled.</p>
-     * <p>*   Disabled: indicates that automatic rotation is disabled.</p>
-     * <p>*   Invalid: indicates that the status of automatic rotation is abnormal. In this case, Secrets Manager cannot automatically rotate the secret.</p>
-     * <br>
-     * <p>>  This parameter is returned if you set the SecretType parameter to Rds, RAMCredentials, or ECS.</p>
-     */
-    @NameInMap("AutomaticRotation")
-    public String automaticRotation;
-
-    /**
-     * <p>The ID of the dedicated KMS instance.</p>
-     */
-    @NameInMap("DKMSInstanceId")
-    public String DKMSInstanceId;
-
-    /**
-     * <p>The extended configuration of the secret.</p>
-     * <br>
-     * <p>>  This parameter is returned if you set the SecretType parameter to Rds, RAMCredentials, or ECS.</p>
-     */
-    @NameInMap("ExtendedConfig")
-    public String extendedConfig;
-
-    /**
-     * <p>The time when the next rotation will be performed.</p>
-     * <br>
-     * <p>>  This parameter is returned if automatic rotation is enabled.</p>
-     */
-    @NameInMap("NextRotationDate")
-    public String nextRotationDate;
-
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
-
-    /**
-     * <p>The interval for automatic rotation.</p>
-     * <br>
-     * <p>The value is in the `integer[unit]` format. The value of the `unit` field is fixed as s. For example, if the value is 604800s, automatic rotation is performed at a 7-day interval.</p>
-     * <br>
-     * <p>>  This parameter is returned if automatic rotation is enabled.</p>
-     */
-    @NameInMap("RotationInterval")
-    public String rotationInterval;
-
-    /**
-     * <p>The name of the secret.</p>
-     */
-    @NameInMap("SecretName")
-    public String secretName;
 
     /**
      * <p>The type of the secret. Valid values:</p>
@@ -74,11 +15,52 @@ public class CreateSecretResponseBody extends TeaModel {
      * <p>*   RAMCredentials: indicates a managed RAM secret.</p>
      * <p>*   ECS: indicates a managed ECS secret.</p>
      */
+    @NameInMap("AutomaticRotation")
+    public String automaticRotation;
+
+    @NameInMap("DKMSInstanceId")
+    public String DKMSInstanceId;
+
+    @NameInMap("ExtendedConfig")
+    public String extendedConfig;
+
+    /**
+     * <p>The extended configuration of the secret.</p>
+     * <br>
+     * <p>>  This parameter is returned if you set the SecretType parameter to Rds, RAMCredentials, or ECS.</p>
+     */
+    @NameInMap("NextRotationDate")
+    public String nextRotationDate;
+
+    /**
+     * <p>The time when the next rotation will be performed.</p>
+     * <br>
+     * <p>>  This parameter is returned if automatic rotation is enabled.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("RotationInterval")
+    public String rotationInterval;
+
+    /**
+     * <p>The interval for automatic rotation.</p>
+     * <br>
+     * <p>The value is in the `integer[unit]` format. The value of the `unit` field is fixed as s. For example, if the value is 604800s, automatic rotation is performed at a 7-day interval.</p>
+     * <br>
+     * <p>>  This parameter is returned if automatic rotation is enabled.</p>
+     */
+    @NameInMap("SecretName")
+    public String secretName;
+
+    /**
+     * <p>The ID of the dedicated KMS instance.</p>
+     */
     @NameInMap("SecretType")
     public String secretType;
 
     /**
-     * <p>The version number of the secret.</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the secret.</p>
      */
     @NameInMap("VersionId")
     public String versionId;

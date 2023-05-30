@@ -3,16 +3,16 @@ package com.aliyun.kms20160120.models;
 
 import com.aliyun.tea.*;
 
-public class UntagResourceResponseBody extends TeaModel {
+public class UntagResourcesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static UntagResourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        UntagResourceResponseBody self = new UntagResourceResponseBody();
+    public static UntagResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UntagResourcesResponseBody self = new UntagResourcesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public UntagResourceResponseBody setRequestId(String requestId) {
+    public UntagResourcesResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

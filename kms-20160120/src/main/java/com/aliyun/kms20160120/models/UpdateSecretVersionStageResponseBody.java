@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class UpdateSecretVersionStageResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The name of the secret.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The name of the secret.</p>
+     * <p>The version to which you want to apply the specified stage label.</p>
+     * <br>
+     * <p>> * You must specify at least one of the RemoveFromVersion and MoveToVersion parameters.</p>
+     * <p>> * If the VersionStage parameter is set to ACSCurrent or ACSPrevious, this parameter is required.</p>
      */
     @NameInMap("SecretName")
     public String secretName;

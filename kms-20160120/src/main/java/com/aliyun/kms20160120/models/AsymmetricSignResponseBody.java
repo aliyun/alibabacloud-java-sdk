@@ -5,29 +5,32 @@ import com.aliyun.tea.*;
 
 public class AsymmetricSignResponseBody extends TeaModel {
     /**
-     * <p>The ID of the CMK. The ID must be globally unique.</p>
-     * <br>
-     * <p>>  If you set the KeyId parameter in the request to an alias, the ID of the CMK to which the alias is bound is returned.</p>
+     * <p>The version ID of the CMK. The ID must be globally unique.</p>
      */
     @NameInMap("KeyId")
     public String keyId;
 
     /**
-     * <p>The version ID of the CMK. The ID must be globally unique.</p>
+     * <p>The digest that is generated for the original message by using a hash algorithm. The hash algorithm is specified by the Algorithm parameter.</p>
+     * <br>
+     * <p>> * The value is encoded in Base64.</p>
+     * <p>> * For more information about how to calculate message digests, see the **Preprocess signature: compute a message digest** section of the [Generate and verify a signature by using an asymmetric CMK](~~148146~~) topic.</p>
      */
     @NameInMap("KeyVersionId")
     public String keyVersionId;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The calculated signature.</p>
+     * <br>
+     * <p>>  The value is encoded in Base64.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The calculated signature.</p>
+     * <p>The ID of the CMK. The ID must be globally unique.</p>
      * <br>
-     * <p>>  The value is encoded in Base64.</p>
+     * <p>>  If you set the KeyId parameter in the request to an alias, the ID of the CMK to which the alias is bound is returned.</p>
      */
     @NameInMap("Value")
     public String value;

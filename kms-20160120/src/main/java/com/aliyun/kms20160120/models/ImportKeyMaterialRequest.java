@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ImportKeyMaterialRequest extends TeaModel {
     /**
-     * <p>Use** GetParametersForImport** the Returned public key and the base64-encoded key material.</p>
+     * <p>Use **GetParametersForImport** the Returned public key and the base64-encoded key material.</p>
      */
     @NameInMap("EncryptedKeyMaterial")
     public String encryptedKeyMaterial;
 
     /**
-     * <p>By calling** GetParametersForImport** the import token.</p>
+     * <p>By calling **GetParametersForImport** the import token.</p>
      */
     @NameInMap("ImportToken")
     public String importToken;

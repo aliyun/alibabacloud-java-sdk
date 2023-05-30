@@ -5,13 +5,20 @@ import com.aliyun.tea.*;
 
 public class ListSecretsRequest extends TeaModel {
     /**
-     * <p>Specifies whether to return the resource tags of the secret. Valid values:</p>
+     * <p>The number of entries to return on each page.</p>
      * <br>
-     * <p>*   true: returns the resource tags.</p>
-     * <p>*   false: does not return the resource tags. This is the default value.</p>
+     * <p>Valid values: 1 to 100.</p>
+     * <br>
+     * <p>Default value: 10.</p>
      */
     @NameInMap("FetchTags")
     public String fetchTags;
+
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
+    @NameInMap("Filters")
+    public String filters;
 
     /**
      * <p>The secret filter. The filter consists of one or more key-value pairs. You can specify one key-value pair or leave this parameter empty. If you use one tag key or tag value to filter resources, up to 4,000 resources can be queried. If you want to query more than 4,000 resources, call the [ListResourceTags](~~120090~~) operation.</p>
@@ -46,25 +53,11 @@ public class ListSecretsRequest extends TeaModel {
      * <br>
      * <p>The logical relationship between values of the Values field in a key-value pair is OR. Example: `[ {"Key":"SecretName", "Values":["sec1","sec2"]}]`. In this example, the semantics are `SecretName=sec 1 OR SecretName=sec 2`.</p>
      */
-    @NameInMap("Filters")
-    public String filters;
-
-    /**
-     * <p>The number of the page to return.</p>
-     * <br>
-     * <p>Pages start from page 1.</p>
-     * <br>
-     * <p>Default value: 1.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
-     * <br>
-     * <p>Valid values: 1 to 100.</p>
-     * <br>
-     * <p>Default value: 10.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

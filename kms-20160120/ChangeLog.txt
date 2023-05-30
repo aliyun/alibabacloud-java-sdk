@@ -1,3 +1,6 @@
+2023-05-30 Version: 1.0.3
+- Add Tag Open API.
+
 2023-02-24 Version: 1.0.2
 - Support create keys and secrets API with DKMS.
 
