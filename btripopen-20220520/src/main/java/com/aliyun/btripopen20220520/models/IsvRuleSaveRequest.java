@@ -7,6 +7,9 @@ public class IsvRuleSaveRequest extends TeaModel {
     @NameInMap("book_type")
     public String bookType;
 
+    @NameInMap("bookuser_list")
+    public java.util.List<IsvRuleSaveRequestBookuserList> bookuserList;
+
     @NameInMap("status")
     public Integer status;
 
@@ -26,6 +29,14 @@ public class IsvRuleSaveRequest extends TeaModel {
         return this.bookType;
     }
 
+    public IsvRuleSaveRequest setBookuserList(java.util.List<IsvRuleSaveRequestBookuserList> bookuserList) {
+        this.bookuserList = bookuserList;
+        return this;
+    }
+    public java.util.List<IsvRuleSaveRequestBookuserList> getBookuserList() {
+        return this.bookuserList;
+    }
+
     public IsvRuleSaveRequest setStatus(Integer status) {
         this.status = status;
         return this;
@@ -40,6 +51,36 @@ public class IsvRuleSaveRequest extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
+    }
+
+    public static class IsvRuleSaveRequestBookuserList extends TeaModel {
+        @NameInMap("entity_id")
+        public String entityId;
+
+        @NameInMap("entity_type")
+        public Integer entityType;
+
+        public static IsvRuleSaveRequestBookuserList build(java.util.Map<String, ?> map) throws Exception {
+            IsvRuleSaveRequestBookuserList self = new IsvRuleSaveRequestBookuserList();
+            return TeaModel.build(map, self);
+        }
+
+        public IsvRuleSaveRequestBookuserList setEntityId(String entityId) {
+            this.entityId = entityId;
+            return this;
+        }
+        public String getEntityId() {
+            return this.entityId;
+        }
+
+        public IsvRuleSaveRequestBookuserList setEntityType(Integer entityType) {
+            this.entityType = entityType;
+            return this;
+        }
+        public Integer getEntityType() {
+            return this.entityType;
+        }
+
     }
 
 }
