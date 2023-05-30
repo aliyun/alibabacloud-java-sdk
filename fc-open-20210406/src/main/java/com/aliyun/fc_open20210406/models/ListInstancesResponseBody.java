@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
     /**
-     * <p>The information about instances.</p>
+     * <p>210234</p>
      */
     @NameInMap("instances")
     public java.util.List<ListInstancesResponseBodyInstances> instances;
@@ -24,15 +24,9 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstances extends TeaModel {
-        /**
-         * <p>The ID of the instance.</p>
-         */
         @NameInMap("instanceId")
         public String instanceId;
 
-        /**
-         * <p>The version of the service to which the instance belongs. If the instance belongs to the LATEST alias, 0 is returned as the version.</p>
-         */
         @NameInMap("versionId")
         public String versionId;
 

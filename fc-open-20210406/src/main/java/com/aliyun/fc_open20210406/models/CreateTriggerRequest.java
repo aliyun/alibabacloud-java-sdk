@@ -5,28 +5,22 @@ import com.aliyun.tea.*;
 
 public class CreateTriggerRequest extends TeaModel {
     /**
-     * <p>The description of the trigger.</p>
+     * <p>The ID of your Alibaba Cloud account.</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The role that is used by the event source such as OSS to invoke the function. For more information, see [Overview](~~53102~~).</p>
+     * <p>The version or alias of the service.</p>
      */
     @NameInMap("invocationRole")
     public String invocationRole;
 
     /**
-     * <p>The version or alias of the service.</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the event source for the trigger.</p>
      */
     @NameInMap("qualifier")
     public String qualifier;
-
-    /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the event source for the trigger.</p>
-     */
-    @NameInMap("sourceArn")
-    public String sourceArn;
 
     /**
      * <p>The configurations of the trigger. The configurations vary based on the trigger type. For more information about the format, see the following topics:</p>
@@ -39,14 +33,14 @@ public class CreateTriggerRequest extends TeaModel {
      * <p>* Alibaba Cloud CDN event trigger: [CDNEventsTriggerConfig](~~struct:CDNEventsTriggerConfig~~).</p>
      * <p>* MNS topic trigger: [MnsTopicTriggerConfig](~~struct:MnsTopicTriggerConfig~~).</p>
      */
-    @NameInMap("triggerConfig")
-    public String triggerConfig;
+    @NameInMap("sourceArn")
+    public String sourceArn;
 
     /**
      * <p>The name of the trigger. The name contains only letters, digits, hyphens (-), and underscores (\_). The name must be 1 to 128 characters in length and cannot start with a digit or hyphen (-).</p>
      */
-    @NameInMap("triggerName")
-    public String triggerName;
+    @NameInMap("triggerConfig")
+    public String triggerConfig;
 
     /**
      * <p>The type of the trigger. Valid values:</p>
@@ -58,6 +52,12 @@ public class CreateTriggerRequest extends TeaModel {
      * <p>*   **tablestore**: Tablestore trigger. For more information, see [Overview](~~100092~~).</p>
      * <p>*   **cdn_events**: CDN event trigger. For more information, see [Overview](~~73333~~).</p>
      * <p>*   **mns_topic**: MNS topic trigger. For more information, see [Overview](~~97032~~).</p>
+     */
+    @NameInMap("triggerName")
+    public String triggerName;
+
+    /**
+     * <p>The description of the trigger.</p>
      */
     @NameInMap("triggerType")
     public String triggerType;

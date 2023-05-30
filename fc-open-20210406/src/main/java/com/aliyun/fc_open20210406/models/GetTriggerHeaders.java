@@ -8,19 +8,19 @@ public class GetTriggerHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>The ID of your Alibaba Cloud account.</p>
+     * <p>The time when the request is initiated on the client. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.</p>
      */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
     /**
-     * <p>The time when the request is initiated on the client. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.</p>
+     * <p>The custom request ID.</p>
      */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
     /**
-     * <p>The custom request ID.</p>
+     * <p>The ETag that is used to modify the trigger. This parameter is used to ensure that the modified trigger is consistent with the trigger to be modified.</p>
      */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;

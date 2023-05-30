@@ -8,26 +8,20 @@ public class DeleteFunctionOnDemandConfigHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>If the ETag specified in the request matches the ETag value of the OndemandConfig, FC returns 200 OK. If the ETag specified in the request does not match the ETag value of the object, FC returns 412 Precondition Failed.</p>
+     * <p>Xiaoqi</p>
      */
     @NameInMap("If-Match")
     public String ifMatch;
 
     /**
-     * <p>The ID of your Alibaba Cloud account.</p>
+     * <p>65332</p>
      */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
-    /**
-     * <p>The start time when the function is invoked. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.</p>
-     */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
-    /**
-     * <p>The trace ID of the request for Function Compute API, which is also the unique ID of the request.</p>
-     */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetFunctionRequest extends TeaModel {
     /**
-     * <p>The version or alias of the service.</p>
+     * <p>The ID of your Alibaba Cloud account.</p>
      */
     @NameInMap("qualifier")
     public String qualifier;

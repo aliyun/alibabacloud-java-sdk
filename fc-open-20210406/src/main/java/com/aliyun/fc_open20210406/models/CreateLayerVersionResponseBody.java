@@ -5,25 +5,22 @@ import com.aliyun.tea.*;
 
 public class CreateLayerVersionResponseBody extends TeaModel {
     /**
-     * <p>The access mode of the layer.</p>
+     * <p>Creates a layer version.</p>
      */
     @NameInMap("acl")
     public Integer acl;
 
-    /**
-     * <p>The name of the layer.</p>
-     */
     @NameInMap("arn")
     public String arn;
 
     /**
-     * <p>The information about the layer code package.</p>
+     * <p>The access mode of the layer.</p>
      */
     @NameInMap("code")
     public OutputCodeLocation code;
 
     /**
-     * <p>The checksum of the layer code package.</p>
+     * <p>Example 1</p>
      */
     @NameInMap("codeChecksum")
     public String codeChecksum;
@@ -35,31 +32,31 @@ public class CreateLayerVersionResponseBody extends TeaModel {
     public Long codesize;
 
     /**
-     * <p>The list of runtime environments that are supported by the layer.</p>
+     * <p>Luoni</p>
      */
     @NameInMap("compatibleRuntime")
     public java.util.List<String> compatibleRuntime;
 
     /**
-     * <p>The time when the layer version was created. The time follows the **yyyy-MM-ddTHH:mm:ssZ** format.</p>
+     * <p>Creates a layer version.</p>
      */
     @NameInMap("createTime")
     public String createTime;
 
     /**
-     * <p>The description of the layer version.</p>
+     * <p>The name of the layer.</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The name of the layer.</p>
+     * <p>The list of runtime environments that are supported by the layer.</p>
      */
     @NameInMap("layerName")
     public String layerName;
 
     /**
-     * <p>The version of the layer.</p>
+     * <p>The time when the layer version was created. The time follows the **yyyy-MM-ddTHH:mm:ssZ** format.</p>
      */
     @NameInMap("version")
     public Integer version;

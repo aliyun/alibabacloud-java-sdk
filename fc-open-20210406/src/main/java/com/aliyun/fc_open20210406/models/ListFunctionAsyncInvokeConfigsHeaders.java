@@ -7,45 +7,21 @@ public class ListFunctionAsyncInvokeConfigsHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
-    /**
-     * <p>The ID of your Alibaba Cloud account.</p>
-     */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
-    /**
-     * <p>The CRC-64 value of the function code package. This value is used to check data integrity. The value is automatically calculated by the tool.</p>
-     */
     @NameInMap("X-Fc-Code-Checksum")
     public String xFcCodeChecksum;
 
-    /**
-     * <p>The time when the Function Compute is called. The format is **EEE,d MMM yyyy HH:mm:ss GMT**.</p>
-     */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
-    /**
-     * <p>The invocation method.</p>
-     * <br>
-     * <p>*   **Sync**: synchronous</p>
-     * <p>*   **Async**: asynchronous</p>
-     */
     @NameInMap("X-Fc-Invocation-Type")
     public String xFcInvocationType;
 
-    /**
-     * <p>The method used to return logs. Valid values:</p>
-     * <br>
-     * <p>*   **Tail**: returns the last 4 KB of logs that are generated for the current request.</p>
-     * <p>*   **None**: No logs are returned for the current request. Default value: None.</p>
-     */
     @NameInMap("X-Fc-Log-Type")
     public String xFcLogType;
 
-    /**
-     * <p>The trace ID of the invocation request of Function Compute.</p>
-     */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;
 

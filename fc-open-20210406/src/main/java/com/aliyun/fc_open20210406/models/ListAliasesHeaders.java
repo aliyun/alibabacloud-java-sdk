@@ -14,7 +14,7 @@ public class ListAliasesHeaders extends TeaModel {
     public String xFcAccountId;
 
     /**
-     * <p>The start time when the function is invoked. Specify the time in the yyyy-mm-ddhh:mm:ss format.</p>
+     * <p>The time on which the function is invoked. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.</p>
      */
     @NameInMap("X-Fc-Date")
     public String xFcDate;

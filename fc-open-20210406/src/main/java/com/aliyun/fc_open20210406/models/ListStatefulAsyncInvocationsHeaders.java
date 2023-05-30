@@ -8,43 +8,40 @@ public class ListStatefulAsyncInvocationsHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>The ID of your Alibaba Cloud account.</p>
+     * <p>It is a tool used to manage and configure Alibaba Cloud resources. After simple installation and configuration, you can use Alibaba Cloud CLI to manage multiple Alibaba Cloud services and migrate your data and business to the cloud with ease.</p>
      */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
     /**
-     * <p>The CRC-64 value of the function code package. This value is used to check data integrity. The value is automatically calculated by the tool.</p>
+     * <p>Alibaba Cloud CLI</p>
      */
     @NameInMap("X-Fc-Code-Checksum")
     public String xFcCodeChecksum;
 
     /**
-     * <p>The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.</p>
+     * <p>- **true**: returns the invocationPayload parameter in the response. </p>
+     * <p>- **false**: does not return the invocationPayload parameter in the response. </p>
+     * <br>
+     * <p>> The `invocationPayload` parameter indicates the input parameters of an asynchronous task.</p>
      */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
     /**
-     * <p>The invocation method. </p>
-     * <br>
-     * <p>- **Sync**: synchronous invocation </p>
-     * <p>- **Async**: asynchronous invocation</p>
+     * <p>The token used to obtain more results. If this parameter is left empty, all the results are returned.</p>
      */
     @NameInMap("X-Fc-Invocation-Type")
     public String xFcInvocationType;
 
     /**
-     * <p>The method used to return logs. Valid values: </p>
-     * <br>
-     * <p>- **Tail**: returns the last 4 KB of logs that are generated for the current request. </p>
-     * <p>- **None**: does not return logs for the current request. This is the default value.</p>
+     * <p>The time when Function Compute API is called.</p>
      */
     @NameInMap("X-Fc-Log-Type")
     public String xFcLogType;
 
     /**
-     * <p>The trace ID of the invocation request of Function Compute.</p>
+     * <p>The CRC-64 value of the function code package. This value is used to check data integrity. The value is automatically calculated by the tool.</p>
      */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;

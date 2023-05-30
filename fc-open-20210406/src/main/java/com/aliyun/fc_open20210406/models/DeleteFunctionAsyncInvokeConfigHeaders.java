@@ -8,20 +8,17 @@ public class DeleteFunctionAsyncInvokeConfigHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>The ID of your Alibaba Cloud account.</p>
+     * <p>{"name":"DeleteFunctionAsyncInvokeConfig","product":"FC-Open","version":"2021-04-06","path":"/2021-04-06/services/{serviceName}/functions/{functionName}/async-invoke-config","deprecated":0,"method":"DELETE","protocol":"HTTP|HTTPS","hidden":0,"timeout":10000,"parameter_type":"Single","params":"[{\"name\":\"serviceName\",\"position\":\"Path\",\"required\":true,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"The name of the service.\",\"description\":\"The name of the service. \",\"example\":\"demo-service\"},{\"name\":\"functionName\",\"position\":\"Path\",\"required\":true,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"The name of the function.\",\"description\":\"The name of the function. \",\"example\":\"helloworld\"},{\"name\":\"qualifier\",\"position\":\"Query\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"The qualifier.\",\"description\":\"The qualifier. \",\"example\":\"test\"},{\"name\":\"X-Fc-Account-Id\",\"position\":\"Header\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"description\":\"The ID of your Alibaba Cloud account. \",\"example\":\"188077086902****\"},{\"name\":\"X-Fc-Date\",\"position\":\"Header\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"description\":\"The time when Function Compute API is called. \",\"example\":\"None\"},{\"name\":\"X-Fc-Trace-Id\",\"position\":\"Header\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"description\":\"The trace ID of the invocation request of Function Compute.\",\"example\":\"asdf*****\"}]","response_headers":"[]","response":"{}","errors":"{}"}</p>
      */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
     /**
-     * <p>The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.</p>
+     * <p>Jianyi</p>
      */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
-    /**
-     * <p>The trace ID of the invocation request of Function Compute.</p>
-     */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;
 

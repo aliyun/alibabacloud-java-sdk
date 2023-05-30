@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteFunctionOnDemandConfigRequest extends TeaModel {
     /**
-     * <p>The alias of the service or LATEST.</p>
+     * <p>Deletes the on-demand configuration of a function.</p>
      */
     @NameInMap("qualifier")
     public String qualifier;

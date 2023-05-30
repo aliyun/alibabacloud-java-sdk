@@ -37,6 +37,9 @@ public class InvokeFunctionHeaders extends TeaModel {
     @NameInMap("X-Fc-Log-Type")
     public String xFcLogType;
 
+    @NameInMap("X-Fc-Stateful-Async-Invocation-Enable")
+    public String xFcStatefulAsyncInvocationEnable;
+
     /**
      * <p>The ID of the asynchronous task. You must enable the asynchronous task feature in advance.</p>
      * <br>
@@ -94,6 +97,14 @@ public class InvokeFunctionHeaders extends TeaModel {
     }
     public String getXFcLogType() {
         return this.xFcLogType;
+    }
+
+    public InvokeFunctionHeaders setXFcStatefulAsyncInvocationEnable(String xFcStatefulAsyncInvocationEnable) {
+        this.xFcStatefulAsyncInvocationEnable = xFcStatefulAsyncInvocationEnable;
+        return this;
+    }
+    public String getXFcStatefulAsyncInvocationEnable() {
+        return this.xFcStatefulAsyncInvocationEnable;
     }
 
     public InvokeFunctionHeaders setXFcStatefulAsyncInvocationId(String xFcStatefulAsyncInvocationId) {

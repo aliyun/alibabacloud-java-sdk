@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListStatefulAsyncInvocationFunctionsRequest extends TeaModel {
     /**
-     * <p>The maximum number of resources to return. Default value: 20. Maximum value: 100. The number of returned resources is less than or equal to the specified number.</p>
+     * <p>The latest version of Function Compute API.</p>
      */
     @NameInMap("limit")
     public Integer limit;
 
     /**
-     * <p>The starting position of the query. If this parameter is left empty, the query starts from the beginning. If the number of resources exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.</p>
+     * <p>Alibaba Cloud provides SDKs for multiple programming languages to help you integrate Alibaba Cloud services by using APIs. We recommend that you use an SDK to call API operations. This frees you from manual signature verification.</p>
      */
     @NameInMap("nextToken")
     public String nextToken;

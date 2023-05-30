@@ -14,13 +14,13 @@ public class GetAccountSettingsHeaders extends TeaModel {
     public String xFcAccountId;
 
     /**
-     * <p>The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.</p>
+     * <p>Example 1</p>
      */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
     /**
-     * <p>The custom request ID.</p>
+     * <p>Queries available zones within the current account.</p>
      */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;

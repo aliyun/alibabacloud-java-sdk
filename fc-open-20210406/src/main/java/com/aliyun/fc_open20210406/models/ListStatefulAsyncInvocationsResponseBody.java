@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListStatefulAsyncInvocationsResponseBody extends TeaModel {
     /**
-     * <p>The information about asynchronous tasks.</p>
+     * <p>The version or alias of the service to which the asynchronous task belongs.</p>
      */
     @NameInMap("invocations")
     public java.util.List<StatefulAsyncInvocation> invocations;
 
     /**
-     * <p>The token used to obtain more results. If this parameter is left empty, all the results are returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
