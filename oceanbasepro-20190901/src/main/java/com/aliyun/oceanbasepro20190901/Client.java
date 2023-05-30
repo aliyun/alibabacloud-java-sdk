@@ -474,6 +474,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createTenantReadOnlyConnectionWithOptions(request, runtime);
     }
 
+    public CreateTenantSecurityIpGroupResponse createTenantSecurityIpGroupWithOptions(CreateTenantSecurityIpGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityIpGroupName)) {
+            body.put("SecurityIpGroupName", request.securityIpGroupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityIps)) {
+            body.put("SecurityIps", request.securityIps);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateTenantSecurityIpGroup"),
+            new TeaPair("version", "2019-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTenantSecurityIpGroupResponse());
+    }
+
+    public CreateTenantSecurityIpGroupResponse createTenantSecurityIpGroup(CreateTenantSecurityIpGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createTenantSecurityIpGroupWithOptions(request, runtime);
+    }
+
     public CreateTenantUserResponse createTenantUserWithOptions(CreateTenantUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -686,6 +727,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteSecurityIpGroupResponse deleteSecurityIpGroup(DeleteSecurityIpGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteSecurityIpGroupWithOptions(request, runtime);
+    }
+
+    public DeleteTenantSecurityIpGroupResponse deleteTenantSecurityIpGroupWithOptions(DeleteTenantSecurityIpGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityIpGroupName)) {
+            body.put("SecurityIpGroupName", request.securityIpGroupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteTenantSecurityIpGroup"),
+            new TeaPair("version", "2019-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTenantSecurityIpGroupResponse());
+    }
+
+    public DeleteTenantSecurityIpGroupResponse deleteTenantSecurityIpGroup(DeleteTenantSecurityIpGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteTenantSecurityIpGroupWithOptions(request, runtime);
     }
 
     public DeleteTenantUsersResponse deleteTenantUsersWithOptions(DeleteTenantUsersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1978,6 +2056,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeTenantSecurityConfigsWithOptions(request, runtime);
     }
 
+    public DescribeTenantSecurityIpGroupsResponse describeTenantSecurityIpGroupsWithOptions(DescribeTenantSecurityIpGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeTenantSecurityIpGroups"),
+            new TeaPair("version", "2019-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeTenantSecurityIpGroupsResponse());
+    }
+
+    public DescribeTenantSecurityIpGroupsResponse describeTenantSecurityIpGroups(DescribeTenantSecurityIpGroupsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeTenantSecurityIpGroupsWithOptions(request, runtime);
+    }
+
     public DescribeTenantTagsResponse describeTenantTagsWithOptions(DescribeTenantTagsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2733,6 +2844,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyTenantResourceResponse modifyTenantResource(ModifyTenantResourceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyTenantResourceWithOptions(request, runtime);
+    }
+
+    public ModifyTenantSecurityIpGroupResponse modifyTenantSecurityIpGroupWithOptions(ModifyTenantSecurityIpGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityIpGroupName)) {
+            body.put("SecurityIpGroupName", request.securityIpGroupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityIps)) {
+            body.put("SecurityIps", request.securityIps);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyTenantSecurityIpGroup"),
+            new TeaPair("version", "2019-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyTenantSecurityIpGroupResponse());
+    }
+
+    public ModifyTenantSecurityIpGroupResponse modifyTenantSecurityIpGroup(ModifyTenantSecurityIpGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyTenantSecurityIpGroupWithOptions(request, runtime);
     }
 
     public ModifyTenantTagsResponse modifyTenantTagsWithOptions(ModifyTenantTagsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
