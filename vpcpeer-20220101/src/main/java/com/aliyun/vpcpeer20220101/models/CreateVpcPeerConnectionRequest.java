@@ -28,6 +28,9 @@ public class CreateVpcPeerConnectionRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -98,6 +101,14 @@ public class CreateVpcPeerConnectionRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateVpcPeerConnectionRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateVpcPeerConnectionRequest setVpcId(String vpcId) {

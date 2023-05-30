@@ -13,6 +13,9 @@ public class AcceptVpcPeerConnectionRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -43,6 +46,14 @@ public class AcceptVpcPeerConnectionRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public AcceptVpcPeerConnectionRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public AcceptVpcPeerConnectionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
