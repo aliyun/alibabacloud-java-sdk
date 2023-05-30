@@ -19,6 +19,9 @@ public class ListVpcPeerConnectionsShrinkRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("Tags")
     public java.util.List<Tags> tags;
 
@@ -68,6 +71,14 @@ public class ListVpcPeerConnectionsShrinkRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListVpcPeerConnectionsShrinkRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ListVpcPeerConnectionsShrinkRequest setTags(java.util.List<Tags> tags) {

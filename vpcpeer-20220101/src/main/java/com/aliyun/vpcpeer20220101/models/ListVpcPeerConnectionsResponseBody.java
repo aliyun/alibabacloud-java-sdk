@@ -216,6 +216,9 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("Status")
         public String status;
 
@@ -332,6 +335,14 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public VpcPeerConnects setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public VpcPeerConnects setStatus(String status) {
