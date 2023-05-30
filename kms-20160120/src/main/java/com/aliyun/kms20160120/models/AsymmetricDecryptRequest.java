@@ -13,9 +13,8 @@ public class AsymmetricDecryptRequest extends TeaModel {
     /**
      * <p>The ciphertext that you want to decrypt.</p>
      * <br>
-     * <p>> </p>
-     * <p>*   The value is encoded in Base64.</p>
-     * <p>*   You can call the [AsymmetricEncrypt](~~148131~~) operation to generate the ciphertext.</p>
+     * <p>> * The value is encoded in Base64.</p>
+     * <p>> * You can call the [AsymmetricEncrypt](~~148131~~) operation to generate the ciphertext.</p>
      */
     @NameInMap("CiphertextBlob")
     public String ciphertextBlob;

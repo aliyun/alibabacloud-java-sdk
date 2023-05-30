@@ -4,37 +4,18 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class UntagResourceRequest extends TeaModel {
-    /**
-     * <p>The ID of the certificate.</p>
-     * <br>
-     * <p>>  You can configure only one of the KeyId, SecretName, and CertificateId parameters.</p>
-     */
     @NameInMap("CertificateId")
     public String certificateId;
 
     /**
-     * <p>The ID of the customer master key (CMK). The ID must be globally unique.</p>
-     * <br>
-     * <p>>  You can configure only one of the KeyId, SecretName, and CertificateId parameters.</p>
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      */
     @NameInMap("KeyId")
     public String keyId;
 
-    /**
-     * <p>The name of the secret.</p>
-     * <br>
-     * <p>>  You can configure only one of the KeyId, SecretName, and CertificateId parameters.</p>
-     */
     @NameInMap("SecretName")
     public String secretName;
 
-    /**
-     * <p>One or more tag keys. Separate multiple tag keys with commas (,).</p>
-     * <br>
-     * <p>You need to specify only the tag keys, not the tag values.</p>
-     * <br>
-     * <p>Each tag key must be 1 to 128 bytes in length.</p>
-     */
     @NameInMap("TagKeys")
     public String tagKeys;
 

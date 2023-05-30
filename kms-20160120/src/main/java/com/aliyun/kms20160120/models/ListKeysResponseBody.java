@@ -4,32 +4,29 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class ListKeysResponseBody extends TeaModel {
-    /**
-     * <p>An array that consists of the CMKs of the current Alibaba Cloud account in the current region.</p>
-     */
     @NameInMap("Keys")
     public ListKeysResponseBodyKeys keys;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The total number of CMKs.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>An array that consists of the CMKs of the current Alibaba Cloud account in the current region.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the CMK. The ID must be globally unique.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of CMKs.</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the CMK.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -80,15 +77,9 @@ public class ListKeysResponseBody extends TeaModel {
     }
 
     public static class ListKeysResponseBodyKeysKey extends TeaModel {
-        /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the CMK.</p>
-         */
         @NameInMap("KeyArn")
         public String keyArn;
 
-        /**
-         * <p>The ID of the CMK. The ID must be globally unique.</p>
-         */
         @NameInMap("KeyId")
         public String keyId;
 
