@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>An array that consists of the risk statistics of check items.</p>
      */
     @NameInMap("List")
     public java.util.List<ListCheckItemWarningSummaryResponseBodyList> list;
 
     /**
-     * <p>The number of servers that are affected by the check item.</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("PageInfo")
     public ListCheckItemWarningSummaryResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The number of entries returned on the current page.</p>
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,40 +53,40 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
 
     public static class ListCheckItemWarningSummaryResponseBodyList extends TeaModel {
         /**
-         * <p>The type of the check item.</p>
+         * <p>The suggestion on the check item.</p>
          */
         @NameInMap("Advice")
         public String advice;
 
         /**
-         * <p>The type of the baseline.</p>
+         * <p>The alias of the baseline type.</p>
          */
         @NameInMap("Alias")
         public String alias;
 
         /**
-         * <p>The alias of the baseline type.</p>
+         * <p>The ID of the check item.</p>
          */
         @NameInMap("CheckId")
         public Long checkId;
 
         /**
-         * <p>The ID of the check item.</p>
+         * <p>The description of the check item.</p>
          */
         @NameInMap("CheckItem")
         public String checkItem;
-
-        /**
-         * <p>The description of the check item.</p>
-         */
-        @NameInMap("CheckLevel")
-        public String checkLevel;
 
         /**
          * <p>The risk level of the check item.Valid values:</p>
          * <p>*   **high**</p>
          * <p>*  **medium**</p>
          * <p>*   **low**</p>
+         */
+        @NameInMap("CheckLevel")
+        public String checkLevel;
+
+        /**
+         * <p>The type of the check item.</p>
          */
         @NameInMap("CheckType")
         public String checkType;
@@ -95,28 +95,28 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
         public Boolean containerCheckItem;
 
         /**
-         * <p>The suggestion on the check item.</p>
+         * <p>The description of the check item.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The risk statistics of the check item.</p>
+         * <p>The type of the baseline.</p>
          */
         @NameInMap("RiskType")
         public String riskType;
-
-        /**
-         * <p>The description of the check item.</p>
-         */
-        @NameInMap("Status")
-        public Integer status;
 
         /**
          * <p>The risk status of the check item.Valid values:</p>
          * <p>*  **1**: failed</p>
          * <br>
          * <p>*  **3**: passed</p>
+         */
+        @NameInMap("Status")
+        public Integer status;
+
+        /**
+         * <p>The number of servers that are affected by the check item.</p>
          */
         @NameInMap("WarningMachineCount")
         public Integer warningMachineCount;
@@ -218,25 +218,25 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
 
     public static class ListCheckItemWarningSummaryResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The number of entries returned on the current page.</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
-         * <p>The pagination information.</p>
+         * <p>The page number of the returned page.</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The number of entries returned per page.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The total number of entries returned.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

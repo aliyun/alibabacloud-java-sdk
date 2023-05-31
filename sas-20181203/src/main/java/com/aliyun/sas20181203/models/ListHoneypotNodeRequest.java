@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListHoneypotNodeRequest extends TeaModel {
     /**
-     * <p>The allowed CIDR block.</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * <p>The ID of the management node.</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
@@ -23,7 +23,7 @@ public class ListHoneypotNodeRequest extends TeaModel {
     public String nodeName;
 
     /**
-     * <p>The time when the management node was created.</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

@@ -4,18 +4,39 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceCatalogRequest extends TeaModel {
+    /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The ID of the region in which the asset resides. Valid values:</p>
+     * <br>
+     * <p>*   **cn-hangzhou**: International</p>
+     * <p>*   **ap-southeast-1**: Singapore</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The IDs of requirement items.</p>
+     */
     @NameInMap("RequirementIds")
     public java.util.List<Long> requirementIds;
 
+    /**
+     * <p>The IDs of standards.</p>
+     */
     @NameInMap("StandardIds")
     public java.util.List<Long> standardIds;
 
+    /**
+     * <p>The types of check standards.</p>
+     */
     @NameInMap("Types")
     public java.util.List<String> types;
 

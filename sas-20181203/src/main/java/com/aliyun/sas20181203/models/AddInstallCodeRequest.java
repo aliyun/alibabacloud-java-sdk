@@ -4,21 +4,49 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class AddInstallCodeRequest extends TeaModel {
+    /**
+     * <p>The validity period of the installation command. The value is a 13-digit timestamp.</p>
+     * <br>
+     * <p>>  The installation command is valid only within the validity period. An expired installation command cannot be used to install the Security Center agent.</p>
+     */
     @NameInMap("ExpiredDate")
     public Long expiredDate;
 
+    /**
+     * <p>The ID of the asset group to which the you want to add the asset.</p>
+     * <br>
+     * <p>>  You can call the [DescribeAllGroups](~~describeallgroups~~) operation to query the IDs of asset groups.</p>
+     */
     @NameInMap("GroupId")
     public Long groupId;
 
+    /**
+     * <p>Specifies whether to create an image. Default value: **false**. Valid values:</p>
+     * <br>
+     * <p>*   **false**: does not create an image.</p>
+     * <p>*   **true**: creates an image.</p>
+     */
     @NameInMap("OnlyImage")
     public Boolean onlyImage;
 
+    /**
+     * <p>The operating system of the instance. Default value: **linux**. Valid values:</p>
+     * <br>
+     * <p>*   **linux**</p>
+     * <p>*   **windows**</p>
+     * <p>*   **windows-2003**</p>
+     */
     @NameInMap("Os")
     public String os;
 
     @NameInMap("ProxyCluster")
     public String proxyCluster;
 
+    /**
+     * <p>The name of the service provider for the asset. Default value: **ALIYUN**.</p>
+     * <br>
+     * <p>>  You can call the [DescribeVendorList](~~DescribeVendorList~~) operation to query the names of service providers.</p>
+     */
     @NameInMap("VendorName")
     public String vendorName;
 

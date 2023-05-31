@@ -404,7 +404,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * InternetIp
+      * Security Center provides asset importance tags and custom tags. You can call the AddTagWithUuid operation to add only a custom tag to assets.
       *
       * @param request AddTagWithUuidRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -439,7 +439,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * InternetIp
+      * Security Center provides asset importance tags and custom tags. You can call the AddTagWithUuid operation to add only a custom tag to assets.
       *
       * @param request AddTagWithUuidRequest
       * @return AddTagWithUuidResponse
@@ -1178,7 +1178,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The key of the file that is stored in the Object Storage Service (OSS) bucket. You can call the [CreateFileDetectUploadUrl](~~CreateFileDetectUploadUrl~~) operation to query the keys of files.
+      * You can call this operation to push a file to the cloud for detection. Before you call this operation, make sure that the file is uploaded. You can call the CreateFileDetectUploadUrl operation to upload the file.
+      * The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only MD5 hash values are supported. Before you call this operation, calculate the MD5 hash value of the file.
       *
       * @param request CreateFileDetectRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1225,7 +1226,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The key of the file that is stored in the Object Storage Service (OSS) bucket. You can call the [CreateFileDetectUploadUrl](~~CreateFileDetectUploadUrl~~) operation to query the keys of files.
+      * You can call this operation to push a file to the cloud for detection. Before you call this operation, make sure that the file is uploaded. You can call the CreateFileDetectUploadUrl operation to upload the file.
+      * The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only MD5 hash values are supported. Before you call this operation, calculate the MD5 hash value of the file.
       *
       * @param request CreateFileDetectRequest
       * @return CreateFileDetectResponse
@@ -1236,7 +1238,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The signature that is used to upload the file.
+      * You can call this operation to query the parameters that are required to upload a file for detection. If the value of the response parameter FileExist is true, the file that you want to upload for detection already exists in the cloud. In this case, you can directly push the file for detection. If the value of the response parameter FileExist is false, you must use the form upload method to upload the file to the specified Object Storage Service (OSS) bucket based on the response parameters of this operation.
+      * The form upload method is provided by OSS. For more information, see [Form upload](~~84788~~).
+      * The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only MD5 hash values are supported. Before you call this operation, calculate the MD5 hash value of the file.
       *
       * @param request CreateFileDetectUploadUrlRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1275,7 +1279,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The signature that is used to upload the file.
+      * You can call this operation to query the parameters that are required to upload a file for detection. If the value of the response parameter FileExist is true, the file that you want to upload for detection already exists in the cloud. In this case, you can directly push the file for detection. If the value of the response parameter FileExist is false, you must use the form upload method to upload the file to the specified Object Storage Service (OSS) bucket based on the response parameters of this operation.
+      * The form upload method is provided by OSS. For more information, see [Form upload](~~84788~~).
+      * The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only MD5 hash values are supported. Before you call this operation, calculate the MD5 hash value of the file.
       *
       * @param request CreateFileDetectUploadUrlRequest
       * @return CreateFileDetectUploadUrlResponse
@@ -1705,7 +1711,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the request, which is used to locate and troubleshoot issues.
+      * A server can belong only to one server group. If you call the CreateOrUpdateAssetGroup operation and the server specified in request parameters belongs to Server Group A, the server is removed from Server Group A and then added to the newly created or specified server group after the call is complete.
       *
       * @param request CreateOrUpdateAssetGroupRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1744,7 +1750,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the request, which is used to locate and troubleshoot issues.
+      * A server can belong only to one server group. If you call the CreateOrUpdateAssetGroup operation and the server specified in request parameters belongs to Server Group A, the server is removed from Server Group A and then added to the newly created or specified server group after the call is complete.
       *
       * @param request CreateOrUpdateAssetGroupRequest
       * @return CreateOrUpdateAssetGroupResponse
@@ -1864,6 +1870,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createRestoreJobWithOptions(request, runtime);
     }
 
+    /**
+      * For more information about service-linked roles, see [Service-linked roles](~~160674~~).
+      *
+      * @param request CreateServiceLinkedRoleRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateServiceLinkedRoleResponse
+     */
     public CreateServiceLinkedRoleResponse createServiceLinkedRoleWithOptions(CreateServiceLinkedRoleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1888,6 +1901,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateServiceLinkedRoleResponse());
     }
 
+    /**
+      * For more information about service-linked roles, see [Service-linked roles](~~160674~~).
+      *
+      * @param request CreateServiceLinkedRoleRequest
+      * @return CreateServiceLinkedRoleResponse
+     */
     public CreateServiceLinkedRoleResponse createServiceLinkedRole(CreateServiceLinkedRoleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createServiceLinkedRoleWithOptions(request, runtime);
@@ -2335,7 +2354,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * 200
+      * The **Default** server group that is provided by Security Center cannot be deleted. After you delete a group, the assets in this group are moved to the **Default** group.
       *
       * @param request DeleteGroupRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2370,7 +2389,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * 200
+      * The **Default** server group that is provided by Security Center cannot be deleted. After you delete a group, the assets in this group are moved to the **Default** group.
       *
       * @param request DeleteGroupRequest
       * @return DeleteGroupResponse
@@ -2769,7 +2788,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the request, which is used to locate and troubleshoot issues.
+      * Security Center provides asset importance tags and custom tags. You can call this operation to remove only the custom tag that is added to an asset.
       *
       * @param request DeleteTagWithUuidRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2804,7 +2823,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the request, which is used to locate and troubleshoot issues.
+      * Security Center provides asset importance tags and custom tags. You can call this operation to remove only the custom tag that is added to an asset.
       *
       * @param request DeleteTagWithUuidRequest
       * @return DeleteTagWithUuidResponse
@@ -3653,7 +3672,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The data returned.
+      * You can call the DescribeBackupClients operation to query the servers on which the anti-ransomware agent is installed in a specified region.
       *
       * @param request DescribeBackupClientsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3684,7 +3703,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The data returned.
+      * You can call the DescribeBackupClients operation to query the servers on which the anti-ransomware agent is installed in a specified region.
       *
       * @param request DescribeBackupClientsRequest
       * @return DescribeBackupClientsResponse
@@ -3851,7 +3870,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The number of the restoration tasks that are in the **being restored** state.
+      * If you have created restoration tasks, you can call this operation to query the number of restoration tasks that are in the **restored** or **being restored** state.
       *
       * @param request DescribeBackupRestoreCountRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3874,7 +3893,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The number of the restoration tasks that are in the **being restored** state.
+      * If you have created restoration tasks, you can call this operation to query the number of restoration tasks that are in the **restored** or **being restored** state.
       *
       * @return DescribeBackupRestoreCountResponse
      */
@@ -4322,9 +4341,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Indicates whether alerts are generated on the asset. Valid values:
-      * *   **YES**
-      * *   **NO**
+      * You can search for assets by using search conditions, such as the instance ID, instance name, virtual private cloud (VPC) ID, region, and public IP address. You can also configure a logical relationship between multiple search conditions to search for the assets that meet the search conditions.
       *
       * @param request DescribeCloudCenterInstancesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4387,9 +4404,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Indicates whether alerts are generated on the asset. Valid values:
-      * *   **YES**
-      * *   **NO**
+      * You can search for assets by using search conditions, such as the instance ID, instance name, virtual private cloud (VPC) ID, region, and public IP address. You can also configure a logical relationship between multiple search conditions to search for the assets that meet the search conditions.
       *
       * @param request DescribeCloudCenterInstancesRequest
       * @return DescribeCloudCenterInstancesResponse
@@ -4792,7 +4807,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The number of nodes on which alerts are generated in the current container cluster.
+      * Only users who created a Container Registry Enterprise Edition instance can call this operation.
       *
       * @param request DescribeContainerStatisticsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4823,7 +4838,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The number of nodes on which alerts are generated in the current container cluster.
+      * Only users who created a Container Registry Enterprise Edition instance can call this operation.
       *
       * @param request DescribeContainerStatisticsRequest
       * @return DescribeContainerStatisticsResponse
@@ -7182,7 +7197,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Queries the risk statistics of container images.
+      * Security Center can scan for security risks and collect statistics only for **Container Registry Enterprise Edition instances**.
+      * >  Security Center cannot scan for security risks or collect statistics for **default** Container Registry instances.
       *
       * @param request DescribeImageStatisticsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -7205,7 +7221,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Queries the risk statistics of container images.
+      * Security Center can scan for security risks and collect statistics only for **Container Registry Enterprise Edition instances**.
+      * >  Security Center cannot scan for security risks or collect statistics for **default** Container Registry instances.
       *
       * @return DescribeImageStatisticsResponse
      */
@@ -7215,7 +7232,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The time at which the scan was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+      * To query the information about the recently detected image vulnerabilities, call the [PublicCreateImageScanTask](~~PublicCreateImageScanTask~~) operation. Wait 1 to 5 minutes until the call is successful and call the DescribeImageVulList operation.
       *
       * @param request DescribeImageVulListRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -7354,7 +7371,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The time at which the scan was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+      * To query the information about the recently detected image vulnerabilities, call the [PublicCreateImageScanTask](~~PublicCreateImageScanTask~~) operation. Wait 1 to 5 minutes until the call is successful and call the DescribeImageVulList operation.
       *
       * @param request DescribeImageVulListRequest
       * @return DescribeImageVulListResponse
@@ -7423,7 +7440,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the server group to which the server belongs.
+      * You can call the DescribeInstallCodes operation to query the commands that are used to manually install the Security Center agent. The returned results contain the installation verification code and the server information. If you want to manually install the Security Center agent on your server, you can call this operation to query installation commands.
+      * # Limits
+      * You can call this API operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request DescribeInstallCodesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -7446,7 +7465,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the server group to which the server belongs.
+      * You can call the DescribeInstallCodes operation to query the commands that are used to manually install the Security Center agent. The returned results contain the installation verification code and the server information. If you want to manually install the Security Center agent on your server, you can call this operation to query installation commands.
+      * # Limits
+      * You can call this API operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @return DescribeInstallCodesResponse
      */
@@ -8922,7 +8943,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The name of the CSV file. The CSV file contains the files that fail to be restored.
+      * If the data on your servers is encrypted by ransomware, you can create a restoration task to restore the data on your servers by using backup data in Security Center.
+      * >  After you enable an anti-ransomware policy, the data on your servers is backed up based on the policy. For more information about anti-ransomware policies, see [Manage protection policies](~~164781~~).
       *
       * @param request DescribeRestoreJobsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -8965,7 +8987,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The name of the CSV file. The CSV file contains the files that fail to be restored.
+      * If the data on your servers is encrypted by ransomware, you can create a restoration task to restore the data on your servers by using backup data in Security Center.
+      * >  After you enable an anti-ransomware policy, the data on your servers is backed up based on the policy. For more information about anti-ransomware policies, see [Manage protection policies](~~164781~~).
       *
       * @param request DescribeRestoreJobsRequest
       * @return DescribeRestoreJobsResponse
@@ -9018,7 +9041,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated
-      * The number of entries returned on the current page.
+      * This operation is phased out. You can use the ListCheckInstanceResult operation.
       *
       * @param request DescribeRiskCheckItemResultRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -9071,7 +9094,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated
-      * The number of entries returned on the current page.
+      * This operation is phased out. You can use the ListCheckInstanceResult operation.
       *
       * @param request DescribeRiskCheckItemResultRequest
       * @return DescribeRiskCheckItemResultResponse
@@ -9084,7 +9107,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated
-      * The details about the check results.
+      * This operation is phased out. You can use the ListCheckResult operation.
       *
       * @param request DescribeRiskCheckResultRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -9161,7 +9184,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated
-      * The details about the check results.
+      * This operation is phased out. You can use the ListCheckResult operation.
       *
       * @param request DescribeRiskCheckResultRequest
       * @return DescribeRiskCheckResultResponse
@@ -9174,7 +9197,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated
-      * The number of detected risk items.
+      * This operation is phased out. You can use the GetCheckSummary operation.
       *
       * @param request DescribeRiskCheckSummaryRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -9219,7 +9242,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated
-      * The number of detected risk items.
+      * This operation is phased out. You can use the GetCheckSummary operation.
       *
       * @param request DescribeRiskCheckSummaryRequest
       * @return DescribeRiskCheckSummaryResponse
@@ -9232,7 +9255,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated
-      * Identity authentication and permissions
+      * This operation is phased out. You can use the ListCheckStandard operation instead.
       *
       * @param request DescribeRiskItemTypeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -9273,7 +9296,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated
-      * Identity authentication and permissions
+      * This operation is phased out. You can use the ListCheckStandard operation instead.
       *
       * @param request DescribeRiskItemTypeRequest
       * @return DescribeRiskItemTypeResponse
@@ -9286,8 +9309,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated
-      * The instance IDs of the cloud services that you want to query. Separate multiple IDs with commas (,).
-      * > If you do not specify this parameter, an empty list is returned.
+      * This operation is phased out. You can use the ListCheckResult operation. When you call the ListCheckResult operation, set the Statuses parameter to NOT_PASS.
       *
       * @param request DescribeRiskListCheckResultRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -9340,8 +9362,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated
-      * The instance IDs of the cloud services that you want to query. Separate multiple IDs with commas (,).
-      * > If you do not specify this parameter, an empty list is returned.
+      * This operation is phased out. You can use the ListCheckResult operation. When you call the ListCheckResult operation, set the Statuses parameter to NOT_PASS.
       *
       * @param request DescribeRiskListCheckResultRequest
       * @return DescribeRiskListCheckResultResponse
@@ -9589,14 +9610,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated
-      * The day of the week when the check tasks are performed. Multiple days can be specified. Multiple days are separated by commas (,).
-      * *   **1**: Monday
-      * *   **2**: Tuesday
-      * *   **3**: Wednesday
-      * *   **4**: Thursday
-      * *   **5**: Friday
-      * *   **6**: Saturday
-      * *   **7**: Sunday
+      * This operation is phased out. You can use the GetCheckConfig operation.
       *
       * @param request DescribeSecurityCheckScheduleConfigRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -9637,14 +9651,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated
-      * The day of the week when the check tasks are performed. Multiple days can be specified. Multiple days are separated by commas (,).
-      * *   **1**: Monday
-      * *   **2**: Tuesday
-      * *   **3**: Wednesday
-      * *   **4**: Thursday
-      * *   **5**: Friday
-      * *   **6**: Saturday
-      * *   **7**: Sunday
+      * This operation is phased out. You can use the GetCheckConfig operation.
       *
       * @param request DescribeSecurityCheckScheduleConfigRequest
       * @return DescribeSecurityCheckScheduleConfigResponse
@@ -11187,7 +11194,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the vSwitch.
+      * If you specify only the Action request parameter in your request, Security Center returns the list of all VPCs regardless of whether a honeypot is deployed on a VPC.
       *
       * @param request DescribeVpcHoneyPotListRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -11238,7 +11245,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the vSwitch.
+      * If you specify only the Action request parameter in your request, Security Center returns the list of all VPCs regardless of whether a honeypot is deployed on a VPC.
       *
       * @param request DescribeVpcHoneyPotListRequest
       * @return DescribeVpcHoneyPotListResponse
@@ -11381,7 +11388,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the task.
+      * If the value of ExportStatus is success, the URL at which you can download the exported Excel file is returned.
       *
       * @param request DescribeVulExportInfoRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -11412,7 +11419,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the task.
+      * If the value of ExportStatus is success, the URL at which you can download the exported Excel file is returned.
       *
       * @param request DescribeVulExportInfoRequest
       * @return DescribeVulExportInfoResponse
@@ -12405,7 +12412,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the exported file.
+      * You can call the operation to export the following check result lists:
+      * *   The list of servers on the Host page.
+      * *   The lists of image system vulnerabilities, image application vulnerabilities, image baseline check results, and malicious image samples on the Image Security page.
+      * *   The list of attack analysis data on the Attack Awareness page.
+      * *   The list of check results for AccessKey pair leaks on the AK leak detection page.
       *
       * @param request ExportRecordRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -12444,7 +12455,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the exported file.
+      * You can call the operation to export the following check result lists:
+      * *   The list of servers on the Host page.
+      * *   The lists of image system vulnerabilities, image application vulnerabilities, image baseline check results, and malicious image samples on the Image Security page.
+      * *   The list of attack analysis data on the Attack Awareness page.
+      * *   The list of check results for AccessKey pair leaks on the AK leak detection page.
       *
       * @param request ExportRecordRequest
       * @return ExportRecordResponse
@@ -12552,7 +12567,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the exported file.
+      * You can call the ExportVul operation to export the following types of vulnerabilities: Linux software vulnerabilities, Windows system vulnerabilities, Web-CMS vulnerabilities, application vulnerabilities, and urgent vulnerabilities.
+      * You can use this operation together with the DescribeVulExportInfo operation. After you call the ExportVul operation to create a vulnerability export task, you can call the DescribeVulExportInfo operation to query the progress of the task by specifying the ID of the task.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request ExportVulRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -12619,7 +12637,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the exported file.
+      * You can call the ExportVul operation to export the following types of vulnerabilities: Linux software vulnerabilities, Windows system vulnerabilities, Web-CMS vulnerabilities, application vulnerabilities, and urgent vulnerabilities.
+      * You can use this operation together with the DescribeVulExportInfo operation. After you call the ExportVul operation to create a vulnerability export task, you can call the DescribeVulExportInfo operation to query the progress of the task by specifying the ID of the task.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request ExportVulRequest
       * @return ExportVulResponse
@@ -13471,7 +13492,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The extended information about the file detection result.
+      * The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only MD5 hash values are supported. Before you call this operation, calculate the MD5 hash value of the file.
       *
       * @param request GetFileDetectResultRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -13510,7 +13531,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The extended information about the file detection result.
+      * The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only MD5 hash values are supported. Before you call this operation, calculate the MD5 hash value of the file.
       *
       * @param request GetFileDetectResultRequest
       * @return GetFileDetectResultResponse
@@ -14229,7 +14250,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The HTTP status code returned.
+      * > Before you call this operation, make sure that the Security Center agent on your servers is online and the servers can access Alibaba Cloud services.
       *
       * @param request InstallCloudMonitorRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -14276,7 +14297,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The HTTP status code returned.
+      * > Before you call this operation, make sure that the Security Center agent on your servers is online and the servers can access Alibaba Cloud services.
       *
       * @param request InstallCloudMonitorRequest
       * @return InstallCloudMonitorResponse
@@ -16096,8 +16117,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the new server group to which the servers belong.
-      * >  You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of server groups.
+      * You can call the ModifyAssetGroup operation to change the server group to which one or more servers belong. After you create a server group by calling the [CreateOrUpdateAssetGroup](~~CreateOrUpdateAssetGroup~~) operation, you can call the ModifyAssetGroup operation to change the server group to which your servers belong.
+      * ### Limits
+      * You can call this API operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request ModifyAssetGroupRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -16136,8 +16158,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the new server group to which the servers belong.
-      * >  You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of server groups.
+      * You can call the ModifyAssetGroup operation to change the server group to which one or more servers belong. After you create a server group by calling the [CreateOrUpdateAssetGroup](~~CreateOrUpdateAssetGroup~~) operation, you can call the ModifyAssetGroup operation to change the server group to which your servers belong.
+      * ### Limits
+      * You can call this API operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request ModifyAssetGroupRequest
       * @return ModifyAssetGroupResponse
@@ -17143,7 +17166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the request, which is used to locate and troubleshoot issues.
+      * **Prerequisites** A service-linked role is created, and Security Center is authorized to access cloud resources. You can call the [CreateServiceLinkedRole](~~CreateServiceLinkedRole~~) operation to create service-linked roles and authorize Security Center to access cloud resources. **Scenarios** Before you use the log analysis feature of Security Center, you must call the ModifyOpenLogShipper operation to activate Log Service.
       *
       * @param request ModifyOpenLogShipperRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -17174,7 +17197,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the request, which is used to locate and troubleshoot issues.
+      * **Prerequisites** A service-linked role is created, and Security Center is authorized to access cloud resources. You can call the [CreateServiceLinkedRole](~~CreateServiceLinkedRole~~) operation to create service-linked roles and authorize Security Center to access cloud resources. **Scenarios** Before you use the log analysis feature of Security Center, you must call the ModifyOpenLogShipper operation to activate Log Service.
       *
       * @param request ModifyOpenLogShipperRequest
       * @return ModifyOpenLogShipperResponse
@@ -17326,7 +17349,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated
-      * The ID of the request, which is used to locate and troubleshoot issues.
+      * This operation is phased out. You can use the following operations:
+      * \\-To **ignore a check item**, use the AddCheckResultWhiteList operation.
+      * \\-To **cancel ignoring a check item**, use the RemoveCheckResultWhiteList operation.
       *
       * @param request ModifyRiskCheckStatusRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -17379,7 +17404,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated
-      * The ID of the request, which is used to locate and troubleshoot issues.
+      * This operation is phased out. You can use the following operations:
+      * \\-To **ignore a check item**, use the AddCheckResultWhiteList operation.
+      * \\-To **cancel ignoring a check item**, use the RemoveCheckResultWhiteList operation.
       *
       * @param request ModifyRiskCheckStatusRequest
       * @return ModifyRiskCheckStatusResponse
@@ -17392,7 +17419,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated
-      * The ID of the request, which is used to locate and troubleshoot issues.
+      * This operation is phased out. You can use the following operations:
+      * \\-To **ignore a risk item**, use the AddCheckInstanceResultWhiteList operation.
+      * \\-To **cancel ignoring a risk item**, use the RemoveCheckInstanceResultWhiteList operation.
       *
       * @param request ModifyRiskSingleResultStatusRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -17445,7 +17474,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated
-      * The ID of the request, which is used to locate and troubleshoot issues.
+      * This operation is phased out. You can use the following operations:
+      * \\-To **ignore a risk item**, use the AddCheckInstanceResultWhiteList operation.
+      * \\-To **cancel ignoring a risk item**, use the RemoveCheckInstanceResultWhiteList operation.
       *
       * @param request ModifyRiskSingleResultStatusRequest
       * @return ModifyRiskSingleResultStatusResponse
@@ -17458,7 +17489,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated
-      * The ID of the request, which is used to locate and troubleshoot issues.
+      * This operation is phased out. You can use the ChangeCheckConfig operation.
       *
       * @param request ModifySecurityCheckScheduleConfigRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -17511,7 +17542,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated
-      * The ID of the request, which is used to locate and troubleshoot issues.
+      * This operation is phased out. You can use the ChangeCheckConfig operation.
       *
       * @param request ModifySecurityCheckScheduleConfigRequest
       * @return ModifySecurityCheckScheduleConfigResponse
@@ -18079,7 +18110,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the request, which is used to locate and troubleshoot issues.
+      * After you delete a directory that has web tamper proofing enabled on a server, files in the directory are no longer protected by web tamper proofing. The information about the websites that are hosted on the server may be maliciously modified by attackers. Proceed with caution.
       *
       * @param request ModifyWebLockDeleteConfigRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -18122,7 +18153,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the request, which is used to locate and troubleshoot issues.
+      * After you delete a directory that has web tamper proofing enabled on a server, files in the directory are no longer protected by web tamper proofing. The information about the websites that are hosted on the server may be maliciously modified by attackers. Proceed with caution.
       *
       * @param request ModifyWebLockDeleteConfigRequest
       * @return ModifyWebLockDeleteConfigResponse
@@ -19024,10 +19055,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The result of the image scan task. Valid values:
-      * *   **SUCCESS**: The task is successful.
-      * *   **TASK_NOT_SUPPORT_REGION**: The images are deployed in a region that is not supported by container image scan.
-      * > For more information about the regions supported by container image scan, see the "Regions supported by container image scan" section in this topic.
+      * Before you call the PublicCreateImageScanTask operation, we recommend that you call the [PublicPreCheckImageScanTask](~~PublicPreCheckImageScanTask~~) operation to query the number of images to scan and the quota for container image scan to be consumed by the image scan task. Make sure that the remaining quota for container image scan is sufficient. This prevents the task from being stopped due to an insufficient quota.
       *
       * @param request PublicCreateImageScanTaskRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -19090,10 +19118,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The result of the image scan task. Valid values:
-      * *   **SUCCESS**: The task is successful.
-      * *   **TASK_NOT_SUPPORT_REGION**: The images are deployed in a region that is not supported by container image scan.
-      * > For more information about the regions supported by container image scan, see the "Regions supported by container image scan" section in this topic.
+      * Before you call the PublicCreateImageScanTask operation, we recommend that you call the [PublicPreCheckImageScanTask](~~PublicPreCheckImageScanTask~~) operation to query the number of images to scan and the quota for container image scan to be consumed by the image scan task. Make sure that the remaining quota for container image scan is sufficient. This prevents the task from being stopped due to an insufficient quota.
       *
       * @param request PublicCreateImageScanTaskRequest
       * @return PublicCreateImageScanTaskResponse
@@ -19226,6 +19251,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryDiscoverDatabaseWithOptions(request, runtime);
     }
 
+    /**
+      * You can call the QueryGroupIdByGroupName operation to query the ID of an asset group to which your assets belong by using the name of the asset group. When you call operations such as [GetSuspiciousStatistics](~~GetSuspiciousStatistics~~) and [DeleteGroup](~~DeleteGroup~~), you must specify the ID of the asset group. To query the ID of an asset group, call the QueryGroupIdByGroupName operation.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request QueryGroupIdByGroupNameRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryGroupIdByGroupNameResponse
+     */
     public QueryGroupIdByGroupNameResponse queryGroupIdByGroupNameWithOptions(QueryGroupIdByGroupNameRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -19254,6 +19288,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryGroupIdByGroupNameResponse());
     }
 
+    /**
+      * You can call the QueryGroupIdByGroupName operation to query the ID of an asset group to which your assets belong by using the name of the asset group. When you call operations such as [GetSuspiciousStatistics](~~GetSuspiciousStatistics~~) and [DeleteGroup](~~DeleteGroup~~), you must specify the ID of the asset group. To query the ID of an asset group, call the QueryGroupIdByGroupName operation.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request QueryGroupIdByGroupNameRequest
+      * @return QueryGroupIdByGroupNameResponse
+     */
     public QueryGroupIdByGroupNameResponse queryGroupIdByGroupName(QueryGroupIdByGroupNameRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryGroupIdByGroupNameWithOptions(request, runtime);

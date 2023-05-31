@@ -4,6 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DeleteHoneypotRequest extends TeaModel {
+    /**
+     * <p>The ID of the honeypot.</p>
+     * <br>
+     * <p>> You can call the [ListHoneypot](~~ListHoneypot~~) operation to query the IDs of honeypots.</p>
+     */
     @NameInMap("HoneypotId")
     public String honeypotId;
 

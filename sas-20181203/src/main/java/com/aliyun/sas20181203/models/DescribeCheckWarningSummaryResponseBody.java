@@ -5,42 +5,37 @@ import com.aliyun.tea.*;
 
 public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
     /**
-     * <p>The level-1 type of the check item. Examples: database, system, weak password, and middleware.</p>
+     * <p>The number of check items returned on the current page.</p>
      */
     @NameInMap("Count")
     public Integer count;
 
     /**
-     * <p>Indicates whether the risk item can be exploited. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <p>The page number of the current page.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The ID of the container cluster.</p>
-     * <br>
-     * <p>>  You can call the [DescribeGroupedContainerInstances](~~182997~~) operation to query the IDs of container clusters.</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the risk item.</p>
+     * <p>The total number of check items.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
     /**
-     * <p>The number of medium-risk items.</p>
+     * <p>The statistics of check items.</p>
      */
     @NameInMap("WarningSummarys")
     public java.util.List<DescribeCheckWarningSummaryResponseBodyWarningSummarys> warningSummarys;
@@ -100,64 +95,92 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
 
     public static class DescribeCheckWarningSummaryResponseBodyWarningSummarys extends TeaModel {
         /**
-         * <p>The statistics of check items.</p>
+         * <p>The number of check items.</p>
          */
         @NameInMap("CheckCount")
         public Integer checkCount;
 
+        /**
+         * <p>Indicates whether the risk item can be exploited. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("CheckExploit")
         public Boolean checkExploit;
 
         @NameInMap("ContainerRisk")
         public Boolean containerRisk;
 
+        /**
+         * <p>Indicates whether the risk item is a database risk item. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("DatabaseRisk")
         public Boolean databaseRisk;
 
+        /**
+         * <p>The number of high-risk items.</p>
+         */
         @NameInMap("HighWarningCount")
         public Integer highWarningCount;
 
         /**
-         * <p>The number of low-risk items.</p>
+         * <p>The time when the last baseline check was performed.</p>
          */
         @NameInMap("LastFoundTime")
         public String lastFoundTime;
 
+        /**
+         * <p>The risk level of the risk item. Valid values:</p>
+         * <br>
+         * <p>*   **high**</p>
+         * <p>*   **medium**</p>
+         * <p>*   **low**</p>
+         */
         @NameInMap("Level")
         public String level;
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of low-risk items.</p>
          */
         @NameInMap("LowWarningCount")
         public Integer lowWarningCount;
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The number of medium-risk items.</p>
          */
         @NameInMap("MediumWarningCount")
         public Integer mediumWarningCount;
 
         /**
-         * <p>The number of check items returned on the current page.</p>
+         * <p>The ID of the risk item.</p>
          */
         @NameInMap("RiskId")
         public Long riskId;
 
+        /**
+         * <p>The name of the risk item.</p>
+         */
         @NameInMap("RiskName")
         public String riskName;
 
         /**
-         * <p>Queries the statistical information about baseline check results. The information includes the number of servers on which a baseline check is performed, the number of baseline check items, and the pass rate of check items in the last baseline check.</p>
+         * <p>The level-2 type of the risk item.</p>
          */
         @NameInMap("SubTypeAlias")
         public String subTypeAlias;
 
+        /**
+         * <p>The level-1 type of the check item. Examples: database, system, weak password, and middleware.</p>
+         */
         @NameInMap("TypeAlias")
         public String typeAlias;
 
         /**
-         * <p>DescribeCheckWarningSummary</p>
+         * <p>The number of assets on which risk items are detected.</p>
          */
         @NameInMap("WarningMachineCount")
         public Integer warningMachineCount;

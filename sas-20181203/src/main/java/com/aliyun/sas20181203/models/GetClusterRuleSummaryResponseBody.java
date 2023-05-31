@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetClusterRuleSummaryResponseBody extends TeaModel {
+    /**
+     * <p>The overall information about the cluster defense rules.</p>
+     */
     @NameInMap("ClusterRuleSummary")
     public GetClusterRuleSummaryResponseBodyClusterRuleSummary clusterRuleSummary;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +38,48 @@ public class GetClusterRuleSummaryResponseBody extends TeaModel {
     }
 
     public static class GetClusterRuleSummaryResponseBodyClusterRuleSummary extends TeaModel {
+        /**
+         * <p>The number of disabled cluster defense rules.</p>
+         */
         @NameInMap("CloseRuleCount")
         public Integer closeRuleCount;
 
+        /**
+         * <p>The number of alerts that are triggered by the cluster defense rules in the last seven days.</p>
+         */
         @NameInMap("InterceptionCount7Day")
         public Long interceptionCount7Day;
 
+        /**
+         * <p>The status of the container firewall feature. Valid values:</p>
+         * <br>
+         * <p>*   **0**: disabled</p>
+         * <p>*   **1**: enabled</p>
+         */
         @NameInMap("InterceptionSwitch")
         public Integer interceptionSwitch;
 
+        /**
+         * <p>The interception mode.</p>
+         */
         @NameInMap("InterceptionType")
         public Integer interceptionType;
 
+        /**
+         * <p>The number of enabled cluster defense rules.</p>
+         */
         @NameInMap("OpenRuleCount")
         public Integer openRuleCount;
 
+        /**
+         * <p>The total number of configured cluster defense rules.</p>
+         */
         @NameInMap("RuleCount")
         public Integer ruleCount;
 
+        /**
+         * <p>The number of recommended cluster defense rules.</p>
+         */
         @NameInMap("SuggestRuleCount")
         public Integer suggestRuleCount;
 

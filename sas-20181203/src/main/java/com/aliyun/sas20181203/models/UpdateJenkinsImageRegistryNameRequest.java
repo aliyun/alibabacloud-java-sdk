@@ -4,12 +4,23 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class UpdateJenkinsImageRegistryNameRequest extends TeaModel {
+    /**
+     * <p>The ID of the image repository.</p>
+     * <br>
+     * <p>> You can call the [PageImageRegistry](~~PageImageRegistry~~) operation to query the IDs of image repositories.</p>
+     */
     @NameInMap("RegistryId")
     public Long registryId;
 
+    /**
+     * <p>The name of the image repository.</p>
+     */
     @NameInMap("RegistryName")
     public String registryName;
 
+    /**
+     * <p>The source IP address of the request.</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 

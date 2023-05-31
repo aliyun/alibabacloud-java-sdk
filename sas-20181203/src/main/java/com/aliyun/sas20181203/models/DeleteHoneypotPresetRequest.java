@@ -4,6 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DeleteHoneypotPresetRequest extends TeaModel {
+    /**
+     * <p>The ID of the honeypot template.</p>
+     * <br>
+     * <p>> You can call the [ListHoneypotPreset](~~ListHoneypotPreset~~) operation to query the IDs of honeypot templates.</p>
+     */
     @NameInMap("HoneypotPresetId")
     public String honeypotPresetId;
 

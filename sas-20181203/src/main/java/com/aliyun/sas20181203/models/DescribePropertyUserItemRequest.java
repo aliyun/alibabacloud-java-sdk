@@ -5,25 +5,28 @@ import com.aliyun.tea.*;
 
 public class DescribePropertyUserItemRequest extends TeaModel {
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The information about the account.</p>
+     * <p>Specifies whether to forcefully refresh the data that you want to query. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
      */
     @NameInMap("ForceFlush")
     public Boolean forceFlush;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The information about the account.</p>
      */
     @NameInMap("User")
     public String user;

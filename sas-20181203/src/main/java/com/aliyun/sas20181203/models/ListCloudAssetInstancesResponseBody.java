@@ -5,25 +5,28 @@ import com.aliyun.tea.*;
 
 public class ListCloudAssetInstancesResponseBody extends TeaModel {
     /**
-     * <p>The details of the cloud asset.</p>
+     * <p>An array that consists of the details of the cloud assets.</p>
      */
     @NameInMap("Instances")
     public java.util.List<ListCloudAssetInstancesResponseBodyInstances> instances;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("PageInfo")
     public ListCloudAssetInstancesResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The pagination information.</p>
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -67,25 +70,13 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
 
     public static class ListCloudAssetInstancesResponseBodyInstances extends TeaModel {
         /**
-         * <p>Indicates whether risks are detected on the cloud asset. Valid values:</p>
+         * <p>Indicates whether alerts are generated for the cloud asset. Valid values:</p>
          * <br>
          * <p>*   **YES**</p>
          * <p>*   **NO**</p>
          */
         @NameInMap("AlarmStatus")
         public String alarmStatus;
-
-        /**
-         * <p>The instance ID of the cloud asset.</p>
-         */
-        @NameInMap("AssetSubType")
-        public String assetSubType;
-
-        /**
-         * <p>The security information about the cloud asset.</p>
-         */
-        @NameInMap("AssetSubTypeName")
-        public String assetSubTypeName;
 
         /**
          * <p>The subtype of the cloud asset. The subtype of the cloud service. Valid values:</p>
@@ -146,62 +137,14 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
          * <p>*   **27**: Elasticsearch</p>
          * <p>    * **0**: instance</p>
          */
-        @NameInMap("AssetType")
-        public Integer assetType;
+        @NameInMap("AssetSubType")
+        public String assetSubType;
 
         /**
          * <p>The subtype name of the cloud asset.</p>
          */
-        @NameInMap("AssetTypeName")
-        public String assetTypeName;
-
-        /**
-         * <p>The public IP address of the instance.</p>
-         */
-        @NameInMap("CreatedTime")
-        public Long createdTime;
-
-        /**
-         * <p>The instance name of the cloud asset.</p>
-         */
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        /**
-         * <p>The time when the instance was created.</p>
-         */
-        @NameInMap("InstanceName")
-        public String instanceName;
-
-        /**
-         * <p>Indicates whether alerts are generated for the cloud asset. Valid values:</p>
-         * <br>
-         * <p>*   **YES**</p>
-         * <p>*   **NO**</p>
-         */
-        @NameInMap("InternetIp")
-        public String internetIp;
-
-        /**
-         * <p>The type of the cloud asset by source. Valid values:</p>
-         * <br>
-         * <p>*   **0**: an asset provided by Alibaba Cloud</p>
-         * <p>*   **1**: a third-party cloud asset</p>
-         * <p>*   **2**: an asset in a data center</p>
-         * <p>*   **3**, **4**, **5**, and **7**: other cloud asset</p>
-         * <p>*   **8**: a lightweight asset</p>
-         */
-        @NameInMap("RegionId")
-        public String regionId;
-
-        /**
-         * <p>The type name of the cloud asset.</p>
-         */
-        @NameInMap("RiskStatus")
-        public String riskStatus;
-
-        @NameInMap("SecurityInfo")
-        public String securityInfo;
+        @NameInMap("AssetSubTypeName")
+        public String assetSubTypeName;
 
         /**
          * <p>The type of the asset. Valid values:</p>
@@ -230,6 +173,69 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
          * <p>*   **25**: IDaaS EIAM</p>
          * <p>*   **26**: PolarDB-X</p>
          * <p>*   **27**: Elasticsearch</p>
+         */
+        @NameInMap("AssetType")
+        public Integer assetType;
+
+        /**
+         * <p>The type name of the cloud asset.</p>
+         */
+        @NameInMap("AssetTypeName")
+        public String assetTypeName;
+
+        /**
+         * <p>The time when the instance was created.</p>
+         */
+        @NameInMap("CreatedTime")
+        public Long createdTime;
+
+        /**
+         * <p>The instance ID of the cloud asset.</p>
+         */
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        /**
+         * <p>The instance name of the cloud asset.</p>
+         */
+        @NameInMap("InstanceName")
+        public String instanceName;
+
+        /**
+         * <p>The public IP address of the instance.</p>
+         */
+        @NameInMap("InternetIp")
+        public String internetIp;
+
+        /**
+         * <p>The region ID of the cloud asset.</p>
+         */
+        @NameInMap("RegionId")
+        public String regionId;
+
+        /**
+         * <p>Indicates whether risks are detected on the cloud asset. Valid values:</p>
+         * <br>
+         * <p>*   **YES**</p>
+         * <p>*   **NO**</p>
+         */
+        @NameInMap("RiskStatus")
+        public String riskStatus;
+
+        /**
+         * <p>The security information about the cloud asset.</p>
+         */
+        @NameInMap("SecurityInfo")
+        public String securityInfo;
+
+        /**
+         * <p>The type of the cloud asset by source. Valid values:</p>
+         * <br>
+         * <p>*   **0**: an asset provided by Alibaba Cloud</p>
+         * <p>*   **1**: a third-party cloud asset</p>
+         * <p>*   **2**: an asset in a data center</p>
+         * <p>*   **3**, **4**, **5**, and **7**: other cloud asset</p>
+         * <p>*   **8**: a lightweight asset</p>
          */
         @NameInMap("Vendor")
         public Integer vendor;
@@ -347,25 +353,25 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
 
     public static class ListCloudAssetInstancesResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>An array that consists of the details of the cloud assets.</p>
+         * <p>The number of entries returned on the current page.</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The page number of the returned page.</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The total number of cloud assets.</p>
+         * <p>The number of entries returned per page.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>The total number of cloud assets.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

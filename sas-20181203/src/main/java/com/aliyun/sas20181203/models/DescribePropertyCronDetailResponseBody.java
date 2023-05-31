@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribePropertyCronDetailResponseBody extends TeaModel {
     /**
-     * <p>The username of the account that runs the scheduled task.</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("PageInfo")
     public DescribePropertyCronDetailResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>10</p>
+     * <p>The details of the scheduled tasks.</p>
      */
     @NameInMap("Propertys")
     public java.util.List<DescribePropertyCronDetailResponseBodyPropertys> propertys;
 
     /**
-     * <p>The username of the account that runs the scheduled task.</p>
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,25 +53,25 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
 
     public static class DescribePropertyCronDetailResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The path to the scheduled task.</p>
+         * <p>The number of entries returned on the current page.</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
-         * <p>The UUID of the server.</p>
+         * <p>The page number of the returned page.</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The interval at which the scheduled task is performed.</p>
+         * <p>The number of entries returned per page. Default value: **10**.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>The total number of entries returned.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -117,67 +117,67 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
 
     public static class DescribePropertyCronDetailResponseBodyPropertys extends TeaModel {
         /**
-         * <p>The number of the page to return. Default value: **1**.</p>
+         * <p>The command that is used to run the scheduled task.</p>
          */
         @NameInMap("Cmd")
         public String cmd;
 
         /**
-         * <p>DescribePropertyCronDetail</p>
+         * <p>The timestamp of the last fingerprint collection. Unit: milliseconds.</p>
          */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
         /**
-         * <p>The IP addresses of the server.</p>
+         * <p>The ID of the server.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The name of the server.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>The pagination information.</p>
+         * <p>The public IP address of the server.</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
-         * <p>The name of the server.</p>
+         * <p>The private IP address of the server.</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
-         * <p>The ID of the server.</p>
+         * <p>The IP addresses of the server.</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
-         * <p>Queries the details of scheduled tasks on the Host page.</p>
+         * <p>The MD5 hash value of the path to the scheduled task.</p>
          */
         @NameInMap("Md5")
         public String md5;
 
         /**
-         * <p>The number of entries returned per page. Default value: **10**.</p>
+         * <p>The interval at which the scheduled task is performed.</p>
          */
         @NameInMap("Period")
         public String period;
 
         /**
-         * <p>The MD5 hash value of the path to the scheduled task.</p>
+         * <p>The path to the scheduled task.</p>
          */
         @NameInMap("Source")
         public String source;
 
         /**
-         * <p>root</p>
+         * <p>The username of the account that runs the scheduled task.</p>
          */
         @NameInMap("User")
         public String user;

@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ExportRecordResponseBody extends TeaModel {
+    /**
+     * <p>The name of the exported file.</p>
+     */
     @NameInMap("FileName")
     public String fileName;
 
+    /**
+     * <p>The ID of the exported file.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class RemoveCheckResultWhiteListRequest extends TeaModel {
+    /**
+     * <p>This parameter is deprecated.</p>
+     */
     @NameInMap("CheckGroupId")
     public String checkGroupId;
 
+    /**
+     * <p>The IDs of check items.</p>
+     */
     @NameInMap("CheckIds")
     public java.util.List<Long> checkIds;
 
+    /**
+     * <p>This parameter is deprecated.</p>
+     */
     @NameInMap("Type")
     public String type;
 

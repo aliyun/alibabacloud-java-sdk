@@ -5,61 +5,61 @@ import com.aliyun.tea.*;
 
 public class DescribePropertyProcDetailRequest extends TeaModel {
     /**
-     * <p>The timestamp of last data collection. Unit: milliseconds.</p>
+     * <p>The startup parameter of the process.</p>
      */
     @NameInMap("Cmdline")
     public String cmdline;
 
     /**
-     * <p>The timestamp when the process starts. Unit: milliseconds.</p>
+     * <p>The number of the page to return. Default value: **1**.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The name of the process.</p>
+     * <p>Specifies whether fuzzy search by process name is supported. If you want to use fuzzy search, set the parameter to 1. If you set the parameter to a different value or leave the parameter empty, fuzzy search is not supported.</p>
      */
     @NameInMap("Extend")
     public String extend;
 
     /**
-     * <p>The startup parameter of the process.</p>
+     * <p>The name of the process.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The name or IP address of the server.</p>
+     * <p>The number of entries to return on each page. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The public IP address of the server.</p>
+     * <p>The timestamp when the process ends. Unit: milliseconds.</p>
      */
     @NameInMap("ProcTimeEnd")
     public Long procTimeEnd;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The timestamp when the process starts. Unit: milliseconds.</p>
      */
     @NameInMap("ProcTimeStart")
     public Long procTimeStart;
 
     /**
-     * <p>1648809853000</p>
+     * <p>The name or IP address of the server.</p>
      */
     @NameInMap("Remark")
     public String remark;
 
     /**
-     * <p>The permission that is required to run the process.</p>
+     * <p>The user who runs the process.</p>
      */
     @NameInMap("User")
     public String user;
 
     /**
-     * <p>The private IP address of the server.</p>
+     * <p>The UUID of the server.</p>
      */
     @NameInMap("Uuid")
     public String uuid;

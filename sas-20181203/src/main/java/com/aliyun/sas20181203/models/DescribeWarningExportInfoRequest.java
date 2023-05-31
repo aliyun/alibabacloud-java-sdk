@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeWarningExportInfoRequest extends TeaModel {
     /**
-     * <p>The name of the exported Excel file.</p>
+     * <p>The ID of the export task.</p>
+     * <br>
+     * <p>>  You can can call the [ExportWarning](~~ExportWarning~~) operation to query the IDs of export tasks.</p>
      */
     @NameInMap("ExportId")
     public Long exportId;

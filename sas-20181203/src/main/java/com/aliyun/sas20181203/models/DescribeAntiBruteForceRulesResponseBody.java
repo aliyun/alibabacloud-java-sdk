@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public DescribeAntiBruteForceRulesResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array that consists of the defense rules.</p>
+     */
     @NameInMap("Rules")
     public java.util.List<DescribeAntiBruteForceRulesResponseBodyRules> rules;
 
@@ -43,15 +52,27 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeAntiBruteForceRulesResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of entries returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -98,30 +119,62 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>Indicates whether the defense rule is the default rule. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         * <br>
+         * <p>> The default rule takes effect on all servers that are not protected by defense rules against brute-force attacks.</p>
+         */
         @NameInMap("DefaultRule")
         public Boolean defaultRule;
 
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("EnableSmartRule")
         public Boolean enableSmartRule;
 
+        /**
+         * <p>The threshold of logon failures that you specify.</p>
+         */
         @NameInMap("FailCount")
         public Integer failCount;
 
+        /**
+         * <p>The period of time during which logons from an account are not allowed. Unit: minutes.</p>
+         */
         @NameInMap("ForbiddenTime")
         public Integer forbiddenTime;
 
+        /**
+         * <p>The ID of the defense rule.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The number of servers to which the defense rule is applied.</p>
+         */
         @NameInMap("MachineCount")
         public Integer machineCount;
 
+        /**
+         * <p>The name of the defense rule.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The period of time during which logon failures from an account are measured. Unit: minutes. If **Span** is set to 10, the defense rule takes effect when the logon failures measured within 10 minutes reaches the specified threshold. The IP addresses of attackers cannot be used to log on to the server within the specified period of time.</p>
+         */
         @NameInMap("Span")
         public Integer span;
 
+        /**
+         * <p>An array consisting of the UUIDs of servers to which the defense rule is applied.</p>
+         */
         @NameInMap("UuidList")
         public java.util.List<String> uuidList;
 

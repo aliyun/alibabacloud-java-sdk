@@ -5,31 +5,35 @@ import com.aliyun.tea.*;
 
 public class DescribeWarningMachinesRequest extends TeaModel {
     /**
-     * <p>The type of the query condition. Valid values:</p>
+     * <p>The ID of the container cluster.</p>
      * <br>
-     * <p>*   **containerId**: the ID of the container</p>
-     * <p>*   **uuid**: the UUID of the asset</p>
+     * <p>>  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The name of the field that is used to search for the container. Valid values:</p>
+     * <br>
+     * <p>*   **CONTAINER_ID**: the ID of the container</p>
+     * <p>*   **IMAGE**: the name of the image</p>
+     * <p>*   **NAMESPACE**: the namespace</p>
+     * <p>*   **NODE_NAME**: the name of the node</p>
+     * <p>*   **POD_IP**: the IP address of the pod</p>
+     * <p>*   **HOST_IP**: the IP address of the host</p>
+     * <p>*   **INSTANCE_ID**: the ID of the instance</p>
      */
     @NameInMap("ContainerFieldName")
     public String containerFieldName;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The value of the field that is used to search for the container.</p>
      */
     @NameInMap("ContainerFieldValue")
     public String containerFieldValue;
 
     /**
-     * <p>The name of the server.</p>
+     * <p>The number of the page to return. Default value: **1**.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -38,58 +42,66 @@ public class DescribeWarningMachinesRequest extends TeaModel {
     public Long groupId;
 
     /**
-     * <p>The number of **low-risk** items on the server.</p>
-     */
-    @NameInMap("HaveRisk")
-    public Integer haveRisk;
-
-    /**
-     * <p>The private IP address of the server.</p>
-     */
-    @NameInMap("Lang")
-    public String lang;
-
-    /**
-     * <p>The source IP address of the request.</p>
-     */
-    @NameInMap("MachineName")
-    public String machineName;
-
-    /**
-     * <p>The number of **medium-risk** items on the server.</p>
-     */
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    /**
-     * <p>The UUID of the server on which the baseline check is performed.</p>
-     */
-    @NameInMap("RiskId")
-    public Long riskId;
-
-    /**
-     * <p>The ID of the baseline check policy.</p>
-     */
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    /**
-     * <p>The page number of the returned page.</p>
-     */
-    @NameInMap("StrategyId")
-    public Long strategyId;
-
-    /**
      * <p>Specifies whether risks were detected. Valid values:</p>
      * <br>
      * <p>*   **1**: yes</p>
      * <p>*   **0**: no</p>
      */
+    @NameInMap("HaveRisk")
+    public Integer haveRisk;
+
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
+    @NameInMap("Lang")
+    public String lang;
+
+    /**
+     * <p>The name of the server on which the baseline check is performed.</p>
+     */
+    @NameInMap("MachineName")
+    public String machineName;
+
+    /**
+     * <p>The number of entries to return on each page. Default value: **10**.</p>
+     */
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    /**
+     * <p>The ID of the risk item.</p>
+     * <br>
+     * <p>>  You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs of risk items.</p>
+     */
+    @NameInMap("RiskId")
+    public Long riskId;
+
+    /**
+     * <p>The source IP address of the request.</p>
+     */
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
+    /**
+     * <p>The ID of the baseline check policy.</p>
+     */
+    @NameInMap("StrategyId")
+    public Long strategyId;
+
+    /**
+     * <p>The type of the query condition. Valid values:</p>
+     * <br>
+     * <p>*   **containerId**: the ID of the container</p>
+     * <p>*   **uuid**: the UUID of the asset</p>
+     */
     @NameInMap("TargetType")
     public String targetType;
 
     /**
-     * <p>The ID of the server.</p>
+     * <p>The UUID of the server on which the baseline check is performed. Separate multiple UUIDs with commas (,).</p>
      */
     @NameInMap("Uuids")
     public String uuids;

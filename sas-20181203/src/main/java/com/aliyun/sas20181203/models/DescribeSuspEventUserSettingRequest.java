@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeSuspEventUserSettingRequest extends TeaModel {
+    /**
+     * <p>The ID of the request source. Set the value to **sas**.</p>
+     */
     @NameInMap("From")
     public String from;
 
+    /**
+     * <p>The ID. You do not need to specify this parameter.</p>
+     */
     @NameInMap("Id")
     public Integer id;
 
+    /**
+     * <p>The IP address of the request. You do not need to specify this parameter.</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 

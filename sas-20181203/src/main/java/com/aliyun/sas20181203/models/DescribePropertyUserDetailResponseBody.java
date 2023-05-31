@@ -5,22 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribePropertyUserDetailResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the password is locked. Valid values:</p>
-     * <br>
-     * <p>*   **0**: yes</p>
-     * <p>*   **1**: no</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("PageInfo")
     public DescribePropertyUserDetailResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The timestamp of the last logon to the account. Unit: milliseconds.</p>
+     * <p>The details of asset fingerprints for the account.</p>
      */
     @NameInMap("Propertys")
     public java.util.List<DescribePropertyUserDetailResponseBodyPropertys> propertys;
 
     /**
-     * <p>The date on which the password of the account expires.</p>
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -56,28 +53,25 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
 
     public static class DescribePropertyUserDetailResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>Specifies whether the account has root permissions. Valid values:</p>
-         * <br>
-         * <p>*   **0**: no</p>
-         * <p>*   **1**: yes</p>
+         * <p>The number of entries returned on the current page.</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
-         * <p>The timestamp of the last logoff from the account. Unit: milliseconds.</p>
+         * <p>The page number of the returned page.</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The name of the account to which the server belongs.</p>
+         * <p>The number of entries returned per page. Default value: **10**.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The name of the account.</p>
+         * <p>The total number of entries returned.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -123,103 +117,133 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
 
     public static class DescribePropertyUserDetailResponseBodyPropertys extends TeaModel {
         /**
-         * <p>Indicates whether the account is an interactive logon account. Valid values:</p>
-         * <br>
-         * <p>*   **0**: no</p>
-         * <p>*   **1**: yes</p>
+         * <p>The date on which the account expires.</p>
          */
         @NameInMap("AccountsExpirationDate")
         public String accountsExpirationDate;
 
         /**
-         * <p>The last logon time of the account.</p>
+         * <p>The timestamp at which the last asset fingerprint collection is performed. Unit: milliseconds.</p>
          */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
         /**
-         * <p>Queries the asset fingerprints for an account to which a server belongs.</p>
+         * <p>The details of the user groups to which the account belongs.</p>
          */
         @NameInMap("GroupNames")
         public java.util.List<String> groupNames;
 
         /**
-         * <p>The UUID of the server.</p>
+         * <p>The ID of the server.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The name of the server.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>The ID of the server.</p>
+         * <p>The public IP address of the server.</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
-         * <p>The number of entries returned per page. Default value: **10**.</p>
+         * <p>The private IP address of the server.</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
-         * <p>The timestamp of the last logon to the account. Unit: milliseconds.</p>
+         * <p>The IP addresses of the server.</p>
          */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>Indicates whether the account is an interactive logon account. Valid values:</p>
+         * <br>
+         * <p>*   **0**: no</p>
+         * <p>*   **1**: yes</p>
+         */
         @NameInMap("IsCouldLogin")
         public Integer isCouldLogin;
 
+        /**
+         * <p>Indicates whether the password expires. Valid values:</p>
+         * <br>
+         * <p>*   **0**: yes</p>
+         * <p>*   **1**: no</p>
+         */
         @NameInMap("IsPasswdExpired")
         public Integer isPasswdExpired;
 
+        /**
+         * <p>Indicates whether the password is locked. Valid values:</p>
+         * <br>
+         * <p>*   **0**: yes</p>
+         * <p>*   **1**: no</p>
+         */
         @NameInMap("IsPasswdLocked")
         public Integer isPasswdLocked;
 
         /**
-         * <p>The IP addresses of the server.</p>
+         * <p>Indicates whether the account has root permissions. Valid values:</p>
+         * <br>
+         * <p>*   **0**: no</p>
+         * <p>*   **1**: yes</p>
          */
         @NameInMap("IsRoot")
         public String isRoot;
 
+        /**
+         * <p>Indicates whether the account is a sudo account. Valid values:</p>
+         * <br>
+         * <p>*   **0**: no</p>
+         * <p>*   **1**: yes</p>
+         */
         @NameInMap("IsSudoer")
         public Integer isSudoer;
-
-        @NameInMap("IsUserExpired")
-        public Integer isUserExpired;
-
-        /**
-         * <p>The pagination information.</p>
-         */
-        @NameInMap("LastLoginIp")
-        public String lastLoginIp;
-
-        /**
-         * <p>Specifies whether the fuzzy search by account name is supported. If you want to use fuzzy search, set the parameter to **1**. If you set the parameter to a different value or leave the parameter empty, fuzzy search is not supported.</p>
-         */
-        @NameInMap("LastLoginTime")
-        public String lastLoginTime;
-
-        @NameInMap("LastLoginTimeDt")
-        public Long lastLoginTimeDt;
-
-        /**
-         * <p>The source IP address of the last logon to the account.</p>
-         */
-        @NameInMap("LastLoginTimestamp")
-        public Long lastLoginTimestamp;
 
         /**
          * <p>Indicates whether the account expires. Valid values:</p>
          * <br>
          * <p>*   **0**: yes</p>
          * <p>*   **1**: no</p>
+         */
+        @NameInMap("IsUserExpired")
+        public Integer isUserExpired;
+
+        /**
+         * <p>The source IP address of the last logon to the account.</p>
+         */
+        @NameInMap("LastLoginIp")
+        public String lastLoginIp;
+
+        /**
+         * <p>The last logon time of the account.</p>
+         */
+        @NameInMap("LastLoginTime")
+        public String lastLoginTime;
+
+        /**
+         * <p>The timestamp of the last logon to the account. Unit: milliseconds.</p>
+         */
+        @NameInMap("LastLoginTimeDt")
+        public Long lastLoginTimeDt;
+
+        /**
+         * <p>The timestamp of the last logon to the account. Unit: milliseconds.</p>
+         */
+        @NameInMap("LastLoginTimestamp")
+        public Long lastLoginTimestamp;
+
+        /**
+         * <p>The date on which the password of the account expires.</p>
          */
         @NameInMap("PasswordExpirationDate")
         public String passwordExpirationDate;
@@ -231,7 +255,7 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The name of the server.</p>
+         * <p>The name of the account.</p>
          */
         @NameInMap("User")
         public String user;

@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeDingTalkRequest extends TeaModel {
     /**
-     * <p>The UID of the user.</p>
+     * <p>The number of the page to return.Default value: 1.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The pagination information.</p>
+     * <p>The number of entries to return on each page.Default value: 20.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The group IDs.</p>
+     * <p>The name of the notification.</p>
      */
     @NameInMap("RuleActionName")
     public String ruleActionName;

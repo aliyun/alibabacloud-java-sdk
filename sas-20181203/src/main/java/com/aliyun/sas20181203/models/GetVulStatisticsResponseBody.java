@@ -4,15 +4,27 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetVulStatisticsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of vulnerabilities that have the high priority.</p>
+     */
     @NameInMap("VulAsapSum")
     public Integer vulAsapSum;
 
+    /**
+     * <p>The number of vulnerabilities that have the medium priority.</p>
+     */
     @NameInMap("VulLaterSum")
     public Integer vulLaterSum;
 
+    /**
+     * <p>The number of vulnerabilities that have the low priority.</p>
+     */
     @NameInMap("VulNntfSum")
     public Integer vulNntfSum;
 

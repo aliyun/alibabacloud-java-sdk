@@ -5,56 +5,36 @@ import com.aliyun.tea.*;
 
 public class DescribeExposedInstanceListRequest extends TeaModel {
     /**
-     * <p>The server component that is exposed on the Internet.</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The total number of servers that are exposed on the Internet.</p>
+     * <p>The server component that is exposed on the Internet.</p>
      */
     @NameInMap("ExposureComponent")
     public String exposureComponent;
 
     /**
-     * <p>The ID of the region where the server resides.</p>
-     * <br>
-     * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     * <p>The public IP address of the server.</p>
      */
     @NameInMap("ExposureIp")
     public String exposureIp;
 
     /**
-     * <p>The public IP address that is exposed on the Internet.</p>
+     * <p>The port that is exposed on the Internet.</p>
      */
     @NameInMap("ExposurePort")
     public String exposurePort;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+     * <p>The ID of the server group.</p>
      * <br>
-     * <p>>  We recommend that you do not leave this parameter empty.</p>
+     * <p>> You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of server groups.</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
-
-    /**
-     * <p>The name of the server.</p>
-     */
-    @NameInMap("HealthStatus")
-    public Boolean healthStatus;
-
-    /**
-     * <p>The UUID of the server.</p>
-     */
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    /**
-     * <p>The ID of the server group.</p>
-     */
-    @NameInMap("InstanceName")
-    public String instanceName;
 
     /**
      * <p>The health status of the Elastic Compute Service (ECS) instance in the scaling group. ECS instances that are not in the Running state are considered unhealthy. Valid values:</p>
@@ -68,11 +48,34 @@ public class DescribeExposedInstanceListRequest extends TeaModel {
      * <br>
      * <p>>  Make sure that you have sufficient balance within your account. If you have overdue payments in your account, pay-as-you-go and preemptible instances are stopped or released. For information about how the status of ECS instances changes when you have overdue payments in your account, see [Overdue payments](~~170589~~).</p>
      */
+    @NameInMap("HealthStatus")
+    public Boolean healthStatus;
+
+    /**
+     * <p>The ID of the server.</p>
+     */
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    /**
+     * <p>The name of the server.</p>
+     */
+    @NameInMap("InstanceName")
+    public String instanceName;
+
+    /**
+     * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+     * <br>
+     * <p>>  We recommend that you do not leave this parameter empty.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The public IP address of the server.</p>
+     * <p>Specifies whether the server has vulnerabilities. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The server has vulnerabilities.</p>
+     * <p>*   **false**: The server does not have vulnerabilities.</p>
      */
     @NameInMap("VulStatus")
     public Boolean vulStatus;

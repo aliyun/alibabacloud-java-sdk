@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeTraceInfoNodeResponseBody extends TeaModel {
+    /**
+     * <p>The details about the node.</p>
+     */
     @NameInMap("Node")
     public DescribeTraceInfoNodeResponseBodyNode node;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class DescribeTraceInfoNodeResponseBody extends TeaModel {
     }
 
     public static class DescribeTraceInfoNodeResponseBodyNodePropertyList extends TeaModel {
+        /**
+         * <p>The name of the property.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The value of the property.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -62,12 +74,21 @@ public class DescribeTraceInfoNodeResponseBody extends TeaModel {
     }
 
     public static class DescribeTraceInfoNodeResponseBodyNode extends TeaModel {
+        /**
+         * <p>The name of the node.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>An array that consists of the properties of the node.</p>
+         */
         @NameInMap("PropertyList")
         public java.util.List<DescribeTraceInfoNodeResponseBodyNodePropertyList> propertyList;
 
+        /**
+         * <p>The type of the node.</p>
+         */
         @NameInMap("Type")
         public String type;
 

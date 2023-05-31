@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array consisting of the parameters that are required to upload a file.</p>
+     */
     @NameInMap("UploadUrlList")
     public java.util.List<CreateFileDetectUploadUrlResponseBodyUploadUrlList> uploadUrlList;
 
@@ -32,15 +38,27 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
     }
 
     public static class CreateFileDetectUploadUrlResponseBodyUploadUrlListContext extends TeaModel {
+        /**
+         * <p>The AccessKey ID that is used to access the OSS bucket.</p>
+         */
         @NameInMap("AccessId")
         public String accessId;
 
+        /**
+         * <p>The key of the file that is used after the file is uploaded to the OSS bucket.</p>
+         */
         @NameInMap("OssKey")
         public String ossKey;
 
+        /**
+         * <p>The policy that poses limits on file upload. For example, the policy can limit the size of the file.</p>
+         */
         @NameInMap("Policy")
         public String policy;
 
+        /**
+         * <p>The signature that is used to upload the file.</p>
+         */
         @NameInMap("Signature")
         public String signature;
 
@@ -84,27 +102,54 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
     }
 
     public static class CreateFileDetectUploadUrlResponseBodyUploadUrlList extends TeaModel {
+        /**
+         * <p>The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The signature information.</p>
+         */
         @NameInMap("Context")
         public CreateFileDetectUploadUrlResponseBodyUploadUrlListContext context;
 
+        /**
+         * <p>The timestamp when the values of the parameters expire. Unit: milliseconds.</p>
+         */
         @NameInMap("Expire")
         public String expire;
 
+        /**
+         * <p>Indicates whether the file exists in the cloud. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The file exists in the cloud. You do not need to upload the file.</p>
+         * <p>*   **false**: The file does not exist in the cloud. You must upload the file.</p>
+         */
         @NameInMap("FileExist")
         public Boolean fileExist;
 
+        /**
+         * <p>The identifier of the file.</p>
+         */
         @NameInMap("HashKey")
         public String hashKey;
 
+        /**
+         * <p>The internal endpoint of the URL to which the file is uploaded.</p>
+         */
         @NameInMap("InternalUrl")
         public String internalUrl;
 
+        /**
+         * <p>The error message returned.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The public endpoint of the URL to which the file is uploaded.</p>
+         */
         @NameInMap("PublicUrl")
         public String publicUrl;
 

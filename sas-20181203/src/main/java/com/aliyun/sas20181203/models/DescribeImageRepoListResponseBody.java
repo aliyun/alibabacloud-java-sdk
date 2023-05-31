@@ -5,39 +5,37 @@ import com.aliyun.tea.*;
 
 public class DescribeImageRepoListResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the information about image repositories.</p>
+     * <p>The number of image repositories that are added to Security Center.</p>
      */
     @NameInMap("AddTargetCount")
     public Integer addTargetCount;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The total number of image repositories.</p>
      */
     @NameInMap("AllTargetCount")
     public Integer allTargetCount;
 
     /**
-     * <p>The condition by which the feature is applied. Valid values:</p>
-     * <br>
-     * <p>*   **image_repo**: the ID of the image repository</p>
+     * <p>The number of excluded image repositories.</p>
      */
     @NameInMap("DelTargetCount")
     public Integer delTargetCount;
 
     /**
-     * <p>DescribeImageRepoList</p>
+     * <p>An array that consists of the information about image repositories.</p>
      */
     @NameInMap("ImageRepoList")
     public java.util.List<DescribeImageRepoListResponseBodyImageRepoList> imageRepoList;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("PageInfo")
     public DescribeImageRepoListResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The number of image repositories that are added to Security Center.</p>
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -96,12 +94,24 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
     }
 
     public static class DescribeImageRepoListResponseBodyImageRepoList extends TeaModel {
+        /**
+         * <p>Indicates whether the feature takes effect on the image repository. Valid values:</p>
+         * <br>
+         * <p>*   **add**: yes</p>
+         * <p>*   **del**: no</p>
+         */
         @NameInMap("Flag")
         public String flag;
 
+        /**
+         * <p>The name of the image repository.</p>
+         */
         @NameInMap("RepoName")
         public String repoName;
 
+        /**
+         * <p>The namespace to which the image repository belongs.</p>
+         */
         @NameInMap("RepoNamespace")
         public String repoNamespace;
 
@@ -138,25 +148,25 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
 
     public static class DescribeImageRepoListResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>Queries the statistics and configurations of the feature that protects images.</p>
+         * <p>The number of entries returned on the current page.</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
-         * <p>The namespace to which the image repository belongs.</p>
+         * <p>The page number of the returned page.</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The number of entries returned per page.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The name of the image repository.</p>
+         * <p>The total number of image repositories.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

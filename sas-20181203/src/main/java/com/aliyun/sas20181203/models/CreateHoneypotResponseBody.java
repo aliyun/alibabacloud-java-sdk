@@ -4,26 +4,42 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateHoneypotResponseBody extends TeaModel {
+    /**
+     * <p>The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The ID of the image that is used for the honeypot.</p>
-     * <br>
-     * <p>>  You can call the [ListAvailableHoneypot](~~ListAvailableHoneypot~~) operation to obtain the IDs of images from the **HoneypotImageId** response parameter.</p>
+     * <p>The information about the honeypot.</p>
      */
     @NameInMap("Data")
     public CreateHoneypotResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -82,7 +98,7 @@ public class CreateHoneypotResponseBody extends TeaModel {
 
     public static class CreateHoneypotResponseBodyData extends TeaModel {
         /**
-         * <p>The information about the honeypot.</p>
+         * <p>The name of the management node.</p>
          */
         @NameInMap("ControlNodeName")
         public String controlNodeName;
@@ -93,21 +109,27 @@ public class CreateHoneypotResponseBody extends TeaModel {
         @NameInMap("HoneypotId")
         public String honeypotId;
 
+        /**
+         * <p>The display name of the honeypot image.</p>
+         */
         @NameInMap("HoneypotImageDisplayName")
         public String honeypotImageDisplayName;
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The name of the honeypot image.</p>
          */
         @NameInMap("HoneypotImageName")
         public String honeypotImageName;
 
         /**
-         * <p>The status of the honeypot.</p>
+         * <p>The custom name of the honeypot.</p>
          */
         @NameInMap("HoneypotName")
         public String honeypotName;
 
+        /**
+         * <p>The ID of the management node.</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
@@ -118,7 +140,7 @@ public class CreateHoneypotResponseBody extends TeaModel {
         public String presetId;
 
         /**
-         * <p>Creates a honeypot.</p>
+         * <p>An array that consists of the status information about the honeypot.</p>
          */
         @NameInMap("State")
         public java.util.List<String> state;

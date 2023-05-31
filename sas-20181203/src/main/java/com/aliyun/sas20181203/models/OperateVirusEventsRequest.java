@@ -4,12 +4,29 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class OperateVirusEventsRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to handle all alert events. Valid values:</p>
+     * <br>
+     * <p>*   **1**: yes</p>
+     * <p>*   **0**: no</p>
+     */
     @NameInMap("OperationAll")
     public Integer operationAll;
 
+    /**
+     * <p>The operation that you want to perform on the alert events. Valid values:</p>
+     * <br>
+     * <p>*   **default**: performs in-depth detection and removal</p>
+     * <p>*   **ignore**: ignores the alert event</p>
+     * <p>*   **advance_mark_mis_info**: adds the alert events to the whitelist</p>
+     * <p>*   **manual_handled**: marks the alert events as manually handled</p>
+     */
     @NameInMap("OperationCode")
     public String operationCode;
 
+    /**
+     * <p>The handling scope.</p>
+     */
     @NameInMap("OperationRange")
     public String operationRange;
 

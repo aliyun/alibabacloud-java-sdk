@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribePropertyProcDetailResponseBody extends TeaModel {
     /**
-     * <p>The name of the process.</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("PageInfo")
     public DescribePropertyProcDetailResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>1</p>
+     * <p>An array that consists of the fingerprints of the processes.</p>
      */
     @NameInMap("Propertys")
     public java.util.List<DescribePropertyProcDetailResponseBodyPropertys> propertys;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**.</p>
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,25 +53,25 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
 
     public static class DescribePropertyProcDetailResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>An array that consists of the fingerprints of the processes.</p>
+         * <p>The number of entries returned on the current page.</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
-         * <p>./8888</p>
+         * <p>The page number of the returned page.</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>10</p>
+         * <p>The number of entries returned per page. Default value: **10**.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>192.168.XX.XX</p>
+         * <p>The total number of entries returned.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -123,91 +123,94 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
         public String cmdline;
 
         /**
-         * <p>root</p>
+         * <p>The timestamp of last data collection. Unit: milliseconds.</p>
          */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
         /**
-         * <p>The time when the process starts.</p>
+         * <p>The permission that is required to run the process.</p>
          */
         @NameInMap("EuidName")
         public String euidName;
 
         /**
-         * <p>The user who runs the process.</p>
+         * <p>The ID of the server that is associated with the process.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The pagination information.</p>
+         * <p>The name of the server that is associated with the process.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>The ID of the process.</p>
+         * <p>The public IP address of the server.</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
-         * <p>The timestamp when the process starts. Unit: milliseconds.</p>
+         * <p>The private IP address of the server.</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
-         * <p>The name of the server that is associated with the process.</p>
+         * <p>Indicates whether the process is a package installation process. Valid values:</p>
+         * <br>
+         * <p>*   **1**: yes</p>
+         * <p>*   **0**: no</p>
          */
         @NameInMap("IsPackage")
         public Integer isPackage;
 
         /**
-         * <p>1649587453000</p>
+         * <p>The MD5 hash value of the process file.</p>
          */
         @NameInMap("Md5")
         public String md5;
 
         /**
-         * <p>Specifies whether fuzzy search by process name is supported. If you want to use fuzzy search, set the parameter to 1. If you set the parameter to a different value or leave the parameter empty, fuzzy search is not supported.</p>
+         * <p>The name of the process.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The ID of the server that is associated with the process.</p>
+         * <p>The path of the process.</p>
          */
         @NameInMap("Path")
         public String path;
 
         /**
-         * <p>The timestamp when the process ends. Unit: milliseconds.</p>
+         * <p>The ID of the process.</p>
          */
         @NameInMap("Pid")
         public String pid;
 
         /**
-         * <p>1</p>
+         * <p>The name of the parent process to which the process belongs.</p>
          */
         @NameInMap("Pname")
         public String pname;
 
         /**
-         * <p>The name of the parent process to which the process belongs.</p>
+         * <p>The time when the process starts.</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
-         * <p>The MD5 hash value of the process file.</p>
+         * <p>The timestamp when the process starts. Unit: milliseconds.</p>
          */
         @NameInMap("StartTimeDt")
         public Long startTimeDt;
 
         /**
-         * <p>The UUID of the server.</p>
+         * <p>The status of the process.</p>
          */
         @NameInMap("State")
         public String state;
@@ -219,7 +222,7 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
         public String user;
 
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>The UUID of the server that is associated with the process.</p>
          */
         @NameInMap("Uuid")
         public String uuid;

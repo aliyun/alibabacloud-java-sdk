@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OperationCancelIgnoreSuspEventRequest extends TeaModel {
     /**
-     * <p>OperationCancelIgnoreSuspEvent</p>
+     * <p>The IDs of alert events.</p>
      */
     @NameInMap("SecurityEventIds")
     public java.util.List<Long> securityEventIds;

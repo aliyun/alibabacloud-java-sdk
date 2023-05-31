@@ -11,25 +11,25 @@ public class DescribeWebLockProcessBlockStatisticsResponseBody extends TeaModel 
     public Integer currentPage;
 
     /**
-     * <p>The number of processes on the current page.</p>
+     * <p>An array consisting of the statistics on processes.</p>
      */
     @NameInMap("List")
     public java.util.List<DescribeWebLockProcessBlockStatisticsResponseBodyList> list;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The number of the page to return. Default value: 1.</p>
+     * <p>The total number of processes.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -81,13 +81,13 @@ public class DescribeWebLockProcessBlockStatisticsResponseBody extends TeaModel 
 
     public static class DescribeWebLockProcessBlockStatisticsResponseBodyList extends TeaModel {
         /**
-         * <p>The statistics on the process.</p>
+         * <p>The number of processes on the current page.</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
-         * <p>Queries the statistics on processes for web tamper proofing.</p>
+         * <p>The process.</p>
          */
         @NameInMap("Process")
         public String process;

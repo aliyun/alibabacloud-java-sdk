@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyCreateVulWhitelistResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array that consists of the information about the whitelist.</p>
+     */
     @NameInMap("VulWhitelistList")
     public java.util.List<ModifyCreateVulWhitelistResponseBodyVulWhitelistList> vulWhitelistList;
 
@@ -32,6 +38,9 @@ public class ModifyCreateVulWhitelistResponseBody extends TeaModel {
     }
 
     public static class ModifyCreateVulWhitelistResponseBodyVulWhitelistList extends TeaModel {
+        /**
+         * <p>The ID of the whitelist.</p>
+         */
         @NameInMap("Id")
         public Long id;
 

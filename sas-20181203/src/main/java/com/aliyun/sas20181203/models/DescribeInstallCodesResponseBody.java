@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeInstallCodesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>An array that consists of the information about the installation command.</p>
      */
     @NameInMap("InstallCodes")
     public java.util.List<DescribeInstallCodesResponseBodyInstallCodes> installCodes;
 
     /**
-     * <p>The installation verification code for you to manually install the Security Center agent.</p>
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,32 +39,52 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
 
     public static class DescribeInstallCodesResponseBodyInstallCodes extends TeaModel {
         /**
-         * <p>DescribeInstallCodes</p>
+         * <p>The installation verification code for you to manually install the Security Center agent.</p>
          */
         @NameInMap("CaptchaCode")
         public String captchaCode;
 
+        /**
+         * <p>The timestamp when the installation command expires. Unit: milliseconds.</p>
+         */
         @NameInMap("ExpiredDate")
         public Long expiredDate;
 
+        /**
+         * <p>The ID of the server group to which the server belongs.</p>
+         */
         @NameInMap("GroupId")
         public Long groupId;
 
+        /**
+         * <p>The name of the server group to which the server belongs.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
-         * <p>Queries the commands that are used to manually install the Security Center Agent.</p>
+         * <p>Indicates whether an image is used to install the Security Center agent. Valid values:</p>
+         * <br>
+         * <p>*   **true**: An image is used to install the Security Center agent.</p>
+         * <p>*   **false**: An image is not used to install the Security Center agent.</p>
          */
         @NameInMap("OnlyImage")
         public Boolean onlyImage;
 
+        /**
+         * <p>The operating system of the server. Valid values:</p>
+         * <p>*   **linux**: Linux.</p>
+         * <p>*   **windows**: Windows.</p>
+         */
         @NameInMap("Os")
         public String os;
 
         @NameInMap("ProxyCluster")
         public String proxyCluster;
 
+        /**
+         * <p>The name of the server provider.</p>
+         */
         @NameInMap("VendorName")
         public String vendorName;
 

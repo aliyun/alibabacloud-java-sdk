@@ -5,12 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribePropertyScaDetailRequest extends TeaModel {
     /**
-     * <p>The IP address that the process monitors.</p>
-     */
-    @NameInMap("Biz")
-    public String biz;
-
-    /**
      * <p>The type of the asset fingerprint that you want to query. Default value: **sca**. Valid values:</p>
      * <br>
      * <p>*   **sca**: middleware</p>
@@ -19,11 +13,25 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
      * <br>
      * <p>>  If you do not specify this parameter, the default value **sca** is used, which indicates that middleware fingerprints are queried.</p>
      */
+    @NameInMap("Biz")
+    public String biz;
+
+    /**
+     * <p>The type of the middleware, database, or web service that you want to query. Valid values:</p>
+     * <br>
+     * <p>*   **system_service**: system service</p>
+     * <p>*   **software_library**: software library</p>
+     * <p>*   **docker_component**: container component</p>
+     * <p>*   **database**: database</p>
+     * <p>*   **web_container**: web container</p>
+     * <p>*   **jar**: JAR package</p>
+     * <p>*   **web_framework**: web framework</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 
     /**
-     * <p>1</p>
+     * <p>The number of the page to return. Default value: **1**.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -38,24 +46,70 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>10</p>
+     * <p>The name of the middleware, database, or web service.</p>
+     * <br>
+     * <p>>  This parameter is deprecated. You can ignore it.</p>
      */
     @NameInMap("Name")
     public Long name;
 
     /**
-     * <p>The type of the middleware, database, or web service. Valid values:</p>
+     * <p>The number of entries to return on each page. Default value: **10**.</p>
      * <br>
-     * <p>*   **system_service**: system service</p>
-     * <p>*   **software_library**: software library</p>
-     * <p>*   **docker_component**: container component</p>
-     * <p>*   **database**: database</p>
-     * <p>*   **web_container**: web container</p>
-     * <p>*   **jar**: JAR package</p>
-     * <p>*   **web_framework**: web framework</p>
+     * <p>>  We recommend that you do not leave this parameter empty.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    /**
+     * <p>The PID.</p>
+     */
+    @NameInMap("Pid")
+    public String pid;
+
+    /**
+     * <p>The port that the process monitors.</p>
+     */
+    @NameInMap("Port")
+    public String port;
+
+    /**
+     * <p>The timestamp when the process ends. Unit: milliseconds.</p>
+     */
+    @NameInMap("ProcessStartedEnd")
+    public Long processStartedEnd;
+
+    /**
+     * <p>The timestamp when the process starts. Unit: milliseconds.</p>
+     */
+    @NameInMap("ProcessStartedStart")
+    public Long processStartedStart;
+
+    /**
+     * <p>The search condition, such as a server name or a server IP address.</p>
+     * <br>
+     * <p>>  Fuzzy match is supported.</p>
+     */
+    @NameInMap("Remark")
+    public String remark;
+
+    /**
+     * <p>The name of the asset fingerprint that you want to query.</p>
+     */
+    @NameInMap("ScaName")
+    public String scaName;
+
+    /**
+     * <p>The name of the process.</p>
+     */
+    @NameInMap("ScaNamePattern")
+    public String scaNamePattern;
+
+    /**
+     * <p>The version of the middleware, database, or web service.</p>
+     */
+    @NameInMap("ScaVersion")
+    public String scaVersion;
 
     /**
      * <p>The search keyword. You must specify this parameter based on the value of the **SearchItem** parameter.</p>
@@ -74,8 +128,21 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
      * <br>
      * <p>>  You must specify both the **SearchItem** and **SearchInfo** parameters before you can query the asset fingerprints based on the specified name or type.</p>
      */
-    @NameInMap("Pid")
-    public String pid;
+    @NameInMap("SearchInfo")
+    public String searchInfo;
+
+    /**
+     * <p>The keyword of the subquery. You must specify this parameter based on the value of the **SearchItemSub** parameter.</p>
+     * <br>
+     * <p>*   If the **SearchItemSub** parameter is set to **port**, you must enter a port number.</p>
+     * <p>*   If the **SearchItemSub** parameter is set to **pid**, you must enter a process ID (PID).</p>
+     * <p>*   If the **SearchItemSub** parameter is set to **version**, you must enter the version of a database, middleware, or web service.</p>
+     * <p>*   If the **SearchItemSub** parameter is set to **user**, you must enter a username.</p>
+     * <br>
+     * <p>>  The subquery is used to search for data of a specified database, middleware, or web service.</p>
+     */
+    @NameInMap("SearchInfoSub")
+    public String searchInfoSub;
 
     /**
      * <p>The type of the search condition. Valid values:</p>
@@ -85,79 +152,28 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
      * <br>
      * <p>>  You must specify both the **SearchItem** and **SearchInfo** parameters before you can query the asset fingerprints based on the specified name or type.</p>
      */
-    @NameInMap("Port")
-    public String port;
-
-    /**
-     * <p>system_service</p>
-     */
-    @NameInMap("ProcessStartedEnd")
-    public Long processStartedEnd;
-
-    /**
-     * <p>The number of entries returned on the current page.</p>
-     */
-    @NameInMap("ProcessStartedStart")
-    public Long processStartedStart;
-
-    /**
-     * <p>The port of the middleware, database, or web service.</p>
-     */
-    @NameInMap("Remark")
-    public String remark;
-
-    /**
-     * <p>The name of the middleware, database, or web service.</p>
-     */
-    @NameInMap("ScaName")
-    public String scaName;
-
-    /**
-     * <p>The number of the page to return. Default value: **1**.</p>
-     */
-    @NameInMap("ScaNamePattern")
-    public String scaNamePattern;
-
-    /**
-     * <p>The number of entries to return on each page. Default value: **10**.</p>
-     * <br>
-     * <p>>  We recommend that you do not leave this parameter empty.</p>
-     */
-    @NameInMap("ScaVersion")
-    public String scaVersion;
-
-    /**
-     * <p>The public IP address of the server on which the middleware, database, or web service is run.</p>
-     */
-    @NameInMap("SearchInfo")
-    public String searchInfo;
-
-    /**
-     * <p>1641110965</p>
-     */
-    @NameInMap("SearchInfoSub")
-    public String searchInfoSub;
-
-    /**
-     * <p>The name of the process.</p>
-     */
     @NameInMap("SearchItem")
     public String searchItem;
 
     /**
-     * <p>root</p>
+     * <p>The type of the subquery. Valid values:</p>
+     * <br>
+     * <p>*   **port**</p>
+     * <p>*   **pid**</p>
+     * <p>*   **version**</p>
+     * <p>*   **user**</p>
      */
     @NameInMap("SearchItemSub")
     public String searchItemSub;
 
     /**
-     * <p>The version of the middleware, database, or web service.</p>
+     * <p>The user who runs the process.</p>
      */
     @NameInMap("User")
     public String user;
 
     /**
-     * <p>The details about the asset fingerprints returned.</p>
+     * <p>The UUID of the server on which the middleware, database, or web service is run.</p>
      */
     @NameInMap("Uuid")
     public String uuid;

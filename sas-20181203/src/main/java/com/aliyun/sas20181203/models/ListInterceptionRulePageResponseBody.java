@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListInterceptionRulePageResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of information about the defense rules.</p>
+     */
     @NameInMap("InterceptionRuleList")
     public java.util.List<ListInterceptionRulePageResponseBodyInterceptionRuleList> interceptionRuleList;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListInterceptionRulePageResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,30 +52,61 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
     }
 
     public static class ListInterceptionRulePageResponseBodyInterceptionRuleListDstTarget extends TeaModel {
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>An array that consists of the affected images.</p>
+         */
         @NameInMap("ImageList")
         public java.util.List<String> imageList;
 
+        /**
+         * <p>The namespace.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>An array that consists of information about the ports used by the destination server.</p>
+         */
         @NameInMap("Ports")
         public java.util.List<String> ports;
 
+        /**
+         * <p>The type of the defense rule. Valid values:</p>
+         * <br>
+         * <p>*   **suggest**: intelligently recommended rule</p>
+         * <p>*   **customize**: custom rule</p>
+         * <p>*   **system**: system rule</p>
+         */
         @NameInMap("RuleType")
         public String ruleType;
 
+        /**
+         * <p>An array that consists of tags added to the destination network object.</p>
+         */
         @NameInMap("TagList")
         public java.util.List<String> tagList;
 
+        /**
+         * <p>The ID of the network object.</p>
+         */
         @NameInMap("TargetId")
         public Integer targetId;
 
+        /**
+         * <p>The name of the network object.</p>
+         */
         @NameInMap("TargetName")
         public String targetName;
 
+        /**
+         * <p>The type of the network object.</p>
+         */
         @NameInMap("TargetType")
         public String targetType;
 
@@ -150,27 +190,55 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
     }
 
     public static class ListInterceptionRulePageResponseBodyInterceptionRuleListSrcTarget extends TeaModel {
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>An array that consists of the images of the network object.</p>
+         */
         @NameInMap("ImageList")
         public java.util.List<String> imageList;
 
+        /**
+         * <p>The namespace.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The type of the defense rule. Valid values:</p>
+         * <br>
+         * <p>*   **suggest**: intelligently recommended rule</p>
+         * <p>*   **customize**: custom rule</p>
+         * <p>*   **system**: system rule</p>
+         */
         @NameInMap("RuleType")
         public String ruleType;
 
+        /**
+         * <p>An array that consists of tags added to the source network object.</p>
+         */
         @NameInMap("TagList")
         public java.util.List<String> tagList;
 
+        /**
+         * <p>The ID of the network object.</p>
+         */
         @NameInMap("TargetId")
         public Integer targetId;
 
+        /**
+         * <p>The name of the network object.</p>
+         */
         @NameInMap("TargetName")
         public String targetName;
 
+        /**
+         * <p>The type of the affected assets.</p>
+         */
         @NameInMap("TargetType")
         public String targetType;
 
@@ -246,27 +314,59 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
     }
 
     public static class ListInterceptionRulePageResponseBodyInterceptionRuleList extends TeaModel {
+        /**
+         * <p>The destination network object.</p>
+         */
         @NameInMap("DstTarget")
         public ListInterceptionRulePageResponseBodyInterceptionRuleListDstTarget dstTarget;
 
+        /**
+         * <p>The interception mode. Valid values:</p>
+         * <br>
+         * <p>*   **0**: monitor</p>
+         * <p>*   **1**: block</p>
+         * <p>*   **2**: alert</p>
+         * <p>*   **3**: allow</p>
+         */
         @NameInMap("InterceptType")
         public Long interceptType;
 
+        /**
+         * <p>The order in which the entries are sorted.</p>
+         */
         @NameInMap("OrderIndex")
         public Long orderIndex;
 
+        /**
+         * <p>The ID of the defense rule.</p>
+         */
         @NameInMap("RuleId")
         public Long ruleId;
 
+        /**
+         * <p>The name of the defense rule.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The status of the defense rule. Valid values:</p>
+         * <br>
+         * <p>*   **1**: enabled</p>
+         * <p>*   **0**: disabled</p>
+         */
         @NameInMap("RuleSwitch")
         public Integer ruleSwitch;
 
+        /**
+         * <p>The type of the defense rule.</p>
+         */
         @NameInMap("RuleType")
         public String ruleType;
 
+        /**
+         * <p>The source network object.</p>
+         */
         @NameInMap("SrcTarget")
         public ListInterceptionRulePageResponseBodyInterceptionRuleListSrcTarget srcTarget;
 
@@ -342,15 +442,27 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
     }
 
     public static class ListInterceptionRulePageResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of entries returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

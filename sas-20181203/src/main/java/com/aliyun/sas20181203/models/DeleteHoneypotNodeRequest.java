@@ -8,7 +8,9 @@ public class DeleteHoneypotNodeRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Deletes a specified management node.</p>
+     * <p>The ID of the management node.</p>
+     * <br>
+     * <p>> You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to query the IDs of management nodes.</p>
      */
     @NameInMap("NodeId")
     public String nodeId;

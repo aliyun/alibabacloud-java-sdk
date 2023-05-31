@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeUniBackupPolicyDetailRequest extends TeaModel {
     /**
-     * <p>$.parameters[2].schema.enumValueTitles</p>
+     * <p>The ID of the anti-ransomware policy.</p>
+     * <br>
+     * <p>> You can call the [DescribeUniBackupPolicies](~~DescribeUniBackupPolicies~~) operation to query the IDs of anti-ransomware policies.</p>
      */
     @NameInMap("PolicyId")
     public String policyId;

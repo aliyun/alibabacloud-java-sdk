@@ -4,6 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class AddVpcHoneyPotRequest extends TeaModel {
+    /**
+     * <p>The ID of the virtual private cloud (VPC) in which you want to create a honeypot.</p>
+     * <br>
+     * <p>> You can call the [DescribeVpcList](~~DescribeVpcList~~) operation to obtain the VPC ID. The VPC ID is the value of the InstanceId parameter.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

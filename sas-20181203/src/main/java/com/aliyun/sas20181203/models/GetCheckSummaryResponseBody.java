@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetCheckSummaryResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array that consists of the summary information about the configuration checks on cloud services.</p>
+     */
     @NameInMap("Summarys")
     public java.util.List<GetCheckSummaryResponseBodySummarys> summarys;
 
@@ -32,24 +38,45 @@ public class GetCheckSummaryResponseBody extends TeaModel {
     }
 
     public static class GetCheckSummaryResponseBodySummarysStandards extends TeaModel {
+        /**
+         * <p>The number of risk items.</p>
+         */
         @NameInMap("FailCount")
         public Integer failCount;
 
+        /**
+         * <p>The ID of the check item.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The number of passed check items.</p>
+         */
         @NameInMap("PassCount")
         public Integer passCount;
 
+        /**
+         * <p>The number of **high-risk** items.</p>
+         */
         @NameInMap("RiskLevelHighCount")
         public Integer riskLevelHighCount;
 
+        /**
+         * <p>The number of **low-risk** items.</p>
+         */
         @NameInMap("RiskLevelLowCount")
         public Integer riskLevelLowCount;
 
+        /**
+         * <p>The number of **medium-risk** items.</p>
+         */
         @NameInMap("RiskLevelMediumCount")
         public Integer riskLevelMediumCount;
 
+        /**
+         * <p>The name of the check item.</p>
+         */
         @NameInMap("ShowName")
         public String showName;
 
@@ -117,15 +144,31 @@ public class GetCheckSummaryResponseBody extends TeaModel {
     }
 
     public static class GetCheckSummaryResponseBodySummarys extends TeaModel {
+        /**
+         * <p>The number of detected risk items.</p>
+         */
         @NameInMap("FailCount")
         public Integer failCount;
 
+        /**
+         * <p>The number of check items that pass the check.</p>
+         */
         @NameInMap("PassCount")
         public Long passCount;
 
+        /**
+         * <p>An array that consist of the standard IDs of check items.</p>
+         */
         @NameInMap("Standards")
         public java.util.List<GetCheckSummaryResponseBodySummarysStandards> standards;
 
+        /**
+         * <p>The type of the check item. Valid values:</p>
+         * <br>
+         * <p>*   **COMPLIANCE**: compliance</p>
+         * <p>*   **RISK**: security risk</p>
+         * <p>*   **IDENTITY_PERMISSION**: identity and permission</p>
+         */
         @NameInMap("Type")
         public String type;
 
