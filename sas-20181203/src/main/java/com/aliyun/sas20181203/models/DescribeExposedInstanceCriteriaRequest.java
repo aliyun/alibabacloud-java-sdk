@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeExposedInstanceCriteriaRequest extends TeaModel {
     /**
-     * <p>DescribeExposedInstanceCriteria</p>
+     * <p>The value of the search condition. Fuzzy match is supported.</p>
      */
     @NameInMap("Value")
     public String value;

@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeStrategyTargetRequest extends TeaModel {
     /**
-     * <p>WB01014029</p>
+     * <p>The ID of the baseline check policy.</p>
      */
     @NameInMap("Config")
     public String config;
 
     /**
-     * <p>Queries the information about the assets to which a baseline check policy is applied.</p>
+     * <p>The source IP address of the request.</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;
 
     /**
-     * <p>DescribeStrategyTarget</p>
+     * <p>The type of the policy. Set the value to hc_strategy, which indicates baseline check policies.</p>
      */
     @NameInMap("Type")
     public String type;

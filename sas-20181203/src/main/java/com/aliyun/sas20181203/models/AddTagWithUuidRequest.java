@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class AddTagWithUuidRequest extends TeaModel {
     /**
-     * <p>Security Center provides asset importance tags and custom tags. You can call the AddTagWithUuid operation to add only a custom tag to assets.</p>
+     * <p>The name of the tag.</p>
      */
     @NameInMap("TagName")
     public String tagName;
 
     /**
-     * <p>Private</p>
+     * <p>The UUIDs of the servers. Separate multiple UUIDs with commas (,).</p>
+     * <br>
+     * <p>> You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.</p>
      */
     @NameInMap("UuidList")
     public String uuidList;

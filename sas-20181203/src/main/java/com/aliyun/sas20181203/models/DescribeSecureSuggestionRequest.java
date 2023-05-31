@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeSecureSuggestionRequest extends TeaModel {
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>An array that consists of the unhandled security risks.</p>
+     * <p>The source IP address of the request.</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;

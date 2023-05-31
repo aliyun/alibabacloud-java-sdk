@@ -5,29 +5,49 @@ import com.aliyun.tea.*;
 
 public class GenerateOnceTaskResponseBody extends TeaModel {
     /**
-     * <p>The number of scan tasks that are complete.</p>
+     * <p>Indicates whether you can create more scan tasks. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     * <br>
+     * <p>> By default, a maximum of 10 scan tasks can be running at the same time. If 10 image scan tasks are running, you cannot create a scan task by calling this operation. You must wait for at least one of the 10 existing scan tasks to complete before you can create a scan task.</p>
      */
     @NameInMap("CanCreate")
     public Boolean canCreate;
 
+    /**
+     * <p>The collection time.</p>
+     */
     @NameInMap("CollectTime")
     public Long collectTime;
 
+    /**
+     * <p>The number of scan tasks that are complete.</p>
+     */
     @NameInMap("FinishCount")
     public Integer finishCount;
 
+    /**
+     * <p>The ID of the last scan task.</p>
+     */
     @NameInMap("LastTask")
     public String lastTask;
 
     /**
-     * <p>The ID of the scan task.</p>
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the scan task.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <p>The total number of scan tasks.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

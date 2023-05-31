@@ -4,27 +4,56 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeTraceInfoNodeRequest extends TeaModel {
+    /**
+     * <p>The name of the alert event.</p>
+     * <br>
+     * <p>> You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the names of alerts events.</p>
+     */
     @NameInMap("EventName")
     public String eventName;
 
+    /**
+     * <p>The ID of the request source. Set the value to sas.</p>
+     */
     @NameInMap("From")
     public String from;
 
+    /**
+     * <p>The time when the alert event was first detected.</p>
+     */
     @NameInMap("IncidentTime")
     public Long incidentTime;
 
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The source IP address of the request. The value of this parameter is specified by the system.</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 
+    /**
+     * <p>The type of the vertex. You can call the [DescribeTraceInfoDetail](~~DescribeTraceInfoDetail~~) operation to query the types of vertexes.</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>The UUID of the server. You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the UUIDs of servers.</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 
+    /**
+     * <p>The ID of the vertex.</p>
+     */
     @NameInMap("VertexId")
     public String vertexId;
 

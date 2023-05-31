@@ -5,34 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeWebLockBindListRequest extends TeaModel {
     /**
-     * <p>on</p>
+     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
-
-    /**
-     * <p>The error code for web tamper proofing. Valid values:</p>
-     * <br>
-     * <p>*   **2001**: The Security Center agent is offline.</p>
-     * <p>*   **9999**: The connection timed out.</p>
-     */
-    @NameInMap("Lang")
-    public String lang;
-
-    /**
-     * <p>The error message for web tamper proofing. Valid values:</p>
-     * <br>
-     * <p>*   **client offline**: The Security Center agent is offline.</p>
-     * <p>*   **timeout**: The connection timed out.</p>
-     */
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    /**
-     * <p>The page number of the returned page. Pages start from page 1. Default value: 1.</p>
-     */
-    @NameInMap("Remark")
-    public String remark;
 
     /**
      * <p>The language of the content within the request and the response. Valid values:</p>
@@ -40,11 +16,32 @@ public class DescribeWebLockBindListRequest extends TeaModel {
      * <p>*   **zh**: Chinese</p>
      * <p>*   **en**: English</p>
      */
+    @NameInMap("Lang")
+    public String lang;
+
+    /**
+     * <p>The number of entries to return on each page. Default value: 20.</p>
+     */
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    /**
+     * <p>The string that allows you to search for servers in fuzzy match mode. You can enter a server name or IP address.</p>
+     */
+    @NameInMap("Remark")
+    public String remark;
+
+    /**
+     * <p>The source IP address of the request.</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 
     /**
-     * <p>The name of the server.</p>
+     * <p>The protection status of the server that you want to query. Valid values:</p>
+     * <br>
+     * <p>*   **on**: protected</p>
+     * <p>*   **off**: unprotected</p>
      */
     @NameInMap("Status")
     public String status;

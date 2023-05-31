@@ -5,28 +5,41 @@ import com.aliyun.tea.*;
 
 public class DescribeGroupedInstancesRequest extends TeaModel {
     /**
-     * <p>The number of entries to return on each page. Default value: **20**.</p>
+     * <p>The number of the page to return. Default value: **1**.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The pagination information.</p>
+     * <p>The name of the group to which the assets belong. Fuzzy search is supported.</p>
      */
     @NameInMap("FieldValue")
     public String fieldValue;
 
     /**
-     * <p>An array that consists of the information about the assets.</p>
+     * <p>The filter condition that you want to use to query the assets. Valid values:</p>
+     * <br>
+     * <p>*   **groupId**: the group to which the assets belong</p>
+     * <p>*   **regionId**: the region in which the assets reside</p>
+     * <p>*   **vpcInstanceId**: the virtual private cloud (VPC) in which the assets reside</p>
      */
     @NameInMap("GroupField")
     public String groupField;
 
     /**
-     * <p>The number of entries returned on the current page.</p>
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
      */
     @NameInMap("Lang")
     public String lang;
+
+    /**
+     * <p>The type of the assets that you want to query. Set the value to **ecs**, which indicates Elastic Compute Service (ECS) instances.</p>
+     */
+    @NameInMap("MachineTypes")
+    public String machineTypes;
 
     /**
      * <p>Specifies whether to enable paged query. Default value: **true**. Valid values:</p>
@@ -34,20 +47,11 @@ public class DescribeGroupedInstancesRequest extends TeaModel {
      * <p>*   **true**: yes</p>
      * <p>*   **false**: no</p>
      */
-    @NameInMap("MachineTypes")
-    public String machineTypes;
-
-    /**
-     * <p>The number of assets on which high-risk vulnerabilities are detected.</p>
-     */
     @NameInMap("NoPage")
     public Boolean noPage;
 
     /**
-     * <p>The type of the server group. Valid values:</p>
-     * <br>
-     * <p>*   **0**: the default group</p>
-     * <p>*   **1**: other group</p>
+     * <p>The number of entries to return on each page. Default value: **20**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -56,16 +60,25 @@ public class DescribeGroupedInstancesRequest extends TeaModel {
     public String saleVersionCheckCode;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <p>The source of the server. Valid values:</p>
      * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>*   **0**: an asset provided by Alibaba Cloud.</p>
+     * <p>*   **1**: a third-party cloud server</p>
+     * <p>*   **2**: a server in a data center</p>
+     * <p>*   **3**, **4**, **5**, and **7**: other cloud asset</p>
+     * <p>*   **8**: a lightweight asset</p>
      */
     @NameInMap("Vendor")
     public Integer vendor;
 
     /**
-     * <p>The name of the group to which the assets belong. Fuzzy search is supported.</p>
+     * <p>The source of the server. Separate multiple sources with commas (,).Valid values:</p>
+     * <br>
+     * <p>*   **0**: an asset provided by Alibaba Cloud.</p>
+     * <p>*   **1**: a third-party cloud server</p>
+     * <p>*   **2**: a server in a data center</p>
+     * <p>*   **3**, **4**, **5**, and **7**: other cloud asset</p>
+     * <p>*   **8**: a lightweight asset</p>
      */
     @NameInMap("Vendors")
     public String vendors;

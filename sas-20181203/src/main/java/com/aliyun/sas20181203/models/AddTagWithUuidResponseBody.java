@@ -5,9 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddTagWithUuidResponseBody extends TeaModel {
     /**
-     * <p>The UUIDs of the servers. Separate multiple UUIDs with commas (,).</p>
-     * <br>
-     * <p>> You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.</p>
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

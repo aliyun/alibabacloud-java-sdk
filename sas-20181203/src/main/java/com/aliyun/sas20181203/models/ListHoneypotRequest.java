@@ -5,37 +5,37 @@ import com.aliyun.tea.*;
 
 public class ListHoneypotRequest extends TeaModel {
     /**
-     * <p>The IDs of honeypots.</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The name of the management node to which the honeypot belongs.</p>
+     * <p>The IDs of the honeypots.</p>
      */
     @NameInMap("HoneypotIds")
     public java.util.List<String> honeypotIds;
 
     /**
-     * <p>execute</p>
+     * <p>The name of the honeypot.</p>
      */
     @NameInMap("HoneypotName")
     public String honeypotName;
 
     /**
-     * <p>The name of the honeypot.</p>
+     * <p>The ID of the management node.</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
 
     /**
-     * <p>java.lang.Object</p>
+     * <p>The name of the management node.</p>
      */
     @NameInMap("NodeName")
     public String nodeName;
 
     /**
-     * <p>The ID of the honeypot.</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

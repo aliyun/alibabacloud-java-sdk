@@ -4,12 +4,28 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupMachineStatusRequest extends TeaModel {
+    /**
+     * <p>The ID of the anti-ransomware policy.</p>
+     * <br>
+     * <p>>  You can call the [DescribeBackupPolicies](~~DescribeBackupPolicies~~) operation to query the IDs of anti-ransomware policies.</p>
+     */
     @NameInMap("PolicyId")
     public Long policyId;
 
+    /**
+     * <p>The version of the anti-ransomware policy. Valid values:</p>
+     * <br>
+     * <p>*   **1.0.0**</p>
+     * <p>*   **2.0.0**</p>
+     */
     @NameInMap("PolicyVersion")
     public String policyVersion;
 
+    /**
+     * <p>The UUID of the server.</p>
+     * <br>
+     * <p>>  You can call the [DescribeBackupPolicy](~~DescribeBackupPolicy~~) operation to query the UUIDs of servers.</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 

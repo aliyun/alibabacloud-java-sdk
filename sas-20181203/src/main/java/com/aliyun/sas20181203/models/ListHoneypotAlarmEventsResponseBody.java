@@ -5,17 +5,20 @@ import com.aliyun.tea.*;
 
 public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
     /**
-     * <p>The information about the array object.</p>
+     * <p>The alert events.</p>
      */
     @NameInMap("HoneypotAlarmEvents")
     public java.util.List<ListHoneypotAlarmEventsResponseBodyHoneypotAlarmEvents> honeypotAlarmEvents;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("PageInfo")
     public ListHoneypotAlarmEventsResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -50,25 +53,25 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
 
     public static class ListHoneypotAlarmEventsResponseBodyHoneypotAlarmEventsMergeFieldList extends TeaModel {
         /**
-         * <p>The pagination information.</p>
+         * <p>The extended value that corresponds to the field key.</p>
          */
         @NameInMap("FieldExtInfo")
         public String fieldExtInfo;
 
         /**
-         * <p>The value that corresponds to the field key.</p>
+         * <p>The key of the field.</p>
          */
         @NameInMap("FieldKey")
         public String fieldKey;
 
         /**
-         * <p>The key of the field.</p>
+         * <p>The type of the field. You can ignore this internal parameter.</p>
          */
         @NameInMap("FieldType")
         public String fieldType;
 
         /**
-         * <p>The extended value that corresponds to the field key.</p>
+         * <p>The value that corresponds to the field key.</p>
          */
         @NameInMap("FieldValue")
         public String fieldValue;
@@ -114,28 +117,52 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
 
     public static class ListHoneypotAlarmEventsResponseBodyHoneypotAlarmEvents extends TeaModel {
         /**
-         * <p>The type of the alert event.</p>
+         * <p>The ID of the alert event.</p>
          */
         @NameInMap("AlarmEventId")
         public Long alarmEventId;
 
         /**
-         * <p>The unique identifier of the alert event.</p>
+         * <p>The name of the alert event.</p>
          */
         @NameInMap("AlarmEventName")
         public String alarmEventName;
 
         /**
-         * <p>The name of the alert event.</p>
+         * <p>The type of the alert event.</p>
          */
         @NameInMap("AlarmEventType")
         public String alarmEventType;
 
         /**
-         * <p>The timestamp when the alert event was first generated. Unit: milliseconds.</p>
+         * <p>The unique identifier of the alert event.</p>
          */
         @NameInMap("AlarmUniqueInfo")
         public String alarmUniqueInfo;
+
+        /**
+         * <p>The total number of times that the alert event was generated.</p>
+         */
+        @NameInMap("EventCount")
+        public Integer eventCount;
+
+        /**
+         * <p>The timestamp when the alert event was first generated. Unit: milliseconds.</p>
+         */
+        @NameInMap("FirstTime")
+        public Long firstTime;
+
+        /**
+         * <p>The timestamp when the alert event was last generated. Unit: milliseconds.</p>
+         */
+        @NameInMap("LastTime")
+        public Long lastTime;
+
+        /**
+         * <p>The risk information.</p>
+         */
+        @NameInMap("MergeFieldList")
+        public java.util.List<ListHoneypotAlarmEventsResponseBodyHoneypotAlarmEventsMergeFieldList> mergeFieldList;
 
         /**
          * <p>The handling status of the alert event. Valid values:</p>
@@ -144,14 +171,8 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
          * <p>*   **2**: ignored</p>
          * <p>*   **4**: confirmed</p>
          */
-        @NameInMap("EventCount")
-        public Integer eventCount;
-
-        /**
-         * <p>The timestamp when the alert event was last generated. Unit: milliseconds.</p>
-         */
-        @NameInMap("FirstTime")
-        public Long firstTime;
+        @NameInMap("OperateStatus")
+        public Integer operateStatus;
 
         /**
          * <p>The risk level of the alert event. Valid values:</p>
@@ -159,24 +180,6 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
          * <p>*   **2**: low</p>
          * <p>*   **3**: medium</p>
          * <p>*   **4**: high</p>
-         */
-        @NameInMap("LastTime")
-        public Long lastTime;
-
-        /**
-         * <p>The information about the array object.</p>
-         */
-        @NameInMap("MergeFieldList")
-        public java.util.List<ListHoneypotAlarmEventsResponseBodyHoneypotAlarmEventsMergeFieldList> mergeFieldList;
-
-        /**
-         * <p>The risk information.</p>
-         */
-        @NameInMap("OperateStatus")
-        public Integer operateStatus;
-
-        /**
-         * <p>The total number of times that the alert event was generated.</p>
          */
         @NameInMap("RiskLevel")
         public String riskLevel;
@@ -270,25 +273,25 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
 
     public static class ListHoneypotAlarmEventsResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The request ID.</p>
+         * <p>The number of entries returned on the current page.</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
-         * <p>The number of entries returned per page. Default value: **100**</p>
+         * <p>The page number of the returned page.</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The number of entries returned per page. Default value: **100**</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>The total number of entries returned.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

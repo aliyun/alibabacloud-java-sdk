@@ -5,66 +5,73 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudCenterInstancesRequest extends TeaModel {
     /**
-     * <p>The version of the kernel.</p>
+     * <p>The search conditions that are used to filter assets. The value of this parameter is in the JSON format and is case-sensitive.</p>
+     * <br>
+     * <p>> A search condition can be an instance ID, instance name, VPC ID, region, or public IP address. You can call the [DescribeCriteria](~~DescribeCriteria~~) operation to query the supported search conditions.</p>
      */
     @NameInMap("Criteria")
     public String criteria;
 
     /**
-     * <p>The name of the group to which the asset belongs.</p>
+     * <p>The number of the page to return. Default value: **1**.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The importance level of the asset. Valid values:</p>
+     * <br>
+     * <p>*   **2**: an important asset</p>
+     * <p>*   **1**: a common asset</p>
+     * <p>*   **0**: a test asset</p>
      */
     @NameInMap("Importance")
     public Integer importance;
 
     /**
-     * <p>You can search for assets by using search conditions, such as the instance ID, instance name, virtual private cloud (VPC) ID, region, and public IP address. You can also configure a logical relationship between multiple search conditions to search for the assets that meet the search conditions.</p>
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The name of the SP for the asset.</p>
+     * <p>The logical operator that you want to use to evaluate multiple search conditions. Default value: **OR**. Valid values:</p>
      * <br>
-     * <p>Valid values:</p>
-     * <br>
-     * <p>*   **ALIYUN**: Alibaba Cloud</p>
-     * <p>*   **OUT**: a third-party service provider</p>
-     * <p>*   **IDC**: a data center</p>
-     * <p>*   **TENCENT**: Tencent Cloud</p>
-     * <p>*   **HUAWEICLOUD**: HUAWEI CLOUD</p>
-     * <p>*   **Microsoft**: Microsoft Azure</p>
-     * <p>*   **AWS**: Amazon Web Services (AWS)</p>
-     * <p>*   **TRIPARTITE**: a lightweight server</p>
+     * <p>*   **OR**: The search conditions are evaluated by using a logical **OR**.</p>
+     * <p>*   **AND**: The search conditions are evaluated by using a logical **AND**.</p>
      */
     @NameInMap("LogicalExp")
     public String logicalExp;
 
     /**
-     * <p>The UUID of the asset.</p>
+     * <p>The type of the assets that you want to query. Valid values:</p>
+     * <br>
+     * <p>*   **ecs**: servers</p>
+     * <p>*   **cloud_product**: Alibaba Cloud services</p>
      */
     @NameInMap("MachineTypes")
     public String machineTypes;
 
     /**
-     * <p>Queries the information about assets that meet specified search conditions. For example, you can search for an asset by using the instance name or region of the asset.</p>
+     * <p>Specifies whether to internationalize the name of the **default** group. Default value: **false**. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The system returns the Chinese name of the default group for the **GroupTrace** response parameter.********</p>
+     * <p>*   **false**: The system returns default for the **GroupTrace** response parameter.</p>
      */
     @NameInMap("NoGroupTrace")
     public Boolean noGroupTrace;
 
     /**
-     * <p>The CPU information about the asset.</p>
+     * <p>The number of entries to return on each page. Default value: **20**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The number of entries returned per page. Default value: **20**.</p>
+     * <p>The ID of the region in which the asset resides.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

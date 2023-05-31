@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeBruteForceRecordsResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the IP addresses.</p>
+     */
     @NameInMap("MachineList")
     public java.util.List<DescribeBruteForceRecordsResponseBodyMachineList> machineList;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public DescribeBruteForceRecordsResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,42 +55,85 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
         @NameInMap("AliNetOnline")
         public Boolean aliNetOnline;
 
+        /**
+         * <p>The timestamp when the block action on the IP address becomes invalid.</p>
+         */
         @NameInMap("BlockExpireDate")
         public Long blockExpireDate;
 
+        /**
+         * <p>The blocked IP address.</p>
+         */
         @NameInMap("BlockIp")
         public String blockIp;
 
         @NameInMap("BlockType")
         public String blockType;
 
+        /**
+         * <p>The error code returned when the defense rule fails to block the IP address.</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The ID of the primary key in the table of records on the blocked IP address.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The name of the server.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The public IP address.</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <p>The private IP address.</p>
+         */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        /**
+         * <p>The port that is attacked.</p>
+         */
         @NameInMap("Port")
         public String port;
 
+        /**
+         * <p>The name of the defense rule.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The type of the defense rule. Valid values:</p>
+         * <br>
+         * <p>*   **userRule**: custom rule</p>
+         * <p>*   **blinkRule**: system rule</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The status of the defense rule. Valid values:</p>
+         * <br>
+         * <p>*   **0**: invalid</p>
+         * <p>*   **1**: enabled</p>
+         * <p>*   **2**: failed</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The UUID of the server on which access from the IP address is blocked.</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 
@@ -205,15 +257,27 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeBruteForceRecordsResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of entries returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries returned per page. Default value: **20**.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

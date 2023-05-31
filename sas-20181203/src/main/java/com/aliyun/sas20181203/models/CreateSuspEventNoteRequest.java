@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateSuspEventNoteRequest extends TeaModel {
+    /**
+     * <p>The ID of the alert event to which you want to add remarks. You can call the [DescribeSuspEvents](~~251497~~) operation to query the IDs of alert events.</p>
+     */
     @NameInMap("EventId")
     public Long eventId;
 
+    /**
+     * <p>The remarks that you want to add.</p>
+     */
     @NameInMap("Note")
     public String note;
 

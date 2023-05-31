@@ -4,36 +4,63 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeWarningExportInfoResponseBody extends TeaModel {
+    /**
+     * <p>The number of baseline entries that are exported.</p>
+     */
     @NameInMap("CurrentCount")
     public Integer currentCount;
 
+    /**
+     * <p>The status of the export task.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   **init**: The task is being initialized.</p>
+     * <p>*   **exporting**: The task is in progress.</p>
+     * <p>*   **success**: The task is successful.</p>
+     */
     @NameInMap("ExportStatus")
     public String exportStatus;
 
+    /**
+     * <p>The name of the exported Excel file.</p>
+     */
     @NameInMap("FileName")
     public String fileName;
 
+    /**
+     * <p>The ID of the export task for the baseline check result.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
     /**
-     * <p>Queries the progress of a export task for a baseline check result.</p>
+     * <p>The URL at which you can download the exported Excel file.</p>
      */
     @NameInMap("Link")
     public String link;
 
+    /**
+     * <p>The message that shows the export task result. The value is fixed as **successful**, which indicates that the export task is successful.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>DescribeWarningExportInfo</p>
+     * <p>The progress percentage of the export task.</p>
      */
     @NameInMap("Progress")
     public Integer progress;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of baseline entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

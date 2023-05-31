@@ -4,21 +4,35 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyVulTargetConfigRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable vulnerability detection. Valid values:</p>
+     * <br>
+     * <p>*   **on**: yes</p>
+     * <p>*   **off**: no</p>
+     */
     @NameInMap("Config")
     public String config;
 
     /**
-     * <p>1.2.XX.XX</p>
+     * <p>The source IP address of the request.</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;
 
     /**
-     * <p>Configures vulnerability detection for a server.</p>
+     * <p>The type of the vulnerability. Valid values:</p>
+     * <br>
+     * <p>*   **cve**: Linux software vulnerability</p>
+     * <p>*   **sys**: Windows system vulnerability</p>
+     * <p>*   **cms**: Web-CMS vulnerability</p>
+     * <p>*   **emg**: urgent vulnerability</p>
      */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>The UUID of the server.</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 

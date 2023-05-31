@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageFixTaskResponseBody extends TeaModel {
+    /**
+     * <p>The tasks returned.</p>
+     */
     @NameInMap("BuildTasks")
     public java.util.List<DescribeImageFixTaskResponseBodyBuildTasks> buildTasks;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public DescribeImageFixTaskResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,42 +52,85 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
     }
 
     public static class DescribeImageFixTaskResponseBodyBuildTasks extends TeaModel {
+        /**
+         * <p>The ID of the task.</p>
+         */
         @NameInMap("BuildTaskId")
         public String buildTaskId;
 
+        /**
+         * <p>The timestamp when the task starts. Unit: milliseconds.</p>
+         */
         @NameInMap("FinishTime")
         public String finishTime;
 
+        /**
+         * <p>The timestamp when the task ends. Unit: milliseconds.</p>
+         */
         @NameInMap("FixTime")
         public String fixTime;
 
+        /**
+         * <p>The version of the image after image risks are fixed.</p>
+         */
         @NameInMap("NewTag")
         public String newTag;
 
+        /**
+         * <p>The UUID of the image after image risks are fixed.</p>
+         */
         @NameInMap("NewUuid")
         public String newUuid;
 
+        /**
+         * <p>The version of the image.</p>
+         */
         @NameInMap("OldTag")
         public String oldTag;
 
+        /**
+         * <p>The UUID of the image.</p>
+         */
         @NameInMap("OldUuid")
         public String oldUuid;
 
+        /**
+         * <p>The region of the image.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The name of the image repository.</p>
+         */
         @NameInMap("RepoName")
         public String repoName;
 
+        /**
+         * <p>The namespace of the image.</p>
+         */
         @NameInMap("RepoNamespace")
         public String repoNamespace;
 
+        /**
+         * <p>The status of the task. Valid values:</p>
+         * <br>
+         * <p>*   **1**: The task is running.</p>
+         * <p>*   **2**: The task is successful.</p>
+         * <p>*   **3**: The task failed.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The type of the task. The value is fixed as IMAGE_REPAIR. The value indicates a task that fixes image risks.</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 
+        /**
+         * <p>The alias of the fixed vulnerability.</p>
+         */
         @NameInMap("VulAlias")
         public String vulAlias;
 
@@ -194,15 +246,27 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
     }
 
     public static class DescribeImageFixTaskResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of tasks returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The page number of the returned page. Default value: **1**</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries returned per page. Default value: **20**</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of tasks returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

@@ -5,31 +5,34 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainListRequest extends TeaModel {
     /**
-     * <p>Queries the information about the domain assets within your Alibaba Cloud account.</p>
+     * <p>The number of the page to return. Default value: **1**.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The number of entries returned per page. Default value: **10**.</p>
+     * <p>The type of the domain name that you want to query. Valid values:</p>
+     * <br>
+     * <p>*   **root**: root domain name</p>
+     * <p>*   **sub**: subdomain name</p>
      */
     @NameInMap("DomainType")
     public String domainType;
 
     /**
-     * <p>The name of the domain or website.</p>
+     * <p>The keyword that is used to query domain names. Fuzzy match is supported.</p>
      */
     @NameInMap("FuzzyDomain")
     public String fuzzyDomain;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The number of entries to return on each page. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**.</p>
+     * <p>The source IP address of the request.</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;

@@ -5,44 +5,37 @@ import com.aliyun.tea.*;
 
 public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
     /**
-     * <p>The download link of the quarantined file.</p>
+     * <p>The number of entries returned on the current page.</p>
      */
     @NameInMap("Count")
     public Integer count;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The number of entries returned on the current page.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The status of the quarantined file. Valid values:</p>
-     * <br>
-     * <p>*   **quaraFailed**: The file fails to be quarantined.</p>
-     * <p>*   **quaraDone**: The file is quarantined.</p>
-     * <p>*   **quaraing**: The file is being quarantined.</p>
-     * <p>*   **rollbackFailed**: The system fails to cancel quarantining the file.</p>
-     * <p>*   **rollbackDone**: The system cancelled quarantining the file.</p>
-     * <p>*   **rollbacking**: The system is cancelling quarantining the file.</p>
+     * <p>An array that consists of the quarantined files.</p>
      */
     @NameInMap("QuaraFiles")
     public java.util.List<DescribeSuspEventQuaraFilesResponseBodyQuaraFiles> quaraFiles;
 
     /**
-     * <p>An array that consists of the quarantined files.</p>
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The quarantined file.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -102,85 +95,98 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
 
     public static class DescribeSuspEventQuaraFilesResponseBodyQuaraFiles extends TeaModel {
         /**
-         * <p>The unique ID of the event.</p>
+         * <p>The name of the event.</p>
          */
         @NameInMap("EventName")
         public String eventName;
 
         /**
-         * <p>The MD5 hash value of the quarantined file.</p>
+         * <p>The type of the event.</p>
          */
         @NameInMap("EventType")
         public String eventType;
 
         /**
-         * <p>172.16.XX.XX</p>
+         * <p>The ID of the quarantined file.</p>
          */
         @NameInMap("Id")
         public Integer id;
 
         /**
-         * <p>The name of the server on which the quarantined file is located.</p>
+         * <p>The instance ID of the asset.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The ID of the quarantined file.</p>
+         * <p>The name of the server on which the quarantined file is located.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>The instance ID of the asset.</p>
+         * <p>The public IP address of the server on which the quarantined file is located.</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <p>The private IP address of the server on which the quarantined file is located.</p>
+         */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
-         * <p>The UUID of the server.</p>
+         * <p>The public IP address of the server on which the quarantined file is located.</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
-         * <p>The public IP address of the server on which the quarantined file is located.</p>
+         * <p>The download link of the quarantined file.</p>
          */
         @NameInMap("Link")
         public String link;
 
         /**
-         * <p>The private IP address of the server on which the quarantined file is located.</p>
+         * <p>The MD5 hash value of the quarantined file.</p>
          */
         @NameInMap("Md5")
         public String md5;
 
+        /**
+         * <p>The time when the quarantined file was last modified.</p>
+         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
         /**
-         * <p>The time when the quarantined file was last modified.</p>
+         * <p>The path to the quarantined file on the server.</p>
          */
         @NameInMap("Path")
         public String path;
 
         /**
-         * <p>The public IP address of the server on which the quarantined file is located.</p>
+         * <p>The status of the quarantined file. Valid values:</p>
+         * <br>
+         * <p>*   **quaraFailed**: The file fails to be quarantined.</p>
+         * <p>*   **quaraDone**: The file is quarantined.</p>
+         * <p>*   **quaraing**: The file is being quarantined.</p>
+         * <p>*   **rollbackFailed**: The system fails to cancel quarantining the file.</p>
+         * <p>*   **rollbackDone**: The system cancelled quarantining the file.</p>
+         * <p>*   **rollbacking**: The system is cancelling quarantining the file.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The type of the event.</p>
+         * <p>The unique ID of the event.</p>
          */
         @NameInMap("Tag")
         public String tag;
 
         /**
-         * <p>The path to the quarantined file on the server.</p>
+         * <p>The UUID of the server.</p>
          */
         @NameInMap("Uuid")
         public String uuid;

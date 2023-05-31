@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupMachineStatusResponseBody extends TeaModel {
+    /**
+     * <p>The backup status of the server.</p>
+     */
     @NameInMap("BackupMachineStatus")
     public DescribeBackupMachineStatusResponseBodyBackupMachineStatus backupMachineStatus;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupMachineStatusResponseBodyBackupMachineStatusErrorList extends TeaModel {
+        /**
+         * <p>The error code returned.</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The error message returned.</p>
+         */
         @NameInMap("ErrorStatus")
         public String errorStatus;
 
@@ -62,36 +74,80 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupMachineStatusResponseBodyBackupMachineStatus extends TeaModel {
+        /**
+         * <p>The ID of the anti-ransomware agent.</p>
+         */
         @NameInMap("ClientId")
         public String clientId;
 
+        /**
+         * <p>The status of the anti-ransomware agent. Valid values:</p>
+         * <br>
+         * <p>*   **ONLINE**: normal</p>
+         * <p>*   **CLIENT_CONNECTION_ERROR**: abnormal</p>
+         * <p>*   **UNINSTALLING**: being uninstalled</p>
+         * <p>*   **UNINSTALL_FAILED**: failed to be uninstalled</p>
+         * <p>*   **UPGRADING**: being upgraded</p>
+         * <p>*   **UPGRADE_FAILED**: failed to be upgraded</p>
+         */
         @NameInMap("ClientStatus")
         public String clientStatus;
 
+        /**
+         * <p>The version of the anti-ransomware agent.</p>
+         */
         @NameInMap("ClientVersion")
         public String clientVersion;
 
+        /**
+         * <p>The error code returned.</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>An array that consists of the error information reported by the backup server.</p>
+         */
         @NameInMap("ErrorList")
         public java.util.List<DescribeBackupMachineStatusResponseBodyBackupMachineStatusErrorList> errorList;
 
+        /**
+         * <p>The ID of the server.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The ID of the region in which the server resides.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The number of backup versions.</p>
+         */
         @NameInMap("SavedBackupCount")
         public Integer savedBackupCount;
 
+        /**
+         * <p>The status of the anti-ransomware agent. Valid values:</p>
+         * <br>
+         * <p>*   **NOT_INSTALLED**: not installed</p>
+         * <p>*   **CLIENT_CONNECTION_ERROR**: abnormal</p>
+         * <p>*   **ACTIVATED**: normal</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The UUID of the server.</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 
+        /**
+         * <p>The ID of the backup vault in which the backup data is stored.</p>
+         */
         @NameInMap("VaultId")
         public String vaultId;
 

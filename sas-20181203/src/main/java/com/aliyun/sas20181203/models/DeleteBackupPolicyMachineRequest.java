@@ -4,15 +4,37 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DeleteBackupPolicyMachineRequest extends TeaModel {
+    /**
+     * <p>The ID of the anti-ransomware policy.</p>
+     * <p>>  You can call the [DescribeBackupPolicies](~~DescribeBackupPolicies~~) operation to query the **Id** of anti-ransomware policies.</p>
+     */
     @NameInMap("PolicyId")
     public Long policyId;
 
+    /**
+     * <p>The version of the anti-ransomware policy. Valid values:</p>
+     * <br>
+     * <p>*   **1.0.0**</p>
+     * <p>*   **2.0.0**</p>
+     * <br>
+     * <p>>  You can call the [DescribeBackupPolicies](~~DescribeBackupPolicies~~) operation to query the versions of anti-ransomware policies.</p>
+     */
     @NameInMap("PolicyVersion")
     public String policyVersion;
 
+    /**
+     * <p>The UUID of the server to which the anti-ransomware policy is applied.</p>
+     * <br>
+     * <p>>  You must specify at least one of the `UuidList` and `Uuid` parameters.</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 
+    /**
+     * <p>The UUIDs of the servers to which the anti-ransomware policy is applied.</p>
+     * <br>
+     * <p>>  You must specify at least one of the `UuidList` and `Uuid` parameters.</p>
+     */
     @NameInMap("UuidList")
     public java.util.List<String> uuidList;
 

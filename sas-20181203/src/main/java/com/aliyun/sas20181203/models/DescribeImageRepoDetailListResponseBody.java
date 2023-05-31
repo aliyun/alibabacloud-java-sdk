@@ -5,22 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeImageRepoDetailListResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the image repository is at risk. Valid values:</p>
-     * <br>
-     * <p>*   **YES**</p>
-     * <p>*   **NO**</p>
+     * <p>An array that consists of the information about image repositories.</p>
      */
     @NameInMap("ImageRepoResponses")
     public java.util.List<DescribeImageRepoDetailListResponseBodyImageRepoResponses> imageRepoResponses;
 
     /**
-     * <p>The total number of image repositories.</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("PageInfo")
     public DescribeImageRepoDetailListResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -56,16 +53,10 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
 
     public static class DescribeImageRepoDetailListResponseBodyImageRepoResponses extends TeaModel {
         /**
-         * <p>The number of images.</p>
+         * <p>The number of alerts that are generated for the image repository.</p>
          */
         @NameInMap("AlarmCount")
         public Integer alarmCount;
-
-        /**
-         * <p>The region ID of the image.</p>
-         */
-        @NameInMap("AlarmStatus")
-        public String alarmStatus;
 
         /**
          * <p>Indicates whether alerts are generated for the image repository. Valid values:</p>
@@ -73,41 +64,20 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
          * <p>*   **YES**</p>
          * <p>*   **NO**</p>
          */
+        @NameInMap("AlarmStatus")
+        public String alarmStatus;
+
+        /**
+         * <p>The address of the image repository.</p>
+         */
         @NameInMap("Endpoints")
         public String endpoints;
 
         /**
-         * <p>The number of alerts that are generated for the image repository.</p>
+         * <p>The number of baseline risk items on the image repository.</p>
          */
         @NameInMap("HcCount")
         public Integer hcCount;
-
-        /**
-         * <p>The namespace to which the image repository belongs.</p>
-         */
-        @NameInMap("HcStatus")
-        public String hcStatus;
-
-        @NameInMap("ImageCount")
-        public Integer imageCount;
-
-        /**
-         * <p>The number of baseline risk items on the image repository.</p>
-         */
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        /**
-         * <p>The number of vulnerabilities detected on the image repository.</p>
-         */
-        @NameInMap("RegionId")
-        public String regionId;
-
-        /**
-         * <p>The ID of the image repository.</p>
-         */
-        @NameInMap("RegistryType")
-        public String registryType;
 
         /**
          * <p>Indicates whether baseline risk items are detected on the image repository. Valid values:</p>
@@ -115,14 +85,26 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
          * <p>*   **NO**</p>
          * <p>*   **YES**</p>
          */
-        @NameInMap("RepoId")
-        public String repoId;
+        @NameInMap("HcStatus")
+        public String hcStatus;
 
-        @NameInMap("RepoName")
-        public String repoName;
+        /**
+         * <p>The number of images.</p>
+         */
+        @NameInMap("ImageCount")
+        public Integer imageCount;
 
-        @NameInMap("RepoNamespace")
-        public String repoNamespace;
+        /**
+         * <p>The ID of the image.</p>
+         */
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        /**
+         * <p>The region ID of the image.</p>
+         */
+        @NameInMap("RegionId")
+        public String regionId;
 
         /**
          * <p>The type of the image repository. Valid values:</p>
@@ -132,17 +114,47 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
          * <p>*   **quay**</p>
          * <p>*   **CI/CD**</p>
          */
+        @NameInMap("RegistryType")
+        public String registryType;
+
+        /**
+         * <p>The ID of the image repository.</p>
+         */
+        @NameInMap("RepoId")
+        public String repoId;
+
+        /**
+         * <p>The name of the image repository.</p>
+         */
+        @NameInMap("RepoName")
+        public String repoName;
+
+        /**
+         * <p>The namespace to which the image repository belongs.</p>
+         */
+        @NameInMap("RepoNamespace")
+        public String repoNamespace;
+
+        /**
+         * <p>Indicates whether the image repository is at risk. Valid values:</p>
+         * <br>
+         * <p>*   **YES**</p>
+         * <p>*   **NO**</p>
+         */
         @NameInMap("RiskStatus")
         public String riskStatus;
 
         /**
-         * <p>The name of the image repository.</p>
+         * <p>The number of vulnerabilities detected on the image repository.</p>
          */
         @NameInMap("VulCount")
         public Integer vulCount;
 
         /**
-         * <p>The ID of the image.</p>
+         * <p>Indicates whether vulnerabilities are detected on the image repository. Valid values:</p>
+         * <br>
+         * <p>*   **YES**</p>
+         * <p>*   **NO**</p>
          */
         @NameInMap("VulStatus")
         public String vulStatus;
@@ -276,25 +288,25 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
 
     public static class DescribeImageRepoDetailListResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The address of the image repository.</p>
+         * <p>The number of entries returned on the current page.</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>The page number of the returned page.</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>An array that consists of the information about image repositories.</p>
+         * <p>The number of entries returned per page.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The information about the image repository.</p>
+         * <p>The total number of image repositories.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

@@ -4,9 +4,19 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class SaveSuspEventUserSettingRequest extends TeaModel {
+    /**
+     * <p>The data source of the exception. Set the value to sas.</p>
+     */
     @NameInMap("From")
     public String from;
 
+    /**
+     * <p>The severities of alert notifications. Valid values:</p>
+     * <br>
+     * <p>*   **remind**</p>
+     * <p>*   **suspicious**</p>
+     * <p>*   **serious**</p>
+     */
     @NameInMap("LevelsOn")
     public String levelsOn;
 

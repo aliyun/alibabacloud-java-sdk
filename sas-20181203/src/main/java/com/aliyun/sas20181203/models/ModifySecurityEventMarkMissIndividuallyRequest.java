@@ -4,18 +4,36 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifySecurityEventMarkMissIndividuallyRequest extends TeaModel {
+    /**
+     * <p>The alert handling rule that you want to delete.</p>
+     */
     @NameInMap("DeleteMarkMissParam")
     public String deleteMarkMissParam;
 
+    /**
+     * <p>The ID of the request source. Set the value to **sas**.</p>
+     */
     @NameInMap("From")
     public String from;
 
+    /**
+     * <p>The alert handling that you want to add.</p>
+     */
     @NameInMap("InsertMarkMissParam")
     public String insertMarkMissParam;
 
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 

@@ -5,43 +5,16 @@ import com.aliyun.tea.*;
 
 public class ModifyUniBackupPolicyRequest extends TeaModel {
     /**
-     * <p>The status of the anti-ransomware policy. Valid values:</p>
-     * <br>
-     * <p>*   **enabled**</p>
-     * <p>*   **disabled**</p>
+     * <p>The name of the database account.</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The password of the database account.</p>
      */
     @NameInMap("AccountPassword")
     public String accountPassword;
-
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
-    @NameInMap("FullPlan")
-    public java.util.Map<String, ?> fullPlan;
-
-    @NameInMap("IncPlan")
-    public java.util.Map<String, ?> incPlan;
-
-    /**
-     * <p>The name of the database account.</p>
-     */
-    @NameInMap("PolicyId")
-    public Long policyId;
-
-    /**
-     * <p>The password of the database account.</p>
-     */
-    @NameInMap("PolicyName")
-    public String policyName;
-
-    @NameInMap("PolicyStatus")
-    public String policyStatus;
 
     /**
      * <p>The policy for full backup. The value of this parameter is a JSON string that contains the following fields:</p>
@@ -51,8 +24,8 @@ public class ModifyUniBackupPolicyRequest extends TeaModel {
      * <p>*   **type**: the unit of the interval</p>
      * <p>*   **days**: the days of a week on which a backup task is performed</p>
      */
-    @NameInMap("Retention")
-    public Integer retention;
+    @NameInMap("FullPlan")
+    public java.util.Map<String, ?> fullPlan;
 
     /**
      * <p>The policy for incremental backup. The value of this parameter is a JSON string that contains the following fields:</p>
@@ -61,6 +34,41 @@ public class ModifyUniBackupPolicyRequest extends TeaModel {
      * <p>*   **interval**: the interval of backup tasks</p>
      * <p>*   **type**: the unit of the interval</p>
      * <p>*   **days**: the days of a week on which a backup task is performed</p>
+     */
+    @NameInMap("IncPlan")
+    public java.util.Map<String, ?> incPlan;
+
+    /**
+     * <p>The ID of the anti-ransomware policy.</p>
+     * <br>
+     * <p>> You can call the [DescribeUniBackupPolicies](~~DescribeUniBackupPolicies~~) operation to query the IDs of anti-ransomware policies.</p>
+     */
+    @NameInMap("PolicyId")
+    public Long policyId;
+
+    /**
+     * <p>The name of the anti-ransomware policy.</p>
+     */
+    @NameInMap("PolicyName")
+    public String policyName;
+
+    /**
+     * <p>The status of the anti-ransomware policy. Valid values:</p>
+     * <br>
+     * <p>*   **enabled**</p>
+     * <p>*   **disabled**</p>
+     */
+    @NameInMap("PolicyStatus")
+    public String policyStatus;
+
+    /**
+     * <p>The retention period of the backup snapshot.</p>
+     */
+    @NameInMap("Retention")
+    public Integer retention;
+
+    /**
+     * <p>The maximum network bandwidth that is allowed during data backup. Unit: bytes.</p>
      */
     @NameInMap("SpeedLimiter")
     public Long speedLimiter;

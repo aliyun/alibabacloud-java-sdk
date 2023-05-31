@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterNetworkResponseBody extends TeaModel {
+    /**
+     * <p>Information about the network topology edge in the cluster.</p>
+     */
     @NameInMap("ClusterNetwork")
     public DescribeClusterNetworkResponseBodyClusterNetwork clusterNetwork;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,44 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterNetworkResponseBodyClusterNetworkEdge extends TeaModel {
+        /**
+         * <p>The ID of the destination node.</p>
+         */
         @NameInMap("DstNodeId")
         public String dstNodeId;
 
+        /**
+         * <p>The type of the destination node. Valid values:</p>
+         * <br>
+         * <p>*   **cluster**: a cluster</p>
+         */
         @NameInMap("DstNodeType")
         public String dstNodeType;
 
+        /**
+         * <p>The ID of the topology edge.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The port number of the topology edge.</p>
+         */
         @NameInMap("Port")
         public String port;
 
+        /**
+         * <p>The ID of the source node.</p>
+         */
         @NameInMap("SrcNodeId")
         public String srcNodeId;
 
+        /**
+         * <p>The type of the source node. Valid values:</p>
+         * <br>
+         * <p>*   **cluster**: a cluster</p>
+         * <p>*   **internet**: a network node in another cluster</p>
+         */
         @NameInMap("SrcNodeType")
         public String srcNodeType;
 
@@ -106,24 +135,63 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterNetworkResponseBodyClusterNetworkNode extends TeaModel {
+        /**
+         * <p>The micro-segmentation switch. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The switch is turned off.</p>
+         * <p>*   **1**: The switch is turned on.</p>
+         */
         @NameInMap("CnnfSwitch")
         public Integer cnnfSwitch;
 
+        /**
+         * <p>The ID of the node.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The network type. Valid values:</p>
+         * <br>
+         * <p>*   **0**: classic network</p>
+         * <p>*   **1**: virtual private cloud (VPC)</p>
+         */
         @NameInMap("InterceptionType")
         public Integer interceptionType;
 
+        /**
+         * <p>The name of the node.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The network topology switch. Valid values:</p>
+         * <br>
+         * <p>*   **ON**</p>
+         * <p>*   **OFF**</p>
+         */
         @NameInMap("NetTopoSwitch")
         public String netTopoSwitch;
 
+        /**
+         * <p>The risk level. Valid values:</p>
+         * <br>
+         * <p>*   **3**: high</p>
+         * <p>*   **2**: medium</p>
+         * <p>*   **1**: low</p>
+         * <p>*   **0**: warning</p>
+         * <p>*   **-1**: unknown</p>
+         */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
+        /**
+         * <p>The type of the node. Valid values:</p>
+         * <br>
+         * <p>*   **cluster**: a cluster</p>
+         * <p>*   **internet**: a node in another cluster</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -191,9 +259,15 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterNetworkResponseBodyClusterNetwork extends TeaModel {
+        /**
+         * <p>An array that consists of information about the topology edge.</p>
+         */
         @NameInMap("Edge")
         public java.util.List<DescribeClusterNetworkResponseBodyClusterNetworkEdge> edge;
 
+        /**
+         * <p>An array that consists of information about the node.</p>
+         */
         @NameInMap("Node")
         public java.util.List<DescribeClusterNetworkResponseBodyClusterNetworkNode> node;
 

@@ -5,22 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribePropertyScaDetailResponseBody extends TeaModel {
     /**
-     * <p>192.168</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("PageInfo")
     public DescribePropertyScaDetailResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The listening status of the process. Valid values:</p>
-     * <br>
-     * <p>*   **NONE**: not listening</p>
-     * <p>*   **LISTEN**: listening</p>
+     * <p>The details about the asset fingerprints returned.</p>
      */
     @NameInMap("Propertys")
     public java.util.List<DescribePropertyScaDetailResponseBodyPropertys> propertys;
 
     /**
-     * <p>1641024565</p>
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -56,27 +53,25 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
 
     public static class DescribePropertyScaDetailResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The name of the server on which the middleware, database, or web service is run.</p>
+         * <p>The number of entries returned on the current page.</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
-         * <p>name</p>
+         * <p>The page number of the returned page.</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The public IP address of the server on which the middleware, database, or web service is run.</p>
+         * <p>The number of entries returned per page. Default value: **10**.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The version of the runtime environment.</p>
-         * <br>
-         * <p>>  The value of this parameter can be the Java Development Kit (JDK) version of the runtime environment for a Java process.</p>
+         * <p>The total number of entries returned.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -122,122 +117,137 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
 
     public static class DescribePropertyScaDetailResponseBodyPropertys extends TeaModel {
         /**
-         * <p>The path to the configuration file.</p>
+         * <p>The type of the middleware, database, or web service. Valid values:</p>
+         * <br>
+         * <p>*   **system_service**: system service</p>
+         * <p>*   **software_library**: software library</p>
+         * <p>*   **docker_component**: container component</p>
+         * <p>*   **database**: database</p>
+         * <p>*   **web_container**: web container</p>
+         * <p>*   **jar**: JAR package</p>
+         * <p>*   **web_framework**: web framework</p>
          */
         @NameInMap("BizType")
         public String bizType;
 
         /**
-         * <p>The UUID of the server on which the middleware, database, or web service is run.</p>
+         * <p>The display name of the type of the middleware, database, or web service . Valid values:</p>
+         * <br>
+         * <p>*   System service</p>
+         * <p>*   Software library</p>
+         * <p>*   Container component</p>
+         * <p>*   Database</p>
+         * <p>*   Web container</p>
+         * <p>*   JAR package</p>
+         * <p>*   Web framework</p>
          */
         @NameInMap("BizTypeDispaly")
         public String bizTypeDispaly;
 
         /**
-         * <p>The latest collection timestamp, which indicates the last timestamp when Security Center collected the information about the middleware, database, or web service. Unit: milliseconds.</p>
+         * <p>The command line of the process.</p>
          */
         @NameInMap("Cmdline")
         public String cmdline;
 
         /**
-         * <p>The name of the user who runs the process.</p>
+         * <p>The path to the configuration file.</p>
          */
         @NameInMap("ConfigPath")
         public String configPath;
 
         /**
-         * <p>uuid-02ebabe7-1c19-ab****</p>
+         * <p>The name of the container.</p>
          */
         @NameInMap("ContainerName")
         public String containerName;
 
         /**
-         * <p>756</p>
+         * <p>The latest collection timestamp, which indicates the last timestamp when Security Center collected the information about the middleware, database, or web service. Unit: milliseconds.</p>
          */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
         /**
-         * <p>The search condition, such as a server name or a server IP address.</p>
-         * <br>
-         * <p>>  Fuzzy match is supported.</p>
+         * <p>The name of the image.</p>
          */
         @NameInMap("ImageName")
         public String imageName;
 
         /**
-         * <p>version</p>
+         * <p>The ID of the server on which the middleware, database, or web service is run.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The name of the container.</p>
+         * <p>The name of the server on which the middleware, database, or web service is run.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The public IP address of the server on which the middleware, database, or web service is run.</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
-         * <p>1.0.2k</p>
+         * <p>The private IP address of the server on which the middleware, database, or web service is run.</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
-         * <p>openssl</p>
+         * <p>The public IP address of the server on which the middleware, database, or web service is run.</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
-         * <p>68</p>
+         * <p>The IP address that the process monitors.</p>
          */
         @NameInMap("ListenIp")
         public String listenIp;
 
         /**
-         * <p>The PID.</p>
+         * <p>The protocol of the traffic on which the process listens. Valid values:</p>
+         * <br>
+         * <p>*   **UDP**</p>
+         * <p>*   **TCP**</p>
          */
         @NameInMap("ListenProtocol")
         public String listenProtocol;
 
         /**
-         * <p>The type of the subquery. Valid values:</p>
+         * <p>The listening status of the process. Valid values:</p>
          * <br>
-         * <p>*   **port**</p>
-         * <p>*   **pid**</p>
-         * <p>*   **version**</p>
-         * <p>*   **user**</p>
+         * <p>*   **NONE**: not listening</p>
+         * <p>*   **LISTEN**: listening</p>
          */
         @NameInMap("ListenStatus")
         public String listenStatus;
 
         /**
-         * <p>The version verification information about the middleware, database, or web service.</p>
+         * <p>The name of the middleware, database, or web service.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The version of the middleware, database, or web service.</p>
+         * <p>The path of the middleware, database, or web service.</p>
          */
         @NameInMap("Path")
         public String path;
 
         /**
-         * <p>The command line of the process.</p>
+         * <p>The PID.</p>
          */
         @NameInMap("Pid")
         public String pid;
 
         /**
-         * <p>1</p>
+         * <p>The port of the middleware, database, or web service.</p>
          */
         @NameInMap("Port")
         public String port;
@@ -249,60 +259,51 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
         public String ppid;
 
         /**
-         * <p>The user who runs the process.</p>
+         * <p>The timestamp when the process starts. Unit: milliseconds.</p>
          */
         @NameInMap("ProcessStarted")
         public Long processStarted;
 
         /**
-         * <p>The port that the process monitors.</p>
+         * <p>The name of the user who runs the process.</p>
          */
         @NameInMap("ProcessUser")
         public String processUser;
 
         /**
-         * <p>The type of the middleware, database, or web service.</p>
+         * <p>The version verification information about the middleware, database, or web service.</p>
          */
         @NameInMap("Proof")
         public String proof;
 
         /**
-         * <p>open</p>
+         * <p>The version of the runtime environment.</p>
+         * <br>
+         * <p>>  The value of this parameter can be the Java Development Kit (JDK) version of the runtime environment for a Java process.</p>
          */
         @NameInMap("RuntimeEnvVersion")
         public String runtimeEnvVersion;
 
         /**
-         * <p>The name of the asset fingerprint that you want to query.</p>
+         * <p>The type of the middleware, database, or web service.</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The protocol of the traffic on which the process listens. Valid values:</p>
-         * <br>
-         * <p>*   **UDP**</p>
-         * <p>*   **TCP**</p>
+         * <p>The UUID of the server on which the middleware, database, or web service is run.</p>
          */
         @NameInMap("Uuid")
         public String uuid;
 
         /**
-         * <p>The type of the middleware, database, or web service that you want to query. Valid values:</p>
-         * <br>
-         * <p>*   **system_service**: system service</p>
-         * <p>*   **software_library**: software library</p>
-         * <p>*   **docker_component**: container component</p>
-         * <p>*   **database**: database</p>
-         * <p>*   **web_container**: web container</p>
-         * <p>*   **jar**: JAR package</p>
-         * <p>*   **web_framework**: web framework</p>
+         * <p>The version of the middleware, database, or web service.</p>
          */
         @NameInMap("Version")
         public String version;
 
         /**
-         * <p>zh</p>
+         * <p>The web directory.</p>
          */
         @NameInMap("WebPath")
         public String webPath;

@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribePropertySoftwareItemResponseBody extends TeaModel {
     /**
-     * <p>10</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("PageInfo")
     public DescribePropertySoftwareItemResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>DescribePropertySoftwareItem</p>
+     * <p>An array that consists of the software assets returned.</p>
      */
     @NameInMap("PropertyItems")
     public java.util.List<DescribePropertySoftwareItemResponseBodyPropertyItems> propertyItems;
 
     /**
-     * <p>The name of the software.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,25 +53,25 @@ public class DescribePropertySoftwareItemResponseBody extends TeaModel {
 
     public static class DescribePropertySoftwareItemResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>Queries information about all software assets.</p>
+         * <p>The number of entries returned on the current page.</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The page number of the returned page.</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The number of entries returned per page.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>true</p>
+         * <p>The total number of entries returned.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -116,9 +116,15 @@ public class DescribePropertySoftwareItemResponseBody extends TeaModel {
     }
 
     public static class DescribePropertySoftwareItemResponseBodyPropertyItems extends TeaModel {
+        /**
+         * <p>The number of servers on which the software is installed.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The name of the software.</p>
+         */
         @NameInMap("Name")
         public String name;
 
