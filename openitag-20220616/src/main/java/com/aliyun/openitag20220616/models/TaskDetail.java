@@ -394,44 +394,6 @@ public class TaskDetail extends TeaModel {
         return this.runMsg;
     }
 
-    public static class CreateTaskDetailAdmins extends TeaModel {
-        @NameInMap("Users")
-        public java.util.List<SimpleUser> users;
-
-        public static CreateTaskDetailAdmins build(java.util.Map<String, ?> map) throws Exception {
-            CreateTaskDetailAdmins self = new CreateTaskDetailAdmins();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateTaskDetailAdmins setUsers(java.util.List<SimpleUser> users) {
-            this.users = users;
-            return this;
-        }
-        public java.util.List<SimpleUser> getUsers() {
-            return this.users;
-        }
-
-    }
-
-    public static class CreateTaskDetailTaskWorkflow extends TeaModel {
-        @NameInMap("NodeName")
-        public String nodeName;
-
-        public static CreateTaskDetailTaskWorkflow build(java.util.Map<String, ?> map) throws Exception {
-            CreateTaskDetailTaskWorkflow self = new CreateTaskDetailTaskWorkflow();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateTaskDetailTaskWorkflow setNodeName(String nodeName) {
-            this.nodeName = nodeName;
-            return this;
-        }
-        public String getNodeName() {
-            return this.nodeName;
-        }
-
-    }
-
     public static class TaskDetailDatasetProxyRelations extends TeaModel {
         @NameInMap("DatasetId")
         public String datasetId;
