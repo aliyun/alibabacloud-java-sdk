@@ -28,6 +28,9 @@ public class HotelOrderCreateRequest extends TeaModel {
     @NameInMap("dis_order_id")
     public String disOrderId;
 
+    @NameInMap("extra")
+    public String extra;
+
     @NameInMap("invoice_info")
     public HotelOrderCreateRequestInvoiceInfo invoiceInfo;
 
@@ -134,6 +137,14 @@ public class HotelOrderCreateRequest extends TeaModel {
     }
     public String getDisOrderId() {
         return this.disOrderId;
+    }
+
+    public HotelOrderCreateRequest setExtra(String extra) {
+        this.extra = extra;
+        return this;
+    }
+    public String getExtra() {
+        return this.extra;
     }
 
     public HotelOrderCreateRequest setInvoiceInfo(HotelOrderCreateRequestInvoiceInfo invoiceInfo) {
@@ -593,6 +604,9 @@ public class HotelOrderCreateRequest extends TeaModel {
         @NameInMap("need_check")
         public Boolean needCheck;
 
+        @NameInMap("promotion_code")
+        public String promotionCode;
+
         @NameInMap("promotion_id")
         public String promotionId;
 
@@ -624,6 +638,14 @@ public class HotelOrderCreateRequest extends TeaModel {
         }
         public Boolean getNeedCheck() {
             return this.needCheck;
+        }
+
+        public HotelOrderCreateRequestPromotionInfoPromotionDetailInfoList setPromotionCode(String promotionCode) {
+            this.promotionCode = promotionCode;
+            return this;
+        }
+        public String getPromotionCode() {
+            return this.promotionCode;
         }
 
         public HotelOrderCreateRequestPromotionInfoPromotionDetailInfoList setPromotionId(String promotionId) {

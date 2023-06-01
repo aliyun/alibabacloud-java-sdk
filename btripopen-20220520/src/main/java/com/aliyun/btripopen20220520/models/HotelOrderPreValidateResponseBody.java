@@ -85,6 +85,9 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         @NameInMap("need_check")
         public Boolean needCheck;
 
+        @NameInMap("promotion_code")
+        public String promotionCode;
+
         @NameInMap("promotion_id")
         public String promotionId;
 
@@ -116,6 +119,14 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         }
         public Boolean getNeedCheck() {
             return this.needCheck;
+        }
+
+        public HotelOrderPreValidateResponseBodyModulePromotionInfoPromotionDetailInfoList setPromotionCode(String promotionCode) {
+            this.promotionCode = promotionCode;
+            return this;
+        }
+        public String getPromotionCode() {
+            return this.promotionCode;
         }
 
         public HotelOrderPreValidateResponseBodyModulePromotionInfoPromotionDetailInfoList setPromotionId(String promotionId) {
@@ -197,6 +208,9 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         @NameInMap("board")
         public String board;
 
+        @NameInMap("discount_price")
+        public String discountPrice;
+
         @NameInMap("price")
         public Long price;
 
@@ -205,6 +219,12 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
 
         @NameInMap("room_count")
         public Integer roomCount;
+
+        @NameInMap("rounding_discount_price")
+        public String roundingDiscountPrice;
+
+        @NameInMap("rounding_price")
+        public String roundingPrice;
 
         @NameInMap("service_fee")
         public Long serviceFee;
@@ -220,6 +240,14 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         }
         public String getBoard() {
             return this.board;
+        }
+
+        public HotelOrderPreValidateResponseBodyModuleRatePlanDaily setDiscountPrice(String discountPrice) {
+            this.discountPrice = discountPrice;
+            return this;
+        }
+        public String getDiscountPrice() {
+            return this.discountPrice;
         }
 
         public HotelOrderPreValidateResponseBodyModuleRatePlanDaily setPrice(Long price) {
@@ -244,6 +272,22 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         }
         public Integer getRoomCount() {
             return this.roomCount;
+        }
+
+        public HotelOrderPreValidateResponseBodyModuleRatePlanDaily setRoundingDiscountPrice(String roundingDiscountPrice) {
+            this.roundingDiscountPrice = roundingDiscountPrice;
+            return this;
+        }
+        public String getRoundingDiscountPrice() {
+            return this.roundingDiscountPrice;
+        }
+
+        public HotelOrderPreValidateResponseBodyModuleRatePlanDaily setRoundingPrice(String roundingPrice) {
+            this.roundingPrice = roundingPrice;
+            return this;
+        }
+        public String getRoundingPrice() {
+            return this.roundingPrice;
         }
 
         public HotelOrderPreValidateResponseBodyModuleRatePlanDaily setServiceFee(Long serviceFee) {
