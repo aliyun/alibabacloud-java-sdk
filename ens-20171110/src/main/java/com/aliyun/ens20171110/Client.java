@@ -160,6 +160,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.addNetworkInterfaceToInstanceWithOptions(request, runtime);
     }
 
+    public AddSnatIpForSnatEntryResponse addSnatIpForSnatEntryWithOptions(AddSnatIpForSnatEntryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.snatEntryId)) {
+            query.put("SnatEntryId", request.snatEntryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.snatIp)) {
+            query.put("SnatIp", request.snatIp);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddSnatIpForSnatEntry"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddSnatIpForSnatEntryResponse());
+    }
+
+    public AddSnatIpForSnatEntryResponse addSnatIpForSnatEntry(AddSnatIpForSnatEntryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addSnatIpForSnatEntryWithOptions(request, runtime);
+    }
+
     public AssignPrivateIpAddressesResponse assignPrivateIpAddressesWithOptions(AssignPrivateIpAddressesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2570,6 +2603,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteSnatEntryResponse deleteSnatEntry(DeleteSnatEntryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteSnatEntryWithOptions(request, runtime);
+    }
+
+    public DeleteSnatIpForSnatEntryResponse deleteSnatIpForSnatEntryWithOptions(DeleteSnatIpForSnatEntryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.snatEntryId)) {
+            query.put("SnatEntryId", request.snatEntryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.snatIp)) {
+            query.put("SnatIp", request.snatIp);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteSnatIpForSnatEntry"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSnatIpForSnatEntryResponse());
+    }
+
+    public DeleteSnatIpForSnatEntryResponse deleteSnatIpForSnatEntry(DeleteSnatIpForSnatEntryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteSnatIpForSnatEntryWithOptions(request, runtime);
     }
 
     public DeleteVSwitchResponse deleteVSwitchWithOptions(DeleteVSwitchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -5537,6 +5603,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeServcieScheduleWithOptions(request, runtime);
     }
 
+    public DescribeSnatAttributeResponse describeSnatAttributeWithOptions(DescribeSnatAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeSnatAttribute"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSnatAttributeResponse());
+    }
+
+    public DescribeSnatAttributeResponse describeSnatAttribute(DescribeSnatAttributeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeSnatAttributeWithOptions(request, runtime);
+    }
+
     public DescribeSnatTableEntriesResponse describeSnatTableEntriesWithOptions(DescribeSnatTableEntriesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -8475,6 +8566,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.startLoadBalancerListenerWithOptions(request, runtime);
     }
 
+    public StartSnatIpForSnatEntryResponse startSnatIpForSnatEntryWithOptions(StartSnatIpForSnatEntryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.snatEntryId)) {
+            query.put("SnatEntryId", request.snatEntryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.snatIp)) {
+            query.put("SnatIp", request.snatIp);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartSnatIpForSnatEntry"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartSnatIpForSnatEntryResponse());
+    }
+
+    public StartSnatIpForSnatEntryResponse startSnatIpForSnatEntry(StartSnatIpForSnatEntryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.startSnatIpForSnatEntryWithOptions(request, runtime);
+    }
+
     public StopEpnInstanceResponse stopEpnInstanceWithOptions(StopEpnInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8611,6 +8735,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StopLoadBalancerListenerResponse stopLoadBalancerListener(StopLoadBalancerListenerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopLoadBalancerListenerWithOptions(request, runtime);
+    }
+
+    public StopSnatIpForSnatEntryResponse stopSnatIpForSnatEntryWithOptions(StopSnatIpForSnatEntryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.snatEntryId)) {
+            query.put("SnatEntryId", request.snatEntryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.snatIp)) {
+            query.put("SnatIp", request.snatIp);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopSnatIpForSnatEntry"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopSnatIpForSnatEntryResponse());
+    }
+
+    public StopSnatIpForSnatEntryResponse stopSnatIpForSnatEntry(StopSnatIpForSnatEntryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.stopSnatIpForSnatEntryWithOptions(request, runtime);
     }
 
     public UnAssociateEnsEipAddressResponse unAssociateEnsEipAddressWithOptions(UnAssociateEnsEipAddressRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
