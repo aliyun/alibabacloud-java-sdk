@@ -28,6 +28,9 @@ public class HotelOrderCreateShrinkRequest extends TeaModel {
     @NameInMap("dis_order_id")
     public String disOrderId;
 
+    @NameInMap("extra")
+    public String extra;
+
     @NameInMap("invoice_info")
     public String invoiceInfoShrink;
 
@@ -134,6 +137,14 @@ public class HotelOrderCreateShrinkRequest extends TeaModel {
     }
     public String getDisOrderId() {
         return this.disOrderId;
+    }
+
+    public HotelOrderCreateShrinkRequest setExtra(String extra) {
+        this.extra = extra;
+        return this;
+    }
+    public String getExtra() {
+        return this.extra;
     }
 
     public HotelOrderCreateShrinkRequest setInvoiceInfoShrink(String invoiceInfoShrink) {

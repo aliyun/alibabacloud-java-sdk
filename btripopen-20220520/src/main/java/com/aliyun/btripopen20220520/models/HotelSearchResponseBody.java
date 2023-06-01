@@ -118,6 +118,9 @@ public class HotelSearchResponseBody extends TeaModel {
         @NameInMap("min_price")
         public Double minPrice;
 
+        @NameInMap("original_min_price")
+        public Double originalMinPrice;
+
         @NameInMap("score")
         public String score;
 
@@ -242,6 +245,14 @@ public class HotelSearchResponseBody extends TeaModel {
         }
         public Double getMinPrice() {
             return this.minPrice;
+        }
+
+        public HotelSearchResponseBodyModuleItems setOriginalMinPrice(Double originalMinPrice) {
+            this.originalMinPrice = originalMinPrice;
+            return this;
+        }
+        public Double getOriginalMinPrice() {
+            return this.originalMinPrice;
         }
 
         public HotelSearchResponseBodyModuleItems setScore(String score) {

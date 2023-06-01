@@ -3816,6 +3816,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("dis_order_id", request.disOrderId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.extra)) {
+            body.put("extra", request.extra);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.invoiceInfoShrink)) {
             body.put("invoice_info", request.invoiceInfoShrink);
         }
