@@ -130,22 +130,19 @@ public class BookRequest extends TeaModel {
 
     }
 
-    public static class BookRequestPassengerAncillaryPurchaseMapListAncillaryList extends TeaModel {
+    public static class BookRequestPassengerAncillaryPurchaseMapListBookAncillaryReqItem extends TeaModel {
         @NameInMap("ancillary_id")
         public String ancillaryId;
-
-        @NameInMap("ancillary_info")
-        public java.util.Map<String, ?> ancillaryInfo;
 
         @NameInMap("ancillary_type")
         public Integer ancillaryType;
 
-        public static BookRequestPassengerAncillaryPurchaseMapListAncillaryList build(java.util.Map<String, ?> map) throws Exception {
-            BookRequestPassengerAncillaryPurchaseMapListAncillaryList self = new BookRequestPassengerAncillaryPurchaseMapListAncillaryList();
+        public static BookRequestPassengerAncillaryPurchaseMapListBookAncillaryReqItem build(java.util.Map<String, ?> map) throws Exception {
+            BookRequestPassengerAncillaryPurchaseMapListBookAncillaryReqItem self = new BookRequestPassengerAncillaryPurchaseMapListBookAncillaryReqItem();
             return TeaModel.build(map, self);
         }
 
-        public BookRequestPassengerAncillaryPurchaseMapListAncillaryList setAncillaryId(String ancillaryId) {
+        public BookRequestPassengerAncillaryPurchaseMapListBookAncillaryReqItem setAncillaryId(String ancillaryId) {
             this.ancillaryId = ancillaryId;
             return this;
         }
@@ -153,15 +150,7 @@ public class BookRequest extends TeaModel {
             return this.ancillaryId;
         }
 
-        public BookRequestPassengerAncillaryPurchaseMapListAncillaryList setAncillaryInfo(java.util.Map<String, ?> ancillaryInfo) {
-            this.ancillaryInfo = ancillaryInfo;
-            return this;
-        }
-        public java.util.Map<String, ?> getAncillaryInfo() {
-            return this.ancillaryInfo;
-        }
-
-        public BookRequestPassengerAncillaryPurchaseMapListAncillaryList setAncillaryType(Integer ancillaryType) {
+        public BookRequestPassengerAncillaryPurchaseMapListBookAncillaryReqItem setAncillaryType(Integer ancillaryType) {
             this.ancillaryType = ancillaryType;
             return this;
         }
@@ -331,8 +320,8 @@ public class BookRequest extends TeaModel {
     }
 
     public static class BookRequestPassengerAncillaryPurchaseMapList extends TeaModel {
-        @NameInMap("ancillary_list")
-        public java.util.List<BookRequestPassengerAncillaryPurchaseMapListAncillaryList> ancillaryList;
+        @NameInMap("book_ancillary_req_item")
+        public BookRequestPassengerAncillaryPurchaseMapListBookAncillaryReqItem bookAncillaryReqItem;
 
         @NameInMap("passenger_list")
         public java.util.List<BookRequestPassengerAncillaryPurchaseMapListPassengerList> passengerList;
@@ -342,12 +331,12 @@ public class BookRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public BookRequestPassengerAncillaryPurchaseMapList setAncillaryList(java.util.List<BookRequestPassengerAncillaryPurchaseMapListAncillaryList> ancillaryList) {
-            this.ancillaryList = ancillaryList;
+        public BookRequestPassengerAncillaryPurchaseMapList setBookAncillaryReqItem(BookRequestPassengerAncillaryPurchaseMapListBookAncillaryReqItem bookAncillaryReqItem) {
+            this.bookAncillaryReqItem = bookAncillaryReqItem;
             return this;
         }
-        public java.util.List<BookRequestPassengerAncillaryPurchaseMapListAncillaryList> getAncillaryList() {
-            return this.ancillaryList;
+        public BookRequestPassengerAncillaryPurchaseMapListBookAncillaryReqItem getBookAncillaryReqItem() {
+            return this.bookAncillaryReqItem;
         }
 
         public BookRequestPassengerAncillaryPurchaseMapList setPassengerList(java.util.List<BookRequestPassengerAncillaryPurchaseMapListPassengerList> passengerList) {
