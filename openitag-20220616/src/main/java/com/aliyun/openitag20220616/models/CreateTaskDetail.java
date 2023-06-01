@@ -37,6 +37,9 @@ public class CreateTaskDetail extends TeaModel {
     @NameInMap("UUID")
     public String UUID;
 
+    @NameInMap("VoteConfigs")
+    public java.util.Map<String, CreateTaskDetailVoteInfo> voteConfigs;
+
     public static CreateTaskDetail build(java.util.Map<String, ?> map) throws Exception {
         CreateTaskDetail self = new CreateTaskDetail();
         return TeaModel.build(map, self);
@@ -128,6 +131,14 @@ public class CreateTaskDetail extends TeaModel {
     }
     public String getUUID() {
         return this.UUID;
+    }
+
+    public CreateTaskDetail setVoteConfigs(java.util.Map<String, CreateTaskDetailVoteInfo> voteConfigs) {
+        this.voteConfigs = voteConfigs;
+        return this;
+    }
+    public java.util.Map<String, CreateTaskDetailVoteInfo> getVoteConfigs() {
+        return this.voteConfigs;
     }
 
     public static class CreateTaskDetailAdmins extends TeaModel {
