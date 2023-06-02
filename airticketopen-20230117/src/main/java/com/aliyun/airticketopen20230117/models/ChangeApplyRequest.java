@@ -138,6 +138,9 @@ public class ChangeApplyRequest extends TeaModel {
         @NameInMap("departure_city")
         public String departureCity;
 
+        @NameInMap("departure_date")
+        public String departureDate;
+
         @NameInMap("departure_terminal")
         public String departureTerminal;
 
@@ -209,6 +212,14 @@ public class ChangeApplyRequest extends TeaModel {
         }
         public String getDepartureCity() {
             return this.departureCity;
+        }
+
+        public ChangeApplyRequestChangedJourneysSegmentList setDepartureDate(String departureDate) {
+            this.departureDate = departureDate;
+            return this;
+        }
+        public String getDepartureDate() {
+            return this.departureDate;
         }
 
         public ChangeApplyRequestChangedJourneysSegmentList setDepartureTerminal(String departureTerminal) {
