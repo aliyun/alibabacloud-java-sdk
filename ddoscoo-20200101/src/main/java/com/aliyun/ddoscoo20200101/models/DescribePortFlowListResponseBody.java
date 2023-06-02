@@ -95,11 +95,29 @@ public class DescribePortFlowListResponseBody extends TeaModel {
         @NameInMap("Region")
         public String region;
 
-        @NameInMap("SlaBps")
-        public Long slaBps;
+        @NameInMap("SlaBpsDropBps")
+        public Long slaBpsDropBps;
 
-        @NameInMap("SlaPps")
-        public Long slaPps;
+        @NameInMap("SlaBpsDropPps")
+        public Long slaBpsDropPps;
+
+        @NameInMap("SlaConnDropBps")
+        public Long slaConnDropBps;
+
+        @NameInMap("SlaConnDropPps")
+        public Long slaConnDropPps;
+
+        @NameInMap("SlaCpsDropBps")
+        public Long slaCpsDropBps;
+
+        @NameInMap("SlaCpsDropPps")
+        public Long slaCpsDropPps;
+
+        @NameInMap("SlaPpsDropBps")
+        public Long slaPpsDropBps;
+
+        @NameInMap("SlaPpsDropPps")
+        public Long slaPpsDropPps;
 
         /**
          * <p>The time when the data was collected. The value is a UNIX timestamp. Unit: seconds.</p>
@@ -176,20 +194,68 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             return this.region;
         }
 
-        public DescribePortFlowListResponseBodyPortFlowList setSlaBps(Long slaBps) {
-            this.slaBps = slaBps;
+        public DescribePortFlowListResponseBodyPortFlowList setSlaBpsDropBps(Long slaBpsDropBps) {
+            this.slaBpsDropBps = slaBpsDropBps;
             return this;
         }
-        public Long getSlaBps() {
-            return this.slaBps;
+        public Long getSlaBpsDropBps() {
+            return this.slaBpsDropBps;
         }
 
-        public DescribePortFlowListResponseBodyPortFlowList setSlaPps(Long slaPps) {
-            this.slaPps = slaPps;
+        public DescribePortFlowListResponseBodyPortFlowList setSlaBpsDropPps(Long slaBpsDropPps) {
+            this.slaBpsDropPps = slaBpsDropPps;
             return this;
         }
-        public Long getSlaPps() {
-            return this.slaPps;
+        public Long getSlaBpsDropPps() {
+            return this.slaBpsDropPps;
+        }
+
+        public DescribePortFlowListResponseBodyPortFlowList setSlaConnDropBps(Long slaConnDropBps) {
+            this.slaConnDropBps = slaConnDropBps;
+            return this;
+        }
+        public Long getSlaConnDropBps() {
+            return this.slaConnDropBps;
+        }
+
+        public DescribePortFlowListResponseBodyPortFlowList setSlaConnDropPps(Long slaConnDropPps) {
+            this.slaConnDropPps = slaConnDropPps;
+            return this;
+        }
+        public Long getSlaConnDropPps() {
+            return this.slaConnDropPps;
+        }
+
+        public DescribePortFlowListResponseBodyPortFlowList setSlaCpsDropBps(Long slaCpsDropBps) {
+            this.slaCpsDropBps = slaCpsDropBps;
+            return this;
+        }
+        public Long getSlaCpsDropBps() {
+            return this.slaCpsDropBps;
+        }
+
+        public DescribePortFlowListResponseBodyPortFlowList setSlaCpsDropPps(Long slaCpsDropPps) {
+            this.slaCpsDropPps = slaCpsDropPps;
+            return this;
+        }
+        public Long getSlaCpsDropPps() {
+            return this.slaCpsDropPps;
+        }
+
+        public DescribePortFlowListResponseBodyPortFlowList setSlaPpsDropBps(Long slaPpsDropBps) {
+            this.slaPpsDropBps = slaPpsDropBps;
+            return this;
+        }
+        public Long getSlaPpsDropBps() {
+            return this.slaPpsDropBps;
+        }
+
+        public DescribePortFlowListResponseBodyPortFlowList setSlaPpsDropPps(Long slaPpsDropPps) {
+            this.slaPpsDropPps = slaPpsDropPps;
+            return this;
+        }
+        public Long getSlaPpsDropPps() {
+            return this.slaPpsDropPps;
         }
 
         public DescribePortFlowListResponseBodyPortFlowList setTime(Long time) {
