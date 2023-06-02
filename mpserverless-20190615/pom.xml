@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>mpserverless20190615</artifactId>
-  <version>1.0.8</version>
+  <version>1.0.9</version>
   <packaging>jar</packaging>
   <name>mpserverless20190615</name>
   <description>Alibaba Cloud MPServerless (20190615) SDK for Java

@@ -7,6 +7,9 @@ public class SaveWebHostingCustomDomainCorsConfigRequest extends TeaModel {
     @NameInMap("AccessControlAllowOrigin")
     public String accessControlAllowOrigin;
 
+    @NameInMap("AccessOriginControl")
+    public Boolean accessOriginControl;
+
     @NameInMap("DomainName")
     public String domainName;
 
@@ -27,6 +30,14 @@ public class SaveWebHostingCustomDomainCorsConfigRequest extends TeaModel {
     }
     public String getAccessControlAllowOrigin() {
         return this.accessControlAllowOrigin;
+    }
+
+    public SaveWebHostingCustomDomainCorsConfigRequest setAccessOriginControl(Boolean accessOriginControl) {
+        this.accessOriginControl = accessOriginControl;
+        return this;
+    }
+    public Boolean getAccessOriginControl() {
+        return this.accessOriginControl;
     }
 
     public SaveWebHostingCustomDomainCorsConfigRequest setDomainName(String domainName) {

@@ -10,6 +10,9 @@ public class DescribeFileUploadSignedUrlResponseBody extends TeaModel {
     @NameInMap("OssCallbackUrl")
     public String ossCallbackUrl;
 
+    @NameInMap("Overwrite")
+    public Boolean overwrite;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,6 +38,14 @@ public class DescribeFileUploadSignedUrlResponseBody extends TeaModel {
     }
     public String getOssCallbackUrl() {
         return this.ossCallbackUrl;
+    }
+
+    public DescribeFileUploadSignedUrlResponseBody setOverwrite(Boolean overwrite) {
+        this.overwrite = overwrite;
+        return this;
+    }
+    public Boolean getOverwrite() {
+        return this.overwrite;
     }
 
     public DescribeFileUploadSignedUrlResponseBody setRequestId(String requestId) {
