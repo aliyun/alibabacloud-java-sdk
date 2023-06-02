@@ -176,7 +176,7 @@ public class ScgSearchResponseBody extends TeaModel {
         public Boolean needCharge;
 
         @NameInMap("RawId")
-        public Long rawId;
+        public String rawId;
 
         @NameInMap("Singers")
         public String singers;
@@ -294,11 +294,11 @@ public class ScgSearchResponseBody extends TeaModel {
             return this.needCharge;
         }
 
-        public ScgSearchResponseBodyResult setRawId(Long rawId) {
+        public ScgSearchResponseBodyResult setRawId(String rawId) {
             this.rawId = rawId;
             return this;
         }
-        public Long getRawId() {
+        public String getRawId() {
             return this.rawId;
         }
 

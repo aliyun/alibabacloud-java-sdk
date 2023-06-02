@@ -60,9 +60,15 @@ public class ScanCodeBindResponseBody extends TeaModel {
         @NameInMap("BizType")
         public String bizType;
 
+        /**
+         * <p>A963*0158</p>
+         */
         @NameInMap("DeviceOpenId")
         public String deviceOpenId;
 
+        /**
+         * <p>DAFE****ce3ej=</p>
+         */
         @NameInMap("UserOpenId")
         public String userOpenId;
 
