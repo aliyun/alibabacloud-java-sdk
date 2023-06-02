@@ -7,6 +7,9 @@ public class ListSubAlbumRequest extends TeaModel {
     @NameInMap("DeviceInfo")
     public ListSubAlbumRequestDeviceInfo deviceInfo;
 
+    /**
+     * <p>request</p>
+     */
     @NameInMap("QuerySubscriptionAlbumRequest")
     public ListSubAlbumRequestQuerySubscriptionAlbumRequest querySubscriptionAlbumRequest;
 

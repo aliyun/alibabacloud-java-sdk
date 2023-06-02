@@ -7,6 +7,9 @@ public class ListSubAlbumShrinkRequest extends TeaModel {
     @NameInMap("DeviceInfo")
     public String deviceInfoShrink;
 
+    /**
+     * <p>request</p>
+     */
     @NameInMap("QuerySubscriptionAlbumRequest")
     public String querySubscriptionAlbumRequestShrink;
 

@@ -4,6 +4,9 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetWeatherResponseBody extends TeaModel {
+    /**
+     * <p>HttpCode</p>
+     */
     @NameInMap("Code")
     public Integer code;
 

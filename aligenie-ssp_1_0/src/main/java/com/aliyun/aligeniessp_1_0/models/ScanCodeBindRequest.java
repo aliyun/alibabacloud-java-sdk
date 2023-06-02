@@ -35,6 +35,9 @@ public class ScanCodeBindRequest extends TeaModel {
         @NameInMap("ClientId")
         public String clientId;
 
+        /**
+         * <p>authCode</p>
+         */
         @NameInMap("Code")
         public String code;
 

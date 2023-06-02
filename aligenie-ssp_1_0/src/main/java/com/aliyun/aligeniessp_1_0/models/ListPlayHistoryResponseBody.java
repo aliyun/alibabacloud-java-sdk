@@ -13,6 +13,9 @@ public class ListPlayHistoryResponseBody extends TeaModel {
     @NameInMap("Result")
     public java.util.List<ListPlayHistoryResponseBodyResult> result;
 
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

@@ -57,6 +57,9 @@ public class CheckAuthCodeBindForExtResponseBody extends TeaModel {
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>DEVICE_ID</p>
+         */
         @NameInMap("IdType")
         public String idType;
 
@@ -87,6 +90,9 @@ public class CheckAuthCodeBindForExtResponseBody extends TeaModel {
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>USER_ID</p>
+         */
         @NameInMap("IdType")
         public String idType;
 
