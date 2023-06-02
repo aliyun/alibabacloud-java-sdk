@@ -65,8 +65,11 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
         /**
          * <p>The status of the instance. Valid values:</p>
          * <br>
-         * <p>*   **normal**</p>
-         * <p>*   **expired**</p>
+         * <p>*   **normal**: indicates that the instance is normal.</p>
+         * <p>*   **expired**: indicates that the instance expired.</p>
+         * <p>*   **defense**: indicates that traffic scrubbing is performed on the asset that is protected by the instance.</p>
+         * <p>*   **blackhole**: indicates that blackhole filtering is triggered for the asset that is protected by the instance.</p>
+         * <p>*   **punished**: indicates that the instance is in penalty.</p>
          */
         @NameInMap("Status")
         public String status;

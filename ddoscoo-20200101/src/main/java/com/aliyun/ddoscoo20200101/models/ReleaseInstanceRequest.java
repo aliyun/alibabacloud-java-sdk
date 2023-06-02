@@ -4,11 +4,6 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class ReleaseInstanceRequest extends TeaModel {
-    /**
-     * <p>The ID of the instance that you want to release.</p>
-     * <br>
-     * <p>> You can release only expired instances. You can call the [DescribeInstances](~~91478~~) operation to query the IDs and expiration status of all instances.</p>
-     */
     @NameInMap("InstanceId")
     public String instanceId;
 

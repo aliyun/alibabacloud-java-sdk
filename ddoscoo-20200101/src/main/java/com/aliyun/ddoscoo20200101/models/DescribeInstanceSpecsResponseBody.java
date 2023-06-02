@@ -97,6 +97,12 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         @NameInMap("ElasticBwModel")
         public String elasticBwModel;
 
+        @NameInMap("ElasticQps")
+        public Long elasticQps;
+
+        @NameInMap("ElasticQpsMode")
+        public String elasticQpsMode;
+
         /**
          * <p>The function plan of the instance. Valid values:</p>
          * <br>
@@ -127,6 +133,9 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         @NameInMap("QpsLimit")
         public Integer qpsLimit;
 
+        /**
+         * <p>实例业务带宽限速值。取值：0～15360，0表示不限速。单位：mbps。</p>
+         */
         @NameInMap("RealLimitBw")
         public Long realLimitBw;
 
@@ -211,6 +220,22 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         }
         public String getElasticBwModel() {
             return this.elasticBwModel;
+        }
+
+        public DescribeInstanceSpecsResponseBodyInstanceSpecs setElasticQps(Long elasticQps) {
+            this.elasticQps = elasticQps;
+            return this;
+        }
+        public Long getElasticQps() {
+            return this.elasticQps;
+        }
+
+        public DescribeInstanceSpecsResponseBodyInstanceSpecs setElasticQpsMode(String elasticQpsMode) {
+            this.elasticQpsMode = elasticQpsMode;
+            return this;
+        }
+        public String getElasticQpsMode() {
+            return this.elasticQpsMode;
         }
 
         public DescribeInstanceSpecsResponseBodyInstanceSpecs setFunctionVersion(String functionVersion) {

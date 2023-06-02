@@ -4,65 +4,30 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifyWebCCRuleRequest extends TeaModel {
-    /**
-     * <p>The blocking type. Valid values:</p>
-     * <br>
-     * <p>*   **close**: blocks the request.</p>
-     * <p>*   **captcha**: enables captcha verification.</p>
-     */
     @NameInMap("Act")
     public String act;
 
-    /**
-     * <p>The number of requests that are allowed from an individual IP address. Valid values: **2** to **2000**.</p>
-     */
     @NameInMap("Count")
     public Integer count;
 
-    /**
-     * <p>The domain name of the website.</p>
-     * <br>
-     * <p>> A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.</p>
-     */
     @NameInMap("Domain")
     public String domain;
 
-    /**
-     * <p>The detection interval. Valid values: **5** to **10800**. Unit: seconds.</p>
-     */
     @NameInMap("Interval")
     public Integer interval;
 
-    /**
-     * <p>The match mode. Valid values:</p>
-     * <br>
-     * <p>*   **prefix**: prefix match</p>
-     * <p>*   **match**: exact match</p>
-     */
     @NameInMap("Mode")
     public String mode;
 
-    /**
-     * <p>The name of the rule.</p>
-     */
     @NameInMap("Name")
     public String name;
 
-    /**
-     * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
-     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    /**
-     * <p>The blocking duration. Valid values: **1** to **1440**. Unit: minutes.</p>
-     */
     @NameInMap("Ttl")
     public Integer ttl;
 
-    /**
-     * <p>The check path.</p>
-     */
     @NameInMap("Uri")
     public String uri;
 

@@ -4,15 +4,9 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainStatusCodeListResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The statistics on response status codes.</p>
-     */
     @NameInMap("StatusCodeList")
     public java.util.List<DescribeDomainStatusCodeListResponseBodyStatusCodeList> statusCodeList;
 
@@ -38,87 +32,45 @@ public class DescribeDomainStatusCodeListResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainStatusCodeListResponseBodyStatusCodeList extends TeaModel {
-        /**
-         * <p>The index number of the returned data.</p>
-         */
         @NameInMap("Index")
         public Integer index;
 
-        /**
-         * <p>The number of 200 status codes.</p>
-         */
         @NameInMap("Status200")
         public Long status200;
 
-        /**
-         * <p>The number of 2xx status codes.</p>
-         */
         @NameInMap("Status2XX")
         public Long status2XX;
 
-        /**
-         * <p>The number of 3xx status codes.</p>
-         */
         @NameInMap("Status3XX")
         public Long status3XX;
 
-        /**
-         * <p>The number of 403 status codes.</p>
-         */
         @NameInMap("Status403")
         public Long status403;
 
-        /**
-         * <p>The number of 404 status codes.</p>
-         */
         @NameInMap("Status404")
         public Long status404;
 
-        /**
-         * <p>The number of 405 status codes.</p>
-         */
         @NameInMap("Status405")
         public Long status405;
 
-        /**
-         * <p>The number of 4xx status codes.</p>
-         */
         @NameInMap("Status4XX")
         public Long status4XX;
 
-        /**
-         * <p>The number of 501 status codes.</p>
-         */
         @NameInMap("Status501")
         public Long status501;
 
-        /**
-         * <p>The number of 502 status codes.</p>
-         */
         @NameInMap("Status502")
         public Long status502;
 
-        /**
-         * <p>The number of 503 status codes.</p>
-         */
         @NameInMap("Status503")
         public Long status503;
 
-        /**
-         * <p>The number of 504 status codes.</p>
-         */
         @NameInMap("Status504")
         public Long status504;
 
-        /**
-         * <p>The number of 5xx status codes.</p>
-         */
         @NameInMap("Status5XX")
         public Long status5XX;
 
-        /**
-         * <p>The time when the data was collected. The value is a UNIX timestamp. Unit: seconds.</p>
-         */
         @NameInMap("Time")
         public Long time;
 

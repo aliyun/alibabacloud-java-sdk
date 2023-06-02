@@ -4,15 +4,9 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCnameReusesResponseBody extends TeaModel {
-    /**
-     * <p>An array that consists of the CNAME reuse information.</p>
-     */
     @NameInMap("CnameReuses")
     public java.util.List<DescribeCnameReusesResponseBodyCnameReuses> cnameReuses;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,24 +32,12 @@ public class DescribeCnameReusesResponseBody extends TeaModel {
     }
 
     public static class DescribeCnameReusesResponseBodyCnameReuses extends TeaModel {
-        /**
-         * <p>The CNAME record that is reused by the website.</p>
-         */
         @NameInMap("Cname")
         public String cname;
 
-        /**
-         * <p>The domain name of the website.</p>
-         */
         @NameInMap("Domain")
         public String domain;
 
-        /**
-         * <p>Indicates whether CNAME reuse is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **0**: no</p>
-         * <p>*   **1**: yes</p>
-         */
         @NameInMap("Enable")
         public Integer enable;
 

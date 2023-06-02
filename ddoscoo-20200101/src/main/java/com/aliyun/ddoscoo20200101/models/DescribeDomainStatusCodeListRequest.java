@@ -4,48 +4,21 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainStatusCodeListRequest extends TeaModel {
-    /**
-     * <p>The domain name of the website. If you do not specify this parameter, the statistics on response status codes of all domain names are queried.</p>
-     * <br>
-     * <p>> A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.</p>
-     */
     @NameInMap("Domain")
     public String domain;
 
-    /**
-     * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
-     * <br>
-     * <p>> This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
-     */
     @NameInMap("EndTime")
     public Long endTime;
 
-    /**
-     * <p>The interval for returning data. Unit: seconds.</p>
-     */
     @NameInMap("Interval")
     public Long interval;
 
-    /**
-     * <p>The source of the statistics. Valid values:</p>
-     * <br>
-     * <p>*   **gf**: Anti-DDoS Pro or Anti-DDoS Premium</p>
-     * <p>*   **upstrem**: origin server</p>
-     */
     @NameInMap("QueryType")
     public String queryType;
 
-    /**
-     * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
-     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    /**
-     * <p>The start time of the event. The value is a UNIX timestamp. Unit: seconds.</p>
-     * <br>
-     * <p>> This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
-     */
     @NameInMap("StartTime")
     public Long startTime;
 
