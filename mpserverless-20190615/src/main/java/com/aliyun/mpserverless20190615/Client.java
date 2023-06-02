@@ -2282,6 +2282,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("EndTime", request.endTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.interval)) {
+            body.put("Interval", request.interval);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.spaceId)) {
             body.put("SpaceId", request.spaceId);
         }
@@ -2650,6 +2654,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.accessControlAllowOrigin)) {
             body.put("AccessControlAllowOrigin", request.accessControlAllowOrigin);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accessOriginControl)) {
+            body.put("AccessOriginControl", request.accessOriginControl);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {

@@ -235,6 +235,11 @@ public class QuerySpaceUsageResponseBody extends TeaModel {
         @NameInMap("DbUsage")
         public QuerySpaceUsageResponseBodySpaceUsageDataListDbUsage dbUsage;
 
+        /**
+         * <p>标记该数据是否出账。</p>
+         * <p>- true：正常出账。</p>
+         * <p>- false：不出账，例如在空间停服的情况下，用量数据不用于出账。</p>
+         */
         @NameInMap("EffectiveBillFlag")
         public Boolean effectiveBillFlag;
 

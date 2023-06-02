@@ -7,6 +7,9 @@ public class QuerySpaceUsageRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("Interval")
+    public Integer interval;
+
     @NameInMap("SpaceId")
     public String spaceId;
 
@@ -24,6 +27,14 @@ public class QuerySpaceUsageRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public QuerySpaceUsageRequest setInterval(Integer interval) {
+        this.interval = interval;
+        return this;
+    }
+    public Integer getInterval() {
+        return this.interval;
     }
 
     public QuerySpaceUsageRequest setSpaceId(String spaceId) {

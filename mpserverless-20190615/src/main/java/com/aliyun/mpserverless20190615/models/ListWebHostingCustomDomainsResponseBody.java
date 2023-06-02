@@ -35,6 +35,9 @@ public class ListWebHostingCustomDomainsResponseBody extends TeaModel {
         @NameInMap("AccessControlAllowOrigin")
         public String accessControlAllowOrigin;
 
+        @NameInMap("AccessOriginControl")
+        public Boolean accessOriginControl;
+
         @NameInMap("Cname")
         public String cname;
 
@@ -73,6 +76,14 @@ public class ListWebHostingCustomDomainsResponseBody extends TeaModel {
         }
         public String getAccessControlAllowOrigin() {
             return this.accessControlAllowOrigin;
+        }
+
+        public ListWebHostingCustomDomainsResponseBodyData setAccessOriginControl(Boolean accessOriginControl) {
+            this.accessOriginControl = accessOriginControl;
+            return this;
+        }
+        public Boolean getAccessOriginControl() {
+            return this.accessOriginControl;
         }
 
         public ListWebHostingCustomDomainsResponseBodyData setCname(String cname) {
