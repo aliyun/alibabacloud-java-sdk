@@ -1388,6 +1388,89 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getLogsWithOptions(project, logstore, request, headers, runtime);
     }
 
+    public GetLogsV2Response getLogsV2WithOptions(String project, String logstore, GetLogsV2Request request, GetLogsV2Headers headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.forward)) {
+            body.put("forward", request.forward);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.from)) {
+            body.put("from", request.from);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.line)) {
+            body.put("line", request.line);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            body.put("offset", request.offset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.powerSql)) {
+            body.put("powerSql", request.powerSql);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            body.put("query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reverse)) {
+            body.put("reverse", request.reverse);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.session)) {
+            body.put("session", request.session);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shard)) {
+            body.put("shard", request.shard);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.to)) {
+            body.put("to", request.to);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topic)) {
+            body.put("topic", request.topic);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.acceptEncoding)) {
+            realHeaders.put("Accept-Encoding", com.aliyun.teautil.Common.toJSONString(headers.acceptEncoding));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetLogsV2"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/logstores/" + logstore + "/logs"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetLogsV2Response());
+    }
+
+    public GetLogsV2Response getLogsV2(String project, String logstore, GetLogsV2Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetLogsV2Headers headers = new GetLogsV2Headers();
+        return this.getLogsV2WithOptions(project, logstore, request, headers, runtime);
+    }
+
     public GetMachineGroupResponse getMachineGroupWithOptions(String project, String machineGroup, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
