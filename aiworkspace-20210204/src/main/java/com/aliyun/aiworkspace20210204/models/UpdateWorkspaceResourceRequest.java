@@ -13,6 +13,9 @@ public class UpdateWorkspaceResourceRequest extends TeaModel {
     @NameInMap("ProductType")
     public String productType;
 
+    @NameInMap("ResourceType")
+    public String resourceType;
+
     public static UpdateWorkspaceResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateWorkspaceResourceRequest self = new UpdateWorkspaceResourceRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class UpdateWorkspaceResourceRequest extends TeaModel {
     }
     public String getProductType() {
         return this.productType;
+    }
+
+    public UpdateWorkspaceResourceRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
 }

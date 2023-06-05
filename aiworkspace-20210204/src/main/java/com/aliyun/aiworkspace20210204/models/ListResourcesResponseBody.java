@@ -42,6 +42,47 @@ public class ListResourcesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListResourcesResponseBodyResourcesEncryption extends TeaModel {
+        @NameInMap("Algorithm")
+        public String algorithm;
+
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("Key")
+        public String key;
+
+        public static ListResourcesResponseBodyResourcesEncryption build(java.util.Map<String, ?> map) throws Exception {
+            ListResourcesResponseBodyResourcesEncryption self = new ListResourcesResponseBodyResourcesEncryption();
+            return TeaModel.build(map, self);
+        }
+
+        public ListResourcesResponseBodyResourcesEncryption setAlgorithm(String algorithm) {
+            this.algorithm = algorithm;
+            return this;
+        }
+        public String getAlgorithm() {
+            return this.algorithm;
+        }
+
+        public ListResourcesResponseBodyResourcesEncryption setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public ListResourcesResponseBodyResourcesEncryption setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+    }
+
     public static class ListResourcesResponseBodyResourcesQuotasSpecs extends TeaModel {
         @NameInMap("Name")
         public String name;
@@ -169,8 +210,14 @@ public class ListResourcesResponseBody extends TeaModel {
     }
 
     public static class ListResourcesResponseBodyResources extends TeaModel {
+        @NameInMap("Encryption")
+        public ListResourcesResponseBodyResourcesEncryption encryption;
+
         @NameInMap("EnvType")
         public String envType;
+
+        @NameInMap("Executor")
+        public java.util.Map<String, ResourcesExecutorValue> executor;
 
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
@@ -193,6 +240,9 @@ public class ListResourcesResponseBody extends TeaModel {
         @NameInMap("Quotas")
         public java.util.List<ListResourcesResponseBodyResourcesQuotas> quotas;
 
+        @NameInMap("ResourceType")
+        public String resourceType;
+
         @NameInMap("Spec")
         public java.util.Map<String, ?> spec;
 
@@ -204,12 +254,28 @@ public class ListResourcesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListResourcesResponseBodyResources setEncryption(ListResourcesResponseBodyResourcesEncryption encryption) {
+            this.encryption = encryption;
+            return this;
+        }
+        public ListResourcesResponseBodyResourcesEncryption getEncryption() {
+            return this.encryption;
+        }
+
         public ListResourcesResponseBodyResources setEnvType(String envType) {
             this.envType = envType;
             return this;
         }
         public String getEnvType() {
             return this.envType;
+        }
+
+        public ListResourcesResponseBodyResources setExecutor(java.util.Map<String, ResourcesExecutorValue> executor) {
+            this.executor = executor;
+            return this;
+        }
+        public java.util.Map<String, ResourcesExecutorValue> getExecutor() {
+            return this.executor;
         }
 
         public ListResourcesResponseBodyResources setGmtCreateTime(String gmtCreateTime) {
@@ -266,6 +332,14 @@ public class ListResourcesResponseBody extends TeaModel {
         }
         public java.util.List<ListResourcesResponseBodyResourcesQuotas> getQuotas() {
             return this.quotas;
+        }
+
+        public ListResourcesResponseBodyResources setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
         }
 
         public ListResourcesResponseBodyResources setSpec(java.util.Map<String, ?> spec) {

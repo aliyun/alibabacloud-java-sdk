@@ -4,13 +4,14 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListProductsRequest extends TeaModel {
-    // 逗号分割的商品 code
     @NameInMap("ProductCodes")
     public String productCodes;
 
-    // 逗号分割的服务 code
     @NameInMap("ServiceCodes")
     public String serviceCodes;
+
+    @NameInMap("Verbose")
+    public Boolean verbose;
 
     public static ListProductsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListProductsRequest self = new ListProductsRequest();
@@ -31,6 +32,14 @@ public class ListProductsRequest extends TeaModel {
     }
     public String getServiceCodes() {
         return this.serviceCodes;
+    }
+
+    public ListProductsRequest setVerbose(Boolean verbose) {
+        this.verbose = verbose;
+        return this;
+    }
+    public Boolean getVerbose() {
+        return this.verbose;
     }
 
 }

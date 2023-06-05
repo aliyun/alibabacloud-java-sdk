@@ -4,20 +4,16 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class CreateProductOrdersResponseBody extends TeaModel {
-    // 产品购买请求id
     @NameInMap("BuyProductRequestId")
     public String buyProductRequestId;
 
-    // 消息
     @NameInMap("Message")
     public String message;
 
-    // 订单id
     @NameInMap("OrderId")
     public String orderId;
 
-    // Id of the request
-    @NameInMap("requestId")
+    @NameInMap("RequestId")
     public String requestId;
 
     public static CreateProductOrdersResponseBody build(java.util.Map<String, ?> map) throws Exception {

@@ -4,6 +4,9 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListModelVersionsRequest extends TeaModel {
+    @NameInMap("ApprovalStatus")
+    public String approvalStatus;
+
     @NameInMap("FormatType")
     public String formatType;
 
@@ -37,6 +40,14 @@ public class ListModelVersionsRequest extends TeaModel {
     public static ListModelVersionsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListModelVersionsRequest self = new ListModelVersionsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListModelVersionsRequest setApprovalStatus(String approvalStatus) {
+        this.approvalStatus = approvalStatus;
+        return this;
+    }
+    public String getApprovalStatus() {
+        return this.approvalStatus;
     }
 
     public ListModelVersionsRequest setFormatType(String formatType) {

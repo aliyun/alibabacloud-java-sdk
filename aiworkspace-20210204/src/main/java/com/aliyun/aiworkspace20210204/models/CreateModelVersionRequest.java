@@ -4,6 +4,9 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class CreateModelVersionRequest extends TeaModel {
+    @NameInMap("ApprovalStatus")
+    public String approvalStatus;
+
     @NameInMap("FormatType")
     public String formatType;
 
@@ -16,6 +19,9 @@ public class CreateModelVersionRequest extends TeaModel {
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
+    @NameInMap("Metrics")
+    public java.util.Map<String, ?> metrics;
+
     @NameInMap("Options")
     public String options;
 
@@ -24,6 +30,9 @@ public class CreateModelVersionRequest extends TeaModel {
 
     @NameInMap("SourceType")
     public String sourceType;
+
+    @NameInMap("TrainingSpec")
+    public java.util.Map<String, ?> trainingSpec;
 
     @NameInMap("Uri")
     public String uri;
@@ -37,6 +46,14 @@ public class CreateModelVersionRequest extends TeaModel {
     public static CreateModelVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateModelVersionRequest self = new CreateModelVersionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateModelVersionRequest setApprovalStatus(String approvalStatus) {
+        this.approvalStatus = approvalStatus;
+        return this;
+    }
+    public String getApprovalStatus() {
+        return this.approvalStatus;
     }
 
     public CreateModelVersionRequest setFormatType(String formatType) {
@@ -71,6 +88,14 @@ public class CreateModelVersionRequest extends TeaModel {
         return this.labels;
     }
 
+    public CreateModelVersionRequest setMetrics(java.util.Map<String, ?> metrics) {
+        this.metrics = metrics;
+        return this;
+    }
+    public java.util.Map<String, ?> getMetrics() {
+        return this.metrics;
+    }
+
     public CreateModelVersionRequest setOptions(String options) {
         this.options = options;
         return this;
@@ -93,6 +118,14 @@ public class CreateModelVersionRequest extends TeaModel {
     }
     public String getSourceType() {
         return this.sourceType;
+    }
+
+    public CreateModelVersionRequest setTrainingSpec(java.util.Map<String, ?> trainingSpec) {
+        this.trainingSpec = trainingSpec;
+        return this;
+    }
+    public java.util.Map<String, ?> getTrainingSpec() {
+        return this.trainingSpec;
     }
 
     public CreateModelVersionRequest setUri(String uri) {

@@ -4,6 +4,9 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class GetModelVersionResponseBody extends TeaModel {
+    @NameInMap("ApprovalStatus")
+    public String approvalStatus;
+
     @NameInMap("FormatType")
     public String formatType;
 
@@ -37,6 +40,9 @@ public class GetModelVersionResponseBody extends TeaModel {
     @NameInMap("SourceType")
     public String sourceType;
 
+    @NameInMap("TrainingSpec")
+    public java.util.Map<String, ?> trainingSpec;
+
     @NameInMap("Uri")
     public String uri;
 
@@ -52,6 +58,14 @@ public class GetModelVersionResponseBody extends TeaModel {
     public static GetModelVersionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetModelVersionResponseBody self = new GetModelVersionResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetModelVersionResponseBody setApprovalStatus(String approvalStatus) {
+        this.approvalStatus = approvalStatus;
+        return this;
+    }
+    public String getApprovalStatus() {
+        return this.approvalStatus;
     }
 
     public GetModelVersionResponseBody setFormatType(String formatType) {
@@ -140,6 +154,14 @@ public class GetModelVersionResponseBody extends TeaModel {
     }
     public String getSourceType() {
         return this.sourceType;
+    }
+
+    public GetModelVersionResponseBody setTrainingSpec(java.util.Map<String, ?> trainingSpec) {
+        this.trainingSpec = trainingSpec;
+        return this;
+    }
+    public java.util.Map<String, ?> getTrainingSpec() {
+        return this.trainingSpec;
     }
 
     public GetModelVersionResponseBody setUri(String uri) {

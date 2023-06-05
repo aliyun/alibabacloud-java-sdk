@@ -1,3 +1,6 @@
+2023-06-05 Version: 1.2.9
+- SDK Update.
+
 2022-10-28 Version: 1.2.8
 - Add models related API.
 

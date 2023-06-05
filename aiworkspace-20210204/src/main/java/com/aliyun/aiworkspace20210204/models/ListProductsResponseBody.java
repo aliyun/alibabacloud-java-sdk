@@ -4,15 +4,12 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListProductsResponseBody extends TeaModel {
-    // 产品列表
     @NameInMap("Products")
     public java.util.List<ListProductsResponseBodyProducts> products;
 
-    // 请求 id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 服务列表
     @NameInMap("Services")
     public java.util.List<ListProductsResponseBodyServices> services;
 
@@ -46,29 +43,32 @@ public class ListProductsResponseBody extends TeaModel {
     }
 
     public static class ListProductsResponseBodyProducts extends TeaModel {
-        // 购买链接
-        @NameInMap("BuyUrl")
-        public String buyUrl;
+        @NameInMap("HasPermissionToPurchase")
+        public Boolean hasPermissionToPurchase;
 
-        // 是否已购买
         @NameInMap("IsPurchased")
         public Boolean isPurchased;
 
-        // 商品 code
         @NameInMap("ProductCode")
         public String productCode;
+
+        @NameInMap("ProductInstanceId")
+        public String productInstanceId;
+
+        @NameInMap("PurchaseUrl")
+        public String purchaseUrl;
 
         public static ListProductsResponseBodyProducts build(java.util.Map<String, ?> map) throws Exception {
             ListProductsResponseBodyProducts self = new ListProductsResponseBodyProducts();
             return TeaModel.build(map, self);
         }
 
-        public ListProductsResponseBodyProducts setBuyUrl(String buyUrl) {
-            this.buyUrl = buyUrl;
+        public ListProductsResponseBodyProducts setHasPermissionToPurchase(Boolean hasPermissionToPurchase) {
+            this.hasPermissionToPurchase = hasPermissionToPurchase;
             return this;
         }
-        public String getBuyUrl() {
-            return this.buyUrl;
+        public Boolean getHasPermissionToPurchase() {
+            return this.hasPermissionToPurchase;
         }
 
         public ListProductsResponseBodyProducts setIsPurchased(Boolean isPurchased) {
@@ -87,18 +87,31 @@ public class ListProductsResponseBody extends TeaModel {
             return this.productCode;
         }
 
+        public ListProductsResponseBodyProducts setProductInstanceId(String productInstanceId) {
+            this.productInstanceId = productInstanceId;
+            return this;
+        }
+        public String getProductInstanceId() {
+            return this.productInstanceId;
+        }
+
+        public ListProductsResponseBodyProducts setPurchaseUrl(String purchaseUrl) {
+            this.purchaseUrl = purchaseUrl;
+            return this;
+        }
+        public String getPurchaseUrl() {
+            return this.purchaseUrl;
+        }
+
     }
 
     public static class ListProductsResponseBodyServices extends TeaModel {
-        // 是否开通
         @NameInMap("IsOpen")
         public Boolean isOpen;
 
-        // 开通链接
         @NameInMap("OpenUrl")
         public String openUrl;
 
-        // 服务Code
         @NameInMap("ServiceCode")
         public String serviceCode;
 

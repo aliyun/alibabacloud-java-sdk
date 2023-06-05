@@ -4,13 +4,11 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class CreateProductOrdersRequest extends TeaModel {
-    // 是否自动购买所有产品
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
-    // 逗号分隔的产品
     @NameInMap("Products")
-    public CreateProductOrdersRequestProducts products;
+    public java.util.List<CreateProductOrdersRequestProducts> products;
 
     public static CreateProductOrdersRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateProductOrdersRequest self = new CreateProductOrdersRequest();
@@ -25,24 +23,21 @@ public class CreateProductOrdersRequest extends TeaModel {
         return this.autoPay;
     }
 
-    public CreateProductOrdersRequest setProducts(CreateProductOrdersRequestProducts products) {
+    public CreateProductOrdersRequest setProducts(java.util.List<CreateProductOrdersRequestProducts> products) {
         this.products = products;
         return this;
     }
-    public CreateProductOrdersRequestProducts getProducts() {
+    public java.util.List<CreateProductOrdersRequestProducts> getProducts() {
         return this.products;
     }
 
     public static class CreateProductOrdersRequestProductsInstanceProperties extends TeaModel {
-        // 代号
         @NameInMap("Code")
         public String code;
 
-        // 名
         @NameInMap("Name")
         public String name;
 
-        // 值
         @NameInMap("Value")
         public String value;
 
@@ -78,31 +73,24 @@ public class CreateProductOrdersRequest extends TeaModel {
     }
 
     public static class CreateProductOrdersRequestProducts extends TeaModel {
-        // 是否自动续费
         @NameInMap("AutoRenew")
         public Boolean autoRenew;
 
-        // 付费类型
         @NameInMap("ChargeType")
         public String chargeType;
 
-        // 购买时长,与pricingCycle配合使用
         @NameInMap("Duration")
         public Long duration;
 
-        // 实例属性信息
         @NameInMap("InstanceProperties")
         public java.util.List<CreateProductOrdersRequestProductsInstanceProperties> instanceProperties;
 
-        // 订单类型
         @NameInMap("OrderType")
         public String orderType;
 
-        // 计价单位
         @NameInMap("PricingCycle")
         public String pricingCycle;
 
-        // 产品code
         @NameInMap("ProductCode")
         public String productCode;
 
