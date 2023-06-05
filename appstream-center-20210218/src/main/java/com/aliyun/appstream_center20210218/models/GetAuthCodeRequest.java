@@ -4,6 +4,9 @@ package com.aliyun.appstream_center20210218.models;
 import com.aliyun.tea.*;
 
 public class GetAuthCodeRequest extends TeaModel {
+    @NameInMap("AutoCreateUser")
+    public Boolean autoCreateUser;
+
     @NameInMap("EndUserId")
     public String endUserId;
 
@@ -16,6 +19,14 @@ public class GetAuthCodeRequest extends TeaModel {
     public static GetAuthCodeRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAuthCodeRequest self = new GetAuthCodeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetAuthCodeRequest setAutoCreateUser(Boolean autoCreateUser) {
+        this.autoCreateUser = autoCreateUser;
+        return this;
+    }
+    public Boolean getAutoCreateUser() {
+        return this.autoCreateUser;
     }
 
     public GetAuthCodeRequest setEndUserId(String endUserId) {
