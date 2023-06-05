@@ -5,12 +5,31 @@ import com.aliyun.tea.*;
 
 public class UpdateDIProjectConfigRequest extends TeaModel {
     /**
+     * <p>The type of the sources of the synchronization solutions.</p>
+     * <br>
+     * <p>Valid values: oracle, mysql, polardb, datahub, drds, and analyticdb_for_mysql.</p>
+     * <br>
+     * <p>If you do not configure this parameter, DataWorks applies the default global configuration to all sources.</p>
+     */
+    @NameInMap("DestinationType")
+    public String destinationType;
+
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The request was successful.</p>
+     * <p>*   false: The request failed.</p>
+     */
+    @NameInMap("ProjectConfig")
+    public String projectConfig;
+
+    /**
      * <p>The type of the destinations of the synchronization solutions. This parameter cannot be left empty.</p>
      * <br>
      * <p>Valid values: analyticdb_for_mysql, odps, elasticsearch, holo, mysql, and polardb.</p>
      */
-    @NameInMap("DestinationType")
-    public String destinationType;
+    @NameInMap("ProjectId")
+    public Long projectId;
 
     /**
      * <p>The new default global configuration of synchronization solutions. The value indicates the processing rules of different types of DDL messages. The value must be in the JSON format. Example:</p>
@@ -34,22 +53,6 @@ public class UpdateDIProjectConfigRequest extends TeaModel {
      * <p>*   IGNORE: discards the message and does not send it to the destination.</p>
      * <p>*   CRITICAL: terminates the real-time synchronization node and sets the node status to Failed.</p>
      * <p>*   NORMAL: sends the message to the destination to process the message. Each destination processes DDL messages based on its own business logic. If DataWorks adopts the NORMAL policy, DataWorks only forwards DDL messages.</p>
-     */
-    @NameInMap("ProjectConfig")
-    public String projectConfig;
-
-    /**
-     * <p>The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.</p>
-     */
-    @NameInMap("ProjectId")
-    public Long projectId;
-
-    /**
-     * <p>The type of the sources of the synchronization solutions.</p>
-     * <br>
-     * <p>Valid values: oracle, mysql, polardb, datahub, drds, and analyticdb_for_mysql.</p>
-     * <br>
-     * <p>If you do not configure this parameter, DataWorks applies the default global configuration to all sources.</p>
      */
     @NameInMap("SourceType")
     public String sourceType;

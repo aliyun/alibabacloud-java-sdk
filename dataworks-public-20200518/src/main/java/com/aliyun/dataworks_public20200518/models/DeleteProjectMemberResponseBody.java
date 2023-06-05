@@ -4,9 +4,6 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class DeleteProjectMemberResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the region.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

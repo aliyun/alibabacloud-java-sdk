@@ -7,12 +7,6 @@ public class UpdateBaselineResponseBody extends TeaModel {
     @NameInMap("Data")
     public Boolean data;
 
-    @NameInMap("DynamicErrorCode")
-    public String dynamicErrorCode;
-
-    @NameInMap("DynamicErrorMessage")
-    public String dynamicErrorMessage;
-
     @NameInMap("ErrorCode")
     public String errorCode;
 
@@ -39,22 +33,6 @@ public class UpdateBaselineResponseBody extends TeaModel {
     }
     public Boolean getData() {
         return this.data;
-    }
-
-    public UpdateBaselineResponseBody setDynamicErrorCode(String dynamicErrorCode) {
-        this.dynamicErrorCode = dynamicErrorCode;
-        return this;
-    }
-    public String getDynamicErrorCode() {
-        return this.dynamicErrorCode;
-    }
-
-    public UpdateBaselineResponseBody setDynamicErrorMessage(String dynamicErrorMessage) {
-        this.dynamicErrorMessage = dynamicErrorMessage;
-        return this;
-    }
-    public String getDynamicErrorMessage() {
-        return this.dynamicErrorMessage;
     }
 
     public UpdateBaselineResponseBody setErrorCode(String errorCode) {

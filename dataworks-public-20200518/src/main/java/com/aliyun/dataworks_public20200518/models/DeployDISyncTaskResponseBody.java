@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class DeployDISyncTaskResponseBody extends TeaModel {
     /**
-     * <p>The result of deploying the real-time synchronization node or data synchronization solution.</p>
+     * <p>Indicates whether the real-time synchronization node or data synchronization solution is deployed. Valid values:</p>
+     * <br>
+     * <p>*   success: The real-time synchronization node or data synchronization solution is deployed.</p>
+     * <p>*   fail: The real-time synchronization node or data synchronization solution fails to be deployed.</p>
      */
     @NameInMap("Data")
     public DeployDISyncTaskResponseBodyData data;
 
     /**
-     * <p>The ID of the request. You can query logs and troubleshoot issues based on the ID.</p>
+     * <p>The result of deploying the real-time synchronization node or data synchronization solution.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request is successful.</p>
-     * <p>*   false: The request fails.</p>
+     * <p>The ID of the request. You can query logs and troubleshoot issues based on the ID.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -55,19 +55,13 @@ public class DeployDISyncTaskResponseBody extends TeaModel {
     }
 
     public static class DeployDISyncTaskResponseBodyData extends TeaModel {
-        /**
-         * <p>The cause of the failure to deploy the real-time synchronization node or data synchronization solution.</p>
-         * <br>
-         * <p>If the real-time synchronization node or data synchronization solution is deployed, the value null is returned.</p>
-         */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>Indicates whether the real-time synchronization node or data synchronization solution is deployed. Valid values:</p>
+         * <p>The cause of the failure to deploy the real-time synchronization node or data synchronization solution.</p>
          * <br>
-         * <p>*   success: The real-time synchronization node or data synchronization solution is deployed.</p>
-         * <p>*   fail: The real-time synchronization node or data synchronization solution fails to be deployed.</p>
+         * <p>If the real-time synchronization node or data synchronization solution is deployed, the value null is returned.</p>
          */
         @NameInMap("Status")
         public String status;

@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListProjectsRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The ID of the resource group.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The tag key.</p>
      */
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tag value.</p>
      */
     @NameInMap("Tags")
     public java.util.List<ListProjectsRequestTags> tags;
@@ -67,13 +67,13 @@ public class ListProjectsRequest extends TeaModel {
 
     public static class ListProjectsRequestTags extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The results that are returned.</p>
          */
         @NameInMap("Value")
         public String value;

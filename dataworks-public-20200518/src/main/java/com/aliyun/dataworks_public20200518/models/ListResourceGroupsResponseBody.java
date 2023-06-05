@@ -5,25 +5,36 @@ import com.aliyun.tea.*;
 
 public class ListResourceGroupsResponseBody extends TeaModel {
     /**
-     * <p>The resource groups.</p>
+     * <p>The time when the resource group was last updated.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListResourceGroupsResponseBodyData> data;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>Indicates whether the request was successful.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+     * <p>The resource groups.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>The status of the resource group. Valid values:</p>
+     * <br>
+     * <p>*   0: The resource group is running or in service.</p>
+     * <p>*   1: The resource group has expired and is frozen.</p>
+     * <p>*   2: The resource group is released or destroyed.</p>
+     * <p>*   3: The resource group is being created or started.</p>
+     * <p>*   4: The resource group fails to be created or started.</p>
+     * <p>*   5: The resource group is being scaled out or upgraded.</p>
+     * <p>*   6: The resource group fails to be scaled out or upgraded.</p>
+     * <p>*   7: The resource group is being released or destroyed.</p>
+     * <p>*   8: The resource group fails to be released or destroyed.</p>
+     * <p>*   9: The operation performed on the resource group times out. All operations may time out. This value is temporarily available only for DataService Studio.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -66,15 +77,9 @@ public class ListResourceGroupsResponseBody extends TeaModel {
     }
 
     public static class ListResourceGroupsResponseBodyDataTags extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag value.</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -103,74 +108,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
 
     public static class ListResourceGroupsResponseBodyData extends TeaModel {
         /**
-         * <p>The category of the resource group. Valid values:</p>
-         * <br>
-         * <p>*   default: shared resource group</p>
-         * <p>*   single: exclusive resource group</p>
+         * <p>The details of the resource group. The content enclosed in braces {} is the details of the resource group.</p>
          */
         @NameInMap("BizExtKey")
         public String bizExtKey;
-
-        /**
-         * <p>The name of the cluster. This parameter is returned only if the type of the resource group is MaxCompute or PAI.</p>
-         */
-        @NameInMap("Cluster")
-        public String cluster;
-
-        /**
-         * <p>The time when the cluster was created. Example: Jul 9, 2018 02:43:37 PM.</p>
-         */
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        /**
-         * <p>Indicates whether the UID of an Alibaba Cloud account is used for access. Valid values:</p>
-         * <br>
-         * <p>*   true: The MaxCompute compute engine uses the UID of the Alibaba Cloud account as the display name of the account for access.</p>
-         * <br>
-         * <p>*   false: The MaxCompute compute engine uses the name of the Alibaba Cloud account as the display name of the account for access.</p>
-         * <br>
-         * <p>    The remaining values are useless. This parameter is returned only if the type of the resource group is MaxCompute.</p>
-         */
-        @NameInMap("EnableKp")
-        public Boolean enableKp;
-
-        /**
-         * <p>The ID of the resource group.</p>
-         */
-        @NameInMap("Id")
-        public Long id;
-
-        /**
-         * <p>The identifier of the resource group.</p>
-         */
-        @NameInMap("Identifier")
-        public String identifier;
-
-        /**
-         * <p>Indicates whether the resource group is the default resource group. Valid values:</p>
-         * <br>
-         * <p>*   true: The resource group is the default resource group.</p>
-         * <p>*   false: The resource group is not the default resource group.</p>
-         */
-        @NameInMap("IsDefault")
-        public Boolean isDefault;
-
-        /**
-         * <p>The mode of the resource group. Valid values:</p>
-         * <br>
-         * <p>*   ISOLATE: exclusive resource group that adopts the subscription billing method</p>
-         * <p>*   SHARE: shared resource group that adopts the pay-as-you-go billing method</p>
-         * <p>*   DEVELOP: resource group for developers</p>
-         */
-        @NameInMap("Mode")
-        public String mode;
-
-        /**
-         * <p>The name of the resource group.</p>
-         */
-        @NameInMap("Name")
-        public String name;
 
         /**
          * <p>The type of the resource group. Valid values:</p>
@@ -182,58 +123,111 @@ public class ListResourceGroupsResponseBody extends TeaModel {
          * <p>*   7: scheduling</p>
          * <p>*   9: DataService Studio</p>
          */
+        @NameInMap("Cluster")
+        public String cluster;
+
+        /**
+         * <p>The mode of the resource group. Valid values:</p>
+         * <br>
+         * <p>*   ISOLATE: exclusive resource group that adopts the subscription billing method</p>
+         * <p>*   SHARE: shared resource group that adopts the pay-as-you-go billing method</p>
+         * <p>*   DEVELOP: resource group for developers</p>
+         */
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        /**
+         * <p>The time when the cluster was created. Example: Jul 9, 2018 02:43:37 PM.</p>
+         */
+        @NameInMap("EnableKp")
+        public Boolean enableKp;
+
+        /**
+         * <p>The ID of your Alibaba Cloud resource group.</p>
+         */
+        @NameInMap("Id")
+        public Long id;
+
+        /**
+         * <p>The category of the resource group. Valid values:</p>
+         * <br>
+         * <p>*   default: shared resource group</p>
+         * <p>*   single: exclusive resource group</p>
+         */
+        @NameInMap("Identifier")
+        public String identifier;
+
+        /**
+         * <p>Indicates whether the UID of an Alibaba Cloud account is used for access. Valid values:</p>
+         * <br>
+         * <p>*   true: The MaxCompute compute engine uses the UID of the Alibaba Cloud account as the display name of the account for access.</p>
+         * <br>
+         * <p>*   false: The MaxCompute compute engine uses the name of the Alibaba Cloud account as the display name of the account for access.</p>
+         * <br>
+         * <p>    The remaining values are useless. This parameter is returned only if the type of the resource group is MaxCompute.</p>
+         */
+        @NameInMap("IsDefault")
+        public Boolean isDefault;
+
+        /**
+         * <p>The sequence number of the resource group. Created resource groups are sorted in ascending order by sequence number.</p>
+         */
+        @NameInMap("Mode")
+        public String mode;
+
+        /**
+         * <p>The ID of the tenant.</p>
+         */
+        @NameInMap("Name")
+        public String name;
+
+        /**
+         * <p>The identifier of the resource group.</p>
+         */
         @NameInMap("ResourceGroupType")
         public String resourceGroupType;
 
         /**
-         * <p>The ID of your Alibaba Cloud resource group.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("ResourceManagerResourceGroupId")
         public String resourceManagerResourceGroupId;
 
         /**
-         * <p>The sequence number of the resource group. Created resource groups are sorted in ascending order by sequence number.</p>
+         * <p>The name of the resource group.</p>
          */
         @NameInMap("Sequence")
         public Integer sequence;
 
         /**
-         * <p>The details of the resource group. The content enclosed in braces {} is the details of the resource group.</p>
+         * <p>The ID of the resource group.</p>
          */
         @NameInMap("Specs")
         public java.util.Map<String, ?> specs;
 
         /**
-         * <p>The status of the resource group. Valid values:</p>
+         * <p>Indicates whether the resource group is the default resource group. Valid values:</p>
          * <br>
-         * <p>*   0: The resource group is running or in service.</p>
-         * <p>*   1: The resource group has expired and is frozen.</p>
-         * <p>*   2: The resource group is released or destroyed.</p>
-         * <p>*   3: The resource group is being created or started.</p>
-         * <p>*   4: The resource group fails to be created or started.</p>
-         * <p>*   5: The resource group is being scaled out or upgraded.</p>
-         * <p>*   6: The resource group fails to be scaled out or upgraded.</p>
-         * <p>*   7: The resource group is being released or destroyed.</p>
-         * <p>*   8: The resource group fails to be released or destroyed.</p>
-         * <p>*   9: The operation performed on the resource group times out. All operations may time out. This value is temporarily available only for DataService Studio.</p>
+         * <p>*   true: The resource group is the default resource group.</p>
+         * <p>*   false: The resource group is not the default resource group.</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
-         * <p>The tags.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListResourceGroupsResponseBodyDataTags> tags;
 
         /**
-         * <p>The ID of the tenant.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("TenantId")
         public Long tenantId;
 
         /**
-         * <p>The time when the resource group was last updated.</p>
+         * <p>The name of the cluster. This parameter is returned only if the type of the resource group is MaxCompute or PAI.</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

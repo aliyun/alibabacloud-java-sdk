@@ -4,9 +4,6 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetTopicInfluenceRequest extends TeaModel {
-    /**
-     * <p>The ID of the event.</p>
-     */
     @NameInMap("TopicId")
     public Long topicId;
 

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDagsRequest extends TeaModel {
     /**
-     * <p>The sequence number that uniquely identifies the data backfill operation. You can call the [GetDag](~~189753~~) operation to obtain the sequence number.</p>
+     * <p>The environment of the workspace. Valid values: PROD and DEV. PROD indicates the production environment. DEV indicates the development environment.</p>
      */
     @NameInMap("OpSeq")
     public Long opSeq;
 
     /**
-     * <p>The environment of the workspace. Valid values: PROD and DEV. PROD indicates the production environment. DEV indicates the development environment.</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("ProjectEnv")
     public String projectEnv;

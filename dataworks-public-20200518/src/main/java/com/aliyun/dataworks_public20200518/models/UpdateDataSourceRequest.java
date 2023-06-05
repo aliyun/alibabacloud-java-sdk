@@ -5,6 +5,18 @@ import com.aliyun.tea.*;
 
 public class UpdateDataSourceRequest extends TeaModel {
     /**
+     * <p>The ID of the data source that you want to update. You can call the [ListDataSources](~~211431~~) operation to obtain the ID.</p>
+     */
+    @NameInMap("Content")
+    public String content;
+
+    /**
+     * <p>Indicates whether the data source is updated.</p>
+     */
+    @NameInMap("DataSourceId")
+    public Long dataSourceId;
+
+    /**
      * <p>The details about the data source that you want to update.</p>
      * <br>
      * <p>You are not allowed to change the type of the data source. For example, you are not allowed to change the data source type from MaxCompute to mysql.</p>
@@ -218,32 +230,17 @@ public class UpdateDataSourceRequest extends TeaModel {
      * <p>                                </p>
      * <p>```</p>
      */
-    @NameInMap("Content")
-    public String content;
-
-    /**
-     * <p>The ID of the data source that you want to update. You can call the [ListDataSources](~~211431~~) operation to obtain the ID.</p>
-     */
-    @NameInMap("DataSourceId")
-    public Long dataSourceId;
-
-    /**
-     * <p>The description of the data source.</p>
-     */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The environment in which the data source runs. Valid values:</p>
-     * <br>
-     * <p>*   0: development environment</p>
-     * <p>*   1: production environment</p>
+     * <p>The status of the data source. The parameter is deprecated. Do not use this parameter.</p>
      */
     @NameInMap("EnvType")
     public Integer envType;
 
     /**
-     * <p>The status of the data source. The parameter is deprecated. Do not use this parameter.</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("Status")
     public String status;

@@ -5,26 +5,20 @@ import com.aliyun.tea.*;
 
 public class UpdateDataSourceResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the data source is updated.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Data")
     public Boolean data;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request is successful.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 

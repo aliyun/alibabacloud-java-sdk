@@ -5,25 +5,22 @@ import com.aliyun.tea.*;
 
 public class ChangeResourceManagerResourceGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the resource type. Valid values:</p>
-     * <br>
-     * <p>*   If you set the ResourceType parameter to project, set this parameter to the value of ProjectIdentifier. You can call the [ListProjects](~~178393~~) operation to obtain the value of ProjectIdentifier.</p>
-     * <p>*   If you set the ResourceType parameter to tenantresourcegroup, set this parameter to the value of ResourceGroupType. You can call the [ListResourceGroups](~~173913~~) operation to obtain the value of ResourceGroupType. Only the values 7, 8, and 9 are valid.</p>
+     * <p>The ID of the new resource group.</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
 
     /**
-     * <p>The ID of the new resource group.</p>
+     * <p>Indicates whether the resource group was successfully modified.</p>
      */
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The resource type. Valid values:</p>
+     * <p>The ID of the resource type. Valid values:</p>
      * <br>
-     * <p>*   project: workspace. If you want to modify the resource group that you specify when you activate DataWorks, set the value to project.</p>
-     * <p>*   tenantresourcegroup: exclusive resource group. If you want to modify the resource group that you specify when you purchase a DataWorks exclusive resource group, set the value to tenantresourcegroup.</p>
+     * <p>*   If you set the ResourceType parameter to project, set this parameter to the value of ProjectIdentifier. You can call the [ListProjects](~~178393~~) operation to obtain the value of ProjectIdentifier.</p>
+     * <p>*   If you set the ResourceType parameter to tenantresourcegroup, set this parameter to the value of ResourceGroupType. You can call the [ListResourceGroups](~~173913~~) operation to obtain the value of ResourceGroupType. Only the values 7, 8, and 9 are valid.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

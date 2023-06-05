@@ -5,37 +5,37 @@ import com.aliyun.tea.*;
 
 public class CheckMetaPartitionRequest extends TeaModel {
     /**
-     * <p>The ID of the E-MapReduce (EMR) cluster.</p>
+     * <p>The name of the table.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The type of the data source. Valid values: odps and emr.</p>
+     * <p>Indicates whether the partition exists.</p>
      */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
     /**
-     * <p>The name of the database.</p>
+     * <p>The type of the data source. Valid values: odps and emr.</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
 
     /**
-     * <p>The name of the partition.</p>
+     * <p>The name of the database.</p>
      */
     @NameInMap("Partition")
     public String partition;
 
     /**
-     * <p>The GUID of the table.</p>
+     * <p>The ID of the E-MapReduce (EMR) cluster.</p>
      */
     @NameInMap("TableGuid")
     public String tableGuid;
 
     /**
-     * <p>The name of the table.</p>
+     * <p>The HTTP status code.</p>
      */
     @NameInMap("TableName")
     public String tableName;

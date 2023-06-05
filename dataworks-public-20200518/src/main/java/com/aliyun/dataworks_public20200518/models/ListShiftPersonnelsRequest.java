@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class ListShiftPersonnelsRequest extends TeaModel {
     /**
-     * <p>The time when the on-duty engineer starts a shift. Set the value to a UNIX timestamp.</p>
+     * <p>The time when the on-duty engineer ends a shift. Set the value to a UNIX timestamp.</p>
      */
     @NameInMap("BeginTime")
     public Long beginTime;
 
     /**
-     * <p>The time when the on-duty engineer ends a shift. Set the value to a UNIX timestamp.</p>
+     * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
-     * <p>The ID of your Alibaba Cloud account. You can log on to the DataWorks console and move the pointer over the profile picture in the upper-right corner to obtain the ID.</p>
+     * <p>The time when the on-duty engineer starts a shift. Set the value to a UNIX timestamp.</p>
      */
     @NameInMap("ShiftPersonUID")
     public String shiftPersonUID;
 
     /**
-     * <p>The unique identifier of the shift schedule.</p>
+     * <p>The type of on-duty engineers that you want to query. Valid values: ALL, PRIMARY, BACKUP, and DESIGNATED_USER.</p>
      */
     @NameInMap("ShiftScheduleIdentifier")
     public String shiftScheduleIdentifier;
 
     /**
-     * <p>The type of on-duty engineers that you want to query. Valid values: ALL, PRIMARY, BACKUP, and DESIGNATED_USER.</p>
+     * <p>The ID of your Alibaba Cloud account. You can log on to the DataWorks console and move the pointer over the profile picture in the upper-right corner to obtain the ID.</p>
      */
     @NameInMap("UserType")
     public String userType;

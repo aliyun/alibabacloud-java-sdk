@@ -5,29 +5,25 @@ import com.aliyun.tea.*;
 
 public class GetMetaDBInfoRequest extends TeaModel {
     /**
-     * <p>The ID of the compute engine instance. Specify the ID in the Engine type.Engine name format.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("AppGuid")
     public String appGuid;
 
     /**
-     * <p>The ID of the EMR cluster. This parameter is required only if you set the DataSourceType parameter to emr.</p>
-     * <br>
-     * <p>You can log on to the [EMR console](https://emr.console.aliyun.com/?spm=a2c4g.11186623.0.0.965cc5c2GeiHet#/cn-hangzhou) to obtain the ID of the EMR cluster.</p>
+     * <p>The business data returned.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The type of the data source. Valid values: odps and emr.</p>
+     * <p>The comment.</p>
      */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
     /**
-     * <p>The name of the metadatabase. This parameter is required only if you set the DataSourceType parameter to emr.</p>
-     * <br>
-     * <p>You can call the [ListMetaDB](~~185662~~) operation to query the name of the metadatabase.</p>
+     * <p>The type of the metadatabase. Only hive is supported.</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;

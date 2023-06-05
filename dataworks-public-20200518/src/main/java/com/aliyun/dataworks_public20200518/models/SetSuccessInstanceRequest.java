@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class SetSuccessInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The environment of the workspace. Valid values: PROD and DEV.</p>
      */
     @NameInMap("InstanceId")
     public Long instanceId;
 
     /**
-     * <p>The environment of the workspace. Valid values: PROD and DEV.</p>
+     * <p>The HTTP status code.</p>
      */
     @NameInMap("ProjectEnv")
     public String projectEnv;

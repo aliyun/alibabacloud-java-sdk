@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListProjectsResponseBody extends TeaModel {
     /**
-     * <p>The results that are returned.</p>
+     * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
      */
     @NameInMap("PageResult")
     public ListProjectsResponseBodyPageResult pageResult;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,13 +39,17 @@ public class ListProjectsResponseBody extends TeaModel {
 
     public static class ListProjectsResponseBodyPageResultProjectListTags extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>Indicates whether the Development role is disabled. Valid values:</p>
+         * <br>
+         * <p>*   false: enabled</p>
+         * <p>*   true: disabled</p>
+         * <p>*   Default value: false</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>Indicates whether a proxy account is used to access the MaxCompute compute engine associated with the workspace.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -75,111 +79,79 @@ public class ListProjectsResponseBody extends TeaModel {
 
     public static class ListProjectsResponseBodyPageResultProjectList extends TeaModel {
         /**
-         * <p>Indicates whether the Development role is disabled. Valid values:</p>
+         * <p>Indicates whether the MaxCompute tables in the workspace are visible to the users within a tenant. Valid values:</p>
          * <br>
-         * <p>*   false: enabled</p>
-         * <p>*   true: disabled</p>
-         * <p>*   Default value: false</p>
+         * <p>*   0: invisible</p>
+         * <p>*   1: visible</p>
          */
         @NameInMap("DisableDevelopment")
         public Boolean disableDevelopment;
+
+        @NameInMap("IsDefault")
+        public Integer isDefault;
+
+        /**
+         * <p>The ID of the resource group.</p>
+         */
+        @NameInMap("ProjectDescription")
+        public String projectDescription;
+
+        /**
+         * <p>The ID of the user used by the workspace owner.</p>
+         */
+        @NameInMap("ProjectId")
+        public Long projectId;
+
+        /**
+         * <p>The description of the workspace.</p>
+         */
+        @NameInMap("ProjectIdentifier")
+        public String projectIdentifier;
+
+        /**
+         * <p>The ID of the workspace.</p>
+         */
+        @NameInMap("ProjectName")
+        public String projectName;
+
+        /**
+         * <p>The tags.</p>
+         */
+        @NameInMap("ProjectOwnerBaseId")
+        public String projectOwnerBaseId;
+
+        /**
+         * <p>The identifier of the workspace.</p>
+         */
+        @NameInMap("ProjectStatus")
+        public Integer projectStatus;
+
+        /**
+         * <p>The name of the workspace.</p>
+         */
+        @NameInMap("ProjectStatusCode")
+        public String projectStatusCode;
+
+        /**
+         * <p>The tag key.</p>
+         */
+        @NameInMap("ResourceManagerResourceGroupId")
+        public String resourceManagerResourceGroupId;
+
+        @NameInMap("TablePrivacyMode")
+        public Integer tablePrivacyMode;
+
+        /**
+         * <p>The tag value.</p>
+         */
+        @NameInMap("Tags")
+        public java.util.List<ListProjectsResponseBodyPageResultProjectListTags> tags;
 
         /**
          * <p>Indicates whether the workspace is a default workspace. Valid values:</p>
          * <br>
          * <p>*   1: The workspace is a default workspace.</p>
          * <p>*   0: The workspace is not a default workspace.</p>
-         */
-        @NameInMap("IsDefault")
-        public Integer isDefault;
-
-        /**
-         * <p>The description of the workspace.</p>
-         */
-        @NameInMap("ProjectDescription")
-        public String projectDescription;
-
-        /**
-         * <p>The ID of the workspace.</p>
-         */
-        @NameInMap("ProjectId")
-        public Long projectId;
-
-        /**
-         * <p>The identifier of the workspace.</p>
-         */
-        @NameInMap("ProjectIdentifier")
-        public String projectIdentifier;
-
-        /**
-         * <p>The name of the workspace.</p>
-         */
-        @NameInMap("ProjectName")
-        public String projectName;
-
-        /**
-         * <p>The ID of the user used by the workspace owner.</p>
-         */
-        @NameInMap("ProjectOwnerBaseId")
-        public String projectOwnerBaseId;
-
-        /**
-         * <p>The status of the workspace. Valid values:</p>
-         * <br>
-         * <p>*   0: AVAILABLE, which indicates that the workspace is running as expected.</p>
-         * <p>*   1: DELETED, which indicates that the workspace is deleted.</p>
-         * <p>*   2: INITIALIZING, which indicates that the workspace is being initialized.</p>
-         * <p>*   3: INIT_FAILED, which indicates that the workspace fails to be initialized.</p>
-         * <p>*   4: FORBIDDEN, which indicates that the workspace is manually disabled.</p>
-         * <p>*   5: DELETING, which indicates that the workspace is being deleted.</p>
-         * <p>*   6: DEL_FAILED, which indicates that the workspace fails to be deleted.</p>
-         * <p>*   7: FROZEN, which indicates that the workspace is frozen due to overdue payments.</p>
-         * <p>*   8: UPDATING, which indicates that the workspace is being updated. After you associate a compute engine with the workspace, the system initializes compute engine and updates the workspace.</p>
-         * <p>*   9: UPDATE_FAILED, which indicates that the workspace fails to be updated.</p>
-         */
-        @NameInMap("ProjectStatus")
-        public Integer projectStatus;
-
-        /**
-         * <p>The status code of the workspace. Valid values:</p>
-         * <br>
-         * <p>*   AVAILABLE: 0, which indicates that the workspace is running as expected.</p>
-         * <p>*   DELETED: 1, which indicates that the workspace is deleted.</p>
-         * <p>*   INITIALIZING: 2, which indicates that the workspace is being initialized.</p>
-         * <p>*   INIT_FAILED: 3, which indicates that the workspace fails to be initialized.</p>
-         * <p>*   FORBIDDEN: 4, which indicates that the workspace is manually disabled.</p>
-         * <p>*   DELETING: 5, which indicates that the workspace is being deleted.</p>
-         * <p>*   DEL_FAILED: 6, which indicates that the workspace fails to be deleted.</p>
-         * <p>*   FROZEN: 7, which indicates that the workspace is frozen due to overdue payments.</p>
-         * <p>*   UPDATING: 8, which indicates that the workspace is being updated. After you associate a compute engine with the workspace, the system initializes compute engine and updates the workspace.</p>
-         * <p>*   UPDATE_FAILED: 9, which indicates that the workspace fails to be updated.</p>
-         */
-        @NameInMap("ProjectStatusCode")
-        public String projectStatusCode;
-
-        /**
-         * <p>The ID of the resource group.</p>
-         */
-        @NameInMap("ResourceManagerResourceGroupId")
-        public String resourceManagerResourceGroupId;
-
-        /**
-         * <p>Indicates whether the MaxCompute tables in the workspace are visible to the users within a tenant. Valid values:</p>
-         * <br>
-         * <p>*   0: invisible</p>
-         * <p>*   1: visible</p>
-         */
-        @NameInMap("TablePrivacyMode")
-        public Integer tablePrivacyMode;
-
-        /**
-         * <p>The tags.</p>
-         */
-        @NameInMap("Tags")
-        public java.util.List<ListProjectsResponseBodyPageResultProjectListTags> tags;
-
-        /**
-         * <p>Indicates whether a proxy account is used to access the MaxCompute compute engine associated with the workspace.</p>
          */
         @NameInMap("UseProxyOdpsAccount")
         public Boolean useProxyOdpsAccount;
@@ -297,25 +269,47 @@ public class ListProjectsResponseBody extends TeaModel {
 
     public static class ListProjectsResponseBodyPageResult extends TeaModel {
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The total number of entries returned.</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
+         * <p>The DataWorks workspaces returned.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The DataWorks workspaces returned.</p>
+         * <p>The status of the workspace. Valid values:</p>
+         * <br>
+         * <p>*   0: AVAILABLE, which indicates that the workspace is running as expected.</p>
+         * <p>*   1: DELETED, which indicates that the workspace is deleted.</p>
+         * <p>*   2: INITIALIZING, which indicates that the workspace is being initialized.</p>
+         * <p>*   3: INIT_FAILED, which indicates that the workspace fails to be initialized.</p>
+         * <p>*   4: FORBIDDEN, which indicates that the workspace is manually disabled.</p>
+         * <p>*   5: DELETING, which indicates that the workspace is being deleted.</p>
+         * <p>*   6: DEL_FAILED, which indicates that the workspace fails to be deleted.</p>
+         * <p>*   7: FROZEN, which indicates that the workspace is frozen due to overdue payments.</p>
+         * <p>*   8: UPDATING, which indicates that the workspace is being updated. After you associate a compute engine with the workspace, the system initializes compute engine and updates the workspace.</p>
+         * <p>*   9: UPDATE_FAILED, which indicates that the workspace fails to be updated.</p>
          */
         @NameInMap("ProjectList")
         public java.util.List<ListProjectsResponseBodyPageResultProjectList> projectList;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The status code of the workspace. Valid values:</p>
+         * <br>
+         * <p>*   AVAILABLE: 0, which indicates that the workspace is running as expected.</p>
+         * <p>*   DELETED: 1, which indicates that the workspace is deleted.</p>
+         * <p>*   INITIALIZING: 2, which indicates that the workspace is being initialized.</p>
+         * <p>*   INIT_FAILED: 3, which indicates that the workspace fails to be initialized.</p>
+         * <p>*   FORBIDDEN: 4, which indicates that the workspace is manually disabled.</p>
+         * <p>*   DELETING: 5, which indicates that the workspace is being deleted.</p>
+         * <p>*   DEL_FAILED: 6, which indicates that the workspace fails to be deleted.</p>
+         * <p>*   FROZEN: 7, which indicates that the workspace is frozen due to overdue payments.</p>
+         * <p>*   UPDATING: 8, which indicates that the workspace is being updated. After you associate a compute engine with the workspace, the system initializes compute engine and updates the workspace.</p>
+         * <p>*   UPDATE_FAILED: 9, which indicates that the workspace fails to be updated.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

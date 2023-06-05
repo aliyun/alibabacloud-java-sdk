@@ -5,37 +5,37 @@ import com.aliyun.tea.*;
 
 public class GetMetaTableLineageResponseBody extends TeaModel {
     /**
-     * <p>The business data.</p>
+     * <p>Indicates whether the next page has more query results.</p>
      */
     @NameInMap("Data")
     public GetMetaTableLineageResponseBodyData data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The paging information.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The error code.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>The business data.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -94,23 +94,17 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
     }
 
     public static class GetMetaTableLineageResponseBodyDataDataEntityList extends TeaModel {
-        /**
-         * <p>The time when the metatable was created.</p>
-         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
         @NameInMap("DatabaseName")
         public String databaseName;
 
-        /**
-         * <p>The GUID of the metatable.</p>
-         */
         @NameInMap("TableGuid")
         public String tableGuid;
 
         /**
-         * <p>The name of the metatable.</p>
+         * <p>The time when the metatable was created.</p>
          */
         @NameInMap("TableName")
         public String tableName;
@@ -156,19 +150,19 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
 
     public static class GetMetaTableLineageResponseBodyData extends TeaModel {
         /**
-         * <p>The information about the metatable.</p>
+         * <p>The GUID of the metatable.</p>
          */
         @NameInMap("DataEntityList")
         public java.util.List<GetMetaTableLineageResponseBodyDataDataEntityList> dataEntityList;
 
         /**
-         * <p>Indicates whether the next page has more query results.</p>
+         * <p>The name of the metatable.</p>
          */
         @NameInMap("HasNext")
         public Boolean hasNext;
 
         /**
-         * <p>The paging information.</p>
+         * <p>The information about the metatable.</p>
          */
         @NameInMap("NextPrimaryKey")
         public String nextPrimaryKey;

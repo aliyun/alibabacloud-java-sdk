@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNodesByBaselineRequest extends TeaModel {
     /**
-     * <p>The ID of the baseline. You can call the [ListBaselineConfigs](~~173964~~) operation to query the ID.</p>
+     * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
      */
     @NameInMap("BaselineId")
     public Long baselineId;

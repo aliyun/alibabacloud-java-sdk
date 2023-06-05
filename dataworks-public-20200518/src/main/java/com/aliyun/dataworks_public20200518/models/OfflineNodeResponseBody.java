@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class OfflineNodeResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request is successful.</p>
-     */
     @NameInMap("Success")
     public String success;
 

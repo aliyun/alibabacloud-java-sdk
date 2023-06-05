@@ -5,27 +5,28 @@ import com.aliyun.tea.*;
 
 public class DeployDISyncTaskRequest extends TeaModel {
     /**
-     * <p>*   If you set the TaskType parameter to DI_REALTIME, set the FileId parameter to the ID of the real-time synchronization node that you want to deploy.</p>
-     * <p>*   If you set the TaskType parameter to DI_SOLUTION, set the FileId parameter to the ID of the data synchronization solution that you want to deploy.</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <br>
-     * <p>You can call the [ListFiles](~~173942~~) operation to query the ID of the real-time synchronization node or data synchronization solution.</p>
+     * <p>*   true: The request is successful.</p>
+     * <p>*   false: The request fails.</p>
      */
     @NameInMap("FileId")
     public Long fileId;
-
-    /**
-     * <p>The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to query the workspace ID.</p>
-     * <br>
-     * <p>This parameter specifies the DataWorks workspace to which the operation is applied.</p>
-     */
-    @NameInMap("ProjectId")
-    public Long projectId;
 
     /**
      * <p>The type of the object that you want to deploy. Valid values:</p>
      * <br>
      * <p>*   DI_REALTIME: real-time synchronization node</p>
      * <p>*   DI_SOLUTION: data synchronization solution</p>
+     */
+    @NameInMap("ProjectId")
+    public Long projectId;
+
+    /**
+     * <p>*   If you set the TaskType parameter to DI_REALTIME, set the FileId parameter to the ID of the real-time synchronization node that you want to deploy.</p>
+     * <p>*   If you set the TaskType parameter to DI_SOLUTION, set the FileId parameter to the ID of the data synchronization solution that you want to deploy.</p>
+     * <br>
+     * <p>You can call the [ListFiles](~~173942~~) operation to query the ID of the real-time synchronization node or data synchronization solution.</p>
      */
     @NameInMap("TaskType")
     public String taskType;

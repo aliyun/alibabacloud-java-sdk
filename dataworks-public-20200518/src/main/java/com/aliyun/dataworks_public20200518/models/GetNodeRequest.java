@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetNodeRequest extends TeaModel {
     /**
-     * <p>The ID of the node. You can call the [ListNodes](~~173979~~) operation to query the node ID.</p>
+     * <p>The interval at which the node is rerun after the node fails to run.</p>
      */
     @NameInMap("NodeId")
     public Long nodeId;
 
     /**
-     * <p>The environment of the workspace. Valid values: PROD and DEV.</p>
+     * <p>The priority of the node. Valid values: 1, 3, 5, 7, and 8.</p>
      */
     @NameInMap("ProjectEnv")
     public String projectEnv;

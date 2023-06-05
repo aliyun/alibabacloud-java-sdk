@@ -5,37 +5,37 @@ import com.aliyun.tea.*;
 
 public class GetMetaTableOutputRequest extends TeaModel {
     /**
-     * <p>The end date of the time range to query. The end date must be within the previous 30 days.</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("EndDate")
     public String endDate;
 
     /**
-     * <p>The number of the page to return. The value must be a positive integer.</p>
+     * <p>The Globally Unique Identifier (GUID) of the MaxCompute metatable.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. The value must be a positive integer. We recommend that you do not set this parameter to a value greater than 100.</p>
+     * <p>The start date of the time range to query. The start date must be within the previous 30 days.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The start date of the time range to query. The start date must be within the previous 30 days.</p>
+     * <p>The ID of the node.</p>
      */
     @NameInMap("StartDate")
     public String startDate;
 
     /**
-     * <p>The Globally Unique Identifier (GUID) of the MaxCompute metatable.</p>
+     * <p>The end date of the time range to query. The end date must be within the previous 30 days.</p>
      */
     @NameInMap("TableGuid")
     public String tableGuid;
 
     /**
-     * <p>The ID of the node.</p>
+     * <p>The error message returned.</p>
      */
     @NameInMap("TaskId")
     public String taskId;

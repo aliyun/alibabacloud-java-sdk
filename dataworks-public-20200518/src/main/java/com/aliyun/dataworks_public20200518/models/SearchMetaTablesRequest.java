@@ -5,51 +5,51 @@ import com.aliyun.tea.*;
 
 public class SearchMetaTablesRequest extends TeaModel {
     /**
-     * <p>The GUID of the workspace where the metatables reside.</p>
+     * <p>The type of the metatables. Valid values: 0 and 1. The value 0 indicates that tables are queried. The value 1 indicates that views are queried. If you do not configure this parameter, all types of metatables are queried.</p>
      */
     @NameInMap("AppGuid")
     public String appGuid;
+
+    /**
+     * <p>The schema information of the table. You need to configure this parameter if you enable the table schema in MaxCompute.</p>
+     */
+    @NameInMap("ClusterId")
+    public String clusterId;
+
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
+    @NameInMap("DataSourceType")
+    public String dataSourceType;
+
+    /**
+     * <p>The type of the data source. Valid values: odps and emr.</p>
+     */
+    @NameInMap("EntityType")
+    public Integer entityType;
 
     /**
      * <p>The ID of the EMR cluster. This parameter is required only if you set the DataSourceType parameter to emr.</p>
      * <br>
      * <p>You can log on to the [EMR console](https://emr.console.aliyun.com/?spm=a2c4g.11186623.0.0.965cc5c2GeiHet#/cn-hangzhou) to obtain the ID of the EMR cluster.</p>
      */
-    @NameInMap("ClusterId")
-    public String clusterId;
-
-    /**
-     * <p>The type of the data source. Valid values: odps and emr.</p>
-     */
-    @NameInMap("DataSourceType")
-    public String dataSourceType;
-
-    /**
-     * <p>The type of the metatables. Valid values: 0 and 1. The value 0 indicates that tables are queried. The value 1 indicates that views are queried. If you do not configure this parameter, all types of metatables are queried.</p>
-     */
-    @NameInMap("EntityType")
-    public Integer entityType;
-
-    /**
-     * <p>The keyword based on which metatables are queried. During the query, the system tokenizes the names of metatables and matches the names with the keyword. If no name is matched, an empty result is returned. By default, the system uses underscores (\_) to tokenize the names.</p>
-     */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The GUID of the workspace where the metatables reside.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     * <p>The keyword based on which metatables are queried. During the query, the system tokenizes the names of metatables and matches the names with the keyword. If no name is matched, an empty result is returned. By default, the system uses underscores (\_) to tokenize the names.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The schema information of the table. You need to configure this parameter if you enable the table schema in MaxCompute.</p>
+     * <p>The error message returned.</p>
      */
     @NameInMap("Schema")
     public String schema;

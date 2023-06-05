@@ -4,15 +4,9 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CheckMetaTableResponseBody extends TeaModel {
-    /**
-     * <p>Indicates whether the table exists.</p>
-     */
     @NameInMap("Data")
     public Boolean data;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

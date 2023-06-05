@@ -5,18 +5,30 @@ import com.aliyun.tea.*;
 
 public class GenerateDISyncTaskConfigForCreatingRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. This parameter is used to prevent repeated operations that are caused by multiple calls.</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The request is successful.</p>
+     * <p>*   false: The request fails.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.</p>
+     * <p>The type of the object that you want to create in Data Integration in asynchronous mode. Valid values:</p>
      * <br>
-     * <p>This parameter specifies the DataWorks workspace to which the operation is applied.</p>
+     * <p>*   DI_REALTIME: real-time synchronization node</p>
+     * <p>*   DI_SOLUTION: synchronization solution</p>
+     * <br>
+     * <p>DataWorks allows you to create real-time synchronization nodes and synchronization solutions in Data Integration only in asynchronous mode.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
+
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. This parameter is used to prevent repeated operations that are caused by multiple calls.</p>
+     */
+    @NameInMap("TaskParam")
+    public String taskParam;
 
     /**
      * <p>The script for the real-time synchronization node or synchronization solution in Data Integration.</p>
@@ -205,17 +217,6 @@ public class GenerateDISyncTaskConfigForCreatingRequest extends TeaModel {
      * <p>]</p>
      * <br>
      * <p>}</p>
-     */
-    @NameInMap("TaskParam")
-    public String taskParam;
-
-    /**
-     * <p>The type of the object that you want to create in Data Integration in asynchronous mode. Valid values:</p>
-     * <br>
-     * <p>*   DI_REALTIME: real-time synchronization node</p>
-     * <p>*   DI_SOLUTION: synchronization solution</p>
-     * <br>
-     * <p>DataWorks allows you to create real-time synchronization nodes and synchronization solutions in Data Integration only in asynchronous mode.</p>
      */
     @NameInMap("TaskType")
     public String taskType;

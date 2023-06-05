@@ -5,22 +5,20 @@ import com.aliyun.tea.*;
 
 public class GetDISyncTaskResponseBody extends TeaModel {
     /**
-     * <p>The details of the real-time synchronization node or data synchronization solution.</p>
+     * <p>*   If the TaskType parameter is set to DI_REALTIME, the details of the real-time synchronization node are returned.</p>
+     * <p>*   If the TaskType parameter is set to DI_SOLUTION, the value null is returned.</p>
      */
     @NameInMap("Data")
     public GetDISyncTaskResponseBodyData data;
 
     /**
-     * <p>The ID of the request. You can query logs and troubleshoot issues based on the ID.</p>
+     * <p>The details of the real-time synchronization node or data synchronization solution.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request is successful.</p>
-     * <p>*   false: The request fails.</p>
+     * <p>The ID of the request. You can query logs and troubleshoot issues based on the ID.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -56,78 +54,64 @@ public class GetDISyncTaskResponseBody extends TeaModel {
 
     public static class GetDISyncTaskResponseBodyDataSolutionDetail extends TeaModel {
         /**
-         * <p>The creator of the data synchronization solution.</p>
+         * <p>The ID of the project to which the data synchronization solution belongs.</p>
          */
         @NameInMap("CreatorName")
         public String creatorName;
 
-        /**
-         * <p>The ID of the data synchronization solution.</p>
-         */
         @NameInMap("Id")
         public Long id;
 
         /**
-         * <p>The name of the data synchronization solution.</p>
+         * <p>The additional parameters of the data synchronization solution.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The configuration details of the data synchronization solution.</p>
+         * <p>The name of the data synchronization solution.</p>
          */
         @NameInMap("ProcessContent")
         public String processContent;
 
         /**
-         * <p>The additional parameters of the data synchronization solution.</p>
+         * <p>The time when the data synchronization solution was committed.</p>
          */
         @NameInMap("ProcessExtra")
         public String processExtra;
 
         /**
-         * <p>The ID of the project to which the data synchronization solution belongs.</p>
+         * <p>The type of the source of the data synchronization solution.</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
         /**
-         * <p>The type of the source of the data synchronization solution.</p>
+         * <p>The configuration details of the data synchronization solution.</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
 
         /**
-         * <p>The start time of the data synchronization solution.</p>
+         * <p>The creator of the data synchronization solution.</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
-         * <p>The status of the data synchronization solution. Valid values:</p>
-         * <br>
-         * <p>*   0: successful</p>
-         * <p>*   1: not running</p>
-         * <p>*   2: running</p>
-         * <p>*   3: failed</p>
-         * <p>*   4: committed</p>
-         * <p>*   5: pending manual confirmation</p>
-         * <p>*   6: manually confirmed</p>
-         * <p>*   7: others</p>
-         * <p>*   8: waiting</p>
-         * <p>*   9: deleted</p>
+         * <p>The type of the data synchronization solution.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The time when the data synchronization solution was committed.</p>
+         * <p>The ID of the data synchronization solution.</p>
          */
         @NameInMap("SubmitTime")
         public String submitTime;
 
         /**
-         * <p>The type of the data synchronization solution.</p>
+         * <p>The start time of the data synchronization solution.</p>
          */
         @NameInMap("Type")
         public String type;
@@ -229,33 +213,43 @@ public class GetDISyncTaskResponseBody extends TeaModel {
 
     public static class GetDISyncTaskResponseBodyData extends TeaModel {
         /**
-         * <p>*   If the TaskType parameter is set to DI_REALTIME, the details of the real-time synchronization node are returned.</p>
-         * <p>*   If the TaskType parameter is set to DI_SOLUTION, the value null is returned.</p>
-         */
-        @NameInMap("Code")
-        public String code;
-
-        /**
-         * <p>The cause of the failure to obtain the details of the real-time synchronization node or data synchronization solution.</p>
-         * <br>
-         * <p>If the details of the real-time synchronization node or data synchronization solution are obtained, the value null is returned.</p>
-         */
-        @NameInMap("Message")
-        public String message;
-
-        /**
-         * <p>*   If the TaskType parameter is set to DI_REALTIME, the value null is returned.</p>
-         * <p>*   If the TaskType parameter is set to DI_SOLUTION, the details of the data synchronization solution task are returned.</p>
-         */
-        @NameInMap("SolutionDetail")
-        public GetDISyncTaskResponseBodyDataSolutionDetail solutionDetail;
-
-        /**
          * <p>Indicates whether the details of the real-time synchronization node or data synchronization solution are obtained. Valid values:</p>
          * <br>
          * <p>success: The details are obtained.</p>
          * <br>
          * <p>fail: The details fail to be obtained.</p>
+         */
+        @NameInMap("Code")
+        public String code;
+
+        /**
+         * <p>*   If the TaskType parameter is set to DI_REALTIME, the value null is returned.</p>
+         * <p>*   If the TaskType parameter is set to DI_SOLUTION, the details of the data synchronization solution task are returned.</p>
+         */
+        @NameInMap("Message")
+        public String message;
+
+        /**
+         * <p>The status of the data synchronization solution. Valid values:</p>
+         * <br>
+         * <p>*   0: successful</p>
+         * <p>*   1: not running</p>
+         * <p>*   2: running</p>
+         * <p>*   3: failed</p>
+         * <p>*   4: committed</p>
+         * <p>*   5: pending manual confirmation</p>
+         * <p>*   6: manually confirmed</p>
+         * <p>*   7: others</p>
+         * <p>*   8: waiting</p>
+         * <p>*   9: deleted</p>
+         */
+        @NameInMap("SolutionDetail")
+        public GetDISyncTaskResponseBodyDataSolutionDetail solutionDetail;
+
+        /**
+         * <p>The cause of the failure to obtain the details of the real-time synchronization node or data synchronization solution.</p>
+         * <br>
+         * <p>If the details of the real-time synchronization node or data synchronization solution are obtained, the value null is returned.</p>
          */
         @NameInMap("Status")
         public String status;

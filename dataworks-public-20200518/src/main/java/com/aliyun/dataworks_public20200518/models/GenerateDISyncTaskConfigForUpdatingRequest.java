@@ -5,27 +5,40 @@ import com.aliyun.tea.*;
 
 public class GenerateDISyncTaskConfigForUpdatingRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. This parameter is used to prevent repeated operations that are caused by multiple calls.</p>
-     */
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    /**
-     * <p>The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.</p>
-     * <br>
-     * <p>This parameter specifies the DataWorks workspace to which the operation is applied.</p>
-     */
-    @NameInMap("ProjectId")
-    public Long projectId;
-
-    /**
      * <p>The ID of the real-time synchronization node or synchronization solution.</p>
      * <br>
      * <p>*   If you set the TaskType parameter to DI_REALTIME, set the TaskId parameter to the value of the FileId parameter for the real-time synchronization node.</p>
      * <p>*   If you set the TaskType parameter to DI_SOLUTION, set the TaskId parameter to the value of the FileId parameter for the synchronization solution.</p>
      */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
+     * <p>The type of the object that you want to update in Data Integration in asynchronous mode. Valid values:</p>
+     * <br>
+     * <p>*   DI_REALTIME: real-time synchronization node</p>
+     * <br>
+     * <p>*   DI_SOLUTION: synchronization solution</p>
+     * <br>
+     * <p>    DataWorks allows you to update real-time synchronization nodes and synchronization solutions in Data Integration only in asynchronous mode.</p>
+     */
+    @NameInMap("ProjectId")
+    public Long projectId;
+
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The request is successful.</p>
+     * <p>*   false: The request fails.</p>
+     */
     @NameInMap("TaskId")
     public Long taskId;
+
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. This parameter is used to prevent repeated operations that are caused by multiple calls.</p>
+     */
+    @NameInMap("TaskParam")
+    public String taskParam;
 
     /**
      * <p>The script for updating the real-time synchronization node or synchronization solution in Data Integration.</p>
@@ -40,18 +53,6 @@ public class GenerateDISyncTaskConfigForUpdatingRequest extends TeaModel {
      * <br>
      * <p>*   If the script contains the SelectedTables parameter, the system synchronizes the tables that you specify in the SelectedTables parameter.</p>
      * <p>*   If the script contains the Tables parameter, the system synchronizes the tables that you specify in the Tables parameter.</p>
-     */
-    @NameInMap("TaskParam")
-    public String taskParam;
-
-    /**
-     * <p>The type of the object that you want to update in Data Integration in asynchronous mode. Valid values:</p>
-     * <br>
-     * <p>*   DI_REALTIME: real-time synchronization node</p>
-     * <br>
-     * <p>*   DI_SOLUTION: synchronization solution</p>
-     * <br>
-     * <p>    DataWorks allows you to update real-time synchronization nodes and synchronization solutions in Data Integration only in asynchronous mode.</p>
      */
     @NameInMap("TaskType")
     public String taskType;

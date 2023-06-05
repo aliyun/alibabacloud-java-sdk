@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class QueryDISyncTaskConfigProcessResultResponseBody extends TeaModel {
     /**
-     * <p>The information returned for the parameters that are asynchronously generated and used to create or update a real-time synchronization node or a synchronization solution in Data Integration.</p>
+     * <p>Indicates whether the parameters are obtained. Valid values:</p>
+     * <br>
+     * <p>*   success: indicates that the parameters are obtained.</p>
+     * <p>*   fail: indicates that the parameters fail to be obtained. You can view the reason for the failure and troubleshoot the issue based on the reason.</p>
      */
     @NameInMap("Data")
     public QueryDISyncTaskConfigProcessResultResponseBodyData data;
 
     /**
-     * <p>The ID of the request. You can locate logs and troubleshoot issues based on the ID.</p>
+     * <p>The information returned for the parameters that are asynchronously generated and used to create or update a real-time synchronization node or a synchronization solution in Data Integration.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request is successful.</p>
-     * <p>*   false: The request fails.</p>
+     * <p>The ID of the request. You can locate logs and troubleshoot issues based on the ID.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -56,23 +56,17 @@ public class QueryDISyncTaskConfigProcessResultResponseBody extends TeaModel {
 
     public static class QueryDISyncTaskConfigProcessResultResponseBodyData extends TeaModel {
         /**
-         * <p>The reason why the parameters fail to be obtained. If the parameters are obtained, the value null is returned.</p>
+         * <p>The parameters that are obtained. The parameters are used as the request parameters of the [CreateDISyncTask](~~278725~~) or [UpdateDISyncTask](~~289109~~) operation to create or update a real-time synchronization node or a synchronization solution in Data Integration.</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>Indicates whether the parameters are obtained. Valid values:</p>
-         * <br>
-         * <p>*   success: indicates that the parameters are obtained.</p>
-         * <p>*   fail: indicates that the parameters fail to be obtained. You can view the reason for the failure and troubleshoot the issue based on the reason.</p>
+         * <p>The reason why the parameters fail to be obtained. If the parameters are obtained, the value null is returned.</p>
          */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The parameters that are obtained. The parameters are used as the request parameters of the [CreateDISyncTask](~~278725~~) or [UpdateDISyncTask](~~289109~~) operation to create or update a real-time synchronization node or a synchronization solution in Data Integration.</p>
-         */
         @NameInMap("TaskContent")
         public String taskContent;
 

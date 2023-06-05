@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteMetaCollectionRequest extends TeaModel {
     /**
-     * <p>The unique identifier of the collection.</p>
+     * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
      */
     @NameInMap("QualifiedName")
     public String qualifiedName;

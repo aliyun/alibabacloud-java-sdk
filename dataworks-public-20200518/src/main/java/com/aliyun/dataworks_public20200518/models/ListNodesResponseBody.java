@@ -5,37 +5,37 @@ import com.aliyun.tea.*;
 
 public class ListNodesResponseBody extends TeaModel {
     /**
-     * <p>The list of nodes.</p>
+     * <p>The ID of the associated workflow.</p>
      */
     @NameInMap("Data")
     public ListNodesResponseBodyData data;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The interval at which the node is rerun after the node fails to run.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+     * <p>The list of nodes.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the node can be rerun.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -95,43 +95,43 @@ public class ListNodesResponseBody extends TeaModel {
 
     public static class ListNodesResponseBodyDataNodes extends TeaModel {
         /**
-         * <p>The ID of the baseline with which the node is associated.</p>
+         * <p>The number of the page to return. Minimum value: 1. Maximum value: 100.</p>
          */
         @NameInMap("BaselineId")
         public Long baselineId;
 
         /**
-         * <p>The ID of the workflow.</p>
+         * <p>The operation that you want to perform. Set the value to **ListNodes**.</p>
          */
         @NameInMap("BusinessId")
         public Long businessId;
 
         /**
-         * <p>The connection string.</p>
+         * <p>The name of the resource group.</p>
          */
         @NameInMap("Connection")
         public String connection;
 
         /**
-         * <p>The cron expression returned.</p>
+         * <p>The name of the workflow.</p>
          */
         @NameInMap("CronExpress")
         public String cronExpress;
 
         /**
-         * <p>The description of the node.</p>
+         * <p>The priority for running the node. Valid values: 1, 3, 5, 7, and 8.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The table and partition filter expression in Data Quality that are associated with the node.</p>
+         * <p>The ID of the owner.</p>
          */
         @NameInMap("DqcDescription")
         public String dqcDescription;
 
         /**
-         * <p>Indicates whether the node is associated with a monitoring rule in Data Quality. Valid values: 0 and 1. The value 0 indicates that the node is associated with Data Quality. The value 1 indicates that the node is not associated with Data Quality.</p>
+         * <p>The connection string.</p>
          */
         @NameInMap("DqcType")
         public Integer dqcType;
@@ -140,61 +140,61 @@ public class ListNodesResponseBody extends TeaModel {
         public Integer fileType;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The types of the nodes. You can call the [ListNodes](~~173979~~) operation to query the type of the node.</p>
          */
         @NameInMap("NodeId")
         public Long nodeId;
 
         /**
-         * <p>The name of the node.</p>
+         * <p>The total number of nodes returned.</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
-         * <p>The ID of the owner.</p>
+         * <p>The additional parameters.</p>
          */
         @NameInMap("OwnerId")
         public String ownerId;
 
         /**
-         * <p>The additional parameters.</p>
+         * <p>The type of the node.</p>
          */
         @NameInMap("ParamValues")
         public String paramValues;
 
         /**
-         * <p>The priority for running the node. Valid values: 1, 3, 5, 7, and 8.</p>
+         * <p>The ID of the owner.</p>
          */
         @NameInMap("Priority")
         public Integer priority;
 
         /**
-         * <p>The type of the node.</p>
+         * <p>The error message returned.</p>
          */
         @NameInMap("ProgramType")
         public String programType;
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The information about the nodes.</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
         /**
-         * <p>The ID of the associated workflow.</p>
+         * <p>The table and partition filter expression in Data Quality that are associated with the node.</p>
          */
         @NameInMap("RelatedFlowId")
         public Long relatedFlowId;
 
         /**
-         * <p>The interval at which the node is rerun after the node fails to run.</p>
+         * <p>The environment of the workspace. Valid values: PROD and DEV.</p>
          */
         @NameInMap("RepeatInterval")
         public Long repeatInterval;
 
         /**
-         * <p>Indicates whether the node can be rerun.</p>
+         * <p>The name of the node.</p>
          */
         @NameInMap("Repeatability")
         public Boolean repeatability;
@@ -203,18 +203,13 @@ public class ListNodesResponseBody extends TeaModel {
         public String resGroupIdentifier;
 
         /**
-         * <p>The name of the resource group.</p>
+         * <p>The ID of the workflow.</p>
          */
         @NameInMap("ResGroupName")
         public String resGroupName;
 
         /**
-         * <p>The scheduling type of the node. Valid values:</p>
-         * <br>
-         * <p>*   NORMAL: indicates that the node is a normal auto triggered node.</p>
-         * <p>*   MANUAL: indicates that the node is a manually triggered node.</p>
-         * <p>*   PAUSE: indicates that the node is a paused node.</p>
-         * <p>*   SKIP: indicates that the node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.</p>
+         * <p>The types of the nodes. You can call the [ListNodes](~~173979~~) operation to query the type of the node.</p>
          */
         @NameInMap("SchedulerType")
         public String schedulerType;
@@ -396,25 +391,30 @@ public class ListNodesResponseBody extends TeaModel {
 
     public static class ListNodesResponseBodyData extends TeaModel {
         /**
-         * <p>The information about the nodes.</p>
+         * <p>The scheduling type of the node. Valid values:</p>
+         * <br>
+         * <p>*   NORMAL: indicates that the node is a normal auto triggered node.</p>
+         * <p>*   MANUAL: indicates that the node is a manually triggered node.</p>
+         * <p>*   PAUSE: indicates that the node is a paused node.</p>
+         * <p>*   SKIP: indicates that the node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.</p>
          */
         @NameInMap("Nodes")
         public java.util.List<ListNodesResponseBodyDataNodes> nodes;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The name of the node.</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
+         * <p>The cron expression returned.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The total number of nodes returned.</p>
+         * <p>The name of the workflow.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

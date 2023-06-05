@@ -5,13 +5,18 @@ import com.aliyun.tea.*;
 
 public class UpdateTableRequest extends TeaModel {
     /**
-     * <p>The globally unique identifier (GUID) of the MaxCompute project. Specify the GUID in the odps.{projectName} format.</p>
+     * <p>Specifies whether the table exists. Valid values:</p>
+     * <br>
+     * <p>*   true: The table exists.</p>
+     * <p>*   false: The table does not exist.</p>
+     * <br>
+     * <p>This parameter is deprecated. Do not use this parameter.</p>
      */
     @NameInMap("AppGuid")
     public String appGuid;
 
     /**
-     * <p>The ID of the associated category.</p>
+     * <p>The ID of the logical level.</p>
      */
     @NameInMap("CategoryId")
     public Long categoryId;
@@ -20,68 +25,63 @@ public class UpdateTableRequest extends TeaModel {
     public java.util.List<UpdateTableRequestColumns> columns;
 
     /**
-     * <p>The comment.</p>
+     * <p>The schema information of the table. You need to enter the schema information of the table if you enable the table schema in MaxCompute.</p>
      */
     @NameInMap("Comment")
     public String comment;
-
-    /**
-     * <p>Specifies whether the table exists. Valid values:</p>
-     * <br>
-     * <p>*   true: The table exists.</p>
-     * <p>*   false: The table does not exist.</p>
-     * <br>
-     * <p>This parameter is deprecated. Do not use this parameter.</p>
-     */
-    @NameInMap("CreateIfNotExists")
-    public Boolean createIfNotExists;
-
-    /**
-     * <p>The endpoint of MaxCompute. If this parameter is left empty, the endpoint of the MaxCompute project is used.</p>
-     */
-    @NameInMap("Endpoint")
-    public String endpoint;
-
-    /**
-     * <p>The environment of the DataWorks workspace. Valid values: 0 and 1. The value 0 indicates the development environment. The value 1 indicates the production environment.</p>
-     */
-    @NameInMap("EnvType")
-    public Integer envType;
-
-    /**
-     * <p>The type of the external table. Valid values: 0, 1, 2, and 3. The value 0 indicates that the external table is an OSS external table. The value 1 indicates that the external table is a Tablestore external table. The value 2 indicates that the external table is a volume external table. The value 3 indicates that the external table is a MySQL external table. This parameter is deprecated. Do not use this parameter.</p>
-     */
-    @NameInMap("ExternalTableType")
-    public String externalTableType;
 
     /**
      * <p>Specifies whether the table that you want to update is a partitioned table. Valid values: 0 and 1. The value 0 indicates that the table is not a partitioned table. The value 1 indicates that the table is a partitioned table. This parameter is deprecated. Do not use this parameter.</p>
      * <br>
      * <p>The Column.N.isPartitionCol parameter is used instead of the HasPart parameter to specify whether the MaxCompute table is a partitioned table. If the Column.N.isPartitionCol parameter is set to 1, the MaxCompute table is a partitioned table.</p>
      */
+    @NameInMap("CreateIfNotExists")
+    public Boolean createIfNotExists;
+
+    /**
+     * <p>The environment of the DataWorks workspace. Valid values: 0 and 1. The value 0 indicates the development environment. The value 1 indicates the production environment.</p>
+     */
+    @NameInMap("Endpoint")
+    public String endpoint;
+
+    /**
+     * <p>The globally unique identifier (GUID) of the MaxCompute project. Specify the GUID in the odps.{projectName} format.</p>
+     */
+    @NameInMap("EnvType")
+    public Integer envType;
+
+    /**
+     * <p>The storage location of the external table. This parameter is deprecated. Do not use this parameter.</p>
+     */
+    @NameInMap("ExternalTableType")
+    public String externalTableType;
+
+    /**
+     * <p>The comment.</p>
+     */
     @NameInMap("HasPart")
     public Integer hasPart;
 
     /**
-     * <p>Specifies whether the table is a view. Valid values: 0 and 1. The value 0 indicates that the table is not a view. The value 1 indicates that the table is a view. This parameter is deprecated. Do not use this parameter.</p>
+     * <p>The scope in which the table is visible. Valid values: 0, 1, and 2. The value 0 indicates that the table is invisible to all workspace members. The value 1 indicates that the table is visible to all workspace members. The value 2 indicates that the table is visible to workspace members.</p>
      */
     @NameInMap("IsView")
     public Integer isView;
 
     /**
-     * <p>The lifecycle of the table. Unit: days. If this parameter is left empty, the table is permanently stored.</p>
+     * <p>The ID of the associated category.</p>
      */
     @NameInMap("LifeCycle")
     public Integer lifeCycle;
 
     /**
-     * <p>The storage location of the external table. This parameter is deprecated. Do not use this parameter.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the DataWorks console to obtain the ID of the DataWorks workspace.</p>
      */
     @NameInMap("Location")
     public String location;
 
     /**
-     * <p>The ID of the logical level.</p>
+     * <p>The ID of the physical level.</p>
      */
     @NameInMap("LogicalLevelId")
     public Long logicalLevelId;
@@ -90,25 +90,25 @@ public class UpdateTableRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The ID of the physical level.</p>
+     * <p>The type of the external table. Valid values: 0, 1, 2, and 3. The value 0 indicates that the external table is an OSS external table. The value 1 indicates that the external table is a Tablestore external table. The value 2 indicates that the external table is a volume external table. The value 3 indicates that the external table is a MySQL external table. This parameter is deprecated. Do not use this parameter.</p>
      */
     @NameInMap("PhysicsLevelId")
     public Long physicsLevelId;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can log on to the DataWorks console to obtain the ID of the DataWorks workspace.</p>
+     * <p>The name of the MaxCompute table.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The schema information of the table. You need to enter the schema information of the table if you enable the table schema in MaxCompute.</p>
+     * <p>The display name of the field.</p>
      */
     @NameInMap("Schema")
     public String schema;
 
     /**
-     * <p>The name of the MaxCompute table.</p>
+     * <p>The endpoint of MaxCompute. If this parameter is left empty, the endpoint of the MaxCompute project is used.</p>
      */
     @NameInMap("TableName")
     public String tableName;
@@ -117,7 +117,7 @@ public class UpdateTableRequest extends TeaModel {
     public java.util.List<UpdateTableRequestThemes> themes;
 
     /**
-     * <p>The scope in which the table is visible. Valid values: 0, 1, and 2. The value 0 indicates that the table is invisible to all workspace members. The value 1 indicates that the table is visible to all workspace members. The value 2 indicates that the table is visible to workspace members.</p>
+     * <p>The lifecycle of the table. Unit: days. If this parameter is left empty, the table is permanently stored.</p>
      */
     @NameInMap("Visibility")
     public Integer visibility;
@@ -289,43 +289,43 @@ public class UpdateTableRequest extends TeaModel {
 
     public static class UpdateTableRequestColumns extends TeaModel {
         /**
-         * <p>The name of the field.</p>
+         * <p>The comment of the field.</p>
          */
         @NameInMap("ColumnName")
         public String columnName;
 
         /**
-         * <p>The display name of the field.</p>
+         * <p>The name of the field.</p>
          */
         @NameInMap("ColumnNameCn")
         public String columnNameCn;
 
         /**
-         * <p>The type of the field. For more information, see MaxCompute field types.</p>
+         * <p>The sequence number of the field. If the field is a partition field, this parameter is not supported.</p>
          */
         @NameInMap("ColumnType")
         public String columnType;
 
         /**
-         * <p>The comment of the field.</p>
+         * <p>The type of the field. For more information, see MaxCompute field types.</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
-         * <p>Specifies whether the field is a partition field. Valid values: 0 and 1. The value 0 indicates that the field is not a partition field. The value 1 indicates that the field is a partition field.</p>
+         * <p>The ID of the associated topic.</p>
          */
         @NameInMap("IsPartitionCol")
         public Boolean isPartitionCol;
 
         /**
-         * <p>The length of the field.</p>
+         * <p>Specifies whether the field is a partition field. Valid values: 0 and 1. The value 0 indicates that the field is not a partition field. The value 1 indicates that the field is a partition field.</p>
          */
         @NameInMap("Length")
         public Integer length;
 
         /**
-         * <p>The sequence number of the field. If the field is a partition field, this parameter is not supported.</p>
+         * <p>The length of the field.</p>
          */
         @NameInMap("SeqNumber")
         public Integer seqNumber;
@@ -395,13 +395,13 @@ public class UpdateTableRequest extends TeaModel {
 
     public static class UpdateTableRequestThemes extends TeaModel {
         /**
-         * <p>The ID of the associated topic.</p>
+         * <p>The level that corresponds to the topic ID.</p>
          */
         @NameInMap("ThemeId")
         public Long themeId;
 
         /**
-         * <p>The level that corresponds to the topic ID.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("ThemeLevel")
         public Integer themeLevel;

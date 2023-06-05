@@ -5,38 +5,32 @@ import com.aliyun.tea.*;
 
 public class CreateDataServiceApiResponseBody extends TeaModel {
     /**
-     * <p>The ID of the API.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("Data")
     public Long data;
 
-    /**
-     * <p>The error code.</p>
-     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error code.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The error message.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request is successful.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 

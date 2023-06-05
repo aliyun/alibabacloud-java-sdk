@@ -5,38 +5,32 @@ import com.aliyun.tea.*;
 
 public class CreateRemindResponseBody extends TeaModel {
     /**
-     * <p>The ID of the custom alert rule returned.</p>
+     * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
      */
     @NameInMap("Data")
     public Long data;
 
-    /**
-     * <p>The error code returned.</p>
-     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>Indicates whether the request was successful.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The error message returned.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+     * <p>The error code returned.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request was successful.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 

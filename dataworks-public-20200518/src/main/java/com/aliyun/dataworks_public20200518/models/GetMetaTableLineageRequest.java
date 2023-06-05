@@ -5,49 +5,49 @@ import com.aliyun.tea.*;
 
 public class GetMetaTableLineageRequest extends TeaModel {
     /**
-     * <p>The ID of the E-MapReduce (EMR) cluster. Set this parameter only when you query data in an EMR compute engine instance.</p>
+     * <p>The name of the metatable.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The type of the data source. Valid values: odps and emr.</p>
+     * <p>The error message.</p>
      */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
     /**
-     * <p>The name of the metadatabase.</p>
+     * <p>The type of the data source. Valid values: odps and emr.</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
 
     /**
-     * <p>Specifies whether to query the ancestor or descendant lineage of the field. The value up indicates the ancestor lineage. The value down indicates the descendant lineage.</p>
+     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
      */
     @NameInMap("Direction")
     public String direction;
 
     /**
-     * <p>The logic of paging. Set this parameter based on the value of the response parameter NextPrimaryKey when the value of the response parameter HasNext is true in the last query.</p>
+     * <p>The ID of the E-MapReduce (EMR) cluster. Set this parameter only when you query data in an EMR compute engine instance.</p>
      */
     @NameInMap("NextPrimaryKey")
     public String nextPrimaryKey;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     * <p>The name of the metadatabase.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The GUID of the metatable.</p>
+     * <p>The logic of paging. Set this parameter based on the value of the response parameter NextPrimaryKey when the value of the response parameter HasNext is true in the last query.</p>
      */
     @NameInMap("TableGuid")
     public String tableGuid;
 
     /**
-     * <p>The name of the metatable.</p>
+     * <p>The HTTP status code.</p>
      */
     @NameInMap("TableName")
     public String tableName;

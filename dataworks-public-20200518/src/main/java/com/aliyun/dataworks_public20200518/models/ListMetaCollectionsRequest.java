@@ -5,57 +5,57 @@ import com.aliyun.tea.*;
 
 public class ListMetaCollectionsRequest extends TeaModel {
     /**
-     * <p>The ID of the collection administrator.</p>
+     * <p>The ID of the collection follower.</p>
      */
     @NameInMap("Administrator")
     public String administrator;
+
+    /**
+     * <p>The ID of the collection creator.</p>
+     */
+    @NameInMap("CollectionType")
+    public String collectionType;
+
+    /**
+     * <p>The ID of the collection administrator.</p>
+     */
+    @NameInMap("Creator")
+    public String creator;
+
+    /**
+     * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+     */
+    @NameInMap("Follower")
+    public String follower;
+
+    /**
+     * <p>The name of the sorting field.</p>
+     */
+    @NameInMap("Keyword")
+    public String keyword;
+
+    /**
+     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     */
+    @NameInMap("NextToken")
+    public String nextToken;
 
     /**
      * <p>ALBUM: data album</p>
      * <br>
      * <p>ALBUM_CATEGORY: category in a data album</p>
      */
-    @NameInMap("CollectionType")
-    public String collectionType;
-
-    /**
-     * <p>The ID of the collection creator.</p>
-     */
-    @NameInMap("Creator")
-    public String creator;
-
-    /**
-     * <p>The ID of the collection follower.</p>
-     */
-    @NameInMap("Follower")
-    public String follower;
-
-    /**
-     * <p>The keyword.</p>
-     */
-    @NameInMap("Keyword")
-    public String keyword;
-
-    /**
-     * <p>The paging information. This parameter specifies the start point of the query.</p>
-     */
-    @NameInMap("NextToken")
-    public String nextToken;
-
-    /**
-     * <p>The name of the sorting field.</p>
-     */
     @NameInMap("OrderBy")
     public String orderBy;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     * <p>The keyword.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The unique identifier of the parent collection.</p>
+     * <p>The paging information. This parameter specifies the start point of the query.</p>
      */
     @NameInMap("ParentQualifiedName")
     public String parentQualifiedName;

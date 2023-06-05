@@ -7,12 +7,6 @@ public class GetBaselineResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetBaselineResponseBodyData data;
 
-    @NameInMap("DynamicErrorCode")
-    public String dynamicErrorCode;
-
-    @NameInMap("DynamicErrorMessage")
-    public String dynamicErrorMessage;
-
     @NameInMap("ErrorCode")
     public String errorCode;
 
@@ -39,22 +33,6 @@ public class GetBaselineResponseBody extends TeaModel {
     }
     public GetBaselineResponseBodyData getData() {
         return this.data;
-    }
-
-    public GetBaselineResponseBody setDynamicErrorCode(String dynamicErrorCode) {
-        this.dynamicErrorCode = dynamicErrorCode;
-        return this;
-    }
-    public String getDynamicErrorCode() {
-        return this.dynamicErrorCode;
-    }
-
-    public GetBaselineResponseBody setDynamicErrorMessage(String dynamicErrorMessage) {
-        this.dynamicErrorMessage = dynamicErrorMessage;
-        return this;
-    }
-    public String getDynamicErrorMessage() {
-        return this.dynamicErrorMessage;
     }
 
     public GetBaselineResponseBody setErrorCode(String errorCode) {
@@ -319,6 +297,9 @@ public class GetBaselineResponseBody extends TeaModel {
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        @NameInMap("NodeIds")
+        public java.util.List<Long> nodeIds;
+
         @NameInMap("OverTimeSettings")
         public java.util.List<GetBaselineResponseBodyDataOverTimeSettings> overTimeSettings;
 
@@ -330,9 +311,6 @@ public class GetBaselineResponseBody extends TeaModel {
 
         @NameInMap("ProjectId")
         public Long projectId;
-
-        @NameInMap("TaskIds")
-        public java.util.List<Long> taskIds;
 
         public static GetBaselineResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetBaselineResponseBodyData self = new GetBaselineResponseBodyData();
@@ -395,6 +373,14 @@ public class GetBaselineResponseBody extends TeaModel {
             return this.enabled;
         }
 
+        public GetBaselineResponseBodyData setNodeIds(java.util.List<Long> nodeIds) {
+            this.nodeIds = nodeIds;
+            return this;
+        }
+        public java.util.List<Long> getNodeIds() {
+            return this.nodeIds;
+        }
+
         public GetBaselineResponseBodyData setOverTimeSettings(java.util.List<GetBaselineResponseBodyDataOverTimeSettings> overTimeSettings) {
             this.overTimeSettings = overTimeSettings;
             return this;
@@ -425,14 +411,6 @@ public class GetBaselineResponseBody extends TeaModel {
         }
         public Long getProjectId() {
             return this.projectId;
-        }
-
-        public GetBaselineResponseBodyData setTaskIds(java.util.List<Long> taskIds) {
-            this.taskIds = taskIds;
-            return this;
-        }
-        public java.util.List<Long> getTaskIds() {
-            return this.taskIds;
         }
 
     }

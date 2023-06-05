@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class DeleteDISyncTaskResponseBody extends TeaModel {
     /**
-     * <p>The result returned after you called the DeleteDISyncTask operation.</p>
+     * <p>Indicates whether the synchronization node in Data Integration is deleted. Valid values:</p>
+     * <br>
+     * <p>*   success: The synchronization node in Data Integration is deleted.</p>
+     * <p>*   fail: The synchronization node in Data Integration failed to be deleted. You can troubleshoot the issue based on the failure reason.</p>
      */
     @NameInMap("Data")
     public DeleteDISyncTaskResponseBodyData data;
 
     /**
-     * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+     * <p>The result returned after you called the DeleteDISyncTask operation.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request is successful.</p>
-     * <p>*   false: The request failed.</p>
+     * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -55,19 +55,13 @@ public class DeleteDISyncTaskResponseBody extends TeaModel {
     }
 
     public static class DeleteDISyncTaskResponseBodyData extends TeaModel {
-        /**
-         * <p>The reason why the synchronization node in Data Integration failed to be deleted.</p>
-         * <br>
-         * <p>If the synchronization node in Data Integration is deleted, the value null is returned.</p>
-         */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>Indicates whether the synchronization node in Data Integration is deleted. Valid values:</p>
+         * <p>The reason why the synchronization node in Data Integration failed to be deleted.</p>
          * <br>
-         * <p>*   success: The synchronization node in Data Integration is deleted.</p>
-         * <p>*   fail: The synchronization node in Data Integration failed to be deleted. You can troubleshoot the issue based on the failure reason.</p>
+         * <p>If the synchronization node in Data Integration is deleted, the value null is returned.</p>
          */
         @NameInMap("Status")
         public String status;

@@ -123,7 +123,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * For more information about how to add your Alibaba Cloud account or a RAM user as a member of a DataWorks workspace, see [Add a member to a DataWorks workspace](~~136941~~).
+      * The ID of the DataWorks workspace. You can call the [ListProjects](~~178393~~) operation to query the ID.
       *
       * @param request AddProjectMemberToRoleRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -166,7 +166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * For more information about how to add your Alibaba Cloud account or a RAM user as a member of a DataWorks workspace, see [Add a member to a DataWorks workspace](~~136941~~).
+      * The ID of the DataWorks workspace. You can call the [ListProjects](~~178393~~) operation to query the ID.
       *
       * @param request AddProjectMemberToRoleRequest
       * @return AddProjectMemberToRoleResponse
@@ -1195,6 +1195,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("FileType", request.fileType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ignoreParentSkipRunningProperty)) {
+            body.put("IgnoreParentSkipRunningProperty", request.ignoreParentSkipRunningProperty);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.inputList)) {
             body.put("InputList", request.inputList);
         }
@@ -1596,7 +1600,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Collections are classified into various types. The names of collections of the same type must be different.
+      * A category must belong to a data album.
+      * You can create a category in a data album only after you create the data album. You can set the value of the parentQualifiedName parameter to the unique identifier of the data album to create the category.
       *
       * @param request CreateMetaCollectionRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1639,7 +1644,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Collections are classified into various types. The names of collections of the same type must be different.
+      * A category must belong to a data album.
+      * You can create a category in a data album only after you create the data album. You can set the value of the parentQualifiedName parameter to the unique identifier of the data album to create the category.
       *
       * @param request CreateMetaCollectionRequest
       * @return CreateMetaCollectionResponse
@@ -3338,8 +3344,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * DataWorks allows you to use only the [CreateDISyncTask](~~278725~~) operation to create a batch synchronization node in Data Integration. To create a real-time synchronization node or a synchronization solution, you must first call the [GenerateDISyncTaskConfigForCreating](~~383463~~) operation to generate the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the [CreateDISyncTask](~~278725~~) operation and use the parameters as request parameters to create a real-time synchronization node or a synchronization solution in Data Integration.
-      * DataWorks allows you to create real-time synchronization nodes and synchronization solutions in Data Integration only in asynchronous mode.
+      * The operation that you want to perform.
       *
       * @param request GenerateDISyncTaskConfigForCreatingRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3382,8 +3387,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * DataWorks allows you to use only the [CreateDISyncTask](~~278725~~) operation to create a batch synchronization node in Data Integration. To create a real-time synchronization node or a synchronization solution, you must first call the [GenerateDISyncTaskConfigForCreating](~~383463~~) operation to generate the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the [CreateDISyncTask](~~278725~~) operation and use the parameters as request parameters to create a real-time synchronization node or a synchronization solution in Data Integration.
-      * DataWorks allows you to create real-time synchronization nodes and synchronization solutions in Data Integration only in asynchronous mode.
+      * The operation that you want to perform.
       *
       * @param request GenerateDISyncTaskConfigForCreatingRequest
       * @return GenerateDISyncTaskConfigForCreatingResponse
@@ -3394,7 +3398,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * DataWorks allows you to use only the [UpdateDISyncTask](~~289109~~) operation to update a batch synchronization node in Data Integration. To update a real-time synchronization node or a synchronization solution, you must first call the GenerateDISyncTaskConfigForUpdating operation to generate the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the UpdateDISyncTask operation and use the parameters as request parameters to update a real-time synchronization node or a synchronization solution in Data Integration. DataWorks allows you to update real-time synchronization nodes and synchronization solutions in Data Integration only in asynchronous mode.
+      * The operation that you want to perform.
       *
       * @param request GenerateDISyncTaskConfigForUpdatingRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3441,7 +3445,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * DataWorks allows you to use only the [UpdateDISyncTask](~~289109~~) operation to update a batch synchronization node in Data Integration. To update a real-time synchronization node or a synchronization solution, you must first call the GenerateDISyncTaskConfigForUpdating operation to generate the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the UpdateDISyncTask operation and use the parameters as request parameters to update a real-time synchronization node or a synchronization solution in Data Integration. DataWorks allows you to update real-time synchronization nodes and synchronization solutions in Data Integration only in asynchronous mode.
+      * The operation that you want to perform.
       *
       * @param request GenerateDISyncTaskConfigForUpdatingRequest
       * @return GenerateDISyncTaskConfigForUpdatingResponse
@@ -4801,7 +4805,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to query only the basic metadata information about a MaxCompute or E-MapReduce (EMR) compute engine instance.
+      * The ID of the EMR cluster. This parameter is required only if you set the DataSourceType parameter to emr.
+      * You can log on to the [EMR console](https://emr.console.aliyun.com/?spm=a2c4g.11186623.0.0.965cc5c2GeiHet#/cn-hangzhou) to obtain the ID of the EMR cluster.
       *
       * @param request GetMetaDBInfoRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4828,7 +4833,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to query only the basic metadata information about a MaxCompute or E-MapReduce (EMR) compute engine instance.
+      * The ID of the EMR cluster. This parameter is required only if you set the DataSourceType parameter to emr.
+      * You can log on to the [EMR console](https://emr.console.aliyun.com/?spm=a2c4g.11186623.0.0.965cc5c2GeiHet#/cn-hangzhou) to obtain the ID of the EMR cluster.
       *
       * @param request GetMetaDBInfoRequest
       * @return GetMetaDBInfoResponse
@@ -5193,7 +5199,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to query only the partitions of a metatable in a MaxCompute or E-MapReduce (EMR) compute engine instance.
+      * The operation that you want to perform. Set the value to **GetMetaTablePartition**.
       *
       * @param tmpReq GetMetaTablePartitionRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5258,7 +5264,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to query only the partitions of a metatable in a MaxCompute or E-MapReduce (EMR) compute engine instance.
+      * The operation that you want to perform. Set the value to **GetMetaTablePartition**.
       *
       * @param request GetMetaTablePartitionRequest
       * @return GetMetaTablePartitionResponse
@@ -6596,16 +6602,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Supported DAG types:
-      * *   MANUAL: the DAG for a manually triggered workflow.
-      * *   SMOKE_TEST: the DAG for a smoke testing workflow.
-      * *   SUPPLY_DATA: the DAG for a data backfill instance.
-      * *   BUSINESS_PROCESS_DAG: the DAG for a one-time workflow.
-      * Supported DAG states:
-      * *   CREATED: The DAG is created.
-      * *   RUNNING: The DAG is running.
-      * *   FAILURE: The DAG fails to run.
-      * *   SUCCESS: The DAG successfully runs.
+      * The operation that you want to perform. Set the value to **ListDags**.
       *
       * @param request ListDagsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6640,16 +6637,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Supported DAG types:
-      * *   MANUAL: the DAG for a manually triggered workflow.
-      * *   SMOKE_TEST: the DAG for a smoke testing workflow.
-      * *   SUPPLY_DATA: the DAG for a data backfill instance.
-      * *   BUSINESS_PROCESS_DAG: the DAG for a one-time workflow.
-      * Supported DAG states:
-      * *   CREATED: The DAG is created.
-      * *   RUNNING: The DAG is running.
-      * *   FAILURE: The DAG fails to run.
-      * *   SUCCESS: The DAG successfully runs.
+      * The operation that you want to perform. Set the value to **ListDags**.
       *
       * @param request ListDagsRequest
       * @return ListDagsResponse
@@ -7670,7 +7658,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The type can be ALBUM or ALBUM_CATEGORY. ALBUM indicates data albums. ALBUM_CATEGORY indicates categories.
+      * You can configure only one of the Creator, Administrator, and Follower parameters.
       *
       * @param request ListMetaCollectionsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -7733,7 +7721,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The type can be ALBUM or ALBUM_CATEGORY. ALBUM indicates data albums. ALBUM_CATEGORY indicates categories.
+      * You can configure only one of the Creator, Administrator, and Follower parameters.
       *
       * @param request ListMetaCollectionsRequest
       * @return ListMetaCollectionsResponse
@@ -8944,8 +8932,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * DataWorks allows you to call only the [CreateDISyncTask](~~278725~~) or [UpdateDISyncTask](~~289109~~) operation to create or update a batch synchronization node in Data Integration. To create or update a real-time synchronization node or a synchronization solution, you must first call the GenerateDISyncTaskConfigForCreating or GenerateDISyncTaskConfigForUpdating operation to generate the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the CreateDISyncTask or UpdateDISyncTask operation and use the parameters as request parameters to create or update a real-time synchronization node or a synchronization solution.
-      * DataWorks allows you to create or update real-time synchronization nodes and synchronization solutions in Data Integration only in asynchronous mode.
+      * The operation that you want to perform.
       *
       * @param request QueryDISyncTaskConfigProcessResultRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -8984,8 +8971,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * DataWorks allows you to call only the [CreateDISyncTask](~~278725~~) or [UpdateDISyncTask](~~289109~~) operation to create or update a batch synchronization node in Data Integration. To create or update a real-time synchronization node or a synchronization solution, you must first call the GenerateDISyncTaskConfigForCreating or GenerateDISyncTaskConfigForUpdating operation to generate the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the CreateDISyncTask or UpdateDISyncTask operation and use the parameters as request parameters to create or update a real-time synchronization node or a synchronization solution.
-      * DataWorks allows you to create or update real-time synchronization nodes and synchronization solutions in Data Integration only in asynchronous mode.
+      * The operation that you want to perform.
       *
       * @param request QueryDISyncTaskConfigProcessResultRequest
       * @return QueryDISyncTaskConfigProcessResultResponse
@@ -8995,16 +8981,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryDISyncTaskConfigProcessResultWithOptions(request, runtime);
     }
 
-    /**
-      * *   You must use FML statements to query information about the data modeling engine when you call this operation.
-      * *   The information about the data modeling engine can be queried by page, except for data layers, business processes, and data domains. You can add an offset to the end of an FML statement.
-      *     The num LIMIT num statement specifies the offset when the information about the data modeling engine is queried, and the number of pages to return each time. The offset value must be a multiple of the number of pages.
-      * *   A maximum of 1,000 entries can be returned each time you call the operation.
-      *
-      * @param request QueryPublicModelEngineRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return QueryPublicModelEngineResponse
-     */
     public QueryPublicModelEngineResponse queryPublicModelEngineWithOptions(QueryPublicModelEngineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -9033,15 +9009,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryPublicModelEngineResponse());
     }
 
-    /**
-      * *   You must use FML statements to query information about the data modeling engine when you call this operation.
-      * *   The information about the data modeling engine can be queried by page, except for data layers, business processes, and data domains. You can add an offset to the end of an FML statement.
-      *     The num LIMIT num statement specifies the offset when the information about the data modeling engine is queried, and the number of pages to return each time. The offset value must be a multiple of the number of pages.
-      * *   A maximum of 1,000 entries can be returned each time you call the operation.
-      *
-      * @param request QueryPublicModelEngineRequest
-      * @return QueryPublicModelEngineResponse
-     */
     public QueryPublicModelEngineResponse queryPublicModelEngine(QueryPublicModelEngineRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryPublicModelEngineWithOptions(request, runtime);
@@ -9345,6 +9312,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("DagParameters", request.dagParameters);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.endBizDate)) {
+            body.put("EndBizDate", request.endBizDate);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.excludeNodeIds)) {
             body.put("ExcludeNodeIds", request.excludeNodeIds);
         }
@@ -9371,6 +9342,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
             body.put("ProjectName", request.projectName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startBizDate)) {
+            body.put("StartBizDate", request.startBizDate);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -9552,7 +9527,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to query only metatables in a MaxCompute or E-MapReduce (EMR) compute engine instance.
+      * The operation that you want to perform. Set the value to **SearchMetaTables**.
       *
       * @param request SearchMetaTablesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -9611,7 +9586,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to query only metatables in a MaxCompute or E-MapReduce (EMR) compute engine instance.
+      * The operation that you want to perform. Set the value to **SearchMetaTables**.
       *
       * @param request SearchMetaTablesRequest
       * @return SearchMetaTablesResponse
@@ -10442,7 +10417,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * DataWorks allows you to specify a default global configuration only for the processing rules of DDL messages in synchronization solutions. After you configure the **processing rules of DDL messages** in synchronization solutions, the configuration is used as the default global configuration and applies to all real-time synchronization nodes in the solutions. You can modify the **processing rules of DDL messages** based on your business requirements. For more information about how to configure a synchronization solution, see [Synchronization solutions](~~199008~~).
+      * The operation that you want to perform. Set the value to **UpdateDIProjectConfig**.
       *
       * @param request UpdateDIProjectConfigRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -10485,7 +10460,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * DataWorks allows you to specify a default global configuration only for the processing rules of DDL messages in synchronization solutions. After you configure the **processing rules of DDL messages** in synchronization solutions, the configuration is used as the default global configuration and applies to all real-time synchronization nodes in the solutions. You can modify the **processing rules of DDL messages** based on your business requirements. For more information about how to configure a synchronization solution, see [Synchronization solutions](~~199008~~).
+      * The operation that you want to perform. Set the value to **UpdateDIProjectConfig**.
       *
       * @param request UpdateDIProjectConfigRequest
       * @return UpdateDIProjectConfigResponse
@@ -10736,6 +10711,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("FileName", request.fileName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ignoreParentSkipRunningProperty)) {
+            body.put("IgnoreParentSkipRunningProperty", request.ignoreParentSkipRunningProperty);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.inputList)) {
             body.put("InputList", request.inputList);
         }
@@ -10940,7 +10919,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Only the name and comment of a collection can be updated.
+      * You must configure at least one of the Name and Comment parameters when you update a collection.
       *
       * @param request UpdateMetaCollectionRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -10979,7 +10958,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Only the name and comment of a collection can be updated.
+      * You must configure at least one of the Name and Comment parameters when you update a collection.
       *
       * @param request UpdateMetaCollectionRequest
       * @return UpdateMetaCollectionResponse
