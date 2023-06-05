@@ -69,8 +69,11 @@ public class CreateWorkspaceResourceRequest extends TeaModel {
         @NameInMap("Quotas")
         public java.util.List<CreateWorkspaceResourceRequestResourcesQuotas> quotas;
 
+        @NameInMap("ResourceType")
+        public String resourceType;
+
         @NameInMap("Spec")
-        public String spec;
+        public java.util.Map<String, ?> spec;
 
         @NameInMap("WorkspaceId")
         public String workspaceId;
@@ -128,11 +131,19 @@ public class CreateWorkspaceResourceRequest extends TeaModel {
             return this.quotas;
         }
 
-        public CreateWorkspaceResourceRequestResources setSpec(String spec) {
+        public CreateWorkspaceResourceRequestResources setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public CreateWorkspaceResourceRequestResources setSpec(java.util.Map<String, ?> spec) {
             this.spec = spec;
             return this;
         }
-        public String getSpec() {
+        public java.util.Map<String, ?> getSpec() {
             return this.spec;
         }
 

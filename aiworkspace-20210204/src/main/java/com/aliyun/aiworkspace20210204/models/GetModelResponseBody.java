@@ -7,6 +7,9 @@ public class GetModelResponseBody extends TeaModel {
     @NameInMap("Accessibility")
     public String accessibility;
 
+    @NameInMap("Domain")
+    public String domain;
+
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
@@ -22,17 +25,29 @@ public class GetModelResponseBody extends TeaModel {
     @NameInMap("ModelDescription")
     public String modelDescription;
 
+    @NameInMap("ModelDoc")
+    public String modelDoc;
+
     @NameInMap("ModelId")
     public String modelId;
 
     @NameInMap("ModelName")
     public String modelName;
 
+    @NameInMap("Origin")
+    public String origin;
+
     @NameInMap("OwnerId")
     public String ownerId;
 
+    @NameInMap("Provider")
+    public String provider;
+
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Task")
+    public String task;
 
     @NameInMap("UserId")
     public String userId;
@@ -51,6 +66,14 @@ public class GetModelResponseBody extends TeaModel {
     }
     public String getAccessibility() {
         return this.accessibility;
+    }
+
+    public GetModelResponseBody setDomain(String domain) {
+        this.domain = domain;
+        return this;
+    }
+    public String getDomain() {
+        return this.domain;
     }
 
     public GetModelResponseBody setGmtCreateTime(String gmtCreateTime) {
@@ -93,6 +116,14 @@ public class GetModelResponseBody extends TeaModel {
         return this.modelDescription;
     }
 
+    public GetModelResponseBody setModelDoc(String modelDoc) {
+        this.modelDoc = modelDoc;
+        return this;
+    }
+    public String getModelDoc() {
+        return this.modelDoc;
+    }
+
     public GetModelResponseBody setModelId(String modelId) {
         this.modelId = modelId;
         return this;
@@ -109,6 +140,14 @@ public class GetModelResponseBody extends TeaModel {
         return this.modelName;
     }
 
+    public GetModelResponseBody setOrigin(String origin) {
+        this.origin = origin;
+        return this;
+    }
+    public String getOrigin() {
+        return this.origin;
+    }
+
     public GetModelResponseBody setOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -117,12 +156,28 @@ public class GetModelResponseBody extends TeaModel {
         return this.ownerId;
     }
 
+    public GetModelResponseBody setProvider(String provider) {
+        this.provider = provider;
+        return this;
+    }
+    public String getProvider() {
+        return this.provider;
+    }
+
     public GetModelResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetModelResponseBody setTask(String task) {
+        this.task = task;
+        return this;
+    }
+    public String getTask() {
+        return this.task;
     }
 
     public GetModelResponseBody setUserId(String userId) {

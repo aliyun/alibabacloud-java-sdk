@@ -22,6 +22,9 @@ public class ListResourcesRequest extends TeaModel {
     @NameInMap("ResourceName")
     public String resourceName;
 
+    @NameInMap("ResourceTypes")
+    public String resourceTypes;
+
     @NameInMap("Verbose")
     public Boolean verbose;
 
@@ -79,6 +82,14 @@ public class ListResourcesRequest extends TeaModel {
     }
     public String getResourceName() {
         return this.resourceName;
+    }
+
+    public ListResourcesRequest setResourceTypes(String resourceTypes) {
+        this.resourceTypes = resourceTypes;
+        return this;
+    }
+    public String getResourceTypes() {
+        return this.resourceTypes;
     }
 
     public ListResourcesRequest setVerbose(Boolean verbose) {

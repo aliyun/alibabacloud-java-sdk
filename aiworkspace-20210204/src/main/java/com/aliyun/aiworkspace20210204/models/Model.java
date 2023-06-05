@@ -7,6 +7,9 @@ public class Model extends TeaModel {
     @NameInMap("Accessibility")
     public String accessibility;
 
+    @NameInMap("Domain")
+    public String domain;
+
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
@@ -22,14 +25,29 @@ public class Model extends TeaModel {
     @NameInMap("ModelDescription")
     public String modelDescription;
 
+    @NameInMap("ModelDoc")
+    public String modelDoc;
+
     @NameInMap("ModelId")
     public String modelId;
 
     @NameInMap("ModelName")
     public String modelName;
 
+    @NameInMap("OrderNumber")
+    public Long orderNumber;
+
+    @NameInMap("Origin")
+    public String origin;
+
     @NameInMap("OwnerId")
     public String ownerId;
+
+    @NameInMap("Provider")
+    public String provider;
+
+    @NameInMap("Task")
+    public String task;
 
     @NameInMap("UserId")
     public String userId;
@@ -48,6 +66,14 @@ public class Model extends TeaModel {
     }
     public String getAccessibility() {
         return this.accessibility;
+    }
+
+    public Model setDomain(String domain) {
+        this.domain = domain;
+        return this;
+    }
+    public String getDomain() {
+        return this.domain;
     }
 
     public Model setGmtCreateTime(String gmtCreateTime) {
@@ -90,6 +116,14 @@ public class Model extends TeaModel {
         return this.modelDescription;
     }
 
+    public Model setModelDoc(String modelDoc) {
+        this.modelDoc = modelDoc;
+        return this;
+    }
+    public String getModelDoc() {
+        return this.modelDoc;
+    }
+
     public Model setModelId(String modelId) {
         this.modelId = modelId;
         return this;
@@ -106,12 +140,44 @@ public class Model extends TeaModel {
         return this.modelName;
     }
 
+    public Model setOrderNumber(Long orderNumber) {
+        this.orderNumber = orderNumber;
+        return this;
+    }
+    public Long getOrderNumber() {
+        return this.orderNumber;
+    }
+
+    public Model setOrigin(String origin) {
+        this.origin = origin;
+        return this;
+    }
+    public String getOrigin() {
+        return this.origin;
+    }
+
     public Model setOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public String getOwnerId() {
         return this.ownerId;
+    }
+
+    public Model setProvider(String provider) {
+        this.provider = provider;
+        return this;
+    }
+    public String getProvider() {
+        return this.provider;
+    }
+
+    public Model setTask(String task) {
+        this.task = task;
+        return this;
+    }
+    public String getTask() {
+        return this.task;
     }
 
     public Model setUserId(String userId) {

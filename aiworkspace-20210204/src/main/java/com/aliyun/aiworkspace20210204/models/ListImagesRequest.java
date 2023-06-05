@@ -22,6 +22,9 @@ public class ListImagesRequest extends TeaModel {
     @NameInMap("ParentUserId")
     public String parentUserId;
 
+    @NameInMap("Query")
+    public String query;
+
     @NameInMap("SortBy")
     public String sortBy;
 
@@ -85,6 +88,14 @@ public class ListImagesRequest extends TeaModel {
     }
     public String getParentUserId() {
         return this.parentUserId;
+    }
+
+    public ListImagesRequest setQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    public String getQuery() {
+        return this.query;
     }
 
     public ListImagesRequest setSortBy(String sortBy) {

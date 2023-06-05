@@ -4,6 +4,9 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ModelVersion extends TeaModel {
+    @NameInMap("ApprovalStatus")
+    public String approvalStatus;
+
     @NameInMap("FormatType")
     public String formatType;
 
@@ -22,6 +25,9 @@ public class ModelVersion extends TeaModel {
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
+    @NameInMap("Metrics")
+    public java.util.Map<String, ?> metrics;
+
     @NameInMap("Options")
     public String options;
 
@@ -33,6 +39,9 @@ public class ModelVersion extends TeaModel {
 
     @NameInMap("SourceType")
     public String sourceType;
+
+    @NameInMap("TrainingSpec")
+    public java.util.Map<String, ?> trainingSpec;
 
     @NameInMap("Uri")
     public String uri;
@@ -49,6 +58,14 @@ public class ModelVersion extends TeaModel {
     public static ModelVersion build(java.util.Map<String, ?> map) throws Exception {
         ModelVersion self = new ModelVersion();
         return TeaModel.build(map, self);
+    }
+
+    public ModelVersion setApprovalStatus(String approvalStatus) {
+        this.approvalStatus = approvalStatus;
+        return this;
+    }
+    public String getApprovalStatus() {
+        return this.approvalStatus;
     }
 
     public ModelVersion setFormatType(String formatType) {
@@ -99,6 +116,14 @@ public class ModelVersion extends TeaModel {
         return this.labels;
     }
 
+    public ModelVersion setMetrics(java.util.Map<String, ?> metrics) {
+        this.metrics = metrics;
+        return this;
+    }
+    public java.util.Map<String, ?> getMetrics() {
+        return this.metrics;
+    }
+
     public ModelVersion setOptions(String options) {
         this.options = options;
         return this;
@@ -129,6 +154,14 @@ public class ModelVersion extends TeaModel {
     }
     public String getSourceType() {
         return this.sourceType;
+    }
+
+    public ModelVersion setTrainingSpec(java.util.Map<String, ?> trainingSpec) {
+        this.trainingSpec = trainingSpec;
+        return this;
+    }
+    public java.util.Map<String, ?> getTrainingSpec() {
+        return this.trainingSpec;
     }
 
     public ModelVersion setUri(String uri) {

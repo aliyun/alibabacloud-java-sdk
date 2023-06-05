@@ -4,8 +4,14 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class UpdateModelVersionRequest extends TeaModel {
+    @NameInMap("ApprovalStatus")
+    public String approvalStatus;
+
     @NameInMap("InferenceSpec")
     public java.util.Map<String, ?> inferenceSpec;
+
+    @NameInMap("Metrics")
+    public java.util.Map<String, ?> metrics;
 
     @NameInMap("Options")
     public String options;
@@ -16,6 +22,9 @@ public class UpdateModelVersionRequest extends TeaModel {
     @NameInMap("SourceType")
     public String sourceType;
 
+    @NameInMap("TrainingSpec")
+    public java.util.Map<String, ?> trainingSpec;
+
     @NameInMap("VersionDescription")
     public String versionDescription;
 
@@ -24,12 +33,28 @@ public class UpdateModelVersionRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UpdateModelVersionRequest setApprovalStatus(String approvalStatus) {
+        this.approvalStatus = approvalStatus;
+        return this;
+    }
+    public String getApprovalStatus() {
+        return this.approvalStatus;
+    }
+
     public UpdateModelVersionRequest setInferenceSpec(java.util.Map<String, ?> inferenceSpec) {
         this.inferenceSpec = inferenceSpec;
         return this;
     }
     public java.util.Map<String, ?> getInferenceSpec() {
         return this.inferenceSpec;
+    }
+
+    public UpdateModelVersionRequest setMetrics(java.util.Map<String, ?> metrics) {
+        this.metrics = metrics;
+        return this;
+    }
+    public java.util.Map<String, ?> getMetrics() {
+        return this.metrics;
     }
 
     public UpdateModelVersionRequest setOptions(String options) {
@@ -54,6 +79,14 @@ public class UpdateModelVersionRequest extends TeaModel {
     }
     public String getSourceType() {
         return this.sourceType;
+    }
+
+    public UpdateModelVersionRequest setTrainingSpec(java.util.Map<String, ?> trainingSpec) {
+        this.trainingSpec = trainingSpec;
+        return this;
+    }
+    public java.util.Map<String, ?> getTrainingSpec() {
+        return this.trainingSpec;
     }
 
     public UpdateModelVersionRequest setVersionDescription(String versionDescription) {

@@ -13,6 +13,9 @@ public class DeleteWorkspaceResourceRequest extends TeaModel {
     @NameInMap("ProductType")
     public String productType;
 
+    @NameInMap("ResourceType")
+    public String resourceType;
+
     public static DeleteWorkspaceResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteWorkspaceResourceRequest self = new DeleteWorkspaceResourceRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class DeleteWorkspaceResourceRequest extends TeaModel {
     }
     public String getProductType() {
         return this.productType;
+    }
+
+    public DeleteWorkspaceResourceRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
 }
