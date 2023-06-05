@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>resourcemanager20200331</artifactId>
-  <version>2.1.7</version>
+  <version>2.1.8</version>
   <packaging>jar</packaging>
   <name>resourcemanager20200331</name>
   <description>Alibaba Cloud ResourceManager (20200331) SDK for Java
