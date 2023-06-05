@@ -7,11 +7,9 @@ public class ListCorpsRequest extends TeaModel {
     @NameInMap("CorpName")
     public String corpName;
 
-    // 页码
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 分页大小
     @NameInMap("PageSize")
     public Integer pageSize;
 

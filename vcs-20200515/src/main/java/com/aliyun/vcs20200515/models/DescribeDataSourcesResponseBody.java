@@ -75,6 +75,9 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>kafka topic</p>
+         */
         @NameInMap("KafkaTopic")
         public String kafkaTopic;
 

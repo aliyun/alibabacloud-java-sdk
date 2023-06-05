@@ -4,15 +4,12 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class DescribeCameraForInstanceRequest extends TeaModel {
-    // 实例id
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 当前页序号
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // 每页显示多少条数据
     @NameInMap("PageSize")
     public Long pageSize;
 

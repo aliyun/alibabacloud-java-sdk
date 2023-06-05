@@ -4,19 +4,18 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class DescribeAIInstanceResponseBody extends TeaModel {
-    // 返回错误码
     @NameInMap("Code")
     public String code;
 
-    // 返回数据
     @NameInMap("Data")
     public DescribeAIInstanceResponseBodyData data;
 
-    // 错误信息
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
+    /**
+     * <p>RequestID</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -58,81 +57,63 @@ public class DescribeAIInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeAIInstanceResponseBodyDataRecords extends TeaModel {
-        // ACU使用数量
         @NameInMap("AcuUsed")
         public Long acuUsed;
 
-        // 算子ID
         @NameInMap("AlgorithmId")
         public String algorithmId;
 
-        // 算子名称
         @NameInMap("AlgorithmName")
         public String algorithmName;
 
-        // 实例中计算的摄像机数量。 仅当DataSource是Camera时返回。
         @NameInMap("CameraNumber")
         public Long cameraNumber;
 
-        // 计算类型
         @NameInMap("ComputeType")
         public String computeType;
 
         @NameInMap("ContainerType")
         public String containerType;
 
-        // 实例创建时间
         @NameInMap("CreateDateTime")
         public String createDateTime;
 
-        // 数据来源
         @NameInMap("DataSource")
         public String dataSource;
 
-        // 数据源时间段
         @NameInMap("DataSourceTimes")
         public String dataSourceTimes;
 
-        // 数据类型
         @NameInMap("DataType")
         public String dataType;
 
-        // 多少秒抽取1帧，取值范围[0, 3600]。 0表示不抽帧。
         @NameInMap("Fps")
         public Long fps;
 
-        // 实例ID
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // 实例名称
         @NameInMap("InstanceName")
         public String instanceName;
 
         @NameInMap("InstanceType")
         public String instanceType;
 
-        // 含义随ScheduleType取值不同
         @NameInMap("ScheduleCycleDates")
         public String scheduleCycleDates;
 
-        // 执行时间段
         @NameInMap("ScheduleTimes")
         public String scheduleTimes;
 
-        // 调度类型
         @NameInMap("ScheduleType")
         public String scheduleType;
 
-        // 多少秒抽取1帧，取值范围[0, 3600]。 0表示不抽帧。
         @NameInMap("Spf")
         public Long spf;
 
-        // 实力状态
         @NameInMap("Status")
         public String status;
 
-        // 预计存储量
         @NameInMap("Storage")
         public Double storage;
 
@@ -304,19 +285,15 @@ public class DescribeAIInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeAIInstanceResponseBodyData extends TeaModel {
-        // 当前页序号
         @NameInMap("PageNumber")
         public Long pageNumber;
 
-        // 每页显示多少条
         @NameInMap("PageSize")
         public Long pageSize;
 
-        // 返回数据条目
         @NameInMap("Records")
         public java.util.List<DescribeAIInstanceResponseBodyDataRecords> records;
 
-        // 总数据数
         @NameInMap("TotalCount")
         public Long totalCount;
 

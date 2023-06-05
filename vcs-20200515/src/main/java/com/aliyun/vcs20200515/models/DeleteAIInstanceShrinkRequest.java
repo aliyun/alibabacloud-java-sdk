@@ -4,7 +4,6 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class DeleteAIInstanceShrinkRequest extends TeaModel {
-    // 需要删除的计算实例id
     @NameInMap("InstanceIds")
     public String instanceIdsShrink;
 

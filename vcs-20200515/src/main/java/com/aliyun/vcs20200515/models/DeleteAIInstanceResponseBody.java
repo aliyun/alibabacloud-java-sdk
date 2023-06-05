@@ -4,15 +4,15 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class DeleteAIInstanceResponseBody extends TeaModel {
-    // 返回code码
     @NameInMap("Code")
     public String code;
 
-    // 错误信息
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
+    /**
+     * <p>RequestID</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

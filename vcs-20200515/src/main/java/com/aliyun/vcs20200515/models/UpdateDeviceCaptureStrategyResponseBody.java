@@ -4,15 +4,12 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class UpdateDeviceCaptureStrategyResponseBody extends TeaModel {
-    // 响应码
     @NameInMap("Code")
     public String code;
 
-    // 响应信息
     @NameInMap("Message")
     public String message;
 
-    // RequestId
     @NameInMap("RequestId")
     public String requestId;
 

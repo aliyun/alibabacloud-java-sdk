@@ -4,19 +4,15 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class CheckAIInstanceNameResponseBody extends TeaModel {
-    // 返回code码
     @NameInMap("Code")
     public String code;
 
-    // 返回数据
     @NameInMap("Data")
     public CheckAIInstanceNameResponseBodyData data;
 
-    // 错误信息
     @NameInMap("Message")
     public String message;
 
-    // 请求id
     @NameInMap("RequestId")
     public String requestId;
 

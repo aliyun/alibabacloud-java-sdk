@@ -7,14 +7,12 @@ public class ModifyDeviceRequest extends TeaModel {
     @NameInMap("AudioEnable")
     public String audioEnable;
 
-    // 设备安装地址
     @NameInMap("DeviceAddress")
     public String deviceAddress;
 
     @NameInMap("DeviceDirection")
     public String deviceDirection;
 
-    // 设备国标编码
     @NameInMap("DeviceId")
     public String deviceId;
 
@@ -24,7 +22,6 @@ public class ModifyDeviceRequest extends TeaModel {
     @NameInMap("DeviceModel")
     public String deviceModel;
 
-    // 设备名称
     @NameInMap("DeviceName")
     public String deviceName;
 
@@ -69,6 +66,9 @@ public class ModifyDeviceRequest extends TeaModel {
 
     @NameInMap("Password")
     public String password;
+
+    @NameInMap("Roi")
+    public String roi;
 
     @NameInMap("Vendor")
     public String vendor;
@@ -244,6 +244,14 @@ public class ModifyDeviceRequest extends TeaModel {
     }
     public String getPassword() {
         return this.password;
+    }
+
+    public ModifyDeviceRequest setRoi(String roi) {
+        this.roi = roi;
+        return this;
+    }
+    public String getRoi() {
+        return this.roi;
     }
 
     public ModifyDeviceRequest setVendor(String vendor) {

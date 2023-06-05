@@ -4,19 +4,15 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class TryCreateAIInstanceResponseBody extends TeaModel {
-    // 返回code码
     @NameInMap("Code")
     public String code;
 
-    // 返回数据
     @NameInMap("Data")
     public TryCreateAIInstanceResponseBodyData data;
 
-    // 错误信息
     @NameInMap("Message")
     public String message;
 
-    // 请求id
     @NameInMap("RequestId")
     public String requestId;
 
@@ -58,7 +54,6 @@ public class TryCreateAIInstanceResponseBody extends TeaModel {
     }
 
     public static class TryCreateAIInstanceResponseBodyData extends TeaModel {
-        // 当前实例ACU使用量
         @NameInMap("AcuUsed")
         public Long acuUsed;
 

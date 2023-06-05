@@ -7,7 +7,6 @@ public class StopStreamsRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
-    // 全局编号,支持多个,英文逗号分隔
     @NameInMap("DeviceIdList")
     public String deviceIdList;
 

@@ -13,7 +13,9 @@ public class DescribeAiotPersonTableItemsResponseBody extends TeaModel {
     @NameInMap("PersonTableItems")
     public DescribeAiotPersonTableItemsResponseBodyPersonTableItems personTableItems;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

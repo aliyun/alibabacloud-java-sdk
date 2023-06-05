@@ -10,6 +10,9 @@ public class BatchDeleteInstanceResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>RequestID</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

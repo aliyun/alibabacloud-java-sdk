@@ -4,7 +4,6 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class DeleteProjectRequest extends TeaModel {
-    // 项目id,多个以”,“隔开
     @NameInMap("ProjectIds")
     public String projectIds;
 

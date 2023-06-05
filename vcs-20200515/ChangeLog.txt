@@ -1,3 +1,6 @@
+2023-06-05 Version: 3.1.7
+CreateDevice新增Roi参数
+
 2022-06-30 Version: 3.1.6
 - The data service support data preview.
 

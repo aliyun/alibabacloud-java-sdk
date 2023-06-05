@@ -67,7 +67,6 @@ public class GetDeviceConfigResponseBody extends TeaModel {
     @NameInMap("Protocol")
     public String protocol;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

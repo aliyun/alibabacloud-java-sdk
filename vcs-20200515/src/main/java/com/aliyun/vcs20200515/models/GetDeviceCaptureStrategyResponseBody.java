@@ -4,19 +4,15 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class GetDeviceCaptureStrategyResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("Code")
     public String code;
 
-    // 响应数据内容
     @NameInMap("Data")
     public GetDeviceCaptureStrategyResponseBodyData data;
 
-    // 错误信息
     @NameInMap("Message")
     public String message;
 
-    // RequestId
     @NameInMap("RequestId")
     public String requestId;
 
@@ -58,39 +54,30 @@ public class GetDeviceCaptureStrategyResponseBody extends TeaModel {
     }
 
     public static class GetDeviceCaptureStrategyResponseBodyData extends TeaModel {
-        // 设备通道
         @NameInMap("DeviceCode")
         public String deviceCode;
 
-        // 设备类型
         @NameInMap("DeviceType")
         public String deviceType;
 
-        // 星期五抓取策略
         @NameInMap("FridayCaptureStrategy")
         public String fridayCaptureStrategy;
 
-        // 星期一抓取策略
         @NameInMap("MondayCaptureStrategy")
         public String mondayCaptureStrategy;
 
-        // 星期六抓取策略
         @NameInMap("SaturdayCaptureStrategy")
         public String saturdayCaptureStrategy;
 
-        // 星期日抓取策略
         @NameInMap("SundayCaptureStrategy")
         public String sundayCaptureStrategy;
 
-        // 星期四抓取策略
         @NameInMap("ThursdayCaptureStrategy")
         public String thursdayCaptureStrategy;
 
-        // 星期二抓取策略
         @NameInMap("TuesdayCaptureStrategy")
         public String tuesdayCaptureStrategy;
 
-        // 星期三抓取策略
         @NameInMap("WednesdayCaptureStrategy")
         public String wednesdayCaptureStrategy;
 

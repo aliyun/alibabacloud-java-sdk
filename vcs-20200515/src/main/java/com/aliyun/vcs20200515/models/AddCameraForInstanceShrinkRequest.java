@@ -4,11 +4,9 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class AddCameraForInstanceShrinkRequest extends TeaModel {
-    // 设备Id
     @NameInMap("CameraIds")
     public String cameraIdsShrink;
 
-    // 实例Id
     @NameInMap("InstanceId")
     public String instanceId;
 

@@ -106,6 +106,9 @@ public class SetAiotStorageInfoRequest extends TeaModel {
     }
 
     public static class SetAiotStorageInfoRequestEventAlarmPictureStorage extends TeaModel {
+        /**
+         * <p>Bucket</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 
