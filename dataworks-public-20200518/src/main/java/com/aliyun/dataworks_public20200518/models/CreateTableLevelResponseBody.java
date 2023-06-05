@@ -5,37 +5,34 @@ import com.aliyun.tea.*;
 
 public class CreateTableLevelResponseBody extends TeaModel {
     /**
-     * <p>The error code returned.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error code returned.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <p>The ID of the table level.</p>
-     */
     @NameInMap("LevelId")
     public Long levelId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>1AAE721C-F9EC-5923-BAFC-99802C4E0F21</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>The ID of the table level.</p>
      */
     @NameInMap("Success")
     public Boolean success;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
     /**
-     * <p>The details of the extension.</p>
+     * <p>The unique code of the extension.</p>
      */
     @NameInMap("Extensions")
     public java.util.List<ListEnabledExtensionsForProjectResponseBodyExtensions> extensions;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The details of the extension.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,61 +39,58 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
 
     public static class ListEnabledExtensionsForProjectResponseBodyExtensions extends TeaModel {
         /**
-         * <p>The creator of the extension.</p>
+         * <p>The modifier of the extension.</p>
          */
         @NameInMap("CreateUser")
         public String createUser;
 
         /**
-         * <p>The unique code of the extension.</p>
+         * <p>The name of the extension.</p>
          */
         @NameInMap("ExtensionCode")
         public String extensionCode;
 
         /**
-         * <p>The description of the extension.</p>
+         * <p>The owner ID.</p>
          */
         @NameInMap("ExtensionDesc")
         public String extensionDesc;
 
         /**
-         * <p>The name of the extension.</p>
+         * <p>The ID of the tenant.</p>
          */
         @NameInMap("ExtensionName")
         public String extensionName;
 
         /**
-         * <p>The time when the extension was created.</p>
+         * <p>The timestamp when extension was modified.</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
-        /**
-         * <p>The timestamp when extension was modified.</p>
-         */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
         /**
-         * <p>The modifier of the extension.</p>
+         * <p>The description of the extension.</p>
          */
         @NameInMap("ModifyUser")
         public String modifyUser;
 
         /**
-         * <p>The owner ID.</p>
+         * <p>The parameter settings of the extension. For more information, see [Configure extension parameters](~~405354~~).</p>
          */
         @NameInMap("Owner")
         public String owner;
 
         /**
-         * <p>The parameter settings of the extension. For more information, see [Configure extension parameters](~~405354~~).</p>
+         * <p>The time when the extension was created.</p>
          */
         @NameInMap("ParameterSetting")
         public String parameterSetting;
 
         /**
-         * <p>The ID of the tenant.</p>
+         * <p>The creator of the extension.</p>
          */
         @NameInMap("TenantId")
         public Long tenantId;

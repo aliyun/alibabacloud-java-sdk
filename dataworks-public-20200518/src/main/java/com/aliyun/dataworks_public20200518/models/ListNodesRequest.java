@@ -5,49 +5,49 @@ import com.aliyun.tea.*;
 
 public class ListNodesRequest extends TeaModel {
     /**
-     * <p>The name of the workflow.</p>
+     * <p>The error code returned.</p>
      */
     @NameInMap("BizName")
     public String bizName;
 
     /**
-     * <p>The name of the node.</p>
+     * <p>The ID of the baseline with which the node is associated.</p>
      */
     @NameInMap("NodeName")
     public String nodeName;
 
     /**
-     * <p>The ID of the owner.</p>
+     * <p>The description of the node.</p>
      */
     @NameInMap("Owner")
     public String owner;
 
     /**
-     * <p>The number of the page to return. Minimum value: 1. Maximum value: 100.</p>
+     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     * <p>The ID of the workspace.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The types of the nodes. You can call the [ListNodes](~~173979~~) operation to query the type of the node.</p>
+     * <p>The operation that you want to perform. Set the value to **ListNodes**.</p>
      */
     @NameInMap("ProgramType")
     public String programType;
 
     /**
-     * <p>The environment of the workspace. Valid values: PROD and DEV.</p>
+     * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
      */
     @NameInMap("ProjectEnv")
     public String projectEnv;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The ID of the owner.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

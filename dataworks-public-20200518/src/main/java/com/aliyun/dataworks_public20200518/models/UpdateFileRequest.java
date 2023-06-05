@@ -135,6 +135,9 @@ public class UpdateFileRequest extends TeaModel {
     @NameInMap("FileName")
     public String fileName;
 
+    @NameInMap("IgnoreParentSkipRunningProperty")
+    public Boolean ignoreParentSkipRunningProperty;
+
     /**
      * <p>The output name of the parent file on which the current file depends. If you specify multiple output names, separate them with commas (,).</p>
      * <br>
@@ -377,6 +380,14 @@ public class UpdateFileRequest extends TeaModel {
     }
     public String getFileName() {
         return this.fileName;
+    }
+
+    public UpdateFileRequest setIgnoreParentSkipRunningProperty(Boolean ignoreParentSkipRunningProperty) {
+        this.ignoreParentSkipRunningProperty = ignoreParentSkipRunningProperty;
+        return this;
+    }
+    public Boolean getIgnoreParentSkipRunningProperty() {
+        return this.ignoreParentSkipRunningProperty;
     }
 
     public UpdateFileRequest setInputList(String inputList) {

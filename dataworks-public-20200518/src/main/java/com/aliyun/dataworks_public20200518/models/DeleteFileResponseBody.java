@@ -5,42 +5,39 @@ import com.aliyun.tea.*;
 
 public class DeleteFileResponseBody extends TeaModel {
     /**
-     * <p>The ID of the deployment task that deploys the file. If the file has been committed, an asynchronous process is triggered to delete the file in the scheduling system. The value of this parameter is used to call the GetDeployment operation to poll the status of the asynchronous process.</p>
-     * <br>
-     * <p>If this parameter is empty, the file is deleted and the polling is not required.</p>
+     * <p>The ID of the request. You can troubleshoot errors based on the ID.</p>
      */
     @NameInMap("DeploymentId")
     public Long deploymentId;
 
-    /**
-     * <p>The error code returned.</p>
-     */
     @NameInMap("ErrorCode")
     public String errorCode;
-
-    /**
-     * <p>The error message returned.</p>
-     */
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    /**
-     * <p>The HTTP status code.</p>
-     */
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    /**
-     * <p>The ID of the request. You can troubleshoot errors based on the ID.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
      * <br>
      * <p>*   true: The request is successful.</p>
      * <p>*   false: The request fails.</p>
+     */
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    /**
+     * <p>The ID of the deployment task that deploys the file. If the file has been committed, an asynchronous process is triggered to delete the file in the scheduling system. The value of this parameter is used to call the GetDeployment operation to poll the status of the asynchronous process.</p>
+     * <br>
+     * <p>If this parameter is empty, the file is deleted and the polling is not required.</p>
+     */
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
+    /**
+     * <p>The error message returned.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
+     * <p>The error code returned.</p>
      */
     @NameInMap("Success")
     public Boolean success;

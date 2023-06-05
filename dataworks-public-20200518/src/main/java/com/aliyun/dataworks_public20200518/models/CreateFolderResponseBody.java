@@ -5,37 +5,34 @@ import com.aliyun.tea.*;
 
 public class CreateFolderResponseBody extends TeaModel {
     /**
-     * <p>The unique identifier of the folder.</p>
+     * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
      */
     @NameInMap("Data")
     public String data;
 
-    /**
-     * <p>The error code returned.</p>
-     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>Indicates whether the request was successful.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The unique identifier of the folder.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+     * <p>The error message returned.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>The error code returned.</p>
      */
     @NameInMap("Success")
     public Boolean success;

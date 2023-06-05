@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class AddMetaCollectionEntityRequest extends TeaModel {
     /**
-     * <p>The unique identifier of the collection.</p>
+     * <p>The unique identifier of the entity.</p>
+     * <br>
+     * <p>Example: maxcompute-table.projectA.tableA.</p>
      */
     @NameInMap("CollectionQualifiedName")
     public String collectionQualifiedName;
 
     /**
-     * <p>The unique identifier of the entity.</p>
-     * <br>
-     * <p>Example: maxcompute-table.projectA.tableA.</p>
+     * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
      */
     @NameInMap("EntityQualifiedName")
     public String entityQualifiedName;

@@ -5,22 +5,31 @@ import com.aliyun.tea.*;
 
 public class ListInstanceHistoryResponseBody extends TeaModel {
     /**
-     * <p>The instance list.</p>
+     * <p>The status of the node that generates the instance. Valid values:</p>
+     * <br>
+     * <p>*   NOT_RUN: The node is not run.</p>
+     * <p>*   WAIT_TIME: The node is waiting for the scheduling time to arrive.</p>
+     * <p>*   WAIT_RESOURCE: The node is waiting for resources.</p>
+     * <p>*   RUNNING: The node is running.</p>
+     * <p>*   CHECKING: Data quality is being checked for the node.</p>
+     * <p>*   CHECKING_CONDITION: Branch conditions are being checked for the node.</p>
+     * <p>*   FAILURE: The node fails to be run.</p>
+     * <p>*   SUCCESS: The node is successfully run.</p>
      */
     @NameInMap("Instances")
     public java.util.List<ListInstanceHistoryResponseBodyInstances> instances;
-
-    /**
-     * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
      * <br>
      * <p>*   true: The request is successful.</p>
      * <p>*   false: The request fails.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
+     * <p>The instance list.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -56,112 +65,40 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
 
     public static class ListInstanceHistoryResponseBodyInstances extends TeaModel {
         /**
-         * <p>The time when the instance started to be run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The time when the running of the node was complete. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("BeginRunningTime")
         public Long beginRunningTime;
 
         /**
-         * <p>The time when the instance started to wait for resources.</p>
+         * <p>The data timestamp of the instance. In most cases, the value is one day before the time when the instance was run.</p>
          */
         @NameInMap("BeginWaitResTime")
         public Long beginWaitResTime;
 
         /**
-         * <p>The time when the instance started to wait to be scheduled.</p>
+         * <p>The ID of the node that generates the instance.</p>
          */
         @NameInMap("BeginWaitTimeTime")
         public Long beginWaitTimeTime;
 
         /**
-         * <p>The data timestamp of the instance. In most cases, the value is one day before the time when the instance was run.</p>
+         * <p>The name of the node.</p>
          */
         @NameInMap("Bizdate")
         public Long bizdate;
 
         /**
-         * <p>The time when the instance was generated.</p>
+         * <p>The ID of the workflow.</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
-         * <p>The time when the node started to be run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The time when the instance started to be run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("CycTime")
         public Long cycTime;
-
-        /**
-         * <p>The ID of the workflow.</p>
-         */
-        @NameInMap("DagId")
-        public Long dagId;
-
-        /**
-         * <p>Indicates whether the instance is associated with a monitoring rule in Data Quality (DQC). Valid values:</p>
-         * <br>
-         * <p>*   0: The instance is associated with a monitoring rule in Data Quality.</p>
-         * <p>*   1: The instance is not associated with a monitoring rule in Data Quality.</p>
-         */
-        @NameInMap("DagType")
-        public String dagType;
-
-        /**
-         * <p>The error message that is returned for the instance. This parameter is deprecated. You can call the GetInstanceLog operation to query the error information related to the node.</p>
-         */
-        @NameInMap("ErrorMessage")
-        public String errorMessage;
-
-        /**
-         * <p>The time when the running of the node was complete. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
-         */
-        @NameInMap("FinishTime")
-        public Long finishTime;
-
-        /**
-         * <p>The historical record number of the instance.</p>
-         */
-        @NameInMap("InstanceHistoryId")
-        public Long instanceHistoryId;
-
-        /**
-         * <p>The ID of the instance.</p>
-         */
-        @NameInMap("InstanceId")
-        public Long instanceId;
-
-        /**
-         * <p>The time when the node was last modified.</p>
-         */
-        @NameInMap("ModifyTime")
-        public Long modifyTime;
-
-        /**
-         * <p>The ID of the node that generates the instance.</p>
-         */
-        @NameInMap("NodeId")
-        public Long nodeId;
-
-        /**
-         * <p>The name of the node.</p>
-         */
-        @NameInMap("NodeName")
-        public String nodeName;
-
-        /**
-         * <p>The status of the node that generates the instance. Valid values:</p>
-         * <br>
-         * <p>*   NOT_RUN: The node is not run.</p>
-         * <p>*   WAIT_TIME: The node is waiting for the scheduling time to arrive.</p>
-         * <p>*   WAIT_RESOURCE: The node is waiting for resources.</p>
-         * <p>*   RUNNING: The node is running.</p>
-         * <p>*   CHECKING: Data quality is being checked for the node.</p>
-         * <p>*   CHECKING_CONDITION: Branch conditions are being checked for the node.</p>
-         * <p>*   FAILURE: The node fails to be run.</p>
-         * <p>*   SUCCESS: The node is successfully run.</p>
-         */
-        @NameInMap("Status")
-        public String status;
 
         /**
          * <p>The type of the node. Valid values:</p>
@@ -174,6 +111,66 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
          * <p>*   SKIP_CYCLE(5): The node is a node that is scheduled by week or month and is waiting for the scheduling time to arrive. The scheduling system regularly runs the node but sets the status of the node to succeeded when the scheduling system starts to run the node.</p>
          * <p>*   CONDITION_UNCHOOSE(6): The node is not selected by its ancestor branch node and is run as a dry-run node.</p>
          * <p>*   REALTIME_DEPRECATED(7): The node has instances that are generated in real time but deprecated. The scheduling system sets the status of the node to succeeded.</p>
+         */
+        @NameInMap("DagId")
+        public Long dagId;
+
+        /**
+         * <p>The time when the node was last modified.</p>
+         */
+        @NameInMap("DagType")
+        public String dagType;
+
+        /**
+         * <p>The time when the instance was generated.</p>
+         */
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        /**
+         * <p>The error message that is returned for the instance. This parameter is deprecated. You can call the GetInstanceLog operation to query the error information related to the node.</p>
+         */
+        @NameInMap("FinishTime")
+        public Long finishTime;
+
+        @NameInMap("InstanceHistoryId")
+        public Long instanceHistoryId;
+
+        /**
+         * <p>The time when the instance started to wait for resources.</p>
+         */
+        @NameInMap("InstanceId")
+        public Long instanceId;
+
+        /**
+         * <p>The ID of the instance.</p>
+         */
+        @NameInMap("ModifyTime")
+        public Long modifyTime;
+
+        /**
+         * <p>The historical record number of the instance.</p>
+         */
+        @NameInMap("NodeId")
+        public Long nodeId;
+
+        /**
+         * <p>The time when the instance started to wait to be scheduled.</p>
+         */
+        @NameInMap("NodeName")
+        public String nodeName;
+
+        /**
+         * <p>The time when the node started to be run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         */
+        @NameInMap("Status")
+        public String status;
+
+        /**
+         * <p>Indicates whether the instance is associated with a monitoring rule in Data Quality (DQC). Valid values:</p>
+         * <br>
+         * <p>*   0: The instance is associated with a monitoring rule in Data Quality.</p>
+         * <p>*   1: The instance is not associated with a monitoring rule in Data Quality.</p>
          */
         @NameInMap("TaskType")
         public String taskType;

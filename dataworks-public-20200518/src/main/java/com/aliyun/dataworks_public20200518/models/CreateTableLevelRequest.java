@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class CreateTableLevelRequest extends TeaModel {
     /**
-     * <p>The description of the table level.</p>
+     * <p>Level Description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The type of the table level. Valid values: 1 and 2. A value of 1 indicates the logical level. A value of 2 indicates the physical level.</p>
+     * <p>The ID of the region where the service is activated.</p>
      */
     @NameInMap("LevelType")
     public Integer levelType;
 
     /**
-     * <p>The name of the table level.</p>
+     * <p>Level 1</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The ID of the DataWorks workspace.</p>
+     * <p>The type of the table level. Valid values: 1 and 2. A value of 1 indicates the logical level. A value of 2 indicates the physical level.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

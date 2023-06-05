@@ -5,22 +5,20 @@ import com.aliyun.tea.*;
 
 public class GetDISyncInstanceInfoResponseBody extends TeaModel {
     /**
-     * <p>The status of the real-time synchronization node or data synchronization solution.</p>
+     * <p>*   If the TaskType parameter is set to DI_REALTIME, the Status parameter indicates the status of the real-time synchronization node. Valid values: PAUSE, NORUN, RUN, KILLING, and WAIT.</p>
+     * <p>*   If the TaskType parameter is set to DI_SOLITION, the Status parameter indicates the status of the data synchronization solution. Valid values: success and fail.</p>
      */
     @NameInMap("Data")
     public GetDISyncInstanceInfoResponseBodyData data;
 
     /**
-     * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+     * <p>The status of the real-time synchronization node or data synchronization solution.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request was successful.</p>
-     * <p>*   false: The request failed.</p>
+     * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -55,26 +53,23 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
     }
 
     public static class GetDISyncInstanceInfoResponseBodyDataSolutionInfoStepDetail extends TeaModel {
-        /**
-         * <p>The information of the data synchronization solution.</p>
-         */
         @NameInMap("Info")
         public String info;
 
         /**
-         * <p>The status of the step in the data synchronization solution.</p>
+         * <p>The ID of the step in the data synchronization solution.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The ID of the step in the data synchronization solution.</p>
+         * <p>The name of the step in the data synchronization solution.</p>
          */
         @NameInMap("StepId")
         public Long stepId;
 
         /**
-         * <p>The name of the step in the data synchronization solution.</p>
+         * <p>The information of the data synchronization solution.</p>
          */
         @NameInMap("StepName")
         public String stepName;
@@ -120,25 +115,25 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
 
     public static class GetDISyncInstanceInfoResponseBodyDataSolutionInfo extends TeaModel {
         /**
-         * <p>The creator of the data synchronization solution.</p>
+         * <p>The step details of the synchronization solution.</p>
          */
         @NameInMap("CreatorName")
         public String creatorName;
 
         /**
-         * <p>The ID of the data synchronization solution.</p>
+         * <p>The creator of the data synchronization solution.</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
-         * <p>The status of the data synchronization solution.</p>
+         * <p>The ID of the data synchronization solution.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The step details of the synchronization solution.</p>
+         * <p>The status of the step in the data synchronization solution.</p>
          */
         @NameInMap("StepDetail")
         public java.util.List<GetDISyncInstanceInfoResponseBodyDataSolutionInfoStepDetail> stepDetail;
@@ -184,28 +179,27 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
 
     public static class GetDISyncInstanceInfoResponseBodyData extends TeaModel {
         /**
-         * <p>The cause of the failure to obtain the status of the real-time synchronization node or data synchronization solution. If the status of the real-time synchronization node or data synchronization solution is obtained, the value null is returned.</p>
+         * <p>*   If the TaskType parameter is set to DI_REALTIME, the Name parameter indicates the name of the real-time synchronization node.</p>
+         * <p>*   If the TaskType parameter is set to DI_SOLITION, the value null is returned.</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>*   If the TaskType parameter is set to DI_REALTIME, the Name parameter indicates the name of the real-time synchronization node.</p>
-         * <p>*   If the TaskType parameter is set to DI_SOLITION, the value null is returned.</p>
+         * <p>*   If the TaskType parameter is set to DI_REALTIME, the value null is returned.</p>
+         * <p>*   If the TaskType parameter is set to DI_SOLITION, the SolutionInfo parameter indicates the details of the data synchronization solution.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>*   If the TaskType parameter is set to DI_REALTIME, the value null is returned.</p>
-         * <p>*   If the TaskType parameter is set to DI_SOLITION, the SolutionInfo parameter indicates the details of the data synchronization solution.</p>
+         * <p>The status of the data synchronization solution.</p>
          */
         @NameInMap("SolutionInfo")
         public GetDISyncInstanceInfoResponseBodyDataSolutionInfo solutionInfo;
 
         /**
-         * <p>*   If the TaskType parameter is set to DI_REALTIME, the Status parameter indicates the status of the real-time synchronization node. Valid values: PAUSE, NORUN, RUN, KILLING, and WAIT.</p>
-         * <p>*   If the TaskType parameter is set to DI_SOLITION, the Status parameter indicates the status of the data synchronization solution. Valid values: success and fail.</p>
+         * <p>The cause of the failure to obtain the status of the real-time synchronization node or data synchronization solution. If the status of the real-time synchronization node or data synchronization solution is obtained, the value null is returned.</p>
          */
         @NameInMap("Status")
         public String status;

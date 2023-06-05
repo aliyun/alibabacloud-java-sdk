@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetOptionValueForProjectRequest extends TeaModel {
     /**
-     * <p>The unique code of the extension.</p>
+     * <p>The ID of the workspace.</p>
      */
     @NameInMap("ExtensionCode")
     public String extensionCode;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>Id of the request</p>
      */
     @NameInMap("ProjectId")
     public String projectId;

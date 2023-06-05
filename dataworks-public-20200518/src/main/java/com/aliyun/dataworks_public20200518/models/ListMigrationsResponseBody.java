@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class ListMigrationsResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The list of migration tasks.</p>
      */
     @NameInMap("Data")
     public ListMigrationsResponseBodyData data;
-
-    /**
-     * <p>The ID of the request.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
      * <br>
      * <p>*   true: The request is successful.</p>
      * <p>*   false: The request fails.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
+     * <p>The data returned.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -56,61 +56,52 @@ public class ListMigrationsResponseBody extends TeaModel {
 
     public static class ListMigrationsResponseBodyDataMigrations extends TeaModel {
         /**
-         * <p>The time when the migration task was created.</p>
+         * <p>The time when the migration task was last updated.</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
-         * <p>The ID of the user who created the migration task.</p>
+         * <p>The name of the user who created the migration task.</p>
          */
         @NameInMap("CreateUser")
         public String createUser;
 
         /**
-         * <p>The name of the user who created the migration task.</p>
+         * <p>The ID of the user who last updated the migration task.</p>
          */
         @NameInMap("CreateUserName")
         public String createUserName;
 
         /**
-         * <p>The description of the export task.</p>
+         * <p>The page number of the returned page.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The URL that is used to download the package of the export task. You can use the URL to download the package of the export task.</p>
+         * <p>The description of the export task.</p>
          */
         @NameInMap("DownloadUrl")
         public String downloadUrl;
 
         /**
-         * <p>The ID of the primary key.</p>
+         * <p>The name of the migration task.</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The URL that is used to download the package of the export task. You can use the URL to download the package of the export task.</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The type of the migration task.</p>
-         * <br>
-         * <p>*   IMPORT</p>
-         * <p>*   EXPORT</p>
+         * <p>The time when the migration task was created.</p>
          */
         @NameInMap("MigrationType")
         public String migrationType;
-
-        /**
-         * <p>The name of the migration task.</p>
-         */
-        @NameInMap("Name")
-        public String name;
 
         /**
          * <p>The type of the import or export package. Valid values:</p>
@@ -122,14 +113,29 @@ public class ListMigrationsResponseBody extends TeaModel {
          * <br>
          * <p>The DWMA and DATAWORKS_MODEL types are interchangeable.</p>
          */
+        @NameInMap("Name")
+        public String name;
+
+        /**
+         * <p>The type of the migration task.</p>
+         * <br>
+         * <p>*   IMPORT</p>
+         * <p>*   EXPORT</p>
+         */
         @NameInMap("PackageType")
         public String packageType;
 
         /**
-         * <p>The ID of the DataWorks workspace to which the task belongs.</p>
+         * <p>The ID of the tenant.</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
+
+        /**
+         * <p>The error message returned.</p>
+         */
+        @NameInMap("Status")
+        public String status;
 
         /**
          * <p>The status of the migration task. Valid values:</p>
@@ -140,29 +146,23 @@ public class ListMigrationsResponseBody extends TeaModel {
          * <p>*   FAILURE: The migration task fails to run.</p>
          * <p>*   SUCCESS: The migration task is successfully run.</p>
          */
-        @NameInMap("Status")
-        public String status;
-
-        /**
-         * <p>The ID of the tenant.</p>
-         */
         @NameInMap("TenantId")
         public Long tenantId;
 
         /**
-         * <p>The time when the migration task was last updated.</p>
+         * <p>The ID of the user who created the migration task.</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
         /**
-         * <p>The ID of the user who last updated the migration task.</p>
+         * <p>The name of the user who last updated the migration task.</p>
          */
         @NameInMap("UpdateUser")
         public String updateUser;
 
         /**
-         * <p>The name of the user who last updated the migration task.</p>
+         * <p>The ID of the DataWorks workspace to which the task belongs.</p>
          */
         @NameInMap("UpdateUserName")
         public String updateUserName;
@@ -304,26 +304,23 @@ public class ListMigrationsResponseBody extends TeaModel {
 
     public static class ListMigrationsResponseBodyData extends TeaModel {
         /**
-         * <p>The list of migration tasks.</p>
+         * <p>The ID of the primary key.</p>
          */
         @NameInMap("Migrations")
         public java.util.List<ListMigrationsResponseBodyDataMigrations> migrations;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The number of entries returned per page. Default value: 10. Maximum value: 50.</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries returned per page. Default value: 10. Maximum value: 50.</p>
+         * <p>The total number of entries returned.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        /**
-         * <p>The total number of entries returned.</p>
-         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

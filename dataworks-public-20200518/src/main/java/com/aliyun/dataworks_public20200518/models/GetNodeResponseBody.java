@@ -11,31 +11,31 @@ public class GetNodeResponseBody extends TeaModel {
     public GetNodeResponseBodyData data;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The ID of the node. You can call the [ListNodes](~~173979~~) operation to query the node ID.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The connection string.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The operation that you want to perform. Set the value to **GetNode**.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+     * <p>Other parameters.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>The ID of the workflow.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -95,43 +95,43 @@ public class GetNodeResponseBody extends TeaModel {
 
     public static class GetNodeResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the baseline.</p>
+         * <p>The description of the node.</p>
          */
         @NameInMap("BaselineId")
         public Long baselineId;
 
         /**
-         * <p>The ID of the workflow.</p>
+         * <p>The operation that you want to perform. Set the value to **GetNode**.</p>
          */
         @NameInMap("BusinessId")
         public Long businessId;
 
         /**
-         * <p>The connection string.</p>
+         * <p>The environment of the workspace. Valid values: PROD and DEV.</p>
          */
         @NameInMap("Connection")
         public String connection;
 
         /**
-         * <p>The CRON expression returned.</p>
+         * <p>The environment of the workspace. Valid values: PROD and DEV.</p>
          */
         @NameInMap("CronExpress")
         public String cronExpress;
 
         /**
-         * <p>The description of the node.</p>
+         * <p>The name of the resource group.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The table and partition filter expression in Data Quality that are associated with the node.</p>
+         * <p>The ID of the node. You can call the [ListNodes](~~173979~~) operation to query the node ID.</p>
          */
         @NameInMap("DqcDescription")
         public String dqcDescription;
 
         /**
-         * <p>Indicates whether the node is associated with Data Quality. Valid values: 0 and 1. A value of 0 indicates that the node is associated with Data Quality. A value of 1 indicates that the node is not associated with Data Quality.</p>
+         * <p>The error message returned.</p>
          */
         @NameInMap("DqcType")
         public Integer dqcType;
@@ -140,73 +140,10 @@ public class GetNodeResponseBody extends TeaModel {
         public Integer fileType;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The HTTP status code returned.</p>
          */
         @NameInMap("NodeId")
         public Long nodeId;
-
-        /**
-         * <p>The name of the node.</p>
-         */
-        @NameInMap("NodeName")
-        public String nodeName;
-
-        /**
-         * <p>The ID of the owner of the node.</p>
-         */
-        @NameInMap("OwnerId")
-        public String ownerId;
-
-        /**
-         * <p>Other parameters.</p>
-         */
-        @NameInMap("ParamValues")
-        public String paramValues;
-
-        /**
-         * <p>The priority of the node. Valid values: 1, 3, 5, 7, and 8.</p>
-         */
-        @NameInMap("Priority")
-        public Integer priority;
-
-        /**
-         * <p>The type of the node.</p>
-         */
-        @NameInMap("ProgramType")
-        public String programType;
-
-        /**
-         * <p>The ID of the workspace.</p>
-         */
-        @NameInMap("ProjectId")
-        public Long projectId;
-
-        /**
-         * <p>The ID of the workflow to which the node belongs.</p>
-         */
-        @NameInMap("RelatedFlowId")
-        public Long relatedFlowId;
-
-        /**
-         * <p>The interval at which the node is rerun after the node fails to run.</p>
-         */
-        @NameInMap("RepeatInterval")
-        public Long repeatInterval;
-
-        /**
-         * <p>Indicates whether the node can be rerun.</p>
-         */
-        @NameInMap("Repeatability")
-        public String repeatability;
-
-        @NameInMap("ResGroupIdentifier")
-        public String resGroupIdentifier;
-
-        /**
-         * <p>The name of the resource group.</p>
-         */
-        @NameInMap("ResGroupName")
-        public String resGroupName;
 
         /**
          * <p>The scheduling type of the node. Valid values:</p>
@@ -215,6 +152,69 @@ public class GetNodeResponseBody extends TeaModel {
          * <p>*   MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered.</p>
          * <p>*   PAUSE: The node is a paused node.</p>
          * <p>*   SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.</p>
+         */
+        @NameInMap("NodeName")
+        public String nodeName;
+
+        /**
+         * <p>The ID of the node.</p>
+         */
+        @NameInMap("OwnerId")
+        public String ownerId;
+
+        /**
+         * <p>The CRON expression returned.</p>
+         */
+        @NameInMap("ParamValues")
+        public String paramValues;
+
+        /**
+         * <p>The HTTP status code returned.</p>
+         */
+        @NameInMap("Priority")
+        public Integer priority;
+
+        /**
+         * <p>The ID of the owner of the node.</p>
+         */
+        @NameInMap("ProgramType")
+        public String programType;
+
+        /**
+         * <p>Indicates whether the node can be rerun.</p>
+         */
+        @NameInMap("ProjectId")
+        public Long projectId;
+
+        /**
+         * <p>Indicates whether the node is associated with Data Quality. Valid values: 0 and 1. A value of 0 indicates that the node is associated with Data Quality. A value of 1 indicates that the node is not associated with Data Quality.</p>
+         */
+        @NameInMap("RelatedFlowId")
+        public Long relatedFlowId;
+
+        /**
+         * <p>The ID of the workflow to which the node belongs.</p>
+         */
+        @NameInMap("RepeatInterval")
+        public Long repeatInterval;
+
+        /**
+         * <p>The type of the node.</p>
+         */
+        @NameInMap("Repeatability")
+        public String repeatability;
+
+        @NameInMap("ResGroupIdentifier")
+        public String resGroupIdentifier;
+
+        /**
+         * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+         */
+        @NameInMap("ResGroupName")
+        public String resGroupName;
+
+        /**
+         * <p>The ID of the workspace.</p>
          */
         @NameInMap("SchedulerType")
         public String schedulerType;

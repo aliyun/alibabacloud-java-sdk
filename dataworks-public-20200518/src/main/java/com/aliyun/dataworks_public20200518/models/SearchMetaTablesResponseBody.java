@@ -5,37 +5,37 @@ import com.aliyun.tea.*;
 
 public class SearchMetaTablesResponseBody extends TeaModel {
     /**
-     * <p>The business data returned.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("Data")
     public SearchMetaTablesResponseBodyData data;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The error code returned.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>The business data returned.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -95,25 +95,28 @@ public class SearchMetaTablesResponseBody extends TeaModel {
 
     public static class SearchMetaTablesResponseBodyDataDataEntityList extends TeaModel {
         /**
-         * <p>The ID of the EMR cluster.</p>
+         * <p>The ID of the tenant.</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
-         * <p>The name of the metadatabase.</p>
+         * <p>The name of the workspace.</p>
          */
         @NameInMap("DatabaseName")
         public String databaseName;
 
         /**
-         * <p>The type of the metatable. Valid values:</p>
-         * <br>
-         * <p>*   0: table</p>
-         * <p>*   1: view</p>
+         * <p>The ID of the workspace.</p>
          */
         @NameInMap("EntityType")
         public Integer entityType;
+
+        /**
+         * <p>The schema information of the table. This parameter is returned only if you enable the table schema in MaxCompute.</p>
+         */
+        @NameInMap("EnvType")
+        public Integer envType;
 
         /**
          * <p>The type of the environment. Valid values:</p>
@@ -121,48 +124,39 @@ public class SearchMetaTablesResponseBody extends TeaModel {
          * <p>*   1: production environment</p>
          * <p>*   0: development environment</p>
          */
-        @NameInMap("EnvType")
-        public Integer envType;
-
-        /**
-         * <p>The ID of the Alibaba Cloud account used by the workspace owner.</p>
-         */
         @NameInMap("OwnerId")
         public String ownerId;
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The ID of the Alibaba Cloud account used by the workspace owner.</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
         /**
-         * <p>The name of the workspace.</p>
+         * <p>The GUID of the metatable.</p>
          */
         @NameInMap("ProjectName")
         public String projectName;
 
-        /**
-         * <p>The schema information of the table. This parameter is returned only if you enable the table schema in MaxCompute.</p>
-         */
         @NameInMap("Schema")
         public String schema;
 
         /**
-         * <p>The GUID of the metatable.</p>
+         * <p>The ID of the EMR cluster.</p>
          */
         @NameInMap("TableGuid")
         public String tableGuid;
 
         /**
-         * <p>The name of the metatable.</p>
+         * <p>The type of the metatable. Valid values:</p>
+         * <br>
+         * <p>*   0: table</p>
+         * <p>*   1: view</p>
          */
         @NameInMap("TableName")
         public String tableName;
 
-        /**
-         * <p>The ID of the tenant.</p>
-         */
         @NameInMap("TenantId")
         public Long tenantId;
 
@@ -263,25 +257,25 @@ public class SearchMetaTablesResponseBody extends TeaModel {
 
     public static class SearchMetaTablesResponseBodyData extends TeaModel {
         /**
-         * <p>The list of metatables.</p>
+         * <p>The name of the metadatabase.</p>
          */
         @NameInMap("DataEntityList")
         public java.util.List<SearchMetaTablesResponseBodyDataDataEntityList> dataEntityList;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The total number of metatables.</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The list of metatables.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The total number of metatables.</p>
+         * <p>The name of the metatable.</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class ListMigrationsRequest extends TeaModel {
     /**
-     * <p>The type of the migration task. Valid values: IMPORT and EXPORT.</p>
+     * <p>The ID of the owner.</p>
      */
     @NameInMap("MigrationType")
     public String migrationType;
 
     /**
-     * <p>The ID of the owner.</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("Owner")
     public String owner;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The number of entries to return on each page. Maximum value: 100.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: 100.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.</p>
+     * <p>The type of the migration task. Valid values: IMPORT and EXPORT.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

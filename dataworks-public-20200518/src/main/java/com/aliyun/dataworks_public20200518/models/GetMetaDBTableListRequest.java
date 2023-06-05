@@ -5,37 +5,37 @@ import com.aliyun.tea.*;
 
 public class GetMetaDBTableListRequest extends TeaModel {
     /**
-     * <p>The globally unique identifier (GUID) of the MaxCompute project. Specify the GUID in the `odps.{projectName}` format. This parameter must be configured if you set the DataSourceType parameter to odps.</p>
+     * <p>The name of the metadatabase.</p>
      */
     @NameInMap("AppGuid")
     public String appGuid;
 
     /**
-     * <p>The ID of the E-MapReduce (EMR) cluster. This parameter must be configured if you set the DataSourceType parameter to emr.</p>
+     * <p>The type of the data source. Valid values: odps and emr.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The type of the data source. Valid values: odps and emr.</p>
+     * <p>The business data.</p>
      */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
     /**
-     * <p>The name of the metadatabase.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The globally unique identifier (GUID) of the MaxCompute project. Specify the GUID in the `odps.{projectName}` format. This parameter must be configured if you set the DataSourceType parameter to odps.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     * <p>The ID of the E-MapReduce (EMR) cluster. This parameter must be configured if you set the DataSourceType parameter to emr.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

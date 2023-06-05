@@ -5,6 +5,59 @@ import com.aliyun.tea.*;
 
 public class CreateDataSourceRequest extends TeaModel {
     /**
+     * <p>The ID of the data source.</p>
+     */
+    @NameInMap("Content")
+    public String content;
+
+    /**
+     * <p>The environment in which the data source is used. Valid values: 0 and 1. 0 indicates the development environment. 1 indicates the production environment.</p>
+     */
+    @NameInMap("DataSourceType")
+    public String dataSourceType;
+
+    /**
+     * <p>The subtype of the data source. Example:</p>
+     * <br>
+     * <p>*   This parameter takes effect only if the DataSourceType parameter is set to rds.</p>
+     * <p>*   If the DataSourceType parameter is set to rds, this parameter can be set to mysql, sqlserver, or postgresql.</p>
+     */
+    @NameInMap("Description")
+    public String description;
+
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
+    @NameInMap("EnvType")
+    public Integer envType;
+
+    /**
+     * <p>The type of the data source. Valid values:</p>
+     * <br>
+     * <p>*   odps</p>
+     * <p>*   mysql</p>
+     * <p>*   rds</p>
+     * <p>*   oss</p>
+     * <p>*   sqlserver</p>
+     * <p>*   polardb</p>
+     * <p>*   oracle</p>
+     * <p>*   mongodb</p>
+     * <p>*   emr</p>
+     * <p>*   postgresql</p>
+     * <p>*   analyticdb_for_mysql</p>
+     * <p>*   hybriddb_for_postgresql</p>
+     * <p>*   holo</p>
+     */
+    @NameInMap("Name")
+    public String name;
+
+    /**
+     * <p>The description of the data source.</p>
+     */
+    @NameInMap("ProjectId")
+    public Long projectId;
+
+    /**
      * <p>The details of the data source. Examples of details of some common data sources:</p>
      * <br>
      * <p>*   odps</p>
@@ -199,59 +252,6 @@ public class CreateDataSourceRequest extends TeaModel {
      * <p>  "ownerId": "1212121212112"</p>
      * <p>}</p>
      * <p>```</p>
-     */
-    @NameInMap("Content")
-    public String content;
-
-    /**
-     * <p>The type of the data source. Valid values:</p>
-     * <br>
-     * <p>*   odps</p>
-     * <p>*   mysql</p>
-     * <p>*   rds</p>
-     * <p>*   oss</p>
-     * <p>*   sqlserver</p>
-     * <p>*   polardb</p>
-     * <p>*   oracle</p>
-     * <p>*   mongodb</p>
-     * <p>*   emr</p>
-     * <p>*   postgresql</p>
-     * <p>*   analyticdb_for_mysql</p>
-     * <p>*   hybriddb_for_postgresql</p>
-     * <p>*   holo</p>
-     */
-    @NameInMap("DataSourceType")
-    public String dataSourceType;
-
-    /**
-     * <p>The description of the data source.</p>
-     */
-    @NameInMap("Description")
-    public String description;
-
-    /**
-     * <p>The environment in which the data source is used. Valid values: 0 and 1. 0 indicates the development environment. 1 indicates the production environment.</p>
-     */
-    @NameInMap("EnvType")
-    public Integer envType;
-
-    /**
-     * <p>The name of the data source.</p>
-     */
-    @NameInMap("Name")
-    public String name;
-
-    /**
-     * <p>The ID of the DataWorks workspace to which the data source belongs. You can call the [ListProjects](~~178393~~) operation to obtain the ID.</p>
-     */
-    @NameInMap("ProjectId")
-    public Long projectId;
-
-    /**
-     * <p>The subtype of the data source. Example:</p>
-     * <br>
-     * <p>*   This parameter takes effect only if the DataSourceType parameter is set to rds.</p>
-     * <p>*   If the DataSourceType parameter is set to rds, this parameter can be set to mysql, sqlserver, or postgresql.</p>
      */
     @NameInMap("SubType")
     public String subType;

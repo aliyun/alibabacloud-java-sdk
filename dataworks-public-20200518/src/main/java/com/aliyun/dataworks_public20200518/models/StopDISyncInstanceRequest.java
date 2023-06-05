@@ -5,23 +5,24 @@ import com.aliyun.tea.*;
 
 public class StopDISyncInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the synchronization node. You can call the [ListFiles](~~173942~~) operation to obtain the ID.</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The request is successful.</p>
+     * <p>*   false: The request fails.</p>
      */
     @NameInMap("FileId")
     public Long fileId;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.</p>
+     * <p>The type of the synchronization node that you want to stop. Set the value to DI_REALTIME.</p>
      * <br>
-     * <p>This parameter specifies the DataWorks workspace to which the operation is applied.</p>
+     * <p>DI_REALTIME indicates a real-time synchronization node.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The type of the synchronization node that you want to stop. Set the value to DI_REALTIME.</p>
-     * <br>
-     * <p>DI_REALTIME indicates a real-time synchronization node.</p>
+     * <p>The ID of the synchronization node. You can call the [ListFiles](~~173942~~) operation to obtain the ID.</p>
      */
     @NameInMap("TaskType")
     public String taskType;

@@ -4,9 +4,6 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class UpdateIDEEventResultResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request. You can troubleshoot errors based on the ID.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

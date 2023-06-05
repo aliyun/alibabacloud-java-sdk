@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class AddProjectMemberToRoleRequest extends TeaModel {
     /**
-     * <p>The client token. It is a field with the idempotence property. We recommend that you use a universally unique identifier (UUID). This parameter is used to uniquely identify the API operation call.</p>
+     * <p>The ID of the request. You can use the ID to search for logs and troubleshoot issues based on the logs.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can call the [ListProjects](~~178393~~) operation to query the ID.</p>
+     * <p>The ID of your Alibaba Cloud account. To view the ID, log on to [the DataWorks console](https://workbench.data.aliyun.com/console) and move the pointer over the profile picture in the upper-right corner.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The code of the role that you want to assign to a member of a DataWorks workspace. You can call the [ListProjectRoles](~~178228~~) operation to query the code of all roles in a DataWorks workspace.</p>
+     * <p>The client token. It is a field with the idempotence property. We recommend that you use a universally unique identifier (UUID). This parameter is used to uniquely identify the API operation call.</p>
      */
     @NameInMap("RoleCode")
     public String roleCode;
 
     /**
-     * <p>The ID of your Alibaba Cloud account. To view the ID, log on to [the DataWorks console](https://workbench.data.aliyun.com/console) and move the pointer over the profile picture in the upper-right corner.</p>
+     * <p>The region of the workspace. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system automatically determines the value of this parameter based on the endpoint used to call the operation.</p>
      */
     @NameInMap("UserId")
     public String userId;

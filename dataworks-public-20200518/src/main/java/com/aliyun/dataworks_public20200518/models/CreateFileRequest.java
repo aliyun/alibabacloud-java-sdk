@@ -144,6 +144,9 @@ public class CreateFileRequest extends TeaModel {
     @NameInMap("FileType")
     public Integer fileType;
 
+    @NameInMap("IgnoreParentSkipRunningProperty")
+    public Boolean ignoreParentSkipRunningProperty;
+
     /**
      * <p>The output name of the parent file on which the current file depends. If you specify multiple output names, separate them with commas (,).</p>
      * <br>
@@ -387,6 +390,14 @@ public class CreateFileRequest extends TeaModel {
     }
     public Integer getFileType() {
         return this.fileType;
+    }
+
+    public CreateFileRequest setIgnoreParentSkipRunningProperty(Boolean ignoreParentSkipRunningProperty) {
+        this.ignoreParentSkipRunningProperty = ignoreParentSkipRunningProperty;
+        return this;
+    }
+    public Boolean getIgnoreParentSkipRunningProperty() {
+        return this.ignoreParentSkipRunningProperty;
     }
 
     public CreateFileRequest setInputList(String inputList) {

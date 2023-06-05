@@ -5,37 +5,37 @@ import com.aliyun.tea.*;
 
 public class GetMetaTablePartitionResponseBody extends TeaModel {
     /**
-     * <p>The business data returned.</p>
+     * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
      */
     @NameInMap("Data")
     public GetMetaTablePartitionResponseBodyData data;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>Indicates whether the request was successful.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The error code returned.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>The business data returned.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -95,68 +95,62 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
 
     public static class GetMetaTablePartitionResponseBodyDataDataEntityList extends TeaModel {
         /**
-         * <p>The comment.</p>
+         * <p>The time when the partition was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
-         * <p>The time when the partition was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The type of the partition.</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
-         * <p>The size of the partition. Unit: bytes.</p>
+         * <p>The comment.</p>
          */
         @NameInMap("DataSize")
         public Long dataSize;
 
         /**
-         * <p>The time when the partition was modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The number of entries in the partition.</p>
          */
         @NameInMap("ModifiedTime")
         public Long modifiedTime;
 
         /**
-         * <p>The GUID of the partition.</p>
+         * <p>The GUID of the metatable.</p>
          */
         @NameInMap("PartitionGuid")
         public String partitionGuid;
 
-        /**
-         * <p>The location of the Hive partition.</p>
-         */
         @NameInMap("PartitionLocation")
         public String partitionLocation;
 
         /**
-         * <p>The name of the partition.</p>
+         * <p>The time when the partition was modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("PartitionName")
         public String partitionName;
 
         /**
-         * <p>The path of the partition.</p>
+         * <p>The name of the partition.</p>
          */
         @NameInMap("PartitionPath")
         public String partitionPath;
 
         /**
-         * <p>The type of the partition.</p>
+         * <p>The location of the Hive partition.</p>
          */
         @NameInMap("PartitionType")
         public String partitionType;
 
         /**
-         * <p>The number of entries in the partition.</p>
+         * <p>The GUID of the partition.</p>
          */
         @NameInMap("RecordCount")
         public Long recordCount;
 
-        /**
-         * <p>The GUID of the metatable.</p>
-         */
         @NameInMap("TableGuid")
         public String tableGuid;
 
@@ -257,25 +251,25 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
 
     public static class GetMetaTablePartitionResponseBodyData extends TeaModel {
         /**
-         * <p>The list of partitions.</p>
+         * <p>The size of the partition. Unit: bytes.</p>
          */
         @NameInMap("DataEntityList")
         public java.util.List<GetMetaTablePartitionResponseBodyDataDataEntityList> dataEntityList;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The total number of partitions.</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
+         * <p>The list of partitions.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The total number of partitions.</p>
+         * <p>The path of the partition.</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

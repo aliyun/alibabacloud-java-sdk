@@ -4,21 +4,12 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateDISyncTaskResponseBody extends TeaModel {
-    /**
-     * <p>The information that indicates whether the synchronization node was created.</p>
-     */
     @NameInMap("Data")
     public CreateDISyncTaskResponseBodyData data;
 
-    /**
-     * <p>The ID of the request. You can query logs and troubleshoot issues based on the ID.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request is successful.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -52,24 +43,12 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
     }
 
     public static class CreateDISyncTaskResponseBodyData extends TeaModel {
-        /**
-         * <p>The ID of the created synchronization node.</p>
-         */
         @NameInMap("FileId")
         public Long fileId;
 
-        /**
-         * <p>The reason why the synchronization node failed to be created.</p>
-         */
         @NameInMap("Message")
         public String message;
 
-        /**
-         * <p>Indicates whether the synchronization node was created. Valid values:</p>
-         * <br>
-         * <p>*   success: The synchronization node was created.</p>
-         * <p>*   fail: The synchronization node failed to be created.</p>
-         */
         @NameInMap("Status")
         public String status;
 

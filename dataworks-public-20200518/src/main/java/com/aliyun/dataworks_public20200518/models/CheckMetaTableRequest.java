@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class CheckMetaTableRequest extends TeaModel {
     /**
-     * <p>The ID of the E-MapReduce (EMR) cluster.</p>
+     * <p>The name of the EMR table.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The type of the data source. Valid values: odps and emr.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
     /**
-     * <p>The name of the EMR database.</p>
+     * <p>The type of the data source. Valid values: odps and emr.</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
 
     /**
-     * <p>The GUID of the table.</p>
+     * <p>The name of the EMR database.</p>
      */
     @NameInMap("TableGuid")
     public String tableGuid;
 
     /**
-     * <p>The name of the EMR table.</p>
+     * <p>Indicates whether the table exists.</p>
      */
     @NameInMap("TableName")
     public String tableName;

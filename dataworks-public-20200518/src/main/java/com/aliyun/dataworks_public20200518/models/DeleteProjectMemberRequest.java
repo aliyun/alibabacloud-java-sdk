@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteProjectMemberRequest extends TeaModel {
     /**
-     * <p>The ID of the DataWorks workspace.</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
-    /**
-     * <p>The ID of the user.</p>
-     */
     @NameInMap("UserId")
     public String userId;
 

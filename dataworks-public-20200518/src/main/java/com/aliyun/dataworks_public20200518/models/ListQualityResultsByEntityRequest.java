@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListQualityResultsByEntityRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
+     * <p>The name of the compute engine instance or data source. You can obtain the name from data source configurations.</p>
      */
     @NameInMap("EndDate")
     public String endDate;
 
     /**
-     * <p>The ID of the partition filter expression. You can call the [GetQualityEntity](~~174003~~) operation to query the ID of the partition filter expression.</p>
+     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
      */
     @NameInMap("EntityId")
     public Integer entityId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The error message returned.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -32,13 +32,13 @@ public class ListQualityResultsByEntityRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The name of the compute engine instance or data source. You can obtain the name from data source configurations.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("StartDate")
     public String startDate;

@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class GetMigrationSummaryResponseBody extends TeaModel {
     /**
-     * <p>The details of the migration task.</p>
+     * <p>The ID of the migration task.</p>
      */
     @NameInMap("Data")
     public GetMigrationSummaryResponseBodyData data;
-
-    /**
-     * <p>The ID of the request. You can locate logs and troubleshoot issues based on the ID.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
      * <br>
      * <p>*   true: The request is successful.</p>
      * <p>*   false: The request fails. You can locate the error based on the request ID.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
+     * <p>The details of the migration task.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -56,52 +56,37 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
 
     public static class GetMigrationSummaryResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the user who creates the migration task.</p>
+         * <p>The ID of the user who manages the migration task.</p>
          */
         @NameInMap("CreateUser")
         public String createUser;
 
-        /**
-         * <p>The URL that is used to download the package of the export task.</p>
-         */
         @NameInMap("DownloadUrl")
         public String downloadUrl;
 
         /**
-         * <p>The time when the migration task was created.</p>
+         * <p>The time when the migration task was modified.</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
-         * <p>The time when the migration task was modified.</p>
+         * <p>The ID of the user who creates the migration task.</p>
          */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
         /**
-         * <p>The ID of the migration task.</p>
+         * <p>The name of the migration task.</p>
          */
         @NameInMap("MigrationId")
         public Long migrationId;
 
         /**
-         * <p>The name of the migration task.</p>
+         * <p>The time when the migration task was created.</p>
          */
         @NameInMap("Name")
         public String name;
-
-        /**
-         * <p>The ID of the user who manages the migration task.</p>
-         */
-        @NameInMap("OpUser")
-        public String opUser;
-
-        /**
-         * <p>The ID of the DataWorks workspace.</p>
-         */
-        @NameInMap("ProjectId")
-        public Long projectId;
 
         /**
          * <p>The status of the migration task. Valid values:</p>
@@ -116,6 +101,18 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
          * <p>*   EXPORT_SUCCESS: The migration task successfully exports data objects.</p>
          * <p>*   REVOKED: The migration task is canceled.</p>
          * <p>*   PARTIAL_SUCCESS: The migration task successfully imports or exports only some data objects.</p>
+         */
+        @NameInMap("OpUser")
+        public String opUser;
+
+        /**
+         * <p>The URL that is used to download the package of the export task.</p>
+         */
+        @NameInMap("ProjectId")
+        public Long projectId;
+
+        /**
+         * <p>The ID of the DataWorks workspace.</p>
          */
         @NameInMap("Status")
         public String status;

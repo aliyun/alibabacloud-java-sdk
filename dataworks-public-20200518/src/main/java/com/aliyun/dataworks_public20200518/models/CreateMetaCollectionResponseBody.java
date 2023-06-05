@@ -5,40 +5,37 @@ import com.aliyun.tea.*;
 
 public class CreateMetaCollectionResponseBody extends TeaModel {
     /**
-     * <p>The error code returned.</p>
+     * <p>The error message returned.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The HTTP status code returned.</p>
-     */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
-
-    /**
-     * <p>The unique identifier of the collection.</p>
-     */
-    @NameInMap("QualifiedName")
-    public String qualifiedName;
-
-    /**
-     * <p>The ID of the request.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
      * <p>*   true: The request was successful.</p>
      * <p>*   false: The request failed.</p>
+     */
+    @NameInMap("QualifiedName")
+    public String qualifiedName;
+
+    /**
+     * <p>The unique identifier of the collection.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
+     * <p>The error code returned.</p>
      */
     @NameInMap("Success")
     public String success;

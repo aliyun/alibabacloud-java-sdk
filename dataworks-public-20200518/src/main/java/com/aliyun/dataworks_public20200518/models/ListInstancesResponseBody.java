@@ -5,40 +5,39 @@ import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
     /**
-     * <p>The instances returned.</p>
+     * <p>The ID of the node. You can call the [ListNodes](~~173979~~) operation to query the ID of the node.</p>
      */
     @NameInMap("Data")
     public ListInstancesResponseBodyData data;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The error message that is returned for the instance.</p>
+     * <br>
+     * <p>This parameter is deprecated. You can call the [GetInstanceLog](~~173983~~) operation to query the error information related to the node.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+     * <p>The name of the node.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request was successful.</p>
-     * <p>*   false: The request failed.</p>
+     * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -98,7 +97,12 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyDataInstances extends TeaModel {
         /**
-         * <p>The ID of the baseline.</p>
+         * <p>The type of the workflow. Valid values:</p>
+         * <br>
+         * <p>*   DAILY: The workflow is used to run auto triggered nodes.</p>
+         * <p>*   MANUAL: The workflow is used to run manually triggered nodes.</p>
+         * <p>*   SMOKE_TEST: The workflow is used to perform smoke testing.</p>
+         * <p>*   SUPPLY_DATA: The workflow is used to backfill data.</p>
          */
         @NameInMap("BaselineId")
         public Long baselineId;
@@ -110,154 +114,76 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long beginRunningTime;
 
         /**
-         * <p>The time when the instance started to wait for resources.</p>
+         * <p>The time when the node stopped running.</p>
          */
         @NameInMap("BeginWaitResTime")
         public Long beginWaitResTime;
 
         /**
-         * <p>The time when the instance started to wait to be scheduled.</p>
+         * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
          */
         @NameInMap("BeginWaitTimeTime")
         public Long beginWaitTimeTime;
 
         /**
-         * <p>The data timestamp of the instance. In most cases, the value is one day before the time when the instance was run.</p>
+         * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+         * <br>
+         * <p>You cannot specify the sorting method for the instances to be returned by this operation. By default, the instances are sorted in descending order of the time when the instances were created.</p>
          */
         @NameInMap("Bizdate")
         public Long bizdate;
 
         /**
-         * <p>The ID of the workflow.</p>
+         * <p>The ID of the workflow to which the node belongs.</p>
          */
         @NameInMap("BusinessId")
         public Long businessId;
 
         /**
-         * <p>The connection string.</p>
+         * <p>The number of times the node can be rerun. The value of this parameter can be empty or an integer that is greater than or equal to 0.</p>
+         * <br>
+         * <p>*   If the value of this parameter is empty, the number of times that the node can be rerun is not specified.</p>
+         * <p>*   If the value of this parameter is 0, the node cannot be rerun.</p>
+         * <p>*   If the value of this parameter is a positive integer such as n, the node can be rerun n times. For example, if the value of this parameter is 1, the node can be rerun once. If the value of this parameter is 2, the node can be rerun twice.</p>
          */
         @NameInMap("Connection")
         public String connection;
 
         /**
-         * <p>The time when the instance was generated.</p>
+         * <p>The interval at which the node is rerun after the node fails to run. Unit: milliseconds.</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
-         * <p>The name of the account that is used to run the instance. For example, if an account named Test was used to run the instance to backfill data, the value of this parameter is Test.</p>
+         * <p>The ID of the node. You can call the [ListNodes](~~173979~~) operation to query the ID of the node.</p>
          */
         @NameInMap("CreateUser")
         public String createUser;
 
         /**
-         * <p>The time when the node was scheduled to run.</p>
+         * <p>The error message returned.</p>
          */
         @NameInMap("CycTime")
         public Long cycTime;
 
         /**
-         * <p>The ID of the workflow.</p>
+         * <p>The time when the instance started to wait for resources.</p>
          */
         @NameInMap("DagId")
         public Long dagId;
 
         /**
-         * <p>The type of the workflow. Valid values:</p>
-         * <br>
-         * <p>*   DAILY: The workflow is used to run auto triggered nodes.</p>
-         * <p>*   MANUAL: The workflow is used to run manually triggered nodes.</p>
-         * <p>*   SMOKE_TEST: The workflow is used to perform smoke testing.</p>
-         * <p>*   SUPPLY_DATA: The workflow is used to backfill data.</p>
+         * <p>The data timestamp of the instance. In most cases, the value is one day before the time when the instance was run.</p>
          */
         @NameInMap("DagType")
         public String dagType;
 
         /**
-         * <p>The table and partition filter expression in Data Quality that are associated with the node.</p>
+         * <p>The operation that you want to perform.</p>
          */
         @NameInMap("DqcDescription")
         public String dqcDescription;
-
-        /**
-         * <p>Indicates whether the instance is associated with a monitoring rule in Data Quality. Valid values:</p>
-         * <br>
-         * <p>*   0: The instance is associated with a monitoring rule in Data Quality.</p>
-         * <p>*   1: The instance is not associated with a monitoring rule in Data Quality.</p>
-         */
-        @NameInMap("DqcType")
-        public Integer dqcType;
-
-        /**
-         * <p>The error message that is returned for the instance.</p>
-         * <br>
-         * <p>This parameter is deprecated. You can call the [GetInstanceLog](~~173983~~) operation to query the error information related to the node.</p>
-         */
-        @NameInMap("ErrorMessage")
-        public String errorMessage;
-
-        /**
-         * <p>The time when the node stopped running.</p>
-         */
-        @NameInMap("FinishTime")
-        public Long finishTime;
-
-        /**
-         * <p>The ID of the instance.</p>
-         */
-        @NameInMap("InstanceId")
-        public Long instanceId;
-
-        /**
-         * <p>The time when the node was last modified.</p>
-         */
-        @NameInMap("ModifyTime")
-        public Long modifyTime;
-
-        /**
-         * <p>The ID of the node.</p>
-         */
-        @NameInMap("NodeId")
-        public Long nodeId;
-
-        /**
-         * <p>The name of the node.</p>
-         */
-        @NameInMap("NodeName")
-        public String nodeName;
-
-        /**
-         * <p>The parameters related to the node.</p>
-         */
-        @NameInMap("ParamValues")
-        public String paramValues;
-
-        /**
-         * <p>The priority of the instance. Valid values: 1, 3, 5, 7, and 8.</p>
-         * <br>
-         * <p>A greater value indicates a higher priority. Default value: 1.</p>
-         */
-        @NameInMap("Priority")
-        public Integer priority;
-
-        /**
-         * <p>The ID of the workflow to which the node belongs.</p>
-         */
-        @NameInMap("RelatedFlowId")
-        public Long relatedFlowId;
-
-        /**
-         * <p>The interval at which the node is rerun after the node fails to run. Unit: milliseconds.</p>
-         */
-        @NameInMap("RepeatInterval")
-        public Long repeatInterval;
-
-        /**
-         * <p>Indicates whether the node can be rerun.</p>
-         */
-        @NameInMap("Repeatability")
-        public Boolean repeatability;
 
         /**
          * <p>The status of the node. Valid values:</p>
@@ -271,18 +197,62 @@ public class ListInstancesResponseBody extends TeaModel {
          * <p>*   FAILURE: The node fails to run.</p>
          * <p>*   SUCCESS: The node is successfully run.</p>
          */
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("DqcType")
+        public Integer dqcType;
 
         /**
-         * <p>The number of times the node can be rerun. The value of this parameter can be empty or an integer that is greater than or equal to 0.</p>
-         * <br>
-         * <p>*   If the value of this parameter is empty, the number of times that the node can be rerun is not specified.</p>
-         * <p>*   If the value of this parameter is 0, the node cannot be rerun.</p>
-         * <p>*   If the value of this parameter is a positive integer such as n, the node can be rerun n times. For example, if the value of this parameter is 1, the node can be rerun once. If the value of this parameter is 2, the node can be rerun twice.</p>
+         * <p>The name of the account that is used to run the instance. For example, if an account named Test was used to run the instance to backfill data, the value of this parameter is Test.</p>
          */
-        @NameInMap("TaskRerunTime")
-        public Integer taskRerunTime;
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        /**
+         * <p>The ID of the Alibaba Cloud account used by the workspace administrator. You can log on to the Alibaba Cloud Management Console and view the ID on the Security Settings page of the Account Center console.</p>
+         */
+        @NameInMap("FinishTime")
+        public Long finishTime;
+
+        /**
+         * <p>The number of the page to return. Minimum value:1. Maximum value: 100.</p>
+         */
+        @NameInMap("InstanceId")
+        public Long instanceId;
+
+        /**
+         * <p>The name of the workflow. You can call the [ListBusiness](~~173945~~) operation to query the name of the workflow.</p>
+         */
+        @NameInMap("ModifyTime")
+        public Long modifyTime;
+
+        /**
+         * <p>The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment. The value DEV indicates the development environment.</p>
+         */
+        @NameInMap("NodeId")
+        public Long nodeId;
+
+        /**
+         * <p>The ID of the workflow.</p>
+         */
+        @NameInMap("NodeName")
+        public String nodeName;
+
+        /**
+         * <p>The table and partition filter expression in Data Quality that are associated with the node.</p>
+         */
+        @NameInMap("ParamValues")
+        public String paramValues;
+
+        /**
+         * <p>The total number of instances.</p>
+         */
+        @NameInMap("Priority")
+        public Integer priority;
+
+        /**
+         * <p>The type of the node. You can call the [ListNodes](~~173979~~) operation to query the type of the node.</p>
+         */
+        @NameInMap("RelatedFlowId")
+        public Long relatedFlowId;
 
         /**
          * <p>The scheduling type of the node. Valid values:</p>
@@ -302,6 +272,39 @@ public class ListInstancesResponseBody extends TeaModel {
          * <p>*   CONDITION_UNCHOOSE(6): The node is not selected by its ancestor branch node and is run as a dry-run node.</p>
          * <br>
          * <p>    REALTIME_DEPRECATED(7): The node has instances that are generated in real time but deprecated. The scheduling system sets the status of the node to succeeded.</p>
+         */
+        @NameInMap("RepeatInterval")
+        public Long repeatInterval;
+
+        /**
+         * <p>The status of the node. Valid values:</p>
+         * <br>
+         * <p>*   NOT_RUN: The node is not run.</p>
+         * <p>*   WAIT_TIME: The node is waiting for the scheduling time to arrive.</p>
+         * <p>*   WAIT_RESOURCE: The node is waiting for resources.</p>
+         * <p>*   RUNNING: The node is running.</p>
+         * <p>*   CHECKING: Data quality is being checked for the node.</p>
+         * <p>*   CHECKING_CONDITION: Branch conditions are being checked for the node.</p>
+         * <p>*   FAILURE: The node fails to run.</p>
+         * <p>*   SUCCESS: The node is successfully run.</p>
+         */
+        @NameInMap("Repeatability")
+        public Boolean repeatability;
+
+        /**
+         * <p>The data timestamp of the instances that you want to query. Specify the timestamp in the yyyy-MM-dd HH:mm:ss format.</p>
+         */
+        @NameInMap("Status")
+        public String status;
+
+        /**
+         * <p>The ID of the workspace. You can call the [ListProjects](~~178393~~) operation to query the ID of the workspace.</p>
+         */
+        @NameInMap("TaskRerunTime")
+        public Integer taskRerunTime;
+
+        /**
+         * <p>The information about the instances.</p>
          */
         @NameInMap("TaskType")
         public String taskType;
@@ -539,25 +542,27 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyData extends TeaModel {
         /**
-         * <p>The information about the instances.</p>
+         * <p>The name of the node. You can call the [ListNodes](~~173979~~) operation to query the name of the node.</p>
          */
         @NameInMap("Instances")
         public java.util.List<ListInstancesResponseBodyDataInstances> instances;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The time when the node was scheduled to run.</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
+         * <p>The end of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The total number of instances.</p>
+         * <p>The priority of the instance. Valid values: 1, 3, 5, 7, and 8.</p>
+         * <br>
+         * <p>A greater value indicates a higher priority. Default value: 1.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

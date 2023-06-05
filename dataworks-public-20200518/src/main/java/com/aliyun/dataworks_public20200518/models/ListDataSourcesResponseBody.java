@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListDataSourcesResponseBody extends TeaModel {
     /**
-     * <p>The query result.</p>
+     * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
      */
     @NameInMap("Data")
     public ListDataSourcesResponseBodyData data;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>Indicates whether the request was successful.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The query result.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -66,11 +66,50 @@ public class ListDataSourcesResponseBody extends TeaModel {
     }
 
     public static class ListDataSourcesResponseBodyDataDataSources extends TeaModel {
+        @NameInMap("BindingCalcEngineId")
+        public Long bindingCalcEngineId;
+
+        /**
+         * <p>The description of the data source.</p>
+         */
+        @NameInMap("ConnectStatus")
+        public Integer connectStatus;
+
         /**
          * <p>The ID of the compute engine instance with which the data source is associated.</p>
          */
-        @NameInMap("BindingCalcEngineId")
-        public Integer bindingCalcEngineId;
+        @NameInMap("Content")
+        public String content;
+
+        /**
+         * <p>Indicates whether the compute engine instance that is associated with the data source is the default compute engine instance used by data sources of the same type.</p>
+         */
+        @NameInMap("DataSourceType")
+        public String dataSourceType;
+
+        /**
+         * <p>The ID of the Alibaba Cloud account that is used to last modify the data source.</p>
+         */
+        @NameInMap("DefaultEngine")
+        public Boolean defaultEngine;
+
+        /**
+         * <p>The time when the data source was created. Example: Mar 17, 2021 4:09:32 PM.</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
+         * <p>The field that is used to sort data sources. Data sources are sorted in descending order based on the value of this parameter.</p>
+         */
+        @NameInMap("EnvType")
+        public Integer envType;
+
+        /**
+         * <p>Indicates whether the data source is a shared data source.</p>
+         */
+        @NameInMap("GmtCreate")
+        public String gmtCreate;
 
         /**
          * <p>The status of the data source. Valid values:</p>
@@ -78,8 +117,20 @@ public class ListDataSourcesResponseBody extends TeaModel {
          * <p>*   1: The data source is accessible.</p>
          * <p>*   2: The data source is inaccessible.</p>
          */
-        @NameInMap("ConnectStatus")
-        public Integer connectStatus;
+        @NameInMap("GmtModified")
+        public String gmtModified;
+
+        /**
+         * <p>The ID of the tenant.</p>
+         */
+        @NameInMap("Id")
+        public Long id;
+
+        /**
+         * <p>The ID of the data source.</p>
+         */
+        @NameInMap("Name")
+        public String name;
 
         /**
          * <p>The data connection string. The value of this parameter is in the JSON format. Sample connection strings of common data sources:</p>
@@ -173,8 +224,14 @@ public class ListDataSourcesResponseBody extends TeaModel {
          * <p>      "username": "lslslsls"</p>
          * <p>    }</p>
          */
-        @NameInMap("Content")
-        public String content;
+        @NameInMap("Operator")
+        public String operator;
+
+        /**
+         * <p>The time when the data source was last modified. Example: Mar 17, 2021 4:09:32 PM.</p>
+         */
+        @NameInMap("ProjectId")
+        public Integer projectId;
 
         /**
          * <p>The type of the data source. Valid values:</p>
@@ -193,20 +250,22 @@ public class ListDataSourcesResponseBody extends TeaModel {
          * <p>*   hybriddb_for_postgresql</p>
          * <p>*   holo</p>
          */
-        @NameInMap("DataSourceType")
-        public String dataSourceType;
+        @NameInMap("Sequence")
+        public Integer sequence;
 
         /**
-         * <p>Indicates whether the compute engine instance that is associated with the data source is the default compute engine instance used by data sources of the same type.</p>
+         * <p>The name of the data source.</p>
          */
-        @NameInMap("DefaultEngine")
-        public Boolean defaultEngine;
+        @NameInMap("Shared")
+        public Boolean shared;
 
         /**
-         * <p>The description of the data source.</p>
+         * <p>The subtype of the data source. This parameter takes effect only if the DataSourceType parameter is set to rds.</p>
+         * <br>
+         * <p>If the DataSourceType parameter is set to rds, this parameter can be set to mysql, sqlserver, or postgresql.</p>
          */
-        @NameInMap("Description")
-        public String description;
+        @NameInMap("Status")
+        public Integer status;
 
         /**
          * <p>The environment in which the data source is used. Valid values:</p>
@@ -214,77 +273,9 @@ public class ListDataSourcesResponseBody extends TeaModel {
          * <p>*   0: development environment</p>
          * <p>*   1: production environment</p>
          */
-        @NameInMap("EnvType")
-        public Integer envType;
-
-        /**
-         * <p>The time when the data source was created. Example: Mar 17, 2021 4:09:32 PM.</p>
-         */
-        @NameInMap("GmtCreate")
-        public String gmtCreate;
-
-        /**
-         * <p>The time when the data source was last modified. Example: Mar 17, 2021 4:09:32 PM.</p>
-         */
-        @NameInMap("GmtModified")
-        public String gmtModified;
-
-        /**
-         * <p>The ID of the data source.</p>
-         */
-        @NameInMap("Id")
-        public Integer id;
-
-        /**
-         * <p>The name of the data source.</p>
-         */
-        @NameInMap("Name")
-        public String name;
-
-        /**
-         * <p>The ID of the Alibaba Cloud account that is used to last modify the data source.</p>
-         */
-        @NameInMap("Operator")
-        public String operator;
-
-        /**
-         * <p>The ID of the workspace to which the data source belongs.</p>
-         */
-        @NameInMap("ProjectId")
-        public Integer projectId;
-
-        /**
-         * <p>The field that is used to sort data sources. Data sources are sorted in descending order based on the value of this parameter.</p>
-         */
-        @NameInMap("Sequence")
-        public Integer sequence;
-
-        /**
-         * <p>Indicates whether the data source is a shared data source.</p>
-         */
-        @NameInMap("Shared")
-        public Boolean shared;
-
-        /**
-         * <p>The status of the data source. Valid values:</p>
-         * <br>
-         * <p>*   1: The data source is accessible.</p>
-         * <p>*   2: The data source is inaccessible.</p>
-         */
-        @NameInMap("Status")
-        public Integer status;
-
-        /**
-         * <p>The subtype of the data source. This parameter takes effect only if the DataSourceType parameter is set to rds.</p>
-         * <br>
-         * <p>If the DataSourceType parameter is set to rds, this parameter can be set to mysql, sqlserver, or postgresql.</p>
-         */
         @NameInMap("SubType")
         public String subType;
 
-        /**
-         * <p>The ID of the tenant.</p>
-         */
         @NameInMap("TenantId")
         public Long tenantId;
 
@@ -293,11 +284,11 @@ public class ListDataSourcesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListDataSourcesResponseBodyDataDataSources setBindingCalcEngineId(Integer bindingCalcEngineId) {
+        public ListDataSourcesResponseBodyDataDataSources setBindingCalcEngineId(Long bindingCalcEngineId) {
             this.bindingCalcEngineId = bindingCalcEngineId;
             return this;
         }
-        public Integer getBindingCalcEngineId() {
+        public Long getBindingCalcEngineId() {
             return this.bindingCalcEngineId;
         }
 
@@ -365,11 +356,11 @@ public class ListDataSourcesResponseBody extends TeaModel {
             return this.gmtModified;
         }
 
-        public ListDataSourcesResponseBodyDataDataSources setId(Integer id) {
+        public ListDataSourcesResponseBodyDataDataSources setId(Long id) {
             this.id = id;
             return this;
         }
-        public Integer getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -441,25 +432,28 @@ public class ListDataSourcesResponseBody extends TeaModel {
 
     public static class ListDataSourcesResponseBodyData extends TeaModel {
         /**
-         * <p>The data sources.</p>
+         * <p>The ID of the workspace to which the data source belongs.</p>
          */
         @NameInMap("DataSources")
         public java.util.List<ListDataSourcesResponseBodyDataDataSources> dataSources;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The total number of data sources.</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
+         * <p>The data sources.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The total number of data sources.</p>
+         * <p>The status of the data source. Valid values:</p>
+         * <br>
+         * <p>*   1: The data source is accessible.</p>
+         * <p>*   2: The data source is inaccessible.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

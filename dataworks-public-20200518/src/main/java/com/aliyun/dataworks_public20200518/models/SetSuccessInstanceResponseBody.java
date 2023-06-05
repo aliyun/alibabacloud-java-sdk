@@ -5,38 +5,35 @@ import com.aliyun.tea.*;
 
 public class SetSuccessInstanceResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether result details are returned.</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Data")
     public Boolean data;
 
     /**
-     * <p>The error code.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>Indicates whether result details are returned.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The error code.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request is successful.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
