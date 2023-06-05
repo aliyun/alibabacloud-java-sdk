@@ -10,6 +10,9 @@ public class DescribeChannelsRequest extends TeaModel {
     @NameInMap("DeviceStatus")
     public String deviceStatus;
 
+    /**
+     * <p>NVR ID</p>
+     */
     @NameInMap("NvrId")
     public String nvrId;
 

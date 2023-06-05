@@ -10,7 +10,6 @@ public class DeleteSearchTablesResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

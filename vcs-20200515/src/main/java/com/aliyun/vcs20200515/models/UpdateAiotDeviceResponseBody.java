@@ -13,7 +13,9 @@ public class UpdateAiotDeviceResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

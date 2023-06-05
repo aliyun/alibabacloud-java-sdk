@@ -13,7 +13,9 @@ public class DescribeAiotPersonTablesResponseBody extends TeaModel {
     @NameInMap("PersonTableList")
     public java.util.List<DescribeAiotPersonTablesResponseBodyPersonTableList> personTableList;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

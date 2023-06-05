@@ -4,11 +4,9 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class GetDeviceCaptureStrategyRequest extends TeaModel {
-    // 设备通道号
     @NameInMap("DeviceCode")
     public String deviceCode;
 
-    // 设备类型
     @NameInMap("DeviceType")
     public String deviceType;
 

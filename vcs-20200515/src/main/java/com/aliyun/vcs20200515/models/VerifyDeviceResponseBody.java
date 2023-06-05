@@ -4,18 +4,15 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class VerifyDeviceResponseBody extends TeaModel {
-    // 响应码
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public java.util.List<VerifyDeviceResponseBodyData> data;
 
-    // 响应码描述
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -57,27 +54,21 @@ public class VerifyDeviceResponseBody extends TeaModel {
     }
 
     public static class VerifyDeviceResponseBodyData extends TeaModel {
-        // 格式错误或国标冲突的错误码，0为成功，-1为失败
         @NameInMap("Code")
         public String code;
 
-        // Excel中的序号列的值
         @NameInMap("Id")
         public String id;
 
-        // 格式错误或国标冲突提示
         @NameInMap("Message")
         public String message;
 
-        // 原始国标编码
         @NameInMap("OriginalGbId")
         public String originalGbId;
 
-        // 记录所在行号
         @NameInMap("RowNumber")
         public Long rowNumber;
 
-        // 建议的国标编码
         @NameInMap("SuggestGbId")
         public String suggestGbId;
 

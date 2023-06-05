@@ -4,11 +4,9 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class VerifyDeviceRequest extends TeaModel {
-    // 设备安装地址
     @NameInMap("DeviceAddress")
     public String deviceAddress;
 
-    // OSS路径
     @NameInMap("FilePath")
     public String filePath;
 

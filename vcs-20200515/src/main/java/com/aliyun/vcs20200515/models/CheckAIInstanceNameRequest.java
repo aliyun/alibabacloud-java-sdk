@@ -4,15 +4,12 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class CheckAIInstanceNameRequest extends TeaModel {
-    // 实例名称
     @NameInMap("InstanceName")
     public String instanceName;
 
-    // 实例类型
     @NameInMap("InstanceType")
     public String instanceType;
 
-    // 所属项目Id
     @NameInMap("ProjectId")
     public String projectId;
 

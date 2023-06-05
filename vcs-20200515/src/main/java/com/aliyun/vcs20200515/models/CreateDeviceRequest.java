@@ -82,14 +82,14 @@ public class CreateDeviceRequest extends TeaModel {
     @NameInMap("ParentDeviceId")
     public String parentDeviceId;
 
+    @NameInMap("Roi")
+    public String roi;
+
     @NameInMap("SubDeviceCount")
     public Long subDeviceCount;
 
     @NameInMap("SubDeviceIdList")
     public String subDeviceIdList;
-
-    @NameInMap("UpStreamMode")
-    public String upStreamMode;
 
     @NameInMap("Vendor")
     public String vendor;
@@ -307,6 +307,14 @@ public class CreateDeviceRequest extends TeaModel {
         return this.parentDeviceId;
     }
 
+    public CreateDeviceRequest setRoi(String roi) {
+        this.roi = roi;
+        return this;
+    }
+    public String getRoi() {
+        return this.roi;
+    }
+
     public CreateDeviceRequest setSubDeviceCount(Long subDeviceCount) {
         this.subDeviceCount = subDeviceCount;
         return this;
@@ -321,14 +329,6 @@ public class CreateDeviceRequest extends TeaModel {
     }
     public String getSubDeviceIdList() {
         return this.subDeviceIdList;
-    }
-
-    public CreateDeviceRequest setUpStreamMode(String upStreamMode) {
-        this.upStreamMode = upStreamMode;
-        return this;
-    }
-    public String getUpStreamMode() {
-        return this.upStreamMode;
     }
 
     public CreateDeviceRequest setVendor(String vendor) {

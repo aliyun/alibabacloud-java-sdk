@@ -13,7 +13,9 @@ public class AddAiotPersonTableResponseBody extends TeaModel {
     @NameInMap("PersonTableId")
     public String personTableId;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

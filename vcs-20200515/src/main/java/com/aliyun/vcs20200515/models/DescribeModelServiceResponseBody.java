@@ -13,7 +13,9 @@ public class DescribeModelServiceResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -139,6 +141,9 @@ public class DescribeModelServiceResponseBody extends TeaModel {
         @NameInMap("ModelServiceStatus")
         public String modelServiceStatus;
 
+        /**
+         * <p>Qps。</p>
+         */
         @NameInMap("Qps")
         public Long qps;
 

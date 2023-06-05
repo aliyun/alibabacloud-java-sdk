@@ -4,19 +4,15 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class CreateAIInstanceResponseBody extends TeaModel {
-    // 返回code码
     @NameInMap("Code")
     public String code;
 
-    // 返回数据
     @NameInMap("Data")
     public CreateAIInstanceResponseBodyData data;
 
-    // 错误信息
     @NameInMap("Message")
     public String message;
 
-    // 请求id
     @NameInMap("RequestId")
     public String requestId;
 
@@ -58,7 +54,6 @@ public class CreateAIInstanceResponseBody extends TeaModel {
     }
 
     public static class CreateAIInstanceResponseBodyData extends TeaModel {
-        // 当前实例ACU使用量
         @NameInMap("AcuUsed")
         public Long acuUsed;
 
@@ -90,37 +85,6 @@ public class CreateAIInstanceResponseBody extends TeaModel {
         }
 
         public CreateAIInstanceResponseBodyData setStorage(String storage) {
-            this.storage = storage;
-            return this;
-        }
-        public String getStorage() {
-            return this.storage;
-        }
-
-    }
-
-    public static class TryCreateAIInstanceResponseBodyData extends TeaModel {
-        // 当前实例ACU使用量
-        @NameInMap("AcuUsed")
-        public Long acuUsed;
-
-        @NameInMap("Storage")
-        public String storage;
-
-        public static TryCreateAIInstanceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            TryCreateAIInstanceResponseBodyData self = new TryCreateAIInstanceResponseBodyData();
-            return TeaModel.build(map, self);
-        }
-
-        public TryCreateAIInstanceResponseBodyData setAcuUsed(Long acuUsed) {
-            this.acuUsed = acuUsed;
-            return this;
-        }
-        public Long getAcuUsed() {
-            return this.acuUsed;
-        }
-
-        public TryCreateAIInstanceResponseBodyData setStorage(String storage) {
             this.storage = storage;
             return this;
         }

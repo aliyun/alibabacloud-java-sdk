@@ -4,63 +4,48 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class CreateAIInstanceShrinkRequest extends TeaModel {
-    // 算子Id
     @NameInMap("AlgorithmId")
     public String algorithmId;
 
-    // 算法名称
     @NameInMap("AlgorithmName")
     public String algorithmName;
 
-    // 计算类型
     @NameInMap("ComputeType")
     public String computeType;
 
-    // 实例类型
     @NameInMap("ContainerType")
     public String containerType;
 
-    // 数据来源
     @NameInMap("DataSource")
     public String dataSource;
 
-    // 数据源时间段
     @NameInMap("DataSourceTimes")
     public String dataSourceTimesShrink;
 
-    // 数据类型
     @NameInMap("DataType")
     public String dataType;
 
-    // 多少秒抽取1帧，取值范围[0, 3600]。 0表示不抽帧。
     @NameInMap("Fps")
     public Long fps;
 
-    // 实例名称
     @NameInMap("InstanceName")
     public String instanceName;
 
-    // 实例类型
     @NameInMap("InstanceType")
     public String instanceType;
 
-    // 所属项目Id
     @NameInMap("ProjectId")
     public String projectId;
 
-    // ScheduleType为EVERY_WEEK、EVERY_MONTH时必填
     @NameInMap("ScheduleCycleDates")
     public String scheduleCycleDatesShrink;
 
-    // 执行时间段，支持多段，指定多段时不能重合交错。
     @NameInMap("ScheduleTimes")
     public String scheduleTimesShrink;
 
-    // 调度类型
     @NameInMap("ScheduleType")
     public String scheduleType;
 
-    // 多少秒抽取1帧，取值范围[0, 3600]。 0表示不抽帧。
     @NameInMap("Spf")
     public Long spf;
 

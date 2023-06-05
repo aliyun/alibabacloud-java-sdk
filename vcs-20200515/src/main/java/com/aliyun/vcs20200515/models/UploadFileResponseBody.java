@@ -57,6 +57,9 @@ public class UploadFileResponseBody extends TeaModel {
         @NameInMap("OssPath")
         public String ossPath;
 
+        /**
+         * <p>SourceId</p>
+         */
         @NameInMap("SourceId")
         public String sourceId;
 

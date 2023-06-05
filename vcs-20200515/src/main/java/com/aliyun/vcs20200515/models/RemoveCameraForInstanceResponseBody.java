@@ -4,15 +4,12 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class RemoveCameraForInstanceResponseBody extends TeaModel {
-    // code码
     @NameInMap("Code")
     public String code;
 
-    // 返回结果消息
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

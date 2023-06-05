@@ -4,27 +4,21 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class AiotDevice extends TeaModel {
-    // ip地址
     @NameInMap("IPAddr")
     public String IPAddr;
 
-    // 纬度
     @NameInMap("Latitude")
     public Float latitude;
 
-    // 经度
     @NameInMap("Longitude")
     public Float longitude;
 
-    // 名称
     @NameInMap("Name")
     public String name;
 
-    // 安装位置
     @NameInMap("Place")
     public String place;
 
-    // 端口
     @NameInMap("Port")
     public Long port;
 

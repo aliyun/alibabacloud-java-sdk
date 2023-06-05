@@ -13,7 +13,9 @@ public class UpdateAiotPersonTableItemResponseBody extends TeaModel {
     @NameInMap("PersonTableItem")
     public UpdateAiotPersonTableItemResponseBodyPersonTableItem personTableItem;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

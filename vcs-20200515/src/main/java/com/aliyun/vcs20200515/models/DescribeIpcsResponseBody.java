@@ -144,6 +144,9 @@ public class DescribeIpcsResponseBody extends TeaModel {
         @NameInMap("Password")
         public String password;
 
+        @NameInMap("Roi")
+        public String roi;
+
         @NameInMap("ServerId")
         public String serverId;
 
@@ -411,6 +414,14 @@ public class DescribeIpcsResponseBody extends TeaModel {
         }
         public String getPassword() {
             return this.password;
+        }
+
+        public DescribeIpcsResponseBodyDataRecords setRoi(String roi) {
+            this.roi = roi;
+            return this;
+        }
+        public String getRoi() {
+            return this.roi;
         }
 
         public DescribeIpcsResponseBodyDataRecords setServerId(String serverId) {

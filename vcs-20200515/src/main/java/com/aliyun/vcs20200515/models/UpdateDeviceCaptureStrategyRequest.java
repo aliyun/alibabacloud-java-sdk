@@ -4,15 +4,12 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class UpdateDeviceCaptureStrategyRequest extends TeaModel {
-    // 设备通道
     @NameInMap("DeviceCode")
     public String deviceCode;
 
-    // 设备类型
     @NameInMap("DeviceType")
     public String deviceType;
 
-    // 周一图片抓去模式
     @NameInMap("MondayCaptureStrategy")
     public String mondayCaptureStrategy;
 
