@@ -10,6 +10,12 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
     @NameInMap("Advice")
     public String advice;
 
+    @NameInMap("CheckDetailAssetInfo")
+    public java.util.List<java.util.Map<String, String>> checkDetailAssetInfo;
+
+    @NameInMap("CheckDetailColumns")
+    public java.util.List<DescribeCheckWarningDetailResponseBodyCheckDetailColumns> checkDetailColumns;
+
     /**
      * <p>The ID of the check item.</p>
      */
@@ -69,6 +75,22 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         return this.advice;
     }
 
+    public DescribeCheckWarningDetailResponseBody setCheckDetailAssetInfo(java.util.List<java.util.Map<String, String>> checkDetailAssetInfo) {
+        this.checkDetailAssetInfo = checkDetailAssetInfo;
+        return this;
+    }
+    public java.util.List<java.util.Map<String, String>> getCheckDetailAssetInfo() {
+        return this.checkDetailAssetInfo;
+    }
+
+    public DescribeCheckWarningDetailResponseBody setCheckDetailColumns(java.util.List<DescribeCheckWarningDetailResponseBodyCheckDetailColumns> checkDetailColumns) {
+        this.checkDetailColumns = checkDetailColumns;
+        return this;
+    }
+    public java.util.List<DescribeCheckWarningDetailResponseBodyCheckDetailColumns> getCheckDetailColumns() {
+        return this.checkDetailColumns;
+    }
+
     public DescribeCheckWarningDetailResponseBody setCheckId(Long checkId) {
         this.checkId = checkId;
         return this;
@@ -123,6 +145,99 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
     }
     public String getType() {
         return this.type;
+    }
+
+    public static class DescribeCheckWarningDetailResponseBodyCheckDetailColumnsGrids extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("ShowName")
+        public String showName;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static DescribeCheckWarningDetailResponseBodyCheckDetailColumnsGrids build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCheckWarningDetailResponseBodyCheckDetailColumnsGrids self = new DescribeCheckWarningDetailResponseBodyCheckDetailColumnsGrids();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCheckWarningDetailResponseBodyCheckDetailColumnsGrids setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeCheckWarningDetailResponseBodyCheckDetailColumnsGrids setShowName(String showName) {
+            this.showName = showName;
+            return this;
+        }
+        public String getShowName() {
+            return this.showName;
+        }
+
+        public DescribeCheckWarningDetailResponseBodyCheckDetailColumnsGrids setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class DescribeCheckWarningDetailResponseBodyCheckDetailColumns extends TeaModel {
+        @NameInMap("Grids")
+        public java.util.List<DescribeCheckWarningDetailResponseBodyCheckDetailColumnsGrids> grids;
+
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("ShowName")
+        public String showName;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static DescribeCheckWarningDetailResponseBodyCheckDetailColumns build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCheckWarningDetailResponseBodyCheckDetailColumns self = new DescribeCheckWarningDetailResponseBodyCheckDetailColumns();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCheckWarningDetailResponseBodyCheckDetailColumns setGrids(java.util.List<DescribeCheckWarningDetailResponseBodyCheckDetailColumnsGrids> grids) {
+            this.grids = grids;
+            return this;
+        }
+        public java.util.List<DescribeCheckWarningDetailResponseBodyCheckDetailColumnsGrids> getGrids() {
+            return this.grids;
+        }
+
+        public DescribeCheckWarningDetailResponseBodyCheckDetailColumns setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeCheckWarningDetailResponseBodyCheckDetailColumns setShowName(String showName) {
+            this.showName = showName;
+            return this;
+        }
+        public String getShowName() {
+            return this.showName;
+        }
+
+        public DescribeCheckWarningDetailResponseBodyCheckDetailColumns setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
     }
 
 }
