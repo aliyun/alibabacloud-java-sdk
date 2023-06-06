@@ -480,6 +480,9 @@ public class HotelOrderCreateRequest extends TeaModel {
         @NameInMap("phone")
         public String phone;
 
+        @NameInMap("room_no")
+        public Integer roomNo;
+
         @NameInMap("staff_no")
         public String staffNo;
 
@@ -577,6 +580,14 @@ public class HotelOrderCreateRequest extends TeaModel {
         }
         public String getPhone() {
             return this.phone;
+        }
+
+        public HotelOrderCreateRequestOccupantInfoList setRoomNo(Integer roomNo) {
+            this.roomNo = roomNo;
+            return this;
+        }
+        public Integer getRoomNo() {
+            return this.roomNo;
         }
 
         public HotelOrderCreateRequestOccupantInfoList setStaffNo(String staffNo) {
