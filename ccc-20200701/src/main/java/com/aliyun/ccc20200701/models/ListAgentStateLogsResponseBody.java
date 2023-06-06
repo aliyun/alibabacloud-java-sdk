@@ -65,6 +65,9 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
     }
 
     public static class ListAgentStateLogsResponseBodyData extends TeaModel {
+        @NameInMap("BreakCode")
+        public String breakCode;
+
         @NameInMap("Duration")
         public Long duration;
 
@@ -80,9 +83,20 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
         @NameInMap("StateCode")
         public String stateCode;
 
+        @NameInMap("WorkMode")
+        public String workMode;
+
         public static ListAgentStateLogsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListAgentStateLogsResponseBodyData self = new ListAgentStateLogsResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListAgentStateLogsResponseBodyData setBreakCode(String breakCode) {
+            this.breakCode = breakCode;
+            return this;
+        }
+        public String getBreakCode() {
+            return this.breakCode;
         }
 
         public ListAgentStateLogsResponseBodyData setDuration(Long duration) {
@@ -123,6 +137,14 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
         }
         public String getStateCode() {
             return this.stateCode;
+        }
+
+        public ListAgentStateLogsResponseBodyData setWorkMode(String workMode) {
+            this.workMode = workMode;
+            return this;
+        }
+        public String getWorkMode() {
+            return this.workMode;
         }
 
     }

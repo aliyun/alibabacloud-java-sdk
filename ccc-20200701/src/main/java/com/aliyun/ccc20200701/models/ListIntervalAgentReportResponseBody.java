@@ -663,6 +663,47 @@ public class ListIntervalAgentReportResponseBody extends TeaModel {
 
     }
 
+    public static class ListIntervalAgentReportResponseBodyDataOverallBreakCodeDetailList extends TeaModel {
+        @NameInMap("BreakCode")
+        public String breakCode;
+
+        @NameInMap("Count")
+        public Long count;
+
+        @NameInMap("Duration")
+        public Long duration;
+
+        public static ListIntervalAgentReportResponseBodyDataOverallBreakCodeDetailList build(java.util.Map<String, ?> map) throws Exception {
+            ListIntervalAgentReportResponseBodyDataOverallBreakCodeDetailList self = new ListIntervalAgentReportResponseBodyDataOverallBreakCodeDetailList();
+            return TeaModel.build(map, self);
+        }
+
+        public ListIntervalAgentReportResponseBodyDataOverallBreakCodeDetailList setBreakCode(String breakCode) {
+            this.breakCode = breakCode;
+            return this;
+        }
+        public String getBreakCode() {
+            return this.breakCode;
+        }
+
+        public ListIntervalAgentReportResponseBodyDataOverallBreakCodeDetailList setCount(Long count) {
+            this.count = count;
+            return this;
+        }
+        public Long getCount() {
+            return this.count;
+        }
+
+        public ListIntervalAgentReportResponseBodyDataOverallBreakCodeDetailList setDuration(Long duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Long getDuration() {
+            return this.duration;
+        }
+
+    }
+
     public static class ListIntervalAgentReportResponseBodyDataOverall extends TeaModel {
         @NameInMap("AverageBreakTime")
         public Float averageBreakTime;
@@ -678,6 +719,9 @@ public class ListIntervalAgentReportResponseBody extends TeaModel {
 
         @NameInMap("AverageWorkTime")
         public Float averageWorkTime;
+
+        @NameInMap("BreakCodeDetailList")
+        public java.util.List<ListIntervalAgentReportResponseBodyDataOverallBreakCodeDetailList> breakCodeDetailList;
 
         @NameInMap("FirstCheckInTime")
         public Long firstCheckInTime;
@@ -726,6 +770,21 @@ public class ListIntervalAgentReportResponseBody extends TeaModel {
 
         @NameInMap("TotalLoggedInTime")
         public Long totalLoggedInTime;
+
+        @NameInMap("TotalOffSiteOnlineTime")
+        public Long totalOffSiteOnlineTime;
+
+        @NameInMap("TotalOfficePhoneOnlineTime")
+        public Long totalOfficePhoneOnlineTime;
+
+        @NameInMap("TotalOnSiteOnlineTime")
+        public Long totalOnSiteOnlineTime;
+
+        @NameInMap("TotalOutboundScenarioReadyTime")
+        public Long totalOutboundScenarioReadyTime;
+
+        @NameInMap("TotalOutboundScenarioTime")
+        public Long totalOutboundScenarioTime;
 
         @NameInMap("TotalReadyTime")
         public Long totalReadyTime;
@@ -779,6 +838,14 @@ public class ListIntervalAgentReportResponseBody extends TeaModel {
         }
         public Float getAverageWorkTime() {
             return this.averageWorkTime;
+        }
+
+        public ListIntervalAgentReportResponseBodyDataOverall setBreakCodeDetailList(java.util.List<ListIntervalAgentReportResponseBodyDataOverallBreakCodeDetailList> breakCodeDetailList) {
+            this.breakCodeDetailList = breakCodeDetailList;
+            return this;
+        }
+        public java.util.List<ListIntervalAgentReportResponseBodyDataOverallBreakCodeDetailList> getBreakCodeDetailList() {
+            return this.breakCodeDetailList;
         }
 
         public ListIntervalAgentReportResponseBodyDataOverall setFirstCheckInTime(Long firstCheckInTime) {
@@ -907,6 +974,46 @@ public class ListIntervalAgentReportResponseBody extends TeaModel {
         }
         public Long getTotalLoggedInTime() {
             return this.totalLoggedInTime;
+        }
+
+        public ListIntervalAgentReportResponseBodyDataOverall setTotalOffSiteOnlineTime(Long totalOffSiteOnlineTime) {
+            this.totalOffSiteOnlineTime = totalOffSiteOnlineTime;
+            return this;
+        }
+        public Long getTotalOffSiteOnlineTime() {
+            return this.totalOffSiteOnlineTime;
+        }
+
+        public ListIntervalAgentReportResponseBodyDataOverall setTotalOfficePhoneOnlineTime(Long totalOfficePhoneOnlineTime) {
+            this.totalOfficePhoneOnlineTime = totalOfficePhoneOnlineTime;
+            return this;
+        }
+        public Long getTotalOfficePhoneOnlineTime() {
+            return this.totalOfficePhoneOnlineTime;
+        }
+
+        public ListIntervalAgentReportResponseBodyDataOverall setTotalOnSiteOnlineTime(Long totalOnSiteOnlineTime) {
+            this.totalOnSiteOnlineTime = totalOnSiteOnlineTime;
+            return this;
+        }
+        public Long getTotalOnSiteOnlineTime() {
+            return this.totalOnSiteOnlineTime;
+        }
+
+        public ListIntervalAgentReportResponseBodyDataOverall setTotalOutboundScenarioReadyTime(Long totalOutboundScenarioReadyTime) {
+            this.totalOutboundScenarioReadyTime = totalOutboundScenarioReadyTime;
+            return this;
+        }
+        public Long getTotalOutboundScenarioReadyTime() {
+            return this.totalOutboundScenarioReadyTime;
+        }
+
+        public ListIntervalAgentReportResponseBodyDataOverall setTotalOutboundScenarioTime(Long totalOutboundScenarioTime) {
+            this.totalOutboundScenarioTime = totalOutboundScenarioTime;
+            return this;
+        }
+        public Long getTotalOutboundScenarioTime() {
+            return this.totalOutboundScenarioTime;
         }
 
         public ListIntervalAgentReportResponseBodyDataOverall setTotalReadyTime(Long totalReadyTime) {

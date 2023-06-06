@@ -663,6 +663,47 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
 
     }
 
+    public static class ListHistoricalAgentReportResponseBodyDataListOverallBreakCodeDetailList extends TeaModel {
+        @NameInMap("BreakCode")
+        public String breakCode;
+
+        @NameInMap("Count")
+        public Long count;
+
+        @NameInMap("Duration")
+        public Long duration;
+
+        public static ListHistoricalAgentReportResponseBodyDataListOverallBreakCodeDetailList build(java.util.Map<String, ?> map) throws Exception {
+            ListHistoricalAgentReportResponseBodyDataListOverallBreakCodeDetailList self = new ListHistoricalAgentReportResponseBodyDataListOverallBreakCodeDetailList();
+            return TeaModel.build(map, self);
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOverallBreakCodeDetailList setBreakCode(String breakCode) {
+            this.breakCode = breakCode;
+            return this;
+        }
+        public String getBreakCode() {
+            return this.breakCode;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOverallBreakCodeDetailList setCount(Long count) {
+            this.count = count;
+            return this;
+        }
+        public Long getCount() {
+            return this.count;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOverallBreakCodeDetailList setDuration(Long duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Long getDuration() {
+            return this.duration;
+        }
+
+    }
+
     public static class ListHistoricalAgentReportResponseBodyDataListOverall extends TeaModel {
         @NameInMap("AverageBreakTime")
         public Float averageBreakTime;
@@ -678,6 +719,15 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
 
         @NameInMap("AverageWorkTime")
         public Float averageWorkTime;
+
+        @NameInMap("BreakCodeDetailList")
+        public java.util.List<ListHistoricalAgentReportResponseBodyDataListOverallBreakCodeDetailList> breakCodeDetailList;
+
+        @NameInMap("FirstCheckInTime")
+        public Long firstCheckInTime;
+
+        @NameInMap("LastCheckOutTime")
+        public Long lastCheckOutTime;
 
         @NameInMap("MaxBreakTime")
         public Long maxBreakTime;
@@ -720,6 +770,21 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
 
         @NameInMap("TotalLoggedInTime")
         public Long totalLoggedInTime;
+
+        @NameInMap("TotalOffSiteOnlineTime")
+        public Long totalOffSiteOnlineTime;
+
+        @NameInMap("TotalOfficePhoneOnlineTime")
+        public Long totalOfficePhoneOnlineTime;
+
+        @NameInMap("TotalOnSiteOnlineTime")
+        public Long totalOnSiteOnlineTime;
+
+        @NameInMap("TotalOutboundScenarioReadyTime")
+        public Long totalOutboundScenarioReadyTime;
+
+        @NameInMap("TotalOutboundScenarioTime")
+        public Long totalOutboundScenarioTime;
 
         @NameInMap("TotalReadyTime")
         public Long totalReadyTime;
@@ -773,6 +838,30 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
         }
         public Float getAverageWorkTime() {
             return this.averageWorkTime;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOverall setBreakCodeDetailList(java.util.List<ListHistoricalAgentReportResponseBodyDataListOverallBreakCodeDetailList> breakCodeDetailList) {
+            this.breakCodeDetailList = breakCodeDetailList;
+            return this;
+        }
+        public java.util.List<ListHistoricalAgentReportResponseBodyDataListOverallBreakCodeDetailList> getBreakCodeDetailList() {
+            return this.breakCodeDetailList;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOverall setFirstCheckInTime(Long firstCheckInTime) {
+            this.firstCheckInTime = firstCheckInTime;
+            return this;
+        }
+        public Long getFirstCheckInTime() {
+            return this.firstCheckInTime;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOverall setLastCheckOutTime(Long lastCheckOutTime) {
+            this.lastCheckOutTime = lastCheckOutTime;
+            return this;
+        }
+        public Long getLastCheckOutTime() {
+            return this.lastCheckOutTime;
         }
 
         public ListHistoricalAgentReportResponseBodyDataListOverall setMaxBreakTime(Long maxBreakTime) {
@@ -885,6 +974,46 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
         }
         public Long getTotalLoggedInTime() {
             return this.totalLoggedInTime;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOverall setTotalOffSiteOnlineTime(Long totalOffSiteOnlineTime) {
+            this.totalOffSiteOnlineTime = totalOffSiteOnlineTime;
+            return this;
+        }
+        public Long getTotalOffSiteOnlineTime() {
+            return this.totalOffSiteOnlineTime;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOverall setTotalOfficePhoneOnlineTime(Long totalOfficePhoneOnlineTime) {
+            this.totalOfficePhoneOnlineTime = totalOfficePhoneOnlineTime;
+            return this;
+        }
+        public Long getTotalOfficePhoneOnlineTime() {
+            return this.totalOfficePhoneOnlineTime;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOverall setTotalOnSiteOnlineTime(Long totalOnSiteOnlineTime) {
+            this.totalOnSiteOnlineTime = totalOnSiteOnlineTime;
+            return this;
+        }
+        public Long getTotalOnSiteOnlineTime() {
+            return this.totalOnSiteOnlineTime;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOverall setTotalOutboundScenarioReadyTime(Long totalOutboundScenarioReadyTime) {
+            this.totalOutboundScenarioReadyTime = totalOutboundScenarioReadyTime;
+            return this;
+        }
+        public Long getTotalOutboundScenarioReadyTime() {
+            return this.totalOutboundScenarioReadyTime;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOverall setTotalOutboundScenarioTime(Long totalOutboundScenarioTime) {
+            this.totalOutboundScenarioTime = totalOutboundScenarioTime;
+            return this;
+        }
+        public Long getTotalOutboundScenarioTime() {
+            return this.totalOutboundScenarioTime;
         }
 
         public ListHistoricalAgentReportResponseBodyDataListOverall setTotalReadyTime(Long totalReadyTime) {

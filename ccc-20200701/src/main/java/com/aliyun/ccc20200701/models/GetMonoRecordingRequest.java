@@ -7,6 +7,9 @@ public class GetMonoRecordingRequest extends TeaModel {
     @NameInMap("ContactId")
     public String contactId;
 
+    @NameInMap("ExpireSeconds")
+    public Long expireSeconds;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -21,6 +24,14 @@ public class GetMonoRecordingRequest extends TeaModel {
     }
     public String getContactId() {
         return this.contactId;
+    }
+
+    public GetMonoRecordingRequest setExpireSeconds(Long expireSeconds) {
+        this.expireSeconds = expireSeconds;
+        return this;
+    }
+    public Long getExpireSeconds() {
+        return this.expireSeconds;
     }
 
     public GetMonoRecordingRequest setInstanceId(String instanceId) {
