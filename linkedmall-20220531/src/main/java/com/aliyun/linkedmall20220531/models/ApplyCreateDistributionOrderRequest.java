@@ -104,9 +104,15 @@ public class ApplyCreateDistributionOrderRequest extends TeaModel {
         @NameInMap("LmItemId")
         public String lmItemId;
 
+        @NameInMap("Price")
+        public Long price;
+
         @NameInMap("Quantity")
         public Integer quantity;
 
+        /**
+         * <p>SKU</p>
+         */
         @NameInMap("SkuId")
         public String skuId;
 
@@ -129,6 +135,14 @@ public class ApplyCreateDistributionOrderRequest extends TeaModel {
         }
         public String getLmItemId() {
             return this.lmItemId;
+        }
+
+        public ApplyCreateDistributionOrderRequestItemInfoLists setPrice(Long price) {
+            this.price = price;
+            return this;
+        }
+        public Long getPrice() {
+            return this.price;
         }
 
         public ApplyCreateDistributionOrderRequestItemInfoLists setQuantity(Integer quantity) {
