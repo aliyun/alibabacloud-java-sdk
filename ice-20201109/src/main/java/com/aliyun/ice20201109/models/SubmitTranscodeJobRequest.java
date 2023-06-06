@@ -208,6 +208,9 @@ public class SubmitTranscodeJobRequest extends TeaModel {
         @NameInMap("EncryptType")
         public String encryptType;
 
+        @NameInMap("KeyServiceType")
+        public String keyServiceType;
+
         public static SubmitTranscodeJobRequestOutputGroupProcessConfigEncryption build(java.util.Map<String, ?> map) throws Exception {
             SubmitTranscodeJobRequestOutputGroupProcessConfigEncryption self = new SubmitTranscodeJobRequestOutputGroupProcessConfigEncryption();
             return TeaModel.build(map, self);
@@ -235,6 +238,14 @@ public class SubmitTranscodeJobRequest extends TeaModel {
         }
         public String getEncryptType() {
             return this.encryptType;
+        }
+
+        public SubmitTranscodeJobRequestOutputGroupProcessConfigEncryption setKeyServiceType(String keyServiceType) {
+            this.keyServiceType = keyServiceType;
+            return this;
+        }
+        public String getKeyServiceType() {
+            return this.keyServiceType;
         }
 
     }
@@ -868,6 +879,102 @@ public class SubmitTranscodeJobRequest extends TeaModel {
 
     }
 
+    public static class SubmitTranscodeJobRequestOutputGroupProcessConfigTranscodeOverwriteParamsTransConfig extends TeaModel {
+        @NameInMap("AdjDarMethod")
+        public String adjDarMethod;
+
+        @NameInMap("IsCheckAudioBitrate")
+        public String isCheckAudioBitrate;
+
+        @NameInMap("IsCheckAudioBitrateFail")
+        public String isCheckAudioBitrateFail;
+
+        @NameInMap("IsCheckReso")
+        public String isCheckReso;
+
+        @NameInMap("IsCheckResoFail")
+        public String isCheckResoFail;
+
+        @NameInMap("IsCheckVideoBitrate")
+        public String isCheckVideoBitrate;
+
+        @NameInMap("IsCheckVideoBitrateFail")
+        public String isCheckVideoBitrateFail;
+
+        @NameInMap("TransMode")
+        public String transMode;
+
+        public static SubmitTranscodeJobRequestOutputGroupProcessConfigTranscodeOverwriteParamsTransConfig build(java.util.Map<String, ?> map) throws Exception {
+            SubmitTranscodeJobRequestOutputGroupProcessConfigTranscodeOverwriteParamsTransConfig self = new SubmitTranscodeJobRequestOutputGroupProcessConfigTranscodeOverwriteParamsTransConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitTranscodeJobRequestOutputGroupProcessConfigTranscodeOverwriteParamsTransConfig setAdjDarMethod(String adjDarMethod) {
+            this.adjDarMethod = adjDarMethod;
+            return this;
+        }
+        public String getAdjDarMethod() {
+            return this.adjDarMethod;
+        }
+
+        public SubmitTranscodeJobRequestOutputGroupProcessConfigTranscodeOverwriteParamsTransConfig setIsCheckAudioBitrate(String isCheckAudioBitrate) {
+            this.isCheckAudioBitrate = isCheckAudioBitrate;
+            return this;
+        }
+        public String getIsCheckAudioBitrate() {
+            return this.isCheckAudioBitrate;
+        }
+
+        public SubmitTranscodeJobRequestOutputGroupProcessConfigTranscodeOverwriteParamsTransConfig setIsCheckAudioBitrateFail(String isCheckAudioBitrateFail) {
+            this.isCheckAudioBitrateFail = isCheckAudioBitrateFail;
+            return this;
+        }
+        public String getIsCheckAudioBitrateFail() {
+            return this.isCheckAudioBitrateFail;
+        }
+
+        public SubmitTranscodeJobRequestOutputGroupProcessConfigTranscodeOverwriteParamsTransConfig setIsCheckReso(String isCheckReso) {
+            this.isCheckReso = isCheckReso;
+            return this;
+        }
+        public String getIsCheckReso() {
+            return this.isCheckReso;
+        }
+
+        public SubmitTranscodeJobRequestOutputGroupProcessConfigTranscodeOverwriteParamsTransConfig setIsCheckResoFail(String isCheckResoFail) {
+            this.isCheckResoFail = isCheckResoFail;
+            return this;
+        }
+        public String getIsCheckResoFail() {
+            return this.isCheckResoFail;
+        }
+
+        public SubmitTranscodeJobRequestOutputGroupProcessConfigTranscodeOverwriteParamsTransConfig setIsCheckVideoBitrate(String isCheckVideoBitrate) {
+            this.isCheckVideoBitrate = isCheckVideoBitrate;
+            return this;
+        }
+        public String getIsCheckVideoBitrate() {
+            return this.isCheckVideoBitrate;
+        }
+
+        public SubmitTranscodeJobRequestOutputGroupProcessConfigTranscodeOverwriteParamsTransConfig setIsCheckVideoBitrateFail(String isCheckVideoBitrateFail) {
+            this.isCheckVideoBitrateFail = isCheckVideoBitrateFail;
+            return this;
+        }
+        public String getIsCheckVideoBitrateFail() {
+            return this.isCheckVideoBitrateFail;
+        }
+
+        public SubmitTranscodeJobRequestOutputGroupProcessConfigTranscodeOverwriteParamsTransConfig setTransMode(String transMode) {
+            this.transMode = transMode;
+            return this;
+        }
+        public String getTransMode() {
+            return this.transMode;
+        }
+
+    }
+
     public static class SubmitTranscodeJobRequestOutputGroupProcessConfigTranscodeOverwriteParamsVideo extends TeaModel {
         @NameInMap("AbrMax")
         public String abrMax;
@@ -1087,6 +1194,9 @@ public class SubmitTranscodeJobRequest extends TeaModel {
         @NameInMap("Tags")
         public java.util.Map<String, String> tags;
 
+        @NameInMap("TransConfig")
+        public SubmitTranscodeJobRequestOutputGroupProcessConfigTranscodeOverwriteParamsTransConfig transConfig;
+
         @NameInMap("Video")
         public SubmitTranscodeJobRequestOutputGroupProcessConfigTranscodeOverwriteParamsVideo video;
 
@@ -1125,6 +1235,14 @@ public class SubmitTranscodeJobRequest extends TeaModel {
         }
         public java.util.Map<String, String> getTags() {
             return this.tags;
+        }
+
+        public SubmitTranscodeJobRequestOutputGroupProcessConfigTranscodeOverwriteParams setTransConfig(SubmitTranscodeJobRequestOutputGroupProcessConfigTranscodeOverwriteParamsTransConfig transConfig) {
+            this.transConfig = transConfig;
+            return this;
+        }
+        public SubmitTranscodeJobRequestOutputGroupProcessConfigTranscodeOverwriteParamsTransConfig getTransConfig() {
+            return this.transConfig;
         }
 
         public SubmitTranscodeJobRequestOutputGroupProcessConfigTranscodeOverwriteParams setVideo(SubmitTranscodeJobRequestOutputGroupProcessConfigTranscodeOverwriteParamsVideo video) {
