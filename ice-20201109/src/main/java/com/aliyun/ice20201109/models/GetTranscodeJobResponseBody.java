@@ -167,6 +167,9 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         @NameInMap("EncryptType")
         public String encryptType;
 
+        @NameInMap("KeyServiceType")
+        public String keyServiceType;
+
         public static GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigEncryption build(java.util.Map<String, ?> map) throws Exception {
             GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigEncryption self = new GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigEncryption();
             return TeaModel.build(map, self);
@@ -194,6 +197,14 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         }
         public String getEncryptType() {
             return this.encryptType;
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigEncryption setKeyServiceType(String keyServiceType) {
+            this.keyServiceType = keyServiceType;
+            return this;
+        }
+        public String getKeyServiceType() {
+            return this.keyServiceType;
         }
 
     }
@@ -827,6 +838,102 @@ public class GetTranscodeJobResponseBody extends TeaModel {
 
     }
 
+    public static class GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsTransConfig extends TeaModel {
+        @NameInMap("AdjDarMethod")
+        public String adjDarMethod;
+
+        @NameInMap("IsCheckAudioBitrate")
+        public String isCheckAudioBitrate;
+
+        @NameInMap("IsCheckAudioBitrateFail")
+        public String isCheckAudioBitrateFail;
+
+        @NameInMap("IsCheckReso")
+        public String isCheckReso;
+
+        @NameInMap("IsCheckResoFail")
+        public String isCheckResoFail;
+
+        @NameInMap("IsCheckVideoBitrate")
+        public String isCheckVideoBitrate;
+
+        @NameInMap("IsCheckVideoBitrateFail")
+        public String isCheckVideoBitrateFail;
+
+        @NameInMap("TransMode")
+        public String transMode;
+
+        public static GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsTransConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsTransConfig self = new GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsTransConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsTransConfig setAdjDarMethod(String adjDarMethod) {
+            this.adjDarMethod = adjDarMethod;
+            return this;
+        }
+        public String getAdjDarMethod() {
+            return this.adjDarMethod;
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsTransConfig setIsCheckAudioBitrate(String isCheckAudioBitrate) {
+            this.isCheckAudioBitrate = isCheckAudioBitrate;
+            return this;
+        }
+        public String getIsCheckAudioBitrate() {
+            return this.isCheckAudioBitrate;
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsTransConfig setIsCheckAudioBitrateFail(String isCheckAudioBitrateFail) {
+            this.isCheckAudioBitrateFail = isCheckAudioBitrateFail;
+            return this;
+        }
+        public String getIsCheckAudioBitrateFail() {
+            return this.isCheckAudioBitrateFail;
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsTransConfig setIsCheckReso(String isCheckReso) {
+            this.isCheckReso = isCheckReso;
+            return this;
+        }
+        public String getIsCheckReso() {
+            return this.isCheckReso;
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsTransConfig setIsCheckResoFail(String isCheckResoFail) {
+            this.isCheckResoFail = isCheckResoFail;
+            return this;
+        }
+        public String getIsCheckResoFail() {
+            return this.isCheckResoFail;
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsTransConfig setIsCheckVideoBitrate(String isCheckVideoBitrate) {
+            this.isCheckVideoBitrate = isCheckVideoBitrate;
+            return this;
+        }
+        public String getIsCheckVideoBitrate() {
+            return this.isCheckVideoBitrate;
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsTransConfig setIsCheckVideoBitrateFail(String isCheckVideoBitrateFail) {
+            this.isCheckVideoBitrateFail = isCheckVideoBitrateFail;
+            return this;
+        }
+        public String getIsCheckVideoBitrateFail() {
+            return this.isCheckVideoBitrateFail;
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsTransConfig setTransMode(String transMode) {
+            this.transMode = transMode;
+            return this;
+        }
+        public String getTransMode() {
+            return this.transMode;
+        }
+
+    }
+
     public static class GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsVideo extends TeaModel {
         @NameInMap("AbrMax")
         public String abrMax;
@@ -1043,6 +1150,9 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         @NameInMap("MuxConfig")
         public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsMuxConfig muxConfig;
 
+        @NameInMap("TransConfig")
+        public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsTransConfig transConfig;
+
         @NameInMap("Video")
         public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsVideo video;
 
@@ -1073,6 +1183,14 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         }
         public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsMuxConfig getMuxConfig() {
             return this.muxConfig;
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParams setTransConfig(GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsTransConfig transConfig) {
+            this.transConfig = transConfig;
+            return this;
+        }
+        public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsTransConfig getTransConfig() {
+            return this.transConfig;
         }
 
         public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParams setVideo(GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsVideo video) {
@@ -2008,6 +2126,9 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         @NameInMap("EncryptType")
         public String encryptType;
 
+        @NameInMap("KeyServiceType")
+        public String keyServiceType;
+
         public static GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigEncryption build(java.util.Map<String, ?> map) throws Exception {
             GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigEncryption self = new GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigEncryption();
             return TeaModel.build(map, self);
@@ -2035,6 +2156,14 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         }
         public String getEncryptType() {
             return this.encryptType;
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigEncryption setKeyServiceType(String keyServiceType) {
+            this.keyServiceType = keyServiceType;
+            return this;
+        }
+        public String getKeyServiceType() {
+            return this.keyServiceType;
         }
 
     }
@@ -2668,6 +2797,102 @@ public class GetTranscodeJobResponseBody extends TeaModel {
 
     }
 
+    public static class GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsTransConfig extends TeaModel {
+        @NameInMap("AdjDarMethod")
+        public String adjDarMethod;
+
+        @NameInMap("IsCheckAudioBitrate")
+        public String isCheckAudioBitrate;
+
+        @NameInMap("IsCheckAudioBitrateFail")
+        public String isCheckAudioBitrateFail;
+
+        @NameInMap("IsCheckReso")
+        public String isCheckReso;
+
+        @NameInMap("IsCheckResoFail")
+        public String isCheckResoFail;
+
+        @NameInMap("IsCheckVideoBitrate")
+        public String isCheckVideoBitrate;
+
+        @NameInMap("IsCheckVideoBitrateFail")
+        public String isCheckVideoBitrateFail;
+
+        @NameInMap("TransMode")
+        public String transMode;
+
+        public static GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsTransConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsTransConfig self = new GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsTransConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsTransConfig setAdjDarMethod(String adjDarMethod) {
+            this.adjDarMethod = adjDarMethod;
+            return this;
+        }
+        public String getAdjDarMethod() {
+            return this.adjDarMethod;
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsTransConfig setIsCheckAudioBitrate(String isCheckAudioBitrate) {
+            this.isCheckAudioBitrate = isCheckAudioBitrate;
+            return this;
+        }
+        public String getIsCheckAudioBitrate() {
+            return this.isCheckAudioBitrate;
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsTransConfig setIsCheckAudioBitrateFail(String isCheckAudioBitrateFail) {
+            this.isCheckAudioBitrateFail = isCheckAudioBitrateFail;
+            return this;
+        }
+        public String getIsCheckAudioBitrateFail() {
+            return this.isCheckAudioBitrateFail;
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsTransConfig setIsCheckReso(String isCheckReso) {
+            this.isCheckReso = isCheckReso;
+            return this;
+        }
+        public String getIsCheckReso() {
+            return this.isCheckReso;
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsTransConfig setIsCheckResoFail(String isCheckResoFail) {
+            this.isCheckResoFail = isCheckResoFail;
+            return this;
+        }
+        public String getIsCheckResoFail() {
+            return this.isCheckResoFail;
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsTransConfig setIsCheckVideoBitrate(String isCheckVideoBitrate) {
+            this.isCheckVideoBitrate = isCheckVideoBitrate;
+            return this;
+        }
+        public String getIsCheckVideoBitrate() {
+            return this.isCheckVideoBitrate;
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsTransConfig setIsCheckVideoBitrateFail(String isCheckVideoBitrateFail) {
+            this.isCheckVideoBitrateFail = isCheckVideoBitrateFail;
+            return this;
+        }
+        public String getIsCheckVideoBitrateFail() {
+            return this.isCheckVideoBitrateFail;
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsTransConfig setTransMode(String transMode) {
+            this.transMode = transMode;
+            return this;
+        }
+        public String getTransMode() {
+            return this.transMode;
+        }
+
+    }
+
     public static class GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsVideo extends TeaModel {
         @NameInMap("AbrMax")
         public String abrMax;
@@ -2887,6 +3112,9 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         @NameInMap("Tags")
         public java.util.Map<String, String> tags;
 
+        @NameInMap("TransConfig")
+        public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsTransConfig transConfig;
+
         @NameInMap("Video")
         public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsVideo video;
 
@@ -2925,6 +3153,14 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         }
         public java.util.Map<String, String> getTags() {
             return this.tags;
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParams setTransConfig(GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsTransConfig transConfig) {
+            this.transConfig = transConfig;
+            return this;
+        }
+        public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsTransConfig getTransConfig() {
+            return this.transConfig;
         }
 
         public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParams setVideo(GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsVideo video) {
