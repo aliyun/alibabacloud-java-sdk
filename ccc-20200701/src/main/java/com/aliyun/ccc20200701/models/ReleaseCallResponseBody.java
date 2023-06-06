@@ -85,6 +85,9 @@ public class ReleaseCallResponseBody extends TeaModel {
         @NameInMap("ChannelState")
         public String channelState;
 
+        @NameInMap("ChannelVariables")
+        public String channelVariables;
+
         @NameInMap("Destination")
         public String destination;
 
@@ -136,6 +139,14 @@ public class ReleaseCallResponseBody extends TeaModel {
         }
         public String getChannelState() {
             return this.channelState;
+        }
+
+        public ReleaseCallResponseBodyDataCallContextChannelContexts setChannelVariables(String channelVariables) {
+            this.channelVariables = channelVariables;
+            return this;
+        }
+        public String getChannelVariables() {
+            return this.channelVariables;
         }
 
         public ReleaseCallResponseBodyDataCallContextChannelContexts setDestination(String destination) {
