@@ -603,6 +603,9 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         @NameInMap("phone")
         public String phone;
 
+        @NameInMap("room_no")
+        public Integer roomNo;
+
         @NameInMap("selected")
         public Boolean selected;
 
@@ -719,6 +722,14 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         }
         public String getPhone() {
             return this.phone;
+        }
+
+        public HotelOrderDetailInfoResponseBodyModuleOccupantInfoList setRoomNo(Integer roomNo) {
+            this.roomNo = roomNo;
+            return this;
+        }
+        public Integer getRoomNo() {
+            return this.roomNo;
         }
 
         public HotelOrderDetailInfoResponseBodyModuleOccupantInfoList setSelected(Boolean selected) {
