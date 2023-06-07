@@ -7,6 +7,9 @@ public class TaskStatus extends TeaModel {
     @NameInMap("executionDetails")
     public java.util.List<String> executionDetails;
 
+    @NameInMap("invocations")
+    public java.util.List<TaskInvocation> invocations;
+
     @NameInMap("phase")
     public String phase;
 
@@ -24,6 +27,14 @@ public class TaskStatus extends TeaModel {
     }
     public java.util.List<String> getExecutionDetails() {
         return this.executionDetails;
+    }
+
+    public TaskStatus setInvocations(java.util.List<TaskInvocation> invocations) {
+        this.invocations = invocations;
+        return this;
+    }
+    public java.util.List<TaskInvocation> getInvocations() {
+        return this.invocations;
     }
 
     public TaskStatus setPhase(String phase) {
