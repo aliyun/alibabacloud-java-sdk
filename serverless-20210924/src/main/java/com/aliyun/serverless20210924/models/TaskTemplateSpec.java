@@ -7,9 +7,6 @@ public class TaskTemplateSpec extends TeaModel {
     @NameInMap("context")
     public Context context;
 
-    @NameInMap("contextSchema")
-    public java.util.Map<String, ?> contextSchema;
-
     @NameInMap("description")
     public String description;
 
@@ -30,14 +27,6 @@ public class TaskTemplateSpec extends TeaModel {
     }
     public Context getContext() {
         return this.context;
-    }
-
-    public TaskTemplateSpec setContextSchema(java.util.Map<String, ?> contextSchema) {
-        this.contextSchema = contextSchema;
-        return this;
-    }
-    public java.util.Map<String, ?> getContextSchema() {
-        return this.contextSchema;
     }
 
     public TaskTemplateSpec setDescription(String description) {

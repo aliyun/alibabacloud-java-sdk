@@ -7,9 +7,6 @@ public class PipelineTemplateSpec extends TeaModel {
     @NameInMap("context")
     public Context context;
 
-    @NameInMap("contextSchema")
-    public java.util.Map<String, ?> contextSchema;
-
     @NameInMap("tasks")
     public java.util.List<TaskExec> tasks;
 
@@ -24,14 +21,6 @@ public class PipelineTemplateSpec extends TeaModel {
     }
     public Context getContext() {
         return this.context;
-    }
-
-    public PipelineTemplateSpec setContextSchema(java.util.Map<String, ?> contextSchema) {
-        this.contextSchema = contextSchema;
-        return this;
-    }
-    public java.util.Map<String, ?> getContextSchema() {
-        return this.contextSchema;
     }
 
     public PipelineTemplateSpec setTasks(java.util.List<TaskExec> tasks) {
