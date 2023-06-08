@@ -7,6 +7,9 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TotalCount")
+    public String totalCount;
+
     @NameInMap("TrFirewallRoutePolicies")
     public java.util.List<DescribeTrFirewallV2RoutePolicyListResponseBodyTrFirewallRoutePolicies> trFirewallRoutePolicies;
 
@@ -21,6 +24,14 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeTrFirewallV2RoutePolicyListResponseBody setTotalCount(String totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public String getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeTrFirewallV2RoutePolicyListResponseBody setTrFirewallRoutePolicies(java.util.List<DescribeTrFirewallV2RoutePolicyListResponseBodyTrFirewallRoutePolicies> trFirewallRoutePolicies) {
