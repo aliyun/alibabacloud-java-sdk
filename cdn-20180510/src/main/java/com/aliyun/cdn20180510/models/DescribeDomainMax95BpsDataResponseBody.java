@@ -8,34 +8,43 @@ public class DescribeDomainMax95BpsDataResponseBody extends TeaModel {
     public DescribeDomainMax95BpsDataResponseBodyDetailData detailData;
 
     /**
-     * <p>http://inner.jing.alibaba-inc.com:1160/v2/api/rtlog/max95BpsData</p>
+     * <p>The accelerated domain name.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The 95th percentile bandwidth in the Chinese mainland.</p>
+     */
     @NameInMap("DomesticMax95Bps")
     public String domesticMax95Bps;
 
     /**
-     * <p>domainName</p>
+     * <p>The end of the time range for which the data was queried.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The 95th percentile bandwidth.</p>
+     */
     @NameInMap("Max95Bps")
     public String max95Bps;
 
+    /**
+     * <p>The 95th percentile bandwidth outside the Chinese mainland.</p>
+     */
     @NameInMap("OverseasMax95Bps")
     public String overseasMax95Bps;
 
     /**
-     * <p>Specified EndTime does not math the specified StartTime.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>http://inner.jing.alibaba-inc.com:1160/v2/api/rtlog/max95BpsData</p>
+     * <p>The beginning of the time range for which the data was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

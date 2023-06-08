@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCdnSMCertificateDetailResponseBody extends TeaModel {
     /**
-     * <p>The name of the certificate.</p>
+     * <p>The expiration time of the certificate. The time is displayed in UTC.</p>
      */
     @NameInMap("CertExpireTime")
     public String certExpireTime;
@@ -17,7 +17,7 @@ public class DescribeCdnSMCertificateDetailResponseBody extends TeaModel {
     public String certIdentifier;
 
     /**
-     * <p>The time when the certificate expires. The time is displayed in UTC.</p>
+     * <p>The name of the certificate.</p>
      */
     @NameInMap("CertName")
     public String certName;
@@ -29,19 +29,19 @@ public class DescribeCdnSMCertificateDetailResponseBody extends TeaModel {
     public String certOrg;
 
     /**
-     * <p>The top-level domain name.</p>
+     * <p>The common name.</p>
      */
     @NameInMap("CommonName")
     public String commonName;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The content of the encryption certificate.</p>
      */
     @NameInMap("EncryptCertificate")
     public String encryptCertificate;
 
     /**
-     * <p>The content of the encryption certificate.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

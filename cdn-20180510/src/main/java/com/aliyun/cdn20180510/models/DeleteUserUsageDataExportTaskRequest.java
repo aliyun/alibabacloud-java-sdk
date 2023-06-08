@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteUserUsageDataExportTaskRequest extends TeaModel {
     /**
-     * <p>The ID of the export task that you want to delete.</p>
+     * <p>The ID of the task to delete.</p>
      */
     @NameInMap("TaskId")
     public String taskId;

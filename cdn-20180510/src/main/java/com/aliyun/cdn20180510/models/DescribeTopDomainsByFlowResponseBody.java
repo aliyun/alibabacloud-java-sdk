@@ -5,37 +5,37 @@ import com.aliyun.tea.*;
 
 public class DescribeTopDomainsByFlowResponseBody extends TeaModel {
     /**
-     * <p>The number of visits to the accelerated domain name.</p>
+     * <p>The total number of accelerated domain names that belong to the current Alibaba Cloud account.</p>
      */
     @NameInMap("DomainCount")
     public Long domainCount;
 
     /**
-     * <p>The ranking of the accelerated domain name.</p>
+     * <p>The total number of accelerated domain names that are in the **Enabled** state within the current Alibaba Cloud account.</p>
      */
     @NameInMap("DomainOnlineCount")
     public Long domainOnlineCount;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeTopDomainsByFlow**.</p>
+     * <p>The end of the time range during which data was queried.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The proportion of the amount of network traffic consumed for visiting the web page.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total amount of network traffic.</p>
+     * <p>The start of the time range during which data was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The end of the time range during which data was queried.</p>
+     * <p>The top N domain names ranked by network traffic.</p>
      */
     @NameInMap("TopDomains")
     public DescribeTopDomainsByFlowResponseBodyTopDomains topDomains;
@@ -95,45 +95,43 @@ public class DescribeTopDomainsByFlowResponseBody extends TeaModel {
 
     public static class DescribeTopDomainsByFlowResponseBodyTopDomainsTopDomain extends TeaModel {
         /**
-         * <p>The total number of accelerated domain names that belong to the current Alibaba Cloud account.</p>
+         * <p>The accelerated domain name.</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-         * <br>
-         * <p>>  Set StartTime to UTC time in the yyyy-MM-ddTHH:mm:ssZ format. For example, if the local time is 00:00, June 1, 2021, set StartTime to 2021-05-31T16:00:00Z.</p>
+         * <p>The peak bandwidth value.</p>
          */
         @NameInMap("MaxBps")
         public Float maxBps;
 
         /**
-         * <p>Queries the top N domain names ranked by network traffic. You can query data collected within the last 30 days.</p>
+         * <p>The time when the bandwidth reached the peak value.</p>
          */
         @NameInMap("MaxBpsTime")
         public String maxBpsTime;
 
         /**
-         * <p>The time when the bandwidth reached the peak value.</p>
+         * <p>The ranking of the accelerated domain name.</p>
          */
         @NameInMap("Rank")
         public Long rank;
 
         /**
-         * <p>The top N domain names ranked by network traffic.</p>
+         * <p>The number of visits to the domain name.</p>
          */
         @NameInMap("TotalAccess")
         public Long totalAccess;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The total volume of traffic.</p>
          */
         @NameInMap("TotalTraffic")
         public String totalTraffic;
 
         /**
-         * <p>The beginning of the time range during which data was queried.</p>
+         * <p>The proportion of network traffic consumed to access the domain name.</p>
          */
         @NameInMap("TrafficPercent")
         public String trafficPercent;

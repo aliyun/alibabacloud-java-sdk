@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class BatchDeleteCdnDomainConfigRequest extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to **BatchDeleteCdnDomainConfig**.</p>
+     * <p>The accelerated domain names whose configurations you want to delete. Separate multiple accelerated domain names with commas (,).</p>
      */
     @NameInMap("DomainNames")
     public String domainNames;
 
     /**
-     * <p>The names of the features that you want to manage. Separate feature names with commas (,).</p>
+     * <p>The names of the features that you want to delete. Separate multiple feature names with commas (,). For more information about feature names, see [Parameters for configuring features for domain names](~~388460~~).</p>
      */
     @NameInMap("FunctionNames")
     public String functionNames;

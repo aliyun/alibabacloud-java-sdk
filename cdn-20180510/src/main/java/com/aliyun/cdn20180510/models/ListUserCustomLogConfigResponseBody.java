@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListUserCustomLogConfigResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The list of log configuration IDs.</p>
      */
     @NameInMap("ConfigIds")
     public ListUserCustomLogConfigResponseBodyConfigIds configIds;
 
     /**
-     * <p>The ID of the log configuration.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

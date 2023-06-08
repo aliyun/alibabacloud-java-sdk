@@ -5,28 +5,32 @@ import com.aliyun.tea.*;
 
 public class SetDomainServerCertificateRequest extends TeaModel {
     /**
-     * <p>Specifies whether to check the certificate name for duplicates. If you set the value to 1, the system does not perform the check and overwrites the information of the existing certificate that uses the same name.</p>
+     * <p>The name of the SSL certificate. You can specify only one name.</p>
      */
     @NameInMap("CertName")
     public String certName;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The type of the certificate. Valid values:</p>
+     * <br>
+     * <p>*   **upload**: a user-uploaded SSL certificate.</p>
+     * <p>*   **cas**: a certificate that is purchased from Alibaba Cloud SSL Certificates Service.</p>
+     * <br>
+     * <p>> If this parameter is set to **cas**, the **PrivateKey** parameter is optional.</p>
      */
     @NameInMap("CertType")
     public String certType;
 
     /**
-     * <p>The private key. Specify the private key only if you want to enable the SSL certificate.</p>
+     * <p>The accelerated domain name for which you want to configure the SSL certificate. The type of request supported by the domain name must be HTTPS.</p>
+     * <br>
+     * <p>You can specify one domain name in each call.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>Specifies whether to enable the SSL certificate. Valid values:</p>
-     * <br>
-     * <p>*   **on**: enables the SSL certificate.</p>
-     * <p>*   **off**: disables the SSL certificate. This is the default value.</p>
+     * <p>Specifies whether to check the certificate name for duplicates. If you set the value to 1, the system does not perform the check and overwrites the information about the existing certificate that uses the same name.</p>
      */
     @NameInMap("ForceSet")
     public String forceSet;
@@ -35,7 +39,7 @@ public class SetDomainServerCertificateRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Specifies whether to check the certificate name for duplicates. If you set the value to 1, the system does not perform the check and overwrites the information of the existing certificate that uses the same name.</p>
+     * <p>The private key. Specify the private key only if you want to enable the SSL certificate.</p>
      */
     @NameInMap("PrivateKey")
     public String privateKey;
@@ -44,19 +48,19 @@ public class SetDomainServerCertificateRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The type of the SSL certificate. Valid values:</p>
+     * <p>The content of the SSL certificate. Specify the content of the SSL certificate only if you want to enable the SSL certificate. You can use one of the following methods to obtain the content of the SSL certificate:</p>
      * <br>
-     * <p>*   **upload**: a user-uploaded SSL certificate.</p>
-     * <p>*   **cas**: an SSL certificate that is issued by Alibaba Cloud SSL Certificates Service.</p>
-     * <p>*   **free**: a free SSL certificate.</p>
-     * <br>
-     * <p>>  If this parameter is set to **cas**, the **PrivateKey** parameter is optional.</p>
+     * <p>*   Method 1: Call the [DescribeDomainCertificateInfo](~~91182~~) API operation to query the information about the SSL certificate corresponding to the accelerated domain name and obtain the public key of the ServerCertificate certificate from the returned data.</p>
+     * <p>*   Method 2: Call the [DescribeCdnCertificateList](~~91181~~) API operation to query the SSL certificate list corresponding to the accelerated domain name, and obtain the value of CertName from the returned data. Then, Call the [DescribeCdnCertificateDetail](~~131905~~) API operation with CertName as a parameter to obtain the details about the certificate, and obtain the public key of the Cert certificate from the returned data.</p>
      */
     @NameInMap("ServerCertificate")
     public String serverCertificate;
 
     /**
-     * <p>The name of the SSL certificate. You can specify only one name.</p>
+     * <p>Specifies whether to enable the SSL certificate. Default value: off. Valid values:</p>
+     * <br>
+     * <p>*   **on** ：enables the SSL certificate.</p>
+     * <p>*   **off**：disables the SSL certificate.</p>
      */
     @NameInMap("ServerCertificateStatus")
     public String serverCertificateStatus;

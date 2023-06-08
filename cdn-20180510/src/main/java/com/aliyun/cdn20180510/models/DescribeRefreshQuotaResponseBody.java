@@ -11,31 +11,31 @@ public class DescribeRefreshQuotaResponseBody extends TeaModel {
     public String blockQuota;
 
     /**
-     * <p>The remaining number of times that you can prefetch content to L1 nodes on the current day.</p>
+     * <p>The remaining number of times that you can prefetch content to L2 points of presence (POPs) on the current day.</p>
      */
     @NameInMap("BlockRemain")
     public String blockRemain;
 
     /**
-     * <p>The remaining number of directories that can be refreshed on the current day.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("DirQuota")
     public String dirQuota;
 
     /**
-     * <p>The operation that you want to perform. Set this parameter to **DescribeRefreshQuota**.</p>
+     * <p>The remaining number of URLs that can be refreshed on the current day.</p>
      */
     @NameInMap("DirRemain")
     public String dirRemain;
 
     /**
-     * <p>当天忽略参数刷新数量上限。</p>
+     * <p>The maximum number of URLs or directories with parameters ignored that can be refreshed on the current day.</p>
      */
     @NameInMap("IgnoreParamsQuota")
     public String ignoreParamsQuota;
 
     /**
-     * <p>当天剩余忽略参数刷新数量。</p>
+     * <p>The number of remaining URLs or directories that can be refreshed with parameters ignored on the current day.</p>
      */
     @NameInMap("IgnoreParamsRemain")
     public String ignoreParamsRemain;
@@ -47,49 +47,49 @@ public class DescribeRefreshQuotaResponseBody extends TeaModel {
     public String preloadEdgeQuota;
 
     /**
-     * <p>The maximum number of times that you can prefetch content to L2 nodes on the current day.</p>
+     * <p>The maximum number of times that you can prefetch content to L1 POPs on the current day.</p>
      */
     @NameInMap("PreloadEdgeRemain")
     public String preloadEdgeRemain;
 
     /**
-     * <p>The remaining number of times that you can use regular expressions to refresh directories or URLs on the current day.</p>
+     * <p>The remaining number of times that you can prefetch content to L1 POPs on the current day.</p>
      */
     @NameInMap("PreloadQuota")
     public String preloadQuota;
 
     /**
-     * <p>The maximum number of URLs and directories that can be blocked on the current day.</p>
+     * <p>The maximum number of times that you can prefetch content to L1 nodes on the current day.</p>
      */
     @NameInMap("PreloadRemain")
     public String preloadRemain;
 
     /**
-     * <p>The ID of the request</p>
+     * <p>The maximum number of times that you can prefetch content to L2 POPs on the current day.</p>
      */
     @NameInMap("RegexQuota")
     public String regexQuota;
 
     /**
-     * <p>The remaining number of times that you can prefetch content to L2 nodes on the current day.</p>
+     * <p>The remaining number of URLs that can be blocked on the current day.</p>
      */
     @NameInMap("RegexRemain")
     public String regexRemain;
 
     /**
-     * <p>The remaining number of URLs that can be refreshed on the current day.</p>
+     * <p>The maximum number of URLs and directories that can be blocked on the current day.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The maximum number of times that you can prefetch content to L1 nodes on the current day.</p>
+     * <p>The remaining number of directories that can be refreshed on the current day.</p>
      */
     @NameInMap("UrlQuota")
     public String urlQuota;
 
     /**
-     * <p>The maximum number of times that you can use regular expressions to refresh directories or URLs on the current day.</p>
+     * <p>The remaining number of URLs or directories that can be refreshed by using regular expressions on the current day.</p>
      */
     @NameInMap("UrlRemain")
     public String urlRemain;

@@ -5,20 +5,19 @@ import com.aliyun.tea.*;
 
 public class DeleteRealTimeLogLogstoreRequest extends TeaModel {
     /**
-     * <p>The ID of the region where the Log Service project is deployed. For more information, see [Regions that support real-time log delivery](~~144883~~).</p>
+     * <p>The name of the Logstore to which log entries are delivered.</p>
      */
     @NameInMap("Logstore")
     public String logstore;
 
     /**
-     * <p>Deletes the Logstore that is used by a specified configuration record of real-time</p>
-     * <p>                  log delivery.</p>
+     * <p>The name of the Log Service project that is used for real-time log delivery.</p>
      */
     @NameInMap("Project")
     public String project;
 
     /**
-     * <p>The name of the Log Service project that is used for real-time log delivery.</p>
+     * <p>The ID of the region where the Log Service project is deployed. For more information, see [Regions that support real-time log delivery](~~144883~~).</p>
      */
     @NameInMap("Region")
     public String region;

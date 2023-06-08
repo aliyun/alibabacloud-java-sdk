@@ -5,19 +5,24 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainMultiUsageDataRequest extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeDomainMultiUsageData**.</p>
+     * <p>The accelerated domain name. Separate multiple accelerated domain names with commas (,).</p>
+     * <br>
+     * <p>> *   You can specify a maximum of 30 domain names at a time.</p>
+     * <p>>*   If this parameter is not set, data of all your accelerated domain names is queried.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The number of requests.</p>
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <br>
+     * <p>> The end time must be later than the start time.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The information about requests collected every 5 minutes.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

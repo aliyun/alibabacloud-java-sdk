@@ -4,15 +4,41 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnUserBillPredictionRequest extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Area")
     public String area;
 
+    /**
+     * <p>The start time of the estimation.</p>
+     */
     @NameInMap("Dimension")
     public String dimension;
 
+    /**
+     * <p>The end time of the estimation.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The billable region. Valid values:</p>
+     * <br>
+     * <p>*   **CN**: the Chinese mainland</p>
+     * <p>*   **OverSeas**: outside the Chinese mainland</p>
+     * <p>*   **AP1**: Asia Pacific 1</p>
+     * <p>*   **AP2**: Asia Pacific 2</p>
+     * <p>*   **AP3**: Asia Pacific 3</p>
+     * <p>*   **NA**: North America</p>
+     * <p>*   **SA**: South America</p>
+     * <p>*   **EU**: Europe</p>
+     * <p>*   **MEAA**: Middle East and Africa</p>
+     * <br>
+     * <p>By default, the value of this parameter is determined by the metering method that is currently used. Regions inside and outside the Chinese mainland are classified into the **CN** and **OverSeas** billable regions. Billable regions inside the Chinese mainland include **CN**. Billable regions outside the Chinese mainland include **AP1**, **AP2**, **AP3**, **NA**, **SA**, **EU**, and **MEAA**.</p>
+     * <br>
+     * <p>> For more information about billable regions, see [Billable regions](~~142221~~).</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

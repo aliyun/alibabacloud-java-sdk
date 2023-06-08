@@ -4,11 +4,14 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeStagingIpResponseBody extends TeaModel {
+    /**
+     * <p>IPv4 addresses.</p>
+     */
     @NameInMap("IPV4s")
     public DescribeStagingIpResponseBodyIPV4s IPV4s;
 
     /**
-     * <p>Queries node IP addresses in the staging environment.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

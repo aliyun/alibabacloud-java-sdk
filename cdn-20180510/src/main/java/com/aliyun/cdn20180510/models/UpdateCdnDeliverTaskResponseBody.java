@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCdnDeliverTaskResponseBody extends TeaModel {
     /**
-     * <p>The parameters that specify the time interval at which the tracking task sends operations reports. The settings must be escaped in JSON.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

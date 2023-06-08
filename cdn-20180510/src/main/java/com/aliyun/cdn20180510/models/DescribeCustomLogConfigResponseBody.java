@@ -11,19 +11,19 @@ public class DescribeCustomLogConfigResponseBody extends TeaModel {
     public String remark;
 
     /**
-     * <p>The ID of the custom configuration.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The sample.</p>
      */
     @NameInMap("Sample")
     public String sample;
 
     /**
-     * <p>>  The maximum number of times that each user can call this operation per second is 100.</p>
+     * <p>The tag information about the log configuration.</p>
      */
     @NameInMap("Tag")
     public String tag;

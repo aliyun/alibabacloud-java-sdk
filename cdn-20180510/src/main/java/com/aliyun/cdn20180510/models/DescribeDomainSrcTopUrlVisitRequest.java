@@ -11,21 +11,30 @@ public class DescribeDomainSrcTopUrlVisitRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The proportion of visits to the URL.</p>
+     * <p>The end of the time range to query.</p>
+     * <br>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <br>
+     * <p>> The end time must be later than the start time. The duration between the end time and the start time cannot exceed seven days.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The method that is used to sort the returned URLs. Default value: **pv**. Valid values:</p>
      * <br>
-     * <p>>  If you do not set the StartTime parameter, the data within the previous day is queried.</p>
+     * <p>*   **traf**: by network traffic</p>
+     * <p>*   **pv**: by the number of visits</p>
      */
     @NameInMap("SortBy")
     public String sortBy;
 
     /**
-     * <p>A list of frequently requested URLs.</p>
+     * <p>The beginning of the time range to query.</p>
+     * <br>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <br>
+     * <p>> If you leave this parameter empty, data within the previous day is queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

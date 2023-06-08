@@ -5,21 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
     /**
-     * <p>The ID of the task that you want to query.</p>
-     * <br>
-     * <p>You can call the [RefreshObjectCaches](~~91164~~) operation to query task IDs. Then, you can use the task IDs to query task status.</p>
-     * <br>
-     * <p>You can specify up to 10 task IDs. Separate task IDs with commas (,).</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The error returned when the refresh or prefetch task failed. Valid values:</p>
-     * <br>
-     * <p>*   **Internal Error**: An internal error occurred.</p>
-     * <p>*   **Origin Timeout**: The response from the origin server timed out.</p>
-     * <p>*   **Origin Return StatusCode 5XX**: The origin server returned a 5XX error.</p>
+     * <p>Details about tasks.</p>
      */
     @NameInMap("Tasks")
     public java.util.List<DescribeRefreshTaskByIdResponseBodyTasks> tasks;
@@ -61,41 +53,58 @@ public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
 
     public static class DescribeRefreshTaskByIdResponseBodyTasks extends TeaModel {
         /**
-         * <p>The progress of the task, in percentage.</p>
+         * <p>The time when the task was created. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The error returned when the refresh or prefetch task failed. Valid values:</p>
+         * <br>
+         * <p>*   **Internal Error**</p>
+         * <p>*   **Origin Timeout**</p>
+         * <p>*   **Origin Return StatusCode 5XX**</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>Queries the status of refresh or prefetch tasks by ID for an accelerated domain name.</p>
+         * <p>The path of the object refreshed by the refresh task.</p>
          */
         @NameInMap("ObjectPath")
         public String objectPath;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The type of the task. Valid values:</p>
+         * <br>
+         * <p>*   **file**: refreshes an individual file.</p>
+         * <p>*   **directory**: refreshes files in the specified directory.</p>
+         * <p>*   **preload**: prefetches an individual file.</p>
+         * <p>*   **regex**: refreshes content based on a regular expression.</p>
          */
         @NameInMap("ObjectType")
         public String objectType;
 
         /**
-         * <p>The operation that you want to perform. Set the value to **DescribeRefreshTaskById**.</p>
+         * <p>The progress of the task, in percentage.</p>
          */
         @NameInMap("Process")
         public String process;
 
         /**
-         * <p>The time when the task was created. The time is displayed in UTC.</p>
+         * <p>The status of the task. Valid values:</p>
+         * <br>
+         * <p>*   **Complete**</p>
+         * <p>*   **Pending**</p>
+         * <p>*   **Refreshing**</p>
+         * <p>*   **Failed**</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the task.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 

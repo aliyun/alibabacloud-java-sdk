@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainISPDataRequest extends TeaModel {
     /**
-     * <p>The request error rate.</p>
+     * <p>The accelerated domain name. You can specify only one domain name in each call.</p>
+     * <br>
+     * <p>By default, this operation queries the proportions of data usage for all accelerated domain names.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -19,7 +21,9 @@ public class DescribeDomainISPDataRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The accelerated domain name.</p>
+     * <p>The beginning of the time range to query.</p>
+     * <br>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

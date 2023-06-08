@@ -4,21 +4,39 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainQpsDataResponseBody extends TeaModel {
+    /**
+     * <p>The time interval between the data entries returned. Unit: seconds.</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    /**
+     * <p>The accelerated domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The end of the time range during which data was queried.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The list of QPS records at each interval.</p>
+     */
     @NameInMap("QpsDataInterval")
     public DescribeDomainQpsDataResponseBodyQpsDataInterval qpsDataInterval;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The start of the time range during which data was queried.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -76,42 +94,81 @@ public class DescribeDomainQpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainQpsDataResponseBodyQpsDataIntervalDataModule extends TeaModel {
+        /**
+         * <p>The number of requests in the Chinese mainland.</p>
+         */
         @NameInMap("AccDomesticValue")
         public String accDomesticValue;
 
+        /**
+         * <p>The number of requests outside the Chinese mainland.</p>
+         */
         @NameInMap("AccOverseasValue")
         public String accOverseasValue;
 
+        /**
+         * <p>The total number of requests.</p>
+         */
         @NameInMap("AccValue")
         public String accValue;
 
+        /**
+         * <p>The number of queries per second in the Chinese mainland.</p>
+         */
         @NameInMap("DomesticValue")
         public String domesticValue;
 
+        /**
+         * <p>The number of HTTPS requests sent to POPs in the Chinese mainland.</p>
+         */
         @NameInMap("HttpsAccDomesticValue")
         public String httpsAccDomesticValue;
 
+        /**
+         * <p>The number of HTTPS requests sent to POPs outside the Chinese mainland.</p>
+         */
         @NameInMap("HttpsAccOverseasValue")
         public String httpsAccOverseasValue;
 
+        /**
+         * <p>The number of HTTPS requests sent to POPs.</p>
+         */
         @NameInMap("HttpsAccValue")
         public String httpsAccValue;
 
+        /**
+         * <p>The number of queries per second that is calculated based on the HTTPS requests sent to POPs in the Chinese mainland.</p>
+         */
         @NameInMap("HttpsDomesticValue")
         public String httpsDomesticValue;
 
+        /**
+         * <p>The number of queries per second that is calculated based on the HTTPS requests sent to POPs outside the Chinese mainland.</p>
+         */
         @NameInMap("HttpsOverseasValue")
         public String httpsOverseasValue;
 
+        /**
+         * <p>The number of queries per second that is calculated based on the HTTPS requests sent to points of presence (POPs).</p>
+         */
         @NameInMap("HttpsValue")
         public String httpsValue;
 
+        /**
+         * <p>The number of queries per second outside the Chinese mainland.</p>
+         */
         @NameInMap("OverseasValue")
         public String overseasValue;
 
+        /**
+         * <p>The timestamp of the data returned.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        /**
+         * <p>The total QPS.</p>
+         */
         @NameInMap("Value")
         public String value;
 

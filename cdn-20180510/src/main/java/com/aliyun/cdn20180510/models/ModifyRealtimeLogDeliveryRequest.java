@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class ModifyRealtimeLogDeliveryRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The accelerated domain name for which you want to modify the configurations of real-time log delivery. Only one domain name is supported.</p>
      */
     @NameInMap("Domain")
     public String domain;
 
     /**
-     * <p>The accelerated domain name for which you want to modify the configurations of real-time log delivery. Only one domain name is supported.</p>
+     * <p>The name of the Logstore where log entries are stored.</p>
      */
     @NameInMap("Logstore")
     public String logstore;
 
     /**
-     * <p>The ID of the region where the Log Service project is deployed. For more information, see [Regions that support real-time log delivery](~~144883~~).</p>
+     * <p>The name of the Log Service project that is used for real-time log delivery.</p>
      */
     @NameInMap("Project")
     public String project;
 
     /**
-     * <p>The name of the Log Service project that is used for real-time log delivery.</p>
+     * <p>The ID of the region where the Log Service project is deployed. For more information, see [Regions that support real-time log delivery](~~144883~~).</p>
      */
     @NameInMap("Region")
     public String region;

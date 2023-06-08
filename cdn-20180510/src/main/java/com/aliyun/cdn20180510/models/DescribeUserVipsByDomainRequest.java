@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeUserVipsByDomainRequest extends TeaModel {
     /**
-     * <p>The virtual IP address.</p>
+     * <p>Specifies whether to query the virtual IP addresses of only healthy CDN POPs. Valid values:</p>
+     * <br>
+     * <p>*   **on**：healthy CDN edge nodes.</p>
+     * <p>*   **off**：all CDN edge nodes.</p>
      */
     @NameInMap("Available")
     public String available;
 
     /**
-     * <p>A list of virtual IP addresses.</p>
+     * <p>The accelerated domain name. You can specify only one domain name.</p>
      */
     @NameInMap("DomainName")
     public String domainName;

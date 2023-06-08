@@ -4,15 +4,35 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainSrcQpsDataRequest extends TeaModel {
+    /**
+     * <p>The accelerated domain name. You can specify multiple domain names in each request. Separate multiple domain names with commas (,).</p>
+     * <br>
+     * <p>By default, this operation queries QPS data for all accelerated domain names that belong to your Alibaba Cloud account.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <br>
+     * <p>> The end time must be later than the start time.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The time interval between the data entries. Unit: seconds.</p>
+     * <br>
+     * <p>The time granularity varies with the maximum time range per query. Valid values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see **Usage notes**.</p>
+     */
     @NameInMap("Interval")
     public String interval;
 
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <br>
+     * <p>If you leave this parameter empty, data collected in the last 24 hours is queried.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchStopCdnDomainResponseBody extends TeaModel {
     /**
-     * <p>The names of the accelerated domain names. You can specify one or more domain names in each request. Separate multiple domain names with commas (,).</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

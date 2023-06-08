@@ -5,9 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeCdnUserConfigsRequest extends TeaModel {
     /**
-     * <p>The name of the parameter.</p>
+     * <p>The configuration that you want to query. Valid values:</p>
      * <br>
-     * <p>The configurations set by enterprise or government users.</p>
+     * <p>*   **domain_business_control**: user configurations</p>
+     * <p>*   **waf**: Web Application Firewall (WAF) configurations</p>
      */
     @NameInMap("FunctionName")
     public String functionName;

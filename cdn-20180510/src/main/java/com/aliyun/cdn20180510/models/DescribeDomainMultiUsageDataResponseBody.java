@@ -11,28 +11,26 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The type of data returned.</p>
-     * <br>
-     * <p>>  For Alibaba Cloud CDN, the valid value is Simple.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The information about requests collected every 5 minutes.</p>
      */
     @NameInMap("RequestPerInterval")
     public DescribeDomainMultiUsageDataResponseBodyRequestPerInterval requestPerInterval;
 
     /**
-     * <p>The accelerated domain names. You can specify multiple accelerated domain names and separate domain names with commas (,).</p>
-     * <br>
-     * <p>> *   You can specify at most 30 accelerated domain names.</p>
-     * <p>*   If you do not set this parameter, the data of all accelerated domain names that belong to your Alibaba Cloud account is queried.</p>
+     * <p>The start of the time range that was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The statistics of network traffic collected every 5 minutes.</p>
+     */
     @NameInMap("TrafficPerInterval")
     public DescribeDomainMultiUsageDataResponseBodyTrafficPerInterval trafficPerInterval;
 
@@ -83,22 +81,27 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
 
     public static class DescribeDomainMultiUsageDataResponseBodyRequestPerIntervalRequestDataModule extends TeaModel {
         /**
-         * <p>DescribeDomainMultiUsageData</p>
+         * <p>The accelerated domain name.</p>
          */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The number of requests.</p>
+         */
         @NameInMap("Request")
         public Long request;
 
         /**
-         * <p>Queries the amount of data transfer and the number of requests for one or more accelerated domain names at a time. Data is collected every 5 minutes.</p>
+         * <p>The timestamp of the returned number of requests.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         /**
-         * <p>The information about the accelerated domain name.</p>
+         * <p>The type.</p>
+         * <br>
+         * <p>>  The value is Simple for Alibaba Cloud CDN.</p>
          */
         @NameInMap("Type")
         public String type;
@@ -162,18 +165,39 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainMultiUsageDataResponseBodyTrafficPerIntervalTrafficDataModule extends TeaModel {
+        /**
+         * <p>The name of the region.</p>
+         */
         @NameInMap("Area")
         public String area;
 
+        /**
+         * <p>The bandwidth. Unit: bit/s.</p>
+         */
         @NameInMap("Bps")
         public Float bps;
 
+        /**
+         * <p>The domain name.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The startstamp of the returned usage data.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        /**
+         * <p>The type of requests. Valid values:</p>
+         * <br>
+         * <p>*   **StaticHttps**: static HTTPS requests</p>
+         * <p>*   **DynamicHttps**: dynamic HTTPS requests</p>
+         * <p>*   **DynamicHttp**: dynamic HTTP requests</p>
+         * <p>*   **StaticQuic**: static QUIC requests</p>
+         * <p>*   **DynamicQuic**: dynamic QUIC requests</p>
+         */
         @NameInMap("Type")
         public String type;
 

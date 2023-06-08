@@ -4,21 +4,41 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
+    /**
+     * <p>The time interval between the data entries returned. Unit: seconds.</p>
+     * <br>
+     * <p>Depending on the maximum time range per query, the value is 60 (1 minute), 300 (5 minutes), or 3600 (1 hour). For more information, see the "Time granularity" section in Usage notes.</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    /**
+     * <p>The accelerated domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The end of the time range during which data was queried.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The proportions of HTTP status codes at each time interval.</p>
+     */
     @NameInMap("RealTimeHttpCodeData")
     public DescribeDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeData realTimeHttpCodeData;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The start of the time range during which data was queried.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -76,12 +96,21 @@ public class DescribeDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageDataValueRealTimeCodeProportionData extends TeaModel {
+        /**
+         * <p>The HTTP status code returned.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The total number of entries.</p>
+         */
         @NameInMap("Count")
         public String count;
 
+        /**
+         * <p>The proportion of the HTTP status code.</p>
+         */
         @NameInMap("Proportion")
         public String proportion;
 
@@ -136,9 +165,15 @@ public class DescribeDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageData extends TeaModel {
+        /**
+         * <p>The timestamp of the data returned.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        /**
+         * <p>The proportions of the HTTP status codes.</p>
+         */
         @NameInMap("Value")
         public DescribeDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageDataValue value;
 

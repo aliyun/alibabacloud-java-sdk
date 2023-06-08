@@ -5,39 +5,45 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainDetailDataByLayerRequest extends TeaModel {
     /**
-     * <p>The bandwidth. Unit: bit/s.</p>
+     * <p>The domain name that you want to query. You can specify multiple domain names and separate them with commas (,). You can specify up to 30 domain names in each call.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The protocol by which you want to query data. Valid values: **http**, **https**, **quic**, and **all**.</p>
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
-     * <p>The default value is **all**.</p>
+     * <p>>  The end time must be later than the start time. The maximum time range that can be specified is 1 hour.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The number of queries per second.</p>
+     * <p>The metric that you want to query. You can specify one or more metrics and separate them with commas (,). Valid values: **bps**, **qps**, **traf**, **acc**, **ipv6\_traf**, **ipv6\_bps**, **ipv6\_acc**, **ipv6\_qps**, and **http_code**.</p>
      */
     @NameInMap("Field")
     public String field;
 
     /**
-     * <p>The amount of network traffic. Unit: bytes.</p>
+     * <p>The name of the Internet service provider (ISP). You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query ISP names.</p>
+     * <br>
+     * <p>If you do not specify an ISP, data of all ISPs is queried.</p>
      */
     @NameInMap("IspNameEn")
     public String ispNameEn;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeDomainDetailDataByLayer**.</p>
+     * <p>The protocol by which you want to query data. Valid values: **http**, **https**, **quic**, and **all**.</p>
+     * <br>
+     * <p>Default value: **all**.</p>
      */
     @NameInMap("Layer")
     public String layer;
 
     /**
-     * <p>The number of IPv6 requests per second.</p>
+     * <p>The name of the region. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query region names.</p>
+     * <br>
+     * <p>If you do not specify a region, data in all regions is queried.</p>
      */
     @NameInMap("LocationNameEn")
     public String locationNameEn;

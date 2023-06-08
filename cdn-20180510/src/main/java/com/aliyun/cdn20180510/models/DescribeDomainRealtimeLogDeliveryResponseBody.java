@@ -4,20 +4,35 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainRealtimeLogDeliveryResponseBody extends TeaModel {
+    /**
+     * <p>The name of the Logstore where log entries are stored.</p>
+     */
     @NameInMap("Logstore")
     public String logstore;
 
+    /**
+     * <p>The name of the Log Service project that is used for real-time log delivery.</p>
+     */
     @NameInMap("Project")
     public String project;
 
+    /**
+     * <p>The ID of the region where the Log Service project is deployed.</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the region where the Log Service project is deployed.</p>
+     * <p>The status of real-time log delivery. Valid values:</p>
+     * <br>
+     * <p>*   **online**</p>
+     * <p>*   **offline**</p>
      */
     @NameInMap("Status")
     public String status;

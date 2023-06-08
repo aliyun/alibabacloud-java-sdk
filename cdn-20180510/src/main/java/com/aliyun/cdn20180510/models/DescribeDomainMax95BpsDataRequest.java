@@ -5,31 +5,44 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainMax95BpsDataRequest extends TeaModel {
     /**
-     * <p>1001</p>
+     * <p>The cycle to query the 95th percentile bandwidth data. Default value: **day**. Valid values:</p>
+     * <br>
+     * <p>*   **day**: queries the 95th percentile bandwidth data by day.</p>
+     * <p>*   **month**: queries the 95th percentile bandwidth data by month.</p>
      */
     @NameInMap("Cycle")
     public String cycle;
 
     /**
-     * <p>data.content.domesticMax95Bps</p>
+     * <p>The accelerated domain name. If you do not specify this parameter, data of all accelerated domain names under your account is queried.</p>
+     * <br>
+     * <p>> You cannot specify multiple domain names at a time.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The 95th percentile bandwidth.</p>
+     * <p>The end of the time range to query.</p>
+     * <br>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <br>
+     * <p>> The end time must be later than the start time.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>data.content.overseasMax95Bps</p>
+     * <p>The beginning of the time range to query.</p>
+     * <br>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>data.content.max95Bps</p>
+     * <p>The beginning of the time range to query.</p>
+     * <br>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      */
     @NameInMap("TimePoint")
     public String timePoint;

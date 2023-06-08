@@ -5,16 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
     /**
-     * <p>The unit of the validity period of the SSL certificate.</p>
-     * <br>
-     * <p>*   **months**: The validity period is measured in months.</p>
-     * <p>*   **years**: The validity period is measured in years.</p>
+     * <p>The information about the certificate.</p>
      */
     @NameInMap("CertInfos")
     public DescribeDomainCertificateInfoResponseBodyCertInfos certInfos;
 
     /**
-     * <p>The time when the SSL certificate expires.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -42,118 +39,118 @@ public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
 
     public static class DescribeDomainCertificateInfoResponseBodyCertInfosCertInfo extends TeaModel {
         /**
-         * <p>The name of the certificate authority (CA) that issued the SSL certificate.</p>
+         * <p>The domain name that matches the certificate.</p>
          */
         @NameInMap("CertDomainName")
         public String certDomainName;
 
         /**
-         * <p>The status of the SSL certificate.</p>
-         * <br>
-         * <p>*   **success**: The SSL certificate is effective.</p>
-         * <p>*   **checking**: The system is checking whether the domain name is accelerated by Alibaba Cloud CDN.</p>
-         * <p>*   **cname_error**: The domain name is not accelerated by Alibaba Cloud CDN.</p>
-         * <p>*   **top_domain_cname_error**: The top-level domain name is not an accelerated domain name.</p>
-         * <p>*   **domain_invalid**: The domain name contains invalid characters.</p>
-         * <p>*   **unsupport_wildcard**: Wildcard domain names are not supported.</p>
-         * <p>*   **applying**: The application for a certificate is in progress.</p>
-         * <p>*   **fget_token_timeout**: The application for a certificate timed out.</p>
-         * <p>*   **check_token_timeout**: The verification timed out.</p>
-         * <p>*   **get_cert_timeout**: The request to obtain the certificate timed out.</p>
-         * <p>*   **failed**: The application for a certificate failed.</p>
+         * <p>The time at which the certificate expires.</p>
          */
         @NameInMap("CertExpireTime")
         public String certExpireTime;
 
         /**
-         * <p>The domain name that matches the SSL certificate.</p>
+         * <p>The ID of the certificate.</p>
          */
         @NameInMap("CertId")
         public String certId;
 
         /**
-         * <p>The time when the certificate was renewed.</p>
+         * <p>The unit of the validity period of the certificate. Valid values:</p>
+         * <br>
+         * <p>*   **months**</p>
+         * <p>*   **years**</p>
          */
         @NameInMap("CertLife")
         public String certLife;
 
         /**
-         * <p>The public key of the SSL certificate.</p>
+         * <p>The name of the certificate.</p>
          */
         @NameInMap("CertName")
         public String certName;
 
         /**
-         * <p>The time when the SSL certificate became effective.</p>
+         * <p>The name of the certificate authority (CA) that issued the certificate.</p>
          */
         @NameInMap("CertOrg")
         public String certOrg;
 
         /**
-         * <p>The status of HTTPS.</p>
-         * <br>
-         * <p>*   **on**: enabled.</p>
-         * <p>*   **off**: disabled.</p>
+         * <p>The region where the certificate is used.</p>
          */
         @NameInMap("CertRegion")
         public String certRegion;
 
         /**
-         * <p>The name of the SSL certificate.</p>
+         * <p>The time when the certificate became effective.</p>
          */
         @NameInMap("CertStartTime")
         public String certStartTime;
 
         /**
-         * <p>The status of the CNAME of the domain name.</p>
+         * <p>The type of the certificate.</p>
          * <br>
-         * <p>*   **ok**: The domain name points to the CNAME assigned from Alibaba Cloud Content Delivery Network (CDN).</p>
-         * <p>*   **cname_error**: An error occurred and the domain name cannot point to the CNAME.</p>
-         * <p>*   **top_domain_cname_error**: An error occurred to the CNAME of the top-level domain name. The domain name cannot point to the CNAME.</p>
-         * <p>*   **unsupport_wildcard**: Wildcard domain names are not supported.</p>
+         * <p>*   **free**: a free certificate</p>
+         * <p>*   **cas**: a certificate that is purchased by using Certificate Management Service</p>
+         * <p>*   **upload**: a custom certificate that you upload</p>
          */
         @NameInMap("CertType")
         public String certType;
 
         /**
-         * <p>The status of HTTPS.</p>
-         * <br>
-         * <p>*   **on**: enabled.</p>
-         * <p>*   **off**: disabled.</p>
+         * <p>The time at which the certificate was updated.</p>
          */
         @NameInMap("CertUpdateTime")
         public String certUpdateTime;
 
         /**
-         * <p>>  The maximum number of times that each user can call this operation per second is 100.</p>
+         * <p>The CANME status of the domain name.</p>
+         * <br>
+         * <p>*   **ok**: The domain name points to the CNAME assigned by Alibaba Cloud CDN.</p>
+         * <p>*   **cname_error**: An error occurred and the domain name cannot point to the CNAME.</p>
+         * <p>*   **op_domain_cname_error** : An error occurred to the CNAME of the top-level domain. The domain name cannot point to the CNAME.</p>
+         * <p>*   **unsupport_wildcard**: The wildcard domain name is not supported.</p>
          */
         @NameInMap("DomainCnameStatus")
         public String domainCnameStatus;
 
         /**
-         * <p>The type of the SSL certificate. Valid values:</p>
-         * <br>
-         * <p>*   **free**: a free SSL certificate.</p>
-         * <p>*   **cas**: an SSL certificate purchased from Alibaba Cloud SSL Certificates Service.</p>
-         * <p>*   **upload**: a user-uploaded SSL certificate.</p>
+         * <p>The accelerated domain name.</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
-         * <p>The public key of the SSL certificate.</p>
+         * <p>The public key of the certificate.</p>
          */
         @NameInMap("ServerCertificate")
         public String serverCertificate;
 
         /**
-         * <p>The accelerated domain name.</p>
+         * <p>The status of HTTPS.</p>
+         * <br>
+         * <p>*   **on**</p>
+         * <p>*   **off**</p>
          */
         @NameInMap("ServerCertificateStatus")
         public String serverCertificateStatus;
 
         /**
-         * <p>The domain name that matches the SSL certificate.</p>
+         * <p>The status of the certificate. Valid values:</p>
+         * <br>
+         * <p>*   **success**: The certificate has taken effect.</p>
+         * <p>*   **checking**: The system is checking whether the domain name is using Alibaba Cloud CDN.</p>
+         * <p>*   **cname_error**: No valid CNAME record has been added for the domain name.</p>
+         * <p>*   **top_domain_cname_error**: No valid CNAME record has been added for the top-level domain.</p>
+         * <p>*   **domain_invalid**: The domain name contains invalid characters.</p>
+         * <p>*   **unsupport_wildcard**: The domain name is a wildcard domain name. Wildcard domain names are not supported.</p>
+         * <p>*   **applying**: The certificate application is in progress.</p>
+         * <p>*   **get_token_timeout**: The certificate application request has timed out.</p>
+         * <p>*   **check_token_timeout**: The verification has timed out.</p>
+         * <p>*   **get_cert_timeout**: The request to obtain the certificate has timed out.</p>
+         * <p>*   **failed**: The certificate application request failed.</p>
          */
         @NameInMap("Status")
         public String status;

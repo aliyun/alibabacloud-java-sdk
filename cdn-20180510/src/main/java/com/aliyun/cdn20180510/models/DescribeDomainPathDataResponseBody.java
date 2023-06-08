@@ -4,27 +4,51 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainPathDataResponseBody extends TeaModel {
+    /**
+     * <p>The time interval. Unit: seconds.</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    /**
+     * <p>The accelerated domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The end of the time range during which data was queried.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The page number of the returned page. Pages start from page **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>A list of bandwidth values collected at each time interval.</p>
+     */
     @NameInMap("PathDataPerInterval")
     public DescribeDomainPathDataResponseBodyPathDataPerInterval pathDataPerInterval;
 
+    /**
+     * <p>The start of the time range during which data was queried.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -98,15 +122,27 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainPathDataResponseBodyPathDataPerIntervalUsageData extends TeaModel {
+        /**
+         * <p>The number of visits to the URL.</p>
+         */
         @NameInMap("Acc")
         public Integer acc;
 
+        /**
+         * <p>The path.</p>
+         */
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <p>The point in time.</p>
+         */
         @NameInMap("Time")
         public String time;
 
+        /**
+         * <p>The amount of network traffic. Unit: bytes.</p>
+         */
         @NameInMap("Traffic")
         public Integer traffic;
 

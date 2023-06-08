@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCdnDomainRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The accelerated domain name that you want to remove. You can specify only one domain name in each call.</p>
      */
     @NameInMap("DomainName")
     public String domainName;

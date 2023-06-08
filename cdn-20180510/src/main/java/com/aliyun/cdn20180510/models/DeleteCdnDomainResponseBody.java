@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCdnDomainResponseBody extends TeaModel {
     /**
-     * <p>1.0.0</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

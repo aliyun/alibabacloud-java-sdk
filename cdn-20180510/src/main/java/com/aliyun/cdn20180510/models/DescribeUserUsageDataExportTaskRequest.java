@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class DescribeUserUsageDataExportTaskRequest extends TeaModel {
     /**
-     * <p>The name of the task.</p>
+     * <p>The number of the page to return. Valid values: **1** to **100000**.</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
-     * <p>The usage details returned per page.</p>
+     * <p>The number of entries to return on each page. Default value: **20**. Maximum value: **50**.</p>
+     * <br>
+     * <p>Valid values: an integer from **1** to **50**.</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
