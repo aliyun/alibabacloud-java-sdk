@@ -826,6 +826,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ArgoServerEnabled", request.argoServerEnabled);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.armsEnabled)) {
+            query.put("ArmsEnabled", request.armsEnabled);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.auditLogEnabled)) {
             query.put("AuditLogEnabled", request.auditLogEnabled);
         }

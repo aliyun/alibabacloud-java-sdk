@@ -4,42 +4,21 @@ package com.aliyun.adcp20220101.models;
 import com.aliyun.tea.*;
 
 public class GrantUserPermissionRequest extends TeaModel {
-    /**
-     * <p>The ID of the master instance.</p>
-     */
     @NameInMap("ClusterId")
     public String clusterId;
 
     @NameInMap("IsRamRole")
     public Boolean isRamRole;
 
-    /**
-     * <p>The namespace to which the permissions are scoped. By default, this parameter is empty when you set role_type to cluster.</p>
-     */
     @NameInMap("Namespace")
     public String namespace;
 
-    /**
-     * <p>Specifies the predefined role that you want to assign. Valid values:</p>
-     * <br>
-     * <p>*   admin: the administrator role.</p>
-     * <p>*   dev: the developer role.</p>
-     */
     @NameInMap("RoleName")
     public String roleName;
 
-    /**
-     * <p>The authorization type. Valid values:</p>
-     * <br>
-     * <p>*   cluster: specifies that the permissions are scoped to a master instance.</p>
-     * <p>*   namespace: specifies that the permissions are scoped to a namespace of a cluster.</p>
-     */
     @NameInMap("RoleType")
     public String roleType;
 
-    /**
-     * <p>The ID of the RAM user.</p>
-     */
     @NameInMap("UserId")
     public String userId;
 

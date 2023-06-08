@@ -16,6 +16,9 @@ public class UpdateHubClusterFeatureRequest extends TeaModel {
     @NameInMap("ArgoServerEnabled")
     public Boolean argoServerEnabled;
 
+    @NameInMap("ArmsEnabled")
+    public Boolean armsEnabled;
+
     /**
      * <p>Specifies whether to enable the audit logging feature. Valid values:</p>
      * <br>
@@ -102,6 +105,14 @@ public class UpdateHubClusterFeatureRequest extends TeaModel {
     }
     public Boolean getArgoServerEnabled() {
         return this.argoServerEnabled;
+    }
+
+    public UpdateHubClusterFeatureRequest setArmsEnabled(Boolean armsEnabled) {
+        this.armsEnabled = armsEnabled;
+        return this;
+    }
+    public Boolean getArmsEnabled() {
+        return this.armsEnabled;
     }
 
     public UpdateHubClusterFeatureRequest setAuditLogEnabled(Boolean auditLogEnabled) {
