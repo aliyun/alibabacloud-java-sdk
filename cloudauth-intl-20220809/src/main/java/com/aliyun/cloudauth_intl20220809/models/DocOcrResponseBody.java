@@ -3,7 +3,7 @@ package com.aliyun.cloudauth_intl20220809.models;
 
 import com.aliyun.tea.*;
 
-public class CardOcrResponseBody extends TeaModel {
+public class DocOcrResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
@@ -17,14 +17,14 @@ public class CardOcrResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Result")
-    public CardOcrResponseBodyResult result;
+    public DocOcrResponseBodyResult result;
 
-    public static CardOcrResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CardOcrResponseBody self = new CardOcrResponseBody();
+    public static DocOcrResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DocOcrResponseBody self = new DocOcrResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CardOcrResponseBody setCode(String code) {
+    public DocOcrResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -32,7 +32,7 @@ public class CardOcrResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CardOcrResponseBody setMessage(String message) {
+    public DocOcrResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -40,7 +40,7 @@ public class CardOcrResponseBody extends TeaModel {
         return this.message;
     }
 
-    public CardOcrResponseBody setRequestId(String requestId) {
+    public DocOcrResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -48,18 +48,15 @@ public class CardOcrResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CardOcrResponseBody setResult(CardOcrResponseBodyResult result) {
+    public DocOcrResponseBody setResult(DocOcrResponseBodyResult result) {
         this.result = result;
         return this;
     }
-    public CardOcrResponseBodyResult getResult() {
+    public DocOcrResponseBodyResult getResult() {
         return this.result;
     }
 
-    public static class CardOcrResponseBodyResult extends TeaModel {
-        @NameInMap("ExtCardInfo")
-        public String extCardInfo;
-
+    public static class DocOcrResponseBodyResult extends TeaModel {
         @NameInMap("ExtIdInfo")
         public String extIdInfo;
 
@@ -72,20 +69,12 @@ public class CardOcrResponseBody extends TeaModel {
         @NameInMap("TransactionId")
         public String transactionId;
 
-        public static CardOcrResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
-            CardOcrResponseBodyResult self = new CardOcrResponseBodyResult();
+        public static DocOcrResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
+            DocOcrResponseBodyResult self = new DocOcrResponseBodyResult();
             return TeaModel.build(map, self);
         }
 
-        public CardOcrResponseBodyResult setExtCardInfo(String extCardInfo) {
-            this.extCardInfo = extCardInfo;
-            return this;
-        }
-        public String getExtCardInfo() {
-            return this.extCardInfo;
-        }
-
-        public CardOcrResponseBodyResult setExtIdInfo(String extIdInfo) {
+        public DocOcrResponseBodyResult setExtIdInfo(String extIdInfo) {
             this.extIdInfo = extIdInfo;
             return this;
         }
@@ -93,7 +82,7 @@ public class CardOcrResponseBody extends TeaModel {
             return this.extIdInfo;
         }
 
-        public CardOcrResponseBodyResult setPassed(String passed) {
+        public DocOcrResponseBodyResult setPassed(String passed) {
             this.passed = passed;
             return this;
         }
@@ -101,7 +90,7 @@ public class CardOcrResponseBody extends TeaModel {
             return this.passed;
         }
 
-        public CardOcrResponseBodyResult setSubCode(String subCode) {
+        public DocOcrResponseBodyResult setSubCode(String subCode) {
             this.subCode = subCode;
             return this;
         }
@@ -109,7 +98,7 @@ public class CardOcrResponseBody extends TeaModel {
             return this.subCode;
         }
 
-        public CardOcrResponseBodyResult setTransactionId(String transactionId) {
+        public DocOcrResponseBodyResult setTransactionId(String transactionId) {
             this.transactionId = transactionId;
             return this;
         }
