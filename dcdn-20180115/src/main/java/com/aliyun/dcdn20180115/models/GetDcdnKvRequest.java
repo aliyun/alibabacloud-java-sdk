@@ -4,15 +4,9 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class GetDcdnKvRequest extends TeaModel {
-    /**
-     * <p>The name of the namespace.</p>
-     */
     @NameInMap("Key")
     public String key;
 
-    /**
-     * <p>Queries the value of the key in a key-value pair.</p>
-     */
     @NameInMap("Namespace")
     public String namespace;
 
