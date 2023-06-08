@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteUsageDetailDataExportTaskRequest extends TeaModel {
     /**
-     * <p>The ID of the task. You can call the [DescribeUserUsageDataExportTask](~~91062~~) operation to query the most recent task list.</p>
+     * <p>The ID of the task. You can call the [DescribeUserUsageDataExportTask](~~91062~~) operation to query tasks.</p>
      */
     @NameInMap("TaskId")
     public String taskId;

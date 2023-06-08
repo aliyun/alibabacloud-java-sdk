@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainCertificateInfoRequest extends TeaModel {
     /**
-     * <p>The information about the SSL certificate.</p>
+     * <p>The accelerated domain name. You can specify only one domain name in each request.</p>
      */
     @NameInMap("DomainName")
     public String domainName;

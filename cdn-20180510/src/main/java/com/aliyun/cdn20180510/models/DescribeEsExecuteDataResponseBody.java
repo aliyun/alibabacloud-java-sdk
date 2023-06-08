@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEsExecuteDataResponseBody extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeEsExecuteData**.</p>
+     * <p>The content of the script.</p>
      */
     @NameInMap("Contents")
     public java.util.List<DescribeEsExecuteDataResponseBodyContents> contents;
@@ -38,17 +38,20 @@ public class DescribeEsExecuteDataResponseBody extends TeaModel {
     }
 
     public static class DescribeEsExecuteDataResponseBodyContents extends TeaModel {
+        /**
+         * <p>The time and column names in the table that shows the status of the script.</p>
+         */
         @NameInMap("Columns")
         public java.util.List<String> columns;
 
         /**
-         * <p>The content of the script.</p>
+         * <p>The name of the table that shows the status of the script.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>Queries the execution status of scripts in EdgeScript (ES).</p>
+         * <p>The list of timestamps and values in the corresponding columns of the table that shows the status of the script.</p>
          */
         @NameInMap("Points")
         public java.util.List<String> points;

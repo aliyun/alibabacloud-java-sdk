@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel {
     /**
-     * <p>The ID of the task.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The end of the time range that was queried.</p>
+     * <p>The usage details returned per page.</p>
      */
     @NameInMap("UsageDataPerPage")
     public DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPage usageDataPerPage;
@@ -39,13 +39,13 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
 
     public static class DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageDataDataItemTaskConfig extends TeaModel {
         /**
-         * <p>refresh</p>
+         * <p>The end of the time range during which data was queried.</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The start of the time range during which data was queried.</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -75,45 +75,43 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
 
     public static class DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageDataDataItem extends TeaModel {
         /**
-         * <p>The download URL.</p>
+         * <p>The time when the task was created.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The configurations of the task.</p>
+         * <p>The download URL.</p>
          */
         @NameInMap("DownloadUrl")
         public String downloadUrl;
 
         /**
-         * <p>The time when the task was created.</p>
+         * <p>The status of the task.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The configurations of the task.</p>
          */
         @NameInMap("TaskConfig")
         public DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageDataDataItemTaskConfig taskConfig;
 
         /**
-         * <p>The number of the page returned.</p>
+         * <p>The ID of the task.</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
-         * <p>The number of entries to return on each page. Default value: **20**. Maximum value: **50**.</p>
-         * <br>
-         * <p>Valid values: **1** to **50**.</p>
+         * <p>The name of the task.</p>
          */
         @NameInMap("TaskName")
         public String taskName;
 
         /**
-         * <p>The operation that you want to perform. Set the value to **DescribeUserUsageDetailDataExportTask**.</p>
+         * <p>The time when the task was last modified.</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
@@ -202,25 +200,25 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
 
     public static class DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPage extends TeaModel {
         /**
-         * <p>The status of the task.</p>
+         * <p>The information about the task.</p>
          */
         @NameInMap("Data")
         public DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageData data;
 
         /**
-         * <p>The number of the page to return. Valid values: **1** to **100000**.</p>
+         * <p>The page number of the returned page.</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
-         * <p>The description of the task.</p>
+         * <p>The number of entries returned per page.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The start of the time range that was queried.</p>
+         * <p>The total number of entries returned.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
-     * <p>The ID of the resource. Valid values of N: **1** to **50**.</p>
+     * <p>The list of resource IDs. Maximum number of list elements: 50.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>>  The maximum number of times that each user can call this operation per second is 100.</p>
+     * <p>The type of the resource. Set this value to **DOMAIN**.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The type of resource. The resource type. Set the value to **DOMAIN**.</p>
+     * <p>The tags. Maximum number of list elements: 20.</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
@@ -53,13 +53,13 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The ID of the request.</p>
+         * <p>The key of a tag.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The operation that you want to perform. Set the value to **TagResources**.</p>
+         * <p>The value of a tag.</p>
          */
         @NameInMap("Value")
         public String value;

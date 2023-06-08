@@ -4,9 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnSubListResponseBody extends TeaModel {
+    /**
+     * <p>The information about the custom report task.</p>
+     */
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

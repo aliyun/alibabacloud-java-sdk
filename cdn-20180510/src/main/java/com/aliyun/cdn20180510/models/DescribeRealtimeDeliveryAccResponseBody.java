@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeRealtimeDeliveryAcc**.</p>
+     * <p>The statistics about real-time log deliveries.</p>
      */
     @NameInMap("ReatTimeDeliveryAccData")
     public DescribeRealtimeDeliveryAccResponseBodyReatTimeDeliveryAccData reatTimeDeliveryAccData;
 
     /**
-     * <p>The number of failed attempts to deliver log data to Log Service.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,16 +39,19 @@ public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
 
     public static class DescribeRealtimeDeliveryAccResponseBodyReatTimeDeliveryAccDataAccData extends TeaModel {
         /**
-         * <p>Queries the number of real-time log deliveries.</p>
+         * <p>The number of failed attempts to deliver log data to Log Service.</p>
          */
         @NameInMap("FailedNum")
         public Integer failedNum;
 
+        /**
+         * <p>The number of successful deliveries of log data to Log Service.</p>
+         */
         @NameInMap("SuccessNum")
         public Integer successNum;
 
         /**
-         * <p>The name of the Logstore that collects log data from Alibaba Cloud Content Delivery Network (CDN) in real time. By default, all Logstores are queried.</p>
+         * <p>The timestamp of the data returned.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

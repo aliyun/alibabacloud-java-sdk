@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeUserVipsByDomainResponseBody extends TeaModel {
     /**
-     * <p>>  The maximum number of times that each user can call this operation per second is 30.</p>
+     * <p>The domain name.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>A list of virtual IP addresses.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The accelerated domain name. You can specify only one domain name.</p>
+     * <p>The list of VIPs.</p>
      */
     @NameInMap("Vips")
     public DescribeUserVipsByDomainResponseBodyVips vips;

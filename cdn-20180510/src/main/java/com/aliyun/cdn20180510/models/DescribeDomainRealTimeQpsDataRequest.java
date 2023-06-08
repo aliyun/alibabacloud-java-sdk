@@ -4,18 +4,45 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainRealTimeQpsDataRequest extends TeaModel {
+    /**
+     * <p>The accelerated domain name. Separate multiple accelerated domain names with commas (,).</p>
+     * <br>
+     * <p>> You can specify up to 500 domain names in each request.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The end of the time range to query.</p>
+     * <br>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <br>
+     * <p>> The end time must be later than the start time.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The name of the Internet service provider (ISP).</p>
+     * <br>
+     * <p>If you do not set this parameter, data of all ISPs is queried. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query ISP names.</p>
+     */
     @NameInMap("IspNameEn")
     public String ispNameEn;
 
+    /**
+     * <p>The name of the region.</p>
+     * <br>
+     * <p>If you do not set this parameter, data in all regions is queried. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions.</p>
+     */
     @NameInMap("LocationNameEn")
     public String locationNameEn;
 
+    /**
+     * <p>The beginning of the time range to query.</p>
+     * <br>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

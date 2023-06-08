@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainRealTimeDetailDataResponseBody extends TeaModel {
     /**
-     * <p>DescribeDomainRealTimeDetailData</p>
+     * <p>The monitoring data of each ISP in each region.</p>
      */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

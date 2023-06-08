@@ -4,12 +4,21 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribePreloadDetailByIdResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of queried tasks.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    /**
+     * <p>The details of the task, including the task ID, start time, end time, domain name, success rate, status, returned error code, and completion details of all URL resources.</p>
+     */
     @NameInMap("UrlDetails")
     public java.util.List<DescribePreloadDetailByIdResponseBodyUrlDetails> urlDetails;
 
@@ -43,12 +52,24 @@ public class DescribePreloadDetailByIdResponseBody extends TeaModel {
     }
 
     public static class DescribePreloadDetailByIdResponseBodyUrlDetailsUrls extends TeaModel {
+        /**
+         * <p>The details of resource prefetch.</p>
+         * <br>
+         * <p>*   If the resource is prefetched on all POPs, "Successfully preloaded" is returned.</p>
+         * <p>*   If the resource fails to be prefetched on some POPs, the failure details separated by vertical bars (|) are returned.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The success percentage, which indicates the number of POPs on which the resource is prefetched.</p>
+         */
         @NameInMap("Success")
         public String success;
 
+        /**
+         * <p>The URL of the prefetched resource.</p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -84,27 +105,59 @@ public class DescribePreloadDetailByIdResponseBody extends TeaModel {
     }
 
     public static class DescribePreloadDetailByIdResponseBodyUrlDetails extends TeaModel {
+        /**
+         * <p>The time when the task was created. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The domain name for prefetching resources.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The time when the task ended. The time is displayed in UTC.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The progress of the prefetch task, which indicates the number of points of presence (POPs) on which the prefetch task is completed.</p>
+         */
         @NameInMap("Process")
         public String process;
 
+        /**
+         * <p>The turned error code. A value of `0` indicates that the task succeeded.</p>
+         */
         @NameInMap("RetCode")
         public String retCode;
 
+        /**
+         * <p>The status of the task. Valid values:</p>
+         * <br>
+         * <p>*   **Complete**</p>
+         * <p>*   **Refreshing**</p>
+         * <p>*   **Failed**</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the task that you want to query.</p>
+         * <br>
+         * <p>You can call the PushObjectCache operation to query task IDs. Then, you can use the task IDs to query task status.</p>
+         * <br>
+         * <p>You can query one task ID at a time.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The completion details of all URL resources in the task.</p>
+         */
         @NameInMap("Urls")
         public java.util.List<DescribePreloadDetailByIdResponseBodyUrlDetailsUrls> urls;
 

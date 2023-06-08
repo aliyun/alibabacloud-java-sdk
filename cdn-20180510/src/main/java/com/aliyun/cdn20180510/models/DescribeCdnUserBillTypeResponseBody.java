@@ -4,9 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnUserBillTypeResponseBody extends TeaModel {
+    /**
+     * <p>Details about the metering methods returned.</p>
+     */
     @NameInMap("BillTypeData")
     public DescribeCdnUserBillTypeResponseBodyBillTypeData billTypeData;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,63 @@ public class DescribeCdnUserBillTypeResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnUserBillTypeResponseBodyBillTypeDataBillTypeDataItem extends TeaModel {
+        /**
+         * <p>The metering method.</p>
+         * <br>
+         * <p>> If the metering method is suffixed with \*\*\_overseas\*\*, the billable region is outside the Chinese mainland. For example, "BillType": "month_avg_day_bandwidth_overseas" indicates that the metering method is pay by average daily peak bandwidth per month in a billable region outside the Chinese mainland.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   hour_flow: pay by hourly data transfer</p>
+         * <p>*   day_bandwidth: pay by daily bandwidth</p>
+         * <p>*   month\_95: pay by monthly 95th percentile bandwidth</p>
+         * <p>*   month_avg_day_bandwidth: pay by average daily peak bandwidth per month</p>
+         * <p>*   month\_4th_day_bandwidth: pay by monthly 4th peak bandwidth</p>
+         * <p>*   month_avg_day\_95: pay by average daily 95th percentile bandwidth per month</p>
+         * <p>*   month\_95\_night_half: pay by 95th percentile bandwidth with 50% off from 00:00 to 08:00</p>
+         * <p>*   hour_vas: pay by value-added services per hour</p>
+         * <p>*   quic_hour_count: pay by hourly QUIC requests</p>
+         * <p>*   day_count: pay by daily requests</p>
+         * <p>*   hour_count: pay by hourly requests</p>
+         * <p>*   day\_95: pay by daily 95th percentile bandwidth</p>
+         */
         @NameInMap("BillType")
         public String billType;
 
+        /**
+         * <p>The billing cycle.</p>
+         */
         @NameInMap("BillingCycle")
         public String billingCycle;
 
+        /**
+         * <p>The dimension. Valid values:</p>
+         * <br>
+         * <p>*   flow: traffic and bandwidth</p>
+         * <p>*   vas: value-added services (HTTPS and requests for dynamic content)</p>
+         * <p>*   quic: the number of QUIC requests</p>
+         * <p>*   websocket: the WebSocket communications protocol</p>
+         * <p>*   rtlog2sls: log entries delivered to Log Service in real time</p>
+         * <p>*   stationflow: traffic over the internal network</p>
+         */
         @NameInMap("Dimension")
         public String dimension;
 
+        /**
+         * <p>The time when the metering method ended.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The name of the product.</p>
+         */
         @NameInMap("Product")
         public String product;
 
+        /**
+         * <p>The time when the metering method started.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 

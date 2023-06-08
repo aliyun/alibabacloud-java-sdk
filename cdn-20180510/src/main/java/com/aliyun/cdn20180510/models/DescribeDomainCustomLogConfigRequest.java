@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainCustomLogConfigRequest extends TeaModel {
     /**
-     * <p>The accelerated domain name. You can specify only one domain name.</p>
+     * <p>The domain name. You can specify only one domain name.</p>
      */
     @NameInMap("DomainName")
     public String domainName;

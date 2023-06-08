@@ -5,49 +5,49 @@ import com.aliyun.tea.*;
 
 public class CreateCdnCertificateSigningRequestRequest extends TeaModel {
     /**
-     * <p>The city to which the organization belongs. Default value: Hangzhou.</p>
+     * <p>The city. Default value: Hangzhou.</p>
      */
     @NameInMap("City")
     public String city;
 
     /**
-     * <p>The email address that can be used to contact the organization.</p>
+     * <p>The Common Name of the certificate.</p>
      */
     @NameInMap("CommonName")
     public String commonName;
 
     /**
-     * <p>The content of the CSR.</p>
+     * <p>The country or region in which the organization is located. Default value: CN.</p>
      */
     @NameInMap("Country")
     public String country;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **CreateCdnCertificateSigningRequest**.</p>
+     * <p>The email address.</p>
      */
     @NameInMap("Email")
     public String email;
 
     /**
-     * <p>The Subject Alternative Name (SAN) extension of the SSL certificate. This extension is used to add domain names to the certificate. Separate multiple domain names with commas (,).</p>
+     * <p>The name of the organization. Default value: Alibaba Inc.</p>
      */
     @NameInMap("Organization")
     public String organization;
 
     /**
-     * <p>The MD5 value of the certificate public key.</p>
+     * <p>The name of the department. Default value: Aliyun CDN.</p>
      */
     @NameInMap("OrganizationUnit")
     public String organizationUnit;
 
     /**
-     * <p>The Common Name of the certificate.</p>
+     * <p>The Subject Alternative Name (SAN) extension of the SSL certificate. This extension is used to add domain names to the certificate. Separate multiple domain names with commas (,).</p>
      */
     @NameInMap("SANs")
     public String SANs;
 
     /**
-     * <p>The name of the organization. Default value: Alibaba Inc.</p>
+     * <p>The provincial district. Default value: Zhejiang.</p>
      */
     @NameInMap("State")
     public String state;

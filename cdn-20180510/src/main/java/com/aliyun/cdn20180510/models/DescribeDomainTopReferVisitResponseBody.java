@@ -5,16 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
     /**
-     * <p>The sorting method. Valid values:</p>
-     * <br>
-     * <p>*   **traf**: by network traffic.</p>
-     * <p>*   **pv**: by the number of page views. This is the default value.</p>
+     * <p>The accelerated domain name.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The URLs to the most frequently requested web pages.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -26,7 +23,7 @@ public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The amount of network traffic. Unit: bytes.</p>
+     * <p>The most frequently requested web pages.</p>
      */
     @NameInMap("TopReferList")
     public DescribeDomainTopReferVisitResponseBodyTopReferList topReferList;
@@ -70,29 +67,32 @@ public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
 
     public static class DescribeDomainTopReferVisitResponseBodyTopReferListReferList extends TeaModel {
         /**
-         * <p>The ID of the request.</p>
+         * <p>The amount of network traffic. Unit: bytes.</p>
          */
         @NameInMap("Flow")
         public String flow;
 
         /**
-         * <p>The proportion of the amount of network traffic consumed for visiting the web page.</p>
+         * <p>The proportion of network traffic consumed to access the URL.</p>
          */
         @NameInMap("FlowProportion")
         public Float flowProportion;
 
         /**
-         * <p>Queries frequently requested web pages of one or more accelerated domain names on a specified day and sorts the web pages. You can query data collected within the last 90 days.</p>
+         * <p>The URLs to the most frequently requested web pages.</p>
          */
         @NameInMap("ReferDetail")
         public String referDetail;
 
         /**
-         * <p>The proportion of visits to the web page.</p>
+         * <p>The number of visits to the URL.</p>
          */
         @NameInMap("VisitData")
         public String visitData;
 
+        /**
+         * <p>The proportion of visits to the URL.</p>
+         */
         @NameInMap("VisitProportion")
         public Float visitProportion;
 

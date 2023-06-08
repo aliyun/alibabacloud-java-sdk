@@ -5,52 +5,60 @@ import com.aliyun.tea.*;
 
 public class BatchSetCdnDomainServerCertificateRequest extends TeaModel {
     /**
-     * <p>The region.</p>
+     * <p>The name of the certificate.</p>
      */
     @NameInMap("CertName")
     public String certName;
 
     /**
-     * <p>Specifies whether to enable the SSL certificate. Valid values:</p>
+     * <p>The type of the certificate. Valid values:</p>
      * <br>
-     * <p>*   **on**: enables the SSL certificate.</p>
-     * <p>*   **off**: disables the SSL certificate. This is the default value.</p>
+     * <p>*   **upload**: a user-uploaded SSL certificate.</p>
+     * <p>*   **cas**: a certificate that is acquired through Certificate Management Service.</p>
      */
     @NameInMap("CertType")
     public String certType;
 
     /**
-     * <p>The type of the SSL certificate. Valid values:</p>
+     * <p>The accelerated domain name to which the SSL certificate belongs. The type of request supported by the accelerated domain name must be HTTPS. You can specify multiple accelerated domain names and separate them with commas (,).</p>
      * <br>
-     * <p>*   **upload**: a user-uploaded SSL certificate.</p>
-     * <p>*   **cas**: a certificate that is issued by SSL Certificates Service.</p>
+     * <p>>You can configure up to 10 domain names at a time.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>Specifies whether to check the certificate name for duplicates. If you set the value to 1, the system does not perform the check and overwrites the information about the existing certificate that uses the same name.</p>
+     */
     @NameInMap("ForceSet")
     public String forceSet;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("Region")
     public String region;
 
     /**
-     * <p>The content of the SSL certificate. Specify the content of the certificate only if you want to enable the SSL certificate.</p>
+     * <p>The private key. Specify the private key only if you want to enable the SSL certificate.</p>
      */
     @NameInMap("SSLPri")
     public String SSLPri;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Specifies whether to enable the SSL certificate. Default value: off. Valid values:</p>
+     * <br>
+     * <p>*   **on** ：enables the SSL certificate.</p>
+     * <p>*   **off**：disables the SSL certificate</p>
      */
     @NameInMap("SSLProtocol")
     public String SSLProtocol;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **BatchSetCdnDomainServerCertificate**.</p>
+     * <p>The content of the SSL certificate. Specify the content of the SSL certificate only if you want to enable the SSL certificate.</p>
      */
     @NameInMap("SSLPub")
     public String SSLPub;

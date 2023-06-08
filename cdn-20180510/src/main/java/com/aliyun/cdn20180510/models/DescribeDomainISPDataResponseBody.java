@@ -5,39 +5,37 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainISPDataResponseBody extends TeaModel {
     /**
-     * <p>The accelerated domain name. You can specify only one domain name in each call.</p>
-     * <br>
-     * <p>By default, this operation queries the proportions of data usage for all accelerated domain names.</p>
+     * <p>The time interval. Unit: seconds.</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
 
     /**
-     * <p>The end of the time range that was queried.</p>
+     * <p>The accelerated domain name.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeDomainISPData**.</p>
+     * <p>The end of the time range during which data was queried.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The number of queries per second.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The proportion of network traffic.</p>
+     * <p>The beginning of the time range that was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The proportion of the HTTP status code.</p>
+     * <p>The access statistics by ISP.</p>
      */
     @NameInMap("Value")
     public DescribeDomainISPDataResponseBodyValue value;
@@ -97,70 +95,73 @@ public class DescribeDomainISPDataResponseBody extends TeaModel {
 
     public static class DescribeDomainISPDataResponseBodyValueISPProportionData extends TeaModel {
         /**
-         * <p>The average response time. Unit: milliseconds.</p>
+         * <p>The average response size. Unit: bytes.</p>
          */
         @NameInMap("AvgObjectSize")
         public String avgObjectSize;
 
         /**
-         * <p>The access statistics by ISP.</p>
+         * <p>The average response speed. Unit: byte/ms.</p>
          */
         @NameInMap("AvgResponseRate")
         public String avgResponseRate;
 
         /**
-         * <p>The total number of requests.</p>
+         * <p>The average response time. Unit: milliseconds.</p>
          */
         @NameInMap("AvgResponseTime")
         public String avgResponseTime;
 
         /**
-         * <p>The time interval between the data entries. Unit: seconds.</p>
+         * <p>The bandwidth.</p>
          */
         @NameInMap("Bps")
         public String bps;
 
+        /**
+         * <p>The proportion of network traffic.</p>
+         */
         @NameInMap("BytesProportion")
         public String bytesProportion;
 
         /**
-         * <p>Queries the proportions of data usage of different Internet service providers (ISPs). Data is collected every day. You can query data collected within the last 90 days.</p>
+         * <p>The information about the ISP.</p>
          */
         @NameInMap("ISP")
         public String ISP;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The name of the ISP.</p>
          */
         @NameInMap("IspEname")
         public String ispEname;
 
         /**
-         * <p>The average response size. Unit: bytes.</p>
+         * <p>The proportion of the HTTP status code.</p>
          */
         @NameInMap("Proportion")
         public String proportion;
 
         /**
-         * <p>The bandwidth value.</p>
+         * <p>The QPS.</p>
          */
         @NameInMap("Qps")
         public String qps;
 
         /**
-         * <p>The beginning of the time range that was queried.</p>
+         * <p>The request error rate.</p>
          */
         @NameInMap("ReqErrRate")
         public String reqErrRate;
 
         /**
-         * <p>The information about the ISP.</p>
+         * <p>The total volume of traffic.</p>
          */
         @NameInMap("TotalBytes")
         public String totalBytes;
 
         /**
-         * <p>The average response speed. Unit: byte/ms.</p>
+         * <p>The total number of requests.</p>
          */
         @NameInMap("TotalQuery")
         public String totalQuery;

@@ -5,21 +5,27 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainRegionDataRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.  </p>
+     * <p>The accelerated domain name. Separate multiple accelerated domain names with commas (,).</p>
      * <br>
-     * <p>The end time must be later than the start time.</p>
+     * <p>By default, this operation queries the geographic distribution of users for all accelerated domain names.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The proportion of bytes transferred from each region. For example, a value of 90 indicates that 90% of the bytes are transferred from the specified area.</p>
+     * <p>The end of the time range to query.</p>
+     * <br>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <br>
+     * <p>The end time must be later than the start time.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The information of the regions.</p>
+     * <p>The beginning of the time range to query.</p>
+     * <br>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

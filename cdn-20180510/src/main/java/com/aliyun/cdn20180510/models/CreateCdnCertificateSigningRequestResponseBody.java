@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class CreateCdnCertificateSigningRequestResponseBody extends TeaModel {
     /**
-     * <p>The name of the organization unit. Default value: Aliyun CDN.</p>
+     * <p>The Common Name of the certificate.</p>
      */
     @NameInMap("CommonName")
     public String commonName;
 
     /**
-     * <p>The Common Name of the SSL certificate.</p>
+     * <p>The content of the CSR file.</p>
      */
     @NameInMap("Csr")
     public String csr;
 
     /**
-     * <p>The provincial district to which the organization belongs. Default value: Zhejiang.</p>
+     * <p>The MD5 hash value of the certificate public key.</p>
      */
     @NameInMap("PubMd5")
     public String pubMd5;
 
     /**
-     * <p>The country to which the organization belongs. Default value: CN.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

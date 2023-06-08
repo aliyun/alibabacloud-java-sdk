@@ -11,7 +11,7 @@ public class DeleteSpecificStagingConfigRequest extends TeaModel {
     public String configId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DeleteSpecificStagingConfig**.</p>
+     * <p>The accelerated domain name. You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).</p>
      */
     @NameInMap("DomainName")
     public String domainName;

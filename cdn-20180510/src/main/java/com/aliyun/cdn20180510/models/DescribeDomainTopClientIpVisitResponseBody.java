@@ -5,17 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainTopClientIpVisitResponseBody extends TeaModel {
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     * <br>
-     * <p>The end time must be later than the start time.</p>
+     * <p>A list of client IP addresses.</p>
      */
     @NameInMap("ClientIpList")
     public java.util.List<DescribeDomainTopClientIpVisitResponseBodyClientIpList> clientIpList;
 
     /**
-     * <p>The accelerated domain name. Separate multiple accelerated domain names with commas (,).</p>
-     * <br>
-     * <p>By default, this operation queries client IP addresses for all accelerated domain names.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -43,23 +39,26 @@ public class DescribeDomainTopClientIpVisitResponseBody extends TeaModel {
 
     public static class DescribeDomainTopClientIpVisitResponseBodyClientIpList extends TeaModel {
         /**
-         * <p>Queries client IP addresses that are ranked by the number of requests or the amount of network traffic within a specific time range for one or more accelerated domain names. You can query data collected within the last 90 days.</p>
+         * <p>The total number of requests.</p>
          */
         @NameInMap("Acc")
         public Long acc;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The client IP address returned. Only IPv4 addressed are supported.</p>
          */
         @NameInMap("ClientIp")
         public String clientIp;
 
         /**
-         * <p>The total amount of network traffic consumed. Unit: bytes.</p>
+         * <p>The ranking of the client IP address returned.</p>
          */
         @NameInMap("Rank")
         public Integer rank;
 
+        /**
+         * <p>The total amount of network traffic consumed. Unit: bytes.</p>
+         */
         @NameInMap("Traffic")
         public Long traffic;
 
