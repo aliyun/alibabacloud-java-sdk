@@ -7,6 +7,9 @@ public class GetSymUploadParamResponseBody extends TeaModel {
     @NameInMap("code")
     public Long code;
 
+    /**
+     * <p>data</p>
+     */
     @NameInMap("data")
     public GetSymUploadParamResponseBodyData data;
 
@@ -16,6 +19,9 @@ public class GetSymUploadParamResponseBody extends TeaModel {
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <p>traceId</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
