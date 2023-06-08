@@ -16,6 +16,9 @@ public class DescribeTrFirewallV2RoutePolicyListRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("PolicyId")
+    public String policyId;
+
     public static DescribeTrFirewallV2RoutePolicyListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeTrFirewallV2RoutePolicyListRequest self = new DescribeTrFirewallV2RoutePolicyListRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class DescribeTrFirewallV2RoutePolicyListRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeTrFirewallV2RoutePolicyListRequest setPolicyId(String policyId) {
+        this.policyId = policyId;
+        return this;
+    }
+    public String getPolicyId() {
+        return this.policyId;
     }
 
 }
