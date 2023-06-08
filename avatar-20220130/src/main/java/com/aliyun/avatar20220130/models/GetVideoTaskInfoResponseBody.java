@@ -74,6 +74,9 @@ public class GetVideoTaskInfoResponseBody extends TeaModel {
         @NameInMap("SubtitlesUrl")
         public String subtitlesUrl;
 
+        @NameInMap("VideoDuration")
+        public Integer videoDuration;
+
         @NameInMap("VideoUrl")
         public String videoUrl;
 
@@ -110,6 +113,14 @@ public class GetVideoTaskInfoResponseBody extends TeaModel {
         }
         public String getSubtitlesUrl() {
             return this.subtitlesUrl;
+        }
+
+        public GetVideoTaskInfoResponseBodyDataTaskResult setVideoDuration(Integer videoDuration) {
+            this.videoDuration = videoDuration;
+            return this;
+        }
+        public Integer getVideoDuration() {
+            return this.videoDuration;
         }
 
         public GetVideoTaskInfoResponseBodyDataTaskResult setVideoUrl(String videoUrl) {

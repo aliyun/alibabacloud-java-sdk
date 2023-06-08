@@ -177,6 +177,9 @@ public class SubmitTextTo2DAvatarVideoTaskRequest extends TeaModel {
     }
 
     public static class SubmitTextTo2DAvatarVideoTaskRequestVideoInfo extends TeaModel {
+        @NameInMap("AlphaFormat")
+        public Integer alphaFormat;
+
         @NameInMap("BackgroundImageUrl")
         public String backgroundImageUrl;
 
@@ -186,9 +189,20 @@ public class SubmitTextTo2DAvatarVideoTaskRequest extends TeaModel {
         @NameInMap("IsSubtitles")
         public Boolean isSubtitles;
 
+        @NameInMap("Resolution")
+        public Integer resolution;
+
         public static SubmitTextTo2DAvatarVideoTaskRequestVideoInfo build(java.util.Map<String, ?> map) throws Exception {
             SubmitTextTo2DAvatarVideoTaskRequestVideoInfo self = new SubmitTextTo2DAvatarVideoTaskRequestVideoInfo();
             return TeaModel.build(map, self);
+        }
+
+        public SubmitTextTo2DAvatarVideoTaskRequestVideoInfo setAlphaFormat(Integer alphaFormat) {
+            this.alphaFormat = alphaFormat;
+            return this;
+        }
+        public Integer getAlphaFormat() {
+            return this.alphaFormat;
         }
 
         public SubmitTextTo2DAvatarVideoTaskRequestVideoInfo setBackgroundImageUrl(String backgroundImageUrl) {
@@ -213,6 +227,14 @@ public class SubmitTextTo2DAvatarVideoTaskRequest extends TeaModel {
         }
         public Boolean getIsSubtitles() {
             return this.isSubtitles;
+        }
+
+        public SubmitTextTo2DAvatarVideoTaskRequestVideoInfo setResolution(Integer resolution) {
+            this.resolution = resolution;
+            return this;
+        }
+        public Integer getResolution() {
+            return this.resolution;
         }
 
     }
