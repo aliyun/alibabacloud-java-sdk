@@ -4,15 +4,9 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class GetDcdnKvResponseBody extends TeaModel {
-    /**
-     * <p>The value of the key.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The name of the key that you want to query.</p>
-     */
     @NameInMap("Value")
     public String value;
 
