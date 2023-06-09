@@ -4,6 +4,9 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListQueryProcessorNersRequest extends TeaModel {
+    /**
+     * <p>ECOMMERCE</p>
+     */
     @NameInMap("domain")
     public String domain;
 

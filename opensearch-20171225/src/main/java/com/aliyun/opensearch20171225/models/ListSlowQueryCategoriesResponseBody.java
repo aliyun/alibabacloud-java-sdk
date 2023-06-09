@@ -4,9 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListSlowQueryCategoriesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("result")
     public ListSlowQueryCategoriesResponseBodyResult result;
 
@@ -32,12 +38,27 @@ public class ListSlowQueryCategoriesResponseBody extends TeaModel {
     }
 
     public static class ListSlowQueryCategoriesResponseBodyResult extends TeaModel {
+        /**
+         * <p>The status of the analysis. Valid values:</p>
+         * <br>
+         * <p>*   PENDING: preparing</p>
+         * <p>*   SUCCESS: succeeded</p>
+         * <p>*   RUNNING: running</p>
+         * <p>*   FAILED: failed</p>
+         * <p>*   N/A: unknown</p>
+         */
         @NameInMap("analyzeStatus")
         public String analyzeStatus;
 
+        /**
+         * <p>The timestamp that indicates the end of the time range to query.</p>
+         */
         @NameInMap("end")
         public Integer end;
 
+        /**
+         * <p>The timestamp that indicates the beginning of the time range to query.</p>
+         */
         @NameInMap("start")
         public Integer start;
 

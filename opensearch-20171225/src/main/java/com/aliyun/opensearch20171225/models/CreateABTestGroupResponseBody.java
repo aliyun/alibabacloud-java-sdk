@@ -4,9 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class CreateABTestGroupResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The return result.</p>
+     */
     @NameInMap("result")
     public CreateABTestGroupResponseBodyResult result;
 
@@ -32,18 +38,36 @@ public class CreateABTestGroupResponseBody extends TeaModel {
     }
 
     public static class CreateABTestGroupResponseBodyResult extends TeaModel {
+        /**
+         * <p>The time when the test group was created.</p>
+         */
         @NameInMap("created")
         public Integer created;
 
+        /**
+         * <p>The ID of the test group.</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <p>The name of the test group.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The status of the test group. Valid values:</p>
+         * <br>
+         * <p>*   0: not in effect</p>
+         * <p>*   1: in effect</p>
+         */
         @NameInMap("status")
         public Integer status;
 
+        /**
+         * <p>The time when the test group was last modified.</p>
+         */
         @NameInMap("updated")
         public Integer updated;
 

@@ -4,9 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The result that was returned.</p>
+     */
     @NameInMap("result")
     public DescribeRegionResponseBodyResult result;
 
@@ -32,9 +38,43 @@ public class DescribeRegionResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionResponseBodyResult extends TeaModel {
+        /**
+         * <p>The configurations.</p>
+         */
         @NameInMap("config")
         public java.util.Map<String, ?> config;
 
+        /**
+         * <p>The ID of the region. Valid values:</p>
+         * <br>
+         * <p>cn-hangzhou: China (Hangzhou)</p>
+         * <br>
+         * <p>cn-shanghai: China (Shanghai)</p>
+         * <br>
+         * <p>cn-qingdao: China (Qingdao)</p>
+         * <br>
+         * <p>cn-beijing: China (Beijing)</p>
+         * <br>
+         * <p>cn-zhangjiakou: China (Zhangjiakou)</p>
+         * <br>
+         * <p>cn-shenzhen: China (Shenzhen)</p>
+         * <br>
+         * <p>ap-southeast-1: Singapore (Singapore)</p>
+         * <br>
+         * <p>cn-internal: Internal Center</p>
+         * <br>
+         * <p>cn-zhangbei-in: Internal Center (Zhangjiakou)</p>
+         * <br>
+         * <p>us-west-1-in: Internal Center (US)</p>
+         * <br>
+         * <p>rus-west-1-in: Internal Center (Russia)</p>
+         * <br>
+         * <p>cn-daily: Daily Environment</p>
+         * <br>
+         * <p>cn-test: Joint Debugging</p>
+         * <br>
+         * <p>pre-hangzhou: China (Hangzhou)-Staging</p>
+         */
         @NameInMap("regionId")
         public String regionId;
 

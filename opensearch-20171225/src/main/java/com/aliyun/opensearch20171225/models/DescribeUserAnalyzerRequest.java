@@ -4,6 +4,9 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserAnalyzerRequest extends TeaModel {
+    /**
+     * <p>all</p>
+     */
     @NameInMap("with")
     public String with;
 

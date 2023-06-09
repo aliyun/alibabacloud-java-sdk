@@ -4,9 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class RemoveQueryProcessorResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>N/A</p>
+     */
     @NameInMap("result")
     public String result;
 

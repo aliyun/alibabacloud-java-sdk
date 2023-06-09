@@ -4,30 +4,57 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class GetFunctionDefaultInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The name of the feature.</p>
+     */
     @NameInMap("FunctionName")
     public String functionName;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpCode")
     public Long httpCode;
 
+    /**
+     * <p>The name of the instance.</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>The default running time.</p>
+     */
     @NameInMap("Latency")
     public Long latency;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The result of the request.</p>
+     */
     @NameInMap("Result")
     public GetFunctionDefaultInstanceResponseBodyResult result;
 
+    /**
+     * <p>The status of the request.</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -109,6 +136,9 @@ public class GetFunctionDefaultInstanceResponseBody extends TeaModel {
     }
 
     public static class GetFunctionDefaultInstanceResponseBodyResult extends TeaModel {
+        /**
+         * <p>The default instance name.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 

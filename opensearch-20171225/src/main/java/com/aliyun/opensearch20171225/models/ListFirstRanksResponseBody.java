@@ -4,9 +4,17 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListFirstRanksResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The information about each rough sort expression.</p>
+     * <br>
+     * <p>For more information, see [FirstRank](~~170007~~).</p>
+     */
     @NameInMap("result")
     public java.util.List<ListFirstRanksResponseBodyResult> result;
 
@@ -32,12 +40,27 @@ public class ListFirstRanksResponseBody extends TeaModel {
     }
 
     public static class ListFirstRanksResponseBodyResultMeta extends TeaModel {
+        /**
+         * <p>The parameters that are used by a function in the expression.</p>
+         * <br>
+         * <p>For more information, see [Rough sort functions](~~180765~~).</p>
+         */
         @NameInMap("arg")
         public String arg;
 
+        /**
+         * <p>The attribute, feature function, or field to be searched for.</p>
+         * <br>
+         * <p>For more information about supported feature functions, see [Rough sort functions](~~180765~~).</p>
+         */
         @NameInMap("attribute")
         public String attribute;
 
+        /**
+         * <p>The weight.</p>
+         * <br>
+         * <p>Valid values: \[-100000,100000] (excluding 0).</p>
+         */
         @NameInMap("weight")
         public Integer weight;
 
@@ -73,18 +96,30 @@ public class ListFirstRanksResponseBody extends TeaModel {
     }
 
     public static class ListFirstRanksResponseBodyResult extends TeaModel {
+        /**
+         * <p>Indicates whether the expression is the default one.</p>
+         */
         @NameInMap("active")
         public Boolean active;
 
         @NameInMap("created")
         public Integer created;
 
+        /**
+         * <p>The description of the expression.</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The content of the expression.</p>
+         */
         @NameInMap("meta")
         public java.util.List<ListFirstRanksResponseBodyResultMeta> meta;
 
+        /**
+         * <p>The name of the expression.</p>
+         */
         @NameInMap("name")
         public String name;
 

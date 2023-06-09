@@ -4,9 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class GetScriptFileNamesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The files of the script.</p>
+     */
     @NameInMap("result")
     public java.util.List<GetScriptFileNamesResponseBodyResult> result;
 
@@ -32,12 +38,21 @@ public class GetScriptFileNamesResponseBody extends TeaModel {
     }
 
     public static class GetScriptFileNamesResponseBodyResult extends TeaModel {
+        /**
+         * <p>The time when the script file was created.</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <p>The name of the script file.</p>
+         */
         @NameInMap("fileName")
         public String fileName;
 
+        /**
+         * <p>The time when the script file was last modified.</p>
+         */
         @NameInMap("modifyTime")
         public String modifyTime;
 

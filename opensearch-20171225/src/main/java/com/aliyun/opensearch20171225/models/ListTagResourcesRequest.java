@@ -4,15 +4,27 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
+    /**
+     * <p>The token that is used to retrieve the next page.</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>The resource IDs. You can specify a maximum number of 50 resource IDs.</p>
+     */
     @NameInMap("resourceId")
     public java.util.List<String> resourceId;
 
+    /**
+     * <p>The resource type.</p>
+     */
     @NameInMap("resourceType")
     public String resourceType;
 
+    /**
+     * <p>The tags. You can specify a maximum number of 20 tags.</p>
+     */
     @NameInMap("tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 
@@ -54,9 +66,15 @@ public class ListTagResourcesRequest extends TeaModel {
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("value")
         public String value;
 

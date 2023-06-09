@@ -4,9 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class GetSortScriptResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The details of the script</p>
+     */
     @NameInMap("result")
     public GetSortScriptResponseBodyResult result;
 
@@ -32,18 +38,33 @@ public class GetSortScriptResponseBody extends TeaModel {
     }
 
     public static class GetSortScriptResponseBodyResult extends TeaModel {
+        /**
+         * <p>The time when the script was created.</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <p>The time when the script was last modified.</p>
+         */
         @NameInMap("modifyTime")
         public String modifyTime;
 
+        /**
+         * <p>The sort phase to which the script applies.</p>
+         */
         @NameInMap("scope")
         public String scope;
 
+        /**
+         * <p>The status of the script. For more information, see the Script status table.</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>The type of the script.</p>
+         */
         @NameInMap("type")
         public String type;
 

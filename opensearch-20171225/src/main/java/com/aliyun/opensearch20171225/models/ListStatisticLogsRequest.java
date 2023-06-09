@@ -4,27 +4,53 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListStatisticLogsRequest extends TeaModel {
+    /**
+     * <p>The fields to query. Example: columns=wordsTopPv.</p>
+     * <br>
+     * <p>For more information, see [Metrics in statistical reports](https://www.alibabacloud.com/help/en/opensearch/latest/statistical-report).</p>
+     */
     @NameInMap("columns")
     public String columns;
 
+    /**
+     * <p>The content of the query clause.</p>
+     */
     @NameInMap("distinct")
     public Boolean distinct;
 
+    /**
+     * <p>The number of the page to return. Default value: 1.</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: 10.</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The content of the query clause.</p>
+     */
     @NameInMap("query")
     public String query;
 
+    /**
+     * <p>The content of the sort clause.</p>
+     */
     @NameInMap("sortBy")
     public String sortBy;
 
+    /**
+     * <p>The beginning of the time range to query. The default value is the timestamp of 00:00:00 on the current day.</p>
+     */
     @NameInMap("startTime")
     public Integer startTime;
 
+    /**
+     * <p>The end of the time range to query. The default value is the timestamp of 24:00:00 on the current day.</p>
+     */
     @NameInMap("stopTime")
     public Integer stopTime;
 

@@ -4,9 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class GetSortScriptFileResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The content of the sort script.</p>
+     */
     @NameInMap("result")
     public GetSortScriptFileResponseBodyResult result;
 
@@ -32,15 +38,27 @@ public class GetSortScriptFileResponseBody extends TeaModel {
     }
 
     public static class GetSortScriptFileResponseBodyResult extends TeaModel {
+        /**
+         * <p>The script content that is encoded in the Base64 format.</p>
+         */
         @NameInMap("content")
         public String content;
 
+        /**
+         * <p>The time when the script was created.</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <p>The last time when the script was last modified.</p>
+         */
         @NameInMap("modifyTime")
         public String modifyTime;
 
+        /**
+         * <p>The version of the script.</p>
+         */
         @NameInMap("version")
         public Long version;
 

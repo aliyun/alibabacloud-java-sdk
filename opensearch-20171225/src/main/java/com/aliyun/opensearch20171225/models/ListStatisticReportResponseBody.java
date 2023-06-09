@@ -4,12 +4,27 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListStatisticReportResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The queried reports. Valid values:</p>
+     * <br>
+     * <p>For more information about the metrics in data quality reports, see the Upload behavioral data section of [Data collection 2.0](~~131547~~).</p>
+     * <br>
+     * <p>For more information about the metrics in application and A/B test reports, see the Core metrics section of [Metrics of statistical reports](~~187654~~).</p>
+     * <br>
+     * <p>For more information about the metrics in query analysis reports, see the Query analysis metrics section of [Metrics of statistical reports](~~187654~~).</p>
+     */
     @NameInMap("result")
     public java.util.List<java.util.Map<String, ?>> result;
 
+    /**
+     * <p>The total number of the queried reports.</p>
+     */
     @NameInMap("totalCount")
     public Long totalCount;
 

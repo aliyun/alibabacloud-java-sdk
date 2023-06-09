@@ -4,12 +4,23 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListStatisticLogsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The return result. For more information, see:</p>
+     * <br>
+     * <p>*   [Parameters of hotwords rankings](https://www.alibabacloud.com/help/en/opensearch/latest/api-doc-opensearch-2017-12-25-api-doc-liststatisticlogs)</p>
+     */
     @NameInMap("result")
     public java.util.List<java.util.Map<String, ?>> result;
 
+    /**
+     * <p>The total number of the queried logs.</p>
+     */
     @NameInMap("totalCount")
     public Long totalCount;
 

@@ -4,6 +4,9 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("tequestId")
     public String tequestId;
 

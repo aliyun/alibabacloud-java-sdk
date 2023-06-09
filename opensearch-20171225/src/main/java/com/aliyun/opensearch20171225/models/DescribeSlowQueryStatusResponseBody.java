@@ -4,9 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlowQueryStatusResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The return result.</p>
+     */
     @NameInMap("result")
     public DescribeSlowQueryStatusResponseBodyResult result;
 
@@ -32,12 +38,28 @@ public class DescribeSlowQueryStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeSlowQueryStatusResponseBodyResult extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("appGroupId")
         public String appGroupId;
 
+        /**
+         * <p>The network type of the slow query optimization service. Valid values:</p>
+         * <br>
+         * <p>*   outer: the Internet</p>
+         * <p>*   internal: the internal network</p>
+         */
         @NameInMap("region")
         public String region;
 
+        /**
+         * <p>The status of the slow query optimization service. Valid values:</p>
+         * <br>
+         * <p>*   enabled</p>
+         * <p>*   disabled</p>
+         * <p>*   n/a</p>
+         */
         @NameInMap("status")
         public String status;
 

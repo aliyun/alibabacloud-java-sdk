@@ -4,6 +4,9 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class GetDomainRequest extends TeaModel {
+    /**
+     * <p>my_app_group_name</p>
+     */
     @NameInMap("appGroupIdentity")
     public String appGroupIdentity;
 

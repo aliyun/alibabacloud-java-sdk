@@ -4,12 +4,23 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListQuotaReviewTasksResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The information about the ticket for application quota approval.</p>
+     * <br>
+     * <p>For more information, see [QuotaReviewTask](~~173609~~).</p>
+     */
     @NameInMap("result")
     public java.util.List<ListQuotaReviewTasksResponseBodyResult> result;
 
+    /**
+     * <p>The total number of the returned tickets.</p>
+     */
     @NameInMap("totalCount")
     public Integer totalCount;
 
@@ -43,51 +54,99 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
     }
 
     public static class ListQuotaReviewTasksResponseBodyResult extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("appGroupId")
         public Integer appGroupId;
 
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("appGroupName")
         public String appGroupName;
 
+        /**
+         * <p>The type of the application.</p>
+         */
         @NameInMap("appGroupType")
         public String appGroupType;
 
+        /**
+         * <p>Indicates whether the ticket is approved.</p>
+         */
         @NameInMap("approved")
         public Boolean approved;
 
+        /**
+         * <p>Indicates whether the model is available.</p>
+         */
         @NameInMap("available")
         public Boolean available;
 
+        /**
+         * <p>The time when the ticket was created.</p>
+         */
         @NameInMap("gmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The time when the ticket was last updated.</p>
+         */
         @NameInMap("gmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The ID of the ticket.</p>
+         */
         @NameInMap("id")
         public Integer id;
 
+        /**
+         * <p>The remarks of the ticket.</p>
+         */
         @NameInMap("memo")
         public String memo;
 
+        /**
+         * <p>The computing resource quota that is applied for.</p>
+         */
         @NameInMap("newComputeResource")
         public Integer newComputeResource;
 
+        /**
+         * <p>The storage capacity quota that is applied for.</p>
+         */
         @NameInMap("newSocSize")
         public Integer newSocSize;
 
+        /**
+         * <p>The application specifications that are applied for.</p>
+         */
         @NameInMap("newSpec")
         public String newSpec;
 
+        /**
+         * <p>The original quota of computing resources.</p>
+         */
         @NameInMap("oldComputeResource")
         public Integer oldComputeResource;
 
+        /**
+         * <p>The original quota of storage capacity.</p>
+         */
         @NameInMap("oldDocSize")
         public Integer oldDocSize;
 
+        /**
+         * <p>The original application specifications.</p>
+         */
         @NameInMap("oldSpec")
         public String oldSpec;
 
+        /**
+         * <p>Indicates whether the ticket is pending.</p>
+         */
         @NameInMap("pending")
         public Boolean pending;
 

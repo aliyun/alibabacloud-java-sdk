@@ -4,12 +4,21 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListUserAnalyzerEntriesRequest extends TeaModel {
+    /**
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>kevintest</p>
+     */
     @NameInMap("word")
     public String word;
 

@@ -4,21 +4,39 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListStatisticReportRequest extends TeaModel {
+    /**
+     * <p>pv,uv</p>
+     */
     @NameInMap("columns")
     public String columns;
 
+    /**
+     * <p>1582646399</p>
+     */
     @NameInMap("endTime")
     public Integer endTime;
 
+    /**
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>bizType:test,sceneTag:myTag</p>
+     */
     @NameInMap("query")
     public String query;
 
+    /**
+     * <p>1582214400</p>
+     */
     @NameInMap("startTime")
     public Integer startTime;
 

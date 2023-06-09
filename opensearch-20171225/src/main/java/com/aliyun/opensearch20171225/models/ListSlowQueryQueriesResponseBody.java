@@ -4,9 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListSlowQueryQueriesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The return result.</p>
+     */
     @NameInMap("result")
     public ListSlowQueryQueriesResponseBodyResult result;
 
@@ -32,15 +38,27 @@ public class ListSlowQueryQueriesResponseBody extends TeaModel {
     }
 
     public static class ListSlowQueryQueriesResponseBodyResult extends TeaModel {
+        /**
+         * <p>The content of the optimization suggestion for the query.</p>
+         */
         @NameInMap("appQuery")
         public String appQuery;
 
+        /**
+         * <p>The end of the time range that was queried.</p>
+         */
         @NameInMap("end")
         public Integer end;
 
+        /**
+         * <p>The ID of the optimization suggestion.</p>
+         */
         @NameInMap("index")
         public Integer index;
 
+        /**
+         * <p>The beginning of the time range that was queried.</p>
+         */
         @NameInMap("start")
         public Integer start;
 

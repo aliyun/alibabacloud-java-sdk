@@ -4,9 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataCollctionResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The details of the data collection task.</p>
+     */
     @NameInMap("result")
     public DescribeDataCollctionResponseBodyResult result;
 
@@ -32,30 +38,77 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
     }
 
     public static class DescribeDataCollctionResponseBodyResult extends TeaModel {
+        /**
+         * <p>The time when the data collection task was created.</p>
+         */
         @NameInMap("created")
         public Integer created;
 
+        /**
+         * <p>The type of the data that is collected by the task. Valid values:</p>
+         * <br>
+         * <p>*   behavior: behavioral data</p>
+         * <p>*   item_info: project data</p>
+         * <p>*   industry_specific: industry-specific data</p>
+         */
         @NameInMap("dataCollectionType")
         public String dataCollectionType;
 
+        /**
+         * <p>The ID of the data collection task.</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <p>The industry to which the data collection task applies. Valid values:</p>
+         * <br>
+         * <p>*   general</p>
+         * <p>*   ecommerce</p>
+         */
         @NameInMap("industryName")
         public String industryName;
 
+        /**
+         * <p>The name of the data collection task.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The status of the data collection task. Valid values:</p>
+         * <br>
+         * <p>*   0: disabled</p>
+         * <p>*   1: being enabled</p>
+         * <p>*   2: enabled</p>
+         * <p>*   3: failed to be enabled</p>
+         */
         @NameInMap("status")
         public Integer status;
 
+        /**
+         * <p>The ID of the sundial.</p>
+         */
         @NameInMap("sundialId")
         public String sundialId;
 
+        /**
+         * <p>The type of the data source. Valid values:</p>
+         * <br>
+         * <p>*   server</p>
+         * <br>
+         * <p>*   web</p>
+         * <br>
+         * <p>*   app</p>
+         * <br>
+         * <p>    Note: Only server is supported.</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>The time when the data collection task was updated.</p>
+         */
         @NameInMap("updated")
         public Integer updated;
 

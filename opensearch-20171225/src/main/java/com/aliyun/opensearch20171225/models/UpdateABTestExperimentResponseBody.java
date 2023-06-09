@@ -4,9 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class UpdateABTestExperimentResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The details of the test.</p>
+     */
     @NameInMap("result")
     public UpdateABTestExperimentResponseBodyResult result;
 
@@ -32,24 +38,50 @@ public class UpdateABTestExperimentResponseBody extends TeaModel {
     }
 
     public static class UpdateABTestExperimentResponseBodyResult extends TeaModel {
+        /**
+         * <p>The time when the test was created.</p>
+         */
         @NameInMap("created")
         public Integer created;
 
+        /**
+         * <p>The ID of the test.</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <p>The name of the test.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The status of the test. Valid values:</p>
+         * <br>
+         * <p>*   true: in effect</p>
+         * <p>*   false: not in effect</p>
+         */
         @NameInMap("online")
         public Boolean online;
 
+        /**
+         * <p>The parameters of the test.</p>
+         */
         @NameInMap("params")
         public java.util.Map<String, ?> params;
 
+        /**
+         * <p>The percentage of traffic that is routed to the test.</p>
+         * <br>
+         * <p>Value values: 0 to 100.</p>
+         */
         @NameInMap("traffic")
         public Integer traffic;
 
+        /**
+         * <p>The time when the test was last modified.</p>
+         */
         @NameInMap("updated")
         public Integer updated;
 

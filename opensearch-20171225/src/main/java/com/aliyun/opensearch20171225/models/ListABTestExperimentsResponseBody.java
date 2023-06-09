@@ -4,9 +4,17 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListABTestExperimentsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The details of the tests.</p>
+     * <br>
+     * <p>For more information, see [ABTestExperiment](~~173617~~).</p>
+     */
     @NameInMap("result")
     public java.util.List<ListABTestExperimentsResponseBodyResult> result;
 
@@ -32,24 +40,50 @@ public class ListABTestExperimentsResponseBody extends TeaModel {
     }
 
     public static class ListABTestExperimentsResponseBodyResult extends TeaModel {
+        /**
+         * <p>The time when the test was created.</p>
+         */
         @NameInMap("created")
         public Integer created;
 
+        /**
+         * <p>The ID of the test group.</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <p>The name of the test group.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The status of the test. Valid values:</p>
+         * <br>
+         * <p>*   true: in effect</p>
+         * <p>*   false: not in effect</p>
+         */
         @NameInMap("online")
         public Boolean online;
 
+        /**
+         * <p>The parameters of the test.</p>
+         */
         @NameInMap("params")
         public java.util.Map<String, ?> params;
 
+        /**
+         * <p>The percentage of traffic that is routed to the test.</p>
+         * <br>
+         * <p>Valid values: \[0,100].</p>
+         */
         @NameInMap("traffic")
         public Integer traffic;
 
+        /**
+         * <p>The time when the test was last modified.</p>
+         */
         @NameInMap("updated")
         public Integer updated;
 

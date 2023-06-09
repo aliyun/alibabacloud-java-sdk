@@ -4,12 +4,21 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class PreviewModelResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The result that was returned.</p>
+     */
     @NameInMap("result")
     public java.util.List<java.util.Map<String, ?>> result;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("totalCount")
     public Long totalCount;
 

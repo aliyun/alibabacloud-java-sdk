@@ -4,9 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class UpdateABTestSceneResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The details of the test scenario. For more information, see [ABTestScene](https://www.alibabacloud.com/help/en/opensearch/latest/abtestscene).</p>
+     */
     @NameInMap("result")
     public UpdateABTestSceneResponseBodyResult result;
 
@@ -32,24 +38,47 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
     }
 
     public static class UpdateABTestSceneResponseBodyResult extends TeaModel {
+        /**
+         * <p>The time when the test scenario was created.</p>
+         */
         @NameInMap("created")
         public Integer created;
 
+        /**
+         * <p>The ID of the test scenario.</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <p>The name of the test scenario.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The status of the test. Valid values:</p>
+         * <p>- true: enabled</p>
+         * <p>- false: stopped</p>
+         */
         @NameInMap("online")
         public Boolean online;
 
+        /**
+         * <p>The parameters of the A/B test.</p>
+         */
         @NameInMap("params")
         public java.util.Map<String, ?> params;
 
+        /**
+         * <p>The percentage of traffic that is allocated to the A/B test. Valid values: [0,100].</p>
+         */
         @NameInMap("traffic")
         public Integer traffic;
 
+        /**
+         * <p>The time when the test scenario was last modified.</p>
+         */
         @NameInMap("updated")
         public Integer updated;
 

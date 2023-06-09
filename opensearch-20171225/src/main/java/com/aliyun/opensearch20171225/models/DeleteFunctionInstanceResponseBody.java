@@ -4,21 +4,42 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class DeleteFunctionInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The error code. If no error occurs, this parameter is left empty.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpCode")
     public Long httpCode;
 
+    /**
+     * <p>The time consumed for the request, in milliseconds.</p>
+     */
     @NameInMap("Latency")
     public Long latency;
 
+    /**
+     * <p>The error message. If no error occurs, this parameter is left empty.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The status of the request. Valid values:</p>
+     * <br>
+     * <p>*   OK: The request is successful.</p>
+     * <p>*   FAIL: The request fails.</p>
+     */
     @NameInMap("Status")
     public String status;
 

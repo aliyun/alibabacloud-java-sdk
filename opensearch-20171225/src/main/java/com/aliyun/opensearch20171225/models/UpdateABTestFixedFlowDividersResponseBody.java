@@ -4,9 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class UpdateABTestFixedFlowDividersResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The whitelists after the update.</p>
+     */
     @NameInMap("result")
     public java.util.List<String> result;
 

@@ -4,6 +4,9 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class UpdateFunctionDefaultInstanceRequest extends TeaModel {
+    /**
+     * <p>The name of the instance.</p>
+     */
     @NameInMap("instanceName")
     public String instanceName;
 
