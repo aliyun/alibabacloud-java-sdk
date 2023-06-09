@@ -4,12 +4,21 @@ package com.aliyun.resourcecenter20221201.models;
 import com.aliyun.tea.*;
 
 public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the resource groups.</p>
+     */
     @NameInMap("ResourceGroups")
     public java.util.List<ListMultiAccountResourceGroupsResponseBodyResourceGroups> resourceGroups;
 
@@ -43,21 +52,43 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
     }
 
     public static class ListMultiAccountResourceGroupsResponseBodyResourceGroups extends TeaModel {
+        /**
+         * <p>The ID of the management account or member of the resource directory.</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <p>The time when the resource group was created.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The display name of the resource group.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The unique identifier of the resource group.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The status of the resource group. Valid values:</p>
+         * <br>
+         * <p>*   Creating: The resource group is being created.</p>
+         * <p>*   OK: The resource group is created.</p>
+         * <p>*   PendingDelete: The resource group is waiting to be deleted.</p>
+         */
         @NameInMap("Status")
         public String status;
 

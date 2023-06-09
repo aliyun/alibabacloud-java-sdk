@@ -4,15 +4,27 @@ package com.aliyun.resourcecenter20221201.models;
 import com.aliyun.tea.*;
 
 public class GetMultiAccountResourceConfigurationRequest extends TeaModel {
+    /**
+     * <p>The ID of the management account or member of the resource directory.</p>
+     */
     @NameInMap("AccountId")
     public String accountId;
 
+    /**
+     * <p>The ID of the resource.</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
+    /**
+     * <p>The region ID of the resource.</p>
+     */
     @NameInMap("ResourceRegionId")
     public String resourceRegionId;
 
+    /**
+     * <p>The type of the resource.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

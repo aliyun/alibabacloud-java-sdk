@@ -4,21 +4,44 @@ package com.aliyun.resourcecenter20221201.models;
 import com.aliyun.tea.*;
 
 public class SearchMultiAccountResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The filter conditions.</p>
+     */
     @NameInMap("Filters")
     public java.util.List<SearchMultiAccountResourcesResponseBodyFilters> filters;
 
+    /**
+     * <p>The maximum number of entries returned per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the resources.</p>
+     */
     @NameInMap("Resources")
     public java.util.List<SearchMultiAccountResourcesResponseBodyResources> resources;
 
+    /**
+     * <p>The search scope.</p>
+     * <br>
+     * <p>*   ID of a resource directory: Resources within the management account and all members of the resource directory are searched.</p>
+     * <p>*   ID of the Root folder: Resources within all members in the Root folder and the subfolders of the Root folder are searched.</p>
+     * <p>*   ID of a folder: Resources within all members in the folder are searched.</p>
+     * <p>*   ID of a member: Resources within the member are searched.</p>
+     */
     @NameInMap("Scope")
     public String scope;
 
@@ -76,12 +99,21 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
     }
 
     public static class SearchMultiAccountResourcesResponseBodyFilters extends TeaModel {
+        /**
+         * <p>The key of the filter condition.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The matching mode.</p>
+         */
         @NameInMap("MatchType")
         public String matchType;
 
+        /**
+         * <p>The values of the filter condition.</p>
+         */
         @NameInMap("Values")
         public java.util.List<String> values;
 
@@ -117,9 +149,15 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
     }
 
     public static class SearchMultiAccountResourcesResponseBodyResourcesTags extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -147,33 +185,69 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
     }
 
     public static class SearchMultiAccountResourcesResponseBodyResources extends TeaModel {
+        /**
+         * <p>The ID of the management account or member of the resource directory.</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <p>The time when the resource was created.</p>
+         * <br>
+         * <p>> Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The IP addresses.</p>
+         * <br>
+         * <p>> Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
+         */
         @NameInMap("IpAddresses")
         public java.util.List<String> ipAddresses;
 
+        /**
+         * <p>The region ID of the resource.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group to which the resource belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The ID of the resource.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The name of the resource.</p>
+         */
         @NameInMap("ResourceName")
         public String resourceName;
 
+        /**
+         * <p>The type of the resource.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The tags of the resource.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<SearchMultiAccountResourcesResponseBodyResourcesTags> tags;
 
+        /**
+         * <p>The zone ID of the resource.</p>
+         * <br>
+         * <p>> Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

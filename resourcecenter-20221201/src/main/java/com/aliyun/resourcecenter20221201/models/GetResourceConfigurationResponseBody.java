@@ -4,39 +4,77 @@ package com.aliyun.resourcecenter20221201.models;
 import com.aliyun.tea.*;
 
 public class GetResourceConfigurationResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+     */
     @NameInMap("AccountId")
     public String accountId;
 
+    /**
+     * <p>The configurations of the resource.</p>
+     */
     @NameInMap("Configuration")
     public java.util.Map<String, ?> configuration;
 
+    /**
+     * <p>The time when the resource was created.</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The IP addresses.</p>
+     * <br>
+     * <p>> Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
+     */
     @NameInMap("IpAddresses")
     public java.util.List<String> ipAddresses;
 
+    /**
+     * <p>The region ID of the resource.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group to which the resource belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The ID of the resource.</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
+    /**
+     * <p>The name of the resource.</p>
+     */
     @NameInMap("ResourceName")
     public String resourceName;
 
+    /**
+     * <p>The type of the resource.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tags of the resource.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<GetResourceConfigurationResponseBodyTags> tags;
 
+    /**
+     * <p>The zone ID of the resource.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 
@@ -142,9 +180,15 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
     }
 
     public static class GetResourceConfigurationResponseBodyTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
