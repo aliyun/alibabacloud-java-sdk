@@ -1,0 +1,10 @@
+2023-06-09 Version: 1.0.0
+- Supported QueryCostCurveContrast.
+- Supported QueryEnergyStorageStrategy.
+- Supported QueryLongTermLoadForecastData.
+- Supported QueryLongTermPvForecastData.
+- Supported QueryShortTermLoadForecastData.
+- Supported QueryShortTermPvForecastData.
+- Supported QueryUltraShortTermLoadForecastData.
+- Supported QueryUltraShortTermPvForecastData.
+
