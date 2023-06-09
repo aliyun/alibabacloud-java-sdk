@@ -16,9 +16,6 @@ public class InvoiceAddResponseBody extends TeaModel {
     @NameInMap("success")
     public Boolean success;
 
-    /**
-     * <p>traceId</p>
-     */
     @NameInMap("traceId")
     public String traceId;
 
