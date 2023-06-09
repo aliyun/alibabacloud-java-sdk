@@ -4,12 +4,21 @@ package com.aliyun.resourcecenter20221201.models;
 import com.aliyun.tea.*;
 
 public class ListMultiAccountTagKeysResponseBody extends TeaModel {
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The tag keys.</p>
+     */
     @NameInMap("TagKeys")
     public java.util.List<String> tagKeys;
 

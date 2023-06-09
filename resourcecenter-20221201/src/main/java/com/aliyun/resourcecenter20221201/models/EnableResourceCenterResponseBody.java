@@ -4,9 +4,18 @@ package com.aliyun.resourcecenter20221201.models;
 import com.aliyun.tea.*;
 
 public class EnableResourceCenterResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The activation status of the service. Valid values:</p>
+     * <br>
+     * <p>*   Pending: The service is being activated.</p>
+     * <p>*   Enabled: The service is activated.</p>
+     */
     @NameInMap("Status")
     public String status;
 

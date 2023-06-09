@@ -4,12 +4,26 @@ package com.aliyun.resourcecenter20221201.models;
 import com.aliyun.tea.*;
 
 public class ListResourceTypesRequest extends TeaModel {
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh-CN: Chinese</p>
+     * <p>*   en-US: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>The query conditions.</p>
+     */
     @NameInMap("Query")
     public java.util.List<String> query;
 
+    /**
+     * <p>The resource type.</p>
+     * <br>
+     * <p>For more information about the resource types that are supported by Resource Center, see [Services that work with Resource Center](~~477798~~).</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

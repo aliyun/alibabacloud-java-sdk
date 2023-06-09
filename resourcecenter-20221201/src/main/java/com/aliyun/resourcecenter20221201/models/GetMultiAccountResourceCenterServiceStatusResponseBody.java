@@ -4,12 +4,27 @@ package com.aliyun.resourcecenter20221201.models;
 import com.aliyun.tea.*;
 
 public class GetMultiAccountResourceCenterServiceStatusResponseBody extends TeaModel {
+    /**
+     * <p>The initialization status of the feature. Valid values:</p>
+     * <br>
+     * <p>*   Pending: The feature is being initialized.</p>
+     * <p>*   Finished: The feature is initialized.</p>
+     */
     @NameInMap("InitialStatus")
     public String initialStatus;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The status of the feature. Valid values:</p>
+     * <br>
+     * <p>*   Enabled: The feature is enabled.</p>
+     * <p>*   Disabled: The feature is disabled.</p>
+     */
     @NameInMap("ServiceStatus")
     public String serviceStatus;
 

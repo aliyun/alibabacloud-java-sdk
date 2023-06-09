@@ -4,9 +4,15 @@ package com.aliyun.resourcecenter20221201.models;
 import com.aliyun.tea.*;
 
 public class ListResourceTypesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the resource types.</p>
+     */
     @NameInMap("ResourceTypes")
     public java.util.List<ListResourceTypesResponseBodyResourceTypes> resourceTypes;
 
@@ -32,15 +38,27 @@ public class ListResourceTypesResponseBody extends TeaModel {
     }
 
     public static class ListResourceTypesResponseBodyResourceTypes extends TeaModel {
+        /**
+         * <p>The supported filter conditions.</p>
+         */
         @NameInMap("FilterKeys")
         public java.util.List<String> filterKeys;
 
+        /**
+         * <p>The name of the Alibaba Cloud service.</p>
+         */
         @NameInMap("ProductName")
         public String productName;
 
+        /**
+         * <p>The resource type.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The name of the resource type.</p>
+         */
         @NameInMap("ResourceTypeName")
         public String resourceTypeName;
 

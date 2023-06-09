@@ -4,18 +4,44 @@ package com.aliyun.resourcecenter20221201.models;
 import com.aliyun.tea.*;
 
 public class SearchMultiAccountResourcesRequest extends TeaModel {
+    /**
+     * <p>The filter conditions.</p>
+     */
     @NameInMap("Filter")
     public java.util.List<SearchMultiAccountResourcesRequestFilter> filter;
 
+    /**
+     * <p>The maximum number of entries to return on each page.</p>
+     * <br>
+     * <p>Valid values: 1 to 100.</p>
+     * <br>
+     * <p>Default value: 20.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <br>
+     * <p>If the total number of entries returned for the current request exceeds the value of the `MaxResults` parameter, the entries are truncated. In this case, you can use the token to initiate another request and obtain the remaining entries.``</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The search scope. You can set the value to one of the following items:</p>
+     * <br>
+     * <p>*   ID of a resource directory: Resources within the management account and all members of the resource directory are searched. You can call the [GetResourceDirectory](~~159995~~) operation to obtain the ID.</p>
+     * <p>*   ID of the Root folder: Resources within all members in the Root folder and the subfolders of the Root folder are searched. You can call the [ListFoldersForParent](~~159997~~) operation to obtain the ID.</p>
+     * <p>*   ID of a folder: Resources within all members in the folder are searched. You can call the [ListFoldersForParent](~~159997~~) operation to obtain the ID.</p>
+     * <p>*   ID of a member: Resources within the member are searched. You can call the [ListAccounts](~~160016~~) operation to obtain the ID.</p>
+     */
     @NameInMap("Scope")
     public String scope;
 
+    /**
+     * <p>The method that is used to sort the entries returned.</p>
+     */
     @NameInMap("SortCriterion")
     public SearchMultiAccountResourcesRequestSortCriterion sortCriterion;
 
@@ -65,12 +91,23 @@ public class SearchMultiAccountResourcesRequest extends TeaModel {
     }
 
     public static class SearchMultiAccountResourcesRequestFilter extends TeaModel {
+        /**
+         * <p>The key of the filter condition. For more information, see `Supported filter parameters`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The matching mode.</p>
+         * <br>
+         * <p>The value Equals indicates an equal match.</p>
+         */
         @NameInMap("MatchType")
         public String matchType;
 
+        /**
+         * <p>The values of the filter condition.</p>
+         */
         @NameInMap("Value")
         public java.util.List<String> value;
 
@@ -106,9 +143,20 @@ public class SearchMultiAccountResourcesRequest extends TeaModel {
     }
 
     public static class SearchMultiAccountResourcesRequestSortCriterion extends TeaModel {
+        /**
+         * <p>The attribute based on which the entries are sorted.</p>
+         * <br>
+         * <p>The value CreateTime indicates the creation time of resources.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The order in which the entries are sorted. Valid values:</p>
+         * <br>
+         * <p>*   ASC: The entries are sorted in ascending order. This value is the default value.</p>
+         * <p>*   DESC: The entries are sorted in descending order.</p>
+         */
         @NameInMap("Order")
         public String order;
 

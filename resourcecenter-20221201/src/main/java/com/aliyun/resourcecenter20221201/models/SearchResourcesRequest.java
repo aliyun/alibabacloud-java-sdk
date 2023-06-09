@@ -4,18 +4,39 @@ package com.aliyun.resourcecenter20221201.models;
 import com.aliyun.tea.*;
 
 public class SearchResourcesRequest extends TeaModel {
+    /**
+     * <p>The filter conditions.</p>
+     */
     @NameInMap("Filter")
     public java.util.List<SearchResourcesRequestFilter> filter;
 
+    /**
+     * <p>The maximum number of entries to return on each page.</p>
+     * <br>
+     * <p>Valid values: 1 to 100.</p>
+     * <br>
+     * <p>Default value: 20.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <br>
+     * <p>If the total number of entries returned for the current request exceeds the value of the `MaxResults` parameter, the entries are truncated. In this case, you can use the `token` to initiate another request and obtain the remaining entries.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The method that is used to sort the entries returned.</p>
+     */
     @NameInMap("SortCriterion")
     public SearchResourcesRequestSortCriterion sortCriterion;
 
@@ -65,12 +86,23 @@ public class SearchResourcesRequest extends TeaModel {
     }
 
     public static class SearchResourcesRequestFilter extends TeaModel {
+        /**
+         * <p>The key of the filter condition. For more information, see `Supported filter parameters`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The matching mode.</p>
+         * <br>
+         * <p>The value Equals indicates an equal match.</p>
+         */
         @NameInMap("MatchType")
         public String matchType;
 
+        /**
+         * <p>The values of the filter condition.</p>
+         */
         @NameInMap("Value")
         public java.util.List<String> value;
 
@@ -106,9 +138,20 @@ public class SearchResourcesRequest extends TeaModel {
     }
 
     public static class SearchResourcesRequestSortCriterion extends TeaModel {
+        /**
+         * <p>The attribute based on which the entries are sorted.</p>
+         * <br>
+         * <p>The value CreateTime indicates the creation time of resources.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The order in which the entries are sorted. Valid values:</p>
+         * <br>
+         * <p>*   ASC: The entries are sorted in ascending order. This value is the default value.</p>
+         * <p>*   DESC: The entries are sorted in descending order.</p>
+         */
         @NameInMap("Order")
         public String order;
 
