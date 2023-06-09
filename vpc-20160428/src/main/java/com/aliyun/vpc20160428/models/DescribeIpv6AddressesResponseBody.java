@@ -96,6 +96,9 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         @NameInMap("BusinessStatus")
         public String businessStatus;
 
+        @NameInMap("HasReservationData")
+        public Boolean hasReservationData;
+
         /**
          * <p>The billing method of the Internet bandwidth of the IPv6 address. Valid values:</p>
          * <br>
@@ -119,6 +122,18 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         @NameInMap("Ipv6InternetBandwidthId")
         public String ipv6InternetBandwidthId;
 
+        @NameInMap("ReservationActiveTime")
+        public String reservationActiveTime;
+
+        @NameInMap("ReservationBandwidth")
+        public Long reservationBandwidth;
+
+        @NameInMap("ReservationInternetChargeType")
+        public String reservationInternetChargeType;
+
+        @NameInMap("ReservationOrderType")
+        public String reservationOrderType;
+
         public static DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressIpv6InternetBandwidth build(java.util.Map<String, ?> map) throws Exception {
             DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressIpv6InternetBandwidth self = new DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressIpv6InternetBandwidth();
             return TeaModel.build(map, self);
@@ -138,6 +153,14 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         }
         public String getBusinessStatus() {
             return this.businessStatus;
+        }
+
+        public DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressIpv6InternetBandwidth setHasReservationData(Boolean hasReservationData) {
+            this.hasReservationData = hasReservationData;
+            return this;
+        }
+        public Boolean getHasReservationData() {
+            return this.hasReservationData;
         }
 
         public DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressIpv6InternetBandwidth setInstanceChargeType(String instanceChargeType) {
@@ -162,6 +185,38 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         }
         public String getIpv6InternetBandwidthId() {
             return this.ipv6InternetBandwidthId;
+        }
+
+        public DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressIpv6InternetBandwidth setReservationActiveTime(String reservationActiveTime) {
+            this.reservationActiveTime = reservationActiveTime;
+            return this;
+        }
+        public String getReservationActiveTime() {
+            return this.reservationActiveTime;
+        }
+
+        public DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressIpv6InternetBandwidth setReservationBandwidth(Long reservationBandwidth) {
+            this.reservationBandwidth = reservationBandwidth;
+            return this;
+        }
+        public Long getReservationBandwidth() {
+            return this.reservationBandwidth;
+        }
+
+        public DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressIpv6InternetBandwidth setReservationInternetChargeType(String reservationInternetChargeType) {
+            this.reservationInternetChargeType = reservationInternetChargeType;
+            return this;
+        }
+        public String getReservationInternetChargeType() {
+            return this.reservationInternetChargeType;
+        }
+
+        public DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressIpv6InternetBandwidth setReservationOrderType(String reservationOrderType) {
+            this.reservationOrderType = reservationOrderType;
+            return this;
+        }
+        public String getReservationOrderType() {
+            return this.reservationOrderType;
         }
 
     }

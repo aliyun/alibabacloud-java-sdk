@@ -5,28 +5,28 @@ import com.aliyun.tea.*;
 
 public class ListNatIpsResponseBody extends TeaModel {
     /**
-     * <p>The list of IP addresses of the NAT gateway.</p>
+     * <p>The CIDR block to which the IP address belongs.</p>
      */
     @NameInMap("NatIps")
     public java.util.List<ListNatIpsResponseBodyNatIps> natIps;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
-     * <br>
-     * <p>*   If the value of **NextToken** is not returned, it indicates that no next query is to be sent.</p>
-     * <p>*   If the value of **NextToken** is returned, the value indicates the token that is used for the next query.</p>
+     * <p>The list of IP addresses of the NAT gateway.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Indicates whether the IP address is the default IP address of the NAT gateway. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The number of IP addresses that are returned.</p>
+     * <p>The IP address.</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -70,49 +70,25 @@ public class ListNatIpsResponseBody extends TeaModel {
 
     public static class ListNatIpsResponseBodyNatIps extends TeaModel {
         /**
-         * <p>Indicates whether the IP address is the default IP address of the NAT gateway. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>The ID of the IP address.</p>
          */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
-        /**
-         * <p>The ID of the Virtual Private Cloud (VPC) NAT gateway to which the IP address is assigned.</p>
-         */
         @NameInMap("NatGatewayId")
         public String natGatewayId;
 
         /**
-         * <p>The IP address.</p>
+         * <p>The description of the IP address.</p>
          */
         @NameInMap("NatIp")
         public String natIp;
 
         /**
-         * <p>The CIDR block to which the IP address belongs.</p>
+         * <p>The ID of the Virtual Private Cloud (VPC) NAT gateway to which the IP address is assigned.</p>
          */
         @NameInMap("NatIpCidr")
         public String natIpCidr;
-
-        /**
-         * <p>The description of the IP address.</p>
-         */
-        @NameInMap("NatIpDescription")
-        public String natIpDescription;
-
-        /**
-         * <p>The ID of the IP address.</p>
-         */
-        @NameInMap("NatIpId")
-        public String natIpId;
-
-        /**
-         * <p>The name of the IP address.</p>
-         */
-        @NameInMap("NatIpName")
-        public String natIpName;
 
         /**
          * <p>The status of the IP address. Valid values:</p>
@@ -124,6 +100,18 @@ public class ListNatIpsResponseBody extends TeaModel {
          * <p>*   **Associated**: specified in an SNAT or DNAT entry</p>
          * <p>*   **Associating**: being specified in an SNAT or DNAT entry</p>
          */
+        @NameInMap("NatIpDescription")
+        public String natIpDescription;
+
+        /**
+         * <p>The name of the IP address.</p>
+         */
+        @NameInMap("NatIpId")
+        public String natIpId;
+
+        @NameInMap("NatIpName")
+        public String natIpName;
+
         @NameInMap("NatIpStatus")
         public String natIpStatus;
 

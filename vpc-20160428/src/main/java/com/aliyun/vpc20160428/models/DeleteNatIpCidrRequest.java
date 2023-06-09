@@ -5,29 +5,22 @@ import com.aliyun.tea.*;
 
 public class DeleteNatIpCidrRequest extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to **DeleteNatIpCidr**.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The ID of the NAT gateway to which the NAT CIDR block to be deleted belongs.</p>
+     * <p>The operation that you want to perform. Set the value to **DeleteNatIpCidr**.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     * <p>The ID of the NAT gateway to which the NAT CIDR block to be deleted belongs.</p>
      */
     @NameInMap("NatIpCidr")
     public String natIpCidr;
@@ -39,10 +32,11 @@ public class DeleteNatIpCidrRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Specifies whether only to precheck this request. Valid values:</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>*   **true**: sends the precheck request but does delete the NAT CIDR block. The system checks your AccessKey pair, the RAM user permissions, and the required parameters. If the request fails the precheck, an error code is returned. If the request passes the check, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false**: sends the API request. This is the default value. If the request passes the precheck, a 2XX HTTP status code is returned and the NAT CIDR block is deleted.</p>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

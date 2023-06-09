@@ -97,6 +97,9 @@ public class AllocateEipSegmentAddressRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Zone")
+    public String zone;
+
     public static AllocateEipSegmentAddressRequest build(java.util.Map<String, ?> map) throws Exception {
         AllocateEipSegmentAddressRequest self = new AllocateEipSegmentAddressRequest();
         return TeaModel.build(map, self);
@@ -196,6 +199,14 @@ public class AllocateEipSegmentAddressRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public AllocateEipSegmentAddressRequest setZone(String zone) {
+        this.zone = zone;
+        return this;
+    }
+    public String getZone() {
+        return this.zone;
     }
 
 }

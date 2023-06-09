@@ -5,11 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSnatEntryRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -21,9 +17,7 @@ public class DeleteSnatEntryRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the NAT gateway.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The ID of the SNAT table to which the SNAT entry belongs.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -35,13 +29,17 @@ public class DeleteSnatEntryRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the SNAT entry that you want to delete.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.</p>
      */
     @NameInMap("SnatEntryId")
     public String snatEntryId;
 
     /**
-     * <p>The ID of the SNAT table to which the SNAT entry belongs.</p>
+     * <p>The ID of the SNAT entry that you want to delete.</p>
      */
     @NameInMap("SnatTableId")
     public String snatTableId;
