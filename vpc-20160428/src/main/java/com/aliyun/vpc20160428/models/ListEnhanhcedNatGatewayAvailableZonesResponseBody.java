@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListEnhanhcedNatGatewayAvailableZonesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The list of zones.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The list of zones.</p>
+     * <p>The ID of the zone where the instance is deployed.</p>
      */
     @NameInMap("Zones")
     public java.util.List<ListEnhanhcedNatGatewayAvailableZonesResponseBodyZones> zones;
@@ -38,14 +38,11 @@ public class ListEnhanhcedNatGatewayAvailableZonesResponseBody extends TeaModel 
     }
 
     public static class ListEnhanhcedNatGatewayAvailableZonesResponseBodyZones extends TeaModel {
-        /**
-         * <p>The name of the zone.</p>
-         */
         @NameInMap("LocalName")
         public String localName;
 
         /**
-         * <p>The ID of the zone where the instance is deployed.</p>
+         * <p>The name of the zone.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

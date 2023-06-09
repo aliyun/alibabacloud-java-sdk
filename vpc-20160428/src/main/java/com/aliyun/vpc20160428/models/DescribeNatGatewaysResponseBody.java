@@ -5,6 +5,24 @@ import com.aliyun.tea.*;
 
 public class DescribeNatGatewaysResponseBody extends TeaModel {
     /**
+     * <p>The type of the NAT gateway. The value is set to **Enhanced** (enhanced NAT gateway).</p>
+     */
+    @NameInMap("NatGateways")
+    public DescribeNatGatewaysResponseBodyNatGateways natGateways;
+
+    /**
+     * <p>The time when the NAT gateway was created.</p>
+     */
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    /**
+     * <p>The details about the NAT gateway.</p>
+     */
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    /**
      * <p>The status of the NAT gateway. Valid values:</p>
      * <br>
      * <p>*   **Creating**: After you send a request to create a NAT gateway, the system creates the NAT gateway in the background. The NAT gateway remains in the Creating state until the operation is completed.</p>
@@ -13,29 +31,11 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
      * <p>*   **Deleting**: After you send a request to delete a NAT gateway, the system deletes the NAT gateway in the background. The NAT gateway remains in the Deleting state until the operation is completed.</p>
      * <p>*   **Converting**: After you send a request to upgrade a standard NAT gateway to an enhanced NAT gateway, the system upgrades the NAT gateway in the background. The NAT gateway remains in the Converting state until the operation is completed.</p>
      */
-    @NameInMap("NatGateways")
-    public DescribeNatGatewaysResponseBodyNatGateways natGateways;
-
-    /**
-     * <p>The number of NAT gateway entries that are returned.</p>
-     */
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    /**
-     * <p>The ID of the request.</p>
-     */
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    /**
-     * <p>The page number of the returned page.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The details about the NAT gateway.</p>
+     * <p>The ID of the VPC where the NAT gateway is deployed.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -125,34 +125,33 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
 
     public static class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpListsIpList extends TeaModel {
         /**
-         * <p>The private IP address of the NAT gateway.</p>
+         * <p>The ID of the FULLNAT table.</p>
          */
         @NameInMap("AllocationId")
         public String allocationId;
 
         /**
-         * <p>Indicates whether IP addresses that are used in DNAT entries can be specified in SNAT entries. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>The ID of the DNAT table.</p>
          */
         @NameInMap("IpAddress")
         public String ipAddress;
 
         /**
-         * <p>The ID of the DNAT table.</p>
+         * <p>The private network information about the enhanced Internet NAT gateway.</p>
+         * <br>
+         * <p>>  If **NatType** is set to **Normal**, all parameters returned in this list are empty.</p>
          */
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
 
         /**
-         * <p>The ID of the EIP associated with the NAT gateway.</p>
+         * <p>The ID of the SNAT table of the NAT gateway.</p>
          */
         @NameInMap("SnatEntryEnabled")
         public Boolean snatEntryEnabled;
 
         /**
-         * <p>The IP address of the EIP associated with the NAT gateway.</p>
+         * <p>The private IP address of the NAT gateway.</p>
          */
         @NameInMap("UsingStatus")
         public String usingStatus;
@@ -225,55 +224,60 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
 
     public static class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayNatGatewayPrivateInfo extends TeaModel {
         /**
-         * <p>The maximum bandwidth. Unit: Mbit/s.</p>
-         */
-        @NameInMap("EniInstanceId")
-        public String eniInstanceId;
-
-        /**
          * <p>Indicates whether the NAT gateway supports PrivateLink. Valid values:</p>
          * <br>
          * <p>*   **true**: yes</p>
          * <p>*   **false**: no</p>
          */
+        @NameInMap("EniInstanceId")
+        public String eniInstanceId;
+
         @NameInMap("EniType")
         public String eniType;
+
+        /**
+         * <p>The tag value of the instance.</p>
+         */
+        @NameInMap("IzNo")
+        public String izNo;
+
+        /**
+         * <p>The mode that is used by PrivateLink. Valid values:</p>
+         * <br>
+         * <p>*   **FullNat**: the FULLNAT mode</p>
+         * <p>*   **Geneve**: the GENEVE mode</p>
+         */
+        @NameInMap("MaxBandwidth")
+        public Integer maxBandwidth;
+
+        /**
+         * <p>The tags that are added to the resource group.</p>
+         */
+        @NameInMap("MaxSessionEstablishRate")
+        public Integer maxSessionEstablishRate;
+
+        /**
+         * <p>The mode in which the NAT gateway is associated with an elastic IP address (EIP). Valid values:</p>
+         * <br>
+         * <p>*   **MULTI_BINDED**: multi-EIP-to-ENI mode</p>
+         * <p>*   **NAT**: NAT mode, which is compatible with IPv4 addresses.</p>
+         * <br>
+         * <p>>  Note: If you use the NAT mode, the EIP occupies one private IP address on the vSwitch of the NAT gateway. Make sure that the vSwitch has sufficient private IP addresses. Otherwise, the NAT gateway fails to be associated with the EIP. In NAT mode, you can associate a NAT gateway with up to 50 EIPs.</p>
+         */
+        @NameInMap("MaxSessionQuota")
+        public Integer maxSessionQuota;
+
+        /**
+         * <p>The tag key of the instance.</p>
+         */
+        @NameInMap("PrivateIpAddress")
+        public String privateIpAddress;
 
         /**
          * <p>The mode in which the ENI is associated with the NAT gateway.</p>
          * <br>
          * <p>*   **indirect**: non-cut-through mode</p>
          * <p>*   If an empty value is returned, it indicates that the cut-through mode is used.</p>
-         */
-        @NameInMap("IzNo")
-        public String izNo;
-
-        /**
-         * <p>The number of concurrent connections to the NAT gateway. Unit: connections.</p>
-         */
-        @NameInMap("MaxBandwidth")
-        public Integer maxBandwidth;
-
-        /**
-         * <p>The private IP address.</p>
-         */
-        @NameInMap("MaxSessionEstablishRate")
-        public Integer maxSessionEstablishRate;
-
-        /**
-         * <p>The number of new connections to the NAT gateway. Unit: connections per second.</p>
-         */
-        @NameInMap("MaxSessionQuota")
-        public Integer maxSessionQuota;
-
-        /**
-         * <p>The zone to which the NAT gateway belongs.</p>
-         */
-        @NameInMap("PrivateIpAddress")
-        public String privateIpAddress;
-
-        /**
-         * <p>The ID of the elastic network interface (ENI).</p>
          */
         @NameInMap("VswitchId")
         public String vswitchId;
@@ -369,9 +373,6 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
     }
 
     public static class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayTagsTag extends TeaModel {
-        /**
-         * <p>The tag value of the instance.</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
@@ -422,86 +423,51 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
 
     public static class DescribeNatGatewaysResponseBodyNatGatewaysNatGateway extends TeaModel {
         /**
-         * <p>The size of the NAT gateway. An empty value is returned for the parameter.</p>
+         * <p>Indicates whether the firewall feature is enabled. Valid values:</p>
          * <br>
-         * <p>If **InternetChargeType** is set to **PayByLcu**, an empty value is returned.</p>
+         * <p>*   **false**: no</p>
+         * <p>*   **true**: yes</p>
          */
         @NameInMap("AutoPay")
         public Boolean autoPay;
 
         /**
-         * <p>The name of the NAT gateway.</p>
+         * <p>The IP address of the EIP associated with the NAT gateway.</p>
          */
         @NameInMap("BusinessStatus")
         public String businessStatus;
 
         /**
-         * <p>The ID of the VPC where the NAT gateway is deployed.</p>
+         * <p>The size of the NAT gateway. An empty value is returned for the parameter.</p>
+         * <br>
+         * <p>If **InternetChargeType** is set to **PayByLcu**, an empty value is returned.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The type of NAT gateway. Valid values:</p>
-         * <br>
-         * <p>*   **internet**: an Internet NAT gateway</p>
-         * <p>*   **intranet**: a VPC NAT gateway</p>
+         * <p>The ID of the region where the NAT gateway is deployed.</p>
          */
         @NameInMap("DeletionProtection")
         public Boolean deletionProtection;
 
         /**
-         * <p>The time when the NAT gateway expires.</p>
+         * <p>The metering method of the NAT gateway. Valid values:</p>
+         * <br>
+         * <p>*   **PayBySpec**: pay-by-specification</p>
+         * <p>*   **PayByLcu**: pay-by-CU</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>Indicates whether the ICMP non-retrieval feature is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>The ID of the resource group to which the contiguous EIP group belongs.</p>
          */
         @NameInMap("EcsMetricEnabled")
         public Boolean ecsMetricEnabled;
 
-        /**
-         * <p>The tags that are added to the resource group.</p>
-         */
         @NameInMap("EipBindMode")
         public String eipBindMode;
-
-        /**
-         * <p>The ID of the resource group to which the contiguous EIP group belongs.</p>
-         */
-        @NameInMap("ExpiredTime")
-        public String expiredTime;
-
-        /**
-         * <p>The ID of the SNAT table of the NAT gateway.</p>
-         */
-        @NameInMap("ForwardTableIds")
-        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayForwardTableIds forwardTableIds;
-
-        /**
-         * <p>The private network information about the enhanced Internet NAT gateway.</p>
-         * <br>
-         * <p>>  If **NatType** is set to **Normal**, all parameters returned in this list are empty.</p>
-         */
-        @NameInMap("FullNatTableIds")
-        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayFullNatTableIds fullNatTableIds;
-
-        /**
-         * <p>The description of the NAT gateway.</p>
-         */
-        @NameInMap("IcmpReplyEnabled")
-        public Boolean icmpReplyEnabled;
-
-        /**
-         * <p>The ID of the region where the NAT gateway is deployed.</p>
-         */
-        @NameInMap("InstanceChargeType")
-        public String instanceChargeType;
 
         /**
          * <p>The status of the NAT gateway. Valid values:</p>
@@ -509,8 +475,32 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
          * <p>*   **Normal**: normal</p>
          * <p>*   **FinancialLocked**: locked due to overdue payments</p>
          */
-        @NameInMap("InternetChargeType")
-        public String internetChargeType;
+        @NameInMap("ExpiredTime")
+        public String expiredTime;
+
+        /**
+         * <p>The ID of the vSwitch to which the NAT gateway belongs.</p>
+         */
+        @NameInMap("ForwardTableIds")
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayForwardTableIds forwardTableIds;
+
+        /**
+         * <p>The number of new connections to the NAT gateway. Unit: connections per second.</p>
+         */
+        @NameInMap("FullNatTableIds")
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayFullNatTableIds fullNatTableIds;
+
+        /**
+         * <p>The ID of the NAT gateway.</p>
+         */
+        @NameInMap("IcmpReplyEnabled")
+        public Boolean icmpReplyEnabled;
+
+        /**
+         * <p>The description of the NAT gateway.</p>
+         */
+        @NameInMap("InstanceChargeType")
+        public String instanceChargeType;
 
         /**
          * <p>The association between the EIP and the Internet NAT gateway. Valid values:</p>
@@ -520,67 +510,44 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
          * <p>*   **UsedByForwardSnatTable**: The EIP is specified in both an SNAT entry and a DNAT entry.</p>
          * <p>*   **Idle**: The EIP is not specified in a DNAT or SNAT entry.</p>
          */
+        @NameInMap("InternetChargeType")
+        public String internetChargeType;
+
+        /**
+         * <p>The ID of the EIP associated with the NAT gateway.</p>
+         */
         @NameInMap("IpLists")
         public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpLists ipLists;
 
         /**
-         * <p>The list of elastic IP addresses (EIPs) that are associated with the Internet NAT gateway.</p>
+         * <p>Indicates whether IP addresses that are used in DNAT entries can be specified in SNAT entries. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The metering method of the NAT gateway. Valid values:</p>
-         * <br>
-         * <p>*   **PayBySpec**: pay-by-specification</p>
-         * <p>*   **PayByLcu**: pay-by-CU</p>
+         * <p>The list of elastic IP addresses (EIPs) that are associated with the Internet NAT gateway.</p>
          */
         @NameInMap("NatGatewayId")
         public String natGatewayId;
 
         /**
-         * <p>The ID of the vSwitch to which the NAT gateway belongs.</p>
+         * <p>The zone to which the NAT gateway belongs.</p>
          */
         @NameInMap("NatGatewayPrivateInfo")
         public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayNatGatewayPrivateInfo natGatewayPrivateInfo;
 
         /**
-         * <p>Indicates whether automatic payment is enabled. Valid values:</p>
+         * <p>The type of NAT gateway. Valid values:</p>
          * <br>
-         * <p>*   **false**: no</p>
-         * <p>*   **true**: yes</p>
+         * <p>*   **internet**: an Internet NAT gateway</p>
+         * <p>*   **intranet**: a VPC NAT gateway</p>
          */
         @NameInMap("NatType")
         public String natType;
-
-        /**
-         * <p>Indicates whether the firewall feature is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **false**: no</p>
-         * <p>*   **true**: yes</p>
-         */
-        @NameInMap("NetworkType")
-        public String networkType;
-
-        /**
-         * <p>The mode that is used by PrivateLink. Valid values:</p>
-         * <br>
-         * <p>*   **FullNat**: the FULLNAT mode</p>
-         * <p>*   **Geneve**: the GENEVE mode</p>
-         */
-        @NameInMap("PrivateLinkEnabled")
-        public Boolean privateLinkEnabled;
-
-        /**
-         * <p>The mode in which the NAT gateway is associated with an elastic IP address (EIP). Valid values:</p>
-         * <br>
-         * <p>*   **MULTI_BINDED**: multi-EIP-to-ENI mode</p>
-         * <p>*   **NAT**: NAT mode, which is compatible with IPv4 addresses.</p>
-         * <br>
-         * <p>>  Note: If you use the NAT mode, the EIP occupies one private IP address on the vSwitch of the NAT gateway. Make sure that the vSwitch has sufficient private IP addresses. Otherwise, the NAT gateway fails to be associated with the EIP. In NAT mode, you can associate a NAT gateway with up to 50 EIPs.</p>
-         */
-        @NameInMap("PrivateLinkMode")
-        public String privateLinkMode;
 
         /**
          * <p>Indicates whether the traffic monitoring feature is enabled. Valid values:</p>
@@ -588,50 +555,65 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
          * <p>*   **true**: yes</p>
          * <p>*   **false**: no</p>
          */
+        @NameInMap("NetworkType")
+        public String networkType;
+
+        @NameInMap("PrivateLinkEnabled")
+        public Boolean privateLinkEnabled;
+
+        @NameInMap("PrivateLinkMode")
+        public String privateLinkMode;
+
+        /**
+         * <p>The time when the NAT gateway expires.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The ID of the NAT gateway.</p>
+         * <p>The name of the NAT gateway.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The billing method of the NAT gateway. The value is set to **PostPaid**, which indicates the pay-as-you-go billing method.</p>
+         * <p>Indicates whether the ICMP non-retrieval feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
          */
         @NameInMap("SecurityProtectionEnabled")
         public Boolean securityProtectionEnabled;
 
         /**
-         * <p>The ID of the FULLNAT table.</p>
+         * <p>The maximum bandwidth. Unit: Mbit/s.</p>
          */
         @NameInMap("SnatTableIds")
         public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewaySnatTableIds snatTableIds;
+
+        /**
+         * <p>The billing method of the NAT gateway. The value is set to **PostPaid**, which indicates the pay-as-you-go billing method.</p>
+         */
+        @NameInMap("Spec")
+        public String spec;
+
+        /**
+         * <p>Indicates whether automatic payment is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **false**: no</p>
+         * <p>*   **true**: yes</p>
+         */
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Tags")
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayTags tags;
 
         /**
          * <p>Indicates whether the deletion protection feature is enabled. Valid values:</p>
          * <br>
          * <p>*   **true**: yes</p>
          * <p>*   **false**: no</p>
-         */
-        @NameInMap("Spec")
-        public String spec;
-
-        /**
-         * <p>The time when the NAT gateway was created.</p>
-         */
-        @NameInMap("Status")
-        public String status;
-
-        /**
-         * <p>The tag key of the instance.</p>
-         */
-        @NameInMap("Tags")
-        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayTags tags;
-
-        /**
-         * <p>The type of the NAT gateway. The value is set to **Enhanced** (enhanced NAT gateway).</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

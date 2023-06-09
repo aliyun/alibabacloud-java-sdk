@@ -975,6 +975,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.zone)) {
+            query.put("Zone", request.zone);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -4635,8 +4639,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the region where you want to create the NAT gateway.
-      * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+      * Before you call this operation, take note of the following items:
+      * *   When you create an enhanced NAT gateway for the first time, the system automatically creates the service-linked role AliyunServiceRoleForNatgw. Then, the system attaches the permission policy AliyunServiceRolePolicyForNatgw to the role. This allows the NAT gateway to access other resources on Alibaba Cloud. For more information, see [Service-linked roles](~~174251~~).
+      * *   After you create an enhanced Internet NAT gateway, a route entry is automatically added to the route table of the VPC. The destination CIDR block of the route entry is 0.0.0.0/0 and the next hop is the NAT gateway. This ensures that traffic is routed to the NAT gateway.
+      * *   **CreateNatGateway** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeNatGateways](~~36054~~) operation to query the status of a NAT gateway.
+      *     *   If a NAT gateway is in the **Creating** state, the NAT gateway is being created. In this case, you can query the NAT gateway but cannot perform other operations.
+      *     *   If a NAT gateway is in the **Available** state, the NAT gateway is created.
+      *         It takes 1 to 3 minutes to create a NAT gateway.
+      * *   You cannot repeatedly call the **CreateNatGateway** operation to create a VPC NAT gateway or an Internet NAT gateway within the specified period of time.
       *
       * @param request CreateNatGatewayRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4751,8 +4761,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the region where you want to create the NAT gateway.
-      * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+      * Before you call this operation, take note of the following items:
+      * *   When you create an enhanced NAT gateway for the first time, the system automatically creates the service-linked role AliyunServiceRoleForNatgw. Then, the system attaches the permission policy AliyunServiceRolePolicyForNatgw to the role. This allows the NAT gateway to access other resources on Alibaba Cloud. For more information, see [Service-linked roles](~~174251~~).
+      * *   After you create an enhanced Internet NAT gateway, a route entry is automatically added to the route table of the VPC. The destination CIDR block of the route entry is 0.0.0.0/0 and the next hop is the NAT gateway. This ensures that traffic is routed to the NAT gateway.
+      * *   **CreateNatGateway** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeNatGateways](~~36054~~) operation to query the status of a NAT gateway.
+      *     *   If a NAT gateway is in the **Creating** state, the NAT gateway is being created. In this case, you can query the NAT gateway but cannot perform other operations.
+      *     *   If a NAT gateway is in the **Available** state, the NAT gateway is created.
+      *         It takes 1 to 3 minutes to create a NAT gateway.
+      * *   You cannot repeatedly call the **CreateNatGateway** operation to create a VPC NAT gateway or an Internet NAT gateway within the specified period of time.
       *
       * @param request CreateNatGatewayRequest
       * @return CreateNatGatewayResponse
@@ -9203,9 +9219,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The NAT CIDR block to be deleted.
-      * *   Before you delete a NAT CIDR block, you must delete all NAT IP addresses from the CIDR block.
-      * *   The default NAT CIDR block cannot be deleted.
+      * Specifies whether only to precheck this request. Valid values:
+      * *   **true**: sends the precheck request but does delete the NAT CIDR block. The system checks your AccessKey pair, the RAM user permissions, and the required parameters. If the request fails the precheck, an error code is returned. If the request passes the check, the `DryRunOperation` error code is returned.
+      * *   **false**: sends the API request. This is the default value. If the request passes the precheck, a 2XX HTTP status code is returned and the NAT CIDR block is deleted.
       *
       * @param request DeleteNatIpCidrRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -9272,9 +9288,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The NAT CIDR block to be deleted.
-      * *   Before you delete a NAT CIDR block, you must delete all NAT IP addresses from the CIDR block.
-      * *   The default NAT CIDR block cannot be deleted.
+      * Specifies whether only to precheck this request. Valid values:
+      * *   **true**: sends the precheck request but does delete the NAT CIDR block. The system checks your AccessKey pair, the RAM user permissions, and the required parameters. If the request fails the precheck, an error code is returned. If the request passes the check, the `DryRunOperation` error code is returned.
+      * *   **false**: sends the API request. This is the default value. If the request passes the precheck, a 2XX HTTP status code is returned and the NAT CIDR block is deleted.
       *
       * @param request DeleteNatIpCidrRequest
       * @return DeleteNatIpCidrResponse
@@ -9875,10 +9891,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * DeleteSnatEntry is an asynchronous operation. After you make a request, the ID of the request is returned but the specified SNAT entry is not deleted. The system deletes the SNAT entry in the background. You can call the [DescribeSnatTableEntries](~~42677~~) operation to query the status of SNAT entries.
-      * *   If the SNAT entries are in the **Deleting** state, the system is deleting the SNAT entries. In this case, you can only query the status of the SNAT entries, and cannot perform other operations.
-      * *   If no SNAT entry is returned in the response, the SNAT entry is deleted.
-      * If some SNAT entries are in the **Pending** state, you cannot delete these SNAT entries.
+      * The operation that you want to perform. Set the value to **DeleteSnatEntry**.
       *
       * @param request DeleteSnatEntryRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -9937,10 +9950,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * DeleteSnatEntry is an asynchronous operation. After you make a request, the ID of the request is returned but the specified SNAT entry is not deleted. The system deletes the SNAT entry in the background. You can call the [DescribeSnatTableEntries](~~42677~~) operation to query the status of SNAT entries.
-      * *   If the SNAT entries are in the **Deleting** state, the system is deleting the SNAT entries. In this case, you can only query the status of the SNAT entries, and cannot perform other operations.
-      * *   If no SNAT entry is returned in the response, the SNAT entry is deleted.
-      * If some SNAT entries are in the **Pending** state, you cannot delete these SNAT entries.
+      * The operation that you want to perform. Set the value to **DeleteSnatEntry**.
       *
       * @param request DeleteSnatEntryRequest
       * @return DeleteSnatEntryResponse
@@ -12852,6 +12862,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.associatedInstanceType)) {
             query.put("AssociatedInstanceType", request.associatedInstanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.includeReservationData)) {
+            query.put("IncludeReservationData", request.includeReservationData);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ipv6Address)) {
@@ -17420,7 +17434,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to query zones that support NAT gateways, including Internet NAT gateways and Virtual Private Cloud (VPC) NAT gateways.
+      * The ID of the region that you want to query.
+      * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+      * In this example, zones that support NAT gateways in the UAE (Dubai) region are queried.
       *
       * @param request ListEnhanhcedNatGatewayAvailableZonesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -17475,7 +17491,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to query zones that support NAT gateways, including Internet NAT gateways and Virtual Private Cloud (VPC) NAT gateways.
+      * The ID of the region that you want to query.
+      * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+      * In this example, zones that support NAT gateways in the UAE (Dubai) region are queried.
       *
       * @param request ListEnhanhcedNatGatewayAvailableZonesRequest
       * @return ListEnhanhcedNatGatewayAvailableZonesResponse

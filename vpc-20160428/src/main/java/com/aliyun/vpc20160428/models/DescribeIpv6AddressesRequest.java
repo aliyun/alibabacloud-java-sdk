@@ -18,6 +18,9 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     @NameInMap("AssociatedInstanceType")
     public String associatedInstanceType;
 
+    @NameInMap("IncludeReservationData")
+    public Boolean includeReservationData;
+
     /**
      * <p>The IPv6 address that you want to query.</p>
      */
@@ -114,6 +117,14 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     }
     public String getAssociatedInstanceType() {
         return this.associatedInstanceType;
+    }
+
+    public DescribeIpv6AddressesRequest setIncludeReservationData(Boolean includeReservationData) {
+        this.includeReservationData = includeReservationData;
+        return this;
+    }
+    public Boolean getIncludeReservationData() {
+        return this.includeReservationData;
     }
 
     public DescribeIpv6AddressesRequest setIpv6Address(String ipv6Address) {

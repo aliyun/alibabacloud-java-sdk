@@ -5,14 +5,32 @@ import com.aliyun.tea.*;
 
 public class ListNatIpCidrsRequest extends TeaModel {
     /**
+     * <p>The status of the CIDR block that you want to query. Set the value to **Available**.</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
      * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * <br>
      * <p>>  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.</p>
      */
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
+     * <p>The name of the CIDR block that you want to query. Valid values of **N**: **1** to **20**.</p>
+     */
+    @NameInMap("MaxResults")
+    public String maxResults;
+
+    /**
+     * <p>The CIDR block of the NAT gateway that you want to query.</p>
+     */
+    @NameInMap("NatGatewayId")
+    public String natGatewayId;
 
     /**
      * <p>Specifies whether to only precheck this request. Valid values:</p>
@@ -20,44 +38,35 @@ public class ListNatIpCidrsRequest extends TeaModel {
      * <p>*   **true**: checks the API request. The CIDR blocks of the NAT gateway are not queried if the API request passes the precheck. The system checks whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user is authorized, and whether the required parameters are set. If the request fails to pass the precheck, the corresponding error message is returned. If the check succeeds, the DryRunOperation error code is returned.</p>
      * <p>*   **false**: sends the API request. If the request passes the precheck, 2xx HTTP status code is returned and the CIDR blocks of the NAT gateway are queried. This is the default value.</p>
      */
-    @NameInMap("DryRun")
-    public Boolean dryRun;
-
-    /**
-     * <p>The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.</p>
-     */
-    @NameInMap("MaxResults")
-    public String maxResults;
-
-    /**
-     * <p>The ID of the VPC NAT gateway that you want to query.</p>
-     */
-    @NameInMap("NatGatewayId")
-    public String natGatewayId;
-
-    /**
-     * <p>The CIDR block of the NAT gateway that you want to query.</p>
-     */
     @NameInMap("NatIpCidr")
     public String natIpCidr;
 
+    /**
+     * <p>The CIDR block of the NAT gateway that you want to query. Valid values of **N**: **1** to **20**.</p>
+     */
     @NameInMap("NatIpCidrName")
     public java.util.List<String> natIpCidrName;
-
-    /**
-     * <p>The status of the CIDR block that you want to query. Set the value to **Available**.</p>
-     */
-    @NameInMap("NatIpCidrStatus")
-    public String natIpCidrStatus;
-
-    @NameInMap("NatIpCidrs")
-    public java.util.List<String> natIpCidrs;
 
     /**
      * <p>The token that is used for the next query. Set the value as needed.</p>
      * <br>
      * <p>*   If this is your first query or no next query is to be sent, ignore this parameter.</p>
      * <p>*   If a next query is to be sent, set the value to the value of NextToken that is returned from the last call.</p>
+     */
+    @NameInMap("NatIpCidrStatus")
+    public String natIpCidrStatus;
+
+    /**
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <br>
+     * <p>*   If the value of **NextToken** is not returned, it indicates that no next query is to be sent.</p>
+     * <p>*   If the value of **NextToken** is returned, the value indicates the token that is used for the next query.</p>
+     */
+    @NameInMap("NatIpCidrs")
+    public java.util.List<String> natIpCidrs;
+
+    /**
+     * <p>The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -69,9 +78,7 @@ public class ListNatIpCidrsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the Virtual Private Cloud (VPC) NAT gateway that you want to query.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The ID of the VPC NAT gateway that you want to query.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
