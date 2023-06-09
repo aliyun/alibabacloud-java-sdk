@@ -13,6 +13,12 @@ public class ListEventStreamingsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("SinkArn")
+    public String sinkArn;
+
+    @NameInMap("SourceArn")
+    public String sourceArn;
+
     public static ListEventStreamingsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListEventStreamingsRequest self = new ListEventStreamingsRequest();
         return TeaModel.build(map, self);
@@ -40,6 +46,22 @@ public class ListEventStreamingsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListEventStreamingsRequest setSinkArn(String sinkArn) {
+        this.sinkArn = sinkArn;
+        return this;
+    }
+    public String getSinkArn() {
+        return this.sinkArn;
+    }
+
+    public ListEventStreamingsRequest setSourceArn(String sourceArn) {
+        this.sourceArn = sourceArn;
+        return this;
+    }
+    public String getSourceArn() {
+        return this.sourceArn;
     }
 
 }
