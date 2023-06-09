@@ -3,7 +3,7 @@ package com.aliyun.eventbridge20200401.models;
 
 import com.aliyun.tea.*;
 
-public class CreateTargetsResponse extends TeaModel {
+public class ListTargetsResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class CreateTargetsResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public CreateTargetsResponseBody body;
+    public ListTargetsResponseBody body;
 
-    public static CreateTargetsResponse build(java.util.Map<String, ?> map) throws Exception {
-        CreateTargetsResponse self = new CreateTargetsResponse();
+    public static ListTargetsResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListTargetsResponse self = new ListTargetsResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateTargetsResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListTargetsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class CreateTargetsResponse extends TeaModel {
         return this.headers;
     }
 
-    public CreateTargetsResponse setStatusCode(Integer statusCode) {
+    public ListTargetsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class CreateTargetsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CreateTargetsResponse setBody(CreateTargetsResponseBody body) {
+    public ListTargetsResponse setBody(ListTargetsResponseBody body) {
         this.body = body;
         return this;
     }
-    public CreateTargetsResponseBody getBody() {
+    public ListTargetsResponseBody getBody() {
         return this.body;
     }
 
