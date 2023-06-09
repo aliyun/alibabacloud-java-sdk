@@ -4,6 +4,9 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListQueryProcessorAnalyzerResultsRequest extends TeaModel {
+    /**
+     * <p>The text to be tested.</p>
+     */
     @NameInMap("text")
     public String text;
 

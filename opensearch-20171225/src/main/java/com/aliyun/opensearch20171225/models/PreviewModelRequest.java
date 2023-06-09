@@ -4,6 +4,9 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class PreviewModelRequest extends TeaModel {
+    /**
+     * <p>query</p>
+     */
     @NameInMap("query")
     public String query;
 

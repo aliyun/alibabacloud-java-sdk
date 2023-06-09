@@ -4,27 +4,51 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListFunctionInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The error code. If no error occurs, the parameter is left empty.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpCode")
     public Long httpCode;
 
+    /**
+     * <p>The time consumed for the request, in milliseconds.</p>
+     */
     @NameInMap("Latency")
     public Long latency;
 
+    /**
+     * <p>The error message. If no error occurs, the parameter is left empty.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the instances.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListFunctionInstancesResponseBodyResult> result;
 
+    /**
+     * <p>The status of the request.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -98,12 +122,21 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
     }
 
     public static class ListFunctionInstancesResponseBodyResultBelongs extends TeaModel {
+        /**
+         * <p>The category.</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The industry.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The abbreviation of the language that applies.</p>
+         */
         @NameInMap("Language")
         public String language;
 
@@ -139,9 +172,15 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
     }
 
     public static class ListFunctionInstancesResponseBodyResultCreateParameters extends TeaModel {
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The value of the parameter.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -169,9 +208,15 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
     }
 
     public static class ListFunctionInstancesResponseBodyResultUsageParameters extends TeaModel {
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The value of the parameter.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -199,45 +244,93 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
     }
 
     public static class ListFunctionInstancesResponseBodyResult extends TeaModel {
+        /**
+         * <p>The information about the instance.</p>
+         */
         @NameInMap("Belongs")
         public ListFunctionInstancesResponseBodyResultBelongs belongs;
 
+        /**
+         * <p>The parameters of the instance.</p>
+         */
         @NameInMap("CreateParameters")
         public java.util.List<ListFunctionInstancesResponseBodyResultCreateParameters> createParameters;
 
+        /**
+         * <p>The time when the instance was created.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The cron expression used to schedule training, in the format of (Minutes Hours DayofMonth Month DayofWeek). If the value is empty, it indicates that no periodic training is performed.</p>
+         */
         @NameInMap("Cron")
         public String cron;
 
+        /**
+         * <p>The description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The extended information, which is a JSON string. It includes model evaluation information and error information.</p>
+         */
         @NameInMap("ExtendInfo")
         public String extendInfo;
 
+        /**
+         * <p>The name of the feature.</p>
+         */
         @NameInMap("FunctionName")
         public String functionName;
 
+        /**
+         * <p>The type of the feature.</p>
+         */
         @NameInMap("FunctionType")
         public String functionType;
 
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The type of the model.</p>
+         */
         @NameInMap("ModelType")
         public String modelType;
 
+        /**
+         * <p>How the instance is created. Valid values:</p>
+         * <br>
+         * <p>*   user: The instance is created by user.</p>
+         * <p>*   builtin: The instance is created by system.</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The state of the instance. Valid values:</p>
+         * <br>
+         * <p>1.  unavailable: No model is available. Models must be trained before you can use them.</p>
+         * <p>2.  available: Models can be used.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The parameters that are used.</p>
+         */
         @NameInMap("UsageParameters")
         public java.util.List<ListFunctionInstancesResponseBodyResultUsageParameters> usageParameters;
 
+        /**
+         * <p>The ID of the version.</p>
+         */
         @NameInMap("VersionId")
         public Long versionId;
 

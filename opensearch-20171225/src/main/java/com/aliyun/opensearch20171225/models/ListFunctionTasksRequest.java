@@ -4,18 +4,37 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListFunctionTasksRequest extends TeaModel {
+    /**
+     * <p>The end time is less than the specified time. Specify the time in the UNIX timestamp format. Unit: milliseconds.</p>
+     */
     @NameInMap("endTime")
     public Long endTime;
 
+    /**
+     * <p>The number of the page to return. Default value: 1.</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: 1.</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The start time is greater than the specified time. Specify the time in the UNIX timestamp format. Unit: milliseconds.</p>
+     */
     @NameInMap("startTime")
     public Long startTime;
 
+    /**
+     * <p>The status of the task. Valid values:</p>
+     * <br>
+     * <p>*   success</p>
+     * <p>*   failed</p>
+     * <p>*   running</p>
+     */
     @NameInMap("status")
     public String status;
 

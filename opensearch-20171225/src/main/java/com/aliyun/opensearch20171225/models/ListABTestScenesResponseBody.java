@@ -4,9 +4,17 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListABTestScenesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The details of the test scenarios.</p>
+     * <br>
+     * <p>For more information, see [ABTestScene](~~173618~~).</p>
+     */
     @NameInMap("result")
     public java.util.List<ListABTestScenesResponseBodyResult> result;
 
@@ -32,21 +40,42 @@ public class ListABTestScenesResponseBody extends TeaModel {
     }
 
     public static class ListABTestScenesResponseBodyResult extends TeaModel {
+        /**
+         * <p>The time when the test scenario was created.</p>
+         */
         @NameInMap("created")
         public Integer created;
 
+        /**
+         * <p>The ID of the test group.</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <p>The name of the test group.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The status of the test scenario. Valid values:</p>
+         * <br>
+         * <p>*   0: not in effect</p>
+         * <p>*   1: in effect</p>
+         */
         @NameInMap("status")
         public Integer status;
 
+        /**
+         * <p>The time when the test scenario was last modified.</p>
+         */
         @NameInMap("updated")
         public Integer updated;
 
+        /**
+         * <p>The name of the test scenario.</p>
+         */
         @NameInMap("values")
         public java.util.List<String> values;
 

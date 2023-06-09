@@ -4,9 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class CreateFirstRankResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The information about the rough sort expression.</p>
+     */
     @NameInMap("result")
     public CreateFirstRankResponseBodyResult result;
 
@@ -32,12 +38,23 @@ public class CreateFirstRankResponseBody extends TeaModel {
     }
 
     public static class CreateFirstRankResponseBodyResultMeta extends TeaModel {
+        /**
+         * <p>The parameters that are used by a function in the expression.</p>
+         */
         @NameInMap("arg")
         public String arg;
 
+        /**
+         * <p>The attribute, feature function, or field to be searched for.</p>
+         */
         @NameInMap("attribute")
         public String attribute;
 
+        /**
+         * <p>The weight.</p>
+         * <br>
+         * <p>Valid values: \[-100000,100000] (excluding 0).</p>
+         */
         @NameInMap("weight")
         public Float weight;
 
@@ -73,12 +90,21 @@ public class CreateFirstRankResponseBody extends TeaModel {
     }
 
     public static class CreateFirstRankResponseBodyResult extends TeaModel {
+        /**
+         * <p>Indicates whether the expression is the default one.</p>
+         */
         @NameInMap("active")
         public Boolean active;
 
+        /**
+         * <p>The content of the expression.</p>
+         */
         @NameInMap("meta")
         public java.util.List<CreateFirstRankResponseBodyResultMeta> meta;
 
+        /**
+         * <p>The name of the expression.</p>
+         */
         @NameInMap("name")
         public String name;
 

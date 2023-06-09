@@ -4,6 +4,9 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListQueryProcessorsRequest extends TeaModel {
+    /**
+     * <p>0</p>
+     */
     @NameInMap("isActive")
     public Integer isActive;
 

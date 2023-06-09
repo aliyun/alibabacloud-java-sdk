@@ -4,9 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The result that was returned.</p>
+     */
     @NameInMap("result")
     public ReplaceAppGroupCommodityCodeResponseBodyResult result;
 
@@ -127,6 +133,9 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
         @NameInMap("projectId")
         public String projectId;
 
+        /**
+         * <p>The quota information.</p>
+         */
         @NameInMap("quota")
         public ReplaceAppGroupCommodityCodeResponseBodyResultQuota quota;
 

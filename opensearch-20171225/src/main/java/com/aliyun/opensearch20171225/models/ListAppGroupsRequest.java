@@ -4,27 +4,48 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListAppGroupsRequest extends TeaModel {
+    /**
+     * <p>ops-cn-xxxx</p>
+     */
     @NameInMap("instanceId")
     public String instanceId;
 
+    /**
+     * <p>my_name</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>""</p>
+     */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>0</p>
+     */
     @NameInMap("sortBy")
     public Integer sortBy;
 
     @NameInMap("tags")
     public java.util.List<ListAppGroupsRequestTags> tags;
 
+    /**
+     * <p>standard</p>
+     */
     @NameInMap("type")
     public String type;
 

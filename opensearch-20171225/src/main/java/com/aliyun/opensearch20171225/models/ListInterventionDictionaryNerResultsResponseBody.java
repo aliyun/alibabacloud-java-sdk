@@ -4,9 +4,17 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListInterventionDictionaryNerResultsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The NER result.</p>
+     * <br>
+     * <p>For more information, see [InterventionDictionaryEntry](~~173606~~).</p>
+     */
     @NameInMap("result")
     public java.util.List<ListInterventionDictionaryNerResultsResponseBodyResult> result;
 
@@ -32,15 +40,64 @@ public class ListInterventionDictionaryNerResultsResponseBody extends TeaModel {
     }
 
     public static class ListInterventionDictionaryNerResultsResponseBodyResult extends TeaModel {
+        /**
+         * <p>The sequence number.</p>
+         */
         @NameInMap("order")
         public Integer order;
 
+        /**
+         * <p>The internal name of the identified entity type. Valid values:</p>
+         * <br>
+         * <p>*   brand</p>
+         * <p>*   category</p>
+         * <p>*   material</p>
+         * <p>*   element</p>
+         * <p>*   style</p>
+         * <p>*   color</p>
+         * <p>*   function</p>
+         * <p>*   scenario</p>
+         * <p>*   people</p>
+         * <p>*   season</p>
+         * <p>*   model</p>
+         * <p>*   region</p>
+         * <p>*   name</p>
+         * <p>*   adjective</p>
+         * <p>*   category-modifier</p>
+         * <p>*   size</p>
+         * <p>*   quality</p>
+         * <p>*   suit</p>
+         * <p>*   new-release</p>
+         * <p>*   series</p>
+         * <p>*   marketing</p>
+         * <p>*   entertainment</p>
+         * <p>*   organization</p>
+         * <p>*   movie</p>
+         * <p>*   game</p>
+         * <p>*   number</p>
+         * <p>*   unit</p>
+         * <p>*   common</p>
+         * <p>*   new-word</p>
+         * <p>*   proper-noun</p>
+         * <p>*   symbol</p>
+         * <p>*   prefix</p>
+         * <p>*   suffix</p>
+         * <p>*   gift</p>
+         * <p>*   negative</p>
+         * <p>*   agent</p>
+         */
         @NameInMap("tag")
         public String tag;
 
+        /**
+         * <p>The description of the internal name of the identified entity type.</p>
+         */
         @NameInMap("tagLabel")
         public String tagLabel;
 
+        /**
+         * <p>The entity.</p>
+         */
         @NameInMap("token")
         public String token;
 

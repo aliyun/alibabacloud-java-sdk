@@ -4,9 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListDataCollectionsRequest extends TeaModel {
+    /**
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 

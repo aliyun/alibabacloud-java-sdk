@@ -4,12 +4,21 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListAppsRequest extends TeaModel {
+    /**
+     * <p>true</p>
+     */
     @NameInMap("group")
     public Boolean group;
 
+    /**
+     * <p>0</p>
+     */
     @NameInMap("page")
     public Integer page;
 
+    /**
+     * <p>0</p>
+     */
     @NameInMap("size")
     public Integer size;
 

@@ -4,9 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The result that was returned.</p>
+     */
     @NameInMap("result")
     public java.util.List<DescribeRegionsResponseBodyResult> result;
 
@@ -32,15 +38,27 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyResult extends TeaModel {
+        /**
+         * <p>The URL of the OpenSearch console.</p>
+         */
         @NameInMap("consoleUrl")
         public String consoleUrl;
 
+        /**
+         * <p>The endpoint of the region.</p>
+         */
         @NameInMap("endpoint")
         public String endpoint;
 
+        /**
+         * <p>The name of the region.</p>
+         */
         @NameInMap("localName")
         public String localName;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("regionId")
         public String regionId;
 

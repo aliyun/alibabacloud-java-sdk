@@ -4,24 +4,45 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class GetFunctionInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The error code. If no error occurs, this parameter is left empty.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpCode")
     public Long httpCode;
 
+    /**
+     * <p>The time consumed for the request, in milliseconds.</p>
+     */
     @NameInMap("Latency")
     public Long latency;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of the instance.</p>
+     */
     @NameInMap("Result")
     public GetFunctionInstanceResponseBodyResult result;
 
+    /**
+     * <p>The status of the request.</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -87,12 +108,21 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
     }
 
     public static class GetFunctionInstanceResponseBodyResultBelongs extends TeaModel {
+        /**
+         * <p>The category.</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The industry.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The abbreviation of the language that applies.</p>
+         */
         @NameInMap("Language")
         public String language;
 
@@ -128,9 +158,15 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
     }
 
     public static class GetFunctionInstanceResponseBodyResultCreateParameters extends TeaModel {
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The value of the parameter.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -158,9 +194,21 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
     }
 
     public static class GetFunctionInstanceResponseBodyResultTask extends TeaModel {
+        /**
+         * <p>The status of the task. Valid values:</p>
+         * <br>
+         * <p>*   success: succeeded</p>
+         * <p>*   failed: failed</p>
+         * <p>*   untrained: to be trained</p>
+         * <p>*   pending: being scheduled</p>
+         * <p>*   running: being trained</p>
+         */
         @NameInMap("DagStatus")
         public String dagStatus;
 
+        /**
+         * <p>The time consumed for the most recent run, in milliseconds.</p>
+         */
         @NameInMap("LastRunTime")
         public Long lastRunTime;
 
@@ -188,9 +236,15 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
     }
 
     public static class GetFunctionInstanceResponseBodyResultUsageParameters extends TeaModel {
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The value of the parameter.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -218,48 +272,99 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
     }
 
     public static class GetFunctionInstanceResponseBodyResult extends TeaModel {
+        /**
+         * <p>The information about the instance.</p>
+         */
         @NameInMap("Belongs")
         public GetFunctionInstanceResponseBodyResultBelongs belongs;
 
+        /**
+         * <p>The parameters that are used to create the instance.</p>
+         */
         @NameInMap("CreateParameters")
         public java.util.List<GetFunctionInstanceResponseBodyResultCreateParameters> createParameters;
 
+        /**
+         * <p>The time when the task was created. Unit: milliseconds.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The cron expression used to schedule training, in the format of (Minutes Hours DayofMonth Month DayofWeek). If the value is empty, it indicates that no periodic training is performed.</p>
+         */
         @NameInMap("Cron")
         public String cron;
 
+        /**
+         * <p>The description of the instance.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The extended information, which is a JSON string.</p>
+         */
         @NameInMap("ExtendInfo")
         public String extendInfo;
 
+        /**
+         * <p>The name of the feature.</p>
+         */
         @NameInMap("FunctionName")
         public String functionName;
 
+        /**
+         * <p>The type of the feature.</p>
+         */
         @NameInMap("FunctionType")
         public String functionType;
 
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The type of the model.</p>
+         */
         @NameInMap("ModelType")
         public String modelType;
 
+        /**
+         * <p>How the instance is created. Valid values:</p>
+         * <br>
+         * <p>*   user: The instance is created by user.</p>
+         * <p>*   builtin: The instance is created by the system.</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The status of the instance. Valid values:</p>
+         * <br>
+         * <p>1.  unavailable: No model is available. Models must be trained before you can use them.</p>
+         * <p>2.  available: Models can be used.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The information about the training task. This parameter is not displayed if no task is available.</p>
+         */
         @NameInMap("Task")
         public GetFunctionInstanceResponseBodyResultTask task;
 
+        /**
+         * <p>The parameters that are used.</p>
+         */
         @NameInMap("UsageParameters")
         public java.util.List<GetFunctionInstanceResponseBodyResultUsageParameters> usageParameters;
 
+        /**
+         * <p>The ID of the version.</p>
+         */
         @NameInMap("VersionId")
         public Long versionId;
 

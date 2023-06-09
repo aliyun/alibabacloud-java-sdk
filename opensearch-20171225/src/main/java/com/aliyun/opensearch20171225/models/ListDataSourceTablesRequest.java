@@ -4,6 +4,9 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListDataSourceTablesRequest extends TeaModel {
+    /**
+     * <p>N/A</p>
+     */
     @NameInMap("params")
     public String params;
 

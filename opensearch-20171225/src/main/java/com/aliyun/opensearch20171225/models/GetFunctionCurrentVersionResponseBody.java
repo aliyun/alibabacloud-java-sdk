@@ -4,24 +4,45 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class GetFunctionCurrentVersionResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpCode")
     public Long httpCode;
 
+    /**
+     * <p>The time consumed for the request, in milliseconds.</p>
+     */
     @NameInMap("Latency")
     public Long latency;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The result of the request.</p>
+     */
     @NameInMap("Result")
     public GetFunctionCurrentVersionResponseBodyResult result;
 
+    /**
+     * <p>The status of the request.</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -87,9 +108,15 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
     }
 
     public static class GetFunctionCurrentVersionResponseBodyResultVersionConfigCreateParameters extends TeaModel {
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Indicates whether the parameter is required.</p>
+         */
         @NameInMap("Required")
         public String required;
 
@@ -117,12 +144,21 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
     }
 
     public static class GetFunctionCurrentVersionResponseBodyResultVersionConfigDepends extends TeaModel {
+        /**
+         * <p>The condition.</p>
+         */
         @NameInMap("Condition")
         public String condition;
 
+        /**
+         * <p>The dependency.</p>
+         */
         @NameInMap("Dependency")
         public String dependency;
 
+        /**
+         * <p>The description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
@@ -158,9 +194,15 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
     }
 
     public static class GetFunctionCurrentVersionResponseBodyResultVersionConfigUsageParameters extends TeaModel {
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Indicates whether the parameter is required.</p>
+         */
         @NameInMap("Required")
         public String required;
 
@@ -188,12 +230,21 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
     }
 
     public static class GetFunctionCurrentVersionResponseBodyResultVersionConfig extends TeaModel {
+        /**
+         * <p>The parameters that are used to create the instance.</p>
+         */
         @NameInMap("CreateParameters")
         public java.util.List<GetFunctionCurrentVersionResponseBodyResultVersionConfigCreateParameters> createParameters;
 
+        /**
+         * <p>The dependencies of the instance.</p>
+         */
         @NameInMap("Depends")
         public java.util.List<GetFunctionCurrentVersionResponseBodyResultVersionConfigDepends> depends;
 
+        /**
+         * <p>The parameters that are used to use the instance online.</p>
+         */
         @NameInMap("UsageParameters")
         public java.util.List<GetFunctionCurrentVersionResponseBodyResultVersionConfigUsageParameters> usageParameters;
 
@@ -229,21 +280,42 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
     }
 
     public static class GetFunctionCurrentVersionResponseBodyResult extends TeaModel {
+        /**
+         * <p>The name of the feature.</p>
+         */
         @NameInMap("FunctionName")
         public String functionName;
 
+        /**
+         * <p>The type of the feature. Valid values:</p>
+         * <br>
+         * <p>*   PAAS</p>
+         * <p>*   SAAS</p>
+         */
         @NameInMap("FunctionType")
         public String functionType;
 
+        /**
+         * <p>The type of the model.</p>
+         */
         @NameInMap("ModelType")
         public String modelType;
 
+        /**
+         * <p>The configuration information about the instance.</p>
+         */
         @NameInMap("VersionConfig")
         public GetFunctionCurrentVersionResponseBodyResultVersionConfig versionConfig;
 
+        /**
+         * <p>The ID of the version.</p>
+         */
         @NameInMap("VersionId")
         public Long versionId;
 
+        /**
+         * <p>The name of the version.</p>
+         */
         @NameInMap("VersionName")
         public String versionName;
 

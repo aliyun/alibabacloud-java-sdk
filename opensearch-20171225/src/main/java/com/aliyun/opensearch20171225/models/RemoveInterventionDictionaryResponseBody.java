@@ -4,9 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class RemoveInterventionDictionaryResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The information about the intervention dictionary.</p>
+     */
     @NameInMap("result")
     public RemoveInterventionDictionaryResponseBodyResult result;
 
@@ -32,18 +38,40 @@ public class RemoveInterventionDictionaryResponseBody extends TeaModel {
     }
 
     public static class RemoveInterventionDictionaryResponseBodyResult extends TeaModel {
+        /**
+         * <p>The custom analyzer.</p>
+         */
         @NameInMap("analyzer")
         public String analyzer;
 
+        /**
+         * <p>The time when the intervention dictionary was created.</p>
+         */
         @NameInMap("created")
         public String created;
 
+        /**
+         * <p>The name of the intervention dictionary.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The type of the intervention dictionary. Valid values:</p>
+         * <br>
+         * <p>*   stopword: an intervention dictionary for stop word filtering</p>
+         * <p>*   synonym: an intervention dictionary for synonym configuration</p>
+         * <p>*   correction: an intervention dictionary for spelling correction</p>
+         * <p>*   category_prediction: an intervention dictionary for category prediction</p>
+         * <p>*   ner: an intervention dictionary for named entity recognition (NER)</p>
+         * <p>*   term_weighting: an intervention dictionary for term weight analysis</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>The time when the intervention dictionary was last updated.</p>
+         */
         @NameInMap("updated")
         public String updated;
 

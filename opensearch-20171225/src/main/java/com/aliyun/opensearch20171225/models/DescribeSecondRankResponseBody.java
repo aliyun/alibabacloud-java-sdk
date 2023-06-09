@@ -4,9 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecondRankResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The information about the fine sort expression.</p>
+     */
     @NameInMap("result")
     public DescribeSecondRankResponseBodyResult result;
 
@@ -32,30 +38,65 @@ public class DescribeSecondRankResponseBody extends TeaModel {
     }
 
     public static class DescribeSecondRankResponseBodyResult extends TeaModel {
+        /**
+         * <p>Indicates whether the expression is the default one.</p>
+         */
         @NameInMap("active")
         public Boolean active;
 
+        /**
+         * <p>The time when the expression was created.</p>
+         */
         @NameInMap("created")
         public Integer created;
 
+        /**
+         * <p>The description of the expression.</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The ID of the expression. This parameter appears only in the response.</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <p>Indicates whether the expression is the default one. This parameter appears only in the response. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("isDefault")
         public String isDefault;
 
+        /**
+         * <p>Indicates whether the expression is a system expression. This parameter appears only in the response. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("isSys")
         public String isSys;
 
+        /**
+         * <p>The content of the fine sort expression.</p>
+         * <br>
+         * <p>You can define an expression that consists of fields, feature functions, and mathematical functions to implement complex sort logic.</p>
+         */
         @NameInMap("meta")
         public String meta;
 
+        /**
+         * <p>The name of the expression.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The time when the expression was last updated.</p>
+         */
         @NameInMap("updated")
         public Integer updated;
 

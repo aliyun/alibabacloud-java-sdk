@@ -4,24 +4,56 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class CreateFunctionInstanceRequest extends TeaModel {
+    /**
+     * <p>The parameters that are used to create the instance.</p>
+     */
     @NameInMap("createParameters")
     public java.util.List<CreateFunctionInstanceRequestCreateParameters> createParameters;
 
+    /**
+     * <p>The cron expression used to schedule periodic training, in the format of (Minutes Hours DayofMonth Month DayofWeek). The default value is empty, which indicates that no periodic training is performed. DayofWeek 0 indicates Sunday.</p>
+     */
     @NameInMap("cron")
     public String cron;
 
+    /**
+     * <p>The description.</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The type of the feature. Valid values:</p>
+     * <br>
+     * <p>*   PAAS: This is the default value. Training is required before you can use the feature.</p>
+     */
     @NameInMap("functionType")
     public String functionType;
 
+    /**
+     * <p>The name of the instance. The name must be 1 to 30 characters in length and can contain letters, digits, and underscores (\_). The name is case-sensitive and must start with a letter.</p>
+     */
     @NameInMap("instanceName")
     public String instanceName;
 
+    /**
+     * <p>The type of the model. The following features correspond to different model types:</p>
+     * <br>
+     * <p>*   click-through rate (CTR) model: tf_checkpoint</p>
+     * <p>*   Popularity model: pop</p>
+     * <p>*   Category model: offline_inference</p>
+     * <p>*   Hotword model: offline_inference</p>
+     * <p>*   Shading model: offline_inference</p>
+     * <p>*   Drop-down suggestion model: offline_inference</p>
+     * <p>*   Word segmentation model: text</p>
+     * <p>*   Term weight model: tf_checkpoint</p>
+     */
     @NameInMap("modelType")
     public String modelType;
 
+    /**
+     * <p>The parameters that are used to use the instance.</p>
+     */
     @NameInMap("usageParameters")
     public java.util.List<CreateFunctionInstanceRequestUsageParameters> usageParameters;
 
@@ -87,9 +119,15 @@ public class CreateFunctionInstanceRequest extends TeaModel {
     }
 
     public static class CreateFunctionInstanceRequestCreateParameters extends TeaModel {
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The value of the parameter.</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -117,9 +155,15 @@ public class CreateFunctionInstanceRequest extends TeaModel {
     }
 
     public static class CreateFunctionInstanceRequestUsageParameters extends TeaModel {
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The value of the parameter.</p>
+         */
         @NameInMap("value")
         public String value;
 

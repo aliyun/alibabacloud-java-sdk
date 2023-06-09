@@ -4,9 +4,17 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListQueryProcessorNersResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The priority settings of entity types.</p>
+     * <br>
+     * <p>For more information, see [Priority settings of entity types](~~173616~~).</p>
+     */
     @NameInMap("result")
     public java.util.List<ListQueryProcessorNersResponseBodyResult> result;
 
@@ -32,15 +40,33 @@ public class ListQueryProcessorNersResponseBody extends TeaModel {
     }
 
     public static class ListQueryProcessorNersResponseBodyResult extends TeaModel {
+        /**
+         * <p>The name of the entity type.</p>
+         */
         @NameInMap("label")
         public String label;
 
+        /**
+         * <p>The priority of an entity type among entity types that have the same priority level.</p>
+         * <br>
+         * <p>A smaller value indicates a higher priority. Default value: 0.</p>
+         */
         @NameInMap("order")
         public Integer order;
 
+        /**
+         * <p>The priority level of the entity type.</p>
+         * <br>
+         * <p>*   HIGH</p>
+         * <p>*   MIDDLE</p>
+         * <p>*   LOW</p>
+         */
         @NameInMap("priority")
         public String priority;
 
+        /**
+         * <p>The internal name of the entity type.</p>
+         */
         @NameInMap("tag")
         public String tag;
 

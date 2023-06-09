@@ -4,6 +4,9 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListProceedingsRequest extends TeaModel {
+    /**
+     * <p>Specifies whether the filtering is complete.</p>
+     */
     @NameInMap("filterFinished")
     public Boolean filterFinished;
 

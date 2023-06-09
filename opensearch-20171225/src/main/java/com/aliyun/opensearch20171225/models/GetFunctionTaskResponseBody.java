@@ -4,24 +4,45 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class GetFunctionTaskResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpCode")
     public Long httpCode;
 
+    /**
+     * <p>The time consumed for the request, in milliseconds.</p>
+     */
     @NameInMap("Latency")
     public Long latency;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The result of the request.</p>
+     */
     @NameInMap("Result")
     public GetFunctionTaskResponseBodyResult result;
 
+    /**
+     * <p>The status of the request.</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -87,27 +108,55 @@ public class GetFunctionTaskResponseBody extends TeaModel {
     }
 
     public static class GetFunctionTaskResponseBodyResult extends TeaModel {
+        /**
+         * <p>The timestamp that indicates the end time of the task. Unit: milliseconds.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The extended information, which is a JSON string.</p>
+         */
         @NameInMap("ExtendInfo")
         public String extendInfo;
 
+        /**
+         * <p>The name of the feature.</p>
+         */
         @NameInMap("FunctionName")
         public String functionName;
 
+        /**
+         * <p>The number of iterations.</p>
+         */
         @NameInMap("Generation")
         public String generation;
 
+        /**
+         * <p>The progress. 90 indicates 90%.</p>
+         */
         @NameInMap("Progress")
         public Long progress;
 
+        /**
+         * <p>The ID of the task.</p>
+         */
         @NameInMap("RunId")
         public String runId;
 
+        /**
+         * <p>The timestamp that indicates the start time of the task. Unit: milliseconds.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>The status of the task. Valid values:</p>
+         * <br>
+         * <p>*   success</p>
+         * <p>*   failed</p>
+         * <p>*   running</p>
+         */
         @NameInMap("Status")
         public String status;
 

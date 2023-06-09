@@ -4,9 +4,17 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListSortExpressionsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The information about the rough sort or fine sort expressions that were returned.</p>
+     * <br>
+     * <p>For more information, see [FirstRank](~~170007~~) and [SecondRank](~~170008~~).</p>
+     */
     @NameInMap("result")
     public java.util.List<ListSortExpressionsResponseBodyResult> result;
 
@@ -32,18 +40,33 @@ public class ListSortExpressionsResponseBody extends TeaModel {
     }
 
     public static class ListSortExpressionsResponseBodyResult extends TeaModel {
+        /**
+         * <p>Indicates whether the expression is the default one.</p>
+         */
         @NameInMap("active")
         public Boolean active;
 
+        /**
+         * <p>The time when the expression was created.</p>
+         */
         @NameInMap("created")
         public Integer created;
 
+        /**
+         * <p>The description of the expression.</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The name of the expression.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The time when the expression was last updated.</p>
+         */
         @NameInMap("updated")
         public Integer updated;
 

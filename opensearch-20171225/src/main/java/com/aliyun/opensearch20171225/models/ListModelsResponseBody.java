@@ -4,9 +4,17 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListModelsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The details of the models.</p>
+     * <br>
+     * <p>For more information, see [Model](~~180898~~).</p>
+     */
     @NameInMap("result")
     public java.util.List<java.util.Map<String, ?>> result;
 

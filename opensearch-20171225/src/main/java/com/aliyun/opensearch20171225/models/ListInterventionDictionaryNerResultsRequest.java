@@ -4,6 +4,9 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListInterventionDictionaryNerResultsRequest extends TeaModel {
+    /**
+     * <p>Soymilk</p>
+     */
     @NameInMap("query")
     public String query;
 
