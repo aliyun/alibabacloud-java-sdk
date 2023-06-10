@@ -63,6 +63,9 @@ public class HandleSecurityEventsRequest extends TeaModel {
     @NameInMap("OperationParams")
     public String operationParams;
 
+    @NameInMap("Remark")
+    public String remark;
+
     /**
      * <p>The IDs of the alert events.</p>
      */
@@ -110,6 +113,14 @@ public class HandleSecurityEventsRequest extends TeaModel {
     }
     public String getOperationParams() {
         return this.operationParams;
+    }
+
+    public HandleSecurityEventsRequest setRemark(String remark) {
+        this.remark = remark;
+        return this;
+    }
+    public String getRemark() {
+        return this.remark;
     }
 
     public HandleSecurityEventsRequest setSecurityEventIds(java.util.List<String> securityEventIds) {

@@ -21,6 +21,12 @@ public class OperateAgentClientInstallRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("Os")
+    public String os;
+
+    @NameInMap("Region")
+    public String region;
+
     /**
      * <p>The UUIDs of the servers on which you want to install the Security Center agent. Separate multiple UUIDs with commas (,).</p>
      * <br>
@@ -48,6 +54,22 @@ public class OperateAgentClientInstallRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public OperateAgentClientInstallRequest setOs(String os) {
+        this.os = os;
+        return this;
+    }
+    public String getOs() {
+        return this.os;
+    }
+
+    public OperateAgentClientInstallRequest setRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    public String getRegion() {
+        return this.region;
     }
 
     public OperateAgentClientInstallRequest setUuids(String uuids) {

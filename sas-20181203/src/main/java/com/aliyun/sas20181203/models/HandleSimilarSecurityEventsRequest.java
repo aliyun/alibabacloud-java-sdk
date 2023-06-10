@@ -41,6 +41,9 @@ public class HandleSimilarSecurityEventsRequest extends TeaModel {
     @NameInMap("OperationParams")
     public String operationParams;
 
+    @NameInMap("Remark")
+    public String remark;
+
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
@@ -85,6 +88,14 @@ public class HandleSimilarSecurityEventsRequest extends TeaModel {
     }
     public String getOperationParams() {
         return this.operationParams;
+    }
+
+    public HandleSimilarSecurityEventsRequest setRemark(String remark) {
+        this.remark = remark;
+        return this;
+    }
+    public String getRemark() {
+        return this.remark;
     }
 
     public HandleSimilarSecurityEventsRequest setResourceOwnerId(Long resourceOwnerId) {

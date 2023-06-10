@@ -14076,6 +14076,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OperationParams", request.operationParams);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.securityEventIds)) {
             query.put("SecurityEventIds", request.securityEventIds);
         }
@@ -14119,6 +14123,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.operationParams)) {
             query.put("OperationParams", request.operationParams);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
@@ -18530,6 +18538,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Lang", request.lang);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.os)) {
+            query.put("Os", request.os);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            query.put("Region", request.region);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.uuids)) {
             query.put("Uuids", request.uuids);
         }
@@ -18932,6 +18948,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public OperationCancelIgnoreSuspEventResponse operationCancelIgnoreSuspEventWithOptions(OperationCancelIgnoreSuspEventRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.securityEventIds)) {
             query.put("SecurityEventIds", request.securityEventIds);
         }

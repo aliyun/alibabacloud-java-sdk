@@ -1,3 +1,9 @@
+2023-06-10 Version: 2.1.3
+- Support remark for suspicious deal.
+- Supported GetClientRatioStatistic.
+- Support mistakReport for suspicious.
+- Support TimeStamp for AntiBruteRules.
+
 2023-06-05 Version: 2.1.2
 - Change ListAssetSelectionTarget Request.
 
