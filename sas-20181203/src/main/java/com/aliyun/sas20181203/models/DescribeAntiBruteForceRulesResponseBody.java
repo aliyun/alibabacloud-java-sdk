@@ -116,8 +116,8 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeAntiBruteForceRulesResponseBodyRules extends TeaModel {
-        @NameInMap("CreateTime")
-        public String createTime;
+        @NameInMap("CreateTimestamp")
+        public Long createTimestamp;
 
         /**
          * <p>Indicates whether the defense rule is the default rule. Valid values:</p>
@@ -183,12 +183,12 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeAntiBruteForceRulesResponseBodyRules setCreateTime(String createTime) {
-            this.createTime = createTime;
+        public DescribeAntiBruteForceRulesResponseBodyRules setCreateTimestamp(Long createTimestamp) {
+            this.createTimestamp = createTimestamp;
             return this;
         }
-        public String getCreateTime() {
-            return this.createTime;
+        public Long getCreateTimestamp() {
+            return this.createTimestamp;
         }
 
         public DescribeAntiBruteForceRulesResponseBodyRules setDefaultRule(Boolean defaultRule) {
