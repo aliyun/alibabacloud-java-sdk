@@ -42,13 +42,54 @@ public class AddFaceVideoTemplateResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class AddFaceVideoTemplateResponseBodyDateFaceInfos extends TeaModel {
+        @NameInMap("TemplateFaceID")
+        public String templateFaceID;
+
+        @NameInMap("TemplateFaceURL")
+        public String templateFaceURL;
+
+        public static AddFaceVideoTemplateResponseBodyDateFaceInfos build(java.util.Map<String, ?> map) throws Exception {
+            AddFaceVideoTemplateResponseBodyDateFaceInfos self = new AddFaceVideoTemplateResponseBodyDateFaceInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public AddFaceVideoTemplateResponseBodyDateFaceInfos setTemplateFaceID(String templateFaceID) {
+            this.templateFaceID = templateFaceID;
+            return this;
+        }
+        public String getTemplateFaceID() {
+            return this.templateFaceID;
+        }
+
+        public AddFaceVideoTemplateResponseBodyDateFaceInfos setTemplateFaceURL(String templateFaceURL) {
+            this.templateFaceURL = templateFaceURL;
+            return this;
+        }
+        public String getTemplateFaceURL() {
+            return this.templateFaceURL;
+        }
+
+    }
+
     public static class AddFaceVideoTemplateResponseBodyDate extends TeaModel {
+        @NameInMap("FaceInfos")
+        public java.util.List<AddFaceVideoTemplateResponseBodyDateFaceInfos> faceInfos;
+
         @NameInMap("TemplateId")
         public String templateId;
 
         public static AddFaceVideoTemplateResponseBodyDate build(java.util.Map<String, ?> map) throws Exception {
             AddFaceVideoTemplateResponseBodyDate self = new AddFaceVideoTemplateResponseBodyDate();
             return TeaModel.build(map, self);
+        }
+
+        public AddFaceVideoTemplateResponseBodyDate setFaceInfos(java.util.List<AddFaceVideoTemplateResponseBodyDateFaceInfos> faceInfos) {
+            this.faceInfos = faceInfos;
+            return this;
+        }
+        public java.util.List<AddFaceVideoTemplateResponseBodyDateFaceInfos> getFaceInfos() {
+            return this.faceInfos;
         }
 
         public AddFaceVideoTemplateResponseBodyDate setTemplateId(String templateId) {

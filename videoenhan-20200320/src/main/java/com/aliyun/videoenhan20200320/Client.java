@@ -251,6 +251,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AddFaceVideoTemplateResponse addFaceVideoTemplateWithOptions(AddFaceVideoTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.videoScene)) {
+            body.put("VideoScene", request.videoScene);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.videoURL)) {
             body.put("VideoURL", request.videoURL);
         }
@@ -1741,6 +1745,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.faceImageURL)) {
             body.put("FaceImageURL", request.faceImageURL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mergeInfos)) {
+            body.put("MergeInfos", request.mergeInfos);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
