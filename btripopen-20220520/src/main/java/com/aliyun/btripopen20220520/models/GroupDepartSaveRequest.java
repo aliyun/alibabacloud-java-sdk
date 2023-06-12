@@ -22,6 +22,9 @@ public class GroupDepartSaveRequest extends TeaModel {
     @NameInMap("sub_corp_id_list")
     public java.util.List<String> subCorpIdList;
 
+    @NameInMap("sync_group")
+    public Boolean syncGroup;
+
     public static GroupDepartSaveRequest build(java.util.Map<String, ?> map) throws Exception {
         GroupDepartSaveRequest self = new GroupDepartSaveRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class GroupDepartSaveRequest extends TeaModel {
     }
     public java.util.List<String> getSubCorpIdList() {
         return this.subCorpIdList;
+    }
+
+    public GroupDepartSaveRequest setSyncGroup(Boolean syncGroup) {
+        this.syncGroup = syncGroup;
+        return this;
+    }
+    public Boolean getSyncGroup() {
+        return this.syncGroup;
     }
 
 }
