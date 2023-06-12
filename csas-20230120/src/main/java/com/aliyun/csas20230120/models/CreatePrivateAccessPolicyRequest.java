@@ -28,12 +28,20 @@ public class CreatePrivateAccessPolicyRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>内网访问标签ID集合。最多可输入100个内网访问标签ID。当**ApplicationType**为**Tag时**，必填。和**ApplicationIds**互斥。</p>
+     */
     @NameInMap("TagIds")
     public java.util.List<String> tagIds;
 
     @NameInMap("UserGroupIds")
     public java.util.List<String> userGroupIds;
 
+    /**
+     * <p>内网访问策略的用户组类型。取值：</p>
+     * <p>- **Normal**：普通用户组。</p>
+     * <p>- **Custom**：自定义用户组。</p>
+     */
     @NameInMap("UserGroupMode")
     public String userGroupMode;
 

@@ -28,6 +28,11 @@ public class ListPrivateAccessPolicesRequest extends TeaModel {
     @NameInMap("TagId")
     public String tagId;
 
+    /**
+     * <p>用户组ID。取值来源：</p>
+     * <p>- [ListUserGroups](~~ListUserGroups~~)：批量查询用户组。</p>
+     * <p>- [CreateUserGroup](~~CreateUserGroup~~)：创建用户组。</p>
+     */
     @NameInMap("UserGroupId")
     public String userGroupId;
 

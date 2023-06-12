@@ -87,6 +87,9 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
         @NameInMap("Attributes")
         public java.util.List<ListUserGroupsForPrivateAccessPolicyResponseBodyPolicesUserGroupsAttributes> attributes;
 
+        /**
+         * <p>用户组创建时间。</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 

@@ -10,6 +10,9 @@ public class ListUserGroupsRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>用户组名称。长度为1~128个字符，支持中文和大小写英文字母，可包含数字、半角句号（.）、下划线（_）和短划线（-）。</p>
+     */
     @NameInMap("Name")
     public String name;
 
