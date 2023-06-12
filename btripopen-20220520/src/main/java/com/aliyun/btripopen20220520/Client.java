@@ -3270,6 +3270,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("sub_corp_id_list", request.subCorpIdListShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.syncGroup)) {
+            body.put("sync_group", request.syncGroup);
+        }
+
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
