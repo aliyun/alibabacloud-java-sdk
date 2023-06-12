@@ -31,9 +31,42 @@ public class QueryFaceVideoTemplateResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class QueryFaceVideoTemplateResponseBodyDataElementsFaceInfos extends TeaModel {
+        @NameInMap("TemplateFaceID")
+        public String templateFaceID;
+
+        @NameInMap("TemplateFaceURL")
+        public String templateFaceURL;
+
+        public static QueryFaceVideoTemplateResponseBodyDataElementsFaceInfos build(java.util.Map<String, ?> map) throws Exception {
+            QueryFaceVideoTemplateResponseBodyDataElementsFaceInfos self = new QueryFaceVideoTemplateResponseBodyDataElementsFaceInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryFaceVideoTemplateResponseBodyDataElementsFaceInfos setTemplateFaceID(String templateFaceID) {
+            this.templateFaceID = templateFaceID;
+            return this;
+        }
+        public String getTemplateFaceID() {
+            return this.templateFaceID;
+        }
+
+        public QueryFaceVideoTemplateResponseBodyDataElementsFaceInfos setTemplateFaceURL(String templateFaceURL) {
+            this.templateFaceURL = templateFaceURL;
+            return this;
+        }
+        public String getTemplateFaceURL() {
+            return this.templateFaceURL;
+        }
+
+    }
+
     public static class QueryFaceVideoTemplateResponseBodyDataElements extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
+
+        @NameInMap("FaceInfos")
+        public java.util.List<QueryFaceVideoTemplateResponseBodyDataElementsFaceInfos> faceInfos;
 
         @NameInMap("TemplateId")
         public String templateId;
@@ -58,6 +91,14 @@ public class QueryFaceVideoTemplateResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public QueryFaceVideoTemplateResponseBodyDataElements setFaceInfos(java.util.List<QueryFaceVideoTemplateResponseBodyDataElementsFaceInfos> faceInfos) {
+            this.faceInfos = faceInfos;
+            return this;
+        }
+        public java.util.List<QueryFaceVideoTemplateResponseBodyDataElementsFaceInfos> getFaceInfos() {
+            return this.faceInfos;
         }
 
         public QueryFaceVideoTemplateResponseBodyDataElements setTemplateId(String templateId) {
