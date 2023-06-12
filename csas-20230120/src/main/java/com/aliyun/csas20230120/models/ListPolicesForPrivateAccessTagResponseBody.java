@@ -32,15 +32,37 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
     }
 
     public static class ListPolicesForPrivateAccessTagResponseBodyTagsPolicesCustomUserAttributes extends TeaModel {
+        /**
+         * <p>用户组的身份源ID。当自定义用户组类型为**department**时，存在该值。</p>
+         */
         @NameInMap("IdpId")
         public Integer idpId;
 
+        /**
+         * <p>用户组的关系。取值：</p>
+         * <p>- **Equal**：等于。</p>
+         * <p>- **Unequal**：不等于。</p>
+         */
         @NameInMap("Relation")
         public String relation;
 
+        /**
+         * <p>用户组的类型。取值：</p>
+         * <p>- **username**：用户名。</p>
+         * <p>- **department**：部门。</p>
+         * <p>- **email**：邮箱。</p>
+         * <p>- **telephone**：手机。</p>
+         */
         @NameInMap("UserGroupType")
         public String userGroupType;
 
+        /**
+         * <p>用户组属性的值。</p>
+         * <p>- 当用户组类型为**username**时，表示用户名的值。长度为1~128个字符，支持中文和大小写英文字母，可包含数字、半角句号（.）、下划线（_）和短划线（-）。</p>
+         * <p>- 当用户组类型为**department**时，表示部门的值。如：OU=部门1,OU=SASE钉钉。</p>
+         * <p>- 当用户组类型为**email**时，表示邮箱的值。如：username@example.com。</p>
+         * <p>- 当用户组类型为**telephone**时，表示手机的值。如：13900001234。</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -87,9 +109,15 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
         @NameInMap("ApplicationType")
         public String applicationType;
 
+        /**
+         * <p>内网访问策略创建时间。</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>自定义用户组属性集合。多个自定义用户组属性之间是或的关系，按照合集生效。</p>
+         */
         @NameInMap("CustomUserAttributes")
         public java.util.List<ListPolicesForPrivateAccessTagResponseBodyTagsPolicesCustomUserAttributes> customUserAttributes;
 

@@ -16,6 +16,12 @@ public class ListConnectorsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("Status")
+    public String status;
+
+    @NameInMap("SwitchStatus")
+    public String switchStatus;
+
     public static ListConnectorsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListConnectorsRequest self = new ListConnectorsRequest();
         return TeaModel.build(map, self);
@@ -51,6 +57,22 @@ public class ListConnectorsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListConnectorsRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
+    public ListConnectorsRequest setSwitchStatus(String switchStatus) {
+        this.switchStatus = switchStatus;
+        return this;
+    }
+    public String getSwitchStatus() {
+        return this.switchStatus;
     }
 
 }

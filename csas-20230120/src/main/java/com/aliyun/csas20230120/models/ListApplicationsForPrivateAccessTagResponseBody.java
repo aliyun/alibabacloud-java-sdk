@@ -68,6 +68,9 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
         @NameInMap("ApplicationId")
         public String applicationId;
 
+        /**
+         * <p>内网访问应用创建时间。</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 

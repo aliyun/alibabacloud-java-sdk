@@ -32,6 +32,9 @@ public class ListTagsForPrivateAccessPolicyResponseBody extends TeaModel {
     }
 
     public static class ListTagsForPrivateAccessPolicyResponseBodyPolicesTags extends TeaModel {
+        /**
+         * <p>内网访问标签创建时间。</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
