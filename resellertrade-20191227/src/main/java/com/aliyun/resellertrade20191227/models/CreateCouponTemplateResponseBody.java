@@ -10,7 +10,9 @@ public class CreateCouponTemplateResponseBody extends TeaModel {
     @NameInMap("ContextMap")
     public java.util.Map<String, ?> contextMap;
 
-    // result data
+    /**
+     * <p>result data</p>
+     */
     @NameInMap("Data")
     public Long data;
 
