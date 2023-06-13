@@ -10,6 +10,9 @@ public class SendMessageShrinkRequest extends TeaModel {
     @NameInMap("SessionId")
     public String sessionId;
 
+    @NameInMap("StreamExtension")
+    public String streamExtensionShrink;
+
     @NameInMap("TenantId")
     public Long tenantId;
 
@@ -38,6 +41,14 @@ public class SendMessageShrinkRequest extends TeaModel {
     }
     public String getSessionId() {
         return this.sessionId;
+    }
+
+    public SendMessageShrinkRequest setStreamExtensionShrink(String streamExtensionShrink) {
+        this.streamExtensionShrink = streamExtensionShrink;
+        return this;
+    }
+    public String getStreamExtensionShrink() {
+        return this.streamExtensionShrink;
     }
 
     public SendMessageShrinkRequest setTenantId(Long tenantId) {

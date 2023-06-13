@@ -10,6 +10,9 @@ public class SendMessageRequest extends TeaModel {
     @NameInMap("SessionId")
     public String sessionId;
 
+    @NameInMap("StreamExtension")
+    public SendMessageRequestStreamExtension streamExtension;
+
     @NameInMap("TenantId")
     public Long tenantId;
 
@@ -40,6 +43,14 @@ public class SendMessageRequest extends TeaModel {
         return this.sessionId;
     }
 
+    public SendMessageRequest setStreamExtension(SendMessageRequestStreamExtension streamExtension) {
+        this.streamExtension = streamExtension;
+        return this;
+    }
+    public SendMessageRequestStreamExtension getStreamExtension() {
+        return this.streamExtension;
+    }
+
     public SendMessageRequest setTenantId(Long tenantId) {
         this.tenantId = tenantId;
         return this;
@@ -62,6 +73,47 @@ public class SendMessageRequest extends TeaModel {
     }
     public SendMessageRequestVAMLRequest getVAMLRequest() {
         return this.VAMLRequest;
+    }
+
+    public static class SendMessageRequestStreamExtension extends TeaModel {
+        @NameInMap("Index")
+        public Integer index;
+
+        @NameInMap("IsStream")
+        public Boolean isStream;
+
+        @NameInMap("Position")
+        public String position;
+
+        public static SendMessageRequestStreamExtension build(java.util.Map<String, ?> map) throws Exception {
+            SendMessageRequestStreamExtension self = new SendMessageRequestStreamExtension();
+            return TeaModel.build(map, self);
+        }
+
+        public SendMessageRequestStreamExtension setIndex(Integer index) {
+            this.index = index;
+            return this;
+        }
+        public Integer getIndex() {
+            return this.index;
+        }
+
+        public SendMessageRequestStreamExtension setIsStream(Boolean isStream) {
+            this.isStream = isStream;
+            return this;
+        }
+        public Boolean getIsStream() {
+            return this.isStream;
+        }
+
+        public SendMessageRequestStreamExtension setPosition(String position) {
+            this.position = position;
+            return this;
+        }
+        public String getPosition() {
+            return this.position;
+        }
+
     }
 
     public static class SendMessageRequestTextRequest extends TeaModel {
