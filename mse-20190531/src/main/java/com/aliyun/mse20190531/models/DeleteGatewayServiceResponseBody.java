@@ -4,21 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteGatewayServiceResponseBody extends TeaModel {
+    /**
+     * <p>The response code returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public DeleteGatewayServiceResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The unique ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,42 +97,81 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
     }
 
     public static class DeleteGatewayServiceResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the gateway.</p>
+         */
         @NameInMap("GatewayId")
         public Long gatewayId;
 
+        /**
+         * <p>The unique ID of the gateway.</p>
+         */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
+        /**
+         * <p>The time when the service was created.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The last modification time.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The name of the group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The ID of the service.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>IP</p>
+         */
         @NameInMap("Ips")
         public java.util.List<String> ips;
 
+        /**
+         * <p>The basic information about the service.</p>
+         */
         @NameInMap("MetaInfo")
         public String metaInfo;
 
+        /**
+         * <p>The name of the service.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The namespace.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The name of the service registered with the service registry.</p>
+         */
         @NameInMap("ServiceNameInRegistry")
         public String serviceNameInRegistry;
 
+        /**
+         * <p>The ID of the service source.</p>
+         */
         @NameInMap("SourceId")
         public Long sourceId;
 
+        /**
+         * <p>The source type of the service.</p>
+         */
         @NameInMap("SourceType")
         public String sourceType;
 

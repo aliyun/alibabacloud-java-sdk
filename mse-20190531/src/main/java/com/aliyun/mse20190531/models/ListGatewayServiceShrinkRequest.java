@@ -5,37 +5,40 @@ import com.aliyun.tea.*;
 
 public class ListGatewayServiceShrinkRequest extends TeaModel {
     /**
-     * <p>systemError</p>
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>duplicated cluster alias name</p>
+     * <p>Specifies whether to enable sorting.</p>
      */
     @NameInMap("DescSort")
     public Boolean descSort;
 
     /**
-     * <p>mse-100-007</p>
+     * <p>The parameters that are used to specify filter conditions. The values of the parameters are in the format of {"key1":"value1"}.</p>
      */
     @NameInMap("FilterParams")
     public String filterParamsShrink;
 
     /**
-     * <p>duplicatedClusterAliasName</p>
+     * <p>The item based on which entries are sorted.</p>
      */
     @NameInMap("OrderItem")
     public String orderItem;
 
     /**
-     * <p>code</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>mse-200-105</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

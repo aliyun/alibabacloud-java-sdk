@@ -4,41 +4,49 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListExportZookeeperDataResponseBody extends TeaModel {
+    /**
+     * <p>The details of the data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListExportZookeeperDataResponseBodyData> data;
 
     /**
-     * <p>cluster not found</p>
+     * <p>The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.</p>
+     * <br>
+     * <p>> If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
-     * <p>systemError</p>
+     * <p>The error code returned if the request failed.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>system error</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
     /**
-     * <p>mse-200-021</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>mse-100-001</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>illegal request:%s</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -105,30 +113,66 @@ public class ListExportZookeeperDataResponseBody extends TeaModel {
     }
 
     public static class ListExportZookeeperDataResponseBodyData extends TeaModel {
+        /**
+         * <p>The details of the task.</p>
+         */
         @NameInMap("ContentMap")
         public String contentMap;
 
+        /**
+         * <p>The time when the task was created.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The type of the object that is exported. Valid values:</p>
+         * <br>
+         * <p>*   transactionLog: transaction logs</p>
+         * <p>*   snapshot: snapshots</p>
+         */
         @NameInMap("ExportType")
         public String exportType;
 
+        /**
+         * <p>The extension information that is in the JSON format. The extension information facilitates addition of parameters.</p>
+         */
         @NameInMap("Extend")
         public String extend;
 
+        /**
+         * <p>The ID of the task.</p>
+         */
         @NameInMap("Id")
         public Integer id;
 
+        /**
+         * <p>The ID of the instance</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The ID of the associated task at the underlying layer. This parameter is used only to troubleshoot failures.</p>
+         */
         @NameInMap("KubeoneTaskIds")
         public String kubeoneTaskIds;
 
+        /**
+         * <p>The status of the task. Valid values:</p>
+         * <br>
+         * <p>*   CREATE: The task is being created.</p>
+         * <p>*   RUNNING: The task is being executed.</p>
+         * <p>*   FINISH: The task is completed.</p>
+         * <p>*   FAILED: The task failed.</p>
+         * <p>*   EXPIRE: The task has expired.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The time when the task was updated.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 

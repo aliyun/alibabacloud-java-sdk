@@ -5,25 +5,34 @@ import com.aliyun.tea.*;
 
 public class ListClusterTypesRequest extends TeaModel {
     /**
-     * <p>mse-100-007</p>
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>duplicatedClusterAliasName</p>
+     * <p>The network type. Valid values:</p>
+     * <br>
+     * <p>*   slb</p>
+     * <p>*   eni</p>
      */
     @NameInMap("ConnectType")
     public String connectType;
 
     /**
-     * <p>duplicated cluster alias name</p>
+     * <p>The edition of the MSE instance that you want to purchase.</p>
+     * <br>
+     * <p>*   mse_pro: Professional Edition</p>
+     * <p>*   mse_dev: Developer Edition</p>
      */
     @NameInMap("MseVersion")
     public String mseVersion;
 
     /**
-     * <p>mse-200-105</p>
+     * <p>The ID of the region in which the instance resides. The region is supported by Microservices Engine (MSE).</p>
      */
     @NameInMap("RegionId")
     public String regionId;

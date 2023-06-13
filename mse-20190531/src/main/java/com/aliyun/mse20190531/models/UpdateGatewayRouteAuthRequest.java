@@ -4,18 +4,36 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateGatewayRouteAuthRequest extends TeaModel {
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>The authentication configurations.</p>
+     */
     @NameInMap("AuthJSON")
     public UpdateGatewayRouteAuthRequestAuthJSON authJSON;
 
+    /**
+     * <p>The gateway ID.</p>
+     */
     @NameInMap("GatewayId")
     public Long gatewayId;
 
+    /**
+     * <p>The unique ID of the gateway.</p>
+     */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    /**
+     * <p>The route ID.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
@@ -65,6 +83,11 @@ public class UpdateGatewayRouteAuthRequest extends TeaModel {
     }
 
     public static class UpdateGatewayRouteAuthRequestAuthJSON extends TeaModel {
+        /**
+         * <p>The authentication type. If an empty string is passed, no authentication type is available. Valid values:</p>
+         * <br>
+         * <p>*   JWT</p>
+         */
         @NameInMap("Type")
         public String type;
 

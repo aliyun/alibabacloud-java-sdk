@@ -5,40 +5,63 @@ import com.aliyun.tea.*;
 
 public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
     /**
-     * <p>systemError</p>
+     * <p>The status code. A value of 200 is returned if the request was successful.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The details of the data.</p>
+     */
     @NameInMap("Data")
     public ListClusterHealthCheckTaskResponseBodyData data;
 
+    /**
+     * <p>The dynamic part in the error message.</p>
+     */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
+    /**
+     * <p>The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.</p>
+     * <br>
+     * <p>> If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
-     * <p>system error</p>
+     * <p>The error code returned if the request failed. Take note of the following rules:</p>
+     * <br>
+     * <p>*   The **ErrorCode** parameter is not returned if the request is successful.</p>
+     * <p>*   The **ErrorCode** parameter is returned if the request fails. For more information, see the **Error codes** section in this topic.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>cluster not found</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>mse-100-001</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -121,48 +144,100 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
     }
 
     public static class ListClusterHealthCheckTaskResponseBodyDataResultRiskList extends TeaModel {
+        /**
+         * <p>The description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID.</p>
+         */
         @NameInMap("Id")
         public Integer id;
 
+        /**
+         * <p>A redundant parameter.</p>
+         */
         @NameInMap("Module")
         public String module;
 
+        /**
+         * <p>Indicates whether the risk item notification feature is disabled.</p>
+         * <br>
+         * <p>*   true: disabled</p>
+         * <p>*   false: enabled</p>
+         */
         @NameInMap("Mute")
         public Boolean mute;
 
+        /**
+         * <p>A redundant parameter.</p>
+         */
         @NameInMap("NoticeFeature")
         public Boolean noticeFeature;
 
+        /**
+         * <p>The ID of the user to which the cluster belongs.</p>
+         */
         @NameInMap("PrimaryUser")
         public String primaryUser;
 
+        /**
+         * <p>The risk code.</p>
+         */
         @NameInMap("RiskCode")
         public String riskCode;
 
+        /**
+         * <p>The severity of the risk. Valid values:</p>
+         * <br>
+         * <p>*   HIGH: high risk</p>
+         * <p>*   MID: medium risk</p>
+         * <p>*   LOW: low risk</p>
+         */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
+        /**
+         * <p>The name of the risk.</p>
+         */
         @NameInMap("RiskName")
         public String riskName;
 
+        /**
+         * <p>The type of the risk.</p>
+         */
         @NameInMap("RiskType")
         public String riskType;
 
+        /**
+         * <p>The situation.</p>
+         */
         @NameInMap("Situation")
         public String situation;
 
+        /**
+         * <p>The suggestion.</p>
+         */
         @NameInMap("Suggestion")
         public String suggestion;
 
+        /**
+         * <p>The ID of the associated parent task.</p>
+         */
         @NameInMap("TaskId")
         public Long taskId;
 
+        /**
+         * <p>A redundant parameter.</p>
+         */
         @NameInMap("Type")
         public Integer type;
 
+        /**
+         * <p>A redundant parameter.</p>
+         */
         @NameInMap("Values")
         public String values;
 
@@ -294,57 +369,111 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
     }
 
     public static class ListClusterHealthCheckTaskResponseBodyDataResult extends TeaModel {
+        /**
+         * <p>The complete version number.</p>
+         */
         @NameInMap("AppVersion")
         public String appVersion;
 
+        /**
+         * <p>The billing method.</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <p>The type of the cluster.</p>
+         */
         @NameInMap("ClusterType")
         public String clusterType;
 
+        /**
+         * <p>The time when the task was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The ID.</p>
+         */
         @NameInMap("Id")
         public Integer id;
 
+        /**
+         * <p>A redundant parameter.</p>
+         */
         @NameInMap("ImageVersion")
         public String imageVersion;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The ID of the user to which the instance belongs.</p>
+         */
         @NameInMap("PrimaryUser")
         public String primaryUser;
 
+        /**
+         * <p>The number of nodes in the instance.</p>
+         */
         @NameInMap("Replica")
         public String replica;
 
+        /**
+         * <p>The list of risk items.</p>
+         */
         @NameInMap("RiskList")
         public java.util.List<ListClusterHealthCheckTaskResponseBodyDataResultRiskList> riskList;
 
+        /**
+         * <p>The total score.</p>
+         */
         @NameInMap("Score")
         public Integer score;
 
+        /**
+         * <p>The specifications.</p>
+         */
         @NameInMap("Spec")
         public String spec;
 
+        /**
+         * <p>The status of the task.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The total number of check items.</p>
+         */
         @NameInMap("TotalItem")
         public Integer totalItem;
 
+        /**
+         * <p>The total number of risk items.</p>
+         */
         @NameInMap("TotalRisk")
         public Integer totalRisk;
 
+        /**
+         * <p>A redundant parameter.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The last update time.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <p>The version number.</p>
+         */
         @NameInMap("VersionCode")
         public String versionCode;
 
@@ -500,15 +629,27 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
     }
 
     public static class ListClusterHealthCheckTaskResponseBodyData extends TeaModel {
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The list of health check tasks.</p>
+         */
         @NameInMap("Result")
         public java.util.List<ListClusterHealthCheckTaskResponseBodyDataResult> result;
 
+        /**
+         * <p>The total number of returned entries.</p>
+         */
         @NameInMap("TotalSize")
         public Integer totalSize;
 

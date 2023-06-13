@@ -113,9 +113,6 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         @NameInMap("enableRules")
         public Boolean enableRules;
 
-        @NameInMap("entryRule")
-        public String entryRule;
-
         @NameInMap("gmtCreate")
         public String gmtCreate;
 
@@ -208,14 +205,6 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         }
         public Boolean getEnableRules() {
             return this.enableRules;
-        }
-
-        public QueryAllSwimmingLaneResponseBodyData setEntryRule(String entryRule) {
-            this.entryRule = entryRule;
-            return this;
-        }
-        public String getEntryRule() {
-            return this.entryRule;
         }
 
         public QueryAllSwimmingLaneResponseBodyData setGmtCreate(String gmtCreate) {

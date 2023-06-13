@@ -5,37 +5,40 @@ import com.aliyun.tea.*;
 
 public class UpdateClusterSpecRequest extends TeaModel {
     /**
-     * <p>system error</p>
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>mse-200-021</p>
+     * <p>The ID of the cluster.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>mse-100-001</p>
+     * <p>The destination engine specifications.</p>
      */
     @NameInMap("ClusterSpecification")
     public String clusterSpecification;
 
     /**
-     * <p>cluster not found</p>
+     * <p>The number of destination nodes.</p>
      */
     @NameInMap("InstanceCount")
     public Integer instanceCount;
 
     /**
-     * <p>clusterNotFound</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>systemError</p>
+     * <p>The MSE version.</p>
      */
     @NameInMap("MseVersion")
     public String mseVersion;

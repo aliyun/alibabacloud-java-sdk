@@ -4,21 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetGatewayResponseBody extends TeaModel {
+    /**
+     * <p>The status code returned. A value of 200 indicates that the request is successful.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The information about the gateway.</p>
+     */
     @NameInMap("Data")
     public GetGatewayResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -75,13 +96,104 @@ public class GetGatewayResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetGatewayResponseBodyDataElasticPolicyTimePolicyList extends TeaModel {
+        @NameInMap("DesiredReplica")
+        public Integer desiredReplica;
+
+        @NameInMap("EndTime")
+        public String endTime;
+
+        @NameInMap("StartTime")
+        public String startTime;
+
+        public static GetGatewayResponseBodyDataElasticPolicyTimePolicyList build(java.util.Map<String, ?> map) throws Exception {
+            GetGatewayResponseBodyDataElasticPolicyTimePolicyList self = new GetGatewayResponseBodyDataElasticPolicyTimePolicyList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetGatewayResponseBodyDataElasticPolicyTimePolicyList setDesiredReplica(Integer desiredReplica) {
+            this.desiredReplica = desiredReplica;
+            return this;
+        }
+        public Integer getDesiredReplica() {
+            return this.desiredReplica;
+        }
+
+        public GetGatewayResponseBodyDataElasticPolicyTimePolicyList setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public GetGatewayResponseBodyDataElasticPolicyTimePolicyList setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+    }
+
+    public static class GetGatewayResponseBodyDataElasticPolicy extends TeaModel {
+        @NameInMap("ElasticType")
+        public String elasticType;
+
+        @NameInMap("MaxReplica")
+        public Integer maxReplica;
+
+        @NameInMap("TimePolicyList")
+        public java.util.List<GetGatewayResponseBodyDataElasticPolicyTimePolicyList> timePolicyList;
+
+        public static GetGatewayResponseBodyDataElasticPolicy build(java.util.Map<String, ?> map) throws Exception {
+            GetGatewayResponseBodyDataElasticPolicy self = new GetGatewayResponseBodyDataElasticPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public GetGatewayResponseBodyDataElasticPolicy setElasticType(String elasticType) {
+            this.elasticType = elasticType;
+            return this;
+        }
+        public String getElasticType() {
+            return this.elasticType;
+        }
+
+        public GetGatewayResponseBodyDataElasticPolicy setMaxReplica(Integer maxReplica) {
+            this.maxReplica = maxReplica;
+            return this;
+        }
+        public Integer getMaxReplica() {
+            return this.maxReplica;
+        }
+
+        public GetGatewayResponseBodyDataElasticPolicy setTimePolicyList(java.util.List<GetGatewayResponseBodyDataElasticPolicyTimePolicyList> timePolicyList) {
+            this.timePolicyList = timePolicyList;
+            return this;
+        }
+        public java.util.List<GetGatewayResponseBodyDataElasticPolicyTimePolicyList> getTimePolicyList() {
+            return this.timePolicyList;
+        }
+
+    }
+
     public static class GetGatewayResponseBodyDataLogConfigDetails extends TeaModel {
+        /**
+         * <p>Indicates whether Log Service is activated.</p>
+         */
         @NameInMap("LogEnabled")
         public Boolean logEnabled;
 
+        /**
+         * <p>The name of the Logstore.</p>
+         */
         @NameInMap("LogStoreName")
         public String logStoreName;
 
+        /**
+         * <p>The name of the project.</p>
+         */
         @NameInMap("ProjectName")
         public String projectName;
 
@@ -117,9 +229,15 @@ public class GetGatewayResponseBody extends TeaModel {
     }
 
     public static class GetGatewayResponseBodyDataXtraceDetails extends TeaModel {
+        /**
+         * <p>The sampling rate of Tracing Analysis.</p>
+         */
         @NameInMap("Sample")
         public Integer sample;
 
+        /**
+         * <p>Indicates whether sampling by using Tracing Analysis is enabled.</p>
+         */
         @NameInMap("TraceOn")
         public Boolean traceOn;
 
@@ -147,69 +265,150 @@ public class GetGatewayResponseBody extends TeaModel {
     }
 
     public static class GetGatewayResponseBodyData extends TeaModel {
+        /**
+         * <p>The billing method, such as subscription or pay-as-you-go.</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
+        @NameInMap("Elastic")
+        public Boolean elastic;
+
+        @NameInMap("ElasticPolicy")
+        public GetGatewayResponseBodyDataElasticPolicy elasticPolicy;
+
+        @NameInMap("ElasticReplica")
+        public Integer elasticReplica;
+
+        @NameInMap("ElasticType")
+        public String elasticType;
+
+        /**
+         * <p>The time when the gateway expires.</p>
+         */
         @NameInMap("EndDate")
         public String endDate;
 
+        /**
+         * <p>The unique ID of the gateway.</p>
+         */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
+        /**
+         * <p>The time when the gateway was created. The time is displayed in GMT. The time is the local time of the region in which the gateway resides.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The time when the gateway was last modified.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The ID of the gateway.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The log configuration.</p>
+         */
         @NameInMap("LogConfigDetails")
         public GetGatewayResponseBodyDataLogConfigDetails logConfigDetails;
 
+        /**
+         * <p>The tag of the resource.</p>
+         */
         @NameInMap("MseTag")
         public String mseTag;
 
+        /**
+         * <p>The name of the gateway.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The Alibaba Cloud account ID of the user who created the gateway.</p>
+         */
         @NameInMap("PrimaryUser")
         public String primaryUser;
 
+        /**
+         * <p>The region ID.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The number of gateway replicas.</p>
+         */
         @NameInMap("Replica")
         public Integer replica;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The ID of the security group.</p>
+         */
         @NameInMap("SecurityGroup")
         public String securityGroup;
 
+        /**
+         * <p>The specifications of the gateway.</p>
+         */
         @NameInMap("Spec")
         public String spec;
 
+        /**
+         * <p>The status of the gateway. Valid values: 0: The gateway is being created. 1: The gateway fails to be created. 2: The gateway is running. 3: The gateway is changing. 4: The gateway is scaling down. 6: The gateway is scaling up. 8: The gateway is being deleted. 10: The gateway is restarting. 11: The gateway is being rebuilt. 12: The gateway is updating. 13: The gateway fails to be updated.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The description of the status.</p>
+         */
         @NameInMap("StatusDesc")
         public String statusDesc;
 
+        @NameInMap("TotalReplica")
+        public Integer totalReplica;
+
+        /**
+         * <p>The ID of the VPC.</p>
+         */
         @NameInMap("Vpc")
         public String vpc;
 
+        /**
+         * <p>The ID of the vSwitch.</p>
+         */
         @NameInMap("Vswitch")
         public String vswitch;
 
+        /**
+         * <p>The ID of the secondary vSwitch.</p>
+         */
         @NameInMap("Vswitch2")
         public String vswitch2;
 
+        /**
+         * <p>The details of Tracing Analysis.</p>
+         */
         @NameInMap("XtraceDetails")
         public GetGatewayResponseBodyDataXtraceDetails xtraceDetails;
 
@@ -224,6 +423,38 @@ public class GetGatewayResponseBody extends TeaModel {
         }
         public String getChargeType() {
             return this.chargeType;
+        }
+
+        public GetGatewayResponseBodyData setElastic(Boolean elastic) {
+            this.elastic = elastic;
+            return this;
+        }
+        public Boolean getElastic() {
+            return this.elastic;
+        }
+
+        public GetGatewayResponseBodyData setElasticPolicy(GetGatewayResponseBodyDataElasticPolicy elasticPolicy) {
+            this.elasticPolicy = elasticPolicy;
+            return this;
+        }
+        public GetGatewayResponseBodyDataElasticPolicy getElasticPolicy() {
+            return this.elasticPolicy;
+        }
+
+        public GetGatewayResponseBodyData setElasticReplica(Integer elasticReplica) {
+            this.elasticReplica = elasticReplica;
+            return this;
+        }
+        public Integer getElasticReplica() {
+            return this.elasticReplica;
+        }
+
+        public GetGatewayResponseBodyData setElasticType(String elasticType) {
+            this.elasticType = elasticType;
+            return this;
+        }
+        public String getElasticType() {
+            return this.elasticType;
         }
 
         public GetGatewayResponseBodyData setEndDate(String endDate) {
@@ -360,6 +591,14 @@ public class GetGatewayResponseBody extends TeaModel {
         }
         public String getStatusDesc() {
             return this.statusDesc;
+        }
+
+        public GetGatewayResponseBodyData setTotalReplica(Integer totalReplica) {
+            this.totalReplica = totalReplica;
+            return this;
+        }
+        public Integer getTotalReplica() {
+            return this.totalReplica;
         }
 
         public GetGatewayResponseBodyData setVpc(String vpc) {

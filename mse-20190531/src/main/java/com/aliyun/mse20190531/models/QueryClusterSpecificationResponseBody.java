@@ -4,24 +4,48 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QueryClusterSpecificationResponseBody extends TeaModel {
+    /**
+     * <p>The return value.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The details of the data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<QueryClusterSpecificationResponseBodyData> data;
 
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -87,12 +111,21 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
     }
 
     public static class QueryClusterSpecificationResponseBodyData extends TeaModel {
+        /**
+         * <p>The engine specifications that can be used.</p>
+         */
         @NameInMap("ClusterSpecificationName")
         public String clusterSpecificationName;
 
+        /**
+         * <p>The number of vCPUs in the specifications.</p>
+         */
         @NameInMap("CpuCapacity")
         public String cpuCapacity;
 
+        /**
+         * <p>The memory size in the specifications. Unit: GB.</p>
+         */
         @NameInMap("MemoryCapacity")
         public String memoryCapacity;
 

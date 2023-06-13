@@ -5,37 +5,40 @@ import com.aliyun.tea.*;
 
 public class ListClusterHealthCheckTaskRequest extends TeaModel {
     /**
-     * <p>mse-200-021</p>
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>duplicatedClusterAliasName</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>duplicated cluster alias name</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("PageNum")
     public Integer pageNum;
 
     /**
-     * <p>mse-100-007</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>illegalRequest</p>
+     * <p>The region in which the instance resides.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>illegal request:%s</p>
+     * <p>The extended request parameters in the JSON format.</p>
      */
     @NameInMap("RequestPars")
     public String requestPars;

@@ -4,35 +4,47 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class FetchLosslessRuleListRequest extends TeaModel {
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>systemError</p>
+     * <p>The ID of the application.</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>cluster not found</p>
+     * <p>The name of the application.</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
-     * <p>mse-100-001</p>
+     * <p>The namespace.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>clusterNotFound</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

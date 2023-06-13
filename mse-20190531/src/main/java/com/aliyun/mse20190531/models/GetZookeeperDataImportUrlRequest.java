@@ -5,19 +5,22 @@ import com.aliyun.tea.*;
 
 public class GetZookeeperDataImportUrlRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>system error</p>
+     * <p>The type of the file.</p>
      */
     @NameInMap("ContentType")
     public String contentType;
 
     /**
-     * <p>systemError</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

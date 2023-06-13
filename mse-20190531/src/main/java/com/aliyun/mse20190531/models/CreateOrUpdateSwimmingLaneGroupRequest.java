@@ -4,71 +4,56 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to record the request details.</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>cluster not found</p>
+     * <p>The IDs of applications. Separate application IDs with commas (,).</p>
      */
     @NameInMap("AppIds")
     public String appIds;
 
     /**
-     * <p>system error</p>
+     * <p>Specifies whether to enable database canary release.</p>
      */
     @NameInMap("DbGrayEnable")
     public Boolean dbGrayEnable;
 
     /**
-     * <p>mse-100-007</p>
+     * <p>Specifies whether to enable a lane group.</p>
      */
     @NameInMap("Enable")
     public Boolean enable;
 
     /**
-     * <p>clusterNotFound</p>
+     * <p>The ingress application.</p>
      */
     @NameInMap("EntryApp")
     public String entryApp;
 
     /**
-     * <p>illegal request:%s</p>
-     */
-    @NameInMap("GmtCreate")
-    public String gmtCreate;
-
-    /**
-     * <p>mse-200-021</p>
-     */
-    @NameInMap("GmtModified")
-    public String gmtModified;
-
-    /**
-     * <p>The details of the data.</p>
+     * <p>The ID of the primary key. The primary key is auto-increment.</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
-     * <p>mse-200-105</p>
-     */
-    @NameInMap("LicenseKey")
-    public String licenseKey;
-
-    /**
-     * <p>systemError</p>
+     * <p>The side for message filtering when the canary release for messaging feature is enabled.</p>
      */
     @NameInMap("MessageQueueFilterSide")
     public String messageQueueFilterSide;
 
     /**
-     * <p>mse-100-001</p>
+     * <p>Specifies whether to enable canary release for messaging.</p>
      */
     @NameInMap("MessageQueueGrayEnable")
     public Boolean messageQueueGrayEnable;
 
     /**
-     * <p>any</p>
+     * <p>The name.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -76,32 +61,23 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>是否开启记录请求详情。</p>
+     */
     @NameInMap("RecordCanaryDetail")
     public Boolean recordCanaryDetail;
 
     /**
-     * <p>code</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
-     * <p>duplicatedClusterAliasName</p>
-     */
-    @NameInMap("Source")
-    public String source;
-
-    /**
-     * <p>illegalRequest</p>
+     * <p>The status of the lane group. The value 0 specifies that the lane group is disabled. The value 1 specifies that the lane group is enabled.</p>
      */
     @NameInMap("Status")
     public Integer status;
-
-    /**
-     * <p>duplicated cluster alias name</p>
-     */
-    @NameInMap("UserId")
-    public String userId;
 
     public static CreateOrUpdateSwimmingLaneGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateOrUpdateSwimmingLaneGroupRequest self = new CreateOrUpdateSwimmingLaneGroupRequest();
@@ -148,36 +124,12 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
         return this.entryApp;
     }
 
-    public CreateOrUpdateSwimmingLaneGroupRequest setGmtCreate(String gmtCreate) {
-        this.gmtCreate = gmtCreate;
-        return this;
-    }
-    public String getGmtCreate() {
-        return this.gmtCreate;
-    }
-
-    public CreateOrUpdateSwimmingLaneGroupRequest setGmtModified(String gmtModified) {
-        this.gmtModified = gmtModified;
-        return this;
-    }
-    public String getGmtModified() {
-        return this.gmtModified;
-    }
-
     public CreateOrUpdateSwimmingLaneGroupRequest setId(Long id) {
         this.id = id;
         return this;
     }
     public Long getId() {
         return this.id;
-    }
-
-    public CreateOrUpdateSwimmingLaneGroupRequest setLicenseKey(String licenseKey) {
-        this.licenseKey = licenseKey;
-        return this;
-    }
-    public String getLicenseKey() {
-        return this.licenseKey;
     }
 
     public CreateOrUpdateSwimmingLaneGroupRequest setMessageQueueFilterSide(String messageQueueFilterSide) {
@@ -228,28 +180,12 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
         return this.region;
     }
 
-    public CreateOrUpdateSwimmingLaneGroupRequest setSource(String source) {
-        this.source = source;
-        return this;
-    }
-    public String getSource() {
-        return this.source;
-    }
-
     public CreateOrUpdateSwimmingLaneGroupRequest setStatus(Integer status) {
         this.status = status;
         return this;
     }
     public Integer getStatus() {
         return this.status;
-    }
-
-    public CreateOrUpdateSwimmingLaneGroupRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
 }

@@ -4,24 +4,48 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetLosslessRuleByAppResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public GetLosslessRuleByAppResponseBodyData data;
 
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The request was successful.</p>
+     * <p>*   false: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -87,36 +111,72 @@ public class GetLosslessRuleByAppResponseBody extends TeaModel {
     }
 
     public static class GetLosslessRuleByAppResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether service registration is complete before readiness probe.</p>
+         */
         @NameInMap("Aligned")
         public Boolean aligned;
 
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The number of instances.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The registration latency. Unit: seconds.</p>
+         */
         @NameInMap("DelayTime")
         public Integer delayTime;
 
+        /**
+         * <p>Indicates whether graceful start is enabled. Valid values:</p>
+         * <br>
+         * <p>*   `true`: enabled</p>
+         * <p>*   `false`: disabled</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
+        /**
+         * <p>The slope of the prefetching curve.</p>
+         */
         @NameInMap("FuncType")
         public Integer funcType;
 
+        /**
+         * <p>Indicates whether online and offline processing details are displayed.</p>
+         */
         @NameInMap("LossLessDetail")
         public Boolean lossLessDetail;
 
+        /**
+         * <p>Indicates whether notification is enabled.</p>
+         */
         @NameInMap("Notice")
         public Boolean notice;
 
+        /**
+         * <p>Indicates whether service prefetching is complete before readiness probe.</p>
+         */
         @NameInMap("Related")
         public Boolean related;
 
+        /**
+         * <p>The prefetching duration. Unit: seconds.</p>
+         */
         @NameInMap("WarmupTime")
         public Integer warmupTime;
 

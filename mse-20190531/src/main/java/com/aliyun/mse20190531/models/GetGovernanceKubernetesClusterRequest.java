@@ -4,12 +4,24 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetGovernanceKubernetesClusterRequest extends TeaModel {
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The ID of the region in which the instance resides. The region is supported by MSE.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

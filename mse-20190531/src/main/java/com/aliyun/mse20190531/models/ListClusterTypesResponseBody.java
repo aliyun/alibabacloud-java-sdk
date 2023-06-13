@@ -5,43 +5,54 @@ import com.aliyun.tea.*;
 
 public class ListClusterTypesResponseBody extends TeaModel {
     /**
-     * <p>mse-100-001</p>
+     * <p>The status code returned.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data entries returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListClusterTypesResponseBodyData> data;
 
+    /**
+     * <p>The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.</p>
+     * <br>
+     * <p>> If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
-     * <p>cluster not found</p>
+     * <p>The error code returned if the request failed.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>illegal request:%s</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>systemError</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>mse-200-021</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>clusterNotFound</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -116,6 +127,9 @@ public class ListClusterTypesResponseBody extends TeaModel {
     }
 
     public static class ListClusterTypesResponseBodyData extends TeaModel {
+        /**
+         * <p>The type of the MSE engine that can be activated.</p>
+         */
         @NameInMap("ShowName")
         public String showName;
 

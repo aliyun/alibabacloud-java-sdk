@@ -5,73 +5,79 @@ import com.aliyun.tea.*;
 
 public class ListNamingTrackRequest extends TeaModel {
     /**
-     * <p>system error</p>
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>clusterNotFound</p>
+     * <p>The end timestamp. Unit: seconds.</p>
      */
     @NameInMap("EndTs")
     public Long endTs;
 
     /**
-     * <p>mse-100-007</p>
+     * <p>The group.</p>
      */
     @NameInMap("Group")
     public String group;
 
     /**
-     * <p>duplicatedClusterAliasName</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>illegal request:%s</p>
+     * <p>The IP address of the client.</p>
      */
     @NameInMap("Ip")
     public String ip;
 
     /**
-     * <p>illegalRequest</p>
+     * <p>The ID of the namespace.</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
-     * <p>mse-100-001</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("PageNum")
     public Long pageNum;
 
     /**
-     * <p>cluster not found</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>mse-200-105</p>
+     * <p>The extended request parameters in the JSON format.</p>
      */
     @NameInMap("RequestPars")
     public String requestPars;
 
     /**
-     * <p>systemError</p>
+     * <p>Specifies whether to sort the query results in chronological order or reverse chronological order. Default value: `false`.</p>
+     * <br>
+     * <p>*   `true`: sorts the query results in reverse chronological order.</p>
+     * <p>*   `false`: sorts the query results in chronological order.</p>
      */
     @NameInMap("Reverse")
     public Boolean reverse;
 
     /**
-     * <p>duplicated cluster alias name</p>
+     * <p>The name of the service.</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;
 
     /**
-     * <p>mse-200-021</p>
+     * <p>The start timestamp. Unit: seconds.</p>
      */
     @NameInMap("StartTs")
     public Long startTs;

@@ -19,6 +19,9 @@ public class QueryAllSwimmingLaneRequest extends TeaModel {
     @NameInMap("GroupId")
     public Long groupId;
 
+    /**
+     * <p>MSE命名空间名字</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 

@@ -5,40 +5,40 @@ import com.aliyun.tea.*;
 
 public class AddSecurityGroupRuleResponseBody extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>The status code returned.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
-     * <p>The ID of the gateway.</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The description.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The range of port numbers.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The schema of the response.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;

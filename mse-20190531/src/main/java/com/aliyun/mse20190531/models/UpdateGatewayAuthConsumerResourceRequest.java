@@ -4,18 +4,30 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateGatewayAuthConsumerResourceRequest extends TeaModel {
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>The gateway authentication consumer ID.</p>
+     */
     @NameInMap("ConsumerId")
     public Long consumerId;
 
     /**
-     * <p>UpdateGatewayAuthConsumerResource</p>
+     * <p>The unique ID of the gateway.</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    /**
+     * <p>The gateway authentication consumer ID.</p>
+     */
     @NameInMap("ResourceList")
     public java.util.List<UpdateGatewayAuthConsumerResourceRequestResourceList> resourceList;
 
@@ -57,9 +69,15 @@ public class UpdateGatewayAuthConsumerResourceRequest extends TeaModel {
     }
 
     public static class UpdateGatewayAuthConsumerResourceRequestResourceList extends TeaModel {
+        /**
+         * <p>The route ID.</p>
+         */
         @NameInMap("RouteId")
         public Long routeId;
 
+        /**
+         * <p>The name of the route.</p>
+         */
         @NameInMap("RouteName")
         public String routeName;
 

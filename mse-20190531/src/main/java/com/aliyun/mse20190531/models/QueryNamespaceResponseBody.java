@@ -7,11 +7,8 @@ public class QueryNamespaceResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<QueryNamespaceResponseBodyData> data;
 
-    /**
-     * <p>HttpStatusCode。</p>
-     */
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
+    @NameInMap("ErrorCode")
+    public String errorCode;
 
     @NameInMap("Message")
     public String message;
@@ -35,12 +32,12 @@ public class QueryNamespaceResponseBody extends TeaModel {
         return this.data;
     }
 
-    public QueryNamespaceResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
+    public QueryNamespaceResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
         return this;
     }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public QueryNamespaceResponseBody setMessage(String message) {

@@ -4,21 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The details of the data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListGatewayRouteOnAuthResponseBodyData> data;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`</p>
+     * <p>*   `false`</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,9 +97,15 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
     }
 
     public static class ListGatewayRouteOnAuthResponseBodyDataRoutePredicatesPathPredicates extends TeaModel {
+        /**
+         * <p>The path.</p>
+         */
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <p>The matching type.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -106,6 +133,9 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
     }
 
     public static class ListGatewayRouteOnAuthResponseBodyDataRoutePredicates extends TeaModel {
+        /**
+         * <p>The information about route matching.</p>
+         */
         @NameInMap("PathPredicates")
         public ListGatewayRouteOnAuthResponseBodyDataRoutePredicatesPathPredicates pathPredicates;
 
@@ -125,30 +155,57 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
     }
 
     public static class ListGatewayRouteOnAuthResponseBodyData extends TeaModel {
+        /**
+         * <p>The domain ID.</p>
+         */
         @NameInMap("DomainId")
         public Long domainId;
 
+        /**
+         * <p>The domain IDs.</p>
+         */
         @NameInMap("DomainIdList")
         public java.util.List<Long> domainIdList;
 
+        /**
+         * <p>The domain name.</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>The domain names.</p>
+         */
         @NameInMap("DomainNameList")
         public java.util.List<String> domainNameList;
 
+        /**
+         * <p>The gateway ID.</p>
+         */
         @NameInMap("GatewayId")
         public String gatewayId;
 
+        /**
+         * <p>The unique ID of the gateway.</p>
+         */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
+        /**
+         * <p>The route ID.</p>
+         */
         @NameInMap("Id")
         public Integer id;
 
+        /**
+         * <p>The name of the route.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The information about route matching.</p>
+         */
         @NameInMap("RoutePredicates")
         public ListGatewayRouteOnAuthResponseBodyDataRoutePredicates routePredicates;
 

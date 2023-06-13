@@ -4,9 +4,15 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class FetchLosslessRuleListResponseBody extends TeaModel {
+    /**
+     * <p>The response code returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Data")
     public FetchLosslessRuleListResponseBodyData data;
 
@@ -16,12 +22,24 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -87,36 +105,72 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
     }
 
     public static class FetchLosslessRuleListResponseBodyDataResults extends TeaModel {
+        /**
+         * <p>Indicates whether service registration is complete before readiness probe.</p>
+         */
         @NameInMap("Aligned")
         public Boolean aligned;
 
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The number of instances.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The registration latency. Unit: seconds.</p>
+         */
         @NameInMap("DelayTime")
         public Integer delayTime;
 
+        /**
+         * <p>Indicates whether graceful start is enabled. Valid values:</p>
+         * <br>
+         * <p>*   `true`: enabled</p>
+         * <p>*   `false`: disabled</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
+        /**
+         * <p>The slope of the prefetching curve.</p>
+         */
         @NameInMap("FuncType")
         public Integer funcType;
 
+        /**
+         * <p>Indicates whether online and offline processing details are displayed.</p>
+         */
         @NameInMap("LossLessDetail")
         public Boolean lossLessDetail;
 
+        /**
+         * <p>Indicates whether notification is enabled.</p>
+         */
         @NameInMap("Notice")
         public Boolean notice;
 
+        /**
+         * <p>Indicates whether service prefetching is complete before readiness probe.</p>
+         */
         @NameInMap("Related")
         public Boolean related;
 
+        /**
+         * <p>The prefetching duration. Unit: seconds.</p>
+         */
         @NameInMap("WarmupTime")
         public Integer warmupTime;
 
@@ -216,15 +270,27 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
     }
 
     public static class FetchLosslessRuleListResponseBodyData extends TeaModel {
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The returned data.</p>
+         */
         @NameInMap("Results")
         public java.util.List<FetchLosslessRuleListResponseBodyDataResults> results;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalSize")
         public Integer totalSize;
 

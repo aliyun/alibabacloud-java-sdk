@@ -4,21 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetGatewayDomainDetailResponseBody extends TeaModel {
+    /**
+     * <p>The status code returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetGatewayDomainDetailResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,66 +97,133 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
     }
 
     public static class GetGatewayDomainDetailResponseBodyData extends TeaModel {
+        /**
+         * <p>The start time.</p>
+         */
         @NameInMap("AfterDate")
         public Long afterDate;
 
+        /**
+         * <p>The algorithm.</p>
+         */
         @NameInMap("Algorithm")
         public String algorithm;
 
+        /**
+         * <p>The expiration time.</p>
+         */
         @NameInMap("BeforeDate")
         public Long beforeDate;
 
+        /**
+         * <p>The ID of the certificate.</p>
+         */
         @NameInMap("CertIdentifier")
         public String certIdentifier;
 
+        /**
+         * <p>The name of the certificate.</p>
+         */
         @NameInMap("CertName")
         public String certName;
 
+        /**
+         * <p>The public domain name.</p>
+         */
         @NameInMap("CommonName")
         public String commonName;
 
+        /**
+         * <p>The ID of the gateway.</p>
+         */
         @NameInMap("GatewayId")
         public Long gatewayId;
 
+        /**
+         * <p>The unique ID of the gateway.</p>
+         */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
+        /**
+         * <p>The start time.</p>
+         */
         @NameInMap("GmtAfter")
         public String gmtAfter;
 
+        /**
+         * <p>The expiration time.</p>
+         */
         @NameInMap("GmtBefore")
         public String gmtBefore;
 
+        /**
+         * <p>The creation time.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The update time.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>Indicates whether `HTTP/2` is enabled.</p>
+         * <br>
+         * <p>*   `open`: `HTTP/2` is enabled.</p>
+         * <p>*   `close`: `HTTP/2` is disabled.</p>
+         * <p>*   `globalConfig`: Global configurations are used.</p>
+         */
         @NameInMap("Http2")
         public String http2;
 
+        /**
+         * <p>The ID.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The issuer.</p>
+         */
         @NameInMap("Issuer")
         public String issuer;
 
+        /**
+         * <p>Indicates whether HTTPS is forcibly used.</p>
+         */
         @NameInMap("MustHttps")
         public Boolean mustHttps;
 
+        /**
+         * <p>The domain name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The protocol of the gateway.</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <p>The name of the extended field.</p>
+         */
         @NameInMap("Sans")
         public String sans;
 
+        /**
+         * <p>The maximum version of Transport Layer Security (TLS).</p>
+         */
         @NameInMap("TlsMax")
         public String tlsMax;
 
+        /**
+         * <p>The minimum version of TLS.</p>
+         */
         @NameInMap("TlsMin")
         public String tlsMin;
 

@@ -4,24 +4,39 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QueryClusterInfoResponseBody extends TeaModel {
+    /**
+     * <p>The details of the data.</p>
+     */
     @NameInMap("Data")
     public QueryClusterInfoResponseBodyData data;
 
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>mse-100-001</p>
+     * <p>The message returned.</p>
+     * <br>
+     * <p>*   If the request is successful, a success message is returned.</p>
+     * <p>*   If the request fails, an error message is returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>system error</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -71,27 +86,51 @@ public class QueryClusterInfoResponseBody extends TeaModel {
     }
 
     public static class QueryClusterInfoResponseBodyDataInstanceModels extends TeaModel {
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("CreationTimestamp")
         public String creationTimestamp;
 
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("HealthStatus")
         public String healthStatus;
 
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("PodName")
         public String podName;
 
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("SingleTunnelVip")
         public String singleTunnelVip;
 
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("Zone")
         public String zone;
 
@@ -167,108 +206,214 @@ public class QueryClusterInfoResponseBody extends TeaModel {
     }
 
     public static class QueryClusterInfoResponseBodyData extends TeaModel {
+        /**
+         * <p>The public IP address whitelist.</p>
+         */
         @NameInMap("AclEntryList")
         public String aclEntryList;
 
+        /**
+         * <p>The ID of the instance in the public IP address whitelist.</p>
+         */
         @NameInMap("AclId")
         public String aclId;
 
+        /**
+         * <p>The version of the instance.</p>
+         */
         @NameInMap("AppVersion")
         public String appVersion;
 
+        /**
+         * <p>The billing method, such as subscription or pay-as-you-go.</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <p>The alias of the instance.</p>
+         */
         @NameInMap("ClusterAliasName")
         public String clusterAliasName;
 
+        /**
+         * <p>The full name of the instance.</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
+        /**
+         * <p>The engine specifications.</p>
+         */
         @NameInMap("ClusterSpecification")
         public String clusterSpecification;
 
+        /**
+         * <p>The type of the instance. Valid values: ZooKeeper, Nacos-Ans, and Eureka.</p>
+         */
         @NameInMap("ClusterType")
         public String clusterType;
 
+        /**
+         * <p>The version of the order.</p>
+         */
         @NameInMap("ClusterVersion")
         public String clusterVersion;
 
+        /**
+         * <p>A deprecated parameter.</p>
+         */
         @NameInMap("ConnectionType")
         public String connectionType;
 
+        /**
+         * <p>A deprecated parameter.</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <p>The time when the instance was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>A deprecated parameter.</p>
+         */
         @NameInMap("DiskCapacity")
         public Long diskCapacity;
 
+        /**
+         * <p>A deprecated parameter.</p>
+         */
         @NameInMap("DiskType")
         public String diskType;
 
+        /**
+         * <p>The status of the instance.</p>
+         */
         @NameInMap("HealthStatus")
         public String healthStatus;
 
+        /**
+         * <p>The time that is required to initialize the instance. Unit: milliseconds.</p>
+         */
         @NameInMap("InitCostTime")
         public Long initCostTime;
 
+        /**
+         * <p>The initial status of the instance.</p>
+         */
         @NameInMap("InitStatus")
         public String initStatus;
 
+        /**
+         * <p>The number of instance nodes.</p>
+         */
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
+        /**
+         * <p>The ID of the instance</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The reserved structure.</p>
+         */
         @NameInMap("InstanceModels")
         public java.util.List<QueryClusterInfoResponseBodyDataInstanceModels> instanceModels;
 
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("InternetAddress")
         public String internetAddress;
 
+        /**
+         * <p>The public endpoint.</p>
+         */
         @NameInMap("InternetDomain")
         public String internetDomain;
 
+        /**
+         * <p>The instance ports that are accessible over the Internet.</p>
+         */
         @NameInMap("InternetPort")
         public String internetPort;
 
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("IntranetAddress")
         public String intranetAddress;
 
+        /**
+         * <p>The internal endpoint.</p>
+         */
         @NameInMap("IntranetDomain")
         public String intranetDomain;
 
+        /**
+         * <p>The instance ports that are accessible over an internal network.</p>
+         */
         @NameInMap("IntranetPort")
         public String intranetPort;
 
+        /**
+         * <p>A deprecated parameter.</p>
+         */
         @NameInMap("MemoryCapacity")
         public Long memoryCapacity;
 
+        /**
+         * <p>The version of the instance.</p>
+         */
         @NameInMap("MseVersion")
         public String mseVersion;
 
+        /**
+         * <p>The network connection type of the instance.</p>
+         */
         @NameInMap("NetType")
         public String netType;
 
+        /**
+         * <p>The billing method.</p>
+         */
         @NameInMap("PayInfo")
         public String payInfo;
 
+        /**
+         * <p>The public bandwidth. Unit: Mbit/s.\</p>
+         * <p>Valid values: 0 to 5000. The value 0 indicates no access to the Internet.</p>
+         */
         @NameInMap("PubNetworkFlow")
         public String pubNetworkFlow;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The tag.</p>
+         */
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
+        /**
+         * <p>The ID of the vSwitch.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The ID of the VPC where the instance resides.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

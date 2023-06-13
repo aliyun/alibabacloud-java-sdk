@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListSSLCertRequest extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>The expiration time.</p>
+     * <p>The unique ID of the gateway.</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;

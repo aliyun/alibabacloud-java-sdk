@@ -5,37 +5,40 @@ import com.aliyun.tea.*;
 
 public class AddServiceSourceResponseBody extends TeaModel {
     /**
-     * <p>The address.</p>
+     * <p>The return value.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The return value.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public Long data;
 
     /**
-     * <p>The namespace whose resources you want to monitor.</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>Specifies whether to update the Ingress status.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The root path of the service.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The list of service groups.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The request was successful.</p>
+     * <p>*   false: The request failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;

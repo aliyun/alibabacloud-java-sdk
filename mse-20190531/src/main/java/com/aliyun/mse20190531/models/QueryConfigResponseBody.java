@@ -312,6 +312,9 @@ public class QueryConfigResponseBody extends TeaModel {
         @NameInMap("SyncLimit")
         public String syncLimit;
 
+        @NameInMap("TLSEnabled")
+        public Boolean TLSEnabled;
+
         /**
          * <p>The time unit of the engine. This parameter is valid for ZooKeeper instances. Default value: 2000. Unit: milliseconds.</p>
          */
@@ -543,6 +546,14 @@ public class QueryConfigResponseBody extends TeaModel {
         }
         public String getSyncLimit() {
             return this.syncLimit;
+        }
+
+        public QueryConfigResponseBodyData setTLSEnabled(Boolean TLSEnabled) {
+            this.TLSEnabled = TLSEnabled;
+            return this;
+        }
+        public Boolean getTLSEnabled() {
+            return this.TLSEnabled;
         }
 
         public QueryConfigResponseBodyData setTickTime(String tickTime) {

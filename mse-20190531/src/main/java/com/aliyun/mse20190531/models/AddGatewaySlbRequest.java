@@ -64,6 +64,9 @@ public class AddGatewaySlbRequest extends TeaModel {
     @NameInMap("VServerGroupId")
     public String VServerGroupId;
 
+    @NameInMap("VServiceList")
+    public java.util.List<AddGatewaySlbRequestVServiceList> VServiceList;
+
     public static AddGatewaySlbRequest build(java.util.Map<String, ?> map) throws Exception {
         AddGatewaySlbRequest self = new AddGatewaySlbRequest();
         return TeaModel.build(map, self);
@@ -139,6 +142,66 @@ public class AddGatewaySlbRequest extends TeaModel {
     }
     public String getVServerGroupId() {
         return this.VServerGroupId;
+    }
+
+    public AddGatewaySlbRequest setVServiceList(java.util.List<AddGatewaySlbRequestVServiceList> VServiceList) {
+        this.VServiceList = VServiceList;
+        return this;
+    }
+    public java.util.List<AddGatewaySlbRequestVServiceList> getVServiceList() {
+        return this.VServiceList;
+    }
+
+    public static class AddGatewaySlbRequestVServiceList extends TeaModel {
+        @NameInMap("Port")
+        public Integer port;
+
+        @NameInMap("Protocol")
+        public String protocol;
+
+        @NameInMap("VServerGroupId")
+        public String VServerGroupId;
+
+        @NameInMap("VServerGroupName")
+        public String VServerGroupName;
+
+        public static AddGatewaySlbRequestVServiceList build(java.util.Map<String, ?> map) throws Exception {
+            AddGatewaySlbRequestVServiceList self = new AddGatewaySlbRequestVServiceList();
+            return TeaModel.build(map, self);
+        }
+
+        public AddGatewaySlbRequestVServiceList setPort(Integer port) {
+            this.port = port;
+            return this;
+        }
+        public Integer getPort() {
+            return this.port;
+        }
+
+        public AddGatewaySlbRequestVServiceList setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        public AddGatewaySlbRequestVServiceList setVServerGroupId(String VServerGroupId) {
+            this.VServerGroupId = VServerGroupId;
+            return this;
+        }
+        public String getVServerGroupId() {
+            return this.VServerGroupId;
+        }
+
+        public AddGatewaySlbRequestVServiceList setVServerGroupName(String VServerGroupName) {
+            this.VServerGroupName = VServerGroupName;
+            return this;
+        }
+        public String getVServerGroupName() {
+            return this.VServerGroupName;
+        }
+
     }
 
 }

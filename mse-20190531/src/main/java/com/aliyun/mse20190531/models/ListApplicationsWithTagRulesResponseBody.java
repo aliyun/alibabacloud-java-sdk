@@ -5,12 +5,6 @@ import com.aliyun.tea.*;
 
 public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code that is returned.</p>
-     */
-    @NameInMap("Code")
-    public Integer code;
-
-    /**
      * <p>The details of the data.</p>
      */
     @NameInMap("Data")
@@ -49,14 +43,6 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
     public static ListApplicationsWithTagRulesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListApplicationsWithTagRulesResponseBody self = new ListApplicationsWithTagRulesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListApplicationsWithTagRulesResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
     public ListApplicationsWithTagRulesResponseBody setData(ListApplicationsWithTagRulesResponseBodyData data) {

@@ -5,25 +5,28 @@ import com.aliyun.tea.*;
 
 public class DeleteSwimmingLaneResponseBody extends TeaModel {
     /**
-     * <p>The status code. A value of 200 is returned if the request is successful.</p>
+     * <p>The error code returned if the request failed.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The error message returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>RestResult</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;

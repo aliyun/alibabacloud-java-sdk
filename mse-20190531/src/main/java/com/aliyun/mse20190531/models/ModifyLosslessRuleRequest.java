@@ -5,82 +5,85 @@ import com.aliyun.tea.*;
 
 public class ModifyLosslessRuleRequest extends TeaModel {
     /**
-     * <p>int64</p>
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>Specifies whether to enable the alert rule. Valid values:</p>
-     * <br>
-     * <p>*   `true`: enables the rule.</p>
-     * <p>*   `false`: disables the rule.</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("Aligned")
     public Boolean aligned;
 
     /**
-     * <p>mse-100-001</p>
+     * <p>The ID of the application.</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>clusterNotFound</p>
+     * <p>The microservice namespace to which the rule applies.</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>Specifies whether to enable graceful start. Valid values:</p>
+     * <br>
+     * <p>*   true: enabled</p>
+     * <p>*   false: disabled</p>
      */
     @NameInMap("DelayTime")
     public Integer delayTime;
 
     /**
-     * <p>systemError</p>
+     * <p>The prefetching duration.</p>
      */
     @NameInMap("Enable")
     public Boolean enable;
 
     /**
-     * <p>The microservice namespace to which the rule applies.</p>
+     * <p>The registration latency.</p>
      */
     @NameInMap("FuncType")
     public Integer funcType;
 
     /**
-     * <p>int64</p>
+     * <p>Specifies whether to display online and offline processing details.</p>
      */
     @NameInMap("LossLessDetail")
     public Boolean lossLessDetail;
 
     /**
-     * <p>cluster not found</p>
+     * <p>The microservice namespace to which the rule applies.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
-     * <p>The registration latency.</p>
+     * <p>Specifies whether to enable notification.</p>
      */
     @NameInMap("Notice")
     public Boolean notice;
 
     /**
-     * <p>mse-200-021</p>
+     * <p>The slope of the prefetching curve.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The prefetching duration.</p>
+     * <p>Specifies whether to complete service registration before readiness probe.</p>
      */
     @NameInMap("Related")
     public Boolean related;
 
     /**
-     * <p>system error</p>
+     * <p>Specifies whether to complete service prefetching before readiness probe.</p>
      */
     @NameInMap("WarmupTime")
     public Integer warmupTime;

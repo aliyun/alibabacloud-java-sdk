@@ -5,46 +5,49 @@ import com.aliyun.tea.*;
 
 public class UpdateClusterSpecResponseBody extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>The response code returned.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>A reserved parameter.</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The error code returned if the request failed. Take note of the following rules:</p>
+     * <br>
+     * <p>*   The **ErrorCode** parameter is not returned if the request succeeds.</p>
+     * <p>*   The **ErrorCode** parameter is returned if the request fails. For more information, see the **Error codes** section in this topic.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The number of destination nodes.</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The destination engine specifications.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The data structure.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;

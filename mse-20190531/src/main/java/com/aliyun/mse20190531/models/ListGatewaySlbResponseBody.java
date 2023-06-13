@@ -4,21 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListGatewaySlbResponseBody extends TeaModel {
+    /**
+     * <p>The status code returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data entries returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListGatewaySlbResponseBodyData> data;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -75,54 +96,160 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class ListGatewaySlbResponseBodyData extends TeaModel {
-        @NameInMap("EditEnable")
-        public Boolean editEnable;
+    public static class ListGatewaySlbResponseBodyDataVServiceList extends TeaModel {
+        @NameInMap("Port")
+        public String port;
 
-        @NameInMap("GatewayId")
-        public String gatewayId;
-
-        @NameInMap("GatewaySlbMode")
-        public String gatewaySlbMode;
-
-        @NameInMap("GatewaySlbStatus")
-        public String gatewaySlbStatus;
-
-        @NameInMap("GmtCreate")
-        public String gmtCreate;
-
-        @NameInMap("HttpPort")
-        public Integer httpPort;
-
-        @NameInMap("HttpsPort")
-        public Integer httpsPort;
-
-        @NameInMap("HttpsVServerGroupId")
-        public String httpsVServerGroupId;
-
-        @NameInMap("Id")
-        public String id;
-
-        @NameInMap("ServiceWeight")
-        public Integer serviceWeight;
-
-        @NameInMap("SlbId")
-        public String slbId;
-
-        @NameInMap("SlbIp")
-        public String slbIp;
-
-        @NameInMap("SlbPort")
-        public String slbPort;
-
-        @NameInMap("StatusDesc")
-        public String statusDesc;
-
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("Protocol")
+        public String protocol;
 
         @NameInMap("VServerGroupId")
         public String VServerGroupId;
+
+        @NameInMap("VServerGroupName")
+        public String VServerGroupName;
+
+        public static ListGatewaySlbResponseBodyDataVServiceList build(java.util.Map<String, ?> map) throws Exception {
+            ListGatewaySlbResponseBodyDataVServiceList self = new ListGatewaySlbResponseBodyDataVServiceList();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGatewaySlbResponseBodyDataVServiceList setPort(String port) {
+            this.port = port;
+            return this;
+        }
+        public String getPort() {
+            return this.port;
+        }
+
+        public ListGatewaySlbResponseBodyDataVServiceList setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        public ListGatewaySlbResponseBodyDataVServiceList setVServerGroupId(String VServerGroupId) {
+            this.VServerGroupId = VServerGroupId;
+            return this;
+        }
+        public String getVServerGroupId() {
+            return this.VServerGroupId;
+        }
+
+        public ListGatewaySlbResponseBodyDataVServiceList setVServerGroupName(String VServerGroupName) {
+            this.VServerGroupName = VServerGroupName;
+            return this;
+        }
+        public String getVServerGroupName() {
+            return this.VServerGroupName;
+        }
+
+    }
+
+    public static class ListGatewaySlbResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether the edit operation is supported.</p>
+         */
+        @NameInMap("EditEnable")
+        public Boolean editEnable;
+
+        /**
+         * <p>The ID of the gateway.</p>
+         */
+        @NameInMap("GatewayId")
+        public String gatewayId;
+
+        /**
+         * <p>The mode of the SLB instance.</p>
+         */
+        @NameInMap("GatewaySlbMode")
+        public String gatewaySlbMode;
+
+        /**
+         * <p>The association status.</p>
+         */
+        @NameInMap("GatewaySlbStatus")
+        public String gatewaySlbStatus;
+
+        /**
+         * <p>The creation time.</p>
+         */
+        @NameInMap("GmtCreate")
+        public String gmtCreate;
+
+        /**
+         * <p>The port number of the HTTP virtual service group.</p>
+         */
+        @NameInMap("HttpPort")
+        public Integer httpPort;
+
+        /**
+         * <p>The port number of the HTTPS virtual service group.</p>
+         */
+        @NameInMap("HttpsPort")
+        public Integer httpsPort;
+
+        /**
+         * <p>The ID of the HTTPS virtual service group.</p>
+         */
+        @NameInMap("HttpsVServerGroupId")
+        public String httpsVServerGroupId;
+
+        /**
+         * <p>The ID.</p>
+         */
+        @NameInMap("Id")
+        public String id;
+
+        /**
+         * <p>The service weight.</p>
+         */
+        @NameInMap("ServiceWeight")
+        public Integer serviceWeight;
+
+        /**
+         * <p>The ID of the SLB instance.</p>
+         */
+        @NameInMap("SlbId")
+        public String slbId;
+
+        /**
+         * <p>The IP address of the SLB instance.</p>
+         */
+        @NameInMap("SlbIp")
+        public String slbIp;
+
+        /**
+         * <p>The port number of the SLB instance.</p>
+         */
+        @NameInMap("SlbPort")
+        public String slbPort;
+
+        /**
+         * <p>The description of the status.</p>
+         */
+        @NameInMap("StatusDesc")
+        public String statusDesc;
+
+        /**
+         * <p>The type.</p>
+         */
+        @NameInMap("Type")
+        public String type;
+
+        /**
+         * <p>The ID of the HTTP virtual service group.</p>
+         */
+        @NameInMap("VServerGroupId")
+        public String VServerGroupId;
+
+        @NameInMap("VServiceList")
+        public java.util.List<ListGatewaySlbResponseBodyDataVServiceList> VServiceList;
+
+        @NameInMap("VsMetaInfo")
+        public String vsMetaInfo;
 
         public static ListGatewaySlbResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListGatewaySlbResponseBodyData self = new ListGatewaySlbResponseBodyData();
@@ -255,6 +382,22 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         }
         public String getVServerGroupId() {
             return this.VServerGroupId;
+        }
+
+        public ListGatewaySlbResponseBodyData setVServiceList(java.util.List<ListGatewaySlbResponseBodyDataVServiceList> VServiceList) {
+            this.VServiceList = VServiceList;
+            return this;
+        }
+        public java.util.List<ListGatewaySlbResponseBodyDataVServiceList> getVServiceList() {
+            return this.VServiceList;
+        }
+
+        public ListGatewaySlbResponseBodyData setVsMetaInfo(String vsMetaInfo) {
+            this.vsMetaInfo = vsMetaInfo;
+            return this;
+        }
+        public String getVsMetaInfo() {
+            return this.vsMetaInfo;
         }
 
     }

@@ -4,30 +4,62 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListGatewayAuthConsumerResponseBody extends TeaModel {
+    /**
+     * <p>The status code. A value of 200 is returned if the request is successful.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data structure.</p>
+     */
     @NameInMap("Data")
     public ListGatewayAuthConsumerResponseBodyData data;
 
+    /**
+     * <p>The dynamic part in the error message.</p>
+     */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
+    /**
+     * <p>The dynamic part in the error message. This parameter is used to replace the **%s** variable in the **ErrMessage** parameter.</p>
+     * <br>
+     * <p>>  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>The error code that is returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -109,30 +141,62 @@ public class ListGatewayAuthConsumerResponseBody extends TeaModel {
     }
 
     public static class ListGatewayAuthConsumerResponseBodyDataResult extends TeaModel {
+        /**
+         * <p>The status of the consumer. Valid values:</p>
+         * <br>
+         * <p>*   true: enabled</p>
+         * <p>*   false: disabled</p>
+         */
         @NameInMap("ConsumerStatus")
         public Boolean consumerStatus;
 
+        /**
+         * <p>The description of the consumer.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The unique ID of the gateway.</p>
+         */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
+        /**
+         * <p>The creation time.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The modification time.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The ID of the consumer.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The name of the consumer.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The creator.</p>
+         */
         @NameInMap("PrimaryUser")
         public String primaryUser;
 
+        /**
+         * <p>The authentication type. Valid values:</p>
+         * <br>
+         * <p>*   JWT</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -216,15 +280,27 @@ public class ListGatewayAuthConsumerResponseBody extends TeaModel {
     }
 
     public static class ListGatewayAuthConsumerResponseBodyData extends TeaModel {
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The returned information.</p>
+         */
         @NameInMap("Result")
         public java.util.List<ListGatewayAuthConsumerResponseBodyDataResult> result;
 
+        /**
+         * <p>The total number of returned entries.</p>
+         */
         @NameInMap("TotalSize")
         public Long totalSize;
 

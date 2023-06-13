@@ -4,21 +4,39 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteNacosConfigRequest extends TeaModel {
+    /**
+     * <p>The status code returned.</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("Beta")
     public Boolean beta;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("DataId")
     public String dataId;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Group")
     public String group;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The request is successfully processed.</p>
+     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 

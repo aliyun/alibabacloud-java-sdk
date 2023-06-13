@@ -5,55 +5,58 @@ import com.aliyun.tea.*;
 
 public class ListNacosHistoryConfigsRequest extends TeaModel {
     /**
-     * <p>systemError</p>
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>clusterNotFound</p>
+     * <p>The ID of the data.</p>
      */
     @NameInMap("DataId")
     public String dataId;
 
     /**
-     * <p>cluster not found</p>
+     * <p>The name of the configuration group.</p>
      */
     @NameInMap("Group")
     public String group;
 
     /**
-     * <p>illegal request:%s</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>mse-100-001</p>
+     * <p>The ID of the namespace.</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
-     * <p>mse-100-007</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("PageNum")
     public Integer pageNum;
 
     /**
-     * <p>illegalRequest</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>mse-200-021</p>
+     * <p>The ID of the region in which the instance resides. The region is supported by MSE.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>duplicatedClusterAliasName</p>
+     * <p>The extended request parameters in the JSON format.</p>
      */
     @NameInMap("RequestPars")
     public String requestPars;

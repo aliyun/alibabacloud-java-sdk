@@ -5,37 +5,40 @@ import com.aliyun.tea.*;
 
 public class QueryInstancesInfoRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>clusterNotFound</p>
+     * <p>The ID of the cluster.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>cluster not found</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>mse-100-001</p>
+     * <p>The ID of the order.</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
-     * <p>systemError</p>
+     * <p>The ID of the region where the instance resides.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>system error</p>
+     * <p>The extended request parameters in the JSON format.</p>
      */
     @NameInMap("RequestPars")
     public String requestPars;

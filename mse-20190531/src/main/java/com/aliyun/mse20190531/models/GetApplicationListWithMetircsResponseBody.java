@@ -321,6 +321,9 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
         @NameInMap("AppName")
         public String appName;
 
+        @NameInMap("AppType")
+        public Integer appType;
+
         /**
          * <p>The current metrics.</p>
          */
@@ -409,6 +412,14 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
         }
         public String getAppName() {
             return this.appName;
+        }
+
+        public GetApplicationListWithMetircsResponseBodyDataResult setAppType(Integer appType) {
+            this.appType = appType;
+            return this;
+        }
+        public Integer getAppType() {
+            return this.appType;
         }
 
         public GetApplicationListWithMetircsResponseBodyDataResult setCurMetrics(java.util.List<GetApplicationListWithMetircsResponseBodyDataResultCurMetrics> curMetrics) {

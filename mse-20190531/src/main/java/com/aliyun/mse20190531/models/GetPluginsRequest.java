@@ -5,31 +5,40 @@ import com.aliyun.tea.*;
 
 public class GetPluginsRequest extends TeaModel {
     /**
-     * <p>system error</p>
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>zh: Chinese en: English</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>cluster not found</p>
+     * <p>The type of the plug-in. Valid values:</p>
+     * <br>
+     * <p>*   0: custom</p>
+     * <p>*   1: permission authorization</p>
+     * <p>*   2: security protection</p>
+     * <p>*   3: transmission protocol</p>
+     * <p>*   4: traffic control</p>
+     * <p>*   5: traffic observation</p>
      */
     @NameInMap("Category")
     public Integer category;
 
     /**
-     * <p>mse-100-001</p>
+     * <p>Specifies whether to enable the plug-in.</p>
      */
     @NameInMap("EnableOnly")
     public Boolean enableOnly;
 
     /**
-     * <p>clusterNotFound</p>
+     * <p>The ID of the gateway.</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
-     * <p>systemError</p>
+     * <p>The name of the plug-in.</p>
      */
     @NameInMap("Name")
     public String name;
