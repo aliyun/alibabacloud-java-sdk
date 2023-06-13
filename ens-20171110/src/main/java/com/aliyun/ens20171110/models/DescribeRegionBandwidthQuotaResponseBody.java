@@ -32,6 +32,9 @@ public class DescribeRegionBandwidthQuotaResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionBandwidthQuotaResponseBodyBandwidthQuotaBandwidthInfo extends TeaModel {
+        @NameInMap("Isp")
+        public String isp;
+
         @NameInMap("MonthAverageQuota")
         public Long monthAverageQuota;
 
@@ -47,6 +50,14 @@ public class DescribeRegionBandwidthQuotaResponseBody extends TeaModel {
         public static DescribeRegionBandwidthQuotaResponseBodyBandwidthQuotaBandwidthInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeRegionBandwidthQuotaResponseBodyBandwidthQuotaBandwidthInfo self = new DescribeRegionBandwidthQuotaResponseBodyBandwidthQuotaBandwidthInfo();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeRegionBandwidthQuotaResponseBodyBandwidthQuotaBandwidthInfo setIsp(String isp) {
+            this.isp = isp;
+            return this;
+        }
+        public String getIsp() {
+            return this.isp;
         }
 
         public DescribeRegionBandwidthQuotaResponseBodyBandwidthQuotaBandwidthInfo setMonthAverageQuota(Long monthAverageQuota) {
@@ -115,7 +126,7 @@ public class DescribeRegionBandwidthQuotaResponseBody extends TeaModel {
 
     public static class DescribeRegionBandwidthQuotaResponseBodyBandwidthQuota extends TeaModel {
         @NameInMap("BandwidthInfo")
-        public DescribeRegionBandwidthQuotaResponseBodyBandwidthQuotaBandwidthInfo bandwidthInfo;
+        public java.util.List<DescribeRegionBandwidthQuotaResponseBodyBandwidthQuotaBandwidthInfo> bandwidthInfo;
 
         @NameInMap("Date")
         public String date;
@@ -131,11 +142,11 @@ public class DescribeRegionBandwidthQuotaResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeRegionBandwidthQuotaResponseBodyBandwidthQuota setBandwidthInfo(DescribeRegionBandwidthQuotaResponseBodyBandwidthQuotaBandwidthInfo bandwidthInfo) {
+        public DescribeRegionBandwidthQuotaResponseBodyBandwidthQuota setBandwidthInfo(java.util.List<DescribeRegionBandwidthQuotaResponseBodyBandwidthQuotaBandwidthInfo> bandwidthInfo) {
             this.bandwidthInfo = bandwidthInfo;
             return this;
         }
-        public DescribeRegionBandwidthQuotaResponseBodyBandwidthQuotaBandwidthInfo getBandwidthInfo() {
+        public java.util.List<DescribeRegionBandwidthQuotaResponseBodyBandwidthQuotaBandwidthInfo> getBandwidthInfo() {
             return this.bandwidthInfo;
         }
 
