@@ -19,6 +19,15 @@ public class CreateVpcFirewallCenConfigureRequest extends TeaModel {
     @NameInMap("FirewallSwitch")
     public String firewallSwitch;
 
+    @NameInMap("FirewallVSwitchCidrBlock")
+    public String firewallVSwitchCidrBlock;
+
+    @NameInMap("FirewallVpcCidrBlock")
+    public String firewallVpcCidrBlock;
+
+    @NameInMap("FirewallVpcZoneId")
+    public String firewallVpcZoneId;
+
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
      * <br>
@@ -76,6 +85,30 @@ public class CreateVpcFirewallCenConfigureRequest extends TeaModel {
     }
     public String getFirewallSwitch() {
         return this.firewallSwitch;
+    }
+
+    public CreateVpcFirewallCenConfigureRequest setFirewallVSwitchCidrBlock(String firewallVSwitchCidrBlock) {
+        this.firewallVSwitchCidrBlock = firewallVSwitchCidrBlock;
+        return this;
+    }
+    public String getFirewallVSwitchCidrBlock() {
+        return this.firewallVSwitchCidrBlock;
+    }
+
+    public CreateVpcFirewallCenConfigureRequest setFirewallVpcCidrBlock(String firewallVpcCidrBlock) {
+        this.firewallVpcCidrBlock = firewallVpcCidrBlock;
+        return this;
+    }
+    public String getFirewallVpcCidrBlock() {
+        return this.firewallVpcCidrBlock;
+    }
+
+    public CreateVpcFirewallCenConfigureRequest setFirewallVpcZoneId(String firewallVpcZoneId) {
+        this.firewallVpcZoneId = firewallVpcZoneId;
+        return this;
+    }
+    public String getFirewallVpcZoneId() {
+        return this.firewallVpcZoneId;
     }
 
     public CreateVpcFirewallCenConfigureRequest setLang(String lang) {

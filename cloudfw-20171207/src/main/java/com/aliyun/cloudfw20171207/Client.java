@@ -492,6 +492,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("FirewallSwitch", request.firewallSwitch);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.firewallVSwitchCidrBlock)) {
+            query.put("FirewallVSwitchCidrBlock", request.firewallVSwitchCidrBlock);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.firewallVpcCidrBlock)) {
+            query.put("FirewallVpcCidrBlock", request.firewallVpcCidrBlock);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.firewallVpcZoneId)) {
+            query.put("FirewallVpcZoneId", request.firewallVpcZoneId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
             query.put("Lang", request.lang);
         }
