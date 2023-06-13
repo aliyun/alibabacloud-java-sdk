@@ -391,6 +391,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SendMessageShrinkRequest request = new SendMessageShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.streamExtension)) {
+            request.streamExtensionShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.streamExtension, "StreamExtension", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.textRequest)) {
             request.textRequestShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.textRequest, "TextRequest", "json");
         }
@@ -406,6 +410,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
             query.put("SessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.streamExtensionShrink)) {
+            query.put("StreamExtension", request.streamExtensionShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
