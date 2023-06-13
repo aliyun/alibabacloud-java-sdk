@@ -13,6 +13,9 @@ public class SubmitDocStructureJobRequest extends TeaModel {
     @NameInMap("FileUrl")
     public String fileUrl;
 
+    @NameInMap("StructureType")
+    public String structureType;
+
     public static SubmitDocStructureJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitDocStructureJobRequest self = new SubmitDocStructureJobRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class SubmitDocStructureJobRequest extends TeaModel {
     }
     public String getFileUrl() {
         return this.fileUrl;
+    }
+
+    public SubmitDocStructureJobRequest setStructureType(String structureType) {
+        this.structureType = structureType;
+        return this;
+    }
+    public String getStructureType() {
+        return this.structureType;
     }
 
 }
