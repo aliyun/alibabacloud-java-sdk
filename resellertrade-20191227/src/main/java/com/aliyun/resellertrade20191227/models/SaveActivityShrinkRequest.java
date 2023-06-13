@@ -141,6 +141,58 @@ public class SaveActivityShrinkRequest extends TeaModel {
         return this.whiteUidList;
     }
 
+    public static class SaveActivityShrinkRequestFusionPromotionParamListModuleInfoParamList extends TeaModel {
+        @NameInMap("moduleCode")
+        public String moduleCode;
+
+        @NameInMap("moduleId")
+        public Long moduleId;
+
+        @NameInMap("moduleName")
+        public String moduleName;
+
+        @NameInMap("pricePlanId")
+        public Long pricePlanId;
+
+        public static SaveActivityShrinkRequestFusionPromotionParamListModuleInfoParamList build(java.util.Map<String, ?> map) throws Exception {
+            SaveActivityShrinkRequestFusionPromotionParamListModuleInfoParamList self = new SaveActivityShrinkRequestFusionPromotionParamListModuleInfoParamList();
+            return TeaModel.build(map, self);
+        }
+
+        public SaveActivityShrinkRequestFusionPromotionParamListModuleInfoParamList setModuleCode(String moduleCode) {
+            this.moduleCode = moduleCode;
+            return this;
+        }
+        public String getModuleCode() {
+            return this.moduleCode;
+        }
+
+        public SaveActivityShrinkRequestFusionPromotionParamListModuleInfoParamList setModuleId(Long moduleId) {
+            this.moduleId = moduleId;
+            return this;
+        }
+        public Long getModuleId() {
+            return this.moduleId;
+        }
+
+        public SaveActivityShrinkRequestFusionPromotionParamListModuleInfoParamList setModuleName(String moduleName) {
+            this.moduleName = moduleName;
+            return this;
+        }
+        public String getModuleName() {
+            return this.moduleName;
+        }
+
+        public SaveActivityShrinkRequestFusionPromotionParamListModuleInfoParamList setPricePlanId(Long pricePlanId) {
+            this.pricePlanId = pricePlanId;
+            return this;
+        }
+        public Long getPricePlanId() {
+            return this.pricePlanId;
+        }
+
+    }
+
     public static class SaveActivityShrinkRequestFusionPromotionParamList extends TeaModel {
         @NameInMap("CommodityCodeList")
         public java.util.List<String> commodityCodeList;
@@ -150,6 +202,9 @@ public class SaveActivityShrinkRequest extends TeaModel {
 
         @NameInMap("RestrictedRegionList")
         public java.util.List<String> restrictedRegionList;
+
+        @NameInMap("moduleInfoParamList")
+        public java.util.List<SaveActivityShrinkRequestFusionPromotionParamListModuleInfoParamList> moduleInfoParamList;
 
         public static SaveActivityShrinkRequestFusionPromotionParamList build(java.util.Map<String, ?> map) throws Exception {
             SaveActivityShrinkRequestFusionPromotionParamList self = new SaveActivityShrinkRequestFusionPromotionParamList();
@@ -178,6 +233,14 @@ public class SaveActivityShrinkRequest extends TeaModel {
         }
         public java.util.List<String> getRestrictedRegionList() {
             return this.restrictedRegionList;
+        }
+
+        public SaveActivityShrinkRequestFusionPromotionParamList setModuleInfoParamList(java.util.List<SaveActivityShrinkRequestFusionPromotionParamListModuleInfoParamList> moduleInfoParamList) {
+            this.moduleInfoParamList = moduleInfoParamList;
+            return this;
+        }
+        public java.util.List<SaveActivityShrinkRequestFusionPromotionParamListModuleInfoParamList> getModuleInfoParamList() {
+            return this.moduleInfoParamList;
         }
 
     }
