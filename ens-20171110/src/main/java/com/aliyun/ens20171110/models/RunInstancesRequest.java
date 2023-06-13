@@ -370,12 +370,23 @@ public class RunInstancesRequest extends TeaModel {
     }
 
     public static class RunInstancesRequestSystemDisk extends TeaModel {
+        @NameInMap("Category")
+        public String category;
+
         @NameInMap("Size")
         public Long size;
 
         public static RunInstancesRequestSystemDisk build(java.util.Map<String, ?> map) throws Exception {
             RunInstancesRequestSystemDisk self = new RunInstancesRequestSystemDisk();
             return TeaModel.build(map, self);
+        }
+
+        public RunInstancesRequestSystemDisk setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
         }
 
         public RunInstancesRequestSystemDisk setSize(Long size) {

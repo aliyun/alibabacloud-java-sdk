@@ -40,6 +40,9 @@ public class CreateARMServerInstancesRequest extends TeaModel {
     @NameInMap("Resolution")
     public String resolution;
 
+    @NameInMap("ServerName")
+    public String serverName;
+
     @NameInMap("ServerType")
     public String serverType;
 
@@ -142,6 +145,14 @@ public class CreateARMServerInstancesRequest extends TeaModel {
     }
     public String getResolution() {
         return this.resolution;
+    }
+
+    public CreateARMServerInstancesRequest setServerName(String serverName) {
+        this.serverName = serverName;
+        return this;
+    }
+    public String getServerName() {
+        return this.serverName;
     }
 
     public CreateARMServerInstancesRequest setServerType(String serverType) {
