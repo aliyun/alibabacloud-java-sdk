@@ -4,12 +4,21 @@ package com.aliyun.swas_open20200601.models;
 import com.aliyun.tea.*;
 
 public class DescribeInvocationResultRequest extends TeaModel {
+    /**
+     * <p>The ID of the simple application server.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the command task. You can call the [DescribeInvocations](~~439368~~) operation to query the task IDs.</p>
+     */
     @NameInMap("InvokeId")
     public String invokeId;
 
+    /**
+     * <p>The region ID of the simple application server. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

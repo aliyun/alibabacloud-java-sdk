@@ -4,12 +4,25 @@ package com.aliyun.swas_open20200601.models;
 import com.aliyun.tea.*;
 
 public class ListImagesRequest extends TeaModel {
+    /**
+     * <p>The IDs of the images. The value can be a JSON array that consists of up to 50 image IDs, in the format of `["xxx", "yyy", … "zzz"]`. Separate the image IDs with commas (,).</p>
+     */
     @NameInMap("ImageIds")
     public String imageIds;
 
+    /**
+     * <p>The type of the image. Valid values:</p>
+     * <br>
+     * <p>*   system</p>
+     * <p>*   app</p>
+     * <p>*   custom</p>
+     */
     @NameInMap("ImageType")
     public String imageType;
 
+    /**
+     * <p>The region ID of the images. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

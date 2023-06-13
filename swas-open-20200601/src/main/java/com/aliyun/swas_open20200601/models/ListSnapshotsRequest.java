@@ -4,23 +4,48 @@ package com.aliyun.swas_open20200601.models;
 import com.aliyun.tea.*;
 
 public class ListSnapshotsRequest extends TeaModel {
+    /**
+     * <p>The ID of the source disk.</p>
+     */
     @NameInMap("DiskId")
     public String diskId;
 
+    /**
+     * <p>The ID of the simple application server.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: 100.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID of the simple application server.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The IDs of the snapshots. The value can be a JSON array that consists of up to 100 snapshot IDs. Separate the snapshot IDs with commas (,).</p>
+     */
     @NameInMap("SnapshotIds")
     public String snapshotIds;
+
+    @NameInMap("SourceDiskType")
+    public String sourceDiskType;
 
     public static ListSnapshotsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSnapshotsRequest self = new ListSnapshotsRequest();
@@ -73,6 +98,14 @@ public class ListSnapshotsRequest extends TeaModel {
     }
     public String getSnapshotIds() {
         return this.snapshotIds;
+    }
+
+    public ListSnapshotsRequest setSourceDiskType(String sourceDiskType) {
+        this.sourceDiskType = sourceDiskType;
+        return this;
+    }
+    public String getSourceDiskType() {
+        return this.sourceDiskType;
     }
 
 }

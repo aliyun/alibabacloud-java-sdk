@@ -4,9 +4,15 @@ package com.aliyun.swas_open20200601.models;
 import com.aliyun.tea.*;
 
 public class ListImagesResponseBody extends TeaModel {
+    /**
+     * <p>Details of the images.</p>
+     */
     @NameInMap("Images")
     public java.util.List<ListImagesResponseBodyImages> images;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +38,40 @@ public class ListImagesResponseBody extends TeaModel {
     }
 
     public static class ListImagesResponseBodyImages extends TeaModel {
+        /**
+         * <p>The description of the image.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the image.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The name of the image.</p>
+         */
         @NameInMap("ImageName")
         public String imageName;
 
+        /**
+         * <p>The type of the image. Valid values:</p>
+         * <br>
+         * <p>*   system</p>
+         * <p>*   app</p>
+         * <p>*   custom</p>
+         */
         @NameInMap("ImageType")
         public String imageType;
 
+        /**
+         * <p>The operating system type of the image. Valid values:</p>
+         * <br>
+         * <p>*   Linux</p>
+         * <p>*   Windows</p>
+         */
         @NameInMap("Platform")
         public String platform;
 
