@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class QuerySwimmingLaneByIdRequest extends TeaModel {
     /**
-     * <p>The ID of the lane.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>system error</p>
+     * <p>The ID of the lane.</p>
      */
     @NameInMap("LaneId")
     public Long laneId;

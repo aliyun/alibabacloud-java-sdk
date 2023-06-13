@@ -4,24 +4,53 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListGatewayAuthConsumerRequest extends TeaModel {
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>The status of the consumer. Valid values:</p>
+     * <br>
+     * <p>*   true: enabled</p>
+     * <p>*   false: disabled</p>
+     */
     @NameInMap("ConsumerStatus")
     public Boolean consumerStatus;
 
+    /**
+     * <p>The unique ID of the gateway.</p>
+     */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    /**
+     * <p>The name of the consumer.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNum")
     public String pageNum;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The authentication type. Valid values:</p>
+     * <br>
+     * <p>*   JWT</p>
+     */
     @NameInMap("Type")
     public String type;
 

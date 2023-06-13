@@ -5,61 +5,68 @@ import com.aliyun.tea.*;
 
 public class ListAnsInstancesRequest extends TeaModel {
     /**
-     * <p>mse-100-001</p>
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>mse-100-007</p>
+     * <p>The ID of the Nacos instance.</p>
+     * <br>
+     * <p>> This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>clusterNotFound</p>
+     * <p>The alias of the Nacos instance.</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
-     * <p>illegal request:%s</p>
+     * <p>The name of the contact group.</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
-     * <p>cluster not found</p>
+     * <p>The ID of the instance.</p>
+     * <br>
+     * <p>> This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>mse-200-021</p>
+     * <p>The ID of the namespace.</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
-     * <p>duplicatedClusterAliasName</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("PageNum")
     public Integer pageNum;
 
     /**
-     * <p>duplicated cluster alias name</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>mse-200-105</p>
+     * <p>The extended request parameters in the JSON format.</p>
      */
     @NameInMap("RequestPars")
     public String requestPars;
 
     /**
-     * <p>illegalRequest</p>
+     * <p>The name of the service.</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;

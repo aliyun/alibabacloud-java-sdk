@@ -4,21 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
+    /**
+     * <p>The response code returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The details of the data.</p>
+     */
     @NameInMap("Data")
     public GetGovernanceKubernetesClusterResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,9 +97,15 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
     }
 
     public static class GetGovernanceKubernetesClusterResponseBodyDataNamespaces extends TeaModel {
+        /**
+         * <p>The name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public String tags;
 
@@ -106,27 +133,51 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
     }
 
     public static class GetGovernanceKubernetesClusterResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
+        /**
+         * <p>The version of Kubernetes.</p>
+         */
         @NameInMap("K8sVersion")
         public String k8sVersion;
 
+        /**
+         * <p>The information of the namespace.</p>
+         */
         @NameInMap("NamespaceInfos")
         public String namespaceInfos;
 
+        /**
+         * <p>The list of namespaces.</p>
+         */
         @NameInMap("Namespaces")
         public java.util.List<GetGovernanceKubernetesClusterResponseBodyDataNamespaces> namespaces;
 
+        /**
+         * <p>The time when the ack-onepilot component was started.</p>
+         */
         @NameInMap("PilotStartTime")
         public String pilotStartTime;
 
+        /**
+         * <p>The ID of the region in which the instance resides. The region is supported by MSE.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The time of the last modification.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

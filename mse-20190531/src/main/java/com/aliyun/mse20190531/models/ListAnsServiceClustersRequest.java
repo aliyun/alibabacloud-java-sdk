@@ -5,61 +5,60 @@ import com.aliyun.tea.*;
 
 public class ListAnsServiceClustersRequest extends TeaModel {
     /**
-     * <p>mse-100-001</p>
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>mse-100-007</p>
+     * <p>The ID of the MSE cluster.</p>
+     * <br>
+     * <p>> The MSE cluster is different from the cluster of the Nacos service.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>clusterNotFound</p>
+     * <p>The alias of the cluster.</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
-     * <p>illegal request:%s</p>
+     * <p>The name of the group.</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
-     * <p>cluster not found</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>mse-200-021</p>
+     * <p>The ID of the namespace.</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
-     * <p>duplicatedClusterAliasName</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("PageNum")
     public Integer pageNum;
 
     /**
-     * <p>duplicated cluster alias name</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>mse-200-105</p>
-     */
-    @NameInMap("RequestPars")
-    public String requestPars;
-
-    /**
-     * <p>illegalRequest</p>
+     * <p>The name of the service.</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;
@@ -131,14 +130,6 @@ public class ListAnsServiceClustersRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public ListAnsServiceClustersRequest setRequestPars(String requestPars) {
-        this.requestPars = requestPars;
-        return this;
-    }
-    public String getRequestPars() {
-        return this.requestPars;
     }
 
     public ListAnsServiceClustersRequest setServiceName(String serviceName) {

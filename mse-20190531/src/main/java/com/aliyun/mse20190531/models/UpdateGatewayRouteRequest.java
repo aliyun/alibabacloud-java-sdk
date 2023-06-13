@@ -4,48 +4,96 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateGatewayRouteRequest extends TeaModel {
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>The destination service type.</p>
+     */
     @NameInMap("DestinationType")
     public String destinationType;
 
+    /**
+     * <p>The information about service mocking.</p>
+     */
     @NameInMap("DirectResponseJSON")
     public UpdateGatewayRouteRequestDirectResponseJSON directResponseJSON;
 
+    /**
+     * <p>The associated domain name.</p>
+     */
     @NameInMap("DomainIdListJSON")
     public String domainIdListJSON;
 
+    /**
+     * <p>Specifies whether to activate Web Application Firewall (WAF).</p>
+     */
     @NameInMap("EnableWaf")
     public Boolean enableWaf;
 
+    /**
+     * <p>Specifies whether to enable the Fallback service.</p>
+     */
     @NameInMap("Fallback")
     public Boolean fallback;
 
+    /**
+     * <p>The information about the Fallback service.</p>
+     */
     @NameInMap("FallbackServices")
     public java.util.List<UpdateGatewayRouteRequestFallbackServices> fallbackServices;
 
+    /**
+     * <p>The ID of the gateway.</p>
+     */
     @NameInMap("GatewayId")
     public Long gatewayId;
 
+    /**
+     * <p>The unique ID of the gateway.</p>
+     */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    /**
+     * <p>The ID of the route.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The name of the route.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The route matching conditions.</p>
+     */
     @NameInMap("Predicates")
     public UpdateGatewayRouteRequestPredicates predicates;
 
+    /**
+     * <p>The information about redirection.</p>
+     */
     @NameInMap("RedirectJSON")
     public UpdateGatewayRouteRequestRedirectJSON redirectJSON;
 
+    /**
+     * <p>The sequence number of the route.</p>
+     */
     @NameInMap("RouteOrder")
     public Integer routeOrder;
 
+    /**
+     * <p>The information about destination services.</p>
+     */
     @NameInMap("Services")
     public java.util.List<UpdateGatewayRouteRequestServices> services;
 
@@ -175,9 +223,15 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     }
 
     public static class UpdateGatewayRouteRequestDirectResponseJSON extends TeaModel {
+        /**
+         * <p>The mock return value.</p>
+         */
         @NameInMap("Body")
         public String body;
 
+        /**
+         * <p>The mock return code.</p>
+         */
         @NameInMap("Code")
         public Long code;
 
@@ -205,30 +259,57 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     }
 
     public static class UpdateGatewayRouteRequestFallbackServices extends TeaModel {
+        /**
+         * <p>The type of the protocol. Valid values:</p>
+         */
         @NameInMap("AgreementType")
         public String agreementType;
 
+        /**
+         * <p>The name of the group to which the service belongs.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The namespace in which the service resides.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The weight in the form of a percentage value.</p>
+         */
         @NameInMap("Percent")
         public Integer percent;
 
+        /**
+         * <p>The ID of the service.</p>
+         */
         @NameInMap("ServiceId")
         public Long serviceId;
 
+        /**
+         * <p>The service port number.</p>
+         */
         @NameInMap("ServicePort")
         public Integer servicePort;
 
+        /**
+         * <p>The source type.</p>
+         */
         @NameInMap("SourceType")
         public String sourceType;
 
+        /**
+         * <p>The version of the service.</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -312,12 +393,21 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     }
 
     public static class UpdateGatewayRouteRequestPredicatesHeaderPredicates extends TeaModel {
+        /**
+         * <p>The key of the request header.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The matching type.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The value of the request header.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -353,12 +443,21 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     }
 
     public static class UpdateGatewayRouteRequestPredicatesPathPredicates extends TeaModel {
+        /**
+         * <p>Specifies whether to perform case-insensitive matching.</p>
+         */
         @NameInMap("IgnoreCase")
         public Boolean ignoreCase;
 
+        /**
+         * <p>The path used for route matching.</p>
+         */
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <p>The matching type.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -394,12 +493,21 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     }
 
     public static class UpdateGatewayRouteRequestPredicatesQueryPredicates extends TeaModel {
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The matching type.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The value of the parameter.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -435,15 +543,27 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     }
 
     public static class UpdateGatewayRouteRequestPredicates extends TeaModel {
+        /**
+         * <p>The information about header matching.</p>
+         */
         @NameInMap("HeaderPredicates")
         public java.util.List<UpdateGatewayRouteRequestPredicatesHeaderPredicates> headerPredicates;
 
+        /**
+         * <p>The information about method matching.</p>
+         */
         @NameInMap("MethodPredicates")
         public java.util.List<String> methodPredicates;
 
+        /**
+         * <p>The information about path matching.</p>
+         */
         @NameInMap("PathPredicates")
         public UpdateGatewayRouteRequestPredicatesPathPredicates pathPredicates;
 
+        /**
+         * <p>The information about parameter matching.</p>
+         */
         @NameInMap("QueryPredicates")
         public java.util.List<UpdateGatewayRouteRequestPredicatesQueryPredicates> queryPredicates;
 
@@ -487,12 +607,21 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     }
 
     public static class UpdateGatewayRouteRequestRedirectJSON extends TeaModel {
+        /**
+         * <p>The status code returned.</p>
+         */
         @NameInMap("Code")
         public Integer code;
 
+        /**
+         * <p>The hostname to be redirected to.</p>
+         */
         @NameInMap("Host")
         public String host;
 
+        /**
+         * <p>The path to be redirected to.</p>
+         */
         @NameInMap("Path")
         public String path;
 
@@ -528,12 +657,31 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     }
 
     public static class UpdateGatewayRouteRequestServicesHttpDubboTranscoderMothedMapListParamMapsList extends TeaModel {
+        /**
+         * <p>The key extracted from the input parameter.</p>
+         */
         @NameInMap("ExtractKey")
         public String extractKey;
 
+        /**
+         * <p>The position of the input parameter.</p>
+         * <br>
+         * <p>> Valid values:</p>
+         * <br>
+         * <p>*   `ALL_QUERY_PARAMETER`: request parameter</p>
+         * <br>
+         * <p>*   `ALL_HEADER`: request header</p>
+         * <br>
+         * <p>*   `ALL_PATH`: request path</p>
+         * <br>
+         * <p>*   `ALL_BODY`: request body</p>
+         */
         @NameInMap("ExtractKeySpec")
         public String extractKeySpec;
 
+        /**
+         * <p>The type of the backend service parameter.</p>
+         */
         @NameInMap("MappingType")
         public String mappingType;
 
@@ -569,21 +717,59 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     }
 
     public static class UpdateGatewayRouteRequestServicesHttpDubboTranscoderMothedMapList extends TeaModel {
+        /**
+         * <p>The method name of the Dubbo service.</p>
+         */
         @NameInMap("DubboMothedName")
         public String dubboMothedName;
 
+        /**
+         * <p>The HTTP method.</p>
+         * <br>
+         * <p>> Valid values:</p>
+         * <br>
+         * <p>*   ALL_GET</p>
+         * <br>
+         * <p>*   ALL_POST</p>
+         * <br>
+         * <p>*   ALL_PUT</p>
+         * <br>
+         * <p>*   ALL_DELETE</p>
+         * <br>
+         * <p>*   ALL_PATCH</p>
+         */
         @NameInMap("HttpMothed")
         public String httpMothed;
 
+        /**
+         * <p>The path that is used to match a method.</p>
+         */
         @NameInMap("Mothedpath")
         public String mothedpath;
 
+        /**
+         * <p>The information of parameter mappings.</p>
+         */
         @NameInMap("ParamMapsList")
         public java.util.List<UpdateGatewayRouteRequestServicesHttpDubboTranscoderMothedMapListParamMapsList> paramMapsList;
 
+        /**
+         * <p>The pass-through type of the header.</p>
+         * <br>
+         * <p>> Valid values:</p>
+         * <br>
+         * <p>*   PASS_ALL: All headers are passed through.</p>
+         * <br>
+         * <p>*   PASS_NOT: All headers are not passed through.</p>
+         * <br>
+         * <p>*   PASS_ASSIGN: Specified headers are passed through.</p>
+         */
         @NameInMap("PassThroughAllHeaders")
         public String passThroughAllHeaders;
 
+        /**
+         * <p>The list of headers to be passed through.</p>
+         */
         @NameInMap("PassThroughList")
         public java.util.List<String> passThroughList;
 
@@ -643,15 +829,27 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     }
 
     public static class UpdateGatewayRouteRequestServicesHttpDubboTranscoder extends TeaModel {
+        /**
+         * <p>The Dubbo service group.</p>
+         */
         @NameInMap("DubboServiceGroup")
         public String dubboServiceGroup;
 
+        /**
+         * <p>The name of the Dubbo service.</p>
+         */
         @NameInMap("DubboServiceName")
         public String dubboServiceName;
 
+        /**
+         * <p>The version of the Dubbo service.</p>
+         */
         @NameInMap("DubboServiceVersion")
         public String dubboServiceVersion;
 
+        /**
+         * <p>The forwarding rules of the Dubbo service.</p>
+         */
         @NameInMap("MothedMapList")
         public java.util.List<UpdateGatewayRouteRequestServicesHttpDubboTranscoderMothedMapList> mothedMapList;
 
@@ -695,33 +893,63 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     }
 
     public static class UpdateGatewayRouteRequestServices extends TeaModel {
+        /**
+         * <p>The type of the protocol. Valid values:</p>
+         */
         @NameInMap("AgreementType")
         public String agreementType;
 
+        /**
+         * <p>The name of the group to which the service belongs.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The transcoder of the Dubbo protocol.</p>
+         */
         @NameInMap("HttpDubboTranscoder")
         public UpdateGatewayRouteRequestServicesHttpDubboTranscoder httpDubboTranscoder;
 
+        /**
+         * <p>The name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The namespace in which the service resides.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The percentage.</p>
+         */
         @NameInMap("Percent")
         public Integer percent;
 
+        /**
+         * <p>The ID of the service.</p>
+         */
         @NameInMap("ServiceId")
         public Long serviceId;
 
+        /**
+         * <p>The Dubbo port number.</p>
+         */
         @NameInMap("ServicePort")
         public Integer servicePort;
 
+        /**
+         * <p>The source type.</p>
+         */
         @NameInMap("SourceType")
         public String sourceType;
 
+        /**
+         * <p>The version of the service.</p>
+         */
         @NameInMap("Version")
         public String version;
 

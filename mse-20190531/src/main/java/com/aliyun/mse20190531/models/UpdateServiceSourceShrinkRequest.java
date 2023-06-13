@@ -4,33 +4,72 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateServiceSourceShrinkRequest extends TeaModel {
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>The address.</p>
+     */
     @NameInMap("Address")
     public String address;
 
+    /**
+     * <p>The ID of the gateway.</p>
+     */
     @NameInMap("GatewayId")
     public Long gatewayId;
 
+    /**
+     * <p>The unique ID of the gateway.</p>
+     */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    /**
+     * <p>The ID of the service source.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The configurations of Ingress resources.</p>
+     */
     @NameInMap("IngressOptionsRequest")
     public String ingressOptionsRequestShrink;
 
+    /**
+     * <p>The name.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>An array of service root paths.</p>
+     */
     @NameInMap("PathList")
     public String pathListShrink;
 
+    /**
+     * <p>The service source. Valid values:</p>
+     * <br>
+     * <p>*   K8S: ACK cluster</p>
+     * <p>*   MSE: Nacos instance</p>
+     */
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <p>The type of the service source. Valid values:</p>
+     * <br>
+     * <p>*   K8S: ACK cluster</p>
+     * <p>*   NACOS: Nacos instance</p>
+     */
     @NameInMap("Type")
     public String type;
 

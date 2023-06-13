@@ -4,15 +4,33 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateGatewayAuthConsumerStatusRequest extends TeaModel {
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>The status of the consumer. Valid values:</p>
+     * <br>
+     * <p>*   true: The consumer is enabled.</p>
+     * <p>*   false: The consumer is disabled.</p>
+     */
     @NameInMap("ConsumerStatus")
     public Boolean consumerStatus;
 
+    /**
+     * <p>The unique ID of the gateway.</p>
+     */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    /**
+     * <p>The consumer ID.</p>
+     */
     @NameInMap("Id")
     public Long id;
 

@@ -5,22 +5,10 @@ import com.aliyun.tea.*;
 
 public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
-     */
-    @NameInMap("Code")
-    public Integer code;
-
-    /**
      * <p>The response data.</p>
      */
     @NameInMap("Data")
     public QueryGovernanceKubernetesClusterResponseBodyData data;
-
-    /**
-     * <p>The HTTP status code returned.</p>
-     */
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
 
     /**
      * <p>The returned message.</p>
@@ -45,28 +33,12 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public QueryGovernanceKubernetesClusterResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public QueryGovernanceKubernetesClusterResponseBody setData(QueryGovernanceKubernetesClusterResponseBodyData data) {
         this.data = data;
         return this;
     }
     public QueryGovernanceKubernetesClusterResponseBodyData getData() {
         return this.data;
-    }
-
-    public QueryGovernanceKubernetesClusterResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
     }
 
     public QueryGovernanceKubernetesClusterResponseBody setMessage(String message) {

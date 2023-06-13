@@ -5,19 +5,22 @@ import com.aliyun.tea.*;
 
 public class GetOverviewRequest extends TeaModel {
     /**
-     * <p>duplicated cluster alias name</p>
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>mse-200-105</p>
+     * <p>The query time. Unit: days. For example, if you set this parameter to 30, the governance rules within the last 30 days are queried.</p>
      */
     @NameInMap("Period")
     public Integer period;
 
     /**
-     * <p>duplicatedClusterAliasName</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("Region")
     public String region;

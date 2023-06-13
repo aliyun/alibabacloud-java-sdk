@@ -5,44 +5,46 @@ import com.aliyun.tea.*;
 
 public class AddServiceSourceShrinkRequest extends TeaModel {
     /**
-     * <p>Specifies whether to monitor Ingress classes.</p>
-     */
-    @NameInMap("AcceptLanguage")
-    public String acceptLanguage;
-
-    /**
-     * <p>The language in which the returned information is displayed. Valid values:</p>
+     * <p>The language of the response. Valid values:</p>
      * <br>
      * <p>*   zh-CN: Chinese. This is the default value.</p>
      * <p>*   en-US: English.</p>
      * <p>*   ja: Japanese.</p>
      */
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
+    /**
+     * <p>The address.</p>
+     */
     @NameInMap("Address")
     public String address;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The unique ID of the gateway.</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request was successful.</p>
-     * <p>*   false: The request failed.</p>
+     * <p>The list of service groups.</p>
      */
     @NameInMap("GroupList")
     public String groupListShrink;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The Ingress configuration.</p>
      */
     @NameInMap("IngressOptionsRequest")
     public String ingressOptionsRequestShrink;
 
     /**
-     * <p>The data structure.</p>
+     * <p>The name.</p>
+     * <br>
+     * <p>> The meaning of this parameter varies with the type of the service source.</p>
+     * <br>
+     * <p>*   If Type is set to K8S, this parameter specifies the name of the ACK cluster.</p>
+     * <p>*   If Type is set to NACOS, this parameter specifies the ID of the Nacos instance.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -54,13 +56,19 @@ public class AddServiceSourceShrinkRequest extends TeaModel {
     public String pathListShrink;
 
     /**
-     * <p>The root path of the service.</p>
+     * <p>The service source. Valid values:</p>
+     * <br>
+     * <p>*   K8S: ACK cluster</p>
+     * <p>*   MSE: MSE Nacos instance</p>
      */
     @NameInMap("Source")
     public String source;
 
     /**
-     * <p>An array of service root paths.</p>
+     * <p>The type of the service source. Valid values:</p>
+     * <br>
+     * <p>*   K8S: ACK cluster</p>
+     * <p>*   NACOS: MSE Nacos instance</p>
      */
     @NameInMap("Type")
     public String type;

@@ -5,49 +5,54 @@ import com.aliyun.tea.*;
 
 public class ImportNacosConfigResponseBody extends TeaModel {
     /**
-     * <p>mse-200-021</p>
+     * <p>The code returned.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>systemError</p>
+     * <p>The details of the data.</p>
      */
     @NameInMap("Data")
     public ImportNacosConfigResponseBodyData data;
 
     /**
-     * <p>mse-100-001</p>
+     * <p>The dynamic part in the error message. This parameter is used to replace the **%s** variable in the **ErrMessage** parameter.</p>
+     * <br>
+     * <p>>  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
-     * <p>illegal request:%s</p>
+     * <p>The error code that is returned.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>duplicated cluster alias name</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>clusterNotFound</p>
+     * <p>The error message returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>mse-100-007</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>illegalRequest</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -123,16 +128,13 @@ public class ImportNacosConfigResponseBody extends TeaModel {
 
     public static class ImportNacosConfigResponseBodyDataFailData extends TeaModel {
         /**
-         * <p>The ID of the request.</p>
+         * <p>The ID of the data.</p>
          */
         @NameInMap("DataId")
         public String dataId;
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
-         * <br>
-         * <p>*   `true`: The request was successful.</p>
-         * <p>*   `false`: The request failed.</p>
+         * <p>The ID of the group.</p>
          */
         @NameInMap("Group")
         public String group;
@@ -162,16 +164,13 @@ public class ImportNacosConfigResponseBody extends TeaModel {
 
     public static class ImportNacosConfigResponseBodyDataSkipData extends TeaModel {
         /**
-         * <p>The URL that is used to download the configuration file.</p>
+         * <p>The ID of the data.</p>
          */
         @NameInMap("DataId")
         public String dataId;
 
         /**
-         * <p>The language of the response. Valid values:</p>
-         * <br>
-         * <p>*   zh: Chinese</p>
-         * <p>*   en: English</p>
+         * <p>The ID of the group.</p>
          */
         @NameInMap("Group")
         public String group;
@@ -201,25 +200,25 @@ public class ImportNacosConfigResponseBody extends TeaModel {
 
     public static class ImportNacosConfigResponseBodyData extends TeaModel {
         /**
-         * <p>The data structure.</p>
+         * <p>The information about configurations that are failed to be imported.</p>
          */
         @NameInMap("FailData")
         public java.util.List<ImportNacosConfigResponseBodyDataFailData> failData;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The number of configurations that are skipped.</p>
          */
         @NameInMap("SkipCount")
         public Integer skipCount;
 
         /**
-         * <p>The ID of the namespace.</p>
+         * <p>The information about skipped configurations.</p>
          */
         @NameInMap("SkipData")
         public java.util.List<ImportNacosConfigResponseBodyDataSkipData> skipData;
 
         /**
-         * <p>system error</p>
+         * <p>The number of configurations that are imported.</p>
          */
         @NameInMap("SuccCount")
         public Integer succCount;

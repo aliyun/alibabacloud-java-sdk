@@ -4,41 +4,41 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public Integer code;
-
+    /**
+     * <p>The name of the MSE namespace.</p>
+     */
     @NameInMap("Data")
     public CreateOrUpdateSwimmingLaneGroupResponseBodyData data;
 
-    @NameInMap("DynamicMessage")
-    public String dynamicMessage;
-
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>true: The request was successful. false: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
     public static CreateOrUpdateSwimmingLaneGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateOrUpdateSwimmingLaneGroupResponseBody self = new CreateOrUpdateSwimmingLaneGroupResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateOrUpdateSwimmingLaneGroupResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
     public CreateOrUpdateSwimmingLaneGroupResponseBody setData(CreateOrUpdateSwimmingLaneGroupResponseBodyData data) {
@@ -49,28 +49,12 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         return this.data;
     }
 
-    public CreateOrUpdateSwimmingLaneGroupResponseBody setDynamicMessage(String dynamicMessage) {
-        this.dynamicMessage = dynamicMessage;
-        return this;
-    }
-    public String getDynamicMessage() {
-        return this.dynamicMessage;
-    }
-
     public CreateOrUpdateSwimmingLaneGroupResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
     public String getErrorCode() {
         return this.errorCode;
-    }
-
-    public CreateOrUpdateSwimmingLaneGroupResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
     }
 
     public CreateOrUpdateSwimmingLaneGroupResponseBody setMessage(String message) {

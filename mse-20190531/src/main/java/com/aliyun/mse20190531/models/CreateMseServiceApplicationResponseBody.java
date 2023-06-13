@@ -5,37 +5,40 @@ import com.aliyun.tea.*;
 
 public class CreateMseServiceApplicationResponseBody extends TeaModel {
     /**
-     * <p>The license key in use.</p>
+     * <p>The return value.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>Specifies whether to enable the Sentinel-compatible mode.</p>
+     * <p>The data structure.</p>
      */
     @NameInMap("Data")
     public CreateMseServiceApplicationResponseBodyData data;
 
     /**
-     * <p>The application ID.</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The source.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The additional information.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The creation time.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
      */
     @NameInMap("Success")
     public String success;
@@ -95,79 +98,73 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
 
     public static class CreateMseServiceApplicationResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the request.</p>
+         * <p>The application ID.</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
-         * <p>The language of the response. Valid values:</p>
-         * <br>
-         * <p>*   zh: Chinese</p>
-         * <p>*   en: English</p>
+         * <p>The name of the application.</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
-         * <p>The request was successfully processed.</p>
+         * <p>The creation time.</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
-         * <p>The edition of the MSE instance that you want to purchase.</p>
-         * <br>
-         * <p>*   mse_pro: Professional Edition</p>
-         * <p>*   mse_dev: Developer Edition</p>
+         * <p>The additional information.</p>
          */
         @NameInMap("ExtraInfo")
         public String extraInfo;
 
         /**
-         * <p>The additional information.</p>
+         * <p>The programming language of the application.</p>
          */
         @NameInMap("Language")
         public String language;
 
         /**
-         * <p>The message returned.</p>
+         * <p>The license key in use.</p>
          */
         @NameInMap("LicenseKey")
         public String licenseKey;
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The ID of the region.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The status. Valid values: 1: available; 2: deleted</p>
+         * <p>The source type.</p>
          */
         @NameInMap("Source")
         public String source;
 
         /**
-         * <p>Specifies whether to enable switching.</p>
+         * <p>The status. Valid values: 1: available; 2: deleted</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
-         * <p>The data structure.</p>
+         * <p>The last modification time.</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
         /**
-         * <p>The data structure.</p>
+         * <p>The ID of the user.</p>
          */
         @NameInMap("UserId")
         public String userId;
 
         /**
-         * <p>The last modification time.</p>
+         * <p>The version information.</p>
          */
         @NameInMap("Version")
         public String version;

@@ -5,46 +5,43 @@ import com.aliyun.tea.*;
 
 public class QueryInstancesInfoResponseBody extends TeaModel {
     /**
-     * <p>The message that is returned.</p>
-     * <br>
-     * <p>*   If the request is successful, a success message is returned.</p>
-     * <p>*   If the request fails, an error message is returned.</p>
+     * <p>The details of the data.</p>
      */
     @NameInMap("Data")
     public java.util.List<QueryInstancesInfoResponseBodyData> data;
 
     /**
-     * <p>BaseResult</p>
+     * <p>The error code returned if the request failed.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
+
+    /**
+     * <p>The HTTP status code.</p>
+     */
+    @NameInMap("HttpCode")
+    public String httpCode;
+
+    /**
+     * <p>The message that is returned.</p>
+     * <br>
+     * <p>*   If the request is successful, a success message is returned.</p>
+     * <p>*   If the request fails, an error message is returned.</p>
+     */
+    @NameInMap("Message")
+    public String message;
+
+    /**
+     * <p>The ID of the request.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
      * <p>*   `true`: The request was successful.</p>
      * <p>*   `false`: The request failed.</p>
-     */
-    @NameInMap("HttpCode")
-    public String httpCode;
-
-    /**
-     * <p>The ID of the region where the instance resides.</p>
-     */
-    @NameInMap("Message")
-    public String message;
-
-    /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
-
-    /**
-     * <p>The ID of the order.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -104,55 +101,55 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
 
     public static class QueryInstancesInfoResponseBodyData extends TeaModel {
         /**
-         * <p>The pod name.</p>
+         * <p>The enabled port.</p>
          */
         @NameInMap("ClientPort")
         public String clientPort;
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>The creation time. The value of this parameter is a timestamp.</p>
          */
         @NameInMap("CreationTimestamp")
         public String creationTimestamp;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>A reserved parameter.</p>
          */
         @NameInMap("HealthStatus")
         public String healthStatus;
 
         /**
-         * <p>The details of the data.</p>
+         * <p>The public IP address.</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
-         * <p>The details of the data.</p>
+         * <p>The IP address of the pod.</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The pod name.</p>
          */
         @NameInMap("PodName")
         public String podName;
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>A reserved parameter.</p>
          */
         @NameInMap("Role")
         public String role;
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>The internal IP address.</p>
          */
         @NameInMap("SingleTunnelVip")
         public String singleTunnelVip;
 
         /**
-         * <p>The IP address of the pod.</p>
+         * <p>The zone.</p>
          */
         @NameInMap("Zone")
         public String zone;

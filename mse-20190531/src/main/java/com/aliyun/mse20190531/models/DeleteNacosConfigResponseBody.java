@@ -10,12 +10,18 @@ public class DeleteNacosConfigResponseBody extends TeaModel {
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>> The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).</p>
+     */
     @NameInMap("HttpCode")
     public String httpCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Deletes a Nacos configuration.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

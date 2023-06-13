@@ -13,6 +13,9 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    @NameInMap("ChargeType")
+    public String chargeType;
+
     /**
      * <p>The engine specifications. Valid values:</p>
      * <br>
@@ -188,6 +191,14 @@ public class CreateClusterRequest extends TeaModel {
     }
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    public CreateClusterRequest setChargeType(String chargeType) {
+        this.chargeType = chargeType;
+        return this;
+    }
+    public String getChargeType() {
+        return this.chargeType;
     }
 
     public CreateClusterRequest setClusterSpecification(String clusterSpecification) {

@@ -4,30 +4,60 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListClustersResponseBody extends TeaModel {
+    /**
+     * <p>The details of the data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListClustersResponseBodyData> data;
 
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpCode")
     public String httpCode;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of returned instances.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -109,60 +139,117 @@ public class ListClustersResponseBody extends TeaModel {
     }
 
     public static class ListClustersResponseBodyData extends TeaModel {
+        /**
+         * <p>The application version.</p>
+         */
         @NameInMap("AppVersion")
         public String appVersion;
 
+        /**
+         * <p>Indicates whether the instance can be upgraded.</p>
+         */
         @NameInMap("CanUpdate")
         public Boolean canUpdate;
 
+        /**
+         * <p>The billing method, such as subscription or pay-as-you-go.</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <p>The alias of the instance.</p>
+         */
         @NameInMap("ClusterAliasName")
         public String clusterAliasName;
 
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
+        /**
+         * <p>The type of the instance. Valid values: ZooKeeper, Nacos-Ans, and Eureka.</p>
+         */
         @NameInMap("ClusterType")
         public String clusterType;
 
+        /**
+         * <p>The time when the instance was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The time when the instance expires.</p>
+         */
         @NameInMap("EndDate")
         public String endDate;
 
+        /**
+         * <p>The initialization status of the instance.</p>
+         */
         @NameInMap("InitStatus")
         public String initStatus;
 
+        /**
+         * <p>The number of instance nodes.</p>
+         */
         @NameInMap("InstanceCount")
         public Long instanceCount;
 
+        /**
+         * <p>The ID of the instance</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The public IP address.</p>
+         */
         @NameInMap("InternetAddress")
         public String internetAddress;
 
+        /**
+         * <p>The public endpoint of the instance.</p>
+         */
         @NameInMap("InternetDomain")
         public String internetDomain;
 
+        /**
+         * <p>The internal IP address.</p>
+         */
         @NameInMap("IntranetAddress")
         public String intranetAddress;
 
+        /**
+         * <p>The internal endpoint of the instance.</p>
+         */
         @NameInMap("IntranetDomain")
         public String intranetDomain;
 
+        /**
+         * <p>The edition of the instance.</p>
+         */
         @NameInMap("MseVersion")
         public String mseVersion;
 
+        /**
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The tags that are attached to the instance.</p>
+         */
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
+        /**
+         * <p>The version information.</p>
+         */
         @NameInMap("VersionCode")
         public String versionCode;
 

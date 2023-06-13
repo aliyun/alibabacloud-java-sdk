@@ -5,64 +5,55 @@ import com.aliyun.tea.*;
 
 public class GetPluginsResponseBody extends TeaModel {
     /**
-     * <p>The name of the plug-in.</p>
+     * <p>The returned code.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The data entries returned.</p>
      */
     @NameInMap("Data")
     public java.util.List<GetPluginsResponseBodyData> data;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>The dynamic part in the error message.</p>
      */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
     /**
-     * <p>The returned code.</p>
+     * <p>The dynamic error message.</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>zh: Chinese en: English</p>
+     * <p>The error code returned if the request failed.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The type of the plug-in. Valid values:</p>
-     * <br>
-     * <p>*   0: custom</p>
-     * <p>*   1: permission authorization</p>
-     * <p>*   2: security protection</p>
-     * <p>*   3: transmission protocol</p>
-     * <p>*   4: traffic control</p>
-     * <p>*   5: traffic observation</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Specifies whether to enable the plug-in.</p>
+     * <p>Indicates whether the request was successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -146,39 +137,6 @@ public class GetPluginsResponseBody extends TeaModel {
 
     public static class GetPluginsResponseBodyData extends TeaModel {
         /**
-         * <p>The dynamic error message.</p>
-         */
-        @NameInMap("Category")
-        public Integer category;
-
-        /**
-         * <p>The version of the plug-in.</p>
-         */
-        @NameInMap("ConfigCheck")
-        public String configCheck;
-
-        /**
-         * <p>The message returned.</p>
-         */
-        @NameInMap("Id")
-        public Long id;
-
-        @NameInMap("MaxVersion")
-        public String maxVersion;
-
-        @NameInMap("Mode")
-        public Integer mode;
-
-        /**
-         * <p>The data entries returned.</p>
-         */
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("NewVersionPublishingFlag")
-        public Boolean newVersionPublishingFlag;
-
-        /**
          * <p>The type of the plug-in. Valid values:</p>
          * <br>
          * <p>0: custom</p>
@@ -193,20 +151,35 @@ public class GetPluginsResponseBody extends TeaModel {
          * <br>
          * <p>5: traffic observation</p>
          */
-        @NameInMap("Phase")
-        public Integer phase;
+        @NameInMap("Category")
+        public Integer category;
 
         /**
-         * <p>The dynamic part in the error message.</p>
+         * <p>The information about the plug-in configuration used for checking.</p>
          */
-        @NameInMap("PrimaryUser")
-        public String primaryUser;
+        @NameInMap("ConfigCheck")
+        public String configCheck;
+
+        /**
+         * <p>The ID of the plug-in.</p>
+         */
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("MaxVersion")
+        public String maxVersion;
+
+        @NameInMap("Mode")
+        public Integer mode;
 
         /**
          * <p>The name of the plug-in.</p>
          */
-        @NameInMap("Priority")
-        public Integer priority;
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("NewVersionPublishingFlag")
+        public Boolean newVersionPublishingFlag;
 
         /**
          * <p>The execution stage of the plug-in.</p>
@@ -216,35 +189,62 @@ public class GetPluginsResponseBody extends TeaModel {
          * <p>*   2: authentication stage</p>
          * <p>*   3: statistics stage</p>
          */
+        @NameInMap("Phase")
+        public Integer phase;
+
+        /**
+         * <p>The ID of the creator.</p>
+         */
+        @NameInMap("PrimaryUser")
+        public String primaryUser;
+
+        /**
+         * <p>The execution priority of the plug-in. A larger value indicates a higher priority.</p>
+         */
+        @NameInMap("Priority")
+        public Integer priority;
+
+        /**
+         * <p>The publish status.</p>
+         */
         @NameInMap("PublishState")
         public Integer publishState;
 
         /**
-         * <p>The information about the plug-in configuration used for checking.</p>
+         * <p>Indicates whether the plug-in is enabled.</p>
+         * <br>
+         * <p>*   0: disabled</p>
+         * <p>*   1: enabled</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The ID of the plug-in.</p>
+         * <p>The summary of the plug-in.</p>
          */
         @NameInMap("Summary")
         public String summary;
 
         /**
-         * <p>The information about the plug-in.</p>
+         * <p>The version of the plug-in.</p>
          */
         @NameInMap("Version")
         public String version;
 
         /**
-         * <p>The execution priority of the plug-in. A larger value indicates a higher priority.</p>
+         * <p>The URL of the Object Storage Service (OSS) bucket that stores the WebAssembly plug-in.</p>
          */
         @NameInMap("WasmFile")
         public String wasmFile;
 
         /**
-         * <p>This is a plug-in.</p>
+         * <p>The WebAssembly language. Valid values:</p>
+         * <br>
+         * <p>*   0: C++</p>
+         * <p>*   1: TinyGo</p>
+         * <p>*   2: Rust</p>
+         * <p>*   3: AssemblyScript</p>
+         * <p>*   4: Zig</p>
          */
         @NameInMap("WasmLang")
         public Integer wasmLang;

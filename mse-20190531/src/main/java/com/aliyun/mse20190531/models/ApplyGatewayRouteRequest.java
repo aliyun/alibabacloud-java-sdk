@@ -5,19 +5,22 @@ import com.aliyun.tea.*;
 
 public class ApplyGatewayRouteRequest extends TeaModel {
     /**
-     * <p>duplicated cluster alias name</p>
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>duplicatedClusterAliasName</p>
+     * <p>The unique ID of the gateway.</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
-     * <p>mse-200-105</p>
+     * <p>The ID of the route.</p>
      */
     @NameInMap("RouteId")
     public String routeId;

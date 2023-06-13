@@ -5,63 +5,55 @@ import com.aliyun.tea.*;
 
 public class GetPluginConfigResponseBody extends TeaModel {
     /**
-     * <p>The description of the README file.</p>
+     * <p>The status code returned.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The mode.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public GetPluginConfigResponseBodyData data;
 
     /**
-     * <p>The information about the plug-in configuration used for checking.</p>
+     * <p>The dynamic error code.</p>
      */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
     /**
-     * <p>\# The configuration includes the fields required for checking, such as name, age, and friends. Sample configuration: name: John age: 18 friends: - David - Anne</p>
+     * <p>The dynamic error message.</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
-     * <p>The description of the README file that is edited in English.</p>
+     * <p>The error code returned if the request failed.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The execution stage of the plug-in.</p>
-     * <br>
-     * <p>0: default stage</p>
-     * <br>
-     * <p>1: authorization stage</p>
-     * <br>
-     * <p>2: authentication stage</p>
-     * <br>
-     * <p>3: statistics stage</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The execution priority of the plug-in. A larger value indicates a higher priority.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The summary of the plug-in.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>This is a plug-in.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -145,55 +137,61 @@ public class GetPluginConfigResponseBody extends TeaModel {
 
     public static class GetPluginConfigResponseBodyDataGatewayConfigList extends TeaModel {
         /**
-         * <p>The ID of the gateway.</p>
+         * <p>The plug-in configuration.</p>
          */
         @NameInMap("Config")
         public String config;
 
         /**
-         * <p>The dynamic error message.</p>
+         * <p>The application scope of the plug-in. Valid values:</p>
+         * <br>
+         * <p>0: global</p>
+         * <br>
+         * <p>1: domain names</p>
+         * <br>
+         * <p>2: routes</p>
          */
         @NameInMap("ConfigLevel")
         public Integer configLevel;
 
         /**
-         * <p>This is a plug-in.</p>
+         * <p>Indicates whether the plug-in is enabled.</p>
          */
         @NameInMap("Enable")
         public Boolean enable;
 
         /**
-         * <p>The description of the README file.</p>
+         * <p>The ID of the gateway.</p>
          */
         @NameInMap("GatewayId")
         public Long gatewayId;
 
         /**
-         * <p>\# The configuration includes the fields required for checking, such as name, age, and friends. Sample configuration: name: John age: 18 friends: - David - Anne</p>
+         * <p>The unique ID of the gateway.</p>
          */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
         /**
-         * <p>The mode.</p>
+         * <p>The creation time.</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
-         * <p>The dynamic error code.</p>
+         * <p>The update time.</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The ID of the plug-in configuration.</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
-         * <p>The message returned.</p>
+         * <p>The ID of the gateway plug-in.</p>
          */
         @NameInMap("PluginId")
         public Long pluginId;
@@ -279,29 +277,136 @@ public class GetPluginConfigResponseBody extends TeaModel {
 
     public static class GetPluginConfigResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the plug-in is enabled.</p>
+         * <p>The category of the plug-in. Valid values:</p>
          * <br>
-         * <p>0: disabled</p>
+         * <p>0: user-defined</p>
          * <br>
-         * <p>1: enabled</p>
+         * <p>1: permission authentication</p>
+         * <br>
+         * <p>2: security protection</p>
+         * <br>
+         * <p>3: transmission protocol</p>
+         * <br>
+         * <p>4: traffic control</p>
+         * <br>
+         * <p>5: traffic observation</p>
          */
         @NameInMap("Category")
         public Integer category;
 
         /**
-         * <p>\# The configuration includes the fields required for checking, such as name, age, and friends. Sample configuration: name: John age: 18 friends: - David - Anne</p>
+         * <p>The information about the plug-in configuration used for checking.</p>
          */
         @NameInMap("ConfigCheck")
         public String configCheck;
 
         /**
-         * <p>The version of the plug-in.</p>
+         * <p>The list of gateway plug-in configurations.</p>
          */
         @NameInMap("GatewayConfigList")
         public java.util.List<GetPluginConfigResponseBodyDataGatewayConfigList> gatewayConfigList;
 
         /**
-         * <p>The WebAssembly language.</p>
+         * <p>The ID of the plug-in.</p>
+         */
+        @NameInMap("Id")
+        public Long id;
+
+        /**
+         * <p>The name of the image.</p>
+         */
+        @NameInMap("ImageName")
+        public String imageName;
+
+        /**
+         * <p>The mode.</p>
+         */
+        @NameInMap("Mode")
+        public Integer mode;
+
+        /**
+         * <p>The name of the plug-in.</p>
+         */
+        @NameInMap("Name")
+        public String name;
+
+        /**
+         * <p>The execution stage of the plug-in. Valid values:</p>
+         * <br>
+         * <p>0: default stage</p>
+         * <br>
+         * <p>1: authorization stage</p>
+         * <br>
+         * <p>2: authentication stage</p>
+         * <br>
+         * <p>3: statistics stage</p>
+         */
+        @NameInMap("Phase")
+        public Integer phase;
+
+        /**
+         * <p>The ID of the creator.</p>
+         */
+        @NameInMap("PrimaryUser")
+        public String primaryUser;
+
+        /**
+         * <p>The execution priority of the plug-in. A larger value indicates a higher priority.</p>
+         */
+        @NameInMap("Priority")
+        public Integer priority;
+
+        /**
+         * <p>The publish status.</p>
+         */
+        @NameInMap("PublishState")
+        public Integer publishState;
+
+        /**
+         * <p>The description of the README file.</p>
+         */
+        @NameInMap("Readme")
+        public String readme;
+
+        /**
+         * <p>The description of the README file that is edited in English.</p>
+         */
+        @NameInMap("ReadmeEn")
+        public String readmeEn;
+
+        /**
+         * <p>Indicates whether the plug-in is enabled. Valid values:</p>
+         * <br>
+         * <p>0: disabled</p>
+         * <br>
+         * <p>1: enabled</p>
+         */
+        @NameInMap("Status")
+        public String status;
+
+        /**
+         * <p>The summary of the plug-in.</p>
+         */
+        @NameInMap("Summary")
+        public String summary;
+
+        /**
+         * <p>The type.</p>
+         */
+        @NameInMap("Type")
+        public Integer type;
+
+        /**
+         * <p>The version of the plug-in.</p>
+         */
+        @NameInMap("Version")
+        public String version;
+
+        @NameInMap("VersionJson")
+        public String versionJson;
+
+        /**
+         * <p>The WebAssembly language. Valid values:</p>
          * <br>
          * <p>0: C++</p>
          * <br>
@@ -312,93 +417,6 @@ public class GetPluginConfigResponseBody extends TeaModel {
          * <p>3: AssemblyScript</p>
          * <br>
          * <p>4: Zig</p>
-         */
-        @NameInMap("Id")
-        public Long id;
-
-        /**
-         * <p>The unique ID of the gateway.</p>
-         */
-        @NameInMap("ImageName")
-        public String imageName;
-
-        /**
-         * <p>The creation time.</p>
-         */
-        @NameInMap("Mode")
-        public Integer mode;
-
-        /**
-         * <p>The list of gateway plug-in configurations.</p>
-         */
-        @NameInMap("Name")
-        public String name;
-
-        /**
-         * <p>Indicates whether the plug-in is enabled.</p>
-         */
-        @NameInMap("Phase")
-        public Integer phase;
-
-        /**
-         * <p>The name of the image.</p>
-         */
-        @NameInMap("PrimaryUser")
-        public String primaryUser;
-
-        /**
-         * <p>The plug-in configuration.</p>
-         */
-        @NameInMap("Priority")
-        public Integer priority;
-
-        /**
-         * <p>Indicates whether the request was successful.</p>
-         */
-        @NameInMap("PublishState")
-        public Integer publishState;
-
-        /**
-         * <p>The unique ID of the gateway.</p>
-         */
-        @NameInMap("Readme")
-        public String readme;
-
-        /**
-         * <p>The ID of the gateway plug-in.</p>
-         */
-        @NameInMap("ReadmeEn")
-        public String readmeEn;
-
-        /**
-         * <p>The information about the plug-in configuration used for checking.</p>
-         */
-        @NameInMap("Status")
-        public String status;
-
-        /**
-         * <p>The ID of the plug-in configuration.</p>
-         */
-        @NameInMap("Summary")
-        public String summary;
-
-        /**
-         * <p>The publish status.</p>
-         */
-        @NameInMap("Type")
-        public Integer type;
-
-        /**
-         * <p>The data object.</p>
-         */
-        @NameInMap("Version")
-        public String version;
-
-        @NameInMap("VersionJson")
-        public String versionJson;
-
-        /**
-         * <p>The update time.</p>
          */
         @NameInMap("WasmLang")
         public Integer wasmLang;

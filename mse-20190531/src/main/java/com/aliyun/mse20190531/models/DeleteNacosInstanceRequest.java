@@ -5,55 +5,61 @@ import com.aliyun.tea.*;
 
 public class DeleteNacosInstanceRequest extends TeaModel {
     /**
-     * <p>mse-100-001</p>
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>illegal request:%s</p>
+     * <p>The alias of the cluster.</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
-     * <p>cluster not found</p>
+     * <p>Specifies whether the node is an ephemeral node. Valid values:</p>
+     * <br>
+     * <p>*   `true`: yes</p>
+     * <p>*   `false`: no</p>
      */
     @NameInMap("Ephemeral")
     public Boolean ephemeral;
 
     /**
-     * <p>illegalRequest</p>
+     * <p>The name of the group.</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
-     * <p>duplicatedClusterAliasName</p>
+     * <p>The ID of the Nacos instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>mse-200-021</p>
+     * <p>The IP address of the Nacos instance.</p>
      */
     @NameInMap("Ip")
     public String ip;
 
     /**
-     * <p>mse-100-007</p>
+     * <p>The ID of the namespace.</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
-     * <p>clusterNotFound</p>
+     * <p>The port of the Nacos instance.</p>
      */
     @NameInMap("Port")
     public Integer port;
 
     /**
-     * <p>duplicated cluster alias name</p>
+     * <p>The name of the service.</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;

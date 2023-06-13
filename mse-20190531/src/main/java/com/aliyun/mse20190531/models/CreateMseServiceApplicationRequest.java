@@ -5,55 +5,67 @@ import com.aliyun.tea.*;
 
 public class CreateMseServiceApplicationRequest extends TeaModel {
     /**
-     * <p>The name of the application.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>edasmsc</p>
+     * <p>The name of the application.</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The additional information.</p>
      */
     @NameInMap("ExtraInfo")
     public String extraInfo;
 
     /**
-     * <p>The additional information.</p>
+     * <p>The programming language of the application.</p>
      */
     @NameInMap("Language")
     public String language;
 
     /**
-     * <p>Creates an application.</p>
+     * <p>The edition of the MSE instance that you want to purchase.</p>
+     * <br>
+     * <p>*   mse_pro: Professional Edition</p>
+     * <p>*   mse_dev: Developer Edition</p>
      */
     @NameInMap("MseVersion")
     public String mseVersion;
 
     /**
-     * <p>The creation time.</p>
+     * <p>The ID of the region where the instance resides. Examples:</p>
+     * <br>
+     * <p>*   cn-hangzhou: China (Hangzhou)</p>
+     * <p>*   cn-beijing: China (Beijing)</p>
+     * <p>*   cn-shanghai: China (Shanghai)</p>
+     * <p>*   cn-zhangjiakou: China (Zhangjiakou)</p>
+     * <p>*   cn-shenzhen: China (Shenzhen)</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
-     * <p>The source type.</p>
+     * <p>Specifies whether to enable the Sentinel-compatible mode.</p>
      */
     @NameInMap("SentinelEnable")
     public String sentinelEnable;
 
     /**
-     * <p>The last modification time.</p>
+     * <p>The source.</p>
      */
     @NameInMap("Source")
     public String source;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Specifies whether to enable switching.</p>
      */
     @NameInMap("SwitchEnable")
     public String switchEnable;

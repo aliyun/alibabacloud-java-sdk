@@ -4,30 +4,62 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
+    /**
+     * <p>The status code. A value of 200 is returned if the request is successful.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data structure.</p>
+     */
     @NameInMap("Data")
     public GetGatewayAuthConsumerDetailResponseBodyData data;
 
+    /**
+     * <p>The dynamic part in the error message.</p>
+     */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
+    /**
+     * <p>The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.</p>
+     * <br>
+     * <p>>  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>The error code that is returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -109,27 +141,54 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
     }
 
     public static class GetGatewayAuthConsumerDetailResponseBodyDataResourceList extends TeaModel {
+        /**
+         * <p>The ID of the consumer.</p>
+         */
         @NameInMap("ConsumerId")
         public Long consumerId;
 
+        /**
+         * <p>The unique ID of the gateway.</p>
+         */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
+        /**
+         * <p>The creation time.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The modification time.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The ID of the authorized resource for the consumer.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The resource authorization status. Valid values:</p>
+         * <br>
+         * <p>*   true: enabled</p>
+         * <p>*   false: disabled</p>
+         */
         @NameInMap("ResourceStatus")
         public Boolean resourceStatus;
 
+        /**
+         * <p>The ID of the route.</p>
+         */
         @NameInMap("RouteId")
         public Long routeId;
 
+        /**
+         * <p>The name of the route.</p>
+         */
         @NameInMap("RouteName")
         public String routeName;
 
@@ -205,57 +264,119 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
     }
 
     public static class GetGatewayAuthConsumerDetailResponseBodyData extends TeaModel {
+        /**
+         * <p>The status of the consumer. Valid values:</p>
+         * <br>
+         * <p>*   true: enabled</p>
+         * <p>*   false: disabled</p>
+         */
         @NameInMap("ConsumerStatus")
         public Boolean consumerStatus;
 
+        /**
+         * <p>The description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The encryption type. Valid values:</p>
+         * <br>
+         * <p>*   RSA</p>
+         * <p>*   OCT</p>
+         */
         @NameInMap("EncodeType")
         public String encodeType;
 
+        /**
+         * <p>The unique ID of the gateway.</p>
+         */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
+        /**
+         * <p>The creation time.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The update time.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The ID of the consumer.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The JWT public key. The JSON format is supported.</p>
+         */
         @NameInMap("Jwks")
         public String jwks;
 
+        /**
+         * <p>The name of the key used for JWT-based identity authentication.</p>
+         */
         @NameInMap("KeyName")
         public String keyName;
 
+        /**
+         * <p>The value of the key used for JWT-based identity authentication.</p>
+         */
         @NameInMap("KeyValue")
         public String keyValue;
 
+        /**
+         * <p>The name of the consumer.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The creator.</p>
+         */
         @NameInMap("PrimaryUser")
         public String primaryUser;
 
+        /**
+         * <p>The resource list.</p>
+         */
         @NameInMap("ResourceList")
         public java.util.List<GetGatewayAuthConsumerDetailResponseBodyDataResourceList> resourceList;
 
+        /**
+         * <p>The names of the parameters that are required to verify each token. By default, each token is prefixed with Bearer and stored in the Authorization header, such as `Authorization: Bearer <Content of a token>`.</p>
+         */
         @NameInMap("TokenName")
         public String tokenName;
 
+        /**
+         * <p>Specifies whether to enable pass-through.</p>
+         */
         @NameInMap("TokenPass")
         public Boolean tokenPass;
 
+        /**
+         * <p>The positions of the parameters that are required to verify each token. By default, each token is prefixed with Bearer and stored in the Authorization header, such as `Authorization: Bearer <Content of a token>`.</p>
+         */
         @NameInMap("TokenPosition")
         public String tokenPosition;
 
+        /**
+         * <p>The prefixes of the parameters that are required to verify each token. By default, each token is prefixed with Bearer and stored in the Authorization header, such as `Authorization: Bearer <Content of a token>`.</p>
+         */
         @NameInMap("TokenPrefix")
         public String tokenPrefix;
 
+        /**
+         * <p>The authentication type. Valid values:</p>
+         * <br>
+         * <p>*   JWT</p>
+         */
         @NameInMap("Type")
         public String type;
 

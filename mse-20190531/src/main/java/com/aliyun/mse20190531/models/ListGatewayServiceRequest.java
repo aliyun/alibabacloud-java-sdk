@@ -5,37 +5,40 @@ import com.aliyun.tea.*;
 
 public class ListGatewayServiceRequest extends TeaModel {
     /**
-     * <p>systemError</p>
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>duplicated cluster alias name</p>
+     * <p>Specifies whether to enable sorting.</p>
      */
     @NameInMap("DescSort")
     public Boolean descSort;
 
     /**
-     * <p>mse-100-007</p>
+     * <p>The parameters that are used to specify filter conditions. The values of the parameters are in the format of {"key1":"value1"}.</p>
      */
     @NameInMap("FilterParams")
     public ListGatewayServiceRequestFilterParams filterParams;
 
     /**
-     * <p>duplicatedClusterAliasName</p>
+     * <p>The item based on which entries are sorted.</p>
      */
     @NameInMap("OrderItem")
     public String orderItem;
 
     /**
-     * <p>code</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>mse-200-105</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -95,37 +98,43 @@ public class ListGatewayServiceRequest extends TeaModel {
 
     public static class ListGatewayServiceRequestFilterParams extends TeaModel {
         /**
-         * <p>cluster not found</p>
+         * <p>The unique ID of the gateway.</p>
          */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
         /**
-         * <p>clusterNotFound</p>
+         * <p>The group.</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
-         * <p>illegalRequest</p>
+         * <p>The name of the service.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>mse-200-021</p>
+         * <p>The namespace to which the service belongs.</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
-         * <p>mse-100-001</p>
+         * <p>The protocol of the service.</p>
+         * <br>
+         * <p>*   HTTP</p>
+         * <p>*   HTTPS</p>
+         * <p>*   HTTP2</p>
+         * <p>*   GRPC</p>
+         * <p>*   DUBBO</p>
          */
         @NameInMap("ServiceProtocol")
         public String serviceProtocol;
 
         /**
-         * <p>illegal request:%s</p>
+         * <p>The type of the source.</p>
          */
         @NameInMap("SourceType")
         public String sourceType;

@@ -4,14 +4,53 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListNacosConfigsResponseBody extends TeaModel {
+    /**
+     * <p>The status code returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The configurations.</p>
+     */
     @NameInMap("Configurations")
     public java.util.List<ListNacosConfigsResponseBodyConfigurations> configurations;
 
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
+
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
+    @NameInMap("HttpCode")
+    public String httpCode;
+
+    /**
+     * <p>The message returned.</p>
+     */
+    @NameInMap("Message")
+    public String message;
+
+    /**
+     * <p>The page number of the returned page.</p>
+     */
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    /**
+     * <p>The ID of the request.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
@@ -19,29 +58,11 @@ public class ListNacosConfigsResponseBody extends TeaModel {
      * <p>*   `true`: The request was successful.</p>
      * <p>*   `false`: The request failed.</p>
      */
-    @NameInMap("HttpCode")
-    public String httpCode;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    /**
-     * <p>Queries Nacos configurations.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>> The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).</p>
+     * <p>The total number of returned instances.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -132,15 +153,27 @@ public class ListNacosConfigsResponseBody extends TeaModel {
     }
 
     public static class ListNacosConfigsResponseBodyConfigurations extends TeaModel {
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The ID of the configuration.</p>
+         */
         @NameInMap("DataId")
         public String dataId;
 
+        /**
+         * <p>The ID of the group.</p>
+         */
         @NameInMap("Group")
         public String group;
 
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("Id")
         public String id;
 

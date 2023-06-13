@@ -5,55 +5,58 @@ import com.aliyun.tea.*;
 
 public class ListNamingTrackResponseBody extends TeaModel {
     /**
-     * <p>The name of the service.</p>
+     * <p>The error code returned if the request failed.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("HttpCode")
     public String httpCode;
 
     /**
-     * <p>The name of the node.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The data information.</p>
+     * <p>The number of the returned page.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The push time.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The group.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The details of the data.</p>
+     * <p>The total number of returned entries.</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
 
     /**
-     * <p>The name of the service.</p>
+     * <p>The data information.</p>
      */
     @NameInMap("Traces")
     public java.util.List<ListNamingTrackResponseBodyTraces> traces;
@@ -137,61 +140,55 @@ public class ListNamingTrackResponseBody extends TeaModel {
 
     public static class ListNamingTrackResponseBodyTraces extends TeaModel {
         /**
-         * <p>The start timestamp. Unit: seconds.</p>
+         * <p>The IP address of the client.</p>
          */
         @NameInMap("ClientIp")
         public String clientIp;
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The group.</p>
          */
         @NameInMap("Group")
         public String group;
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The number of instances.</p>
          */
         @NameInMap("InstanceSize")
         public String instanceSize;
 
         /**
-         * <p>The IP address of the client.</p>
+         * <p>The name of the node.</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
-         * <p>The ID of the namespace.</p>
+         * <p>The push time.</p>
          */
         @NameInMap("PushTime")
         public String pushTime;
 
         /**
-         * <p>Specifies whether to sort the query results in chronological order or reverse chronological order. Default value: `false`.</p>
-         * <br>
-         * <p>*   `true`: sorts the query results in reverse chronological order.</p>
-         * <p>*   `false`: sorts the query results in chronological order.</p>
+         * <p>The total push time.</p>
          */
         @NameInMap("PushTimeAll")
         public String pushTimeAll;
 
         /**
-         * <p>The language of the response. Valid values:</p>
-         * <br>
-         * <p>*   zh: Chinese</p>
-         * <p>*   en: English</p>
+         * <p>The push time for the network.</p>
          */
         @NameInMap("PushTimeNetwork")
         public String pushTimeNetwork;
 
         /**
-         * <p>The end timestamp. Unit: seconds.</p>
+         * <p>The name of the service.</p>
          */
         @NameInMap("ServerName")
         public String serverName;
 
         /**
-         * <p>The data structure.</p>
+         * <p>The duration that is specified in the service-level agreement (SLA).</p>
          */
         @NameInMap("SlaTime")
         public String slaTime;

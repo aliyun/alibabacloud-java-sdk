@@ -4,27 +4,36 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetTagsBySwimmingLaneGroupIdResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public Integer code;
-
+    /**
+     * <p>The details of the data.</p>
+     */
     @NameInMap("Data")
-    public Object data;
+    public java.util.List<String> data;
 
-    @NameInMap("DynamicMessage")
-    public String dynamicMessage;
-
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -33,28 +42,12 @@ public class GetTagsBySwimmingLaneGroupIdResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetTagsBySwimmingLaneGroupIdResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
-    public GetTagsBySwimmingLaneGroupIdResponseBody setData(Object data) {
+    public GetTagsBySwimmingLaneGroupIdResponseBody setData(java.util.List<String> data) {
         this.data = data;
         return this;
     }
-    public Object getData() {
+    public java.util.List<String> getData() {
         return this.data;
-    }
-
-    public GetTagsBySwimmingLaneGroupIdResponseBody setDynamicMessage(String dynamicMessage) {
-        this.dynamicMessage = dynamicMessage;
-        return this;
-    }
-    public String getDynamicMessage() {
-        return this.dynamicMessage;
     }
 
     public GetTagsBySwimmingLaneGroupIdResponseBody setErrorCode(String errorCode) {
@@ -63,14 +56,6 @@ public class GetTagsBySwimmingLaneGroupIdResponseBody extends TeaModel {
     }
     public String getErrorCode() {
         return this.errorCode;
-    }
-
-    public GetTagsBySwimmingLaneGroupIdResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
     }
 
     public GetTagsBySwimmingLaneGroupIdResponseBody setMessage(String message) {

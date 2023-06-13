@@ -4,71 +4,83 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateNacosConfigRequest extends TeaModel {
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>mse-100-007</p>
+     * <p>The name of the application.</p>
      */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>The list of IP addresses where the beta release of the configuration is performed.</p>
+     */
     @NameInMap("BetaIps")
     public String betaIps;
 
     /**
-     * <p>cluster not found</p>
+     * <p>The content of the configuration.</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
-     * <p>duplicatedClusterAliasName</p>
+     * <p>The ID of the configuration.</p>
      */
     @NameInMap("DataId")
     public String dataId;
 
     /**
-     * <p>illegal request:%s</p>
+     * <p>The description of the configuration.</p>
      */
     @NameInMap("Desc")
     public String desc;
 
+    /**
+     * <p>The encryption key.</p>
+     */
     @NameInMap("EncryptedDataKey")
     public String encryptedDataKey;
 
     /**
-     * <p>duplicated cluster alias name</p>
+     * <p>The name of the group.</p>
      */
     @NameInMap("Group")
     public String group;
 
     /**
-     * <p>mse-200-105</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>system error</p>
+     * <p>The MD5 value of the configuration.</p>
      */
     @NameInMap("Md5")
     public String md5;
 
     /**
-     * <p>systemError</p>
+     * <p>The ID of the namespace.</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
-     * <p>illegalRequest</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tags")
     public String tags;
 
     /**
-     * <p>clusterNotFound</p>
+     * <p>The format of the configuration. Supported formats include TEXT, JSON, XML, and HTML.</p>
      */
     @NameInMap("Type")
     public String type;

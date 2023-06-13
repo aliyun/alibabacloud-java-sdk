@@ -4,38 +4,72 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class AddGatewayRequest extends TeaModel {
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>付费类型。</p>
+     */
+    @NameInMap("ChargeType")
+    public String chargeType;
+
+    /**
+     * <p>Specifies whether to enable hardware acceleration.</p>
+     */
     @NameInMap("EnableHardwareAcceleration")
     public Boolean enableHardwareAcceleration;
 
+    /**
+     * <p>Specifies whether to activate Log Service.</p>
+     */
     @NameInMap("EnableSls")
     public Boolean enableSls;
 
+    /**
+     * <p>Specifies whether to activate Tracing Analysis.</p>
+     */
     @NameInMap("EnableXtrace")
     public Boolean enableXtrace;
 
+    /**
+     * <p>Specifies whether to use an advanced security group.</p>
+     */
     @NameInMap("EnterpriseSecurityGroup")
     public Boolean enterpriseSecurityGroup;
 
+    /**
+     * <p>The specifications of the Internet-facing SLB instance. Valid values:</p>
+     * <br>
+     * <p>*   slb.s1.small</p>
+     * <p>*   slb.s2.small</p>
+     * <p>*   slb.s2.medium</p>
+     * <p>*   slb.s3.small</p>
+     * <p>*   slb.s3.medium</p>
+     * <p>*   slb.s3.large</p>
+     */
     @NameInMap("InternetSlbSpec")
     public String internetSlbSpec;
 
     /**
-     * <p>illegal request:%s</p>
+     * <p>The name of the gateway.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>mse-200-021</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
-     * <p>system error</p>
+     * <p>The number of nodes.</p>
      */
     @NameInMap("Replica")
     public Integer replica;
@@ -46,41 +80,71 @@ public class AddGatewayRequest extends TeaModel {
     @NameInMap("RequestPars")
     public String requestPars;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>clusterNotFound</p>
+     * <p>The specifications of the internal-facing Server Load Balancer (SLB) instance. Valid values:</p>
+     * <br>
+     * <p>*   slb.s1.small</p>
+     * <p>*   slb.s2.small</p>
+     * <p>*   slb.s2.medium</p>
+     * <p>*   slb.s3.small</p>
+     * <p>*   slb.s3.medium</p>
+     * <p>*   slb.s3.large</p>
      */
     @NameInMap("SlbSpec")
     public String slbSpec;
 
     /**
-     * <p>systemError</p>
+     * <p>The node specifications. Valid values:</p>
+     * <br>
+     * <p>*   MSE_GTW\_16\_32\_200\_c(16C32G)</p>
+     * <p>*   MSE_GTW\_2\_4\_200\_c(2C4G)</p>
+     * <p>*   MSE_GTW\_4\_8\_200\_c(4C8G)</p>
+     * <p>*   MSE_GTW\_8\_16\_200\_c(8C16G)</p>
      */
     @NameInMap("Spec")
     public String spec;
 
+    /**
+     * <p>The tag of the gateway.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<AddGatewayRequestTag> tag;
 
     /**
-     * <p>mse-100-001</p>
+     * <p>The ID of the primary vSwitch.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    /**
+     * <p>The ID of the secondary vSwitch.</p>
+     */
     @NameInMap("VSwitchId2")
     public String vSwitchId2;
 
     /**
-     * <p>cluster not found</p>
+     * <p>The ID of the virtual private cloud (VPC).</p>
      */
     @NameInMap("Vpc")
     public String vpc;
 
+    /**
+     * <p>The sampling rate of Tracing Analysis. Valid values: \[1,100].</p>
+     */
     @NameInMap("XtraceRatio")
     public String xtraceRatio;
+
+    /**
+     * <p>可用区信息。</p>
+     */
+    @NameInMap("ZoneInfo")
+    public java.util.List<AddGatewayRequestZoneInfo> zoneInfo;
 
     public static AddGatewayRequest build(java.util.Map<String, ?> map) throws Exception {
         AddGatewayRequest self = new AddGatewayRequest();
@@ -93,6 +157,14 @@ public class AddGatewayRequest extends TeaModel {
     }
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    public AddGatewayRequest setChargeType(String chargeType) {
+        this.chargeType = chargeType;
+        return this;
+    }
+    public String getChargeType() {
+        return this.chargeType;
     }
 
     public AddGatewayRequest setEnableHardwareAcceleration(Boolean enableHardwareAcceleration) {
@@ -231,10 +303,24 @@ public class AddGatewayRequest extends TeaModel {
         return this.xtraceRatio;
     }
 
+    public AddGatewayRequest setZoneInfo(java.util.List<AddGatewayRequestZoneInfo> zoneInfo) {
+        this.zoneInfo = zoneInfo;
+        return this;
+    }
+    public java.util.List<AddGatewayRequestZoneInfo> getZoneInfo() {
+        return this.zoneInfo;
+    }
+
     public static class AddGatewayRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -257,6 +343,42 @@ public class AddGatewayRequest extends TeaModel {
         }
         public String getValue() {
             return this.value;
+        }
+
+    }
+
+    public static class AddGatewayRequestZoneInfo extends TeaModel {
+        /**
+         * <p>交换机ID。</p>
+         */
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        /**
+         * <p>可用区ID。</p>
+         */
+        @NameInMap("ZoneId")
+        public String zoneId;
+
+        public static AddGatewayRequestZoneInfo build(java.util.Map<String, ?> map) throws Exception {
+            AddGatewayRequestZoneInfo self = new AddGatewayRequestZoneInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public AddGatewayRequestZoneInfo setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public AddGatewayRequestZoneInfo setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

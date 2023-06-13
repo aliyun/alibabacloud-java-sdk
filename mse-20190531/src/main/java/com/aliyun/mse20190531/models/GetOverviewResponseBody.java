@@ -5,37 +5,40 @@ import com.aliyun.tea.*;
 
 public class GetOverviewResponseBody extends TeaModel {
     /**
-     * <p>clusterNotFound</p>
+     * <p>The response code returned.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>mse-200-021</p>
+     * <p>The details of the data.</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
-     * <p>mse-100-001</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>illegalRequest</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>You are not authorized to perform this operation.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>cluster not found</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
      */
     @NameInMap("Success")
     public String success;

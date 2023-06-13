@@ -4,15 +4,32 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
+    /**
+     * <p>The language of the response. Valid values:****</p>
+     * <br>
+     * <p>*   **zh-CN**: Chinese</p>
+     * <p>*   **en-US**: English</p>
+     * <br>
+     * <p>> Default value: **zh-CN**.</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>Specifies whether to enable the lane.</p>
+     */
     @NameInMap("Enable")
     public Boolean enable;
 
+    /**
+     * <p>Specifies whether to configure a routing rule for the lane. If an Ingress gateway is used, this parameter is not required.</p>
+     */
     @NameInMap("EnableRules")
     public Boolean enableRules;
 
+    /**
+     * <p>The JSON string.</p>
+     */
     @NameInMap("EntryRule")
     public String entryRule;
 
@@ -22,24 +39,41 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
     @NameInMap("GatewaySwimmingLaneRouteJson")
     public String gatewaySwimmingLaneRouteJsonShrink;
 
+    /**
+     * <p>The language of the response. Valid values:****</p>
+     * <br>
+     * <p>*   **zh-CN**: Chinese</p>
+     * <p>*   **en-US**: English</p>
+     * <br>
+     * <p>> Default value: **zh-CN**.</p>
+     */
     @NameInMap("GroupId")
     public Long groupId;
 
+    /**
+     * <p>The ID of the primary key. A value -1 specifies a request that is used to create a lane. A value greater than 0 specifies a request that is used to modify a lane.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The name of the MSE namespace.</p>
+     */
     @NameInMap("Name")
     public String name;
 
-    /**
-     * <p>MSE命名空间名字</p>
-     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the primary key. The value -1 specifies a request that is used to create a lane. A value greater than 0 specifies a request that is used to modify a lane.</p>
+     */
     @NameInMap("Tag")
     public String tag;
 

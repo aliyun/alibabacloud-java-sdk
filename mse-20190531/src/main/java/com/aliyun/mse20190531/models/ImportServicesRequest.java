@@ -4,6 +4,12 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ImportServicesRequest extends TeaModel {
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
@@ -13,15 +19,38 @@ public class ImportServicesRequest extends TeaModel {
     @NameInMap("FcVersion")
     public String fcVersion;
 
+    /**
+     * <p>The unique ID of the gateway.</p>
+     */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    /**
+     * <p>The information about services.</p>
+     */
     @NameInMap("ServiceList")
     public java.util.List<ImportServicesRequestServiceList> serviceList;
 
+    /**
+     * <p>The service source. Valid values:</p>
+     * <br>
+     * <p>*   MSE: MSE Nacos instance</p>
+     * <p>*   K8s: ACK cluster</p>
+     * <p>*   VIP: fixed address</p>
+     * <p>*   DNS: DNS domain</p>
+     */
     @NameInMap("SourceType")
     public String sourceType;
 
+    /**
+     * <p>The Transport Layer Security (TLS) settings. Valid values:</p>
+     * <br>
+     * <p>*   mode: TLS mode</p>
+     * <p>*   certId: certificate ID</p>
+     * <p>*   caCertId: CA certificate ID</p>
+     * <p>*   caCertContent: CA certificate public key</p>
+     * <p>*   sni: service name identification</p>
+     */
     @NameInMap("TlsSetting")
     public String tlsSetting;
 
@@ -87,21 +116,39 @@ public class ImportServicesRequest extends TeaModel {
     }
 
     public static class ImportServicesRequestServiceList extends TeaModel {
+        /**
+         * <p>The group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The IP addresses of the service.</p>
+         */
         @NameInMap("Ips")
         public java.util.List<String> ips;
 
+        /**
+         * <p>The name of the service.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The namespace.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The port of the service.</p>
+         */
         @NameInMap("ServicePort")
         public Long servicePort;
 
+        /**
+         * <p>The protocol of the service.</p>
+         */
         @NameInMap("ServiceProtocol")
         public String serviceProtocol;
 

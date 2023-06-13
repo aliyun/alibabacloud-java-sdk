@@ -5,51 +5,59 @@ import com.aliyun.tea.*;
 
 public class CreateNacosServiceRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The language of the response. Valid values:</p>
      * <br>
-     * <p>> This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.</p>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>system error</p>
+     * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>> This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>systemError</p>
+     * <p>Specifies whether the instance is marked as a temporary node. Valid values:</p>
+     * <br>
+     * <p>*   `true`: yes</p>
+     * <p>*   `false`: no</p>
      */
     @NameInMap("Ephemeral")
     public Boolean ephemeral;
 
     /**
-     * <p>clusterNotFound</p>
+     * <p>The name of the group.</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
-     * <p>illegal request:%s</p>
+     * <p>The ID of the instance.</p>
+     * <br>
+     * <p>> This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>cluster not found</p>
+     * <p>The ID of the namespace.</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
-     * <p>mse-100-001</p>
+     * <p>The protection threshold.</p>
      */
     @NameInMap("ProtectThreshold")
     public String protectThreshold;
 
     /**
-     * <p>mse-200-021</p>
+     * <p>The name of the service.</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;

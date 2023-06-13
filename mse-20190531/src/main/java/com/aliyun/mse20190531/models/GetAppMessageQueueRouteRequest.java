@@ -4,9 +4,18 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetAppMessageQueueRouteRequest extends TeaModel {
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>The ID of the application.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
@@ -16,6 +25,15 @@ public class GetAppMessageQueueRouteRequest extends TeaModel {
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The region where the instance resides. Examples:</p>
+     * <br>
+     * <p>*   `cn-hangzhou`: China (Hangzhou)</p>
+     * <p>*   `cn-beijing`: China (Beijing)</p>
+     * <p>*   `cn-shanghai`: China (Shanghai)</p>
+     * <p>*   `cn-zhangjiakou`: China (Zhangjiakou)</p>
+     * <p>*   `cn-shenzhen`: China (Shenzhen)</p>
+     */
     @NameInMap("Region")
     public String region;
 

@@ -3,7 +3,7 @@ package com.aliyun.mse20190531.models;
 
 import com.aliyun.tea.*;
 
-public class ListAnsServicesResponse extends TeaModel {
+public class CreateFlowRuleResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class ListAnsServicesResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListAnsServicesResponseBody body;
+    public CreateFlowRuleResponseBody body;
 
-    public static ListAnsServicesResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListAnsServicesResponse self = new ListAnsServicesResponse();
+    public static CreateFlowRuleResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateFlowRuleResponse self = new CreateFlowRuleResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListAnsServicesResponse setHeaders(java.util.Map<String, String> headers) {
+    public CreateFlowRuleResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class ListAnsServicesResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListAnsServicesResponse setStatusCode(Integer statusCode) {
+    public CreateFlowRuleResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class ListAnsServicesResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListAnsServicesResponse setBody(ListAnsServicesResponseBody body) {
+    public CreateFlowRuleResponse setBody(CreateFlowRuleResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListAnsServicesResponseBody getBody() {
+    public CreateFlowRuleResponseBody getBody() {
         return this.body;
     }
 

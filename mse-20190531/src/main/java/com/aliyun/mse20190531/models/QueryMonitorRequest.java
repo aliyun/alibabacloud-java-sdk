@@ -5,70 +5,46 @@ import com.aliyun.tea.*;
 
 public class QueryMonitorRequest extends TeaModel {
     /**
-     * <p>The timestamp when the monitoring starts.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>system error</p>
+     * <p>systemError</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
-     * <p>The metric type. The following metric types are supported:</p>
-     * <br>
-     * <p>\[Basic system metrics]</p>
-     * <br>
-     * <p>*   cpuUsage</p>
-     * <p>*   memoryUsage</p>
-     * <p>*   diskUsage</p>
-     * <p>*   gcCount</p>
-     * <p>*   gcTime</p>
-     * <br>
-     * <p>\[Nacos registry]</p>
-     * <br>
-     * <p>*   serviceCount</p>
-     * <p>*   writeCostTime</p>
-     * <p>*   readCostTime</p>
-     * <p>*   TPS regCenterTps</p>
-     * <p>*   QPS regCenterQps</p>
-     * <br>
-     * <p>\[Nacos configuration center]</p>
-     * <br>
-     * <p>*   publish</p>
-     * <p>*   getConfig</p>
-     * <br>
-     * <p>\[zookeeper]</p>
-     * <br>
-     * <p>*   TPS zk_TpsCount</p>
-     * <p>*   QPS zk_QpsCount</p>
-     * <p>*   zookeeper_AvgRequestLatency</p>
+     * <p>The extended request parameters in the JSON format.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>mse-100-001</p>
+     * <p>cluster not found</p>
      */
     @NameInMap("MonitorType")
     public String monitorType;
 
     /**
-     * <p>cluster not found</p>
+     * <p>clusterNotFound</p>
      */
     @NameInMap("RequestPars")
     public String requestPars;
 
     /**
-     * <p>systemError</p>
+     * <p>mse-100-001</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
 
     /**
-     * <p>The extended request parameters in the JSON format.</p>
+     * <p>system error</p>
      */
     @NameInMap("Step")
     public Long step;

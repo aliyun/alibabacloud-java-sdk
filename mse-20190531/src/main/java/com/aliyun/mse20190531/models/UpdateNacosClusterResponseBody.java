@@ -5,37 +5,37 @@ import com.aliyun.tea.*;
 
 public class UpdateNacosClusterResponseBody extends TeaModel {
     /**
-     * <p>The port used for health checks.</p>
+     * <p>The response code returned.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The type of the health check.</p>
+     * <p>The result returned.</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
-     * <p>The name of the service.</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the namespace.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The name of the group.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Specifies whether to use the port of the instance for a health check.</p>
+     * <p>Indicates whether the request was successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
