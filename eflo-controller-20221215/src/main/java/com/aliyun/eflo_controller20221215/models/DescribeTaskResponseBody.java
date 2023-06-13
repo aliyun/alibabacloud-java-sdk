@@ -16,6 +16,9 @@ public class DescribeTaskResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    @NameInMap("NodeIds")
+    public java.util.List<String> nodeIds;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -66,6 +69,14 @@ public class DescribeTaskResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public DescribeTaskResponseBody setNodeIds(java.util.List<String> nodeIds) {
+        this.nodeIds = nodeIds;
+        return this;
+    }
+    public java.util.List<String> getNodeIds() {
+        return this.nodeIds;
     }
 
     public DescribeTaskResponseBody setRequestId(String requestId) {

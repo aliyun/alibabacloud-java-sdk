@@ -516,9 +516,15 @@ public class CreateClusterRequest extends TeaModel {
     }
 
     public static class CreateClusterRequestNetworksVpdInfo extends TeaModel {
+        /**
+         * <p>专有网络 id</p>
+         */
         @NameInMap("VpdId")
         public String vpdId;
 
+        /**
+         * <p>集群子网id列表</p>
+         */
         @NameInMap("VpdSubnets")
         public java.util.List<String> vpdSubnets;
 
@@ -552,6 +558,9 @@ public class CreateClusterRequest extends TeaModel {
         @NameInMap("NewVpdInfo")
         public CreateClusterRequestNetworksNewVpdInfo newVpdInfo;
 
+        /**
+         * <p>复用VPD信息</p>
+         */
         @NameInMap("VpdInfo")
         public CreateClusterRequestNetworksVpdInfo vpdInfo;
 

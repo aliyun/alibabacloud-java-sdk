@@ -22,6 +22,12 @@ public class DescribeNodeResponseBody extends TeaModel {
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <p>镜像名称</p>
+     */
+    @NameInMap("ImageName")
+    public String imageName;
+
     @NameInMap("MachineType")
     public String machineType;
 
@@ -100,6 +106,14 @@ public class DescribeNodeResponseBody extends TeaModel {
     }
     public String getImageId() {
         return this.imageId;
+    }
+
+    public DescribeNodeResponseBody setImageName(String imageName) {
+        this.imageName = imageName;
+        return this;
+    }
+    public String getImageName() {
+        return this.imageName;
     }
 
     public DescribeNodeResponseBody setMachineType(String machineType) {
