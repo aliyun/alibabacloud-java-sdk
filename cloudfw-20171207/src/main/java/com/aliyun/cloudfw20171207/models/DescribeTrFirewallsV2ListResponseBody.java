@@ -83,6 +83,132 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsProtectedResource extends TeaModel {
+        @NameInMap("Count")
+        public Integer count;
+
+        @NameInMap("PeerTrList")
+        public java.util.List<String> peerTrList;
+
+        @NameInMap("VbrList")
+        public java.util.List<String> vbrList;
+
+        @NameInMap("VpcList")
+        public java.util.List<String> vpcList;
+
+        @NameInMap("VpnList")
+        public java.util.List<String> vpnList;
+
+        public static DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsProtectedResource build(java.util.Map<String, ?> map) throws Exception {
+            DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsProtectedResource self = new DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsProtectedResource();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsProtectedResource setCount(Integer count) {
+            this.count = count;
+            return this;
+        }
+        public Integer getCount() {
+            return this.count;
+        }
+
+        public DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsProtectedResource setPeerTrList(java.util.List<String> peerTrList) {
+            this.peerTrList = peerTrList;
+            return this;
+        }
+        public java.util.List<String> getPeerTrList() {
+            return this.peerTrList;
+        }
+
+        public DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsProtectedResource setVbrList(java.util.List<String> vbrList) {
+            this.vbrList = vbrList;
+            return this;
+        }
+        public java.util.List<String> getVbrList() {
+            return this.vbrList;
+        }
+
+        public DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsProtectedResource setVpcList(java.util.List<String> vpcList) {
+            this.vpcList = vpcList;
+            return this;
+        }
+        public java.util.List<String> getVpcList() {
+            return this.vpcList;
+        }
+
+        public DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsProtectedResource setVpnList(java.util.List<String> vpnList) {
+            this.vpnList = vpnList;
+            return this;
+        }
+        public java.util.List<String> getVpnList() {
+            return this.vpnList;
+        }
+
+    }
+
+    public static class DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsUnprotectedResource extends TeaModel {
+        @NameInMap("Count")
+        public Integer count;
+
+        @NameInMap("PeerTrList")
+        public java.util.List<String> peerTrList;
+
+        @NameInMap("VbrList")
+        public java.util.List<String> vbrList;
+
+        @NameInMap("VpcList")
+        public java.util.List<String> vpcList;
+
+        @NameInMap("VpnList")
+        public java.util.List<String> vpnList;
+
+        public static DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsUnprotectedResource build(java.util.Map<String, ?> map) throws Exception {
+            DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsUnprotectedResource self = new DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsUnprotectedResource();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsUnprotectedResource setCount(Integer count) {
+            this.count = count;
+            return this;
+        }
+        public Integer getCount() {
+            return this.count;
+        }
+
+        public DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsUnprotectedResource setPeerTrList(java.util.List<String> peerTrList) {
+            this.peerTrList = peerTrList;
+            return this;
+        }
+        public java.util.List<String> getPeerTrList() {
+            return this.peerTrList;
+        }
+
+        public DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsUnprotectedResource setVbrList(java.util.List<String> vbrList) {
+            this.vbrList = vbrList;
+            return this;
+        }
+        public java.util.List<String> getVbrList() {
+            return this.vbrList;
+        }
+
+        public DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsUnprotectedResource setVpcList(java.util.List<String> vpcList) {
+            this.vpcList = vpcList;
+            return this;
+        }
+        public java.util.List<String> getVpcList() {
+            return this.vpcList;
+        }
+
+        public DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsUnprotectedResource setVpnList(java.util.List<String> vpnList) {
+            this.vpnList = vpnList;
+            return this;
+        }
+        public java.util.List<String> getVpnList() {
+            return this.vpnList;
+        }
+
+    }
+
     public static class DescribeTrFirewallsV2ListResponseBodyVpcTrFirewalls extends TeaModel {
         @NameInMap("CenId")
         public String cenId;
@@ -105,6 +231,9 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
         @NameInMap("PrecheckStatus")
         public String precheckStatus;
 
+        @NameInMap("ProtectedResource")
+        public DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsProtectedResource protectedResource;
+
         @NameInMap("RegionNo")
         public String regionNo;
 
@@ -119,6 +248,9 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
 
         @NameInMap("TransitRouterId")
         public String transitRouterId;
+
+        @NameInMap("UnprotectedResource")
+        public DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsUnprotectedResource unprotectedResource;
 
         @NameInMap("VpcFirewallName")
         public String vpcFirewallName;
@@ -184,6 +316,14 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
             return this.precheckStatus;
         }
 
+        public DescribeTrFirewallsV2ListResponseBodyVpcTrFirewalls setProtectedResource(DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsProtectedResource protectedResource) {
+            this.protectedResource = protectedResource;
+            return this;
+        }
+        public DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsProtectedResource getProtectedResource() {
+            return this.protectedResource;
+        }
+
         public DescribeTrFirewallsV2ListResponseBodyVpcTrFirewalls setRegionNo(String regionNo) {
             this.regionNo = regionNo;
             return this;
@@ -222,6 +362,14 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
         }
         public String getTransitRouterId() {
             return this.transitRouterId;
+        }
+
+        public DescribeTrFirewallsV2ListResponseBodyVpcTrFirewalls setUnprotectedResource(DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsUnprotectedResource unprotectedResource) {
+            this.unprotectedResource = unprotectedResource;
+            return this;
+        }
+        public DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsUnprotectedResource getUnprotectedResource() {
+            return this.unprotectedResource;
         }
 
         public DescribeTrFirewallsV2ListResponseBodyVpcTrFirewalls setVpcFirewallName(String vpcFirewallName) {

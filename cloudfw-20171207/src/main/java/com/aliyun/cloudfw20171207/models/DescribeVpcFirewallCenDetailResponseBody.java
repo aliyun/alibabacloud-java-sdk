@@ -20,6 +20,9 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
     @NameInMap("FirewallSwitchStatus")
     public String firewallSwitchStatus;
 
+    @NameInMap("FirewallVpc")
+    public DescribeVpcFirewallCenDetailResponseBodyFirewallVpc firewallVpc;
+
     /**
      * <p>The details about the VPC.</p>
      */
@@ -65,6 +68,14 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         return this.firewallSwitchStatus;
     }
 
+    public DescribeVpcFirewallCenDetailResponseBody setFirewallVpc(DescribeVpcFirewallCenDetailResponseBodyFirewallVpc firewallVpc) {
+        this.firewallVpc = firewallVpc;
+        return this;
+    }
+    public DescribeVpcFirewallCenDetailResponseBodyFirewallVpc getFirewallVpc() {
+        return this.firewallVpc;
+    }
+
     public DescribeVpcFirewallCenDetailResponseBody setLocalVpc(DescribeVpcFirewallCenDetailResponseBodyLocalVpc localVpc) {
         this.localVpc = localVpc;
         return this;
@@ -97,6 +108,80 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         return this.vpcFirewallName;
     }
 
+    public static class DescribeVpcFirewallCenDetailResponseBodyFirewallVpc extends TeaModel {
+        @NameInMap("AllowConfiguration")
+        public Integer allowConfiguration;
+
+        @NameInMap("VpcCidr")
+        public String vpcCidr;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        @NameInMap("VswitchCidr")
+        public String vswitchCidr;
+
+        @NameInMap("VswitchId")
+        public String vswitchId;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
+
+        public static DescribeVpcFirewallCenDetailResponseBodyFirewallVpc build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVpcFirewallCenDetailResponseBodyFirewallVpc self = new DescribeVpcFirewallCenDetailResponseBodyFirewallVpc();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVpcFirewallCenDetailResponseBodyFirewallVpc setAllowConfiguration(Integer allowConfiguration) {
+            this.allowConfiguration = allowConfiguration;
+            return this;
+        }
+        public Integer getAllowConfiguration() {
+            return this.allowConfiguration;
+        }
+
+        public DescribeVpcFirewallCenDetailResponseBodyFirewallVpc setVpcCidr(String vpcCidr) {
+            this.vpcCidr = vpcCidr;
+            return this;
+        }
+        public String getVpcCidr() {
+            return this.vpcCidr;
+        }
+
+        public DescribeVpcFirewallCenDetailResponseBodyFirewallVpc setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public DescribeVpcFirewallCenDetailResponseBodyFirewallVpc setVswitchCidr(String vswitchCidr) {
+            this.vswitchCidr = vswitchCidr;
+            return this;
+        }
+        public String getVswitchCidr() {
+            return this.vswitchCidr;
+        }
+
+        public DescribeVpcFirewallCenDetailResponseBodyFirewallVpc setVswitchId(String vswitchId) {
+            this.vswitchId = vswitchId;
+            return this;
+        }
+        public String getVswitchId() {
+            return this.vswitchId;
+        }
+
+        public DescribeVpcFirewallCenDetailResponseBodyFirewallVpc setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+    }
+
     public static class DescribeVpcFirewallCenDetailResponseBodyLocalVpcEniList extends TeaModel {
         /**
          * <p>The ID of the ENI that belongs to the VPC.</p>
@@ -109,6 +194,9 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
          */
         @NameInMap("EniPrivateIpAddress")
         public String eniPrivateIpAddress;
+
+        @NameInMap("EniVSwitchId")
+        public String eniVSwitchId;
 
         public static DescribeVpcFirewallCenDetailResponseBodyLocalVpcEniList build(java.util.Map<String, ?> map) throws Exception {
             DescribeVpcFirewallCenDetailResponseBodyLocalVpcEniList self = new DescribeVpcFirewallCenDetailResponseBodyLocalVpcEniList();
@@ -129,6 +217,14 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         }
         public String getEniPrivateIpAddress() {
             return this.eniPrivateIpAddress;
+        }
+
+        public DescribeVpcFirewallCenDetailResponseBodyLocalVpcEniList setEniVSwitchId(String eniVSwitchId) {
+            this.eniVSwitchId = eniVSwitchId;
+            return this;
+        }
+        public String getEniVSwitchId() {
+            return this.eniVSwitchId;
         }
 
     }
