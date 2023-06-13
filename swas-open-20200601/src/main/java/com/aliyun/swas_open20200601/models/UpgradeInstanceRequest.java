@@ -4,15 +4,27 @@ package com.aliyun.swas_open20200601.models;
 import com.aliyun.tea.*;
 
 public class UpgradeInstanceRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the simple application server.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the new plan. You can call the [ListPlans](~~189314~~) operation to query plans provided by Simple Application Server.</p>
+     */
     @NameInMap("PlanId")
     public String planId;
 
+    /**
+     * <p>The region ID of the simple application server.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

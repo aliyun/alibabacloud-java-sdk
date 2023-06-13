@@ -4,15 +4,27 @@ package com.aliyun.swas_open20200601.models;
 import com.aliyun.tea.*;
 
 public class RenewInstanceRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the simple application server.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The renewal duration. Unit: months Valid values: 1, 3, 6, 12, 24, and 36.</p>
+     */
     @NameInMap("Period")
     public Integer period;
 
+    /**
+     * <p>The region ID of the simple application server.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

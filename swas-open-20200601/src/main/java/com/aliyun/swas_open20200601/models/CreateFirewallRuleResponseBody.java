@@ -4,9 +4,15 @@ package com.aliyun.swas_open20200601.models;
 import com.aliyun.tea.*;
 
 public class CreateFirewallRuleResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the firewall rule.</p>
+     */
     @NameInMap("FirewallId")
     public String firewallId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,9 +4,15 @@ package com.aliyun.swas_open20200601.models;
 import com.aliyun.tea.*;
 
 public class ListInstancePlansModificationResponseBody extends TeaModel {
+    /**
+     * <p>Details about the plans.</p>
+     */
     @NameInMap("Plans")
     public java.util.List<ListInstancePlansModificationResponseBodyPlans> plans;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,33 +38,69 @@ public class ListInstancePlansModificationResponseBody extends TeaModel {
     }
 
     public static class ListInstancePlansModificationResponseBodyPlans extends TeaModel {
+        /**
+         * <p>The peak bandwidth. Unit: Mbit/s.</p>
+         */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
+        /**
+         * <p>The number of vCPUs.</p>
+         */
         @NameInMap("Core")
         public Integer core;
 
+        /**
+         * <p>The unit of the plan price. Valid values:</p>
+         * <br>
+         * <p>*   CNY</p>
+         * <p>*   USD</p>
+         */
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <p>The disk size of the simple application server. Unit: GB.</p>
+         */
         @NameInMap("DiskSize")
         public Integer diskSize;
 
+        /**
+         * <p>The category of the disk. Valid values:</p>
+         * <br>
+         * <p>*   SSD: standard SSD</p>
+         * <p>*   ESSD: enhanced SSD</p>
+         */
         @NameInMap("DiskType")
         public String diskType;
 
+        /**
+         * <p>The monthly data transfer quota. Unit: GB.</p>
+         */
         @NameInMap("Flow")
         public Integer flow;
 
+        /**
+         * <p>The memory size. Unit: GB.</p>
+         */
         @NameInMap("Memory")
         public Integer memory;
 
+        /**
+         * <p>The price of the plan.</p>
+         */
         @NameInMap("OriginPrice")
         public Double originPrice;
 
+        /**
+         * <p>The ID of the plan.</p>
+         */
         @NameInMap("PlanId")
         public String planId;
 
+        /**
+         * <p>The operating system types supported by the plan.</p>
+         */
         @NameInMap("SupportPlatform")
         public String supportPlatform;
 

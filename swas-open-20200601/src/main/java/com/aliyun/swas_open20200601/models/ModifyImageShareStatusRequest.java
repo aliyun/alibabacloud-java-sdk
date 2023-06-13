@@ -4,15 +4,30 @@ package com.aliyun.swas_open20200601.models;
 import com.aliyun.tea.*;
 
 public class ModifyImageShareStatusRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.**** For more information, see [How to ensure idempotence](~~25693~~).</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the image.</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   Share</p>
+     * <p>*   UnShare</p>
+     */
     @NameInMap("Operation")
     public String operation;
 
+    /**
+     * <p>The region ID of the custom image. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

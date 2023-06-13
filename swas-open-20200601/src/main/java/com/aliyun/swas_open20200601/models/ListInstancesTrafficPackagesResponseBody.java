@@ -4,9 +4,15 @@ package com.aliyun.swas_open20200601.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesTrafficPackagesResponseBody extends TeaModel {
+    /**
+     * <p>The details of the data transfer plans of the simple application servers.</p>
+     */
     @NameInMap("InstanceTrafficPackageUsages")
     public java.util.List<ListInstancesTrafficPackagesResponseBodyInstanceTrafficPackageUsages> instanceTrafficPackageUsages;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +38,35 @@ public class ListInstancesTrafficPackagesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesTrafficPackagesResponseBodyInstanceTrafficPackageUsages extends TeaModel {
+        /**
+         * <p>The ID of the simple application server.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The data transfers that exceeds the quota of the data transfer plan in the current month. Unit: Byte.</p>
+         */
         @NameInMap("TrafficOverflow")
         public Long trafficOverflow;
 
+        /**
+         * <p>The unused quota of the data transfer plan in the current month. Unit: Byte.</p>
+         */
         @NameInMap("TrafficPackageRemaining")
         public Long trafficPackageRemaining;
 
+        /**
+         * <p>The quota of the data transfer plan in the current month. Unit: Byte.</p>
+         * <br>
+         * <p>>  TrafficPackageTotal = TrafficUsed + TrafficPackageRemaining</p>
+         */
         @NameInMap("TrafficPackageTotal")
         public Long trafficPackageTotal;
 
+        /**
+         * <p>The used quota of the data transfer plan in the current month. Unit: Byte.</p>
+         */
         @NameInMap("TrafficUsed")
         public Long trafficUsed;
 

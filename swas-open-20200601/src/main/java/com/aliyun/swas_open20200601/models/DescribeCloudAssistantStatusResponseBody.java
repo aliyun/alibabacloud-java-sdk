@@ -4,18 +4,41 @@ package com.aliyun.swas_open20200601.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
+    /**
+     * <p>The status of the Cloud Assistant client.</p>
+     */
     @NameInMap("CloudAssistantStatus")
     public java.util.List<DescribeCloudAssistantStatusResponseBodyCloudAssistantStatus> cloudAssistantStatus;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     * <br>
+     * <p>Pages start from page 1.</p>
+     * <br>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     * <br>
+     * <p>Maximum value: 50.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of commands.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +88,15 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudAssistantStatusResponseBodyCloudAssistantStatus extends TeaModel {
+        /**
+         * <p>The ID of the simple application server.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>Indicates whether the Cloud Assistant client is installed on the server.</p>
+         */
         @NameInMap("Status")
         public Boolean status;
 

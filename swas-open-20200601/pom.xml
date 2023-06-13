@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>swas_open20200601</artifactId>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
   <packaging>jar</packaging>
   <name>swas_open20200601</name>
   <description>Alibaba Cloud SWAS-OPEN (20200601) SDK for Java
@@ -61,7 +61,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.2.0</version>
+      <version>0.2.1</version>
     </dependency>
   </dependencies>
   <build>

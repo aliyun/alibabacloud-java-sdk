@@ -4,18 +4,33 @@ package com.aliyun.swas_open20200601.models;
 import com.aliyun.tea.*;
 
 public class ListSnapshotsResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Details about the snapshots.</p>
+     */
     @NameInMap("Snapshots")
     public java.util.List<ListSnapshotsResponseBodySnapshots> snapshots;
 
+    /**
+     * <p>The total number of snapshots.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,30 +80,70 @@ public class ListSnapshotsResponseBody extends TeaModel {
     }
 
     public static class ListSnapshotsResponseBodySnapshots extends TeaModel {
+        /**
+         * <p>The time when the snapshot was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        /**
+         * <p>The progress of snapshot creation.</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The remarks of the snapshot.</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        @NameInMap("RollbackTime")
+        public String rollbackTime;
+
+        /**
+         * <p>The ID of the snapshot.</p>
+         */
         @NameInMap("SnapshotId")
         public String snapshotId;
 
+        /**
+         * <p>The name of the snapshot.</p>
+         */
         @NameInMap("SnapshotName")
         public String snapshotName;
 
+        /**
+         * <p>The ID of the source disk. This parameter has a value even after the source disk is released.</p>
+         */
         @NameInMap("SourceDiskId")
         public String sourceDiskId;
 
+        /**
+         * <p>The type of the source disk. Valid values:</p>
+         * <br>
+         * <p>*   System: system disk</p>
+         * <p>*   data: data disk</p>
+         */
         @NameInMap("SourceDiskType")
         public String sourceDiskType;
 
+        /**
+         * <p>The status of the snapshot. Valid values:</p>
+         * <br>
+         * <p>*   Progressing: The snapshot is being created.</p>
+         * <p>*   Accomplished: The snapshot is created.</p>
+         * <p>*   Failed: The snapshot failed to be created.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -103,6 +158,14 @@ public class ListSnapshotsResponseBody extends TeaModel {
         }
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        public ListSnapshotsResponseBodySnapshots setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public ListSnapshotsResponseBodySnapshots setProgress(String progress) {
@@ -127,6 +190,14 @@ public class ListSnapshotsResponseBody extends TeaModel {
         }
         public String getRemark() {
             return this.remark;
+        }
+
+        public ListSnapshotsResponseBodySnapshots setRollbackTime(String rollbackTime) {
+            this.rollbackTime = rollbackTime;
+            return this;
+        }
+        public String getRollbackTime() {
+            return this.rollbackTime;
         }
 
         public ListSnapshotsResponseBodySnapshots setSnapshotId(String snapshotId) {

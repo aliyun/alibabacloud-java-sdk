@@ -4,18 +4,33 @@ package com.aliyun.swas_open20200601.models;
 import com.aliyun.tea.*;
 
 public class ListDisksResponseBody extends TeaModel {
+    /**
+     * <p>Details about the disks.</p>
+     */
     @NameInMap("Disks")
     public java.util.List<ListDisksResponseBodyDisks> disks;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of disks.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,36 +80,88 @@ public class ListDisksResponseBody extends TeaModel {
     }
 
     public static class ListDisksResponseBodyDisks extends TeaModel {
+        /**
+         * <p>The category of the disk. Valid values: Valid values:</p>
+         * <br>
+         * <p>*   ESSD: enhanced SSD (ESSD) at performance level 0 (PL0)</p>
+         * <p>*   SSD: standard SSD</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The time when the disk was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The device name of the disk on the simple application server.</p>
+         */
         @NameInMap("Device")
         public String device;
 
+        /**
+         * <p>The billing method of the disk.</p>
+         */
         @NameInMap("DiskChargeType")
         public String diskChargeType;
 
+        /**
+         * <p>The ID of the disk.</p>
+         */
         @NameInMap("DiskId")
         public String diskId;
 
+        /**
+         * <p>The name of the disk.</p>
+         */
         @NameInMap("DiskName")
         public String diskName;
 
+        /**
+         * <p>The type of the disk. Valid values:</p>
+         * <br>
+         * <p>*   System: system disk</p>
+         * <p>*   Data: data disk</p>
+         */
         @NameInMap("DiskType")
         public String diskType;
 
+        /**
+         * <p>The ID of the simple application server to which the disk is attached.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("InstanceName")
+        public String instanceName;
+
+        /**
+         * <p>The region ID of the server.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("Remark")
+        public String remark;
+
+        /**
+         * <p>The size of the disk. Unit: GB.</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
+        /**
+         * <p>The status of the disk. Valid values:</p>
+         * <br>
+         * <p>*   ReIniting: The disk is being initialized.</p>
+         * <p>*   Creating: The disk is being created.</p>
+         * <p>*   In_Use: The disk is being used.</p>
+         * <p>*   Available: The disk can be attached.</p>
+         * <p>*   Attaching: The disk is being attached.</p>
+         * <p>*   Detaching: The disk is being detached.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -167,12 +234,28 @@ public class ListDisksResponseBody extends TeaModel {
             return this.instanceId;
         }
 
+        public ListDisksResponseBodyDisks setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
         public ListDisksResponseBodyDisks setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public ListDisksResponseBodyDisks setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
         }
 
         public ListDisksResponseBodyDisks setSize(Integer size) {

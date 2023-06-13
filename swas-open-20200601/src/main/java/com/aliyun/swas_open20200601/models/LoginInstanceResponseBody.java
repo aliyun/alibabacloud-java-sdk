@@ -4,9 +4,15 @@ package com.aliyun.swas_open20200601.models;
 import com.aliyun.tea.*;
 
 public class LoginInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The URL that you use to log on to the server.</p>
+     */
     @NameInMap("RedirectUrl")
     public String redirectUrl;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

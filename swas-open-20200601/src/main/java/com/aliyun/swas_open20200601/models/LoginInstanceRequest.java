@@ -4,15 +4,35 @@ package com.aliyun.swas_open20200601.models;
 import com.aliyun.tea.*;
 
 public class LoginInstanceRequest extends TeaModel {
+    /**
+     * <p>The ID of the simple application server.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The password that corresponds to the username.</p>
+     * <br>
+     * <p>*   For a Linux server, you do not need to enter a password.</p>
+     * <p>*   For a Windows server, enter the password that you set. If you have not set a password for the simple application server, set a password. For more information, see [Reset the password](~~60055~~l).</p>
+     */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>The region ID of the simple application server.</p>
+     * <br>
+     * <p>You can call the [ListRegions](~~189315~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The username of the simple application server.</p>
+     * <br>
+     * <p>*   For a Linux server, you do not need to enter a username.</p>
+     * <p>*   For a Windows server, the default username is `administrator`.</p>
+     */
     @NameInMap("Username")
     public String username;
 
