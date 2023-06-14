@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>resellertrade20191227</artifactId>
-  <version>1.1.14</version>
+  <version>1.1.15</version>
   <packaging>jar</packaging>
   <name>resellertrade20191227</name>
   <description>Alibaba Cloud ResellerTrade (20191227) SDK for Java
