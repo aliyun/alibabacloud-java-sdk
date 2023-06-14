@@ -80,7 +80,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     /**
      * <p>The minor version of proxy nodes.</p>
      * <br>
-     * <p>> This parameter is returned only for cluster instances and read/write splitting instances.</p>
+     * <p>> This parameter is returned only for cluster and read/write splitting instances.</p>
      */
     @NameInMap("ProxyMinorVersion")
     public String proxyMinorVersion;
@@ -88,13 +88,13 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     /**
      * <p>The release notes for the minor version of proxy nodes. The release notes include the release date, minor version number, release type such as new feature, and description.</p>
      * <br>
-     * <p>> This parameter is returned only for cluster instances and read/write splitting instances.</p>
+     * <p>> This parameter is returned only for cluster and read/write splitting instances.</p>
      */
     @NameInMap("ProxyVersionRelease")
     public String proxyVersionRelease;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

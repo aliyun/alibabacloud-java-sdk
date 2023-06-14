@@ -20,9 +20,9 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String autoRenew;
 
     /**
-     * <p>The auto-renewal period. Unit: months. Valid values: **1**, **2**, **3**, **6**, and **12**.</p>
+     * <p>The subscription duration that is supported by auto-renewal. Unit: months. Valid values: **1**, **2**, **3**, **6**, and **12**.</p>
      * <br>
-     * <p>> This parameter is required if the **AutoRenew** parameter is set to **true**.</p>
+     * <p>> This parameter is required only if the **AutoRenew** parameter is set to **true**.</p>
      */
     @NameInMap("AutoRenewPeriod")
     public String autoRenewPeriod;
@@ -45,19 +45,22 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String backupId;
 
     /**
-     * <p>The ID of the promotional event or business information.</p>
+     * <p>The ID of the promotion event or the business information.</p>
      */
     @NameInMap("BusinessInfo")
     public String businessInfo;
 
     /**
-     * <p>The billing method of the instance. Set the value to **PrePaid**. This value specifies subscription.</p>
+     * <p>The billing method of the instance. Default value: PrePaid. Valid values:</p>
+     * <br>
+     * <p>*   **PrePaid**: subscription</p>
+     * <p>*   **PostPaid**: pay-as-you-go</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token is case-sensitive. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the token is unique among different requests. The token is case-sensitive. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -68,6 +71,12 @@ public class CreateTairInstanceRequest extends TeaModel {
     @NameInMap("CouponNo")
     public String couponNo;
 
+    /**
+     * <p>Specifies whether to perform a dry run. Default value: false. Valid values:</p>
+     * <br>
+     * <p>*   **true**: performs a dry run and does not create the instance. The system prechecks the request parameters, request format, service limits, and available resources. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false**: performs a dry run and sends the request. If the request passes the dry run, the instance is created.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -83,11 +92,14 @@ public class CreateTairInstanceRequest extends TeaModel {
     @NameInMap("GlobalInstanceId")
     public String globalInstanceId;
 
+    /**
+     * <p>实例的全局IP白名单模板，多个IP白名单模板请用英文逗号（,）分隔，不可重复。</p>
+     */
     @NameInMap("GlobalSecurityGroupIds")
     public String globalSecurityGroupIds;
 
     /**
-     * <p>The instance series. For more information, see the following topics:</p>
+     * <p>The instance type. For more information, see the following topics:</p>
      * <br>
      * <p>*   [DRAM-based instances](~~443844~~)</p>
      * <p>*   [Persistent memory-optimized instances](~~443845~~)</p>
@@ -100,13 +112,13 @@ public class CreateTairInstanceRequest extends TeaModel {
      * <p>The name of the instance. The name must meet the following requirements:</p>
      * <br>
      * <p>*   The name is 2 to 80 characters in length.</p>
-     * <p>*   The name starts with a letter and cannot contain spaces or special characters. These special characters include `@ / : = " < > { [ ] }`</p>
+     * <p>*   The name starts with a letter and does not contain spaces or special characters. Special characters include `@ / : = " < > { [ ] }`</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
-     * <p>The instance series. Valid values:</p>
+     * <p>The storage type of the instance. Valid values:</p>
      * <br>
      * <p>*   **tair_rdb**: ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance</p>
      * <p>*   **tair_scm**: ApsaraDB for Redis Enhanced Edition (Tair) persistent memory-optimized instance</p>
@@ -125,7 +137,7 @@ public class CreateTairInstanceRequest extends TeaModel {
      * <p>The password that is used to connect to the instance. The password must meet the following requirements:</p>
      * <br>
      * <p>*   The password is 8 to 32 characters in length.</p>
-     * <p>*   The password contains at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. These special characters include `! @ # $ % ^ & * ( ) _ + - =`</p>
+     * <p>*   The password contains at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include `! @ # $ % ^ & * ( ) _ + - =`</p>
      */
     @NameInMap("Password")
     public String password;
@@ -144,7 +156,7 @@ public class CreateTairInstanceRequest extends TeaModel {
     /**
      * <p>The private IP address of the instance.</p>
      * <br>
-     * <p>> The IP address must be within the CIDR block of the vSwitch to which the instance is connected. You can call the [DescribeVSwitches](~~35748~~) operation of the VPC API to query the CIDR block information.</p>
+     * <p>> The IP address must be within the CIDR block of the vSwitch to which you want the instance to connect. You can call the [DescribeVSwitches](~~35748~~) operation of the VPC API to query the CIDR block information.</p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
@@ -166,9 +178,9 @@ public class CreateTairInstanceRequest extends TeaModel {
      * <br>
      * <p>> </p>
      * <br>
-     * <p>*   You can query resource group IDs in the ApsaraDB for Redis console or by calling the [ListResourceGroups](~~158855~~) operation. For more information, see [View basic information of a resource group](~~151181~~).</p>
+     * <p>*   You can query resource group IDs by using the ApsaraDB for Redis console or by calling the [ListResourceGroups](~~158855~~) operation. For more information, see [View basic information of a resource group](~~151181~~).</p>
      * <br>
-     * <p>*   Before you modify the resource group to which an instance belongs, you can call the [ListResources](~~158866~~) operation to view the resource group of the instance.</p>
+     * <p>*   Before you modify the resource group to which an instance belongs, you can call the [ListResources](~~158866~~) operation to view the current resource group of the instance.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -184,7 +196,7 @@ public class CreateTairInstanceRequest extends TeaModel {
      * <br>
      * <p>> </p>
      * <br>
-     * <p>*   You cannot specify multiple zone IDs or set this parameter to a value the same as that of the **ZoneId** parameter.</p>
+     * <p>*   You cannot specify multiple zone IDs or set this parameter to a value that is the same as that of the **ZoneId** parameter.</p>
      * <br>
      * <p>*   If you set both the SecondaryZoneId and **ZoneId** parameters, the master node is deployed in the primary zone and the replica node is deployed in the secondary zone within the same region. In this case, the instance adopts the zone-disaster recovery architecture.</p>
      */
@@ -195,18 +207,21 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The number of data nodes in the instance. Default value: 1. Valid values:</p>
+     * <p>The number of data shards in the instance. Default value: 1. Valid values:</p>
      * <br>
-     * <p>*   **1**: You can create an instance in the standard architecture that contains only a single data node. For more information about the standard architecture, see [Cluster master-replica instances](~~52228~~).</p>
-     * <p>*   **2** to **32**: You can create an instance in the cluster architecture that contains the specified number of data nodes. For more information about the cluster architecture, see [Cluster master-replica instances](~~52228~~).</p>
+     * <p>*   **1**: You can create an instance in the [standard architecture](~~52228~~) that contains only a single data shard.</p>
+     * <p>*   **2** to **32**: You can create an instance in the [cluster architecture](~~52228~~) that contains the specified number of data shards.</p>
      * <br>
-     * <p>> Only DRAM-based and persistent memory-optimized instances can use the cluster architecture. You can set this parameter to an integer from **2** to **32** only if you set the **InstanceType** parameter to **tair_rdb** or **tair_scm**.</p>
+     * <p>> Only persistent memory-optimized instances can use the cluster architecture. You can set this parameter to an integer from **2** to **32** only if you set the **InstanceType** parameter to **tair_scm**.</p>
      */
     @NameInMap("ShardCount")
     public Integer shardCount;
 
     /**
-     * <p>The node type of the instance. Set the value to **MASTER_SLAVE**. This value specifies that the instance uses the master-replica architecture to ensure service availability.</p>
+     * <p>The data shard type of the instance. Default value: MASTER_SLAVE. Valid values:</p>
+     * <br>
+     * <p>*   **MASTER_SLAVE**: runs in a master-replica architecture that provides high availability.</p>
+     * <p>*   **STAND_ALONE**: runs in a standalone architecture. If the only node fails, the system creates a new instance and switches the workloads to the new instance. This may cause data loss. You can set this parameter to this value only if the instance uses the **single-zone** deployment type. If you set this parameter to this value, you cannot create cluster or read/write splitting instances.</p>
      */
     @NameInMap("ShardType")
     public String shardType;
@@ -214,13 +229,13 @@ public class CreateTairInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the source instance.</p>
      * <br>
-     * <p>> To create an instance based on the backup set of an existing instance, set this parameter to the ID of the source instance and the **BackupId** parameter to the backup set that you want to use.</p>
+     * <p>> If you want to create an instance based on the backup set of an existing instance, set this parameter to the ID of the source instance and the **BackupId** parameter to the backup set that you want to use.</p>
      */
     @NameInMap("SrcDBInstanceId")
     public String srcDBInstanceId;
 
     /**
-     * <p>The storage space of the cloud disk. Valid values vary with specifications. For more information, see [ESSD-based instances](~~443846~~).</p>
+     * <p>The storage space of cloud disks. Valid values vary based on the instance specifications. For more information, see [ESSD-based instances](~~443846~~).</p>
      * <br>
      * <p>> This parameter is available and required only if the **InstanceType** parameter is set to **tair_essd**.</p>
      */
@@ -236,13 +251,13 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String storageType;
 
     /**
-     * <p>The tags of the instance.</p>
+     * <p>The tags to add to the instance.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateTairInstanceRequestTag> tag;
 
     /**
-     * <p>The ID of the vSwitch to which the instance is connected. You can call the [DescribeVpcs](~~35739~~) operation to query the ID of the vSwitch.</p>
+     * <p>The ID of the vSwitch that belongs to the VPC. You can call the [DescribeVpcs](~~35739~~) operation to query the ID of the vSwitch.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
@@ -254,7 +269,7 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The primary zone ID of the instance. You can call the [DescribeRegions](~~61012~~) operation to query the most recent region list.</p>
+     * <p>The primary zone ID of the instance. You can call the [DescribeRegions](~~61012~~) operation to query the most recent zone list.</p>
      * <br>
      * <p>> If you want to create an instance that adopts the zone-disaster recovery architecture, you can deploy the master node and replica node of the instance in different zones within the same region. You can set the **SecondaryZoneId** parameter to specify the secondary zone. In this case, do not set the ZoneId parameter to multiple zone IDs.</p>
      */
@@ -580,9 +595,9 @@ public class CreateTairInstanceRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag associated with the instance.</p>
+         * <p>The value of the tag.</p>
          * <br>
-         * <p>> **N** specifies the serial number of the tag. For example, **Tag.1.Value** specifies the value of the first tag and **Tag.2.Value** specifies the value of the second tag.</p>
+         * <p>> **N** specifies the serial number of the tag. For example, **Tag.1.Value** specifies the value of the first tag, and **Tag.2.Value** specifies the value of the second tag.</p>
          */
         @NameInMap("Value")
         public String value;

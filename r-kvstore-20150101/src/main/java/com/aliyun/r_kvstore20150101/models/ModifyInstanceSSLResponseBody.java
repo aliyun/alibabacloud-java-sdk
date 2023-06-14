@@ -11,14 +11,11 @@ public class ModifyInstanceSSLResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The operation that you want to perform. Set the value to **ModifyInstanceSSL**.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The ID of the task.</p>
-     */
     @NameInMap("TaskId")
     public String taskId;
 

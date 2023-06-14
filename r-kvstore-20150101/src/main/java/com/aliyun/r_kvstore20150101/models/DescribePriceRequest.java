@@ -5,44 +5,22 @@ import com.aliyun.tea.*;
 
 public class DescribePriceRequest extends TeaModel {
     /**
-     * <p>The extended information such as the promotional event ID and business information.</p>
+     * <p>The coupon code. Default value: youhuiquan_promotion_option_id_for_blank. This value indicates that no coupon code is available.</p>
      */
     @NameInMap("BusinessInfo")
     public String businessInfo;
 
     /**
-     * <p>The storage capacity of the instance. Unit: MB. You must set **InstanceClass** or **Capacity** to specify the instance type. We recommend that you use **InstanceClass** to specify the instance type.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~61012~~) operation to query the most recent region list.</p>
      */
     @NameInMap("Capacity")
     public Long capacity;
 
     /**
-     * <p>The billing method of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **PostPaid**: pay-as-you-go</p>
-     * <p>*   **PrePaid**: subscription</p>
-     * <br>
-     * <p>>  Default value: **PostPaid**.</p>
+     * <p>The actual price of the order.</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
-
-    /**
-     * <p>The coupon code. Default value: youhuiquan_promotion_option_id_for_blank. This value indicates that no coupon code is available.</p>
-     */
-    @NameInMap("CouponNo")
-    public String couponNo;
-
-    /**
-     * <p>Specifies whether to forcefully change the configurations of the instance. Default value: true. Valid values:</p>
-     * <br>
-     * <p>*   **false**: The system forcefully changes the configurations.</p>
-     * <p>*   **true**: The system does not forcefully change the configurations.</p>
-     * <br>
-     * <p>>  Default value: **true**.</p>
-     */
-    @NameInMap("ForceUpgrade")
-    public Boolean forceUpgrade;
 
     /**
      * <p>Specify the instance type. You must set InstanceClass or Capacity to specify the instance type. We recommend that you use InstanceClass to specify the instance type.</p>
@@ -53,45 +31,52 @@ public class DescribePriceRequest extends TeaModel {
      * <br>
      * <p>2\. In the instance type table of the page that appears, find the code corresponding to the instance type in the **InstanceClass** column.</p>
      */
+    @NameInMap("CouponNo")
+    public String couponNo;
+
+    /**
+     * <p>The node type. Set the value to MASTER_SLAVE. This value indicates that the node type is master-replica.</p>
+     */
+    @NameInMap("ForceUpgrade")
+    public Boolean forceUpgrade;
+
+    /**
+     * <p>Specifies whether to forcefully change the configurations of the instance. Default value: true. Valid values:</p>
+     * <br>
+     * <p>*   **false**: The system forcefully changes the configurations.</p>
+     * <p>*   **true**: The system does not forcefully change the configurations.</p>
+     * <br>
+     * <p>>  Default value: **true**.</p>
+     */
     @NameInMap("InstanceClass")
     public String instanceClass;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The subscription period. Unit: months. Valid values: **1**, 2, 3, 4, 5, 6, 7, 8, **9**, **12**, **24**, and **36**.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>A JSON string that contains multiple instances. For more information, see [Description of the Instances parameter in the DescribePrice API operation](~~161811~~).</p>
+     * <p>The storage capacity of the instance. Unit: MB. You must set **InstanceClass** or **Capacity** to specify the instance type. We recommend that you use **InstanceClass** to specify the instance type.</p>
      */
     @NameInMap("Instances")
     public String instances;
 
     /**
-     * <p>The node type. Set the value to MASTER_SLAVE. This value indicates that the node type is master-replica.</p>
+     * <p>The discount amount of the order.</p>
      */
     @NameInMap("NodeType")
     public String nodeType;
 
     /**
-     * <p>Specifies whether to return parameters related to the order. Valid values:</p>
-     * <br>
-     * <p>*   **false**: The system does not return parameters related to the order.</p>
-     * <p>*   **true**: The system returns parameters related to the order.</p>
-     * <br>
-     * <p>>  Default value: **false**.</p>
+     * <p>Indicates whether the coupon was selected.</p>
      */
     @NameInMap("OrderParamOut")
     public String orderParamOut;
 
     /**
-     * <p>The order type. Valid values:</p>
-     * <br>
-     * <p>*   **BUY**</p>
-     * <p>*   **UPGRADE**</p>
-     * <p>*   **RENEW**</p>
-     * <p>*   **CONVERT**</p>
+     * <p>The service fees of the order.</p>
      */
     @NameInMap("OrderType")
     public String orderType;
@@ -103,21 +88,24 @@ public class DescribePriceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The subscription period. Unit: months. Valid values: **1**, 2, 3, 4, 5, 6, 7, 8, **9**, **12**, **24**, and **36**.</p>
+     * <p>The extended information such as the promotional event ID and business information.</p>
      */
     @NameInMap("Period")
     public Long period;
 
     /**
-     * <p>The number of instances that you want to purchase. Valid values: **1** to **30**.</p>
-     * <br>
-     * <p>>  Default value: **1**.</p>
+     * <p>The currency used for payment. A value of CNY is used when the order was generated on the China site (aliyun.com), and a value of USD is used when the order was generated on the international site (alibabacloud.com).</p>
      */
     @NameInMap("Quantity")
     public Long quantity;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~61012~~) operation to query the most recent region list.</p>
+     * <p>The billing method of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **PostPaid**: pay-as-you-go</p>
+     * <p>*   **PrePaid**: subscription</p>
+     * <br>
+     * <p>>  Default value: **PostPaid**.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -132,7 +120,7 @@ public class DescribePriceRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The zone ID of the instance. You can call the [DescribeZones](~~94527~~) operation to query the most recent zone list.</p>
+     * <p>The description of the coupon.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class EnableAdditionalBandwidthRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable automatic payment. Valid values:</p>
+     * <p>Specifies whether to enable automatic payment. Default value: true. Valid values:</p>
      * <br>
-     * <p>*   **true**: enables automatic payment. Make sure that your Alibaba Cloud account has a sufficient balance.</p>
-     * <p>*   **false**: disables automatic payment. To manually complete the payment, you can perform the following procedure: In the top navigation bar of the ApsaraDB for Redis console, choose **Expenses** > **Renewal Management**. In the left-side navigation pane of the Billing Management console, click **Orders******. On the page that appears, find the order and complete the payment.</p>
+     * <p>*   **true**: enables automatic payment. Make sure that you have sufficient balance within your account.</p>
+     * <p>*   **false**: disables automatic payment. If automatic payment is disabled, you must perform the following steps to complete the payment in the ApsaraDB for Redis console: In the top navigation bar, choose **Expenses** > **Renewal Management**. In the left-side navigation pane, click **Orders**. On the **Orders** page, find the order and complete the payment.</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
@@ -40,8 +40,11 @@ public class EnableAdditionalBandwidthRequest extends TeaModel {
     @NameInMap("Bandwidth")
     public String bandwidth;
 
+    @NameInMap("ChargeType")
+    public String chargeType;
+
     /**
-     * <p>The ID of the coupon that you want to use.</p>
+     * <p>The coupon ID.</p>
      */
     @NameInMap("CouponNo")
     public String couponNo;
@@ -53,17 +56,17 @@ public class EnableAdditionalBandwidthRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the data shard for which you want to purchase a specific amount of bandwidth. You can call the [DescribeLogicInstanceTopology](~~94665~~) operation to query the IDs of the data shards in an instance. If you specify multiple data shard IDs, separate the data shard IDs with commas (,). You can also set this parameter to **ALL**, which specifies all the data shards of the instance.</p>
+     * <p>The ID of the data shard for which you want to purchase a specific amount of bandwidth. You can call the [DescribeLogicInstanceTopology](~~94665~~) operation to query the IDs of the data shards in an instance. If you specify multiple data shard IDs, separate the data shard IDs with commas (,). You can also set this parameter to **All**, which specifies all the data shards of the instance.</p>
      * <br>
-     * <p>>  This parameter takes effect and must be specified only when the instance is a cluster master-replica instance or a read/write splitting instance. For more information, see [Cluster master-replica instances](~~52228~~) or [Read/write splitting instances](~~62870~~).</p>
+     * <p>> This parameter is available and required only if the instance is a [cluster master-replica](~~52228~~) or [read/write splitting](~~62870~~) instance.</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
 
     /**
-     * <p>The period of time for which the purchased bandwidth is valid. Unit: days. Valid values: **1**, **2**, **3**, **7**, **14**, **30**, **60**, **90**, **180**, **365**, **730**, **1095**, and **1825**.</p>
+     * <p>The validity period of the bandwidth that you purchase. Unit: day. Valid values: **1**, **2**, **3**, **7**, **14**, **30**, **60**, **90**, **180**, **365**, **730**, **1095**, and **1825**.</p>
      * <br>
-     * <p>>  If you want to continue using the purchased bandwidth after the specified period of time elapses, you must call the [RenewAdditionalBandwidth](~~211199~~) operation to submit a renewal order.</p>
+     * <p>> If you want to continue using the purchased bandwidth after the specified period of time elapses, you must call the [RenewAdditionalBandwidth](~~211199~~) operation to submit a renewal order.</p>
      */
     @NameInMap("OrderTimeLength")
     public String orderTimeLength;
@@ -124,6 +127,14 @@ public class EnableAdditionalBandwidthRequest extends TeaModel {
     }
     public String getBandwidth() {
         return this.bandwidth;
+    }
+
+    public EnableAdditionalBandwidthRequest setChargeType(String chargeType) {
+        this.chargeType = chargeType;
+        return this;
+    }
+    public String getChargeType() {
+        return this.chargeType;
     }
 
     public EnableAdditionalBandwidthRequest setCouponNo(String couponNo) {

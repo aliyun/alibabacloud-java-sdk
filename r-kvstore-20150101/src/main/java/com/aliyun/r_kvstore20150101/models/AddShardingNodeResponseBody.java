@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddShardingNodeResponseBody extends TeaModel {
     /**
-     * <p>The IDs of the added data shards.</p>
+     * <p>The IDs of the data shards.</p>
      */
     @NameInMap("NodeIds")
     public java.util.List<String> nodeIds;

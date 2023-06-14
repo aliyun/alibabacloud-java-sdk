@@ -5,31 +5,34 @@ import com.aliyun.tea.*;
 
 public class DescribeParameterTemplatesResponseBody extends TeaModel {
     /**
-     * <p>The database engine that is run on the instance. The value **Redis** is returned for this parameter.</p>
+     * <p>The valid values of the parameter.</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
-     * <p>The major version that is run on the instance.</p>
+     * <p>The default value of the parameter.</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     /**
-     * <p>The number of parameters that are supported by the instance.</p>
+     * <p>The architecture of the instance. For more information, see [Overview](~~86132~~). Valid values:</p>
+     * <br>
+     * <p>*   **logic**: The instance is a cluster master-replica instance or a read/write splitting instance.</p>
+     * <p>*   **normal**: The instance is a standard master-replica instance.</p>
      */
     @NameInMap("ParameterCount")
     public String parameterCount;
 
     /**
-     * <p>An array that consists of the details about the parameters returned.</p>
+     * <p>Redis</p>
      */
     @NameInMap("Parameters")
     public DescribeParameterTemplatesResponseBodyParameters parameters;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The name of the parameter. For more information about the parameters and the parameter settings, see [Parameters](~~259681~~).</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -81,43 +84,36 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
 
     public static class DescribeParameterTemplatesResponseBodyParametersTemplateRecord extends TeaModel {
         /**
-         * <p>The valid values of the parameter.</p>
+         * <p>The number of parameters that are supported by the instance.</p>
          */
         @NameInMap("CheckingCode")
         public String checkingCode;
 
         /**
-         * <p>Indicates whether the parameter can be reconfigured. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The parameter can be reconfigured.</p>
-         * <p>*   **false**: The parameter cannot be reconfigured.</p>
+         * <p>DescribeParameterTemplates</p>
          */
         @NameInMap("ForceModify")
         public Boolean forceModify;
 
         /**
-         * <p>Indicates whether a restart of the instance is required after the parameter is reconfigured. Valid values:</p>
-         * <br>
-         * <p>*   **true**: After the parameter is reconfigured, you must restart the instance to make the new value of the parameter take effect.</p>
-         * <p>*   **false**: After the parameter is reconfigured, the new value of the parameter immediately takes effect. You do not need to restart the instance.</p>
+         * <p>Queries the parameters and default values of an ApsaraDB for Redis instance that runs a specific major version in a specific architecture.</p>
          */
         @NameInMap("ForceRestart")
         public Boolean forceRestart;
 
-        /**
-         * <p>The description of the parameter.</p>
-         */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
         /**
-         * <p>The name of the parameter. For more information about the parameters and the parameter settings, see [Parameters](~~259681~~).</p>
+         * <p>5.0</p>
          */
         @NameInMap("ParameterName")
         public String parameterName;
 
         /**
-         * <p>The default value of the parameter.</p>
+         * <p>The ID of the resource group to which the instance belongs. You can call the [ListResourceGroups](~~158855~~) operation to query the IDs of resource groups.</p>
+         * <br>
+         * <p>>  You can also query the ID of a resource group in the Resource Management console. For more information, see [View the basic information of a resource group](~~151181~~).</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;

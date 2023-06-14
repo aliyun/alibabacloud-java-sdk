@@ -5,15 +5,16 @@ import com.aliyun.tea.*;
 
 public class TransformInstanceChargeTypeResponseBody extends TeaModel {
     /**
-     * <p>The time when the instance expires.</p>
+     * <p>The new billing method. Valid values:</p>
      * <br>
-     * <p>>  A value is returned for this parameter only if the instance was changed from pay-as-you-go to subscription.</p>
+     * <p>*   **PrePaid**: subscription. If you set this parameter to PrePaid, you must also set the **Period** parameter.</p>
+     * <p>*   **PostPaid**: pay-as-you-go.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The ID of the order.</p>
+     * <p>The operation that you want to perform. Set the value to **TransformInstanceChargeType**.</p>
      */
     @NameInMap("OrderId")
     public String orderId;

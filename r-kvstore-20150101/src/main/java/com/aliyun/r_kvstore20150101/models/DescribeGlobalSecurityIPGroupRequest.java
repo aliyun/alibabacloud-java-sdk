@@ -4,6 +4,9 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeGlobalSecurityIPGroupRequest extends TeaModel {
+    /**
+     * <p>The ID of the IP whitelist template.</p>
+     */
     @NameInMap("GlobalSecurityGroupId")
     public String globalSecurityGroupId;
 
@@ -13,9 +16,15 @@ public class DescribeGlobalSecurityIPGroupRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource group ID.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

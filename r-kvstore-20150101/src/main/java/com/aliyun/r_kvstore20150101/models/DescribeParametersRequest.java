@@ -13,7 +13,7 @@ public class DescribeParametersRequest extends TeaModel {
     /**
      * <p>The ID of the node.</p>
      * <br>
-     * <p>>  You can set this parameter to query the parameter configurations of the specified node in a cluster instance.</p>
+     * <p>> You can set this parameter to query the parameter settings of the specified node in a cluster instance.</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
@@ -25,7 +25,7 @@ public class DescribeParametersRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~61012~~) operation to query the region ID of the instance.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~61012~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailableResourceRequest extends TeaModel {
     /**
-     * <p>The language of the return values. Defualt value: zh-CN. Valid values:</p>
+     * <p>The display language of the response. Default value: zh-CN. Valid values:</p>
      * <br>
-     * <p>* **zh-CN**: Chinese</p>
-     * <p>* **en-US**: English</p>
+     * <p>*   **zh-CN**: Chinese</p>
+     * <p>*   **en-US**: English</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>The database engine of the instance. Valid values:</p>
+     * <p>The category of the instance. Valid values:</p>
      * <br>
-     * <p>* **Redis**</p>
-     * <p>* **Memcache**</p>
+     * <p>*   **Redis**</p>
+     * <p>*   **Memcache**</p>
      */
     @NameInMap("Engine")
     public String engine;
@@ -25,8 +25,8 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     /**
      * <p>The billing method of the instance. Valid values:</p>
      * <br>
-     * <p>* **PrePaid**: subscription</p>
-     * <p>* **PostPaid**: pay-as-you-go</p>
+     * <p>*   **PrePaid**: subscription</p>
+     * <p>*   **PostPaid**: pay-as-you-go</p>
      * <br>
      * <p>> The default value is **PrePaid**.</p>
      */
@@ -34,17 +34,17 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The ID of the instance</p>
+     * <p>The ID of the instance.</p>
      * <br>
-     * <p>>  This parameter is available and required only if the **OrderType** parameter is set to **UPGRADE** or **DOWNGRADE**.</p>
+     * <p>> This parameter is available and required only if the **OrderType** parameter is set to **UPGRADE** or **DOWNGRADE**.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the data node for which you want to query available resources that can be created. You can call the [DescribeLogicInstanceTopology](~~94665~~) operation to query the ID of the data node. Remove the number sign (`#`) and the content that follows the number sign. For example, retain only r-bp10noxlhcoim2****-db-0.</p>
+     * <p>The ID of the data node for which you want to query available resources that can be created. You can call the [DescribeLogicInstanceTopology](~~94665~~) operation to query the ID of the data node. Remove the number sign (`#`) and the content that follows the number sign. For example, retain only r-bp10noxlhcoim2\*\*\*\*-db-0.</p>
      * <br>
-     * <p>>  Before you specify this parameter, you must set the **InstanceId** parameter to the ID of an instance that uses the cluster or read/write splitting architecture.</p>
+     * <p>> Before you specify this parameter, you must set the **InstanceId** parameter to the ID of an instance that uses the cluster or read/write splitting architecture.</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
@@ -52,9 +52,9 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     /**
      * <p>The type of the order. Default value: BUY. Valid values:</p>
      * <br>
-     * <p>* **BUY**: orders that are newly created.</p>
-     * <p>* **UPGRADE**: orders that are used to upgrade instances.</p>
-     * <p>* **DOWNGRADE**: orders that are used to downgrade instances.</p>
+     * <p>*   **BUY**: orders that are newly created</p>
+     * <p>*   **UPGRADE**: orders that are used to upgrade instances</p>
+     * <p>*   **DOWNGRADE**: orders that are used to downgrade instances</p>
      */
     @NameInMap("OrderType")
     public String orderType;
@@ -66,13 +66,13 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The series of the instance. Valid values:</p>
+     * <p>The instance series. Valid values:</p>
      * <br>
-     * <p>* **Local**: ApsaraDB for Redis Community Edition instances that use local disks or ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instances that use local disks</p>
-     * <p>* **Tair_rdb**: ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instances that use cloud disks</p>
-     * <p>* **Tair_scm**: ApsaraDB for Redis Enhanced Edition (Tair) persistent memory-optimized instances</p>
-     * <p>* **Tair_essd**: ApsaraDB for Redis Enhanced Edition (Tair) ESSD-based instances</p>
-     * <p>* **OnECS**: ApsaraDB for Redis Community Edition instances that use cloud disks</p>
+     * <p>*   **Local**: ApsaraDB for Redis Community Edition instance that uses local disks or ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance that uses local disks</p>
+     * <p>*   **Tair_rdb**: ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance that uses cloud disks</p>
+     * <p>*   **Tair_scm**: ApsaraDB for Redis Enhanced Edition (Tair) persistent memory-optimized instance</p>
+     * <p>*   **Tair_essd**: ApsaraDB for Redis Enhanced Edition (Tair) ESSD-based instance</p>
+     * <p>*   **OnECS**: ApsaraDB for Redis Community Edition instance that uses cloud disks</p>
      */
     @NameInMap("ProductType")
     public String productType;
@@ -84,9 +84,9 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which to assign the instance. You can call the [ListResourceGroups](~~158855~~) operation to query the IDs of resource groups.</p>
+     * <p>The ID of the resource group to which the instance belongs. You can call the [ListResourceGroups](~~158855~~) operation to query the IDs of resource groups.</p>
      * <br>
-     * <p>>  You can also query the IDs of resource groups in the Resource Management console. For more information, see [View basic information about a resource group](~~151181~~).</p>
+     * <p>> You can also query the IDs of resource groups in the Resource Management console. For more information, see [View basic information about a resource group](~~151181~~).</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

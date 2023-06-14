@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceAutoRenewalAttributeRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotency of requests. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -13,7 +13,7 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
      * <br>
-     * <p>>  By default, the system checks whether auto-renewal is enabled for all instances.</p>
+     * <p>> By default, the system checks whether auto-renewal is enabled for all instances.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -33,13 +33,13 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page. Valid values: **30**, **50**, and **100**.</p>
      * <br>
-     * <p>>  Default value: **30**.</p>
+     * <p>> The default value is **30**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the instance is deployed.</p>
+     * <p>The region ID of the instance.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

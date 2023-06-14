@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceSSLRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the task.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -23,11 +23,7 @@ public class ModifyInstanceSSLRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Modifies SSL encryption configurations. Valid values:</p>
-     * <br>
-     * <p>*   **Disable**: The SSL encryption is disabled.</p>
-     * <p>*   **Enable**: The SSL encryption is enabled.</p>
-     * <p>*   **Update**: The SSL certificate is updated.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("SSLEnabled")
     public String SSLEnabled;

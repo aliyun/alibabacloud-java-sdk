@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityIpsRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The IP addresses in the whitelist. A maximum of 1,000 IP addresses can be specified in a whitelist.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

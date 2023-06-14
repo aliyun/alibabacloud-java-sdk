@@ -16,7 +16,7 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends TeaModel {
     public String autoRenew;
 
     /**
-     * <p>The ID of the instance Separate multiple instance IDs with commas (,).</p>
+     * <p>The ID of the instance. Separate multiple instance IDs with commas (,).</p>
      * <br>
      * <p>> You can specify up to 30 instance IDs.</p>
      */

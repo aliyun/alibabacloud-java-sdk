@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceAttributeResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Modifies the attributes of an ApsaraDB for Redis instance, such as the name, password, and state of release protection.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

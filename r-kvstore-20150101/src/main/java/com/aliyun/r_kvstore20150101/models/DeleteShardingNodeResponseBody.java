@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteShardingNodeResponseBody extends TeaModel {
     /**
-     * <p>The ID of the order. On the Orders page in the Billing Management console, you can obtain the details of the order.</p>
+     * <p>The ID of the order. On the Orders page in the Billing Management console, you can obtain the details of the order based on the order ID.</p>
      */
     @NameInMap("OrderId")
     public String orderId;

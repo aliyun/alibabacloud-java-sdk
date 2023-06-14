@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifySecurityGroupConfigurationRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The operation that you want to perform. Set the value to **ModifySecurityGroupConfiguration**.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class CheckCloudResourceAuthorizedRequest extends TeaModel {
     /**
-     * <p>The ID of the ApsaraDB for Redis instance. You can call the [DescribeInstances](~~60933~~) operation to query instance IDs.</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role that you want to attach to your ApsaraDB for Redis instance. The ARN must be in the format of `acs:ram::$accountID:role/$roleName`. After the role is attached, your ApsaraDB for Redis instance can use KMS.</p>
+     * <br>
+     * <p>> </p>
+     * <p>*   `$accountID`: the ID of the Alibaba Cloud account. To view the account ID, log on to the Alibaba Cloud console, move the pointer over your profile picture in the upper-right corner of the page, and then click **Security Settings**.</p>
+     * <p>*   `$roleName`: the name of the RAM role. Replace $roleName with **AliyunRdsInstanceEncryptionDefaultRole**.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -23,10 +27,7 @@ public class CheckCloudResourceAuthorizedRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role that you want to attach to your ApsaraDB for Redis instance. The ARN must be in the format of `acs:ram::$accountID:role/$roleName`. After the role is attached, your ApsaraDB for Redis instance can use KMS.</p>
-     * <br>
-     * <p>> * `$accountID`: the ID of the Alibaba Cloud account. To view the account ID, log on to the Alibaba Cloud console, move the pointer over your profile picture in the upper-right corner of the page, and then click **Security Settings**.</p>
-     * <p>> * `$roleName`: the name of the RAM role. Replace $roleName with **AliyunRdsInstanceEncryptionDefaultRole**.</p>
+     * <p>Queries whether an ApsaraDB for Redis instance is authorized to use Key Management Service (KMS).</p>
      */
     @NameInMap("RoleArn")
     public String roleArn;

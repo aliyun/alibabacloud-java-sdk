@@ -5,18 +5,25 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
+     * <p>指定新创建实例的 aof 参数配置。</p>
+     * <br>
+     * <p>> </p>
+     * <p>> 改参数适用于创建本地盘实例，云盘实例暂不支持指定 aof 参数。</p>
+     */
+    @NameInMap("Appendonly")
+    public String appendonly;
+
+    /**
+     * <p>Specifies whether to enable auto-renewal for the instance. Default value: false. Valid values:</p>
      * <br>
      * <p>*   **true**: enables auto-renewal.</p>
      * <p>*   **false**: disables auto-renewal.</p>
-     * <br>
-     * <p>> The default value is **false**.</p>
      */
     @NameInMap("AutoRenew")
     public String autoRenew;
 
     /**
-     * <p>The auto-renewal period. Unit: months. Valid values: **1**, **2**, **3**, **6**, and **12**.</p>
+     * <p>The subscription duration that is supported by auto-renewal. Unit: months. Valid values: **1**, **2**, **3**, **6**, and **12**.</p>
      * <br>
      * <p>> This parameter is required only if the **AutoRenew** parameter is set to **true**.</p>
      */
@@ -24,18 +31,16 @@ public class CreateInstanceRequest extends TeaModel {
     public String autoRenewPeriod;
 
     /**
-     * <p>Specifies whether to use a coupon. Valid values:</p>
+     * <p>Specifies whether to use a coupon. Default value: false. Valid values:</p>
      * <br>
      * <p>*   **true**: uses a coupon.</p>
      * <p>*   **false**: does not use a coupon.</p>
-     * <br>
-     * <p>> The default value is **false**.</p>
      */
     @NameInMap("AutoUseCoupon")
     public String autoUseCoupon;
 
     /**
-     * <p>The ID of the backup file of the source instance. If you want to create an instance based on a backup file of a specified instance, you can specify this parameter after you specify the **SrcDBInstanceId** parameter. Then, the system creates an instance based on the backup file that is specified by this parameter. You can call the [DescribeBackups](~~61081~~) operation to query the IDs of backup files.</p>
+     * <p>The ID of the backup file of the original instance. If you want to create an instance based on a backup file of a specified instance, you can specify this parameter after you specify the **SrcDBInstanceId** parameter. Then, the system creates an instance based on the backup file that is specified by this parameter. You can call the [DescribeBackups](~~61081~~) operation to query the IDs of backup files.</p>
      * <br>
      * <p>> After you specify the **SrcDBInstanceId** parameter, you must use the **BackupId** or **RestoreTime** parameter to specify the backup file.</p>
      */
@@ -57,12 +62,10 @@ public class CreateInstanceRequest extends TeaModel {
     public Long capacity;
 
     /**
-     * <p>The billing method of the instance. Valid values:</p>
+     * <p>The billing method of the instance. Default value: PrePaid. Valid values:</p>
      * <br>
      * <p>*   **PrePaid**: subscription</p>
      * <p>*   **PostPaid**: pay-as-you-go</p>
-     * <br>
-     * <p>> The default value is **PostPaid**.</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
@@ -74,16 +77,16 @@ public class CreateInstanceRequest extends TeaModel {
     public String couponNo;
 
     /**
-     * <p>The ID of the dedicated cluster. This parameter is required only if you create an instance in a dedicated cluster.</p>
+     * <p>The ID of the dedicated cluster. This parameter is required if you create an instance in a dedicated cluster.</p>
      */
     @NameInMap("DedicatedHostGroupId")
     public String dedicatedHostGroupId;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Default value: false. Valid values:</p>
      * <br>
-     * <p>*   **true**: performs a dry run. The system prechecks the request parameters, request format, service limits, and available resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false**: sends the request without a dry run. If the request passes the dry run, the system creates the instance.</p>
+     * <p>*   **true**: performs a dry run and does not create the instance. The system prechecks the request parameters, request format, service limits, and available resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false**: performs a dry run and sends the request. If the request passes the dry run, the instance is created.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -135,12 +138,10 @@ public class CreateInstanceRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The category of the instance. Valid values:</p>
+     * <p>The category of the instance. Default value: Redis. Valid values:</p>
      * <br>
      * <p>*   **Redis**</p>
      * <p>*   **Memcache**</p>
-     * <br>
-     * <p>> The default value is **Redis**.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -160,7 +161,7 @@ public class CreateInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The password that is used to connect to the instance. The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. These special characters include `! @ # $ % ^ & * ( ) _ + - =`</p>
+     * <p>The password that is used to connect to the instance. The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and specific special characters. These special characters include `! @ # $ % ^ & * ( ) _ + - =`</p>
      */
     @NameInMap("Password")
     public String password;
@@ -174,7 +175,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The port number of the instance. Valid values: **1024** to **65535**. Default value: **6379**.</p>
+     * <p>The port number that is used to connect to the instance. Valid values: **1024** to **65535**. Default value: **6379**.</p>
      */
     @NameInMap("Port")
     public String port;
@@ -188,7 +189,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String privateIpAddress;
 
     /**
-     * <p>The number of read-only nodes of the instance. This parameter is available only if you create a read/write splitting instance that uses cloud disks. You can use this parameter to specify a custom number of read-only nodes. Valid value: 1 to 5.</p>
+     * <p>The number of read-only nodes in the instance. This parameter is available only if you create a read/write splitting instance that uses cloud disks. Valid values: 1 to 5.</p>
      */
     @NameInMap("ReadOnlyCount")
     public Integer readOnlyCount;
@@ -200,7 +201,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs.</p>
+     * <p>The ID of the resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -212,7 +213,7 @@ public class CreateInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The point in time at which the specified source instance is backed up. The point in time must be within the retention period of backup files of the source instance. If you want to create an instance based on a backup file of a specified instance, you can use this parameter to specify a point in time after you specify the **SrcDBInstanceId** parameter. Then, the system creates an instance based on the backup file that was created at the specified point in time for the source instance. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <p>The point in time at which the specified original instance is backed up. The point in time must be within the retention period of backup files of the original instance. If you want to create an instance based on a backup file of a specified instance, you can set this parameter to specify a point in time after you set the **SrcDBInstanceId** parameter. Then, the system creates an instance based on the backup file that was created at the specified point in time for the original instance. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
      * <br>
      * <p>> After you specify the **SrcDBInstanceId** parameter, you must use the **BackupId** or **RestoreTime** parameter to specify the backup file.</p>
      */
@@ -237,7 +238,7 @@ public class CreateInstanceRequest extends TeaModel {
     public Integer shardCount;
 
     /**
-     * <p>The ID of the source instance. If you want to create an instance based on a backup file of a specified instance, you can specify this parameter and use the **BackupId** or **RestoreTime** parameter to specify the backup file.</p>
+     * <p>The ID of the original instance. If you want to create an instance based on a backup file of a specified instance, you can specify this parameter and use the **BackupId** or **RestoreTime** parameter to specify the backup file.</p>
      */
     @NameInMap("SrcDBInstanceId")
     public String srcDBInstanceId;
@@ -249,7 +250,7 @@ public class CreateInstanceRequest extends TeaModel {
     public java.util.List<CreateInstanceRequestTag> tag;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token is case-sensitive. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the token is unique among different requests. The token is case-sensitive. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("Token")
     public String token;
@@ -275,6 +276,14 @@ public class CreateInstanceRequest extends TeaModel {
     public static CreateInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateInstanceRequest self = new CreateInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateInstanceRequest setAppendonly(String appendonly) {
+        this.appendonly = appendonly;
+        return this;
+    }
+    public String getAppendonly() {
+        return this.appendonly;
     }
 
     public CreateInstanceRequest setAutoRenew(String autoRenew) {
@@ -591,19 +600,19 @@ public class CreateInstanceRequest extends TeaModel {
 
     public static class CreateInstanceRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The keys of the tags that are added to the instance.</p>
          * <br>
          * <p>> </p>
          * <br>
          * <p>*   **N** specifies the serial number of the tag. Up to 20 tags can be added to a single instance. For example, Tag.1.Key specifies the key of the first tag and Tag.2.Key specifies the key of the second tag.</p>
          * <br>
-         * <p>*   If the key of the tag does not exist, the key is automatically created.</p>
+         * <p>*   If the key of the tag does not exist, the tag is automatically created.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The values of the tags that are added to the instance.</p>
          * <br>
          * <p>> **N** specifies the serial number of the tag. For example, **Tag.1.Value** specifies the value of the first tag and **Tag.2.Value** specifies the value of the second tag.</p>
          */

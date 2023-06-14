@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRoleZoneInfoRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query instance IDs.</p>
+     * <p>The number of the page to return. The value must be an integer that is greater than **0** and less than or equal to the maximum value supported by the integer data type. Default value: **1**.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -17,25 +17,23 @@ public class DescribeRoleZoneInfoRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. The value must be an integer that is greater than **0** and less than or equal to the maximum value supported by the integer data type. Default value: **1**.</p>
+     * <p>The minor version of the node.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **10**, **20**, and **50**. Default value: **10**.</p>
+     * <p>The operation that you want to perform. Set the value to **DescribeRoleZoneInfo**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The type of node to query. Default value: 1. Valid values:</p>
+     * <p>The current bandwidth of the node, which consists of the default bandwidth and the increased bandwidth. Unit: MB/s.</p>
      * <br>
-     * <p>*   **0**: proxy node</p>
-     * <br>
-     * <p>> This parameter is supported only for cluster and read/write splitting instances.</p>
-     * <br>
-     * <p>*   **1**: data node</p>
+     * <p>> </p>
+     * <p>*   You can call the [EnableAdditionalBandwidth](~~206173~~) operation to specify the increased bandwidth.</p>
+     * <p>*   You can also use this parameter to calculate the increased bandwidth. For example, if the default bandwidth of the node is 96 MB/s and the returned value of this parameter is 100, the increased bandwidth is 4 MB/s.</p>
      */
     @NameInMap("QueryType")
     public Integer queryType;

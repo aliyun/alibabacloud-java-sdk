@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceConfigRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to obtain it.</p>
+     * <p>The instance ID. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

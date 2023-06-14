@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceNetExpireTimeRequest extends TeaModel {
     /**
-     * <p>The retention period of the endpoint of the classic network. Valid values: **14**, **30**, **60**, and **120**. Unit: days.</p>
+     * <p>The extension period to retain the classic network endpoint of the instance. Unit: days. Valid values: **14**, **30**, **60**, and **120**.</p>
      */
     @NameInMap("ClassicExpiredDays")
     public Integer classicExpiredDays;

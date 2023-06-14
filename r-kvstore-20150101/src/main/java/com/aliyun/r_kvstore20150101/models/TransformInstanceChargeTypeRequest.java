@@ -5,25 +5,22 @@ import com.aliyun.tea.*;
 
 public class TransformInstanceChargeTypeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable automatic payment. Default value: true. Valid values:</p>
-     * <br>
-     * <p>*   **true**: Automatic payment is enabled.</p>
-     * <p>*   **false**: Automatic payment is disabled. If automatic payment is disabled, you must perform the following steps to complete the payment: In the top navigation bar of the ApsaraDB for Redis console, choose **Expenses** > **Renewal Management**. In the left-side navigation pane of the Billing Management console, click **Orders**. On the **Orders** page, find the order and complete the payment.</p>
+     * <p>true</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
-     * <p>The new billing method. Valid values:</p>
+     * <p>Specifies whether to enable automatic payment. Default value: true. Valid values:</p>
      * <br>
-     * <p>*   **PrePaid**: subscription. If you set this parameter to PrePaid, you must also set the **Period** parameter.</p>
-     * <p>*   **PostPaid**: pay-as-you-go.</p>
+     * <p>*   **true**: Automatic payment is enabled.</p>
+     * <p>*   **false**: Automatic payment is disabled. If automatic payment is disabled, you must perform the following steps to complete the payment: In the top navigation bar of the ApsaraDB for Redis console, choose **Expenses** > **Renewal Management**. In the left-side navigation pane of the Billing Management console, click **Orders**. On the **Orders** page, find the order and complete the payment.</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
-     * <p>The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.</p>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

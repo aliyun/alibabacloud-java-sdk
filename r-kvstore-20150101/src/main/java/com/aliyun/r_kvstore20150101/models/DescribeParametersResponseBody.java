@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeParametersResponseBody extends TeaModel {
     /**
-     * <p>Details about the configuration parameters.</p>
+     * <p>The configuration parameters.</p>
      */
     @NameInMap("ConfigParameters")
     public DescribeParametersResponseBodyConfigParameters configParameters;
 
     /**
-     * <p>The database engine of the instance.</p>
+     * <p>The database engine that the instance runs.</p>
      */
     @NameInMap("Engine")
     public String engine;
@@ -29,7 +29,7 @@ public class DescribeParametersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Details about the operational parameters.</p>
+     * <p>The running parameters.</p>
      */
     @NameInMap("RunningParameters")
     public DescribeParametersResponseBodyRunningParameters runningParameters;
@@ -96,10 +96,10 @@ public class DescribeParametersResponseBody extends TeaModel {
         public Boolean forceRestart;
 
         /**
-         * <p>Indicates whether the parameter can be reconfigured. Valid values:</p>
+         * <p>Indicates whether the parameter can be reset. Valid values:</p>
          * <br>
-         * <p>*   **False**: The parameter cannot be reconfigured.</p>
-         * <p>*   **True**: The parameter can be reconfigured.</p>
+         * <p>*   **False**: The parameter cannot be reset.</p>
+         * <p>*   **True**: The parameter can be reset.</p>
          */
         @NameInMap("ModifiableStatus")
         public Boolean modifiableStatus;
@@ -204,19 +204,19 @@ public class DescribeParametersResponseBody extends TeaModel {
         public String checkingCode;
 
         /**
-         * <p>Indicates whether the instance must be restarted for the modifications to take effect. Valid values: </p>
+         * <p>Indicates whether the instance must be restarted for the modifications to take effect. Valid values:</p>
          * <br>
-         * <p>- **True**: The instance must be restarted for the modifications to take effect.</p>
-         * <p>- **False**: The instance does not need to be restarted for the modifications to take effect. Modifications immediately take effect.</p>
+         * <p>*   **True**: The instance must be restarted for the modifications to take effect.</p>
+         * <p>*   **False**: The instance does not need to be restarted for the modifications to take effect. Modifications immediately take effect.</p>
          */
         @NameInMap("ForceRestart")
         public String forceRestart;
 
         /**
-         * <p>Indicates whether the parameter can be reconfigured. Valid values:</p>
+         * <p>Indicates whether the parameter can be reset. Valid values:</p>
          * <br>
-         * <p>- **False**: The parameter cannot be reconfigured.</p>
-         * <p>- **True**: The parameter can be reconfigured.</p>
+         * <p>*   **False**: The parameter cannot be reset.</p>
+         * <p>*   **True**: The parameter can be reset.</p>
          */
         @NameInMap("ModifiableStatus")
         public String modifiableStatus;

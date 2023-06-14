@@ -156,13 +156,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic describes how to enable the direct connection mode for an ApsaraDB for Redis cluster instance. By default, cluster instances can be connected only by using proxy nodes. If you want to bypass proxy nodes and connect to cluster instances in the same manner as you connect to native Redis clusters, you can enable the direct connection mode and apply for private endpoints for cluster instances. This reduces connection overheads and improves service performance. For more information, see [Enable the direct connection mode](~~146901~~).
-      * To call this operation, the instance must meet the following requirements:
-      * *   The instance is an ApsaraDB for Redis cluster instance.
-      * *   The instance runs Redis 4.0 (Community Edition) or Redis 5.0 (Community Edition or Enhanced Edition (Tair)).
-      * *   The instance is deployed in a virtual private cloud (VPC). If the instance is deployed in the classic network, call the [SwitchNetwork](~~61005~~) operation to change the network type to VPC.
-      * *   Secure Sockets Layer (SSL) encryption of the instance is disabled. If SSL encryption is enabled, you can call the [ModifyInstanceSSL](~~96194~~) operation to disable it.
-      * *   The vSwitch to which the instance is connected has sufficient IP addresses to be allocated. For more information, see [Obtain the number of available IP addresses in the vSwitch to which an ApsaraDB for Redis instance is connected](~~183151~~).
+      * The ID of the instance.
       *
       * @param request AllocateDirectConnectionRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -221,13 +215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic describes how to enable the direct connection mode for an ApsaraDB for Redis cluster instance. By default, cluster instances can be connected only by using proxy nodes. If you want to bypass proxy nodes and connect to cluster instances in the same manner as you connect to native Redis clusters, you can enable the direct connection mode and apply for private endpoints for cluster instances. This reduces connection overheads and improves service performance. For more information, see [Enable the direct connection mode](~~146901~~).
-      * To call this operation, the instance must meet the following requirements:
-      * *   The instance is an ApsaraDB for Redis cluster instance.
-      * *   The instance runs Redis 4.0 (Community Edition) or Redis 5.0 (Community Edition or Enhanced Edition (Tair)).
-      * *   The instance is deployed in a virtual private cloud (VPC). If the instance is deployed in the classic network, call the [SwitchNetwork](~~61005~~) operation to change the network type to VPC.
-      * *   Secure Sockets Layer (SSL) encryption of the instance is disabled. If SSL encryption is enabled, you can call the [ModifyInstanceSSL](~~96194~~) operation to disable it.
-      * *   The vSwitch to which the instance is connected has sufficient IP addresses to be allocated. For more information, see [Obtain the number of available IP addresses in the vSwitch to which an ApsaraDB for Redis instance is connected](~~183151~~).
+      * The ID of the instance.
       *
       * @param request AllocateDirectConnectionRequest
       * @return AllocateDirectConnectionResponse
@@ -238,7 +226,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can also apply for public endpoints in the ApsaraDB for Redis console. For more information, see [Use a public endpoint to connect to an ApsaraDB for Redis instance](~~43850~~).
+      * r-bp1zxszhcgatnx****
       *
       * @param request AllocateInstancePublicConnectionRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -297,7 +285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can also apply for public endpoints in the ApsaraDB for Redis console. For more information, see [Use a public endpoint to connect to an ApsaraDB for Redis instance](~~43850~~).
+      * r-bp1zxszhcgatnx****
       *
       * @param request AllocateInstancePublicConnectionRequest
       * @return AllocateInstancePublicConnectionResponse
@@ -308,8 +296,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   For more information about TDE and the usage notes of TDE, see [Enable TDE](~~265913~~).
-      * *   If the ApsaraDB for Redis instance is authorized to use KMS, you can call the [ModifyInstanceTDE](~~302337~~) operation to enable TDE.
+      * The operation that you want to perform. Set the value to **CheckCloudResourceAuthorized**.
       *
       * @param request CheckCloudResourceAuthorizedRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -364,8 +351,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   For more information about TDE and the usage notes of TDE, see [Enable TDE](~~265913~~).
-      * *   If the ApsaraDB for Redis instance is authorized to use KMS, you can call the [ModifyInstanceTDE](~~302337~~) operation to enable TDE.
+      * The operation that you want to perform. Set the value to **CheckCloudResourceAuthorized**.
       *
       * @param request CheckCloudResourceAuthorizedRequest
       * @return CheckCloudResourceAuthorizedResponse
@@ -376,11 +362,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > 
-      * *   This operation is supported only for instances that run Redis 4.0 or later.
-      * *   The instance must be in the running state.
-      * *   You can create up to 18 accounts for an instance.
-      * You can also create an account in the ApsaraDB for Redis console. For more information, see [Manage database accounts](~~92665~~).
+      * The name of the account.
       *
       * @param request CreateAccountRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -451,11 +433,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > 
-      * *   This operation is supported only for instances that run Redis 4.0 or later.
-      * *   The instance must be in the running state.
-      * *   You can create up to 18 accounts for an instance.
-      * You can also create an account in the ApsaraDB for Redis console. For more information, see [Manage database accounts](~~92665~~).
+      * The name of the account.
       *
       * @param request CreateAccountRequest
       * @return CreateAccountResponse
@@ -466,7 +444,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can also back up an instance in the ApsaraDB for Redis console. For more information, see [Back up and recover data in the console](~~43886~~).
+      * The ID of the backup job.
       *
       * @param request CreateBackupRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -517,7 +495,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can also back up an instance in the ApsaraDB for Redis console. For more information, see [Back up and recover data in the console](~~43886~~).
+      * The ID of the backup job.
       *
       * @param request CreateBackupRequest
       * @return CreateBackupResponse
@@ -528,13 +506,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Billing
-      * >  ApsaraDB for Redis has optimized the cache analytics feature to improve user experience. This API operation is phased out and replaced with a new API operation. For more information, see [API operations for cache analysis will be upgraded](~~186019~~).
-      * Before you call this API operation, make sure that the ApsaraDB for Redis instance meets the following requirements:
-      * *   The instance runs on Redis 4.0 or later.
-      * *   The instance is an ApsaraDB for Redis Community Edition instance or a performance-enhanced instance of the ApsaraDB for Redis Enhanced Edition (Tair). For more information about performance-enhanced instances, see [Performance-enhanced instances](~~126164~~).
-      * *   The instance is of the latest minor version. For more information about whether you must update the minor version for the instance, see [How do I check whether the minor version of an ApsaraDB for Redis instance is the latest?](~~129203~~)
-      * After you call this operation, you can call the [DescribeCacheAnalysisReport](~~128808~~) operation to view the analytic results.
+      * The operation that you want to perform. Set the value to **CreateCacheAnalysisTask**.
       *
       * @param request CreateCacheAnalysisTaskRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -585,13 +557,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Billing
-      * >  ApsaraDB for Redis has optimized the cache analytics feature to improve user experience. This API operation is phased out and replaced with a new API operation. For more information, see [API operations for cache analysis will be upgraded](~~186019~~).
-      * Before you call this API operation, make sure that the ApsaraDB for Redis instance meets the following requirements:
-      * *   The instance runs on Redis 4.0 or later.
-      * *   The instance is an ApsaraDB for Redis Community Edition instance or a performance-enhanced instance of the ApsaraDB for Redis Enhanced Edition (Tair). For more information about performance-enhanced instances, see [Performance-enhanced instances](~~126164~~).
-      * *   The instance is of the latest minor version. For more information about whether you must update the minor version for the instance, see [How do I check whether the minor version of an ApsaraDB for Redis instance is the latest?](~~129203~~)
-      * After you call this operation, you can call the [DescribeCacheAnalysisReport](~~128808~~) operation to view the analytic results.
+      * The operation that you want to perform. Set the value to **CreateCacheAnalysisTask**.
       *
       * @param request CreateCacheAnalysisTaskRequest
       * @return CreateCacheAnalysisTaskResponse
@@ -602,10 +568,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You cannot directly create a distributed instance. If you require a distributed instance, you must call this operation to convert an existing instance to the first child instance of the distributed instance. After the instance is converted, the distributed instance is created. Before you call this operation, make sure that the following requirements are met:
-      * *   A [DRAM-based instance](~~126164~~) of Enhanced Edition is used.
-      * *   If the existing instance is a cluster instance, the direct connection mode must be disabled for the instance. For more information, see [Release a private endpoint](~~150047~~).
-      * > You can also call the [CreateInstance](~~60873~~) operation to create an instance that is specified as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which the child instance belongs is created.
+      * The ID of the existing instance.
       *
       * @param request CreateGlobalDistributeCacheRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -656,10 +619,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You cannot directly create a distributed instance. If you require a distributed instance, you must call this operation to convert an existing instance to the first child instance of the distributed instance. After the instance is converted, the distributed instance is created. Before you call this operation, make sure that the following requirements are met:
-      * *   A [DRAM-based instance](~~126164~~) of Enhanced Edition is used.
-      * *   If the existing instance is a cluster instance, the direct connection mode must be disabled for the instance. For more information, see [Release a private endpoint](~~150047~~).
-      * > You can also call the [CreateInstance](~~60873~~) operation to create an instance that is specified as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which the child instance belongs is created.
+      * The ID of the existing instance.
       *
       * @param request CreateGlobalDistributeCacheRequest
       * @return CreateGlobalDistributeCacheResponse
@@ -742,6 +702,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateInstanceResponse createInstanceWithOptions(CreateInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appendonly)) {
+            query.put("Appendonly", request.appendonly);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
             query.put("AutoRenew", request.autoRenew);
         }
@@ -929,9 +893,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
-      * >  For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see [Step 1: Create an ApsaraDB for Redis instance](~~26351~~).
-      * To create an ApsaraDB for Redis Enhanced Edition (Tair) instance that uses cloud disks, call [CreateTairInstance](~~208271~~).
+      * Specifies whether to enable automatic payment. Default value: true. Valid values:
+      * *   **true**: yes
+      * *   **false**: no If automatic payment is disabled, you must perform the following steps to complete the payment in the ApsaraDB for Redis console: In the top navigation bar, choose **Expenses** > **Renewal Management**. In the left-side navigation pane, click **Orders**. On the **Orders** page, find the order and complete the payment.
+      * >  This parameter is available only if **ChargeType** in the **Instances** parameter is set to **PrePaid**.
       *
       * @param request CreateInstancesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1014,9 +979,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
-      * >  For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see [Step 1: Create an ApsaraDB for Redis instance](~~26351~~).
-      * To create an ApsaraDB for Redis Enhanced Edition (Tair) instance that uses cloud disks, call [CreateTairInstance](~~208271~~).
+      * Specifies whether to enable automatic payment. Default value: true. Valid values:
+      * *   **true**: yes
+      * *   **false**: no If automatic payment is disabled, you must perform the following steps to complete the payment in the ApsaraDB for Redis console: In the top navigation bar, choose **Expenses** > **Renewal Management**. In the left-side navigation pane, click **Orders**. On the **Orders** page, find the order and complete the payment.
+      * >  This parameter is available only if **ChargeType** in the **Instances** parameter is set to **PrePaid**.
       *
       * @param request CreateInstancesRequest
       * @return CreateInstancesResponse
@@ -1027,10 +993,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * For more information about instance selection, see [Select ApsaraDB for Redis instances](~~223808~~).
-      * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
-      * > * For more information about how to create an ApsaraDB for Redis Enhanced Edition (Tair) instance that uses cloud disks in the ApsaraDB for Redis console, see [Create an ApsaraDB for Redis instance](~~443863~~).
-      * > * To create an instance of another series such as an ApsaraDB for Redis Community Edition or a Tair [DRAM-based instance](~~126164~~) that uses local disks, call [CreateInstance](~~60873~~).
+      * For more information about instance selection, see [Select an ApsaraDB for Redis instance](~~223808~~).
+      * Before you call this operation, make sure that you are familiar with the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
+      * > 
+      * *   For more information about how to create an ApsaraDB for Redis Enhanced Edition (Tair) instance that uses cloud disks in the ApsaraDB for Redis console, see [Create an ApsaraDB for Redis instance](~~443863~~).
+      * *   To create an instance of another edition or series such as a Community Edition instance or Tair [DRAM-based instance](~~126164~~) that uses local disks, call [CreateInstance](~~60873~~).
       *
       * @param request CreateTairInstanceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1209,10 +1176,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * For more information about instance selection, see [Select ApsaraDB for Redis instances](~~223808~~).
-      * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
-      * > * For more information about how to create an ApsaraDB for Redis Enhanced Edition (Tair) instance that uses cloud disks in the ApsaraDB for Redis console, see [Create an ApsaraDB for Redis instance](~~443863~~).
-      * > * To create an instance of another series such as an ApsaraDB for Redis Community Edition or a Tair [DRAM-based instance](~~126164~~) that uses local disks, call [CreateInstance](~~60873~~).
+      * For more information about instance selection, see [Select an ApsaraDB for Redis instance](~~223808~~).
+      * Before you call this operation, make sure that you are familiar with the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
+      * > 
+      * *   For more information about how to create an ApsaraDB for Redis Enhanced Edition (Tair) instance that uses cloud disks in the ApsaraDB for Redis console, see [Create an ApsaraDB for Redis instance](~~443863~~).
+      * *   To create an instance of another edition or series such as a Community Edition instance or Tair [DRAM-based instance](~~126164~~) that uses local disks, call [CreateInstance](~~60873~~).
       *
       * @param request CreateTairInstanceRequest
       * @return CreateTairInstanceResponse
@@ -1224,7 +1192,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * *   This operation is supported only for ApsaraDB for Redis instances that run Redis 4.0.
-      * *   The ApsaraDB for Redis instance must be in the running state.
+      * *   The ApsaraDB for Redis instance must be in the Running state.
       *
       * @param request DeleteAccountRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1280,7 +1248,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * *   This operation is supported only for ApsaraDB for Redis instances that run Redis 4.0.
-      * *   The ApsaraDB for Redis instance must be in the running state.
+      * *   The ApsaraDB for Redis instance must be in the Running state.
       *
       * @param request DeleteAccountRequest
       * @return DeleteAccountResponse
@@ -1288,67 +1256,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteAccountResponse deleteAccount(DeleteAccountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteAccountWithOptions(request, runtime);
-    }
-
-    public DeleteGlobalSecurityIPGroupResponse deleteGlobalSecurityIPGroupWithOptions(DeleteGlobalSecurityIPGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.globalIgName)) {
-            query.put("GlobalIgName", request.globalIgName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.globalSecurityGroupId)) {
-            query.put("GlobalSecurityGroupId", request.globalSecurityGroupId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
-            query.put("OwnerAccount", request.ownerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
-            query.put("ResourceGroupId", request.resourceGroupId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
-            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
-            query.put("ResourceOwnerId", request.resourceOwnerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
-            query.put("SecurityToken", request.securityToken);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DeleteGlobalSecurityIPGroup"),
-            new TeaPair("version", "2015-01-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteGlobalSecurityIPGroupResponse());
-    }
-
-    public DeleteGlobalSecurityIPGroupResponse deleteGlobalSecurityIPGroup(DeleteGlobalSecurityIPGroupRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteGlobalSecurityIPGroupWithOptions(request, runtime);
     }
 
     /**
@@ -1502,7 +1409,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
+      * Details about returned accounts of the instance.
       *
       * @param request DescribeAccountsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1557,7 +1464,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
+      * Details about returned accounts of the instance.
       *
       * @param request DescribeAccountsRequest
       * @return DescribeAccountsResponse
@@ -1568,7 +1475,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After you have called this API operation and queried the information about a specific O&M task, you can also call the [ModifyActiveOperationTask](https://www.alibabacloud.com/help/en/apsaradb-for-redis/latest/modifyactiveoperationtask) operation to modify the scheduled switchover time of the O&M task.
+      * Specifies whether to return the historical tasks. Valid values:
+      * *   **0**: returns the current task. This is the default value.
+      * *   **1**: returns the historical tasks.
       *
       * @param request DescribeActiveOperationTaskRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1635,7 +1544,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After you have called this API operation and queried the information about a specific O&M task, you can also call the [ModifyActiveOperationTask](https://www.alibabacloud.com/help/en/apsaradb-for-redis/latest/modifyactiveoperationtask) operation to modify the scheduled switchover time of the O&M task.
+      * Specifies whether to return the historical tasks. Valid values:
+      * *   **0**: returns the current task. This is the default value.
+      * *   **1**: returns the historical tasks.
       *
       * @param request DescribeActiveOperationTaskRequest
       * @return DescribeActiveOperationTaskResponse
@@ -1720,10 +1631,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation can be called up to 100 times per minute. For more information about how to query the audit log in the ApsaraDB for Redis console, see [Query the audit log](~~101937~~).
-      * Before you call this operation, make sure that the following requirements are met:
-      * *   ApsaraDB for Redis instances of Community Edition or performance-enhanced instances of Enterprise Edition are used.
+      * This operation can be called up to 100 times per minute. You can also query audit logs in the ApsaraDB for Redis console. For more information, see [Query audit logs of an instance](~~101937~~).
+      * Before you call this operation, make sure that the instance meets the following requirements:
+      * *   The instance is an ApsaraDB for Redis Community Edition instance or an ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance.
       * *   The engine version of the instance is Redis 4.0 or later.
+      * *   The audit log feature is enabled for the instance. For more information, see [ModifyAuditLogConfig](~~130206~~).
       *
       * @param request DescribeAuditRecordsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1810,10 +1722,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation can be called up to 100 times per minute. For more information about how to query the audit log in the ApsaraDB for Redis console, see [Query the audit log](~~101937~~).
-      * Before you call this operation, make sure that the following requirements are met:
-      * *   ApsaraDB for Redis instances of Community Edition or performance-enhanced instances of Enterprise Edition are used.
+      * This operation can be called up to 100 times per minute. You can also query audit logs in the ApsaraDB for Redis console. For more information, see [Query audit logs of an instance](~~101937~~).
+      * Before you call this operation, make sure that the instance meets the following requirements:
+      * *   The instance is an ApsaraDB for Redis Community Edition instance or an ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance.
       * *   The engine version of the instance is Redis 4.0 or later.
+      * *   The audit log feature is enabled for the instance. For more information, see [ModifyAuditLogConfig](~~130206~~).
       *
       * @param request DescribeAuditRecordsRequest
       * @return DescribeAuditRecordsResponse
@@ -2088,10 +2001,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  ApsaraDB for Redis has optimized the cache analytics feature to improve user experience. This API operation is phased out and replaced with a new API operation. For more information, see [API operations for cache analysis will be upgraded](~~186019~~).
-      * Before you call this API operation, make sure that the ApsaraDB for Redis instance meets the following requirements:
-      * *   The instance runs on Redis 4.0 or later.
-      * *   The instance is of the latest minor version. For more information about whether you must update the minor version for the instance, see [How do I check whether the minor version of an ApsaraDB for Redis instance is the latest?](~~129203~~)
+      * The number of entries returned on the current page.
       *
       * @param request DescribeCacheAnalysisReportRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2162,10 +2072,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  ApsaraDB for Redis has optimized the cache analytics feature to improve user experience. This API operation is phased out and replaced with a new API operation. For more information, see [API operations for cache analysis will be upgraded](~~186019~~).
-      * Before you call this API operation, make sure that the ApsaraDB for Redis instance meets the following requirements:
-      * *   The instance runs on Redis 4.0 or later.
-      * *   The instance is of the latest minor version. For more information about whether you must update the minor version for the instance, see [How do I check whether the minor version of an ApsaraDB for Redis instance is the latest?](~~129203~~)
+      * The number of entries returned on the current page.
       *
       * @param request DescribeCacheAnalysisReportRequest
       * @return DescribeCacheAnalysisReportResponse
@@ -2176,10 +2083,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  Alibaba Cloud has optimized the cache analytics feature of ApsaraDB for Redis to improve user experience. This API operation is phased out and replaced with a new API operation. For more information, see [API operations for cache analysis will be upgraded](~~186019~~).
-      * Before you call this API operation, make sure that the ApsaraDB for Redis instance meets the following requirements:
-      * *   The engine version of the instance is Redis 4.0 or later.
-      * *   The instance uses the latest minor version. For more information about how to check whether to update the minor version of an ApsaraDB for Redis instance, see [How do I check whether the minor version of an ApsaraDB for Redis instance is the latest?](~~129203~~)
+      * The operation that you want to perform. Set the value to **DescribeCacheAnalysisReportList**.
       *
       * @param request DescribeCacheAnalysisReportListRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2246,10 +2150,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  Alibaba Cloud has optimized the cache analytics feature of ApsaraDB for Redis to improve user experience. This API operation is phased out and replaced with a new API operation. For more information, see [API operations for cache analysis will be upgraded](~~186019~~).
-      * Before you call this API operation, make sure that the ApsaraDB for Redis instance meets the following requirements:
-      * *   The engine version of the instance is Redis 4.0 or later.
-      * *   The instance uses the latest minor version. For more information about how to check whether to update the minor version of an ApsaraDB for Redis instance, see [How do I check whether the minor version of an ApsaraDB for Redis instance is the latest?](~~129203~~)
+      * The operation that you want to perform. Set the value to **DescribeCacheAnalysisReportList**.
       *
       * @param request DescribeCacheAnalysisReportListRequest
       * @return DescribeCacheAnalysisReportListResponse
@@ -2260,7 +2161,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  The instance must be a [persistent memory-optimized](~~183956~~) instance in the cluster architecture.
+      * The storage capacity of the [enhanced solid-state disk (ESSD)](~~122389~~) that is mounted to the data node. Unit: MB.
+      * >  The ESSD is used only to store system operating data, such as persistent data. It is not used as a medium to write and read data.
       *
       * @param request DescribeClusterMemberInfoRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2311,7 +2213,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  The instance must be a [persistent memory-optimized](~~183956~~) instance in the cluster architecture.
+      * The storage capacity of the [enhanced solid-state disk (ESSD)](~~122389~~) that is mounted to the data node. Unit: MB.
+      * >  The ESSD is used only to store system operating data, such as persistent data. It is not used as a medium to write and read data.
       *
       * @param request DescribeClusterMemberInfoRequest
       * @return DescribeClusterMemberInfoResponse
@@ -2474,7 +2377,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * Before you call this operation, TDE must be enabled for the ApsaraDB for Redis instance by using a custom key. For more information, see [ModifyInstanceTDE](~~302337~~).
-      * > For more information about TDE and the usage notes of TDE, see [Enable TDE](~~265913~~).
+      * > For more information about TDE, see [Enable TDE](~~265913~~).
       *
       * @param request DescribeEncryptionKeyRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2530,7 +2433,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * Before you call this operation, TDE must be enabled for the ApsaraDB for Redis instance by using a custom key. For more information, see [ModifyInstanceTDE](~~302337~~).
-      * > For more information about TDE and the usage notes of TDE, see [Enable TDE](~~265913~~).
+      * > For more information about TDE, see [Enable TDE](~~265913~~).
       *
       * @param request DescribeEncryptionKeyRequest
       * @return DescribeEncryptionKeyResponse
@@ -2541,8 +2444,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > * You can specify a custom key when you call the [ModifyInstanceTDE](~~302337~~) operation to enable TDE. You can call the DescribeEncryptionKeyList operation to query the custom keys that are in use. To create a custom key, you can call the [CreateKey](~~28947~~) operation of the Key Management Service (KMS) API.
-      * > * For more information about TDE and the usage notes of TDE, see [Enable TDE](~~265913~~).
+      * The ID of the request.
       *
       * @param request DescribeEncryptionKeyListRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2593,8 +2495,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > * You can specify a custom key when you call the [ModifyInstanceTDE](~~302337~~) operation to enable TDE. You can call the DescribeEncryptionKeyList operation to query the custom keys that are in use. To create a custom key, you can call the [CreateKey](~~28947~~) operation of the Key Management Service (KMS) API.
-      * > * For more information about TDE and the usage notes of TDE, see [Enable TDE](~~265913~~).
+      * The ID of the request.
       *
       * @param request DescribeEncryptionKeyListRequest
       * @return DescribeEncryptionKeyListResponse
@@ -2739,33 +2640,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeGlobalSecurityIPGroupWithOptions(request, runtime);
     }
 
-    public DescribeGlobalSecurityIPGroupRelationResponse describeGlobalSecurityIPGroupRelationWithOptions(DescribeGlobalSecurityIPGroupRelationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeGlobalSecurityIPGroupRelation"),
-            new TeaPair("version", "2015-01-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeGlobalSecurityIPGroupRelationResponse());
-    }
-
-    public DescribeGlobalSecurityIPGroupRelationResponse describeGlobalSecurityIPGroupRelation(DescribeGlobalSecurityIPGroupRelationRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeGlobalSecurityIPGroupRelationWithOptions(request, runtime);
-    }
-
     /**
-      * For information about how to query the monitoring data of an instance in the ApsaraDB for Redis console, see [Metrics](~~43887~~).
+      * You can also query the performance monitoring data of an instance in the ApsaraDB for Redis console. For more information, see [Metrics](~~43887~~).
       *
       * @param request DescribeHistoryMonitorValuesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2836,7 +2712,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * For information about how to query the monitoring data of an instance in the ApsaraDB for Redis console, see [Metrics](~~43887~~).
+      * You can also query the performance monitoring data of an instance in the ApsaraDB for Redis console. For more information, see [Metrics](~~43887~~).
       *
       * @param request DescribeHistoryMonitorValuesRequest
       * @return DescribeHistoryMonitorValuesResponse
@@ -2956,6 +2832,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeInstanceAutoRenewalAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * This operation is available only for instances that use cloud disks.
+      * > You can call the [DescribeParameters](~~473847~~) operation to query the parameter settings of instances that use local disks.
+      *
+      * @param request DescribeInstanceConfigRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeInstanceConfigResponse
+     */
     public DescribeInstanceConfigResponse describeInstanceConfigWithOptions(DescribeInstanceConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3000,17 +2884,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInstanceConfigResponse());
     }
 
+    /**
+      * This operation is available only for instances that use cloud disks.
+      * > You can call the [DescribeParameters](~~473847~~) operation to query the parameter settings of instances that use local disks.
+      *
+      * @param request DescribeInstanceConfigRequest
+      * @return DescribeInstanceConfigResponse
+     */
     public DescribeInstanceConfigResponse describeInstanceConfig(DescribeInstanceConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeInstanceConfigWithOptions(request, runtime);
     }
 
     /**
-      * The standard and cluster Instances of Redis 2.8 and the cluster instances of Redis 4.0 support secure sockets layer (SSL) encryption. You can enable SSL encryption to enhance data transmission security.
-      * You can enable or disable SSL encryption or update the SSL certificate for an ApsaraDB for Redis instance in the following ways:
-      * *   Call the [ModifyInstanceSSL](~~96194~~) operation.
-      * *   Enable or disable SSL encryption or update the SSL certificate in the ApsaraDB for Redis console. For more information, see [Configure SSL encryption](~~84898~~).
-      * >  After SSL encryption is enabled, the instance may respond slower.
+      * The common name of the SSL certificate, which is the domain name for which you want to apply for the SSL certificate. The default value is the internal endpoint of the instance.
       *
       * @param request DescribeInstanceSSLRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3061,11 +2948,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The standard and cluster Instances of Redis 2.8 and the cluster instances of Redis 4.0 support secure sockets layer (SSL) encryption. You can enable SSL encryption to enhance data transmission security.
-      * You can enable or disable SSL encryption or update the SSL certificate for an ApsaraDB for Redis instance in the following ways:
-      * *   Call the [ModifyInstanceSSL](~~96194~~) operation.
-      * *   Enable or disable SSL encryption or update the SSL certificate in the ApsaraDB for Redis console. For more information, see [Configure SSL encryption](~~84898~~).
-      * >  After SSL encryption is enabled, the instance may respond slower.
+      * The common name of the SSL certificate, which is the domain name for which you want to apply for the SSL certificate. The default value is the internal endpoint of the instance.
       *
       * @param request DescribeInstanceSSLRequest
       * @return DescribeInstanceSSLResponse
@@ -3076,8 +2959,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * For more information about TDE and the usage notes of TDE, see [Enable TDE](~~265913~~).
-      * >  You can call the [ModifyInstanceTDE](~~302337~~) to enable or disable TDE.
+      * r-bp1zxszhcgatnx****
       *
       * @param request DescribeInstanceTDEStatusRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3128,8 +3010,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * For more information about TDE and the usage notes of TDE, see [Enable TDE](~~265913~~).
-      * >  You can call the [ModifyInstanceTDE](~~302337~~) to enable or disable TDE.
+      * r-bp1zxszhcgatnx****
       *
       * @param request DescribeInstanceTDEStatusRequest
       * @return DescribeInstanceTDEStatusResponse
@@ -3393,7 +3274,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call the [EnableAdditionalBandwidth](~~206173~~) operation to increase the internal bandwidth of an instance.
+      * rg-acfmyiu4ekp****
       *
       * @param request DescribeIntranetAttributeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3448,7 +3329,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call the [EnableAdditionalBandwidth](~~206173~~) operation to increase the internal bandwidth of an instance.
+      * rg-acfmyiu4ekp****
       *
       * @param request DescribeIntranetAttributeRequest
       * @return DescribeIntranetAttributeResponse
@@ -3459,7 +3340,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This parameter is supported only for cluster and read/write splitting instances.
+      * The maximum number of connections.
       *
       * @param request DescribeLogicInstanceTopologyRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3510,7 +3391,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This parameter is supported only for cluster and read/write splitting instances.
+      * The maximum number of connections.
       *
       * @param request DescribeLogicInstanceTopologyRequest
       * @return DescribeLogicInstanceTopologyResponse
@@ -3646,7 +3527,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After you call this operation to query the parameters and default values of an instance, you can call the [ModifyInstanceConfig](~~61113~~) operation to reconfigure the parameters of the instance.
+      * An array that consists of the details about the parameters returned.
       *
       * @param request DescribeParameterTemplatesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3713,7 +3594,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After you call this operation to query the parameters and default values of an instance, you can call the [ModifyInstanceConfig](~~61113~~) operation to reconfigure the parameters of the instance.
+      * An array that consists of the details about the parameters returned.
       *
       * @param request DescribeParameterTemplatesRequest
       * @return DescribeParameterTemplatesResponse
@@ -3723,6 +3604,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeParameterTemplatesWithOptions(request, runtime);
     }
 
+    /**
+      * This operation is available only for instances that use local disks.
+      * > You can call the [DescribeInstanceConfig](~~473846~~) operation to query the parameter settings of instances that use cloud disks.
+      *
+      * @param request DescribeParametersRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeParametersResponse
+     */
     public DescribeParametersResponse describeParametersWithOptions(DescribeParametersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3775,6 +3664,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeParametersResponse());
     }
 
+    /**
+      * This operation is available only for instances that use local disks.
+      * > You can call the [DescribeInstanceConfig](~~473846~~) operation to query the parameter settings of instances that use cloud disks.
+      *
+      * @param request DescribeParametersRequest
+      * @return DescribeParametersResponse
+     */
     public DescribeParametersResponse describeParameters(DescribeParametersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeParametersWithOptions(request, runtime);
@@ -4202,8 +4098,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can also query slow logs in the ApsaraDB for Redis console. For more information, see [Query slow logs of an instance](~~95874~~).
-      * This operation can be called up to 100 times per minute.
+      * You can also query slow logs in the ApsaraDB for Redis console. For more information, see [Query slow logs of an instance](~~95874~~). This operation can be called up to 100 times per minute.
       *
       * @param request DescribeSlowLogRecordsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4294,8 +4189,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can also query slow logs in the ApsaraDB for Redis console. For more information, see [Query slow logs of an instance](~~95874~~).
-      * This operation can be called up to 100 times per minute.
+      * You can also query slow logs in the ApsaraDB for Redis console. For more information, see [Query slow logs of an instance](~~95874~~). This operation can be called up to 100 times per minute.
       *
       * @param request DescribeSlowLogRecordsRequest
       * @return DescribeSlowLogRecordsResponse
@@ -4306,7 +4200,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to query the progress of a task when you perform time-consuming operations. You can also log on to the ApsaraDB for Redis console and click the Tasks icon in the upper-right corner of the **Instance Information** page to view the progress of the current task.
+      * The progress of the task. Unit: %.
       *
       * @param request DescribeTasksRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4377,7 +4271,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to query the progress of a task when you perform time-consuming operations. You can also log on to the ApsaraDB for Redis console and click the Tasks icon in the upper-right corner of the **Instance Information** page to view the progress of the current task.
+      * The progress of the task. Unit: %.
       *
       * @param request DescribeTasksRequest
       * @return DescribeTasksResponse
@@ -4467,6 +4361,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Bandwidth", request.bandwidth);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.chargeType)) {
+            query.put("ChargeType", request.chargeType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.couponNo)) {
             query.put("CouponNo", request.couponNo);
         }
@@ -4537,8 +4435,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * For more information about how to clear the expired keys in the ApsaraDB for Redis console, see [Clear data](~~43881~~).
-      * >  Expired keys cannot be recovered after they are deleted. Exercise caution when you call this operation.
+      * The time when the minor version is upgraded. Valid values:
+      * *   **Immediately**: immediately deletes expired keys.
+      * *   **MaintainTime:**deletes expired key in the maintenance window.
+      * >  You can call the [ModifyInstanceMaintainTime](~~61000~~) operation to modify the maintenance window of an ApsaraDB for Redis instance.
       *
       * @param request FlushExpireKeysRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4593,8 +4493,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * For more information about how to clear the expired keys in the ApsaraDB for Redis console, see [Clear data](~~43881~~).
-      * >  Expired keys cannot be recovered after they are deleted. Exercise caution when you call this operation.
+      * The time when the minor version is upgraded. Valid values:
+      * *   **Immediately**: immediately deletes expired keys.
+      * *   **MaintainTime:**deletes expired key in the maintenance window.
+      * >  You can call the [ModifyInstanceMaintainTime](~~61000~~) operation to modify the maintenance window of an ApsaraDB for Redis instance.
       *
       * @param request FlushExpireKeysRequest
       * @return FlushExpireKeysResponse
@@ -4605,8 +4507,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can also clear the data of an instance in the ApsaraDB for Redis console. For more information, see [Clear data](~~43881~~).
-      * >  Before you call this operation, back up the data or make sure that the data does not need to be backed up.
+      * The ID of the instance.
       *
       * @param request FlushInstanceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4657,8 +4558,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can also clear the data of an instance in the ApsaraDB for Redis console. For more information, see [Clear data](~~43881~~).
-      * >  Before you call this operation, back up the data or make sure that the data does not need to be backed up.
+      * The ID of the instance.
       *
       * @param request FlushInstanceRequest
       * @return FlushInstanceResponse
@@ -4669,8 +4569,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > * Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
-      * > * The ApsaraDB for Redis instance must be in the running state.
+      * The name of the account. You can call the [DescribeAccounts](~~95802~~) operation to obtain the name of the account.
       *
       * @param request GrantAccountPrivilegeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4729,8 +4628,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > * Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
-      * > * The ApsaraDB for Redis instance must be in the running state.
+      * The name of the account. You can call the [DescribeAccounts](~~95802~~) operation to obtain the name of the account.
       *
       * @param request GrantAccountPrivilegeRequest
       * @return GrantAccountPrivilegeResponse
@@ -4741,7 +4639,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The log management feature of ApsaraDB for Redis requires the resources of [Log Service](~~48869~~). To use the log management feature of ApsaraDB for Redis, you can call this operation to associate the RAM role named AliyunServiceRoleForKvstore with the ApsaraDB for Redis instance. For more information, see [Associated RAM roles of ApsaraDB for Redis](~~184337~~).
+      * The ID of the request.
       *
       * @param request InitializeKvstorePermissionRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4792,7 +4690,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The log management feature of ApsaraDB for Redis requires the resources of [Log Service](~~48869~~). To use the log management feature of ApsaraDB for Redis, you can call this operation to associate the RAM role named AliyunServiceRoleForKvstore with the ApsaraDB for Redis instance. For more information, see [Associated RAM roles of ApsaraDB for Redis](~~184337~~).
+      * The ID of the request.
       *
       * @param request InitializeKvstorePermissionRequest
       * @return InitializeKvstorePermissionResponse
@@ -4877,10 +4775,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can also migrate an instance across zones in the ApsaraDB for Redis console. For more information, see [Migrate an instance across zones](~~106272~~).
-      * > 
-      * *   If the network type of an ApsaraDB for Redis instance is changed from classic network to Virtual Private Cloud (VPC), and the endpoint of the classic network is retained, you can migrate the instance across zones only after the classic network endpoint is released upon expiration.
-      * *   After the instance is migrated, the endpoint of the instance remains unchanged. However, the virtual IP address (VIP) is changed. We recommend that you use the endpoint instead of the VIP to connect to the instance.
+      * The ID of the request.
       *
       * @param request MigrateToOtherZoneRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4947,10 +4842,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can also migrate an instance across zones in the ApsaraDB for Redis console. For more information, see [Migrate an instance across zones](~~106272~~).
-      * > 
-      * *   If the network type of an ApsaraDB for Redis instance is changed from classic network to Virtual Private Cloud (VPC), and the endpoint of the classic network is retained, you can migrate the instance across zones only after the classic network endpoint is released upon expiration.
-      * *   After the instance is migrated, the endpoint of the instance remains unchanged. However, the virtual IP address (VIP) is changed. We recommend that you use the endpoint instead of the VIP to connect to the instance.
+      * The ID of the request.
       *
       * @param request MigrateToOtherZoneRequest
       * @return MigrateToOtherZoneResponse
@@ -5092,7 +4984,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can receive notifications of events such as instance migration and version upgrades by SMS messages, phone calls, emails, internal messages, and notifications in the ApsaraDB for Redis console. In addition to modifying the scheduled switchover time by calling this operation, you can also modify the time in the ApsaraDB for Redis console. For more information, see [Query or manage pending events](~~187022~~).
+      * 11111,22222
       *
       * @param request ModifyActiveOperationTaskRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5147,7 +5039,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can receive notifications of events such as instance migration and version upgrades by SMS messages, phone calls, emails, internal messages, and notifications in the ApsaraDB for Redis console. In addition to modifying the scheduled switchover time by calling this operation, you can also modify the time in the ApsaraDB for Redis console. For more information, see [Query or manage pending events](~~187022~~).
+      * 11111,22222
       *
       * @param request ModifyActiveOperationTaskRequest
       * @return ModifyActiveOperationTaskResponse
@@ -5158,10 +5050,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of the audit log feature.
-      * Before you call this operation, make sure that the ApsaraDB for Redis instance meets the following requirements:
-      * *   The instance is an ApsaraDB for Redis Community Edition instance or ApsaraDB for Redis Enhanced Edition (Tair) [DRAM-based instance](~~126164~~).
-      * *   The engine version of the instance is Redis 4.0 or later, and the latest minor version is used. You can call the [DescribeEngineVersion](~~95268~~) operation to check whether the instance uses the latest major version and minor version.
+      * Specifies whether to enable the audit log feature. Default value: true. Valid values:
+      * *   **true**: enables the audit log feature.
+      * *   **false**: disables the audit log feature.
+      * > If the instance uses the [cluster architecture](~~52228~~) or [read/write splitting architecture](~~62870~~), the audit log feature is enabled or disabled for both the data nodes and proxy nodes. You cannot separately enable the audit log feature for the data nodes or proxy nodes.
       *
       * @param request ModifyAuditLogConfigRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5220,10 +5112,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of the audit log feature.
-      * Before you call this operation, make sure that the ApsaraDB for Redis instance meets the following requirements:
-      * *   The instance is an ApsaraDB for Redis Community Edition instance or ApsaraDB for Redis Enhanced Edition (Tair) [DRAM-based instance](~~126164~~).
-      * *   The engine version of the instance is Redis 4.0 or later, and the latest minor version is used. You can call the [DescribeEngineVersion](~~95268~~) operation to check whether the instance uses the latest major version and minor version.
+      * Specifies whether to enable the audit log feature. Default value: true. Valid values:
+      * *   **true**: enables the audit log feature.
+      * *   **false**: disables the audit log feature.
+      * > If the instance uses the [cluster architecture](~~52228~~) or [read/write splitting architecture](~~62870~~), the audit log feature is enabled or disabled for both the data nodes and proxy nodes. You cannot separately enable the audit log feature for the data nodes or proxy nodes.
       *
       * @param request ModifyAuditLogConfigRequest
       * @return ModifyAuditLogConfigResponse
@@ -5372,195 +5264,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyDBInstanceConnectionStringWithOptions(request, runtime);
     }
 
-    public ModifyGlobalSecurityIPGroupResponse modifyGlobalSecurityIPGroupWithOptions(ModifyGlobalSecurityIPGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.GIpList)) {
-            query.put("GIpList", request.GIpList);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.globalIgName)) {
-            query.put("GlobalIgName", request.globalIgName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.globalSecurityGroupId)) {
-            query.put("GlobalSecurityGroupId", request.globalSecurityGroupId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
-            query.put("OwnerAccount", request.ownerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
-            query.put("ResourceGroupId", request.resourceGroupId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
-            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
-            query.put("ResourceOwnerId", request.resourceOwnerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
-            query.put("SecurityToken", request.securityToken);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ModifyGlobalSecurityIPGroup"),
-            new TeaPair("version", "2015-01-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyGlobalSecurityIPGroupResponse());
-    }
-
-    public ModifyGlobalSecurityIPGroupResponse modifyGlobalSecurityIPGroup(ModifyGlobalSecurityIPGroupRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.modifyGlobalSecurityIPGroupWithOptions(request, runtime);
-    }
-
-    public ModifyGlobalSecurityIPGroupNameResponse modifyGlobalSecurityIPGroupNameWithOptions(ModifyGlobalSecurityIPGroupNameRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.globalIgName)) {
-            query.put("GlobalIgName", request.globalIgName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.globalSecurityGroupId)) {
-            query.put("GlobalSecurityGroupId", request.globalSecurityGroupId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
-            query.put("OwnerAccount", request.ownerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
-            query.put("ResourceGroupId", request.resourceGroupId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
-            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
-            query.put("ResourceOwnerId", request.resourceOwnerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
-            query.put("SecurityToken", request.securityToken);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ModifyGlobalSecurityIPGroupName"),
-            new TeaPair("version", "2015-01-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyGlobalSecurityIPGroupNameResponse());
-    }
-
-    public ModifyGlobalSecurityIPGroupNameResponse modifyGlobalSecurityIPGroupName(ModifyGlobalSecurityIPGroupNameRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.modifyGlobalSecurityIPGroupNameWithOptions(request, runtime);
-    }
-
-    public ModifyGlobalSecurityIPGroupRelationResponse modifyGlobalSecurityIPGroupRelationWithOptions(ModifyGlobalSecurityIPGroupRelationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
-            query.put("DBClusterId", request.DBClusterId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.globalSecurityGroupId)) {
-            query.put("GlobalSecurityGroupId", request.globalSecurityGroupId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
-            query.put("OwnerAccount", request.ownerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
-            query.put("ResourceGroupId", request.resourceGroupId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
-            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
-            query.put("ResourceOwnerId", request.resourceOwnerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
-            query.put("SecurityToken", request.securityToken);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ModifyGlobalSecurityIPGroupRelation"),
-            new TeaPair("version", "2015-01-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyGlobalSecurityIPGroupRelationResponse());
-    }
-
-    public ModifyGlobalSecurityIPGroupRelationResponse modifyGlobalSecurityIPGroupRelation(ModifyGlobalSecurityIPGroupRelationRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.modifyGlobalSecurityIPGroupRelationWithOptions(request, runtime);
-    }
-
     /**
-      * You can also modify the attributes in the ApsaraDB for Redis console. For more information, see [Change or reset the password](~~43874~~).
+      * uW8+nsrp
       *
       * @param request ModifyInstanceAttributeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5623,7 +5328,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can also modify the attributes in the ApsaraDB for Redis console. For more information, see [Change or reset the password](~~43874~~).
+      * uW8+nsrp
       *
       * @param request ModifyInstanceAttributeRequest
       * @return ModifyInstanceAttributeResponse
@@ -5756,13 +5461,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyInstanceConfigWithOptions(request, runtime);
     }
 
-    /**
-      * You can also modify the maintenance window of an instance in the ApsaraDB for Redis console. For more information, see [Set a maintenance window](https://www.alibabacloud.com/help/en/apsaradb-for-redis/latest/set-a-maintenance-window).
-      *
-      * @param request ModifyInstanceMaintainTimeRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ModifyInstanceMaintainTimeResponse
-     */
     public ModifyInstanceMaintainTimeResponse modifyInstanceMaintainTimeWithOptions(ModifyInstanceMaintainTimeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5815,19 +5513,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyInstanceMaintainTimeResponse());
     }
 
-    /**
-      * You can also modify the maintenance window of an instance in the ApsaraDB for Redis console. For more information, see [Set a maintenance window](https://www.alibabacloud.com/help/en/apsaradb-for-redis/latest/set-a-maintenance-window).
-      *
-      * @param request ModifyInstanceMaintainTimeRequest
-      * @return ModifyInstanceMaintainTimeResponse
-     */
     public ModifyInstanceMaintainTimeResponse modifyInstanceMaintainTime(ModifyInstanceMaintainTimeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyInstanceMaintainTimeWithOptions(request, runtime);
     }
 
     /**
-      * For more information about how to perform the corresponding operation in the console, see [Upgrade the major version](~~101764~~).
+      * r-bp1zxszhcgatnx****
       *
       * @param request ModifyInstanceMajorVersionRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5886,7 +5578,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * For more information about how to perform the corresponding operation in the console, see [Upgrade the major version](~~101764~~).
+      * r-bp1zxszhcgatnx****
       *
       * @param request ModifyInstanceMajorVersionRequest
       * @return ModifyInstanceMajorVersionResponse
@@ -5897,9 +5589,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The procedure to update the minor version of an instance varies based on types of ApsaraDB for Redis instances. For more information, see [Upgrade the minor version](~~56450~~).
-      * > *   Before you call this operation, you can call the [DescribeEngineVersion](~~95268~~) operation to query the minor version of the current instance.
-      * > *   When you switch your workloads over from the original instance to a new instance or from the master node to the replica node in the original instance, you may experience disconnections that last a few seconds. The original instance stays in the read-only state within 60 seconds until all data is synchronized. We recommend that you upgrade the original instance during off-peak hours and make sure that your application is configured to automatically reconnect to the original instance.
+      * The ID of the instance.
       *
       * @param request ModifyInstanceMinorVersionRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5958,9 +5648,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The procedure to update the minor version of an instance varies based on types of ApsaraDB for Redis instances. For more information, see [Upgrade the minor version](~~56450~~).
-      * > *   Before you call this operation, you can call the [DescribeEngineVersion](~~95268~~) operation to query the minor version of the current instance.
-      * > *   When you switch your workloads over from the original instance to a new instance or from the master node to the replica node in the original instance, you may experience disconnections that last a few seconds. The original instance stays in the read-only state within 60 seconds until all data is synchronized. We recommend that you upgrade the original instance during off-peak hours and make sure that your application is configured to automatically reconnect to the original instance.
+      * The ID of the instance.
       *
       * @param request ModifyInstanceMinorVersionRequest
       * @return ModifyInstanceMinorVersionResponse
@@ -5971,8 +5659,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * For more information about how to perform the corresponding operation in the console, see [Change the expiration time for the endpoint of the classic network](~~60062~~).
-      * >  For more information about how to switch the network type of an ApsaraDB for Redis instance from classic network to VPC, see [SwitchNetwork](~~61005~~).
+      * You can also perform this operation in the ApsaraDB for Redis console. For more information, see [Change the expiration time for the endpoint of the classic network](~~60062~~).
+      * > For more information about how to switch the network type of an ApsaraDB for Redis instance from classic network to VPC, see [SwitchNetwork](~~61005~~).
       *
       * @param request ModifyInstanceNetExpireTimeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6031,8 +5719,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * For more information about how to perform the corresponding operation in the console, see [Change the expiration time for the endpoint of the classic network](~~60062~~).
-      * >  For more information about how to switch the network type of an ApsaraDB for Redis instance from classic network to VPC, see [SwitchNetwork](~~61005~~).
+      * You can also perform this operation in the ApsaraDB for Redis console. For more information, see [Change the expiration time for the endpoint of the classic network](~~60062~~).
+      * > For more information about how to switch the network type of an ApsaraDB for Redis instance from classic network to VPC, see [SwitchNetwork](~~61005~~).
       *
       * @param request ModifyInstanceNetExpireTimeRequest
       * @return ModifyInstanceNetExpireTimeResponse
@@ -6043,8 +5731,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can also modify SSL encryption configurations in the ApsaraDB for Redis console. For more information, see [Configure SSL encryption](~~84898~~).
-      * >  To specify the earliest supported SSL version, you can call the [ModifyInstanceConfig](~~61113~~) operation to modify the required parameter.
+      * Modifies SSL encryption configurations. Valid values:
+      * *   **Disable**: The SSL encryption is disabled.
+      * *   **Enable**: The SSL encryption is enabled.
+      * *   **Update**: The SSL certificate is updated.
       *
       * @param request ModifyInstanceSSLRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6099,8 +5789,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can also modify SSL encryption configurations in the ApsaraDB for Redis console. For more information, see [Configure SSL encryption](~~84898~~).
-      * >  To specify the earliest supported SSL version, you can call the [ModifyInstanceConfig](~~61113~~) operation to modify the required parameter.
+      * Modifies SSL encryption configurations. Valid values:
+      * *   **Disable**: The SSL encryption is disabled.
+      * *   **Enable**: The SSL encryption is enabled.
+      * *   **Update**: The SSL certificate is updated.
       *
       * @param request ModifyInstanceSSLRequest
       * @return ModifyInstanceSSLResponse
@@ -6111,7 +5803,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  For more information about the procedure, impacts, limits, and fees of this operation, see [Change the configurations of an instance](~~26353~~).
+      * The ID of the promotional event or business information.
       *
       * @param request ModifyInstanceSpecRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6214,7 +5906,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  For more information about the procedure, impacts, limits, and fees of this operation, see [Change the configurations of an instance](~~26353~~).
+      * The ID of the promotional event or business information.
       *
       * @param request ModifyInstanceSpecRequest
       * @return ModifyInstanceSpecResponse
@@ -6225,7 +5917,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  For more information about TDE and the impact of TDE, see [Enable TDE](https://www.alibabacloud.com/help/en/apsaradb-for-redis/latest/enable-tde).
+      * The encryption algorithm. Default value: AES-CTR-256. 
+      * >  This parameter takes effect only if the **TDEStatus** parameter is set to **Enabled**.
       *
       * @param request ModifyInstanceTDERequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6292,7 +5985,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  For more information about TDE and the impact of TDE, see [Enable TDE](https://www.alibabacloud.com/help/en/apsaradb-for-redis/latest/enable-tde).
+      * The encryption algorithm. Default value: AES-CTR-256. 
+      * >  This parameter takes effect only if the **TDEStatus** parameter is set to **Enabled**.
       *
       * @param request ModifyInstanceTDERequest
       * @return ModifyInstanceTDEResponse
@@ -6303,8 +5997,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When the password-free access feature is enabled, Elastic Compute Service (ECS) instances in the same virtual private cloud (VPC) can access the ApsaraDB for Redis instance without a password. You can also use the username and password to access the ApsaraDB for Redis instance.
-      * >  The ApsaraDB for Redis instance is deployed in VPC. For more information, see [Enable password-free access](~~85168~~).
+      * The ID of the request.
       *
       * @param request ModifyInstanceVpcAuthModeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6359,8 +6052,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When the password-free access feature is enabled, Elastic Compute Service (ECS) instances in the same virtual private cloud (VPC) can access the ApsaraDB for Redis instance without a password. You can also use the username and password to access the ApsaraDB for Redis instance.
-      * >  The ApsaraDB for Redis instance is deployed in VPC. For more information, see [Enable password-free access](~~85168~~).
+      * The ID of the request.
       *
       * @param request ModifyInstanceVpcAuthModeRequest
       * @return ModifyInstanceVpcAuthModeResponse
@@ -6371,7 +6063,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > This operation is applicable only to an ApsaraDB for Redis instance that is deployed in a dedicated cluster. To adjust the bandwidth of a standard ApsaraDB for Redis instance, call the [EnableAdditionalBandwidth](~~206173~~) operation.
+      * > 
+      * *   This operation is applicable only to an ApsaraDB for Redis instance that is deployed in a dedicated cluster. To adjust the bandwidth of a standard ApsaraDB for Redis instance, call the [EnableAdditionalBandwidth](~~206173~~) operation.
       *
       * @param request ModifyIntranetAttributeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6430,7 +6123,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > This operation is applicable only to an ApsaraDB for Redis instance that is deployed in a dedicated cluster. To adjust the bandwidth of a standard ApsaraDB for Redis instance, call the [EnableAdditionalBandwidth](~~206173~~) operation.
+      * > 
+      * *   This operation is applicable only to an ApsaraDB for Redis instance that is deployed in a dedicated cluster. To adjust the bandwidth of a standard ApsaraDB for Redis instance, call the [EnableAdditionalBandwidth](~~206173~~) operation.
       *
       * @param request ModifyIntranetAttributeRequest
       * @return ModifyIntranetAttributeResponse
@@ -6441,8 +6135,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can use resource groups to sort resources that belong to your Alibaba Cloud account into groups. This simplifies how you manage resources that belong to your Alibaba Cloud account and control access to these resources. For more information, see [What is resource management](~~94475~~)?
-      * >  For more information about resource group API operations, see [Resource management API overview](~~160024~~).
+      * Resource groups allow you to sort resources owned by your Alibaba Cloud account into groups. This simplifies resource and permission management within your Alibaba Cloud account. For more information, see [What is Resource Management?](~~94475~~)
+      * > For more information about resource group API operations, see [Resource Management API overview](~~160024~~).
       *
       * @param request ModifyResourceGroupRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6501,8 +6195,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can use resource groups to sort resources that belong to your Alibaba Cloud account into groups. This simplifies how you manage resources that belong to your Alibaba Cloud account and control access to these resources. For more information, see [What is resource management](~~94475~~)?
-      * >  For more information about resource group API operations, see [Resource management API overview](~~160024~~).
+      * Resource groups allow you to sort resources owned by your Alibaba Cloud account into groups. This simplifies resource and permission management within your Alibaba Cloud account. For more information, see [What is Resource Management?](~~94475~~)
+      * > For more information about resource group API operations, see [Resource Management API overview](~~160024~~).
       *
       * @param request ModifyResourceGroupRequest
       * @return ModifyResourceGroupResponse
@@ -6513,8 +6207,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  After you call this operation, the security groups in the whitelist of the ApsaraDB for Redis instance are deleted, and the security group specified by the **SecurityGroupId** parameter is added to the whitelist.
-      * For more information about how to reset security groups in the ApsaraDB for Redis console, see [Add security groups](~~148267~~).
+      * The ID of the request.
       *
       * @param request ModifySecurityGroupConfigurationRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6569,8 +6262,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  After you call this operation, the security groups in the whitelist of the ApsaraDB for Redis instance are deleted, and the security group specified by the **SecurityGroupId** parameter is added to the whitelist.
-      * For more information about how to reset security groups in the ApsaraDB for Redis console, see [Add security groups](~~148267~~).
+      * The ID of the request.
       *
       * @param request ModifySecurityGroupConfigurationRequest
       * @return ModifySecurityGroupConfigurationResponse
@@ -6581,7 +6273,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can also modify IP address whitelists in the ApsaraDB for Redis console. For more information, see [Set an IP address whitelist](~~56464~~).
+      * The IP addresses in the whitelist group. Up to 1,000 IP addresses can be specified in each whitelist. Separate multiple IP addresses with a comma (,). You can add 0.0.0.0/0, IP addresses such as 10.23.12.24, and Classless Inter-Domain Routing (CIDR) blocks such as 10.23.12.24/24 to the whitelist group. In CIDR block 10.23.12.24/24, /24 specifies the length of the prefix in the IP addresses. The prefix length ranges from 1 to 32.
       *
       * @param request ModifySecurityIpsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6648,7 +6340,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can also modify IP address whitelists in the ApsaraDB for Redis console. For more information, see [Set an IP address whitelist](~~56464~~).
+      * The IP addresses in the whitelist group. Up to 1,000 IP addresses can be specified in each whitelist. Separate multiple IP addresses with a comma (,). You can add 0.0.0.0/0, IP addresses such as 10.23.12.24, and Classless Inter-Domain Routing (CIDR) blocks such as 10.23.12.24/24 to the whitelist group. In CIDR block 10.23.12.24/24, /24 specifies the length of the prefix in the IP addresses. The prefix length ranges from 1 to 32.
       *
       * @param request ModifySecurityIpsRequest
       * @return ModifySecurityIpsResponse
@@ -6659,7 +6351,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic describes how to connect to a cluster instance of ApsaraDB for Redis through a private endpoint. By default, cluster instances can be connected only through a proxy server. If you want to bypass the proxy server, you can apply for a private endpoint to enable direct connections to a cluster instance. This reduces the number of connections and improves service performance. For more information, see [Enable a direct connection](~~146901~~).
+      * In direct connection mode, clients can bypass proxy nodes and use private endpoints to connect to ApsaraDB for Redis instances. This is similar to the connection to a native Redis cluster. The direct connection mode can reduce communication overheads and the response time of ApsaraDB for Redis. For more information, see [Enable the direct connection mode](~~146901~~).
       *
       * @param request ReleaseDirectConnectionRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6710,7 +6402,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic describes how to connect to a cluster instance of ApsaraDB for Redis through a private endpoint. By default, cluster instances can be connected only through a proxy server. If you want to bypass the proxy server, you can apply for a private endpoint to enable direct connections to a cluster instance. This reduces the number of connections and improves service performance. For more information, see [Enable a direct connection](~~146901~~).
+      * In direct connection mode, clients can bypass proxy nodes and use private endpoints to connect to ApsaraDB for Redis instances. This is similar to the connection to a native Redis cluster. The direct connection mode can reduce communication overheads and the response time of ApsaraDB for Redis. For more information, see [Enable the direct connection mode](~~146901~~).
       *
       * @param request ReleaseDirectConnectionRequest
       * @return ReleaseDirectConnectionResponse
@@ -6721,7 +6413,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * For more information about how to perform the API operation in the ApsaraDB for Redis console, see [Release public endpoints](~~125424~~).
+      * The ID of the request.
       *
       * @param request ReleaseInstancePublicConnectionRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6776,7 +6468,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * For more information about how to perform the API operation in the ApsaraDB for Redis console, see [Release public endpoints](~~125424~~).
+      * The ID of the request.
       *
       * @param request ReleaseInstancePublicConnectionRequest
       * @return ReleaseInstancePublicConnectionResponse
@@ -6787,7 +6479,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  After you call the operation, the child instance becomes a regular ApsaraDB for Redis instance and all its data is retained. You can find the instance in the instance list of the corresponding region and manage it.
+      * The operation that you want to perform. Set the value to **RemoveSubInstance**.
       *
       * @param request RemoveSubInstanceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6838,7 +6530,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  After you call the operation, the child instance becomes a regular ApsaraDB for Redis instance and all its data is retained. You can find the instance in the instance list of the corresponding region and manage it.
+      * The operation that you want to perform. Set the value to **RemoveSubInstance**.
       *
       * @param request RemoveSubInstanceRequest
       * @return RemoveSubInstanceResponse
@@ -6849,9 +6541,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that you understand the billing methods and prices of ApsaraDB for Redis. For more information, see [Billing items and pricing](~~54532~~).
-      * You can adjust the bandwidth of an instance in the ApsaraDB for Redis console. For more information, see [Adjust the maximum bandwidth value of an instance](~~102588~~). You can also call the [EnableAdditionalBandwidth](~~206173~~) operation to adjust the bandwidth of an instance. If you want to continue using the bandwidth that you purchase after the validity period of the bandwidth, you must call the RenewAdditionalBandwidth operation to renew the bandwidth before the bandwidth expires.
-      * >  Before you call this operation, you can call the [DescribeIntranetAttribute](~~128715~~) operation, which returns the expiration time of the purchased bandwidth in the **BandwidthExpireTime** parameter.
+      * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
+      * You can adjust the bandwidth of an instance in the ApsaraDB for Redis console. For more information, see [Adjust the bandwidth of an ApsaraDB for Redis instance](~~102588~~). You can also call the [EnableAdditionalBandwidth](~~206173~~) operation to adjust the bandwidth of an instance. If you want to continue using the bandwidth that you purchase after the validity period of the bandwidth, you must call the RenewAdditionalBandwidth operation to renew the bandwidth before the bandwidth expires.
+      * > Before you call this operation, you can call the [DescribeIntranetAttribute](~~128715~~) operation, which returns the expiration time of the purchased bandwidth in the **BandwidthExpireTime** parameter.
       *
       * @param request RenewAdditionalBandwidthRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6918,9 +6610,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that you understand the billing methods and prices of ApsaraDB for Redis. For more information, see [Billing items and pricing](~~54532~~).
-      * You can adjust the bandwidth of an instance in the ApsaraDB for Redis console. For more information, see [Adjust the maximum bandwidth value of an instance](~~102588~~). You can also call the [EnableAdditionalBandwidth](~~206173~~) operation to adjust the bandwidth of an instance. If you want to continue using the bandwidth that you purchase after the validity period of the bandwidth, you must call the RenewAdditionalBandwidth operation to renew the bandwidth before the bandwidth expires.
-      * >  Before you call this operation, you can call the [DescribeIntranetAttribute](~~128715~~) operation, which returns the expiration time of the purchased bandwidth in the **BandwidthExpireTime** parameter.
+      * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
+      * You can adjust the bandwidth of an instance in the ApsaraDB for Redis console. For more information, see [Adjust the bandwidth of an ApsaraDB for Redis instance](~~102588~~). You can also call the [EnableAdditionalBandwidth](~~206173~~) operation to adjust the bandwidth of an instance. If you want to continue using the bandwidth that you purchase after the validity period of the bandwidth, you must call the RenewAdditionalBandwidth operation to renew the bandwidth before the bandwidth expires.
+      * > Before you call this operation, you can call the [DescribeIntranetAttribute](~~128715~~) operation, which returns the expiration time of the purchased bandwidth in the **BandwidthExpireTime** parameter.
       *
       * @param request RenewAdditionalBandwidthRequest
       * @return RenewAdditionalBandwidthResponse
@@ -6931,7 +6623,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation applies to only subscription instances.
+      * The ID of the order.
       *
       * @param request RenewInstanceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -7014,7 +6706,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation applies to only subscription instances.
+      * The ID of the order.
       *
       * @param request RenewInstanceRequest
       * @return RenewInstanceResponse
@@ -7025,7 +6717,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
+      * r-bp1zxszhcgatnx****
       *
       * @param request ResetAccountPasswordRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -7084,7 +6776,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
+      * r-bp1zxszhcgatnx****
       *
       * @param request ResetAccountPasswordRequest
       * @return ResetAccountPasswordResponse
@@ -7317,6 +7009,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.switchInstanceHAWithOptions(request, runtime);
     }
 
+    /**
+      * For more information about the proxy mode, see [Features of proxy nodes](~~142959~~). Before you call this operation, make sure that the following requirements are met:
+      * *   Your ApsaraDB for Redis instance is created by using a dedicated cluster. For more information, see [What is ApsaraDB MyBase?](~~141455~~)
+      * *   The instance uses the cluster architecture. For more information about the cluster architecture, see [Cluster master-replica instances](~~52228~~).
+      * > Before you call the SwitchInstanceProxy operation, you must call the [DescribeDedicatedClusterInstanceList](~~229522~~) operation and view the value of the **ProxyCount** response parameter to check whether the proxy mode is enabled. A value of 0 indicates that the proxy mode is disabled. A value that is greater than 0 indicates that the proxy mode is enabled.
+      *
+      * @param request SwitchInstanceProxyRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SwitchInstanceProxyResponse
+     */
     public SwitchInstanceProxyResponse switchInstanceProxyWithOptions(SwitchInstanceProxyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7361,6 +7063,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SwitchInstanceProxyResponse());
     }
 
+    /**
+      * For more information about the proxy mode, see [Features of proxy nodes](~~142959~~). Before you call this operation, make sure that the following requirements are met:
+      * *   Your ApsaraDB for Redis instance is created by using a dedicated cluster. For more information, see [What is ApsaraDB MyBase?](~~141455~~)
+      * *   The instance uses the cluster architecture. For more information about the cluster architecture, see [Cluster master-replica instances](~~52228~~).
+      * > Before you call the SwitchInstanceProxy operation, you must call the [DescribeDedicatedClusterInstanceList](~~229522~~) operation and view the value of the **ProxyCount** response parameter to check whether the proxy mode is enabled. A value of 0 indicates that the proxy mode is disabled. A value that is greater than 0 indicates that the proxy mode is enabled.
+      *
+      * @param request SwitchInstanceProxyRequest
+      * @return SwitchInstanceProxyResponse
+     */
     public SwitchInstanceProxyResponse switchInstanceProxy(SwitchInstanceProxyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.switchInstanceProxyWithOptions(request, runtime);
@@ -7579,9 +7290,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that you understand relevant precautions and billing rules. For more information, see the following topics:
-      * *   [Change the billing method to subscription](~~54542~~).
-      * *   [Change the billing method to pay-as-you-go](~~211549~~).
+      * 1
       *
       * @param request TransformInstanceChargeTypeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -7644,9 +7353,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that you understand relevant precautions and billing rules. For more information, see the following topics:
-      * *   [Change the billing method to subscription](~~54542~~).
-      * *   [Change the billing method to pay-as-you-go](~~211549~~).
+      * 1
       *
       * @param request TransformInstanceChargeTypeRequest
       * @return TransformInstanceChargeTypeResponse
@@ -7657,8 +7364,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * For more information about how to change the billing method in the ApsaraDB for Redis console, see [Switch to subscription](~~54542~~).
-      * >  You cannot change the billing method of an ApsaraDB for Redis instance from subscription to pay-as-you-go.
+      * The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
       *
       * @param request TransformToPrePaidRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -7717,8 +7423,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * For more information about how to change the billing method in the ApsaraDB for Redis console, see [Switch to subscription](~~54542~~).
-      * >  You cannot change the billing method of an ApsaraDB for Redis instance from subscription to pay-as-you-go.
+      * The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
       *
       * @param request TransformToPrePaidRequest
       * @return TransformToPrePaidResponse

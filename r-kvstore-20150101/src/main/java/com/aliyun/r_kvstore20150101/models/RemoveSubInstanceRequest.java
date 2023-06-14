@@ -4,9 +4,6 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class RemoveSubInstanceRequest extends TeaModel {
-    /**
-     * <p>The ID of the child instance in the distributed instance. You can call the [DescribeGlobalDistributeCache](~~188699~~) operation to obtain the ID of the child instance.</p>
-     */
     @NameInMap("InstanceId")
     public String instanceId;
 

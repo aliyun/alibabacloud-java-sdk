@@ -51,7 +51,9 @@ public class AddShardingNodeRequest extends TeaModel {
     /**
      * <p>The number of data shards that you want to add. Default value: **1**.</p>
      * <br>
-     * <p>>   A cluster instance must contain 2 to 256 data shards. You can add a maximum of 64 data shards at a time.</p>
+     * <p>> </p>
+     * <br>
+     * <p>*   A cluster instance must contain 2 to 256 data shards. You can add a maximum of 64 data shards at a time.</p>
      */
     @NameInMap("ShardCount")
     public Integer shardCount;

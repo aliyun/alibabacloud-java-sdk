@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailableResourceResponseBody extends TeaModel {
     /**
-     * <p>Details of available resources within zones.</p>
+     * <p>Details of the zones.</p>
      */
     @NameInMap("AvailableZones")
     public DescribeAvailableResourceResponseBodyAvailableZones availableZones;
@@ -45,7 +45,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         public Long capacity;
 
         /**
-         * <p>The code of the instance type. If you want to view the code of an instance type, you can search for the code of the instance typein Document Center.</p>
+         * <p>The code of the instance type. If you want to view the code of an instance type, you can search for the code of the instance type in Help Center.</p>
          */
         @NameInMap("InstanceClass")
         public String instanceClass;
@@ -116,8 +116,8 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         /**
          * <p>The node type of the instance. Valid values:</p>
          * <br>
-         * <p>*   **single**: single-replica</p>
-         * <p>*   **double**: a master node and a replica node</p>
+         * <p>*   **single**: standalone</p>
+         * <p>*   **double**: master-replica</p>
          */
         @NameInMap("SupportedNodeType")
         public String supportedNodeType;
@@ -166,7 +166,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     public static class SupportedShardNumber extends TeaModel {
         /**
-         * <p>The number of shards in the instance.</p>
+         * <p>The number of shards.</p>
          */
         @NameInMap("ShardNumber")
         public String shardNumber;
@@ -223,9 +223,9 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         /**
          * <p>The architecture of the instance. Valid values:</p>
          * <br>
-         * <p>* **standard**: standard architecture</p>
-         * <p>* **cluster**: cluster architecture</p>
-         * <p>* **rwsplit**: read/write splitting architecture</p>
+         * <p>*   **standard**: standard architecture</p>
+         * <p>*   **cluster**: cluster architecture</p>
+         * <p>*   **rwsplit**: read/write splitting architecture</p>
          */
         @NameInMap("Architecture")
         public String architecture;
@@ -335,10 +335,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     public static class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEditionTypesSupportedEditionTypeSupportedSeriesTypesSupportedSeriesType extends TeaModel {
         /**
-         * <p>The series of the instance. Valid values:</p>
+         * <p>The instance series. Valid values:</p>
          * <br>
-         * <p>*   **enhanced_performance_type**: ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instances</p>
-         * <p>*   **hybrid_storage**: hybrid-storage instances</p>
+         * <p>*   **enhanced_performance_type**: ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance</p>
+         * <p>*   **hybrid_storage**: ApsaraDB for Redis Community Edition hybrid-storage instance</p>
          */
         @NameInMap("SeriesType")
         public String seriesType;
@@ -396,7 +396,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
          * <p>The edition of the instance. Valid values:</p>
          * <br>
          * <p>*   **Community**: Community Edition</p>
-         * <p>*   **Enterprise**: Enhance Edition (Tair)</p>
+         * <p>*   **Enterprise**: Enhanced Edition (Tair)</p>
          */
         @NameInMap("EditionType")
         public String editionType;
@@ -518,7 +518,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEngines supportedEngines;
 
         /**
-         * <p>The ID of the zone.</p>
+         * <p>The ID of the zone in which the instance is located.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

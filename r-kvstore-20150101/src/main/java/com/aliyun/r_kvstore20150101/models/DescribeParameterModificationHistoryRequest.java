@@ -4,22 +4,17 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeParameterModificationHistoryRequest extends TeaModel {
-    /**
-     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query instance IDs.</p>
+     * <p>The operation that you want to perform. Set the value to **DescribeParameterModificationHistory**.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The node ID.</p>
-     * <br>
-     * <p>>  You can set this parameter to query the parameter configurations of a specified node in a cluster instance.</p>
+     * <p>The name of the parameter.</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
@@ -30,9 +25,6 @@ public class DescribeParameterModificationHistoryRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The name of the parameter.</p>
-     */
     @NameInMap("ParameterName")
     public String parameterName;
 
@@ -46,7 +38,7 @@ public class DescribeParameterModificationHistoryRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The name of the parameter.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

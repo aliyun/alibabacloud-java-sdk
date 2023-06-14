@@ -5,13 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRunningLogRecordsRequest extends TeaModel {
     /**
-     * <p>The shard type of the cluster instance. Valid values:</p>
-     * <br>
-     * <p>*   **proxy**: proxy node</p>
-     * <p>*   **db**: data node</p>
-     * <p>*   **cs**: config server node</p>
-     * <br>
-     * <p>>  If you set this parameter, you must also set the **NodeId** parameter.</p>
+     * <p>The number of the page to return. The value must be an integer that is greater than **0** and less than or equal to the maximum value supported by the integer data type. Default value: **1**.</p>
      */
     @NameInMap("CharacterType")
     public String characterType;
@@ -23,31 +17,35 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
     public String DBName;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. The time range cannot exceed one day. We recommend that you specify 1 hour. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
+     * <p>The operation that you want to perform. Set the value to **DescribeRunningLogRecords**.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The time when the log was generated. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the node in the instance. You can set this parameter to query the operational logs of a specified node.</p>
+     * <p>The shard type of the cluster instance. Valid values:</p>
      * <br>
-     * <p>> * This parameter is available only for read/write splitting and cluster instances of ApsaraDB for Redis.</p>
-     * <p>> * If you set this parameter, you must also set the **CharacterType** parameter.</p>
+     * <p>*   **proxy**: proxy node</p>
+     * <p>*   **db**: data node</p>
+     * <p>*   **cs**: config server node</p>
+     * <br>
+     * <p>>  If you set this parameter, you must also set the **NodeId** parameter.</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
 
     /**
-     * <p>The method that is used to sort the returned log entries. Valid values:</p>
+     * <p>The ID of the node in the instance. You can set this parameter to query the operational logs of a specified node.</p>
      * <br>
-     * <p>*   **asc**: ascending order</p>
-     * <p>*   **desc**: descending order</p>
+     * <p>> </p>
+     * <p>*   This parameter is available only for read/write splitting and cluster instances of ApsaraDB for Redis.</p>
+     * <p>*   If you set this parameter, you must also set the **CharacterType** parameter.</p>
      */
     @NameInMap("OrderType")
     public String orderType;
@@ -59,25 +57,31 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. The value must be an integer that is greater than **0** and less than or equal to the maximum value supported by the integer data type. Default value: **1**.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: **30**.</p>
+     * <p>The role of the data shard. Default value: master. Valid values:</p>
+     * <br>
+     * <p>*   **master**: master node</p>
+     * <p>*   **slave**: replica node</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The keyword that is used to query operational logs.</p>
+     * <p>The content of the log.</p>
      */
     @NameInMap("QueryKeyword")
     public String queryKeyword;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The method that is used to sort the returned log entries. Valid values:</p>
+     * <br>
+     * <p>*   **asc**: ascending order</p>
+     * <p>*   **desc**: descending order</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -89,10 +93,7 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The role of the data shard. Default value: master. Valid values:</p>
-     * <br>
-     * <p>*   **master**: master node</p>
-     * <p>*   **slave**: replica node</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("RoleType")
     public String roleType;
@@ -101,7 +102,7 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
+     * <p>Details about the log entries.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

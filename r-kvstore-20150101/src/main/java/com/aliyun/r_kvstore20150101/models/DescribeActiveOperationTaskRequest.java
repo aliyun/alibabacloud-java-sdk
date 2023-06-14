@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTaskRequest extends TeaModel {
     /**
-     * <p>Specifies whether to return the historical tasks. Valid values:</p>
-     * <br>
-     * <p>*   **0**: returns the current task. This is the default value.</p>
-     * <p>*   **1**: returns the historical tasks.</p>
+     * <p>The time when the O\&M task was created. The time in UTC is displayed in the *yyyy-MM-dd*T*HH:mm:ss*Z format.</p>
      */
     @NameInMap("IsHistory")
     public Integer isHistory;
@@ -20,21 +17,19 @@ public class DescribeActiveOperationTaskRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. It must be an integer that is greater than **0** and less than or equal to the maximum value supported by the integer data type. Default value: **1**.</p>
+     * <p>The deadline before which the time to execute the O\&M task can be modified. The time in UTC is displayed in the *yyyy-MM-dd*T*HH:mm:ss*Z format.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Specify a value greater than **10**. Default value: **30**.</p>
+     * <p>The operation that you want to perform. Set the value to **DescribeActiveOperationTask**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region to which pending events belong. You can call the [DescribeRegions](~~61012~~) operation to query the region IDs.</p>
-     * <br>
-     * <p>>  A value of **all** indicates all region IDs.</p>
+     * <p>The ID of the O\&M task.</p>
      */
     @NameInMap("Region")
     public String region;
@@ -49,12 +44,7 @@ public class DescribeActiveOperationTaskRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The type of the O&M task. Valid values:</p>
-     * <br>
-     * <p>*   **rds_apsaradb_ha**: switchover between a master node and a replica node.</p>
-     * <p>*   **rds_apsaradb_transfer**: instance migration task.</p>
-     * <p>*   **rds_apsaradb_upgrade**: minor version upgrade.</p>
-     * <p>*   **all**: all task types.</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("TaskType")
     public String taskType;

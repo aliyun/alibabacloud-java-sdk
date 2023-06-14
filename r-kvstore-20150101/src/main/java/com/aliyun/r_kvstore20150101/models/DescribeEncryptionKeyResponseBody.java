@@ -25,13 +25,13 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the custom key used by the instance.</p>
+     * <p>The ID of the custom key.</p>
      */
     @NameInMap("EncryptionKey")
     public String encryptionKey;
 
     /**
-     * <p>The state of the custom key used by the instance. Valid values:</p>
+     * <p>The state of the custom key. Valid values:</p>
      * <br>
      * <p>*   **Enabled**: The custom key is available.</p>
      * <p>*   **Disabled**: The custom key is unavailable.</p>
@@ -39,11 +39,14 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
     @NameInMap("EncryptionKeyStatus")
     public String encryptionKeyStatus;
 
+    /**
+     * <p>The encryption algorithm.</p>
+     */
     @NameInMap("EncryptionName")
     public String encryptionName;
 
     /**
-     * <p>The purpose of the custom key used by the instance. A value of `ENCRYPT/DECRYPT` indicates encryption and decryption.</p>
+     * <p>The purpose of the custom key. A value of `ENCRYPT/DECRYPT` indicates encryption and decryption.</p>
      */
     @NameInMap("KeyUsage")
     public String keyUsage;
@@ -68,6 +71,9 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role to which you want to grant permissions.</p>
+     */
     @NameInMap("RoleArn")
     public String roleArn;
 

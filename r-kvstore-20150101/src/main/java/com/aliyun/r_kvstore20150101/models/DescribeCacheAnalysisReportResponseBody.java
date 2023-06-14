@@ -4,47 +4,24 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCacheAnalysisReportResponseBody extends TeaModel {
-    /**
-     * <p>Details about the large keys.</p>
-     */
     @NameInMap("BigKeys")
     public java.util.List<java.util.Map<String, ?>> bigKeys;
 
-    /**
-     * <p>Details about the hotkeys.</p>
-     * <br>
-     * <p>>  This parameter is not returned because ApsaraDB for Redis does not support hotkey analysis for the moment.</p>
-     */
     @NameInMap("HotKeys")
     public java.util.List<java.util.Map<String, ?>> hotKeys;
 
-    /**
-     * <p>The page number of the returned page.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries returned on the current page.</p>
-     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
-    /**
-     * <p>The maximum number of entries returned per page.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of entries returned.</p>
-     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 

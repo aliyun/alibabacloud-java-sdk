@@ -4,36 +4,30 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceSSLResponseBody extends TeaModel {
-    /**
-     * <p>The common name of the SSL certificate, which is the domain name for which you want to apply for the SSL certificate. The default value is the internal endpoint of the instance.</p>
-     */
     @NameInMap("CertCommonName")
     public String certCommonName;
 
+    @NameInMap("CertDownloadURL")
+    public String certDownloadURL;
+
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The operation that you want to perform. Set the value to **DescribeInstanceSSL**.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The expiration time of the SSL certificate.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
-     * <br>
-     * <p>*   **Enable**: SSL encryption is enabled.</p>
-     * <p>*   **Disable** : SSL encryption is disabled.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("SSLEnabled")
     public String SSLEnabled;
 
-    /**
-     * <p>The expiration time of the SSL certificate.</p>
-     */
     @NameInMap("SSLExpiredTime")
     public String SSLExpiredTime;
 
@@ -48,6 +42,14 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
     }
     public String getCertCommonName() {
         return this.certCommonName;
+    }
+
+    public DescribeInstanceSSLResponseBody setCertDownloadURL(String certDownloadURL) {
+        this.certDownloadURL = certDownloadURL;
+        return this;
+    }
+    public String getCertDownloadURL() {
+        return this.certDownloadURL;
     }
 
     public DescribeInstanceSSLResponseBody setInstanceId(String instanceId) {

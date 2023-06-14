@@ -5,13 +5,18 @@ import com.aliyun.tea.*;
 
 public class SwitchNetworkResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Switches the network type of an ApsaraDB for Redis instance from classic network to Virtual Private Cloud (VPC).</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>Specifies whether to retain the original endpoint for the classic network after you switch the instance from classic network to VPC. Valid values:</p>
+     * <br>
+     * <p>*   **True**: retains the original endpoint.</p>
+     * <p>*   **False**: does not retain the original endpoint. This is the default value.</p>
+     * <br>
+     * <p>>  This parameter can be used only when the network type of the instance is classic network.</p>
      */
     @NameInMap("TaskId")
     public String taskId;

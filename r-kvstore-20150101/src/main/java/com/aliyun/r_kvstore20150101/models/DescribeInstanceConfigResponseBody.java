@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceConfigResponseBody extends TeaModel {
     /**
-     * <p>The parameters of the instance. For more information, see [Parameter overview and configuration guide](~~43885~~).</p>
+     * <p>The parameter settings of the instance. For more information, see [Parameter overview and configuration guide](~~43885~~).</p>
      */
     @NameInMap("Config")
     public String config;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

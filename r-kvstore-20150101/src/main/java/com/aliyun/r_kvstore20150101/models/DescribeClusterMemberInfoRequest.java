@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterMemberInfoRequest extends TeaModel {
     /**
-     * <p>The ID of the ApsaraDB for Redis instance. You can call the [DescribeInstances](~~60933~~) operation to query instance IDs.</p>
+     * <p>The ID of the replica set on the node.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

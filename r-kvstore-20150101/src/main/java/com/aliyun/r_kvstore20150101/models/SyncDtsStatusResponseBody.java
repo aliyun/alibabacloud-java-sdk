@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SyncDtsStatusResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The region ID of the instance.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

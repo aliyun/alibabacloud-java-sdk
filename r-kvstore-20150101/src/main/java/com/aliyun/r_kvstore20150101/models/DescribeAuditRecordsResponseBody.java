@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAuditRecordsResponseBody extends TeaModel {
     /**
-     * <p>The end of the time range that is specified to query the audit log.</p>
+     * <p>The end time of the query.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The name of the ApsaraDB for Redis instance.</p>
+     * <p>The name of the instance.</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
@@ -23,13 +23,13 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
     public DescribeAuditRecordsResponseBodyItems items;
 
     /**
-     * <p>The page number of the page returned.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The maximum number of log entries returned on each page.</p>
+     * <p>The maximum number of entries returned per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -41,13 +41,13 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The start of the time range that is specified to query the audit log.</p>
+     * <p>The start time of the query.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The total number of log entries returned.</p>
+     * <p>The total number of returned entries.</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -123,13 +123,13 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
 
     public static class DescribeAuditRecordsResponseBodyItemsSQL extends TeaModel {
         /**
-         * <p>The name of the account.</p>
+         * <p>The username of the account.</p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          */
         @NameInMap("DatabaseName")
         public String databaseName;
@@ -141,13 +141,13 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         public String executeTime;
 
         /**
-         * <p>The client IP address.</p>
+         * <p>The IP address of the client.</p>
          */
         @NameInMap("HostAddress")
         public String hostAddress;
 
         /**
-         * <p>The IP address.</p>
+         * <p>The IP address of the instance.</p>
          */
         @NameInMap("IPAddress")
         public String IPAddress;
@@ -155,7 +155,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         /**
          * <p>The ID of the node.</p>
          * <br>
-         * <p>>  A specific node ID is returned only if a cluster or read/write splitting instance is used.</p>
+         * <p>> A specific node ID is returned only if the instance uses the cluster or read/write splitting architecture.</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
@@ -167,13 +167,13 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         public String SQLText;
 
         /**
-         * <p>The type of command.</p>
+         * <p>The type of the command.</p>
          */
         @NameInMap("SQLType")
         public String SQLType;
 
         /**
-         * <p>The amount of time that is consumed to run the command.</p>
+         * <p>The amount of time consumed to run the command.</p>
          */
         @NameInMap("TotalExecutionTimes")
         public String totalExecutionTimes;

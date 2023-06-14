@@ -4,21 +4,12 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class CreateAccountResponseBody extends TeaModel {
-    /**
-     * <p>The username of the account.</p>
-     */
     @NameInMap("AcountName")
     public String acountName;
 
-    /**
-     * <p>The ID of the instance.</p>
-     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -11,13 +11,16 @@ public class CreateTairInstanceResponseBody extends TeaModel {
     public Long bandwidth;
 
     /**
-     * <p>The billing method of the instance. The return value is **PrePaid**, which indicates subscription.</p>
+     * <p>The billing method of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **PrePaid**: subscription</p>
+     * <p>*   **PostPaid**: pay-as-you-go</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
-     * <p>The detailed configurations of the instance. The value is a JSON string. For more information about parameter description, see [Modify the parameters of an ApsaraDB for Redis instance](~~43885~~).</p>
+     * <p>The detailed configurations of the instance. The value is a JSON string. For more information about the parameter description, see [Modify the parameters of an ApsaraDB for Redis instance](~~43885~~).</p>
      */
     @NameInMap("Config")
     public String config;
@@ -43,7 +46,9 @@ public class CreateTairInstanceResponseBody extends TeaModel {
     /**
      * <p>The name of the instance.</p>
      * <br>
-     * <p>> This parameter is returned only if the **InstanceName** parameter is specified in the request.</p>
+     * <p>**</p>
+     * <br>
+     * <p>This parameter is returned only if the **InstanceName** parameter is specified in the request.</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
@@ -61,7 +66,7 @@ public class CreateTairInstanceResponseBody extends TeaModel {
     public Long orderId;
 
     /**
-     * <p>The port number of the instance.</p>
+     * <p>The port number that is used to connect to the instance.</p>
      */
     @NameInMap("Port")
     public Integer port;

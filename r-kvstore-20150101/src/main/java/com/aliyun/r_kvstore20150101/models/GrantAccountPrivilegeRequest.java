@@ -5,22 +5,16 @@ import com.aliyun.tea.*;
 
 public class GrantAccountPrivilegeRequest extends TeaModel {
     /**
-     * <p>The name of the account. You can call the [DescribeAccounts](~~95802~~) operation to obtain the name of the account.</p>
+     * <p>GrantAccountPrivilege</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
-    /**
-     * <p>The permissions of the account. Default value: RoleReadWrite. Valid values:</p>
-     * <br>
-     * <p>*   RoleReadOnly: The account has the read-only permissions.</p>
-     * <p>*   RoleReadWrite: The account has the read and write permissions.</p>
-     */
     @NameInMap("AccountPrivilege")
     public String accountPrivilege;
 
     /**
-     * <p>The ID of the instance to which the account belongs.</p>
+     * <p>Modifies the permissions of an account for an ApsaraDB for Redis instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

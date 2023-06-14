@@ -5,23 +5,66 @@ import com.aliyun.tea.*;
 
 public class DescribeInstancesRequest extends TeaModel {
     /**
-     * <p>The architecture of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **cluster**: cluster architecture</p>
-     * <p>*   **standard**: standard architecture</p>
-     * <p>*   **rwsplit**: read/write splitting architecture</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("ArchitectureType")
     public String architectureType;
 
     /**
-     * <p>The billing method of the instance. Default value: PostPaid. Valid values:</p>
+     * <p>The connection mode of the instance. Valid values:</p>
      * <br>
-     * <p>*   **PrePaid**: subscription</p>
-     * <p>*   **PostPaid**: pay-as-you-go</p>
+     * <p>*   **Standard**: standard mode</p>
+     * <p>*   **Safe**: proxy mode</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
+
+    /**
+     * <p>The username that is used to connect to the instance. By default, the username that is named after the instance ID is returned.</p>
+     */
+    @NameInMap("EditionType")
+    public String editionType;
+
+    /**
+     * <p>The database engine of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **Tair**</p>
+     * <p>*   **Redis**</p>
+     * <p>*   **Memcache**</p>
+     */
+    @NameInMap("EngineVersion")
+    public String engineVersion;
+
+    /**
+     * <p>The database engine type of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **Tair**</p>
+     * <p>*   **Redis**</p>
+     * <p>*   **Memcache**</p>
+     */
+    @NameInMap("Expired")
+    public String expired;
+
+    /**
+     * <p>The details of the tags.</p>
+     */
+    @NameInMap("GlobalInstance")
+    public Boolean globalInstance;
+
+    /**
+     * <p>The database engine version of the instance. Valid values: **2.8**, **4.0**, and **5.0**.</p>
+     */
+    @NameInMap("InstanceClass")
+    public String instanceClass;
+
+    /**
+     * <p>The node type. Valid values:</p>
+     * <br>
+     * <p>*   **double**: The instance contains a master node and a replica node.</p>
+     * <p>*   **single**: The instance contains only a master node. This node type is phrased out.</p>
+     */
+    @NameInMap("InstanceIds")
+    public String instanceIds;
 
     /**
      * <p>The edition of the instance. Valid values:</p>
@@ -29,46 +72,26 @@ public class DescribeInstancesRequest extends TeaModel {
      * <p>*   **Community**: Community Edition</p>
      * <p>*   **Enterprise**: Enhance Edition (Tair)</p>
      */
-    @NameInMap("EditionType")
-    public String editionType;
+    @NameInMap("InstanceStatus")
+    public String instanceStatus;
 
     /**
-     * <p>The database engine version of the instance. Valid values: **2.8**, **4.0**, and **5.0**.</p>
+     * <p>The key of the tag.</p>
      */
-    @NameInMap("EngineVersion")
-    public String engineVersion;
-
-    /**
-     * <p>Specifies whether the instance has expired. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The cluster has expired.</p>
-     * <p>*   **false**: The cluster has not expired.</p>
-     */
-    @NameInMap("Expired")
-    public String expired;
-
-    /**
-     * <p>Specifies whether to return the child instances of distributed instances. Valid values:</p>
-     * <br>
-     * <p>*   **true**: Only child instances are returned.</p>
-     * <p>*   **false**: Child instances are not returned.</p>
-     */
-    @NameInMap("GlobalInstance")
-    public Boolean globalInstance;
-
-    /**
-     * <p>The instance type. For more information, see [Instance types](~~107984~~).</p>
-     */
-    @NameInMap("InstanceClass")
-    public String instanceClass;
+    @NameInMap("InstanceType")
+    public String instanceType;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
-     * <p>>  If you specify multiple instance IDs, separate the instance IDs with commas (,).</p>
      */
-    @NameInMap("InstanceIds")
-    public String instanceIds;
+    @NameInMap("NetworkType")
+    public String networkType;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     /**
      * <p>The state of the instance. Valid values:</p>
@@ -91,42 +114,11 @@ public class DescribeInstancesRequest extends TeaModel {
      * <br>
      * <p>>  For more information about instance states, see [Instance states and impacts](~~200740~~).</p>
      */
-    @NameInMap("InstanceStatus")
-    public String instanceStatus;
-
-    /**
-     * <p>The database engine of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **Tair**</p>
-     * <p>*   **Redis**</p>
-     * <p>*   **Memcache**</p>
-     */
-    @NameInMap("InstanceType")
-    public String instanceType;
-
-    /**
-     * <p>The network type of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **CLASSIC**: classic network</p>
-     * <p>*   **VPC**: Virtual Private Cloud (VPC)</p>
-     */
-    @NameInMap("NetworkType")
-    public String networkType;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    /**
-     * <p>The number of the page to return. Pages start from page **1**. Default value: **1**.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The parameter configurations of the instance. For more information, see [Modify parameters of an instance](~~43885~~).</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -138,17 +130,13 @@ public class DescribeInstancesRequest extends TeaModel {
     public String privateIp;
 
     /**
-     * <p>The region ID of the instance.</p>
-     * <br>
-     * <p>>  This parameter is required if you specify the **Tag.N.Key** and **Tag.N.Value** parameters when you call the operation.</p>
+     * <p>The service port of the instance.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs.</p>
-     * <br>
-     * <p>>  You can query resource group IDs by using the ApsaraDB for Redis console or by calling the [ListResourceGroups](~~158855~~) operation. For more information, see [View basic information of a resource group](~~151181~~).</p>
+     * <p>The ID of the vSwitch to which the instance is connected.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -160,7 +148,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The keyword used for fuzzy search. The keyword can be based on an instance name or an instance ID.</p>
+     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
      */
     @NameInMap("SearchKey")
     public String searchKey;
@@ -168,23 +156,33 @@ public class DescribeInstancesRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The bandwidth of the instance. Unit: MB/s.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeInstancesRequestTag> tag;
 
     /**
-     * <p>The ID of the vSwitch to which the instance is connected.</p>
+     * <p>The keyword used for fuzzy search. The keyword can be based on an instance name or an instance ID.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
-     * <p>The ID of the VPC.</p>
+     * <p>The ID of the instance.</p>
+     * <br>
+     * <p>>  If you specify multiple instance IDs, separate the instance IDs with commas (,).</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
-     * <p>The zone ID of the instance.</p>
+     * <p>The architecture of the instance. Default value: NULL. Valid values:</p>
+     * <br>
+     * <p>*   **cluster**: cluster architecture</p>
+     * <p>*   **standard**: standard architecture</p>
+     * <p>*   **rwsplit**: read/write splitting architecture</p>
+     * <p>*   **NULL**: The instance can be a cluster instance, standard instance, or read/write splitting instance.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -404,15 +402,13 @@ public class DescribeInstancesRequest extends TeaModel {
 
     public static class DescribeInstancesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the instance. A tag is a key-value pair.</p>
-         * <br>
-         * <p>>  Valid values of N: 1 to 5.</p>
+         * <p>The number of entries returned per page.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N of the instance.</p>
+         * <p>The instance type.</p>
          */
         @NameInMap("Value")
         public String value;

@@ -5,49 +5,25 @@ import com.aliyun.tea.*;
 
 public class CreateInstancesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable automatic payment. Default value: true. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no If automatic payment is disabled, you must perform the following steps to complete the payment in the ApsaraDB for Redis console: In the top navigation bar, choose **Expenses** > **Renewal Management**. In the left-side navigation pane, click **Orders**. On the **Orders** page, find the order and complete the payment.</p>
-     * <br>
-     * <p>>  This parameter is available only if **ChargeType** in the **Instances** parameter is set to **PrePaid**.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
-    /**
-     * <p>Specifies whether to enable auto-renewal for the instance. Default value: false. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
-     * <br>
-     * <p>>  This parameter is available only if **ChargeType** in the **Instances** parameter is set to **PrePaid**.</p>
-     */
     @NameInMap("AutoRenew")
     public String autoRenew;
 
-    /**
-     * <p>The additional business information about the instance.</p>
-     */
     @NameInMap("BusinessInfo")
     public String businessInfo;
 
-    /**
-     * <p>The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.</p>
-     */
     @NameInMap("CouponNo")
     public String couponNo;
 
-    /**
-     * <p>The database engine version of the instance. Valid values: **4.0** and **5.0**.</p>
-     * <br>
-     * <p>>  The default value is **5.0**.</p>
-     */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     /**
-     * <p>The configurations of the instance in the JSON format. For more information, see [Description of the Instances parameter](~~214638~~).</p>
+     * <p>The ID of the resource group to which to assign the instance.</p>
      */
     @NameInMap("Instances")
     public String instances;
@@ -58,20 +34,9 @@ public class CreateInstancesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>Specifies whether to restore the source instance from the recycle bin. Default value: false. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
-     * <br>
-     * <p>>  This parameter is available only if **SrcDBInstanceId** in the **Instances** parameter is specified.</p>
-     */
     @NameInMap("RebuildInstance")
     public Boolean rebuildInstance;
 
-    /**
-     * <p>The ID of the resource group to which to assign the instance.</p>
-     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -85,7 +50,7 @@ public class CreateInstancesRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token is case-sensitive. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The additional business information about the instance.</p>
      */
     @NameInMap("Token")
     public String token;
