@@ -1,3 +1,6 @@
+2023-06-14 Version: 1.1.15
+- Update api frequency.
+
 2023-06-13 Version: 1.1.14
 - Update api frequency.
 

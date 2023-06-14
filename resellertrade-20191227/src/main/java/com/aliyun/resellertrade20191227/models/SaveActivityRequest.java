@@ -142,6 +142,9 @@ public class SaveActivityRequest extends TeaModel {
     }
 
     public static class SaveActivityRequestFusionPromotionParamListModuleInfoParamList extends TeaModel {
+        @NameInMap("itemCode")
+        public String itemCode;
+
         @NameInMap("moduleCode")
         public String moduleCode;
 
@@ -151,12 +154,23 @@ public class SaveActivityRequest extends TeaModel {
         @NameInMap("moduleName")
         public String moduleName;
 
+        @NameInMap("moduleValueList")
+        public java.util.List<String> moduleValueList;
+
         @NameInMap("pricePlanId")
         public Long pricePlanId;
 
         public static SaveActivityRequestFusionPromotionParamListModuleInfoParamList build(java.util.Map<String, ?> map) throws Exception {
             SaveActivityRequestFusionPromotionParamListModuleInfoParamList self = new SaveActivityRequestFusionPromotionParamListModuleInfoParamList();
             return TeaModel.build(map, self);
+        }
+
+        public SaveActivityRequestFusionPromotionParamListModuleInfoParamList setItemCode(String itemCode) {
+            this.itemCode = itemCode;
+            return this;
+        }
+        public String getItemCode() {
+            return this.itemCode;
         }
 
         public SaveActivityRequestFusionPromotionParamListModuleInfoParamList setModuleCode(String moduleCode) {
@@ -181,6 +195,14 @@ public class SaveActivityRequest extends TeaModel {
         }
         public String getModuleName() {
             return this.moduleName;
+        }
+
+        public SaveActivityRequestFusionPromotionParamListModuleInfoParamList setModuleValueList(java.util.List<String> moduleValueList) {
+            this.moduleValueList = moduleValueList;
+            return this;
+        }
+        public java.util.List<String> getModuleValueList() {
+            return this.moduleValueList;
         }
 
         public SaveActivityRequestFusionPromotionParamListModuleInfoParamList setPricePlanId(Long pricePlanId) {
