@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceVpcAuthModeRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The operation that you want to perform. Set the value to **ModifyInstanceVpcAuthMode**.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

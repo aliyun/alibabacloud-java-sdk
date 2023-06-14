@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
     /**
-     * <p>The value of the **RegionIds** parameter is an array. Each element in the array contains the **RegionId** and **ZoneIds** parameters.</p>
+     * <p>The value of the **RegionIds** parameter is in the array format. Each element in the array contains the **RegionId** and **ZoneIds** parameters.</p>
      */
     @NameInMap("RegionIds")
     public DescribeRegionsResponseBodyRegionIds regionIds;
@@ -70,19 +70,19 @@ public class DescribeRegionsResponseBody extends TeaModel {
         public String regionEndpoint;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID of the instance.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The IDs of the zones in the region. The zone IDs are separated by commas (,).</p>
+         * <p>The list of zone IDs.</p>
          */
         @NameInMap("ZoneIdList")
         public DescribeRegionsResponseBodyRegionIdsKVStoreRegionZoneIdList zoneIdList;
 
         /**
-         * <p>The ID of the zone.</p>
+         * <p>The zone ID of the instance.</p>
          */
         @NameInMap("ZoneIds")
         public String zoneIds;

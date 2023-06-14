@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstancesOverviewResponseBody extends TeaModel {
     /**
-     * <p>Overview information of the instances.</p>
+     * <p>An array of instances.</p>
      */
     @NameInMap("Instances")
     public java.util.List<DescribeInstancesOverviewResponseBodyInstances> instances;
@@ -17,7 +17,7 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of instances that were queried.</p>
+     * <p>The total number of instances.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -90,7 +90,7 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The time when the instance expires if the instance is charged based on the subscription billing method.</p>
+         * <p>The time when the subscription instance expires.</p>
          */
         @NameInMap("EndTime")
         public String endTime;
@@ -102,15 +102,15 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
         public String engineVersion;
 
         /**
-         * <p>The ID of the distributed instance to which the instance belongs.</p>
+         * <p>The ID of the distributed instance.</p>
          * <br>
-         * <p>>  This parameter is returned only if the instance is a child instance of a distributed instance.</p>
+         * <p>> This parameter is returned only when the instance is a child instance of a distributed instance.</p>
          */
         @NameInMap("GlobalInstanceId")
         public String globalInstanceId;
 
         /**
-         * <p>The instance type.</p>
+         * <p>The instance type of the instance.</p>
          */
         @NameInMap("InstanceClass")
         public String instanceClass;
@@ -130,27 +130,27 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
         /**
          * <p>The state of the instance. Valid values:</p>
          * <br>
-         * <p>* **Normal**: The instance is normal.</p>
-         * <p>* **Creating**: The instance is being created.</p>
-         * <p>* **Changing**: The configurations of the instance are being changed.</p>
-         * <p>* **Inactive**: The instance is disabled.</p>
-         * <p>* **Flushing**: The instance is being released.</p>
-         * <p>* **Released**: The instance is released.</p>
-         * <p>* **Transforming**: The billing method of the instance is changing.</p>
-         * <p>* **Unavailable**: The instance is suspended.</p>
-         * <p>* **Error**: The instance failed to be created.</p>
-         * <p>* **Migrating**: The instance is being migrated.</p>
-         * <p>* **BackupRecovering**: The instance is being restored from a backup.</p>
-         * <p>* **MinorVersionUpgrading**: The minor version of the instance is being updated.</p>
-         * <p>* **NetworkModifying**: The network type of the instance is being changed.</p>
-         * <p>* **SSLModifying**: The SSL certificate of the instance is being changed.</p>
-         * <p>* **MajorVersionUpgrading**: The major version of the instance is being upgraded. The instance remains available during the upgrade.</p>
+         * <p>*   **Normal**: The instance is normal.</p>
+         * <p>*   **Creating**: The instance is being created.</p>
+         * <p>*   **Changing**: The configurations of the instance are being changed.</p>
+         * <p>*   **Inactive**: The instance is disabled.</p>
+         * <p>*   **Flushing**: The instance is being released.</p>
+         * <p>*   **Released**: The instance is released.</p>
+         * <p>*   **Transforming**: The billing method of the instance is being changed.</p>
+         * <p>*   **Unavailable**: The instance is unavailable.</p>
+         * <p>*   **Error**: The instance failed to be created.</p>
+         * <p>*   **Migrating**: The instance is being migrated.</p>
+         * <p>*   **BackupRecovering**: The instance is being restored from a backup.</p>
+         * <p>*   **MinorVersionUpgrading**: The minor version of the instance is being updated.</p>
+         * <p>*   **NetworkModifying**: The network type of the instance is being changed.</p>
+         * <p>*   **SSLModifying**: The SSL certificate of the instance is being changed.</p>
+         * <p>*   **MajorVersionUpgrading**: The major version of the instance is being upgraded. The instance remains accessible during the upgrade.</p>
          */
         @NameInMap("InstanceStatus")
         public String instanceStatus;
 
         /**
-         * <p>The database engine of the instance. Valid values:</p>
+         * <p>The category of the instance. Valid values:</p>
          * <br>
          * <p>*   **Tair**</p>
          * <p>*   **Redis**</p>
@@ -171,13 +171,13 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
         /**
          * <p>The private IP address of the instance.</p>
          * <br>
-         * <p>>  This parameter is not returned if the instance is deployed in the classic network.</p>
+         * <p>> This parameter is not returned when the instance is deployed in the classic network.</p>
          */
         @NameInMap("PrivateIp")
         public String privateIp;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID of the instance.</p>
          */
         @NameInMap("RegionId")
         public String regionId;

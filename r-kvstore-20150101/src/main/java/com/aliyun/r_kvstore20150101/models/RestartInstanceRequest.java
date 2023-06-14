@@ -5,18 +5,13 @@ import com.aliyun.tea.*;
 
 public class RestartInstanceRequest extends TeaModel {
     /**
-     * <p>The time when you want to restart the instance. Valid values:</p>
-     * <br>
-     * <p>*   **Immediately**: immediately restarts the instance.</p>
-     * <p>*   **MaintainTime**: restarts the instance in the maintenance window.</p>
-     * <br>
-     * <p>>  Default value: **Immediately**.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The operation that you want to perform. Set the value to **RestartInstance**.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -36,14 +31,6 @@ public class RestartInstanceRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    /**
-     * <p>Specifies whether to upgrade to the latest minor version after the instance is restarted. Valid values:</p>
-     * <br>
-     * <p>*   **true**: upgrades the minor version.</p>
-     * <p>*   **false**: do not upgrade the minor version.</p>
-     * <br>
-     * <p>>  Default value: **true**.</p>
-     */
     @NameInMap("UpgradeMinorVersion")
     public Boolean upgradeMinorVersion;
 

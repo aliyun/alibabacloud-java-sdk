@@ -5,24 +5,19 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceMinorVersionRequest extends TeaModel {
     /**
-     * <p>The time when the minor version is updated. Valid values:</p>
-     * <br>
-     * <p>*   **Immediately**: The minor version is immediately updated.</p>
-     * <p>*   **MaintainTime**: The minor version is updated within the maintenance window.</p>
-     * <br>
-     * <p>>  You can call the [ModifyInstanceMaintainTime](~~61000~~) operation to modify the maintenance window of an ApsaraDB for Redis instance.</p>
+     * <p>The minor version to which you want to update. Default value: **latest_version**.</p>
      */
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The minor version to which you want to update. Default value: **latest_version**.</p>
+     * <p>The operation that you want to perform. Set the value to **ModifyInstanceMinorVersion**.</p>
      */
     @NameInMap("Minorversion")
     public String minorversion;

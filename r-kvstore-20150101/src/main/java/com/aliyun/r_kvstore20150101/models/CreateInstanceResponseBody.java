@@ -77,7 +77,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String networkType;
 
     /**
-     * <p>The data shard type of the instance. Valid values:</p>
+     * <p>The node type. Valid values:</p>
      * <br>
      * <p>*   **STAND_ALONE**: standalone</p>
      * <p>*   **MASTER_SLAVE**: master-replica</p>

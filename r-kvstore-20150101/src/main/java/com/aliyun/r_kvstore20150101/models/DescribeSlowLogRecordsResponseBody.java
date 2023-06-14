@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     /**
-     * <p>The database engine type of the instance.</p>
+     * <p>The database engine that the instance runs.</p>
      */
     @NameInMap("Engine")
     public String engine;
@@ -17,7 +17,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The slow logs returned.</p>
+     * <p>Details of slow log entries.</p>
      */
     @NameInMap("Items")
     public DescribeSlowLogRecordsResponseBodyItems items;
@@ -29,7 +29,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of logs returned on the current page.</p>
+     * <p>The number of log entries returned on the current page.</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
@@ -47,7 +47,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range where slow logs were queried.</p>
+     * <p>The start time of the query.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -143,7 +143,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String account;
 
         /**
-         * <p>The name of the account.</p>
+         * <p>The username of the account.</p>
          */
         @NameInMap("AccountName")
         public String accountName;
@@ -161,19 +161,19 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String DBName;
 
         /**
-         * <p>Database name, which serves the same purpose as the **DBName** parameter. We recommend that you use the value of the **DBName** parameter.</p>
+         * <p>The name of the database, which serves the same purpose as the **DBName** parameter. We recommend that you use the value of the **DBName** parameter.</p>
          */
         @NameInMap("DataBaseName")
         public String dataBaseName;
 
         /**
-         * <p>The amount of time to run the slow query statement. Unit: milliseconds.</p>
+         * <p>The amount of time consumed to execute the slow query statement. Unit: microseconds.</p>
          */
         @NameInMap("ElapsedTime")
         public Long elapsedTime;
 
         /**
-         * <p>The time when the slow query statement was run. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         * <p>The start time when the slow query statement was executed. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          */
         @NameInMap("ExecuteTime")
         public String executeTime;

@@ -7,9 +7,6 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
     @NameInMap("HistoricalParameters")
     public DescribeParameterModificationHistoryResponseBodyHistoricalParameters historicalParameters;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,27 +32,15 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeParameterModificationHistoryResponseBodyHistoricalParametersHistoricalParameter extends TeaModel {
-        /**
-         * <p>The time when the parameter was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
-        /**
-         * <p>The parameter value after modification.</p>
-         */
         @NameInMap("NewParameterValue")
         public String newParameterValue;
 
-        /**
-         * <p>The parameter value before modification.</p>
-         */
         @NameInMap("OldParameterValue")
         public String oldParameterValue;
 
-        /**
-         * <p>The name of the parameter.</p>
-         */
         @NameInMap("ParameterName")
         public String parameterName;
 

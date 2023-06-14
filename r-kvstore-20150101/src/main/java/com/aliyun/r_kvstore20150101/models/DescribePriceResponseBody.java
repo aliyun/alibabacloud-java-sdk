@@ -5,32 +5,28 @@ import com.aliyun.tea.*;
 
 public class DescribePriceResponseBody extends TeaModel {
     /**
-     * <p>The order information.</p>
+     * <p>The number of instances that you want to purchase. Valid values: **1** to **30**.</p>
+     * <br>
+     * <p>>  Default value: **1**.</p>
      */
     @NameInMap("Order")
     public DescribePriceResponseBodyOrder order;
 
     /**
-     * <p>The parameters of the order. This parameter is returned when OrderParamOut is set to `true`.</p>
+     * <p>Details about coupons.</p>
      */
     @NameInMap("OrderParams")
     public String orderParams;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>A JSON string that contains multiple instances. For more information, see [Description of the Instances parameter in the DescribePrice API operation](~~161811~~).</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Details about promotion rules.</p>
-     */
     @NameInMap("Rules")
     public DescribePriceResponseBodyRules rules;
 
-    /**
-     * <p>Details about rules that match the coupon.</p>
-     */
     @NameInMap("SubOrders")
     public DescribePriceResponseBodySubOrders subOrders;
 
@@ -80,27 +76,15 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodyOrderCouponsCoupon extends TeaModel {
-        /**
-         * <p>The coupon number.</p>
-         */
         @NameInMap("CouponNo")
         public String couponNo;
 
-        /**
-         * <p>The description of the coupon.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>Indicates whether the coupon was selected.</p>
-         */
         @NameInMap("IsSelected")
         public String isSelected;
 
-        /**
-         * <p>The name of the coupon.</p>
-         */
         @NameInMap("Name")
         public String name;
 
@@ -183,43 +167,45 @@ public class DescribePriceResponseBody extends TeaModel {
 
     public static class DescribePriceResponseBodyOrder extends TeaModel {
         /**
-         * <p>Details about coupons.</p>
+         * <p>Queries the fees that you must pay when you create, upgrade, or renew an ApsaraDB for Redis instance.</p>
          */
         @NameInMap("Coupons")
         public DescribePriceResponseBodyOrderCoupons coupons;
 
         /**
-         * <p>The currency used for payment. A value of CNY is used when the order was generated on the China site (aliyun.com), and a value of USD is used when the order was generated on the international site (alibabacloud.com).</p>
+         * <p>The order type. Valid values:</p>
+         * <br>
+         * <p>*   **BUY**</p>
+         * <p>*   **UPGRADE**</p>
+         * <p>*   **RENEW**</p>
+         * <p>*   **CONVERT**</p>
          */
         @NameInMap("Currency")
         public String currency;
 
         /**
-         * <p>The discount amount of the order.</p>
+         * <p>The order information.</p>
          */
         @NameInMap("DiscountAmount")
         public String discountAmount;
 
         /**
-         * <p>The service fees of the order.</p>
+         * <p>The name of the coupon.</p>
          */
         @NameInMap("HandlingFeeAmount")
         public String handlingFeeAmount;
 
         /**
-         * <p>The original price of the order.</p>
+         * <p>The coupon number.</p>
          */
         @NameInMap("OriginalAmount")
         public String originalAmount;
 
-        /**
-         * <p>Details about promotion rule IDs.</p>
-         */
         @NameInMap("RuleIds")
         public DescribePriceResponseBodyOrderRuleIds ruleIds;
 
         /**
-         * <p>The actual price of the order.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("TradeAmount")
         public String tradeAmount;
@@ -288,21 +274,12 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodyRulesRule extends TeaModel {
-        /**
-         * <p>The name of the rule.</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The ID of the rule.</p>
-         */
         @NameInMap("RuleDescId")
         public Long ruleDescId;
 
-        /**
-         * <p>The title of the rule.</p>
-         */
         @NameInMap("Title")
         public String title;
 
@@ -376,33 +353,18 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodySubOrdersSubOrder extends TeaModel {
-        /**
-         * <p>The discount amount of the order.</p>
-         */
         @NameInMap("DiscountAmount")
         public String discountAmount;
 
-        /**
-         * <p>The ID of the instance.</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The original price of the order.</p>
-         */
         @NameInMap("OriginalAmount")
         public String originalAmount;
 
-        /**
-         * <p>Details about hit rule IDs.</p>
-         */
         @NameInMap("RuleIds")
         public DescribePriceResponseBodySubOrdersSubOrderRuleIds ruleIds;
 
-        /**
-         * <p>The actual price of the order.</p>
-         */
         @NameInMap("TradeAmount")
         public String tradeAmount;
 

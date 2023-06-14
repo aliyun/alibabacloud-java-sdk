@@ -11,7 +11,7 @@ public class ReleaseInstancePublicConnectionRequest extends TeaModel {
     public String currentConnectionString;
 
     /**
-     * <p>The ID of the instance for which you want to release a public endpoint.</p>
+     * <p>The operation that you want to perform. Set the value to **ReleaseInstancePublicConnection**.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeCacheAnalysisReportListRequest extends TeaModel {
     /**
-     * <p>The time range to query. Default value: 7. Unit: days.</p>
+     * <p>The ID of the child node in the cluster instance.</p>
      * <br>
-     * <p>>  If automatic analysis has not started and manual analysis is not performed on the day when you query analysis results, no records are returned.</p>
+     * <p>>  If this parameter is not specified, the analysis results of all child nodes in the instance are returned.</p>
      */
     @NameInMap("Days")
     public Integer days;
@@ -19,9 +19,7 @@ public class DescribeCacheAnalysisReportListRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the child node in the cluster instance.</p>
-     * <br>
-     * <p>>  If this parameter is not specified, the analysis results of all child nodes in the instance are returned.</p>
+     * <p>7</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
@@ -33,15 +31,13 @@ public class DescribeCacheAnalysisReportListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("PageNumbers")
     public Integer pageNumbers;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **30**, **50**, and **100**.</p>
-     * <br>
-     * <p>>  Default value: **30**.</p>
+     * <p>r-bp1zxszhcgatnx****-db-0</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

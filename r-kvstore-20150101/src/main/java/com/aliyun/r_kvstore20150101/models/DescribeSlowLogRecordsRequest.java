@@ -11,7 +11,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public String DBName;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the beginning time. The time range cannot exceed one day. We recommend that you set the time range to one hour. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
+     * <p>The end of the time range to query. The end time must be later than the start time. The time range cannot exceed one day. We recommend that you set the time range to 1 hour. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -23,31 +23,27 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the node on the instance. You can set this parameter to query the slow logs of a specified node.</p>
+     * <p>The ID of the node in the instance. You can specify this parameter to query the slow logs of a specified node.</p>
      * <br>
-     * <p>>  This parameter is available only for read/write splitting instances or cluster instances of ApsaraDB for Redis.</p>
+     * <p>> This parameter is available only if the instance uses the read/write splitting or cluster architecture.</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
 
     /**
-     * <p>The dimension by which the results to return are sorted. Valid values:</p>
+     * <p>The dimension by which to sort the results. Default value: execution_time. Valid values:</p>
      * <br>
-     * <p>*   **execution_time**: specifies that the results to return are sorted by the start time of queries.</p>
-     * <p>*   **latency**: specifies that the results to return are sorted by the execution time of queries.</p>
-     * <br>
-     * <p>>  Default value: **execution_time**.</p>
+     * <p>*   **execution_time**: sorts the results by query start time.</p>
+     * <p>*   **latency**: sorts the results by query latency.</p>
      */
     @NameInMap("OrderBy")
     public String orderBy;
 
     /**
-     * <p>The sorting method of the results to return. Valid values:</p>
+     * <p>The sorting order of the results to return. Default value: DESC. Valid values:</p>
      * <br>
-     * <p>*   **ASC**: ascending order.</p>
-     * <p>*   **DESC**: descending order.</p>
-     * <br>
-     * <p>>  Default value: **DESC**.</p>
+     * <p>*   **ASC**: ascending order</p>
+     * <p>*   **DESC**: descending order</p>
      */
     @NameInMap("OrderType")
     public String orderType;
@@ -59,7 +55,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. The value must be an integer that is greater than **0** and does not exceed the maximum value of the Integer data type. Default value: **1**.</p>
+     * <p>The number of the page to return. The value must be an integer that is greater than **0**. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -86,18 +82,16 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The type of slow log. Valid values:</p>
+     * <p>The type of the slow logs. Default value: db. Valid values:</p>
      * <br>
-     * <p>*   **proxy**: slow logs of the proxy nodes.</p>
-     * <p>*   **db**: slow logs of data nodes.</p>
-     * <br>
-     * <p>>  Default value: **db**.</p>
+     * <p>*   **proxy**: slow logs of proxy nodes</p>
+     * <p>*   **db**: slow logs of data nodes</p>
      */
     @NameInMap("SlowLogRecordType")
     public String slowLogRecordType;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

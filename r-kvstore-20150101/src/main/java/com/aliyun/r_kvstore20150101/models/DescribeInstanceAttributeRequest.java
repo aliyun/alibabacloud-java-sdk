@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The number of read-only nodes. This parameter is available only for read/write splitting instances that use cloud disks.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

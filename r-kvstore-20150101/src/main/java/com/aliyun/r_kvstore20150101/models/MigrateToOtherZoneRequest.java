@@ -4,20 +4,9 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class MigrateToOtherZoneRequest extends TeaModel {
-    /**
-     * <p>The ID of the instance.</p>
-     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    /**
-     * <p>The time when the database is switched after the instance is migrated. Valid values:</p>
-     * <br>
-     * <p>*   **Immediately**: The database is immediately switched after the instance is migrated.</p>
-     * <p>*   **MaintainTime**: The database is switched within the maintenance window.</p>
-     * <br>
-     * <p>> The default value is **Immediately**.</p>
-     */
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
@@ -33,32 +22,15 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The ID of the secondary zone to which you want to migrate the instance. You can call the [DescribeZones](~~94527~~) operation to query zone IDs.</p>
-     * <br>
-     * <p>> If you specify this parameter, the master node and replica node of the instance can be deployed in different zones. This way, disaster recovery can be implemented across zones, and the instance can withstand failures in data centers.</p>
-     */
     @NameInMap("SecondaryZoneId")
     public String secondaryZoneId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    /**
-     * <p>The ID of the vSwitch.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   The vSwitch must be deployed in the zone that is specified by the ZoneId parameter.</p>
-     * <br>
-     * <p>*   If the network type of the instance is VPC, this parameter is required.</p>
-     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
-    /**
-     * <p>The ID of the primary zone to which you want to migrate the instance. You can call the [DescribeZones](~~94527~~) operation to query zone IDs.</p>
-     */
     @NameInMap("ZoneId")
     public String zoneId;
 

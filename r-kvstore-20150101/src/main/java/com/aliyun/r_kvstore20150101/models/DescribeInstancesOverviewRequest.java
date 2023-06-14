@@ -27,7 +27,7 @@ public class DescribeInstancesOverviewRequest extends TeaModel {
      * <p>The edition of the instance. Valid values:</p>
      * <br>
      * <p>*   **Community**: Community Edition</p>
-     * <p>*   **Enterprise**: Enhance Edition (Tair)</p>
+     * <p>*   **Enterprise**: Enhanced Edition (Tair)</p>
      */
     @NameInMap("EditionType")
     public String editionType;
@@ -39,15 +39,15 @@ public class DescribeInstancesOverviewRequest extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>The instance type. For more information, see [Instance types](~~107984~~).</p>
+     * <p>The instance type of the instance. For more information, see [Instance types](~~107984~~).</p>
      */
     @NameInMap("InstanceClass")
     public String instanceClass;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The IDs of instances.</p>
      * <br>
-     * <p>>  By default, all instances that belong to this account are queried. If you specify multiple instance IDs, separate the instance IDs with commas (,).</p>
+     * <p>> By default, all instances that belong to this account are queried. If you specify multiple instance IDs, separate the instance IDs with commas (,).</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;
@@ -55,21 +55,21 @@ public class DescribeInstancesOverviewRequest extends TeaModel {
     /**
      * <p>The state of the instance. Valid values:</p>
      * <br>
-     * <p>* **Normal**: The instance is normal.</p>
-     * <p>* **Creating**: The instance is being created.</p>
-     * <p>* **Changing**: The configurations of the instance are being changed.</p>
-     * <p>* **Inactive**: The instance is disabled.</p>
-     * <p>* **Flushing**: The instance is being released.</p>
-     * <p>* **Released**: The instance is released.</p>
-     * <p>* **Transforming**: The billing method of the instance is changing.</p>
-     * <p>* **Unavailable**: The instance is suspended.</p>
-     * <p>* **Error**: The instance failed to be created.</p>
-     * <p>* **Migrating**: The instance is being migrated.</p>
-     * <p>* **BackupRecovering**: The instance is being restored from a backup.</p>
-     * <p>* **MinorVersionUpgrading**: The minor version of the instance is being updated.</p>
-     * <p>* **NetworkModifying**: The network type of the instance is being changed.</p>
-     * <p>* **SSLModifying**: The SSL certificate of the instance is being changed.</p>
-     * <p>* **MajorVersionUpgrading**: The major version of the instance is being upgraded. The instance remains available during the upgrade.</p>
+     * <p>*   **Normal**: The instance is normal.</p>
+     * <p>*   **Creating**: The instance is being created.</p>
+     * <p>*   **Changing**: The configurations of the instance are being changed.</p>
+     * <p>*   **Inactive**: The instance is disabled.</p>
+     * <p>*   **Flushing**: The instance is being released.</p>
+     * <p>*   **Released**: The instance is released.</p>
+     * <p>*   **Transforming**: The billing method of the instance is being changed.</p>
+     * <p>*   **Unavailable**: The instance is unavailable.</p>
+     * <p>*   **Error**: The instance failed to be created.</p>
+     * <p>*   **Migrating**: The instance is being migrated.</p>
+     * <p>*   **BackupRecovering**: The instance is being restored from a backup.</p>
+     * <p>*   **MinorVersionUpgrading**: The minor version of the instance is being updated.</p>
+     * <p>*   **NetworkModifying**: The network type of the instance is being changed.</p>
+     * <p>*   **SSLModifying**: The SSL certificate of the instance is being changed.</p>
+     * <p>*   **MajorVersionUpgrading**: The major version of the instance is being upgraded. The instance remains accessible during the upgrade.</p>
      * <br>
      * <p>> For more information about instance states, see [Instance states and impacts](~~200740~~).</p>
      */
@@ -77,7 +77,7 @@ public class DescribeInstancesOverviewRequest extends TeaModel {
     public String instanceStatus;
 
     /**
-     * <p>The database engine of the instance. Valid values:</p>
+     * <p>The category of the instance. Valid values:</p>
      * <br>
      * <p>*   **Tair**</p>
      * <p>*   **Redis**</p>
@@ -108,15 +108,15 @@ public class DescribeInstancesOverviewRequest extends TeaModel {
     public String privateIp;
 
     /**
-     * <p>The region ID of the instance whose information you want to query. You can call the [DescribeRegions](~~61012~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region in which the instances you want to query reside. You can call the [DescribeRegions](~~61012~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which to assign the instance.</p>
+     * <p>The ID of the resource group to which the instances you want to query belong.</p>
      * <br>
-     * <p>>  You can query resource group IDs by using the ApsaraDB for Redis console or by calling the [ListResourceGroups](~~158855~~) operation. For more information, see [View basic information of a resource group](~~151181~~).</p>
+     * <p>> You can query resource group IDs by using the ApsaraDB for Redis console or by calling the [ListResourceGroups](~~158855~~) operation. For more information, see [View basic information of a resource group](~~151181~~).</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -137,7 +137,7 @@ public class DescribeInstancesOverviewRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The ID of the vSwitch to which the instance is connected.</p>
+     * <p>The ID of the vSwitch.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;

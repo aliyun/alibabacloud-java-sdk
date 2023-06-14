@@ -5,9 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyActiveOperationTaskRequest extends TeaModel {
     /**
-     * <p>The ID of the O&M task. Separate multiple IDs with commas (,).</p>
-     * <br>
-     * <p>>  You can call the [DescribeActiveOperationTask](https://www.alibabacloud.com/help/en/apsaradb-for-redis/latest/describeactiveoperationtask) operation to query IDs of O&M tasks.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("Ids")
     public String ids;
@@ -28,9 +26,7 @@ public class ModifyActiveOperationTaskRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The scheduled switchover time to be specified. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
-     * <br>
-     * <p>>  The time cannot be later than the latest operation time. You can call the [DescribeActiveOperationTask](~~197387~~) operation. The **Deadline** parameter in the response indicates the latest operation time.</p>
+     * <p>The operation that you want to perform. Set the value to: **ModifyActiveOperationTask**.</p>
      */
     @NameInMap("SwitchTime")
     public String switchTime;

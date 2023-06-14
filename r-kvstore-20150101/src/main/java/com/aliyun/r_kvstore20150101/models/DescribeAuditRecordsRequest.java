@@ -5,42 +5,45 @@ import com.aliyun.tea.*;
 
 public class DescribeAuditRecordsRequest extends TeaModel {
     /**
-     * <p>The name of the account. By default, all accounts are queried.</p>
+     * <p>The username of the account. If you do not specify this parameter, this call applies to all accounts of the instance.</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
-     * <p>The name of the database.</p>
+     * <p>The name of the database in the instance. If you do not specify this parameter, all databases are queried. Valid values: 0 to 255. 0 specifies the database 0.</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
 
     /**
-     * <p>The end of the time range that is specified to query the audit log. The end time must be later than the start time. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
      * <br>
-     * <p>>  We recommend that you set a time range of 10 minutes or less because the audit log contains a great number of entries. Do not specify a time range that is longer than one day.</p>
+     * <p>> We recommend that you specify a time range of 10 minutes or less because audit logs contain a great number of entries. Do not specify a time range that is longer than one day.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The IP address of the client. By default, all client IP addresses are queried.</p>
+     * <p>The IP address of the client. If you do not specify this parameter, this call applies to all clients.</p>
      */
     @NameInMap("HostAddress")
     public String hostAddress;
 
     /**
-     * <p>The ID of the ApsaraDB for Redis instance for which you want to query the audit log.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the node on the instance. You can set this parameter to query the information about a specified node.</p>
+     * <p>The ID of the node in the instance. You can set this parameter to query the data of a specified node.</p>
      * <br>
-     * <p>> *   This parameter is available for only read/write splitting or cluster instances of ApsaraDB for Redis.</p>
-     * <p>> *   You can call the [DescribeLogicInstanceTopology](~~94665~~) operation to query node IDs.</p>
+     * <p>> </p>
+     * <br>
+     * <p>*   This parameter is available only for read/write splitting or cluster instances of ApsaraDB for Redis.</p>
+     * <br>
+     * <p>*   You can call the [DescribeLogicInstanceTopology](~~94665~~) operation to query node IDs.</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
@@ -52,21 +55,21 @@ public class DescribeAuditRecordsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the page to return.</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The maximum number of log entries to return per page.</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The keyword based on which the audit log is queried. You can pass a command as a keyword to query log data for the specified command. By default, all commands are queried.</p>
+     * <p>The keyword based on which the audit logs are queried. You can specify a command as a keyword to query logs. By default, all commands are queried.</p>
      * <br>
-     * <p>>  You can specify only one keyword in each call.</p>
+     * <p>> You can specify only a single keyword in each call.</p>
      */
     @NameInMap("QueryKeywords")
     public String queryKeywords;
@@ -81,7 +84,7 @@ public class DescribeAuditRecordsRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The start of the time range that is specified to query the audit log. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

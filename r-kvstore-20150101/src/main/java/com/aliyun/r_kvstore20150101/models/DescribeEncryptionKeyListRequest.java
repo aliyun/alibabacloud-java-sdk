@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEncryptionKeyListRequest extends TeaModel {
     /**
-     * <p>The ID of the ApsaraDB for Redis instance. You can call the [DescribeInstances](~~60933~~) operation to query instance IDs.</p>
+     * <p>The operation that you want to perform. Set the value to **DescribeEncryptionKeyList**.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

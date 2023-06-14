@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAccountsResponseBody extends TeaModel {
     /**
-     * <p>Details about returned accounts of the instance.</p>
+     * <p>Details about account permissions.</p>
      */
     @NameInMap("Accounts")
     public DescribeAccountsResponseBodyAccounts accounts;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,12 +38,6 @@ public class DescribeAccountsResponseBody extends TeaModel {
     }
 
     public static class DescribeAccountsResponseBodyAccountsAccountDatabasePrivilegesDatabasePrivilege extends TeaModel {
-        /**
-         * <p>The permission of the account. Default value: RoleReadWrite. Valid values:</p>
-         * <br>
-         * <p>*   **RoleReadOnly**: The account has the read-only permissions.</p>
-         * <p>*   **RoleReadWrite**: The account has the read and write permissions.</p>
-         */
         @NameInMap("AccountPrivilege")
         public String accountPrivilege;
 
@@ -83,43 +77,43 @@ public class DescribeAccountsResponseBody extends TeaModel {
 
     public static class DescribeAccountsResponseBodyAccountsAccount extends TeaModel {
         /**
-         * <p>The description of the account.</p>
+         * <p>The name of the account that you want to query.</p>
          */
         @NameInMap("AccountDescription")
         public String accountDescription;
 
         /**
-         * <p>The name of the account.</p>
+         * <p>The operation that you want to perform. Set the value to **DescribeAccounts**.</p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
-         * <p>The state of the account. Valid values:</p>
-         * <br>
-         * <p>*   **Unavailable**: The account is unavailable.</p>
-         * <p>*   **Available**: The account is available.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("AccountStatus")
         public String accountStatus;
+
+        /**
+         * <p>The description of the account.</p>
+         */
+        @NameInMap("AccountType")
+        public String accountType;
+
+        /**
+         * <p>The permission of the account. Default value: RoleReadWrite. Valid values:</p>
+         * <br>
+         * <p>*   **RoleReadOnly**: The account has the read-only permissions.</p>
+         * <p>*   **RoleReadWrite**: The account has the read and write permissions.</p>
+         */
+        @NameInMap("DatabasePrivileges")
+        public DescribeAccountsResponseBodyAccountsAccountDatabasePrivileges databasePrivileges;
 
         /**
          * <p>The type of the account. Valid values:</p>
          * <br>
          * <p>*   **Normal**: standard account</p>
          * <p>*   **Super**: super account</p>
-         */
-        @NameInMap("AccountType")
-        public String accountType;
-
-        /**
-         * <p>Details about account permissions.</p>
-         */
-        @NameInMap("DatabasePrivileges")
-        public DescribeAccountsResponseBodyAccountsAccountDatabasePrivileges databasePrivileges;
-
-        /**
-         * <p>The ID of the instance.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;

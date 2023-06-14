@@ -4,15 +4,9 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeZonesResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The zones that are returned.</p>
-     */
     @NameInMap("Zones")
     public DescribeZonesResponseBodyZones zones;
 
@@ -38,42 +32,21 @@ public class DescribeZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeZonesResponseBodyZonesKVStoreZone extends TeaModel {
-        /**
-         * <p>Indicates whether the ApsaraDB for Redis instance can be created in the current zone.</p>
-         */
         @NameInMap("Disabled")
         public Boolean disabled;
 
-        /**
-         * <p>Indicates whether the zone is managed by Relational Database Service (RDS). The value of this parameter is **true** for ApsaraDB for Redis.</p>
-         */
         @NameInMap("IsRds")
         public Boolean isRds;
 
-        /**
-         * <p>The ID of the region to which the zone belongs.</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>Indicates whether the zone allows you to switch the network type of an ApsaraDB for Redis instance from classic network to virtual private cloud (VPC). Valid values:</p>
-         * <br>
-         * <p>*   **true**: The network type can be changed from classic network to VPC.</p>
-         * <p>*   **false**: The network type cannot be changed from classic network to VPC.</p>
-         */
         @NameInMap("SwitchNetwork")
         public Boolean switchNetwork;
 
-        /**
-         * <p>The ID of the zone.</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 
-        /**
-         * <p>The name of the zone.</p>
-         */
         @NameInMap("ZoneName")
         public String zoneName;
 

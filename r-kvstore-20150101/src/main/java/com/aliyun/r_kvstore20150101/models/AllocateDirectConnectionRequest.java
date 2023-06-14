@@ -11,7 +11,7 @@ public class AllocateDirectConnectionRequest extends TeaModel {
     public String connectionString;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -22,9 +22,6 @@ public class AllocateDirectConnectionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The port number of the instance. Valid values: **1024** to **65535**. Default value: **6379**.</p>
-     */
     @NameInMap("Port")
     public String port;
 

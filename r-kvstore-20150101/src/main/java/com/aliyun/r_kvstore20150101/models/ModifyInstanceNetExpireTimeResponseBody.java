@@ -11,7 +11,7 @@ public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The details of the retention period of the endpoint in the classic network.</p>
+     * <p>Details of the extension period for which the classic network endpoint of the instance is retained.</p>
      */
     @NameInMap("NetInfoItems")
     public ModifyInstanceNetExpireTimeResponseBodyNetInfoItems netInfoItems;
@@ -59,13 +59,13 @@ public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
         public String connectionString;
 
         /**
-         * <p>The network type. The returned value is **Classic**.</p>
+         * <p>The network type of the instance. The returned value is **Classic**.</p>
          */
         @NameInMap("DBInstanceNetType")
         public String DBInstanceNetType;
 
         /**
-         * <p>The expiration time of the endpoint of the classic network.</p>
+         * <p>The expiration time of the classic network endpoint.</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
@@ -77,7 +77,7 @@ public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
         public String IPAddress;
 
         /**
-         * <p>The service port of the instance.</p>
+         * <p>The port number that is used to connect to the instance.</p>
          */
         @NameInMap("Port")
         public String port;

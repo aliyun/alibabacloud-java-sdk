@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyResourceGroupRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotency of requests. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the generated token is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -23,16 +23,19 @@ public class ModifyResourceGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the instance is deployed.</p>
+     * <p>The region ID of the instance.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the resource group to which you want to move the instance.</p>
      * <br>
-     * <p>> * You can call the [ListResourceGroups](~~158855~~) operation or log on to the console to query the IDs of the resource groups. For more information, see [View basic information about resource groups](~~151181~~).</p>
-     * <p>> * Before you modify the resource group to which an instance belongs, you can call the [ListResources](~~158866~~) operation to view the resource group.</p>
+     * <p>> </p>
+     * <br>
+     * <p>*   You can query resource group IDs by using the ApsaraDB for Redis console or by calling the [ListResourceGroups](~~158855~~) operation. For more information, see [View basic information of a resource group](~~151181~~).</p>
+     * <br>
+     * <p>*   Before you modify the resource group to which an instance belongs, you can call the [ListResources](~~158866~~) operation to view the resource group of the instance.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

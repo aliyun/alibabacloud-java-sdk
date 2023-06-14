@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
     /**
-     * <p>The auto-renewal status of instances.</p>
+     * <p>Details of the auto-renewal information for the instance.</p>
      */
     @NameInMap("Items")
     public DescribeInstanceAutoRenewalAttributeResponseBodyItems items;
@@ -17,7 +17,7 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of returned entries on the current page.</p>
+     * <p>The number of entries returned on the current page.</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
@@ -81,10 +81,10 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
 
     public static class DescribeInstanceAutoRenewalAttributeResponseBodyItemsItem extends TeaModel {
         /**
-         * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+         * <p>Indicates whether auto-renewal is enabled. Valid values:</p>
          * <br>
-         * <p>*   **true**: enables auto-renewal.</p>
-         * <p>*   **false**: disables auto-renewal.</p>
+         * <p>*   **true**: Auto-renewal is enabled.</p>
+         * <p>*   **false**: Auto-renewal is disabled.</p>
          */
         @NameInMap("AutoRenew")
         public String autoRenew;
@@ -102,7 +102,7 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
         public Integer duration;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID of the instance.</p>
          */
         @NameInMap("RegionId")
         public String regionId;

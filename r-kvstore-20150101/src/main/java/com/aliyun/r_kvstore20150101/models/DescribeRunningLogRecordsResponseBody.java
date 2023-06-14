@@ -5,55 +5,57 @@ import com.aliyun.tea.*;
 
 public class DescribeRunningLogRecordsResponseBody extends TeaModel {
     /**
-     * <p>The type of the database engine.</p>
+     * <p>The ID of the node.</p>
+     * <br>
+     * <p>>  If a standard instance is queried, `(null)` is returned.</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the resource group.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>Details about the log entries.</p>
+     * <p>The beginning of the time range to query.</p>
      */
     @NameInMap("Items")
     public DescribeRunningLogRecordsResponseBodyItems items;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The number of log entries returned on the current page.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of log entries returned on the current page.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
-     * <p>The maximum number of entries returned on each page.</p>
+     * <p>The keyword that is used to query operational logs.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: **30**.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The beginning of the time range to query.</p>
+     * <p>The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The type of the database engine.</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -137,27 +139,25 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
 
     public static class DescribeRunningLogRecordsResponseBodyItemsLogRecords extends TeaModel {
         /**
-         * <p>The content of the log.</p>
+         * <p>The maximum number of entries returned on each page.</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
-         * <p>The time when the log was generated. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The end of the time range to query. The end time must be later than the start time. The time range cannot exceed one day. We recommend that you specify 1 hour. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The page number of the returned page.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The ID of the node.</p>
-         * <br>
-         * <p>>  If a standard instance is queried, `(null)` is returned.</p>
+         * <p>The ID of the instance.</p>
          */
         @NameInMap("NodeId")
         public String nodeId;

@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class RenewAdditionalBandwidthRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable automatic payment. Valid values:</p>
+     * <p>Specifies whether to enable automatic payment. Default value: true. Valid values:</p>
      * <br>
-     * <p>*   **true**: Automatic payment is enabled. This is the default value.</p>
-     * <p>*   **false**: Automatic payment is disabled. If automatic payment is disabled, you must perform the following steps to complete the payment in the ApsaraDB for Redis console: In the top navigation bar, choose **Expenses** > **Renewal Management**. In the left-side navigation pane, click **Orders******. On the page that appears, find the order and complete the payment.</p>
+     * <p>*   **true**: enables automatic payment.</p>
+     * <p>*   **false**: disables automatic payment. If automatic payment is disabled, you must perform the following steps to complete the payment in the ApsaraDB for Redis console: In the top navigation bar, choose **Expenses** > **Renewal Management**. In the left-side navigation pane, click **Orders**. On the **Orders** page, find the order and complete the payment.</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
-     * <p>The ID of the coupon that you want to use.</p>
+     * <p>The ID of the coupon.</p>
      */
     @NameInMap("CouponNo")
     public String couponNo;
 
     /**
-     * <p>The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the IDs of instances.</p>
+     * <p>The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

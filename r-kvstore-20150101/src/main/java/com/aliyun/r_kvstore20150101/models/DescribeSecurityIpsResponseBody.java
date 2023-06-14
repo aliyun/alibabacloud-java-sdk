@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityIpsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The name of the whitelist.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The whitelists of the instance.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("SecurityIpGroups")
     public DescribeSecurityIpsResponseBodySecurityIpGroups securityIpGroups;
@@ -39,22 +39,14 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
 
     public static class DescribeSecurityIpsResponseBodySecurityIpGroupsSecurityIpGroup extends TeaModel {
         /**
-         * <p>The attribute of the whitelist. This parameter is empty by default.</p>
-         * <br>
-         * <p>>  If the instance is authorized to use a service such as Database Autonomy Service (DAS), Data Management (DMS), or Data Transmission Service (DTS), this service automatically generates a **hidden** whitelist for the instance. This type of whitelists cannot be modified or deleted.</p>
+         * <p>The operation that you want to perform. Set the value to **DescribeSecurityIps**.</p>
          */
         @NameInMap("SecurityIpGroupAttribute")
         public String securityIpGroupAttribute;
 
-        /**
-         * <p>The name of the whitelist.</p>
-         */
         @NameInMap("SecurityIpGroupName")
         public String securityIpGroupName;
 
-        /**
-         * <p>The IP addresses in the whitelist. A maximum of 1,000 IP addresses can be specified in a whitelist.</p>
-         */
         @NameInMap("SecurityIpList")
         public String securityIpList;
 

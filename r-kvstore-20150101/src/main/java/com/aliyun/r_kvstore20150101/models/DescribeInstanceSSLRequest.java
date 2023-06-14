@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceSSLRequest extends TeaModel {
     /**
-     * <p>The ID of the instance that was queried.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

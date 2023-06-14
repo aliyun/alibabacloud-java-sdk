@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupPolicyResponseBody extends TeaModel {
     /**
-     * <p>The retention period for backups. Unit: days.</p>
+     * <p>The retention period of the backup data. Unit: days.</p>
      */
     @NameInMap("BackupRetentionPeriod")
     public String backupRetentionPeriod;
 
     /**
-     * <p>Specifies whether incremental backup is enabled. Valid values:</p>
+     * <p>Indicates whether incremental data backup is enabled. Valid values:</p>
      * <br>
-     * <p>*   **1**: enabled.</p>
-     * <p>*   **0**: disabled.</p>
+     * <p>*   **1**: Incremental data backup is enabled.</p>
+     * <p>*   **0**: Incremental data backup is disabled.</p>
      */
     @NameInMap("EnableBackupLog")
     public Integer enableBackupLog;
@@ -34,7 +34,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String preferredBackupPeriod;
 
     /**
-     * <p>The time when the data was backed up. The time follows the ISO 8601 standard in the *HH:mm*Z-*HH:mm*Z format. The time is displayed in UTC.</p>
+     * <p>The time range during which the backup was created. The time follows the ISO 8601 standard in the *HH:mm*Z-*HH:mm*Z format. The time is displayed in UTC.</p>
      */
     @NameInMap("PreferredBackupTime")
     public String preferredBackupTime;
