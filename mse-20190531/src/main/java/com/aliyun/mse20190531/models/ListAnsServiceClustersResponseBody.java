@@ -16,6 +16,9 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    @NameInMap("HttpCode")
+    public String httpCode;
+
     /**
      * <p>The message returned.</p>
      */
@@ -56,6 +59,14 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
     }
     public String getErrorCode() {
         return this.errorCode;
+    }
+
+    public ListAnsServiceClustersResponseBody setHttpCode(String httpCode) {
+        this.httpCode = httpCode;
+        return this;
+    }
+    public String getHttpCode() {
+        return this.httpCode;
     }
 
     public ListAnsServiceClustersResponseBody setMessage(String message) {
