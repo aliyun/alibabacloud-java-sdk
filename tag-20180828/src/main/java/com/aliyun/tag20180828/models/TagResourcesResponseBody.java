@@ -4,9 +4,19 @@ package com.aliyun.tag20180828.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The information of the resources to which tags fail to be added.</p>
+     * <br>
+     * <p>> </p>
+     * <p>*   If tags are added to all resources, the value of `FailedResources` is empty.</p>
+     * <p>*   If tags fail to be added to some or all resources, the value of `FailedResources` contains the detailed information of the resources.</p>
+     */
     @NameInMap("FailedResources")
     public TagResourcesResponseBodyFailedResources failedResources;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -31,81 +41,16 @@ public class TagResourcesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class ListTagResourcesResponseBodyTagResourcesTags extends TeaModel {
-        @NameInMap("Category")
-        public String category;
-
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static ListTagResourcesResponseBodyTagResourcesTags build(java.util.Map<String, ?> map) throws Exception {
-            ListTagResourcesResponseBodyTagResourcesTags self = new ListTagResourcesResponseBodyTagResourcesTags();
-            return TeaModel.build(map, self);
-        }
-
-        public ListTagResourcesResponseBodyTagResourcesTags setCategory(String category) {
-            this.category = category;
-            return this;
-        }
-        public String getCategory() {
-            return this.category;
-        }
-
-        public ListTagResourcesResponseBodyTagResourcesTags setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public ListTagResourcesResponseBodyTagResourcesTags setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-    }
-
-    public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
-        @NameInMap("ResourceARN")
-        public String resourceARN;
-
-        @NameInMap("Tags")
-        public java.util.List<ListTagResourcesResponseBodyTagResourcesTags> tags;
-
-        public static ListTagResourcesResponseBodyTagResources build(java.util.Map<String, ?> map) throws Exception {
-            ListTagResourcesResponseBodyTagResources self = new ListTagResourcesResponseBodyTagResources();
-            return TeaModel.build(map, self);
-        }
-
-        public ListTagResourcesResponseBodyTagResources setResourceARN(String resourceARN) {
-            this.resourceARN = resourceARN;
-            return this;
-        }
-        public String getResourceARN() {
-            return this.resourceARN;
-        }
-
-        public ListTagResourcesResponseBodyTagResources setTags(java.util.List<ListTagResourcesResponseBodyTagResourcesTags> tags) {
-            this.tags = tags;
-            return this;
-        }
-        public java.util.List<ListTagResourcesResponseBodyTagResourcesTags> getTags() {
-            return this.tags;
-        }
-
-    }
-
     public static class TagResourcesResponseBodyFailedResourcesFailedResourceResult extends TeaModel {
+        /**
+         * <p>The error code.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The error message.</p>
+         */
         @NameInMap("Message")
         public String message;
 
@@ -133,9 +78,15 @@ public class TagResourcesResponseBody extends TeaModel {
     }
 
     public static class TagResourcesResponseBodyFailedResourcesFailedResource extends TeaModel {
+        /**
+         * <p>The ARN of the resource.</p>
+         */
         @NameInMap("ResourceARN")
         public String resourceARN;
 
+        /**
+         * <p>The information of the error.</p>
+         */
         @NameInMap("Result")
         public TagResourcesResponseBodyFailedResourcesFailedResourceResult result;
 

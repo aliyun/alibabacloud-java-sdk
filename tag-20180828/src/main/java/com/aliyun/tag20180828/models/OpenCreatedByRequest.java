@@ -3,22 +3,13 @@ package com.aliyun.tag20180828.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeRegionsRequest extends TeaModel {
-    /**
-     * <p>The information of the regions.</p>
-     */
-    @NameInMap("AcceptLanguage")
-    public String acceptLanguage;
-
+public class OpenCreatedByRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -26,22 +17,14 @@ public class DescribeRegionsRequest extends TeaModel {
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    public String resourceOwnerId;
 
-    public static DescribeRegionsRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeRegionsRequest self = new DescribeRegionsRequest();
+    public static OpenCreatedByRequest build(java.util.Map<String, ?> map) throws Exception {
+        OpenCreatedByRequest self = new OpenCreatedByRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeRegionsRequest setAcceptLanguage(String acceptLanguage) {
-        this.acceptLanguage = acceptLanguage;
-        return this;
-    }
-    public String getAcceptLanguage() {
-        return this.acceptLanguage;
-    }
-
-    public DescribeRegionsRequest setOwnerAccount(String ownerAccount) {
+    public OpenCreatedByRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -49,7 +32,7 @@ public class DescribeRegionsRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DescribeRegionsRequest setOwnerId(Long ownerId) {
+    public OpenCreatedByRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -57,7 +40,7 @@ public class DescribeRegionsRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeRegionsRequest setRegionId(String regionId) {
+    public OpenCreatedByRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -65,7 +48,7 @@ public class DescribeRegionsRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DescribeRegionsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public OpenCreatedByRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -73,11 +56,11 @@ public class DescribeRegionsRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public DescribeRegionsRequest setResourceOwnerId(Long resourceOwnerId) {
+    public OpenCreatedByRequest setResourceOwnerId(String resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
-    public Long getResourceOwnerId() {
+    public String getResourceOwnerId() {
         return this.resourceOwnerId;
     }
 

@@ -4,7 +4,6 @@ package com.aliyun.tag20180828.models;
 import com.aliyun.tea.*;
 
 public class CreateTagsResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

@@ -10,6 +10,9 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the resources.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

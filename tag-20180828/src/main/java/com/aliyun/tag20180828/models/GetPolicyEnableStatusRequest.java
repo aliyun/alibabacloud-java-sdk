@@ -10,6 +10,9 @@ public class GetPolicyEnableStatusRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID. Set the value to cn-shanghai.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -19,6 +22,16 @@ public class GetPolicyEnableStatusRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public String resourceOwnerId;
 
+    /**
+     * <p>The mode of the Tag Policy feature. This parameter specifies a filter condition for the query. Valid values:</p>
+     * <br>
+     * <p>*   USER: single-account mode</p>
+     * <p>*   RD: multi-account mode</p>
+     * <br>
+     * <p>For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).</p>
+     * <br>
+     * <p>>  The value of this parameter is not case-sensitive.</p>
+     */
     @NameInMap("UserType")
     public String userType;
 

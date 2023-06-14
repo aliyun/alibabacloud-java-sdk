@@ -4,12 +4,24 @@ package com.aliyun.tag20180828.models;
 import com.aliyun.tea.*;
 
 public class ListSupportResourceTypesResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the next query is required.</p>
+     * <br>
+     * <p>*   If the value of this parameter is empty, all results are returned, and the next query is not required.</p>
+     * <p>*   If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The supported resource types.</p>
+     */
     @NameInMap("SupportResourceTypes")
     public java.util.List<ListSupportResourceTypesResponseBodySupportResourceTypes> supportResourceTypes;
 
@@ -43,9 +55,18 @@ public class ListSupportResourceTypesResponseBody extends TeaModel {
     }
 
     public static class ListSupportResourceTypesResponseBodySupportResourceTypesSupportItems extends TeaModel {
+        /**
+         * <p>Indicates whether the tag-related capability item is supported. Valid values:</p>
+         * <br>
+         * <p>*   true: The tag-related capability item is supported.</p>
+         * <p>*   false: The tag-related capability item is not supported.</p>
+         */
         @NameInMap("Support")
         public Boolean support;
 
+        /**
+         * <p>The code of the tag-related capability item.</p>
+         */
         @NameInMap("SupportCode")
         public String supportCode;
 
@@ -73,12 +94,23 @@ public class ListSupportResourceTypesResponseBody extends TeaModel {
     }
 
     public static class ListSupportResourceTypesResponseBodySupportResourceTypes extends TeaModel {
+        /**
+         * <p>The service code.</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
+        /**
+         * <p>The resource type.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The supported tag-related capability items.</p>
+         * <br>
+         * <p>>  This parameter is returned only if the `ShowItems` parameter is set to `true`.</p>
+         */
         @NameInMap("SupportItems")
         public java.util.List<ListSupportResourceTypesResponseBodySupportResourceTypesSupportItems> supportItems;
 

@@ -4,9 +4,21 @@ package com.aliyun.tag20180828.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
+    /**
+     * <p>The type of the tag. Valid values:</p>
+     * <br>
+     * <p>*   Custom</p>
+     * <p>*   System</p>
+     * <p>*   All</p>
+     * <br>
+     * <p>Default value: All.</p>
+     */
     @NameInMap("Category")
     public String category;
 
+    /**
+     * <p>The token that is used to start the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -16,9 +28,17 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Maximum value: 1000. Default value: 50.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID of the resources.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -28,6 +48,18 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <p>The key-value pairs of tags. You can specify 1 to 10 key-value pairs.</p>
+     * <br>
+     * <p>If you specify multiple tags, the system queries the resources to which all these tags are added.</p>
+     * <br>
+     * <p>Limits:</p>
+     * <br>
+     * <p>*   A tag key must be 1 to 128 characters in length.</p>
+     * <p>*   A tag value must be 1 to 128 characters in length.</p>
+     * <p>*   Tag keys and tag values are case-sensitive.</p>
+     * <p>*   Each tag key on a resource can have only one tag value. If you create a tag that has the same key as an existing tag, the value of the existing tag is overwritten.</p>
+     */
     @NameInMap("Tags")
     public String tags;
 

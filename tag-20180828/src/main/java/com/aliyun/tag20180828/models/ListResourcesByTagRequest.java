@@ -7,15 +7,35 @@ public class ListResourcesByTagRequest extends TeaModel {
     @NameInMap("TagFilter")
     public ListResourcesByTagRequestTagFilter tagFilter;
 
+    /**
+     * <p>The type of the query. Valid values:</p>
+     * <br>
+     * <p>*   EQUAL: exact match for resources to which the specified tag is added. This is the default value.</p>
+     * <p>*   NOT: exact match for resources to which the specified tag is not added.</p>
+     */
     @NameInMap("FuzzyType")
     public String fuzzyType;
 
+    /**
+     * <p>Specifies whether to return the information of tags added to the resources. Valid values:</p>
+     * <br>
+     * <p>*   False: does not return the information of tags added to the resources. This is the default value.</p>
+     * <p>*   True: returns the information of all tags added to the resources.</p>
+     */
     @NameInMap("IncludeAllTags")
     public Boolean includeAllTags;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Default value: 50. Maximum value: 1000.</p>
+     */
     @NameInMap("MaxResult")
     public Integer maxResult;
 
+    /**
+     * <p>The token that is used to start the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -25,12 +45,23 @@ public class ListResourcesByTagRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * <br>
+     * <p>For more information about the region ID, see [Endpoints](~~170112~~).</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <p>The resource type. This parameter specifies a filter condition for the query.</p>
+     * <br>
+     * <p>*   If you set the FuzzyType parameter to EQUAL, you can set this parameter to a resource type provided in [Types of resources that support Tag API operations](~~172061~~).</p>
+     * <p>*   If you set the FuzzyType parameter to NOT, you can set this parameter to a resource type provided in **Types of resources that support queries based on the NOT operator**.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
@@ -120,9 +151,19 @@ public class ListResourcesByTagRequest extends TeaModel {
     }
 
     public static class ListResourcesByTagRequestTagFilter extends TeaModel {
+        /**
+         * <p>The tag key. This parameter specifies a filter condition for the query.</p>
+         * <br>
+         * <p>The tag key can be a maximum of 128 characters in length. It cannot contain `http://` or `https://` and cannot start with `acs:` or `aliyun`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value. This parameter specifies a filter condition for the query.</p>
+         * <br>
+         * <p>The tag value can be a maximum of 128 characters in length. It cannot contain `http://` or `https://` and cannot start with `acs:` or `aliyun`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

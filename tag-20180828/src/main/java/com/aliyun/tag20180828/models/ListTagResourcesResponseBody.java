@@ -4,12 +4,24 @@ package com.aliyun.tag20180828.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the `next query` is required.</p>
+     * <br>
+     * <p>*   If the value of this parameter is empty (`"NextToken": ""`), all results are returned, and the `next query` is not required.</p>
+     * <p>*   If the value of this parameter is not empty, the next query is required, and the value is the `token` used to start the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information of the tags that are added to the resources.</p>
+     */
     @NameInMap("TagResources")
     public java.util.List<ListTagResourcesResponseBodyTagResources> tagResources;
 
@@ -43,12 +55,24 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResourcesTags extends TeaModel {
+        /**
+         * <p>The type of the tag. Valid values:</p>
+         * <br>
+         * <p>*   Custom</p>
+         * <p>*   System</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -84,9 +108,15 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
+        /**
+         * <p>The ARN of the resource.</p>
+         */
         @NameInMap("ResourceARN")
         public String resourceARN;
 
+        /**
+         * <p>The information of the tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListTagResourcesResponseBodyTagResourcesTags> tags;
 

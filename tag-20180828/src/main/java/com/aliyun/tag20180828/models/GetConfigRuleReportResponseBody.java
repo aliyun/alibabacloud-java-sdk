@@ -4,15 +4,30 @@ package com.aliyun.tag20180828.models;
 import com.aliyun.tea.*;
 
 public class GetConfigRuleReportResponseBody extends TeaModel {
+    /**
+     * <p>The basic information of the resource non-compliance report that is last generated.</p>
+     */
     @NameInMap("Data")
     public GetConfigRuleReportResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The request is successful.</p>
+     * <p>*   false: The request fails.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,15 +69,36 @@ public class GetConfigRuleReportResponseBody extends TeaModel {
     }
 
     public static class GetConfigRuleReportResponseBodyData extends TeaModel {
+        /**
+         * <p>The time when the report was generated. This value is a UNIX timestamp.</p>
+         */
         @NameInMap("CreatedTime")
         public Long createdTime;
 
+        /**
+         * <p>The ID of the report.</p>
+         */
         @NameInMap("ReportId")
         public String reportId;
 
+        /**
+         * <p>The ID of the object.</p>
+         * <br>
+         * <p>>  This parameter is returned if you set the `TargetType` and `TargetId` parameters in the current request to the same values as the parameters that are configured when you call the [GenerateConfigRuleReport](~~433313~~) operation to generate the report.</p>
+         */
         @NameInMap("TargetId")
         public String targetId;
 
+        /**
+         * <p>The type of the object. Valid values:</p>
+         * <br>
+         * <p>*   USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.</p>
+         * <p>*   ROOT: the Root folder in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</p>
+         * <p>*   FOLDER: a folder other than the Root folder in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</p>
+         * <p>*   ACCOUNT: a member in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</p>
+         * <br>
+         * <p>>  This parameter is returned if you set the `TargetType` and `TargetId` parameters in the current request to the same values as the parameters that are configured when you call the [GenerateConfigRuleReport](~~433313~~) operation to generate the report.</p>
+         */
         @NameInMap("TargetType")
         public String targetType;
 

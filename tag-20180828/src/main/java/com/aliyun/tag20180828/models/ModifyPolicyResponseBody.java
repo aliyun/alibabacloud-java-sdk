@@ -4,7 +4,9 @@ package com.aliyun.tag20180828.models;
 import com.aliyun.tea.*;
 
 public class ModifyPolicyResponseBody extends TeaModel {
-    // Id of the request
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
