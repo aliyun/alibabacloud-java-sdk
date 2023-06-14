@@ -4,9 +4,19 @@ package com.aliyun.tag20180828.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The information of resources from which tags fail to be removed.</p>
+     * <br>
+     * <p>> </p>
+     * <p>*   If tags are removed from all resources, the value of FailedResources is empty.</p>
+     * <p>*   If tags fail to be removed from some or all resources, the value of FailedResources contains the detailed information of the resources.</p>
+     */
     @NameInMap("FailedResources")
     public UntagResourcesResponseBodyFailedResources failedResources;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +42,15 @@ public class UntagResourcesResponseBody extends TeaModel {
     }
 
     public static class UntagResourcesResponseBodyFailedResourcesFailedResourceResult extends TeaModel {
+        /**
+         * <p>The error code.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The error message.</p>
+         */
         @NameInMap("Message")
         public String message;
 
@@ -62,9 +78,15 @@ public class UntagResourcesResponseBody extends TeaModel {
     }
 
     public static class UntagResourcesResponseBodyFailedResourcesFailedResource extends TeaModel {
+        /**
+         * <p>The ARN of the resource.</p>
+         */
         @NameInMap("ResourceARN")
         public String resourceARN;
 
+        /**
+         * <p>The information of the error.</p>
+         */
         @NameInMap("Result")
         public UntagResourcesResponseBodyFailedResourcesFailedResourceResult result;
 

@@ -13,6 +13,9 @@ public class DeleteTagRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

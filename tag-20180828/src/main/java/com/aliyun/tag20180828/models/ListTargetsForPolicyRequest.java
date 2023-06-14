@@ -4,9 +4,17 @@ package com.aliyun.tag20180828.models;
 import com.aliyun.tea.*;
 
 public class ListTargetsForPolicyRequest extends TeaModel {
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Default value: 50. Maximum value: 1000.</p>
+     */
     @NameInMap("MaxResult")
     public Integer maxResult;
 
+    /**
+     * <p>The token that is used to start the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -16,9 +24,15 @@ public class ListTargetsForPolicyRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the tag policy.</p>
+     */
     @NameInMap("PolicyId")
     public String policyId;
 
+    /**
+     * <p>The region ID. Set the value to cn-shanghai.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

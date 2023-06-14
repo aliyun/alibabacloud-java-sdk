@@ -3,19 +3,16 @@ package com.aliyun.tag20180828.models;
 
 import com.aliyun.tea.*;
 
-public class DeletePolicyResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
+public class OpenCreatedByResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DeletePolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeletePolicyResponseBody self = new DeletePolicyResponseBody();
+    public static OpenCreatedByResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        OpenCreatedByResponseBody self = new OpenCreatedByResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeletePolicyResponseBody setRequestId(String requestId) {
+    public OpenCreatedByResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

@@ -10,6 +10,9 @@ public class TagResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the resources.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -19,6 +22,18 @@ public class TagResourcesRequest extends TeaModel {
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <p>The key-value pairs of tags. You can specify 1 to 10 key-value pairs.</p>
+     * <br>
+     * <p>If you specify multiple tags, the system adds all the tags to the specified resources.</p>
+     * <br>
+     * <p>Limits:</p>
+     * <br>
+     * <p>*   A tag key must be 1 to 128 characters in length.</p>
+     * <p>*   A tag value must be 1 to 128 characters in length.</p>
+     * <p>*   Tag keys and tag values are case-sensitive.</p>
+     * <p>*   Each tag key on a resource can have only one tag value. If you create a tag that has the same key as an existing tag, the value of the existing tag is overwritten.</p>
+     */
     @NameInMap("Tags")
     public String tags;
 

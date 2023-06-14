@@ -4,9 +4,15 @@ package com.aliyun.tag20180828.models;
 import com.aliyun.tea.*;
 
 public class ListPoliciesForTargetRequest extends TeaModel {
+    /**
+     * <p>The token that is used to start the next query.</p>
+     */
     @NameInMap("MaxResult")
     public Integer maxResult;
 
+    /**
+     * <p>The ID of the object. This parameter specifies a filter condition for the query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -16,15 +22,33 @@ public class ListPoliciesForTargetRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Default value: 50. Maximum value: 1000.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <p>The type of the object. This parameter specifies a filter condition for the query. Valid values:</p>
+     * <br>
+     * <p>*   USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.</p>
+     * <p>*   ROOT: the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</p>
+     * <p>*   FOLDER: a folder other than the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</p>
+     * <p>*   ACCOUNT: a member in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</p>
+     * <br>
+     * <p>>  The value of this parameter is not case-sensitive.</p>
+     */
     @NameInMap("TargetId")
     public String targetId;
 
+    /**
+     * <p>The tag policies that are attached to the object.</p>
+     */
     @NameInMap("TargetType")
     public String targetType;
 

@@ -4,14 +4,24 @@ package com.aliyun.tag20180828.models;
 import com.aliyun.tea.*;
 
 public class ListResourcesByTagResponseBody extends TeaModel {
-    // 表示当前调用返回读取到的位置，空或者空字符串代表数据已经读取完毕
+    /**
+     * <p>Indicates whether the `next query` is required.</p>
+     * <br>
+     * <p>*   If the value of this parameter is empty (`"NextToken": ""`), all results are returned, and the `next query` is not required.</p>
+     * <p>*   If the value of this parameter is not empty, the next query is required, and the value is the `token` used to start the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // Id of the request
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information of the resources.</p>
+     */
     @NameInMap("Resources")
     public java.util.List<ListResourcesByTagResponseBodyResources> resources;
 
@@ -45,12 +55,24 @@ public class ListResourcesByTagResponseBody extends TeaModel {
     }
 
     public static class ListResourcesByTagResponseBodyResourcesTags extends TeaModel {
+        /**
+         * <p>The type of the tag. Valid values:</p>
+         * <br>
+         * <p>*   custom</p>
+         * <p>*   system</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -86,9 +108,17 @@ public class ListResourcesByTagResponseBody extends TeaModel {
     }
 
     public static class ListResourcesByTagResponseBodyResources extends TeaModel {
+        /**
+         * <p>The ID of the resource.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The information of the tags.</p>
+         * <br>
+         * <p>This parameter is returned only if the `IncludeAllTags` parameter is set to `True`.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListResourcesByTagResponseBodyResourcesTags> tags;
 

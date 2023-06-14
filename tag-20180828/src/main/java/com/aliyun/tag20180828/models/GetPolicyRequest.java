@@ -10,9 +10,15 @@ public class GetPolicyRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the tag policy.</p>
+     */
     @NameInMap("PolicyId")
     public String policyId;
 
+    /**
+     * <p>The region ID. Set the value to cn-shanghai.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

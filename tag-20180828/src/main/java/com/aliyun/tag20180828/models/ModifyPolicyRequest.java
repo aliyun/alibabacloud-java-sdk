@@ -4,6 +4,12 @@ package com.aliyun.tag20180828.models;
 import com.aliyun.tea.*;
 
 public class ModifyPolicyRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to perform a dry run for the request. Valid values:</p>
+     * <br>
+     * <p>*   false: The system performs the related operation based on the parameter settings in the request. This is the default value.</p>
+     * <p>*   true: The system does not perform the related operation based on the parameter settings in the request but only verifies the parameter settings.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -13,18 +19,39 @@ public class ModifyPolicyRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The document of the tag policy.</p>
+     * <br>
+     * <p>For more information about the syntax of a tag policy, see [Syntax of a tag policy](~~417436~~).</p>
+     */
     @NameInMap("PolicyContent")
     public String policyContent;
 
+    /**
+     * <p>The description of the tag policy.</p>
+     * <br>
+     * <p>The description must be 0 to 512 characters in length.</p>
+     */
     @NameInMap("PolicyDesc")
     public String policyDesc;
 
+    /**
+     * <p>The ID of the tag policy.</p>
+     */
     @NameInMap("PolicyId")
     public String policyId;
 
+    /**
+     * <p>The name of the tag policy.</p>
+     * <br>
+     * <p>The name must be 1 to 128 characters in length and can contain letters, digits, and underscores (\_).</p>
+     */
     @NameInMap("PolicyName")
     public String policyName;
 
+    /**
+     * <p>The region ID. Set the value to cn-shanghai.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

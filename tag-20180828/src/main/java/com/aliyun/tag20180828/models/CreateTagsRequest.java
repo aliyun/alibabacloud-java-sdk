@@ -10,6 +10,11 @@ public class CreateTagsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The description of the tag value.</p>
+     * <br>
+     * <p>Valid values of N: 1 to 10.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -68,6 +73,9 @@ public class CreateTagsRequest extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the request.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -98,6 +106,11 @@ public class CreateTagsRequest extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The description of the tag key.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 10.</p>
+         */
         @NameInMap("Key")
         public String key;
 
