@@ -28,6 +28,9 @@ public class InvoiceAddRequest extends TeaModel {
     @NameInMap("type")
     public Integer type;
 
+    @NameInMap("unit_type")
+    public Integer unitType;
+
     public static InvoiceAddRequest build(java.util.Map<String, ?> map) throws Exception {
         InvoiceAddRequest self = new InvoiceAddRequest();
         return TeaModel.build(map, self);
@@ -95,6 +98,14 @@ public class InvoiceAddRequest extends TeaModel {
     }
     public Integer getType() {
         return this.type;
+    }
+
+    public InvoiceAddRequest setUnitType(Integer unitType) {
+        this.unitType = unitType;
+        return this;
+    }
+    public Integer getUnitType() {
+        return this.unitType;
     }
 
 }
