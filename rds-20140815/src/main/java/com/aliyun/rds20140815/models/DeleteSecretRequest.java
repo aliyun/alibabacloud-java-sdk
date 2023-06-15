@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSecretRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -13,7 +13,7 @@ public class DeleteSecretRequest extends TeaModel {
     /**
      * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
      * <br>
-     * <p>> If you specify this parameter, you must also specify the **SecretName** parameter.</p>
+     * <p>> If you specify this parameter, you must also specify **SecretName**.</p>
      */
     @NameInMap("DbInstanceId")
     public String dbInstanceId;
@@ -42,9 +42,9 @@ public class DeleteSecretRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ARN of the credential for the created Data API account. You can call the [CreateSecret](~~446607~~) operation to obtain the value of this parameter.</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the credential for the created Data API account. You can call the [CreateSecret](~~446607~~) operation to obtain the value of this parameter.</p>
      * <br>
-     * <p>> You must specify one of the **SecretName** and SecretArn parameters.</p>
+     * <p>> You must specify one of **SecretName** and SecretArn.</p>
      */
     @NameInMap("SecretArn")
     public String secretArn;
@@ -54,9 +54,9 @@ public class DeleteSecretRequest extends TeaModel {
      * <br>
      * <p>> </p>
      * <br>
-     * <p>*   You must specify one of the **SecretArn** and SecretName parameters.</p>
+     * <p>*   You must specify one of **SecretArn** and SecretName.</p>
      * <br>
-     * <p>*   If you specify this parameter, you must also specify the **DbInstanceId** parameter.</p>
+     * <p>*   If you specify this parameter, you must also specify **DbInstanceId**.</p>
      */
     @NameInMap("SecretName")
     public String secretName;

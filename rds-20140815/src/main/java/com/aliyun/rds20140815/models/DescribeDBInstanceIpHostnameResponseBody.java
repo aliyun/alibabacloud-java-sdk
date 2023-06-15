@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceIpHostnameResponseBody extends TeaModel {
     /**
-     * <p>The ID of the RDS instance.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The private IP addresses and hostnames of the primary and standby RDS instances. Format: IP address 1,Hostname 1;IP address 2,Hostname 2.</p>
+     * <p>The internal IP addresses and hostnames of the ECS instances where the primary and secondary instances reside. Format: IP address 1,Hostname 1;IP address 2,Hostname 2.</p>
      */
     @NameInMap("IpHostnameInfos")
     public String ipHostnameInfos;

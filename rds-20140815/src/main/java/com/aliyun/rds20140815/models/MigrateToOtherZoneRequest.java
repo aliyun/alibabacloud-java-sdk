@@ -16,7 +16,7 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     public String category;
 
     /**
-     * <p>The new instance type of the instance. You can change the instance type of the instance. You cannot change the storage type of the instance. If you set the **IsModifySpec** parameter to **true**, you must specify at least one of the DBInstanceClass and **DBInstanceStorage** parameters.</p>
+     * <p>The new instance type of the instance. You can change the instance type of the instance. You cannot change the storage type of the instance. If you set **IsModifySpec** to **true**, you must specify at least one of DBInstanceClass and **DBInstanceStorage**.</p>
      * <br>
      * <p>For more information about instance types, see [Primary ApsaraDB RDS for MySQL instance types](~~276975~~).</p>
      */
@@ -30,7 +30,7 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The new storage capacity of the instance. If you set the **IsModifySpec** parameter to **true**, you must specify at least one of the DBInstanceStorage and **DBInstanceClass** parameters.</p>
+     * <p>The new storage capacity of the instance. If you set **IsModifySpec** to **true**, you must specify at least one of DBInstanceStorage and **DBInstanceClass**.</p>
      * <br>
      * <p>Unit: GB. The available storage capacity range varies based on the instance type of the instance. For more information, see [Primary ApsaraDB RDS for MySQL instance types](~~276975~~).</p>
      */
@@ -38,13 +38,13 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     public Long DBInstanceStorage;
 
     /**
-     * <p>The time at which you want the change to take effect. Valid values:</p>
+     * <p>The time when you want to migrate the instance. Valid values:</p>
      * <br>
-     * <p>*   **Immediately**: The change immediately takes effect. This is the default value.</p>
-     * <p>*   **MaintainTime**: The change takes effect during the maintenance window. For more information, see [ModifyDBInstanceMaintainTime](~~26249~~).</p>
-     * <p>*   **ScheduleTime**: The change takes effect at the point in time that you specify.</p>
+     * <p>*   **Immediate**: The instance is immediately migrated. This is the default value.</p>
+     * <p>*   **MaintainTime**: The instance is migrated during the maintenance window. For more information, see [ModifyDBInstanceMaintainTime](~~26249~~).</p>
+     * <p>*   **ScheduleTime**: The instance is migrated at the point in time that you specify.</p>
      * <br>
-     * <p>> If you set this parameter to **ScheduleTime**, you must also specify the **SwitchTime** parameter.</p>
+     * <p>> If you set this parameter to **ScheduleTime**, you must also specify **SwitchTime**.</p>
      */
     @NameInMap("EffectiveTime")
     public String effectiveTime;
@@ -52,8 +52,8 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     /**
      * <p>Specifies whether to change the specifications of the instance during the cross-zone migration. Valid values:</p>
      * <br>
-     * <p>*   **true**: You want to change the specifications of the instance during the cross-zone migration. If you set this parameter to **true**, you must specify at least one of the **DBInstanceClass** and **DBInstanceStorage** parameters.</p>
-     * <p>*   **false**: You do not want to change the specifications of the instance during the cross-zone migration. This is the default value.</p>
+     * <p>*   **true**: You want to change the specifications of the instance during the cross-zone migration. If you set this parameter to **true**, you must specify at least one of **DBInstanceClass** and **DBInstanceStorage**.</p>
+     * <p>*   **false** (default): You do not want to change the specifications of the instance during the cross-zone migration.</p>
      * <br>
      * <p>> This parameter applies only to instances that run MySQL.</p>
      */
@@ -73,18 +73,18 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The point in time at which you want the change to take effect. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <p>The migration time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
      * <br>
-     * <p>> This parameter is used with the **EffectiveTime** parameter. You must specify this parameter only when the **EffectiveTime** parameter is set to **ScheduleTime**.</p>
+     * <p>> This parameter is used with **EffectiveTime**. You must specify this parameter only when **EffectiveTime** is set to **ScheduleTime**.</p>
      */
     @NameInMap("SwitchTime")
     public String switchTime;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC). Do not change the VPC of the instance.</p>
+     * <p>The ID of the virtual private cloud (VPC) to which the instance belongs. Do not change the VPC of the instance when you migrate the instance across zones.</p>
      * <br>
-     * <p>> * If the instance resides in a VPC, you must specify this parameter.</p>
-     * <p>> * If the instance runs SQL Server, you can change the VPC of the instance.</p>
+     * <p>*   This parameter must be specified when the instance resides in a VPC.</p>
+     * <p>*   If the instance runs SQL Server, you can change the VPC of the instance.</p>
      */
     @NameInMap("VPCId")
     public String VPCId;
@@ -92,8 +92,8 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     /**
      * <p>The ID of the vSwitch.</p>
      * <br>
-     * <p>> *   If the instance resides in a VPC, you must specify this parameter. You can call the [DescribeVSwitches](~~35748~~) operation to query the ID of the vSwitch.</p>
-     * <p>> *   If the instance runs PostgreSQL or SQL Server and a secondary zone is specified for the instance, you can specify multiple vSwitch IDs, each of which corresponds to a zone. Separate the vSwitch IDs with commas (,).</p>
+     * <p>*   This parameter must be specified when the instance resides in a VPC. You can call the [DescribeVSwitches](~~35748~~) operation to query the vSwitch ID.</p>
+     * <p>*   If the instance runs PostgreSQL or SQL Server and a secondary zone is specified for the instance, you can specify multiple vSwitch IDs, each of which corresponds to a zone. Separate the vSwitch IDs with commas (,).</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
@@ -105,7 +105,7 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     public String zoneId;
 
     /**
-     * <p>The zone of the secondary instance.</p>
+     * <p>The zone ID of the secondary instance.</p>
      * <br>
      * <p>> If the instance does not run RDS Basic Edition, you must specify this parameter.</p>
      */
@@ -113,9 +113,9 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     public String zoneIdSlave1;
 
     /**
-     * <p>The zone of the logger instance.</p>
+     * <p>The zone ID of the logger instance.</p>
      * <br>
-     * <p>> If the instance runs RDS Enterprise Edition, you must specify this parameter.</p>
+     * <p>> This parameter is available only when the instance runs RDS Enterprise Edition.</p>
      */
     @NameInMap("ZoneIdSlave2")
     public String zoneIdSlave2;

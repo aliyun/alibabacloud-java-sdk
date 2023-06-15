@@ -17,7 +17,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -81,13 +81,19 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
 
     public static class DescribeVSwitchesResponseBodyVSwitchs extends TeaModel {
         /**
-         * <p>The CIDR block of the vSwitches.</p>
+         * <p>交换机中可用的IP地址数量。</p>
+         */
+        @NameInMap("AvailableIpAddressCount")
+        public String availableIpAddressCount;
+
+        /**
+         * <p>The CIDR blocks of the vSwitches.</p>
          */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
         /**
-         * <p>The description of the vSwitches.</p>
+         * <p>The descriptions of the vSwitches.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -102,13 +108,13 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
-         * <p>The ID of the zone to which the vSwitch belongs.</p>
+         * <p>The ID of the zone to which the vSwitches belong.</p>
          */
         @NameInMap("IzNo")
         public String izNo;
 
         /**
-         * <p>The status of the vSwitch. Valid values:</p>
+         * <p>The status of a vSwitch. Valid values:</p>
          * <br>
          * <p>*   **Pending**: The vSwitch is being configured.</p>
          * <p>*   **Available**: The vSwitch is available.</p>
@@ -117,7 +123,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the vSwitch</p>
+         * <p>The ID of the vSwitch.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
@@ -131,6 +137,14 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         public static DescribeVSwitchesResponseBodyVSwitchs build(java.util.Map<String, ?> map) throws Exception {
             DescribeVSwitchesResponseBodyVSwitchs self = new DescribeVSwitchesResponseBodyVSwitchs();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeVSwitchesResponseBodyVSwitchs setAvailableIpAddressCount(String availableIpAddressCount) {
+            this.availableIpAddressCount = availableIpAddressCount;
+            return this;
+        }
+        public String getAvailableIpAddressCount() {
+            return this.availableIpAddressCount;
         }
 
         public DescribeVSwitchesResponseBodyVSwitchs setCidrBlock(String cidrBlock) {

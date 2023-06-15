@@ -11,7 +11,7 @@ public class MigrateConnectionToOtherZoneResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The error details.</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Message")
     public String message;

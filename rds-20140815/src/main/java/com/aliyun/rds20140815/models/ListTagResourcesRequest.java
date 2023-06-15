@@ -20,7 +20,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IDs of resources. You can specifies up to 50 resource IDs.</p>
+     * <p>The IDs of resources. You can specify up to 50 resource IDs.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;

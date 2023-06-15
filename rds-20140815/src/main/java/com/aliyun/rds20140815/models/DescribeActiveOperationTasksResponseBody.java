@@ -4,18 +4,33 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTasksResponseBody extends TeaModel {
+    /**
+     * <p>The O\&M tasks of the instance.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeActiveOperationTasksResponseBodyItems> items;
 
+    /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 25.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -65,84 +80,176 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeActiveOperationTasksResponseBodyItems extends TeaModel {
+        /**
+         * <p>Indicates whether the task can be canceled. The value 1 indicates that the task can be canceled. The value 0 indicates that the task cannot be canceled.</p>
+         */
         @NameInMap("AllowCancel")
         public String allowCancel;
 
+        /**
+         * <p>Indicates whether the switching time can be changed. The value 1 indicates that the switching time can be changed. The value 0 indicates that the switching time cannot be changed.</p>
+         */
         @NameInMap("AllowChange")
         public String allowChange;
 
+        /**
+         * <p>The code of the task level. The value S1 indicates the system O\&M level. The value S0 indicates the exception fixing level.</p>
+         */
         @NameInMap("ChangeLevel")
         public String changeLevel;
 
+        /**
+         * <p>The level of the task in English.</p>
+         */
         @NameInMap("ChangeLevelEn")
         public String changeLevelEn;
 
+        /**
+         * <p>The level of the task in Chinese.</p>
+         */
         @NameInMap("ChangeLevelZh")
         public String changeLevelZh;
 
+        /**
+         * <p>The time when the task was created. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <p>The current zone.</p>
+         */
         @NameInMap("CurrentAVZ")
         public String currentAVZ;
 
+        /**
+         * <p>The type of the database. Valid values: mysql, pgsql, and mssql.</p>
+         */
         @NameInMap("DbType")
         public String dbType;
 
+        /**
+         * <p>The minor engine version.</p>
+         */
         @NameInMap("DbVersion")
         public String dbVersion;
 
+        /**
+         * <p>The deadline of the switching time for the task. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("Deadline")
         public String deadline;
 
+        /**
+         * <p>The ID of the precheck task.</p>
+         */
         @NameInMap("Id")
         public Integer id;
 
+        /**
+         * <p>The impact of the task.</p>
+         */
         @NameInMap("Impact")
         public String impact;
 
+        /**
+         * <p>The impact of the task in English.</p>
+         */
         @NameInMap("ImpactEn")
         public String impactEn;
 
+        /**
+         * <p>The impact of the task in Chinese.</p>
+         */
         @NameInMap("ImpactZh")
         public String impactZh;
 
+        /**
+         * <p>The alias and description of the instance.</p>
+         */
         @NameInMap("InsComment")
         public String insComment;
 
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("InsName")
         public String insName;
 
+        /**
+         * <p>The time after the modification. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <p>The required preparation period between the task start time and the switching time. The time is displayed in the HH:mm:ss format.</p>
+         */
         @NameInMap("PrepareInterval")
         public String prepareInterval;
 
+        /**
+         * <p>The region ID of the pending task.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The information about the execution result.</p>
+         */
         @NameInMap("ResultInfo")
         public String resultInfo;
 
+        /**
+         * <p>The time when the task was executed. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The status of the task.</p>
+         * <br>
+         * <p>*   **3**: pending</p>
+         * <p>*   **4**: being processed</p>
+         * <p>*   **5**: completed</p>
+         * <p>*   **6**: failed</p>
+         * <p>*   **7**: canceled</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The subtasks of the instance.</p>
+         */
         @NameInMap("SubInsNames")
         public java.util.List<String> subInsNames;
 
+        /**
+         * <p>The switching time of the task. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("SwitchTime")
         public String switchTime;
 
+        /**
+         * <p>The type of the task. Valid values:</p>
+         * <br>
+         * <p>*   **rds_apsaradb_ha**: primary/secondary switchover</p>
+         * <p>*   **rds_apsaradb_transfer**: instance migration</p>
+         * <p>*   **rds_apsaradb_upgrade**: update of the minor engine version</p>
+         * <p>*   **rds_apsaradb_maxscale**: update of the minor version of the proxy</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 
+        /**
+         * <p>The reason for the task in English.</p>
+         */
         @NameInMap("TaskTypeEn")
         public String taskTypeEn;
 
+        /**
+         * <p>The reason for the task in Chinese.</p>
+         */
         @NameInMap("TaskTypeZh")
         public String taskTypeZh;
 

@@ -29,7 +29,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -141,7 +141,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
         public String connectionMode;
 
         /**
-         * <p>The time when the instance is created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the instance was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -153,9 +153,9 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
         public String DBInstanceClass;
 
         /**
-         * <p>The name of the instance. It must be 2 to 256 characters in length. The name can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+         * <p>The name of the instance. It must be 2 to 256 characters in length. The value can contain letters, digits, underscores (\_), and hyphens (-). The value must start with a letter.</p>
          * <br>
-         * <p>> The name cannot start with http:// or https://.</p>
+         * <p>> The value cannot start with http:// or https://.</p>
          */
         @NameInMap("DBInstanceDescription")
         public String DBInstanceDescription;
@@ -185,7 +185,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
          * <p>The storage type of the instance. Valid values:</p>
          * <br>
          * <p>*   **local_ssd/ephemeral_ssd**: local SSD</p>
-         * <p>*   **cloud_ssd**: standard SSD</p>
+         * <p>*   **cloud_ssd**: standard SSD.</p>
          * <p>*   **cloud_essd**: enhanced SSD (ESSD)</p>
          */
         @NameInMap("DBInstanceStorageType")
@@ -209,7 +209,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
         public String destroyTime;
 
         /**
-         * <p>The type of the database engine. Valid values:</p>
+         * <p>The database engine of the instance. Valid values:</p>
          * <br>
          * <p>*   MySQL</p>
          * <p>*   SQLServer</p>
@@ -221,7 +221,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
         public String engine;
 
         /**
-         * <p>The database engine version of the instance.</p>
+         * <p>The version of the database engine.</p>
          */
         @NameInMap("EngineVersion")
         public String engineVersion;
@@ -258,8 +258,8 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
          * <br>
          * <p>*   **Unlock**: The instance is not locked.</p>
          * <p>*   **ManualLock**: The instance is manually locked.</p>
-         * <p>*   **LockByExpiration**: The instance is automatically locked due to instance expiration.</p>
-         * <p>*   **LockByRestoration**: The instance is automatically locked due to instance restoration.</p>
+         * <p>*   **LockByExpiration**: The instance is automatically locked after it expires.</p>
+         * <p>*   **LockByRestoration**: The instance is automatically locked before a rollback.</p>
          * <p>*   **LockByDiskQuota**: The instance is automatically locked because its storage capacity is exhausted and the instance is inaccessible.</p>
          */
         @NameInMap("LockMode")
@@ -296,7 +296,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
         public String payType;
 
         /**
-         * <p>An array that consists of the IDs of the read-only instances that are attached to the primary instance.</p>
+         * <p>An array consisting of the IDs of the read-only instances that are attached to the primary instance.</p>
          */
         @NameInMap("ReadOnlyDBInstanceIds")
         public DescribeDBInstancesForCloneResponseBodyItemsDBInstanceReadOnlyDBInstanceIds readOnlyDBInstanceIds;
@@ -338,7 +338,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
         public String vpcCloudInstanceId;
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The ID of the virtual private cloud (VPC).</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

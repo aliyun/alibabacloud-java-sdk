@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyParameterGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the parameter template.</p>
+     * <p>The parameter template ID.</p>
      */
     @NameInMap("ParameterGroupId")
     public String parameterGroupId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

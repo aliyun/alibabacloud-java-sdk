@@ -5,16 +5,19 @@ import com.aliyun.tea.*;
 
 public class DeleteBackupFileRequest extends TeaModel {
     /**
-     * <p>The ID of the backup set. You can specify the IDs of up to 100 backup files at a time. Separate the IDs with commas (,).</p>
+     * <p>The ID of the backup set. You can specify the IDs of up to 100 backup sets at a time. Separate the IDs with commas (,).</p>
      * <br>
-     * <p>> * Only the IDs of the backup files for the database is supported.</p>
-     * <p>> * You can call the [DescribeBackups](~~26273~~) operation to query the IDs of backup files.</p>
+     * <p>> </p>
+     * <br>
+     * <p>*   Only the IDs of the backup sets for the database is supported.</p>
+     * <br>
+     * <p>*   You can call the [DescribeBackups](~~26273~~) operation to query the IDs of backup sets.</p>
      */
     @NameInMap("BackupId")
     public String backupId;
 
     /**
-     * <p>Specifies whether to delete the backup files that are generated before the specified point in time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>Specifies whether to delete the backup sets that are generated before the specified point in time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      */
     @NameInMap("BackupTime")
     public String backupTime;

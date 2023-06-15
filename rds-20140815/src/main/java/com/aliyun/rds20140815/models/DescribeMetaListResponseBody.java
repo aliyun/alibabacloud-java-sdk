@@ -11,19 +11,19 @@ public class DescribeMetaListResponseBody extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>An array consisting of the information about the databases and tables whose data is included in the data backup file.</p>
+     * <p>An array consisting of the information about the databases and tables whose data is included in the backup set.</p>
      */
     @NameInMap("Items")
     public DescribeMetaListResponseBodyItems items;
 
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on the current page.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
@@ -41,7 +41,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
     public Integer totalPageCount;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of returned entries.</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TransformDBInstancePayTypeResponseBody extends TeaModel {
     /**
-     * <p>The billing method of the instance.</p>
+     * <p>The billing method.</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
@@ -17,9 +17,9 @@ public class TransformDBInstancePayTypeResponseBody extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The time at which the instance expires.</p>
+     * <p>The expiration time.</p>
      * <br>
-     * <p>>  If you change the billing method from subscription to pay-as-you-go, this parameter is not returned.</p>
+     * <p>> If you call this operation to change the billing method of an instance from subscription to pay-as-you-go, this parameter is not returned.</p>
      */
     @NameInMap("ExpiredTime")
     public String expiredTime;

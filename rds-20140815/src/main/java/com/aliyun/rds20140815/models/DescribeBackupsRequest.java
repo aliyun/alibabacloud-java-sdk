@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupsRequest extends TeaModel {
     /**
-     * <p>The ID of the data backup file.</p>
+     * <p>The ID of the backup set.</p>
      */
     @NameInMap("BackupId")
     public String backupId;
 
     /**
-     * <p>The backup mode of the data backup file. Valid values:</p>
+     * <p>The backup mode. Valid values:</p>
      * <br>
      * <p>*   **Automated**</p>
      * <p>*   **Manual**</p>
@@ -20,7 +20,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public String backupMode;
 
     /**
-     * <p>The status of the data backup file. Valid values:</p>
+     * <p>The status of the backup set. Valid values:</p>
      * <br>
      * <p>*   **Success**</p>
      * <p>*   **Failed**</p>
@@ -29,10 +29,10 @@ public class DescribeBackupsRequest extends TeaModel {
     public String backupStatus;
 
     /**
-     * <p>The backup type of the data backup file. Valid values:</p>
+     * <p>The backup type. Valid values:</p>
      * <br>
-     * <p>*   **FullBackup**</p>
-     * <p>*   **IncrementalBackup**</p>
+     * <p>*   **FullBackup**: full backup</p>
+     * <p>*   **IncrementalBackup**: incremental backup</p>
      */
     @NameInMap("BackupType")
     public String backupType;
@@ -45,6 +45,8 @@ public class DescribeBackupsRequest extends TeaModel {
 
     /**
      * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
+     * <br>
+     * <p>> We recommend that you specify a time range that is as short as possible to avoid timeout.</p>
      */
     @NameInMap("EndTime")
     public String endTime;

@@ -11,7 +11,7 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>Details of the migration task.</p>
+     * <p>The details of the migration task.</p>
      */
     @NameInMap("Items")
     public DescribeMigrateTasksResponseBodyItems items;
@@ -23,7 +23,7 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
@@ -142,7 +142,7 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
         /**
          * <p>The status of the migration task. Valid values:</p>
          * <br>
-         * <p>*   **NoStart**: The task has not started.</p>
+         * <p>*   **NoStart**: The task is not started.</p>
          * <p>*   **Running**:The task is in progress.</p>
          * <p>*   **Success**: The task is successful.</p>
          * <p>*   **Failed**: The task failed.</p>

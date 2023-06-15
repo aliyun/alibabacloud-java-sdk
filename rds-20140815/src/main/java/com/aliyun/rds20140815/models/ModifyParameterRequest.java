@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyParameterRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -36,8 +36,11 @@ public class ModifyParameterRequest extends TeaModel {
     /**
      * <p>The ID of the parameter template.</p>
      * <br>
-     * <p>> * If you specify this parameter, you do not need to specify the **Parameters** parameter.</p>
-     * <p>> * If the parameter template can be applied only after the instance is restarted, you must specify the **Forcerestart** parameter.</p>
+     * <p>> </p>
+     * <br>
+     * <p>*   If you specify this parameter, you do not need to specify **Parameters**.</p>
+     * <br>
+     * <p>*   If the parameter template can be applied only after the instance is restarted, you must specify **Forcerestart**.</p>
      */
     @NameInMap("ParameterGroupId")
     public String parameterGroupId;
@@ -45,7 +48,7 @@ public class ModifyParameterRequest extends TeaModel {
     /**
      * <p>The JSON strings of parameters and their values. All the parameter values are of the string type. Format: {"Parameter name 1":"Parameter value 1","Parameter name 2":"Parameter value 2"...}. You can call the [DescribeParameterTemplates](~~26284~~) operation to query parameter names and values.</p>
      * <br>
-     * <p>> If you specify this parameter, you do not need to specify the **ParameterGroupId** parameter.</p>
+     * <p>> If you specify this parameter, you do not need to specify **ParameterGroupId**.</p>
      */
     @NameInMap("Parameters")
     public String parameters;
@@ -69,7 +72,7 @@ public class ModifyParameterRequest extends TeaModel {
      * <br>
      * <p>*   **Immediately**: immediately modifies the parameter. This is the default value.</p>
      * <p>*   **MaintainTime**: modifies the parameter during the maintenance window of the instance. You can call the [ModifyDBInstanceMaintainTime](~~26249~~) operation to change the maintenance window of the instance.</p>
-     * <p>*   **ScheduleTime**: The modification takes effect at the point in time that you specify. If you specify this value, you must also specify the **SwitchTime** parameter.</p>
+     * <p>*   **ScheduleTime**: The modification takes effect at the point in time that you specify. If you specify this value, you must also specify **SwitchTime**.</p>
      */
     @NameInMap("SwitchTimeMode")
     public String switchTimeMode;

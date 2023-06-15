@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupsResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the details of the returned data backup files.</p>
+     * <p>An array that consists of the details of the returned backup sets.</p>
      */
     @NameInMap("Items")
     public DescribeBackupsResponseBodyItems items;
@@ -17,7 +17,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of data backup files on the page.</p>
+     * <p>The number of backup sets on the current page.</p>
      */
     @NameInMap("PageRecordCount")
     public String pageRecordCount;
@@ -101,13 +101,13 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String dataBase;
 
         /**
-         * <p>The public URL from which you can download the data backup file.</p>
+         * <p>The public URL from which you can download the backup set.</p>
          */
         @NameInMap("DownloadLink")
         public String downloadLink;
 
         /**
-         * <p>The internal URL from which you can download the data backup file.</p>
+         * <p>The internal URL from which you can download the backup set.</p>
          */
         @NameInMap("IntranetDownloadLink")
         public String intranetDownloadLink;
@@ -164,15 +164,15 @@ public class DescribeBackupsResponseBody extends TeaModel {
 
     public static class DescribeBackupsResponseBodyItemsBackup extends TeaModel {
         /**
-         * <p>The URL from which you can download the data backup file of the individual database.</p>
+         * <p>An array consisting of URLs from which you can download backup sets of individual databases.</p>
          */
         @NameInMap("BackupDownloadLinkByDB")
         public DescribeBackupsResponseBodyItemsBackupBackupDownloadLinkByDB backupDownloadLinkByDB;
 
         /**
-         * <p>The URL that is used to download the data backup file over the Internet. If the data backup file cannot be downloaded, null is returned.</p>
+         * <p>The URL that is used to download the backup set over the Internet. If the backup set cannot be downloaded, null is returned.</p>
          * <br>
-         * <p>>  For example, if the instance runs SQL Server and the BackupMethod parameter is set to **Snapshot**, null is returned.</p>
+         * <p>> For example, if BackupMethod of an ApsaraDB RDS for SQL Server instance is set to **Snapshot**, a null string is returned.</p>
          */
         @NameInMap("BackupDownloadURL")
         public String backupDownloadURL;
@@ -184,7 +184,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String backupEndTime;
 
         /**
-         * <p>The ID of the data backup file.</p>
+         * <p>The ID of the backup set.</p>
          */
         @NameInMap("BackupId")
         public String backupId;
@@ -199,15 +199,15 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String backupInitiator;
 
         /**
-         * <p>The URL that is used to download the data backup file over an internal network. If the data backup file cannot be downloaded, null is returned.</p>
+         * <p>The URL that is used to download the backup set over an internal network. If the backup set cannot be downloaded, null is returned.</p>
          * <br>
-         * <p>>  For example, if the instance runs SQL Server and the BackupMethod parameter is set to **Snapshot**, null is returned.</p>
+         * <p>> For example, if BackupMethod of an ApsaraDB RDS for SQL Server instance is set to **Snapshot**, a null string is returned.</p>
          */
         @NameInMap("BackupIntranetDownloadURL")
         public String backupIntranetDownloadURL;
 
         /**
-         * <p>The method that is used to generate the data backup file. Valid values:</p>
+         * <p>The method that is used to generate the backup set. Valid values:</p>
          * <br>
          * <p>*   **Logical**: logical backup</p>
          * <p>*   **Physical**: physical backup</p>
@@ -217,7 +217,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String backupMethod;
 
         /**
-         * <p>The backup mode of the data backup file. Valid values:</p>
+         * <p>The backup mode of the backup set. Valid values:</p>
          * <br>
          * <p>*   **Automated**</p>
          * <p>*   **Manual**</p>
@@ -226,7 +226,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String backupMode;
 
         /**
-         * <p>The size of the data backup file. Unit: bytes.</p>
+         * <p>The backup size. Unit: bytes.</p>
          */
         @NameInMap("BackupSize")
         public Long backupSize;
@@ -238,16 +238,16 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String backupStartTime;
 
         /**
-         * <p>The status of the data backup file.</p>
+         * <p>The status of the backup set.</p>
          */
         @NameInMap("BackupStatus")
         public String backupStatus;
 
         /**
-         * <p>The backup type of the data backup file. Valid values:</p>
+         * <p>The backup type of the backup set. Valid values:</p>
          * <br>
-         * <p>*   **FullBackup**</p>
-         * <p>*   **IncrementalBackup**</p>
+         * <p>*   **FullBackup**: full backup</p>
+         * <p>*   **IncrementalBackup**: incremental backup</p>
          */
         @NameInMap("BackupType")
         public String backupType;
@@ -259,18 +259,17 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String checksum;
 
         /**
-         * <p>The point in time at which the data in the data backup file is consistent. The return value of this parameter is a timestamp.</p>
+         * <p>The point in time at which the data in the backup set is consistent. The return value of this parameter is a timestamp.</p>
          * <br>
-         * <p>>  If the instance runs MySQL 5.6, a timestamp is returned. Otherwise, the value 0 is returned.</p>
+         * <p>> If the instance runs MySQL 5.6, a timestamp is returned. Otherwise, the value 0 is returned.</p>
          */
         @NameInMap("ConsistentTime")
         public Long consistentTime;
 
         /**
-         * <p>The backup mode of the data backup file. Valid values:</p>
+         * <p>The backup mode of the backup set. Valid values:</p>
          * <br>
          * <p>*   0: the standard mode. This mode supports full backups and incremental backups.</p>
-         * <br>
          * <p>*   1: the copy-only mode. This mode supports only full backups.</p>
          * <br>
          * <p>> This parameter is returned only when the instance runs SQL Server.</p>
@@ -279,40 +278,40 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String copyOnlyBackup;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the instance</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
         /**
-         * <p>The encryption information of the data backup file.</p>
+         * <p>The encryption information about the backup set.</p>
          */
         @NameInMap("Encryption")
         public String encryption;
 
         /**
-         * <p>The No. of the instance that generates the data backup file. This parameter is used to indicate whether the instance that generates the data backup file is a primary instance or a secondary instance.</p>
+         * <p>The No. of the instance that generates the backup set. This parameter is used to indicate whether the instance that generates the backup set is a primary instance or a secondary instance.</p>
          */
         @NameInMap("HostInstanceID")
         public String hostInstanceID;
 
         /**
-         * <p>Indicates whether the data backup file is available. Valid values:</p>
+         * <p>Indicates whether the backup set is available. Valid values:</p>
          * <br>
-         * <p>*   **0**: The data backup file is unavailable.</p>
-         * <p>*   **1**: The data backup file is available.</p>
+         * <p>*   **0**: The backup set is unavailable.</p>
+         * <p>*   **1**: The backup set is available.</p>
          */
         @NameInMap("IsAvail")
         public Integer isAvail;
 
         /**
-         * <p>The status of the data backup file that is used to restore individual databases or tables. Valid values:</p>
+         * <p>The status of the backup set that is used to restore individual databases or tables. Valid values:</p>
          * <br>
-         * <p>*   **OK**: The data backup file is normal.</p>
-         * <p>*   **LARGE**: The data backup file contains an abnormally large number of tables. It cannot be used to restore individual databases or tables.</p>
-         * <p>*   **EMPTY**: The data backup file is generated from a failed backup task.</p>
+         * <p>*   **OK**: The backup set is normal.</p>
+         * <p>*   **LARGE**: The backup set contains an abnormally large number of tables. It cannot be used to restore individual databases or tables.</p>
+         * <p>*   **EMPTY**: The backup set is generated from a failed backup task.</p>
          * <br>
-         * <p>>  If an empty string is returned, the data backup file cannot be used to restore individual databases or tables.</p>
+         * <p>> If an empty string is returned, the backup set cannot be used to restore individual databases or tables.</p>
          */
         @NameInMap("MetaStatus")
         public String metaStatus;
@@ -324,7 +323,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The storage class of the data backup file. Valid values:</p>
+         * <p>The storage class of the backup set. Valid values:</p>
          * <br>
          * <p>*   **0**: regular storage</p>
          * <p>*   **1**: archive storage</p>
@@ -333,10 +332,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String storageClass;
 
         /**
-         * <p>Indicates whether the data backup file can be deleted. Valid values:</p>
+         * <p>Indicates whether the backup set can be deleted. Valid values:</p>
          * <br>
-         * <p>*   **Enabled**: The data backup file can be deleted.</p>
-         * <p>*   **Disabled**: The data backup file cannot be deleted.</p>
+         * <p>*   **Enabled**: The backup set can be deleted.</p>
+         * <p>*   **Disabled**: The backup set cannot be deleted.</p>
          */
         @NameInMap("StoreStatus")
         public String storeStatus;

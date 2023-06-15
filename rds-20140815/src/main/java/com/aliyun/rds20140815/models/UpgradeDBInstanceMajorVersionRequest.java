@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
     /**
-     * <p>The time at which ApsaraDB RDS collects the statistics of the new instance. Valid values:</p>
+     * <p>The time at which the system collects the statistics of the new instance. Valid values:</p>
      * <br>
      * <p>*   Before: ApsaraDB RDS collects the statistics of the new instance before the switchover to ensure service stability. If the original instance contains a large amount of data, the upgrade may require a long period of time.</p>
      * <p>*   After: ApsaraDB RDS collects the statistics of the new instance after the switchover to accelerate the upgrade. If you access tables for which no statistics are generated, the execution plans that you specify may be inaccurate. In addition, your database service may be unavailable during peak hours.</p>
      * <br>
-     * <p>> If you set the SwitchOver parameter to false, the value Before of this parameter specifies that ApsaraDB RDS collects the statistics of the new instance before the new instance starts to process read and write requests, and the value After of this parameter specifies that ApsaraDB RDS collects the statistics of the new instance after the new instance starts to process read and write requests.</p>
+     * <p>> If you set SwitchOver to false, the value Before of this parameter specifies that ApsaraDB RDS collects the statistics of the new instance before the new instance starts to process read and write requests, and the value After of this parameter specifies that ApsaraDB RDS collects the statistics of the new instance after the new instance starts to process read and write requests.</p>
      */
     @NameInMap("CollectStatMode")
     public String collectStatMode;
 
     /**
-     * <p>The instance type of the new instance. The vCPU and memory specifications of the new instance must be higher than or equal to the vCPU and memory specifications of the original instance.</p>
+     * <p>The instance type of the new instance. The CPU and memory specifications of the new instance must be higher than or equal to the CPU and memory specifications of the original instance.</p>
      * <br>
      * <p>For example, if the instance type of the original instance is `pg.n2.small.2c`, which provides 1 core and 2 GB of memory, the instance type of the new instance can be `pg.n2.medium.2c`, which provides 2 cores and 4 GB of memory.</p>
      * <br>
@@ -42,7 +42,7 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
      * <p>*   Valid values if you use ESSDs of PL2: 500 to 3200</p>
      * <p>*   Valid values if you use ESSDs of PL3: 1500 to 3200</p>
      * <br>
-     * <p>> If the original instance uses local SSDs, you can reduce the storage capacity of the instance when you upgrade the major engine version of the instance. For more information about the minimum available storage capacity, see [Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance](~~203309~~).</p>
+     * <p>> If the original instance uses local disks, you can reduce the storage capacity of the instance when you upgrade the major engine version of the instance. For more information about the minimum available storage capacity, see [Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance](~~203309~~).</p>
      */
     @NameInMap("DBInstanceStorage")
     public Integer DBInstanceStorage;
@@ -57,11 +57,11 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
      * <p>*   cloud_essd2: ESSD of PL2</p>
      * <p>*   cloud_essd3: ESSD of PL3</p>
      * <br>
-     * <p>The major engine version upgrade feature is based on SSD snapshots. You can select a storage type based on the following conditions:</p>
+     * <p>The major engine version upgrade feature is based on cloud disk snapshots. You can select a storage type based on the following conditions:</p>
      * <br>
      * <p>*   If the original instance uses standard SSDs, you can set this parameter to cloud_ssd.</p>
      * <p>*   If the original instance uses ESSDs, you can set this parameter to cloud_essd, cloud_essd2, or cloud_essd3.</p>
-     * <p>*   If the original instance uses local SSDs, you can set this parameter to cloud_essd, cloud_essd2, or cloud_essd3.</p>
+     * <p>*   If the original instance uses local disks, you can set this parameter to cloud_essd, cloud_essd2, or cloud_essd3.</p>
      */
     @NameInMap("DBInstanceStorageType")
     public String DBInstanceStorageType;
@@ -89,7 +89,7 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The internal IP address of the new instance. You do not need to specify this parameter. ApsaraDB RDS automatically assigns an internal IP address based on the values of the VPCId and vSwitchId parameters.</p>
+     * <p>The internal IP address of the new instance. You do not need to specify this parameter. The system automatically assigns an internal IP address based on the values of the VPCId and vSwitchId parameters.</p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
@@ -98,12 +98,12 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether ApsaraDB RDS automatically switches your workloads over to the new instance after data is migrated to the new instance.</p>
+     * <p>Specifies whether the system automatically switches your workloads over to the new instance after data is migrated to the new instance.</p>
      * <br>
      * <p>Valid values:</p>
      * <br>
-     * <p>*   true: ApsaraDB RDS automatically switches workloads over to the new instance.</p>
-     * <p>*   false: ApsaraDB RDS does not automatically switch your workloads over to the new instance. Before you perform an upgrade, we recommend that you set this parameter to false to test whether the new major engine version is compatible with your workloads.</p>
+     * <p>*   true</p>
+     * <p>*   false Before you perform an upgrade, we recommend that you set this parameter to false to test whether the new major engine version is compatible with your workloads.</p>
      * <br>
      * <p>> </p>
      * <br>
@@ -128,12 +128,12 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
     public String switchTime;
 
     /**
-     * <p>The time at which ApsaraDB RDS switches your workloads over to the new instance. This parameter is used together with the SwitchOver parameter and takes effect only when you set the SwitchOver parameter to true.</p>
+     * <p>The time at which the system switches your workloads over to the new instance. This parameter is used together with SwitchOver and takes effect only when you set SwitchOver to true.</p>
      * <br>
      * <p>Valid values:</p>
      * <br>
-     * <p>*   Immediate: After data is migrated to the new instance, ApsaraDB RDS immediately switches your workloads over to the new instance.</p>
-     * <p>*   MaintainTime: After data is migrated to the new instance, ApsaraDB RDS switches your workloads over to the new instance during the maintenance window that you specify. You can call the [ModifyDBInstanceMaintainTime](~~26249~~) operation to change the maintenance window of an instance.</p>
+     * <p>*   Immediate: After data is migrated to the new instance, the system immediately switches your workloads over to the new instance.</p>
+     * <p>*   MaintainTime: After data is migrated to the new instance, the system switches your workloads over to the new instance during the maintenance window that you specify. You can call the [ModifyDBInstanceMaintainTime](~~26249~~) operation to change the maintenance window of an instance.</p>
      */
     @NameInMap("SwitchTimeMode")
     public String switchTimeMode;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCloudMigrationTaskResponseBody extends TeaModel {
     /**
-     * <p>The name of the ApsaraDB RDS for PostgreSQL instance.</p>
+     * <p>The name of the instance.</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;

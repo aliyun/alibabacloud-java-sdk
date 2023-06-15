@@ -21,7 +21,7 @@ public class CreateMigrateTaskRequest extends TeaModel {
      * <br>
      * <p>Default value: **AsyncExecuteDBCheck** (compatible with SQL Server 2008 R2).</p>
      * <br>
-     * <p>> When you set the **IsOnlineDB** parameter to **True**, the value of this parameter is valid.</p>
+     * <p>> When you set **IsOnlineDB** to **True**, the value of this parameter is valid.</p>
      */
     @NameInMap("CheckDBMode")
     public String checkDBMode;
@@ -33,7 +33,7 @@ public class CreateMigrateTaskRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The name of the database.</p>
+     * <p>The name of the destination database.</p>
      */
     @NameInMap("DBName")
     public String DBName;
@@ -52,14 +52,14 @@ public class CreateMigrateTaskRequest extends TeaModel {
     /**
      * <p>The ID of the migration task.</p>
      * <br>
-     * <p>*   If you set the **BackupMode** parameter to **FULL**, the value of this parameter is empty. The full backup mode is compatible with instance that runs SQL Server 2008 R2.</p>
-     * <p>*   If you set the **BackupMode** parameter to **UPDF**, the value of this parameter is the ID of the required full migration task.</p>
+     * <p>*   If you set **BackupMode** to **FULL**, the value of this parameter is empty. The full backup mode is compatible with instance that runs SQL Server 2008 R2.</p>
+     * <p>*   If you set **BackupMode** to **UPDF**, the value of this parameter is the ID of the required full migration task.</p>
      * <br>
      * <p>> </p>
      * <br>
-     * <p>*   If you set the **IsOnlineDB** parameter to **True**, the value of the **BackupMode** parameter must be **FULL**.</p>
+     * <p>*   If you set **IsOnlineDB** to **True**, the value of **BackupMode** must be **FULL**.</p>
      * <br>
-     * <p>*   If you set the **IsOnlineDB** parameter to **False**, the value of the **BackupMode** parameter must be **UPDF**.</p>
+     * <p>*   If you set **IsOnlineDB** to **False**, the value of **BackupMode** must be **UPDF**.</p>
      */
     @NameInMap("MigrateTaskId")
     public String migrateTaskId;
@@ -79,15 +79,15 @@ public class CreateMigrateTaskRequest extends TeaModel {
      * <br>
      * <p>The values consist of three parts that are separated by colons (:):</p>
      * <br>
-     * <p>*   The OSS endpoint: oss-ap-southeast-1.aliyuncs.com.</p>
-     * <p>*   The name of the OSS bucket: rdsmssqlsingapore.</p>
-     * <p>*   The key of the backup file in the OSS bucket: autotest\_2008R2\_TestMigration_FULL.bak.</p>
+     * <p>*   OSS endpoint: oss-ap-southeast-1.aliyuncs.com.</p>
+     * <p>*   Name of the OSS bucket: rdsmssqlsingapore.</p>
+     * <p>*   Key of the backup file in the OSS bucket: autotest\_2008R2\_TestMigration_FULL.bak.</p>
      * <br>
      * <p>> </p>
      * <br>
      * <p>*   This parameter is optional for instances that run SQL Server 2008 R2.</p>
      * <br>
-     * <p>*   This parameter is required for instances that run a database engine later than SQL Server 2008 R2.</p>
+     * <p>*   This parameter is required for instances that run a database engine version later than SQL Server 2008 R2.</p>
      */
     @NameInMap("OssObjectPositions")
     public String ossObjectPositions;

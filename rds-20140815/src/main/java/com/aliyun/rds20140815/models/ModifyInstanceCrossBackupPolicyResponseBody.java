@@ -7,8 +7,8 @@ public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
     /**
      * <p>The status of the cross-region backup feature on the instance. Valid values:</p>
      * <br>
-     * <p>*   **Disable**: The feature is disabled.</p>
-     * <p>*   **Enable**: The feature is enabled.</p>
+     * <p>*   **Disable**</p>
+     * <p>*   **Enable**</p>
      */
     @NameInMap("BackupEnabled")
     public String backupEnabled;
@@ -26,7 +26,7 @@ public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
     public String crossBackupType;
 
     /**
-     * <p>The ID of the instance</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -34,14 +34,14 @@ public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
     /**
      * <p>The status of the cross-region log backup feature on the instance. Valid values:</p>
      * <br>
-     * <p>*   **Disable**: The feature is disabled.</p>
-     * <p>*   **Enable**: The feature is enabled.</p>
+     * <p>*   **Disable**</p>
+     * <p>*   **Enable**</p>
      */
     @NameInMap("LogBackupEnabled")
     public String logBackupEnabled;
 
     /**
-     * <p>The ID of the region to which the source instance belongs. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the source instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

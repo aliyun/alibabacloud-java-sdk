@@ -36,7 +36,7 @@ public class ModifyDBProxyRequest extends TeaModel {
     /**
      * <p>The network type of the instance. Set the value to **VPC**.</p>
      * <br>
-     * <p>> This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses standard SSDs or enhanced SSDs (ESSDs) or an ApsaraDB RDS for PostgreSQL instance.</p>
+     * <p>> This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses cloud disks or an ApsaraDB RDS for PostgreSQL instance.</p>
      */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
@@ -65,15 +65,15 @@ public class ModifyDBProxyRequest extends TeaModel {
     /**
      * <p>The ID of the virtual private cloud (VPC) to which the instance belongs. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the VPC ID of the instance.</p>
      * <br>
-     * <p>> This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses standard SSDs or ESSDs or an ApsaraDB RDS for PostgreSQL instance</p>
+     * <p>> This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses cloud disks or an ApsaraDB RDS for PostgreSQL instance.</p>
      */
     @NameInMap("VPCId")
     public String VPCId;
 
     /**
-     * <p>The ID of the vSwitch that is associated with the specified VPC. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the vSwitch ID of the instance.</p>
+     * <p>The ID of the vSwitch that is associated with the specified VPC. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the VPC ID of the instance.</p>
      * <br>
-     * <p>> This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses standard SSDs or ESSDs or an ApsaraDB RDS for PostgreSQL instance</p>
+     * <p>> This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses cloud disks or an ApsaraDB RDS for PostgreSQL instance.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;

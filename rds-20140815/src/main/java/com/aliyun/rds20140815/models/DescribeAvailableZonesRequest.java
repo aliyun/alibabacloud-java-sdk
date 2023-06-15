@@ -7,11 +7,17 @@ public class DescribeAvailableZonesRequest extends TeaModel {
     /**
      * <p>The RDS edition of the instance. Valid values:</p>
      * <br>
-     * <p>*   **Basic**: RDS Basic Edition</p>
-     * <p>*   **HighAvailability**: RDS High-availability Edition</p>
-     * <p>*   **AlwaysOn**: RDS Cluster Edition for SQL Server</p>
-     * <p>*   **Finance**: RDS Enterprise Edition</p>
-     * <p>*   **serverless_basic**: RDS Serverless Basic Edition</p>
+     * <p>*   **Basic**: RDS Basic Edition.</p>
+     * <p>*   **HighAvailability**: RDS High-availability Edition.</p>
+     * <p>*   **cluster**: RDS Cluster Edition for MySQL.</p>
+     * <p>*   **AlwaysOn**: RDS Cluster Edition for SQL Server.</p>
+     * <p>*   **Finance**: RDS Enterprise Edition.</p>
+     * <br>
+     * <p>**Serverless instances**</p>
+     * <br>
+     * <p>*   **serverless_basic**: RDS Serverless Basic Edition. This edition is available only for instances that run MySQL and PostgreSQL.</p>
+     * <p>*   **serverless_standard**: RDS Serverless High-availability Edition for MySQL.</p>
+     * <p>*   **serverless_ha** RDS Serverless High-availability Edition for SQL Server.</p>
      */
     @NameInMap("Category")
     public String category;
@@ -36,7 +42,7 @@ public class DescribeAvailableZonesRequest extends TeaModel {
     /**
      * <p>The ID of the primary instance. If you want to query the read-only instances that you can purchase for a primary instance, you can specify this parameter.</p>
      * <br>
-     * <p>If you set the **CommodityCode** parameter to one of the following values, you must specify this parameter:</p>
+     * <p>If you set **CommodityCode** to one of the following values, you must specify this parameter:</p>
      * <br>
      * <p>*   **rords_intl**</p>
      * <p>*   **rds_rordspre_public_intl**</p>
@@ -49,10 +55,8 @@ public class DescribeAvailableZonesRequest extends TeaModel {
     /**
      * <p>Specifies whether to return the zones in which the single-zone deployment method is supported. Valid values:</p>
      * <br>
-     * <p>*   **1**: returns the zones.</p>
+     * <p>*   **1** (default): returns the zones.</p>
      * <p>*   **0**: does not return the zones.</p>
-     * <br>
-     * <p>Default value: **0**.</p>
      * <br>
      * <p>> The single-zone deployment method allows you to deploy an instance that runs RDS Enterprise Edition in a single zone.</p>
      */
@@ -73,10 +77,18 @@ public class DescribeAvailableZonesRequest extends TeaModel {
     /**
      * <p>The database engine version of the instance. Valid values:</p>
      * <br>
-     * <p>*   Valid values when you set the Engine parameter to MySQL: **5.5, 5.6, 5.7, and 8.0**</p>
-     * <p>*   Valid values when you set the Engine parameter to SQLServer: **2008r2, 08r2\_ent_ha, 2012, 2012\_ent_ha, 2012\_std_ha, 2012\_web, 2014\_std_ha, 2016\_ent_ha, 2016\_std_ha, 2016\_web, 2017\_std_ha, 2017\_ent, 2019\_std_ha, and 2019\_ent**</p>
-     * <p>*   Valid values when you set the Engine parameter to PostgreSQL: **10.0, 11.0, 12.0, 13.0, 14.0, and 15.0**</p>
-     * <p>*   Valid values when you set the Engine parameter to MariaDB: **10.3**</p>
+     * <p>*   Valid values if you set Engine to MySQL: **5.5**, **5.6**, **5.7**, and **8.0**</p>
+     * <p>*   Valid values if you set Engine to SQLServer: **2008r2**, **08r2\_ent_ha**, **2012**, **2012\_ent_ha**, **2012\_std_ha**, **2012\_web**, **2014\_std_ha**, **2016\_ent_ha**, **2016\_std_ha**, **2016\_web**, **2017\_std_ha**, **2017\_ent**, **2019\_std_ha**, and **2019\_ent**</p>
+     * <p>*   Valid values if you set Engine to PostgreSQL: **10.0**, **11.0**, **12.0**, **13.0**, **14.0**, and **15.0**</p>
+     * <p>*   Valid value if you set Engine to MariaDB: **10.3**</p>
+     * <br>
+     * <p>**Serverless instances**</p>
+     * <br>
+     * <p>*   Valid values if you set Engine to MySQL: **5.7** and **8.0**</p>
+     * <p>*   Valid values if you set Engine to SQLServer: **2016\_std_sl**, **2017\_std_sl**, and **2019\_std_sl**</p>
+     * <p>*   Valid value if you set Engine to PostgreSQL: **14.0**</p>
+     * <br>
+     * <p>> ApsaraDB RDS for MariaDB does not support serverless instances.</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;

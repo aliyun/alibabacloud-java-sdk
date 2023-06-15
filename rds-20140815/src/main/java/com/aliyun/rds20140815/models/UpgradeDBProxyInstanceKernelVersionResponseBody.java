@@ -17,7 +17,7 @@ public class UpgradeDBProxyInstanceKernelVersionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The task ID.</p>
      */
     @NameInMap("TaskId")
     public String taskId;

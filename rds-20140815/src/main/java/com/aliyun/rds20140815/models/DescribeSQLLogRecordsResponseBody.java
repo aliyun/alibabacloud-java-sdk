@@ -29,7 +29,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalRecordCount")
     public Long totalRecordCount;
@@ -93,7 +93,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
         public String DBName;
 
         /**
-         * <p>The time at which the SQL statement was executed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time at which the SQL statement was executed. The time follows the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("ExecuteTime")
         public String executeTime;

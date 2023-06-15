@@ -14,7 +14,7 @@ public class CreateParameterGroupRequest extends TeaModel {
     public String engine;
 
     /**
-     * <p>The database engine version that is run on the instance. Valid values:</p>
+     * <p>The database engine version of the instance.</p>
      * <br>
      * <p>*   If the instance runs MySQL, the instance must run one of the following MySQL versions:</p>
      * <br>
@@ -29,6 +29,7 @@ public class CreateParameterGroupRequest extends TeaModel {
      * <p>    *   **12.0**</p>
      * <p>    *   **13.0**</p>
      * <p>    *   **14.0**</p>
+     * <p>    *   **15.0**</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
@@ -37,7 +38,7 @@ public class CreateParameterGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The description of the parameter template. The description can be up to 200 characters in length.</p>
+     * <p>The description of the parameter template. The value can be up to 200 characters in length.</p>
      */
     @NameInMap("ParameterGroupDesc")
     public String parameterGroupDesc;
@@ -45,8 +46,8 @@ public class CreateParameterGroupRequest extends TeaModel {
     /**
      * <p>The name of the parameter template.</p>
      * <br>
-     * <p>*   The name can contain letters, digits, periods (.), and underscores (\_) and must start with a letter.</p>
-     * <p>*   The name can be 8 to 64 characters in length.</p>
+     * <p>*   The value must start with a letter and can contain letters, digits, periods (.), and underscores (\_).</p>
+     * <p>*   The value can be 8 to 64 characters in length.</p>
      */
     @NameInMap("ParameterGroupName")
     public String parameterGroupName;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstancesForCloneRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the generated token is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -46,7 +46,7 @@ public class DescribeDBInstancesForCloneRequest extends TeaModel {
     public String DBInstanceStatus;
 
     /**
-     * <p>The role of the instance. Valid values:</p>
+     * <p>The role of the instance that you want to query. Valid values:</p>
      * <br>
      * <p>*   **Primary**: primary instance</p>
      * <p>*   **Readonly**: read-only instance</p>
@@ -73,7 +73,7 @@ public class DescribeDBInstancesForCloneRequest extends TeaModel {
     public String engine;
 
     /**
-     * <p>The database engine version of the instance.</p>
+     * <p>The version of the database engine.</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
@@ -81,8 +81,8 @@ public class DescribeDBInstancesForCloneRequest extends TeaModel {
     /**
      * <p>Specifies whether the instance expires. Valid values:</p>
      * <br>
-     * <p>*   **True**: the instance has expired.</p>
-     * <p>*   **False**: the instance that has not expired.</p>
+     * <p>*   **True**: queries the instances that have expired.</p>
+     * <p>*   **False**: does not query instances that have expired.</p>
      */
     @NameInMap("Expired")
     public String expired;

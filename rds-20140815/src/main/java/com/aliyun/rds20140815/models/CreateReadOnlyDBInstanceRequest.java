@@ -4,17 +4,26 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CreateReadOnlyDBInstanceRequest extends TeaModel {
+    @NameInMap("AutoPay")
+    public Boolean autoPay;
+
     /**
-     * <p>Specifies whether to enable auto-renewal for the read-only instance. If you set the PayType parameter to Prepaid, you must also specify this parameter. Valid values:</p>
+     * <p>Specifies whether to enable the auto-renewal feature for the read-only instance. If you set the PayType parameter to Prepaid, you must also specify this parameter. Valid values:</p>
      * <br>
-     * <p>*   **true**: enables auto-renewal for the read-only instance.</p>
-     * <p>*   **false**: disables auto-renewal for the read-only instance.</p>
+     * <p>*   **true**: enables the feature.</p>
+     * <p>*   **false**: disables the feature.</p>
      * <br>
-     * <p>> *   If you set the Period parameter to Month, the auto-renewal cycle is one month.</p>
-     * <p>> *   If you set the Period parameter to Year, the auto-renewal cycle is one year.</p>
+     * <p>> * If you set the Period parameter to Month, the auto-renewal cycle is one month.</p>
+     * <p>> * If you set the Period parameter to Year, the auto-renewal cycle is one year.</p>
      */
     @NameInMap("AutoRenew")
     public String autoRenew;
+
+    @NameInMap("BpeEnabled")
+    public String bpeEnabled;
+
+    @NameInMap("BurstingEnabled")
+    public Boolean burstingEnabled;
 
     /**
      * <p>The RDS edition of the read-only instance. Valid values:</p>
@@ -23,13 +32,13 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
      * <p>*   **HighAvailability**: RDS High-availability Edition. This is the default value.</p>
      * <p>*   **AlwaysOn**: RDS Cluster Edition.</p>
      * <br>
-     * <p>> If the primary instance runs PostgreSQL with standard SSDs or ESSDs, you must set this parameter to **Basic**.</p>
+     * <p>> If the primary instance runs PostgreSQL with cloud disks, you must set this parameter to **Basic**.</p>
      */
     @NameInMap("Category")
     public String category;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -63,14 +72,14 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     /**
      * <p>The storage type of the read-only instance. Valid values:</p>
      * <br>
-     * <p>*   **local_ssd**: local SSDs</p>
-     * <p>*   **cloud_ssd**: standard SSDs</p>
-     * <p>*   **cloud_essd**: ESSDs of performance level 1 (PL1)</p>
-     * <p>*   **cloud_essd2**: ESSDs of PL2</p>
-     * <p>*   **cloud_essd3**: ESSDs of PL3</p>
+     * <p>*   **local_ssd**: local SSD</p>
+     * <p>*   **cloud_ssd**: standard SSD</p>
+     * <p>*   **cloud_essd**: enhanced SSD (ESSD) of performance level 1 (PL1)</p>
+     * <p>*   **cloud_essd2**: ESSD of PL2</p>
+     * <p>*   **cloud_essd3**: ESSD of PL3</p>
      * <br>
-     * <p>> *   If the primary instance runs MySQL with local SSDs, you must set this parameter to **local_ssd**. If the primary instance runs MySQL with standard SSDs or ESSDs, you must set this parameter to cloud_ssd, cloud_essd, cloud_essd2, or cloud_essd3.</p>
-     * <p>> *   If the primary instance runs SQL Server, you must set this parameter to cloud_ssd, cloud_essd, cloud_essd2, or cloud_essd3.</p>
+     * <p>> * If the primary instance runs MySQL with local disks, you must set this parameter to **local\_ssd**. If the primary instance runs MySQL with cloud disks, you must set this parameter to cloud\_ssd, cloud\_essd, cloud\_essd2, or cloud\_essd3.</p>
+     * <p>> * If the primary instance runs SQL Server, you must set this parameter to cloud\_ssd, cloud\_essd, cloud\_essd2, or cloud\_essd3.</p>
      */
     @NameInMap("DBInstanceStorageType")
     public String DBInstanceStorageType;
@@ -164,7 +173,7 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the read-only instance belongs.</p>
+     * <p>The ID of the resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -176,7 +185,7 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the host to which the read-only instance belongs. This parameter is valid when you create the read-only instance in a dedicated cluster.</p>
+     * <p>The ID of the host on which the primary instance resides. This parameter is valid when you create the read-only instance in a dedicated cluster.</p>
      */
     @NameInMap("TargetDedicatedHostIdForMaster")
     public String targetDedicatedHostIdForMaster;
@@ -205,16 +214,16 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public String usedTime;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) to which the read-only instance belongs. If you leave the **InstanceNetworkType** parameter empty or set it to **VPC**, you must also specify this parameter.</p>
+     * <p>The virtual private cloud (VPC) ID of the read-only instance. If you leave the **InstanceNetworkType** parameter empty or set it to **VPC**, you must also specify this parameter.</p>
      * <br>
-     * <p>> *   If the primary instance uses local SSDs, the read-only instance and the primary instance can belong to the same VPC or different VPCs.</p>
-     * <p>> *   If the primary instance uses standard SSDs or ESSDs, the read-only instance and the primary instance must belong to the same VPC.</p>
+     * <p>> * If the primary instance uses local disks, the read-only instance and the primary instance can belong to the same VPC or different VPCs.</p>
+     * <p>> * If the primary instance uses cloud disks, the read-only instance and the primary instance must belong to the same VPC.</p>
      */
     @NameInMap("VPCId")
     public String VPCId;
 
     /**
-     * <p>The ID of the vSwitch to which the read-only instance belongs. If you leave the **InstanceNetworkType** parameter empty or set it to **VPC**, you must specify the VSwitchId parameter.</p>
+     * <p>The vSwitch ID of the read-only instance. If you leave the **InstanceNetworkType** parameter empty or set it to **VPC**, you must specify the VSwitchId parameter.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
@@ -230,12 +239,36 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateReadOnlyDBInstanceRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
+        return this;
+    }
+    public Boolean getAutoPay() {
+        return this.autoPay;
+    }
+
     public CreateReadOnlyDBInstanceRequest setAutoRenew(String autoRenew) {
         this.autoRenew = autoRenew;
         return this;
     }
     public String getAutoRenew() {
         return this.autoRenew;
+    }
+
+    public CreateReadOnlyDBInstanceRequest setBpeEnabled(String bpeEnabled) {
+        this.bpeEnabled = bpeEnabled;
+        return this;
+    }
+    public String getBpeEnabled() {
+        return this.bpeEnabled;
+    }
+
+    public CreateReadOnlyDBInstanceRequest setBurstingEnabled(Boolean burstingEnabled) {
+        this.burstingEnabled = burstingEnabled;
+        return this;
+    }
+    public Boolean getBurstingEnabled() {
+        return this.burstingEnabled;
     }
 
     public CreateReadOnlyDBInstanceRequest setCategory(String category) {

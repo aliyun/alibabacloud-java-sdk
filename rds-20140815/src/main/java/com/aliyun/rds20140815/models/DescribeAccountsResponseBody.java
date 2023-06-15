@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAccountsResponseBody extends TeaModel {
     /**
-     * <p>Details of the account.</p>
+     * <p>The details of the accounts.</p>
      */
     @NameInMap("Accounts")
     public DescribeAccountsResponseBodyAccounts accounts;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -23,7 +23,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The first time when the superuser account was enabled. The time follows the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+     * <p>The first time when the superuser account was enabled. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
      */
     @NameInMap("SystemAdminAccountFirstActivationTime")
     public String systemAdminAccountFirstActivationTime;
@@ -35,7 +35,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
     public String systemAdminAccountStatus;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -101,7 +101,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
          * <p>*   **ReadOnly**: read-only permissions</p>
          * <p>*   **DDLOnly**: DDL-only permissions</p>
          * <p>*   **DMLOnly**: DML-only permissions</p>
-         * <p>*   **Custom**: custom permissions (which can be modified by using SQL statements)</p>
+         * <p>*   **Custom**: custom permissions (You can modify the permissions of the account by using SQL commands.)</p>
          */
         @NameInMap("AccountPrivilege")
         public String accountPrivilege;
@@ -176,13 +176,13 @@ public class DescribeAccountsResponseBody extends TeaModel {
         public String accountDescription;
 
         /**
-         * <p>The name of the account.</p>
+         * <p>The username of the account.</p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
-         * <p>The state of the account. Valid values:</p>
+         * <p>The status of the account. Valid values:</p>
          * <br>
          * <p>*   **Unavailable**</p>
          * <p>*   **Available**</p>
@@ -201,12 +201,12 @@ public class DescribeAccountsResponseBody extends TeaModel {
         public String accountType;
 
         /**
-         * <p>Indicates whether the account has the row-level security (RLS) permissions. Valid values: </p>
+         * <p>Indicates whether the account has the row-level security (RLS) permissions. Valid values:</p>
          * <br>
-         * <p>- **t**: The account has the RLS permissions.</p>
-         * <p>- **f**: The account does not have the RLS permissions.</p>
+         * <p>*   **t**: yes</p>
+         * <p>*   **f**: no</p>
          * <br>
-         * <p>>  This parameter is returned only for ApsaraDB RDS for PostgreSQL instances.</p>
+         * <p>> This parameter is returned only for instances that run PostgreSQL.</p>
          */
         @NameInMap("BypassRLS")
         public String bypassRLS;
@@ -214,10 +214,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the account has the permissions to create databases. Valid values:</p>
          * <br>
-         * <p>- **t**: The account has the permissions to create databases.</p>
-         * <p>- **f**: The account does not have the permissions to create databases.</p>
+         * <p>*   **t**: yes</p>
+         * <p>*   **f**: no</p>
          * <br>
-         * <p>>  This parameter is returned only for ApsaraDB RDS for PostgreSQL instances.</p>
+         * <p>> This parameter is returned only for instances that run PostgreSQL.</p>
          */
         @NameInMap("CreateDB")
         public String createDB;
@@ -225,10 +225,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the account has the permissions to create roles. Valid values:</p>
          * <br>
-         * <p>- **t**: The account has the permissions to create roles.</p>
-         * <p>- **f**: The account does not have the permissions to create roles.</p>
+         * <p>*   **t**: yes</p>
+         * <p>*   **f**: no</p>
          * <br>
-         * <p>>  This parameter is returned only for ApsaraDB RDS for PostgreSQL instances.</p>
+         * <p>> This parameter is returned only for instances that run PostgreSQL.</p>
          */
         @NameInMap("CreateRole")
         public String createRole;
@@ -240,7 +240,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         public String DBInstanceId;
 
         /**
-         * <p>Details of the permissions that are granted to the account.</p>
+         * <p>The details of the permissions that are granted to the account.</p>
          */
         @NameInMap("DatabasePrivileges")
         public DescribeAccountsResponseBodyAccountsDBInstanceAccountDatabasePrivileges databasePrivileges;
@@ -248,8 +248,8 @@ public class DescribeAccountsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the number of databases that are managed by the account exceeds the upper limit. Valid values:</p>
          * <br>
-         * <p>*   **1**: The number of databases that are managed by the account exceeds the upper limit.</p>
-         * <p>*   **0**: The number of databases that are managed by the account does not exceed the upper limit.</p>
+         * <p>*   **1**: yes</p>
+         * <p>*   **0**: no</p>
          */
         @NameInMap("PrivExceeded")
         public String privExceeded;
@@ -257,10 +257,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the account has the replication permissions. Valid values:</p>
          * <br>
-         * <p>- **t**: The account has the replication permissions.</p>
-         * <p>- **f**: The account does not have the replication permissions.</p>
+         * <p>*   **t**: yes</p>
+         * <p>*   **f**: no</p>
          * <br>
-         * <p>>  This parameter is returned only for ApsaraDB RDS for PostgreSQL instances.</p>
+         * <p>> This parameter is returned only for instances that run PostgreSQL.</p>
          */
         @NameInMap("Replication")
         public String replication;
@@ -268,11 +268,11 @@ public class DescribeAccountsResponseBody extends TeaModel {
         /**
          * <p>The expiration time of the password. Valid values:</p>
          * <br>
-         * <p>- **infinity**: The password never expires.</p>
-         * <p>- **Empty**: The expiration time is not specified.</p>
-         * <p>- **Actual expiration time** in the format of *yyyy-MM-dd*T*HH:mm:ss*Z in UTC. Example: 2022-10-01T00:00:00Z.</p>
+         * <p>*   **infinity**: The password never expires.</p>
+         * <p>*   **Empty**: The expiration time is not specified.</p>
+         * <p>*   **Actual expiration time** in the format of *yyyy-MM-dd*T*HH:mm:ss*Z in UTC. Example: 2022-10-01T00:00:00Z.</p>
          * <br>
-         * <p>>  This parameter is returned only for ApsaraDB RDS for PostgreSQL instances.</p>
+         * <p>> This parameter is returned only for instances that run PostgreSQL.</p>
          */
         @NameInMap("ValidUntil")
         public String validUntil;

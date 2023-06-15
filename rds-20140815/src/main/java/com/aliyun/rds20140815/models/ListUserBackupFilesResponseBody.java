@@ -57,7 +57,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>The time when the system started to import the full backup file. The value of this parameter is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the system started to import the full backup file. The value is a UNIX timestamp. Unit: milliseconds.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -69,19 +69,19 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
         public String engine;
 
         /**
-         * <p>The database engine version that the instance runs.</p>
+         * <p>The database engine version of the instance.</p>
          */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
         /**
-         * <p>The time when the system finished importing the full backup file. The value of this parameter is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the full backup file is successfully imported. The value is a UNIX timestamp. Unit: milliseconds.</p>
          */
         @NameInMap("FinishTime")
         public String finishTime;
 
         /**
-         * <p>The time when the system finished importing the full backup file. The value of this parameter is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the full backup file is successfully imported. The value is a UNIX timestamp. Unit: milliseconds.</p>
          */
         @NameInMap("ModificationTime")
         public String modificationTime;
@@ -117,7 +117,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
         public Long ossFileSize;
 
         /**
-         * <p>The OSS download URL of the full backup file.</p>
+         * <p>The URL to download the full backup file from the OSS bucket.</p>
          */
         @NameInMap("OssUrl")
         public String ossUrl;

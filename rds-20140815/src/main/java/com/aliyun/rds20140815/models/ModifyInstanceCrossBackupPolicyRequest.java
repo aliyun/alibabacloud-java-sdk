@@ -7,7 +7,7 @@ public class ModifyInstanceCrossBackupPolicyRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the cross-region backup feature on the instance. This parameter specifies whether you can back up data and logs. Valid values:</p>
      * <br>
-     * <p>*   **0:** disables the feature.</p>
+     * <p>*   **0**: disables the feature.</p>
      * <p>*   **1:** enables the feature.</p>
      * <br>
      * <p>> Before you enable the cross-region backup feature, you must configure the CrossBackupRegion parameter.</p>

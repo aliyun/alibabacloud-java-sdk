@@ -5,12 +5,20 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailableClassesRequest extends TeaModel {
     /**
-     * <p>The RDS edition that is run by the instance. Valid values:</p>
+     * <p>The RDS edition of the instance. Valid values:</p>
      * <br>
-     * <p>* **Basic**: Basic Edition</p>
-     * <p>* **HighAvailability**: High-availability Edition</p>
-     * <p>* **AlwaysOn**: Cluster Edition</p>
-     * <p>* **Finance**: Enterprise Edition</p>
+     * <p>*   **Basic**: RDS Basic Edition.</p>
+     * <p>*   **HighAvailability**: RDS High-availability Edition.</p>
+     * <p>*   **AlwaysOn**: RDS Cluster Edition for SQL Server</p>
+     * <p>*   **Finance**: RDS Enterprise Edition</p>
+     * <br>
+     * <p>**Serverless instances**</p>
+     * <br>
+     * <p>*   **serverless_basic**: RDS Serverless Basic Edition. This edition is available only for instances that run MySQL and PostgreSQL.</p>
+     * <p>*   **serverless_standard**: RDS Serverless High-availability Edition for MySQL.</p>
+     * <p>*   **serverless_ha** RDS Serverless High-availability Edition for SQL Server.</p>
+     * <br>
+     * <p>> If you create a serverless instance, you must specify this parameter.</p>
      */
     @NameInMap("Category")
     public String category;
@@ -18,16 +26,18 @@ public class DescribeAvailableClassesRequest extends TeaModel {
     /**
      * <p>The commodity code of the instance. Valid values:</p>
      * <br>
-     * <p>* **bards**: The instance is a pay-as-you-go primary instance. This value is available on the China site (aliyun.com).</p>
-     * <p>* **rds**: The instance is a subscription primary instance. This value is available on the China site (aliyun.com).</p>
-     * <p>* **rords**: The instance is a pay-as-you-go read-only instance. This value is available on the China site (aliyun.com).</p>
-     * <p>* **rds\_rordspre\_public\_cn**: The instance is a subscription read-only instance. This value is available on the China site (aliyun.com).</p>
-     * <p>* **bards_intl**: The instance is a pay-as-you-go primary instance. This value is available on the International site (alibabacloud.com).</p>
-     * <p>* **rds_intl**: The instance is a subscription primary instance. This value is available on the International site (alibabacloud.com).</p>
-     * <p>* **rords_intl**: The instance is a pay-as-you-go read-only instance. This value is available on the International site (alibabacloud.com).</p>
-     * <p>* **rds\_rordspre\_public\_intl**: The instance is a subscription read-only instance. This value is available on the International site (alibabacloud.com).</p>
+     * <p>*   **bards**: The instance is a pay-as-you-go primary instance. This value is available at the China site (aliyun.com).</p>
+     * <p>*   **rds**: The instance is a subscription primary instance. This value is available at the China site (aliyun.com).</p>
+     * <p>*   **rords**: The instance is a pay-as-you-go read-only instance. This value is available at the China site (aliyun.com).</p>
+     * <p>*   **rds_rordspre_public_cn**: The instance is a subscription read-only instance. This value is available at the China site (aliyun.com).</p>
+     * <p>*   **bards_intl**: The instance is a pay-as-you-go primary instance. This value is available at the International site (alibabacloud.com).</p>
+     * <p>*   **rds_intl**: The instance is a subscription primary instance. This value is available at the International site (alibabacloud.com).</p>
+     * <p>*   **rords_intl**: The instance is a pay-as-you-go read-only instance. This value is available at the International site (alibabacloud.com).</p>
+     * <p>*   **rds_rordspre_public_intl**: The instance is a subscription read-only instance. This value is available at the International site (alibabacloud.com).</p>
+     * <p>*   **rds_serverless_public_cn**: The instance is a serverless instance. This value is available at the China site (aliyun.com).</p>
+     * <p>*   **rds_serverless_public_intl**: The instance is a serverless instance. This value is available at the International site (alibabacloud.com).</p>
      * <br>
-     * <p>> If the instance is a read-only instance, you must specify the CommodityCode parameter.</p>
+     * <p>> If you want to query the price of a read-only instance, you must specify this parameter.</p>
      */
     @NameInMap("CommodityCode")
     public String commodityCode;
@@ -39,13 +49,15 @@ public class DescribeAvailableClassesRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The type of storage media that is used for the instance. Valid values:</p>
+     * <p>The storage type of the instance. Valid values:</p>
      * <br>
-     * <p>* **local_ssd**: local SSDs. This is the recommended storage type.</p>
-     * <p>* **cloud_ssd**: standard SSDs.</p>
-     * <p>* **cloud_essd**: enhanced SSDs (ESSDs) of performance level 1 (PL1).</p>
-     * <p>* **cloud_essd2**: ESSDs of PL2.</p>
-     * <p>* **cloud_essd3**: ESSDs of PL3.</p>
+     * <p>*   **local_ssd**: local SSD. This is the recommended storage type.</p>
+     * <p>*   **cloud_ssd**: standard SSD.</p>
+     * <p>*   **cloud_essd**: enhanced SSDs (ESSDs) of performance level 1 (PL1)</p>
+     * <p>*   **cloud_essd2**: ESSDs of PL2</p>
+     * <p>*   **cloud_essd3**: ESSD of PL3</p>
+     * <br>
+     * <p>> Serverless instances support only ESSDs of PL 1. For a serverless instance, you must set this parameter to **cloud_essd**.</p>
      */
     @NameInMap("DBInstanceStorageType")
     public String DBInstanceStorageType;
@@ -62,12 +74,20 @@ public class DescribeAvailableClassesRequest extends TeaModel {
     public String engine;
 
     /**
-     * <p>The version of the database engine that is run by the instance. Valid values:</p>
+     * <p>The database engine version of the instance. Valid values:</p>
      * <br>
-     * <p>* Values that are valid if you set the Engine parameter to MySQL: **5.5, 5.6, 5.7, and 8.0**</p>
-     * <p>* Values that are valid if you set the Engine parameter to SQL Server: **2008r2, 08r2\_ent\_ha, 2012, 2012\_ent\_ha, 2012\_std\_ha, 2012\_web, 2014\_std\_ha, 2016\_ent_ha, 2016\_std\_ha, 2016\_web, 2017\_std\_ha, 2017\_ent, 2019\_std\_ha, and 2019\_ent**</p>
-     * <p>* Values that are valid if you set the Engine parameter to PostgreSQL: **10.0, 11.0, 12.0, 13.0 and 14.0**</p>
-     * <p>* Values that are valid if you set the Engine parameter to MariaDB: **10.3**</p>
+     * <p>*   Valid values if you set Engine to MySQL: **5.5, 5.6, 5.7, and 8.0**</p>
+     * <p>*   Valid values if you set Engine to SQLServer: **2008r2, 08r2\_ent_ha, 2012, 2012\_ent_ha, 2012\_std_ha, 2012\_web, 2014\_std_ha, 2016\_ent_ha, 2016\_std_ha, 2016\_web, 2017\_std_ha, 2017\_ent, 2019\_std_ha, and 2019\_ent**</p>
+     * <p>*   Valid values if you set Engine to PostgreSQL: **10.0, 11.0, 12.0, 13.0, 14.0, and 15.0**</p>
+     * <p>*   Valid value if you set Engine to MariaDB: **10.3**</p>
+     * <br>
+     * <p>**Serverless instances**</p>
+     * <br>
+     * <p>*   Valid values if you set Engine to MySQL: **5.7** and **8.0**</p>
+     * <p>*   Valid values if you set Engine to SQLServer: **SQL Server**, **SQL Server**, and **SQL Server**</p>
+     * <p>*   Valid value if you set Engine to PostgreSQL: **14.0**</p>
+     * <br>
+     * <p>> ApsaraDB RDS for MariaDB does not support serverless instances.</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
@@ -75,8 +95,11 @@ public class DescribeAvailableClassesRequest extends TeaModel {
     /**
      * <p>The billing method of the instance. Valid values:</p>
      * <br>
-     * <p>* **Prepaid**: subscription</p>
-     * <p>* **Postpaid**: pay-as-you-go</p>
+     * <p>*   **Prepaid**: subscription</p>
+     * <p>*   **Postpaid**: pay-as-you-go</p>
+     * <p>*   **Serverless**: serverless</p>
+     * <br>
+     * <p>> ApsaraDB RDS for MariaDB does not support serverless instances.</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;

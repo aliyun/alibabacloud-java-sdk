@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GrantAccountPrivilegeRequest extends TeaModel {
     /**
-     * <p>The name of the account.</p>
+     * <p>The username of the account.</p>
      */
     @NameInMap("AccountName")
     public String accountName;
@@ -18,9 +18,13 @@ public class GrantAccountPrivilegeRequest extends TeaModel {
      * <p>*   **DDLOnly**: DDL-only permissions</p>
      * <p>*   **DMLOnly**: DML-only permissions</p>
      * <p>*   **DBOwner**: database owner permissions</p>
-     * <p>> *   If the instance runs MySQL or MariaDB, you can set this parameter to **ReadWrite**, **ReadOnly**, **DDLOnly**, or **DMLOnly**.</p>
-     * <p>> *   If the instance runs SQL Server, you can set this parameter to **ReadWrite**, **ReadOnly**, or **DBOwner**.</p>
-     * <p>> *   If the instance runs PostgreSQL with standard SSDs or enhanced SSDs (ESSDs), you can set this parameter only to **DBOwner**.</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   If the instance runs MySQL or MariaDB, you can set this parameter to **ReadWrite**, **ReadOnly**, **DDLOnly**, or **DMLOnly**.</p>
+     * <br>
+     * <p>*   If the instance runs SQL Server, you can set this parameter to **ReadWrite**, **ReadOnly**, or **DBOwner**.</p>
+     * <p>*   If the instance runs PostgreSQL and uses cloud disks, you can set this parameter to **DBOwner**.</p>
      */
     @NameInMap("AccountPrivilege")
     public String accountPrivilege;

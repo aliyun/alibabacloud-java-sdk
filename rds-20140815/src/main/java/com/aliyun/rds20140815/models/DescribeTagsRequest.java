@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class DescribeTagsRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
      * <br>
-     * <p>>  If you specify this parameter, the other filtering conditions are invalid.</p>
+     * <p>> If you specify this parameter, all tags that are added to the instance are queried. Other filter conditions are invalid.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -37,13 +37,13 @@ public class DescribeTagsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource. Set the value to **INSTANCE**.</p>
+     * <p>The type of resource. Set the value to INSTANCE.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The tags to be queried. Each tag includes a TagKey and a TagValue. Format: {"key1":"value1"}.</p>
+     * <p>The tag that you want to query. The value of the parameter consists of TagKey and TagValue. Format: `{"TagKey":"TagValue"}`.</p>
      */
     @NameInMap("Tags")
     public String tags;

@@ -17,13 +17,13 @@ public class DescribeDBInstanceIPArrayListRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The network type of IP address whitelist to query. Valid values:</p>
+     * <p>The network type of the IP address whitelist. Valid values:</p>
      * <br>
-     * <p>*   **Classic**: classic network type. This value applies in enhanced whitelist mode.</p>
-     * <p>*   **VPC**: VPC network type. This value applies in enhanced whitelist mode.</p>
-     * <p>*   **MIX**: classic and VPC network types. This value applies in standard whitelist mode.</p>
+     * <p>*   **Classic**: classic network in enhanced whitelist mode</p>
+     * <p>*   **VPC**: virtual private cloud (VPC) in enhanced whitelist mode</p>
+     * <p>*   **MIX**: standard whitelist mode</p>
      * <br>
-     * <p>This operation returns IP address whitelists of all network types by default.</p>
+     * <p>By default, this operation returns IP address whitelists of all network types.</p>
      */
     @NameInMap("WhitelistNetworkType")
     public String whitelistNetworkType;

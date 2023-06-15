@@ -11,7 +11,7 @@ public class DescribeParametersResponseBody extends TeaModel {
     public DescribeParametersResponseBodyConfigParameters configParameters;
 
     /**
-     * <p>The database engine of the instance.</p>
+     * <p>The type of the database engine.</p>
      */
     @NameInMap("Engine")
     public String engine;
@@ -21,6 +21,9 @@ public class DescribeParametersResponseBody extends TeaModel {
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
+
+    @NameInMap("ParamGroupInfo")
+    public DescribeParametersResponseBodyParamGroupInfo paramGroupInfo;
 
     /**
      * <p>The ID of the request.</p>
@@ -61,6 +64,14 @@ public class DescribeParametersResponseBody extends TeaModel {
     }
     public String getEngineVersion() {
         return this.engineVersion;
+    }
+
+    public DescribeParametersResponseBody setParamGroupInfo(DescribeParametersResponseBodyParamGroupInfo paramGroupInfo) {
+        this.paramGroupInfo = paramGroupInfo;
+        return this;
+    }
+    public DescribeParametersResponseBodyParamGroupInfo getParamGroupInfo() {
+        return this.paramGroupInfo;
     }
 
     public DescribeParametersResponseBody setRequestId(String requestId) {
@@ -144,6 +155,58 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
         public java.util.List<DescribeParametersResponseBodyConfigParametersDBInstanceParameter> getDBInstanceParameter() {
             return this.DBInstanceParameter;
+        }
+
+    }
+
+    public static class DescribeParametersResponseBodyParamGroupInfo extends TeaModel {
+        @NameInMap("ParamGroupId")
+        public String paramGroupId;
+
+        @NameInMap("ParameterGroupDesc")
+        public String parameterGroupDesc;
+
+        @NameInMap("ParameterGroupName")
+        public String parameterGroupName;
+
+        @NameInMap("ParameterGroupType")
+        public String parameterGroupType;
+
+        public static DescribeParametersResponseBodyParamGroupInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeParametersResponseBodyParamGroupInfo self = new DescribeParametersResponseBodyParamGroupInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeParametersResponseBodyParamGroupInfo setParamGroupId(String paramGroupId) {
+            this.paramGroupId = paramGroupId;
+            return this;
+        }
+        public String getParamGroupId() {
+            return this.paramGroupId;
+        }
+
+        public DescribeParametersResponseBodyParamGroupInfo setParameterGroupDesc(String parameterGroupDesc) {
+            this.parameterGroupDesc = parameterGroupDesc;
+            return this;
+        }
+        public String getParameterGroupDesc() {
+            return this.parameterGroupDesc;
+        }
+
+        public DescribeParametersResponseBodyParamGroupInfo setParameterGroupName(String parameterGroupName) {
+            this.parameterGroupName = parameterGroupName;
+            return this;
+        }
+        public String getParameterGroupName() {
+            return this.parameterGroupName;
+        }
+
+        public DescribeParametersResponseBodyParamGroupInfo setParameterGroupType(String parameterGroupType) {
+            this.parameterGroupType = parameterGroupType;
+            return this;
+        }
+        public String getParameterGroupType() {
+            return this.parameterGroupType;
         }
 
     }

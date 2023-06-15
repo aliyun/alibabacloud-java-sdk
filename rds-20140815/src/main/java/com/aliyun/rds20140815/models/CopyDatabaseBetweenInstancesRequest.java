@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CopyDatabaseBetweenInstancesRequest extends TeaModel {
     /**
-     * <p>The ID of the backup set by which you want to restore databases of the source instance. You can call the [DescribeBackups](~~26273~~) operation to obtain the IDs of backup sets.</p>
+     * <p>The ID of the backup set by which you want to restore databases of the source instance. You can call the [DescribeBackups](~~26273~~) operation to obtain the ID of the backup set.</p>
      * <br>
-     * <p>> You must specify one of the **BackupId** and **RestoreTime** parameters.</p>
+     * <p>> You must specify one of **BackupId** and **RestoreTime**.</p>
      */
     @NameInMap("BackupId")
     public String backupId;
@@ -30,7 +30,7 @@ public class CopyDatabaseBetweenInstancesRequest extends TeaModel {
     /**
      * <p>The point in time when the system replicates databases. You can select a point in time within the backup retention period. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
      * <br>
-     * <p>> You must specify one of the **BackupId** and **RestoreTime** parameters.</p>
+     * <p>> You must specify one of **BackupId** and **RestoreTime**.</p>
      */
     @NameInMap("RestoreTime")
     public String restoreTime;
@@ -38,8 +38,8 @@ public class CopyDatabaseBetweenInstancesRequest extends TeaModel {
     /**
      * <p>Specifies whether to copy users and permissions.</p>
      * <br>
-     * <p>*   **YES**: copies users and permissions. If the destination instance has a user whose name is the same as a user in the source instance, the permissions of the user in the source instance will also be granted to the user in the destination instance after you copy user permissions.</p>
-     * <p>*   **NO**: does not copy users and permissions.</p>
+     * <p>*   **YES**: replicates users and permissions. If the destination instance has a user whose name is the same as a user in the source instance, the permissions of the user in the source instance will also be granted to the user in the destination instance after you replicate user permissions.</p>
+     * <p>*   **NO**: does not replicate users and permissions.</p>
      * <br>
      * <p>Default value: **NO**.</p>
      */

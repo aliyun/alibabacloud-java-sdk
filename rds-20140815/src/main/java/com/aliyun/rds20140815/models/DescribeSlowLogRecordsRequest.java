@@ -4,23 +4,17 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlowLogRecordsRequest extends TeaModel {
-    /**
-     * <p>The ID of the instance.</p>
-     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    /**
-     * <p>The name of the database.</p>
-     */
     @NameInMap("DBName")
     public String DBName;
 
-    /**
-     * <p>The end of the time range to query. The end time must be later than the start time. The time span between the start time and the end time must be less than 31 days. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
-     */
     @NameInMap("EndTime")
     public String endTime;
+
+    @NameInMap("NodeId")
+    public String nodeId;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -28,19 +22,9 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The number of the page to return. Valid values: any non-zero positive integer.</p>
-     * <br>
-     * <p>>  Default value: **1**.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries to return on each page. Valid values: **30** to **100**.</p>
-     * <br>
-     * <p>>  Default value: **30**.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -50,15 +34,9 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The unique ID of the SQL statement. The ID is used to obtain the slow query logs of the SQL statement.</p>
-     */
     @NameInMap("SQLHASH")
     public String SQLHASH;
 
-    /**
-     * <p>The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
-     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -89,6 +67,14 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeSlowLogRecordsRequest setNodeId(String nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+    public String getNodeId() {
+        return this.nodeId;
     }
 
     public DescribeSlowLogRecordsRequest setOwnerAccount(String ownerAccount) {

@@ -11,7 +11,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     public DescribeDBInstancesResponseBodyItems items;
 
     /**
-     * <p>The token that is used to display the next page. If the returned entries are displayed on multiple pages, the next page can be displayed when you call this operation again with the **NextToken** parameter specified.</p>
+     * <p>The token that is used to display the next page. If the returned entries are displayed on multiple pages, the next page can be displayed when you call this operation again with **NextToken** specified.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -19,7 +19,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
      * <br>
-     * <p>> If you specify the **MaxResults** parameter or the **NextToken** parameter, only the value **1** is returned. You can ignore the value 1.</p>
+     * <p>> If you specify **MaxResults** or **NextToken**, only the value **1** is returned. You can ignore the value 1.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -37,9 +37,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of entries returned.</p>
      * <br>
-     * <p>> If you specify the **MaxResults** parameter or the **NextToken** parameter, only the number of entries on the current page is returned. You can ignore the number.</p>
+     * <p>> If you specify **MaxResults** or **NextToken**, only the number of entries on the current page is returned. You can ignore the number.</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -99,7 +99,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
     public static class DescribeDBInstancesResponseBodyItemsDBInstanceReadOnlyDBInstanceIdsReadOnlyDBInstanceId extends TeaModel {
         /**
-         * <p>The ID of the read-only RDS instance.</p>
+         * <p>The ID of the read-only instance.</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
@@ -139,6 +139,12 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancesResponseBodyItemsDBInstance extends TeaModel {
+        @NameInMap("BpeEnabled")
+        public String bpeEnabled;
+
+        @NameInMap("BurstingEnabled")
+        public Boolean burstingEnabled;
+
         /**
          * <p>The RDS edition of the instance. Valid values:</p>
          * <br>
@@ -146,7 +152,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
          * <p>*   **HighAvailability**: RDS High-availability Edition</p>
          * <p>*   **Finance**: RDS Enterprise Edition</p>
          * <br>
-         * <p>> This parameter is returned only when the **InstanceLevel** parameter is set to **1**.</p>
+         * <p>> This parameter is returned only when **InstanceLevel** is set to **1**.</p>
          */
         @NameInMap("Category")
         public String category;
@@ -167,7 +173,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String connectionString;
 
         /**
-         * <p>The time when the instance was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The creation time of the instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -191,10 +197,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String DBInstanceId;
 
         /**
-         * <p>The type of network connection to the instance. Valid values:</p>
+         * <p>The type of the network connection to the instance. Valid values:</p>
          * <br>
-         * <p>*   **Internet**: Internet</p>
-         * <p>*   **Intranet**: internal network</p>
+         * <p>*   **Internet**</p>
+         * <p>*   **Intranet**</p>
          */
         @NameInMap("DBInstanceNetType")
         public String DBInstanceNetType;
@@ -304,7 +310,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String destroyTime;
 
         /**
-         * <p>The type of the database engine.</p>
+         * <p>The database engine of the instance.</p>
          */
         @NameInMap("Engine")
         public String engine;
@@ -324,7 +330,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String expireTime;
 
         /**
-         * <p>The name of the dedicated cluster to which the instance belongs. This parameter is returned only when the instance runs MySQL on RDS Standard Edition and is created in a dedicated cluster.</p>
+         * <p>The name of the dedicated cluster to which the instance belongs. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition.</p>
          */
         @NameInMap("GeneralGroupName")
         public String generalGroupName;
@@ -399,13 +405,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the resource group to which the instance belongs.</p>
+         * <p>The ID of the resource group.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>Indicates whether the instance supports weight-based switchovers for high availability. This parameter is returned only when the instance runs MySQL on RDS Standard Edition and is created in a dedicated cluster. Valid values:</p>
+         * <p>Indicates whether the instance supports weight-based switchovers for high availability. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition. Valid values:</p>
          * <br>
          * <p>*   **100**: The instance supports weight-based switchovers for high availability.</p>
          * <p>*   **0**: The instance does not support weight-based switchovers for high availability.</p>
@@ -420,13 +426,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String tempDBInstanceId;
 
         /**
-         * <p>The information about the exception that is detected on the instance. This parameter is returned only when the instance runs MySQL on RDS Standard Edition and is created in a dedicated cluster.</p>
+         * <p>The information about the exception that is detected on the instance. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition.</p>
          */
         @NameInMap("Tips")
         public String tips;
 
         /**
-         * <p>The severity level of the exception that is detected on the instance. This parameter is returned only when the instance runs MySQL on RDS Standard Edition and is created in a dedicated cluster. Valid values:</p>
+         * <p>The severity level of the exception that is detected on the instance. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition. Valid values:</p>
          * <br>
          * <p>*   **1**: The instance is normal.</p>
          * <p>*   **2**: The specifications of the read-only instances do not match the specifications of the primary instance, and the performance is affected. You must adjust the specifications of these instances based on your business requirements.</p>
@@ -435,19 +441,19 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public Integer tipsLevel;
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The vSwitch ID of the instance.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
-         * <p>The ID of the VPC. This parameter is returned only when the instance resides in a VPC.</p>
+         * <p>The VPC ID of the instance. This parameter is returned only when the instance resides in a VPC.</p>
          */
         @NameInMap("VpcCloudInstanceId")
         public String vpcCloudInstanceId;
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The VPC ID of the instance.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
@@ -467,6 +473,22 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public static DescribeDBInstancesResponseBodyItemsDBInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstancesResponseBodyItemsDBInstance self = new DescribeDBInstancesResponseBodyItemsDBInstance();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setBpeEnabled(String bpeEnabled) {
+            this.bpeEnabled = bpeEnabled;
+            return this;
+        }
+        public String getBpeEnabled() {
+            return this.bpeEnabled;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setBurstingEnabled(Boolean burstingEnabled) {
+            this.burstingEnabled = burstingEnabled;
+            return this;
+        }
+        public Boolean getBurstingEnabled() {
+            return this.burstingEnabled;
         }
 
         public DescribeDBInstancesResponseBodyItemsDBInstance setCategory(String category) {

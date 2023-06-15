@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ActivateMigrationTargetInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
+     * <p>The ID of the destination instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the IDs of instances.</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
     /**
-     * <p>Specifies whether to forcefully perform a switchover. Set the value to 1. The value 1 specifies that a forceful switchover is performed.</p>
+     * <p>Specifies whether to forcefully perform a switchover. Set the value to 1. The value 1 specifies a forceful switchover.</p>
      */
     @NameInMap("ForceSwitch")
     public String forceSwitch;
@@ -28,7 +28,7 @@ public class ActivateMigrationTargetInstanceRequest extends TeaModel {
     /**
      * <p>The time when you want to perform the switchover.</p>
      * <br>
-     * <p>Set the value to 0. The value 0 specifies that an immediate switchover is performed.</p>
+     * <p>Set the value to 0. The value 0 specifies an immediate switchover.</p>
      */
     @NameInMap("SwitchTimeMode")
     public String switchTimeMode;

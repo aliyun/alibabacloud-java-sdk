@@ -11,9 +11,9 @@ public class CancelImportRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The ID of the migration task that you want to cancel.</p>
+     * <p>The ID of the migration task.</p>
      * <br>
-     * <p>>  This parameter is returned when the migration task is started. For more information, see [ImportDatabaseBetweenInstances](~~26301~~).</p>
+     * <p>> This parameter is returned when the migration task is started. For more information, see [ImportDatabaseBetweenInstances](~~26301~~).</p>
      */
     @NameInMap("ImportId")
     public Integer importId;

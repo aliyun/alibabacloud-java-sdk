@@ -7,7 +7,7 @@ public class CreateDdrInstanceResponseBody extends TeaModel {
     /**
      * <p>The endpoint that is used to connect to the destination instance.</p>
      * <br>
-     * <p>> The **DBInstanceNetType** parameter indicates whether the endpoint is internal or public.</p>
+     * <p>> **DBInstanceNetType** indicates whether the endpoint is internal or public.</p>
      */
     @NameInMap("ConnectionString")
     public String connectionString;
@@ -27,7 +27,7 @@ public class CreateDdrInstanceResponseBody extends TeaModel {
     /**
      * <p>The port number that is used to connect to the destination instance.</p>
      * <br>
-     * <p>> The **DBInstanceNetType** parameter indicates whether the port is internal or public.</p>
+     * <p>> **DBInstanceNetType** indicates whether the port is internal or public.</p>
      */
     @NameInMap("Port")
     public String port;

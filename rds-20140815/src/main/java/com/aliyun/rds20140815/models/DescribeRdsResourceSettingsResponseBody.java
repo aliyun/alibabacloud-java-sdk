@@ -4,15 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
-    /**
-     * <p>The details about notification settings for an instance.</p>
-     */
     @NameInMap("RdsInstanceResourceSettings")
     public DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettings rdsInstanceResourceSettings;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,57 +32,30 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
     }
 
     public static class DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting extends TeaModel {
-        /**
-         * <p>The end of the time range. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.</p>
-         */
         @NameInMap("EndDate")
         public String endDate;
 
-        /**
-         * <p>IsTop.</p>
-         */
         @NameInMap("IsTop")
         public String isTop;
 
-        /**
-         * <p>The content in the notification bar.</p>
-         */
         @NameInMap("NoticeBarContent")
         public String noticeBarContent;
 
-        /**
-         * <p>The text of the button.</p>
-         */
         @NameInMap("PoppedUpButtonText")
         public String poppedUpButtonText;
 
-        /**
-         * <p>The type of the button. Valid values:</p>
-         */
         @NameInMap("PoppedUpButtonType")
         public String poppedUpButtonType;
 
-        /**
-         * <p>The link of the button.</p>
-         */
         @NameInMap("PoppedUpButtonUrl")
         public String poppedUpButtonUrl;
 
-        /**
-         * <p>The content.</p>
-         */
         @NameInMap("PoppedUpContent")
         public String poppedUpContent;
 
-        /**
-         * <p>The location of the notification.</p>
-         */
         @NameInMap("ResourceNiche")
         public String resourceNiche;
 
-        /**
-         * <p>The beginning of the time range. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.</p>
-         */
         @NameInMap("StartDate")
         public String startDate;
 

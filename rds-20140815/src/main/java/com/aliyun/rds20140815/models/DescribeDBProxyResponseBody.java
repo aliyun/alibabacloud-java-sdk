@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBProxyResponseBody extends TeaModel {
+    /**
+     * <p>The list of zones that are available for the database proxy.</p>
+     */
     @NameInMap("DBProxyAVZones")
     public DescribeDBProxyResponseBodyDBProxyAVZones DBProxyAVZones;
 
@@ -14,19 +17,19 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     public DescribeDBProxyResponseBodyDBProxyConnectStringItems DBProxyConnectStringItems;
 
     /**
-     * <p>An internal parameter. You do not need to specify this parameter.</p>
+     * <p>An internal parameter. You can ignore this parameter.</p>
      */
     @NameInMap("DBProxyEngineType")
     public String DBProxyEngineType;
 
     /**
-     * <p>The proxy version that is run by the instance.</p>
+     * <p>The version of the proxy instance.</p>
      */
     @NameInMap("DBProxyInstanceCurrentMinorVersion")
     public String DBProxyInstanceCurrentMinorVersion;
 
     /**
-     * <p>The latest proxy version that is available for the instance.</p>
+     * <p>The latest version that is available for the proxy instance.</p>
      */
     @NameInMap("DBProxyInstanceLatestMinorVersion")
     public String DBProxyInstanceLatestMinorVersion;
@@ -44,46 +47,115 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     public Integer DBProxyInstanceNum;
 
     /**
-     * <p>The specifications of the proxy instance. This parameter is available only for ApsaraDB RDS for PostgreSQL instances.</p>
+     * <p>This parameter is available only for ApsaraDB RDS for PostgreSQL instances. The specifications of the proxy instance that is enabled.</p>
      * <br>
-     * <p>Format: Number of cores/Memory capacity. For example, the value 4/8 indicates that the proxy instance has 4 cores and 8 GB of memory.</p>
+     * <p>Format: `Number of cores/Memory capacity`.</p>
+     * <br>
+     * <p>For example, a value of 4/8 indicates that the proxy instance has 4 cores and 8 GB of memory.</p>
      */
     @NameInMap("DBProxyInstanceSize")
     public String DBProxyInstanceSize;
 
     /**
-     * <p>The status of the proxy instance. Valid values:</p>
+     * <p>The status of the proxy instance.</p>
      * <br>
-     * <p>*   **Creating**: The proxy instance is being created.</p>
-     * <p>*   **Running**: The proxy instance is running.</p>
-     * <p>*   **DBInstanceClassChanging**: The specifications of the proxy instance are being changed.</p>
-     * <p>*   **Deleting**: The proxy instance is being deleted.</p>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   DBInstanceClassChanging</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   Creating</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   Running</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   Deleting</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("DBProxyInstanceStatus")
     public String DBProxyInstanceStatus;
 
     /**
-     * <p>The type of the database proxy that is enabled on the instance. Valid values:</p>
+     * <p>The type of the database proxy that is enabled on the instance.</p>
      * <br>
-     * <p>*   **1**: shared proxy</p>
-     * <p>*   **2**: dedicated proxy</p>
+     * <p>> ApsaraDB RDS for PostgreSQL instances support only dedicated proxies.</p>
      * <br>
-     * <p>>  ApsaraDB RDS for PostgreSQL instances support only dedicated proxies.</p>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   1</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    :</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    shared proxy</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   2</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    :</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    dedicated proxy</p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("DBProxyInstanceType")
     public String DBProxyInstanceType;
 
     /**
-     * <p>The status of the database proxy feature. Valid values:</p>
+     * <p>The status of the database proxy.</p>
      * <br>
-     * <p>*   **Startup**: enabled</p>
-     * <p>*   **Shutdown**: disabled</p>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   Shutdown</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   Startup</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("DBProxyServiceStatus")
     public String DBProxyServiceStatus;
 
     /**
-     * <p>An array consisting of the information about the proxy terminal.</p>
+     * <p>The proxy terminals of the instance.</p>
      */
     @NameInMap("DbProxyEndpointItems")
     public DescribeDBProxyResponseBodyDbProxyEndpointItems dbProxyEndpointItems;
@@ -244,20 +316,77 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         public String DBProxyConnectString;
 
         /**
-         * <p>The network type of the proxy endpoint. Valid values:</p>
+         * <p>The network type of the proxy endpoint.</p>
          * <br>
-         * <p>*   **InnerString**: internal network</p>
-         * <p>*   **OuterString**: Internet</p>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   OuterString</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    Internet</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   InnerString</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    internal network</p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("DBProxyConnectStringNetType")
         public String DBProxyConnectStringNetType;
 
         /**
-         * <p>The network type of the database proxy. Valid values:</p>
+         * <p>The network type of the database proxy.</p>
          * <br>
-         * <p>*   **0**: Internet</p>
-         * <p>*   **1**: classic network</p>
-         * <p>*   **2**: virtual private cloud (VPC)</p>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   0</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    Internet</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   1</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    classic network</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   2</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    virtual private cloud (VPC)</p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("DBProxyConnectStringNetWorkType")
         public String DBProxyConnectStringNetWorkType;
@@ -280,6 +409,9 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         @NameInMap("DBProxyEndpointName")
         public String DBProxyEndpointName;
 
+        /**
+         * <p>The VPC that is associated with the proxy endpoint.</p>
+         */
         @NameInMap("DBProxyVpcId")
         public String DBProxyVpcId;
 
@@ -289,6 +421,9 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         @NameInMap("DBProxyVpcInstanceId")
         public String DBProxyVpcInstanceId;
 
+        /**
+         * <p>The vSwitch that is associated with the proxy endpoint.</p>
+         */
         @NameInMap("DBProxyVswitchId")
         public String DBProxyVswitchId;
 
@@ -404,10 +539,33 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         public String dbProxyEndpointName;
 
         /**
-         * <p>The type of the proxy terminal. Valid values:</p>
+         * <p>The type of the proxy terminal.</p>
          * <br>
-         * <p>- **RWSplit**: default proxy terminal</p>
-         * <p>- **Custom**: custom proxy terminal</p>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   Custom</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    custom proxy terminal</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   RWSplit</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    default proxy terminal</p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("DbProxyEndpointType")
         public String dbProxyEndpointType;
@@ -415,8 +573,23 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         /**
          * <p>The read and write attributes of the proxy terminal.</p>
          * <br>
-         * <p>- **ReadWrite**: The proxy terminal supports read and write requests.</p>
-         * <p>- **ReadOnly**: The proxy terminal supports only read requests.</p>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   ReadOnly</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   ReadWrite</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("DbProxyReadWriteMode")
         public String dbProxyReadWriteMode;

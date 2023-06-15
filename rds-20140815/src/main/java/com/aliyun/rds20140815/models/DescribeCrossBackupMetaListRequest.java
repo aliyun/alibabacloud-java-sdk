@@ -11,7 +11,7 @@ public class DescribeCrossBackupMetaListRequest extends TeaModel {
     public String backupSetId;
 
     /**
-     * <p>The name of the database to query. The system implements exact match based on the value of this parameter and returns the name of the matched database and the names of the tables in the matched database.</p>
+     * <p>The name of the database that you want to query. The system implements exact match based on the value of this parameter and returns the name of the matched database and the names of the tables in the matched database.</p>
      */
     @NameInMap("GetDbName")
     public String getDbName;
@@ -22,23 +22,23 @@ public class DescribeCrossBackupMetaListRequest extends TeaModel {
     /**
      * <p>The number of the page to return. Valid values: any non-zero positive integer.</p>
      * <br>
-     * <p>>  This parameter is valid only when you specify the **PageSize** parameter.</p>
+     * <p>> This parameter only takes effect when you specify the **PageSize** parameter.</p>
      */
     @NameInMap("PageIndex")
     public String pageIndex;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **1**.</p>
+     * <p>The number of entries to return per page. Default value: **1**.</p>
      * <br>
-     * <p>>  This parameter is valid only when you specify the **PageIndex** parameter.</p>
+     * <p>> This parameter only takes effect when you specify the **PageIndex** parameter.</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
-     * <p>The name of the database to query. The system implements fuzzy match based on the value of this parameter and returns only the name of the matched database.</p>
+     * <p>The name of the database that you want to query. The system implements fuzzy match based on the value of this parameter and returns only the name of the matched database.</p>
      * <br>
-     * <p>>  You can implement fuzzy match and then exact match. For example, you can set the Pattern parameter to test to query the testdb1 and testdb2 databases. Then, you can specify the **GetDbName** parameter to query only the matched database and the tables in the matched database.</p>
+     * <p>> You can implement fuzzy match and then exact match. For example, you can set the Pattern parameter to test to query the testdb1 and testdb2 databases. Then, you can specify the **GetDbName** parameter to query only the matched database and the tables in the matched database.</p>
      */
     @NameInMap("Pattern")
     public String pattern;

@@ -19,7 +19,7 @@ public class ModifyDBProxyEndpointAddressRequest extends TeaModel {
      * <br>
      * <p>If the instance runs MySQL, the default value of this parameter is **Classic**.</p>
      * <br>
-     * <p>>  If the instance runs PostgreSQL, you must set this parameter to **Public** or **VPC**.</p>
+     * <p>> If the instance runs PostgreSQL, you must set this parameter to **Public** or **VPC**.</p>
      */
     @NameInMap("DBProxyConnectStringNetType")
     public String DBProxyConnectStringNetType;
@@ -39,7 +39,7 @@ public class ModifyDBProxyEndpointAddressRequest extends TeaModel {
     /**
      * <p>The new prefix of the proxy endpoint. Enter a prefix.</p>
      * <br>
-     * <p>>  You must specify at least one of the **DBProxyNewConnectString** and **DBProxyNewConnectStringPort** parameters.</p>
+     * <p>> You must specify at least one of the **DBProxyNewConnectString** and **DBProxyNewConnectStringPort** parameters.</p>
      */
     @NameInMap("DBProxyNewConnectString")
     public String DBProxyNewConnectString;
@@ -47,7 +47,7 @@ public class ModifyDBProxyEndpointAddressRequest extends TeaModel {
     /**
      * <p>The port number that is associated with the proxy endpoint. Enter a port number.</p>
      * <br>
-     * <p>>  You must specify at least one of the **DBProxyNewConnectString** and **DBProxyNewConnectStringPort** parameters.</p>
+     * <p>> You must specify at least one of the **DBProxyNewConnectString** and **DBProxyNewConnectStringPort** parameters.</p>
      */
     @NameInMap("DBProxyNewConnectStringPort")
     public String DBProxyNewConnectStringPort;

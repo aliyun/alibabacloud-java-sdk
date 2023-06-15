@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CloneDBInstanceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the new instance.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

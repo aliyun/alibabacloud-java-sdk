@@ -36,9 +36,7 @@ public class DescribePriceShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the instance for which you want to change the specifications or the instance that you want to renew.</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If you want to query the price of an specification change order or a renewal order, you must specify this parameter. - If the instance is a read-only instance, you must set this parameter to the ID of its primary instance.</p>
+     * <p>> *   If you want to query the price of an specification change order or a renewal order, you must specify this parameter. - If the instance is a read-only instance, you must set this parameter to the ID of its primary instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

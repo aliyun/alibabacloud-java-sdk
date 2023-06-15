@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudMigrationResultResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the details about the cloud migration task.</p>
+     * <p>The details of the cloud migration tasks.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeCloudMigrationResultResponseBodyItems> items;
 
     /**
-     * <p>The number of returned pages.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
@@ -29,7 +29,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalSize")
     public Integer totalSize;
@@ -81,7 +81,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
 
     public static class DescribeCloudMigrationResultResponseBodyItems extends TeaModel {
         /**
-         * <p>The details about the task.</p>
+         * <p>The details of the task.</p>
          */
         @NameInMap("Detail")
         public String detail;
@@ -138,9 +138,8 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
         /**
          * <p>The environment in which the self-managed PostgreSQL instance runs.</p>
          * <br>
-         * <p>*   **idcOnVpc**: The self-managed PostgreSQL instance resides in a data center, which can communicate with the VPC to which the ApsaraDB RDS for PostgreSQL instance belongs.</p>
+         * <p>*   **idcOnVpc**: The self-managed PostgreSQL instance resides in a data center. The data center can communicate with the VPC to which the ApsaraDB RDS for PostgreSQL instance belongs.</p>
          * <p>*   **ecsOnVpc**: The self-managed PostgreSQL instance resides on an ECS instance.</p>
-         * <p>*   **internet**: The self-managed PostgreSQL instance resides on a device that is connected over the Internet.</p>
          */
         @NameInMap("SourceCategory")
         public String sourceCategory;
@@ -176,7 +175,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
         public String targetEip;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the destination instance.</p>
          */
         @NameInMap("TargetInstanceName")
         public String targetInstanceName;

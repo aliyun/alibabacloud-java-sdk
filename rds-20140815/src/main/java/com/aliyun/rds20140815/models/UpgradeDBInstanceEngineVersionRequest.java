@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeDBInstanceEngineVersionRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the generated token is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -17,10 +17,10 @@ public class UpgradeDBInstanceEngineVersionRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The time when you want the change to take effect. Valid values:</p>
+     * <p>The time at which you want the specification change to take effect. Valid values:</p>
      * <br>
-     * <p>*   **Immediate**: The change immediately takes effect.</p>
-     * <p>*   **MaintainTime**: The change takes effect during the specified maintenance window. For more information, see [ModifyDBInstanceMaintainTime](~~26249~~).</p>
+     * <p>*   **Immediate**: The specification change takes effect immediately.</p>
+     * <p>*   **MaintainTime**: The change is applied during the specified maintenance window. For more information, see [ModifyDBInstanceMaintainTime](~~26249~~).</p>
      * <br>
      * <p>Default value: **Immediate**.</p>
      */

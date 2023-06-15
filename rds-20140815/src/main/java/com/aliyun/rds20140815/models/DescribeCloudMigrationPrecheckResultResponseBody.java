@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
     /**
-     * <p>Details of the assessment report.</p>
+     * <p>The details of the assessment report.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeCloudMigrationPrecheckResultResponseBodyItems> items;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
@@ -29,7 +29,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalSize")
     public Integer totalSize;
@@ -107,15 +107,14 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
         /**
          * <p>The environment in which the self-managed PostgreSQL instance runs.</p>
          * <br>
-         * <p>*   **idcOnVpc**: The self-managed PostgreSQL instance resides in an on-premises data center that can communicate with the virtual private cloud (VPC) in which the ApsaraDB RDS for PostgreSQL instance resides.</p>
+         * <p>*   **idcOnVpc**: The self-managed PostgreSQL instance resides in a data center. The data center can communicate with the VPC to which the ApsaraDB RDS for PostgreSQL instance belongs.</p>
          * <p>*   **ecsOnVpc**: The self-managed PostgreSQL instance resides on an ECS instance.</p>
-         * <p>*   **internet**: The self-managed PostgreSQL instance resides on a device that is connected over the Internet.</p>
          */
         @NameInMap("SourceCategory")
         public String sourceCategory;
 
         /**
-         * <p>The private public IP address that is used to connect to the self-managed PostgreSQL instance.</p>
+         * <p>The private IP address that is used to connect to the self-managed PostgreSQL instance.</p>
          */
         @NameInMap("SourceIpAddress")
         public String sourceIpAddress;
@@ -139,19 +138,19 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
         public String targetEip;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the destination instance.</p>
          */
         @NameInMap("TargetInstanceName")
         public String targetInstanceName;
 
         /**
-         * <p>The ID of the cloud migration task.</p>
+         * <p>The ID of the task.</p>
          */
         @NameInMap("TaskId")
         public Long taskId;
 
         /**
-         * <p>The name of the cloud migration task.</p>
+         * <p>The name of the task.</p>
          */
         @NameInMap("TaskName")
         public String taskName;
