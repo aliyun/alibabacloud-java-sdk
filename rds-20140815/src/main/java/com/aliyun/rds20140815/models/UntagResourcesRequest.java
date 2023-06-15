@@ -12,7 +12,7 @@ public class UntagResourcesRequest extends TeaModel {
      * <br>
      * <p>Default value: **false**.</p>
      * <br>
-     * <p>>  This parameter is valid when **TagKey.N** is not specified.</p>
+     * <p>> This parameter is valid if parameters that contain **TagKey.N** are not specified.</p>
      */
     @NameInMap("All")
     public Boolean all;
@@ -27,7 +27,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IDs of resources. You can specifies up to 50 resource IDs.</p>
+     * <p>The IDs of instances. You can remove tags from N instances at a time. Valid values of N: **1** to **50**.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -45,7 +45,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tag keys. A maximum of 20 tag keys are supported.</p>
+     * <p>The list of tag keys. You can delete N tag keys at a time. Valid values of N: **1** to **20**. The value of this parameter cannot be an empty string.</p>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;

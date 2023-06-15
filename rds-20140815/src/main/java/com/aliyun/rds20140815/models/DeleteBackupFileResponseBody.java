@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteBackupFileResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the IDs of deleted backup files.</p>
+     * <p>An array that consists of the IDs of deleted backup sets.</p>
      */
     @NameInMap("DeletedBaksetIds")
     public DeleteBackupFileResponseBodyDeletedBaksetIds deletedBaksetIds;

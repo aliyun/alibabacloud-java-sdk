@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListClassesResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the instance types that are available.</p>
+     * <p>An array that consists of available instance types.</p>
      */
     @NameInMap("Items")
     public java.util.List<ListClassesResponseBodyItems> items;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -59,13 +59,13 @@ public class ListClassesResponseBody extends TeaModel {
         public String classCode;
 
         /**
-         * <p>The instance family of the instance. For more information, see [Instance families](~~57184~~).</p>
+         * <p>The instance family. For more information, see [Instance families](~~57184~~).</p>
          */
         @NameInMap("ClassGroup")
         public String classGroup;
 
         /**
-         * <p>The number of cores that are supported by the instance type. Unit: cores.</p>
+         * <p>The number of cores that are supported by the instance type. Unit: core.</p>
          */
         @NameInMap("Cpu")
         public String cpu;
@@ -77,15 +77,16 @@ public class ListClassesResponseBody extends TeaModel {
         public String encryptedMemory;
 
         /**
-         * <p>The architecture of the instance type.</p>
+         * <p>The architecture of the instance type. Valid values:</p>
          * <br>
-         * <p>>  If the architecture of the instance type is **x86**, an empty string is returned by default. If the architecture of the instance type is ARM, arm is returned.</p>
+         * <p>*   If the architecture of the instance type is **x86**, an empty string is returned by default.</p>
+         * <p>*   If the architecture of the instance type is **ARM**, **arm** is returned.</p>
          */
         @NameInMap("InstructionSetArch")
         public String instructionSetArch;
 
         /**
-         * <p>The maximum number of connections that are supported by the instance type. Unit: connections.</p>
+         * <p>The maximum number of connections that are supported by the instance type. Unit: core.</p>
          */
         @NameInMap("MaxConnections")
         public String maxConnections;
@@ -113,8 +114,11 @@ public class ListClassesResponseBody extends TeaModel {
          * <br>
          * <p>*   Unit: cent (USD).</p>
          * <br>
-         * <p>> * If you set the **CommodityCode** parameter to a value that indicates the pay-as-you-go billing method, the ReferencePrice parameter specifies the hourly fee that you must pay.</p>
-         * <p>> * If you set the **CommodityCode** parameter to a value that indicates the subscription billing method, the ReferencePrice parameter specifies the monthly fee that you must pay.</p>
+         * <p>> </p>
+         * <br>
+         * <p>*   If you set **CommodityCode** to a value that indicates the pay-as-you-go billing method, the ReferencePrice parameter specifies the hourly fee that you must pay.</p>
+         * <br>
+         * <p>*   If you set **CommodityCode** to a value that indicates the subscription billing method, the ReferencePrice parameter specifies the monthly fee that you must pay.</p>
          */
         @NameInMap("ReferencePrice")
         public String referencePrice;

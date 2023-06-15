@@ -13,9 +13,9 @@ public class CreateDBInstanceForRebuildRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The name of the instance. The name must be 2 to 256 characters in length. The name can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name of the destination instance. The value must be 2 to 256 characters in length. The value must start with a letter and can contain letters, digits, underscores (\_), and hyphens (-).</p>
      * <br>
-     * <p>> The name cannot start with http:// or https://.</p>
+     * <p>> The value cannot start with http:// or https://.</p>
      */
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
@@ -27,23 +27,23 @@ public class CreateDBInstanceForRebuildRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The type of network connection to the instance. Valid values:</p>
+     * <p>The type of the network connection to the instance. Valid values:</p>
      * <br>
-     * <p>*   **Internet**: Internet</p>
-     * <p>*   **Intranet**: internal network</p>
+     * <p>*   **Internet**</p>
+     * <p>*   **Intranet**</p>
      */
     @NameInMap("DBInstanceNetType")
     public String DBInstanceNetType;
 
     /**
-     * <p>The network type of the instance. Valid values:</p>
+     * <p>The network type of the destination instance. Valid values:</p>
      * <br>
      * <p>*   **VPC**</p>
      * <p>*   **Classic**</p>
      * <br>
      * <p>Default value: Classic.</p>
      * <br>
-     * <p>> If you set this parameter to **VPC**, you must also specify the **VpcId** and **VSwitchId** parameters.</p>
+     * <p>> If you set this parameter to **VPC**, you must also specify **VpcId** and **VSwitchId**.</p>
      */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
@@ -55,7 +55,7 @@ public class CreateDBInstanceForRebuildRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The billing method of the instance. Valid values:</p>
+     * <p>The billing method of the destination instance. Valid values:</p>
      * <br>
      * <p>*   **Postpaid**: pay-as-you-go</p>
      * <p>*   **Prepaid**: subscription</p>
@@ -64,24 +64,24 @@ public class CreateDBInstanceForRebuildRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>Specifies whether to use yearly subscription or monthly subscription for the instance. Valid values:</p>
+     * <p>The unit of the subscription duration. Valid values:</p>
      * <br>
      * <p>*   **Year**</p>
      * <p>*   **Month**</p>
      * <br>
-     * <p>> If you set the PayType parameter to **Prepaid**, you must specify this parameter.</p>
+     * <p>> If you set PayType to **Prepaid**, you must also specify this parameter.</p>
      */
     @NameInMap("Period")
     public String period;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the instance you want to rebuild belongs. The value of this parameter can be NULL.</p>
+     * <p>The ID of the resource group. You can leave this parameter empty.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -93,7 +93,7 @@ public class CreateDBInstanceForRebuildRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The IP address whitelist of the instance. For more information, see [Use a database client or the CLI to connect to an ApsaraDB RDS for MySQL instance](~~43185~~). If the IP address whitelist contains more than one entry, separate the entries with commas (,). Each entry must be unique. The IP address whitelist can contain up to 1,000 entries. The entries in the IP address whitelist must be in one of the following formats:</p>
+     * <p>The IP address whitelist of the instance. For more information, see [Use a database client or the CLI to connect to an ApsaraDB RDS for MySQL instance](~~43185~~). If you want to add more than one entry to the IP address whitelist, separate the entries with commas (,). Each entry must be unique. You can add up to 1,000 entries. The entries in the IP address whitelist must be in one of the following formats:</p>
      * <br>
      * <p>*   IP addresses, such as 10.10.XX.XX.</p>
      * <p>*   CIDR blocks, such as 10.10.XX.XX/24. In this example, 24 indicates that the prefix of each IP address in the IP address whitelist is 24 bits in length. You can replace 24 with a value within the range of 1 to 32.</p>
@@ -107,30 +107,30 @@ public class CreateDBInstanceForRebuildRequest extends TeaModel {
     /**
      * <p>The subscription duration of the instance. Valid values:</p>
      * <br>
-     * <p>*   If you set the **Period** parameter to **Year**, the value of the **UsedTime** parameter ranges from **1** to **5**.</p>
-     * <p>*   If you set the **Period** parameter to **Month**, the value of the **UsedTime** parameter ranges from **1** to **11**.</p>
+     * <p>*   If you set **Period** to **Year**, the value of **UsedTime** ranges from **1** to **5**.</p>
+     * <p>*   If you set **Period** to **Month**, the value of **UsedTime** ranges from **1** to **11**.</p>
      * <br>
-     * <p>> If you set the **PayType** parameter to **Prepaid**, you must specify this parameter.</p>
+     * <p>> If you set **PayType** to **Prepaid**, you must specify this parameter.</p>
      */
     @NameInMap("UsedTime")
     public String usedTime;
 
     /**
-     * <p>The VPC ID of the instance. This parameter is available only when you set the **InstanceNetworkType** parameter to **VPC**.</p>
+     * <p>The VPC ID of the destination instance. This parameter is available only when you set **InstanceNetworkType** to **VPC**.</p>
      * <br>
-     * <p>> If you specify this parameter, you must also specify the **ZoneId** parameter.</p>
+     * <p>> If you specify this parameter, you must also specify **ZoneId**.</p>
      */
     @NameInMap("VPCId")
     public String VPCId;
 
     /**
-     * <p>The ID of the vSwitch. The vSwitch must belong to the zone that is specified by the **ZoneId** parameter.</p>
+     * <p>The ID of the vSwitch. The vSwitch must belong to the zone that is specified by **ZoneId**.</p>
      * <br>
      * <p>> </p>
      * <br>
-     * <p>*   If you set the **InstanceNetworkType** parameter to **VPC**, you must specify this parameter.</p>
+     * <p>*   If you set **InstanceNetworkType** to **VPC**, you must also specify this parameter.</p>
      * <br>
-     * <p>*   If you specify the ZoneSlaveId1 parameter, you must specify the IDs of two vSwitches for this parameter and separate the IDs with a comma (,).</p>
+     * <p>*   If you specify ZoneSlaveId1, you must specify the IDs of two vSwitches for this parameter and separate the IDs with a comma (,).</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
@@ -138,23 +138,23 @@ public class CreateDBInstanceForRebuildRequest extends TeaModel {
     /**
      * <p>The zone ID of the primary instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent zone list.</p>
      * <br>
-     * <p>> This parameter is required to identify the zone for a vSwitch if you have specified the virtual private cloud (VPC) and the vSwitch.</p>
+     * <p>> If you specify a virtual private cloud (VPC) and a vSwitch, you must specify this parameter to identify the zone for the vSwitch.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
 
     /**
-     * <p>The zone of the secondary instance.</p>
+     * <p>The zone ID of the secondary instance.</p>
      * <br>
-     * <p>> You must specify this parameter when the instance does not run RDS Basic Edition.</p>
+     * <p>> If the instance does not run RDS Basic Edition, you must specify this parameter.</p>
      */
     @NameInMap("ZoneIdSlave1")
     public String zoneIdSlave1;
 
     /**
-     * <p>The zone of the logger instance.</p>
+     * <p>The zone ID of the logger instance.</p>
      * <br>
-     * <p>> You can specify this parameter only when the instance runs RDS Enterprise Edition.</p>
+     * <p>> This parameter is available only when the instance runs RDS Enterprise Edition.</p>
      */
     @NameInMap("ZoneIdSlave2")
     public String zoneIdSlave2;

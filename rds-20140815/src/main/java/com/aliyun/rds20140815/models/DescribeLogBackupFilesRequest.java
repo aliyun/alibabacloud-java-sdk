@@ -23,7 +23,7 @@ public class DescribeLogBackupFilesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Valid values: any non-zero positive integer.</p>
+     * <p>The page number. Valid values: any non-zero positive integer.</p>
      * <br>
      * <p>Default value: **1**.</p>
      */
@@ -31,7 +31,7 @@ public class DescribeLogBackupFilesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **30** to **1000**. Default value: **30**.</p>
+     * <p>The number of entries per page. Valid values: **30** to **1000**. Default value: **30**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -43,7 +43,7 @@ public class DescribeLogBackupFilesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

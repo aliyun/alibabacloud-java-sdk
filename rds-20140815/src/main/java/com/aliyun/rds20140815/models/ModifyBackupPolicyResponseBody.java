@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyBackupPolicyResponseBody extends TeaModel {
     /**
-     * <p>The format into which backups are compressed. Valid values:</p>
+     * <p>The method that is used to compress backups. Valid values:</p>
      * <br>
-     * <p>*   **0**: Backups are not compressed.</p>
+     * <p>*   **0:** Backups are not compressed.</p>
      * <p>*   **1**: Backups are compressed by using the zlib tool.</p>
      * <p>*   **2**: Backups are compressed in parallel by using the zlib tool.</p>
      * <p>*   **4**: Backups are compressed by using the QuickLZ tool and can be used to restore individual databases and tables.</p>
-     * <p>*   **8**: Backups are compressed by using the QuickLZ tool but cannot be used to restore individual databases or tables. This value is supported only by instances that run MySQL 8.0.</p>
+     * <p>*   **8**: Backups are compressed by using the QuickLZ tool but cannot be used to restore individual databases or tables. This value is supported only for instances that run MySQL 8.0.</p>
      */
     @NameInMap("CompressType")
     public String compressType;
@@ -25,14 +25,14 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the log backup feature is enabled. Valid values:</p>
      * <br>
-     * <p>*   **1**: The log backup feature is enabled.</p>
-     * <p>*   **0**: The log backup feature is disabled.</p>
+     * <p>*   **1**: The feature is enabled.</p>
+     * <p>*   **0**: The feature is disabled.</p>
      */
     @NameInMap("EnableBackupLog")
     public String enableBackupLog;
 
     /**
-     * <p>Indicates whether ApsaraDB RDS forcibly deletes log backup files from the instance when the storage usage of the instance exceeds 80% or the amount of remaining storage on the instance is less than 5 GB.</p>
+     * <p>Specifies whether to forcefully delete log backup files from the instance when the storage usage of the instance exceeds 80% or the amount of remaining storage on the instance is less than 5 GB.</p>
      */
     @NameInMap("HighSpaceUsageProtection")
     public String highSpaceUsageProtection;
@@ -50,7 +50,7 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
     public String localLogRetentionSpace;
 
     /**
-     * <p>The number of binary log files that are retained on the instance.</p>
+     * <p>The number of binary log files on the instance.</p>
      */
     @NameInMap("LogBackupLocalRetentionNumber")
     public Integer logBackupLocalRetentionNumber;

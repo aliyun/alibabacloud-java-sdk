@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the network information about the instance.</p>
+     * <p>The network information about the instance.</p>
      */
     @NameInMap("DBInstanceNetInfos")
     public DescribeDBInstanceNetInfoForChannelResponseBodyDBInstanceNetInfos DBInstanceNetInfos;
@@ -13,8 +13,8 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
     /**
      * <p>The network type of the instance. Valid values:</p>
      * <br>
-     * <p>*   **VPC**</p>
-     * <p>*   **Classic**</p>
+     * <p>*   **VPC**: a virtual private cloud (VPC)</p>
+     * <p>*   **Classic**: classic network</p>
      */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
@@ -232,14 +232,14 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
         /**
          * <p>The policy that is used to assign read weights. This parameter is returned only for a read/write splitting endpoint that is assigned after the shared proxy feature is enabled. Valid values:</p>
          * <br>
-         * <p>*   **Standard**: ApsaraDB RDS automatically allocates read weights to the instance and its read-only instances based on the specifications of the instances.</p>
-         * <p>*   **Custom**: You must manually allocate read weights to the instance and its read-only instances.</p>
+         * <p>*   **Standard**: The system automatically allocates read weights to the instance and its read-only instances based on the specifications of the instances.</p>
+         * <p>*   **Custom**: You must manually assign read weights to the instance and its read-only instances.</p>
          */
         @NameInMap("DistributionType")
         public String distributionType;
 
         /**
-         * <p>The IP address of the instance.</p>
+         * <p>The IP address.</p>
          */
         @NameInMap("IPAddress")
         public String IPAddress;
@@ -249,7 +249,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
          * <br>
          * <p>*   **Public**: the Internet</p>
          * <p>*   **Inner**: the classic network</p>
-         * <p>*   **Private**: a virtual private cloud (VPC)</p>
+         * <p>*   **Private**: a VPC</p>
          */
         @NameInMap("IPType")
         public String IPType;
@@ -263,31 +263,31 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
         public String maxDelayTime;
 
         /**
-         * <p>The port number of the instance.</p>
+         * <p>The service port number.</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
-         * <p>Details of the IP address whitelist.</p>
+         * <p>An array that consists of the details about the IP address whitelist.</p>
          */
         @NameInMap("SecurityIPGroups")
         public DescribeDBInstanceNetInfoForChannelResponseBodyDBInstanceNetInfosDBInstanceNetInfoSecurityIPGroups securityIPGroups;
 
         /**
-         * <p>An internal parameter. You can ignore this parameter.</p>
+         * <p>An internal parameter. This operation does not return a value for this parameter.</p>
          */
         @NameInMap("Upgradeable")
         public String upgradeable;
 
         /**
-         * <p>The VPC ID of the instance.</p>
+         * <p>The ID of the VPC in which the instance is deployed.</p>
          */
         @NameInMap("VPCId")
         public String VPCId;
 
         /**
-         * <p>The vSwitch ID of the instance.</p>
+         * <p>The ID of the vSwitch to which the instance belongs.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;

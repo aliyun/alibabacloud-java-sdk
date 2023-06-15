@@ -17,13 +17,13 @@ public class CreateCloudMigrationPrecheckTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the cloud migration task.</p>
+     * <p>The ID of the task.</p>
      */
     @NameInMap("TaskId")
     public Long taskId;
 
     /**
-     * <p>The name of the cloud migration task.</p>
+     * <p>The name of the task.</p>
      */
     @NameInMap("TaskName")
     public String taskName;

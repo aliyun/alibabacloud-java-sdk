@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateUserBackupFileRequest extends TeaModel {
     /**
-     * <p>The ID of the full backup file. You can call the [ListUserBackupFiles](~~257821~~) operation to query the information about all full backup files in a region.</p>
+     * <p>The ID of the backup file. You can call the [ListUserBackupFiles](~~257821~~) operation to query the ID of the backup file.</p>
      */
     @NameInMap("BackupId")
     public String backupId;
@@ -20,7 +20,7 @@ public class UpdateUserBackupFileRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the full backup file. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -13,8 +13,8 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
     /**
      * <p>The network type of the instance. Valid values:</p>
      * <br>
-     * <p>*   **Classic**</p>
-     * <p>*   **VPC**</p>
+     * <p>*   **Classic**: classic network</p>
+     * <p>*   **VPC**: virtual private cloud (VPC)</p>
      */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
@@ -75,8 +75,8 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         /**
          * <p>The availability of the instance. Valid values:</p>
          * <br>
-         * <p>- **Unavailable**</p>
-         * <p>- **Available**</p>
+         * <p>*   **Unavailable**</p>
+         * <p>*   **Available**</p>
          */
         @NameInMap("Availability")
         public String availability;
@@ -88,10 +88,10 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         public String DBInstanceId;
 
         /**
-         * <p>The role of the instance. Valid values:</p>
+         * <p>The database engine of the instance. Valid values:</p>
          * <br>
-         * <p>- **Master**: primary instance</p>
-         * <p>- **Readonly**: read-only instance</p>
+         * <p>*   **Master**: primary instance</p>
+         * <p>*   **Readonly**: read-only instance</p>
          */
         @NameInMap("DBInstanceType")
         public String DBInstanceType;
@@ -233,7 +233,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         /**
          * <p>The Tabular Data Stream (TDS) port of the instance for which Babelfish is enabled.</p>
          * <br>
-         * <p>>  This parameter applies only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for ApsaraDB RDS for PostgreSQL, see [Introduction to Babelfish](~~428613~~).</p>
+         * <p>> This parameter applies only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for ApsaraDB RDS for PostgreSQL, see [Introduction to Babelfish](~~428613~~).</p>
          */
         @NameInMap("BabelfishPort")
         public String babelfishPort;
@@ -262,8 +262,8 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         /**
          * <p>The policy that is used to assign read weights. This parameter is returned only for a read/write splitting endpoint. Valid values:</p>
          * <br>
-         * <p>*   **Standard**: ApsaraDB RDS automatically assigns read weights to the instance and its read-only instances based on the specifications of these instances.</p>
-         * <p>*   **Custom**: You must manually assign read weights to the instance and its read-only instances.</p>
+         * <p>*   **Standard**: The system automatically assigns read weights to the instance and its read-only instances based on the specifications of these instances.</p>
+         * <p>*   **Custom**: You must manually allocate read weights to the instance and its read-only instances.</p>
          */
         @NameInMap("DistributionType")
         public String distributionType;
@@ -275,23 +275,20 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         public String expiredTime;
 
         /**
-         * <p>The IP address of the instance.</p>
+         * <p>The IP address of the endpoint.</p>
          */
         @NameInMap("IPAddress")
         public String IPAddress;
 
         /**
-         * <p>The network type.</p>
+         * <p>The type of the network.</p>
          * <br>
          * <p>*   Valid values when the instance resides in the classic network:</p>
-         * <br>
-         * <p>    *   **Inner:**: internal network</p>
-         * <p>    *   **Public**: Internet</p>
-         * <br>
-         * <p>*   Valid values when the instance resides in a virtual private cloud (VPC):</p>
-         * <br>
-         * <p>    *   **Private**: internal network</p>
-         * <p>    *   **Public**: Internet</p>
+         * <p>*   **Inner:**: internal network</p>
+         * <p>*   **Public**: Internet</p>
+         * <p>*   Valid values when the instance resides in a VPC:</p>
+         * <p>*   **Private**: internal network</p>
+         * <p>*   **Public**: Internet</p>
          */
         @NameInMap("IPType")
         public String IPType;
@@ -299,7 +296,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         /**
          * <p>The latency threshold. This parameter is returned only for a read/write splitting endpoint. Unit: seconds.</p>
          * <br>
-         * <p>>  If the latency on a read-only instance exceeds the specified threshold, ApsaraDB RDS no longer forwards read requests to the read-only instance.</p>
+         * <p>> If the latency on a read-only instance exceeds the specified threshold, the system no longer forwards read requests to the read-only instance.</p>
          */
         @NameInMap("MaxDelayTime")
         public String maxDelayTime;
@@ -311,7 +308,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         public String port;
 
         /**
-         * <p>Details about the IP whitelists of the instance.</p>
+         * <p>An array that consists of the details about the IP address whitelists.</p>
          */
         @NameInMap("SecurityIPGroups")
         public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoSecurityIPGroups securityIPGroups;
@@ -320,7 +317,6 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
          * <p>Indicates whether the IP version can be updated. Valid values:</p>
          * <br>
          * <p>*   **Enable**: The IP version can be updated.</p>
-         * <br>
          * <p>*   **Disabled**: The IP version cannot be updated.</p>
          * <br>
          * <p>> The IP version can be updated from IPv4 to IPv6.</p>
@@ -329,7 +325,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         public String upgradeable;
 
         /**
-         * <p>The ID of the VPC to which the instance belongs.</p>
+         * <p>The ID of the VPC.</p>
          */
         @NameInMap("VPCId")
         public String VPCId;

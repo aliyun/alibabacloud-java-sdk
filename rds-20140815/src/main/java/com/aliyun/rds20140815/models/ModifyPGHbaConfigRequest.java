@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ModifyPGHbaConfigRequest extends TeaModel {
     /**
-     * <p>This parameter is reserved. You do not need to specify this parameter.</p>
+     * <p>A reserved parameter. You do not need to specify this parameter.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the IDs of instances.</p>
+     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>AD domain service information list.</p>
+     * <p>The details of the AD domain.</p>
      */
     @NameInMap("HbaItem")
     public java.util.List<ModifyPGHbaConfigRequestHbaItem> hbaItem;
@@ -122,21 +122,21 @@ public class ModifyPGHbaConfigRequest extends TeaModel {
         public String address;
 
         /**
-         * <p>The name of the database for record N. If you set this parameter to all, the specified users are allowed to access all databases on the instance.</p>
+         * <p>The name of the database. If you set this parameter to all, the specified users are allowed to access all databases on the instance.</p>
          * <br>
-         * <p>If you specify multiple databases, separate the database names with commas (,).</p>
+         * <p>If you specify multiple users, separate the usernames with commas (,).</p>
          */
         @NameInMap("Database")
         public String database;
 
         /**
-         * <p>The mask for record N. If the value of the **Address** parameter is an IP address, you can use this parameter to specify the mask of the IP address.</p>
+         * <p>The mask of the instance. If the value of the **Address** parameter is an IP address, you can use this parameter to specify the mask of the IP address.</p>
          */
         @NameInMap("Mask")
         public String mask;
 
         /**
-         * <p>The authentication method. Valid values:</p>
+         * <p>The authentication method. Valid values: authorization_code and refresh_token.</p>
          * <br>
          * <p>*   **trust**</p>
          * <p>*   **reject**</p>
@@ -154,13 +154,13 @@ public class ModifyPGHbaConfigRequest extends TeaModel {
         public String method;
 
         /**
-         * <p>Optional. The value of this parameter varies based on the value of the HbaItem.N.Method parameter. In this topic, LDAP is used as an example. You must specify this parameter. For more information, see [Authentication Methods](https://www.postgresql.org/docs/11/auth-methods.html).</p>
+         * <p>Optional. The value of this parameter varies based on the value of the Method parameter. In this topic, LDAP is used as an example. You must configure this parameter. For more information, see [Authentication Methods](https://www.postgresql.org/docs/11/auth-methods.html).</p>
          */
         @NameInMap("Option")
         public String option;
 
         /**
-         * <p>The priority of record N. If you set this parameter to 0, the record has the highest priority. Valid values: 0 to 10000.</p>
+         * <p>The priority of the record. If you set this parameter to 0, the record has the highest priority. Valid values: 0 to 10000.</p>
          * <br>
          * <p>This parameter is used to identify each record. When you add a record, the value of the PriorityId parameter for the new record must be different from the value of the PriorityId parameter of any existing record. When you modify or delete a record, you must also modify or delete the value of the PriorityId parameter for this record.</p>
          */
@@ -168,14 +168,12 @@ public class ModifyPGHbaConfigRequest extends TeaModel {
         public Integer priorityId;
 
         /**
-         * <p>The connection type of record N.</p>
+         * <p>The connection type.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   **host**: The record matches TCP/IP connections, including SSL connections and non-SSL connections.</p>
-         * <br>
+         * <p>*   **host**: The AD domain verifies TCP/IP connections, including SSL connections and non-SSL connections.</p>
          * <p>*   **hostssl**: The record matches only TCP/IP connections that are established over SSL.</p>
-         * <br>
          * <p>*   **hostnossl**: The record matches only TCP/IP connections that are not established over SSL.</p>
          * <br>
          * <p>> You can set this parameter to hostssl only when SSL encryption is enabled for the instance. For more information, see [Configure SSL encryption for an ApsaraDB RDS for PostgreSQL instance](~~229518~~).</p>

@@ -23,7 +23,7 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on the current page.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
@@ -35,13 +35,13 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned pages.</p>
+     * <p>The total number of pages returned.</p>
      */
     @NameInMap("TotalPageCount")
     public Integer totalPageCount;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of returned entries.</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;

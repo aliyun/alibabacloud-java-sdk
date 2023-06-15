@@ -5,25 +5,28 @@ import com.aliyun.tea.*;
 
 public class TransformDBInstancePayTypeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
+     * <p>Specifies whether to enable the auto-renewal feature for the instance. Valid values:</p>
      * <br>
-     * <p>*   **true**: Auto-renewal is enabled.</p>
-     * <p>*   **false**: Auto-renewal is disabled.</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      * <br>
-     * <p>> * This parameter is valid only when you change the billing method from pay-as-you-go to subscription.</p>
-     * <p>> * All strings except **true** are considered **false**.</p>
+     * <p>> </p>
+     * <br>
+     * <p>*   This parameter is valid only when you change the billing method from pay-as-you-go to subscription.</p>
+     * <br>
+     * <p>*   All strings except **true** are considered **false**.</p>
      */
     @NameInMap("AutoRenew")
     public String autoRenew;
 
     /**
-     * <p>The extended business information of the instance.</p>
+     * <p>The additional business information about the instance.</p>
      */
     @NameInMap("BusinessInfo")
     public String businessInfo;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -50,12 +53,12 @@ public class TransformDBInstancePayTypeRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The subscription type of the instance. Valid values:</p>
+     * <p>The renewal cycle of the instance. Valid values:</p>
      * <br>
-     * <p>*   **Year**: yearly subscription</p>
-     * <p>*   **Month**: monthly subscription</p>
+     * <p>*   **Year**</p>
+     * <p>*   **Month**</p>
      * <br>
-     * <p>>  This parameter must be specified if you set the **PayType** parameter to **Prepaid**.</p>
+     * <p>> This parameter must be specified if you set **PayType** to **Prepaid**.</p>
      */
     @NameInMap("Period")
     public String period;
@@ -67,12 +70,12 @@ public class TransformDBInstancePayTypeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The subscription period of the instance. Valid values:</p>
+     * <p>The subscription duration of the instance. Valid values:</p>
      * <br>
-     * <p>*   If you set the **Period** parameter to **Year**, the value of the UsedTime parameter ranges from **1 to 5**.</p>
-     * <p>*   If you set the **Period** parameter to **Month**, the value of the UsedTime parameter ranges from **1 to 9**.</p>
+     * <p>*   If you set **Period** to **Year**, the value of UsedTime ranges from **1 to 5**.</p>
+     * <p>*   If you set **Period** to **Month**, the value of UsedTime ranges from **1 to 9**.</p>
      * <br>
-     * <p>>  This parameter must be specified if you set the **PayType** parameter to **Prepaid**.</p>
+     * <p>> This parameter must be specified if you set **PayType** to **Prepaid**.</p>
      */
     @NameInMap("UsedTime")
     public Integer usedTime;

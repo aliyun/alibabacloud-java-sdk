@@ -25,7 +25,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     /**
      * <p>The backup interval. Unit: minutes.</p>
      * <br>
-     * <p>*   If the instance runs MySQL, the interval is the same as the value of the Snapshot Backup Start Time parameter (not the Snapshot Backup Period parameter) in the ApsaraDB RDS console. For more information, see [Back up an ApsaraDB RDS for MySQL instance](~~98818~~).</p>
+     * <p>*   If the instance runs MySQL, the interval is the same as the value of the Snapshot Backup Start Time parameter rather than the Snapshot Backup Period parameter in the ApsaraDB RDS console. For more information, see [Back up an ApsaraDB RDS for MySQL instance](~~98818~~).</p>
      * <p>*   If the instance runs SQL Server, the interval is the same as the log backup frequency.</p>
      */
     @NameInMap("BackupInterval")
@@ -46,7 +46,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
      * <p>*   **Physical**: physical backup</p>
      * <p>*   **Snapshot**: snapshot backup</p>
      * <br>
-     * <p>>  This parameter is returned only when the instance runs SQL Server and uses standard SSDs or enhanced SSDs (ESSDs).</p>
+     * <p>> This parameter is returned only when the instance runs SQL Server and uses cloud disks.</p>
      */
     @NameInMap("BackupMethod")
     public String backupMethod;
@@ -63,7 +63,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
      * <p>*   **Flash**: The single-digit second backup feature is enabled.</p>
      * <p>*   **Standard**: The single-digit second backup feature is disabled.</p>
      * <br>
-     * <p>>  This parameter takes effect only when you set the **BackupPolicyMode** parameter to **DataBackupPolicy**.</p>
+     * <p>> This parameter takes effect only when you set the **BackupPolicyMode** parameter to **DataBackupPolicy**.</p>
      */
     @NameInMap("Category")
     public String category;
@@ -114,7 +114,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public Integer localLogRetentionHours;
 
     /**
-     * <p>The maximum disk usage that is allowed for log backup files on the instance.</p>
+     * <p>The maximum storage usage that is allowed for log files on the instance.</p>
      */
     @NameInMap("LocalLogRetentionSpace")
     public String localLogRetentionSpace;
@@ -125,13 +125,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
      * <p>*   **LogInterval**: Log backups are performed every 30 minutes.</p>
      * <p>*   Default value: same as the value of the **PreferredBackupPeriod** parameter.</p>
      * <br>
-     * <p>>  The **LogBackupFrequency** parameter is returned only when the instance runs **SQL Server**.</p>
+     * <p>> The **LogBackupFrequency** parameter is supported only when the instance runs **SQL Server**.</p>
      */
     @NameInMap("LogBackupFrequency")
     public String logBackupFrequency;
 
     /**
-     * <p>The number of binary log files that are retained on the instance.</p>
+     * <p>The number of binary log files that you want to retain on the instance.</p>
      */
     @NameInMap("LogBackupLocalRetentionNumber")
     public Integer logBackupLocalRetentionNumber;
@@ -196,7 +196,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
      * <p>*   **1**: The instance supports snapshot backups.</p>
      * <p>*   **0**: The instance does not support snapshot backups.</p>
      * <br>
-     * <p>>  This parameter is returned only when the instance runs SQL Server.</p>
+     * <p>> This parameter is returned only when the instance runs SQL Server.</p>
      */
     @NameInMap("SupportVolumeShadowCopy")
     public Integer supportVolumeShadowCopy;

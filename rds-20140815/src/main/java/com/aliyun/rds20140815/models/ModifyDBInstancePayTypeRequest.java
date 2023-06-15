@@ -5,19 +5,25 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstancePayTypeRequest extends TeaModel {
     /**
-     * <p>The name of the instance.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The billing method of the instance. Valid values: Postpaid: pay-as-you-go Prepaid: subscription</p>
+     * <p>The billing method of the instance. Valid values:</p>
+     * <br>
+     * <p>*   Postpaid: pay-as-you-go</p>
+     * <p>*   Prepaid: subscription</p>
      */
     @NameInMap("PayType")
     public String payType;
 
     /**
-     * <p>The subscription method of the instance. Valid values: Year and Month. If you set the PayType parameter to Prepaid, you must specify whether to use yearly subscription or monthly subscription for the instance.</p>
+     * <p>The subscription method of the instance. This parameter must be specified when PayType is set to Prepaid.</p>
+     * <br>
+     * <p>*   Year</p>
+     * <p>*   Month</p>
      */
     @NameInMap("Period")
     public String period;
@@ -26,7 +32,7 @@ public class ModifyDBInstancePayTypeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>If the Period parameter is set to Year, the value of the UsedTime parameter ranges from 1 to 9. If the Period parameter is set to Month, the value of the UsedTime parameter can be 1, 2, or 3.</p>
+     * <p>Valid values when Period is set to Year: 1 to 9. Valid values when Period is set to Month: 1, 2, and 3.</p>
      */
     @NameInMap("UsedTime")
     public Integer usedTime;

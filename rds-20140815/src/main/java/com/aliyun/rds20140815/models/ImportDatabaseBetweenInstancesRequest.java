@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class ImportDatabaseBetweenInstancesRequest extends TeaModel {
     /**
-     * <p>The names of the source and destination databases. The value of this parameter is a JSON string. </p>
+     * <p>The names of the source and destination databases. The value of this parameter is a JSON string.</p>
      * <br>
-     * <p>>  If the source and destination instances run the SQL Server database engine, the value of this parameter consists of one or more key-value pairs. In each key-value pair, the key specifies the name of the source database, and the value specifies the name of the destination database. A source database can have a different name from its destination database. Example:</p>
-     * <p>> ```</p>
-     * <p>> {"DBNames":{"srcdb":"destdb","srcdb2":"destmydb2"}}</p>
-     * <p>> ```</p>
-     * <p>> In the preceding example, the data of the source database srcdb is migrated to the destination database destdb, and the data of the source database srcdb2 is migrated to the destination database destmydb2. The name of each source or destination database must be unique.</p>
+     * <p>> If the source and destination instances run SQL Server, the value of this parameter consists of one or more key-value pairs. In each key-value pair, the key specifies the name of the source database, and the value specifies the name of the destination database. A source database can have a different name from the destination database. For example, `{"DBNames":{"srcdb":"destdb","srcdb2":"destmydb2"}}` indicates that srcdb is migrated to destdb and srcdb2 is migrated to destmydb2. The names of source databases cannot be the same, and the names of destination databases cannot be the same.</p>
      */
     @NameInMap("DBInfo")
     public String DBInfo;
 
     /**
-     * <p>The ID of the destination instance.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -35,7 +31,7 @@ public class ImportDatabaseBetweenInstancesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the source instance. The source and destination instances cannot have the same ID.</p>
+     * <p>The ID of the source instance, which cannot be the same as the ID of the destination instance.</p>
      */
     @NameInMap("SourceDBInstanceId")
     public String sourceDBInstanceId;

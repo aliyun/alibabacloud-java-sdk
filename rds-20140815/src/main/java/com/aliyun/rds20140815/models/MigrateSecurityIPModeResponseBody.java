@@ -17,7 +17,21 @@ public class MigrateSecurityIPModeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The network isolation mode after the switching. Valid value: **safety**, which indicates the enhanced whitelist mode.</p>
+     * <p>The whitelist mode after the change, which is the enhanced whitelist mode.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   safety</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    :</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    enhanced whitelist mode</p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("SecurityIPMode")
     public String securityIPMode;

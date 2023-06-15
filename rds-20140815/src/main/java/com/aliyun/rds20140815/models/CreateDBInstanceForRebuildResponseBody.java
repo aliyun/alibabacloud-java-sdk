@@ -11,7 +11,7 @@ public class CreateDBInstanceForRebuildResponseBody extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The response parameters.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -23,7 +23,7 @@ public class CreateDBInstanceForRebuildResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

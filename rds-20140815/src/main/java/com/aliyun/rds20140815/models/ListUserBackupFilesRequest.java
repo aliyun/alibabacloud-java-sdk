@@ -11,9 +11,9 @@ public class ListUserBackupFilesRequest extends TeaModel {
     public String backupId;
 
     /**
-     * <p>The part of the description that is included in the descriptions of the full backup files.</p>
+     * <p>The description of the full backup file.</p>
      * <br>
-     * <p>>  The system implements a fuzzy match based on the value of this parameter.</p>
+     * <p>> The system implements a fuzzy match based on the value of this parameter.</p>
      */
     @NameInMap("Comment")
     public String comment;
@@ -28,7 +28,7 @@ public class ListUserBackupFilesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -40,19 +40,19 @@ public class ListUserBackupFilesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The status of the full backup files. Valid values:</p>
+     * <p>The status of the full backup file. Valid values:</p>
      * <br>
-     * <p>*   **Importing**: The full backup files are being imported.</p>
-     * <p>*   **Failed**: The full backup files fail to be imported.</p>
-     * <p>*   **CheckSucccess**: The full backup files pass the check.</p>
-     * <p>*   **BackupSuccess**: The full backup files are imported.</p>
-     * <p>*   **Deleted**: The full backup files are deleted.</p>
+     * <p>*   **Importing**: The full backup file is being imported.</p>
+     * <p>*   **Failed**: The full backup file fails to be imported.</p>
+     * <p>*   **CheckSucccess**: The full backup file passes the check.</p>
+     * <p>*   **BackupSuccess**: The full backup file is imported.</p>
+     * <p>*   **Deleted**: The full backup file is deleted.</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>The tag that is added to the full backup files.</p>
+     * <p>The tag that is added to the full backup file.</p>
      */
     @NameInMap("Tags")
     public String tags;

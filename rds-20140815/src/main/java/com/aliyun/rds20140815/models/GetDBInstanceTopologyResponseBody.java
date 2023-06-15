@@ -11,7 +11,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Details about the topology.</p>
+     * <p>The details about the topology.</p>
      */
     @NameInMap("Data")
     public GetDBInstanceTopologyResponseBodyData data;
@@ -67,7 +67,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
 
     public static class GetDBInstanceTopologyResponseBodyDataConnections extends TeaModel {
         /**
-         * <p>The endpoint that is used to connect to the instance.</p>
+         * <p>The endpoint of the instance.</p>
          */
         @NameInMap("ConnectionString")
         public String connectionString;
@@ -88,7 +88,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
         public String netType;
 
         /**
-         * <p>The ID of the zone.</p>
+         * <p>The zone ID of the instance.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
@@ -142,7 +142,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
         /**
          * <p>The ID of the dedicated cluster.</p>
          * <br>
-         * <p>>  If the instance does not reside in the specified dedicated cluster, no value is returned.</p>
+         * <p>> If the instance does not reside in the specified dedicated cluster, no value is returned.</p>
          */
         @NameInMap("DedicatedHostGroupId")
         public String dedicatedHostGroupId;
@@ -150,15 +150,15 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
         /**
          * <p>The ID of the host on which the instance resides in the dedicated cluster.</p>
          * <br>
-         * <p>>  If the instance does not reside in the dedicated cluster, no value is returned.</p>
+         * <p>> If the instance does not reside in the specified dedicated cluster, no value is returned.</p>
          */
         @NameInMap("DedicatedHostId")
         public String dedicatedHostId;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The unique identifier of the instance.</p>
          * <br>
-         * <p>>  The value **-1** is returned for an instance that does not reside in a dedicated cluster.</p>
+         * <p>> The value \*\*-1\*\* is returned for an instance that does not reside in a dedicated cluster.</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
@@ -173,7 +173,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
         public String role;
 
         /**
-         * <p>The ID of the zone.</p>
+         * <p>The zone ID of the instance.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

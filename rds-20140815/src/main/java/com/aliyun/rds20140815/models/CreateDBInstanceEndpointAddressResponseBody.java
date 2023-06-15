@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDBInstanceEndpointAddressResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public CreateDBInstanceEndpointAddressResponseBodyData data;

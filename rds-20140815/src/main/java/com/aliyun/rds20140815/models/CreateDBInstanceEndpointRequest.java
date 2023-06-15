@@ -29,8 +29,8 @@ public class CreateDBInstanceEndpointRequest extends TeaModel {
     /**
      * <p>The type of the endpoint. Valid values:</p>
      * <br>
-     * <p>*   Primary: the read/write endpoint of the instance.</p>
-     * <p>*   Readonly: the read-only endpoint of the instance.</p>
+     * <p>*   Primary: read/write endpoint of the instance</p>
+     * <p>*   Readonly: read-only endpoint of the instance</p>
      */
     @NameInMap("DBInstanceEndpointType")
     public String DBInstanceEndpointType;
@@ -42,7 +42,7 @@ public class CreateDBInstanceEndpointRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The information about the node that is configured for the endpoint.</p>
+     * <p>The node that is configured for the endpoint.</p>
      */
     @NameInMap("NodeItems")
     public java.util.List<CreateDBInstanceEndpointRequestNodeItems> nodeItems;

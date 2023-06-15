@@ -7,7 +7,7 @@ public class CheckDBNameAvailableResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
      * <br>
-     * <p>> If this operation returns only the ID of the request, the database name can be used. Otherwise, an error message is returned to indicate that the database name is duplicate or does not conform to the naming conventions.</p>
+     * <p>> If this operation returns only the ID of the request, the database name conforms to the naming conventions. If an error message is returned, the database name is duplicate or does not conform to the naming conventions.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

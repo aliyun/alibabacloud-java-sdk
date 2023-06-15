@@ -5,12 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpgradeDBInstanceKernelVersionRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. This parameter is supported only for instances that run the MySQL, PostgreSQL, or SQL Server database engine.</p>
+     * <p>The ID of the instance. This parameter is supported only for instances that run MySQL, PostgreSQL, or SQL Server.</p>
      * <br>
      * <p>> </p>
      * <br>
-     * <p>*   If the instance runs PostgreSQL, you must make sure that the instance is equipped with **standard SSDs or enhanced SSDs (ESSDs)**. If the instance is equipped with local SSDs, you must call the [RestartDBInstance](~~26230~~) operation to restart the instance. ApsaraDB RDS automatically updates the instance to the latest minor engine version during the restart process.</p>
-     * <p>*   If the instance runs SQL Server, you must make sure that the instance runs SQL Server 2019.</p>
+     * <p>*   If your instance runs PostgreSQL, you must make sure that the instance uses **cloud disks**. If the instance is equipped with local disks, you must call the [RestartDBInstance](~~26230~~) operation to restart the instance. The system automatically updates the instance to the latest minor engine version during the restart process.</p>
+     * <br>
+     * <p>*   If your instance runs SQL Server, you must make sure that the instance runs SQL Server 2019.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -25,21 +26,21 @@ public class UpgradeDBInstanceKernelVersionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The specific point in time when you want to perform the update. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <p>The update time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
      * <br>
-     * <p>>  This parameter takes effect only when you set the **UpgradeTime** parameter to **SpecifyTime**.</p>
+     * <p>> This parameter takes effect only when you set **UpgradeTime** to **SpecifyTime**.</p>
      */
     @NameInMap("SwitchTime")
     public String switchTime;
 
     /**
-     * <p>The minor engine version to which you want to update the instance. You must specify the minor engine version in one of the following formats:</p>
+     * <p>The minor engine version to which you want to update the instance. Format:</p>
      * <br>
      * <p>*   **PostgreSQL**: `rds_postgres_<Major engine version>00_<Minor engine version>`. Example: `rds_postgres_1200_20200830`.</p>
      * <br>
-     * <p>*   **MySQL**: `<RDS edition>_<Minor engine version>`. Examples: `rds_20200229`, `xcluster_20200229`, and `xcluster80_20200229`. The following RDS editions and MySQL versions are supported:</p>
+     * <p>*   **MySQL**: `<RDS edition and MySQL version>_<Minor engine version>`. Examples: `rds_20200229`, `xcluster_20200229`, and `xcluster80_20200229`. The following RDS editions and MySQL versions are supported:</p>
      * <br>
-     * <p>    *   **rds**: The instance runs RDS Basic Edition or High-availability Edition.</p>
+     * <p>    *   **rds**: The instance runs RDS Basic Edition or RDS High-availability Edition.</p>
      * <p>    *   **xcluster**: The instance runs MySQL 5.7 on RDS Enterprise Edition.</p>
      * <p>    *   **xcluster80**: The instance runs MySQL 8.0 on RDS Enterprise Edition.</p>
      * <br>
@@ -47,17 +48,17 @@ public class UpgradeDBInstanceKernelVersionRequest extends TeaModel {
      * <br>
      * <p>If you do not specify this parameter, the instance is updated to the latest minor engine version.</p>
      * <br>
-     * <p>>  For more information about minor engine versions, see [Release notes of minor AliPG versions](~~126002~~), [Release notes of minor AliSQL versions](~~96060~~), and [Release notes of minor engine versions of ApsaraDB RDS for SQL Server](~~213577~~).</p>
+     * <p>> For more information about minor engine versions, see [Release notes of minor AliPG versions](~~126002~~), [Release notes of minor AliSQL versions](~~96060~~), and [Release notes of minor engine versions of ApsaraDB RDS for SQL Server](~~213577~~).</p>
      */
     @NameInMap("TargetMinorVersion")
     public String targetMinorVersion;
 
     /**
-     * <p>The method that is used to update the minor engine version. Valid values:</p>
+     * <p>The time when the update takes effect. Valid values:</p>
      * <br>
-     * <p>*   **Immediate**: The minor engine version is immediately updated.</p>
-     * <p>*   **MaintainTime**: The minor engine version is updated during the maintenance window that you specify. For more information about how to change the maintenance window, see [ModifyDBInstanceMaintainTime](~~26249~~).</p>
-     * <p>*   **SpecifyTime**: The minor engine version is updated at the point in time you specify.</p>
+     * <p>*   **Immediate**: The update immediately takes effect.</p>
+     * <p>*   **MaintainTime**: The update takes effect during the maintenance window that you specify. For more information about how to change the maintenance window, see [ModifyDBInstanceMaintainTime](~~26249~~).</p>
+     * <p>*   **SpecifyTime**: The update takes effect at the point in time you specify.</p>
      * <br>
      * <p>Default value: **Immediate**.</p>
      */

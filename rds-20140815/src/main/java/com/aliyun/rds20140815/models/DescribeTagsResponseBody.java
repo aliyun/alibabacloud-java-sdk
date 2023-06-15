@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTagsResponseBody extends TeaModel {
     /**
-     * <p>The array that consists of tag data.</p>
+     * <p>The tags that are added to the instance.</p>
      */
     @NameInMap("Items")
     public DescribeTagsResponseBodyItems items;
@@ -58,19 +58,19 @@ public class DescribeTagsResponseBody extends TeaModel {
 
     public static class DescribeTagsResponseBodyItemsTagInfos extends TeaModel {
         /**
-         * <p>The IDs of instances to which the tag is added.</p>
+         * <p>The IDs of the instances to which the tag is added.</p>
          */
         @NameInMap("DBInstanceIds")
         public DescribeTagsResponseBodyItemsTagInfosDBInstanceIds DBInstanceIds;
 
         /**
-         * <p>The tag key.</p>
+         * <p>The key of the tag.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of the tag.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

@@ -416,12 +416,19 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("BabelfishConfig")
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeBabelfishConfig babelfishConfig;
 
+        @NameInMap("BpeEnabled")
+        public String bpeEnabled;
+
+        @NameInMap("BurstingEnabled")
+        public Boolean burstingEnabled;
+
         /**
          * <p>The RDS edition of the instance. Valid values:</p>
          * <br>
          * <p>*   **Basic**: RDS Basic Edition</p>
          * <p>*   **HighAvailability**: RDS High-availability Edition</p>
-         * <p>*   **AlwaysOn**: RDS Cluster Edition</p>
+         * <p>*   **AlwaysOn**: RDS Cluster Edition for SQL Server</p>
+         * <p>*   **cluster**: RDS Cluster Edition for MySQL</p>
          * <p>*   **Finance**: RDS Enterprise Edition</p>
          */
         @NameInMap("Category")
@@ -902,6 +909,22 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeBabelfishConfig getBabelfishConfig() {
             return this.babelfishConfig;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setBpeEnabled(String bpeEnabled) {
+            this.bpeEnabled = bpeEnabled;
+            return this;
+        }
+        public String getBpeEnabled() {
+            return this.bpeEnabled;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setBurstingEnabled(Boolean burstingEnabled) {
+            this.burstingEnabled = burstingEnabled;
+            return this;
+        }
+        public Boolean getBurstingEnabled() {
+            return this.burstingEnabled;
         }
 
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setCategory(String category) {

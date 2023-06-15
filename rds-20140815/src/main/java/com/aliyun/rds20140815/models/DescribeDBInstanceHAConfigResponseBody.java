@@ -4,44 +4,18 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the instance.</p>
-     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    /**
-     * <p>The high availability mode of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **RPO**: Data consistency is preferred. The instance ensures data reliability to minimize data losses. If you have high requirements on data consistency, select this mode.</p>
-     * <p>*   **RTO**: Instance availability is preferred. The instance restores the database service at the earliest opportunity to ensure instance availability. If you have high requirements on instance availability, select this mode.</p>
-     * <br>
-     * <p>> This parameter is returned only for instances that run MySQL.</p>
-     */
     @NameInMap("HAMode")
     public String HAMode;
 
-    /**
-     * <p>An array that consists of the information of the primary and secondary instances.</p>
-     */
     @NameInMap("HostInstanceInfos")
     public DescribeDBInstanceHAConfigResponseBodyHostInstanceInfos hostInstanceInfos;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>[The data replication mode of the instance.](~~96055~~) Valid values:</p>
-     * <br>
-     * <p>*   **Sync**: the synchronous mode</p>
-     * <p>*   **Semi-sync**: the semi-synchronous mode</p>
-     * <p>*   **Async**: the asynchronous mode</p>
-     * <br>
-     * <p>> This parameter is returned only for instances that run MySQL.</p>
-     */
     @NameInMap("SyncMode")
     public String syncMode;
 
@@ -91,53 +65,24 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceHAConfigResponseBodyHostInstanceInfosNodeInfo extends TeaModel {
-        /**
-         * <p>The time when the secondary instance completed the synchronization of data from the primary instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
-         */
         @NameInMap("DataSyncTime")
         public String dataSyncTime;
 
-        /**
-         * <p>The time when the secondary instance received logs from the primary instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
-         */
         @NameInMap("LogSyncTime")
         public String logSyncTime;
 
-        /**
-         * <p>The ID of the instance.</p>
-         */
         @NameInMap("NodeId")
         public String nodeId;
 
-        /**
-         * <p>The type of the node. Valid values:</p>
-         * <br>
-         * <p>*   **Master**: the primary node</p>
-         * <p>*   **Slave**: the secondary node</p>
-         */
         @NameInMap("NodeType")
         public String nodeType;
 
-        /**
-         * <p>The region ID of the instance.</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The synchronization status. Valid values:</p>
-         * <br>
-         * <p>*   **NotAvailable**: The synchronization fails. This means that faults occur.</p>
-         * <p>*   **Syncing**: The synchronization is in process. In this case, a primary/secondary switchover may cause data losses.</p>
-         * <p>*   **Synchronized**: The synchronization is complete.</p>
-         * <p>*   **NotSupport**: The database engine or version does not involve the synchronization between the primary and secondary instances.</p>
-         */
         @NameInMap("SyncStatus")
         public String syncStatus;
 
-        /**
-         * <p>The zone ID of the instance.</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 

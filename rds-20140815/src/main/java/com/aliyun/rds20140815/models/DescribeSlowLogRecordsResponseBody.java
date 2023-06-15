@@ -4,45 +4,27 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlowLogRecordsResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the instance.</p>
-     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    /**
-     * <p>The database engine that the instance runs.</p>
-     */
     @NameInMap("Engine")
     public String engine;
 
     /**
-     * <p>An array that consists of slow query logs.</p>
+     * <p>An array that consists of the information about each slow query log.</p>
      */
     @NameInMap("Items")
     public DescribeSlowLogRecordsResponseBodyItems items;
 
-    /**
-     * <p>The number of the returned page.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of SQL statements that are returned on the current page.</p>
-     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of entries returned.</p>
-     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -108,135 +90,60 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord extends TeaModel {
-        /**
-         * <p>The name of the application that is connected to the instance.</p>
-         * <br>
-         * <p>>  This parameter is supported only by instances that run SQL Server.</p>
-         */
         @NameInMap("ApplicationName")
         public String applicationName;
 
-        /**
-         * <p>The hostname of the client.</p>
-         * <br>
-         * <p>>  This parameter is supported only by instances that run SQL Server.</p>
-         */
         @NameInMap("ClientHostName")
         public String clientHostName;
 
-        /**
-         * <p>The duration during which the SQL statement is processed by the CPU. Unit: milliseconds.</p>
-         * <br>
-         * <p>>  This parameter is supported only by instances that run SQL Server.</p>
-         */
         @NameInMap("CpuTime")
         public Long cpuTime;
 
-        /**
-         * <p>The name of the database.</p>
-         */
         @NameInMap("DBName")
         public String DBName;
 
-        /**
-         * <p>The time when the execution of the SQL statement started. The time follows the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
-         */
         @NameInMap("ExecutionStartTime")
         public String executionStartTime;
 
-        /**
-         * <p>The name and IP address of the client that is connected to the database.</p>
-         */
         @NameInMap("HostAddress")
         public String hostAddress;
 
-        /**
-         * <p>The number of rows that are affected by the last SQL statement.</p>
-         * <br>
-         * <p>>  This parameter is supported only by instances that run SQL Server.</p>
-         */
         @NameInMap("LastRowsAffectedCount")
         public Long lastRowsAffectedCount;
 
-        /**
-         * <p>The lock duration of the SQL statement. Unit: seconds.</p>
-         */
         @NameInMap("LockTimes")
         public Long lockTimes;
 
-        /**
-         * <p>The number of logical reads.</p>
-         * <br>
-         * <p>>  This parameter is supported only by instances that run SQL Server.</p>
-         */
         @NameInMap("LogicalIORead")
         public Long logicalIORead;
 
-        /**
-         * <p>The number of rows parsed by the SQL statement.</p>
-         */
         @NameInMap("ParseRowCounts")
         public Long parseRowCounts;
 
-        /**
-         * <p>The number of physical reads.</p>
-         * <br>
-         * <p>>  This parameter is supported only by instances that run SQL Server.</p>
-         */
         @NameInMap("PhysicalIORead")
         public Long physicalIORead;
 
-        /**
-         * <p>The execution duration of the slow query. Unit: milliseconds.</p>
-         */
         @NameInMap("QueryTimeMS")
         public Long queryTimeMS;
 
-        /**
-         * <p>The execution duration of the slow query. Unit: seconds.</p>
-         */
         @NameInMap("QueryTimes")
         public Long queryTimes;
 
-        /**
-         * <p>The number of rows returned by the SQL statement.</p>
-         */
         @NameInMap("ReturnRowCounts")
         public Long returnRowCounts;
 
-        /**
-         * <p>The number of rows affected by the SQL statement.</p>
-         * <br>
-         * <p>>  This parameter is supported only by instances that run SQL Server.</p>
-         */
         @NameInMap("RowsAffectedCount")
         public Long rowsAffectedCount;
 
-        /**
-         * <p>The unique ID of the SQL statement.</p>
-         */
         @NameInMap("SQLHash")
         public String SQLHash;
 
-        /**
-         * <p>The details of the SQL statement.</p>
-         */
         @NameInMap("SQLText")
         public String SQLText;
 
-        /**
-         * <p>The username of the account that is used to connect to the instance.</p>
-         * <br>
-         * <p>>  This parameter is supported only by instances that run SQL Server.</p>
-         */
         @NameInMap("UserName")
         public String userName;
 
-        /**
-         * <p>The number of I/O writes.</p>
-         * <br>
-         * <p>>  This parameter is supported only by instances that run SQL Server.</p>
-         */
         @NameInMap("WriteIOCount")
         public Long writeIOCount;
 

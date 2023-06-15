@@ -17,7 +17,7 @@ public class ImportUserBackupFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the full backup file is imported into the ApsaraDB RDS for MySQL instance. If the full backup file is imported, the **true** is returned. Otherwise, an error message is returned.</p>
+     * <p>Indicates whether the full backup file is successfully imported into the instance. If the full backup file is successfully imported, **true** is returned. Otherwise, an error message is returned.</p>
      */
     @NameInMap("Status")
     public Boolean status;

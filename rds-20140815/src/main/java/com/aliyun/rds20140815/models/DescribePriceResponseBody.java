@@ -22,6 +22,9 @@ public class DescribePriceResponseBody extends TeaModel {
     @NameInMap("Rules")
     public DescribePriceResponseBodyRules rules;
 
+    @NameInMap("ShowDiscount")
+    public Boolean showDiscount;
+
     public static DescribePriceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePriceResponseBody self = new DescribePriceResponseBody();
         return TeaModel.build(map, self);
@@ -49,6 +52,14 @@ public class DescribePriceResponseBody extends TeaModel {
     }
     public DescribePriceResponseBodyRules getRules() {
         return this.rules;
+    }
+
+    public DescribePriceResponseBody setShowDiscount(Boolean showDiscount) {
+        this.showDiscount = showDiscount;
+        return this;
+    }
+    public Boolean getShowDiscount() {
+        return this.showDiscount;
     }
 
     public static class DescribePriceResponseBodyPriceInfoActivityInfo extends TeaModel {

@@ -11,13 +11,13 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
     public DescribeDBInstanceByTagsResponseBodyItems items;
 
     /**
-     * <p>The page number of the page returned.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
@@ -81,13 +81,13 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceByTagsResponseBodyItemsDBInstanceTagTagsTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of the tag.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of the tag.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

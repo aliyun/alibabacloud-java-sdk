@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     /**
-     * <p>The method that is used to verify the identities of clients. This parameter is supported only when the instance runs PostgreSQL with standard SSDs or ESSDs. Valid values:</p>
+     * <p>The method that is used to verify the identities of clients. This parameter is supported only when the instance runs PostgreSQL with cloud disks. Valid values:</p>
      * <br>
      * <p>*   **cert**</p>
      * <p>*   **perfer**</p>
@@ -16,7 +16,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String ACL;
 
     /**
-     * <p>The type of the server certificate. This parameter is supported only when the instance runs PostgreSQL with standard SSDs or ESSDs. Valid values:</p>
+     * <p>The type of the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disks. Valid values:</p>
      * <br>
      * <p>*   **aliyun**: a cloud certificate</p>
      * <p>*   **custom**: a custom certificate</p>
@@ -25,19 +25,19 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String CAType;
 
     /**
-     * <p>The public key of the CA that issues client certificates. This parameter is supported only when the instance runs PostgreSQL with standard SSDs or ESSDs.</p>
+     * <p>The public key of the CA that issues client certificates. This parameter is supported only when the instance runs PostgreSQL with cloud disks.</p>
      */
     @NameInMap("ClientCACert")
     public String clientCACert;
 
     /**
-     * <p>The time when the public key of the CA that issues client certificates expires. This parameter is supported only when the instance runs PostgreSQL with standard SSDs or ESSDs. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. This parameter is not supported now.</p>
+     * <p>The content of the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disks. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. This parameter is not supported now.</p>
      */
     @NameInMap("ClientCACertExpireTime")
     public String clientCACertExpireTime;
 
     /**
-     * <p>The certificate revocation list (CRL) that contains revoked client certificates. This parameter is supported only when the instance runs PostgreSQL with standard SSDs or ESSDs.</p>
+     * <p>The certificate revocation list (CRL) that contains revoked client certificates. This parameter is supported only when the instance runs PostgreSQL with cloud disks.</p>
      */
     @NameInMap("ClientCertRevocationList")
     public String clientCertRevocationList;
@@ -49,7 +49,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String connectionString;
 
     /**
-     * <p>The status of the SSL link. This parameter is supported only when the instance runs PostgreSQL with standard SSDs or ESSDs. Valid values:</p>
+     * <p>The status of the SSL link. This parameter is supported only when the instance runs PostgreSQL with cloud disks. Valid values:</p>
      * <br>
      * <p>*   **success**</p>
      * <p>*   **setting**</p>
@@ -59,13 +59,13 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String lastModifyStatus;
 
     /**
-     * <p>The reason why the SSL link stays in the current state. This parameter is supported only when the instance runs PostgreSQL with standard SSDs or ESSDs.</p>
+     * <p>The reason why the SSL link stays in the current state. This parameter is supported only when the instance runs PostgreSQL with cloud disks.</p>
      */
     @NameInMap("ModifyStatusReason")
     public String modifyStatusReason;
 
     /**
-     * <p>The method that is used to verify the replication permission. This parameter is supported only when the instance runs PostgreSQL with standard SSDs or ESSDs. Valid values:</p>
+     * <p>The method that is used to verify the replication permission. This parameter is supported only when the instance runs PostgreSQL with cloud disks. Valid values:</p>
      * <br>
      * <p>*   **cert**</p>
      * <p>*   **perfer**</p>
@@ -98,19 +98,19 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String requireUpdate;
 
     /**
-     * <p>The server certificate that needs to be updated. This parameter is supported only when the instance runs PostgreSQL with standard SSDs or ESSDs.</p>
+     * <p>The server certificate that needs to be updated. This parameter is supported only when the instance runs PostgreSQL with cloud disks.</p>
      */
     @NameInMap("RequireUpdateItem")
     public String requireUpdateItem;
 
     /**
-     * <p>The reason why the server certificate needs to be updated. This parameter is supported only when the instance runs PostgreSQL with standard SSDs or ESSDs.</p>
+     * <p>The reason why the server certificate needs to be updated. This parameter is supported only when the instance runs PostgreSQL with cloud disks.</p>
      */
     @NameInMap("RequireUpdateReason")
     public String requireUpdateReason;
 
     /**
-     * <p>The time when the server certificate was created. This parameter is supported only when the instance runs PostgreSQL with standard SSDs or ESSDs. In addition, this parameter is valid only when the CAType parameter is set to aliyun.</p>
+     * <p>The time when the server certificate was created. This parameter is supported only when the instance runs PostgreSQL with cloud disks. In addition, this parameter is valid only when CAType is set to aliyun.</p>
      */
     @NameInMap("SSLCreateTime")
     public String SSLCreateTime;
@@ -120,8 +120,8 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
      * <br>
      * <p>*   Valid values for ApsaraDB RDS for MySQL instances and ApsaraDB RDS for SQL Server instances:</p>
      * <br>
-     * <p>    *   **Yes**: enabled</p>
-     * <p>    *   **No**: disabled</p>
+     * <p>    *   **Yes**</p>
+     * <p>    *   **No**</p>
      * <br>
      * <p>*   Valid values for ApsaraDB RDS for PostgreSQL instances:</p>
      * <br>
@@ -138,19 +138,19 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String SSLExpireTime;
 
     /**
-     * <p>The URL of the certificate that is used to issue the server certificate. This parameter is supported only when the instance runs PostgreSQL with standard SSDs or ESSDs.</p>
+     * <p>The URL of the certificate that is used to issue the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disks.</p>
      */
     @NameInMap("ServerCAUrl")
     public String serverCAUrl;
 
     /**
-     * <p>The content of the server certificate. This parameter is supported only when the instance runs PostgreSQL with standard SSDs or ESSDs.</p>
+     * <p>The content of the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disks.</p>
      */
     @NameInMap("ServerCert")
     public String serverCert;
 
     /**
-     * <p>The private key of the server certificate. This parameter is supported only when the instance runs PostgreSQL with standard SSDs or ESSDs.</p>
+     * <p>The private key of the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disks.</p>
      */
     @NameInMap("ServerKey")
     public String serverKey;

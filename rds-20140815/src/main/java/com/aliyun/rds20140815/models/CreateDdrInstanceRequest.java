@@ -7,13 +7,13 @@ public class CreateDdrInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the backup set that is used for the restoration. You can call the [DescribeCrossRegionBackups](~~121733~~) operation to query the ID of the backup set.</p>
      * <br>
-     * <p>> If you set the **RestoreType** parameter to **BackupSet**, you must specify this parameter.</p>
+     * <p>> If you set **RestoreType** to **BackupSet**, you must specify this parameter.</p>
      */
     @NameInMap("BackupSetId")
     public String backupSetId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the generated token is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -36,7 +36,7 @@ public class CreateDdrInstanceRequest extends TeaModel {
     public String DBInstanceClass;
 
     /**
-     * <p>The name of the destination instance. The name must be 2 to 256 characters in length. The name can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name of the instance. The name must be 2 to 256 characters in length. The name can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
      * <br>
      * <p>> The name cannot start with http:// or https://.</p>
      */
@@ -75,7 +75,7 @@ public class CreateDdrInstanceRequest extends TeaModel {
     public String engine;
 
     /**
-     * <p>The major engine version of the destination instance. The value of this parameter varies based on the value of the **Engine** parameter.</p>
+     * <p>The major engine version of the destination instance. The value of this parameter varies based on the value of **Engine**.</p>
      * <br>
      * <p>*   Valid values when Engine is set to MySQL: **5.5, 5.6, 5.7, and 8.0**</p>
      * <p>*   Valid values when Engine is set to SQLServer: **2008r2, 08r2\_ent_ha, 2012, 2012\_ent_ha, 2012\_std_ha, 2012\_web, 2014\_std_ha, 2016\_ent_ha, 2016\_std_ha, 2016\_web, 2017\_std_ha, 2017\_ent, 2019\_std_ha, and 2019\_ent**</p>
@@ -85,14 +85,14 @@ public class CreateDdrInstanceRequest extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>The network type of the destination instance. Valid values:</p>
+     * <p>The network type of the instance. Valid values:</p>
      * <br>
      * <p>*   **VPC**</p>
      * <p>*   **Classic**</p>
      * <br>
      * <p>Default value: Classic.</p>
      * <br>
-     * <p>> If you set this parameter to **VPC**, you must also specify the **VpcId** and **VSwitchId** parameters.</p>
+     * <p>> If you set this parameter to **VPC**, you must also specify **VpcId** and **VSwitchId**.</p>
      */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
@@ -104,7 +104,7 @@ public class CreateDdrInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The billing method of the destination instance. Valid values:</p>
+     * <p>The billing method of the instance. Valid values:</p>
      * <br>
      * <p>*   **Postpaid**: pay-as-you-go</p>
      * <p>*   **Prepaid**: subscription</p>
@@ -118,13 +118,13 @@ public class CreateDdrInstanceRequest extends TeaModel {
      * <p>*   **Year**</p>
      * <p>*   **Month**</p>
      * <br>
-     * <p>> If you set the PayType parameter to **Prepaid**, you must specify the UsedTime parameter.</p>
+     * <p>> If you set PayType to **Prepaid**, you must specify UsedTime.</p>
      */
     @NameInMap("Period")
     public String period;
 
     /**
-     * <p>The private IP address of the destination instance. The private IP address must be within the CIDR block that is supported by the specified vSwitch. The system automatically assigns a private IP address to an instance based on the values of the **VPCId** and **VSwitchId** parameters.</p>
+     * <p>The private IP address of the destination instance. The private IP address must be within the CIDR block that is supported by the specified vSwitch. The system automatically assigns a private IP address to an instance based on the values of **VPCId** and **VSwitchId**.</p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
@@ -150,7 +150,7 @@ public class CreateDdrInstanceRequest extends TeaModel {
     /**
      * <p>The point in time to which you want to restore data. The point in time that you specify must be earlier than the current time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
      * <br>
-     * <p>> If the **RestoreType** parameter is set to **BackupTime**, you must specify this parameter.</p>
+     * <p>> If **RestoreType** is set to **BackupTime**, you must specify this parameter.</p>
      */
     @NameInMap("RestoreTime")
     public String restoreTime;
@@ -158,8 +158,8 @@ public class CreateDdrInstanceRequest extends TeaModel {
     /**
      * <p>The method that is used to restore data. Valid values:</p>
      * <br>
-     * <p>*   **BackupSet**: Data is restored from a backup set. If you use this value, you must also specify the **BackupSetID** parameter.</p>
-     * <p>*   **BackupTime**: restores data to a point in time. You must also specify the **RestoreTime**, **SourceRegion**, and **SourceDBInstanceName** parameters.</p>
+     * <p>*   **BackupSet**: restores data from a backup set. If you use this value, you must also specify **BackupSetID**.</p>
+     * <p>*   **BackupTime**: restores data to a point in time. You must also specify **RestoreTime**, **SourceRegion**, and **SourceDBInstanceName**.</p>
      */
     @NameInMap("RestoreType")
     public String restoreType;
@@ -176,7 +176,7 @@ public class CreateDdrInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the source instance if you want to restore data to a point in time.</p>
      * <br>
-     * <p>> If you set the **RestoreType** parameter to **BackupTime**, you must specify this parameter.</p>
+     * <p>> If you set **RestoreType** to **BackupTime**, you must specify this parameter.</p>
      */
     @NameInMap("SourceDBInstanceName")
     public String sourceDBInstanceName;
@@ -184,7 +184,7 @@ public class CreateDdrInstanceRequest extends TeaModel {
     /**
      * <p>The region ID of the source instance if you want to restore data to a point in time.</p>
      * <br>
-     * <p>> If you set the **RestoreType** parameter to **BackupTime**, you must specify this parameter.</p>
+     * <p>> If you set **RestoreType** to **BackupTime**, you must specify this parameter.</p>
      */
     @NameInMap("SourceRegion")
     public String sourceRegion;
@@ -201,28 +201,28 @@ public class CreateDdrInstanceRequest extends TeaModel {
     public String systemDBCharset;
 
     /**
-     * <p>The subscription duration of the instance. Valid values:</p>
+     * <p>The subscription duration of the instance.</p>
      * <br>
-     * <p>*   If you set the **Period** parameter to **Year**, the value of the UsedTime parameter ranges from **1 to 3**.</p>
-     * <p>*   If you set the **Period** parameter to **Month**, the value of the UsedTime parameter ranges from **1 to 9**.</p>
+     * <p>*   If you set **Period** to **Year**, the value of UsedTime ranges from **1 to 3**.</p>
+     * <p>*   If you set **Period** to **Month**, the value of UsedTime ranges from **1 to 9**.</p>
      * <br>
-     * <p>> If you set the PayType parameter to **Prepaid**, you must specify the UsedTime parameter.</p>
+     * <p>> If you set PayType to **Prepaid**, you must specify UsedTime.</p>
      */
     @NameInMap("UsedTime")
     public String usedTime;
 
     /**
-     * <p>The VPC ID of the destination instance. This parameter is available only when you set the **InstanceNetworkType** parameter to **VPC**.</p>
+     * <p>The VPC ID of the instance. This parameter is available only when you set **InstanceNetworkType** to **VPC**.</p>
      * <br>
-     * <p>> If you specify this parameter, you must also specify the **ZoneId** parameter.</p>
+     * <p>> If you specify this parameter, you must also specify **ZoneId**.</p>
      */
     @NameInMap("VPCId")
     public String VPCId;
 
     /**
-     * <p>The vSwitch ID of the destination instance. If you specify more than one vSwitch, separate the IDs of the vSwitches with commas (,). This parameter is available only when you set the **InstanceNetworkType** parameter to **VPC**.</p>
+     * <p>The vSwitch ID of the destination instance. If you specify more than one vSwitch, separate the IDs of the vSwitches with commas (,). This parameter is available only when you set **InstanceNetworkType** to **VPC**.</p>
      * <br>
-     * <p>> If you specify this parameter, you must also specify the **ZoneId** parameter.</p>
+     * <p>> If you specify this parameter, you must also specify **ZoneId**.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;

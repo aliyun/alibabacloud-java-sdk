@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeDBProxyInstanceKernelVersionRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
+     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -26,9 +26,9 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The point in time at which you want to upgrade the database proxy version of the instance. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <p>The specific point in time when you want to perform the upgrade. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
      * <br>
-     * <p>>  If you set the **UpgradeTime** parameter to **SpecificTime**, you must specify the SwitchTime parameter.</p>
+     * <p>> If you set **UpgradeTime** to **SpecificTime**, you must specify SwitchTime.</p>
      */
     @NameInMap("SwitchTime")
     public String switchTime;
@@ -43,6 +43,7 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends TeaModel {
      * <p>> </p>
      * <br>
      * <p>*   If the instance runs MySQL, you can set this parameter to **MaintainTime**, **Immediate**, or **SpecificTime**.</p>
+     * <br>
      * <p>*   If the instance runs PostgreSQL, you can set this parameter to **MaintainTime** or **Immediate**.</p>
      */
     @NameInMap("UpgradeTime")

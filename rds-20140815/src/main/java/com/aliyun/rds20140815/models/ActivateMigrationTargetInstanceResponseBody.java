@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ActivateMigrationTargetInstanceResponseBody extends TeaModel {
     /**
-     * <p>The name of the instance.</p>
+     * <p>The name of the destination instance.</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
@@ -17,7 +17,7 @@ public class ActivateMigrationTargetInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The private or public IP address that is used to connect to the self-managed PostgreSQL instance.</p>
+     * <p>The private IP address that is used to connect to the self-managed PostgreSQL instance.</p>
      */
     @NameInMap("SourceIpAddress")
     public String sourceIpAddress;
@@ -29,7 +29,7 @@ public class ActivateMigrationTargetInstanceResponseBody extends TeaModel {
     public Long sourcePort;
 
     /**
-     * <p>The ID of the job.</p>
+     * <p>The ID of the identification task.</p>
      */
     @NameInMap("TaskId")
     public Long taskId;

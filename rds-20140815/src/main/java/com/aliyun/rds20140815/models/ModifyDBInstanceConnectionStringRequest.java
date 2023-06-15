@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     /**
-     * <p>The TDS port of the instance for which Babelfish is enabled.</p>
+     * <p>The Tabular Data Stream (TDS) port of the instance for which Babelfish is enabled.</p>
      * <br>
      * <p>> This parameter applies only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for ApsaraDB RDS for PostgreSQL, see [Introduction to Babelfish](~~428613~~).</p>
      */
@@ -13,9 +13,9 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     public String babelfishPort;
 
     /**
-     * <p>The prefix of the endpoint after the change. Only the prefix of the value of the **CurrentConnectionString** parameter can be changed.</p>
+     * <p>The prefix of the endpoint after the change. Only the prefix of the value of **CurrentConnectionString** can be changed.</p>
      * <br>
-     * <p>> The value can be 8 to 64 characters in length and can contain letters, digits, and hyphens (-). The value cannot contain any of the following special characters: ! # % ^ & \* = + | {} ; : \" " ,<> / ?</p>
+     * <p>> The value must be 8 to 64 characters in length and can contain letters, digits, and hyphens (-). The value cannot contain any of the following special characters: ! # % ^ & \* = + | {} ; : \" " ,<> / ?</p>
      */
     @NameInMap("ConnectionStringPrefix")
     public String connectionStringPrefix;

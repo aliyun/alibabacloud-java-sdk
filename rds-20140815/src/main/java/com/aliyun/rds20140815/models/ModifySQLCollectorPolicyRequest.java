@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifySQLCollectorPolicyRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the IDs of instances.</p>
+     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -17,7 +17,7 @@ public class ModifySQLCollectorPolicyRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs. For more information, see [View basic information of a resource group](~~151181~~).</p>
+     * <p>The ID of the resource group. For more information, see [View basic information of a resource group](~~151181~~).</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

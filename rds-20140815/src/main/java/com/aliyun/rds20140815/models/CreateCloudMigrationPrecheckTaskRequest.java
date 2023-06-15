@@ -22,18 +22,17 @@ public class CreateCloudMigrationPrecheckTaskRequest extends TeaModel {
     /**
      * <p>The environment in which the self-managed PostgreSQL instance runs.</p>
      * <br>
-     * <p>*   **idcOnVpc**: The self-managed PostgreSQL instance resides in a data center, which can communicate with the VPC to which the ApsaraDB RDS for PostgreSQL instance belongs.</p>
+     * <p>*   **idcOnVpc**: The self-managed PostgreSQL instance resides in a data center. The data center can communicate with the VPC to which the ApsaraDB RDS for PostgreSQL instance belongs.</p>
      * <p>*   **ecsOnVpc**: The self-managed PostgreSQL instance resides on an ECS instance.</p>
-     * <p>*   **internet**: The self-managed PostgreSQL instance resides on a device that is connected over the Internet.</p>
      */
     @NameInMap("SourceCategory")
     public String sourceCategory;
 
     /**
-     * <p>The private or public IP address that is used to connect to the self-managed PostgreSQL instance.</p>
+     * <p>The private IP address that is used to connect to the self-managed PostgreSQL instance.</p>
      * <br>
      * <p>*   If the self-managed PostgreSQL instance resides on an ECS instance, enter the private IP address of the ECS instance. For more information about how to obtain the private IP address of an ECS instance, see [View IP addresses](~~273914~~).</p>
-     * <p>*   If the self-managed PostgreSQL instance resides in a data center, enter the IP address of the DNS server.</p>
+     * <p>*   If the self-managed PostgreSQL instance resides in an on-premises data center, enter the private IP address of the on-premises data center.</p>
      */
     @NameInMap("SourceIpAddress")
     public String sourceIpAddress;
@@ -45,13 +44,13 @@ public class CreateCloudMigrationPrecheckTaskRequest extends TeaModel {
     public String sourcePassword;
 
     /**
-     * <p>The port that is used to connect to the self-managed PostgreSQL instance. You can run the `netstat -a grep PGSQL` command to view the port.</p>
+     * <p>The port that is used to connect to the self-managed PostgreSQL instance. You can run the `netstat -a | grep PGSQL` command to view the port.</p>
      */
     @NameInMap("SourcePort")
     public Long sourcePort;
 
     /**
-     * <p>The name of the cloud migration task. If you do not specify this parameter, ApsaraDB RDS automatically generates a name for the cloud migration task.</p>
+     * <p>The name of the task. If you do not specify this parameter, ApsaraDB RDS automatically generates a name for the cloud migration task.</p>
      */
     @NameInMap("TaskName")
     public String taskName;

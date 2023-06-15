@@ -23,7 +23,7 @@ public class ModifyDbProxyInstanceSslRequest extends TeaModel {
     public String dbProxyConnectString;
 
     /**
-     * <p>The ID of the proxy endpoint. You can call the [DescribeDBProxyEndpoint](~~140955~~) operation to query the proxy endpoints of a proxy terminal.</p>
+     * <p>The ID of the proxy endpoint. You can call the [DescribeDBProxyEndpoint](~~140955~~) operation to query the ID of the proxy endpoint.</p>
      */
     @NameInMap("DbProxyEndpointId")
     public String dbProxyEndpointId;
@@ -35,7 +35,7 @@ public class ModifyDbProxyInstanceSslRequest extends TeaModel {
      * <p>*   1: enables SSL encryption or modifies the endpoint that requires SSL encryption.</p>
      * <p>*   2: updates the validity period of the SSL certificate.</p>
      * <br>
-     * <p>>  This setting causes your instance to restart. Proceed with caution.</p>
+     * <p>> This setting causes your instance to restart. Proceed with caution.</p>
      */
     @NameInMap("DbProxySslEnabled")
     public String dbProxySslEnabled;

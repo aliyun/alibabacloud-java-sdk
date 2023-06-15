@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateUserBackupFileResponseBody extends TeaModel {
     /**
-     * <p>The ID of the full backup file.</p>
+     * <p>The ID of the backup file.</p>
      */
     @NameInMap("BackupId")
     public String backupId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

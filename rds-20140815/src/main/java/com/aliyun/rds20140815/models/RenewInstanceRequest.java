@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class RenewInstanceRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable automatic payment during the renewal. Valid values:</p>
+     * <p>Specifies whether payment is automatically made during renewal. Valid values:</p>
      * <br>
-     * <p>*   **True**: Automatic payment is enabled. Make sure that your Alibaba Cloud account has adequate balance.</p>
-     * <p>*   **False**: Automatic payment is disabled. You have to manually pay the order in the console. Log on to the ApsaraDB RDS console. In the upper-right corner, choose **Expenses > User Center**. In the left-side navigation pane, click **Orders**. On the page that appears, find your order and complete the payment.</p>
+     * <p>*   **True**: enables automatic payment. Make sure that your Alibaba Cloud account has adequate balance.</p>
+     * <p>*   **False** (default): disables automatic payment. You have to manually pay the order in the console. Log on to the ApsaraDB RDS console. In the upper-right corner, choose **Expenses > User Center**. In the left-side navigation pane, click **Orders**. On the page that appears, find your order and complete the payment.</p>
      */
     @NameInMap("AutoPay")
     public String autoPay;
@@ -17,13 +17,13 @@ public class RenewInstanceRequest extends TeaModel {
      * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
      * <br>
      * <p>*   **true**.</p>
-     * <p>*   **false**. This is the default value.</p>
+     * <p>*   **false** (default)</p>
      */
     @NameInMap("AutoRenew")
     public String autoRenew;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the generated token is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -38,7 +38,7 @@ public class RenewInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The duration of the subscription renewal. Unit: months. Valid values:</p>
+     * <p>The duration of the subscription renewal. Unit: month. Valid values:</p>
      * <br>
      * <p>*   **1~9**</p>
      * <p>*   **12**</p>

@@ -11,7 +11,7 @@ public class MigrateDBInstanceRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The ID of the dedicated cluster. You can call the [DescribeDedicatedHostGroups](~~141946~~) operation to query the IDs of dedicated clusters.</p>
+     * <p>The ID of the dedicated cluster. You can call the [DescribeDedicatedHostGroups](~~141946~~) operation to query the ID of the dedicated cluster.</p>
      */
     @NameInMap("DedicatedHostGroupId")
     public String dedicatedHostGroupId;
@@ -30,7 +30,7 @@ public class MigrateDBInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -44,19 +44,19 @@ public class MigrateDBInstanceRequest extends TeaModel {
     /**
      * <p>The point in time when you want the system to start the migration. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
      * <br>
-     * <p>>  This parameter must be specified when you set the **EffectiveTime** parameter to **Specified**.</p>
+     * <p>> This parameter must be specified when you set **EffectiveTime** to **Specified**.</p>
      */
     @NameInMap("SpecifiedTime")
     public String specifiedTime;
 
     /**
-     * <p>The ID of the host to which you want to migrate the primary instance. You can call the [DescribeDedicatedHosts](~~200944~~) operation to query the IDs of hosts.</p>
+     * <p>The ID of the host to which you want to migrate the primary instance. You can call the [DescribeDedicatedHosts](~~200944~~) operation to obtain the ID of the host.</p>
      */
     @NameInMap("TargetDedicatedHostIdForMaster")
     public String targetDedicatedHostIdForMaster;
 
     /**
-     * <p>The ID of the host to which you want to migrate the secondary instance. You can call the [DescribeDedicatedHosts](~~200944~~) operation to query the IDs of hosts.</p>
+     * <p>The ID of the host to which you want to migrate the secondary instance. You can call the [DescribeDedicatedHosts](~~200944~~) operation to obtain the ID of the host.</p>
      */
     @NameInMap("TargetDedicatedHostIdForSlave")
     public String targetDedicatedHostIdForSlave;

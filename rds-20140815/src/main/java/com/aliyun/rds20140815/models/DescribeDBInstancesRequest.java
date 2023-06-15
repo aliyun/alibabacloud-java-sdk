@@ -4,8 +4,11 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancesRequest extends TeaModel {
+    @NameInMap("Category")
+    public String category;
+
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the generated token is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -65,7 +68,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String dedicatedHostGroupId;
 
     /**
-     * <p>The ID of the host on which the instance resides in the dedicated cluster.</p>
+     * <p>The host ID of the instance in the dedicated cluster.</p>
      */
     @NameInMap("DedicatedHostId")
     public String dedicatedHostId;
@@ -99,6 +102,12 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String expired;
 
     /**
+     * <p>实例过滤条件参数及其值的JSON串</p>
+     */
+    @NameInMap("Filter")
+    public String filter;
+
+    /**
      * <p>Specifies whether to return the RDS edition of the instance by using the Category parameter. Valid values:</p>
      * <br>
      * <p>*   **0**: returns the RDS edition of the instance.</p>
@@ -123,13 +132,13 @@ public class DescribeDBInstancesRequest extends TeaModel {
      * <br>
      * <p>Default value: **30**.</p>
      * <br>
-     * <p>> If you specify this parameter, the **PageSize** parameter and the **PageNumber** parameter are unavailable.</p>
+     * <p>> If you specify this parameter, **PageSize** and **PageNumber** are unavailable.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to display the next page. You must set this parameter to the value that is returned from the most recent call of the **DescribeDBInstances** operation for the **NextToken** parameter. If the returned entries are displayed on multiple pages, the next page can be displayed when you call this operation again with this parameter specified.</p>
+     * <p>The token that is used to display the next page. You must set this parameter to the value that is returned from the most recent call of the **DescribeDBInstances** operation for **NextToken**. If the returned entries are displayed on multiple pages, the next page can be displayed when you call this operation again with this parameter specified.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -172,7 +181,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs.</p>
+     * <p>The ID of the resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -190,19 +199,19 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String searchKey;
 
     /**
-     * <p>The tag that is added to the instance. Each tag is a key-value pair that consists of two parts: TagKey and TagValue. You can specify a maximum of five tags in the following format for each request: {"key1":"value1","key2":"value2"...}.</p>
+     * <p>The tag that is added to the instance. Each tag is a key-value pair that consists of two fields: TagKey and TagValue. You can specify a maximum of five tags in the following format for each request: {"key1":"value1","key2":"value2"...}.</p>
      */
     @NameInMap("Tags")
     public String tags;
 
     /**
-     * <p>The ID of the vSwitch.</p>
+     * <p>The vSwitch ID of the instance.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC).</p>
+     * <p>The VPC ID of the instance.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -222,6 +231,14 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public static DescribeDBInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstancesRequest self = new DescribeDBInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDBInstancesRequest setCategory(String category) {
+        this.category = category;
+        return this;
+    }
+    public String getCategory() {
+        return this.category;
     }
 
     public DescribeDBInstancesRequest setClientToken(String clientToken) {
@@ -318,6 +335,14 @@ public class DescribeDBInstancesRequest extends TeaModel {
     }
     public String getExpired() {
         return this.expired;
+    }
+
+    public DescribeDBInstancesRequest setFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
+    public String getFilter() {
+        return this.filter;
     }
 
     public DescribeDBInstancesRequest setInstanceLevel(Integer instanceLevel) {

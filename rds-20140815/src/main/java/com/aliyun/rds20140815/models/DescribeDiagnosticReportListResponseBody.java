@@ -11,7 +11,7 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The details about a diagnostic report.</p>
+     * <p>The details of a diagnostic report.</p>
      */
     @NameInMap("ReportList")
     public java.util.List<DescribeDiagnosticReportListResponseBodyReportList> reportList;

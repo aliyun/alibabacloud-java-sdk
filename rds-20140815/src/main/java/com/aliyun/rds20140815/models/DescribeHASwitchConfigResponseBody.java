@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeHASwitchConfigResponseBody extends TeaModel {
     /**
-     * <p>The status of the automatic primary/secondary switchover function. Valid values:</p>
+     * <p>The status of the automatic primary/secondary switchover feature. Valid values:</p>
      * <br>
-     * <p>*   **Auto:** The automatic primary/secondary switchover function is enabled. The system automatically switches over services from the primary to secondary instances in the event of a fault.</p>
-     * <p>*   **Manual:** The automatic primary/secondary switchover function is temporarily disabled.</p>
+     * <p>*   **Auto:** The automatic primary/secondary switchover feature is enabled. The system automatically switches your workloads over from the instance to its secondary instance in the event of a fault.</p>
+     * <p>*   **Manual:** The automatic primary/secondary switchover feature is temporarily disabled.</p>
      */
     @NameInMap("HAConfig")
     public String HAConfig;
 
     /**
-     * <p>The time when at which the automatic primary/secondary switchover function is enabled again. The time must be in UTC.</p>
+     * <p>The time when the automatic primary/secondary switchover feature is enabled again. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
      */
     @NameInMap("ManualHATime")
     public String manualHATime;

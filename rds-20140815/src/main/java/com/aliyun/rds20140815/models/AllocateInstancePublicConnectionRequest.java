@@ -27,7 +27,7 @@ public class AllocateInstancePublicConnectionRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The name of the dedicated cluster to which the instance belongs. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition.</p>
+     * <p>The name of the dedicated cluster to which the instance belongs. This parameter takes effect only when the instance runs MySQL on RDS Standard Edition and is created in a dedicated cluster.</p>
      */
     @NameInMap("GeneralGroupName")
     public String generalGroupName;

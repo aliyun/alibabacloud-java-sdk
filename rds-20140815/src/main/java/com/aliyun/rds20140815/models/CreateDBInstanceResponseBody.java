@@ -21,28 +21,22 @@ public class CreateDBInstanceResponseBody extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>Indicates that the system prechecks the request before the system creates the instance.</p>
+     * <p>Indicates that the system performed a dry run.</p>
      * <br>
-     * <br>
-     * <br>
-     * <p>> *   The return value is fixed as **true**.</p>
-     * <br>
-     * <p>> *   If the system does not perform a precheck, this parameter is not returned.</p>
+     * <p>*   The value is fixed as **true**.</p>
+     * <p>*   If the system does not perform a dry run, this parameter is not returned.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>Indicates whether the request passed the precheck. Valid values:</p>
+     * <p>Indicates whether the request passed the dry run. Valid values:</p>
      * <br>
-     * <p>*   **true**: The request passed the precheck.</p>
-     * <p>*   **false**: The request failed the precheck.</p>
+     * <p>*   **true**</p>
+     * <p>*   **false** </p>
      * <br>
-     * <br>
-     * <p>> </p>
-     * <p>*   If the system does not perform a precheck, this parameter is not returned.</p>
-     * <p>> </p>
-     * <p>*   If the request failed the precheck, an error is returned.</p>
+     * <p>*   If the system does not perform a dry run, this parameter is not returned.</p>
+     * <p>*   If the request failed the dry run, an error message is returned.</p>
      */
     @NameInMap("DryRunResult")
     public Boolean dryRunResult;
@@ -89,11 +83,8 @@ public class CreateDBInstanceResponseBody extends TeaModel {
     /**
      * <p>The ID of the task that is run to create multiple instances.</p>
      * <br>
-     * <br>
-     * <br>
-     * <p>> *   This parameter is returned only when the value of the **Amount** parameter is greater than 1.</p>
-     * <br>
-     * <p>> *   The **TaskID** parameter cannot be used to query a task.</p>
+     * <p>*   This parameter is returned only when the value of **Amount** is greater than 1.</p>
+     * <p>*   **TaskID** cannot be used to query a task.</p>
      */
     @NameInMap("TaskId")
     public String taskId;

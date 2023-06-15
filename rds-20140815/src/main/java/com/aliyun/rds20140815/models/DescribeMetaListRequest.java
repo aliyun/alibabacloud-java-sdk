@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class DescribeMetaListRequest extends TeaModel {
     /**
-     * <p>The ID of the data backup file from which you want to restore data. You can call the [DescribeBackups](~~26273~~) operation to query the IDs of data backup files.</p>
+     * <p>The ID of the backup set from which you want to restore data. You can call the [DescribeBackups](~~26273~~) operation to query the IDs of backup sets.</p>
      * <br>
-     * <p>>  This parameter is required when you set the **RestoreType** parameter to **BackupSetID**.</p>
+     * <p>> If you set the **RestoreType** parameter to **BackupSetID**, you must also specify this parameter.</p>
      */
     @NameInMap("BackupSetID")
     public Integer backupSetID;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the generated token is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -25,9 +25,9 @@ public class DescribeMetaListRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The name of the database to query. ApsaraDB RDS implements exact match based on the value of this parameter and returns the name of the matched database and the names of all tables contained in the database.</p>
+     * <p>The name of the database to query. The system implements exact match based on the value of this parameter and returns the name of the matched database and the names of all tables contained in the database.</p>
      * <br>
-     * <p>>  If you leave this parameter empty, ApsaraDB RDS returns all databases that are created on the instance.</p>
+     * <p>> If you leave this parameter empty, the system returns all databases that are created on the instance.</p>
      */
     @NameInMap("GetDbName")
     public String getDbName;
@@ -36,9 +36,9 @@ public class DescribeMetaListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Valid values: any **non-zero** positive integer. Default value: **1**.</p>
+     * <p>The number of the page to return. Valid values: any non-zero positive integer.**** Default value: **1**.</p>
      * <br>
-     * <p>>  This parameter is valid only when you specify the **PageSize** parameter.</p>
+     * <p>> This parameter only takes effect when you specify the **PageSize** parameter.</p>
      */
     @NameInMap("PageIndex")
     public Integer pageIndex;
@@ -46,15 +46,15 @@ public class DescribeMetaListRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page. Default value: **1**.</p>
      * <br>
-     * <p>>  This parameter is valid only when you specify the **PageIndex** parameter.</p>
+     * <p>> This parameter only takes effect when you specify the **PageIndex** parameter.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The name of the database to query. ApsaraDB RDS implements fuzzy match based on the value of this parameter and returns only the names of the matched databases.</p>
+     * <p>The name of the database to query. The system implements fuzzy match based on the value of this parameter and returns only the name of the matched database.</p>
      * <br>
-     * <p>>  For example, if you set the value to `test`, ApsaraDB RDS returns `testdb1` and `testdb2`. Then, you can specify the **GetDbName** parameter to query tables in the required database.</p>
+     * <p>> For example, if you set the value to `test`, the system returns `testdb1` and `testdb2`. Then, you can specify the **GetDbName** parameter to query tables in the required database.</p>
      */
     @NameInMap("Pattern")
     public String pattern;
@@ -74,7 +74,7 @@ public class DescribeMetaListRequest extends TeaModel {
     /**
      * <p>The point in time to which you want to restore data. The specified point in time must be earlier than the current time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC. You can call the [DescribeBackups](~~26273~~) operation to query the restorable time range.</p>
      * <br>
-     * <p>>  This parameter is required when you set the **RestoreType** parameter to **RestoreTime**.</p>
+     * <p>> If you set the **RestoreType** parameter to **RestoreTime**, you must also specify this parameter.</p>
      */
     @NameInMap("RestoreTime")
     public String restoreTime;
@@ -82,7 +82,7 @@ public class DescribeMetaListRequest extends TeaModel {
     /**
      * <p>The method that is used to restore data. Valid values:</p>
      * <br>
-     * <p>*   **BackupSetID**: Data is restored from a data backup file. If you use this value, you must also specify the **BackupSetID** parameter.</p>
+     * <p>*   **BackupSetID**: Data is restored from a backup set. If you use this value, you must also specify the **BackupSetID** parameter.</p>
      * <p>*   **RestoreTime**: Data is restored to a specific point in time. If you use this value, you must also specify the **RestoreTime** parameter.</p>
      * <br>
      * <p>Default value: **BackupSetID**.</p>

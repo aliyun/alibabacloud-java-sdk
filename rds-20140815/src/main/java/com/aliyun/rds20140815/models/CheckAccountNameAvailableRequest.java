@@ -4,21 +4,12 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CheckAccountNameAvailableRequest extends TeaModel {
-    /**
-     * <p>The name of the account that you want to create.</p>
-     */
     @NameInMap("AccountName")
     public String accountName;
 
-    /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
-     */
     @NameInMap("ClientToken")
     public String clientToken;
 
-    /**
-     * <p>The ID of the instance.</p>
-     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 

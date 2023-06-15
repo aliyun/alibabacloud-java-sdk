@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeSecretsResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
@@ -23,7 +23,7 @@ public class DescribeSecretsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details about the credential.</p>
+     * <p>An array that consists of the details about the credential.</p>
      */
     @NameInMap("Secrets")
     public java.util.List<DescribeSecretsResponseBodySecrets> secrets;
@@ -79,13 +79,13 @@ public class DescribeSecretsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The ID of the region.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The ARN of the credential for the created Data API account.</p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the credential for the created Data API account.</p>
          */
         @NameInMap("SecretArn")
         public String secretArn;

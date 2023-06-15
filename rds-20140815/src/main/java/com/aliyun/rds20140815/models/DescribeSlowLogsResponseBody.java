@@ -202,6 +202,9 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         @NameInMap("MaxExecutionTime")
         public Long maxExecutionTime;
 
+        @NameInMap("MaxExecutionTimeMS")
+        public Long maxExecutionTimeMS;
+
         /**
          * <p>The largest number of I/O writes that were performed by a specific SQL statement in the query.</p>
          * <br>
@@ -223,6 +226,9 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
          */
         @NameInMap("MaxLockTime")
         public Long maxLockTime;
+
+        @NameInMap("MaxLockTimeMS")
+        public Long maxLockTimeMS;
 
         /**
          * <p>The largest number of logical reads that were performed by a specific SQL statement in the query.</p>
@@ -531,6 +537,14 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             return this.maxExecutionTime;
         }
 
+        public DescribeSlowLogsResponseBodyItemsSQLSlowLog setMaxExecutionTimeMS(Long maxExecutionTimeMS) {
+            this.maxExecutionTimeMS = maxExecutionTimeMS;
+            return this;
+        }
+        public Long getMaxExecutionTimeMS() {
+            return this.maxExecutionTimeMS;
+        }
+
         public DescribeSlowLogsResponseBodyItemsSQLSlowLog setMaxIOWriteCounts(Long maxIOWriteCounts) {
             this.maxIOWriteCounts = maxIOWriteCounts;
             return this;
@@ -553,6 +567,14 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         }
         public Long getMaxLockTime() {
             return this.maxLockTime;
+        }
+
+        public DescribeSlowLogsResponseBodyItemsSQLSlowLog setMaxLockTimeMS(Long maxLockTimeMS) {
+            this.maxLockTimeMS = maxLockTimeMS;
+            return this;
+        }
+        public Long getMaxLockTimeMS() {
+            return this.maxLockTimeMS;
         }
 
         public DescribeSlowLogsResponseBodyItemsSQLSlowLog setMaxLogicalReadCounts(Long maxLogicalReadCounts) {

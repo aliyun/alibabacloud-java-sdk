@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAccountDescriptionRequest extends TeaModel {
     /**
-     * <p>The description of the account. The description must be 2 to 256 characters in length The value can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The description of the account. The value must be 2 to 256 characters in length The value can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
      * <br>
      * <p>> The value cannot start with http:// or https://.</p>
      */

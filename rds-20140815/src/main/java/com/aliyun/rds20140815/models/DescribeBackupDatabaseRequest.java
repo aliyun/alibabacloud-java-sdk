@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupDatabaseRequest extends TeaModel {
     /**
-     * <p>The ID of the backup file.</p>
+     * <p>The ID of the backup set.</p>
      */
     @NameInMap("BackupId")
     public String backupId;

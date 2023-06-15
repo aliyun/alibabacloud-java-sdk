@@ -72,7 +72,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The virtual private cloud (VPC) ID of the endpoint.</p>
+         * <p>The ID of the virtual private cloud (VPC).</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
@@ -224,7 +224,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpointsDBInstanceEndpoint extends TeaModel {
         /**
-         * <p>The information about the endpoint.</p>
+         * <p>An array that consists of the details of the endpoint.</p>
          */
         @NameInMap("AddressItems")
         public DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpointsDBInstanceEndpointAddressItems addressItems;
@@ -244,14 +244,14 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
         /**
          * <p>The type of the endpoint. Valid values:</p>
          * <br>
-         * <p>*   **Primary**: the read/write endpoint of the instance.</p>
-         * <p>*   **Readonly**: the read-only endpoint of the instance</p>
+         * <p>*   **Primary**: read/write endpoint of the instance</p>
+         * <p>*   **Readonly**: read-only endpoint of the instance</p>
          */
         @NameInMap("EndpointType")
         public String endpointType;
 
         /**
-         * <p>The details about the node that is configured for the endpoint.</p>
+         * <p>An array consisting of the details of the node that is configured for the endpoint.</p>
          */
         @NameInMap("NodeItems")
         public DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpointsDBInstanceEndpointNodeItems nodeItems;
@@ -324,7 +324,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceEndpointsResponseBodyData extends TeaModel {
         /**
-         * <p>The information about the endpoint of the instance.</p>
+         * <p>An array that consists of details of the endpoint.</p>
          */
         @NameInMap("DBInstanceEndpoints")
         public DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpoints DBInstanceEndpoints;

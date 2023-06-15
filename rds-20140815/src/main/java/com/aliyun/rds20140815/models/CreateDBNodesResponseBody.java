@@ -10,6 +10,9 @@ public class CreateDBNodesResponseBody extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The ID of the created node. The value is a string. Multiple values are separated by commas (`,`).</p>
+     */
     @NameInMap("NodeIds")
     public String nodeIds;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceSSLRequest extends TeaModel {
     /**
-     * <p>The method that is used to verify the identities of clients. This parameter is supported only when the instance runs PostgreSQL with standard SSDs or ESSDs. In addition, this parameter is available only when the public key of the CA that issues client certificates is enabled. Valid values:</p>
+     * <p>The method that is used to verify the identities of clients. This parameter is supported only when the instance runs PostgreSQL with cloud disks. In addition, this parameter is available only when the public key of the CA that issues client certificates is enabled. Valid values:</p>
      * <br>
      * <p>*   **cert**</p>
      * <p>*   **perfer**</p>
@@ -16,9 +16,7 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     public String ACL;
 
     /**
-     * <p>The type of the server certificate. This parameter is supported only when the instance runs PostgreSQL with standard SSDs or ESSDs. If you set the SSLEnabled parameter to **1**, the default value of this parameter is **aliyun**.</p>
-     * <br>
-     * <p>Valid values:</p>
+     * <p>The type of the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disks. If you set SSLEnabled to **1**, the default value of this parameter is **aliyun**. Valid values:</p>
      * <br>
      * <p>*   **aliyun**: a cloud certificate</p>
      * <p>*   **custom**: a custom certificate</p>
@@ -27,31 +25,31 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     public String CAType;
 
     /**
-     * <p>The public key of the CA that issues client certificates. This parameter is supported only when the instance runs PostgreSQL with standard SSDs or ESSDs. If you set the ClientCAEbabled parameter to **1**, you must also specify this parameter.</p>
+     * <p>The public key of the CA that issues client certificates. This parameter is supported only when the instance runs PostgreSQL with cloud disks. This parameter must be specified when ClientCAEbabled is set to **1**.</p>
      */
     @NameInMap("ClientCACert")
     public String clientCACert;
 
     /**
-     * <p>Specifies whether to enable the public key of the CA that issues client certificates. This parameter is supported only when the instance runs PostgreSQL with standard SSDs or ESSDs. Valid values:</p>
+     * <p>Specifies whether to enable the public key of the CA that issues client certificates. This parameter is supported only when the instance runs PostgreSQL with cloud disks. Valid values:</p>
      * <br>
-     * <p>*   **1**: enables the public key</p>
-     * <p>*   **0**: disables the public key</p>
+     * <p>*   **1**: enables the public key.</p>
+     * <p>*   **0**: disables the public key.</p>
      */
     @NameInMap("ClientCAEnabled")
     public Integer clientCAEnabled;
 
     /**
-     * <p>The CRL that contains revoked client certificates. This parameter is supported only when the instance runs PostgreSQL with standard SSDs or ESSDs. If you set the ClientCrlEnabled parameter to **1**, you must also specify this parameter.</p>
+     * <p>The CRL that contains revoked client certificates. This parameter is supported only when the instance runs PostgreSQL with cloud disks. This parameter must be specified when ClientCrlEnabled is set to **1**.</p>
      */
     @NameInMap("ClientCertRevocationList")
     public String clientCertRevocationList;
 
     /**
-     * <p>Specifies whether to enable a certificate revocation list (CRL) that contains revoked client certificates. This parameter is supported only when the instance runs PostgreSQL with standard or enhanced SSDs. In addition, this parameter is available only when the public key of the CA that issues client certificates is enabled. Valid values:</p>
+     * <p>Specifies whether to enable a certificate revocation list (CRL) that contains revoked client certificates. This parameter is supported only when the instance runs PostgreSQL with cloud disks. In addition, this parameter is available only when the public key of the CA that issues client certificates is enabled. Valid values:</p>
      * <br>
-     * <p>*   **1**: enables the CRL</p>
-     * <p>*   **0**: disables the CRL</p>
+     * <p>*   **1**: enables the CRL.</p>
+     * <p>*   **0**: disables the CRL.</p>
      */
     @NameInMap("ClientCrlEnabled")
     public Integer clientCrlEnabled;
@@ -75,7 +73,7 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The method that is used to verify the replication permission. This parameter is supported only when the instance runs PostgreSQL with standard SSDs or ESSDs. In addition, this parameter is available only when the public key of the CA that issues client certificates is enabled. Valid values:</p>
+     * <p>The method that is used to verify the replication permission. This parameter is supported only when the instance runs PostgreSQL with cloud disks. In addition, this parameter is available only when the public key of the CA that issues client certificates is enabled. Valid values:</p>
      * <br>
      * <p>*   **cert**</p>
      * <p>*   **perfer**</p>
@@ -92,22 +90,22 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to enable or disable SSL encryption. Valid values:</p>
+     * <p>Specifies whether to enable or disable the SSL encryption feature. Valid values:</p>
      * <br>
-     * <p>*   **1**: enables SSL encryption</p>
-     * <p>*   **0**: disables SSL encryption</p>
+     * <p>*   **1**: enables the feature.</p>
+     * <p>*   **0**: disables the feature.</p>
      */
     @NameInMap("SSLEnabled")
     public Integer SSLEnabled;
 
     /**
-     * <p>The content of the server certificate. This parameter is supported only when the instance runs PostgreSQL with standard SSDs or ESSDs. If you set the CAType parameter to **custom**, you must also specify this parameter.</p>
+     * <p>The content of the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disks. This parameter must be specified when CAType is set to **custom**.</p>
      */
     @NameInMap("ServerCert")
     public String serverCert;
 
     /**
-     * <p>The private key of the server certificate. This parameter is supported only when the instance runs PostgreSQL with standard SSDs or ESSDs. If you set the CAType parameter to **custom**, you must also specify this parameter.</p>
+     * <p>The private key of the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disks. This parameter must be specified when CAType is set to **custom**.</p>
      */
     @NameInMap("ServerKey")
     public String serverKey;

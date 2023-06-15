@@ -11,10 +11,10 @@ public class ModifyDBInstanceHAConfigRequest extends TeaModel {
     public String dbInstanceId;
 
     /**
-     * <p>The high availability mode. Valid values:</p>
+     * <p>The HA mode of the instance.</p>
      * <br>
-     * <p>*   **RPO**: Data persistence is preferred. The instance preferentially ensures data reliability to minimize data loss. Use this mode if you have higher requirements on data consistency.</p>
-     * <p>*   **RTO**: Instance availability is preferred. The instance restores services as soon as possible to ensure availability. Use this mode if you have higher requirements on service availability.</p>
+     * <p>*   RPO: Data consistency is preferred. The instance ensures data reliability to minimize data losses. If you have high requirements on data consistency, select this mode.</p>
+     * <p>*   RTO: Service availability is preferred. The instance restores the database service at the earliest opportunity to ensure service availability. If you have high requirements for service availability, select this mode.</p>
      */
     @NameInMap("HAMode")
     public String HAMode;
@@ -32,13 +32,14 @@ public class ModifyDBInstanceHAConfigRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>[The data replication mode](~~96055~~). Valid values:</p>
+     * <p>The data replication mode of the instance. For more information, see [Data replication mode](~~96055~~).</p>
      * <br>
-     * <p>*   **Sync**: synchronous replication</p>
-     * <p>*   **Semi-sync**: semi-synchronous replication</p>
-     * <p>*   **Async**: asynchronous replication</p>
+     * <p>*   Semi-sync: the semi-synchronous mode.</p>
+     * <p>*   Sync: the synchronous mode.</p>
+     * <p>*   gAsyncg: the asynchronous mode.</p>
+     * <p>*   Mgr: the MySQL group replication (MGR) mode. This mode is available only for the China site (aliyun.com).</p>
      * <br>
-     * <p>>  This parameter is not supported for instances that run SQL Server 2017 EE.</p>
+     * <p>> This parameter is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.</p>
      */
     @NameInMap("SyncMode")
     public String syncMode;

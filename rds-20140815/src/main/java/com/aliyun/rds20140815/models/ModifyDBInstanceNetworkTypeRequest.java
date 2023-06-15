@@ -39,15 +39,15 @@ public class ModifyDBInstanceNetworkTypeRequest extends TeaModel {
     /**
      * <p>The number of days for which you want to retain the read/write splitting endpoint of the classic network type. Valid values: **1 to 120**. Default value: **7**.</p>
      * <br>
-     * <p>> This parameter takes effect only when a read/write splitting endpoint of the classic network type exists and the **RetainClassic** paramter is set to **True**.</p>
+     * <p>> This parameter takes effect only when a read/write splitting endpoint of the classic network type exists and the **RetainClassic** parameter is set to **True**.</p>
      */
     @NameInMap("ReadWriteSplittingClassicExpiredDays")
     public Integer readWriteSplittingClassicExpiredDays;
 
     /**
-     * <p>The internal IP address that corresponds to the read/write splitting endpoint of the instance. The internal IP address must be within the CIDR block supported by the specified vSwitch. ApsaraDB RDS automatically assigns an internal IP address to the read-only instance based on the values of the **VPCId** and **VSwitchId** parameters.</p>
+     * <p>The internal IP address that corresponds to the read/write splitting endpoint of the instance. The internal IP address must be within the CIDR block supported by the specified vSwitch. The system automatically assigns an internal IP address to the read-only instance based on the values of the **VPCId** and **VSwitchId** parameters.</p>
      * <br>
-     * <p>> This parameter is valid when a read/write splitting endpoint of the classic network type exists.</p>
+     * <p>> This value is valid when a read/write splitting endpoint of the classic network type exists.</p>
      */
     @NameInMap("ReadWriteSplittingPrivateIpAddress")
     public String readWriteSplittingPrivateIpAddress;
@@ -70,7 +70,7 @@ public class ModifyDBInstanceNetworkTypeRequest extends TeaModel {
     public String retainClassic;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC).</p>
+     * <p>The ID of the VPC.</p>
      */
     @NameInMap("VPCId")
     public String VPCId;
