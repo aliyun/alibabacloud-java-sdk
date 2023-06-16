@@ -81,6 +81,91 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         return this.traceId;
     }
 
+    public static class QueryReimbursementOrderResponseBodyModuleExpensesExpenseCompositions extends TeaModel {
+        @NameInMap("bill_settlement_id")
+        public Long billSettlementId;
+
+        @NameInMap("fee_type")
+        public String feeType;
+
+        @NameInMap("remark")
+        public String remark;
+
+        @NameInMap("remind_tag_list")
+        public java.util.List<String> remindTagList;
+
+        @NameInMap("settlement_amount")
+        public String settlementAmount;
+
+        @NameInMap("settlement_time")
+        public String settlementTime;
+
+        @NameInMap("voucher_type")
+        public Integer voucherType;
+
+        public static QueryReimbursementOrderResponseBodyModuleExpensesExpenseCompositions build(java.util.Map<String, ?> map) throws Exception {
+            QueryReimbursementOrderResponseBodyModuleExpensesExpenseCompositions self = new QueryReimbursementOrderResponseBodyModuleExpensesExpenseCompositions();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryReimbursementOrderResponseBodyModuleExpensesExpenseCompositions setBillSettlementId(Long billSettlementId) {
+            this.billSettlementId = billSettlementId;
+            return this;
+        }
+        public Long getBillSettlementId() {
+            return this.billSettlementId;
+        }
+
+        public QueryReimbursementOrderResponseBodyModuleExpensesExpenseCompositions setFeeType(String feeType) {
+            this.feeType = feeType;
+            return this;
+        }
+        public String getFeeType() {
+            return this.feeType;
+        }
+
+        public QueryReimbursementOrderResponseBodyModuleExpensesExpenseCompositions setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
+        }
+
+        public QueryReimbursementOrderResponseBodyModuleExpensesExpenseCompositions setRemindTagList(java.util.List<String> remindTagList) {
+            this.remindTagList = remindTagList;
+            return this;
+        }
+        public java.util.List<String> getRemindTagList() {
+            return this.remindTagList;
+        }
+
+        public QueryReimbursementOrderResponseBodyModuleExpensesExpenseCompositions setSettlementAmount(String settlementAmount) {
+            this.settlementAmount = settlementAmount;
+            return this;
+        }
+        public String getSettlementAmount() {
+            return this.settlementAmount;
+        }
+
+        public QueryReimbursementOrderResponseBodyModuleExpensesExpenseCompositions setSettlementTime(String settlementTime) {
+            this.settlementTime = settlementTime;
+            return this;
+        }
+        public String getSettlementTime() {
+            return this.settlementTime;
+        }
+
+        public QueryReimbursementOrderResponseBodyModuleExpensesExpenseCompositions setVoucherType(Integer voucherType) {
+            this.voucherType = voucherType;
+            return this;
+        }
+        public Integer getVoucherType() {
+            return this.voucherType;
+        }
+
+    }
+
     public static class QueryReimbursementOrderResponseBodyModuleExpenses extends TeaModel {
         @NameInMap("amount")
         public String amount;
@@ -90,6 +175,9 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
 
         @NameInMap("expense_city")
         public String expenseCity;
+
+        @NameInMap("expense_compositions")
+        public java.util.List<QueryReimbursementOrderResponseBodyModuleExpensesExpenseCompositions> expenseCompositions;
 
         @NameInMap("expense_time")
         public String expenseTime;
@@ -136,6 +224,14 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         }
         public String getExpenseCity() {
             return this.expenseCity;
+        }
+
+        public QueryReimbursementOrderResponseBodyModuleExpenses setExpenseCompositions(java.util.List<QueryReimbursementOrderResponseBodyModuleExpensesExpenseCompositions> expenseCompositions) {
+            this.expenseCompositions = expenseCompositions;
+            return this;
+        }
+        public java.util.List<QueryReimbursementOrderResponseBodyModuleExpensesExpenseCompositions> getExpenseCompositions() {
+            return this.expenseCompositions;
         }
 
         public QueryReimbursementOrderResponseBodyModuleExpenses setExpenseTime(String expenseTime) {
