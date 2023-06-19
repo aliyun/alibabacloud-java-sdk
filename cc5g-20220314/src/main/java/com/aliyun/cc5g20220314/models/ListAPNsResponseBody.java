@@ -13,9 +13,6 @@ public class ListAPNsResponseBody extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    /**
-     * <p>Id of the request</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -69,7 +66,7 @@ public class ListAPNsResponseBody extends TeaModel {
 
     public static class ListAPNsResponseBodyAPNs extends TeaModel {
         /**
-         * <p>apn</p>
+         * <p>代表资源名称的资源属性字段</p>
          */
         @NameInMap("APN")
         public String APN;
