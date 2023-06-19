@@ -226,6 +226,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("ClassicEgressAddress")
         public String classicEgressAddress;
 
+        @NameInMap("ConnectCidrBlocks")
+        public String connectCidrBlocks;
+
         /**
          * <p>VPC融合类型专享实例联通的用户VPC ID</p>
          */
@@ -301,6 +304,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         @NameInMap("IntranetSegments")
         public String intranetSegments;
+
+        @NameInMap("MaintainEndTime")
+        public String maintainEndTime;
+
+        @NameInMap("MaintainStartTime")
+        public String maintainStartTime;
 
         /**
          * <p>VPC融合类型专享实例连通的用户VPC内的网络信息</p>
@@ -387,6 +396,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getClassicEgressAddress() {
             return this.classicEgressAddress;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceAttribute setConnectCidrBlocks(String connectCidrBlocks) {
+            this.connectCidrBlocks = connectCidrBlocks;
+            return this;
+        }
+        public String getConnectCidrBlocks() {
+            return this.connectCidrBlocks;
         }
 
         public DescribeInstancesResponseBodyInstancesInstanceAttribute setConnectVpcId(String connectVpcId) {
@@ -555,6 +572,22 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getIntranetSegments() {
             return this.intranetSegments;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceAttribute setMaintainEndTime(String maintainEndTime) {
+            this.maintainEndTime = maintainEndTime;
+            return this;
+        }
+        public String getMaintainEndTime() {
+            return this.maintainEndTime;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceAttribute setMaintainStartTime(String maintainStartTime) {
+            this.maintainStartTime = maintainStartTime;
+            return this;
+        }
+        public String getMaintainStartTime() {
+            return this.maintainStartTime;
         }
 
         public DescribeInstancesResponseBodyInstancesInstanceAttribute setNetworkInterfaceAttributes(DescribeInstancesResponseBodyInstancesInstanceAttributeNetworkInterfaceAttributes networkInterfaceAttributes) {

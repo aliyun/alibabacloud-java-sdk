@@ -137,6 +137,12 @@ public class DescribeApiGroupResponseBody extends TeaModel {
     @NameInMap("Ipv6Status")
     public String ipv6Status;
 
+    @NameInMap("MigrationError")
+    public String migrationError;
+
+    @NameInMap("MigrationStatus")
+    public String migrationStatus;
+
     /**
      * <p>The last modification time (UTC) of the API group.</p>
      */
@@ -383,6 +389,22 @@ public class DescribeApiGroupResponseBody extends TeaModel {
     }
     public String getIpv6Status() {
         return this.ipv6Status;
+    }
+
+    public DescribeApiGroupResponseBody setMigrationError(String migrationError) {
+        this.migrationError = migrationError;
+        return this;
+    }
+    public String getMigrationError() {
+        return this.migrationError;
+    }
+
+    public DescribeApiGroupResponseBody setMigrationStatus(String migrationStatus) {
+        this.migrationStatus = migrationStatus;
+        return this;
+    }
+    public String getMigrationStatus() {
+        return this.migrationStatus;
     }
 
     public DescribeApiGroupResponseBody setModifiedTime(String modifiedTime) {

@@ -37,6 +37,9 @@ public class ModifyApiGroupRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    @NameInMap("SupportSSE")
+    public String supportSSE;
+
     @NameInMap("Tag")
     public java.util.List<ModifyApiGroupRequestTag> tag;
 
@@ -134,6 +137,14 @@ public class ModifyApiGroupRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public ModifyApiGroupRequest setSupportSSE(String supportSSE) {
+        this.supportSSE = supportSSE;
+        return this;
+    }
+    public String getSupportSSE() {
+        return this.supportSSE;
     }
 
     public ModifyApiGroupRequest setTag(java.util.List<ModifyApiGroupRequestTag> tag) {

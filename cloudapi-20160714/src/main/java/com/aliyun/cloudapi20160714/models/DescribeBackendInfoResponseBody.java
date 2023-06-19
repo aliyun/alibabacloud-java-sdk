@@ -31,6 +31,154 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigNacosConfig extends TeaModel {
+        @NameInMap("AccessKey")
+        public String accessKey;
+
+        @NameInMap("AuthType")
+        public String authType;
+
+        @NameInMap("Clusters")
+        public String clusters;
+
+        @NameInMap("GroupName")
+        public String groupName;
+
+        @NameInMap("Namespace")
+        public String namespace;
+
+        @NameInMap("Password")
+        public String password;
+
+        @NameInMap("SecretKey")
+        public String secretKey;
+
+        @NameInMap("ServerAddress")
+        public String serverAddress;
+
+        @NameInMap("ServiceName")
+        public String serviceName;
+
+        @NameInMap("UserName")
+        public String userName;
+
+        public static DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigNacosConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigNacosConfig self = new DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigNacosConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigNacosConfig setAccessKey(String accessKey) {
+            this.accessKey = accessKey;
+            return this;
+        }
+        public String getAccessKey() {
+            return this.accessKey;
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigNacosConfig setAuthType(String authType) {
+            this.authType = authType;
+            return this;
+        }
+        public String getAuthType() {
+            return this.authType;
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigNacosConfig setClusters(String clusters) {
+            this.clusters = clusters;
+            return this;
+        }
+        public String getClusters() {
+            return this.clusters;
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigNacosConfig setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigNacosConfig setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigNacosConfig setPassword(String password) {
+            this.password = password;
+            return this;
+        }
+        public String getPassword() {
+            return this.password;
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigNacosConfig setSecretKey(String secretKey) {
+            this.secretKey = secretKey;
+            return this;
+        }
+        public String getSecretKey() {
+            return this.secretKey;
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigNacosConfig setServerAddress(String serverAddress) {
+            this.serverAddress = serverAddress;
+            return this;
+        }
+        public String getServerAddress() {
+            return this.serverAddress;
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigNacosConfig setServiceName(String serviceName) {
+            this.serviceName = serviceName;
+            return this;
+        }
+        public String getServiceName() {
+            return this.serviceName;
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigNacosConfig setUserName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+        public String getUserName() {
+            return this.userName;
+        }
+
+    }
+
+    public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfig extends TeaModel {
+        @NameInMap("NacosConfig")
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigNacosConfig nacosConfig;
+
+        @NameInMap("RcType")
+        public String rcType;
+
+        public static DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfig self = new DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfig setNacosConfig(DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigNacosConfig nacosConfig) {
+            this.nacosConfig = nacosConfig;
+            return this;
+        }
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigNacosConfig getNacosConfig() {
+            return this.nacosConfig;
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfig setRcType(String rcType) {
+            this.rcType = rcType;
+            return this;
+        }
+        public String getRcType() {
+            return this.rcType;
+        }
+
+    }
+
     public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEventBridgeConfig extends TeaModel {
         @NameInMap("EventBridgeRegionId")
         public String eventBridgeRegionId;
@@ -366,6 +514,9 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfig extends TeaModel {
+        @NameInMap("DiscoveryConfig")
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfig discoveryConfig;
+
         @NameInMap("EventBridgeConfig")
         public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEventBridgeConfig eventBridgeConfig;
 
@@ -393,6 +544,14 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         public static DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfig self = new DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfig();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfig setDiscoveryConfig(DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfig discoveryConfig) {
+            this.discoveryConfig = discoveryConfig;
+            return this;
+        }
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfig getDiscoveryConfig() {
+            return this.discoveryConfig;
         }
 
         public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfig setEventBridgeConfig(DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEventBridgeConfig eventBridgeConfig) {
