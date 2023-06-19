@@ -219,6 +219,9 @@ public class GetWirelessCloudConnectorResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("Type")
+        public String type;
+
         @NameInMap("VSwitchs")
         public java.util.List<String> vSwitchs;
 
@@ -300,6 +303,14 @@ public class GetWirelessCloudConnectorResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetWirelessCloudConnectorResponseBodyNetLinks setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
         public GetWirelessCloudConnectorResponseBodyNetLinks setVSwitchs(java.util.List<String> vSwitchs) {
