@@ -579,12 +579,6 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("TemplateId")
         public String templateId;
 
-        /**
-         * <p>The ID of the application.</p>
-         */
-        @NameInMap("TopoURL")
-        public String topoURL;
-
         public static GetApplicationResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetApplicationResponseBodyData self = new GetApplicationResponseBodyData();
             return TeaModel.build(map, self);
@@ -684,14 +678,6 @@ public class GetApplicationResponseBody extends TeaModel {
         }
         public String getTemplateId() {
             return this.templateId;
-        }
-
-        public GetApplicationResponseBodyData setTopoURL(String topoURL) {
-            this.topoURL = topoURL;
-            return this;
-        }
-        public String getTopoURL() {
-            return this.topoURL;
         }
 
     }

@@ -4,20 +4,32 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code. A value of 200 indicates that the request is successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. If the NextToken parameter is empty, no next page exists.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>TagResource</p>
+     * <p>The tags that are added to the resources.</p>
      */
     @NameInMap("TagResources")
     public java.util.List<ListTagResourcesResponseBodyTagResources> tagResources;
@@ -68,15 +80,27 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
+        /**
+         * <p>The ID of the resource.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The resource type. Valid values: application and template.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 

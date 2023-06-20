@@ -94,9 +94,6 @@ public class ListApplicationResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
-        @NameInMap("TopoURL")
-        public String topoURL;
-
         public static ListApplicationResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListApplicationResponseBodyData self = new ListApplicationResponseBodyData();
             return TeaModel.build(map, self);
@@ -148,14 +145,6 @@ public class ListApplicationResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
-        }
-
-        public ListApplicationResponseBodyData setTopoURL(String topoURL) {
-            this.topoURL = topoURL;
-            return this;
-        }
-        public String getTopoURL() {
-            return this.topoURL;
         }
 
     }

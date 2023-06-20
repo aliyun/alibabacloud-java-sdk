@@ -4,21 +4,39 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource IDs. You can specify a maximum number of 50 IDs.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    /**
+     * <p>The resource type.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tags. A maximum of 20 tags are supported.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 
@@ -76,9 +94,15 @@ public class ListTagResourcesRequest extends TeaModel {
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 
