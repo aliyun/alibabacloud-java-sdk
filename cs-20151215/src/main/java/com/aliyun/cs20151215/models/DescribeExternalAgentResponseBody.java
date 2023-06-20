@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeExternalAgentResponseBody extends TeaModel {
+    /**
+     * <p>The agent configurations in YAML format.</p>
+     */
     @NameInMap("config")
     public String config;
 

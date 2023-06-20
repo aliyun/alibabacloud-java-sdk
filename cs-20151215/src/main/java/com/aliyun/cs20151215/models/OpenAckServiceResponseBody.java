@@ -4,9 +4,15 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class OpenAckServiceResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the order.</p>
+     */
     @NameInMap("order_id")
     public String orderId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("request_id")
     public String requestId;
 

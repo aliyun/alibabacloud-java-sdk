@@ -4,12 +4,21 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The token that is used to start the next query.</p>
+     */
     @NameInMap("next_token")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("request_id")
     public String requestId;
 
+    /**
+     * <p>The details of the queried labels and resources.</p>
+     */
     @NameInMap("tag_resources")
     public ListTagResourcesResponseBodyTagResources tagResources;
 
@@ -43,15 +52,27 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
+        /**
+         * <p>The ID of the resource.</p>
+         */
         @NameInMap("resource_id")
         public String resourceId;
 
+        /**
+         * <p>The type of the resource. For more information, see [Labels](~~110425~~).</p>
+         */
         @NameInMap("resource_type")
         public String resourceType;
 
+        /**
+         * <p>The key of the label.</p>
+         */
         @NameInMap("tag_key")
         public String tagKey;
 
+        /**
+         * <p>The value of the label.</p>
+         */
         @NameInMap("tag_value")
         public String tagValue;
 
@@ -95,6 +116,9 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
+        /**
+         * <p>The labels of the resource.</p>
+         */
         @NameInMap("tag_resource")
         public java.util.List<ListTagResourcesResponseBodyTagResourcesTagResource> tagResource;
 

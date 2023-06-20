@@ -10,6 +10,9 @@ public class UpgradeClusterNodepoolRequest extends TeaModel {
     @NameInMap("kubernetes_version")
     public String kubernetesVersion;
 
+    @NameInMap("runtime_type")
+    public String runtimeType;
+
     @NameInMap("runtime_version")
     public String runtimeVersion;
 
@@ -32,6 +35,14 @@ public class UpgradeClusterNodepoolRequest extends TeaModel {
     }
     public String getKubernetesVersion() {
         return this.kubernetesVersion;
+    }
+
+    public UpgradeClusterNodepoolRequest setRuntimeType(String runtimeType) {
+        this.runtimeType = runtimeType;
+        return this;
+    }
+    public String getRuntimeType() {
+        return this.runtimeType;
     }
 
     public UpgradeClusterNodepoolRequest setRuntimeVersion(String runtimeVersion) {

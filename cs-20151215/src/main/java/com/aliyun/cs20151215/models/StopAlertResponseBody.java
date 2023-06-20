@@ -4,9 +4,15 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class StopAlertResponseBody extends TeaModel {
+    /**
+     * <p>The error message returned if the call fails.</p>
+     */
     @NameInMap("msg")
     public String msg;
 
+    /**
+     * <p>A value of True indicates that the call succeeds. A value of False indicates that the call failed.</p>
+     */
     @NameInMap("status")
     public Boolean status;
 

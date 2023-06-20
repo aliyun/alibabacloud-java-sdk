@@ -4,9 +4,15 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class AttachInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The details of the added nodes.</p>
+     */
     @NameInMap("list")
     public java.util.List<AttachInstancesResponseBodyList> list;
 
+    /**
+     * <p>The ID of the task.</p>
+     */
     @NameInMap("task_id")
     public String taskId;
 
@@ -32,12 +38,21 @@ public class AttachInstancesResponseBody extends TeaModel {
     }
 
     public static class AttachInstancesResponseBodyList extends TeaModel {
+        /**
+         * <p>The code that indicates the task result.</p>
+         */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("instanceId")
         public String instanceId;
 
+        /**
+         * <p>Indicates whether the ECS instances are successfully added to the ACK cluster.</p>
+         */
         @NameInMap("message")
         public String message;
 

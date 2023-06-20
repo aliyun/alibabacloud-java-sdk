@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DeployPolicyInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The policy instances that are deployed.</p>
+     */
     @NameInMap("instances")
     public java.util.List<String> instances;
 

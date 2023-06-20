@@ -3,7 +3,7 @@ package com.aliyun.cs20151215.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteClusterResponse extends TeaModel {
+public class DescribeClusterAddonInstanceResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DeleteClusterResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DeleteClusterResponseBody body;
+    public DescribeClusterAddonInstanceResponseBody body;
 
-    public static DeleteClusterResponse build(java.util.Map<String, ?> map) throws Exception {
-        DeleteClusterResponse self = new DeleteClusterResponse();
+    public static DescribeClusterAddonInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeClusterAddonInstanceResponse self = new DescribeClusterAddonInstanceResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteClusterResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeClusterAddonInstanceResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DeleteClusterResponse extends TeaModel {
         return this.headers;
     }
 
-    public DeleteClusterResponse setStatusCode(Integer statusCode) {
+    public DescribeClusterAddonInstanceResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DeleteClusterResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DeleteClusterResponse setBody(DeleteClusterResponseBody body) {
+    public DescribeClusterAddonInstanceResponse setBody(DescribeClusterAddonInstanceResponseBody body) {
         this.body = body;
         return this;
     }
-    public DeleteClusterResponseBody getBody() {
+    public DescribeClusterAddonInstanceResponseBody getBody() {
         return this.body;
     }
 

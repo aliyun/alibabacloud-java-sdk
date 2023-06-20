@@ -4,9 +4,15 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ModifyClusterNodePoolResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the node pool.</p>
+     */
     @NameInMap("nodepool_id")
     public String nodepoolId;
 
+    /**
+     * <p>The ID of the task.</p>
+     */
     @NameInMap("task_id")
     public String taskId;
 

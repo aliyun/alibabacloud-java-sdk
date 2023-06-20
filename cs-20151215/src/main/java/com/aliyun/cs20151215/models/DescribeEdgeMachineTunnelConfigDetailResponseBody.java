@@ -4,33 +4,45 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeEdgeMachineTunnelConfigDetailResponseBody extends TeaModel {
+    /**
+     * <p>The name of the cloud-native box.</p>
+     */
     @NameInMap("device_name")
     public String deviceName;
 
+    /**
+     * <p>The model of the cloud-native box.</p>
+     */
     @NameInMap("model")
     public String model;
 
     /**
-     * <p>Product Key</p>
+     * <p>The product key.</p>
      */
     @NameInMap("product_key")
     public String productKey;
 
     /**
-     * <p>Request ID</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("request_id")
     public String requestId;
 
+    /**
+     * <p>The serial number of the cloud-native box.</p>
+     */
     @NameInMap("sn")
     public String sn;
 
     /**
-     * <p>Token</p>
+     * <p>The token.</p>
      */
     @NameInMap("token")
     public String token;
 
+    /**
+     * <p>The backend endpoint of the tunnel.</p>
+     */
     @NameInMap("tunnel_endpoint")
     public String tunnelEndpoint;
 

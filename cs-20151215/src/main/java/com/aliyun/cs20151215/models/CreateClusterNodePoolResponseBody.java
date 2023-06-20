@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class CreateClusterNodePoolResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the node pool that is created.</p>
+     */
     @NameInMap("nodepool_id")
     public String nodepoolId;
 

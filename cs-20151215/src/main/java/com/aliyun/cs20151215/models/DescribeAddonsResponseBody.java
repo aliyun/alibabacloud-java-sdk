@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeAddonsResponseBody extends TeaModel {
+    /**
+     * <p>The details of the returned components.</p>
+     */
     @NameInMap("ComponentGroups")
     public java.util.List<DescribeAddonsResponseBodyComponentGroups> componentGroups;
 
@@ -32,6 +35,9 @@ public class DescribeAddonsResponseBody extends TeaModel {
     }
 
     public static class DescribeAddonsResponseBodyComponentGroupsItems extends TeaModel {
+        /**
+         * <p>The name of the component.</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -51,9 +57,15 @@ public class DescribeAddonsResponseBody extends TeaModel {
     }
 
     public static class DescribeAddonsResponseBodyComponentGroups extends TeaModel {
+        /**
+         * <p>The name of the component group.</p>
+         */
         @NameInMap("group_name")
         public String groupName;
 
+        /**
+         * <p>The names of the components in the component group.</p>
+         */
         @NameInMap("items")
         public java.util.List<DescribeAddonsResponseBodyComponentGroupsItems> items;
 

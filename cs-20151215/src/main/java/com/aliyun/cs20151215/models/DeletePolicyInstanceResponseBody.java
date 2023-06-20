@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DeletePolicyInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The policy instances that are deleted.</p>
+     */
     @NameInMap("instances")
     public java.util.List<String> instances;
 

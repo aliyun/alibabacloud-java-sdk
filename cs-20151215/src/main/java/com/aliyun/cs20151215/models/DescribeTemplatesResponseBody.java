@@ -4,9 +4,15 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeTemplatesResponseBody extends TeaModel {
+    /**
+     * <p>The pagination details.</p>
+     */
     @NameInMap("page_info")
     public DescribeTemplatesResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The list of the templates returned .</p>
+     */
     @NameInMap("templates")
     public java.util.List<DescribeTemplatesResponseBodyTemplates> templates;
 
@@ -32,12 +38,21 @@ public class DescribeTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeTemplatesResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("page_number")
         public Long pageNumber;
 
+        /**
+         * <p>The maximum number of entries returned per page.</p>
+         */
         @NameInMap("page_size")
         public Long pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("total_count")
         public Long totalCount;
 
@@ -73,33 +88,72 @@ public class DescribeTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeTemplatesResponseBodyTemplates extends TeaModel {
+        /**
+         * <p>The access control policy of the template. Valid values:</p>
+         * <br>
+         * <p>*   `private`: The template is private.</p>
+         * <p>*   `public`: The template is public.</p>
+         * <p>*   `shared`: The template can be shared.</p>
+         * <br>
+         * <p>Default value: `private`.</p>
+         */
         @NameInMap("acl")
         public String acl;
 
+        /**
+         * <p>The time when the template was created.</p>
+         */
         @NameInMap("created")
         public String created;
 
+        /**
+         * <p>The description of the template.</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The ID of the template.</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <p>The name of the template.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The tag of the template. By default, the value is the name of the template.</p>
+         */
         @NameInMap("tags")
         public String tags;
 
+        /**
+         * <p>The template content in YAML format.</p>
+         */
         @NameInMap("template")
         public String template;
 
+        /**
+         * <p>The type of the template. The value can be a custom value.</p>
+         * <br>
+         * <p>*   If the value is `kubernetes`, it indicates that the template is displayed on the Templates page in the ACK console.</p>
+         * <p>*   If the value is `compose`, it indicates that the template is displayed on the Container Service - Swarm page in the console. However, Container Service for Swarm is deprecated.</p>
+         */
         @NameInMap("template_type")
         public String templateType;
 
+        /**
+         * <p>The ID of the parent template. The value of `template_with_hist_id` is the same for each template version. This allows you to manage different template versions.</p>
+         */
         @NameInMap("template_with_hist_id")
         public String templateWithHistId;
 
+        /**
+         * <p>The time when the template was updated.</p>
+         */
         @NameInMap("updated")
         public String updated;
 

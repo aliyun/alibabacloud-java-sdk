@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventsResponseBody extends TeaModel {
+    /**
+     * <p>The details of the event.</p>
+     */
     @NameInMap("events")
     public java.util.List<DescribeEventsResponseBodyEvents> events;
 
@@ -32,12 +35,21 @@ public class DescribeEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeEventsResponseBodyEventsData extends TeaModel {
+        /**
+         * <p>The level of the event.</p>
+         */
         @NameInMap("level")
         public String level;
 
+        /**
+         * <p>The details of the event.</p>
+         */
         @NameInMap("message")
         public String message;
 
+        /**
+         * <p>The state of the event.</p>
+         */
         @NameInMap("reason")
         public String reason;
 
@@ -73,24 +85,62 @@ public class DescribeEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeEventsResponseBodyEvents extends TeaModel {
+        /**
+         * <p>The ID of the cluster.</p>
+         */
         @NameInMap("cluster_id")
         public String clusterId;
 
+        /**
+         * <p>The description of the event.</p>
+         */
         @NameInMap("data")
         public DescribeEventsResponseBodyEventsData data;
 
+        /**
+         * <p>The ID of the event.</p>
+         */
         @NameInMap("event_id")
         public String eventId;
 
+        /**
+         * <p>The source of the event.</p>
+         */
         @NameInMap("source")
         public String source;
 
+        /**
+         * <p>The subject of the event.</p>
+         */
         @NameInMap("subject")
         public String subject;
 
+        /**
+         * <p>The time when the event started.</p>
+         */
         @NameInMap("time")
         public String time;
 
+        /**
+         * <p>The type of the event. Valid values:</p>
+         * <br>
+         * <p>*   `cluster_create`: cluster creation.</p>
+         * <p>*   `cluster_scaleout`: cluster scale-out.</p>
+         * <p>*   `cluster_attach`: adding existing nodes.</p>
+         * <p>*   `cluster_delete`: cluster deletion.</p>
+         * <p>*   `cluster_upgrade`: cluster upgrades.</p>
+         * <p>*   `cluster_migrate`: cluster migration.</p>
+         * <p>*   `cluster_node_delete`: node removal.</p>
+         * <p>*   `cluster_node_drain`: node draining.</p>
+         * <p>*   `cluster_modify`: cluster modifications.</p>
+         * <p>*   `cluster_configuration_modify`: modifications to cluster control configurations.</p>
+         * <p>*   `cluster_addon_install`: component installation.</p>
+         * <p>*   `cluster_addon_upgrade`: component upgrades.</p>
+         * <p>*   `cluster_addon_uninstall`: component uninstallation.</p>
+         * <p>*   `runtime_upgrade`: runtime upgrades.</p>
+         * <p>*   `nodepool_upgrade`: node pool upgrades.</p>
+         * <p>*   `nodepool_update`: node pool updates.</p>
+         */
         @NameInMap("type")
         public String type;
 
