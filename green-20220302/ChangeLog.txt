@@ -1,3 +1,6 @@
+2023-06-20 Version: 1.0.6
+- Add Riskwords in Image Result Query API.
+
 2023-03-15 Version: 1.0.4
 - Add voice result api.
 
