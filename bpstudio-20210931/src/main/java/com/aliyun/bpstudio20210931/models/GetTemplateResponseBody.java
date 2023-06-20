@@ -136,9 +136,6 @@ public class GetTemplateResponseBody extends TeaModel {
         @NameInMap("TemplateId")
         public String templateId;
 
-        @NameInMap("TopoURL")
-        public String topoURL;
-
         @NameInMap("Variables")
         public java.util.List<GetTemplateResponseBodyDataVariables> variables;
 
@@ -193,14 +190,6 @@ public class GetTemplateResponseBody extends TeaModel {
         }
         public String getTemplateId() {
             return this.templateId;
-        }
-
-        public GetTemplateResponseBodyData setTopoURL(String topoURL) {
-            this.topoURL = topoURL;
-            return this;
-        }
-        public String getTopoURL() {
-            return this.topoURL;
         }
 
         public GetTemplateResponseBodyData setVariables(java.util.List<GetTemplateResponseBodyDataVariables> variables) {

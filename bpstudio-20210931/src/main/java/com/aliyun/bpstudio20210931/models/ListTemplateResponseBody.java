@@ -136,12 +136,6 @@ public class ListTemplateResponseBody extends TeaModel {
         @NameInMap("TemplateId")
         public String templateId;
 
-        /**
-         * <p>The URL of the template topology image.</p>
-         */
-        @NameInMap("TopoURL")
-        public String topoURL;
-
         public static ListTemplateResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListTemplateResponseBodyData self = new ListTemplateResponseBodyData();
             return TeaModel.build(map, self);
@@ -201,14 +195,6 @@ public class ListTemplateResponseBody extends TeaModel {
         }
         public String getTemplateId() {
             return this.templateId;
-        }
-
-        public ListTemplateResponseBodyData setTopoURL(String topoURL) {
-            this.topoURL = topoURL;
-            return this;
-        }
-        public String getTopoURL() {
-            return this.topoURL;
         }
 
     }
