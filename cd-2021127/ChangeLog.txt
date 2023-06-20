@@ -1,3 +1,6 @@
+2023-06-20 Version: 1.0.21
+- Add Commercial API.
+
 2023-03-27 Version: 1.0.20
 - Add Country Support.
 

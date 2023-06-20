@@ -243,6 +243,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.batchCreateShopGroupWithOptions(request, headers, runtime);
     }
 
+    public BatchGetStoreTextDataResponse batchGetStoreTextDataWithOptions(BatchGetStoreTextDataRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        BatchGetStoreTextDataShrinkRequest request = new BatchGetStoreTextDataShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.storeIds)) {
+            request.storeIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.storeIds, "StoreIds", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.storeIdsShrink)) {
+            body.put("StoreIds", request.storeIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.country)) {
+            body.put("country", request.country);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchGetStoreTextData"),
+            new TeaPair("version", "2021-12-7"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/BatchGetStoreTextData"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchGetStoreTextDataResponse());
+    }
+
+    public BatchGetStoreTextDataResponse batchGetStoreTextData(BatchGetStoreTextDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.batchGetStoreTextDataWithOptions(request, headers, runtime);
+    }
+
+    public BatchUpdateStoreTextDataResponse batchUpdateStoreTextDataWithOptions(BatchUpdateStoreTextDataRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        BatchUpdateStoreTextDataShrinkRequest request = new BatchUpdateStoreTextDataShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.storeTextData)) {
+            request.storeTextDataShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.storeTextData, "StoreTextData", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.storeTextDataShrink)) {
+            body.put("StoreTextData", request.storeTextDataShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.country)) {
+            body.put("country", request.country);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchUpdateStoreTextData"),
+            new TeaPair("version", "2021-12-7"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/BatchUpdateStoreTextData"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchUpdateStoreTextDataResponse());
+    }
+
+    public BatchUpdateStoreTextDataResponse batchUpdateStoreTextData(BatchUpdateStoreTextDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.batchUpdateStoreTextDataWithOptions(request, headers, runtime);
+    }
+
     public CreateLabelResponse createLabelWithOptions(CreateLabelRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -437,6 +519,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createShopGroupWithOptions(request, headers, runtime);
     }
 
+    public CreateSpeechTemplateResponse createSpeechTemplateWithOptions(CreateSpeechTemplateRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.contents)) {
+            body.put("Contents", request.contents);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.country)) {
+            body.put("country", request.country);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSpeechTemplate"),
+            new TeaPair("version", "2021-12-7"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/CreateSpeechTemplate"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSpeechTemplateResponse());
+    }
+
+    public CreateSpeechTemplateResponse createSpeechTemplate(CreateSpeechTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createSpeechTemplateWithOptions(request, headers, runtime);
+    }
+
     public DeleteLabelResponse deleteLabelWithOptions(DeleteLabelRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -587,6 +708,41 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteShopGroupWithOptions(request, headers, runtime);
     }
 
+    public DeleteSpeechTemplateResponse deleteSpeechTemplateWithOptions(DeleteSpeechTemplateRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.country)) {
+            body.put("country", request.country);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteSpeechTemplate"),
+            new TeaPair("version", "2021-12-7"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/DeleteSpeechTemplate"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSpeechTemplateResponse());
+    }
+
+    public DeleteSpeechTemplateResponse deleteSpeechTemplate(DeleteSpeechTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteSpeechTemplateWithOptions(request, headers, runtime);
+    }
+
     public GetMenuDataStatusResponse getMenuDataStatusWithOptions(GetMenuDataStatusRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -694,6 +850,41 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getShopGroupWithOptions(request, headers, runtime);
+    }
+
+    public GetSpeechTemplateResponse getSpeechTemplateWithOptions(GetSpeechTemplateRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.country)) {
+            body.put("country", request.country);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSpeechTemplate"),
+            new TeaPair("version", "2021-12-7"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/GetSpeechTemplate"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSpeechTemplateResponse());
+    }
+
+    public GetSpeechTemplateResponse getSpeechTemplate(GetSpeechTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getSpeechTemplateWithOptions(request, headers, runtime);
     }
 
     public ListMenuDataResponse listMenuDataWithOptions(ListMenuDataRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -849,6 +1040,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listShopGroupWithOptions(request, headers, runtime);
+    }
+
+    public PushStoreSpeechDataResponse pushStoreSpeechDataWithOptions(PushStoreSpeechDataRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        PushStoreSpeechDataShrinkRequest request = new PushStoreSpeechDataShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.speech)) {
+            request.speechShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.speech, "Speech", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.speechShrink)) {
+            body.put("Speech", request.speechShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storeId)) {
+            body.put("StoreId", request.storeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.country)) {
+            body.put("country", request.country);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PushStoreSpeechData"),
+            new TeaPair("version", "2021-12-7"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/PushStoreSpeechData"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PushStoreSpeechDataResponse());
+    }
+
+    public PushStoreSpeechDataResponse pushStoreSpeechData(PushStoreSpeechDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.pushStoreSpeechDataWithOptions(request, headers, runtime);
     }
 
     public QueryDeviceDataListResponse queryDeviceDataListWithOptions(QueryDeviceDataListRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1469,5 +1705,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateShopGroupWithOptions(request, headers, runtime);
+    }
+
+    public UpdateSpeechTemplateResponse updateSpeechTemplateWithOptions(UpdateSpeechTemplateRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.contents)) {
+            body.put("Contents", request.contents);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.country)) {
+            body.put("country", request.country);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateSpeechTemplate"),
+            new TeaPair("version", "2021-12-7"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/UpdateSpeechTemplate"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSpeechTemplateResponse());
+    }
+
+    public UpdateSpeechTemplateResponse updateSpeechTemplate(UpdateSpeechTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateSpeechTemplateWithOptions(request, headers, runtime);
     }
 }
