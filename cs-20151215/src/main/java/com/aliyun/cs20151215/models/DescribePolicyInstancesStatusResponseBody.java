@@ -4,9 +4,15 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
+    /**
+     * <p>Information about the number of policy instances of each severity level.</p>
+     */
     @NameInMap("instances_severity_count")
     public java.util.Map<String, ?> instancesSeverityCount;
 
+    /**
+     * <p>Details about policy instances of different types.</p>
+     */
     @NameInMap("policy_instances")
     public java.util.List<DescribePolicyInstancesStatusResponseBodyPolicyInstances> policyInstances;
 
@@ -32,18 +38,33 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyInstancesStatusResponseBodyPolicyInstances extends TeaModel {
+        /**
+         * <p>The type of the policy. For more information about different types of policies and their descriptions, see [Predefined security policies of ACK](https://www.alibabacloud.com/help/doc-detail/359819.html).</p>
+         */
         @NameInMap("policy_category")
         public String policyCategory;
 
+        /**
+         * <p>The description of the policy.</p>
+         */
         @NameInMap("policy_description")
         public String policyDescription;
 
+        /**
+         * <p>The number of policy instances that are deployed. If this parameter is empty, it indicates that no policy instance is deployed from the policy.</p>
+         */
         @NameInMap("policy_instances_count")
         public Long policyInstancesCount;
 
+        /**
+         * <p>The name of the policy.</p>
+         */
         @NameInMap("policy_name")
         public String policyName;
 
+        /**
+         * <p>The severity level of the policy.</p>
+         */
         @NameInMap("policy_severity")
         public String policySeverity;
 

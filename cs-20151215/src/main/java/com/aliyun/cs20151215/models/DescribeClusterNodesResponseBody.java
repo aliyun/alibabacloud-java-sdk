@@ -4,9 +4,15 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterNodesResponseBody extends TeaModel {
+    /**
+     * <p>The details of the nodes that are returned.</p>
+     */
     @NameInMap("nodes")
     public java.util.List<DescribeClusterNodesResponseBodyNodes> nodes;
 
+    /**
+     * <p>The pagination details.</p>
+     */
     @NameInMap("page")
     public DescribeClusterNodesResponseBodyPage page;
 
@@ -32,63 +38,147 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterNodesResponseBodyNodes extends TeaModel {
+        /**
+         * <p>The time when the node was created.</p>
+         */
         @NameInMap("creation_time")
         public String creationTime;
 
+        /**
+         * <p>The error message that was generated when the node was created.</p>
+         */
         @NameInMap("error_message")
         public String errorMessage;
 
+        /**
+         * <p>The expiration time of the node.</p>
+         */
         @NameInMap("expired_time")
         public String expiredTime;
 
+        /**
+         * <p>The name of the host.</p>
+         */
         @NameInMap("host_name")
         public String hostName;
 
+        /**
+         * <p>The ID of the system image that is used by the node.</p>
+         */
         @NameInMap("image_id")
         public String imageId;
 
+        /**
+         * <p>The billing method of the instance on which the node is deployed. Valid values:</p>
+         * <br>
+         * <p>*   `PrePaid`: the subscription billing method. If the value is PrePaid, make sure that you have a sufficient balance or credit in your account. Otherwise, an `InvalidPayMethod` error is returned.</p>
+         * <p>*   `PostPaid`: the pay-as-you-go billing method.</p>
+         */
         @NameInMap("instance_charge_type")
         public String instanceChargeType;
 
+        /**
+         * <p>The ID of the instance on which the node is deployed.</p>
+         */
         @NameInMap("instance_id")
         public String instanceId;
 
+        /**
+         * <p>The name of the instance on which the node is deployed.</p>
+         */
         @NameInMap("instance_name")
         public String instanceName;
 
+        /**
+         * <p>The role of the node. Valid values:</p>
+         * <br>
+         * <p>*   Master: master node</p>
+         * <p>*   Worker: worker node</p>
+         */
         @NameInMap("instance_role")
         public String instanceRole;
 
+        /**
+         * <p>The status of the node.</p>
+         */
         @NameInMap("instance_status")
         public String instanceStatus;
 
+        /**
+         * <p>The instance type of the node.</p>
+         */
         @NameInMap("instance_type")
         public String instanceType;
 
+        /**
+         * <p>The Elastic Compute Service (ECS) instance family of the node.</p>
+         */
         @NameInMap("instance_type_family")
         public String instanceTypeFamily;
 
+        /**
+         * <p>The IP address of the node.</p>
+         */
         @NameInMap("ip_address")
         public java.util.List<String> ipAddress;
 
+        /**
+         * <p>Indicates whether the instance on which the node is deployed is provided by Alibaba Cloud. Valid values:</p>
+         * <br>
+         * <p>*   `true`: The instance is provided by Alibaba Cloud.</p>
+         * <p>*   `false`: The instance is not provided by Alibaba Cloud.</p>
+         */
         @NameInMap("is_aliyun_node")
         public Boolean isAliyunNode;
 
+        /**
+         * <p>The name of the node. This name is the identifier of the node in the cluster.</p>
+         */
         @NameInMap("node_name")
         public String nodeName;
 
+        /**
+         * <p>Indicates whether the node is ready. Valid values:</p>
+         * <br>
+         * <p>*   `Ready`: The node is ready.</p>
+         * <p>*   `NotReady`: The node is not ready.</p>
+         * <p>*   `Unknown`: The status of the node is unknown.</p>
+         * <p>*   `Offline`: The node is offline.</p>
+         */
         @NameInMap("node_status")
         public String nodeStatus;
 
+        /**
+         * <p>The ID of the node pool.</p>
+         */
         @NameInMap("nodepool_id")
         public String nodepoolId;
 
+        /**
+         * <p>Indicates how the node is initialized. A node can be manually created or created by using Resource Orchestration Service (ROS).</p>
+         */
         @NameInMap("source")
         public String source;
 
+        /**
+         * <p>The type of the preemptible instance. Valid values:</p>
+         * <br>
+         * <p>*   NoSpot: a non-preemptible instance.</p>
+         * <p>*   SpotWithPriceLimit: a preemptible instance that is configured with the highest bid price.</p>
+         * <p>*   SpotAsPriceGo: a preemptible instance for which the system automatically bids based on the current market price.</p>
+         */
         @NameInMap("spot_strategy")
         public String spotStrategy;
 
+        /**
+         * <p>The status of the node. Valid values:</p>
+         * <br>
+         * <p>*   `pending`: The node is being created.</p>
+         * <p>*   `running`: The node is running.</p>
+         * <p>*   `starting`: The node is being started.</p>
+         * <p>*   `stopping`: The node is being stopped.</p>
+         * <p>*   `stopped`: The node is stopped.</p>
+         */
         @NameInMap("state")
         public String state;
 
@@ -260,12 +350,21 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterNodesResponseBodyPage extends TeaModel {
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("page_number")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("page_size")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("total_count")
         public Integer totalCount;
 

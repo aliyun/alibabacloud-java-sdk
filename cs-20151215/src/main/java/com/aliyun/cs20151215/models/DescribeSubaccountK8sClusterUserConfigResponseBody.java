@@ -4,9 +4,15 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeSubaccountK8sClusterUserConfigResponseBody extends TeaModel {
+    /**
+     * <p>The content of the KubeConfig file. For more information about the content of the KubeConfig file, see [Configure cluster credentials](~~86494~~).</p>
+     */
     @NameInMap("config")
     public String config;
 
+    /**
+     * <p>The expiration time of the KubeConfig file. The value is the UTC time displayed in RFC3339 format.</p>
+     */
     @NameInMap("expiration")
     public String expiration;
 

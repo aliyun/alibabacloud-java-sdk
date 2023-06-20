@@ -30,6 +30,9 @@ public class UpgradeClusterAddonsRequest extends TeaModel {
         @NameInMap("next_version")
         public String nextVersion;
 
+        @NameInMap("policy")
+        public String policy;
+
         @NameInMap("version")
         public String version;
 
@@ -60,6 +63,14 @@ public class UpgradeClusterAddonsRequest extends TeaModel {
         }
         public String getNextVersion() {
             return this.nextVersion;
+        }
+
+        public UpgradeClusterAddonsRequestBody setPolicy(String policy) {
+            this.policy = policy;
+            return this;
+        }
+        public String getPolicy() {
+            return this.policy;
         }
 
         public UpgradeClusterAddonsRequestBody setVersion(String version) {

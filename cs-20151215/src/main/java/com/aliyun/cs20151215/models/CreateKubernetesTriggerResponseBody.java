@@ -4,18 +4,38 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class CreateKubernetesTriggerResponseBody extends TeaModel {
+    /**
+     * <p>The action that the trigger performs. For example, a value of `redeploy` indicates that the trigger redeploys the application.</p>
+     */
     @NameInMap("action")
     public String action;
 
+    /**
+     * <p>The ID of the ACK cluster.</p>
+     */
     @NameInMap("cluster_id")
     public String clusterId;
 
+    /**
+     * <p>The ID of the trigger.</p>
+     */
     @NameInMap("id")
     public String id;
 
+    /**
+     * <p>The name of the project.</p>
+     */
     @NameInMap("project_id")
     public String projectId;
 
+    /**
+     * <p>The type of trigger.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   `deployment`: performs actions on Deployments.</p>
+     * <p>*   `application`: performs actions on applications that are deployed in Application Center.</p>
+     */
     @NameInMap("type")
     public String type;
 

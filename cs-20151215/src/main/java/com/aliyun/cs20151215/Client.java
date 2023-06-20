@@ -291,6 +291,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("cool_down_duration", request.coolDownDuration);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.daemonsetEvictionForNodes)) {
+            body.put("daemonset_eviction_for_nodes", request.daemonsetEvictionForNodes);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.expander)) {
             body.put("expander", request.expander);
         }
@@ -299,12 +303,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("gpu_utilization_threshold", request.gpuUtilizationThreshold);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.maxGracefulTerminationSec)) {
+            body.put("max_graceful_termination_sec", request.maxGracefulTerminationSec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minReplicaCount)) {
+            body.put("min_replica_count", request.minReplicaCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recycleNodeDeletionEnabled)) {
+            body.put("recycle_node_deletion_enabled", request.recycleNodeDeletionEnabled);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.scaleDownEnabled)) {
             body.put("scale_down_enabled", request.scaleDownEnabled);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.scaleUpFromZero)) {
+            body.put("scale_up_from_zero", request.scaleUpFromZero);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.scanInterval)) {
             body.put("scan_interval", request.scanInterval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skipNodesWithLocalStorage)) {
+            body.put("skip_nodes_with_local_storage", request.skipNodesWithLocalStorage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skipNodesWithSystemPods)) {
+            body.put("skip_nodes_with_system_pods", request.skipNodesWithSystemPods);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.unneededDuration)) {
@@ -1039,7 +1067,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteClusterResponse());
     }
@@ -1081,6 +1109,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteClusterNodepoolWithOptions(ClusterId, NodepoolId, request, headers, runtime);
     }
 
+    /**
+      * > 
+      * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.
+      * *   Unknown errors may occur when you remove nodes. Before you remove nodes, back up the data on the nodes.
+      * *   Nodes remain in the unschedulable state when they are being removed.
+      * *   You can remove only worker nodes by calling this operation.
+      *
+      * @param request DeleteClusterNodesRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteClusterNodesResponse
+     */
     public DeleteClusterNodesResponse deleteClusterNodesWithOptions(String ClusterId, DeleteClusterNodesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1114,6 +1154,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteClusterNodesResponse());
     }
 
+    /**
+      * > 
+      * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.
+      * *   Unknown errors may occur when you remove nodes. Before you remove nodes, back up the data on the nodes.
+      * *   Nodes remain in the unschedulable state when they are being removed.
+      * *   You can remove only worker nodes by calling this operation.
+      *
+      * @param request DeleteClusterNodesRequest
+      * @return DeleteClusterNodesResponse
+     */
     public DeleteClusterNodesResponse deleteClusterNodes(String ClusterId, DeleteClusterNodesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1362,6 +1412,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.describeAddonsWithOptions(request, headers, runtime);
+    }
+
+    public DescribeClusterAddonInstanceResponse describeClusterAddonInstanceWithOptions(String ClusterID, String AddonName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeClusterAddonInstance"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterID) + "/components/" + com.aliyun.openapiutil.Client.getEncodeParam(AddonName) + "/instance"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClusterAddonInstanceResponse());
+    }
+
+    public DescribeClusterAddonInstanceResponse describeClusterAddonInstance(String ClusterID, String AddonName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeClusterAddonInstanceWithOptions(ClusterID, AddonName, headers, runtime);
     }
 
     public DescribeClusterAddonMetadataResponse describeClusterAddonMetadataWithOptions(String clusterId, String componentId, String version, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2146,6 +2220,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeEventsWithOptions(request, headers, runtime);
     }
 
+    /**
+      * For more information, see [Register an external Kubernetes cluster](~~121053~~).
+      *
+      * @param request DescribeExternalAgentRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeExternalAgentResponse
+     */
     public DescribeExternalAgentResponse describeExternalAgentWithOptions(String ClusterId, DescribeExternalAgentRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2171,6 +2253,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeExternalAgentResponse());
     }
 
+    /**
+      * For more information, see [Register an external Kubernetes cluster](~~121053~~).
+      *
+      * @param request DescribeExternalAgentRequest
+      * @return DescribeExternalAgentResponse
+     */
     public DescribeExternalAgentResponse describeExternalAgent(String ClusterId, DescribeExternalAgentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -2386,6 +2474,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describePolicyInstancesStatusWithOptions(clusterId, headers, runtime);
     }
 
+    /**
+      * >  You can call this operation only with an Alibaba Cloud account.
+      *
+      * @param request DescribeSubaccountK8sClusterUserConfigRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeSubaccountK8sClusterUserConfigResponse
+     */
     public DescribeSubaccountK8sClusterUserConfigResponse describeSubaccountK8sClusterUserConfigWithOptions(String ClusterId, String Uid, DescribeSubaccountK8sClusterUserConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2415,6 +2511,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSubaccountK8sClusterUserConfigResponse());
     }
 
+    /**
+      * >  You can call this operation only with an Alibaba Cloud account.
+      *
+      * @param request DescribeSubaccountK8sClusterUserConfigRequest
+      * @return DescribeSubaccountK8sClusterUserConfigResponse
+     */
     public DescribeSubaccountK8sClusterUserConfigResponse describeSubaccountK8sClusterUserConfig(String ClusterId, String Uid, DescribeSubaccountK8sClusterUserConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -2542,7 +2644,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DescribeTrigger"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/%5Bcluster_id%5D/triggers"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + "/triggers"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2775,6 +2877,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getUpgradeStatusWithOptions(ClusterId, headers, runtime);
     }
 
+    /**
+      * **Precautions**:
+      * *   Make sure that you have granted the specified RAM user at least read permissions on the specified cluster by attaching RAM policies. Otherwise, the `ErrorRamPolicyConfig` error will be returned.
+      *     For more information about how to authorize a RAM user by attaching RAM policies, see [Create a custom RAM policy](~~86485~~).
+      * *   If you call this operation as a RAM user, make sure that this RAM user has the permissions to grant other RAM users the permissions to manage ACK clusters. Otherwise, the `StatusForbidden` or `ForbiddenGrantPermissions` errors will be returned. For more information, see [Use a RAM user to grant RBAC permissions to other RAM users](~~119035~~).
+      * *   This operation overwrites the permissions that have been granted to the specified RAM user. When you call this operation, make sure that the required permissions are included.
+      *
+      * @param request GrantPermissionsRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GrantPermissionsResponse
+     */
     public GrantPermissionsResponse grantPermissionsWithOptions(String uid, GrantPermissionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2795,6 +2909,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GrantPermissionsResponse());
     }
 
+    /**
+      * **Precautions**:
+      * *   Make sure that you have granted the specified RAM user at least read permissions on the specified cluster by attaching RAM policies. Otherwise, the `ErrorRamPolicyConfig` error will be returned.
+      *     For more information about how to authorize a RAM user by attaching RAM policies, see [Create a custom RAM policy](~~86485~~).
+      * *   If you call this operation as a RAM user, make sure that this RAM user has the permissions to grant other RAM users the permissions to manage ACK clusters. Otherwise, the `StatusForbidden` or `ForbiddenGrantPermissions` errors will be returned. For more information, see [Use a RAM user to grant RBAC permissions to other RAM users](~~119035~~).
+      * *   This operation overwrites the permissions that have been granted to the specified RAM user. When you call this operation, make sure that the required permissions are included.
+      *
+      * @param request GrantPermissionsRequest
+      * @return GrantPermissionsResponse
+     */
     public GrantPermissionsResponse grantPermissions(String uid, GrantPermissionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -2982,6 +3106,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyClusterWithOptions(ClusterId, request, headers, runtime);
     }
 
+    /**
+      * You can use this API operation to modify the components in a Container Service for Kubernetes (ACK) cluster or the control plane components in an ACK Pro cluster.
+      * *   To query the customizable parameters of a component, call the `DescribeClusterAddonMetadata` API operation. For more information, see [Query the metadata of a specified component version](https://www.alibabacloud.com/help/zh/container-service-for-kubernetes/latest/query).
+      * *   For more information about the customizable parameters of control plane components in ACK Pro clusters, see [Customize the parameters of control plane components in ACK Pro clusters](https://www.alibabacloud.com/help/zh/container-service-for-kubernetes/latest/customize-control-plane-parameters-for-a-professional-kubernetes-cluster).
+      * After you call this operation, the component may be redeployed and restarted. We recommend that you evaluate the impact before you call this operation.
+      *
+      * @param request ModifyClusterAddonRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyClusterAddonResponse
+     */
     public ModifyClusterAddonResponse modifyClusterAddonWithOptions(String clusterId, String componentId, ModifyClusterAddonRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -3007,6 +3142,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyClusterAddonResponse());
     }
 
+    /**
+      * You can use this API operation to modify the components in a Container Service for Kubernetes (ACK) cluster or the control plane components in an ACK Pro cluster.
+      * *   To query the customizable parameters of a component, call the `DescribeClusterAddonMetadata` API operation. For more information, see [Query the metadata of a specified component version](https://www.alibabacloud.com/help/zh/container-service-for-kubernetes/latest/query).
+      * *   For more information about the customizable parameters of control plane components in ACK Pro clusters, see [Customize the parameters of control plane components in ACK Pro clusters](https://www.alibabacloud.com/help/zh/container-service-for-kubernetes/latest/customize-control-plane-parameters-for-a-professional-kubernetes-cluster).
+      * After you call this operation, the component may be redeployed and restarted. We recommend that you evaluate the impact before you call this operation.
+      *
+      * @param request ModifyClusterAddonRequest
+      * @return ModifyClusterAddonResponse
+     */
     public ModifyClusterAddonResponse modifyClusterAddon(String clusterId, String componentId, ModifyClusterAddonRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -3203,6 +3347,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyPolicyInstanceWithOptions(clusterId, policyName, request, headers, runtime);
     }
 
+    /**
+      * You can activate ACK with Alibaba Cloud accounts or RAM users that have the authority of AdministratorAccess.
+      *
+      * @param request OpenAckServiceRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return OpenAckServiceResponse
+     */
     public OpenAckServiceResponse openAckServiceWithOptions(OpenAckServiceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3228,6 +3380,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new OpenAckServiceResponse());
     }
 
+    /**
+      * You can activate ACK with Alibaba Cloud accounts or RAM users that have the authority of AdministratorAccess.
+      *
+      * @param request OpenAckServiceRequest
+      * @return OpenAckServiceResponse
+     */
     public OpenAckServiceResponse openAckService(OpenAckServiceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -3361,6 +3519,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.removeClusterNodesWithOptions(ClusterId, request, headers, runtime);
     }
 
+    /**
+      * > 
+      * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.
+      * *   Unknown errors may occur when you remove nodes. Before you remove nodes, back up the data on the nodes.
+      * *   Nodes remain in the Unschedulable state when they are being removed.
+      * *   You can remove only worker nodes. You cannot remove control planes.
+      *
+      * @param tmpReq RemoveNodePoolNodesRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RemoveNodePoolNodesResponse
+     */
     public RemoveNodePoolNodesResponse removeNodePoolNodesWithOptions(String ClusterId, String NodepoolId, RemoveNodePoolNodesRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         RemoveNodePoolNodesShrinkRequest request = new RemoveNodePoolNodesShrinkRequest();
@@ -3408,6 +3578,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveNodePoolNodesResponse());
     }
 
+    /**
+      * > 
+      * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.
+      * *   Unknown errors may occur when you remove nodes. Before you remove nodes, back up the data on the nodes.
+      * *   Nodes remain in the Unschedulable state when they are being removed.
+      * *   You can remove only worker nodes. You cannot remove control planes.
+      *
+      * @param request RemoveNodePoolNodesRequest
+      * @return RemoveNodePoolNodesResponse
+     */
     public RemoveNodePoolNodesResponse removeNodePoolNodes(String ClusterId, String NodepoolId, RemoveNodePoolNodesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -3691,6 +3871,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.scaleClusterNodePoolWithOptions(ClusterId, NodepoolId, request, headers, runtime);
     }
 
+    /**
+      * >  The ScaleOutCluster API operation is phased out. You must call the node pool-related API operations to manage nodes. If you want to add worker nodes to an ACK cluster, call the ScaleClusterNodePool API operation. For more information, see [ScaleClusterNodePool](~~184928~~).
+      *
+      * @param request ScaleOutClusterRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ScaleOutClusterResponse
+     */
     public ScaleOutClusterResponse scaleOutClusterWithOptions(String ClusterId, ScaleOutClusterRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -3796,6 +3984,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ScaleOutClusterResponse());
     }
 
+    /**
+      * >  The ScaleOutCluster API operation is phased out. You must call the node pool-related API operations to manage nodes. If you want to add worker nodes to an ACK cluster, call the ScaleClusterNodePool API operation. For more information, see [ScaleClusterNodePool](~~184928~~).
+      *
+      * @param request ScaleOutClusterRequest
+      * @return ScaleOutClusterResponse
+     */
     public ScaleOutClusterResponse scaleOutCluster(String ClusterId, ScaleOutClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -4141,6 +4335,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateContactGroupForAlertWithOptions(ClusterId, headers, runtime);
     }
 
+    /**
+      * > 
+      * *   You can call this operation only with an Alibaba Cloud account.
+      * *   After you revoke the kubeconfig file of a cluster, the validity period of the kubeconfig file that you specified becomes invalid. You can call this API operation to specify the validity period again.
+      *
+      * @param request UpdateK8sClusterUserConfigExpireRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateK8sClusterUserConfigExpireResponse
+     */
     public UpdateK8sClusterUserConfigExpireResponse updateK8sClusterUserConfigExpireWithOptions(String ClusterId, UpdateK8sClusterUserConfigExpireRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -4170,6 +4374,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateK8sClusterUserConfigExpireResponse());
     }
 
+    /**
+      * > 
+      * *   You can call this operation only with an Alibaba Cloud account.
+      * *   After you revoke the kubeconfig file of a cluster, the validity period of the kubeconfig file that you specified becomes invalid. You can call this API operation to specify the validity period again.
+      *
+      * @param request UpdateK8sClusterUserConfigExpireRequest
+      * @return UpdateK8sClusterUserConfigExpireResponse
+     */
     public UpdateK8sClusterUserConfigExpireResponse updateK8sClusterUserConfigExpire(String ClusterId, UpdateK8sClusterUserConfigExpireRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -4292,6 +4504,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.upgradeClusterAddonsWithOptions(ClusterId, request, headers, runtime);
     }
 
+    /**
+      * You can call the UpgradeClusterNodepool operation to update the Kubernetes version, OS version, or container runtime version of the nodes in a node pool.
+      *
+      * @param request UpgradeClusterNodepoolRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpgradeClusterNodepoolResponse
+     */
     public UpgradeClusterNodepoolResponse upgradeClusterNodepoolWithOptions(String ClusterId, String NodepoolId, UpgradeClusterNodepoolRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -4301,6 +4521,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.kubernetesVersion)) {
             body.put("kubernetes_version", request.kubernetesVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.runtimeType)) {
+            body.put("runtime_type", request.runtimeType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.runtimeVersion)) {
@@ -4325,6 +4549,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpgradeClusterNodepoolResponse());
     }
 
+    /**
+      * You can call the UpgradeClusterNodepool operation to update the Kubernetes version, OS version, or container runtime version of the nodes in a node pool.
+      *
+      * @param request UpgradeClusterNodepoolRequest
+      * @return UpgradeClusterNodepoolResponse
+     */
     public UpgradeClusterNodepoolResponse upgradeClusterNodepool(String ClusterId, String NodepoolId, UpgradeClusterNodepoolRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();

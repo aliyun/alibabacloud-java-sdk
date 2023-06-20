@@ -4,36 +4,69 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescirbeWorkflowResponseBody extends TeaModel {
+    /**
+     * <p>The time when the workflow was created.</p>
+     */
     @NameInMap("create_time")
     public String createTime;
 
+    /**
+     * <p>The duration of the workflow.</p>
+     */
     @NameInMap("duration")
     public String duration;
 
+    /**
+     * <p>The time when the workflow ended.</p>
+     */
     @NameInMap("finish_time")
     public String finishTime;
 
+    /**
+     * <p>The size of the input data.</p>
+     */
     @NameInMap("input_data_size")
     public String inputDataSize;
 
+    /**
+     * <p>The name of the workflow.</p>
+     */
     @NameInMap("job_name")
     public String jobName;
 
+    /**
+     * <p>The namespace to which the workflow belongs.</p>
+     */
     @NameInMap("job_namespace")
     public String jobNamespace;
 
+    /**
+     * <p>The size of the output data.</p>
+     */
     @NameInMap("output_data_size")
     public String outputDataSize;
 
+    /**
+     * <p>The current state of the workflow.</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>The number of base pairs.</p>
+     */
     @NameInMap("total_bases")
     public String totalBases;
 
+    /**
+     * <p>The number of reads.</p>
+     */
     @NameInMap("total_reads")
     public String totalReads;
 
+    /**
+     * <p>The user input parameters.</p>
+     */
     @NameInMap("user_input_data")
     public String userInputData;
 

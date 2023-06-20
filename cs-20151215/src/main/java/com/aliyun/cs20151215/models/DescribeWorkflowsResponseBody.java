@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeWorkflowsResponseBody extends TeaModel {
+    /**
+     * <p>The list of the jobs.</p>
+     */
     @NameInMap("jobs")
     public java.util.List<DescribeWorkflowsResponseBodyJobs> jobs;
 
@@ -21,12 +24,21 @@ public class DescribeWorkflowsResponseBody extends TeaModel {
     }
 
     public static class DescribeWorkflowsResponseBodyJobs extends TeaModel {
+        /**
+         * <p>The ID of the ACK cluster.</p>
+         */
         @NameInMap("cluster_id")
         public String clusterId;
 
+        /**
+         * <p>The time when the workflow was created.</p>
+         */
         @NameInMap("create_time")
         public String createTime;
 
+        /**
+         * <p>The name of the workflow.</p>
+         */
         @NameInMap("job_name")
         public String jobName;
 

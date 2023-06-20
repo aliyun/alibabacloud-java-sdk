@@ -4,12 +4,21 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class MigrateClusterResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("cluster_id")
     public String clusterId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("request_id")
     public String requestId;
 
+    /**
+     * <p>The ID of the task.</p>
+     */
     @NameInMap("task_id")
     public String taskId;
 

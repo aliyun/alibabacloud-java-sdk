@@ -4,9 +4,15 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeEdgeMachinesResponseBody extends TeaModel {
+    /**
+     * <p>The list of details about cloud-native boxes.</p>
+     */
     @NameInMap("edge_machines")
     public java.util.List<DescribeEdgeMachinesResponseBodyEdgeMachines> edgeMachines;
 
+    /**
+     * <p>The pagination details.</p>
+     */
     @NameInMap("page_info")
     public DescribeEdgeMachinesResponseBodyPageInfo pageInfo;
 
@@ -32,33 +38,63 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
     }
 
     public static class DescribeEdgeMachinesResponseBodyEdgeMachines extends TeaModel {
+        /**
+         * <p>The time when the cloud-native box was activated.</p>
+         */
         @NameInMap("active_time")
         public String activeTime;
 
+        /**
+         * <p>The time when the cloud-native box was created.</p>
+         */
         @NameInMap("created")
         public String created;
 
+        /**
+         * <p>The ID of the cloud-native box.</p>
+         */
         @NameInMap("edge_machine_id")
         public String edgeMachineId;
 
+        /**
+         * <p>The `hostname` of the cloud-native box.</p>
+         */
         @NameInMap("hostname")
         public String hostname;
 
+        /**
+         * <p>The lifecycle status of the cloud-native box.</p>
+         */
         @NameInMap("life_state")
         public String lifeState;
 
+        /**
+         * <p>The model of the cloud-native box.</p>
+         */
         @NameInMap("model")
         public String model;
 
+        /**
+         * <p>The name of the cloud-native box.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The online status of the cloud-native box.</p>
+         */
         @NameInMap("online_state")
         public String onlineState;
 
+        /**
+         * <p>The serial number of the cloud-native box.</p>
+         */
         @NameInMap("sn")
         public String sn;
 
+        /**
+         * <p>The time when the cloud-native box was last updated.</p>
+         */
         @NameInMap("updated")
         public String updated;
 
@@ -150,12 +186,21 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
     }
 
     public static class DescribeEdgeMachinesResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("page_number")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("page_size")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("total_count")
         public Integer totalCount;
 

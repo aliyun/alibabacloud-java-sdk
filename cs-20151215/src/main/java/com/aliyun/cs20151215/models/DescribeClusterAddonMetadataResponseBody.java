@@ -4,12 +4,21 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterAddonMetadataResponseBody extends TeaModel {
+    /**
+     * <p>The schema of component parameters.</p>
+     */
     @NameInMap("config_schema")
     public String configSchema;
 
+    /**
+     * <p>The name of the component.</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The version of the component.</p>
+     */
     @NameInMap("version")
     public String version;
 

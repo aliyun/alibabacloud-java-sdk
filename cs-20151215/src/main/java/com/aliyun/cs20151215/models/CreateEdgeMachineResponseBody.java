@@ -4,9 +4,15 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class CreateEdgeMachineResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the cloud-native box.</p>
+     */
     @NameInMap("edge_machine_id")
     public String edgeMachineId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("request_id")
     public String requestId;
 

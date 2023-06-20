@@ -4,9 +4,15 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class StartAlertResponseBody extends TeaModel {
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("msg")
     public String msg;
 
+    /**
+     * <p>The status.</p>
+     */
     @NameInMap("status")
     public Boolean status;
 

@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ScaleClusterNodePoolResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the scaling task.</p>
+     */
     @NameInMap("task_id")
     public String taskId;
 

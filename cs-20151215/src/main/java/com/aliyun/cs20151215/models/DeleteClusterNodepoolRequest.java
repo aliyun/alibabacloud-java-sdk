@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DeleteClusterNodepoolRequest extends TeaModel {
+    /**
+     * <p>false</p>
+     */
     @NameInMap("force")
     public Boolean force;
 

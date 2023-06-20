@@ -4,9 +4,15 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeTaskInfoResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the ACK cluster.</p>
+     */
     @NameInMap("cluster_id")
     public String clusterId;
 
+    /**
+     * <p>The time when the task was created.</p>
+     */
     @NameInMap("created")
     public String created;
 
@@ -25,21 +31,40 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
     @NameInMap("stages")
     public java.util.List<DescribeTaskInfoResponseBodyStages> stages;
 
+    /**
+     * <p>The state of the task. Valid values:</p>
+     * <br>
+     * <p>*   `running`: The task is running.</p>
+     * <p>*   `fail`: The task failed.</p>
+     * <p>*   `success`: The task is complete.</p>
+     */
     @NameInMap("state")
     public String state;
 
     @NameInMap("target")
     public DescribeTaskInfoResponseBodyTarget target;
 
+    /**
+     * <p>The ID of the task.</p>
+     */
     @NameInMap("task_id")
     public String taskId;
 
+    /**
+     * <p>The execution result of the task.</p>
+     */
     @NameInMap("task_result")
     public java.util.List<DescribeTaskInfoResponseBodyTaskResult> taskResult;
 
+    /**
+     * <p>The task type. A value of `cluster_scaleout` indicates a scale-out task.</p>
+     */
     @NameInMap("task_type")
     public String taskType;
 
+    /**
+     * <p>The time when the task was updated.</p>
+     */
     @NameInMap("updated")
     public String updated;
 
@@ -350,9 +375,19 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeTaskInfoResponseBodyTaskResult extends TeaModel {
+        /**
+         * <p>The resources that are managed by the task. For a scale-out task, the value of this parameter the ID of the instance that is added by the task.</p>
+         */
         @NameInMap("data")
         public String data;
 
+        /**
+         * <p>The state of the scaling of the resource. Valid values:</p>
+         * <br>
+         * <p>*   `success`: The scale-out task is successful.</p>
+         * <p>*   `failed`: The scale-out task failed.</p>
+         * <p>*   `initail`: The scale-out task is initializing.</p>
+         */
         @NameInMap("status")
         public String status;
 
