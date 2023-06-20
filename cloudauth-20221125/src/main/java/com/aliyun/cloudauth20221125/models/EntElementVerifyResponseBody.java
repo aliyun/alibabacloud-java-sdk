@@ -63,6 +63,9 @@ public class EntElementVerifyResponseBody extends TeaModel {
         @NameInMap("ReasonCode")
         public String reasonCode;
 
+        @NameInMap("ReasonDetail")
+        public String reasonDetail;
+
         @NameInMap("Status")
         public String status;
 
@@ -85,6 +88,14 @@ public class EntElementVerifyResponseBody extends TeaModel {
         }
         public String getReasonCode() {
             return this.reasonCode;
+        }
+
+        public EntElementVerifyResponseBodyResult setReasonDetail(String reasonDetail) {
+            this.reasonDetail = reasonDetail;
+            return this;
+        }
+        public String getReasonDetail() {
+            return this.reasonDetail;
         }
 
         public EntElementVerifyResponseBodyResult setStatus(String status) {
