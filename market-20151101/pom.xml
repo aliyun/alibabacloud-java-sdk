@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>market20151101</artifactId>
-  <version>3.0.3</version>
+  <version>3.0.4</version>
   <packaging>jar</packaging>
   <name>market20151101</name>
   <description>Alibaba Cloud Market (20151101) SDK for Java
@@ -51,7 +51,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.2.0</version>
+      <version>0.2.1</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
