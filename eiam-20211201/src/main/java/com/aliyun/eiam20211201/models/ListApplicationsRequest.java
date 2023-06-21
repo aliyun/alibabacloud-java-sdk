@@ -5,43 +5,49 @@ import com.aliyun.tea.*;
 
 public class ListApplicationsRequest extends TeaModel {
     /**
-     * <p>应用Id列表</p>
+     * <p>The IDs of the applications.</p>
      */
     @NameInMap("ApplicationIds")
     public java.util.List<String> applicationIds;
 
     /**
-     * <p>应用的表示名称</p>
+     * <p>The name of the application. Only fuzzy match from the leftmost character is supported.</p>
      */
     @NameInMap("ApplicationName")
     public String applicationName;
 
     /**
-     * <p>应用的授权类型。</p>
+     * <p>The authorization of the application. Valid values:</p>
+     * <br>
+     * <p>*   authorize_required: Only the user with explicit authorization can access the application.</p>
+     * <p>*   default_all: By default, all users can access the application.</p>
      */
     @NameInMap("AuthorizationType")
     public String authorizationType;
 
     /**
-     * <p>IDaaS EIAM的实例id</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>当前查询的列表页码，默认为1</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>当前查询的列表页码，默认为20</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>应用状态检索条件</p>
+     * <p>The status of the application. Valid values:</p>
+     * <br>
+     * <p>*   Enabled: The application is enabled.</p>
+     * <p>*   Disabled: The application is disabled.</p>
      */
     @NameInMap("Status")
     public String status;

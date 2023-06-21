@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetApplicationProvisioningConfigRequest extends TeaModel {
     /**
-     * <p>IDaaS的应用资源ID。</p>
+     * <p>The ID of the application.</p>
      */
     @NameInMap("ApplicationId")
     public String applicationId;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

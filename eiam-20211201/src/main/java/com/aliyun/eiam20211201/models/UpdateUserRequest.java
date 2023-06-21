@@ -5,61 +5,61 @@ import com.aliyun.tea.*;
 
 public class UpdateUserRequest extends TeaModel {
     /**
-     * <p>扩展字段列表</p>
+     * <p>The custom extended fields.</p>
      */
     @NameInMap("CustomFields")
     public java.util.List<UpdateUserRequestCustomFields> customFields;
 
     /**
-     * <p>账户展示名</p>
+     * <p>The display name of the account. The display name can be up to 64 characters in length.</p>
      */
     @NameInMap("DisplayName")
     public String displayName;
 
     /**
-     * <p>邮箱</p>
+     * <p>The email address. The prefix of the email address can contain letters, digits, periods (.), underscores (\_), and hyphens (-).</p>
      */
     @NameInMap("Email")
     public String email;
 
     /**
-     * <p>邮箱是否验证，邮箱若设置此字段必须设置，无特殊业务可直接设置为true</p>
+     * <p>Specifies whether the email address is verified. This parameter must be specified if you specify Email. You can set this parameter to true if you have no special business requirements.</p>
      */
     @NameInMap("EmailVerified")
     public Boolean emailVerified;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>手机号</p>
+     * <p>The mobile number. The mobile number must be 6 to 15 digits in length.</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
     /**
-     * <p>手机号是否验证，手机号若设置此字段必须设置，无特殊业务可直接设置为true</p>
+     * <p>Specifies whether the mobile number is verified. This parameter must be specified if you specify PhoneNumber. You can set this parameter to true if you have no special business requirements.</p>
      */
     @NameInMap("PhoneNumberVerified")
     public Boolean phoneNumberVerified;
 
     /**
-     * <p>手机地区编号,示例：中国大陆手区号为86，不带 00 或 +, 手机号若设置，此参数必填</p>
+     * <p>The area code of the mobile number. For example, the area code of a mobile number in the Chinese mainland is 86 without 00 or the plus sign (+). This parameter must be specified if you specify PhoneNumber.</p>
      */
     @NameInMap("PhoneRegion")
     public String phoneRegion;
 
     /**
-     * <p>账户ID</p>
+     * <p>The account ID.</p>
      */
     @NameInMap("UserId")
     public String userId;
 
     /**
-     * <p>账户名。</p>
+     * <p>The name of the account. The name can be up to 64 characters in length. It can contain letters, digits, and the following special characters: \_ . @ -</p>
      */
     @NameInMap("Username")
     public String username;
@@ -151,19 +151,23 @@ public class UpdateUserRequest extends TeaModel {
 
     public static class UpdateUserRequestCustomFields extends TeaModel {
         /**
-         * <p>扩展字段标识</p>
+         * <p>The name of the extended field. You must create an extended field before you specify this parameter. To create an extended field, go to the Extended Fields page of the specified EIAM instance in the IDaaS console.</p>
          */
         @NameInMap("FieldName")
         public String fieldName;
 
         /**
-         * <p>扩展字段值</p>
+         * <p>The value of the extended field. The value follows the limits on the properties of the extended field.</p>
          */
         @NameInMap("FieldValue")
         public String fieldValue;
 
         /**
-         * <p>扩展字段操作类型，枚举值，add（新增),replace（更新),remove(移除)</p>
+         * <p>The operation type of the extended field. Valid values:</p>
+         * <br>
+         * <p>*   add: adds a value to the extended field of the account.</p>
+         * <p>*   replace: replaces the existing value of the extended field of the account. If the existing value to be replaced does not exist, this operation changes to the add operation.</p>
+         * <p>*   remove: removes a value from the extended field of the account.</p>
          */
         @NameInMap("Operation")
         public String operation;

@@ -11,6 +11,12 @@ public class ListOrganizationalUnitsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>组织ID列表。size限制最大100。</p>
+     */
+    @NameInMap("OrganizationalUnitIds")
+    public java.util.List<String> organizationalUnitIds;
+
+    /**
      * <p>The name of the organizational unit.</p>
      */
     @NameInMap("OrganizationalUnitName")
@@ -51,6 +57,14 @@ public class ListOrganizationalUnitsRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ListOrganizationalUnitsRequest setOrganizationalUnitIds(java.util.List<String> organizationalUnitIds) {
+        this.organizationalUnitIds = organizationalUnitIds;
+        return this;
+    }
+    public java.util.List<String> getOrganizationalUnitIds() {
+        return this.organizationalUnitIds;
     }
 
     public ListOrganizationalUnitsRequest setOrganizationalUnitName(String organizationalUnitName) {

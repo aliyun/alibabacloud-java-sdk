@@ -5,31 +5,39 @@ import com.aliyun.tea.*;
 
 public class SetPasswordInitializationConfigurationRequest extends TeaModel {
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>密码强制更新状态。枚举取值:enabled(开启)、disabled(禁用)</p>
+     * <p>Specifies whether to enable forcible password change upon first logon. Valid values:</p>
+     * <br>
+     * <p>*   enabled</p>
+     * <p>*   disabled</p>
      */
     @NameInMap("PasswordForcedUpdateStatus")
     public String passwordForcedUpdateStatus;
 
     /**
-     * <p>密码初始化通知渠道。枚举取值:email(邮件)、sms(短信)</p>
+     * <p>The methods for receiving password initialization notifications.</p>
      */
     @NameInMap("PasswordInitializationNotificationChannels")
     public java.util.List<String> passwordInitializationNotificationChannels;
 
     /**
-     * <p>密码初始化配置状态。枚举取值:enabled(开启)、disabled(禁用)</p>
+     * <p>Specifies whether to enable password initialization. Valid values:</p>
+     * <br>
+     * <p>*   enabled</p>
+     * <p>*   disabled</p>
      */
     @NameInMap("PasswordInitializationStatus")
     public String passwordInitializationStatus;
 
     /**
-     * <p>密码初始化方式。当passwordInitializationStatus取值为enabled时必传。枚举取值:random(随机)</p>
+     * <p>The password initialization method. This parameter is required when PasswordInitializationStatus is set to enabled. Set the value to random.</p>
+     * <br>
+     * <p>*   random: A randomly generated password is used.</p>
      */
     @NameInMap("PasswordInitializationType")
     public String passwordInitializationType;

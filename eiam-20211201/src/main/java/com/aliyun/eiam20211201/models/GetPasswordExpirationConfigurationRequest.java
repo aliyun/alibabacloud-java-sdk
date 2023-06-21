@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPasswordExpirationConfigurationRequest extends TeaModel {
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

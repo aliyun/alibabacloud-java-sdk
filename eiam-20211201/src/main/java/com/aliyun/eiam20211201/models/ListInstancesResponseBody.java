@@ -4,12 +4,21 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The information of instances.</p>
+     */
     @NameInMap("Instances")
     public java.util.List<ListInstancesResponseBodyInstances> instances;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -44,13 +53,16 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyInstancesDefaultEndpoint extends TeaModel {
         /**
-         * <p>用户portal和应用开发集成的端点地址</p>
+         * <p>The endpoint of the instance.</p>
          */
         @NameInMap("Endpoint")
         public String endpoint;
 
         /**
-         * <p>实例域名状态，Unresolved(未解析)、Resolved(已解析)</p>
+         * <p>The status of the endpoint. Valid values:</p>
+         * <br>
+         * <p>*   resolved</p>
+         * <p>*   unresolved</p>
          */
         @NameInMap("Status")
         public String status;
@@ -80,31 +92,34 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyInstances extends TeaModel {
         /**
-         * <p>实例的创建时间</p>
+         * <p>The time when the instance was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
-         * <p>实例默认域名,用户portal和应用开发集成的端点地址</p>
+         * <p>The default endpoint of the instance.</p>
          */
         @NameInMap("DefaultEndpoint")
         public ListInstancesResponseBodyInstancesDefaultEndpoint defaultEndpoint;
 
         /**
-         * <p>实例描述信息</p>
+         * <p>The description of the instance.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>实例id</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>实例状态，Pending(初始状态)、Creating(创建中)、Running(运行中)、Disabled(禁用)、CreateFailed(创建失败)</p>
+         * <p>The status of the instance. Valid values:</p>
+         * <br>
+         * <p>*   creating</p>
+         * <p>*   running</p>
          */
         @NameInMap("Status")
         public String status;

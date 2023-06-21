@@ -5,25 +5,28 @@ import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
     /**
-     * <p>实例ID列表，支持0到100个</p>
+     * <p>The list of instance IDs.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>当前查询的列表页码，默认为1</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>当前查询的列表页码，默认为20</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>实例状态</p>
+     * <p>The status of the instance. Valid values:</p>
+     * <br>
+     * <p>*   creating</p>
+     * <p>*   running</p>
      */
     @NameInMap("Status")
     public String status;

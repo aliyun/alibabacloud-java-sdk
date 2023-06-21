@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class CreateOrganizationalUnitRequest extends TeaModel {
     /**
-     * <p>组织描述。</p>
+     * <p>The description of the organization. The value can be up to 256 characters in length.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>外部ID。</p>
+     * <p>The external ID of the organization, which can be used to associate the organization with an external system. By default, the external ID is the organization ID. The value can be up to 64 characters in length.</p>
      */
     @NameInMap("OrganizationalUnitExternalId")
     public String organizationalUnitExternalId;
 
     /**
-     * <p>组织名称。</p>
+     * <p>The name of the organization. The name can be up to 64 characters in length.</p>
      */
     @NameInMap("OrganizationalUnitName")
     public String organizationalUnitName;
 
     /**
-     * <p>父组织ID。</p>
+     * <p>The parent organization ID.</p>
      */
     @NameInMap("ParentId")
     public String parentId;

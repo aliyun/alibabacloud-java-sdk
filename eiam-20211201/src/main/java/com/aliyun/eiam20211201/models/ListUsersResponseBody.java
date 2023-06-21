@@ -4,12 +4,21 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListUsersResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of entries in the list.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    /**
+     * <p>The list of data objects of accounts.</p>
+     */
     @NameInMap("Users")
     public java.util.List<ListUsersResponseBodyUsers> users;
 
@@ -44,127 +53,139 @@ public class ListUsersResponseBody extends TeaModel {
 
     public static class ListUsersResponseBodyUsers extends TeaModel {
         /**
-         * <p>账户过期时间</p>
+         * <p>The time when the account expires. This value is a UNIX timestamp. Unit: milliseconds.</p>
          */
         @NameInMap("AccountExpireTime")
         public Long accountExpireTime;
 
         /**
-         * <p>创建时间</p>
+         * <p>The time when the account was created. This value is a UNIX timestamp. Unit: milliseconds.</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
-         * <p>账号描述</p>
+         * <p>The description of the account.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>账户显示名</p>
+         * <p>The display name of the account.</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
-         * <p>邮箱</p>
+         * <p>The email address of the user who owns the account.</p>
          */
         @NameInMap("Email")
         public String email;
 
         /**
-         * <p>邮箱是否已验证</p>
+         * <p>Indicates whether the email address has been verified. A value of true indicates that the email address has been verified by the user or has been set to the verified status by the administrator. A value of false indicates that the email address has not been verified.</p>
          */
         @NameInMap("EmailVerified")
         public Boolean emailVerified;
 
         /**
-         * <p>实例ID</p>
+         * <p>The ID of the instance</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>锁定过期时间</p>
+         * <p>The time when the account lock expires. This value is a UNIX timestamp. Unit: milliseconds.</p>
          */
         @NameInMap("LockExpireTime")
         public Long lockExpireTime;
 
         /**
-         * <p>密码过期时间</p>
+         * <p>Time When Password Expires</p>
          */
         @NameInMap("PasswordExpireTime")
         public Long passwordExpireTime;
 
         /**
-         * <p>密码是否已设置</p>
+         * <p>Indicates whether a password is set.</p>
          */
         @NameInMap("PasswordSet")
         public Boolean passwordSet;
 
         /**
-         * <p>手机号码</p>
+         * <p>The mobile number of the user who owns the account.</p>
          */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
         /**
-         * <p>手机号是否已验证</p>
+         * <p>Indicates whether the mobile number has been verified. A value of true indicates that the mobile number has been verified by the user or has been set to the verified status by the administrator. A value of false indicates that the mobile number has not been verified.</p>
          */
         @NameInMap("PhoneNumberVerified")
         public Boolean phoneNumberVerified;
 
         /**
-         * <p>手机地区编号,示例：中国大陆手区号为86，不带 00 或 +</p>
+         * <p>The country code of the mobile number. For example, the country code of China is 86 without 00 or +.</p>
          */
         @NameInMap("PhoneRegion")
         public String phoneRegion;
 
         /**
-         * <p>账户注册时间</p>
+         * <p>The time when the account was registered. This value is a UNIX timestamp. Unit: milliseconds.</p>
          */
         @NameInMap("RegisterTime")
         public Long registerTime;
 
         /**
-         * <p>账户状态, enabled:启用,disabled:禁用</p>
+         * <p>The status of the account. Valid values:</p>
+         * <br>
+         * <p>*   enabled: The account is enabled.</p>
+         * <p>*   disabled: The account is disabled.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>最近一次更新时间</p>
+         * <p>The time when the account was last updated. The value is a UNIX timestamp. Unit: milliseconds.</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
         /**
-         * <p>外部ID</p>
+         * <p>The external ID of the account. The external ID can be used by external data to map the data of the account in IDaaS EIAM. By default, the external ID is the account ID.</p>
+         * <br>
+         * <p>For accounts with the same source type and source ID, each account has a unique external ID.</p>
          */
         @NameInMap("UserExternalId")
         public String userExternalId;
 
         /**
-         * <p>账户ID</p>
+         * <p>The ID of the account.</p>
          */
         @NameInMap("UserId")
         public String userId;
 
         /**
-         * <p>来源ID</p>
+         * <p>The source ID of the account.</p>
+         * <br>
+         * <p>If the account was created in IDaaS, its source ID is the ID of the IDaaS instance. If the account was imported, its source ID is the enterprise ID in the source. For example, if the account was imported from DingTalk, its source ID is the corpId value of the enterprise in DingTalk.</p>
          */
         @NameInMap("UserSourceId")
         public String userSourceId;
 
         /**
-         * <p>来源类型，build_in[自建],ding_talk[钉钉导入],ad[AD导入],ldap[LDAP导入]</p>
+         * <p>The source type of the account. Valid values:</p>
+         * <br>
+         * <p>*   build_in: The account was created in IDaaS.</p>
+         * <p>*   ding_talk: The account was imported from DingTalk.</p>
+         * <p>*   ad: The account was imported from Microsoft Active Directory (AD).</p>
+         * <p>*   ldap: The account was imported from a Lightweight Directory Access Protocol (LDAP) service.</p>
          */
         @NameInMap("UserSourceType")
         public String userSourceType;
 
         /**
-         * <p>账户名</p>
+         * <p>The username of the account.</p>
          */
         @NameInMap("Username")
         public String username;

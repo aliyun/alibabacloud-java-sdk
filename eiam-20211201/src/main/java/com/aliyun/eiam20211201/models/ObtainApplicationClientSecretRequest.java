@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ObtainApplicationClientSecretRequest extends TeaModel {
     /**
-     * <p>IDaaS的应用主键id</p>
+     * <p>The ID of the application whose client key you want to query.</p>
      */
     @NameInMap("ApplicationId")
     public String applicationId;
 
     /**
-     * <p>IDaaS EIAM的实例id</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>OIDC 场景下用于客户端身份验证的客户端密钥</p>
+     * <p>The client key ID of the application.</p>
      */
     @NameInMap("SecretId")
     public String secretId;

@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class UpdateOrganizationalUnitParentIdRequest extends TeaModel {
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>组织ID。</p>
+     * <p>The organization ID.</p>
      */
     @NameInMap("OrganizationalUnitId")
     public String organizationalUnitId;
 
     /**
-     * <p>父组织ID。</p>
+     * <p>The parent organization ID.</p>
      */
     @NameInMap("ParentId")
     public String parentId;

@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class SetPasswordComplexityConfigurationRequest extends TeaModel {
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>密码复杂度规则</p>
+     * <p>The password complexity rules.</p>
      */
     @NameInMap("PasswordComplexityRules")
     public java.util.List<SetPasswordComplexityConfigurationRequestPasswordComplexityRules> passwordComplexityRules;
 
     /**
-     * <p>密码最小长度</p>
+     * <p>The minimum number of characters in a password.</p>
      */
     @NameInMap("PasswordMinLength")
     public Integer passwordMinLength;
@@ -53,7 +53,16 @@ public class SetPasswordComplexityConfigurationRequest extends TeaModel {
 
     public static class SetPasswordComplexityConfigurationRequestPasswordComplexityRules extends TeaModel {
         /**
-         * <p>密码检查类型。枚举取值:inclusion\_upper\_case(包含大写字母)、inclusion\_lower\_case(包含小写字母)、inclusion\_special\_case(包含特殊字符)、inclusion\_number(包含数字)、exclusion\_username(不能包含用户名)、exclusion\_email(不能包含邮箱)、exclusion\_phone\_number(不能包含手机号)、exclusion\_display\_name(不能包含显示名)</p>
+         * <p>The type of the password check. Valid values:</p>
+         * <br>
+         * <p>*   inclusion_upper_case: The password must contain uppercase letters.</p>
+         * <p>*   inclusion_lower_case: The password must contain lowercase letters.</p>
+         * <p>*   inclusion_special_case: The password must contain one or more of the following special characters: @ % + \ / \" ! # $ ^ ? : , ( ) { } \[ ] ~ - \_ .</p>
+         * <p>*   inclusion_number: The password must contain digits.</p>
+         * <p>*   exclusion_username: The password cannot contain a username.</p>
+         * <p>*   exclusion_email: The password cannot contain an email prefix.</p>
+         * <p>*   exclusion_phone_number: The password cannot contain a mobile number.</p>
+         * <p>*   exclusion_display_name: The password cannot contain a display name.</p>
          */
         @NameInMap("PasswordCheckType")
         public String passwordCheckType;

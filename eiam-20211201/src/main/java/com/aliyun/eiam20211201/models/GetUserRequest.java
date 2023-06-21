@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetUserRequest extends TeaModel {
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>账户ID</p>
+     * <p>The ID of the account.</p>
      */
     @NameInMap("UserId")
     public String userId;

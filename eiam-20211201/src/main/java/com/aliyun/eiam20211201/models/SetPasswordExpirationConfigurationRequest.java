@@ -5,49 +5,59 @@ import com.aliyun.tea.*;
 
 public class SetPasswordExpirationConfigurationRequest extends TeaModel {
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>密码过期动作。当passwordExpirationStatus取值为enabled时必传。枚举取值:forbid_login(禁止登录)、force_update_password(强制修改密码)、remind_update_password(提醒修改密码)</p>
+     * <p>The action to take upon password expiration. This parameter must be specified when PasswordExpirationStatus is set to enabled. Valid values:</p>
+     * <br>
+     * <p>*   forbid_login: Users cannot log on to IDaaS.</p>
+     * <p>*   force_update_password: Users must change the password.</p>
+     * <p>*   remind_update_password: IDaaS reminds users to change the password upon each logon.</p>
      */
     @NameInMap("PasswordExpirationAction")
     public String passwordExpirationAction;
 
     /**
-     * <p>密码过期通知渠道。枚举取值:login(用户登录)、email(邮件)、sms(短信)</p>
+     * <p>The methods for receiving password expiration notifications. This parameter must be specified when PasswordExpirationNotificationStatus is set to enabled.</p>
      */
     @NameInMap("PasswordExpirationNotificationChannels")
     public java.util.List<String> passwordExpirationNotificationChannels;
 
     /**
-     * <p>密码过期通知时间，单位是天。当passwordExpirationNotificationStatus取值为enabled时必传。</p>
+     * <p>The number of days before the expiration date during which password expiration notifications are sent. Unit: day. This parameter must be specified when PasswordExpirationNotificationStatus is set to enabled.</p>
      */
     @NameInMap("PasswordExpirationNotificationDuration")
     public Integer passwordExpirationNotificationDuration;
 
     /**
-     * <p>密码过期通知状态。枚举取值:enabled(开启)、disabled(禁用)</p>
+     * <p>Specifies whether to enable the password expiration notification feature. Valid values:</p>
+     * <br>
+     * <p>*   enabled</p>
+     * <p>*   disabled</p>
      */
     @NameInMap("PasswordExpirationNotificationStatus")
     public String passwordExpirationNotificationStatus;
 
     /**
-     * <p>密码过期配置状态。枚举取值:enabled(开启)、disabled(禁用)</p>
+     * <p>Specifies whether to enable the password expiration feature. Valid values:</p>
+     * <br>
+     * <p>*   enabled</p>
+     * <p>*   disabled</p>
      */
     @NameInMap("PasswordExpirationStatus")
     public String passwordExpirationStatus;
 
     /**
-     * <p>密码强制修改时间，单位是天。当前字段取值要比passwordExpirationNotificationDuration大。</p>
+     * <p>The number of days before which users must change the password to prevent password expiration. Unit: day. You must set this parameter to a value greater than the value of PasswordExpirationNotificationDuration.</p>
      */
     @NameInMap("PasswordForcedUpdateDuration")
     public Integer passwordForcedUpdateDuration;
 
     /**
-     * <p>密码有效时长，单位是天。当passwordExpirationStatus取值为enabled时必传。</p>
+     * <p>The validity period of a password. Unit: day. This parameter must be specified when PasswordExpirationStatus is set to enabled.</p>
      */
     @NameInMap("PasswordValidMaxDay")
     public Integer passwordValidMaxDay;

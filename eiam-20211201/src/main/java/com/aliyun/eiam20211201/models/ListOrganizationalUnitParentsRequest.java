@@ -3,25 +3,25 @@ package com.aliyun.eiam20211201.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteOrganizationalUnitRequest extends TeaModel {
+public class ListOrganizationalUnitParentsRequest extends TeaModel {
     /**
-     * <p>The instance ID.</p>
+     * <p>IDaaS EIAM实例的ID。</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The organization ID.</p>
+     * <p>组织ID。</p>
      */
     @NameInMap("OrganizationalUnitId")
     public String organizationalUnitId;
 
-    public static DeleteOrganizationalUnitRequest build(java.util.Map<String, ?> map) throws Exception {
-        DeleteOrganizationalUnitRequest self = new DeleteOrganizationalUnitRequest();
+    public static ListOrganizationalUnitParentsRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListOrganizationalUnitParentsRequest self = new ListOrganizationalUnitParentsRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteOrganizationalUnitRequest setInstanceId(String instanceId) {
+    public ListOrganizationalUnitParentsRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -29,7 +29,7 @@ public class DeleteOrganizationalUnitRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public DeleteOrganizationalUnitRequest setOrganizationalUnitId(String organizationalUnitId) {
+    public ListOrganizationalUnitParentsRequest setOrganizationalUnitId(String organizationalUnitId) {
         this.organizationalUnitId = organizationalUnitId;
         return this;
     }

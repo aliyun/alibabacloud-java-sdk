@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class SetApplicationGrantScopeRequest extends TeaModel {
     /**
-     * <p>IDaaS的应用主键id</p>
+     * <p>The ID of the application that you want to configure.</p>
      */
     @NameInMap("ApplicationId")
     public String applicationId;
 
     /**
-     * <p>api调用的授权范围</p>
+     * <p>The permissions of the Developer API feature.</p>
      */
     @NameInMap("GrantScopes")
     public java.util.List<String> grantScopes;
 
     /**
-     * <p>IDaaS EIAM的实例id</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

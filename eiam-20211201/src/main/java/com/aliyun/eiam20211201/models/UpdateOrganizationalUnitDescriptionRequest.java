@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class UpdateOrganizationalUnitDescriptionRequest extends TeaModel {
     /**
-     * <p>组织描述。</p>
+     * <p>The description of the organization. The value can be up to 256 characters in length.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>组织ID。</p>
+     * <p>The organization ID.</p>
      */
     @NameInMap("OrganizationalUnitId")
     public String organizationalUnitId;

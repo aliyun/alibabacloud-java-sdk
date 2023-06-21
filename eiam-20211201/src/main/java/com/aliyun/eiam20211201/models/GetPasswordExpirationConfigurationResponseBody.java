@@ -4,9 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
+    /**
+     * <p>The password expiration configurations.</p>
+     */
     @NameInMap("PasswordExpirationConfiguration")
     public GetPasswordExpirationConfigurationResponseBodyPasswordExpirationConfiguration passwordExpirationConfiguration;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +38,55 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
     }
 
     public static class GetPasswordExpirationConfigurationResponseBodyPasswordExpirationConfiguration extends TeaModel {
+        /**
+         * <p>The action to take when a password expires. Valid values:</p>
+         * <br>
+         * <p>*   forbid_login: Prohibit the user from using the password to log on to IDaaS.</p>
+         * <p>*   force_update_password: Force the user to change the password.</p>
+         * <p>*   remind_update_password: Remind the user to change the password.</p>
+         */
         @NameInMap("PasswordExpirationAction")
         public String passwordExpirationAction;
 
+        /**
+         * <p>The methods for receiving password expiration notifications.</p>
+         */
         @NameInMap("PasswordExpirationNotificationChannels")
         public java.util.List<String> passwordExpirationNotificationChannels;
 
+        /**
+         * <p>The number of days before the expiration date during which password expiration notifications are sent. Unit: day.</p>
+         */
         @NameInMap("PasswordExpirationNotificationDuration")
         public Integer passwordExpirationNotificationDuration;
 
+        /**
+         * <p>Indicates whether the password expiration notification feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   enabled</p>
+         * <p>*   disabled</p>
+         */
         @NameInMap("PasswordExpirationNotificationStatus")
         public String passwordExpirationNotificationStatus;
 
+        /**
+         * <p>Indicates whether the password expiration feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   enabled</p>
+         * <p>*   disabled</p>
+         */
         @NameInMap("PasswordExpirationStatus")
         public String passwordExpirationStatus;
 
+        /**
+         * <p>The number of days before which users must change the password to prevent password expiration. Unit: day.</p>
+         */
         @NameInMap("PasswordForcedUpdateDuration")
         public Integer passwordForcedUpdateDuration;
 
+        /**
+         * <p>The validity period of a password. Unit: day.</p>
+         */
         @NameInMap("PasswordValidMaxDay")
         public Integer passwordValidMaxDay;
 

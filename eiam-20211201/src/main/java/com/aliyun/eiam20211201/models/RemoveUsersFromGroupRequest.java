@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class RemoveUsersFromGroupRequest extends TeaModel {
     /**
-     * <p>组ID。</p>
+     * <p>The group ID.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>账户ID列表，列表最大元素限制为100</p>
+     * <p>The account IDs. A maximum of 100 accounts can be removed from a group.</p>
      */
     @NameInMap("UserIds")
     public java.util.List<String> userIds;

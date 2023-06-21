@@ -4,9 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class GetApplicationSsoConfigResponseBody extends TeaModel {
+    /**
+     * <p>The SSO configuration information of the application.</p>
+     */
     @NameInMap("ApplicationSsoConfig")
     public GetApplicationSsoConfigResponseBodyApplicationSsoConfig applicationSsoConfig;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,13 +39,13 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
 
     public static class GetApplicationSsoConfigResponseBodyApplicationSsoConfigOidcSsoConfigCustomClaims extends TeaModel {
         /**
-         * <p>返回的claim名称</p>
+         * <p>The claim name.</p>
          */
         @NameInMap("ClaimName")
         public String claimName;
 
         /**
-         * <p>返回的claim取值表达式</p>
+         * <p>The expression that is used to generate the value of the claim.</p>
          */
         @NameInMap("ClaimValueExpression")
         public String claimValueExpression;
@@ -69,91 +75,91 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
 
     public static class GetApplicationSsoConfigResponseBodyApplicationSsoConfigOidcSsoConfig extends TeaModel {
         /**
-         * <p>返回的access token有效时间，单位为Second</p>
+         * <p>The validity period of the issued access token. Unit: seconds. Default value: 1200.</p>
          */
         @NameInMap("AccessTokenEffectiveTime")
         public Long accessTokenEffectiveTime;
 
         /**
-         * <p>Authorization code流中code的有效时间，单位为Second</p>
+         * <p>The validity period of the issued code. Unit: seconds. Default value: 60.</p>
          */
         @NameInMap("CodeEffectiveTime")
         public Long codeEffectiveTime;
 
         /**
-         * <p>自定义id token返回信息</p>
+         * <p>The custom claims that are returned for the ID token.</p>
          */
         @NameInMap("CustomClaims")
         public java.util.List<GetApplicationSsoConfigResponseBodyApplicationSsoConfigOidcSsoConfigCustomClaims> customClaims;
 
         /**
-         * <p>OIDC标准参数，如profile、email等</p>
+         * <p>The scopes of user attributes that can be returned for the UserInfo endpoint or ID token.</p>
          */
         @NameInMap("GrantScopes")
         public java.util.List<String> grantScopes;
 
         /**
-         * <p>应用支持的授权类型，OIDC标准参数</p>
+         * <p>The list of grant types that are supported for OIDC protocols.</p>
          */
         @NameInMap("GrantTypes")
         public java.util.List<String> grantTypes;
 
         /**
-         * <p>id token有效时间，单位为Second</p>
+         * <p>The validity period of the issued ID token. Unit: seconds. Default value: 300.</p>
          */
         @NameInMap("IdTokenEffectiveTime")
         public Long idTokenEffectiveTime;
 
         /**
-         * <p>密码模式使用的身份认证来源id，仅对password模式生效</p>
+         * <p>The ID of the identity authentication source in password mode. This parameter is returned only when the value of the GrantTypes parameter includes the password mode.</p>
          */
         @NameInMap("PasswordAuthenticationSourceId")
         public String passwordAuthenticationSourceId;
 
         /**
-         * <p>是否强制需要TOTP二次认证，仅对password模式生效</p>
+         * <p>Indicates whether time-based one-time password (TOTP) authentication is required in password mode. This parameter is returned only when the value of the GrantTypes parameter includes the password mode.</p>
          */
         @NameInMap("PasswordTotpMfaRequired")
         public Boolean passwordTotpMfaRequired;
 
         /**
-         * <p>支持的PKCE算法类型</p>
+         * <p>The algorithms that are used to calculate the code challenge for PKCE.</p>
          */
         @NameInMap("PkceChallengeMethods")
         public java.util.List<String> pkceChallengeMethods;
 
         /**
-         * <p>是否强制PKCE,authorization_code强制必须指定PKCE参数</p>
+         * <p>Indicates whether the SSO of the application requires Proof Key for Code Exchange (PKCE) (RFC 7636).</p>
          */
         @NameInMap("PkceRequired")
         public Boolean pkceRequired;
 
         /**
-         * <p>Logout回调支持的Uri列表，OIDC协议标准参数。</p>
+         * <p>The list of logout redirect URIs that are supported by the application.</p>
          */
         @NameInMap("PostLogoutRedirectUris")
         public java.util.List<String> postLogoutRedirectUris;
 
         /**
-         * <p>应用SSO支持的回调的uri列表，OIDC标准参数。</p>
+         * <p>The list of redirect URIs that are supported by the application.</p>
          */
         @NameInMap("RedirectUris")
         public java.util.List<String> redirectUris;
 
         /**
-         * <p>refresh token有效时间，单位为Second</p>
+         * <p>The validity period of the issued refresh token. Unit: seconds. Default value: 86400.</p>
          */
         @NameInMap("RefreshTokenEffective")
         public Long refreshTokenEffective;
 
         /**
-         * <p>隐式流支持的返回类型，OIDC标准参数，如token id_token</p>
+         * <p>The response types that are supported by the application. This parameter is returned when the value of the GrantTypes parameter includes the implicit mode.</p>
          */
         @NameInMap("ResponseTypes")
         public java.util.List<String> responseTypes;
 
         /**
-         * <p>自定义id token返回信息</p>
+         * <p>The custom expression that is used to generate the subject ID returned for the ID token.</p>
          */
         @NameInMap("SubjectIdExpression")
         public String subjectIdExpression;
@@ -287,61 +293,61 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
 
     public static class GetApplicationSsoConfigResponseBodyApplicationSsoConfigProtocolEndpointDomain extends TeaModel {
         /**
-         * <p>单点登录地址，接受认证请求</p>
+         * <p>The OAuth2.0 authorization endpoint. This parameter is returned only when the SSO protocol of the application is an OIDC protocol.</p>
          */
         @NameInMap("Oauth2AuthorizationEndpoint")
         public String oauth2AuthorizationEndpoint;
 
         /**
-         * <p>oauth2设备模式授权端点</p>
+         * <p>The OAuth2.0 device authorization endpoint. This parameter is returned only when the SSO protocol of the application is an OIDC protocol.</p>
          */
         @NameInMap("Oauth2DeviceAuthorizationEndpoint")
         public String oauth2DeviceAuthorizationEndpoint;
 
         /**
-         * <p>吊销 access token 端点</p>
+         * <p>The OAuth2.0 token revocation endpoint. This parameter is returned only when the SSO protocol of the application is an OIDC protocol.</p>
          */
         @NameInMap("Oauth2RevokeEndpoint")
         public String oauth2RevokeEndpoint;
 
         /**
-         * <p>换取access token 端点</p>
+         * <p>The OAuth2.0 token endpoint. This parameter is returned only when the SSO protocol of the application is an OIDC protocol.</p>
          */
         @NameInMap("Oauth2TokenEndpoint")
         public String oauth2TokenEndpoint;
 
         /**
-         * <p>获取用户信息端点</p>
+         * <p>The OIDC UserInfo endpoint. This parameter is returned only when the SSO protocol of the application is an OIDC protocol.</p>
          */
         @NameInMap("Oauth2UserinfoEndpoint")
         public String oauth2UserinfoEndpoint;
 
         /**
-         * <p>OIDC issuer地址，类似于SAML Entity ID</p>
+         * <p>The information about the OIDC issuer. This parameter is returned only when the SSO protocol of the application is an OIDC protocol.</p>
          */
         @NameInMap("OidcIssuer")
         public String oidcIssuer;
 
         /**
-         * <p>获取公钥信息端点</p>
+         * <p>The JSON Web Key Set (JWKS) URL of the OIDC issuer. This parameter is returned only when the SSO protocol of the application is an OIDC protocol.</p>
          */
         @NameInMap("OidcJwksEndpoint")
         public String oidcJwksEndpoint;
 
         /**
-         * <p>OIDC RP-initial Logout端点</p>
+         * <p>The OIDC relying party (RP)-initiated logout endpoint. This parameter is returned only when the SSO protocol of the application is an OIDC protocol.</p>
          */
         @NameInMap("OidcLogoutEndpoint")
         public String oidcLogoutEndpoint;
 
         /**
-         * <p>IdP 单点登录地址 SSO URL</p>
+         * <p>The metadata URL of the SAML protocol. This parameter is returned only when the SSO protocol of the application is SAML 2.0.</p>
          */
         @NameInMap("SamlMetaEndpoint")
         public String samlMetaEndpoint;
 
         /**
-         * <p>saml SSO URL 单点登录地址</p>
+         * <p>The request receiving URL of the SAML protocol. This parameter is returned only when the SSO protocol of the application is SAML 2.0.</p>
          */
         @NameInMap("SamlSsoEndpoint")
         public String samlSsoEndpoint;
@@ -435,13 +441,13 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
 
     public static class GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfigAttributeStatements extends TeaModel {
         /**
-         * <p>SAML属性的Name</p>
+         * <p>The attribute name.</p>
          */
         @NameInMap("AttributeName")
         public String attributeName;
 
         /**
-         * <p>SAML属性取值表达式</p>
+         * <p>The expression that is used to generate the value of the attribute.</p>
          */
         @NameInMap("AttributeValueExpression")
         public String attributeValueExpression;
@@ -471,43 +477,48 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
 
     public static class GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfig extends TeaModel {
         /**
-         * <p>SAML断言的属性配置</p>
+         * <p>The additional user attributes in the SAML assertion.</p>
          */
         @NameInMap("AttributeStatements")
         public java.util.List<GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfigAttributeStatements> attributeStatements;
 
         /**
-         * <p>默认RelayState取值，可空</p>
+         * <p>The default value of the RelayState attribute. If the SSO request is initiated in EIAM, the RelayState attribute in the SAML response is set to this default value.</p>
          */
         @NameInMap("DefaultRelayState")
         public String defaultRelayState;
 
         /**
-         * <p>SAML标准协议中的NameID格式</p>
+         * <p>The Format attribute of the NameID element in the SAML assertion. Valid values:</p>
+         * <br>
+         * <p>*   urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified: No format is specified. How to resolve the NameID element depends on the application.</p>
+         * <p>*   urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress: The NameID element must be an email address.</p>
+         * <p>*   urn:oasis:names:tc:SAML:2.0:nameid-format:persistent: The NameID element must be persistent.</p>
+         * <p>*   urn:oasis:names:tc:SAML:2.0:nameid-format:transient: The NameID element must be transient.</p>
          */
         @NameInMap("NameIdFormat")
         public String nameIdFormat;
 
         /**
-         * <p>返回的claim名称</p>
+         * <p>The expression that is used to generate the value of NameID in the SAML assertion.</p>
          */
         @NameInMap("NameIdValueExpression")
         public String nameIdValueExpression;
 
         /**
-         * <p>IDaaS签发SAML断言时使用的签名算法</p>
+         * <p>The algorithm that is used to calculate the signature for the SAML assertion.</p>
          */
         @NameInMap("SignatureAlgorithm")
         public String signatureAlgorithm;
 
         /**
-         * <p>SP的EntityId，用于唯一标识SP身份</p>
+         * <p>The entity ID of the application in SAML. The application assumes the role of service provider.</p>
          */
         @NameInMap("SpEntityId")
         public String spEntityId;
 
         /**
-         * <p>SP的SSO地址，用于接受IDaaS签发的SAML断言</p>
+         * <p>The Assertion Consumer Service (ACS) URL of the application in SAML. The application assumes the role of service provider.</p>
          */
         @NameInMap("SpSsoAcsUrl")
         public String spSsoAcsUrl;
@@ -577,37 +588,43 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
 
     public static class GetApplicationSsoConfigResponseBodyApplicationSsoConfig extends TeaModel {
         /**
-         * <p>初始化登录方式，idp_init or sp_init or idp_or_sp_init</p>
+         * <p>The initial SSO method. Valid values:</p>
+         * <br>
+         * <p>*   only_app_init_sso: Only application-initiated SSO is allowed. This method is selected by default when the SSO protocol of the application is an OIDC protocol. If this method is selected when the SSO protocol of the application is SAML, the InitLoginUrl parameter is required.</p>
+         * <p>*   idaas_or_app_init_sso: IDaaS-initiated SSO and application-initiated SSO are allowed. This method is selected by default when the SSO protocol of the application is SAML. If this method is selected when the SSO protocol of the application is an OIDC protocol, the InitLoginUrl parameter is required.</p>
          */
         @NameInMap("InitLoginType")
         public String initLoginType;
 
         /**
-         * <p>仅SP-init情况下，SP指定的登录地址</p>
+         * <p>The initial webhook URL of SSO. This parameter is required when the SSO protocol of the application is an OIDC protocol and the InitLoginType parameters is set to idaas_or_app_init_sso or when the SSO protocol of the application is SAML and the InitLoginType parameter is set to only_app_init_sso.</p>
          */
         @NameInMap("InitLoginUrl")
         public String initLoginUrl;
 
         /**
-         * <p>IDaaS OIDC SSO配置，单点登录类型为Oidc时可以配置</p>
+         * <p>The Open ID Connect (OIDC)-based SSO configuration attributes of the application. This parameter is returned only when the SSO protocol of the application is an OIDC protocol.</p>
          */
         @NameInMap("OidcSsoConfig")
         public GetApplicationSsoConfigResponseBodyApplicationSsoConfigOidcSsoConfig oidcSsoConfig;
 
         /**
-         * <p>IDaaS metadata 端点配置信息</p>
+         * <p>The configuration of the metadata endpoint provided by the application.</p>
          */
         @NameInMap("ProtocolEndpointDomain")
         public GetApplicationSsoConfigResponseBodyApplicationSsoConfigProtocolEndpointDomain protocolEndpointDomain;
 
         /**
-         * <p>IDaaS SAML SSO配置，单点登录类型为saml2时可以配置</p>
+         * <p>The Security Assertion Markup Language (SAML)-based SSO configuration attributes of the application. This parameter is returned only when the SSO protocol of the application is SAML 2.0.</p>
          */
         @NameInMap("SamlSsoConfig")
         public GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfig samlSsoConfig;
 
         /**
-         * <p>应用 SSO 启用状态</p>
+         * <p>The SSO feature status of the application. Valid values:</p>
+         * <br>
+         * <p>*   enabled: The feature is enabled.</p>
+         * <p>*   disabled: The feature is disabled.</p>
          */
         @NameInMap("SsoStatus")
         public String ssoStatus;

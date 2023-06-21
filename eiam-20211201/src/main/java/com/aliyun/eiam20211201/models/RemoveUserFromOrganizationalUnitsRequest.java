@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class RemoveUserFromOrganizationalUnitsRequest extends TeaModel {
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>组织ID集合</p>
+     * <p>The organization IDs. You can remove an account from a maximum of 100 organizations.</p>
      */
     @NameInMap("OrganizationalUnitIds")
     public java.util.List<String> organizationalUnitIds;
 
     /**
-     * <p>账户ID</p>
+     * <p>The account ID.</p>
      */
     @NameInMap("UserId")
     public String userId;

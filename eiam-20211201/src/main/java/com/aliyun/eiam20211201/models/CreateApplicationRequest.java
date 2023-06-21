@@ -5,43 +5,49 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationRequest extends TeaModel {
     /**
-     * <p>应用的表示名称</p>
+     * <p>The name of the application.</p>
      */
     @NameInMap("ApplicationName")
     public String applicationName;
 
     /**
-     * <p>创建应用的来源类型，标准协议 or 模板应用 or 自建应用</p>
+     * <p>The type of the application source. Valid values:</p>
+     * <br>
+     * <p>*   urn:alibaba:idaas:app:source:template: application template</p>
+     * <p>*   urn:alibaba:idaas:app:source:standard: standard protocol</p>
      */
     @NameInMap("ApplicationSourceType")
     public String applicationSourceType;
 
     /**
-     * <p>应用创建来源为模板应用时必须指定</p>
+     * <p>The ID of the application template. This parameter is required if you set the ApplicationSourceType parameter to urn:alibaba:idaas:app:source:template.</p>
      */
     @NameInMap("ApplicationTemplateId")
     public String applicationTemplateId;
 
     /**
-     * <p>应用的描述信息</p>
+     * <p>The description of the application.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>IDaaS EIAM的实例id</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>应用Logo地址</p>
+     * <p>The URL of the application logo.</p>
      */
     @NameInMap("LogoUrl")
     public String logoUrl;
 
     /**
-     * <p>单点登录类型，saml2 or oidc</p>
+     * <p>The SSO protocol. Valid values:</p>
+     * <br>
+     * <p>*   saml2: the SAML 2.0 protocol.</p>
+     * <p>*   oidc: the OpenID Connect protocol.</p>
      */
     @NameInMap("SsoType")
     public String ssoType;

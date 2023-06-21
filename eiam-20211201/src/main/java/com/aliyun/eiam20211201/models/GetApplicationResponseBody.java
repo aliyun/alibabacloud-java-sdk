@@ -4,9 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class GetApplicationResponseBody extends TeaModel {
+    /**
+     * <p>The details of the application.</p>
+     */
     @NameInMap("Application")
     public GetApplicationResponseBodyApplication application;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,103 +39,122 @@ public class GetApplicationResponseBody extends TeaModel {
 
     public static class GetApplicationResponseBodyApplication extends TeaModel {
         /**
-         * <p>IDaaS EIAM 应用apiInvoke能力启用状态</p>
+         * <p>The status of the Developer API feature. Valid values:</p>
+         * <br>
+         * <p>*   Enabled: The Developer API feature is enabled.</p>
+         * <p>*   Disabled: The Developer API feature is disabled.</p>
          */
         @NameInMap("ApiInvokeStatus")
         public String apiInvokeStatus;
 
         /**
-         * <p>IDaaS EIAM 应用Id</p>
+         * <p>The ID of the application.</p>
          */
         @NameInMap("ApplicationId")
         public String applicationId;
 
         /**
-         * <p>IDaaS EIAM 应用名称</p>
+         * <p>The name of the application.</p>
          */
         @NameInMap("ApplicationName")
         public String applicationName;
 
         /**
-         * <p>创建应用的来源类型，标准协议 or 模板应用 or 自建应用</p>
+         * <p>The origin of the application. Valid values:</p>
+         * <br>
+         * <p>*   urn:alibaba:idaas:app:source:template: The application is created based on a template.</p>
+         * <p>*   urn:alibaba:idaas: The application is created based on the standard protocol.</p>
          */
         @NameInMap("ApplicationSourceType")
         public String applicationSourceType;
 
         /**
-         * <p>创建来源应用模板id。当且仅当创建来源为应用模板时才返回。</p>
+         * <p>The ID of the template based on which the application is created. This parameter is returned only if the application is created based on a template.</p>
          */
         @NameInMap("ApplicationTemplateId")
         public String applicationTemplateId;
 
         /**
-         * <p>IDaaS EIAM 应用授权类型，default or authorize_required</p>
+         * <p>The authorization type of the EIAM application. Valid values:</p>
+         * <br>
+         * <p>*   authorize_required: Only the user with explicit authorization can access the application.</p>
+         * <p>*   default_all: By default, all users can access the application.</p>
          */
         @NameInMap("AuthorizationType")
         public String authorizationType;
 
         /**
-         * <p>IDaaS EIAM 客户端ID</p>
+         * <p>The client ID of the application.</p>
          */
         @NameInMap("ClientId")
         public String clientId;
 
         /**
-         * <p>IDaaS EIAM 应用创建时间</p>
+         * <p>The time when the application was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
-         * <p>IDaaS EIAM 应用描述信息</p>
+         * <p>The description of the application.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>IDaaS EIAM 应用支持的特性，provisioning、permission_system、api_invoke等</p>
+         * <p>The features that are supported by the application. The value is a JSON array. Valid values:</p>
+         * <br>
+         * <p>*   sso: The application supports SSO.</p>
+         * <p>*   provision: The application supports account synchronization.</p>
+         * <p>*   api_invoke: The application supports custom APIs.</p>
          */
         @NameInMap("Features")
         public String features;
 
         /**
-         * <p>IDaaS EIAM 实例Id</p>
+         * <p>The ID of the instance.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>IDaaS EIAM 应用图标URL地址</p>
+         * <p>The URL of the application icon.</p>
          */
         @NameInMap("LogoUrl")
         public String logoUrl;
 
         /**
-         * <p>托管应用模板的云产品ServiceCode。当且仅当ServiceManaged为true是返回。</p>
+         * <p>The service code of the cloud service that manages the application template.</p>
          */
         @NameInMap("ManagedServiceCode")
         public String managedServiceCode;
 
         /**
-         * <p>应用模板是否被云产品托管。</p>
+         * <p>Indicates whether the application template is managed by a cloud service.</p>
          */
         @NameInMap("ServiceManaged")
         public Boolean serviceManaged;
 
         /**
-         * <p>IDaaS EIAM 应用支持的sso协议类型，oidc、saml2</p>
+         * <p>The type of the single sign-on (SSO) protocol. Valid values:</p>
+         * <br>
+         * <p>*   saml2: the Security Assertion Markup Language (SAML) 2.0 protocol.</p>
+         * <p>*   oidc: the OpenID Connect (OIDC) protocol.</p>
          */
         @NameInMap("SsoType")
         public String ssoType;
 
         /**
-         * <p>IDaaS EIAM 应用状态</p>
+         * <p>The status of the application. Valid values:</p>
+         * <br>
+         * <p>*   Enabled: The application is enabled.</p>
+         * <p>*   Disabled: The application is disabled.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>IDaaS EIAM 应用最近更新时间</p>
+         * <p>The time when the application was last updated. The value is a UNIX timestamp. Unit: milliseconds.</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;

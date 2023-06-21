@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListApplicationClientSecretsRequest extends TeaModel {
     /**
-     * <p>IDaaS的应用主键id</p>
+     * <p>The ID of the application that you want to query.</p>
      */
     @NameInMap("ApplicationId")
     public String applicationId;
 
     /**
-     * <p>IDaaS EIAM的实例id</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

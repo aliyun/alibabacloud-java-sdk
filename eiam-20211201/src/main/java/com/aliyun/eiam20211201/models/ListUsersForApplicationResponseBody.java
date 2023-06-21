@@ -4,12 +4,21 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListUsersForApplicationResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    /**
+     * <p>The IDs of the accounts.</p>
+     */
     @NameInMap("Users")
     public java.util.List<ListUsersForApplicationResponseBodyUsers> users;
 
@@ -44,7 +53,7 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
 
     public static class ListUsersForApplicationResponseBodyUsers extends TeaModel {
         /**
-         * <p>账户的唯一标识。</p>
+         * <p>The ID of the account.</p>
          */
         @NameInMap("UserId")
         public String userId;

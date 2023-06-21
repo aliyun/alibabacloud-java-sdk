@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DisableUserRequest extends TeaModel {
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>账户ID</p>
+     * <p>The ID of the account.</p>
      */
     @NameInMap("UserId")
     public String userId;

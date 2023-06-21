@@ -5,37 +5,40 @@ import com.aliyun.tea.*;
 
 public class ListApplicationsForUserRequest extends TeaModel {
     /**
-     * <p>非必填，如果填写则可以基于应用ID进行过滤，列表中最多包含100个元素。</p>
+     * <p>The IDs of the applications that the EIAM account can access. You can query a maximum of 100 application IDs at a time.</p>
      */
     @NameInMap("ApplicationIds")
     public java.util.List<String> applicationIds;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>当前查询的列表页码，默认为1。</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>当前查询的列表页码，默认为20。</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>有两种查询模式，IncludeInherit-包含继承的权限，OnlyDirect-不包含继承的权限，默认值：OnlyDirect</p>
+     * <p>The query mode. Default value: **OnlyDirect**. Valid values:</p>
+     * <br>
+     * <p>*   OnlyDirect: Only the direct permissions are queried. Direct permissions are the permissions that are directly granted to the account.</p>
+     * <p>*   IncludeInherit: Both the permissions that are directly granted to the account and the inherited permissions are queried. Inherited permissions are the permissions that an account inherits from the parent organization or the group to which the account belongs.</p>
      */
     @NameInMap("QueryMode")
     public String queryMode;
 
     /**
-     * <p>账户的唯一标识。</p>
+     * <p>The ID of the EIAM account.</p>
      */
     @NameInMap("UserId")
     public String userId;

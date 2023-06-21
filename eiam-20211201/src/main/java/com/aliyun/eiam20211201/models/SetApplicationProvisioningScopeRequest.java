@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class SetApplicationProvisioningScopeRequest extends TeaModel {
     /**
-     * <p>IDaaS的应用主键id</p>
+     * <p>The ID of the application.</p>
      */
     @NameInMap("ApplicationId")
     public String applicationId;
 
     /**
-     * <p>IDaaS EIAM的实例id</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>授权同步出的组织机构列表</p>
+     * <p>The list of organizational units that are authorized for account synchronization.</p>
      */
     @NameInMap("OrganizationalUnitIds")
     public java.util.List<String> organizationalUnitIds;

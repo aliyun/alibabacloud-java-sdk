@@ -4,9 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
+    /**
+     * <p>The scope of account synchronization.</p>
+     */
     @NameInMap("ApplicationProvisioningScope")
     public GetApplicationProvisioningScopeResponseBodyApplicationProvisioningScope applicationProvisioningScope;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,7 +39,7 @@ public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
 
     public static class GetApplicationProvisioningScopeResponseBodyApplicationProvisioningScope extends TeaModel {
         /**
-         * <p>同步授权的组织机构列表</p>
+         * <p>The list of organizational units that are authorized for account synchronization.</p>
          */
         @NameInMap("OrganizationalUnitIds")
         public java.util.List<String> organizationalUnitIds;

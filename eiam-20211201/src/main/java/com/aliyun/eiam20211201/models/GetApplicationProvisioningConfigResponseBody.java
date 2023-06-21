@@ -4,9 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
+    /**
+     * <p>The configuration of the account synchronization feature for the application.</p>
+     */
     @NameInMap("ApplicationProvisioningConfig")
     public GetApplicationProvisioningConfigResponseBodyApplicationProvisioningConfig applicationProvisioningConfig;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,25 +39,28 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
 
     public static class GetApplicationProvisioningConfigResponseBodyApplicationProvisioningConfigCallbackProvisioningConfig extends TeaModel {
         /**
-         * <p>IDaaS回调SP地址，当provisionProtocolType为idaas_callback时必填</p>
+         * <p>The URL that the application uses to receive IDaaS event callbacks.</p>
          */
         @NameInMap("CallbackUrl")
         public String callbackUrl;
 
         /**
-         * <p>IDaaS回调对称加密秘钥, AES 256格式</p>
+         * <p>The symmetric key for IDaaS event callbacks. The key is an AES-256 encryption key in the HEX format.</p>
          */
         @NameInMap("EncryptKey")
         public String encryptKey;
 
         /**
-         * <p>IDaaS回调是否加密</p>
+         * <p>Indicates whether IDaaS event callback messages are encrypted. Valid values:</p>
+         * <br>
+         * <p>*   true: The messages are encrypted.</p>
+         * <p>*   false: The messages are transmitted in plaintext.</p>
          */
         @NameInMap("EncryptRequired")
         public Boolean encryptRequired;
 
         /**
-         * <p>IDaaS回调事件监听范围</p>
+         * <p>The list of types of IDaaS event callback messages that are supported by the listener.</p>
          */
         @NameInMap("ListenEventScopes")
         public java.util.List<String> listenEventScopes;
@@ -97,31 +106,34 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
 
     public static class GetApplicationProvisioningConfigResponseBodyApplicationProvisioningConfigScimProvisioningConfigAuthnConfigurationAuthnParam extends TeaModel {
         /**
-         * <p>accessToken</p>
+         * <p>The access token. This parameter is returned when the GrantType parameter is set to bearer_token.</p>
          */
         @NameInMap("AccessToken")
         public String accessToken;
 
         /**
-         * <p>oauth2 authentication method</p>
+         * <p>The authentication mode of the SCIM protocol. Valid values:</p>
+         * <br>
+         * <p>*   client_secret_basic: The client secret is passed in the request header.</p>
+         * <p>*   client_secret_post: The client secret is passed in the request body.</p>
          */
         @NameInMap("AuthnMethod")
         public String authnMethod;
 
         /**
-         * <p>oauth2 client id</p>
+         * <p>The client ID of the application.</p>
          */
         @NameInMap("ClientId")
         public String clientId;
 
         /**
-         * <p>oauth2 client secret</p>
+         * <p>The client secret of the application.</p>
          */
         @NameInMap("ClientSecret")
         public String clientSecret;
 
         /**
-         * <p>oauth2 token端点</p>
+         * <p>The token endpoint.</p>
          */
         @NameInMap("TokenEndpoint")
         public String tokenEndpoint;
@@ -175,19 +187,27 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
 
     public static class GetApplicationProvisioningConfigResponseBodyApplicationProvisioningConfigScimProvisioningConfigAuthnConfiguration extends TeaModel {
         /**
-         * <p>认证类型</p>
+         * <p>The authentication mode of the SCIM protocol. Valid value:</p>
+         * <br>
+         * <p>*   oauth2: OAuth2.0 mode.</p>
          */
         @NameInMap("AuthnMode")
         public String authnMode;
 
         /**
-         * <p>授权相关配置</p>
+         * <p>The configuration parameters related to authorization.</p>
+         * <br>
+         * <p>*   If the GrantType parameter is set to client_credentials, the configuration parameters ClientId, ClientSecret, and AuthnMethod are returned.</p>
+         * <p>*   If the GrantType parameter is set to bearer_token, the configuration parameter AccessToken is returned.</p>
          */
         @NameInMap("AuthnParam")
         public GetApplicationProvisioningConfigResponseBodyApplicationProvisioningConfigScimProvisioningConfigAuthnConfigurationAuthnParam authnParam;
 
         /**
-         * <p>授权模式</p>
+         * <p>The grant type of the SCIM protocol. Valid values:</p>
+         * <br>
+         * <p>*   client_credentials: client mode.</p>
+         * <p>*   bearer_token: key mode.</p>
          */
         @NameInMap("GrantType")
         public String grantType;
@@ -225,25 +245,31 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
 
     public static class GetApplicationProvisioningConfigResponseBodyApplicationProvisioningConfigScimProvisioningConfig extends TeaModel {
         /**
-         * <p>scim同步相关配置</p>
+         * <p>The configuration parameters related to SCIM-based synchronization.</p>
          */
         @NameInMap("AuthnConfiguration")
         public GetApplicationProvisioningConfigResponseBodyApplicationProvisioningConfigScimProvisioningConfigAuthnConfiguration authnConfiguration;
 
         /**
-         * <p>全量推送范围</p>
+         * <p>The full synchronization scope of the SCIM protocol. Valid value:</p>
+         * <br>
+         * <p>*   urn:alibaba:idaas:app:scim:User:PUSH: full account data synchronization.</p>
          */
         @NameInMap("FullPushScopes")
         public java.util.List<String> fullPushScopes;
 
         /**
-         * <p>目标资源操作行为</p>
+         * <p>The resource operations of the SCIM protocol. Valid values:</p>
+         * <br>
+         * <p>*   urn:alibaba:idaas:app:scim:User:CREATE: account creation.</p>
+         * <p>*   urn:alibaba:idaas:app:scim:User:UPDATE: account update.</p>
+         * <p>*   urn:alibaba:idaas:app:scim:User:DELETE: account deletion.</p>
          */
         @NameInMap("ProvisioningActions")
         public java.util.List<String> provisioningActions;
 
         /**
-         * <p>scim同步端点</p>
+         * <p>The base URL that the application uses to receive the SCIM protocol for IDaaS synchronization.</p>
          */
         @NameInMap("ScimBaseUrl")
         public String scimBaseUrl;
@@ -289,13 +315,13 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
 
     public static class GetApplicationProvisioningConfigResponseBodyApplicationProvisioningConfig extends TeaModel {
         /**
-         * <p>IDaaS EIAM 应用Id</p>
+         * <p>The ID of the application.</p>
          */
         @NameInMap("ApplicationId")
         public String applicationId;
 
         /**
-         * <p>IDaaS回调同步配置，当provisionProtocolType为idaas_callback时必填</p>
+         * <p>The configuration of the custom event callback protocol of IDaaS.</p>
          */
         @NameInMap("CallbackProvisioningConfig")
         public GetApplicationProvisioningConfigResponseBodyApplicationProvisioningConfigCallbackProvisioningConfig callbackProvisioningConfig;
@@ -307,37 +333,46 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
         public String configOperateMode;
 
         /**
-         * <p>IDaaS EIAM 实例Id</p>
+         * <p>The ID of the instance.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>应用同步验签公钥端点</p>
+         * <p>The public key endpoint for signature verification of the synchronization callback information.</p>
          */
         @NameInMap("ProvisionJwksEndpoint")
         public String provisionJwksEndpoint;
 
         /**
-         * <p>同步信息是否包含密码</p>
+         * <p>Indicates whether the password is synchronized in IDaaS user event callbacks. Valid values:</p>
+         * <br>
+         * <p>*   true: The password is synchronized.</p>
+         * <p>*   false: The password is not synchronized.</p>
          */
         @NameInMap("ProvisionPassword")
         public Boolean provisionPassword;
 
         /**
-         * <p>IDaaS EIAM 应用同步协议，scim2 or custom or idaas_callback</p>
+         * <p>The synchronization protocol type of the application. Valid values:</p>
+         * <br>
+         * <p>*   idaas_callback: custom event callback protocol of IDaaS.</p>
+         * <p>*   scim2: System for Cross-domain Identity Management (SCIM) protocol.</p>
          */
         @NameInMap("ProvisionProtocolType")
         public String provisionProtocolType;
 
         /**
-         * <p>IDaaS SCIM同步配置，当provisionProtocolType为scim2时填写该配置</p>
+         * <p>The configuration of SCIM-based IDaaS synchronization.</p>
          */
         @NameInMap("ScimProvisioningConfig")
         public GetApplicationProvisioningConfigResponseBodyApplicationProvisioningConfigScimProvisioningConfig scimProvisioningConfig;
 
         /**
-         * <p>IDaaS 应用同步启用状态</p>
+         * <p>The status of the IDaaS account synchronization feature. Valid values:</p>
+         * <br>
+         * <p>*   enabled: The feature is enabled.</p>
+         * <p>*   disabled: The feature is disabled.</p>
          */
         @NameInMap("Status")
         public String status;

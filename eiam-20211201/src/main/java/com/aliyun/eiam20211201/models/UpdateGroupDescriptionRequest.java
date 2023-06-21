@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class UpdateGroupDescriptionRequest extends TeaModel {
     /**
-     * <p>组描述，长度最大限制128。</p>
+     * <p>The description of the account group. The value can be up to 256 characters in length.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>组ID，长度最大限制64。</p>
+     * <p>The ID of the account group.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
