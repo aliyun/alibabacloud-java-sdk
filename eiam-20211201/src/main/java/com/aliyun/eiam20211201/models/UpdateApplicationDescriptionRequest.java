@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class UpdateApplicationDescriptionRequest extends TeaModel {
     /**
-     * <p>IDaaS的应用主键id</p>
+     * <p>The ID of the application that you want to modify.</p>
      */
     @NameInMap("ApplicationId")
     public String applicationId;
 
     /**
-     * <p>IDaaS的应用描述信息</p>
+     * <p>The description of the application.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>IDaaS EIAM的实例id</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

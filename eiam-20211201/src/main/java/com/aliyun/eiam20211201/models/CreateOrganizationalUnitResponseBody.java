@@ -4,9 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class CreateOrganizationalUnitResponseBody extends TeaModel {
+    /**
+     * <p>The organization ID.</p>
+     */
     @NameInMap("OrganizationalUnitId")
     public String organizationalUnitId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

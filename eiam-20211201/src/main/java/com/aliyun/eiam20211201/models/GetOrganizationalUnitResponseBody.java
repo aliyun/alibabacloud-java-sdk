@@ -77,7 +77,7 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
         public String organizationalUnitId;
 
         /**
-         * <p>机构名称</p>
+         * <p>组织名称。</p>
          */
         @NameInMap("OrganizationalUnitName")
         public String organizationalUnitName;

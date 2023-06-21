@@ -1,3 +1,6 @@
+2023-06-21 Version: 1.1.1
+- Generated java 2021-12-01 for Eiam.
+
 2023-04-06 Version: 1.1.0
 - OIDC protocol application support password grant type.
 

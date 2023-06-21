@@ -211,6 +211,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.authorizeApplicationToUsersWithOptions(request, runtime);
     }
 
+    /**
+      * IDaaS EIAM supports the following two standard single sign-on (SSO) protocols for adding applications: SAML 2.0 and OIDC. You can select an SSO protocol based on your business requirements when you add an application. You cannot change the SSO protocol that you selected after the application is added.
+      *
+      * @param request CreateApplicationRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateApplicationResponse
+     */
     public CreateApplicationResponse createApplicationWithOptions(CreateApplicationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -259,6 +266,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateApplicationResponse());
     }
 
+    /**
+      * IDaaS EIAM supports the following two standard single sign-on (SSO) protocols for adding applications: SAML 2.0 and OIDC. You can select an SSO protocol based on your business requirements when you add an application. You cannot change the SSO protocol that you selected after the application is added.
+      *
+      * @param request CreateApplicationRequest
+      * @return CreateApplicationResponse
+     */
     public CreateApplicationResponse createApplication(CreateApplicationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createApplicationWithOptions(request, runtime);
@@ -338,8 +351,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createGroupWithOptions(request, runtime);
     }
 
-    public CreateInstanceResponse createInstanceWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+    public CreateInstanceResponse createInstanceWithOptions(CreateInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateInstance"),
             new TeaPair("version", "2021-12-01"),
@@ -354,9 +375,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateInstanceResponse());
     }
 
-    public CreateInstanceResponse createInstance() throws Exception {
+    public CreateInstanceResponse createInstance(CreateInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createInstanceWithOptions(runtime);
+        return this.createInstanceWithOptions(request, runtime);
     }
 
     public CreateOrganizationalUnitResponse createOrganizationalUnitWithOptions(CreateOrganizationalUnitRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -489,6 +510,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createUserWithOptions(request, runtime);
     }
 
+    /**
+      * Make sure that the EIAM application that you want to delete is not used before you delete the EIAM application. After you delete the EIAM application, all configurations are deleted and cannot be restored.
+      *
+      * @param request DeleteApplicationRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteApplicationResponse
+     */
     public DeleteApplicationResponse deleteApplicationWithOptions(DeleteApplicationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -517,6 +545,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteApplicationResponse());
     }
 
+    /**
+      * Make sure that the EIAM application that you want to delete is not used before you delete the EIAM application. After you delete the EIAM application, all configurations are deleted and cannot be restored.
+      *
+      * @param request DeleteApplicationRequest
+      * @return DeleteApplicationResponse
+     */
     public DeleteApplicationResponse deleteApplication(DeleteApplicationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteApplicationWithOptions(request, runtime);
@@ -592,6 +626,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteGroupWithOptions(request, runtime);
     }
 
+    /**
+      * Make sure that the instance to be deleted is no longer used. If the instance is deleted, all data related to the instance will be deleted.
+      *
+      * @param request DeleteInstanceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteInstanceResponse
+     */
     public DeleteInstanceResponse deleteInstanceWithOptions(DeleteInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -616,6 +657,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteInstanceResponse());
     }
 
+    /**
+      * Make sure that the instance to be deleted is no longer used. If the instance is deleted, all data related to the instance will be deleted.
+      *
+      * @param request DeleteInstanceRequest
+      * @return DeleteInstanceResponse
+     */
     public DeleteInstanceResponse deleteInstance(DeleteInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteInstanceWithOptions(request, runtime);
@@ -687,6 +734,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteUserWithOptions(request, runtime);
     }
 
+    /**
+      * All features of the EIAM application cannot be used if you disable the EIAM application, such as single sign-on (SSO) and account synchronization. Make sure that you acknowledge the risks of the delete operation.
+      *
+      * @param request DisableApplicationRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DisableApplicationResponse
+     */
     public DisableApplicationResponse disableApplicationWithOptions(DisableApplicationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -715,6 +769,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DisableApplicationResponse());
     }
 
+    /**
+      * All features of the EIAM application cannot be used if you disable the EIAM application, such as single sign-on (SSO) and account synchronization. Make sure that you acknowledge the risks of the delete operation.
+      *
+      * @param request DisableApplicationRequest
+      * @return DisableApplicationResponse
+     */
     public DisableApplicationResponse disableApplication(DisableApplicationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.disableApplicationWithOptions(request, runtime);
@@ -1549,6 +1609,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listApplicationsWithOptions(request, runtime);
     }
 
+    /**
+      * You can only query the permissions that are directly granted to the EIAM organization by calling the ListApplicationsForOrganizationalUnit operation. You can filter applications by configuring the **ApplicationIds** parameter when you call this operation.
+      *
+      * @param request ListApplicationsForOrganizationalUnitRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListApplicationsForOrganizationalUnitResponse
+     */
     public ListApplicationsForOrganizationalUnitResponse listApplicationsForOrganizationalUnitWithOptions(ListApplicationsForOrganizationalUnitRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1589,6 +1656,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListApplicationsForOrganizationalUnitResponse());
     }
 
+    /**
+      * You can only query the permissions that are directly granted to the EIAM organization by calling the ListApplicationsForOrganizationalUnit operation. You can filter applications by configuring the **ApplicationIds** parameter when you call this operation.
+      *
+      * @param request ListApplicationsForOrganizationalUnitRequest
+      * @return ListApplicationsForOrganizationalUnitResponse
+     */
     public ListApplicationsForOrganizationalUnitResponse listApplicationsForOrganizationalUnit(ListApplicationsForOrganizationalUnitRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listApplicationsForOrganizationalUnitWithOptions(request, runtime);
@@ -1823,11 +1896,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listInstancesWithOptions(request, runtime);
     }
 
+    public ListOrganizationalUnitParentsResponse listOrganizationalUnitParentsWithOptions(ListOrganizationalUnitParentsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.organizationalUnitId)) {
+            query.put("OrganizationalUnitId", request.organizationalUnitId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListOrganizationalUnitParents"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListOrganizationalUnitParentsResponse());
+    }
+
+    public ListOrganizationalUnitParentsResponse listOrganizationalUnitParents(ListOrganizationalUnitParentsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listOrganizationalUnitParentsWithOptions(request, runtime);
+    }
+
     public ListOrganizationalUnitsResponse listOrganizationalUnitsWithOptions(ListOrganizationalUnitsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.organizationalUnitIds)) {
+            query.put("OrganizationalUnitIds", request.organizationalUnitIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.organizationalUnitName)) {
@@ -1941,6 +2051,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListUsersResponse listUsersWithOptions(ListUsersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.displayNameStartsWith)) {
+            query.put("DisplayNameStartsWith", request.displayNameStartsWith);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.email)) {
             query.put("Email", request.email);
         }
@@ -1977,12 +2091,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("UserExternalId", request.userExternalId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.userIds)) {
+            query.put("UserIds", request.userIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.userSourceId)) {
             query.put("UserSourceId", request.userSourceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userSourceType)) {
             query.put("UserSourceType", request.userSourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usernameStartsWith)) {
+            query.put("UsernameStartsWith", request.usernameStartsWith);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2442,6 +2564,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.setApplicationProvisioningScopeWithOptions(request, runtime);
     }
 
+    /**
+      * In IDaaS EIAM, the application management feature supports multiple SSO protocols for applications, including SAML 2.0 and OIDC protocols. Each application supports only one protocol, and the protocol cannot be changed after the application is created. You can specify the SSO configuration attributes of an application based on the supported SSO protocol.
+      *
+      * @param request SetApplicationSsoConfigRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SetApplicationSsoConfigResponse
+     */
     public SetApplicationSsoConfigResponse setApplicationSsoConfigWithOptions(SetApplicationSsoConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2486,6 +2615,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SetApplicationSsoConfigResponse());
     }
 
+    /**
+      * In IDaaS EIAM, the application management feature supports multiple SSO protocols for applications, including SAML 2.0 and OIDC protocols. Each application supports only one protocol, and the protocol cannot be changed after the application is created. You can specify the SSO configuration attributes of an application based on the supported SSO protocol.
+      *
+      * @param request SetApplicationSsoConfigRequest
+      * @return SetApplicationSsoConfigResponse
+     */
     public SetApplicationSsoConfigResponse setApplicationSsoConfig(SetApplicationSsoConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setApplicationSsoConfigWithOptions(request, runtime);

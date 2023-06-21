@@ -5,31 +5,34 @@ import com.aliyun.tea.*;
 
 public class UpdateUserPasswordRequest extends TeaModel {
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>密码</p>
+     * <p>The new password of the account. For more information about the password format, see the "Password Policies" topic.</p>
      */
     @NameInMap("Password")
     public String password;
 
     /**
-     * <p>强制修改密码状态,默认不启用。枚举取值:enabled(开启)、disabled(禁用)</p>
+     * <p>Specifies whether to enable forcible password change upon first logon. Default value: disabled. Valid values:</p>
+     * <br>
+     * <p>*   enabled</p>
+     * <p>*   disabled</p>
      */
     @NameInMap("PasswordForcedUpdateStatus")
     public String passwordForcedUpdateStatus;
 
     /**
-     * <p>账户ID</p>
+     * <p>The account ID.</p>
      */
     @NameInMap("UserId")
     public String userId;
 
     /**
-     * <p>密码通知渠道。枚举取值:email(邮件)、sms(短信)</p>
+     * <p>The methods for receiving password notifications.</p>
      */
     @NameInMap("UserNotificationChannels")
     public java.util.List<String> userNotificationChannels;

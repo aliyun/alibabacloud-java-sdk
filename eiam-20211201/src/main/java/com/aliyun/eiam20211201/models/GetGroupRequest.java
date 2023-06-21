@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetGroupRequest extends TeaModel {
     /**
-     * <p>组ID。</p>
+     * <p>The group ID.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

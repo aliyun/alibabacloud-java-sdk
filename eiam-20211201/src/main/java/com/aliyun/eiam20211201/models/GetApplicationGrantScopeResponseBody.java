@@ -4,9 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class GetApplicationGrantScopeResponseBody extends TeaModel {
+    /**
+     * <p>The permissions of the Developer API feature.</p>
+     */
     @NameInMap("ApplicationGrantScope")
     public GetApplicationGrantScopeResponseBodyApplicationGrantScope applicationGrantScope;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,7 +39,7 @@ public class GetApplicationGrantScopeResponseBody extends TeaModel {
 
     public static class GetApplicationGrantScopeResponseBodyApplicationGrantScope extends TeaModel {
         /**
-         * <p>应用授权的api权限scope列表</p>
+         * <p>The permissions of the Developer API feature.</p>
          */
         @NameInMap("GrantScopes")
         public java.util.List<String> grantScopes;

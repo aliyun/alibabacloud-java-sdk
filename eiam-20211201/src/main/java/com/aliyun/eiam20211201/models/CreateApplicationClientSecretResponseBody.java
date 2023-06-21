@@ -4,9 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class CreateApplicationClientSecretResponseBody extends TeaModel {
+    /**
+     * <p>The information about the client key.</p>
+     */
     @NameInMap("ApplicationClientSecret")
     public CreateApplicationClientSecretResponseBodyApplicationClientSecret applicationClientSecret;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,19 +39,19 @@ public class CreateApplicationClientSecretResponseBody extends TeaModel {
 
     public static class CreateApplicationClientSecretResponseBodyApplicationClientSecret extends TeaModel {
         /**
-         * <p>IDaaS EIAM 客户端ID</p>
+         * <p>The client ID of the application.</p>
          */
         @NameInMap("ClientId")
         public String clientId;
 
         /**
-         * <p>IDaaS EIAM 客户端密钥</p>
+         * <p>The client key secret of the application.</p>
          */
         @NameInMap("ClientSecret")
         public String clientSecret;
 
         /**
-         * <p>IDaaS EIAM 客户端密钥Id</p>
+         * <p>The client key ID of the application.</p>
          */
         @NameInMap("SecretId")
         public String secretId;

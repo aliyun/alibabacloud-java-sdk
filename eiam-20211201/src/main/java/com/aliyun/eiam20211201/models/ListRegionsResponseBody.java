@@ -4,9 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListRegionsResponseBody extends TeaModel {
+    /**
+     * <p>The supported regions.</p>
+     */
     @NameInMap("Regions")
     public java.util.List<ListRegionsResponseBodyRegions> regions;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,19 +39,19 @@ public class ListRegionsResponseBody extends TeaModel {
 
     public static class ListRegionsResponseBodyRegions extends TeaModel {
         /**
-         * <p>地域名称</p>
+         * <p>The name of the region.</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
         /**
-         * <p>地域对应的接入地址</p>
+         * <p>The endpoint of the region.</p>
          */
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
 
         /**
-         * <p>地域ID</p>
+         * <p>The ID of the region.</p>
          */
         @NameInMap("RegionId")
         public String regionId;

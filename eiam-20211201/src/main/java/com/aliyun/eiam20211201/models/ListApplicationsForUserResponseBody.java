@@ -4,12 +4,21 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationsForUserResponseBody extends TeaModel {
+    /**
+     * <p>The applications that the EIAM account can access.</p>
+     */
     @NameInMap("Applications")
     public java.util.List<ListApplicationsForUserResponseBodyApplications> applications;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of the returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -44,19 +53,25 @@ public class ListApplicationsForUserResponseBody extends TeaModel {
 
     public static class ListApplicationsForUserResponseBodyApplications extends TeaModel {
         /**
-         * <p>应用的唯一标识。</p>
+         * <p>The ID of the application that the EIAM account can access.</p>
          */
         @NameInMap("ApplicationId")
         public String applicationId;
 
         /**
-         * <p>直接分配给当前用户的权限，视为直接授权。</p>
+         * <p>Indicates whether the EIAM account has direct permissions on the application. Valid values:</p>
+         * <br>
+         * <p>*   true: The EIAM account has direct permissions on the application.</p>
+         * <p>*   false: The EIAM account does not have direct permissions on the application.</p>
          */
         @NameInMap("HasDirectAuthorization")
         public Boolean hasDirectAuthorization;
 
         /**
-         * <p>通过用户隶属的组织、组获取的权限，视为继承权限。</p>
+         * <p>Indicates whether the EIAM account has inherited permissions on the application. Valid values:</p>
+         * <br>
+         * <p>*   true: A parent organization or an organization to which the EIAM account belongs has direct permissions on the application.</p>
+         * <p>*   false: A parent organization or an organization to which the EIAM account belongs does not have direct permissions on the application.</p>
          */
         @NameInMap("HasInheritAuthorization")
         public Boolean hasInheritAuthorization;

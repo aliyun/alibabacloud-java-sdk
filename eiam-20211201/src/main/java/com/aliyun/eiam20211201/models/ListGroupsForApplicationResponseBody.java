@@ -4,12 +4,21 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListGroupsForApplicationResponseBody extends TeaModel {
+    /**
+     * <p>The group IDs.</p>
+     */
     @NameInMap("Groups")
     public java.util.List<ListGroupsForApplicationResponseBodyGroups> groups;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -44,7 +53,7 @@ public class ListGroupsForApplicationResponseBody extends TeaModel {
 
     public static class ListGroupsForApplicationResponseBodyGroups extends TeaModel {
         /**
-         * <p>组的唯一标识。</p>
+         * <p>The group ID.</p>
          */
         @NameInMap("GroupId")
         public String groupId;

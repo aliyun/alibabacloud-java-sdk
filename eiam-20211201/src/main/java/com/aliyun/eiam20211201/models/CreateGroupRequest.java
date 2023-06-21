@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class CreateGroupRequest extends TeaModel {
     /**
-     * <p>组描述，长度最大限制128。</p>
+     * <p>The description of the group. The value can be up to 256 characters in length.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>组外部ID，长度最大限制64，如果不填，则默认使用groupId填充。</p>
+     * <p>The external ID of the group, which can be used to associate the group with an external system. By default, the external ID is the group ID. The value can be up to 64 characters in length.</p>
      */
     @NameInMap("GroupExternalId")
     public String groupExternalId;
 
     /**
-     * <p>组名称，长度最大限制64。</p>
+     * <p>The name of the group. The name can be up to 64 characters in length.</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

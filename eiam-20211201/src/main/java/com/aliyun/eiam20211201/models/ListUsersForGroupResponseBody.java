@@ -4,12 +4,21 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListUsersForGroupResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned. The maximum number of entries that can be returned per page is specified by PageSize.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    /**
+     * <p>The information about accounts.</p>
+     */
     @NameInMap("Users")
     public java.util.List<ListUsersForGroupResponseBodyUsers> users;
 
@@ -44,7 +53,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
 
     public static class ListUsersForGroupResponseBodyUsers extends TeaModel {
         /**
-         * <p>账户Id</p>
+         * <p>The account ID.</p>
          */
         @NameInMap("UserId")
         public String userId;

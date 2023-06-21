@@ -5,43 +5,43 @@ import com.aliyun.tea.*;
 
 public class ListGroupsRequest extends TeaModel {
     /**
-     * <p>组外部ID。</p>
+     * <p>The external ID of the group.</p>
      */
     @NameInMap("GroupExternalId")
     public String groupExternalId;
 
     /**
-     * <p>组ID列表，size最大限制100。</p>
+     * <p>The group IDs.</p>
      */
     @NameInMap("GroupIds")
     public java.util.List<String> groupIds;
 
     /**
-     * <p>组名称，长度最大限制64。</p>
+     * <p>The name of the group. If you specify this parameter, the query is based on an exact match.</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
-     * <p>组名称，长度最大限制64。</p>
+     * <p>The prefix of the group name. If you specify this parameter, the query follows the leftmost matching principle.</p>
      */
     @NameInMap("GroupNameStartsWith")
     public String groupNameStartsWith;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>当前查询的列表页码，默认为1。</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>当前查询的列表页码，默认为20。</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;

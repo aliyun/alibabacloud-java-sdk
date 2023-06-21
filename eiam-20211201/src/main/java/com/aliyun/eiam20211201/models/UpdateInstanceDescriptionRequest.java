@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceDescriptionRequest extends TeaModel {
     /**
-     * <p>实例的描述信息</p>
+     * <p>The new description of the instance.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>IDaaS EIAM的实例id</p>
+     * <p>The ID of the instance whose description you want to modify.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteInstanceRequest extends TeaModel {
     /**
-     * <p>IDaaS EIAM的实例id</p>
+     * <p>The ID of the instance to be deleted.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

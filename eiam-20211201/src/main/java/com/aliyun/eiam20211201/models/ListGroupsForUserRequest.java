@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListGroupsForUserRequest extends TeaModel {
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>当前查询的列表页码，默认为1。</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>当前查询的列表页码，默认为20。</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>账户ID。</p>
+     * <p>The account ID.</p>
      */
     @NameInMap("UserId")
     public String userId;

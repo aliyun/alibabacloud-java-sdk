@@ -4,12 +4,21 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The queried account groups.</p>
+     */
     @NameInMap("Groups")
     public java.util.List<ListGroupsResponseBodyGroups> groups;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned. The maximum number of entries returned at a time depends on the value of PageSize.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -44,55 +53,57 @@ public class ListGroupsResponseBody extends TeaModel {
 
     public static class ListGroupsResponseBodyGroups extends TeaModel {
         /**
-         * <p>组创建时间, Unix时间戳格式，单位为毫秒。</p>
+         * <p>The time at which the group was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
-         * <p>组描述。</p>
+         * <p>The description of the group.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>组外部标识。</p>
+         * <p>The external ID of the group, which can be used to associate the group with an external system. By default, the external ID is the group ID.</p>
          */
         @NameInMap("GroupExternalId")
         public String groupExternalId;
 
         /**
-         * <p>组ID。</p>
+         * <p>The group ID.</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
-         * <p>组名称。</p>
+         * <p>The name of the group.</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
-         * <p>组来源ID。</p>
+         * <p>The source ID of the group. If the group was imported from other services, this value indicates the external source ID. By default, the source ID is the instance ID.</p>
          */
         @NameInMap("GroupSourceId")
         public String groupSourceId;
 
         /**
-         * <p>组来源类型，build_in[自建],ding_talk[钉钉导入],ad[AD导入],ldap[LDAP导入]。</p>
+         * <p>The source type of the group. Only build_in may be returned, which indicates that the group was created in IDaaS.</p>
+         * <br>
+         * <p>*</p>
          */
         @NameInMap("GroupSourceType")
         public String groupSourceType;
 
         /**
-         * <p>实例ID。</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>组最近一次更新时间，Unix时间戳格式，单位为毫秒。</p>
+         * <p>The time at which the group was last updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;

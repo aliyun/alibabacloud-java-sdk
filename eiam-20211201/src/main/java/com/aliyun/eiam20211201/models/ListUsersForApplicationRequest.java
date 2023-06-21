@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class ListUsersForApplicationRequest extends TeaModel {
     /**
-     * <p>应用的唯一标识。</p>
+     * <p>The ID of the application.</p>
      */
     @NameInMap("ApplicationId")
     public String applicationId;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>当前查询的列表页码，默认为1。</p>
+     * <p>The number of the page to return</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>当前查询的列表页码，默认为20。</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>非必填，如果填写则可以基于账户ID进行过滤，列表中最多包含100个元素。</p>
+     * <p>The IDs of the accounts. You can query a maximum of 100 accounts at a time.</p>
      */
     @NameInMap("UserIds")
     public java.util.List<String> userIds;

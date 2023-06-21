@@ -4,9 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class GetPasswordHistoryConfigurationResponseBody extends TeaModel {
+    /**
+     * <p>The password history configurations.</p>
+     */
     @NameInMap("PasswordHistoryConfiguration")
     public GetPasswordHistoryConfigurationResponseBodyPasswordHistoryConfiguration passwordHistoryConfiguration;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,18 @@ public class GetPasswordHistoryConfigurationResponseBody extends TeaModel {
     }
 
     public static class GetPasswordHistoryConfigurationResponseBodyPasswordHistoryConfiguration extends TeaModel {
+        /**
+         * <p>The maximum number of recent passwords that are retained.</p>
+         */
         @NameInMap("PasswordHistoryMaxRetention")
         public Integer passwordHistoryMaxRetention;
 
+        /**
+         * <p>Indicates whether the password history feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   enabled</p>
+         * <p>*   disabled</p>
+         */
         @NameInMap("PasswordHistoryStatus")
         public String passwordHistoryStatus;
 

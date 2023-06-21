@@ -4,9 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class GetPasswordInitializationConfigurationResponseBody extends TeaModel {
+    /**
+     * <p>The password initialization configurations.</p>
+     */
     @NameInMap("PasswordInitializationConfiguration")
     public GetPasswordInitializationConfigurationResponseBodyPasswordInitializationConfiguration passwordInitializationConfiguration;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,35 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
     }
 
     public static class GetPasswordInitializationConfigurationResponseBodyPasswordInitializationConfiguration extends TeaModel {
+        /**
+         * <p>Indicates whether forcible password change upon first logon is enabled. Valid values:</p>
+         * <br>
+         * <p>*   enabled</p>
+         * <p>*   disabled</p>
+         */
         @NameInMap("PasswordForcedUpdateStatus")
         public String passwordForcedUpdateStatus;
 
+        /**
+         * <p>The methods for receiving password initialization notifications.</p>
+         */
         @NameInMap("PasswordInitializationNotificationChannels")
         public java.util.List<String> passwordInitializationNotificationChannels;
 
+        /**
+         * <p>Indicates whether the password initialization feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   enabled</p>
+         * <p>*   disabled</p>
+         */
         @NameInMap("PasswordInitializationStatus")
         public String passwordInitializationStatus;
 
+        /**
+         * <p>The password initialization method. Set the value to random.</p>
+         * <br>
+         * <p>*   random: A randomly generated password is used.</p>
+         */
         @NameInMap("PasswordInitializationType")
         public String passwordInitializationType;
 

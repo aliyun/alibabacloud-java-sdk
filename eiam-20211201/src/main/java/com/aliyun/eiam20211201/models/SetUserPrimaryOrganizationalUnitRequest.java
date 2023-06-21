@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class SetUserPrimaryOrganizationalUnitRequest extends TeaModel {
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>主组织ID</p>
+     * <p>The ID of the new primary organizational unit.</p>
      */
     @NameInMap("OrganizationalUnitId")
     public String organizationalUnitId;
 
     /**
-     * <p>账户ID</p>
+     * <p>The ID of the account.</p>
      */
     @NameInMap("UserId")
     public String userId;

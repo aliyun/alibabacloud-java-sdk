@@ -4,12 +4,21 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListOrganizationalUnitsForApplicationResponseBody extends TeaModel {
+    /**
+     * <p>The IDs of the organizations that are allowed to access the application.</p>
+     */
     @NameInMap("OrganizationalUnits")
     public java.util.List<ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnits> organizationalUnits;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of the returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -44,7 +53,7 @@ public class ListOrganizationalUnitsForApplicationResponseBody extends TeaModel 
 
     public static class ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnits extends TeaModel {
         /**
-         * <p>组织的唯一标识.</p>
+         * <p>The ID of the organization that is allowed to access the application.</p>
          */
         @NameInMap("OrganizationalUnitId")
         public String organizationalUnitId;

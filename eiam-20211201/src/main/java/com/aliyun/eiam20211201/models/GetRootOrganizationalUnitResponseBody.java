@@ -4,9 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class GetRootOrganizationalUnitResponseBody extends TeaModel {
+    /**
+     * <p>The data object of the organizational unit.</p>
+     */
     @NameInMap("OrganizationalUnit")
     public GetRootOrganizationalUnitResponseBodyOrganizationalUnit organizationalUnit;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,37 +39,37 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
 
     public static class GetRootOrganizationalUnitResponseBodyOrganizationalUnit extends TeaModel {
         /**
-         * <p>创建时间</p>
+         * <p>The time when the organizational unit was created. This value is a UNIX timestamp. Unit: milliseconds.</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
-         * <p>描述</p>
+         * <p>The description of the organizational unit.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>实例ID</p>
+         * <p>The ID of the instance.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>组织ID</p>
+         * <p>The ID of the organizational unit.</p>
          */
         @NameInMap("OrganizationalUnitId")
         public String organizationalUnitId;
 
         /**
-         * <p>组织名称</p>
+         * <p>The name of the organization.</p>
          */
         @NameInMap("OrganizationalUnitName")
         public String organizationalUnitName;
 
         /**
-         * <p>最近一次更新时间</p>
+         * <p>The time when the organizational unit was last updated. The value is a UNIX timestamp. Unit: milliseconds.</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;

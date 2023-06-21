@@ -4,12 +4,21 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationClientSecretsResponseBody extends TeaModel {
+    /**
+     * <p>The information about the client keys.</p>
+     */
     @NameInMap("ApplicationClientSecrets")
     public java.util.List<ListApplicationClientSecretsResponseBodyApplicationClientSecrets> applicationClientSecrets;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -44,43 +53,46 @@ public class ListApplicationClientSecretsResponseBody extends TeaModel {
 
     public static class ListApplicationClientSecretsResponseBodyApplicationClientSecrets extends TeaModel {
         /**
-         * <p>IDaaS EIAM 应用Id</p>
+         * <p>The ID of the application that you want to query.</p>
          */
         @NameInMap("ApplicationId")
         public String applicationId;
 
         /**
-         * <p>IDaaS EIAM 客户端ID</p>
+         * <p>The client ID of the application.</p>
          */
         @NameInMap("ClientId")
         public String clientId;
 
         /**
-         * <p>客户端密钥（已脱敏）</p>
+         * <p>The client key secret of the application. The value is not masked.</p>
          */
         @NameInMap("ClientSecret")
         public String clientSecret;
 
         /**
-         * <p>IDaaS EIAM 实例Id</p>
+         * <p>The ID of the instance.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>IDaaS EIAM 客户端密钥最近使用时间</p>
+         * <p>The time when the client key was last used. The value is a UNIX timestamp. Unit: milliseconds.</p>
          */
         @NameInMap("LastUsedTime")
         public Long lastUsedTime;
 
         /**
-         * <p>IDaaS EIAM 客户端密钥Id</p>
+         * <p>The client key ID of the application.</p>
          */
         @NameInMap("SecretId")
         public String secretId;
 
         /**
-         * <p>IDaaS EIAM 客户端密钥状态</p>
+         * <p>The status of the client key. Valid values:</p>
+         * <br>
+         * <p>*   Enabled: The client key is enabled.</p>
+         * <p>*   Disabled: The client key is disabled.</p>
          */
         @NameInMap("Status")
         public String status;

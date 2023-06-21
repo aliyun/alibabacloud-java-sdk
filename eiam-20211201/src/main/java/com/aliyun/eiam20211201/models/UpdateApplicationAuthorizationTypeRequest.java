@@ -5,19 +5,22 @@ import com.aliyun.tea.*;
 
 public class UpdateApplicationAuthorizationTypeRequest extends TeaModel {
     /**
-     * <p>IDaaS的应用主键id</p>
+     * <p>The ID of the application that you want to modify.</p>
      */
     @NameInMap("ApplicationId")
     public String applicationId;
 
     /**
-     * <p>应用的授权类型</p>
+     * <p>The authorization type of the application. Valid values:</p>
+     * <br>
+     * <p>*   authorize_required: Only the user with explicit authorization can access the application.</p>
+     * <p>*   default_all: By default, all users can access the application.</p>
      */
     @NameInMap("AuthorizationType")
     public String authorizationType;
 
     /**
-     * <p>IDaaS EIAM的实例id</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

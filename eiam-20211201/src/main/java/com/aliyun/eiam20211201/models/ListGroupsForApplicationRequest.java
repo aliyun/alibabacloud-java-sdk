@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class ListGroupsForApplicationRequest extends TeaModel {
     /**
-     * <p>应用的唯一标识。</p>
+     * <p>The application ID.</p>
      */
     @NameInMap("ApplicationId")
     public String applicationId;
 
     /**
-     * <p>非必填，如果填写则可以基于组ID进行过滤，列表中最多包含100个元素。</p>
+     * <p>The group IDs. You can specify up to 100 group IDs at a time.</p>
      */
     @NameInMap("GroupIds")
     public java.util.List<String> groupIds;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>当前查询的列表页码，默认为1。</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>当前查询的列表页码，默认为20。</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;

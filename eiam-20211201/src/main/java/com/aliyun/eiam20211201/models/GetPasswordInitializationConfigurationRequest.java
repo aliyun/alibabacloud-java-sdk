@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPasswordInitializationConfigurationRequest extends TeaModel {
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class UpdateGroupRequest extends TeaModel {
     /**
-     * <p>组外部ID，长度最大限制64，如果不填，则默认使用groupId填充。</p>
+     * <p>The external ID of the group.</p>
      */
     @NameInMap("GroupExternalId")
     public String groupExternalId;
 
     /**
-     * <p>组ID，长度最大限制64。</p>
+     * <p>The group ID.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>组名称，长度最大限制64。</p>
+     * <p>The name of the group.</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

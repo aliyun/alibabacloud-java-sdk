@@ -5,74 +5,112 @@ import com.aliyun.tea.*;
 
 public class ListUsersRequest extends TeaModel {
     /**
-     * <p>邮箱</p>
+     * <p>账户展示名，模糊匹配</p>
+     */
+    @NameInMap("DisplayNameStartsWith")
+    public String displayNameStartsWith;
+
+    /**
+     * <p>The email address of the user who owns the account.</p>
      */
     @NameInMap("Email")
     public String email;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>组织ID</p>
+     * <p>The ID of the organizational unit.</p>
      */
     @NameInMap("OrganizationalUnitId")
     public String organizationalUnitId;
 
     /**
-     * <p>当前查询的列表页码，默认为1。</p>
+     * <p>The number of the page to return. Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>当前查询的列表页码，默认为20。</p>
+     * <p>The number of entries to return on each page. Default value: 20.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>手机区号</p>
+     * <p>The mobile number of the user who owns the account.</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
     /**
-     * <p>手机区号</p>
+     * <p>The country code of the mobile number. For example, the country code of China is 86 without 00 or +.</p>
      */
     @NameInMap("PhoneRegion")
     public String phoneRegion;
 
     /**
-     * <p>账户状态</p>
+     * <p>The status of the account. Valid values:</p>
+     * <br>
+     * <p>*   enabled: The account is enabled.</p>
+     * <p>*   disabled: The account is disabled.</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>外部关联ID</p>
+     * <p>The external ID of the account. The external ID can be used by external data to map the data of the account in IDaaS EIAM.</p>
+     * <br>
+     * <p>For accounts with the same source type and source ID, each account has a unique external ID.</p>
      */
     @NameInMap("UserExternalId")
     public String userExternalId;
 
     /**
-     * <p>自建类型为实例ID，非自建类型，为对应企业ID，比如钉钉，对应的corpId</p>
+     * <p>账户的ID集合</p>
+     */
+    @NameInMap("UserIds")
+    public java.util.List<String> userIds;
+
+    /**
+     * <p>The source ID of the account.</p>
+     * <br>
+     * <p>If the account was created in IDaaS, its source ID is the ID of the IDaaS instance. If the account was imported, its source ID is the enterprise ID in the source. For example, if the account was imported from DingTalk, its source ID is the corpId value of the enterprise in DingTalk.</p>
      */
     @NameInMap("UserSourceId")
     public String userSourceId;
 
     /**
-     * <p>build_in(自建),ding_talk(钉钉导入),ad(AD导入),ldap(LDAP导入)</p>
+     * <p>The source type of the account. Valid values:</p>
+     * <br>
+     * <p>*   build_in: The account was created in IDaaS.</p>
+     * <p>*   ding_talk: The account was imported from DingTalk.</p>
+     * <p>*   ad: The account was imported from Microsoft Active Directory (AD).</p>
+     * <p>*   ldap: The account was imported from a Lightweight Directory Access Protocol (LDAP) service.</p>
      */
     @NameInMap("UserSourceType")
     public String userSourceType;
 
+    /**
+     * <p>账户名，左模糊匹配</p>
+     */
+    @NameInMap("UsernameStartsWith")
+    public String usernameStartsWith;
+
     public static ListUsersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListUsersRequest self = new ListUsersRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListUsersRequest setDisplayNameStartsWith(String displayNameStartsWith) {
+        this.displayNameStartsWith = displayNameStartsWith;
+        return this;
+    }
+    public String getDisplayNameStartsWith() {
+        return this.displayNameStartsWith;
     }
 
     public ListUsersRequest setEmail(String email) {
@@ -147,6 +185,14 @@ public class ListUsersRequest extends TeaModel {
         return this.userExternalId;
     }
 
+    public ListUsersRequest setUserIds(java.util.List<String> userIds) {
+        this.userIds = userIds;
+        return this;
+    }
+    public java.util.List<String> getUserIds() {
+        return this.userIds;
+    }
+
     public ListUsersRequest setUserSourceId(String userSourceId) {
         this.userSourceId = userSourceId;
         return this;
@@ -161,6 +207,14 @@ public class ListUsersRequest extends TeaModel {
     }
     public String getUserSourceType() {
         return this.userSourceType;
+    }
+
+    public ListUsersRequest setUsernameStartsWith(String usernameStartsWith) {
+        this.usernameStartsWith = usernameStartsWith;
+        return this;
+    }
+    public String getUsernameStartsWith() {
+        return this.usernameStartsWith;
     }
 
 }
