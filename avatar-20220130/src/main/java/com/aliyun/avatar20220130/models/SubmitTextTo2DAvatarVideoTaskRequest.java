@@ -13,6 +13,15 @@ public class SubmitTextTo2DAvatarVideoTaskRequest extends TeaModel {
     @NameInMap("AvatarInfo")
     public SubmitTextTo2DAvatarVideoTaskRequestAvatarInfo avatarInfo;
 
+    @NameInMap("Callback")
+    public Boolean callback;
+
+    @NameInMap("CallbackParams")
+    public String callbackParams;
+
+    @NameInMap("ExtParams")
+    public String extParams;
+
     @NameInMap("TenantId")
     public Long tenantId;
 
@@ -52,6 +61,30 @@ public class SubmitTextTo2DAvatarVideoTaskRequest extends TeaModel {
     }
     public SubmitTextTo2DAvatarVideoTaskRequestAvatarInfo getAvatarInfo() {
         return this.avatarInfo;
+    }
+
+    public SubmitTextTo2DAvatarVideoTaskRequest setCallback(Boolean callback) {
+        this.callback = callback;
+        return this;
+    }
+    public Boolean getCallback() {
+        return this.callback;
+    }
+
+    public SubmitTextTo2DAvatarVideoTaskRequest setCallbackParams(String callbackParams) {
+        this.callbackParams = callbackParams;
+        return this;
+    }
+    public String getCallbackParams() {
+        return this.callbackParams;
+    }
+
+    public SubmitTextTo2DAvatarVideoTaskRequest setExtParams(String extParams) {
+        this.extParams = extParams;
+        return this;
+    }
+    public String getExtParams() {
+        return this.extParams;
     }
 
     public SubmitTextTo2DAvatarVideoTaskRequest setTenantId(Long tenantId) {

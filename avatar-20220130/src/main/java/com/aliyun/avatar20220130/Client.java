@@ -604,6 +604,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AvatarInfo", request.avatarInfoShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.callback)) {
+            query.put("Callback", request.callback);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callbackParams)) {
+            query.put("CallbackParams", request.callbackParams);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extParams)) {
+            query.put("ExtParams", request.extParams);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
             query.put("TenantId", request.tenantId);
         }
@@ -665,6 +677,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.avatarInfoShrink)) {
             query.put("AvatarInfo", request.avatarInfoShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callback)) {
+            query.put("Callback", request.callback);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callbackParams)) {
+            query.put("CallbackParams", request.callbackParams);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extParams)) {
+            query.put("ExtParams", request.extParams);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
@@ -736,6 +760,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.avatarInfoShrink)) {
             query.put("AvatarInfo", request.avatarInfoShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callback)) {
+            query.put("Callback", request.callback);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callbackParams)) {
+            query.put("CallbackParams", request.callbackParams);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extParams)) {
+            query.put("ExtParams", request.extParams);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {

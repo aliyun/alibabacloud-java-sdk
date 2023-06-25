@@ -10,6 +10,15 @@ public class SubmitAudioTo3DAvatarVideoTaskRequest extends TeaModel {
     @NameInMap("AvatarInfo")
     public SubmitAudioTo3DAvatarVideoTaskRequestAvatarInfo avatarInfo;
 
+    @NameInMap("Callback")
+    public Boolean callback;
+
+    @NameInMap("CallbackParams")
+    public String callbackParams;
+
+    @NameInMap("ExtParams")
+    public String extParams;
+
     @NameInMap("TenantId")
     public Long tenantId;
 
@@ -41,6 +50,30 @@ public class SubmitAudioTo3DAvatarVideoTaskRequest extends TeaModel {
     }
     public SubmitAudioTo3DAvatarVideoTaskRequestAvatarInfo getAvatarInfo() {
         return this.avatarInfo;
+    }
+
+    public SubmitAudioTo3DAvatarVideoTaskRequest setCallback(Boolean callback) {
+        this.callback = callback;
+        return this;
+    }
+    public Boolean getCallback() {
+        return this.callback;
+    }
+
+    public SubmitAudioTo3DAvatarVideoTaskRequest setCallbackParams(String callbackParams) {
+        this.callbackParams = callbackParams;
+        return this;
+    }
+    public String getCallbackParams() {
+        return this.callbackParams;
+    }
+
+    public SubmitAudioTo3DAvatarVideoTaskRequest setExtParams(String extParams) {
+        this.extParams = extParams;
+        return this;
+    }
+    public String getExtParams() {
+        return this.extParams;
     }
 
     public SubmitAudioTo3DAvatarVideoTaskRequest setTenantId(Long tenantId) {
