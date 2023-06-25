@@ -64,58 +64,6 @@ public class GetProjectInfoResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class GetProjectInfoResponseBodyProjectFieldList extends TeaModel {
-        @NameInMap("displayName")
-        public String displayName;
-
-        @NameInMap("identifier")
-        public String identifier;
-
-        @NameInMap("value")
-        public String value;
-
-        @NameInMap("valueType")
-        public String valueType;
-
-        public static GetProjectInfoResponseBodyProjectFieldList build(java.util.Map<String, ?> map) throws Exception {
-            GetProjectInfoResponseBodyProjectFieldList self = new GetProjectInfoResponseBodyProjectFieldList();
-            return TeaModel.build(map, self);
-        }
-
-        public GetProjectInfoResponseBodyProjectFieldList setDisplayName(String displayName) {
-            this.displayName = displayName;
-            return this;
-        }
-        public String getDisplayName() {
-            return this.displayName;
-        }
-
-        public GetProjectInfoResponseBodyProjectFieldList setIdentifier(String identifier) {
-            this.identifier = identifier;
-            return this;
-        }
-        public String getIdentifier() {
-            return this.identifier;
-        }
-
-        public GetProjectInfoResponseBodyProjectFieldList setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-        public GetProjectInfoResponseBodyProjectFieldList setValueType(String valueType) {
-            this.valueType = valueType;
-            return this;
-        }
-        public String getValueType() {
-            return this.valueType;
-        }
-
-    }
-
     public static class GetProjectInfoResponseBodyProject extends TeaModel {
         @NameInMap("category")
         public String category;
@@ -131,9 +79,6 @@ public class GetProjectInfoResponseBody extends TeaModel {
 
         @NameInMap("description")
         public String description;
-
-        @NameInMap("fieldList")
-        public java.util.List<GetProjectInfoResponseBodyProjectFieldList> fieldList;
 
         @NameInMap("gmtCreate")
         public Long gmtCreate;
@@ -182,9 +127,6 @@ public class GetProjectInfoResponseBody extends TeaModel {
 
         @NameInMap("statusIdentifier")
         public String statusIdentifier;
-
-        @NameInMap("statusName")
-        public String statusName;
 
         @NameInMap("statusStageIdentifier")
         public String statusStageIdentifier;
@@ -238,14 +180,6 @@ public class GetProjectInfoResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
-        }
-
-        public GetProjectInfoResponseBodyProject setFieldList(java.util.List<GetProjectInfoResponseBodyProjectFieldList> fieldList) {
-            this.fieldList = fieldList;
-            return this;
-        }
-        public java.util.List<GetProjectInfoResponseBodyProjectFieldList> getFieldList() {
-            return this.fieldList;
         }
 
         public GetProjectInfoResponseBodyProject setGmtCreate(Long gmtCreate) {
@@ -374,14 +308,6 @@ public class GetProjectInfoResponseBody extends TeaModel {
         }
         public String getStatusIdentifier() {
             return this.statusIdentifier;
-        }
-
-        public GetProjectInfoResponseBodyProject setStatusName(String statusName) {
-            this.statusName = statusName;
-            return this;
-        }
-        public String getStatusName() {
-            return this.statusName;
         }
 
         public GetProjectInfoResponseBodyProject setStatusStageIdentifier(String statusStageIdentifier) {

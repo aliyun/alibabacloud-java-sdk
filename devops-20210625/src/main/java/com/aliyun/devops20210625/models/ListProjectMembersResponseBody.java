@@ -154,6 +154,9 @@ public class ListProjectMembersResponseBody extends TeaModel {
         @NameInMap("realNamePinyin")
         public String realNamePinyin;
 
+        /**
+         * <p>角色名称</p>
+         */
         @NameInMap("roleName")
         public String roleName;
 

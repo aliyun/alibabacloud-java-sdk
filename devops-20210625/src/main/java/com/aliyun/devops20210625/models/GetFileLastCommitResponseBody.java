@@ -65,6 +65,9 @@ public class GetFileLastCommitResponseBody extends TeaModel {
     }
 
     public static class GetFileLastCommitResponseBodyResultSignature extends TeaModel {
+        /**
+         * <p>GPG密钥ID</p>
+         */
         @NameInMap("gpgKeyId")
         public String gpgKeyId;
 
@@ -116,9 +119,6 @@ public class GetFileLastCommitResponseBody extends TeaModel {
         @NameInMap("createdAt")
         public String createdAt;
 
-        /**
-         * <p>Commit ID</p>
-         */
         @NameInMap("id")
         public String id;
 

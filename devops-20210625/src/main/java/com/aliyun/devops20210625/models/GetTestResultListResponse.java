@@ -3,7 +3,7 @@ package com.aliyun.devops20210625.models;
 
 import com.aliyun.tea.*;
 
-public class CreatePipelineResponse extends TeaModel {
+public class GetTestResultListResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class CreatePipelineResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public CreatePipelineResponseBody body;
+    public GetTestResultListResponseBody body;
 
-    public static CreatePipelineResponse build(java.util.Map<String, ?> map) throws Exception {
-        CreatePipelineResponse self = new CreatePipelineResponse();
+    public static GetTestResultListResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetTestResultListResponse self = new GetTestResultListResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreatePipelineResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetTestResultListResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class CreatePipelineResponse extends TeaModel {
         return this.headers;
     }
 
-    public CreatePipelineResponse setStatusCode(Integer statusCode) {
+    public GetTestResultListResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class CreatePipelineResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CreatePipelineResponse setBody(CreatePipelineResponseBody body) {
+    public GetTestResultListResponse setBody(GetTestResultListResponseBody body) {
         this.body = body;
         return this;
     }
-    public CreatePipelineResponseBody getBody() {
+    public GetTestResultListResponseBody getBody() {
         return this.body;
     }
 

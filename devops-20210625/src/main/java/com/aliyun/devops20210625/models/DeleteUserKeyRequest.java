@@ -3,19 +3,19 @@ package com.aliyun.devops20210625.models;
 
 import com.aliyun.tea.*;
 
-public class ListRepositoryMemberWithInheritedRequest extends TeaModel {
+public class DeleteUserKeyRequest extends TeaModel {
     @NameInMap("accessToken")
     public String accessToken;
 
     @NameInMap("organizationId")
     public String organizationId;
 
-    public static ListRepositoryMemberWithInheritedRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListRepositoryMemberWithInheritedRequest self = new ListRepositoryMemberWithInheritedRequest();
+    public static DeleteUserKeyRequest build(java.util.Map<String, ?> map) throws Exception {
+        DeleteUserKeyRequest self = new DeleteUserKeyRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListRepositoryMemberWithInheritedRequest setAccessToken(String accessToken) {
+    public DeleteUserKeyRequest setAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
     }
@@ -23,7 +23,7 @@ public class ListRepositoryMemberWithInheritedRequest extends TeaModel {
         return this.accessToken;
     }
 
-    public ListRepositoryMemberWithInheritedRequest setOrganizationId(String organizationId) {
+    public DeleteUserKeyRequest setOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
