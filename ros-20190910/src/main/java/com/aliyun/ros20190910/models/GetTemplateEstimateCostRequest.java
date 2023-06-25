@@ -38,9 +38,6 @@ public class GetTemplateEstimateCostRequest extends TeaModel {
     @NameInMap("StackId")
     public String stackId;
 
-    /**
-     * <p>The version of the template. This parameter takes effect only when the TemplateId parameter is specified.</p>
-     */
     @NameInMap("TemplateBody")
     public String templateBody;
 

@@ -75,6 +75,58 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
 
     }
 
+    public static class GetTemplateParameterConstraintsResponseBodyParameterConstraintsOriginalConstraints extends TeaModel {
+        @NameInMap("AllowedValues")
+        public java.util.List<?> allowedValues;
+
+        @NameInMap("PropertyName")
+        public String propertyName;
+
+        @NameInMap("ResourceName")
+        public String resourceName;
+
+        @NameInMap("ResourceType")
+        public String resourceType;
+
+        public static GetTemplateParameterConstraintsResponseBodyParameterConstraintsOriginalConstraints build(java.util.Map<String, ?> map) throws Exception {
+            GetTemplateParameterConstraintsResponseBodyParameterConstraintsOriginalConstraints self = new GetTemplateParameterConstraintsResponseBodyParameterConstraintsOriginalConstraints();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTemplateParameterConstraintsResponseBodyParameterConstraintsOriginalConstraints setAllowedValues(java.util.List<?> allowedValues) {
+            this.allowedValues = allowedValues;
+            return this;
+        }
+        public java.util.List<?> getAllowedValues() {
+            return this.allowedValues;
+        }
+
+        public GetTemplateParameterConstraintsResponseBodyParameterConstraintsOriginalConstraints setPropertyName(String propertyName) {
+            this.propertyName = propertyName;
+            return this;
+        }
+        public String getPropertyName() {
+            return this.propertyName;
+        }
+
+        public GetTemplateParameterConstraintsResponseBodyParameterConstraintsOriginalConstraints setResourceName(String resourceName) {
+            this.resourceName = resourceName;
+            return this;
+        }
+        public String getResourceName() {
+            return this.resourceName;
+        }
+
+        public GetTemplateParameterConstraintsResponseBodyParameterConstraintsOriginalConstraints setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+    }
+
     public static class GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryErrors extends TeaModel {
         /**
          * <p>The error message.</p>
@@ -178,6 +230,9 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         @NameInMap("NotSupportResources")
         public java.util.List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsNotSupportResources> notSupportResources;
 
+        @NameInMap("OriginalConstraints")
+        public java.util.List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsOriginalConstraints> originalConstraints;
+
         /**
          * <p>The name of the parameter.</p>
          */
@@ -255,6 +310,14 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         }
         public java.util.List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsNotSupportResources> getNotSupportResources() {
             return this.notSupportResources;
+        }
+
+        public GetTemplateParameterConstraintsResponseBodyParameterConstraints setOriginalConstraints(java.util.List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsOriginalConstraints> originalConstraints) {
+            this.originalConstraints = originalConstraints;
+            return this;
+        }
+        public java.util.List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsOriginalConstraints> getOriginalConstraints() {
+            return this.originalConstraints;
         }
 
         public GetTemplateParameterConstraintsResponseBodyParameterConstraints setParameterKey(String parameterKey) {

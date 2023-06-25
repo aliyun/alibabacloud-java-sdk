@@ -4,19 +4,20 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListStackOperationRisksResponseBody extends TeaModel {
+    /**
+     * <p>The operations on which the permissions are not granted to the Alibaba Cloud account of the caller.</p>
+     */
     @NameInMap("MissingPolicyActions")
     public java.util.List<String> missingPolicyActions;
 
     /**
-     * <p>The physical ID of the resource. The physical ID is the actual ID of the resource.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the request when the risk detection fails.</p>
-     * <br>
-     * <p>>  This parameter is not returned if the risk detection is successful.</p>
+     * <p>The resources that are at risk.</p>
      */
     @NameInMap("RiskResources")
     public java.util.List<ListStackOperationRisksResponseBodyRiskResources> riskResources;
@@ -52,41 +53,52 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
 
     public static class ListStackOperationRisksResponseBodyRiskResources extends TeaModel {
         /**
-         * <p>The reason for the risk.</p>
+         * <p>The error code that is returned when the risk detection fails.</p>
+         * <br>
+         * <p>>  This parameter is not returned if the risk detection is successful.</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
-         * <p>The resource type.</p>
+         * <p>The logical ID of the resource. The logical ID is the resource name that is defined in the template.</p>
          */
         @NameInMap("LogicalResourceId")
         public String logicalResourceId;
-
-        /**
-         * <p>The operations on which the permissions are not granted to the Alibaba Cloud account of the caller.</p>
-         */
-        @NameInMap("Message")
-        public String message;
-
-        /**
-         * <p>The error code that is returned when the risk detection fails.</p>
-         * <br>
-         * <p>>  This parameter is not returned if the risk detection is successful.</p>
-         */
-        @NameInMap("PhysicalResourceId")
-        public String physicalResourceId;
-
-        @NameInMap("Reason")
-        public String reason;
 
         /**
          * <p>The error message that is returned when the risk detection fails.</p>
          * <br>
          * <p>>  This parameter is not returned if the risk detection is successful.</p>
          */
+        @NameInMap("Message")
+        public String message;
+
+        /**
+         * <p>The physical ID of the resource. The physical ID is the actual ID of the resource.</p>
+         */
+        @NameInMap("PhysicalResourceId")
+        public String physicalResourceId;
+
+        /**
+         * <p>The cause of the risk.</p>
+         */
+        @NameInMap("Reason")
+        public String reason;
+
+        /**
+         * <p>The ID of the request when the risk detection fails.</p>
+         * <br>
+         * <p>>  This parameter is not returned if the risk detection is successful.</p>
+         */
         @NameInMap("RequestId")
         public String requestId;
+
+        /**
+         * <p>The type of the resource.</p>
+         */
+        @NameInMap("ResourceType")
+        public String resourceType;
 
         /**
          * <p>The type of the risk. Valid values:</p>
@@ -95,12 +107,6 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
          * <p>*   MaybeReferenced: The resource may be referenced by other resources.</p>
          * <p>*   AdditionalRiskCheckRequired: An additional risk detection is required for a nested stack.</p>
          * <p>*   OperationIgnored: The operation does not take effect for the resource.</p>
-         */
-        @NameInMap("ResourceType")
-        public String resourceType;
-
-        /**
-         * <p>The operations on which the permissions are not granted to the Alibaba Cloud account of the caller.</p>
          */
         @NameInMap("RiskType")
         public String riskType;
