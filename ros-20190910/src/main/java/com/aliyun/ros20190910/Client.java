@@ -1498,6 +1498,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TemplateScratchId", request.templateScratchId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.templateType)) {
+            query.put("TemplateType", request.templateType);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1637,7 +1641,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The Terraform version that is supported by ROS. The parameter value is the same as the value of the Transform parameter in a Terraform template.
+      * You can call this operation to query the Terraform hosting, resource cleaner, and scenario features.
+      * This topic provides an example on how to query the details of features supported by ROS in the China (Hangzhou) region. The details include Terraform versions, provider versions, and supported resource types.
+      * >  In the Examples section, only part of the sample code is provided.
       *
       * @param request GetFeatureDetailsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1672,7 +1678,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The Terraform version that is supported by ROS. The parameter value is the same as the value of the Transform parameter in a Terraform template.
+      * You can call this operation to query the Terraform hosting, resource cleaner, and scenario features.
+      * This topic provides an example on how to query the details of features supported by ROS in the China (Hangzhou) region. The details include Terraform versions, provider versions, and supported resource types.
+      * >  In the Examples section, only part of the sample code is provided.
       *
       * @param request GetFeatureDetailsRequest
       * @return GetFeatureDetailsResponse
@@ -2301,10 +2309,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("StackId", request.stackId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.templateBody)) {
-            query.put("TemplateBody", request.templateBody);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
             query.put("TemplateId", request.templateId);
         }
@@ -2325,8 +2329,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TemplateVersion", request.templateVersion);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.templateBody)) {
+            body.put("TemplateBody", request.templateBody);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetTemplateEstimateCost"),
@@ -2398,10 +2408,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("StackId", request.stackId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.templateBody)) {
-            query.put("TemplateBody", request.templateBody);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
             query.put("TemplateId", request.templateId);
         }
@@ -2414,8 +2420,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TemplateVersion", request.templateVersion);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.templateBody)) {
+            body.put("TemplateBody", request.templateBody);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetTemplateParameterConstraints"),
@@ -3069,7 +3081,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the stack.
+      * The ListStackOperationRisks operation is suitable for the following scenarios:
+      * *   You want to detect high risks that may arise in resources when you delete a stack that contains the resources, and query the cause of each risk in a resource.
+      * *   When you create a stack, the creation may fail. In this case, you can call this operation to check which types of permissions that are required to create stacks are missing.
       *
       * @param request ListStackOperationRisksRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3140,7 +3154,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the stack.
+      * The ListStackOperationRisks operation is suitable for the following scenarios:
+      * *   You want to detect high risks that may arise in resources when you delete a stack that contains the resources, and query the cause of each risk in a resource.
+      * *   When you create a stack, the creation may fail. In this case, you can call this operation to check which types of permissions that are required to create stacks are missing.
       *
       * @param request ListStackOperationRisksRequest
       * @return ListStackOperationRisksResponse

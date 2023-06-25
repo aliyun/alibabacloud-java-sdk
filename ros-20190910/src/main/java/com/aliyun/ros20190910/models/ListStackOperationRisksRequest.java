@@ -5,55 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListStackOperationRisksRequest extends TeaModel {
     /**
-     * <p>The resource N that you want to retain in the stack.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_). For more information, see [How to ensure idempotence](~~134212~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to retain all resources in the stack.</p>
+     * <p>The type of the operation of which you want to detect risks. Valid values:</p>
      * <br>
-     * <p>Default value: false. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
-     * <p>>  This parameter takes effect when the OperationType parameter is set to DeleteStack.</p>
+     * <p>*   DeleteStack: detects high risks that may arise in resources when you delete a stack.</p>
+     * <p>*   CreateStack: detects the missing permissions when you fail to create a stack.</p>
      */
     @NameInMap("OperationType")
     public String operationType;
-
-    /**
-     * <p>The resource N that you want to retain in the stack.</p>
-     */
-    @NameInMap("RamRoleName")
-    public String ramRoleName;
-
-    /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests.</p>
-     * <br>
-     * <p>The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).</p>
-     * <br>
-     * <p>For more information, see [Ensure idempotence](~~134212~~).</p>
-     */
-    @NameInMap("RegionId")
-    public String regionId;
-
-    /**
-     * <p>The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.</p>
-     * <br>
-     * <p>>  You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
-     */
-    @NameInMap("RetainAllResources")
-    public Boolean retainAllResources;
-
-    /**
-     * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo or oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length. If you do not specify the region ID of the OSS bucket, the value of the RegionId parameter is used.</p>
-     * <br>
-     * <p>>  You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
-     */
-    @NameInMap("RetainResources")
-    public java.util.List<String> retainResources;
 
     /**
      * <p>The name of the RAM role.</p>
@@ -63,31 +27,68 @@ public class ListStackOperationRisksRequest extends TeaModel {
      * <br>
      * <p>The name of the RAM role can be up to 64 bytes in length.</p>
      */
+    @NameInMap("RamRoleName")
+    public String ramRoleName;
+
+    /**
+     * <p>The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
+
+    /**
+     * <p>Specifies whether to retain all resources in the stack. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false (default)</p>
+     * <br>
+     * <p>> This parameter takes effect only if you set OperationType to DeleteStack.</p>
+     */
+    @NameInMap("RetainAllResources")
+    public Boolean retainAllResources;
+
+    /**
+     * <p>The list of resources to retain.</p>
+     * <br>
+     * <p>> This parameter takes effect only if you set OperationType to DeleteStack.</p>
+     */
+    @NameInMap("RetainResources")
+    public java.util.List<String> retainResources;
+
+    /**
+     * <p>The ID of the stack.</p>
+     */
     @NameInMap("StackId")
     public String stackId;
 
     /**
-     * <p>The version of the template.</p>
+     * <p>The template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.</p>
      * <br>
-     * <p>>  This parameter takes effect only when the TemplateId parameter is specified.</p>
+     * <p>> You must specify one of TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
      */
     @NameInMap("TemplateBody")
     public String templateBody;
 
     /**
-     * <p>The resources that are at risk.</p>
+     * <p>The ID of the template. This parameter applies to shared and private templates.</p>
+     * <br>
+     * <p>> You must specify one of TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
      */
     @NameInMap("TemplateId")
     public String templateId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo and oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length. If you do not specify RegionId in the URL, the region ID of the stack is used.</p>
+     * <br>
+     * <p>> You must specify one of TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
      */
     @NameInMap("TemplateURL")
     public String templateURL;
 
     /**
-     * <p>The logical ID of the resource. The logical ID is the resource name that is defined in the template.</p>
+     * <p>The version of the template.</p>
+     * <br>
+     * <p>> This parameter takes effect only if you specify TemplateId.</p>
      */
     @NameInMap("TemplateVersion")
     public String templateVersion;

@@ -44,6 +44,9 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
         @NameInMap("Action")
         public java.util.List<String> action;
 
+        @NameInMap("Condition")
+        public java.util.Map<String, ?> condition;
+
         /**
          * <p>The effect of the statement. Valid values:</p>
          * <br>
@@ -70,6 +73,14 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
         }
         public java.util.List<String> getAction() {
             return this.action;
+        }
+
+        public GenerateTemplatePolicyResponseBodyPolicyStatement setCondition(java.util.Map<String, ?> condition) {
+            this.condition = condition;
+            return this;
+        }
+        public java.util.Map<String, ?> getCondition() {
+            return this.condition;
         }
 
         public GenerateTemplatePolicyResponseBodyPolicyStatement setEffect(String effect) {

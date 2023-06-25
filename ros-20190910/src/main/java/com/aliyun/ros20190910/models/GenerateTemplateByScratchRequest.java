@@ -26,6 +26,9 @@ public class GenerateTemplateByScratchRequest extends TeaModel {
     @NameInMap("TemplateScratchId")
     public String templateScratchId;
 
+    @NameInMap("TemplateType")
+    public String templateType;
+
     public static GenerateTemplateByScratchRequest build(java.util.Map<String, ?> map) throws Exception {
         GenerateTemplateByScratchRequest self = new GenerateTemplateByScratchRequest();
         return TeaModel.build(map, self);
@@ -53,6 +56,14 @@ public class GenerateTemplateByScratchRequest extends TeaModel {
     }
     public String getTemplateScratchId() {
         return this.templateScratchId;
+    }
+
+    public GenerateTemplateByScratchRequest setTemplateType(String templateType) {
+        this.templateType = templateType;
+        return this;
+    }
+    public String getTemplateType() {
+        return this.templateType;
     }
 
 }
