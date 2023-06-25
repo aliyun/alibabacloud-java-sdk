@@ -4,6 +4,9 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListOrganizationMembersRequest extends TeaModel {
+    /**
+     * <p>返回信息中是否包含第三方信息，默认不包含。</p>
+     */
     @NameInMap("containsExternInfo")
     public Boolean containsExternInfo;
 
