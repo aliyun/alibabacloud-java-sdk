@@ -43,11 +43,14 @@ public class File extends TeaModel {
     @NameInMap("hidden")
     public Boolean hidden;
 
+    @NameInMap("image_media_metadata")
+    public ImageMediaMetadata imageMediaMetadata;
+
     @NameInMap("investigation_info")
     public FileInvestigationInfo investigationInfo;
 
     @NameInMap("labels")
-    public String labels;
+    public java.util.List<String> labels;
 
     @NameInMap("local_created_at")
     public String localCreatedAt;
@@ -75,6 +78,9 @@ public class File extends TeaModel {
 
     @NameInMap("thumbnail")
     public String thumbnail;
+
+    @NameInMap("thumbnail_urls")
+    public java.util.Map<String, String> thumbnailUrls;
 
     @NameInMap("trashed_at")
     public String trashedAt;
@@ -197,6 +203,14 @@ public class File extends TeaModel {
         return this.hidden;
     }
 
+    public File setImageMediaMetadata(ImageMediaMetadata imageMediaMetadata) {
+        this.imageMediaMetadata = imageMediaMetadata;
+        return this;
+    }
+    public ImageMediaMetadata getImageMediaMetadata() {
+        return this.imageMediaMetadata;
+    }
+
     public File setInvestigationInfo(FileInvestigationInfo investigationInfo) {
         this.investigationInfo = investigationInfo;
         return this;
@@ -205,11 +219,11 @@ public class File extends TeaModel {
         return this.investigationInfo;
     }
 
-    public File setLabels(String labels) {
+    public File setLabels(java.util.List<String> labels) {
         this.labels = labels;
         return this;
     }
-    public String getLabels() {
+    public java.util.List<String> getLabels() {
         return this.labels;
     }
 
@@ -283,6 +297,14 @@ public class File extends TeaModel {
     }
     public String getThumbnail() {
         return this.thumbnail;
+    }
+
+    public File setThumbnailUrls(java.util.Map<String, String> thumbnailUrls) {
+        this.thumbnailUrls = thumbnailUrls;
+        return this;
+    }
+    public java.util.Map<String, String> getThumbnailUrls() {
+        return this.thumbnailUrls;
     }
 
     public File setTrashedAt(String trashedAt) {

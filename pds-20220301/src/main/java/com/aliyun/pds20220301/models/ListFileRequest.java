@@ -34,6 +34,9 @@ public class ListFileRequest extends TeaModel {
     @NameInMap("status")
     public String status;
 
+    @NameInMap("thumbnail_processes")
+    public java.util.Map<String, ImageProcess> thumbnailProcesses;
+
     @NameInMap("type")
     public String type;
 
@@ -120,6 +123,14 @@ public class ListFileRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public ListFileRequest setThumbnailProcesses(java.util.Map<String, ImageProcess> thumbnailProcesses) {
+        this.thumbnailProcesses = thumbnailProcesses;
+        return this;
+    }
+    public java.util.Map<String, ImageProcess> getThumbnailProcesses() {
+        return this.thumbnailProcesses;
     }
 
     public ListFileRequest setType(String type) {
