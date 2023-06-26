@@ -4,26 +4,64 @@ package com.aliyun.ebs20210730.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiskReplicaGroupsRequest extends TeaModel {
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("GroupIds")
     public String groupIds;
 
+    /**
+     * <p>The IDs of replication pair-consistent groups. You can specify the IDs of one or more replication pair-consistent groups. Separate the IDs with commas (,).</p>
+     * <br>
+     * <p>This parameter is empty by default, which indicates that all replication pair-consistent groups in the specified region are queried.</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    /**
+     * <p>The type of the site from which the information of replication pair-consistent groups is retrieved. This parameter is used for scenarios where data is replicated across zones in replication pairs.</p>
+     * <br>
+     * <p>*   If the Site parameter is not specified, information such as the state of replication pair-consistent groups at the primary site is queried and returned.</p>
+     * <br>
+     * <p>*   Otherwise, information such as the state of replication pair-consistent groups at the site specified by the Site parameter is queried and returned. Valid values:</p>
+     * <br>
+     * <p>    *   production: primary site</p>
+     * <p>    *   backup: secondary site</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The query token returned in this call.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The query token. Set the value to the NextToken value returned in the previous call to the DescribeDiskReplicaGroups operation. Leave this parameter empty the first time you call this operation. When NextToken is specified, the PageSize and PageNumber request parameters do not take effect and the TotalCount response parameter is invalid.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Valid values: 1 to 100.</p>
+     */
     @NameInMap("Site")
     public String site;
+
+    @NameInMap("Tag")
+    public java.util.List<DescribeDiskReplicaGroupsRequestTag> tag;
 
     public static DescribeDiskReplicaGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDiskReplicaGroupsRequest self = new DescribeDiskReplicaGroupsRequest();
@@ -78,12 +116,58 @@ public class DescribeDiskReplicaGroupsRequest extends TeaModel {
         return this.regionId;
     }
 
+    public DescribeDiskReplicaGroupsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public DescribeDiskReplicaGroupsRequest setSite(String site) {
         this.site = site;
         return this;
     }
     public String getSite() {
         return this.site;
+    }
+
+    public DescribeDiskReplicaGroupsRequest setTag(java.util.List<DescribeDiskReplicaGroupsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeDiskReplicaGroupsRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class DescribeDiskReplicaGroupsRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeDiskReplicaGroupsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDiskReplicaGroupsRequestTag self = new DescribeDiskReplicaGroupsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDiskReplicaGroupsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeDiskReplicaGroupsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

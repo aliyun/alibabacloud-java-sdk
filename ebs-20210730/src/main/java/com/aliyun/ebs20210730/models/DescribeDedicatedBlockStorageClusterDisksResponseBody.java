@@ -4,12 +4,21 @@ package com.aliyun.ebs20210730.models;
 import com.aliyun.tea.*;
 
 public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaModel {
+    /**
+     * <p>Details about the cloud disks.</p>
+     */
     @NameInMap("Disks")
     public DescribeDedicatedBlockStorageClusterDisksResponseBodyDisks disks;
 
+    /**
+     * <p>The query token returned in this call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,9 +52,15 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
     }
 
     public static class DescribeDedicatedBlockStorageClusterDisksResponseBodyDisksDiskTags extends TeaModel {
+        /**
+         * <p>The tag key of the cloud disk.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value of the cloud disk.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -73,96 +88,234 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
     }
 
     public static class DescribeDedicatedBlockStorageClusterDisksResponseBodyDisksDisk extends TeaModel {
+        /**
+         * <p>The time when the cloud disk was last attached. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("AttachedTime")
         public String attachedTime;
 
+        /**
+         * <p>This parameter is currently in invitational preview and unavailable for general users.</p>
+         */
         @NameInMap("BdfId")
         public String bdfId;
 
+        @NameInMap("BurstingEnabled")
+        public Boolean burstingEnabled;
+
+        /**
+         * <p>The category of the disk. A value of cloud_essd indicates that the disk is an ESSD.</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>Indicates whether the automatic snapshots of the cloud disk are deleted when the disk is released. Valid values:</p>
+         * <br>
+         * <p>*   true: The automatic snapshots of the cloud disk are deleted when the disk is released.</p>
+         * <p>*   false: The automatic snapshots of the cloud disk are retained when the disk is released.</p>
+         * <br>
+         * <p>Snapshots that are created by calling the [CreateSnapshot](~~25524~~) operation or by using the Elastic Compute Service (ECS) console are retained and not affected by this parameter.</p>
+         */
         @NameInMap("DeleteAutoSnapshot")
         public Boolean deleteAutoSnapshot;
 
+        /**
+         * <p>Indicates whether the cloud disk is released when its associated instance is released. Valid values:</p>
+         * <br>
+         * <p>*   true: The cloud disk is released when its associated instance is released.</p>
+         * <p>*   false: The cloud disk is retained when its associated instance is released.</p>
+         */
         @NameInMap("DeleteWithInstance")
         public Boolean deleteWithInstance;
 
+        /**
+         * <p>The description of the cloud disk.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The time when the cloud disk was last detached.</p>
+         */
         @NameInMap("DetachedTime")
         public String detachedTime;
 
+        /**
+         * <p>The device name of the cloud disk on its associated instance. Example: /dev/xvdb. Take note of the following items:</p>
+         * <br>
+         * <p>*   This parameter has a value only when the `Status` value is `In_use`.</p>
+         * <p>*   This parameter is empty for cloud disks that have the multi-attach feature enabled. You can query the attachment information of the cloud disk based on the `Attachment` values.</p>
+         * <br>
+         * <p>>  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+         */
         @NameInMap("Device")
         public String device;
 
+        /**
+         * <p>The billing method of the cloud disk. Valid values:</p>
+         * <br>
+         * <p>*   PrePaid: subscription</p>
+         * <p>*   PostPaid: pay-as-you-go</p>
+         */
         @NameInMap("DiskChargeType")
         public String diskChargeType;
 
+        /**
+         * <p>The ID of the cloud disk.</p>
+         */
         @NameInMap("DiskId")
         public String diskId;
 
+        /**
+         * <p>The name of the cloud disk.</p>
+         */
         @NameInMap("DiskName")
         public String diskName;
 
+        /**
+         * <p>Indicates whether the automatic snapshot policy feature is enabled for the cloud disk.</p>
+         */
         @NameInMap("EnableAutoSnapshot")
         public Boolean enableAutoSnapshot;
 
+        /**
+         * <p>Indicates whether the cloud disk is encrypted.</p>
+         */
         @NameInMap("Encrypted")
         public Boolean encrypted;
 
+        /**
+         * <p>The maximum number of IOPS.</p>
+         */
         @NameInMap("IOPS")
         public Long IOPS;
 
+        /**
+         * <p>The ID of the image that was used to create the instance. This parameter is empty unless the cloud disk was created from an image. The value of this parameter remains unchanged throughout the lifecycle of the cloud disk.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The ID of the instance to which the cloud disk is attached. Take note of the following items:</p>
+         * <br>
+         * <p>*   This parameter has a value only when the `Status` value is `In_use`.</p>
+         * <p>*   This parameter is empty for cloud disks that have the multi-attach feature enabled. You can query the attachment information of the cloud disk based on the `Attachment` values.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The ID of the Key Management Service (KMS) key used by the cloud disk.</p>
+         */
         @NameInMap("KMSKeyId")
         public String KMSKeyId;
 
+        /**
+         * <p>The number of instances to which the Shared Block Storage device is attached.</p>
+         */
         @NameInMap("MountInstanceNum")
         public Integer mountInstanceNum;
 
+        /**
+         * <p>Indicates whether the multi-attach feature was enabled for the cloud disk.</p>
+         */
         @NameInMap("MultiAttach")
         public String multiAttach;
 
+        /**
+         * <p>The performance level of the enhanced SSD (ESSD). Valid values:</p>
+         * <br>
+         * <p>*   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</p>
+         * <p>*   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</p>
+         * <p>*   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</p>
+         * <p>*   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</p>
+         */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
+        /**
+         * <p>Indicates whether the cloud disk is removable.</p>
+         */
         @NameInMap("Portable")
         public Boolean portable;
 
+        @NameInMap("ProvisionedIops")
+        public Long provisionedIops;
+
+        /**
+         * <p>The region ID of cloud disk.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The size of the disk. Unit: GiB.</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
+        /**
+         * <p>The ID of the snapshot that was used to create the cloud disk.</p>
+         * <br>
+         * <p>This parameter is empty unless the cloud disk was created from a snapshot. The value of this parameter remains unchanged throughout the lifecycle of the cloud disk.</p>
+         */
         @NameInMap("SourceSnapshotId")
         public String sourceSnapshotId;
 
+        /**
+         * <p>The state of the cloud disk. For more information, see [Disk states](~~25689~~). Valid values:</p>
+         * <br>
+         * <p>*   In_use</p>
+         * <p>*   Available</p>
+         * <p>*   Attaching</p>
+         * <p>*   Detaching</p>
+         * <p>*   Creating</p>
+         * <p>*   ReIniting</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the dedicated block storage cluster to which the cloud disk belongs. If your cloud disk belongs to the public block storage cluster, an empty value is returned.</p>
+         */
         @NameInMap("StorageClusterId")
         public String storageClusterId;
 
+        /**
+         * <p>The ID of the storage set.</p>
+         */
         @NameInMap("StorageSetId")
         public String storageSetId;
 
+        /**
+         * <p>The maximum number of partitions in the storage set.</p>
+         */
         @NameInMap("StorageSetPartitionNumber")
         public Integer storageSetPartitionNumber;
 
+        /**
+         * <p>The tags of the cloud disk.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<DescribeDedicatedBlockStorageClusterDisksResponseBodyDisksDiskTags> tags;
 
+        @NameInMap("Throughput")
+        public Long throughput;
+
+        /**
+         * <p>The type of the disk. Valid values:</p>
+         * <br>
+         * <p>*   system: system disk</p>
+         * <p>*   data: data disk</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The zone ID of cloud disk.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -185,6 +338,14 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         }
         public String getBdfId() {
             return this.bdfId;
+        }
+
+        public DescribeDedicatedBlockStorageClusterDisksResponseBodyDisksDisk setBurstingEnabled(Boolean burstingEnabled) {
+            this.burstingEnabled = burstingEnabled;
+            return this;
+        }
+        public Boolean getBurstingEnabled() {
+            return this.burstingEnabled;
         }
 
         public DescribeDedicatedBlockStorageClusterDisksResponseBodyDisksDisk setCategory(String category) {
@@ -339,6 +500,14 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             return this.portable;
         }
 
+        public DescribeDedicatedBlockStorageClusterDisksResponseBodyDisksDisk setProvisionedIops(Long provisionedIops) {
+            this.provisionedIops = provisionedIops;
+            return this;
+        }
+        public Long getProvisionedIops() {
+            return this.provisionedIops;
+        }
+
         public DescribeDedicatedBlockStorageClusterDisksResponseBodyDisksDisk setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
@@ -403,6 +572,14 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             return this.tags;
         }
 
+        public DescribeDedicatedBlockStorageClusterDisksResponseBodyDisksDisk setThroughput(Long throughput) {
+            this.throughput = throughput;
+            return this;
+        }
+        public Long getThroughput() {
+            return this.throughput;
+        }
+
         public DescribeDedicatedBlockStorageClusterDisksResponseBodyDisksDisk setType(String type) {
             this.type = type;
             return this;
@@ -422,6 +599,9 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
     }
 
     public static class DescribeDedicatedBlockStorageClusterDisksResponseBodyDisks extends TeaModel {
+        /**
+         * <p>Details about the cloud disks.</p>
+         */
         @NameInMap("Disk")
         public java.util.List<DescribeDedicatedBlockStorageClusterDisksResponseBodyDisksDisk> disk;
 

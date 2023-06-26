@@ -26,6 +26,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+      * The region ID of the replication pair-consistent group.
+      *
+      * @param request AddDiskReplicaPairRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AddDiskReplicaPairResponse
+     */
     public AddDiskReplicaPairResponse addDiskReplicaPairWithOptions(AddDiskReplicaPairRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -62,6 +69,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddDiskReplicaPairResponse());
     }
 
+    /**
+      * The region ID of the replication pair-consistent group.
+      *
+      * @param request AddDiskReplicaPairRequest
+      * @return AddDiskReplicaPairResponse
+     */
     public AddDiskReplicaPairResponse addDiskReplicaPair(AddDiskReplicaPairRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addDiskReplicaPairWithOptions(request, runtime);
@@ -109,6 +122,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.cancelLensServiceWithOptions(runtime);
     }
 
+    public ChangeResourceGroupResponse changeResourceGroupWithOptions(ChangeResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.newResourceGroupId)) {
+            query.put("NewResourceGroupId", request.newResourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            query.put("ResourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ChangeResourceGroup"),
+            new TeaPair("version", "2021-07-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeResourceGroupResponse());
+    }
+
+    public ChangeResourceGroupResponse changeResourceGroup(ChangeResourceGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.changeResourceGroupWithOptions(request, runtime);
+    }
+
+    /**
+      * Dedicated block storage clusters are physically isolated from public block storage clusters. The owner of each dedicated block storage cluster has exclusive access to all resources in the cluster. For more information, see [Overview](~~208883~~).
+      * Disks created in a dedicated block storage cluster can be attached only to Elastic Compute Service (ECS) instances that reside in the same zone as the cluster. Before you create a dedicated block storage cluster, decide the regions and zones in which to deploy your cloud resources.
+      * Dedicated block storage clusters are classified into basic and performance types. When you create a dedicated block storage cluster, select a cluster type based on your business requirements.
+      * You are charged for creating dedicated block storage clusters. For more information, see [~~208884~~](~~208884~~).
+      *
+      * @param request CreateDedicatedBlockStorageClusterRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateDedicatedBlockStorageClusterResponse
+     */
     public CreateDedicatedBlockStorageClusterResponse createDedicatedBlockStorageClusterWithOptions(CreateDedicatedBlockStorageClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -128,12 +196,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DbscName", request.dbscName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.periodUnit)) {
+            query.put("PeriodUnit", request.periodUnit);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
             query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
@@ -157,11 +237,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDedicatedBlockStorageClusterResponse());
     }
 
+    /**
+      * Dedicated block storage clusters are physically isolated from public block storage clusters. The owner of each dedicated block storage cluster has exclusive access to all resources in the cluster. For more information, see [Overview](~~208883~~).
+      * Disks created in a dedicated block storage cluster can be attached only to Elastic Compute Service (ECS) instances that reside in the same zone as the cluster. Before you create a dedicated block storage cluster, decide the regions and zones in which to deploy your cloud resources.
+      * Dedicated block storage clusters are classified into basic and performance types. When you create a dedicated block storage cluster, select a cluster type based on your business requirements.
+      * You are charged for creating dedicated block storage clusters. For more information, see [~~208884~~](~~208884~~).
+      *
+      * @param request CreateDedicatedBlockStorageClusterRequest
+      * @return CreateDedicatedBlockStorageClusterResponse
+     */
     public CreateDedicatedBlockStorageClusterResponse createDedicatedBlockStorageCluster(CreateDedicatedBlockStorageClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDedicatedBlockStorageClusterWithOptions(request, runtime);
     }
 
+    /**
+      * The replication pair-consistent group feature allows you to batch manage multiple disks in disaster recovery scenarios. You can restore the data of all disks in the same replication pair-consistent group to the same point in time to allow for disaster recovery of one or more instances.
+      * When you create a replication pair-consistent group, take note of the following items:
+      * *   The replication pair-consistent group feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore, US (Silicon Valley), and US (Virginia) regions.
+      * *   Replication pair-consistent groups support disaster recovery across zones within the same region and disaster recovery across regions.
+      * *   A replication pair and a replication pair-consistent group replicate in the same direction if they have the same primary region (production region), primary zone (production zone), secondary region (disaster recovery region), and secondary zone (disaster recovery zone). Replication pairs can be added only to a replication pair-consistent group that replicates in the same direction as them.
+      * *   After replication pairs are added to a replication pair-consistent group, the recovery point objective (RPO) of the group takes effect on the pairs in place of their original RPOs.
+      *
+      * @param request CreateDiskReplicaGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateDiskReplicaGroupResponse
+     */
     public CreateDiskReplicaGroupResponse createDiskReplicaGroupWithOptions(CreateDiskReplicaGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -197,8 +298,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sourceZoneId)) {
             query.put("SourceZoneId", request.sourceZoneId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -218,11 +327,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDiskReplicaGroupResponse());
     }
 
+    /**
+      * The replication pair-consistent group feature allows you to batch manage multiple disks in disaster recovery scenarios. You can restore the data of all disks in the same replication pair-consistent group to the same point in time to allow for disaster recovery of one or more instances.
+      * When you create a replication pair-consistent group, take note of the following items:
+      * *   The replication pair-consistent group feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore, US (Silicon Valley), and US (Virginia) regions.
+      * *   Replication pair-consistent groups support disaster recovery across zones within the same region and disaster recovery across regions.
+      * *   A replication pair and a replication pair-consistent group replicate in the same direction if they have the same primary region (production region), primary zone (production zone), secondary region (disaster recovery region), and secondary zone (disaster recovery zone). Replication pairs can be added only to a replication pair-consistent group that replicates in the same direction as them.
+      * *   After replication pairs are added to a replication pair-consistent group, the recovery point objective (RPO) of the group takes effect on the pairs in place of their original RPOs.
+      *
+      * @param request CreateDiskReplicaGroupRequest
+      * @return CreateDiskReplicaGroupResponse
+     */
     public CreateDiskReplicaGroupResponse createDiskReplicaGroup(CreateDiskReplicaGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDiskReplicaGroupWithOptions(request, runtime);
     }
 
+    /**
+      * The operation that you want to perform. Set the value to **CreateDiskReplicaPair**.
+      *
+      * @param request CreateDiskReplicaPairRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateDiskReplicaPairResponse
+     */
     public CreateDiskReplicaPairResponse createDiskReplicaPairWithOptions(CreateDiskReplicaPairRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -278,8 +405,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sourceZoneId)) {
             query.put("SourceZoneId", request.sourceZoneId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -299,11 +434,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDiskReplicaPairResponse());
     }
 
+    /**
+      * The operation that you want to perform. Set the value to **CreateDiskReplicaPair**.
+      *
+      * @param request CreateDiskReplicaPairRequest
+      * @return CreateDiskReplicaPairResponse
+     */
     public CreateDiskReplicaPairResponse createDiskReplicaPair(CreateDiskReplicaPairRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDiskReplicaPairWithOptions(request, runtime);
     }
 
+    /**
+      * *   The replication pair-consistent group feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore (Singapore), US (Silicon Valley), and US (Virginia) regions.
+      * *   Before you can delete a replication pair-consistent group, make sure that no replication pairs are present in the group.
+      * *   The replication pair-consistent group that you want to delete must be in the **Created** (`created`), **Creation Failed** (`create_failed`), **Stopped** (`stopped`), **Failover Failed** (`failovered`), **Deleting** (`deleting`), **Deletion Failed** (`delete_failed`), or **Invalid** (`invalid`) state.
+      *
+      * @param request DeleteDiskReplicaGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteDiskReplicaGroupResponse
+     */
     public DeleteDiskReplicaGroupResponse deleteDiskReplicaGroupWithOptions(DeleteDiskReplicaGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -336,11 +486,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDiskReplicaGroupResponse());
     }
 
+    /**
+      * *   The replication pair-consistent group feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore (Singapore), US (Silicon Valley), and US (Virginia) regions.
+      * *   Before you can delete a replication pair-consistent group, make sure that no replication pairs are present in the group.
+      * *   The replication pair-consistent group that you want to delete must be in the **Created** (`created`), **Creation Failed** (`create_failed`), **Stopped** (`stopped`), **Failover Failed** (`failovered`), **Deleting** (`deleting`), **Deletion Failed** (`delete_failed`), or **Invalid** (`invalid`) state.
+      *
+      * @param request DeleteDiskReplicaGroupRequest
+      * @return DeleteDiskReplicaGroupResponse
+     */
     public DeleteDiskReplicaGroupResponse deleteDiskReplicaGroup(DeleteDiskReplicaGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDiskReplicaGroupWithOptions(request, runtime);
     }
 
+    /**
+      * *   The async replication feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore (Singapore), US (Silicon Valley), and US (Virginia) regions.
+      * *   Only replication pairs that are in the **Stopped** (`stopped`), **Invalid** (`invalid`), or **Failed Over** (`failovered`) state can be deleted. This operation deletes only replication pairs. The primary and secondary disks in the deleted replication pairs are retained.
+      * *   To delete a replication pair, you must call this operation in the region where the primary disk is located. After the replication pair is deleted, the functionality limits are lifted from the primary and secondary disks. For example, you can attach the secondary disk, resize the disk, or read data from or write data to the disk.
+      *
+      * @param request DeleteDiskReplicaPairRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteDiskReplicaPairResponse
+     */
     public DeleteDiskReplicaPairResponse deleteDiskReplicaPairWithOptions(DeleteDiskReplicaPairRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -373,11 +540,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDiskReplicaPairResponse());
     }
 
+    /**
+      * *   The async replication feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore (Singapore), US (Silicon Valley), and US (Virginia) regions.
+      * *   Only replication pairs that are in the **Stopped** (`stopped`), **Invalid** (`invalid`), or **Failed Over** (`failovered`) state can be deleted. This operation deletes only replication pairs. The primary and secondary disks in the deleted replication pairs are retained.
+      * *   To delete a replication pair, you must call this operation in the region where the primary disk is located. After the replication pair is deleted, the functionality limits are lifted from the primary and secondary disks. For example, you can attach the secondary disk, resize the disk, or read data from or write data to the disk.
+      *
+      * @param request DeleteDiskReplicaPairRequest
+      * @return DeleteDiskReplicaPairResponse
+     */
     public DeleteDiskReplicaPairResponse deleteDiskReplicaPair(DeleteDiskReplicaPairRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDiskReplicaPairWithOptions(request, runtime);
     }
 
+    /**
+      * *   You can use one of the following methods to check the responses:
+      *     *   Method 1: Use `NextToken` to configure the query token. Set the value to the `NextToken` value that is returned in the last call to the DescribeDisks operation. Then, use `MaxResults` to specify the maximum number of entries to return on each page.
+      *     *   Method 2: Use `PageSize` to specify the number of entries to return on each page and then use `PageNumber` to specify the number of the page to return.
+      *         You can use only one of the preceding methods. If a large number of entries are to be returned, we recommend that you use method 1. When `NextToken` is specified, `PageSize` and `PageNumber` do not take effect and `TotalCount` in the response is invalid.
+      * *   A disk that has the multi-attach feature enabled can be attached to multiple instances. You can query the attachment information of the disk based on the `Attachment` values in the response.
+      * When you call an API operation by using Alibaba Cloud CLI, you must specify request parameter values of different data types in the required formats. For more information, see [Parameter format overview](~~110340~~).
+      *
+      * @param request DescribeDedicatedBlockStorageClusterDisksRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDedicatedBlockStorageClusterDisksResponse
+     */
     public DescribeDedicatedBlockStorageClusterDisksResponse describeDedicatedBlockStorageClusterDisksWithOptions(DescribeDedicatedBlockStorageClusterDisksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -414,11 +601,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDedicatedBlockStorageClusterDisksResponse());
     }
 
+    /**
+      * *   You can use one of the following methods to check the responses:
+      *     *   Method 1: Use `NextToken` to configure the query token. Set the value to the `NextToken` value that is returned in the last call to the DescribeDisks operation. Then, use `MaxResults` to specify the maximum number of entries to return on each page.
+      *     *   Method 2: Use `PageSize` to specify the number of entries to return on each page and then use `PageNumber` to specify the number of the page to return.
+      *         You can use only one of the preceding methods. If a large number of entries are to be returned, we recommend that you use method 1. When `NextToken` is specified, `PageSize` and `PageNumber` do not take effect and `TotalCount` in the response is invalid.
+      * *   A disk that has the multi-attach feature enabled can be attached to multiple instances. You can query the attachment information of the disk based on the `Attachment` values in the response.
+      * When you call an API operation by using Alibaba Cloud CLI, you must specify request parameter values of different data types in the required formats. For more information, see [Parameter format overview](~~110340~~).
+      *
+      * @param request DescribeDedicatedBlockStorageClusterDisksRequest
+      * @return DescribeDedicatedBlockStorageClusterDisksResponse
+     */
     public DescribeDedicatedBlockStorageClusterDisksResponse describeDedicatedBlockStorageClusterDisks(DescribeDedicatedBlockStorageClusterDisksRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDedicatedBlockStorageClusterDisksWithOptions(request, runtime);
     }
 
+    /**
+      * >  Dedicated Block Storage Cluster is supported in the China (Heyuan), Indonesia (Jakarta), and China (Shenzhen) regions.
+      * *   You can specify multiple request parameters to be queried. Specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.
+      * *   We recommend that you use the NextToken and MaxResults parameters to perform a paged query. During a paged query, when you call the DescribeDedicatedBlockStorageClusters operation to retrieve the first page of results, set MaxResults to specify the maximum number of entries to return in the call. The return value of NextToken is a pagination token, which can be used in the next call to retrieve a new page of results. When you call the DescribeDedicatedBlockStorageClusters operation to retrieve a new page of results, set NextToken to the NextToken value returned in the previous call and set MaxResults to specify the maximum number of entries to return in this call.
+      *
+      * @param request DescribeDedicatedBlockStorageClustersRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDedicatedBlockStorageClustersResponse
+     */
     public DescribeDedicatedBlockStorageClustersResponse describeDedicatedBlockStorageClustersWithOptions(DescribeDedicatedBlockStorageClustersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -489,6 +696,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDedicatedBlockStorageClustersResponse());
     }
 
+    /**
+      * >  Dedicated Block Storage Cluster is supported in the China (Heyuan), Indonesia (Jakarta), and China (Shenzhen) regions.
+      * *   You can specify multiple request parameters to be queried. Specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.
+      * *   We recommend that you use the NextToken and MaxResults parameters to perform a paged query. During a paged query, when you call the DescribeDedicatedBlockStorageClusters operation to retrieve the first page of results, set MaxResults to specify the maximum number of entries to return in the call. The return value of NextToken is a pagination token, which can be used in the next call to retrieve a new page of results. When you call the DescribeDedicatedBlockStorageClusters operation to retrieve a new page of results, set NextToken to the NextToken value returned in the previous call and set MaxResults to specify the maximum number of entries to return in this call.
+      *
+      * @param request DescribeDedicatedBlockStorageClustersRequest
+      * @return DescribeDedicatedBlockStorageClustersResponse
+     */
     public DescribeDedicatedBlockStorageClustersResponse describeDedicatedBlockStorageClusters(DescribeDedicatedBlockStorageClustersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDedicatedBlockStorageClustersWithOptions(request, runtime);
@@ -653,6 +868,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDiskMonitorDataListWithOptions(request, runtime);
     }
 
+    /**
+      * The region ID of the replication pair-consistent group.
+      *
+      * @param request DescribeDiskReplicaGroupsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDiskReplicaGroupsResponse
+     */
     public DescribeDiskReplicaGroupsResponse describeDiskReplicaGroupsWithOptions(DescribeDiskReplicaGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -680,8 +902,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.site)) {
             query.put("Site", request.site);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -701,6 +931,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDiskReplicaGroupsResponse());
     }
 
+    /**
+      * The region ID of the replication pair-consistent group.
+      *
+      * @param request DescribeDiskReplicaGroupsRequest
+      * @return DescribeDiskReplicaGroupsResponse
+     */
     public DescribeDiskReplicaGroupsResponse describeDiskReplicaGroups(DescribeDiskReplicaGroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDiskReplicaGroupsWithOptions(request, runtime);
@@ -739,6 +975,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDiskReplicaPairProgressWithOptions(request, runtime);
     }
 
+    /**
+      * *   The async replication feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore, US (Silicon Valley), and US (Virginia) regions.
+      * *   When you call this operation for a specific region, if the primary disk (source disk) or secondary disk (destination disk) of a replication pair resides within the region, the information of the replication pair is displayed in the response.
+      * *   If you want to perform a paged query, configure the `NextToken` and `MaxResults` parameters. During a paged query, when you call the DescribeDiskReplicaPairs operation to retrieve the first page of results, set `MaxResults` to limit the maximum number of entries to return in the call. The return value of NextToken is a pagination token, which can be used in the next call to retrieve a new page of results. When you call the DescribeDiskReplicaPairs operation to retrieve a new page of results, set NextToken to the NextToken value returned in the previous call and set MaxResults to specify the maximum number of entries to return in this call.
+      *
+      * @param request DescribeDiskReplicaPairsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDiskReplicaPairsResponse
+     */
     public DescribeDiskReplicaPairsResponse describeDiskReplicaPairsWithOptions(DescribeDiskReplicaPairsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -770,8 +1015,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ReplicaGroupId", request.replicaGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.site)) {
             query.put("Site", request.site);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -791,6 +1044,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDiskReplicaPairsResponse());
     }
 
+    /**
+      * *   The async replication feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore, US (Silicon Valley), and US (Virginia) regions.
+      * *   When you call this operation for a specific region, if the primary disk (source disk) or secondary disk (destination disk) of a replication pair resides within the region, the information of the replication pair is displayed in the response.
+      * *   If you want to perform a paged query, configure the `NextToken` and `MaxResults` parameters. During a paged query, when you call the DescribeDiskReplicaPairs operation to retrieve the first page of results, set `MaxResults` to limit the maximum number of entries to return in the call. The return value of NextToken is a pagination token, which can be used in the next call to retrieve a new page of results. When you call the DescribeDiskReplicaPairs operation to retrieve a new page of results, set NextToken to the NextToken value returned in the previous call and set MaxResults to specify the maximum number of entries to return in this call.
+      *
+      * @param request DescribeDiskReplicaPairsRequest
+      * @return DescribeDiskReplicaPairsResponse
+     */
     public DescribeDiskReplicaPairsResponse describeDiskReplicaPairs(DescribeDiskReplicaPairsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDiskReplicaPairsWithOptions(request, runtime);
@@ -854,6 +1115,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeRegionsWithOptions(request, runtime);
     }
 
+    /**
+      * The operation that you want to perform. Set the value to **FailoverDiskReplicaGroup**.
+      *
+      * @param request FailoverDiskReplicaGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return FailoverDiskReplicaGroupResponse
+     */
     public FailoverDiskReplicaGroupResponse failoverDiskReplicaGroupWithOptions(FailoverDiskReplicaGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -886,11 +1154,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new FailoverDiskReplicaGroupResponse());
     }
 
+    /**
+      * The operation that you want to perform. Set the value to **FailoverDiskReplicaGroup**.
+      *
+      * @param request FailoverDiskReplicaGroupRequest
+      * @return FailoverDiskReplicaGroupResponse
+     */
     public FailoverDiskReplicaGroupResponse failoverDiskReplicaGroup(FailoverDiskReplicaGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.failoverDiskReplicaGroupWithOptions(request, runtime);
     }
 
+    /**
+      * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+      *
+      * @param request FailoverDiskReplicaPairRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return FailoverDiskReplicaPairResponse
+     */
     public FailoverDiskReplicaPairResponse failoverDiskReplicaPairWithOptions(FailoverDiskReplicaPairRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -923,11 +1204,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new FailoverDiskReplicaPairResponse());
     }
 
+    /**
+      * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+      *
+      * @param request FailoverDiskReplicaPairRequest
+      * @return FailoverDiskReplicaPairResponse
+     */
     public FailoverDiskReplicaPairResponse failoverDiskReplicaPair(FailoverDiskReplicaPairRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.failoverDiskReplicaPairWithOptions(request, runtime);
     }
 
+    /**
+      * Specify at least one of the following parameters or parameter pairs in a request to determine a query object:
+      * *   `ResourceId.N`
+      * *   `Tag.N` parameter pair (`Tag.N.Key` and `Tag.N.Value`)
+      * If you set `Tag.N` and `ResourceId.N` at the same time, the EBS resources that match both the parameters are returned.
+      *
+      * @param request ListTagResourcesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListTagResourcesResponse
+     */
     public ListTagResourcesResponse listTagResourcesWithOptions(ListTagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -972,11 +1269,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagResourcesResponse());
     }
 
+    /**
+      * Specify at least one of the following parameters or parameter pairs in a request to determine a query object:
+      * *   `ResourceId.N`
+      * *   `Tag.N` parameter pair (`Tag.N.Key` and `Tag.N.Value`)
+      * If you set `Tag.N` and `ResourceId.N` at the same time, the EBS resources that match both the parameters are returned.
+      *
+      * @param request ListTagResourcesRequest
+      * @return ListTagResourcesResponse
+     */
     public ListTagResourcesResponse listTagResources(ListTagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTagResourcesWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation to modify the information of a dedicated block storage cluster. The information includes the name and description of the cluster.
+      *
+      * @param request ModifyDedicatedBlockStorageClusterAttributeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyDedicatedBlockStorageClusterAttributeResponse
+     */
     public ModifyDedicatedBlockStorageClusterAttributeResponse modifyDedicatedBlockStorageClusterAttributeWithOptions(ModifyDedicatedBlockStorageClusterAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1017,11 +1330,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDedicatedBlockStorageClusterAttributeResponse());
     }
 
+    /**
+      * You can call this operation to modify the information of a dedicated block storage cluster. The information includes the name and description of the cluster.
+      *
+      * @param request ModifyDedicatedBlockStorageClusterAttributeRequest
+      * @return ModifyDedicatedBlockStorageClusterAttributeResponse
+     */
     public ModifyDedicatedBlockStorageClusterAttributeResponse modifyDedicatedBlockStorageClusterAttribute(ModifyDedicatedBlockStorageClusterAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDedicatedBlockStorageClusterAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * *   The replication pair-consistent group feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore (Singapore), US (Silicon Valley), and US (Virginia) regions.
+      * *   The replication pair-consistent group must be in the **Created** (`created`) or **Stopped** (`stopped`) state.
+      *
+      * @param request ModifyDiskReplicaGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyDiskReplicaGroupResponse
+     */
     public ModifyDiskReplicaGroupResponse modifyDiskReplicaGroupWithOptions(ModifyDiskReplicaGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1070,11 +1397,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDiskReplicaGroupResponse());
     }
 
+    /**
+      * *   The replication pair-consistent group feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore (Singapore), US (Silicon Valley), and US (Virginia) regions.
+      * *   The replication pair-consistent group must be in the **Created** (`created`) or **Stopped** (`stopped`) state.
+      *
+      * @param request ModifyDiskReplicaGroupRequest
+      * @return ModifyDiskReplicaGroupResponse
+     */
     public ModifyDiskReplicaGroupResponse modifyDiskReplicaGroup(ModifyDiskReplicaGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDiskReplicaGroupWithOptions(request, runtime);
     }
 
+    /**
+      * The name of the replication pair.
+      *
+      * @param request ModifyDiskReplicaPairRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyDiskReplicaPairResponse
+     */
     public ModifyDiskReplicaPairResponse modifyDiskReplicaPairWithOptions(ModifyDiskReplicaPairRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1123,11 +1464,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDiskReplicaPairResponse());
     }
 
+    /**
+      * The name of the replication pair.
+      *
+      * @param request ModifyDiskReplicaPairRequest
+      * @return ModifyDiskReplicaPairResponse
+     */
     public ModifyDiskReplicaPairResponse modifyDiskReplicaPair(ModifyDiskReplicaPairRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDiskReplicaPairWithOptions(request, runtime);
     }
 
+    /**
+      * *   The replication pair-consistent group feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore (Singapore), US (Silicon Valley), and US (Virginia) regions.
+      * *   The replication pair-consistent group from which you want to remove a replication pair must be in the **Created** (`created`), **Stopped** (`stopped`), or **Invalid** (`invalid`) state.
+      *
+      * @param request RemoveDiskReplicaPairRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RemoveDiskReplicaPairResponse
+     */
     public RemoveDiskReplicaPairResponse removeDiskReplicaPairWithOptions(RemoveDiskReplicaPairRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1164,11 +1519,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveDiskReplicaPairResponse());
     }
 
+    /**
+      * *   The replication pair-consistent group feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore (Singapore), US (Silicon Valley), and US (Virginia) regions.
+      * *   The replication pair-consistent group from which you want to remove a replication pair must be in the **Created** (`created`), **Stopped** (`stopped`), or **Invalid** (`invalid`) state.
+      *
+      * @param request RemoveDiskReplicaPairRequest
+      * @return RemoveDiskReplicaPairResponse
+     */
     public RemoveDiskReplicaPairResponse removeDiskReplicaPair(RemoveDiskReplicaPairRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.removeDiskReplicaPairWithOptions(request, runtime);
     }
 
+    /**
+      * The operation that you want to perform. Set the value to **ReprotectDiskReplicaGroup**.
+      *
+      * @param request ReprotectDiskReplicaGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ReprotectDiskReplicaGroupResponse
+     */
     public ReprotectDiskReplicaGroupResponse reprotectDiskReplicaGroupWithOptions(ReprotectDiskReplicaGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1201,11 +1570,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ReprotectDiskReplicaGroupResponse());
     }
 
+    /**
+      * The operation that you want to perform. Set the value to **ReprotectDiskReplicaGroup**.
+      *
+      * @param request ReprotectDiskReplicaGroupRequest
+      * @return ReprotectDiskReplicaGroupResponse
+     */
     public ReprotectDiskReplicaGroupResponse reprotectDiskReplicaGroup(ReprotectDiskReplicaGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.reprotectDiskReplicaGroupWithOptions(request, runtime);
     }
 
+    /**
+      * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+      *
+      * @param request ReprotectDiskReplicaPairRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ReprotectDiskReplicaPairResponse
+     */
     public ReprotectDiskReplicaPairResponse reprotectDiskReplicaPairWithOptions(ReprotectDiskReplicaPairRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1238,6 +1620,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ReprotectDiskReplicaPairResponse());
     }
 
+    /**
+      * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+      *
+      * @param request ReprotectDiskReplicaPairRequest
+      * @return ReprotectDiskReplicaPairResponse
+     */
     public ReprotectDiskReplicaPairResponse reprotectDiskReplicaPair(ReprotectDiskReplicaPairRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.reprotectDiskReplicaPairWithOptions(request, runtime);
@@ -1282,6 +1670,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.startDiskMonitorWithOptions(request, runtime);
     }
 
+    /**
+      * The operation that you want to perform. Set the value to **StartDiskReplicaGroup**.
+      *
+      * @param request StartDiskReplicaGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return StartDiskReplicaGroupResponse
+     */
     public StartDiskReplicaGroupResponse startDiskReplicaGroupWithOptions(StartDiskReplicaGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1318,11 +1713,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartDiskReplicaGroupResponse());
     }
 
+    /**
+      * The operation that you want to perform. Set the value to **StartDiskReplicaGroup**.
+      *
+      * @param request StartDiskReplicaGroupRequest
+      * @return StartDiskReplicaGroupResponse
+     */
     public StartDiskReplicaGroupResponse startDiskReplicaGroup(StartDiskReplicaGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startDiskReplicaGroupWithOptions(request, runtime);
     }
 
+    /**
+      * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+      *
+      * @param request StartDiskReplicaPairRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return StartDiskReplicaPairResponse
+     */
     public StartDiskReplicaPairResponse startDiskReplicaPairWithOptions(StartDiskReplicaPairRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1359,6 +1767,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartDiskReplicaPairResponse());
     }
 
+    /**
+      * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+      *
+      * @param request StartDiskReplicaPairRequest
+      * @return StartDiskReplicaPairResponse
+     */
     public StartDiskReplicaPairResponse startDiskReplicaPair(StartDiskReplicaPairRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startDiskReplicaPairWithOptions(request, runtime);
@@ -1403,6 +1817,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.stopDiskMonitorWithOptions(request, runtime);
     }
 
+    /**
+      * *   The replication pair-consistent group feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore (Singapore), US (Silicon Valley), and US (Virginia) regions.
+      * *   The replication pair-consistent group that you want to stop must be in the **One-time Syncing** (`manual_syncing`), **Syncing** (`syncing`), **Normal** (`normal`), **Stopping** (`stopping`), **Stop Failed** (`stop_failed`), or **Stopped** (`stopped`) state.
+      * *   When a replication pair-consistent group is stopped, it enters the **Stopped** (`stopped`) state. If a replication pair-consistent group cannot be stopped, the state of the group remains unchanged or changes to **Stop Failed** (`stop_failed`). In this case, try again later.
+      *
+      * @param request StopDiskReplicaGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return StopDiskReplicaGroupResponse
+     */
     public StopDiskReplicaGroupResponse stopDiskReplicaGroupWithOptions(StopDiskReplicaGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1435,11 +1858,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StopDiskReplicaGroupResponse());
     }
 
+    /**
+      * *   The replication pair-consistent group feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore (Singapore), US (Silicon Valley), and US (Virginia) regions.
+      * *   The replication pair-consistent group that you want to stop must be in the **One-time Syncing** (`manual_syncing`), **Syncing** (`syncing`), **Normal** (`normal`), **Stopping** (`stopping`), **Stop Failed** (`stop_failed`), or **Stopped** (`stopped`) state.
+      * *   When a replication pair-consistent group is stopped, it enters the **Stopped** (`stopped`) state. If a replication pair-consistent group cannot be stopped, the state of the group remains unchanged or changes to **Stop Failed** (`stop_failed`). In this case, try again later.
+      *
+      * @param request StopDiskReplicaGroupRequest
+      * @return StopDiskReplicaGroupResponse
+     */
     public StopDiskReplicaGroupResponse stopDiskReplicaGroup(StopDiskReplicaGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopDiskReplicaGroupWithOptions(request, runtime);
     }
 
+    /**
+      * *   The async replication feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore (Singapore), US (Silicon Valley), and US (Virginia) regions.
+      * *   Only replication pairs that are in the **Initial Syncing** (`initial_syncing`), **Syncing** (`syncing`), **One-time Syncing** (`manual_syncing`), or **Normal** (`normal`) state can be stopped. When a replication pair is stopped, it enters the Stopped (`stopped`) state. The secondary disk rolls back to the point in time when the last asynchronous replication was complete and drops all the data that is being replicated from the primary disk.
+      *
+      * @param request StopDiskReplicaPairRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return StopDiskReplicaPairResponse
+     */
     public StopDiskReplicaPairResponse stopDiskReplicaPairWithOptions(StopDiskReplicaPairRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1472,11 +1911,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StopDiskReplicaPairResponse());
     }
 
+    /**
+      * *   The async replication feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore (Singapore), US (Silicon Valley), and US (Virginia) regions.
+      * *   Only replication pairs that are in the **Initial Syncing** (`initial_syncing`), **Syncing** (`syncing`), **One-time Syncing** (`manual_syncing`), or **Normal** (`normal`) state can be stopped. When a replication pair is stopped, it enters the Stopped (`stopped`) state. The secondary disk rolls back to the point in time when the last asynchronous replication was complete and drops all the data that is being replicated from the primary disk.
+      *
+      * @param request StopDiskReplicaPairRequest
+      * @return StopDiskReplicaPairResponse
+     */
     public StopDiskReplicaPairResponse stopDiskReplicaPair(StopDiskReplicaPairRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopDiskReplicaPairWithOptions(request, runtime);
     }
 
+    /**
+      * Before you add tags to a resource, Alibaba Cloud checks the number of existing tags of the resource. If the maximum number of tags is reached, an error message is returned. For more information, see the "Tag limits" section in [Limits](~~25412~~).
+      *
+      * @param request TagResourcesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return TagResourcesResponse
+     */
     public TagResourcesResponse tagResourcesWithOptions(TagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1517,11 +1970,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourcesResponse());
     }
 
+    /**
+      * Before you add tags to a resource, Alibaba Cloud checks the number of existing tags of the resource. If the maximum number of tags is reached, an error message is returned. For more information, see the "Tag limits" section in [Limits](~~25412~~).
+      *
+      * @param request TagResourcesRequest
+      * @return TagResourcesResponse
+     */
     public TagResourcesResponse tagResources(TagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.tagResourcesWithOptions(request, runtime);
     }
 
+    /**
+      * *   You can remove up to 20 tags at a time.
+      * *   After a tag is removed from an EBS resource, the tag is automatically deleted if the tag is not added to any instance.
+      *
+      * @param request UntagResourcesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UntagResourcesResponse
+     */
     public UntagResourcesResponse untagResourcesWithOptions(UntagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1566,6 +2033,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UntagResourcesResponse());
     }
 
+    /**
+      * *   You can remove up to 20 tags at a time.
+      * *   After a tag is removed from an EBS resource, the tag is automatically deleted if the tag is not added to any instance.
+      *
+      * @param request UntagResourcesRequest
+      * @return UntagResourcesResponse
+     */
     public UntagResourcesResponse untagResources(UntagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.untagResourcesWithOptions(request, runtime);

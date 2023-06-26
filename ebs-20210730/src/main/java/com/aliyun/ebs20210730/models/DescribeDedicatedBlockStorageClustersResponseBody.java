@@ -4,9 +4,15 @@ package com.aliyun.ebs20210730.models;
 import com.aliyun.tea.*;
 
 public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel {
+    /**
+     * <p>Details about the dedicated block storage clusters.</p>
+     */
     @NameInMap("DedicatedBlockStorageClusters")
     public java.util.List<DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClusters> dedicatedBlockStorageClusters;
 
+    /**
+     * <p>The query token returned in this call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -16,6 +22,9 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -76,12 +85,18 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
     }
 
     public static class DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersDedicatedBlockStorageClusterCapacity extends TeaModel {
+        /**
+         * <p>The available capacity of the dedicated block storage cluster. Unit: GiB.</p>
+         */
         @NameInMap("AvailableCapacity")
         public Long availableCapacity;
 
         @NameInMap("DeliveryCapacity")
         public Long deliveryCapacity;
 
+        /**
+         * <p>The total capacity of the dedicated block storage cluster. Unit: GiB.</p>
+         */
         @NameInMap("TotalCapacity")
         public Long totalCapacity;
 
@@ -158,48 +173,102 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
     }
 
     public static class DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClusters extends TeaModel {
+        /**
+         * <p>The category of disks that can be created in the dedicated block storage cluster.</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The time when the dedicated block storage cluster was created. The value is a UNIX timestamp. Unit: seconds.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>Details about the storage capacity of the dedicated block storage cluster.</p>
+         */
         @NameInMap("DedicatedBlockStorageClusterCapacity")
         public DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersDedicatedBlockStorageClusterCapacity dedicatedBlockStorageClusterCapacity;
 
+        /**
+         * <p>The ID of the dedicated block storage cluster.</p>
+         */
         @NameInMap("DedicatedBlockStorageClusterId")
         public String dedicatedBlockStorageClusterId;
 
+        /**
+         * <p>The name of the dedicated block storage cluster.</p>
+         */
         @NameInMap("DedicatedBlockStorageClusterName")
         public String dedicatedBlockStorageClusterName;
 
+        /**
+         * <p>The description of the dedicated block storage cluster.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The time when the dedicated block storage cluster expires. The value is a UNIX timestamp. Unit: seconds.</p>
+         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        /**
+         * <p>The performance level of disks. Valid values:</p>
+         * <br>
+         * <p>*   PL0</p>
+         * <p>*   PL1</p>
+         * <p>*   PL2</p>
+         * <p>*   PL3</p>
+         * <br>
+         * <p>>  This parameter is valid only when SupportedCategory is set to cloud_essd.</p>
+         */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
+        /**
+         * <p>The region ID of the dedicated block storage cluster.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The state of the dedicated block storage cluster. Valid values:</p>
+         * <br>
+         * <p>*   Preparing: The cluster is pending delivery.</p>
+         * <p>*   Running: The cluster is running.</p>
+         * <p>*   Expired: The cluster has expired.</p>
+         * <p>*   Offline: The cluster is offline.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>This parameter is not supported.</p>
+         */
         @NameInMap("SupportedCategory")
         public String supportedCategory;
 
         @NameInMap("Tags")
         public java.util.List<DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersTags> tags;
 
+        /**
+         * <p>The type of the dedicated block storage cluster. Valid values:</p>
+         * <br>
+         * <p>*   Standard: a standard dedicated block storage cluster. ESSDs at performance level 0 (PL0 ESSDs) can be created in standard dedicated block storage clusters.</p>
+         * <p>*   Premium: a performance dedicated block storage cluster. ESSDs at performance level 1 (PL1 ESSDs) can be created in performance dedicated block storage clusters.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The zone ID of the dedicated block storage cluster.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

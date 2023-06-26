@@ -4,21 +4,40 @@ package com.aliyun.ebs20210730.models;
 import com.aliyun.tea.*;
 
 public class DescribeDedicatedBlockStorageClustersRequest extends TeaModel {
+    /**
+     * <p>The zone ID of the dedicated block storage cluster. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.</p>
+     */
     @NameInMap("AzoneId")
     public String azoneId;
 
+    /**
+     * <p>The category of disks that can be created in the dedicated block storage cluster.</p>
+     * <br>
+     * <p>Set the value to cloud_essd. Only enhanced SSDs (ESSDs) can be created in dedicated block storage clusters.</p>
+     */
     @NameInMap("Category")
     public String category;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("DedicatedBlockStorageClusterId")
     public java.util.List<String> dedicatedBlockStorageClusterId;
 
+    /**
+     * <p>The maximum number of entries to return on each page. Maximum value: 500.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The query token. Set the value to the NextToken value returned in the previous call to the DescribeDedicatedBlockStorageClusters operation. Leave this parameter empty the first time you call this operation.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -28,6 +47,9 @@ public class DescribeDedicatedBlockStorageClustersRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID of the dedicated block storage cluster. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

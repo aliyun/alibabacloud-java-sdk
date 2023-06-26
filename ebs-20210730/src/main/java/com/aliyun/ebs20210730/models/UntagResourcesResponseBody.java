@@ -4,6 +4,9 @@ package com.aliyun.ebs20210730.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request. The request ID is returned regardless of whether the call is successful.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

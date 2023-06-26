@@ -4,12 +4,21 @@ package com.aliyun.ebs20210730.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The token used to start the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request. The request ID is returned regardless of whether the call is successful.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Details about the resources and tags, including resource IDs, resource types, and tag key-value pairs.</p>
+     */
     @NameInMap("TagResources")
     public java.util.List<ListTagResourcesResponseBodyTagResources> tagResources;
 
@@ -43,15 +52,31 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
+        /**
+         * <p>The ID of the resource.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The type of the resource. Valid values:</p>
+         * <br>
+         * <p>*   dbsc: dedicated block storage cluster</p>
+         * <p>*   pair: replication pair</p>
+         * <p>*   group: replication pair-consistent group</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The tag key of the resource.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value of the resource.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
