@@ -82,6 +82,12 @@ public class HotelOrderCancelResponseBody extends TeaModel {
         @NameInMap("cancel_success")
         public Boolean cancelSuccess;
 
+        @NameInMap("code")
+        public String code;
+
+        @NameInMap("desc")
+        public String desc;
+
         @NameInMap("forfeit_fee")
         public Long forfeitFee;
 
@@ -96,6 +102,22 @@ public class HotelOrderCancelResponseBody extends TeaModel {
         }
         public Boolean getCancelSuccess() {
             return this.cancelSuccess;
+        }
+
+        public HotelOrderCancelResponseBodyModule setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+        public HotelOrderCancelResponseBodyModule setDesc(String desc) {
+            this.desc = desc;
+            return this;
+        }
+        public String getDesc() {
+            return this.desc;
         }
 
         public HotelOrderCancelResponseBodyModule setForfeitFee(Long forfeitFee) {
