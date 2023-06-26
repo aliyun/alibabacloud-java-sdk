@@ -4,11 +4,17 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancesAsCsvRequest extends TeaModel {
+    @NameInMap("CachedAsync")
+    public Boolean cachedAsync;
+
     /**
      * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
+
+    @NameInMap("ExportKey")
+    public String exportKey;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -36,12 +42,28 @@ public class DescribeDBInstancesAsCsvRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeDBInstancesAsCsvRequest setCachedAsync(Boolean cachedAsync) {
+        this.cachedAsync = cachedAsync;
+        return this;
+    }
+    public Boolean getCachedAsync() {
+        return this.cachedAsync;
+    }
+
     public DescribeDBInstancesAsCsvRequest setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
         return this;
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public DescribeDBInstancesAsCsvRequest setExportKey(String exportKey) {
+        this.exportKey = exportKey;
+        return this;
+    }
+    public String getExportKey() {
+        return this.exportKey;
     }
 
     public DescribeDBInstancesAsCsvRequest setOwnerId(Long ownerId) {

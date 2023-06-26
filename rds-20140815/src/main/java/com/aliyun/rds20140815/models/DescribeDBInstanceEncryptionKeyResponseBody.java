@@ -29,7 +29,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
     public String encryptionKey;
 
     /**
-     * <p>An array that consists of keys.</p>
+     * <p>The details about the key.</p>
      */
     @NameInMap("EncryptionKeyList")
     public java.util.List<DescribeDBInstanceEncryptionKeyResponseBodyEncryptionKeyList> encryptionKeyList;
@@ -37,8 +37,8 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
     /**
      * <p>The status of the key. Valid values:</p>
      * <br>
-     * <p>*   Enabled</p>
-     * <p>*   Disabled</p>
+     * <p>*   **Enabled**</p>
+     * <p>*   **Disabled**</p>
      */
     @NameInMap("EncryptionKeyStatus")
     public String encryptionKeyStatus;
@@ -186,14 +186,17 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         /**
          * <p>The status of the key. Valid values:</p>
          * <br>
-         * <p>*   Enabled</p>
-         * <p>*   Disabled</p>
+         * <p>*   **Enabled**</p>
+         * <p>*   **Disabled**</p>
          */
         @NameInMap("EncryptionKeyStatus")
         public String encryptionKeyStatus;
 
         /**
-         * <p>The type of the key.</p>
+         * <p>The type of the key. Valid values:</p>
+         * <br>
+         * <p>*   **CMK**</p>
+         * <p>*   **ServiceKey**</p>
          */
         @NameInMap("KeyType")
         public String keyType;
@@ -217,7 +220,10 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         public String origin;
 
         /**
-         * <p>The role of the instance that uses the key. Valid values: ***master**: primary instance*. **slave**: read-only instance.</p>
+         * <p>The role of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **Master**: primary instance</p>
+         * <p>*   **slave**: read-only instance</p>
          */
         @NameInMap("UsedBy")
         public String usedBy;
