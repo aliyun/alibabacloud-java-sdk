@@ -17,7 +17,7 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on the current page.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
@@ -29,7 +29,7 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -81,13 +81,13 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
 
     public static class DescribeSQLLogFilesResponseBodyItemsLogFile extends TeaModel {
         /**
-         * <p>The name of the audit log file.</p>
+         * <p>The name of the file.</p>
          */
         @NameInMap("FileID")
         public String fileID;
 
         /**
-         * <p>The download URL of the audit log file. If the audit log file cannot be downloaded, this parameter is null.</p>
+         * <p>The download URL of the file. If the audit log file cannot be downloaded, this parameter is null.</p>
          */
         @NameInMap("LogDownloadURL")
         public String logDownloadURL;

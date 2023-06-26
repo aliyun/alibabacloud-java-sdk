@@ -23,17 +23,13 @@ public class DescribeSQLLogFilesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Valid values: **1 to 100000**.  </p>
-     * <br>
-     * <p>Default value: **1**.</p>
+     * <p>The number of the page to return. Valid values: **1 to 100000**. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid value: **30 to 200**. </p>
-     * <br>
-     * <p>Default value: **30**.</p>
+     * <p>The number of entries to return on each page. Valid value: **30 to 200**. Default value: **30**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

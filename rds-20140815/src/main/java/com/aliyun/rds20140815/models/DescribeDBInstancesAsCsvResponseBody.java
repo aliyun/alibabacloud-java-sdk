@@ -37,6 +37,25 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeDBInstancesAsCsvResponseBodyItemsDBInstanceAttributeSlaveZones extends TeaModel {
+        @NameInMap("slaveRegion")
+        public java.util.List<String> slaveRegion;
+
+        public static DescribeDBInstancesAsCsvResponseBodyItemsDBInstanceAttributeSlaveZones build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBInstancesAsCsvResponseBodyItemsDBInstanceAttributeSlaveZones self = new DescribeDBInstancesAsCsvResponseBodyItemsDBInstanceAttributeSlaveZones();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstancesAsCsvResponseBodyItemsDBInstanceAttributeSlaveZones setSlaveRegion(java.util.List<String> slaveRegion) {
+            this.slaveRegion = slaveRegion;
+            return this;
+        }
+        public java.util.List<String> getSlaveRegion() {
+            return this.slaveRegion;
+        }
+
+    }
+
     public static class DescribeDBInstancesAsCsvResponseBodyItemsDBInstanceAttribute extends TeaModel {
         /**
          * <p>The maximum number of accounts.</p>
@@ -175,6 +194,9 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        @NameInMap("ExportKey")
+        public String exportKey;
+
         /**
          * <p>The ID of the disaster recovery instance that is attached to the instance.</p>
          */
@@ -258,6 +280,9 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
          */
         @NameInMap("SecurityIPList")
         public String securityIPList;
+
+        @NameInMap("SlaveZones")
+        public DescribeDBInstancesAsCsvResponseBodyItemsDBInstanceAttributeSlaveZones slaveZones;
 
         /**
          * <p>None.</p>
@@ -468,6 +493,14 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             return this.expireTime;
         }
 
+        public DescribeDBInstancesAsCsvResponseBodyItemsDBInstanceAttribute setExportKey(String exportKey) {
+            this.exportKey = exportKey;
+            return this;
+        }
+        public String getExportKey() {
+            return this.exportKey;
+        }
+
         public DescribeDBInstancesAsCsvResponseBodyItemsDBInstanceAttribute setGuardDBInstanceId(String guardDBInstanceId) {
             this.guardDBInstanceId = guardDBInstanceId;
             return this;
@@ -578,6 +611,14 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
         }
         public String getSecurityIPList() {
             return this.securityIPList;
+        }
+
+        public DescribeDBInstancesAsCsvResponseBodyItemsDBInstanceAttribute setSlaveZones(DescribeDBInstancesAsCsvResponseBodyItemsDBInstanceAttributeSlaveZones slaveZones) {
+            this.slaveZones = slaveZones;
+            return this;
+        }
+        public DescribeDBInstancesAsCsvResponseBodyItemsDBInstanceAttributeSlaveZones getSlaveZones() {
+            return this.slaveZones;
         }
 
         public DescribeDBInstancesAsCsvResponseBodyItemsDBInstanceAttribute setSupportUpgradeAccountType(String supportUpgradeAccountType) {

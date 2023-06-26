@@ -111,12 +111,75 @@ public class DescribeDatabasesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeDatabasesResponseBodyDatabasesDatabaseAdvancedInfo extends TeaModel {
+        @NameInMap("AdvancedDbProperty")
+        public java.util.List<java.util.Map<String, ?>> advancedDbProperty;
+
+        public static DescribeDatabasesResponseBodyDatabasesDatabaseAdvancedInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDatabasesResponseBodyDatabasesDatabaseAdvancedInfo self = new DescribeDatabasesResponseBodyDatabasesDatabaseAdvancedInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDatabasesResponseBodyDatabasesDatabaseAdvancedInfo setAdvancedDbProperty(java.util.List<java.util.Map<String, ?>> advancedDbProperty) {
+            this.advancedDbProperty = advancedDbProperty;
+            return this;
+        }
+        public java.util.List<java.util.Map<String, ?>> getAdvancedDbProperty() {
+            return this.advancedDbProperty;
+        }
+
+    }
+
+    public static class DescribeDatabasesResponseBodyDatabasesDatabaseBasicInfo extends TeaModel {
+        @NameInMap("BasicDbProperty")
+        public java.util.List<java.util.Map<String, ?>> basicDbProperty;
+
+        public static DescribeDatabasesResponseBodyDatabasesDatabaseBasicInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDatabasesResponseBodyDatabasesDatabaseBasicInfo self = new DescribeDatabasesResponseBodyDatabasesDatabaseBasicInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDatabasesResponseBodyDatabasesDatabaseBasicInfo setBasicDbProperty(java.util.List<java.util.Map<String, ?>> basicDbProperty) {
+            this.basicDbProperty = basicDbProperty;
+            return this;
+        }
+        public java.util.List<java.util.Map<String, ?>> getBasicDbProperty() {
+            return this.basicDbProperty;
+        }
+
+    }
+
+    public static class DescribeDatabasesResponseBodyDatabasesDatabaseRuntimeInfo extends TeaModel {
+        @NameInMap("RuntimeDbProperty")
+        public java.util.List<java.util.Map<String, ?>> runtimeDbProperty;
+
+        public static DescribeDatabasesResponseBodyDatabasesDatabaseRuntimeInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDatabasesResponseBodyDatabasesDatabaseRuntimeInfo self = new DescribeDatabasesResponseBodyDatabasesDatabaseRuntimeInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDatabasesResponseBodyDatabasesDatabaseRuntimeInfo setRuntimeDbProperty(java.util.List<java.util.Map<String, ?>> runtimeDbProperty) {
+            this.runtimeDbProperty = runtimeDbProperty;
+            return this;
+        }
+        public java.util.List<java.util.Map<String, ?>> getRuntimeDbProperty() {
+            return this.runtimeDbProperty;
+        }
+
+    }
+
     public static class DescribeDatabasesResponseBodyDatabasesDatabase extends TeaModel {
         /**
          * <p>An array that consists of the details of the accounts. Each account has specific permissions on the database.</p>
          */
         @NameInMap("Accounts")
         public DescribeDatabasesResponseBodyDatabasesDatabaseAccounts accounts;
+
+        @NameInMap("AdvancedInfo")
+        public DescribeDatabasesResponseBodyDatabasesDatabaseAdvancedInfo advancedInfo;
+
+        @NameInMap("BasicInfo")
+        public DescribeDatabasesResponseBodyDatabasesDatabaseBasicInfo basicInfo;
 
         /**
          * <p>The name of the character set.</p>
@@ -197,6 +260,9 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        @NameInMap("RuntimeInfo")
+        public DescribeDatabasesResponseBodyDatabasesDatabaseRuntimeInfo runtimeInfo;
+
         /**
          * <p>The tablespace of the database.</p>
          * <br>
@@ -222,6 +288,22 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         }
         public DescribeDatabasesResponseBodyDatabasesDatabaseAccounts getAccounts() {
             return this.accounts;
+        }
+
+        public DescribeDatabasesResponseBodyDatabasesDatabase setAdvancedInfo(DescribeDatabasesResponseBodyDatabasesDatabaseAdvancedInfo advancedInfo) {
+            this.advancedInfo = advancedInfo;
+            return this;
+        }
+        public DescribeDatabasesResponseBodyDatabasesDatabaseAdvancedInfo getAdvancedInfo() {
+            return this.advancedInfo;
+        }
+
+        public DescribeDatabasesResponseBodyDatabasesDatabase setBasicInfo(DescribeDatabasesResponseBodyDatabasesDatabaseBasicInfo basicInfo) {
+            this.basicInfo = basicInfo;
+            return this;
+        }
+        public DescribeDatabasesResponseBodyDatabasesDatabaseBasicInfo getBasicInfo() {
+            return this.basicInfo;
         }
 
         public DescribeDatabasesResponseBodyDatabasesDatabase setCharacterSetName(String characterSetName) {
@@ -318,6 +400,14 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public DescribeDatabasesResponseBodyDatabasesDatabase setRuntimeInfo(DescribeDatabasesResponseBodyDatabasesDatabaseRuntimeInfo runtimeInfo) {
+            this.runtimeInfo = runtimeInfo;
+            return this;
+        }
+        public DescribeDatabasesResponseBodyDatabasesDatabaseRuntimeInfo getRuntimeInfo() {
+            return this.runtimeInfo;
         }
 
         public DescribeDatabasesResponseBodyDatabasesDatabase setTablespace(String tablespace) {
