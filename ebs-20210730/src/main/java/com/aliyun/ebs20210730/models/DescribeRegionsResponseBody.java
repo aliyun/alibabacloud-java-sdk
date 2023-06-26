@@ -4,9 +4,15 @@ package com.aliyun.ebs20210730.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
+    /**
+     * <p>Details about the zones.</p>
+     */
     @NameInMap("Regions")
     public java.util.List<DescribeRegionsResponseBodyRegions> regions;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -73,12 +79,25 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegions extends TeaModel {
+        /**
+         * <p>The name of the zone.</p>
+         */
         @NameInMap("LocalName")
         public String localName;
 
+        /**
+         * <p>The ID of the zone.</p>
+         */
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
 
+        /**
+         * <p>The type of resource. Valid values:</p>
+         * <br>
+         * <p>*   ear: async replication</p>
+         * <p>*   lend: CloudLens for EBS</p>
+         * <p>*   dbsc: Dedicated Block Storage Cluster</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

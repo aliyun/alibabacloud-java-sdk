@@ -4,18 +4,35 @@ package com.aliyun.ebs20210730.models;
 import com.aliyun.tea.*;
 
 public class ModifyDedicatedBlockStorageClusterAttributeRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests.</p>
+     * <br>
+     * <p>The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure idempotence ](~~25693~~).</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the dedicated block storage cluster.</p>
+     */
     @NameInMap("DbscId")
     public String dbscId;
 
+    /**
+     * <p>The new name of the dedicated block storage cluster.</p>
+     */
     @NameInMap("DbscName")
     public String dbscName;
 
+    /**
+     * <p>The new description of dedicated block storage cluster.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The region ID of the dedicated block storage cluster. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

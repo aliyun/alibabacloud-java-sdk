@@ -4,12 +4,21 @@ package com.aliyun.ebs20210730.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
+    /**
+     * <p>The name of the region.</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>The endpoint of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Details about the regions.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

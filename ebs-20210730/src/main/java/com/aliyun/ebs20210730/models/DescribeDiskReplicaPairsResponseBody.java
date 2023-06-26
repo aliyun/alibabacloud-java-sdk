@@ -4,21 +4,39 @@ package com.aliyun.ebs20210730.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
+    /**
+     * <p>The query token returned in this call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page. Valid values: 1 to 100.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Details about the replication pairs.</p>
+     */
     @NameInMap("ReplicaPairs")
     public java.util.List<DescribeDiskReplicaPairsResponseBodyReplicaPairs> replicaPairs;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -75,78 +93,233 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeDiskReplicaPairsResponseBodyReplicaPairsTags extends TeaModel {
+        /**
+         * <p>The tag key of the replication pair.</p>
+         */
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        /**
+         * <p>The tag value of the replication pair.</p>
+         */
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static DescribeDiskReplicaPairsResponseBodyReplicaPairsTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDiskReplicaPairsResponseBodyReplicaPairsTags self = new DescribeDiskReplicaPairsResponseBodyReplicaPairsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDiskReplicaPairsResponseBodyReplicaPairsTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeDiskReplicaPairsResponseBodyReplicaPairsTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class DescribeDiskReplicaPairsResponseBodyReplicaPairs extends TeaModel {
+        /**
+         * <p>The bandwidth used to asynchronously replicate data from the primary disk to the secondary disk. Unit: Kbit/s.</p>
+         */
         @NameInMap("Bandwidth")
         public Long bandwidth;
 
+        /**
+         * <p>The billing method of the replication pair.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   PREPAY: subscription</p>
+         * <p>*   POSTPAY: pay-as-you-go</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <p>The time when the replication pair was created. The value of this parameter is a timestamp. Unit: seconds.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The description of the replication pair.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the secondary disk.</p>
+         */
         @NameInMap("DestinationDiskId")
         public String destinationDiskId;
 
+        /**
+         * <p>The region ID of the secondary disk.</p>
+         */
         @NameInMap("DestinationRegion")
         public String destinationRegion;
 
+        /**
+         * <p>The zone ID of the secondary disk.</p>
+         */
         @NameInMap("DestinationZoneId")
         public String destinationZoneId;
 
+        /**
+         * <p>The time when the replication pair expires. The value of this parameter is a timestamp. Unit: seconds.</p>
+         */
         @NameInMap("ExpiredTime")
         public Long expiredTime;
 
+        /**
+         * <p>The time when data was last replicated from the primary disk to the secondary disk in the replication pair. The value of this parameter is a timestamp. Unit: seconds.</p>
+         */
         @NameInMap("LastRecoverPoint")
         public Long lastRecoverPoint;
 
+        /**
+         * <p>The name of the replication pair.</p>
+         */
         @NameInMap("PairName")
         public String pairName;
 
+        /**
+         * <p>The initial source region (primary region) of the replication pair.</p>
+         */
         @NameInMap("PrimaryRegion")
         public String primaryRegion;
 
+        /**
+         * <p>The initial source zone (primary zone) of the replication pair.</p>
+         */
         @NameInMap("PrimaryZone")
         public String primaryZone;
 
+        /**
+         * <p>The recovery point objective (RPO) of the replication pair. Unit: seconds.</p>
+         */
         @NameInMap("RPO")
         public Long RPO;
 
+        /**
+         * <p>The ID of the replication pair-consistent group to which the replication pair belongs.</p>
+         */
         @NameInMap("ReplicaGroupId")
         public String replicaGroupId;
 
+        /**
+         * <p>The name of the replication pair-consistent group to which the replication pair belongs.</p>
+         */
         @NameInMap("ReplicaGroupName")
         public String replicaGroupName;
 
+        /**
+         * <p>The ID of the replication pair.</p>
+         */
         @NameInMap("ReplicaPairId")
         public String replicaPairId;
 
+        /**
+         * <p>The ID of the resource group to which the replication pair belongs.</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
+         * <p>The type of the site from which the information of the replication pair and replication pair-consistent group is obtained. Valid values:</p>
+         * <br>
+         * <p>*   production: primary site</p>
+         * <p>*   backup: secondary site</p>
+         */
         @NameInMap("Site")
         public String site;
 
+        /**
+         * <p>The ID of the primary disk.</p>
+         */
         @NameInMap("SourceDiskId")
         public String sourceDiskId;
 
+        /**
+         * <p>The region ID of the primary disk.</p>
+         */
         @NameInMap("SourceRegion")
         public String sourceRegion;
 
+        /**
+         * <p>The zone ID of the primary disk.</p>
+         */
         @NameInMap("SourceZoneId")
         public String sourceZoneId;
 
+        /**
+         * <p>The initial destination region (secondary region) of the replication pair.</p>
+         */
         @NameInMap("StandbyRegion")
         public String standbyRegion;
 
+        /**
+         * <p>The initial destination zone (secondary zone) of the replication pair.</p>
+         */
         @NameInMap("StandbyZone")
         public String standbyZone;
 
+        /**
+         * <p>The state of the replication pair. Valid values:</p>
+         * <br>
+         * <p>*   invalid: The replication pair is invalid. When a replication pair becomes abnormal, it enters this state.</p>
+         * <p>*   creating: The replication pair is being created.</p>
+         * <p>*   created: The replication pair is created.</p>
+         * <p>*   create_failed: The replication pair cannot be created.</p>
+         * <p>*   initial_syncing: Data is synchronized from the primary disk to the secondary disk for the first time. After a replication pair is created and activated, the replication pair is in this state the first time data is synchronized from the primary disk to the secondary disk.</p>
+         * <p>*   manual_syncing: Data is being manually synchronized from the primary disk to the secondary disk. After data is manually synchronized from the primary disk to the secondary disk, the replication pair returns to the Stopped state. The first time data is manually synchronized from the primary disk to the secondary disk, the replication pair is in the manual_syncing state during the synchronization.</p>
+         * <p>*   syncing: Data is being synchronized from the primary disk to the secondary disk. While data is being asynchronously replicated from the primary disk to the secondary disk not for the first time, the replication pair is in this state.</p>
+         * <p>*   normal: The replication pair is working as expected. When the system finishes replicating data from the primary disk to the secondary disk within the current replication cycle, the replication pair enters this state.</p>
+         * <p>*   stopping: The replication pair is being stopped.</p>
+         * <p>*   stopped: The replication pair is stopped.</p>
+         * <p>*   stop_failed: The replication pair cannot be stopped.</p>
+         * <p>*   failovering: A failover is being performed.</p>
+         * <p>*   failovered: A failover is performed.</p>
+         * <p>*   failover_failed: A failover cannot be performed.</p>
+         * <p>*   reprotecting: A reverse replication is being performed.</p>
+         * <p>*   reprotect_failed: A reverse replication cannot be performed.</p>
+         * <p>*   deleting: The replication pair is being deleted.</p>
+         * <p>*   delete_failed: The replication pair cannot be deleted.</p>
+         * <p>*   deleted: The replication pair is deleted.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The message that describes the state of the replication pair. This parameter has a value when `Status` has a value of invalid or `create_failed`. Valid values:</p>
+         * <br>
+         * <p>*   PrePayOrderExpired: The replication pair has expired.</p>
+         * <p>*   PostPayOrderCeaseService: The pay-as-you-go replication pair has been stopped due to an overdue payment.</p>
+         * <p>*   DeviceRemoved: The primary or secondary disk has been deleted.</p>
+         * <p>*   DeviceKeyChanged: The `DeviceKey` mapping of the primary or secondary disk has changed.</p>
+         * <p>*   DeviceSizeChanged: The `DeviceSize` value of the primary or secondary disk has changed.</p>
+         * <p>*   OperationDenied.QuotaExceed: The maximum number of replication pairs that can be created has been reached.</p>
+         */
         @NameInMap("StatusMessage")
         public String statusMessage;
+
+        /**
+         * <p>The tags of the replication pair.</p>
+         */
+        @NameInMap("Tags")
+        public java.util.List<DescribeDiskReplicaPairsResponseBodyReplicaPairsTags> tags;
 
         public static DescribeDiskReplicaPairsResponseBodyReplicaPairs build(java.util.Map<String, ?> map) throws Exception {
             DescribeDiskReplicaPairsResponseBodyReplicaPairs self = new DescribeDiskReplicaPairsResponseBodyReplicaPairs();
@@ -281,6 +454,14 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             return this.replicaPairId;
         }
 
+        public DescribeDiskReplicaPairsResponseBodyReplicaPairs setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public DescribeDiskReplicaPairsResponseBodyReplicaPairs setSite(String site) {
             this.site = site;
             return this;
@@ -343,6 +524,14 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
         }
         public String getStatusMessage() {
             return this.statusMessage;
+        }
+
+        public DescribeDiskReplicaPairsResponseBodyReplicaPairs setTags(java.util.List<DescribeDiskReplicaPairsResponseBodyReplicaPairsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeDiskReplicaPairsResponseBodyReplicaPairsTags> getTags() {
+            return this.tags;
         }
 
     }

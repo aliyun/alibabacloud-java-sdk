@@ -4,9 +4,15 @@ package com.aliyun.ebs20210730.models;
 import com.aliyun.tea.*;
 
 public class CreateDiskReplicaGroupResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the replication pair-consistent group.</p>
+     */
     @NameInMap("ReplicaGroupId")
     public String replicaGroupId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

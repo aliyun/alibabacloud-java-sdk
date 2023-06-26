@@ -7,9 +7,15 @@ public class CreateDiskReplicaPairResponseBody extends TeaModel {
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <p>The ID of the order.</p>
+     */
     @NameInMap("ReplicaPairId")
     public String replicaPairId;
 
+    /**
+     * <p>The ID of the replication pair.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -10,6 +10,9 @@ public class StartDiskReplicaPairRequest extends TeaModel {
     @NameInMap("OneShot")
     public Boolean oneShot;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
