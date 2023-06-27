@@ -4,12 +4,21 @@ package com.aliyun.dysmsapi20180501.models;
 import com.aliyun.tea.*;
 
 public class ConversionDataResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Status code. Returning OK means the request was successful. For other error codes, please refer to the [Error codes](~~180674~~) list.</p>
+     */
     @NameInMap("ResponseCode")
     public String responseCode;
 
+    /**
+     * <p>The description of the status code.</p>
+     */
     @NameInMap("ResponseDescription")
     public String responseDescription;
 

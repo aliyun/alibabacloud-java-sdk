@@ -4,6 +4,9 @@ package com.aliyun.dysmsapi20180501.models;
 import com.aliyun.tea.*;
 
 public class QueryMessageRequest extends TeaModel {
+    /**
+     * <p>The ID of the message.</p>
+     */
     @NameInMap("MessageId")
     public String messageId;
 
