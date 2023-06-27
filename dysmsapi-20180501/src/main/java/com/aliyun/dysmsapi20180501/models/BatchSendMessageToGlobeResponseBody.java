@@ -4,24 +4,45 @@ package com.aliyun.dysmsapi20180501.models;
 import com.aliyun.tea.*;
 
 public class BatchSendMessageToGlobeResponseBody extends TeaModel {
+    /**
+     * <p>The list of mobile phone numbers that failed to receive the message.</p>
+     */
     @NameInMap("FailedList")
     public String failedList;
 
+    /**
+     * <p>The sender ID returned.</p>
+     */
     @NameInMap("From")
     public String from;
 
+    /**
+     * <p>The ID of the message.</p>
+     */
     @NameInMap("MessageIdList")
     public String messageIdList;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The status code. If OK is returned, the request is successful. For more information, see [Error codes](https://www.alibabacloud.com/help/zh/short-message-service/latest/error-codes).</p>
+     */
     @NameInMap("ResponseCode")
     public String responseCode;
 
+    /**
+     * <p>The description of the status code.</p>
+     */
     @NameInMap("ResponseDescription")
     public String responseDescription;
 
+    /**
+     * <p>The number of mobile phone numbers that received the message.</p>
+     */
     @NameInMap("SuccessCount")
     public String successCount;
 

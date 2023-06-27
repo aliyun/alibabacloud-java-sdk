@@ -3,23 +3,19 @@ package com.aliyun.dysmsapi20180501;
 
 import com.aliyun.tea.*;
 import com.aliyun.dysmsapi20180501.models.*;
-import com.aliyun.teautil.*;
-import com.aliyun.teautil.models.*;
-import com.aliyun.teaopenapi.*;
-import com.aliyun.teaopenapi.models.*;
-import com.aliyun.openapiutil.*;
-import com.aliyun.endpointutil.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
 
-    public Client(Config config) throws Exception {
+    public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "central";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("ap-southeast-1", "dysmsapi.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "dysmsapi-xman.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "dysmsapi.ap-southeast-5.aliyuncs.com"),
             new TeaPair("cn-beijing", "dysmsapi-proxy.cn-beijing.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "dysmsapi-xman.cn-hongkong.aliyuncs.com")
+            new TeaPair("cn-hongkong", "dysmsapi-xman.cn-hongkong.aliyuncs.com"),
+            new TeaPair("eu-central-1", "dysmsapi.eu-central-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "dysmsapi.us-east-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("dysmsapi", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -38,7 +34,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public BatchSendMessageToGlobeResponse batchSendMessageToGlobeWithOptions(BatchSendMessageToGlobeRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * *   You cannot call the BatchSendMessageToGlobe operation to send messages to the Chinese mainland.
+      * *   You can call the BatchSendMessageToGlobe operation to send notifications and promotional messages to a limited number of mobile phone numbers at a time. To send messages exceeding more than 1,000 mobile number per request, you can choose to use the broadcast messaging feature available in the Alibaba Cloud SMS console.
+      * *   For time-sensitive related messages, we recommend that you use the [SendMessageToGlobe](~~SendMessageToGlobe~~) operation to ensure that messages are delivered on time.
+      * *   In each request, you can send messages to up to 1,000 mobile phone numbers.
+      * ### QPS limit
+      * You may call this operation only once per second. If the number of calls per second exceeds this limit, throttling will be triggered. This can potentially impact your business operations. Therefore, we recommend that you take note of this limit when making calls to this operation.
+      *
+      * @param request BatchSendMessageToGlobeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BatchSendMessageToGlobeResponse
+     */
+    public BatchSendMessageToGlobeResponse batchSendMessageToGlobeWithOptions(BatchSendMessageToGlobeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.from)) {
@@ -61,10 +69,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Type", request.type);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        if (!com.aliyun.teautil.Common.isUnset(request.validityPeriod)) {
+            query.put("ValidityPeriod", request.validityPeriod);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "BatchSendMessageToGlobe"),
             new TeaPair("version", "2018-05-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -78,12 +90,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BatchSendMessageToGlobeResponse());
     }
 
+    /**
+      * *   You cannot call the BatchSendMessageToGlobe operation to send messages to the Chinese mainland.
+      * *   You can call the BatchSendMessageToGlobe operation to send notifications and promotional messages to a limited number of mobile phone numbers at a time. To send messages exceeding more than 1,000 mobile number per request, you can choose to use the broadcast messaging feature available in the Alibaba Cloud SMS console.
+      * *   For time-sensitive related messages, we recommend that you use the [SendMessageToGlobe](~~SendMessageToGlobe~~) operation to ensure that messages are delivered on time.
+      * *   In each request, you can send messages to up to 1,000 mobile phone numbers.
+      * ### QPS limit
+      * You may call this operation only once per second. If the number of calls per second exceeds this limit, throttling will be triggered. This can potentially impact your business operations. Therefore, we recommend that you take note of this limit when making calls to this operation.
+      *
+      * @param request BatchSendMessageToGlobeRequest
+      * @return BatchSendMessageToGlobeResponse
+     */
     public BatchSendMessageToGlobeResponse batchSendMessageToGlobe(BatchSendMessageToGlobeRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchSendMessageToGlobeWithOptions(request, runtime);
     }
 
-    public ConversionDataResponse conversionDataWithOptions(ConversionDataRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * Metrics:
+      * *   Requested OTP messages
+      * *   Verified OTP messages
+      * An OTP conversion rate is calculated based on the following formula: OTP conversion rate = Number of verified OTP messages/Number of requested OTP messages.
+      *
+      * @param request ConversionDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ConversionDataResponse
+     */
+    public ConversionDataResponse conversionDataWithOptions(ConversionDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.conversionRate)) {
@@ -94,10 +127,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ReportTime", request.reportTime);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ConversionData"),
             new TeaPair("version", "2018-05-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -111,22 +144,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ConversionDataResponse());
     }
 
+    /**
+      * Metrics:
+      * *   Requested OTP messages
+      * *   Verified OTP messages
+      * An OTP conversion rate is calculated based on the following formula: OTP conversion rate = Number of verified OTP messages/Number of requested OTP messages.
+      *
+      * @param request ConversionDataRequest
+      * @return ConversionDataResponse
+     */
     public ConversionDataResponse conversionData(ConversionDataRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.conversionDataWithOptions(request, runtime);
     }
 
-    public QueryMessageResponse queryMessageWithOptions(QueryMessageRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * ### QPS limit
+      * You can call this operation up to 300 times per second. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
+      *
+      * @param request QueryMessageRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryMessageResponse
+     */
+    public QueryMessageResponse queryMessageWithOptions(QueryMessageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.messageId)) {
             query.put("MessageId", request.messageId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "QueryMessage"),
             new TeaPair("version", "2018-05-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -140,12 +190,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryMessageResponse());
     }
 
+    /**
+      * ### QPS limit
+      * You can call this operation up to 300 times per second. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
+      *
+      * @param request QueryMessageRequest
+      * @return QueryMessageResponse
+     */
     public QueryMessageResponse queryMessage(QueryMessageRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryMessageWithOptions(request, runtime);
     }
 
-    public SendMessageToGlobeResponse sendMessageToGlobeWithOptions(SendMessageToGlobeRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * ### Usage notes
+      * You cannot call the SendMessageToGlobe operation to send messages to the Chinese mainland.
+      * ### QPS limit
+      * You may call this operation up to 300 times per second. If the number of calls per second exceeds this limit, throttling will be triggered. This can potentially impact your business operations. Therefore, we recommend that you take note of this limit when making calls to this operation.
+      *
+      * @param request SendMessageToGlobeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SendMessageToGlobeResponse
+     */
+    public SendMessageToGlobeResponse sendMessageToGlobeWithOptions(SendMessageToGlobeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.from)) {
@@ -164,10 +231,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("To", request.to);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        if (!com.aliyun.teautil.Common.isUnset(request.validityPeriod)) {
+            query.put("ValidityPeriod", request.validityPeriod);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SendMessageToGlobe"),
             new TeaPair("version", "2018-05-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -181,12 +252,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SendMessageToGlobeResponse());
     }
 
+    /**
+      * ### Usage notes
+      * You cannot call the SendMessageToGlobe operation to send messages to the Chinese mainland.
+      * ### QPS limit
+      * You may call this operation up to 300 times per second. If the number of calls per second exceeds this limit, throttling will be triggered. This can potentially impact your business operations. Therefore, we recommend that you take note of this limit when making calls to this operation.
+      *
+      * @param request SendMessageToGlobeRequest
+      * @return SendMessageToGlobeResponse
+     */
     public SendMessageToGlobeResponse sendMessageToGlobe(SendMessageToGlobeRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.sendMessageToGlobeWithOptions(request, runtime);
     }
 
-    public SendMessageWithTemplateResponse sendMessageWithTemplateWithOptions(SendMessageWithTemplateRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * ### Usage notes
+      * You can call the SendMessageWithTemplate operation to send messages only to the Chinese mainland.
+      *
+      * @param request SendMessageWithTemplateRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SendMessageWithTemplateResponse
+     */
+    public SendMessageWithTemplateResponse sendMessageWithTemplateWithOptions(SendMessageWithTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.from)) {
@@ -209,10 +297,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("To", request.to);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        if (!com.aliyun.teautil.Common.isUnset(request.validityPeriod)) {
+            query.put("ValidityPeriod", request.validityPeriod);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SendMessageWithTemplate"),
             new TeaPair("version", "2018-05-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -226,12 +318,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SendMessageWithTemplateResponse());
     }
 
+    /**
+      * ### Usage notes
+      * You can call the SendMessageWithTemplate operation to send messages only to the Chinese mainland.
+      *
+      * @param request SendMessageWithTemplateRequest
+      * @return SendMessageWithTemplateResponse
+     */
     public SendMessageWithTemplateResponse sendMessageWithTemplate(SendMessageWithTemplateRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.sendMessageWithTemplateWithOptions(request, runtime);
     }
 
-    public SmsConversionResponse smsConversionWithOptions(SmsConversionRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * Metrics:
+      * *   Requested OTP messages
+      * *   Verified OTP messages
+      * An OTP conversion rate is calculated based on the following formula: OTP conversion rate = Number of verified OTP messages/Number of requested OTP messages.
+      * > If you call the SmsConversion operation to query OTP conversion rates, your business may be affected. We recommend that you perform the following operations:
+      * > * Call the SmsConversion operation in an asynchronous manner by configuring queues or events.
+      * > * Manually degrade your services or use a circuit breaker to automatically degrade services.
+      *
+      * @param request SmsConversionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SmsConversionResponse
+     */
+    public SmsConversionResponse smsConversionWithOptions(SmsConversionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.conversionTime)) {
@@ -246,10 +358,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("MessageId", request.messageId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SmsConversion"),
             new TeaPair("version", "2018-05-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -263,8 +375,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SmsConversionResponse());
     }
 
+    /**
+      * Metrics:
+      * *   Requested OTP messages
+      * *   Verified OTP messages
+      * An OTP conversion rate is calculated based on the following formula: OTP conversion rate = Number of verified OTP messages/Number of requested OTP messages.
+      * > If you call the SmsConversion operation to query OTP conversion rates, your business may be affected. We recommend that you perform the following operations:
+      * > * Call the SmsConversion operation in an asynchronous manner by configuring queues or events.
+      * > * Manually degrade your services or use a circuit breaker to automatically degrade services.
+      *
+      * @param request SmsConversionRequest
+      * @return SmsConversionResponse
+     */
     public SmsConversionResponse smsConversion(SmsConversionRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.smsConversionWithOptions(request, runtime);
     }
 }
