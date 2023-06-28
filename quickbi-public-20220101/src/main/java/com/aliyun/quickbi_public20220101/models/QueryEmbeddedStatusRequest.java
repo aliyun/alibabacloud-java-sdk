@@ -4,6 +4,9 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class QueryEmbeddedStatusRequest extends TeaModel {
+    /**
+     * <p>The work ID of the query.</p>
+     */
     @NameInMap("WorksId")
     public String worksId;
 
