@@ -4,9 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeFotaTasksResponseBody extends TeaModel {
+    /**
+     * <p>Details about the image update task.</p>
+     */
     @NameInMap("FotaTasks")
     public java.util.List<DescribeFotaTasksResponseBodyFotaTasks> fotaTasks;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,30 +38,83 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeFotaTasksResponseBodyFotaTasks extends TeaModel {
+        /**
+         * <p>The image version. You can call the [DescribeImages](~~188895~~) operation to obtain the value of this parameter.</p>
+         */
         @NameInMap("AppVersion")
         public String appVersion;
 
+        /**
+         * <p>This parameter is not available.</p>
+         */
         @NameInMap("FotaProject")
         public String fotaProject;
 
+        /**
+         * <p>The number of custom images that can be updated to this version.</p>
+         */
         @NameInMap("PendingCustomImageCount")
         public Integer pendingCustomImageCount;
 
+        /**
+         * <p>The number of cloud desktops for which the images can be updated to this version.</p>
+         */
         @NameInMap("PendingDesktopCount")
         public Integer pendingDesktopCount;
 
+        /**
+         * <p>The time when the image version available for update was published.</p>
+         */
         @NameInMap("PublishTime")
         public String publishTime;
 
+        /**
+         * <p>The description of the image version available for update.</p>
+         */
         @NameInMap("ReleaseNote")
         public String releaseNote;
 
+        /**
+         * <p>The size of the image update package. Unit: KB.</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
+        /**
+         * <p>Indicates whether an end user can update the image of the cloud desktop.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   valid</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    The end user can update the image of the cloud desktop.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   invalid</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    The end user cannot update the image of the cloud desktop.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the image update task.</p>
+         */
         @NameInMap("TaskUid")
         public String taskUid;
 

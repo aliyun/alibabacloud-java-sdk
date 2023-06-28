@@ -4,21 +4,39 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdsFileShareLinksResponseBody extends TeaModel {
+    /**
+     * <p>The operation result. A value of success indicates that the operation is successful. If the operation failed, an error message is returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data information.</p>
+     */
     @NameInMap("Data")
     public java.util.List<CdsFileShareLinkModel> data;
 
+    /**
+     * <p>The error message that is returned. This parameter is not returned if the value of Code is `success`.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

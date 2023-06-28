@@ -4,18 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CompleteCdsFileRequest extends TeaModel {
+    /**
+     * <p>The ID of the cloud disk.</p>
+     */
     @NameInMap("CdsId")
     public String cdsId;
 
+    /**
+     * <p>The name of the end user.</p>
+     */
     @NameInMap("EndUserId")
     public String endUserId;
 
+    /**
+     * <p>The file ID. An ID is the unique identifier of a file.</p>
+     */
     @NameInMap("FileId")
     public String fileId;
 
+    /**
+     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the file uploading task.</p>
+     */
     @NameInMap("UploadId")
     public String uploadId;
 

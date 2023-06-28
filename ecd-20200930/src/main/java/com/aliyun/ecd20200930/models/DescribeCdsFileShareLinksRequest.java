@@ -4,24 +4,45 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdsFileShareLinksRequest extends TeaModel {
+    /**
+     * <p>The ID of the cloud disk.</p>
+     */
     @NameInMap("CdsId")
     public String cdsId;
 
+    /**
+     * <p>The users that create the file sharing links.</p>
+     */
     @NameInMap("Creators")
     public java.util.List<String> creators;
 
+    /**
+     * <p>The maximum number of resources to return. Valid values: 1 to 100. Default value: 100. The number of returned resources must be less than or equal to the specified number.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>Specifies the marker after which the returned list begins. If this parameter is not specified, all results are returned. Default value: null.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the file sharing link.</p>
+     */
     @NameInMap("ShareId")
     public String shareId;
 
+    /**
+     * <p>The sharing name for fuzzy search.</p>
+     */
     @NameInMap("ShareName")
     public String shareName;
 
+    /**
+     * <p>The file sharing status. Valid values: ● disabled: canceled ● enabled: valid</p>
+     */
     @NameInMap("Status")
     public String status;
 

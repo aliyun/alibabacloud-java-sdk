@@ -7,6 +7,9 @@ public class CreateCdsFileResponseBody extends TeaModel {
     @NameInMap("FileModel")
     public CreateCdsFileResponseBodyFileModel fileModel;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -283,6 +283,12 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @NameInMap("SubDomainName")
         public String subDomainName;
 
+        @NameInMap("TotalEdsCount")
+        public Long totalEdsCount;
+
+        @NameInMap("TotalEdsCountForGroup")
+        public Long totalEdsCountForGroup;
+
         @NameInMap("TrustPassword")
         public String trustPassword;
 
@@ -602,6 +608,22 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
         public String getSubDomainName() {
             return this.subDomainName;
+        }
+
+        public DescribeOfficeSitesResponseBodyOfficeSites setTotalEdsCount(Long totalEdsCount) {
+            this.totalEdsCount = totalEdsCount;
+            return this;
+        }
+        public Long getTotalEdsCount() {
+            return this.totalEdsCount;
+        }
+
+        public DescribeOfficeSitesResponseBodyOfficeSites setTotalEdsCountForGroup(Long totalEdsCountForGroup) {
+            this.totalEdsCountForGroup = totalEdsCountForGroup;
+            return this;
+        }
+        public Long getTotalEdsCountForGroup() {
+            return this.totalEdsCountForGroup;
         }
 
         public DescribeOfficeSitesResponseBodyOfficeSites setTrustPassword(String trustPassword) {

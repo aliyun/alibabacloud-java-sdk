@@ -4,9 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ResetSnapshotRequest extends TeaModel {
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the snapshot.</p>
+     */
     @NameInMap("SnapshotId")
     public String snapshotId;
 

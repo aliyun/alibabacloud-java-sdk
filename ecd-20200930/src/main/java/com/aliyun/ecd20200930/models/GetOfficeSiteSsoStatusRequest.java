@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetOfficeSiteSsoStatusRequest extends TeaModel {
     /**
-     * <p>Indicates whether SSO is enabled.</p>
+     * <p>The workspace ID.</p>
      */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

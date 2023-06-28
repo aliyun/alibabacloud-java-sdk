@@ -5,39 +5,40 @@ import com.aliyun.tea.*;
 
 public class ListOfficeSiteOverviewRequest extends TeaModel {
     /**
-     * <p>The beginning of the time range that you want to query.</p>
-     * <br>
-     * <p>> The desktop group feature is in invitational preview. If you want to use this feature, submit a ticket.</p>
+     * <p>Specifies whether to refresh the cache.</p>
      */
     @NameInMap("ForceRefresh")
     public Boolean forceRefresh;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>*   Valid values: 1 to 100</p>
+     * <p>*   Default value: 10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>Details of the workspaces.</p>
+     * <p>The token that determines the start point of the next query. If this is your first query or no next query is to be sent, skip this parameter. If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>Details about the IDs of the workspaces. You can specify 1 to 100 workspace IDs.</p>
      */
     @NameInMap("OfficeSiteId")
     public java.util.List<String> officeSiteId;
 
     /**
-     * <p>The region ID of the workspace.</p>
+     * <p>The query scope. Default value: 1.</p>
      */
     @NameInMap("QueryRange")
     public Integer queryRange;
 
     /**
-     * <p>Details about the IDs of the workspaces. You can specify 1 to 100 workspace IDs.</p>
+     * <p>The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

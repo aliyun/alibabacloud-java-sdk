@@ -80,6 +80,9 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudDriveGroupsResponseBodyCloudDriveGroups extends TeaModel {
+        @NameInMap("AdminUserIds")
+        public String adminUserIds;
+
         /**
          * <p>The time when the team space was created.</p>
          */
@@ -87,19 +90,19 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The workspace ID.</p>
          */
         @NameInMap("DirectoryId")
         public String directoryId;
 
         /**
-         * <p>The ID of the team space.</p>
+         * <p>The team space ID.</p>
          */
         @NameInMap("DriveId")
         public String driveId;
 
         /**
-         * <p>The ID of the team.</p>
+         * <p>The team ID.</p>
          */
         @NameInMap("GroupId")
         public String groupId;
@@ -110,8 +113,11 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         @NameInMap("GroupName")
         public String groupName;
 
+        @NameInMap("OrgId")
+        public String orgId;
+
         /**
-         * <p>The status of the team space. Valid values:</p>
+         * <p>The team space status. Valid values:</p>
          * <br>
          * <p>*   enabled</p>
          * <p>*   disabled</p>
@@ -128,7 +134,7 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         public Long totalSize;
 
         /**
-         * <p>The size of the used space. Unit: bytes.</p>
+         * <p>The capacity of the used space. Unit: bytes.</p>
          */
         @NameInMap("UsedSize")
         public String usedSize;
@@ -136,6 +142,14 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         public static DescribeCloudDriveGroupsResponseBodyCloudDriveGroups build(java.util.Map<String, ?> map) throws Exception {
             DescribeCloudDriveGroupsResponseBodyCloudDriveGroups self = new DescribeCloudDriveGroupsResponseBodyCloudDriveGroups();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeCloudDriveGroupsResponseBodyCloudDriveGroups setAdminUserIds(String adminUserIds) {
+            this.adminUserIds = adminUserIds;
+            return this;
+        }
+        public String getAdminUserIds() {
+            return this.adminUserIds;
         }
 
         public DescribeCloudDriveGroupsResponseBodyCloudDriveGroups setCreateTime(String createTime) {
@@ -176,6 +190,14 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         }
         public String getGroupName() {
             return this.groupName;
+        }
+
+        public DescribeCloudDriveGroupsResponseBodyCloudDriveGroups setOrgId(String orgId) {
+            this.orgId = orgId;
+            return this;
+        }
+        public String getOrgId() {
+            return this.orgId;
         }
 
         public DescribeCloudDriveGroupsResponseBodyCloudDriveGroups setStatus(String status) {

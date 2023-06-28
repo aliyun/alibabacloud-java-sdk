@@ -11,19 +11,19 @@ public class DescribeCloudDriveGroupsRequest extends TeaModel {
     public String cdsId;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The workspace ID.</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
 
     /**
-     * <p>The name of the workspace.</p>
+     * <p>The workspace name.</p>
      */
     @NameInMap("DirectoryName")
     public String directoryName;
 
     /**
-     * <p>The status of the team space. Valid values:</p>
+     * <p>The team space status. Valid values:</p>
      * <br>
      * <p>*   enabled</p>
      * <p>*   disabled</p>
@@ -34,41 +34,41 @@ public class DescribeCloudDriveGroupsRequest extends TeaModel {
     public String driveStatus;
 
     /**
-     * <p>Specifies whether space is increased.</p>
+     * <p>Specifies whether the space is increased.</p>
      * <br>
-     * <p>*   binding: Space is increased.</p>
-     * <p>*   unbound: Space is not increased.</p>
+     * <p>*   binding: increased</p>
+     * <p>*   unbound: not increased</p>
      * <br>
-     * <p>Default value: null. This value indicates that all results are queried.</p>
+     * <p>Default value: null. The default value indicates that all spaces are queried.</p>
      */
     @NameInMap("DriveType")
     public String driveType;
 
     /**
-     * <p>The IDs of the teams.</p>
+     * <p>The team ID.</p>
      */
     @NameInMap("GroupId")
     public java.util.List<String> groupId;
 
     /**
-     * <p>The name of the team for fuzzy search.</p>
+     * <p>The team name for fuzzy search.</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
-     * <p>The type of the team.</p>
+     * <p>The team type.</p>
      * <br>
      * <p>*   org: organizational structure</p>
      * <p>*   directory: workspace</p>
      * <br>
-     * <p>Default value: null. This value indicates that all results are queried.</p>
+     * <p>Default value: null. The default value indicates that all types of teams are queried.</p>
      */
     @NameInMap("GroupType")
     public String groupType;
 
     /**
-     * <p>The maximum number of entries to return on each page.</p>
+     * <p>The number of entries to return on each page.</p>
      * <br>
      * <p>*   Valid values: 1 to 100</p>
      * <p>*   Default value: 20</p>
@@ -83,7 +83,9 @@ public class DescribeCloudDriveGroupsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the parent ID. If a parent node ID is specified, the subnode list is queried. If you set the value of this parameter to root, the root nodes are queried. Default value: null. This value indicates that all results are queried.</p>
+     * <p>The ID of the parent node. If a parent node ID is specified, the subnodes are queried. If you set the value of this parameter to root, the root node is queried.</p>
+     * <br>
+     * <p>Default value: null. The default value indicates that all nodes are queried.</p>
      */
     @NameInMap("ParentGroupId")
     public String parentGroupId;

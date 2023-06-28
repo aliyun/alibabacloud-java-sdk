@@ -443,6 +443,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @NameInMap("GpuSpec")
         public String gpuSpec;
 
+        @NameInMap("HibernationBeta")
+        public Boolean hibernationBeta;
+
         /**
          * <p>> This parameter is in invitational preview and is unavailable to the public.</p>
          */
@@ -849,6 +852,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
         public String getGpuSpec() {
             return this.gpuSpec;
+        }
+
+        public DescribeDesktopsResponseBodyDesktops setHibernationBeta(Boolean hibernationBeta) {
+            this.hibernationBeta = hibernationBeta;
+            return this;
+        }
+        public Boolean getHibernationBeta() {
+            return this.hibernationBeta;
         }
 
         public DescribeDesktopsResponseBodyDesktops setHibernationOptionsConfigured(Boolean hibernationOptionsConfigured) {

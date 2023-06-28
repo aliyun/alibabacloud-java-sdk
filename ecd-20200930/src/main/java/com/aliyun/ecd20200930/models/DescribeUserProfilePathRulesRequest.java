@@ -4,12 +4,39 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserProfilePathRulesRequest extends TeaModel {
+    /**
+     * <p>The desktop group ID. This parameter is required when you set RuleType parameter to DesktopGroup.</p>
+     */
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The rule type that you want to configure for the directory.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   DesktopGroup</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   Default</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     */
     @NameInMap("RuleType")
     public String ruleType;
 

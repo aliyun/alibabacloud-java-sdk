@@ -64,6 +64,9 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
     @NameInMap("StopedPrePaidDesktopsCount")
     public Integer stopedPrePaidDesktopsCount;
 
+    @NameInMap("StoppedPrePaidDesktopsCount")
+    public Integer stoppedPrePaidDesktopsCount;
+
     public static DescribeDesktopsInGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDesktopsInGroupResponseBody self = new DescribeDesktopsInGroupResponseBody();
         return TeaModel.build(map, self);
@@ -147,6 +150,14 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
     }
     public Integer getStopedPrePaidDesktopsCount() {
         return this.stopedPrePaidDesktopsCount;
+    }
+
+    public DescribeDesktopsInGroupResponseBody setStoppedPrePaidDesktopsCount(Integer stoppedPrePaidDesktopsCount) {
+        this.stoppedPrePaidDesktopsCount = stoppedPrePaidDesktopsCount;
+        return this;
+    }
+    public Integer getStoppedPrePaidDesktopsCount() {
+        return this.stoppedPrePaidDesktopsCount;
     }
 
     public static class DescribeDesktopsInGroupResponseBodyPaidDesktops extends TeaModel {

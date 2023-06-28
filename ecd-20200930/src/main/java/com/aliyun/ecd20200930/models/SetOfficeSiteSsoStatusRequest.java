@@ -4,17 +4,38 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class SetOfficeSiteSsoStatusRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable SSO.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   false</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     */
     @NameInMap("EnableSso")
     public Boolean enableSso;
 
     /**
-     * <p>The operation that you want to perform. Set the value to SetOfficeSiteSsoStatus.</p>
+     * <p>The workspace ID.</p>
      */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

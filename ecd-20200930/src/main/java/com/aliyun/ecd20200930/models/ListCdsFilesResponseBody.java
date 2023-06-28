@@ -4,24 +4,63 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ListCdsFilesResponseBody extends TeaModel {
+    /**
+     * <p>The result of the operation. A value of success indicates that the operation is successful. If the operation failed, an error message is returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The total number of entries.</p>
+     */
     @NameInMap("Count")
     public String count;
 
+    /**
+     * <p>The files.</p>
+     */
     @NameInMap("FileModels")
     public java.util.List<ListCdsFilesResponseBodyFileModels> fileModels;
 
+    /**
+     * <p>The error message returned if the request failed. This parameter is empty if the value of Code is success.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The token used for the next query. If this parameter is empty, all results have been returned.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID. An ID is the unique identifier of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   <!-- --></p>
+     * <br>
+     * <p>    false</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -87,66 +126,129 @@ public class ListCdsFilesResponseBody extends TeaModel {
     }
 
     public static class ListCdsFilesResponseBodyFileModels extends TeaModel {
+        /**
+         * <p>The file category. PDS categorizes files based on their suffixes and MIME types. The following major categories are included: doc, image, audio, and video.</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The content type of the file.</p>
+         */
         @NameInMap("ContentType")
         public String contentType;
 
+        /**
+         * <p>The time when the file was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The file creator.</p>
+         */
         @NameInMap("Creator")
         public String creator;
 
+        /**
+         * <p>The file description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The URL that is used to download the file. The download URL is valid for only 15 minutes. If the URL is expired, you can call the GetFile operation to obtain the file.</p>
+         */
         @NameInMap("DownloadUrl")
         public String downloadUrl;
 
+        /**
+         * <p>The filename extension.</p>
+         */
         @NameInMap("FileExtension")
         public String fileExtension;
 
+        /**
+         * <p>The file ID.</p>
+         */
         @NameInMap("FileId")
         public String fileId;
 
+        /**
+         * <p>The file path.</p>
+         */
         @NameInMap("FilePath")
         public String filePath;
 
+        /**
+         * <p>The file type.</p>
+         */
         @NameInMap("FileType")
         public String fileType;
 
+        /**
+         * <p>The MD5 value of the file.</p>
+         */
         @NameInMap("Md5")
         public String md5;
 
+        /**
+         * <p>The time when the file was last modified.</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <p>The user who modified the file.</p>
+         */
         @NameInMap("Modifier")
         public String modifier;
 
+        /**
+         * <p>The file name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The time when the file was last opened.</p>
+         */
         @NameInMap("OpenTime")
         public String openTime;
 
+        /**
+         * <p>The timestamp that indicates the time when the file was last opened.</p>
+         */
         @NameInMap("OpenTimeStamp")
         public Long openTimeStamp;
 
+        /**
+         * <p>The ID of the parent folder.</p>
+         */
         @NameInMap("ParentId")
         public String parentId;
 
+        /**
+         * <p>The region ID You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The SHA 1 file.</p>
+         */
         @NameInMap("Sha1")
         public String sha1;
 
+        /**
+         * <p>The file size. Unit: bits.</p>
+         */
         @NameInMap("Size")
         public Long size;
 
+        /**
+         * <p>The URL of the thumbnail.</p>
+         */
         @NameInMap("Thumbnail")
         public String thumbnail;
 
