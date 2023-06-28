@@ -22,6 +22,9 @@ public class AddDirectionalAddressRequest extends TeaModel {
     @NameInMap("Source")
     public String source;
 
+    @NameInMap("UrlInsecurityForce")
+    public Boolean urlInsecurityForce;
+
     public static AddDirectionalAddressRequest build(java.util.Map<String, ?> map) throws Exception {
         AddDirectionalAddressRequest self = new AddDirectionalAddressRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class AddDirectionalAddressRequest extends TeaModel {
     }
     public String getSource() {
         return this.source;
+    }
+
+    public AddDirectionalAddressRequest setUrlInsecurityForce(Boolean urlInsecurityForce) {
+        this.urlInsecurityForce = urlInsecurityForce;
+        return this;
+    }
+    public Boolean getUrlInsecurityForce() {
+        return this.urlInsecurityForce;
     }
 
 }

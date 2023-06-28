@@ -86,6 +86,9 @@ public class GetCredentialPoolStatisticsResponseBody extends TeaModel {
         @NameInMap("EffectiveTotalFlow")
         public String effectiveTotalFlow;
 
+        @NameInMap("MonthExceedFee")
+        public Long monthExceedFee;
+
         @NameInMap("MonthFeatureFee")
         public Long monthFeatureFee;
 
@@ -169,6 +172,14 @@ public class GetCredentialPoolStatisticsResponseBody extends TeaModel {
         }
         public String getEffectiveTotalFlow() {
             return this.effectiveTotalFlow;
+        }
+
+        public GetCredentialPoolStatisticsResponseBodyData setMonthExceedFee(Long monthExceedFee) {
+            this.monthExceedFee = monthExceedFee;
+            return this;
+        }
+        public Long getMonthExceedFee() {
+            return this.monthExceedFee;
         }
 
         public GetCredentialPoolStatisticsResponseBodyData setMonthFeatureFee(Long monthFeatureFee) {

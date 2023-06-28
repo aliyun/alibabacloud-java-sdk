@@ -111,6 +111,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Source", request.source);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.urlInsecurityForce)) {
+            query.put("UrlInsecurityForce", request.urlInsecurityForce);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
