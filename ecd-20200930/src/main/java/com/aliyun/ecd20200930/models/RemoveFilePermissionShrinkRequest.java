@@ -4,18 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class RemoveFilePermissionShrinkRequest extends TeaModel {
+    /**
+     * <p>The ID of the cloud disk in Cloud Drive Service.</p>
+     */
     @NameInMap("CdsId")
     public String cdsId;
 
+    /**
+     * <p>The user ID.</p>
+     */
     @NameInMap("EndUserId")
     public String endUserId;
 
+    /**
+     * <p>The file ID. The ID is a unique identifier for the file.</p>
+     */
     @NameInMap("FileId")
     public String fileId;
 
+    /**
+     * <p>The users that you want to authorize.</p>
+     */
     @NameInMap("MemberList")
     public String memberListShrink;
 
+    /**
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

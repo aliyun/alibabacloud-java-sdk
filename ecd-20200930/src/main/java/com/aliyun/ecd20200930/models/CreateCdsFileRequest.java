@@ -4,30 +4,133 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateCdsFileRequest extends TeaModel {
+    /**
+     * <p>The ID of the cloud disk.</p>
+     */
     @NameInMap("CdsId")
     public String cdsId;
 
+    /**
+     * <p>The policy that is used when the file that you want to upload has the same name as an existing file in the cloud disk.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   refuse</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    :</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    denies creating the file</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    .</p>
+     * <br>
+     * <p>*   auto_rename</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    :</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    automatically renames the file</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    .</p>
+     * <br>
+     * <p>*   ignore</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    :</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    allows the file to use the same name as the existing file in the cloud disk</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    .</p>
+     * <br>
+     * <p>*   over_write</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    :</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    overwrites the existing file in the cloud disk</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    .</p>
+     */
     @NameInMap("ConflictPolicy")
     public String conflictPolicy;
 
+    /**
+     * <p>The user ID.</p>
+     */
     @NameInMap("EndUserId")
     public String endUserId;
 
+    /**
+     * <p>The hash value of the SHA1 algorithm that is used by the file.</p>
+     */
     @NameInMap("FileHash")
     public String fileHash;
 
+    /**
+     * <p>The file size. Unit: bytes.</p>
+     */
     @NameInMap("FileLength")
     public Long fileLength;
 
+    /**
+     * <p>The file name.</p>
+     */
     @NameInMap("FileName")
     public String fileName;
 
+    /**
+     * <p>The file type.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   file</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   folder</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     */
     @NameInMap("FileType")
     public String fileType;
 
+    /**
+     * <p>The ID of the parent folder.</p>
+     */
     @NameInMap("ParentFileId")
     public String parentFileId;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

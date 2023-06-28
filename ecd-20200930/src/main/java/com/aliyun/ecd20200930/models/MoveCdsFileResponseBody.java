@@ -4,18 +4,51 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class MoveCdsFileResponseBody extends TeaModel {
+    /**
+     * <p>The result of the modification. A value of success indicates that the modification is successful. If the modification failed, an error message is returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The error message that is returned. This parameter is not returned if the value of Code is success.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The response object when you move a file.</p>
+     */
     @NameInMap("MoveCdsFileModel")
     public MoveCdsFileResponseBodyMoveCdsFileModel moveCdsFileModel;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   <!-- --></p>
+     * <br>
+     * <p>    true</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   <!-- --></p>
+     * <br>
+     * <p>    false</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +98,39 @@ public class MoveCdsFileResponseBody extends TeaModel {
     }
 
     public static class MoveCdsFileResponseBodyMoveCdsFileModel extends TeaModel {
+        /**
+         * <p>The ID of the asynchronous task. This parameter is not returned if you copy files. This parameter is returned if you copy folders in the backend in an asynchronous manner. You can call the GetAsyncTask operation to obtain the ID and details of an asynchronous task.</p>
+         */
         @NameInMap("AsyncTaskId")
         public String asyncTaskId;
 
+        /**
+         * <p>Indicates whether the file exists.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   <!-- --></p>
+         * <br>
+         * <p>    true</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   <!-- --></p>
+         * <br>
+         * <p>    false</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
         @NameInMap("Exist")
         public Boolean exist;
 
+        /**
+         * <p>The ID of the file.</p>
+         */
         @NameInMap("FileId")
         public String fileId;
 

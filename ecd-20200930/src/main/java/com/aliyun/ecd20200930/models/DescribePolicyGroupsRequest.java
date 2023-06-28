@@ -4,18 +4,42 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribePolicyGroupsRequest extends TeaModel {
+    /**
+     * <p>The number of entries per page.</p>
+     * <br>
+     * <p>*   Valid values: 1 to 100</p>
+     * <p>*   Default value: 10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The policy IDs. You can specify one or more policy IDs.</p>
+     */
     @NameInMap("PolicyGroupId")
     public java.util.List<String> policyGroupId;
 
+    /**
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The effective scope of the policy. Valid values:</p>
+     * <br>
+     * <p>*   GLOBAL: The policy takes effect globally.</p>
+     * <p>*   IP: The policy takes effect based on the IP address.</p>
+     * <p>*   ALL: The policy takes effect without limits.</p>
+     * <br>
+     * <p>Default value: GLOBAL.</p>
+     */
     @NameInMap("Scope")
     public String scope;
 

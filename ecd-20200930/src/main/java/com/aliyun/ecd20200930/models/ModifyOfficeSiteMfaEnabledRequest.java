@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyOfficeSiteMfaEnabledRequest extends TeaModel {
     /**
-     * <p>Enables or disables multi-factor authentication (MFA) for a workspace.</p>
+     * <p>Specifies whether to enable MFA. Valid values:</p>
+     * <br>
+     * <p>*   true: enables MFA</p>
+     * <p>*   false: disables MFA</p>
      */
     @NameInMap("MfaEnabled")
     public Boolean mfaEnabled;
@@ -17,7 +20,7 @@ public class ModifyOfficeSiteMfaEnabledRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to ModifyOfficeSiteMfaEnabled.</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

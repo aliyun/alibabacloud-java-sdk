@@ -4,9 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The directory blacklist and whitelist.</p>
+     */
     @NameInMap("UserProfilePathRule")
     public DescribeUserProfilePathRulesResponseBodyUserProfilePathRule userProfilePathRule;
 
@@ -32,9 +38,33 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeUserProfilePathRulesResponseBodyUserProfilePathRuleRulesBlackPath extends TeaModel {
+        /**
+         * <p>The path.</p>
+         */
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <p>The path type.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   file</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   folder</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -62,9 +92,33 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeUserProfilePathRulesResponseBodyUserProfilePathRuleRulesWhitePaths extends TeaModel {
+        /**
+         * <p>The path.</p>
+         */
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <p>The path type.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   file</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   folder</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -92,9 +146,15 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeUserProfilePathRulesResponseBodyUserProfilePathRuleRules extends TeaModel {
+        /**
+         * <p>The blacklist that is configured.</p>
+         */
         @NameInMap("BlackPath")
         public DescribeUserProfilePathRulesResponseBodyUserProfilePathRuleRulesBlackPath blackPath;
 
+        /**
+         * <p>The directories in the whitelist.</p>
+         */
         @NameInMap("WhitePaths")
         public java.util.List<DescribeUserProfilePathRulesResponseBodyUserProfilePathRuleRulesWhitePaths> whitePaths;
 
@@ -122,12 +182,39 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeUserProfilePathRulesResponseBodyUserProfilePathRule extends TeaModel {
+        /**
+         * <p>The desktop group ID.</p>
+         */
         @NameInMap("DesktopGroupId")
         public String desktopGroupId;
 
+        /**
+         * <p>The directory rules.</p>
+         */
         @NameInMap("Rules")
         public java.util.List<DescribeUserProfilePathRulesResponseBodyUserProfilePathRuleRules> rules;
 
+        /**
+         * <p>The directory type that is configured for the directory.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   DesktopGroup</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Default</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
         @NameInMap("UserProfileRuleType")
         public String userProfileRuleType;
 

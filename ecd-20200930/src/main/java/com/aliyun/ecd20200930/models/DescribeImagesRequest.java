@@ -10,6 +10,9 @@ public class DescribeImagesRequest extends TeaModel {
     @NameInMap("DesktopInstanceType")
     public String desktopInstanceType;
 
+    @NameInMap("FotaVersion")
+    public String fotaVersion;
+
     /**
      * <p>Specifies whether the image is a GPU-accelerated image.</p>
      */
@@ -27,6 +30,9 @@ public class DescribeImagesRequest extends TeaModel {
      */
     @NameInMap("ImageId")
     public java.util.List<String> imageId;
+
+    @NameInMap("ImageName")
+    public String imageName;
 
     /**
      * <p>The state of the image.</p>
@@ -98,6 +104,14 @@ public class DescribeImagesRequest extends TeaModel {
         return this.desktopInstanceType;
     }
 
+    public DescribeImagesRequest setFotaVersion(String fotaVersion) {
+        this.fotaVersion = fotaVersion;
+        return this;
+    }
+    public String getFotaVersion() {
+        return this.fotaVersion;
+    }
+
     public DescribeImagesRequest setGpuCategory(Boolean gpuCategory) {
         this.gpuCategory = gpuCategory;
         return this;
@@ -120,6 +134,14 @@ public class DescribeImagesRequest extends TeaModel {
     }
     public java.util.List<String> getImageId() {
         return this.imageId;
+    }
+
+    public DescribeImagesRequest setImageName(String imageName) {
+        this.imageName = imageName;
+        return this;
+    }
+    public String getImageName() {
+        return this.imageName;
     }
 
     public DescribeImagesRequest setImageStatus(String imageStatus) {

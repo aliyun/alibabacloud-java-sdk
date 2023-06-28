@@ -4,9 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DeleteNASFileSystemsRequest extends TeaModel {
+    /**
+     * <p>The IDs of the NAS file systems that you want to delete.</p>
+     */
     @NameInMap("FileSystemId")
     public java.util.List<String> fileSystemId;
 
+    /**
+     * <p>The region ID of the NAS file system that you want to delete.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

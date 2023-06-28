@@ -4,21 +4,68 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeFotaTasksRequest extends TeaModel {
+    /**
+     * <p>This parameter is not available.</p>
+     */
     @NameInMap("FotaStatus")
     public String fotaStatus;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * <br>
+     * <p>*   Valid values: 1 to 100</p>
+     * <p>*   Default value: 20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. If the NextToken parameter is empty, no next page exists.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The IDs of the image update tasks. You can call the DescribeFotaTasks operation to obtain the value of this parameter.</p>
+     */
     @NameInMap("TaskUid")
     public java.util.List<String> taskUid;
 
+    /**
+     * <p>Specifies whether to automatically push the image update task.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   Running</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    :</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    automatically pushes the image update task.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   Pending</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    :</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    does not automatically push the image update task.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     */
     @NameInMap("UserStatus")
     public String userStatus;
 

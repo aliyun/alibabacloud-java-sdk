@@ -4,18 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyCdsFileResponseBody extends TeaModel {
+    /**
+     * <p>The modification result. The value success indicates that the modification is successful. If the modification failed, an error message is returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The value true returned if the request is successful.</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values: true: The request is successful. false: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

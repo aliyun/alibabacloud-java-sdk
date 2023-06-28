@@ -4,9 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CancelCdsFileShareLinkRequest extends TeaModel {
+    /**
+     * <p>The ID of the cloud disk.</p>
+     */
     @NameInMap("CdsId")
     public String cdsId;
 
+    /**
+     * <p>The ID of the file sharing task.</p>
+     */
     @NameInMap("ShareId")
     public String shareId;
 

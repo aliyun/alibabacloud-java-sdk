@@ -49,6 +49,9 @@ public class DescribeBundlesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("Scope")
+    public String scope;
+
     @NameInMap("SelectedBundle")
     public Boolean selectedBundle;
 
@@ -184,6 +187,14 @@ public class DescribeBundlesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeBundlesRequest setScope(String scope) {
+        this.scope = scope;
+        return this;
+    }
+    public String getScope() {
+        return this.scope;
     }
 
     public DescribeBundlesRequest setSelectedBundle(Boolean selectedBundle) {

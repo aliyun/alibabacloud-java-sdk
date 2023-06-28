@@ -5,16 +5,19 @@ import com.aliyun.tea.*;
 
 public class GetSpMetadataRequest extends TeaModel {
     /**
-     * <p>GetSpMetadata</p>
+     * <p>The workspace ID. This parameter is the same as `OfficeSiteId`. We recommend that you use `OfficeSiteId` to replace `DirectoryId`. You can specify only `DirectoryId` or `OfficeSiteId`.</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    /**
+     * <p>The workspace ID.</p>
+     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to GetSpMetadata.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
