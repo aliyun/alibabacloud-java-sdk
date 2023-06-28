@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAvailableBusiRegionsResponseBody extends TeaModel {
     /**
-     * <p>Information about the region.</p>
+     * <p>The information about the regions.</p>
      */
     @NameInMap("Regions")
     public java.util.List<ListAvailableBusiRegionsResponseBodyRegions> regions;
@@ -45,10 +45,10 @@ public class ListAvailableBusiRegionsResponseBody extends TeaModel {
         public String localName;
 
         /**
-         * <p>Indicates whether it is a point of presence (PoP). Valid values:</p>
+         * <p>Indicates whether the region is a point of presence (PoP). Valid values:</p>
          * <br>
-         * <p>*   **true**: It is a PoP.</p>
-         * <p>*   **false**: It is not a PoP.</p>
+         * <p>*   **true**: The region is a PoP.</p>
+         * <p>*   **false**: The region is not a PoP.</p>
          */
         @NameInMap("Pop")
         public Boolean pop;

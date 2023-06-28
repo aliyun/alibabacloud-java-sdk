@@ -270,6 +270,15 @@ public class UpdateEndpointGroupRequest extends TeaModel {
         public Boolean enableClientIPPreservation;
 
         /**
+         * <p>Specifies whether to preserve the IP addresses of clients that access the endpoint by using the ProxyProtocol module. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false** (default)</p>
+         */
+        @NameInMap("EnableProxyProtocol")
+        public Boolean enableProxyProtocol;
+
+        /**
          * <p>The IP address or domain name of the endpoint.</p>
          */
         @NameInMap("Endpoint")
@@ -320,6 +329,14 @@ public class UpdateEndpointGroupRequest extends TeaModel {
         }
         public Boolean getEnableClientIPPreservation() {
             return this.enableClientIPPreservation;
+        }
+
+        public UpdateEndpointGroupRequestEndpointConfigurations setEnableProxyProtocol(Boolean enableProxyProtocol) {
+            this.enableProxyProtocol = enableProxyProtocol;
+            return this;
+        }
+        public Boolean getEnableProxyProtocol() {
+            return this.enableProxyProtocol;
         }
 
         public UpdateEndpointGroupRequestEndpointConfigurations setEndpoint(String endpoint) {

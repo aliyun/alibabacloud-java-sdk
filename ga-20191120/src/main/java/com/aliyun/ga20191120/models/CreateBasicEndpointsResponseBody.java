@@ -11,7 +11,7 @@ public class CreateBasicEndpointsResponseBody extends TeaModel {
     public String endpointGroupId;
 
     /**
-     * <p>The endpoints that are associated with the basic GA instance.</p>
+     * <p>The endpoints in the endpoint group.</p>
      */
     @NameInMap("Endpoints")
     public java.util.List<CreateBasicEndpointsResponseBodyEndpoints> endpoints;
@@ -77,12 +77,12 @@ public class CreateBasicEndpointsResponseBody extends TeaModel {
         public String endpointSubAddress;
 
         /**
-         * <p>The type of endpoint. Valid values:</p>
+         * <p>The type of the endpoint. Valid values:</p>
          * <br>
-         * <p>*   **ENI**: ENI.</p>
-         * <p>*   **SLB**: CLB instance.</p>
-         * <p>*   **ECS**: ECS instance.</p>
-         * <p>*   **NLB**: NLB instance.</p>
+         * <p>*   **ENI:** ENI.</p>
+         * <p>*   **SLB:** CLB instance.</p>
+         * <p>*   **ECS:** ECS instance.</p>
+         * <p>*   **NLB:** NLB instance.</p>
          */
         @NameInMap("EndpointType")
         public String endpointType;

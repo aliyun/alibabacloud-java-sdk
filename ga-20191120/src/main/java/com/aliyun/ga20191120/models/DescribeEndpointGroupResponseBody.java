@@ -11,7 +11,7 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
     public String acceleratorId;
 
     /**
-     * <p>Indicates the state of the binding relationship between the Log Service project and the endpoint group. Valid values:</p>
+     * <p>Indicates the status of the binding between the Log Service project and the endpoint group. Valid values:</p>
      * <br>
      * <p>*   **on**: The Log Service project is bound to the endpoint group.</p>
      * <p>*   **off**: No Log Service projects are bound to the endpoint group.</p>
@@ -28,16 +28,16 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>Indicates whether the access logging feature is enabled. Valid values:</p>
+     * <p>Indicates whether the access log feature is enabled. Valid values:</p>
      * <br>
-     * <p>*   **on**: The access logging feature is enabled.</p>
-     * <p>*   **off**: The access logging feature is disabled.</p>
+     * <p>*   **on**: enabled</p>
+     * <p>*   **off**: disabled</p>
      */
     @NameInMap("EnableAccessLog")
     public Boolean enableAccessLog;
 
     /**
-     * <p>The configurations of endpoints in the endpoint group.</p>
+     * <p>The configurations of the endpoint.</p>
      */
     @NameInMap("EndpointConfigurations")
     public java.util.List<DescribeEndpointGroupResponseBodyEndpointConfigurations> endpointConfigurations;
@@ -61,7 +61,7 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
     public String endpointGroupRegion;
 
     /**
-     * <p>The type of the endpoint group. Valid values:</p>
+     * <p>The type of endpoint group. Valid values:</p>
      * <br>
      * <p>*   **default**: a default endpoint group</p>
      * <p>*   **virtual**: a virtual endpoint group</p>
@@ -70,7 +70,7 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
     public String endpointGroupType;
 
     /**
-     * <p>The endpoint group IP addresses to be confirmed. After the GA instance is upgraded, the IP addresses that are added to the endpoint group need to be confirmed.</p>
+     * <p>The endpoint group IP addresses to be confirmed after the GA instance is upgraded.</p>
      */
     @NameInMap("EndpointGroupUnconfirmedIpList")
     public java.util.List<String> endpointGroupUnconfirmedIpList;
@@ -93,8 +93,8 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the health check feature is enabled. Valid values:</p>
      * <br>
-     * <p>*   **true**: The health check feature is enabled.</p>
-     * <p>*   **false**: The health check feature is disabled.</p>
+     * <p>*   **true**: enabled</p>
+     * <p>*   **false**: disabled</p>
      */
     @NameInMap("HealthCheckEnabled")
     public Boolean healthCheckEnabled;
@@ -106,7 +106,7 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
     public Integer healthCheckIntervalSeconds;
 
     /**
-     * <p>The path to which health check requests are sent.</p>
+     * <p>The path to which health check probes are sent.</p>
      */
     @NameInMap("HealthCheckPath")
     public String healthCheckPath;
@@ -170,16 +170,19 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
     public String slsRegion;
 
     /**
-     * <p>The state of the endpoint group.</p>
+     * <p>The status of the endpoint group. Valid values:</p>
      * <br>
      * <p>*   **init**: The endpoint group is being initialized.</p>
-     * <p>*   **active**: The endpoint group is running normally.</p>
+     * <p>*   **active**: The endpoint group is running as expected.</p>
      * <p>*   **updating**: The endpoint group is being updated.</p>
      * <p>*   **deleting**: The endpoint group is being deleted.</p>
      */
     @NameInMap("State")
     public String state;
 
+    /**
+     * <p>Tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<DescribeEndpointGroupResponseBodyTags> tags;
 
@@ -428,12 +431,15 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the client IP address preservation feature is enabled. Valid values:</p>
          * <br>
-         * <p>*   **true**: The client IP address preservation feature is enabled.</p>
-         * <p>*   **false**: The client IP address preservation feature is disabled.</p>
+         * <p>*   **true**: enabled</p>
+         * <p>*   **false**: disabled</p>
          */
         @NameInMap("EnableClientIPPreservation")
         public Boolean enableClientIPPreservation;
 
+        /**
+         * <p>是否使用ProxyProtocol方式保留客户端源IP。</p>
+         */
         @NameInMap("EnableProxyProtocol")
         public Boolean enableProxyProtocol;
 
@@ -444,7 +450,7 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The port that is used to monitor latency.</p>
+         * <p>The port that is used to monitor the latency.</p>
          */
         @NameInMap("ProbePort")
         public Integer probePort;
@@ -459,15 +465,15 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
         public String probeProtocol;
 
         /**
-         * <p>The type of the endpoint. Valid values:</p>
+         * <p>The type of endpoint. Valid values:</p>
          * <br>
          * <p>*   **Domain**: a custom domain name</p>
          * <p>*   **Ip**: a custom IP address</p>
          * <p>*   **PublicIp**: a public IP address provided by Alibaba Cloud</p>
-         * <p>*   **ECS**: an Elastic Compute Service (ECS) instance</p>
-         * <p>*   **SLB**: a Server Load Balancer (SLB) instance</p>
-         * <p>*   **ALB**: an Application Load Balancer (ALB) instance</p>
-         * <p>*   **OSS**: an Object Storage Service (OSS) bucket</p>
+         * <p>*   **ECS:** Elastic Compute Service (ECS) instance</p>
+         * <p>*   **SLB**: Server Load Balancer (SLB) instance</p>
+         * <p>*   **ALB**: Application Load Balancer (ALB) instance</p>
+         * <p>*   **OSS**: Object Storage Service (OSS) bucket</p>
          */
         @NameInMap("Type")
         public String type;
@@ -549,7 +555,7 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
         public Integer endpointPort;
 
         /**
-         * <p>The listener port.</p>
+         * <p>The listening port.</p>
          */
         @NameInMap("ListenerPort")
         public Integer listenerPort;
@@ -578,9 +584,15 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeEndpointGroupResponseBodyTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 

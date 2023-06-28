@@ -46,9 +46,8 @@ public class CreateAcceleratorRequest extends TeaModel {
     /**
      * <p>The bandwidth billing method. Valid values:</p>
      * <br>
-     * <p>*   **BandwidthPackage:** billed based on bandwidth plans.</p>
+     * <p>*   **BandwidthPackage:** billed based on bandwidth plans. This is the default value.</p>
      * <p>*   **CDT:** billed based on data transfer.</p>
-     * <p>*   **CDT95:** billed based on the 95th percentile bandwidth. The bills are managed by using Cloud Data Transfer (CDT). This bandwidth billing method is not available by default. Contact your Alibaba Cloud account manager for more information.</p>
      */
     @NameInMap("BandwidthBillingType")
     public String bandwidthBillingType;
@@ -63,6 +62,9 @@ public class CreateAcceleratorRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>The subscription duration of the GA instance.</p>
      * <br>
@@ -71,6 +73,9 @@ public class CreateAcceleratorRequest extends TeaModel {
      */
     @NameInMap("Duration")
     public Integer duration;
+
+    @NameInMap("InstanceChargeType")
+    public String instanceChargeType;
 
     /**
      * <p>The configurations of the acceleration area.</p>
@@ -198,12 +203,28 @@ public class CreateAcceleratorRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public CreateAcceleratorRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
     public CreateAcceleratorRequest setDuration(Integer duration) {
         this.duration = duration;
         return this;
     }
     public Integer getDuration() {
         return this.duration;
+    }
+
+    public CreateAcceleratorRequest setInstanceChargeType(String instanceChargeType) {
+        this.instanceChargeType = instanceChargeType;
+        return this;
+    }
+    public String getInstanceChargeType() {
+        return this.instanceChargeType;
     }
 
     public CreateAcceleratorRequest setIpSetConfig(CreateAcceleratorRequestIpSetConfig ipSetConfig) {

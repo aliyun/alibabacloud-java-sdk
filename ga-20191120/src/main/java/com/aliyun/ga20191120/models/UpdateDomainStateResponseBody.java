@@ -11,18 +11,18 @@ public class UpdateDomainStateResponseBody extends TeaModel {
     public String domain;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ICP filing status of the accelerated domain name.</p>
+     * <p>The ICP filing status of the accelerated domain name. Valid values:</p>
      * <br>
-     * <p>*   **illegal**: The domain name is illegal.</p>
-     * <p>*   **inactive**: The domain name has not completed ICP filing.</p>
-     * <p>*   **active**: The domain name has completed ICP filing.</p>
-     * <p>*   **unknown**: The ICP filing status is unknown.</p>
+     * <p>*   **illegal:** The domain name is illegal.</p>
+     * <p>*   **inactive:** The domain name has not completed ICP filing.</p>
+     * <p>*   **active:** The domain name has a valid ICP number.</p>
+     * <p>*   **unknown:** The ICP filing status is unknown.</p>
      */
     @NameInMap("State")
     public String state;

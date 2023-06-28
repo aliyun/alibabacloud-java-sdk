@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateIpSetsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the GA instance.</p>
+     * <p>The GA instance ID.</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
@@ -17,7 +17,7 @@ public class CreateIpSetsResponseBody extends TeaModel {
     public java.util.List<CreateIpSetsResponseBodyIpSets> ipSets;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,7 +53,7 @@ public class CreateIpSetsResponseBody extends TeaModel {
 
     public static class CreateIpSetsResponseBodyIpSets extends TeaModel {
         /**
-         * <p>The ID of the region that requires acceleration.</p>
+         * <p>The acceleration region ID.</p>
          */
         @NameInMap("AccelerateRegionId")
         public String accelerateRegionId;
@@ -65,7 +65,7 @@ public class CreateIpSetsResponseBody extends TeaModel {
         public Integer bandwidth;
 
         /**
-         * <p>The ID of the acceleration region.</p>
+         * <p>The acceleration region ID.</p>
          */
         @NameInMap("IpSetId")
         public String ipSetId;

@@ -7,14 +7,14 @@ public class ListCommonAreasRequest extends TeaModel {
     /**
      * <p>The IP version used to connect to the GA instance. Valid values:</p>
      * <br>
-     * <p>*   **IPv4** (default): queries regions that support IPv4.</p>
-     * <p>*   **IPv6** :queries regions that support IPv6.</p>
+     * <p>*   **IPv4** (default)</p>
+     * <p>*   **IPv6**</p>
      */
     @NameInMap("IpVersion")
     public String ipVersion;
 
     /**
-     * <p>Specifies whether to query regions where endpoint groups can be deployed.</p>
+     * <p>Specifies whether to query regions where endpoint groups of GA can be deployed. Valid values:</p>
      * <br>
      * <p>*   **true**: yes</p>
      * <p>*   **false** (default): no</p>
@@ -23,10 +23,10 @@ public class ListCommonAreasRequest extends TeaModel {
     public Boolean isEpg;
 
     /**
-     * <p>Specifies whether to query regions supported by GA.</p>
+     * <p>Specifies whether to query regions supported by GA. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false** (default): no</p>
+     * <p>*   **true**</p>
+     * <p>*   **false** (default)</p>
      */
     @NameInMap("IsIpSet")
     public Boolean isIpSet;

@@ -7,17 +7,17 @@ public class CreateBasicAcceleratorRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <br>
-     * <p>*   **false** (default): disables automatic payment. If you select this option, you must go to the Order Center to complete the payment after an order is generated.</p>
-     * <p>*   **true**: enables automatic payment. Payments are automatically completed.</p>
+     * <p>*   **false:** disables automatic payment. If you select this option, you must go to the Order Center to complete the payment after an order is generated. This is the default value.</p>
+     * <p>*   **true:** enables automatic payment. Payments are automatically completed.</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to enable auto-renewal for the GA instance. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal for the basic GA instance. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false** (default): no</p>
+     * <p>*   **true:** enables auto-renewal for the basic GA instance.</p>
+     * <p>*   **false:** disables auto-renewal for the basic GA instance. This is the default value.</p>
      */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
@@ -27,18 +27,18 @@ public class CreateBasicAcceleratorRequest extends TeaModel {
      * <br>
      * <p>Valid values: **1** to **12**. Default value: **1**.</p>
      * <br>
-     * <p>> : This parameter takes effect only if **AutoRenew** is set to **true**.</p>
+     * <p>>  This parameter takes effect only when the **AutoPay** parameter is set to **true**.</p>
      */
     @NameInMap("AutoRenewDuration")
     public Integer autoRenewDuration;
 
     /**
-     * <p>Specifies whether to automatically pay bills by using coupons. Default value: false. Valid values:</p>
+     * <p>Specifies whether to automatically apply coupons to your bills. Valid values:</p>
      * <br>
-     * <p>*   **true**: automatically pays bills by using coupons.</p>
-     * <p>*   **false**: does not automatically pay bills by using coupons.</p>
+     * <p>*   **true:** automatically applies coupons to your bills.</p>
+     * <p>*   **false:** does not automatically apply coupons to your bills. This is the default value.</p>
      * <br>
-     * <p>>  This parameter takes effect only if **AutoPay** is set to **true**.</p>
+     * <p>>  This parameter takes effect only when the **AutoPay** parameter is set to **true**.</p>
      */
     @NameInMap("AutoUseCoupon")
     public String autoUseCoupon;
@@ -46,15 +46,17 @@ public class CreateBasicAcceleratorRequest extends TeaModel {
     /**
      * <p>The bandwidth billing method. Valid values:</p>
      * <br>
-     * <p>*   **BandwidthPackage**: billed based on bandwidth plans.</p>
-     * <p>*   **CDT**: billed through Cloud Data Transfer (CDT) and based on data transfer.</p>
-     * <p>*   **CDT95**: billed through CDT and based on the 95th percentile bandwidth. This bandwidth billing method is available only for users that are included in the whitelist.</p>
+     * <p>*   **BandwidthPackage:** billed based on bandwidth plans.</p>
+     * <p>*   **CDT:** billed based on data transfer. The bills are managed by using Cloud Data Transfer (CDT).</p>
+     * <p>*   **CDT95:** billed based on the 95th percentile bandwidth. The bills are managed by using Cloud Data Transfer (CDT). This bandwidth billing method is not available by default. Contact your Alibaba Cloud account manager for more information.</p>
      */
     @NameInMap("BandwidthBillingType")
     public String bandwidthBillingType;
 
     /**
-     * <p>The billing method. Set the value to **PREPAY**, which specifies the subscription billing method.</p>
+     * <p>The billing method of the basic GA instance. Valid values:</p>
+     * <p>- **PREPAY**: subscription. This is the default value.</p>
+     * <p>- **POSTPAY**: pay-as-you-go.</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
@@ -62,50 +64,50 @@ public class CreateBasicAcceleratorRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     * <p>>  If you do not set this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The value of **RequestId** may be different for each API request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. Default value: false. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <br>
-     * <p>*   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false**: performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * <p>*   **true:** performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false**: performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed. This is the default value.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The subscription duration.</p>
+     * <p>The subscription duration of the GA instance.</p>
      * <br>
-     * <p>*   If the **PricingCycle** parameter is set to **Month**, the valid values for the **Duration** parameter are **1** to **9**.</p>
-     * <p>*   If the **PricingCycle** parameter is set to **Year**, the valid values for the **Duration** parameter are **1** to **3**.</p>
+     * <p>*   If you set the **PricingCycle** parameter to **Month**, the valid values for the **Duration** parameter are **1** to **9**.</p>
+     * <p>*   If you set the **PricingCycle** parameter to **Year**, the valid values for the **Duration** parameter are **1** to **3**.</p>
      */
     @NameInMap("Duration")
     public Integer duration;
 
     /**
-     * <p>The billing cycle of the GA instance. Valid values:</p>
+     * <p>The billing cycle of the basic GA instance. Valid values:</p>
      * <br>
-     * <p>*   **Month**: billed on a monthly basis.</p>
-     * <p>*   **Year**: billed on an annual basis.</p>
+     * <p>*   **Month:** billed on a monthly basis.</p>
+     * <p>*   **Year:** billed on an annual basis.</p>
      */
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
     /**
-     * <p>The coupon code.</p>
+     * <p>The code of the coupon.</p>
      * <br>
-     * <p>>  This parameter is available only on the international site (alibabacloud.com).</p>
+     * <p>>  This parameter takes effect only for accounts registered on the international site (alibabacloud.com).</p>
      */
     @NameInMap("PromotionOptionNo")
     public String promotionOptionNo;
 
     /**
-     * <p>The ID of the region to which the basic GA instance belongs. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the region where the basic GA instance is deployed. Set the value to **cn-hangzhou**.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

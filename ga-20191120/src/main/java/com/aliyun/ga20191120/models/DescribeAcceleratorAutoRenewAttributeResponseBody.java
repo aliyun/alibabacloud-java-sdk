@@ -13,14 +13,14 @@ public class DescribeAcceleratorAutoRenewAttributeResponseBody extends TeaModel 
     /**
      * <p>Indicates whether auto-renewal is enabled. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false** (default): no</p>
+     * <p>*   **true**: enabled</p>
+     * <p>*   **false** (default): disabled</p>
      */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
     /**
-     * <p>The auto-renewal period. Unit: months.</p>
+     * <p>The auto-renewal duration. Unit: months.</p>
      * <br>
      * <p>This parameter is returned only if **AutoRenew** is set to **true**.</p>
      */
@@ -31,8 +31,8 @@ public class DescribeAcceleratorAutoRenewAttributeResponseBody extends TeaModel 
      * <p>Indicates how the GA instance is renewed. Valid values:</p>
      * <br>
      * <p>*   **AutoRenewal**: The GA instance is automatically renewed.</p>
-     * <p>*   **Normal**: The GA instance is manually renewed.</p>
-     * <p>*   **NotRenewal**: The GA instance is not renewed after the instance expires. The system sends only a non-renewal reminder three days before the expiration date. The system no longer sends notifications to remind you to renew the GA instance.</p>
+     * <p>*   **Normal**: You must manually renew the GA instance.</p>
+     * <p>*   **NotRenewal**: The GA instance is not renewed after it expires. The system sends only a non-renewal reminder three days before the expiration date. The system no longer sends notifications to remind you to renew the GA instance.</p>
      */
     @NameInMap("RenewalStatus")
     public String renewalStatus;

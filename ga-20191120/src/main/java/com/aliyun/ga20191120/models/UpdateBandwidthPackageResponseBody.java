@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateBandwidthPackageResponseBody extends TeaModel {
     /**
-     * <p>The ID of the bandwidth plan.</p>
+     * <p>The bandwidth plan ID.</p>
      */
     @NameInMap("BandwidthPackage")
     public String bandwidthPackage;
@@ -23,7 +23,7 @@ public class UpdateBandwidthPackageResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

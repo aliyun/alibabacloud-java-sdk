@@ -28,6 +28,9 @@ public class CreateEndpointGroupRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The configurations of the endpoint.</p>
+     */
     @NameInMap("EndpointConfigurations")
     public java.util.List<CreateEndpointGroupRequestEndpointConfigurations> endpointConfigurations;
 
@@ -54,9 +57,8 @@ public class CreateEndpointGroupRequest extends TeaModel {
      * <p>*   **HTTP**</p>
      * <p>*   **HTTPS**</p>
      * <br>
-     * <p>> </p>
-     * <p>*   You can set this parameter only when the listener that is associated with the endpoint group uses **HTTP** or **HTTPS**.</p>
-     * <p>*   For an **HTTP** listener, the backend service protocol must be **HTTP**.</p>
+     * <p>> *   You can set this parameter only when the listener that is associated with the endpoint group uses **HTTP** or **HTTPS**.</p>
+     * <p>>*   For an **HTTP** listener, the backend service protocol must be **HTTP**.</p>
      */
     @NameInMap("EndpointRequestProtocol")
     public String endpointRequestProtocol;
@@ -112,6 +114,9 @@ public class CreateEndpointGroupRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The mappings between ports.</p>
+     */
     @NameInMap("PortOverrides")
     public java.util.List<CreateEndpointGroupRequestPortOverrides> portOverrides;
 
@@ -121,6 +126,9 @@ public class CreateEndpointGroupRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Tags of GA instances.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateEndpointGroupRequestTag> tag;
 
@@ -308,6 +316,15 @@ public class CreateEndpointGroupRequest extends TeaModel {
         public Boolean enableClientIPPreservation;
 
         /**
+         * <p>Specifies whether to preserve client IP addresses by using the ProxyProtocol module. Default value: false. Valid values:</p>
+         * <br>
+         * <p>*   **true**: preserves client IP addresses by using the ProxyProtocol module.</p>
+         * <p>*   **false**: does not preserve client IP addresses by using the ProxyProtocol module.</p>
+         */
+        @NameInMap("EnableProxyProtocol")
+        public Boolean enableProxyProtocol;
+
+        /**
          * <p>The IP address or domain name of the endpoint.</p>
          */
         @NameInMap("Endpoint")
@@ -357,6 +374,14 @@ public class CreateEndpointGroupRequest extends TeaModel {
             return this.enableClientIPPreservation;
         }
 
+        public CreateEndpointGroupRequestEndpointConfigurations setEnableProxyProtocol(Boolean enableProxyProtocol) {
+            this.enableProxyProtocol = enableProxyProtocol;
+            return this;
+        }
+        public Boolean getEnableProxyProtocol() {
+            return this.enableProxyProtocol;
+        }
+
         public CreateEndpointGroupRequestEndpointConfigurations setEndpoint(String endpoint) {
             this.endpoint = endpoint;
             return this;
@@ -393,9 +418,8 @@ public class CreateEndpointGroupRequest extends TeaModel {
         /**
          * <p>The listener port that is mapped to the endpoint port.</p>
          * <br>
-         * <p>> </p>
-         * <p>*   Only HTTP and HTTPS listeners support port mappings.</p>
-         * <p>*   The listener port must be the one used by the current listener.</p>
+         * <p>> *   Only HTTP and HTTPS listeners support port mappings.</p>
+         * <p>>*   The listener port must be the one used by the current listener.</p>
          */
         @NameInMap("ListenerPort")
         public Integer listenerPort;
@@ -424,9 +448,23 @@ public class CreateEndpointGroupRequest extends TeaModel {
     }
 
     public static class CreateEndpointGroupRequestTag extends TeaModel {
+        /**
+         * <p>The tag key of the GA instance. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         * <br>
+         * <p>You can specify up to 20 tag keys.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value of the GA instance. The tag value cannot be an empty string.</p>
+         * <br>
+         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         * <br>
+         * <p>You can specify up to 20 tag values.</p>
+         */
         @NameInMap("Value")
         public String value;
 

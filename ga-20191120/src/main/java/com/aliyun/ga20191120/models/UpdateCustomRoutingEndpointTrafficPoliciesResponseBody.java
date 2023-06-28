@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaModel {
     /**
-     * <p>The IDs of the access policies of traffic.</p>
+     * <p>The IDs of the traffic destinations.</p>
      */
     @NameInMap("PolicyIds")
     public java.util.List<String> policyIds;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

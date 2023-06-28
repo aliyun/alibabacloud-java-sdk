@@ -13,8 +13,8 @@ public class ListEndpointGroupsRequest extends TeaModel {
     /**
      * <p>Specifies whether the access logging feature is enabled. Default value: off. Valid values:</p>
      * <br>
-     * <p>*   **on**: The access logging feature is enabled.</p>
-     * <p>*   **off**: The access logging feature is disabled.</p>
+     * <p>*   **on:** enables the access logging feature.</p>
+     * <p>*   **off:** disables the access logging feature.</p>
      */
     @NameInMap("AccessLogSwitch")
     public String accessLogSwitch;
@@ -28,8 +28,8 @@ public class ListEndpointGroupsRequest extends TeaModel {
     /**
      * <p>The type of the endpoint group. Valid values:</p>
      * <br>
-     * <p>*   **default**: a default endpoint group</p>
-     * <p>*   **virtual**: a virtual endpoint group</p>
+     * <p>*   **default:** a default endpoint group.</p>
+     * <p>*   **virtual:** a virtual endpoint group.</p>
      * <p>*   If you leave this parameter empty, all default and virtual endpoint groups are queried.</p>
      */
     @NameInMap("EndpointGroupType")
@@ -59,6 +59,9 @@ public class ListEndpointGroupsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Tags of GA instances.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListEndpointGroupsRequestTag> tag;
 
@@ -140,9 +143,15 @@ public class ListEndpointGroupsRequest extends TeaModel {
     }
 
     public static class ListEndpointGroupsRequestTag extends TeaModel {
+        /**
+         * <p>The tag key of the GA instance.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value of the GA instance.</p>
+         */
         @NameInMap("Value")
         public String value;
 

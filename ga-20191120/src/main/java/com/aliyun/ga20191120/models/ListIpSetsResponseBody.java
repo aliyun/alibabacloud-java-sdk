@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIpSetsResponseBody extends TeaModel {
     /**
-     * <p>Details of the acceleration region.</p>
+     * <p>Details of the acceleration regions.</p>
      */
     @NameInMap("IpSets")
     public java.util.List<ListIpSetsResponseBodyIpSets> ipSets;
@@ -81,7 +81,7 @@ public class ListIpSetsResponseBody extends TeaModel {
 
     public static class ListIpSetsResponseBodyIpSets extends TeaModel {
         /**
-         * <p>The ID of the region that is accelerated.</p>
+         * <p>The ID of the acceleration region.</p>
          */
         @NameInMap("AccelerateRegionId")
         public String accelerateRegionId;
@@ -105,7 +105,7 @@ public class ListIpSetsResponseBody extends TeaModel {
         public String ipSetId;
 
         /**
-         * <p>The version of the accelerated IP address. Valid values:</p>
+         * <p>The version of the IP protocol. Valid values:</p>
          * <br>
          * <p>*   **IPv4**</p>
          * <p>*   **IPv6**</p>
@@ -113,6 +113,23 @@ public class ListIpSetsResponseBody extends TeaModel {
         @NameInMap("IpVersion")
         public String ipVersion;
 
+        /**
+         * <p>The line type of the elastic IP address (EIP) in the acceleration region. Valid values:</p>
+         * <br>
+         * <p>*   **BGP**: BGP (Multi-ISP) lines.</p>
+         * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro lines If the acceleration region is China (Hong Kong) and a basic bandwidth plan whose bandwidth type is Premium is associated with the GA instance, the default value of IspType is BGP_PRO.</p>
+         * <br>
+         * <p>If you are allowed to use single-ISP bandwidth, you can also specify one of the following values:</p>
+         * <br>
+         * <p>*   **ChinaTelecom**: China Telecom (single ISP)</p>
+         * <p>*   **ChinaUnicom**: China Unicom (single ISP)</p>
+         * <p>*   **ChinaMobile**: China Mobile (single ISP)</p>
+         * <p>*   **ChinaTelecom_L2**: China Telecom \_L2 (single ISP)</p>
+         * <p>*   **ChinaUnicom_L2**: China Unicom \_L2 (single ISP)</p>
+         * <p>*   **ChinaMobile_L2**: China Mobile \_L2 (single ISP)</p>
+         * <br>
+         * <p>> Different acceleration regions support different single-ISP BGP lines.</p>
+         */
         @NameInMap("IspType")
         public String ispType;
 
@@ -120,9 +137,9 @@ public class ListIpSetsResponseBody extends TeaModel {
          * <p>The status of the acceleration region. Valid values:</p>
          * <br>
          * <p>*   **init**: The acceleration region is being initialized.</p>
-         * <p>*   **active**: The acceleration region is in the running state.</p>
+         * <p>*   **active**: The acceleration region is running.</p>
          * <p>*   **updating**: The acceleration region is being configured.</p>
-         * <p>*   **Deleting**: The acceleration region is being deleted.</p>
+         * <p>*   **deleting**: The acceleration region is being deleted.</p>
          */
         @NameInMap("State")
         public String state;

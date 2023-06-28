@@ -23,6 +23,9 @@ public class UpdateEndpointGroupsRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>Terminal node group configuration information.</p>
+     */
     @NameInMap("EndpointGroupConfigurations")
     public java.util.List<UpdateEndpointGroupsRequestEndpointGroupConfigurations> endpointGroupConfigurations;
 
@@ -215,6 +218,9 @@ public class UpdateEndpointGroupsRequest extends TeaModel {
         @NameInMap("EnableClientIPPreservationToa")
         public Boolean enableClientIPPreservationToa;
 
+        /**
+         * <p>Terminal node configuration information.</p>
+         */
         @NameInMap("EndpointConfigurations")
         public java.util.List<UpdateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations> endpointConfigurations;
 
@@ -292,6 +298,9 @@ public class UpdateEndpointGroupsRequest extends TeaModel {
         @NameInMap("HealthCheckProtocol")
         public String healthCheckProtocol;
 
+        /**
+         * <p>The mappings between ports.</p>
+         */
         @NameInMap("PortOverrides")
         public java.util.List<UpdateEndpointGroupsRequestEndpointGroupConfigurationsPortOverrides> portOverrides;
 

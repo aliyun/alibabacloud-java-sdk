@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class UpdateBandwidthPackagaAutoRenewAttributeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal for the bandwidth plan. Valid values:</p>
      * <br>
      * <p>*   **true**: enables auto-renewal.</p>
-     * <p>*   **false** disables auto-renewal.</p>
+     * <p>*   **false** (default): disables auto-renewal.</p>
      */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
     /**
-     * <p>The auto-renewal period. Unit: months. Valid values: **1** to **12**.</p>
+     * <p>The auto-renewal duration. Unit: months. Valid values: **1** to **12**.</p>
      * <br>
-     * <p>>  This parameter is required only if **AutoRenew** is set to **true**.</p>
+     * <p>> : This parameter takes effect only if **AutoRenew** is set to **true**.</p>
      */
     @NameInMap("AutoRenewDuration")
     public Integer autoRenewDuration;
@@ -24,9 +24,9 @@ public class UpdateBandwidthPackagaAutoRenewAttributeRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** of each API request may be different.</p>
+     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -54,11 +54,11 @@ public class UpdateBandwidthPackagaAutoRenewAttributeRequest extends TeaModel {
     /**
      * <p>The auto-renewal status of the bandwidth plan. Valid values:</p>
      * <br>
-     * <p>*   **AutoRenewal**: The system automatically renews the bandwidth plan.</p>
+     * <p>*   **AutoRenewal**: The bandwidth plan is automatically renewed.</p>
      * <p>*   **Normal**: You must manually renew the bandwidth plan.</p>
      * <p>*   **NotRenewal**: Choose this option if you do not want to renew the bandwidth plan after it expires. The system sends only a non-renewal reminder three days before the expiration date. The system no longer sends notifications to remind you to renew the bandwidth plan. You can change the value of this parameter from NotRenewal to Normal for a bandwidth plan, and then manually renew the bandwidth plan. You can also set the RenewalStatus parameter to **AutoRenewal**.</p>
      * <br>
-     * <p>>  **RenewalStatus** takes precedence over **AutoRenew**. If you do not specify **RenewalStatus**, the **AutoRenew** parameter is used by default.</p>
+     * <p>> The **RenewalStatus** parameter takes precedence over the **AutoRenew** parameter. If you do not set **RenewalStatus**, the **AutoRenew** parameter is used by default.</p>
      */
     @NameInMap("RenewalStatus")
     public String renewalStatus;

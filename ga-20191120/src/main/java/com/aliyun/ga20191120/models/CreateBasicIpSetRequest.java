@@ -7,7 +7,7 @@ public class CreateBasicIpSetRequest extends TeaModel {
     /**
      * <p>The ID of the acceleration region.</p>
      * <br>
-     * <p>You can call the [ListAvailableBusiRegions](~~261190~~) operation to query the acceleration regions available for a specified GA instance.</p>
+     * <p>You can call the [ListAvailableBusiRegions](~~261190~~) operation to query the most recent acceleration region list.</p>
      */
     @NameInMap("AccelerateRegionId")
     public String accelerateRegionId;
@@ -19,7 +19,7 @@ public class CreateBasicIpSetRequest extends TeaModel {
     public String acceleratorId;
 
     /**
-     * <p>The bandwidth allocated to the acceleration region. Unit: **Mbit/s**.</p>
+     * <p>The bandwidth to be allocated to the acceleration region. Unit: **Mbit/s**.</p>
      */
     @NameInMap("Bandwidth")
     public Long bandwidth;
@@ -27,9 +27,9 @@ public class CreateBasicIpSetRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     * <p>> If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -37,8 +37,8 @@ public class CreateBasicIpSetRequest extends TeaModel {
     /**
      * <p>The line type of the elastic IP address (EIP) in the acceleration region. Valid values:</p>
      * <br>
-     * <p>*   **BGP**: BGP (Multi-ISP) lines</p>
-     * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro lines If the acceleration region is China (Hong Kong) and a basic bandwidth plan whose bandwidth type is Premium is associated with the GA instance, the default value of IspType is BGP_PRO.</p>
+     * <p>*   **BGP** (default)</p>
+     * <p>*   **BGP_PRO** If the acceleration region is China (Hong Kong) and a basic bandwidth plan whose bandwidth type is Premium is associated with the GA instance, the default value of IspType is BGP_PRO.</p>
      * <br>
      * <p>If you are allowed to use single-ISP bandwidth, you can also specify one of the following values:</p>
      * <br>
@@ -55,7 +55,7 @@ public class CreateBasicIpSetRequest extends TeaModel {
     public String ispType;
 
     /**
-     * <p>The ID of the region where the basic GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The region ID of the basic GA instance. Set the value to **cn-hangzhou**.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
