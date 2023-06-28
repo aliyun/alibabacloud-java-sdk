@@ -6648,7 +6648,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the request.
+      * > You can call this operation up to 100 times per second per account.
       *
       * @param request DescribeDcdnUserTagsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6671,7 +6671,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the request.
+      * > You can call this operation up to 100 times per second per account.
       *
       * @return DescribeDcdnUserTagsResponse
      */
@@ -8879,6 +8879,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SetDcdnDomainStagingConfigResponse setDcdnDomainStagingConfig(SetDcdnDomainStagingConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setDcdnDomainStagingConfigWithOptions(request, runtime);
+    }
+
+    /**
+      * > You can call this operation up to 10 times per second per account.
+      *
+      * @param request SetDcdnFullDomainsBlockIPRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SetDcdnFullDomainsBlockIPResponse
+     */
+    public SetDcdnFullDomainsBlockIPResponse setDcdnFullDomainsBlockIPWithOptions(SetDcdnFullDomainsBlockIPRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.blockInterval)) {
+            body.put("BlockInterval", request.blockInterval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.IPList)) {
+            body.put("IPList", request.IPList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operationType)) {
+            body.put("OperationType", request.operationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.updateType)) {
+            body.put("UpdateType", request.updateType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetDcdnFullDomainsBlockIP"),
+            new TeaPair("version", "2018-01-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetDcdnFullDomainsBlockIPResponse());
+    }
+
+    /**
+      * > You can call this operation up to 10 times per second per account.
+      *
+      * @param request SetDcdnFullDomainsBlockIPRequest
+      * @return SetDcdnFullDomainsBlockIPResponse
+     */
+    public SetDcdnFullDomainsBlockIPResponse setDcdnFullDomainsBlockIP(SetDcdnFullDomainsBlockIPRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.setDcdnFullDomainsBlockIPWithOptions(request, runtime);
     }
 
     /**
