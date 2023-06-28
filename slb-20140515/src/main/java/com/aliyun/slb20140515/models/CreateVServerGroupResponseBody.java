@@ -5,19 +5,22 @@ import com.aliyun.tea.*;
 
 public class CreateVServerGroupResponseBody extends TeaModel {
     /**
-     * <p>The list of backend servers.</p>
+     * <p>The type of the backend server. Valid values:</p>
+     * <br>
+     * <p>*   **ecs**: an ECS instance. This is the default value.</p>
+     * <p>*   **eni**: an ENI.</p>
      */
     @NameInMap("BackendServers")
     public CreateVServerGroupResponseBodyBackendServers backendServers;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The list of backend servers.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the vServer group.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("VServerGroupId")
     public String VServerGroupId;
@@ -53,34 +56,31 @@ public class CreateVServerGroupResponseBody extends TeaModel {
 
     public static class CreateVServerGroupResponseBodyBackendServersBackendServer extends TeaModel {
         /**
-         * <p>The description of the vServer group.</p>
+         * <p>backend server</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The port that is used by the backend server.</p>
+         * <p>The ID of the ECS instance or ENI.</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
-         * <p>The ID of the ECS instance or ENI.</p>
+         * <p>Creates a vServer group and adds backend servers to the vServer group.</p>
          */
         @NameInMap("ServerId")
         public String serverId;
 
         /**
-         * <p>The type of the backend server. Valid values:</p>
-         * <br>
-         * <p>*   **ecs**: an ECS instance. This is the default value.</p>
-         * <p>*   **eni**: an ENI.</p>
+         * <p>The weight of the backend server.</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The weight of the backend server.</p>
+         * <p>The description of the vServer group.</p>
          */
         @NameInMap("Weight")
         public Integer weight;

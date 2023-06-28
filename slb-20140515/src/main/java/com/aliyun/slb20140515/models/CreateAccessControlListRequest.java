@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateAccessControlListRequest extends TeaModel {
     /**
-     * <p>The name of the ACL. The name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), hyphens (-), forward slashes (/), and underscores (\_). The name of the ACL that you create must be unique within each region.</p>
+     * <p>The ID of the resource group to which the ACL belongs.</p>
      */
     @NameInMap("AclName")
     public String aclName;
 
     /**
-     * <p>The IP version. Valid values: **ipv4** and **ipv6**.</p>
+     * <p>The ID of the ACL.</p>
      */
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
@@ -23,13 +23,13 @@ public class CreateAccessControlListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where you want to create the ACL.</p>
+     * <p>The IP version. Valid values: **ipv4** and **ipv6**.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the ACL belongs.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -39,6 +39,9 @@ public class CreateAccessControlListRequest extends TeaModel {
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
+
+    @NameInMap("Tag")
+    public java.util.List<CreateAccessControlListRequestTag> tag;
 
     public static CreateAccessControlListRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAccessControlListRequest self = new CreateAccessControlListRequest();
@@ -107,6 +110,44 @@ public class CreateAccessControlListRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public CreateAccessControlListRequest setTag(java.util.List<CreateAccessControlListRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateAccessControlListRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class CreateAccessControlListRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateAccessControlListRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateAccessControlListRequestTag self = new CreateAccessControlListRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAccessControlListRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateAccessControlListRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

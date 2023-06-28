@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetDomainExtensionAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the domain name that is associated with the additional certificate to be replaced.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("DomainExtensionId")
     public String domainExtensionId;
@@ -17,7 +17,7 @@ public class SetDomainExtensionAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the SLB instance is created.</p>
+     * <p>The ID of the new certificate.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -29,7 +29,7 @@ public class SetDomainExtensionAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the new certificate.</p>
+     * <p>>  You cannot replace an additional certificate for a listener that is added to a shared-resource Server Load Balancer (SLB) instance.</p>
      */
     @NameInMap("ServerCertificateId")
     public String serverCertificateId;

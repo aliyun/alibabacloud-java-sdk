@@ -5,6 +5,24 @@ import com.aliyun.tea.*;
 
 public class SetBackendServersRequest extends TeaModel {
     /**
+     * <p>The description of the backend server.</p>
+     */
+    @NameInMap("BackendServers")
+    public String backendServers;
+
+    /**
+     * <p>The ID of the CLB instance.</p>
+     */
+    @NameInMap("LoadBalancerId")
+    public String loadBalancerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    /**
      * <p>The list of backend servers that you want to modify.</p>
      * <br>
      * <p>The value of this parameter must be a STRING list in the JSON format. You can specify up to 20 elements in each request.</p>
@@ -32,24 +50,6 @@ public class SetBackendServersRequest extends TeaModel {
      * <br>
      * <p>> </p>
      * <p>*   The backend servers must be in the Running state. You can specify up to 20 backend servers in each request.</p>
-     */
-    @NameInMap("BackendServers")
-    public String backendServers;
-
-    /**
-     * <p>The ID of the CLB instance.</p>
-     */
-    @NameInMap("LoadBalancerId")
-    public String loadBalancerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    /**
-     * <p>The region ID of the Classic Load Balancer (CLB) instance.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

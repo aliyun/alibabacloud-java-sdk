@@ -11,9 +11,7 @@ public class DescribeRuleAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the Server Load Balancer (SLB) instance is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     * <p>The ID of the forwarding rule.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -25,7 +23,11 @@ public class DescribeRuleAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the forwarding rule.</p>
+     * <p>The HTTP status code that indicates a successful health check. Separate multiple HTTP status codes with commas (,). Default value: **http\_2xx**.</p>
+     * <br>
+     * <p>Valid values: **http\_2xx**, **http\_3xx**, **http\_4xx**, and **http\_5xx**.</p>
+     * <br>
+     * <p>>  If you set the **HealthCheck** parameter to **on**, this parameter is required.</p>
      */
     @NameInMap("RuleId")
     public String ruleId;

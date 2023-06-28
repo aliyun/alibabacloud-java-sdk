@@ -4,247 +4,111 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
-    /**
-     * <p>The IP address that the CLB instance uses to provide services.</p>
-     */
     @NameInMap("Address")
     public String address;
 
-    /**
-     * <p>The IP version that is used by the CLB instance. Valid values: **ipv4** and **ipv6**.</p>
-     */
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
 
-    /**
-     * <p>The address type of the CLB instance.</p>
-     */
     @NameInMap("AddressType")
     public String addressType;
 
-    /**
-     * <p>The timestamp when the CLB instance was released.</p>
-     */
     @NameInMap("AutoReleaseTime")
     public Long autoReleaseTime;
 
-    /**
-     * <p>The list of backend servers of the CLB instance.</p>
-     */
     @NameInMap("BackendServers")
     public DescribeLoadBalancerAttributeResponseBodyBackendServers backendServers;
 
-    /**
-     * <p>The maximum bandwidth of the Internet-facing CLB instance that is metered on a pay-by-bandwidth basis.</p>
-     */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
-    /**
-     * <p>The time when the CLB instance was created. The time is in the `YYYY-MM-DDThh:mm:ssZ` format.</p>
-     */
     @NameInMap("CreateTime")
     public String createTime;
 
-    /**
-     * <p>The timestamp when the CLB instance was created.</p>
-     */
     @NameInMap("CreateTimeStamp")
     public Long createTimeStamp;
 
-    /**
-     * <p>Indicates whether deletion protection is enabled for the CLB instance.</p>
-     * <br>
-     * <p>Valid values: **on** and **off**.</p>
-     */
     @NameInMap("DeleteProtection")
     public String deleteProtection;
 
-    /**
-     * <p>The time when the CLB instance expires.</p>
-     */
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <p>The timestamp that indicates the expiration time of the CLB instance.</p>
-     */
     @NameInMap("EndTimeStamp")
     public Long endTimeStamp;
 
-    /**
-     * <p>The metering method of the CLB instance. Valid values:</p>
-     * <br>
-     * <p>*   **PayBySpec:** pay-by-specification.</p>
-     * <p>*   **PayByCLCU:** pay-by-LCU.</p>
-     */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
-    /**
-     * <p>The metering method of the Internet-facing CLB instance. Valid values:</p>
-     * <br>
-     * <p>*   **paybytraffic:** pay-by-data-transfer.</p>
-     * <p>*   **paybybandwidth:** pay-by-bandwidth.</p>
-     */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
-    /**
-     * <p>The frontend port that is used by the CLB instance.</p>
-     */
     @NameInMap("ListenerPorts")
     public DescribeLoadBalancerAttributeResponseBodyListenerPorts listenerPorts;
 
-    /**
-     * <p>The port or protocol of the listener.</p>
-     */
     @NameInMap("ListenerPortsAndProtocal")
     public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocal listenerPortsAndProtocal;
 
-    /**
-     * <p>The frontend port and protocol that are used by the CLB instance.</p>
-     */
     @NameInMap("ListenerPortsAndProtocol")
     public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocol listenerPortsAndProtocol;
 
-    /**
-     * <p>The ID of the CLB instance.</p>
-     */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
-    /**
-     * <p>The name of the CLB instance.</p>
-     */
     @NameInMap("LoadBalancerName")
     public String loadBalancerName;
 
-    /**
-     * <p>The specification of the CLB instance.</p>
-     */
     @NameInMap("LoadBalancerSpec")
     public String loadBalancerSpec;
 
-    /**
-     * <p>The status of the CLB instance:</p>
-     * <br>
-     * <p>*   **inactive:** The CLB instance is disabled. CLB instances in the inactive state do not forward traffic.</p>
-     * <p>*   **active:** The CLB instance runs as expected. By default, newly created CLB instances are in the **active** state.</p>
-     * <p>*   **locked:** The CLB instance is locked. CLB instances may be locked due to overdue payments or other reasons.</p>
-     */
     @NameInMap("LoadBalancerStatus")
     public String loadBalancerStatus;
 
-    /**
-     * <p>The ID of the primary zone to which the CLB instance belongs.</p>
-     */
     @NameInMap("MasterZoneId")
     public String masterZoneId;
 
-    /**
-     * <p>The reason why the configuration read-only mode was enabled. The reason must be 1 to 80 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.</p>
-     * <br>
-     * <p>> This parameter takes effect only when you set the **ModificationProtectionStatus** parameter to **ConsoleProtection**.</p>
-     */
     @NameInMap("ModificationProtectionReason")
     public String modificationProtectionReason;
 
-    /**
-     * <p>Indicates whether the configuration read-only mode is enabled. Valid values:</p>
-     * <br>
-     * <p>*   **NonProtection:** The configuration read-only mode is disabled. In this case, you cannot specify the ModificationProtectionReason parameter. If you specify the **ModificationProtectionReason** parameter, the value is cleared.</p>
-     * <p>*   **ConsoleProtection:** The configuration read-only mode is enabled.</p>
-     * <br>
-     * <p>>  If you set this parameter to **ConsoleProtection**, you cannot modify the configurations of the CLB instance in the CLB console. However, you can call API operations to modify the configurations of the CLB instance.</p>
-     */
     @NameInMap("ModificationProtectionStatus")
     public String modificationProtectionStatus;
 
-    /**
-     * <p>The network type of the CLB instance.</p>
-     */
     @NameInMap("NetworkType")
     public String networkType;
 
-    /**
-     * <p>The billing method of the CLB instance. Valid values:</p>
-     * <br>
-     * <p>*   Set the value to **PayOnDemand**.</p>
-     */
     @NameInMap("PayType")
     public String payType;
 
-    /**
-     * <p>The ID of the region where the CLB instance was deployed.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The alias of the region where the CLB instance is deployed.</p>
-     */
     @NameInMap("RegionIdAlias")
     public String regionIdAlias;
 
-    /**
-     * <p>The auto-renewal cycle. Valid values: **Year** and **Month**. Default value: Month.</p>
-     * <br>
-     * <p>>  This parameter takes effect only for accounts registered on the China site (aliyun.com) and when the **PayType** parameter is set to **PrePay** and the **RenewalStatus** parameter is set to **AutoRenewal**.</p>
-     */
     @NameInMap("RenewalCycUnit")
     public String renewalCycUnit;
 
-    /**
-     * <p>The auto-renewal duration. This parameter takes effect only when you set the **RenewalStatus** parameter is set to **AutoRenewal**.</p>
-     * <br>
-     * <p>*   Valid values if the **PeriodUnit** parameter is set to **Year**: **1**, **2**, and **3**.</p>
-     * <p>*   Valid values if the **PeriodUnit** parameter is set to **Month**: **1**, **2**, **3**, and **6**.</p>
-     * <br>
-     * <p>>  This parameter takes effect only for accounts registered on the China site (aliyun.com) and when the **PayType** parameter is set to **PrePay**.</p>
-     */
     @NameInMap("RenewalDuration")
     public Integer renewalDuration;
 
-    /**
-     * <p>Indicates whether auto-renewal is enabled. Valid values:</p>
-     * <br>
-     * <p>*   **AutoRenewal:** Auto-renewal is enabled.</p>
-     * <p>*   **Normal:** Auto-renewal is disabled. You must manually renew the CLB instance.</p>
-     * <p>*   **NotRenewal:** The CLB instance is not renewed after expiration. If this value is returned, the system does not send notifications until three days before the expiration date.</p>
-     * <br>
-     * <p>>  This parameter takes effect only for accounts registered on the China site (aliyun.com) and when the **PayType** parameter is set to **PrePay**.</p>
-     */
     @NameInMap("RenewalStatus")
     public String renewalStatus;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The ID of the resource group.</p>
-     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    /**
-     * <p>The ID of the secondary zone to which the CLB instance belongs.</p>
-     */
     @NameInMap("SlaveZoneId")
     public String slaveZoneId;
 
-    /**
-     * <p>The ID of the vSwitch to which the internal-facing CLB instance belongs.</p>
-     */
+    @NameInMap("Tags")
+    public DescribeLoadBalancerAttributeResponseBodyTags tags;
+
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
-    /**
-     * <p>The ID of the virtual private cloud (VPC) in which the internal-facing CLB instance was deployed.</p>
-     */
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -517,6 +381,14 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         return this.slaveZoneId;
     }
 
+    public DescribeLoadBalancerAttributeResponseBody setTags(DescribeLoadBalancerAttributeResponseBodyTags tags) {
+        this.tags = tags;
+        return this;
+    }
+    public DescribeLoadBalancerAttributeResponseBodyTags getTags() {
+        return this.tags;
+    }
+
     public DescribeLoadBalancerAttributeResponseBody setVSwitchId(String vSwitchId) {
         this.vSwitchId = vSwitchId;
         return this;
@@ -534,33 +406,18 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer extends TeaModel {
-        /**
-         * <p>The description of the backend server.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the backend server.</p>
-         */
         @NameInMap("ServerId")
         public String serverId;
 
-        /**
-         * <p>The ID of the Elastic Compute Service (ECS) instance, elastic network interface (ENI), or elastic container instance that functions as the backend server.</p>
-         */
         @NameInMap("ServerIp")
         public String serverIp;
 
-        /**
-         * <p>The type of the backend server.</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <p>The weight of the backend server.</p>
-         */
         @NameInMap("Weight")
         public Integer weight;
 
@@ -650,15 +507,9 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocalListenerPortAndProtocal extends TeaModel {
-        /**
-         * <p>The frontend port that is used by the CLB instance.</p>
-         */
         @NameInMap("ListenerPort")
         public Integer listenerPort;
 
-        /**
-         * <p>The frontend protocol that is used by the CLB instance.</p>
-         */
         @NameInMap("ListenerProtocal")
         public String listenerProtocal;
 
@@ -705,33 +556,18 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocolListenerPortAndProtocol extends TeaModel {
-        /**
-         * <p>The description of the port and protocol of the listener.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The destination listening port to which requests are forwarded. The port must be open and use HTTPS.</p>
-         */
         @NameInMap("ForwardPort")
         public Integer forwardPort;
 
-        /**
-         * <p>Indicates whether the listener is enabled.</p>
-         */
         @NameInMap("ListenerForward")
         public String listenerForward;
 
-        /**
-         * <p>The frontend port that is used by the CLB instance.</p>
-         */
         @NameInMap("ListenerPort")
         public Integer listenerPort;
 
-        /**
-         * <p>The frontend protocol that is used by the CLB instance.</p>
-         */
         @NameInMap("ListenerProtocol")
         public String listenerProtocol;
 
@@ -797,6 +633,55 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
         public java.util.List<DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocolListenerPortAndProtocol> getListenerPortAndProtocol() {
             return this.listenerPortAndProtocol;
+        }
+
+    }
+
+    public static class DescribeLoadBalancerAttributeResponseBodyTagsTag extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static DescribeLoadBalancerAttributeResponseBodyTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLoadBalancerAttributeResponseBodyTagsTag self = new DescribeLoadBalancerAttributeResponseBodyTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLoadBalancerAttributeResponseBodyTagsTag setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeLoadBalancerAttributeResponseBodyTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
+    public static class DescribeLoadBalancerAttributeResponseBodyTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeLoadBalancerAttributeResponseBodyTagsTag> tag;
+
+        public static DescribeLoadBalancerAttributeResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLoadBalancerAttributeResponseBodyTags self = new DescribeLoadBalancerAttributeResponseBodyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLoadBalancerAttributeResponseBodyTags setTag(java.util.List<DescribeLoadBalancerAttributeResponseBodyTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeLoadBalancerAttributeResponseBodyTagsTag> getTag() {
+            return this.tag;
         }
 
     }

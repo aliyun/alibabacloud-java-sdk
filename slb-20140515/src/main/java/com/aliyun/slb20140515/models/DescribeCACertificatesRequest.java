@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCACertificatesRequest extends TeaModel {
     /**
-     * <p>The ID of the CA certificate.</p>
+     * <p>The ID of the resource group.</p>
      */
     @NameInMap("CACertificateId")
     public String CACertificateId;
@@ -17,9 +17,9 @@ public class DescribeCACertificatesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region where the CA certificates are created.</p>
+     * <p>The timestamp that indicates when the CA certificate expires. Unit: milliseconds.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

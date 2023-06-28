@@ -5,6 +5,18 @@ import com.aliyun.tea.*;
 
 public class RemoveVServerGroupBackendServersRequest extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     */
+    @NameInMap("BackendServers")
+    public String backendServers;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    /**
      * <p>The list of backend servers that you want to remove from the vServer group.</p>
      * <br>
      * <p>You can specify at most 20 backend servers for a vServer group in each call.</p>
@@ -25,18 +37,6 @@ public class RemoveVServerGroupBackendServersRequest extends TeaModel {
      * <p>    *   **eni**: an ENI.</p>
      * <br>
      * <p>*   **ServerIp**: the IP address of the ECS instance or ENI.</p>
-     */
-    @NameInMap("BackendServers")
-    public String backendServers;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    /**
-     * <p>The ID of the region where the Classic Load Balancer (CLB) instance is deployed.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

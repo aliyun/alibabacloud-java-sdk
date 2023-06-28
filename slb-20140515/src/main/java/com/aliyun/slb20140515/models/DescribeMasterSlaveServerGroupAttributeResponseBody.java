@@ -4,26 +4,26 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaModel {
-    /**
-     * <p>The time when the CLB instance was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.</p>
-     */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
-     * <p>The ID of the associated CLB instance.</p>
+     * <p>The region ID of the Classic Load Balancer (CLB) instance.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
     /**
-     * <p>The list of backend servers in the primary/secondary server group.</p>
+     * <p>The ID of the associated CLB instance.</p>
      */
     @NameInMap("MasterSlaveBackendServers")
     public DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServers masterSlaveBackendServers;
 
     /**
-     * <p>The ID of the primary/secondary server group.</p>
+     * <p>The type of the backend server. Valid values:</p>
+     * <br>
+     * <p>*   **ecs** (default): an Elastic Compute Service (ECS) instance</p>
+     * <p>*   **eni**: an elastic network interface (ENI)</p>
      */
     @NameInMap("MasterSlaveServerGroupId")
     public String masterSlaveServerGroupId;
@@ -35,10 +35,13 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
     public String masterSlaveServerGroupName;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the primary/secondary server group.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Tags")
+    public DescribeMasterSlaveServerGroupAttributeResponseBodyTags tags;
 
     public static DescribeMasterSlaveServerGroupAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMasterSlaveServerGroupAttributeResponseBody self = new DescribeMasterSlaveServerGroupAttributeResponseBody();
@@ -93,42 +96,38 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
         return this.requestId;
     }
 
+    public DescribeMasterSlaveServerGroupAttributeResponseBody setTags(DescribeMasterSlaveServerGroupAttributeResponseBodyTags tags) {
+        this.tags = tags;
+        return this;
+    }
+    public DescribeMasterSlaveServerGroupAttributeResponseBodyTags getTags() {
+        return this.tags;
+    }
+
     public static class DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServersMasterSlaveBackendServer extends TeaModel {
         /**
-         * <p>The description of the primary/secondary server group.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The port used by the backend server.</p>
-         */
         @NameInMap("Port")
         public Integer port;
 
-        /**
-         * <p>The ID of the ECS instance or ENI.</p>
-         */
         @NameInMap("ServerId")
         public String serverId;
 
-        /**
-         * <p>The type of backend server. Valid values: **Master and Slave. Default value: Master.</p>
-         */
         @NameInMap("ServerType")
         public String serverType;
 
         /**
-         * <p>The type of the backend server. Valid values:</p>
-         * <br>
-         * <p>*   **ecs** (default): an Elastic Compute Service (ECS) instance</p>
-         * <p>*   **eni**: an elastic network interface (ENI)</p>
+         * <p>The weight of the backend server.</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The weight of the backend server.</p>
+         * <p>The type of backend server. Valid values: **Master and Slave. Default value: Master.</p>
          */
         @NameInMap("Weight")
         public Integer weight;
@@ -203,6 +202,55 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
         }
         public java.util.List<DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServersMasterSlaveBackendServer> getMasterSlaveBackendServer() {
             return this.masterSlaveBackendServer;
+        }
+
+    }
+
+    public static class DescribeMasterSlaveServerGroupAttributeResponseBodyTagsTag extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static DescribeMasterSlaveServerGroupAttributeResponseBodyTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMasterSlaveServerGroupAttributeResponseBodyTagsTag self = new DescribeMasterSlaveServerGroupAttributeResponseBodyTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMasterSlaveServerGroupAttributeResponseBodyTagsTag setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeMasterSlaveServerGroupAttributeResponseBodyTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
+    public static class DescribeMasterSlaveServerGroupAttributeResponseBodyTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeMasterSlaveServerGroupAttributeResponseBodyTagsTag> tag;
+
+        public static DescribeMasterSlaveServerGroupAttributeResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMasterSlaveServerGroupAttributeResponseBodyTags self = new DescribeMasterSlaveServerGroupAttributeResponseBodyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMasterSlaveServerGroupAttributeResponseBodyTags setTag(java.util.List<DescribeMasterSlaveServerGroupAttributeResponseBodyTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeMasterSlaveServerGroupAttributeResponseBodyTagsTag> getTag() {
+            return this.tag;
         }
 
     }

@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
     /**
-     * <p>The list of backend servers.</p>
+     * <p>The name of the vServer group.</p>
      */
     @NameInMap("BackendServers")
     public DescribeVServerGroupAttributeResponseBodyBackendServers backendServers;
 
-    /**
-     * <p>The time when the CLB instance was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.</p>
-     */
     @NameInMap("CreateTime")
     public String createTime;
 
@@ -23,19 +20,22 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
     public String loadBalancerId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The region ID of the Classic Load Balancer (CLB) instance.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Tags")
+    public DescribeVServerGroupAttributeResponseBodyTags tags;
+
     /**
-     * <p>The ID of the vServer group.</p>
+     * <p>The port used by the backend server.</p>
      */
     @NameInMap("VServerGroupId")
     public String VServerGroupId;
 
     /**
-     * <p>The name of the vServer group.</p>
+     * <p>The IP address of the ECS instance, ENI, or elastic container instance.</p>
      */
     @NameInMap("VServerGroupName")
     public String VServerGroupName;
@@ -77,6 +77,14 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeVServerGroupAttributeResponseBody setTags(DescribeVServerGroupAttributeResponseBodyTags tags) {
+        this.tags = tags;
+        return this;
+    }
+    public DescribeVServerGroupAttributeResponseBodyTags getTags() {
+        return this.tags;
+    }
+
     public DescribeVServerGroupAttributeResponseBody setVServerGroupId(String VServerGroupId) {
         this.VServerGroupId = VServerGroupId;
         return this;
@@ -95,26 +103,17 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
 
     public static class DescribeVServerGroupAttributeResponseBodyBackendServersBackendServer extends TeaModel {
         /**
-         * <p>The description of the vServer group.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The port used by the backend server.</p>
-         */
         @NameInMap("Port")
         public Integer port;
 
-        /**
-         * <p>The ID of the ECS instance, ENI, or elastic container instance.</p>
-         */
         @NameInMap("ServerId")
         public String serverId;
 
-        /**
-         * <p>The IP address of the ECS instance, ENI, or elastic container instance.</p>
-         */
         @NameInMap("ServerIp")
         public String serverIp;
 
@@ -129,7 +128,7 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The weight of the backend server.</p>
+         * <p>The list of backend servers.</p>
          */
         @NameInMap("Weight")
         public Integer weight;
@@ -204,6 +203,55 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
         }
         public java.util.List<DescribeVServerGroupAttributeResponseBodyBackendServersBackendServer> getBackendServer() {
             return this.backendServer;
+        }
+
+    }
+
+    public static class DescribeVServerGroupAttributeResponseBodyTagsTag extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static DescribeVServerGroupAttributeResponseBodyTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVServerGroupAttributeResponseBodyTagsTag self = new DescribeVServerGroupAttributeResponseBodyTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVServerGroupAttributeResponseBodyTagsTag setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeVServerGroupAttributeResponseBodyTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
+    public static class DescribeVServerGroupAttributeResponseBodyTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeVServerGroupAttributeResponseBodyTagsTag> tag;
+
+        public static DescribeVServerGroupAttributeResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVServerGroupAttributeResponseBodyTags self = new DescribeVServerGroupAttributeResponseBodyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVServerGroupAttributeResponseBodyTags setTag(java.util.List<DescribeVServerGroupAttributeResponseBodyTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeVServerGroupAttributeResponseBodyTagsTag> getTag() {
+            return this.tag;
         }
 
     }

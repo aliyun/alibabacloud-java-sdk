@@ -5,23 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeRulesRequest extends TeaModel {
     /**
-     * <p>The frontend listener port that is used by the Server Load Balancer (SLB) instance.</p>
-     * <br>
-     * <p>Valid values: **1 to 65535**.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
-     * <p>The frontend listener protocol that is used by the SLB instance.</p>
+     * <p>The frontend listener port that is used by the Server Load Balancer (SLB) instance.</p>
      * <br>
-     * <p>>  This parameter is required when listeners that use different protocols listen on the same port.</p>
+     * <p>Valid values: **1 to 65535**.</p>
      */
     @NameInMap("ListenerProtocol")
     public String listenerProtocol;
 
     /**
-     * <p>The ID of the SLB instance.</p>
+     * <p>The frontend listener protocol that is used by the SLB instance.</p>
+     * <br>
+     * <p>>  This parameter is required when listeners that use different protocols listen on the same port.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -33,9 +33,7 @@ public class DescribeRulesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the SLB instance is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     * <p>The ID of the SLB instance.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

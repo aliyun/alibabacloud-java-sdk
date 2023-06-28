@@ -4,19 +4,9 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DeleteAccessLogsDownloadAttributeRequest extends TeaModel {
-    /**
-     * <p>The ID of the CLB instance.</p>
-     */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
-    /**
-     * <p>The access log forwarding rule. Parameters:</p>
-     * <br>
-     * <p>*   **LogProject**: the name of the project of Log Service.</p>
-     * <p>*   **LogStore**: the name of the Logstore of Log Service.</p>
-     * <p>*   **LoadBalancerId**: the ID of the CLB instance.</p>
-     */
     @NameInMap("LogsDownloadAttributes")
     public String logsDownloadAttributes;
 
@@ -27,7 +17,7 @@ public class DeleteAccessLogsDownloadAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the CLB instance is deployed.</p>
+     * <p>The operation that you want to perform. Set the value to **DeleteAccessLogsDownloadAttribute**.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

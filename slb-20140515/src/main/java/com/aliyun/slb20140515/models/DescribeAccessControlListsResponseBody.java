@@ -5,37 +5,37 @@ import com.aliyun.tea.*;
 
 public class DescribeAccessControlListsResponseBody extends TeaModel {
     /**
-     * <p>The list of network ACLs.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("Acls")
     public DescribeAccessControlListsResponseBodyAcls acls;
 
     /**
-     * <p>The number of network ACLs on the current page.</p>
+     * <p>The list of network ACLs.</p>
      */
     @NameInMap("Count")
     public Integer count;
 
     /**
-     * <p>The number of the returned page. Pages start from page **1**. Default value: **1**.</p>
+     * <p>The name of the network ACL.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on each page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The number of the returned page. Pages start from page **1**. Default value: **1**.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The number of network ACLs.</p>
+     * <p>The number of entries returned on each page. Maximum value: **50**. Default value: **10**.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -93,36 +93,57 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeAccessControlListsResponseBodyAclsAclTagsTag extends TeaModel {
+        public static DescribeAccessControlListsResponseBodyAclsAclTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAccessControlListsResponseBodyAclsAclTagsTag self = new DescribeAccessControlListsResponseBodyAclsAclTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+    }
+
+    public static class DescribeAccessControlListsResponseBodyAclsAclTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeAccessControlListsResponseBodyAclsAclTagsTag> tag;
+
+        public static DescribeAccessControlListsResponseBodyAclsAclTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAccessControlListsResponseBodyAclsAclTags self = new DescribeAccessControlListsResponseBodyAclsAclTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAccessControlListsResponseBodyAclsAclTags setTag(java.util.List<DescribeAccessControlListsResponseBodyAclsAclTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeAccessControlListsResponseBodyAclsAclTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class DescribeAccessControlListsResponseBodyAclsAcl extends TeaModel {
         /**
-         * <p>The ID of the network ACL.</p>
+         * <p>The ID of the resource group to which the CLB instance belongs.</p>
          */
         @NameInMap("AclId")
         public String aclId;
 
-        /**
-         * <p>The name of the network ACL.</p>
-         */
         @NameInMap("AclName")
         public String aclName;
 
         /**
-         * <p>The IP version that is used by the associated CLB instance.</p>
+         * <p>The number of network ACLs on the current page.</p>
          */
         @NameInMap("AddressIPVersion")
         public String addressIPVersion;
 
-        /**
-         * <p>The time when the CLB instance was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The ID of the resource group to which the CLB instance belongs.</p>
-         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
+
+        @NameInMap("Tags")
+        public DescribeAccessControlListsResponseBodyAclsAclTags tags;
 
         public static DescribeAccessControlListsResponseBodyAclsAcl build(java.util.Map<String, ?> map) throws Exception {
             DescribeAccessControlListsResponseBodyAclsAcl self = new DescribeAccessControlListsResponseBodyAclsAcl();
@@ -167,6 +188,14 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public DescribeAccessControlListsResponseBodyAclsAcl setTags(DescribeAccessControlListsResponseBodyAclsAclTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeAccessControlListsResponseBodyAclsAclTags getTags() {
+            return this.tags;
         }
 
     }

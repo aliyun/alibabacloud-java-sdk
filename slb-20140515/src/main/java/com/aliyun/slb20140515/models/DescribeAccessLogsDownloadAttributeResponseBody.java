@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeAccessLogsDownloadAttributeResponseBody extends TeaModel {
     /**
-     * <p>The configuration of access logs.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("LogsDownloadAttributes")
     public DescribeAccessLogsDownloadAttributeResponseBodyLogsDownloadAttributes logsDownloadAttributes;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The type of access log. Set the value to **layer7**, which specifies Layer 7 access logs.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The ID of the CLB instance.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The type of access log. Only **layer7** is returned, which indicates Layer 7 access logs.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -80,9 +80,6 @@ public class DescribeAccessLogsDownloadAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeAccessLogsDownloadAttributeResponseBodyLogsDownloadAttributesLogsDownloadAttribute extends TeaModel {
-        /**
-         * <p>The ID of the CLB instance.</p>
-         */
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
@@ -93,20 +90,14 @@ public class DescribeAccessLogsDownloadAttributeResponseBody extends TeaModel {
         public String logProject;
 
         /**
-         * <p>The name of the Logstore of Log Service.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("LogStore")
         public String logStore;
 
-        /**
-         * <p>The type of access log. Only **layer7** is returned, which indicates Layer 7 access logs.</p>
-         */
         @NameInMap("LogType")
         public String logType;
 
-        /**
-         * <p>The ID of the region where the CLB instance is deployed.</p>
-         */
         @NameInMap("Region")
         public String region;
 

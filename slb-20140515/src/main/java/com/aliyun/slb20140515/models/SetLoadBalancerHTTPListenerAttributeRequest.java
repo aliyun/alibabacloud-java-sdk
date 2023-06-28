@@ -5,23 +5,6 @@ import com.aliyun.tea.*;
 
 public class SetLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the access control list (ACL) to be associated with the listener.</p>
-     * <br>
-     * <p>>  If **AclStatus** is set to **on**, this parameter is required.</p>
-     */
-    @NameInMap("AclId")
-    public String aclId;
-
-    /**
-     * <p>Specifies whether to enable the access control feature. Valid values:</p>
-     * <br>
-     * <p>*   **on**: yes</p>
-     * <p>*   **off**: no</p>
-     */
-    @NameInMap("AclStatus")
-    public String aclStatus;
-
-    /**
      * <p>The type of the ACL. Valid values:</p>
      * <br>
      * <p>*   **white**: a whitelist. Only requests from the IP addresses or CIDR blocks in the network ACL are forwarded. Whitelists apply to scenarios where you want to allow only specific IP addresses to access an application. Risks may arise if the whitelist is improperly set. After the whitelist is set, only requests from IP addresses that are added to the whitelist are forwarded by the listener.</p>
@@ -34,16 +17,43 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
      * <br>
      * <p>>  If **AclStatus** is set to **on**, this parameter is required.</p>
      */
+    @NameInMap("AclId")
+    public String aclId;
+
+    /**
+     * <p>The timeout period of an idle connection. Unit: seconds. Valid values: **1 to 60**. Default value: **15**.</p>
+     * <br>
+     * <p>If no request is received within the specified timeout period, CLB closes the connection. When another request is received, CLB establishes a new connection.</p>
+     */
+    @NameInMap("AclStatus")
+    public String aclStatus;
+
+    /**
+     * <p>Specifies whether to enable the access control feature. Valid values:</p>
+     * <br>
+     * <p>*   **on**: yes</p>
+     * <p>*   **off**: no</p>
+     */
     @NameInMap("AclType")
     public String aclType;
 
     /**
-     * <p>The maximum bandwidth of the listener. Unit: Mbit/s. Valid values:</p>
+     * <p>Specifies whether to use the `X-Forwarded-For` header to preserve the real IP address of the client. Valid values:</p>
      * <br>
-     * <p>*   **-1**: For a pay-by-data-transfer Internet-facing CLB instance, you can set this parameter to **-1**. In this case, the bandwidth of the listener is unlimited.</p>
+     * <p>*   **on** (default): yes</p>
+     * <p>*   **off**: no</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
+
+    /**
+     * <p>Specifies whether to enable health checks. Valid values:</p>
+     * <br>
+     * <p>*   **on**: yes</p>
+     * <p>*   **off**: no</p>
+     */
+    @NameInMap("Cookie")
+    public String cookie;
 
     /**
      * <p>The cookie that is configured on the server.</p>
@@ -52,42 +62,59 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
      * <br>
      * <p>>  This parameter is required if the **StickySession** parameter is set to **on** and the **StickySessionType** parameter is set to **server**.</p>
      */
-    @NameInMap("Cookie")
-    public String cookie;
-
-    /**
-     * <p>The timeout period of the cookie. Unit: seconds.</p>
-     * <br>
-     * <p>Valid values: **1** to **86400**.</p>
-     * <br>
-     * <p>>  If **StickySession** is set to **on** and **StickySessionType** is set to **insert**, this parameter is required.</p>
-     */
     @NameInMap("CookieTimeout")
     public Integer cookieTimeout;
 
     /**
-     * <p>The description of the listener.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>Specifies whether to enable `Gzip` compression to compress specific types of files. Valid values:</p>
+     * <p>The ID of the access control list (ACL) to be associated with the listener.</p>
      * <br>
-     * <p>*   **on**: yes</p>
-     * <p>*   **off**: no</p>
+     * <p>>  If **AclStatus** is set to **on**, this parameter is required.</p>
      */
     @NameInMap("Gzip")
     public String gzip;
 
     /**
-     * <p>Specifies whether to enable health checks. Valid values:</p>
+     * <p>The health check method used in HTTP health checks. Valid values: **head** and **get**.</p>
+     * <br>
+     * <p>>  This parameter takes effect only if the **HealthCheck** parameter is set to **on**.</p>
+     */
+    @NameInMap("HealthCheck")
+    public String healthCheck;
+
+    /**
+     * <p>The HTTP status code that indicates a successful health check. Separate HTTP status codes with commas (,).</p>
+     * <br>
+     * <p>Valid values: **http\_2xx**, **http\_3xx**, **http\_4xx**, and **http\_5xx**.</p>
+     * <br>
+     * <p>>  This parameter takes effect only when the **HealthCheck** parameter is set to **on**.</p>
+     */
+    @NameInMap("HealthCheckConnectPort")
+    public Integer healthCheckConnectPort;
+
+    /**
+     * <p>The uniform resource identifier (URI) that is used for health checks.</p>
+     * <br>
+     * <p>The URI must be 1 to 80 characters in length, and can contain letters, digits, and the following characters: - / . % ? # & The URI must start with a forward slash (/) but cannot be a single forward slash (/).</p>
+     * <br>
+     * <p>>  This parameter takes effect only if the **HealthCheck** parameter is set to **on**.</p>
+     */
+    @NameInMap("HealthCheckDomain")
+    public String healthCheckDomain;
+
+    /**
+     * <p>Specifies whether to use a vServer group. Valid values:</p>
      * <br>
      * <p>*   **on**: yes</p>
      * <p>*   **off**: no</p>
      */
-    @NameInMap("HealthCheck")
-    public String healthCheck;
+    @NameInMap("HealthCheckHttpCode")
+    public String healthCheckHttpCode;
 
     /**
      * <p>The port that is used for health checks.</p>
@@ -96,8 +123,8 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
      * <br>
      * <p>>  This parameter takes effect only if the **HealthCheck** parameter is set to **on**.</p>
      */
-    @NameInMap("HealthCheckConnectPort")
-    public Integer healthCheckConnectPort;
+    @NameInMap("HealthCheckInterval")
+    public Integer healthCheckInterval;
 
     /**
      * <p>The domain name that is used for health checks. Valid values:</p>
@@ -107,18 +134,8 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
      * <br>
      * <p>>  This parameter takes effect only if the **HealthCheck** parameter is set to **on**.</p>
      */
-    @NameInMap("HealthCheckDomain")
-    public String healthCheckDomain;
-
-    /**
-     * <p>The HTTP status code that indicates a successful health check. Separate HTTP status codes with commas (,).</p>
-     * <br>
-     * <p>Valid values: **http\_2xx**, **http\_3xx**, **http\_4xx**, and **http\_5xx**.</p>
-     * <br>
-     * <p>>  This parameter takes effect only when the **HealthCheck** parameter is set to **on**.</p>
-     */
-    @NameInMap("HealthCheckHttpCode")
-    public String healthCheckHttpCode;
+    @NameInMap("HealthCheckMethod")
+    public String healthCheckMethod;
 
     /**
      * <p>The time interval between two consecutive health checks.</p>
@@ -127,36 +144,8 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
      * <br>
      * <p>>  This parameter takes effect only when the **HealthCheck** parameter is set to **on**.</p>
      */
-    @NameInMap("HealthCheckInterval")
-    public Integer healthCheckInterval;
-
-    /**
-     * <p>The health check method used in HTTP health checks. Valid values: **head** and **get**.</p>
-     * <br>
-     * <p>>  This parameter takes effect only if the **HealthCheck** parameter is set to **on**.</p>
-     */
-    @NameInMap("HealthCheckMethod")
-    public String healthCheckMethod;
-
-    /**
-     * <p>The timeout period of a health check response. If a backend Elastic Compute Service (ECS) instance does not send an expected response within the specified period of time, the ECS instance is considered unhealthy. This parameter takes effect only when the **HealthCheck** parameter is set to **on**.</p>
-     * <br>
-     * <p>Valid values: **1** to **300**. Unit: seconds.</p>
-     * <br>
-     * <p>>  If the value of the **HealthCheckTimeout** parameter is smaller than that of the **HealthCheckInterval** parameter, the timeout period specified by the **HealthCheckTimeout** parameter is ignored and the period of time specified by the **HealthCheckInterval** parameter is used as the timeout period.</p>
-     */
     @NameInMap("HealthCheckTimeout")
     public Integer healthCheckTimeout;
-
-    /**
-     * <p>The uniform resource identifier (URI) that is used for health checks.</p>
-     * <br>
-     * <p>The URI must be 1 to 80 characters in length, and can contain letters, digits, and the following characters: - / . % ? # & The URI must start with a forward slash (/) but cannot be a single forward slash (/).</p>
-     * <br>
-     * <p>>  This parameter takes effect only if the **HealthCheck** parameter is set to **on**.</p>
-     */
-    @NameInMap("HealthCheckURI")
-    public String healthCheckURI;
 
     /**
      * <p>The number of health checks that an unhealthy backend server must consecutively pass before it can be declared healthy (from **fail** to **success**).</p>
@@ -165,27 +154,39 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
      * <br>
      * <p>>  This parameter takes effect only when the **HealthCheck** parameter is set to **on**.</p>
      */
+    @NameInMap("HealthCheckURI")
+    public String healthCheckURI;
+
+    /**
+     * <p>The number of consecutive health check failures before a backend server is declared unhealthy (from **success** to **fail**).</p>
+     * <br>
+     * <p>Valid values: **2** to **10**.</p>
+     * <br>
+     * <p>>  This parameter takes effect only if the **HealthCheck** parameter is set to **on**.</p>
+     */
     @NameInMap("HealthyThreshold")
     public Integer healthyThreshold;
 
     /**
-     * <p>The timeout period of an idle connection. Unit: seconds. Valid values: **1 to 60**. Default value: **15**.</p>
+     * <p>The timeout period of a request. Unit: seconds. Valid values: **1 to 180**. Default value: **60**.</p>
      * <br>
-     * <p>If no request is received within the specified timeout period, CLB closes the connection. When another request is received, CLB establishes a new connection.</p>
+     * <p>If no response is received from the backend server within the request timeout period, CLB returns an HTTP 504 error code to the client.</p>
      */
     @NameInMap("IdleTimeout")
     public Integer idleTimeout;
 
     /**
-     * <p>The frontend port that is used by the CLB instance.</p>
+     * <p>The maximum bandwidth of the listener. Unit: Mbit/s. Valid values:</p>
      * <br>
-     * <p>Valid values: **1** to **65535**.</p>
+     * <p>*   **-1**: For a pay-by-data-transfer Internet-facing CLB instance, you can set this parameter to **-1**. In this case, the bandwidth of the listener is unlimited.</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
-     * <p>The ID of the CLB instance.</p>
+     * <p>The frontend port that is used by the CLB instance.</p>
+     * <br>
+     * <p>Valid values: **1** to **65535**.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -197,17 +198,15 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the CLB instance is deployed.</p>
+     * <p>The operation that you want to perform.</p>
      * <br>
-     * <p>You can query the region ID from the [Regions and zones](~~27585~~) list or by calling the [DescribeRegions](~~27584~~) operation.</p>
+     * <p>Set the value to **SetLoadBalancerHTTPListenerAttribute**.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The timeout period of a request. Unit: seconds. Valid values: **1 to 180**. Default value: **60**.</p>
-     * <br>
-     * <p>If no response is received from the backend server within the request timeout period, CLB returns an HTTP 504 error code to the client.</p>
+     * <p>The description of the listener.</p>
      */
     @NameInMap("RequestTimeout")
     public Integer requestTimeout;
@@ -219,22 +218,13 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The scheduling algorithm. Valid values:</p>
-     * <br>
-     * <p>*   **wrr**: Backend servers that have higher weights receive more requests than backend servers that have lower weights.</p>
-     * <p>*   **rr**: Requests are distributed to backend servers in sequence.</p>
-     */
-    @NameInMap("Scheduler")
-    public String scheduler;
-
-    /**
      * <p>Specifies whether to enable session persistence. Valid values:</p>
      * <br>
      * <p>*   **on**: yes</p>
      * <p>*   **off**: no</p>
      */
-    @NameInMap("StickySession")
-    public String stickySession;
+    @NameInMap("Scheduler")
+    public String scheduler;
 
     /**
      * <p>The method that is used to handle a cookie. Valid values:</p>
@@ -249,45 +239,55 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
      * <br>
      * <p>>This parameter is required if the **StickySession** parameter is set to **on**.</p>
      */
+    @NameInMap("StickySession")
+    public String stickySession;
+
+    /**
+     * <p>The timeout period of the cookie. Unit: seconds.</p>
+     * <br>
+     * <p>Valid values: **1** to **86400**.</p>
+     * <br>
+     * <p>>  If **StickySession** is set to **on** and **StickySessionType** is set to **insert**, this parameter is required.</p>
+     */
     @NameInMap("StickySessionType")
     public String stickySessionType;
 
     /**
-     * <p>The number of consecutive health check failures before a backend server is declared unhealthy (from **success** to **fail**).</p>
+     * <p>The timeout period of a health check response. If a backend Elastic Compute Service (ECS) instance does not send an expected response within the specified period of time, the ECS instance is considered unhealthy. This parameter takes effect only when the **HealthCheck** parameter is set to **on**.</p>
      * <br>
-     * <p>Valid values: **2** to **10**.</p>
+     * <p>Valid values: **1** to **300**. Unit: seconds.</p>
      * <br>
-     * <p>>  This parameter takes effect only if the **HealthCheck** parameter is set to **on**.</p>
+     * <p>>  If the value of the **HealthCheckTimeout** parameter is smaller than that of the **HealthCheckInterval** parameter, the timeout period specified by the **HealthCheckTimeout** parameter is ignored and the period of time specified by the **HealthCheckInterval** parameter is used as the timeout period.</p>
      */
     @NameInMap("UnhealthyThreshold")
     public Integer unhealthyThreshold;
 
     /**
-     * <p>Specifies whether to use a vServer group. Valid values:</p>
-     * <br>
-     * <p>*   **on**: yes</p>
-     * <p>*   **off**: no</p>
+     * <p>The ID of the vServer group.</p>
      */
     @NameInMap("VServerGroup")
     public String VServerGroup;
 
     /**
-     * <p>The ID of the vServer group.</p>
+     * <p>Indicates whether to use the `SLB-IP` header to retrieve the virtual IP address (VIP) requested by the client. Valid values:</p>
+     * <br>
+     * <p>*   **on**: yes</p>
+     * <p>*   **off**: no</p>
      */
     @NameInMap("VServerGroupId")
     public String VServerGroupId;
 
     /**
-     * <p>Specifies whether to use the `X-Forwarded-For` header to preserve the real IP address of the client. Valid values:</p>
+     * <p>The scheduling algorithm. Valid values:</p>
      * <br>
-     * <p>*   **on** (default): yes</p>
-     * <p>*   **off**: no</p>
+     * <p>*   **wrr**: Backend servers that have higher weights receive more requests than backend servers that have lower weights.</p>
+     * <p>*   **rr**: Requests are distributed to backend servers in sequence.</p>
      */
     @NameInMap("XForwardedFor")
     public String XForwardedFor;
 
     /**
-     * <p>Specifies whether to use the `SLB-ID` header to retrieve the ID of the CLB instance. Valid values:</p>
+     * <p>Specifies whether to use the `X-Forwarded-Proto` header to retrieve the listener protocol. Valid values:</p>
      * <br>
      * <p>*   **on**: yes</p>
      * <p>*   **off**: no</p>
@@ -296,7 +296,7 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
     public String XForwardedFor_SLBID;
 
     /**
-     * <p>Indicates whether to use the `SLB-IP` header to retrieve the virtual IP address (VIP) requested by the client. Valid values:</p>
+     * <p>Specifies whether to use the `SLB-ID` header to retrieve the ID of the CLB instance. Valid values:</p>
      * <br>
      * <p>*   **on**: yes</p>
      * <p>*   **off**: no</p>
@@ -305,7 +305,7 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
     public String XForwardedFor_SLBIP;
 
     /**
-     * <p>Specifies whether to use the `X-Forwarded-Proto` header to retrieve the listener protocol. Valid values:</p>
+     * <p>Specifies whether to enable `Gzip` compression to compress specific types of files. Valid values:</p>
      * <br>
      * <p>*   **on**: yes</p>
      * <p>*   **off**: no</p>

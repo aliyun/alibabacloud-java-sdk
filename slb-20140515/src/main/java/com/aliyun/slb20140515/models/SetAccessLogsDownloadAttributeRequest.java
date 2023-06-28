@@ -5,18 +5,13 @@ import com.aliyun.tea.*;
 
 public class SetAccessLogsDownloadAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the CLB instance.</p>
+     * <p>The tags that are added to the CLB instance. The tags must be key-value pairs that are contained in a JSON dictionary.</p>
+     * <br>
+     * <p>You can specify up to 10 tags in each call.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
-    /**
-     * <p>The access log forwarding rule. Parameters:</p>
-     * <br>
-     * <p>*   **LogProject**: the name of the project.</p>
-     * <p>*   **LogStore**: the name of the Logstore.</p>
-     * <p>*   **LoadBalancerId**: the ID of the CLB instance.</p>
-     */
     @NameInMap("LogsDownloadAttributes")
     public String logsDownloadAttributes;
 
@@ -27,9 +22,7 @@ public class SetAccessLogsDownloadAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the CLB instance is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -41,9 +34,7 @@ public class SetAccessLogsDownloadAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags that are added to the CLB instance. The tags must be key-value pairs that are contained in a JSON dictionary.</p>
-     * <br>
-     * <p>You can specify up to 10 tags in each call.</p>
+     * <p>The operation that you want to perform. Set the value to **SetAccessLogsDownloadAttribute**.</p>
      */
     @NameInMap("Tags")
     public String tags;

@@ -5,23 +5,25 @@ import com.aliyun.tea.*;
 
 public class DeleteLoadBalancerListenerRequest extends TeaModel {
     /**
-     * <p>The frontend listening port used by the listener.</p>
+     * <p>The frontend port that is used by the CLB instance.</p>
      * <br>
-     * <p>Value range: **1 to 65535**</p>
+     * <p>Valid values: **1 to 65535**.</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
-     * <p>The frontend listening protocol used by the listener.</p>
+     * <p>The frontend protocol that is used by the CLB instance.</p>
      * <br>
-     * <p>>  This parameter is required when listeners with different protocols use the same port.</p>
+     * <p>>  This parameter is required if the same port is specified for listeners of different protocols.</p>
      */
     @NameInMap("ListenerProtocol")
     public String listenerProtocol;
 
     /**
-     * <p>The ID of the Server Load Balancer (SLB) instance to which the listener belongs.</p>
+     * <p>The ID of the CLB instance.</p>
+     * <br>
+     * <p>>  If the endpoint of the selected region is slb.aliyuncs.com, the **RegionId** parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -33,7 +35,9 @@ public class DeleteLoadBalancerListenerRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region to which the SLB instance belongs.</p>
+     * <p>The region ID of the Classic Load Balancer (CLB) instance.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

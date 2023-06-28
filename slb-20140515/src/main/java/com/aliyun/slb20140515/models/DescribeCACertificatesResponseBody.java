@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeCACertificatesResponseBody extends TeaModel {
     /**
-     * <p>The information about the CA certificate.</p>
+     * <p>The fingerprint of the CA certificate.</p>
      */
     @NameInMap("CACertificates")
     public DescribeCACertificatesResponseBodyCACertificates CACertificates;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The operation that you want to perform. Set the value to **DescribeCACertificates**.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -37,6 +37,33 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeCACertificatesResponseBodyCACertificatesCACertificateTagsTag extends TeaModel {
+        public static DescribeCACertificatesResponseBodyCACertificatesCACertificateTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCACertificatesResponseBodyCACertificatesCACertificateTagsTag self = new DescribeCACertificatesResponseBodyCACertificatesCACertificateTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+    }
+
+    public static class DescribeCACertificatesResponseBodyCACertificatesCACertificateTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeCACertificatesResponseBodyCACertificatesCACertificateTagsTag> tag;
+
+        public static DescribeCACertificatesResponseBodyCACertificatesCACertificateTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCACertificatesResponseBodyCACertificatesCACertificateTags self = new DescribeCACertificatesResponseBodyCACertificatesCACertificateTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCACertificatesResponseBodyCACertificatesCACertificateTags setTag(java.util.List<DescribeCACertificatesResponseBodyCACertificatesCACertificateTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeCACertificatesResponseBodyCACertificatesCACertificateTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class DescribeCACertificatesResponseBodyCACertificatesCACertificate extends TeaModel {
         /**
          * <p>The ID of the CA certificate.</p>
@@ -44,63 +71,55 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
         @NameInMap("CACertificateId")
         public String CACertificateId;
 
-        /**
-         * <p>The name of the CA certificate.</p>
-         */
         @NameInMap("CACertificateName")
         public String CACertificateName;
 
-        /**
-         * <p>The domain name of the CA certificate.</p>
-         */
         @NameInMap("CommonName")
         public String commonName;
 
         /**
-         * <p>The time when the CA certificate was created. The time is in the `YYYY-MM-DDThh:mm:ssZ` format.</p>
+         * <p>The time when the CA certificate expires. The time is in the `YYYY-MM-DDThh:mm:ssZ` format.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The timestamp that indicates when the CA certificate was created. Unit: milliseconds.</p>
-         * <br>
-         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The information about the CA certificate.</p>
          */
         @NameInMap("CreateTimeStamp")
         public Long createTimeStamp;
 
         /**
-         * <p>The time when the CA certificate expires. The time is in the `YYYY-MM-DDThh:mm:ssZ` format.</p>
+         * <p>The region where the CA certificates are created.</p>
+         * <br>
+         * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
 
         /**
-         * <p>The timestamp that indicates when the CA certificate expires. Unit: milliseconds.</p>
-         * <br>
-         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The name of the CA certificate.</p>
          */
         @NameInMap("ExpireTimeStamp")
         public Long expireTimeStamp;
 
         /**
-         * <p>The fingerprint of the CA certificate.</p>
+         * <p>The region where the CA certificate is created.</p>
          */
         @NameInMap("Fingerprint")
         public String fingerprint;
 
         /**
-         * <p>The region where the CA certificate is created.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The ID of the resource group.</p>
-         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
+
+        @NameInMap("Tags")
+        public DescribeCACertificatesResponseBodyCACertificatesCACertificateTags tags;
 
         public static DescribeCACertificatesResponseBodyCACertificatesCACertificate build(java.util.Map<String, ?> map) throws Exception {
             DescribeCACertificatesResponseBodyCACertificatesCACertificate self = new DescribeCACertificatesResponseBodyCACertificatesCACertificate();
@@ -185,6 +204,14 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public DescribeCACertificatesResponseBodyCACertificatesCACertificate setTags(DescribeCACertificatesResponseBodyCACertificatesCACertificateTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeCACertificatesResponseBodyCACertificatesCACertificateTags getTags() {
+            return this.tags;
         }
 
     }

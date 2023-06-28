@@ -11,9 +11,7 @@ public class DeleteTLSCipherPolicyRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the Classic Load Balancer (CLB) instance is created.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The ID of the TLS policy.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -25,7 +23,7 @@ public class DeleteTLSCipherPolicyRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the TLS policy.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("TLSCipherPolicyId")
     public String TLSCipherPolicyId;

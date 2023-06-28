@@ -5,15 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
     /**
-     * <p>The frontend port that is used by the CLB instance.</p>
-     * <br>
-     * <p>Valid values: **1** to **65535**.</p>
+     * <p>The operation that you want to perform. Set the value to **DescribeLoadBalancerHTTPSListenerAttribute**.</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
-     * <p>The ID of the CLB instance.</p>
+     * <p>The domain name.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;

@@ -5,19 +5,23 @@ import com.aliyun.tea.*;
 
 public class AddBackendServersResponseBody extends TeaModel {
     /**
-     * <p>The list of backend servers.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("BackendServers")
     public AddBackendServersResponseBodyBackendServers backendServers;
 
     /**
-     * <p>The ID of the CLB instance.</p>
+     * <p>The type of the backend server. Valid values:</p>
+     * <br>
+     * <p>*   **ecs** (default): an ECS instance</p>
+     * <p>*   **eni**: an ENI</p>
+     * <p>*   **eci**: an elastic container instance</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The list of backend servers.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -52,34 +56,22 @@ public class AddBackendServersResponseBody extends TeaModel {
     }
 
     public static class AddBackendServersResponseBodyBackendServersBackendServer extends TeaModel {
-        /**
-         * <p>The description of the backend server.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the ECS instance, ENI, or elastic container instance.</p>
-         */
         @NameInMap("ServerId")
         public String serverId;
 
         /**
-         * <p>The type of the backend server. Valid values:</p>
+         * <p>The ID of the region where the Classic Load Balancer (CLB) instance is deployed.</p>
          * <br>
-         * <p>*   **ecs** (default): an ECS instance</p>
-         * <p>*   **eni**: an ENI</p>
-         * <p>*   **eci**: an elastic container instance</p>
+         * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The weight of the backend server.</p>
-         * <br>
-         * <p>Valid values: **0 to 100**. Default value: **100**.</p>
-         * <br>
-         * <p>If the value is set to **0**, no requests are forwarded to the backend server.</p>
+         * <p>Adds backend servers.</p>
          */
         @NameInMap("Weight")
         public String weight;

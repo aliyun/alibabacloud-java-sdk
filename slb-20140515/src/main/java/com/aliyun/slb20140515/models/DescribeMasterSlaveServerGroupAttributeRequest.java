@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMasterSlaveServerGroupAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the primary/secondary server group.</p>
+     * <p>The operation that you want to perform. Set the value to **DescribeMasterSlaveServerGroupAttribute**.</p>
      */
     @NameInMap("MasterSlaveServerGroupId")
     public String masterSlaveServerGroupId;
@@ -17,7 +17,7 @@ public class DescribeMasterSlaveServerGroupAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the Classic Load Balancer (CLB) instance.</p>
+     * <p>The list of backend servers in the primary/secondary server group.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeLoadBalancersRequest extends TeaModel {
     /**
-     * <p>The service address of the CLB instance.</p>
+     * <p>The IP address that the CLB instance uses to provide services.</p>
      */
     @NameInMap("Address")
     public String address;
 
     /**
-     * <p>The IP version. Valid values: **ipv4** and **ipv6**.</p>
+     * <p>The IP version that is used by the CLB instance. Valid values: **ipv4** and **ipv6**.</p>
      */
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
@@ -19,8 +19,8 @@ public class DescribeLoadBalancersRequest extends TeaModel {
     /**
      * <p>The network type of the CLB instance. Valid values:</p>
      * <br>
-     * <p>*   **internet**: After an Internet-facing CLB instance is created, the system allocates a public IP address to the CLB instance. Then, the CLB instance can forward requests over the Internet.</p>
-     * <p>*   **intranet**: After an internal-facing CLB instance is created, the system allocates a private IP address to the CLB instance. Then, the CLB instance can forward only requests within the internal network.</p>
+     * <p>*   **internet:** After an Internet-facing CLB instance is created, the system assigns a public IP address to the CLB instance. Then, the CLB instance can forward requests over the Internet.</p>
+     * <p>*   **intranet:** After an internal-facing CLB instance is created, the system assigns a private IP address to the CLB instance. Then, the CLB instance can forward requests only over internal networks.</p>
      */
     @NameInMap("AddressType")
     public String addressType;
@@ -28,8 +28,8 @@ public class DescribeLoadBalancersRequest extends TeaModel {
     /**
      * <p>The metering method of Internet data transfer. Valid values:</p>
      * <br>
-     * <p>*   **paybybandwidth**: pay-by-bandwidth</p>
-     * <p>*   **paybytraffic**: pay-by-data-transfer</p>
+     * <p>*   **paybybandwidth:** pay-by-bandwidth.</p>
+     * <p>*   **paybytraffic:** pay-by-data-transfer.</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
@@ -55,9 +55,9 @@ public class DescribeLoadBalancersRequest extends TeaModel {
     /**
      * <p>The status of the CLB instance. Valid values:</p>
      * <br>
-     * <p>*   **inactive**: The CLB instance is disabled. CLB instances in the inactive state do not forward traffic.</p>
-     * <p>*   **active**: The CLB instance is running as expected. Newly created CLB instances are in the **active** state by default.</p>
-     * <p>*   **locked**: The CLB instance is locked. When a CLB instance expires, it is locked for seven days. You cannot perform operations on a locked CLB instance. The CLB instance no longer forwards traffic, but the IP address and other settings are retained.</p>
+     * <p>*   **inactive:** The CLB instance is disabled. CLB instances in the inactive state do not forward traffic.</p>
+     * <p>*   **active:** The CLB instance runs as expected. By default, newly created CLB instances are in the **active** state.</p>
+     * <p>*   **locked:** The CLB instance is locked. After a CLB instance expires, it is locked for seven days. A locked CLB instance cannot forward traffic and you cannot perform operations on the locked CLB instance. However, other settings such as the IP address are retained.</p>
      */
     @NameInMap("LoadBalancerStatus")
     public String loadBalancerStatus;
@@ -71,8 +71,8 @@ public class DescribeLoadBalancersRequest extends TeaModel {
     /**
      * <p>The network type of the internal-facing CLB instance. Valid values:</p>
      * <br>
-     * <p>*   **vpc**: VPC</p>
-     * <p>*   **classic**: classic network</p>
+     * <p>*   **vpc:** VPC.</p>
+     * <p>*   **classic:** classic network.</p>
      */
     @NameInMap("NetworkType")
     public String networkType;
@@ -84,31 +84,31 @@ public class DescribeLoadBalancersRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number of the page to return.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page.</p>
+     * <p>The number of entries to return on each page.</p>
      * <br>
      * <p>Valid values: **1** to **100**.</p>
      * <br>
-     * <p>>  If you set **PageSize**, you must also set **PageNumber**.</p>
+     * <p>>  If you specify the **PageSize** parameter, you must also specify the **PageNumber** parameter.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The billing method of the CLB instance.</p>
+     * <p>The billing method of the CLB instance. Valid values:</p>
      * <br>
-     * <p>*   Set the value to **PayOnDemand**, which specifies the pay-as-you-go billing method.</p>
+     * <p>*   Set the value to **PayOnDemand**.</p>
      */
     @NameInMap("PayType")
     public String payType;
 
     /**
-     * <p>The region ID of the CLB instance.</p>
+     * <p>The ID of the region where the CLB instance is deployed.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
      */

@@ -4,24 +4,12 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeListenerAccessControlAttributeResponseBody extends TeaModel {
-    /**
-     * <p>Indicates whether the whitelist is enabled. Valid values:</p>
-     * <br>
-     * <p>*   **open_white_list**: the whitelist is enabled.</p>
-     * <p>*   **close**: the whitelist is disabled.</p>
-     */
     @NameInMap("AccessControlStatus")
     public String accessControlStatus;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The IP addresses and CIDR blocks added to the whitelist.</p>
-     */
     @NameInMap("SourceItems")
     public String sourceItems;
 

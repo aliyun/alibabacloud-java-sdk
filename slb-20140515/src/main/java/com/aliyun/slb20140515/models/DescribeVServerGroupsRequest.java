@@ -5,25 +5,21 @@ import com.aliyun.tea.*;
 
 public class DescribeVServerGroupsRequest extends TeaModel {
     /**
-     * <p>Specifies whether to return information about the associated listeners. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false** (default): no</p>
+     * <p>The ID of the server group.</p>
      */
     @NameInMap("IncludeListener")
     public Boolean includeListener;
 
     /**
-     * <p>Specifies whether to return the forwarding rules associated with the vServer groups. Valid values:</p>
+     * <p>The region ID of the Classic Load Balancer (CLB) instance.</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false** (default): no</p>
+     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
      */
     @NameInMap("IncludeRule")
     public Boolean includeRule;
 
     /**
-     * <p>The ID of the CLB instance.</p>
+     * <p>The operation that you want to perform. Set the value to **DescribeVServerGroups**.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -35,9 +31,7 @@ public class DescribeVServerGroupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the Classic Load Balancer (CLB) instance.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     * <p>The items associated with the server groups.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -47,6 +41,9 @@ public class DescribeVServerGroupsRequest extends TeaModel {
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
+
+    @NameInMap("Tag")
+    public java.util.List<DescribeVServerGroupsRequestTag> tag;
 
     public static DescribeVServerGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVServerGroupsRequest self = new DescribeVServerGroupsRequest();
@@ -115,6 +112,22 @@ public class DescribeVServerGroupsRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DescribeVServerGroupsRequest setTag(java.util.List<DescribeVServerGroupsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeVServerGroupsRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class DescribeVServerGroupsRequestTag extends TeaModel {
+        public static DescribeVServerGroupsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVServerGroupsRequestTag self = new DescribeVServerGroupsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
     }
 
 }

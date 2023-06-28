@@ -11,9 +11,7 @@ public class DescribeHighDefinationMonitorRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where you want to query the configuration of fine-grained monitoring.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     * <p>The name of the Logstore of Log Service.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -25,7 +23,9 @@ public class DescribeHighDefinationMonitorRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags of the logs. The tags must be key-value pairs that are contained in a JSON dictionary.</p>
+     * <p>The ID of the region where you want to query the configuration of fine-grained monitoring.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
      */
     @NameInMap("Tags")
     public String tags;

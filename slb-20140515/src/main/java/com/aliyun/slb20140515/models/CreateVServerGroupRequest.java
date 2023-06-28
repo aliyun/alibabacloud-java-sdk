@@ -5,6 +5,41 @@ import com.aliyun.tea.*;
 
 public class CreateVServerGroupRequest extends TeaModel {
     /**
+     * <p>The ID of the vServer group.</p>
+     */
+    @NameInMap("BackendServers")
+    public String backendServers;
+
+    /**
+     * <p>The name of the vServer group.</p>
+     * <br>
+     * <p>The name must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.),and underscores (\_).</p>
+     */
+    @NameInMap("LoadBalancerId")
+    public String loadBalancerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    /**
+     * <p>The ID of the Server Load Balancer (SLB) instance.</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("Tag")
+    public java.util.List<CreateVServerGroupRequestTag> tag;
+
+    /**
      * <p>The list of backend servers to be added.</p>
      * <br>
      * <p>The value of this parameter must be a STRING list in the JSON format. You can specify up to 20 elements in each request.</p>
@@ -29,38 +64,6 @@ public class CreateVServerGroupRequest extends TeaModel {
      * <p>*   ECS instance:`  [{ "ServerId": "i-xxxxxxxxx", "Weight": "100", "Type": "ecs", "Port": "80", "Description": "test-112" }]. `</p>
      * <p>*   ENI:`  [{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.**.**", "Port":"80","Description":"test-112" }] `</p>
      * <p>*   ENI with multiple IP addresses:`  [{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.**.**", "Port":"80","Description":"test-112" },{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "172.166.**.**", "Port":"80","Description":"test-113" }] `</p>
-     */
-    @NameInMap("BackendServers")
-    public String backendServers;
-
-    /**
-     * <p>The ID of the Server Load Balancer (SLB) instance.</p>
-     */
-    @NameInMap("LoadBalancerId")
-    public String loadBalancerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    /**
-     * <p>The ID of the region where the SLB instance is deployed.</p>
-     */
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    /**
-     * <p>The name of the vServer group.</p>
-     * <br>
-     * <p>The name must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.),and underscores (\_).</p>
      */
     @NameInMap("VServerGroupName")
     public String VServerGroupName;
@@ -126,12 +129,50 @@ public class CreateVServerGroupRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public CreateVServerGroupRequest setTag(java.util.List<CreateVServerGroupRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateVServerGroupRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateVServerGroupRequest setVServerGroupName(String VServerGroupName) {
         this.VServerGroupName = VServerGroupName;
         return this;
     }
     public String getVServerGroupName() {
         return this.VServerGroupName;
+    }
+
+    public static class CreateVServerGroupRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateVServerGroupRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateVServerGroupRequestTag self = new CreateVServerGroupRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateVServerGroupRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateVServerGroupRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

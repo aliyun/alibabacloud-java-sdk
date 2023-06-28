@@ -5,19 +5,22 @@ import com.aliyun.tea.*;
 
 public class RemoveVServerGroupBackendServersResponseBody extends TeaModel {
     /**
-     * <p>The list of backend servers.</p>
+     * <p>The weight of the backend server.</p>
      */
     @NameInMap("BackendServers")
     public RemoveVServerGroupBackendServersResponseBodyBackendServers backendServers;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The type of backend server. Valid values:</p>
+     * <br>
+     * <p>*   **ecs**: an ECS instance</p>
+     * <p>*   **eni**: an ENI</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the vServer group.</p>
+     * <p>The list of backend servers.</p>
      */
     @NameInMap("VServerGroupId")
     public String VServerGroupId;
@@ -53,28 +56,25 @@ public class RemoveVServerGroupBackendServersResponseBody extends TeaModel {
 
     public static class RemoveVServerGroupBackendServersResponseBodyBackendServersBackendServer extends TeaModel {
         /**
-         * <p>The port that is used by the backend server.</p>
+         * <p>>  If one or more backend servers specified by the **BackendServers** parameter do not exist in the specified vServer group, these backend servers are ignored and no error message is returned.</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
-         * <p>The ID of the ECS instance or ENI.</p>
+         * <p>Removes one or more backend servers from a specified vServer group.</p>
          */
         @NameInMap("ServerId")
         public String serverId;
 
         /**
-         * <p>The type of backend server. Valid values:</p>
-         * <br>
-         * <p>*   **ecs**: an ECS instance</p>
-         * <p>*   **eni**: an ENI</p>
+         * <p>The port that is used by the backend server.</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The weight of the backend server.</p>
+         * <p>The ID of the ECS instance or ENI.</p>
          */
         @NameInMap("Weight")
         public Integer weight;

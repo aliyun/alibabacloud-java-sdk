@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
     /**
-     * <p>The list of backend servers in the primary/secondary server group.</p>
+     * <p>The associated resources.</p>
      */
     @NameInMap("MasterSlaveServerGroups")
     public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroups masterSlaveServerGroups;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The listening protocol.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,15 +38,9 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListenersListener extends TeaModel {
-        /**
-         * <p>The listening port.</p>
-         */
         @NameInMap("Port")
         public Integer port;
 
-        /**
-         * <p>The listening protocol.</p>
-         */
         @NameInMap("Protocol")
         public String protocol;
 
@@ -94,7 +88,7 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
 
     public static class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjects extends TeaModel {
         /**
-         * <p>The list of listeners.</p>
+         * <p>Queries backend servers in a primary/secondary server group.</p>
          */
         @NameInMap("Listeners")
         public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListeners listeners;
@@ -114,30 +108,79 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupTagsTag extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupTagsTag self = new DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupTagsTag setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
+    public static class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupTagsTag> tag;
+
+        public static DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupTags self = new DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupTags setTag(java.util.List<DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroup extends TeaModel {
         /**
-         * <p>The associated resources.</p>
+         * <p>The name of the primary/secondary server group.</p>
          */
         @NameInMap("AssociatedObjects")
         public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjects associatedObjects;
 
-        /**
-         * <p>The time when the CLB instance was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The ID of the primary/secondary server group.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("MasterSlaveServerGroupId")
         public String masterSlaveServerGroupId;
 
         /**
-         * <p>The name of the primary/secondary server group.</p>
+         * <p>The operation that you want to perform. Set the value to **DescribeMasterSlaveServerGroups**.</p>
          */
         @NameInMap("MasterSlaveServerGroupName")
         public String masterSlaveServerGroupName;
+
+        @NameInMap("Tags")
+        public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupTags tags;
 
         public static DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroup build(java.util.Map<String, ?> map) throws Exception {
             DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroup self = new DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroup();
@@ -174,6 +217,14 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
         }
         public String getMasterSlaveServerGroupName() {
             return this.masterSlaveServerGroupName;
+        }
+
+        public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroup setTags(DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupTags getTags() {
+            return this.tags;
         }
 
     }

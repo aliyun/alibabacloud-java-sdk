@@ -5,50 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeRuleAttributeResponseBody extends TeaModel {
     /**
-     * <p>The cookie to be configured on the backend server.</p>
-     * <br>
-     * <p>The cookie must be 1 to 200 characters in length and can contain ASCII letters and digits. It cannot contain commas (,), semicolons (;), or whitespace characters. It cannot start with a dollar sign ($).</p>
-     * <br>
-     * <p>If you set the **StickySession** parameter to **on** and the **StickySessionType** parameter to **server**, this parameter is required.</p>
+     * <p>The ID of the SLB instance.</p>
      */
     @NameInMap("Cookie")
     public String cookie;
-
-    /**
-     * <p>The timeout period of a cookie.</p>
-     * <br>
-     * <p>Valid values: **1 to 86400**. Unit: seconds.</p>
-     * <br>
-     * <p>>  If you set the **StickySession** parameter to **on** and the **StickySessionType** parameter to **insert**, this parameter is required.</p>
-     */
-    @NameInMap("CookieTimeout")
-    public Integer cookieTimeout;
-
-    /**
-     * <p>The domain name that is configured in the forwarding rule.</p>
-     */
-    @NameInMap("Domain")
-    public String domain;
-
-    /**
-     * <p>Specifies whether to enable health checks.</p>
-     * <br>
-     * <p>Valid values: **on** and **off**.</p>
-     * <br>
-     * <p>>  If you set the **ListenerSync** parameter to **off**, this parameter is required. If you set the parameter to **on**, the configuration of the listener is used.</p>
-     */
-    @NameInMap("HealthCheck")
-    public String healthCheck;
-
-    /**
-     * <p>The port of the backend server that is used for health checks.</p>
-     * <br>
-     * <p>Valid values: **1** to **65535**.</p>
-     * <br>
-     * <p>>  If you set the **HealthCheck** parameter to **on**, this parameter is required. If you left this parameter empty and the **HealthCheck** parameter is set to **on**, the backend port configuration of the listener is used by default.</p>
-     */
-    @NameInMap("HealthCheckConnectPort")
-    public Integer healthCheckConnectPort;
 
     /**
      * <p>The domain name that is used for health checks. Valid values:</p>
@@ -58,97 +18,21 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
      * <br>
      * <p>>  If you set the **HealthCheck** parameter to **on**, this parameter is required.</p>
      */
-    @NameInMap("HealthCheckDomain")
-    public String healthCheckDomain;
+    @NameInMap("CookieTimeout")
+    public Integer cookieTimeout;
 
     /**
-     * <p>The HTTP status code that indicates a successful health check. Separate multiple HTTP status codes with commas (,). Default value: **http\_2xx**.</p>
+     * <p>The cookie to be configured on the backend server.</p>
      * <br>
-     * <p>Valid values: **http\_2xx**, **http\_3xx**, **http\_4xx**, and **http\_5xx**.</p>
+     * <p>The cookie must be 1 to 200 characters in length and can contain ASCII letters and digits. It cannot contain commas (,), semicolons (;), or whitespace characters. It cannot start with a dollar sign ($).</p>
      * <br>
-     * <p>>  If you set the **HealthCheck** parameter to **on**, this parameter is required.</p>
+     * <p>If you set the **StickySession** parameter to **on** and the **StickySessionType** parameter to **server**, this parameter is required.</p>
      */
-    @NameInMap("HealthCheckHttpCode")
-    public String healthCheckHttpCode;
+    @NameInMap("Domain")
+    public String domain;
 
-    /**
-     * <p>The time interval between two consecutive health checks.</p>
-     * <br>
-     * <p>Valid values: **1** to **50**. Unit: seconds.</p>
-     * <br>
-     * <p>>  If you set the **HealthCheck** parameter to **on**, this parameter is required.</p>
-     */
-    @NameInMap("HealthCheckInterval")
-    public Integer healthCheckInterval;
-
-    /**
-     * <p>The timeout period of a health check response. If a backend ECS instance does not send an expected response within the specified period of time, the ECS instance is considered unhealthy.</p>
-     * <br>
-     * <p>Valid values: **1** to **300**. Unit: seconds.</p>
-     * <br>
-     * <p>>  If the value of the **HealthCHeckTimeout** parameter is smaller than that of the **HealthCheckInterval** parameter, the value of the **HealthCHeckTimeout** parameter is ignored and the value of the **HealthCheckInterval** parameter is regarded as the waiting period. If you set the **HealthCheck** parameter to **on**, this parameter is required.</p>
-     */
-    @NameInMap("HealthCheckTimeout")
-    public Integer healthCheckTimeout;
-
-    /**
-     * <p>The URI that is used for health checks.</p>
-     * <br>
-     * <p>>  If you set the **HealthCheck** parameter to **on**, this parameter is required.</p>
-     */
-    @NameInMap("HealthCheckURI")
-    public String healthCheckURI;
-
-    /**
-     * <p>The number of consecutive successful health checks that must occur before an unhealthy backend server is declared healthy. In this case, the health check state is changed from **fail** to **success**.</p>
-     * <br>
-     * <p>Valid values: **2** to **10**.</p>
-     * <br>
-     * <p>>  If you set the **HealthCheck** parameter to **on**, this parameter is required.</p>
-     */
-    @NameInMap("HealthyThreshold")
-    public Integer healthyThreshold;
-
-    /**
-     * <p>The listener port that is used by the SLB instance.</p>
-     */
-    @NameInMap("ListenerPort")
-    public String listenerPort;
-
-    /**
-     * <p>Indicates whether the forwarding rule uses the scheduling algorithm, session persistence, and health check configurations of the listener.</p>
-     * <br>
-     * <p>Valid values: **on** and **off**.</p>
-     * <br>
-     * <p>*   **off**: does not use the configurations of the listener. You can customize health check and session persistence configurations for the forwarding rule.</p>
-     * <p>*   **on**: uses the configurations of the listener.</p>
-     */
-    @NameInMap("ListenerSync")
-    public String listenerSync;
-
-    /**
-     * <p>The ID of the SLB instance.</p>
-     */
-    @NameInMap("LoadBalancerId")
-    public String loadBalancerId;
-
-    /**
-     * <p>The ID of the request.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
-
-    /**
-     * <p>The ID of the forwarding rule.</p>
-     */
-    @NameInMap("RuleId")
-    public String ruleId;
-
-    /**
-     * <p>The name of the forwarding rule.</p>
-     */
-    @NameInMap("RuleName")
-    public String ruleName;
+    @NameInMap("HealthCheck")
+    public String healthCheck;
 
     /**
      * <p>The scheduling algorithm. Valid values:</p>
@@ -158,18 +42,41 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
      * <br>
      * <p>>  If you set the **ListenerSync** parameter to **off**, this parameter is required. If you set the parameter to **on**, the configuration of the listener is used.</p>
      */
-    @NameInMap("Scheduler")
-    public String scheduler;
+    @NameInMap("HealthCheckConnectPort")
+    public Integer healthCheckConnectPort;
 
     /**
-     * <p>Indicates whether session persistence is enabled.</p>
+     * <p>The number of consecutive failed health checks that must occur before a healthy backend server is declared unhealthy. In this case, the health check state is changed from **success** to **fail**.</p>
+     * <br>
+     * <p>Valid values: **2** to **10**.</p>
+     * <br>
+     * <p>>  If you set the **HealthCheck** parameter to **on**, this parameter is required.</p>
+     */
+    @NameInMap("HealthCheckDomain")
+    public String healthCheckDomain;
+
+    /**
+     * <p>The ID of the vServer group that is associated with the forwarding rule.</p>
+     */
+    @NameInMap("HealthCheckHttpCode")
+    public String healthCheckHttpCode;
+
+    /**
+     * <p>The URL that is configured in the forwarding rule.</p>
+     */
+    @NameInMap("HealthCheckInterval")
+    public Integer healthCheckInterval;
+
+    /**
+     * <p>Indicates whether the forwarding rule uses the scheduling algorithm, session persistence, and health check configurations of the listener.</p>
      * <br>
      * <p>Valid values: **on** and **off**.</p>
      * <br>
-     * <p>>  If you set the **ListenerSync** parameter to **off**, this parameter is required. If you set the parameter to **on**, the configuration of the listener is used.</p>
+     * <p>*   **off**: does not use the configurations of the listener. You can customize health check and session persistence configurations for the forwarding rule.</p>
+     * <p>*   **on**: uses the configurations of the listener.</p>
      */
-    @NameInMap("StickySession")
-    public String stickySession;
+    @NameInMap("HealthCheckTimeout")
+    public Integer healthCheckTimeout;
 
     /**
      * <p>The method that is used to handle a cookie. Valid values:</p>
@@ -179,27 +86,113 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
      * <br>
      * <p>>  If you set the **StickySession** parameter to **on**, this parameter is required.</p>
      */
-    @NameInMap("StickySessionType")
-    public String stickySessionType;
+    @NameInMap("HealthCheckURI")
+    public String healthCheckURI;
 
     /**
-     * <p>The number of consecutive failed health checks that must occur before a healthy backend server is declared unhealthy. In this case, the health check state is changed from **success** to **fail**.</p>
+     * <p>The timeout period of a cookie.</p>
+     * <br>
+     * <p>Valid values: **1 to 86400**. Unit: seconds.</p>
+     * <br>
+     * <p>>  If you set the **StickySession** parameter to **on** and the **StickySessionType** parameter to **insert**, this parameter is required.</p>
+     */
+    @NameInMap("HealthyThreshold")
+    public Integer healthyThreshold;
+
+    /**
+     * <p>The time interval between two consecutive health checks.</p>
+     * <br>
+     * <p>Valid values: **1** to **50**. Unit: seconds.</p>
+     * <br>
+     * <p>>  If you set the **HealthCheck** parameter to **on**, this parameter is required.</p>
+     */
+    @NameInMap("ListenerPort")
+    public String listenerPort;
+
+    /**
+     * <p>The number of consecutive successful health checks that must occur before an unhealthy backend server is declared healthy. In this case, the health check state is changed from **fail** to **success**.</p>
      * <br>
      * <p>Valid values: **2** to **10**.</p>
      * <br>
      * <p>>  If you set the **HealthCheck** parameter to **on**, this parameter is required.</p>
      */
+    @NameInMap("ListenerSync")
+    public String listenerSync;
+
+    /**
+     * <p>The listener port that is used by the SLB instance.</p>
+     */
+    @NameInMap("LoadBalancerId")
+    public String loadBalancerId;
+
+    /**
+     * <p>The timeout period of a health check response. If a backend ECS instance does not send an expected response within the specified period of time, the ECS instance is considered unhealthy.</p>
+     * <br>
+     * <p>Valid values: **1** to **300**. Unit: seconds.</p>
+     * <br>
+     * <p>>  If the value of the **HealthCHeckTimeout** parameter is smaller than that of the **HealthCheckInterval** parameter, the value of the **HealthCHeckTimeout** parameter is ignored and the value of the **HealthCheckInterval** parameter is regarded as the waiting period. If you set the **HealthCheck** parameter to **on**, this parameter is required.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
+     * <p>The port of the backend server that is used for health checks.</p>
+     * <br>
+     * <p>Valid values: **1** to **65535**.</p>
+     * <br>
+     * <p>>  If you set the **HealthCheck** parameter to **on**, this parameter is required. If you left this parameter empty and the **HealthCheck** parameter is set to **on**, the backend port configuration of the listener is used by default.</p>
+     */
+    @NameInMap("RuleId")
+    public String ruleId;
+
+    /**
+     * <p>The ID of the forwarding rule.</p>
+     */
+    @NameInMap("RuleName")
+    public String ruleName;
+
+    /**
+     * <p>The ID of the request.</p>
+     */
+    @NameInMap("Scheduler")
+    public String scheduler;
+
+    /**
+     * <p>Specifies whether to enable health checks.</p>
+     * <br>
+     * <p>Valid values: **on** and **off**.</p>
+     * <br>
+     * <p>>  If you set the **ListenerSync** parameter to **off**, this parameter is required. If you set the parameter to **on**, the configuration of the listener is used.</p>
+     */
+    @NameInMap("StickySession")
+    public String stickySession;
+
+    /**
+     * <p>The name of the forwarding rule.</p>
+     */
+    @NameInMap("StickySessionType")
+    public String stickySessionType;
+
+    /**
+     * <p>Indicates whether session persistence is enabled.</p>
+     * <br>
+     * <p>Valid values: **on** and **off**.</p>
+     * <br>
+     * <p>>  If you set the **ListenerSync** parameter to **off**, this parameter is required. If you set the parameter to **on**, the configuration of the listener is used.</p>
+     */
     @NameInMap("UnhealthyThreshold")
     public Integer unhealthyThreshold;
 
     /**
-     * <p>The URL that is configured in the forwarding rule.</p>
+     * <p>The URI that is used for health checks.</p>
+     * <br>
+     * <p>>  If you set the **HealthCheck** parameter to **on**, this parameter is required.</p>
      */
     @NameInMap("Url")
     public String url;
 
     /**
-     * <p>The ID of the vServer group that is associated with the forwarding rule.</p>
+     * <p>The domain name that is configured in the forwarding rule.</p>
      */
     @NameInMap("VServerGroupId")
     public String VServerGroupId;

@@ -5,23 +5,25 @@ import com.aliyun.tea.*;
 
 public class StartLoadBalancerListenerRequest extends TeaModel {
     /**
-     * <p>The listener port of the SLB instance.</p>
-     * <br>
-     * <p>Valid values: **1 to 65535**.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
-     * <p>The protocol used by the listener of the SLB instance.</p>
+     * <p>When you call this operation, note the following items:</p>
      * <br>
-     * <p>>  If different listeners use the same port, you must specify this parameter.</p>
+     * <p>*   You can call the operation only when the listener is in the Stopped state.</p>
+     * <p>*   After the operation is called, the status of the listener changes to Starting.</p>
+     * <p>*   You cannot call this operation when the SLB instance to which the listener is bound is in the Locked state.</p>
      */
     @NameInMap("ListenerProtocol")
     public String listenerProtocol;
 
     /**
-     * <p>The ID of the SLB instance.</p>
+     * <p>The protocol used by the listener of the SLB instance.</p>
+     * <br>
+     * <p>>  If different listeners use the same port, you must specify this parameter.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -33,9 +35,7 @@ public class StartLoadBalancerListenerRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region where the SLB instance is deployed.</p>
-     * <br>
-     * <p>You can retrieve the region ID by calling the [DescribeRegions](~~27584~~) operation.</p>
+     * <p>The ID of the SLB instance.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

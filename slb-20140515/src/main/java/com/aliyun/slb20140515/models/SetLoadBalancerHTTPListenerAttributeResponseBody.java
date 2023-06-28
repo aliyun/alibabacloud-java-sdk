@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class SetLoadBalancerHTTPListenerAttributeResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>## Prerequisites</p>
+     * <br>
+     * <p>*   A Classic Load Balancer (CLB) instance is created. For more information, see [CreateLoadBalancer](~~27577~~).</p>
+     * <p>*   An HTTP listener is created. For more information about how to create an HTTP listener, see [CreateLoadBalancerHTTPListener](~~27592~~).</p>
      */
     @NameInMap("RequestId")
     public String requestId;

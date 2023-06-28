@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCACertificateRequest extends TeaModel {
     /**
-     * <p>The ID of the CA certificate.</p>
+     * <p>>  CA certificates in use cannot be deleted.</p>
      */
     @NameInMap("CACertificateId")
     public String CACertificateId;
@@ -17,9 +17,7 @@ public class DeleteCACertificateRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region to which the CA certificate belongs.</p>
-     * <br>
-     * <p>To query the region ID, call [DescribeRegions](~~27584~~).</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeVServerGroupsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The listening port.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The list of backend servers.</p>
+     * <p>The name of the server group.</p>
      */
     @NameInMap("VServerGroups")
     public DescribeVServerGroupsResponseBodyVServerGroups VServerGroups;
@@ -38,15 +38,9 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsListenersListener extends TeaModel {
-        /**
-         * <p>The listening port.</p>
-         */
         @NameInMap("Port")
         public Integer port;
 
-        /**
-         * <p>The listening protocol. Valid values: **tcp**, **udp**, **http**, and **https**.</p>
-         */
         @NameInMap("Protocol")
         public String protocol;
 
@@ -93,27 +87,15 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsRulesRule extends TeaModel {
-        /**
-         * <p>The requested domain name.</p>
-         */
         @NameInMap("Domain")
         public String domain;
 
-        /**
-         * <p>The ID of the forwarding rule.</p>
-         */
         @NameInMap("RuleId")
         public String ruleId;
 
-        /**
-         * <p>The name of the forwarding rule.</p>
-         */
         @NameInMap("RuleName")
         public String ruleName;
 
-        /**
-         * <p>The request path.</p>
-         */
         @NameInMap("Url")
         public String url;
 
@@ -177,14 +159,11 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
 
     public static class DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjects extends TeaModel {
         /**
-         * <p>The list of listeners.</p>
+         * <p>Queries server groups of a Classic Load Balancer (CLB) instance.</p>
          */
         @NameInMap("Listeners")
         public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsListeners listeners;
 
-        /**
-         * <p>The list of forwarding rules.</p>
-         */
         @NameInMap("Rules")
         public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsRules rules;
 
@@ -211,35 +190,82 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupTagsTag extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupTagsTag self = new DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupTagsTag setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
+    public static class DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupTagsTag> tag;
+
+        public static DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupTags self = new DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupTags setTag(java.util.List<DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class DescribeVServerGroupsResponseBodyVServerGroupsVServerGroup extends TeaModel {
         /**
-         * <p>The items associated with the server groups.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("AssociatedObjects")
         public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjects associatedObjects;
 
-        /**
-         * <p>The time when the CLB instance was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The number of servers. </p>
-         * <br>
-         * <p>>  The feature corresponding to this parameter is not available by default. If you want to use this feature, [submit a ticket](https://ticket-intl.console.aliyun.com/#/ticket/createIndex).</p>
-         */
         @NameInMap("ServerCount")
         public Long serverCount;
 
+        @NameInMap("Tags")
+        public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupTags tags;
+
         /**
-         * <p>The ID of the server group.</p>
+         * <p>Specifies whether to return information about the associated listeners. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false** (default): no</p>
          */
         @NameInMap("VServerGroupId")
         public String VServerGroupId;
 
         /**
-         * <p>The name of the server group.</p>
+         * <p>The list of backend servers.</p>
          */
         @NameInMap("VServerGroupName")
         public String VServerGroupName;
@@ -271,6 +297,14 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
         }
         public Long getServerCount() {
             return this.serverCount;
+        }
+
+        public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroup setTags(DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupTags getTags() {
+            return this.tags;
         }
 
         public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroup setVServerGroupId(String VServerGroupId) {

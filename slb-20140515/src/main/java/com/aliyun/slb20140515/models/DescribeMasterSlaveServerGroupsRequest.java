@@ -5,16 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeMasterSlaveServerGroupsRequest extends TeaModel {
     /**
-     * <p>Specifies whether to return information about the associated listeners. Valid values:</p>
-     * <br>
-     * <p>*   **true**: returns information about the associated listeners.</p>
-     * <p>*   **false**: does not return information about the associated listeners.</p>
+     * <p>The list of backend servers in the primary/secondary server group.</p>
      */
     @NameInMap("IncludeListener")
     public Boolean includeListener;
 
     /**
-     * <p>The ID of the CLB instance.</p>
+     * <p>The ID of the primary/secondary server group.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -26,7 +23,7 @@ public class DescribeMasterSlaveServerGroupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the Classic Load Balancer (CLB) instance.</p>
+     * <p>The listening port.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -36,6 +33,9 @@ public class DescribeMasterSlaveServerGroupsRequest extends TeaModel {
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
+
+    @NameInMap("Tag")
+    public java.util.List<DescribeMasterSlaveServerGroupsRequestTag> tag;
 
     public static DescribeMasterSlaveServerGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeMasterSlaveServerGroupsRequest self = new DescribeMasterSlaveServerGroupsRequest();
@@ -96,6 +96,22 @@ public class DescribeMasterSlaveServerGroupsRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DescribeMasterSlaveServerGroupsRequest setTag(java.util.List<DescribeMasterSlaveServerGroupsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeMasterSlaveServerGroupsRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class DescribeMasterSlaveServerGroupsRequestTag extends TeaModel {
+        public static DescribeMasterSlaveServerGroupsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMasterSlaveServerGroupsRequestTag self = new DescribeMasterSlaveServerGroupsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
     }
 
 }

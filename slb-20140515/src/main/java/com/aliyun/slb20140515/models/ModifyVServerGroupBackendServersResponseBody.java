@@ -5,19 +5,22 @@ import com.aliyun.tea.*;
 
 public class ModifyVServerGroupBackendServersResponseBody extends TeaModel {
     /**
-     * <p>The list of backend servers.</p>
+     * <p>The weight of the backend server.</p>
      */
     @NameInMap("BackendServers")
     public ModifyVServerGroupBackendServersResponseBodyBackendServers backendServers;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The type of backend server. Valid values:</p>
+     * <br>
+     * <p>*   **ecs**: an ECS instance. This is the default value.</p>
+     * <p>*   **eni**: an ENI.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the vServer group.</p>
+     * <p>The list of backend servers.</p>
      */
     @NameInMap("VServerGroupId")
     public String VServerGroupId;
@@ -53,34 +56,31 @@ public class ModifyVServerGroupBackendServersResponseBody extends TeaModel {
 
     public static class ModifyVServerGroupBackendServersResponseBodyBackendServersBackendServer extends TeaModel {
         /**
-         * <p>The description of the backend server.</p>
+         * <p>The port that is used by the backend server.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The port that is used by the backend server.</p>
+         * <p>You can call this operation to replace the backend servers in a specified vServer group. To modify the configurations of the backend servers, such as their weights, you can call the [SetVServerGroupAttribute](~~35217~~) operation.</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
-         * <p>The ID of the ECS instance or ENI.</p>
+         * <p>Replaces backend servers in a specified vServer group.</p>
          */
         @NameInMap("ServerId")
         public String serverId;
 
         /**
-         * <p>The type of backend server. Valid values:</p>
-         * <br>
-         * <p>*   **ecs**: an ECS instance. This is the default value.</p>
-         * <p>*   **eni**: an ENI.</p>
+         * <p>The description of the backend server.</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The weight of the backend server.</p>
+         * <p>Backend server description</p>
          */
         @NameInMap("Weight")
         public Integer weight;
