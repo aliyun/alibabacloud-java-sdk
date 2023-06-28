@@ -4,15 +4,9 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessControlListAttributeRequest extends TeaModel {
-    /**
-     * <p>The description of the network ACL entry.</p>
-     */
     @NameInMap("AclEntryComment")
     public String aclEntryComment;
 
-    /**
-     * <p>The ID of the network ACL that you want to query.</p>
-     */
     @NameInMap("AclId")
     public String aclId;
 
@@ -29,9 +23,7 @@ public class DescribeAccessControlListAttributeRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the network ACL is created.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     * <p>The time when the network ACL was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

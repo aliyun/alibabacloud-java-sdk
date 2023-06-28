@@ -4,15 +4,9 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class SetAccessControlListAttributeRequest extends TeaModel {
-    /**
-     * <p>The ID of the network ACL.</p>
-     */
     @NameInMap("AclId")
     public String aclId;
 
-    /**
-     * <p>The new name of the network ACL. The name must be 1 to 80 characters in length, and can contain only letters, digits, periods (.), hyphens (-), forward slashes (/), and underscores (\_). The name of the network ACL must be unique within each region.</p>
-     */
     @NameInMap("AclName")
     public String aclName;
 
@@ -23,9 +17,7 @@ public class SetAccessControlListAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the network ACL is created.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     * <p>The ID of the network ACL.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

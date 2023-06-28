@@ -4,46 +4,31 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class ModifyLoadBalancerInstanceChargeTypeRequest extends TeaModel {
-    /**
-     * <p>The maximum bandwidth of the Internet-facing CLB instance that is billed on a pay-by-bandwidth basis.</p>
-     * <br>
-     * <p>You do not need to set this parameter. The metering method of Internet data transfer for pay-by-LCU instances supports only pay-by-traffic.</p>
-     */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
-
-    /**
-     * <p>The metering method of the instance after the change.</p>
-     * <br>
-     * <p>Valid value: **PayByCLCU**. Only pay-by-LCU is supported.</p>
-     */
-    @NameInMap("InstanceChargeType")
-    public String instanceChargeType;
-
-    /**
-     * <p>The metering method of Internet data transfer after the change.</p>
-     * <br>
-     * <p>Valid value: **paybytraffic**.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If the value of the **InstanceChargeType** parameter is set to **PayByCLCU**, only pay-by-data-transfer is supported.</p>
-     * <p>*   When you change the metering method, the new metering method takes effect at 00:00:00 the next day.</p>
-     */
-    @NameInMap("InternetChargeType")
-    public String internetChargeType;
-
-    /**
-     * <p>The ID of the CLB instance.</p>
-     */
-    @NameInMap("LoadBalancerId")
-    public String loadBalancerId;
 
     /**
      * <p>The specification of the CLB instance.</p>
      * <br>
      * <p>You do not need to set this parameter. For pay-as-you-go CLB instances, you can only change the metering method from pay-by-specification to pay-by-LCU. You cannot change the metering method from pay-by-LCU to pay-by-specification.</p>
      */
+    @NameInMap("InstanceChargeType")
+    public String instanceChargeType;
+
+    /**
+     * <p>The region ID of the CLB instance.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
+    @NameInMap("InternetChargeType")
+    public String internetChargeType;
+
+    /**
+     * <p>The ID of the request.</p>
+     */
+    @NameInMap("LoadBalancerId")
+    public String loadBalancerId;
+
     @NameInMap("LoadBalancerSpec")
     public String loadBalancerSpec;
 
@@ -54,9 +39,14 @@ public class ModifyLoadBalancerInstanceChargeTypeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the CLB instance.</p>
+     * <p>The metering method of Internet data transfer after the change.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>Valid value: **paybytraffic**.</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   If the value of the **InstanceChargeType** parameter is set to **PayByCLCU**, only pay-by-data-transfer is supported.</p>
+     * <p>*   When you change the metering method, the new metering method takes effect at 00:00:00 the next day.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

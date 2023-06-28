@@ -5,23 +5,21 @@ import com.aliyun.tea.*;
 
 public class DescribeListenerAccessControlAttributeRequest extends TeaModel {
     /**
-     * <p>The frontend port that is used by the CLB instance.</p>
+     * <p>The region where the Classic Load Balancer (CLB) instance is created.</p>
      * <br>
-     * <p>Valid values: **1 to 65535**.</p>
+     * <p>You can query the region ID from the [Regions and zones](~~40654~~) list or by calling the [DescribeRegions](~~25609~~) operation.</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
-     * <p>The frontend protocol that is used by the CLB instance.</p>
-     * <br>
-     * <p>>  This parameter is required when listeners that use different protocols listen on the same port.</p>
+     * <p>The IP addresses and CIDR blocks added to the whitelist.</p>
      */
     @NameInMap("ListenerProtocol")
     public String listenerProtocol;
 
     /**
-     * <p>The ID of the CLB instance.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -33,9 +31,9 @@ public class DescribeListenerAccessControlAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region where the Classic Load Balancer (CLB) instance is created.</p>
+     * <p>The frontend protocol that is used by the CLB instance.</p>
      * <br>
-     * <p>You can query the region ID from the [Regions and zones](~~40654~~) list or by calling the [DescribeRegions](~~25609~~) operation.</p>
+     * <p>>  This parameter is required when listeners that use different protocols listen on the same port.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

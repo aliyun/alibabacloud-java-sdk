@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainExtensionsResponseBody extends TeaModel {
     /**
-     * <p>The list of additional certificates.</p>
+     * <p>The ID of the server certificate that is used by the domain name.</p>
      */
     @NameInMap("DomainExtensions")
     public DescribeDomainExtensionsResponseBodyDomainExtensions domainExtensions;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The list of additional certificates.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,19 +39,19 @@ public class DescribeDomainExtensionsResponseBody extends TeaModel {
 
     public static class DescribeDomainExtensionsResponseBodyDomainExtensionsDomainExtension extends TeaModel {
         /**
-         * <p>The domain name.</p>
+         * <p>The ID of the additional certificate.</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
-         * <p>The ID of the additional certificate.</p>
+         * <p>Queries additional certificates.</p>
          */
         @NameInMap("DomainExtensionId")
         public String domainExtensionId;
 
         /**
-         * <p>The ID of the server certificate that is used by the domain name.</p>
+         * <p>The domain name.</p>
          */
         @NameInMap("ServerCertificateId")
         public String serverCertificateId;

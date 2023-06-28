@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class SetLoadBalancerDeleteProtectionRequest extends TeaModel {
     /**
-     * <p>Specify whether to enable or disable deletion protection for the SLB instance.</p>
-     * <br>
-     * <p>Valid values: **on and off**.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("DeleteProtection")
     public String deleteProtection;
 
     /**
-     * <p>The ID of the SLB instance.</p>
+     * <p>Specify whether to enable or disable deletion protection for the SLB instance.</p>
+     * <br>
+     * <p>Valid values: **on and off**.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -25,9 +25,9 @@ public class SetLoadBalancerDeleteProtectionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region where the SLB instance is deployed.</p>
+     * <p>The operation that you want to perform.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~27584~~) operation to query region IDs.</p>
+     * <p>Set the value to **SetLoadBalancerDeleteProtection**.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

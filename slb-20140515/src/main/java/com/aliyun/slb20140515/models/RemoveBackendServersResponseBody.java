@@ -5,19 +5,22 @@ import com.aliyun.tea.*;
 
 public class RemoveBackendServersResponseBody extends TeaModel {
     /**
-     * <p>The list of backend servers.</p>
+     * <p>The weight of the backend server. Valid values: **0 to 100**.</p>
      */
     @NameInMap("BackendServers")
     public RemoveBackendServersResponseBodyBackendServers backendServers;
 
     /**
-     * <p>The ID of the CLB instance.</p>
+     * <p>The list of backend servers.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The type of the backend server. Valid values:</p>
+     * <br>
+     * <p>*   **ecs**: an ECS instance</p>
+     * <p>*   **eni**: an ENI</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,28 +56,25 @@ public class RemoveBackendServersResponseBody extends TeaModel {
 
     public static class RemoveBackendServersResponseBodyBackendServersBackendServer extends TeaModel {
         /**
-         * <p>The description of the server group.</p>
+         * <p>>  If the backend servers that you want to remove are not in the server list of the Classic Load Balancer (CLB) instance, the request fails. However, the system does not report an error.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The ID of the backend server.</p>
+         * <p>Removes backend servers.</p>
          */
         @NameInMap("ServerId")
         public String serverId;
 
         /**
-         * <p>The type of the backend server. Valid values:</p>
-         * <br>
-         * <p>*   **ecs**: an ECS instance</p>
-         * <p>*   **eni**: an ENI</p>
+         * <p>The description of the server group.</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The weight of the backend server. Valid values: **0 to 100**.</p>
+         * <p>The ID of the backend server.</p>
          */
         @NameInMap("Weight")
         public Integer weight;

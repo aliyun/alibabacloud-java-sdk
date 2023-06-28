@@ -5,31 +5,28 @@ import com.aliyun.tea.*;
 
 public class ListTLSCipherPoliciesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to return the information about the associated listeners. Valid values:</p>
-     * <br>
-     * <p>*   **true**: returns the information about the associated listeners.</p>
-     * <p>*   **false** (default): does not return the information about the associated listeners.</p>
+     * <p>The name of the TLS policy. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.</p>
      */
     @NameInMap("IncludeListener")
     public Boolean includeListener;
 
     /**
-     * <p>The maximum number of TLS policies to be queried in this call. Valid values: **1** to **100**. If you do not set this parameter, the default value **20** is used.</p>
+     * <p>The timestamp generated when the TLS policy is created.</p>
      */
     @NameInMap("MaxItems")
     public Integer maxItems;
 
     /**
-     * <p>The name of the TLS policy. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The status of the TLS policy. Valid values:</p>
+     * <br>
+     * <p>*   **configuring**: The TLS policy is being configured.</p>
+     * <p>*   **normal**: The TLS policy works as expected.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
-     * <br>
-     * <p>*   If this is your first query or no next query is to be sent, ignore this parameter.</p>
-     * <p>*   If a next query is to be sent, set the value to the value of NextToken that is returned from the last call.</p>
+     * <p>The ID of the TLS policy.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -41,9 +38,7 @@ public class ListTLSCipherPoliciesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the Classic Load Balancer (CLB) instance is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The list of TLS policies.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

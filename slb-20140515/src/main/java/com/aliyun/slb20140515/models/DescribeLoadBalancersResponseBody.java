@@ -81,13 +81,13 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
 
     public static class DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancerTagsTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of the tag.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of the tag.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -136,13 +136,13 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
 
     public static class DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer extends TeaModel {
         /**
-         * <p>The IP address that the CLB instance uses to provide services.</p>
+         * <p>The endpoint of the CLB instance.</p>
          */
         @NameInMap("Address")
         public String address;
 
         /**
-         * <p>The IP version. Valid values: **ipv4** and **ipv6**.</p>
+         * <p>The IP version that is used by the CLB instance. Valid values: **ipv4** and **ipv6**.</p>
          */
         @NameInMap("AddressIPVersion")
         public String addressIPVersion;
@@ -150,8 +150,8 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         /**
          * <p>The network type of the CLB instance. Valid values:</p>
          * <br>
-         * <p>*   **internet**: After an Internet-facing CLB instance is created, the system allocates a public IP address to the CLB instance. Then, the CLB instance can forward requests over the Internet.</p>
-         * <p>*   **intranet**: After an internal-facing CLB instance is created, the system allocates a private IP address to the CLB instance. Then, the CLB instance can forward only requests within the internal network.</p>
+         * <p>*   **internet:** After an Internet-facing CLB instance is created, the system assigns a public IP address to the CLB instance. Then, the CLB instance can forward requests over the Internet.</p>
+         * <p>*   **intranet:** After an internal-facing CLB instance is created, the system assigns a private IP address to the CLB instance. Then, the CLB instance can forward requests only over internal networks.</p>
          */
         @NameInMap("AddressType")
         public String addressType;
@@ -159,8 +159,8 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         /**
          * <p>The maximum bandwidth of the listener. Unit: Mbit/s. Valid values:</p>
          * <br>
-         * <p>*   **-1**: For a pay-by-data-transfer Internet-facing CLB instance, this value is set to -1. This indicates that the bandwidth is unlimited.</p>
-         * <p>*   **1 to 5120**: For a pay-by-bandwidth Internet-facing CLB instance, you can specify a maximum bandwidth for each listener. The sum of the maximum bandwidth of all listeners cannot exceed the maximum bandwidth of the CLB instance.</p>
+         * <p>*   **-1:** For a pay-by-data-transfer Internet-facing CLB instance, this value is set to -1. This indicates that the bandwidth is unlimited.</p>
+         * <p>*   **1 to 5120:** For a pay-by-bandwidth Internet-facing CLB instance, you can specify the maximum bandwidth for each listener. The sum of the maximum bandwidth of all listeners cannot exceed the maximum bandwidth of the CLB instance.</p>
          */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
@@ -180,8 +180,8 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         /**
          * <p>Indicates whether deletion protection is enabled for the CLB instance. Valid values:</p>
          * <br>
-         * <p>*   **on**: enabled.</p>
-         * <p>*   **off**: disabled.</p>
+         * <p>*   **on:** Deletion protection is enabled.</p>
+         * <p>*   **off:** Deletion protection is disabled.</p>
          */
         @NameInMap("DeleteProtection")
         public String deleteProtection;
@@ -189,10 +189,10 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         /**
          * <p>The metering method of the CLB instance. Valid values:</p>
          * <br>
-         * <p>*   **PayBySpec**: pay-by-specification</p>
-         * <p>*   **PayByCLCU**: pay-by-LCU</p>
+         * <p>*   **PayBySpec:** pay-by-specification.</p>
+         * <p>*   **PayByCLCU:** pay-by-LCU.</p>
          * <br>
-         * <p>>  This parameter is available only on the China site (aliyun.com) and takes effect when the **PayType** parameter is set to **PayOnDemand** (pay-as-you-go).</p>
+         * <p>>  This parameter takes effect only for accounts registered on the China site (aliyun.com) and when the **PayType** parameter is set to **PayOnDemand**.</p>
          */
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
@@ -200,8 +200,8 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         /**
          * <p>The metering method of the Internet-facing CLB instance. Valid values:</p>
          * <br>
-         * <p>*   **3**: pay-by-bandwidth (**paybybandwidth**)</p>
-         * <p>*   **4**: pay-by-data-transfer (**paybytraffic**)</p>
+         * <p>*   **3:** pay-by-bandwidth (**paybybandwidth**).</p>
+         * <p>*   **4:** pay-by-data-transfer (**paybytraffic**).</p>
          */
         @NameInMap("InternetChargeType")
         public String internetChargeType;
@@ -209,8 +209,8 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         /**
          * <p>The metering method of Internet data transfer. Valid values:</p>
          * <br>
-         * <p>*   **paybybandwidth**: pay-by-bandwidth</p>
-         * <p>*   **paybytraffic**: pay-by-data-transfer</p>
+         * <p>*   **paybybandwidth:** pay-by-bandwidth.</p>
+         * <p>*   **paybytraffic:** pay-by-data-transfer.</p>
          */
         @NameInMap("InternetChargeTypeAlias")
         public String internetChargeTypeAlias;
@@ -236,9 +236,9 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         /**
          * <p>The status of the CLB instance. Valid values:</p>
          * <br>
-         * <p>*   **inactive**: The CLB instance is disabled. CLB instances in the inactive state do not forward traffic.</p>
-         * <p>*   **active**: The CLB instance is running as expected. Newly created CLB instances are in the **active** state by default.</p>
-         * <p>*   **locked**: The CLB instance is locked.</p>
+         * <p>*   **inactive:** The CLB instance is disabled. CLB instances in the inactive state do not forward traffic.</p>
+         * <p>*   **active:** The CLB instance runs as expected. By default, newly created CLB instances are in the **active** state.</p>
+         * <p>*   **locked:** The CLB instance is locked.</p>
          */
         @NameInMap("LoadBalancerStatus")
         public String loadBalancerStatus;
@@ -250,9 +250,9 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         public String masterZoneId;
 
         /**
-         * <p>The reason why the configuration read-only mode is enabled. The value is 1 to 80 characters in length. It starts with a letter and can contain letters, digits, periods (.), underscores (\_), and hyphens (-).</p>
+         * <p>The reason why the configuration read-only mode was enabled. The reason must be 1 to 80 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The reason must start with a letter.</p>
          * <br>
-         * <p>>  This parameter is valid only if the `ModificationProtectionStatus` parameter is set to **ConsoleProtection**.</p>
+         * <p>> This parameter takes effect only when you set the `ModificationProtectionStatus` parameter to **ConsoleProtection**.</p>
          */
         @NameInMap("ModificationProtectionReason")
         public String modificationProtectionReason;
@@ -260,10 +260,10 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the configuration read-only mode is enabled for the CLB instance. Valid values:</p>
          * <br>
-         * <p>*   **NonProtection**: The configuration read-only mode is disabled. After you disable the configuration read-only mode, the value of `ModificationProtectionReason` is cleared.</p>
-         * <p>*   **ConsoleProtection**: The configuration read-only mode is enabled.</p>
+         * <p>*   **NonProtection:** The configuration read-only mode is disabled. In this case, you cannot specify the ModificationProtectionReason parameter. If you specify the `ModificationProtectionReason` parameter, the value is cleared.</p>
+         * <p>*   **ConsoleProtection:** The configuration read-only mode is enabled.</p>
          * <br>
-         * <p>>  If this parameter is set to **ConsoleProtection**, you cannot use the CLB console to modify instance configurations. However, you can call API operations to modify instance configurations.</p>
+         * <p>>  If you set this parameter to **ConsoleProtection**, you cannot modify the configurations of the CLB instance in the CLB console. However, you can call API operations to modify the configurations of the CLB instance.</p>
          */
         @NameInMap("ModificationProtectionStatus")
         public String modificationProtectionStatus;
@@ -271,8 +271,8 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         /**
          * <p>The network type of the internal-facing CLB instance. Valid values:</p>
          * <br>
-         * <p>*   **vpc**: VPC</p>
-         * <p>*   **classic**: classic network</p>
+         * <p>*   **vpc:** VPC.</p>
+         * <p>*   **classic:** classic network.</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
@@ -286,13 +286,13 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         public String payType;
 
         /**
-         * <p>The ID of the region where the CLB instance is deployed.</p>
+         * <p>The ID of the region where the CLB instance was deployed.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The name of the region in which the CLB instance resides.</p>
+         * <p>The region where the CLB instance was deployed.</p>
          */
         @NameInMap("RegionIdAlias")
         public String regionIdAlias;
@@ -310,7 +310,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         public String slaveZoneId;
 
         /**
-         * <p>The tags.</p>
+         * <p>The tags of the CLB instance.</p>
          */
         @NameInMap("Tags")
         public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancerTags tags;
@@ -322,7 +322,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The ID of the VPC to which the internal-facing CLB instance belongs.</p>
+         * <p>The ID of the VPC in which the internal-facing CLB instance was deployed.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

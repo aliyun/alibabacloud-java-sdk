@@ -5,10 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateMasterSlaveServerGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the Classic Load Balancer (CLB) instance.</p>
+     * <p>The name of the primary/secondary server group.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
+
+    /**
+     * <p>The ID of the primary/secondary server group.</p>
+     */
+    @NameInMap("MasterSlaveBackendServers")
+    public String masterSlaveBackendServers;
 
     /**
      * <p>The list of backend servers in the primary/secondary server group.</p>
@@ -51,12 +57,6 @@ public class CreateMasterSlaveServerGroupRequest extends TeaModel {
      * <p>*   ENI: `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "Port":"80","ServerType":"Master","Description":"test-112" }, { "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.**.**", "Port":"80","ServerType":"Slave","Description":"test-112" }]`</p>
      * <p>*   ENI with multiple IP addresses: `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni","ServerIp": "192.168.**.**", "Port":"80","ServerType":"Master","Description":"test-112" }, { "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni","ServerIp": "192.168.**.**", "Port":"80","ServerType":"Slave","Description":"test-112" }]`</p>
      */
-    @NameInMap("MasterSlaveBackendServers")
-    public String masterSlaveBackendServers;
-
-    /**
-     * <p>The name of the primary/secondary server group.</p>
-     */
     @NameInMap("MasterSlaveServerGroupName")
     public String masterSlaveServerGroupName;
 
@@ -67,7 +67,7 @@ public class CreateMasterSlaveServerGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the CLB instance is deployed.</p>
+     * <p>The ID of the Classic Load Balancer (CLB) instance.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -77,6 +77,9 @@ public class CreateMasterSlaveServerGroupRequest extends TeaModel {
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
+
+    @NameInMap("Tag")
+    public java.util.List<CreateMasterSlaveServerGroupRequestTag> tag;
 
     public static CreateMasterSlaveServerGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateMasterSlaveServerGroupRequest self = new CreateMasterSlaveServerGroupRequest();
@@ -145,6 +148,44 @@ public class CreateMasterSlaveServerGroupRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public CreateMasterSlaveServerGroupRequest setTag(java.util.List<CreateMasterSlaveServerGroupRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateMasterSlaveServerGroupRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class CreateMasterSlaveServerGroupRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateMasterSlaveServerGroupRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateMasterSlaveServerGroupRequestTag self = new CreateMasterSlaveServerGroupRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateMasterSlaveServerGroupRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateMasterSlaveServerGroupRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

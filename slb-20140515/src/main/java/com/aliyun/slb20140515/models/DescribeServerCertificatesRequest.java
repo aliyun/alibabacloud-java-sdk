@@ -11,11 +11,7 @@ public class DescribeServerCertificatesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region where the CLB instances are deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
-     * <br>
-     * <p>>  If the endpoint of the region is slb.aliyuncs.com, you must specify the `RegionId` parameter.</p>
+     * <p>The ID of the server certificate.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -33,7 +29,7 @@ public class DescribeServerCertificatesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the server certificate.</p>
+     * <p>The domain name of the certificate. The domain name is specified in the `CommonName` field.</p>
      */
     @NameInMap("ServerCertificateId")
     public String serverCertificateId;

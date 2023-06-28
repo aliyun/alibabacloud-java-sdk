@@ -5,15 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
     /**
-     * <p>The frontend port that is used by the CLB instance.</p>
+     * <p>Indicates whether the listener is in the Secure state. Valid values:</p>
      * <br>
-     * <p>Valid values: **1** to **65535**.</p>
+     * <p>*   **on**: yes</p>
+     * <p>*   **off**: no</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
-     * <p>The ID of the CLB instance.</p>
+     * <p>The name of the forwarding rule.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -25,9 +26,10 @@ public class DescribeLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the CLB instance.</p>
+     * <p>Indicates whether the `SLB-ID` header is used to retrieve the ID of the CLB instance. Valid values:</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>*   **on**: yes</p>
+     * <p>*   **off**: no</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class EnableHighDefinationMonitorRequest extends TeaModel {
     /**
-     * <p>The name of the project of Log Service. The name must be 4 to 63 characters in length, and can contain digits and lowercase letters. It must start and end with a digit or a letter.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("LogProject")
     public String logProject;
 
     /**
-     * <p>The name of the Logstore of Log Service. The name must be 2 to 64 characters in length and can contain digits, lowercase letters, hyphens (-) and underscores (\_). It must start and end with a digit or a letter.</p>
+     * <p>The operation that you want to perform. Set the value to **EnableHighDefinationMonitor**.</p>
      */
     @NameInMap("LogStore")
     public String logStore;
@@ -23,9 +23,7 @@ public class EnableHighDefinationMonitorRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the Classic Load Balancer (CLB) instance is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     * <p>The name of the Logstore of Log Service. The name must be 2 to 64 characters in length and can contain digits, lowercase letters, hyphens (-) and underscores (\_). It must start and end with a digit or a letter.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -37,7 +35,7 @@ public class EnableHighDefinationMonitorRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags of the logs. The tags must be key-value pairs that are contained in a JSON dictionary.</p>
+     * <p>The name of the project of Log Service. The name must be 4 to 63 characters in length, and can contain digits and lowercase letters. It must start and end with a digit or a letter.</p>
      */
     @NameInMap("Tags")
     public String tags;

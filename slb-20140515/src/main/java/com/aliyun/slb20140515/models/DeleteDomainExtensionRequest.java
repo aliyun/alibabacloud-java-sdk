@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDomainExtensionRequest extends TeaModel {
     /**
-     * <p>The ID of the domain name extension to be deleted.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("DomainExtensionId")
     public String domainExtensionId;
@@ -17,7 +17,7 @@ public class DeleteDomainExtensionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region to which the SLB instance belongs.</p>
+     * <p>The ID of the domain name extension to be deleted.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

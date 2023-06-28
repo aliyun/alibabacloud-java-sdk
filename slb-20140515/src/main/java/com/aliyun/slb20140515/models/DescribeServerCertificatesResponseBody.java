@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeServerCertificatesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The timestamp generated when the server certificate is uploaded.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -56,54 +56,66 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateTagsTag extends TeaModel {
+        public static DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateTagsTag self = new DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+    }
+
+    public static class DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateTagsTag> tag;
+
+        public static DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateTags self = new DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateTags setTag(java.util.List<DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate extends TeaModel {
-        /**
-         * <p>The ID of the server certificate from Alibaba Cloud Certificate Management Service.</p>
-         */
         @NameInMap("AliCloudCertificateId")
         public String aliCloudCertificateId;
 
         /**
-         * <p>The name of the server certificate from Alibaba Cloud Certificate Management Service.</p>
+         * <p>The time when the server certificate is uploaded.</p>
          */
         @NameInMap("AliCloudCertificateName")
         public String aliCloudCertificateName;
 
         /**
-         * <p>The domain name of the certificate. The domain name is specified in the `CommonName` field.</p>
+         * <p>The ID of the server certificate from Alibaba Cloud Certificate Management Service.</p>
          */
         @NameInMap("CommonName")
         public String commonName;
 
         /**
-         * <p>The time when the server certificate is uploaded.</p>
+         * <p>The ID of the region where the server certificate is created.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The timestamp generated when the server certificate is uploaded.</p>
+         * <p>The operation that you want to perform. Set the value to **DescribeServerCertificates**.</p>
          */
         @NameInMap("CreateTimeStamp")
         public Long createTimeStamp;
 
         /**
-         * <p>The expiration time.</p>
+         * <p>The ID of the resource group.</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
-
-        /**
-         * <p>The timestamp that indicates when the certificate expires.</p>
-         */
-        @NameInMap("ExpireTimeStamp")
-        public Long expireTimeStamp;
-
-        /**
-         * <p>The fingerprint of the server certificate.</p>
-         */
-        @NameInMap("Fingerprint")
-        public String fingerprint;
 
         /**
          * <p>Indicates whether the server certificate is from Alibaba Cloud Certificate Management Service. Valid values:</p>
@@ -111,38 +123,51 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
          * <p>*   **1**: yes</p>
          * <p>*   **0**: no</p>
          */
+        @NameInMap("ExpireTimeStamp")
+        public Long expireTimeStamp;
+
+        /**
+         * <p>The name of the server certificate from Alibaba Cloud Certificate Management Service.</p>
+         */
+        @NameInMap("Fingerprint")
+        public String fingerprint;
+
         @NameInMap("IsAliCloudCertificate")
         public Integer isAliCloudCertificate;
 
         /**
-         * <p>The ID of the region where the server certificate is created.</p>
+         * <p>The ID of the server certificate.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The ID of the server certificate.</p>
+         * <p>The region where the CLB instances are deployed.</p>
+         * <br>
+         * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+         * <br>
+         * <p>>  If the endpoint of the region is slb.aliyuncs.com, you must specify the `RegionId` parameter.</p>
          */
         @NameInMap("ServerCertificateId")
         public String serverCertificateId;
 
         /**
-         * <p>The name of the server certificate.</p>
+         * <p>The timestamp that indicates when the certificate expires.</p>
          */
         @NameInMap("ServerCertificateName")
         public String serverCertificateName;
 
-        /**
-         * <p>The list of alternative domain names of the server certificate. The alternative domain names are specified in the `Subject Alternative Name` field of the server certificate.</p>
-         */
         @NameInMap("SubjectAlternativeNames")
         public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateSubjectAlternativeNames subjectAlternativeNames;
+
+        @NameInMap("Tags")
+        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateTags tags;
 
         public static DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate build(java.util.Map<String, ?> map) throws Exception {
             DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate self = new DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate();
@@ -259,6 +284,14 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
         }
         public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateSubjectAlternativeNames getSubjectAlternativeNames() {
             return this.subjectAlternativeNames;
+        }
+
+        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setTags(DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateTags getTags() {
+            return this.tags;
         }
 
     }

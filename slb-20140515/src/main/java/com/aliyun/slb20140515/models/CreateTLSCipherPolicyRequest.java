@@ -4,6 +4,49 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class CreateTLSCipherPolicyRequest extends TeaModel {
+    /**
+     * <p>The supported cipher suites, which are determined by the TLS protocol version. You can specify at most 32 cipher suites.</p>
+     * <br>
+     * <p>TLS 1.0 and TLS 1.1 support the following cipher suites:</p>
+     * <br>
+     * <p>*   **ECDHE-ECDSA-AES128-SHA**</p>
+     * <p>*   **ECDHE-ECDSA-AES256-SHA**</p>
+     * <p>*   **ECDHE-RSA-AES128-SHA**</p>
+     * <p>*   **ECDHE-RSA-AES256-SHA**</p>
+     * <p>*   **AES128-SHA**</p>
+     * <p>*   **AES256-SHA**</p>
+     * <p>*   **DES-CBC3-SHA**</p>
+     * <br>
+     * <p>TLS 1.2 supports the following cipher suites:</p>
+     * <br>
+     * <p>*   **ECDHE-ECDSA-AES128-SHA**</p>
+     * <p>*   **ECDHE-ECDSA-AES256-SHA**</p>
+     * <p>*   **ECDHE-RSA-AES128-SHA**</p>
+     * <p>*   **ECDHE-RSA-AES256-SHA**</p>
+     * <p>*   **AES128-SHA**</p>
+     * <p>*   **AES256-SHA**</p>
+     * <p>*   **DES-CBC3-SHA**</p>
+     * <p>*   **ECDHE-ECDSA-AES128-GCM-SHA256**</p>
+     * <p>*   **ECDHE-ECDSA-AES256-GCM-SHA384**</p>
+     * <p>*   **ECDHE-ECDSA-AES128-SHA256**</p>
+     * <p>*   **ECDHE-ECDSA-AES256-SHA384**</p>
+     * <p>*   **ECDHE-RSA-AES128-GCM-SHA256**</p>
+     * <p>*   **ECDHE-RSA-AES256-GCM-SHA384**</p>
+     * <p>*   **ECDHE-RSA-AES128-SHA256**</p>
+     * <p>*   **ECDHE-RSA-AES256-SHA384**</p>
+     * <p>*   **AES128-GCM-SHA256**</p>
+     * <p>*   **AES256-GCM-SHA384**</p>
+     * <p>*   **AES128-SHA256**</p>
+     * <p>*   **AES256-SHA256**</p>
+     * <br>
+     * <p>TLS 1.3 supports the following cipher suites:</p>
+     * <br>
+     * <p>*   **TLS_AES\_128\_GCM_SHA256**</p>
+     * <p>*   **TLS_AES\_256\_GCM_SHA384**</p>
+     * <p>*   **TLS_CHACHA20\_POLY1305\_SHA256**</p>
+     * <p>*   **TLS_AES\_128\_CCM_SHA256**</p>
+     * <p>*   **TLS_AES\_128\_CCM\_8\_SHA256**</p>
+     */
     @NameInMap("Ciphers")
     public java.util.List<String> ciphers;
 
@@ -20,7 +63,7 @@ public class CreateTLSCipherPolicyRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the Classic Load Balancer (CLB) instance is created.</p>
+     * <p>The ID of the region where the Server Load Balancer (SLB) instance is created.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
@@ -33,6 +76,9 @@ public class CreateTLSCipherPolicyRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The version of the TLS protocol. Valid values: **TLSv1.0**, **TLSv1.1**, **TLSv1.2**, and **TLSv1.3**. You can specify at most four TLS versions.</p>
+     */
     @NameInMap("TLSVersions")
     public java.util.List<String> TLSVersions;
 

@@ -10,7 +10,7 @@ public class AddAccessControlListEntryRequest extends TeaModel {
      * <p>*   **entry**: the IP entries that you want to add to the network ACL. You can add CIDR blocks. Separate multiple CIDR blocks with commas (,).</p>
      * <p>*   **comment**: the comment on the network ACL.</p>
      * <br>
-     * <p>>  You can add at most 50 IP entries to a network ACL in each call. If the IP entry that you want to add already exists, the IP entry is not added.</p>
+     * <p>> You can add at most 50 IP entries to a network ACL in each call. If the IP entry that you want to add to a network ACL already exists, the IP entry is not added. The IP entries that you add must be CIDR blocks.</p>
      */
     @NameInMap("AclEntrys")
     public String aclEntrys;
@@ -28,7 +28,7 @@ public class AddAccessControlListEntryRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the network ACL is created.</p>
+     * <p>The region ID of the network ACL.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

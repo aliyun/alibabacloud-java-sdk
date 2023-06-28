@@ -4,62 +4,59 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class UploadCACertificateResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the CA certificate.</p>
-     */
     @NameInMap("CACertificateId")
     public String CACertificateId;
 
     /**
-     * <p>The name of the CA certificate.</p>
+     * <p>The ID of the CA certificate.</p>
      */
     @NameInMap("CACertificateName")
     public String CACertificateName;
 
     /**
-     * <p>The domain name of the CA certificate.</p>
+     * <p>The name of the CA certificate.</p>
      */
     @NameInMap("CommonName")
     public String commonName;
 
     /**
-     * <p>The time when the CA certificate is uploaded.</p>
+     * <p>The ID of the enterprise resource group.</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
-     * <p>The timestamp generated when the CA certificate is uploaded.</p>
+     * <p>The time when the CA certificate expires.</p>
      */
     @NameInMap("CreateTimeStamp")
     public Long createTimeStamp;
 
     /**
-     * <p>The time when the CA certificate expires.</p>
+     * <p>The time when the CA certificate is uploaded.</p>
      */
     @NameInMap("ExpireTime")
     public String expireTime;
 
     /**
-     * <p>The timestamp generated when the CA certificate expires.</p>
+     * <p>You can upload only one CA certificate at a time. After a CA certificate is uploaded, the certificate ID, name, and fingerprint are returned.</p>
      */
     @NameInMap("ExpireTimeStamp")
     public Long expireTimeStamp;
 
     /**
-     * <p>The fingerprint of the CA certificate.</p>
+     * <p>The domain name of the CA certificate.</p>
      */
     @NameInMap("Fingerprint")
     public String fingerprint;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The fingerprint of the CA certificate.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the enterprise resource group.</p>
+     * <p>The timestamp generated when the CA certificate expires.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

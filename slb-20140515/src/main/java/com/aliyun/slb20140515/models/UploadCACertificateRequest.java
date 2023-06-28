@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UploadCACertificateRequest extends TeaModel {
     /**
-     * <p>The content of the CA certificate to be uploaded.</p>
+     * <p>The ID of the enterprise resource group.</p>
      */
     @NameInMap("CACertificate")
     public String CACertificate;
 
     /**
-     * <p>The name of the CA certificate.</p>
+     * <p>The timestamp generated when the CA certificate is uploaded.</p>
      */
     @NameInMap("CACertificateName")
     public String CACertificateName;
@@ -23,15 +23,13 @@ public class UploadCACertificateRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region to which the CA certificate belongs.</p>
-     * <br>
-     * <p>To query the region ID, call [DescribeRegions](~~27584~~).</p>
+     * <p>The name of the CA certificate.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the enterprise resource group.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -41,6 +39,9 @@ public class UploadCACertificateRequest extends TeaModel {
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
+
+    @NameInMap("Tag")
+    public java.util.List<UploadCACertificateRequestTag> tag;
 
     public static UploadCACertificateRequest build(java.util.Map<String, ?> map) throws Exception {
         UploadCACertificateRequest self = new UploadCACertificateRequest();
@@ -109,6 +110,44 @@ public class UploadCACertificateRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public UploadCACertificateRequest setTag(java.util.List<UploadCACertificateRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<UploadCACertificateRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class UploadCACertificateRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static UploadCACertificateRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            UploadCACertificateRequestTag self = new UploadCACertificateRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public UploadCACertificateRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public UploadCACertificateRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

@@ -5,25 +5,28 @@ import com.aliyun.tea.*;
 
 public class SetVServerGroupAttributeResponseBody extends TeaModel {
     /**
-     * <p>The list of backend servers.</p>
+     * <p>The weight of the backend server.</p>
      */
     @NameInMap("BackendServers")
     public SetVServerGroupAttributeResponseBodyBackendServers backendServers;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The type of backend server. Valid values:</p>
+     * <br>
+     * <p>*   **ecs**: an ECS instance</p>
+     * <p>*   **eni**: an ENI</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the vServer group.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("VServerGroupId")
     public String VServerGroupId;
 
     /**
-     * <p>The name of the vServer group.</p>
+     * <p>The list of backend servers.</p>
      */
     @NameInMap("VServerGroupName")
     public String VServerGroupName;
@@ -67,34 +70,34 @@ public class SetVServerGroupAttributeResponseBody extends TeaModel {
 
     public static class SetVServerGroupAttributeResponseBodyBackendServersBackendServer extends TeaModel {
         /**
-         * <p>The description of the vServer group.</p>
+         * <p>The port that is used by the backend server.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The port that is used by the backend server.</p>
+         * <p>This operation allows you to modify only the name of a vServer group and the weights of the backend servers in the vServer group.</p>
+         * <br>
+         * <p>*   If you want to modify backend servers in a specified vServer group, call the [ModifyVServerGroupBackendServers](~~35220~~) operation.</p>
+         * <p>*   If you want to add backend servers to a specified vServer group, call the [AddVServerGroupBackendServers](~~35218~~) operation.</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
-         * <p>The ID of the ECS instance or ENI.</p>
+         * <p>Modifies the configurations of a vServer group.</p>
          */
         @NameInMap("ServerId")
         public String serverId;
 
         /**
-         * <p>The type of backend server. Valid values:</p>
-         * <br>
-         * <p>*   **ecs**: an ECS instance</p>
-         * <p>*   **eni**: an ENI</p>
+         * <p>The description of the vServer group.</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The weight of the backend server.</p>
+         * <p>Backend server group description</p>
          */
         @NameInMap("Weight")
         public Integer weight;

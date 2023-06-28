@@ -5,37 +5,36 @@ import com.aliyun.tea.*;
 
 public class ListTLSCipherPoliciesResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the current page is the last page. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The current page is the last page.</p>
-     * <p>*   **false**: The current page is not the last page.</p>
+     * <p>The maximum number of TLS policies to be queried in this call. Valid values: **1** to **100**. If you do not set this parameter, the default value **20** is used.</p>
      */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** is empty, it indicates that no next query is to be sent.</p>
-     * <p>*   If **NextToken** is not empty, the value indicates the token that is used for the next query.</p>
+     * <p>The operation that you want to perform. Set the value to **ListTLSCipherPolicies**.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <br>
+     * <p>*   If this is your first query or no next query is to be sent, ignore this parameter.</p>
+     * <p>*   If a next query is to be sent, set the value to the value of NextToken that is returned from the last call.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The list of TLS policies.</p>
+     * <p>The ID of the region where the Classic Load Balancer (CLB) instance is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
     @NameInMap("TLSCipherPolicies")
     public java.util.List<ListTLSCipherPoliciesResponseBodyTLSCipherPolicies> TLSCipherPolicies;
 
     /**
-     * <p>The total number of TLS policies returned.</p>
+     * <p>The ID of the CLB instance.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -86,25 +85,17 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListTLSCipherPoliciesResponseBodyTLSCipherPoliciesRelateListeners extends TeaModel {
-        /**
-         * <p>The ID of the CLB instance.</p>
-         */
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
         /**
-         * <p>The listening port. Valid values: **1** to **65535**.</p>
+         * <p>The name of the TLS policy.</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
-         * <p>The listening protocol. Valid values:</p>
-         * <br>
-         * <p>*   **TCP**</p>
-         * <p>*   **UDP**</p>
-         * <p>*   **HTTP**</p>
-         * <p>*   **HTTPS**</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("Protocol")
         public String protocol;
@@ -141,85 +132,50 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListTLSCipherPoliciesResponseBodyTLSCipherPolicies extends TeaModel {
-        /**
-         * <p>The cipher suites supported by the TLS version.</p>
-         * <br>
-         * <p>TLS 1.0 and TLS 1.1 support the following cipher suites:</p>
-         * <br>
-         * <p>*   ECDHE-ECDSA-AES128-SHA</p>
-         * <p>*   ECDHE-ECDSA-AES256-SHA</p>
-         * <p>*   ECDHE-RSA-AES128-SHA</p>
-         * <p>*   ECDHE-RSA-AES256-SHA</p>
-         * <p>*   AES128-SHA AES256-SHA</p>
-         * <p>*   DES-CBC3-SHA</p>
-         * <br>
-         * <p>TLS 1.2 supports the following cipher suites:</p>
-         * <br>
-         * <p>*   ECDHE-ECDSA-AES128-SHA</p>
-         * <p>*   ECDHE-ECDSA-AES256-SHA</p>
-         * <p>*   ECDHE-RSA-AES128-SHA</p>
-         * <p>*   ECDHE-RSA-AES256-SHA</p>
-         * <p>*   AES128-SHA AES256-SHA</p>
-         * <p>*   DES-CBC3-SHA</p>
-         * <p>*   ECDHE-ECDSA-AES128-GCM-SHA256</p>
-         * <p>*   ECDHE-ECDSA-AES256-GCM-SHA384</p>
-         * <p>*   ECDHE-ECDSA-AES128-SHA256</p>
-         * <p>*   ECDHE-ECDSA-AES256-SHA384</p>
-         * <p>*   ECDHE-RSA-AES128-GCM-SHA256</p>
-         * <p>*   ECDHE-RSA-AES256-GCM-SHA384</p>
-         * <p>*   ECDHE-RSA-AES128-SHA256</p>
-         * <p>*   ECDHE-RSA-AES256-SHA384</p>
-         * <p>*   AES128-GCM-SHA256</p>
-         * <p>*   AES256-GCM-SHA384</p>
-         * <p>*   AES128-SHA256 AES256-SHA256</p>
-         * <br>
-         * <p>TLS 1.3 supports the following cipher suites:</p>
-         * <br>
-         * <p>*   TLS_AES\_128\_GCM_SHA256</p>
-         * <p>*   TLS_AES\_256\_GCM_SHA384</p>
-         * <p>*   TLS_CHACHA20\_POLY1305\_SHA256</p>
-         * <p>*   TLS_AES\_128\_CCM_SHA256</p>
-         * <p>*   TLS_AES\_128\_CCM\_8\_SHA256</p>
-         */
         @NameInMap("Ciphers")
         public java.util.List<String> ciphers;
 
         /**
-         * <p>The timestamp generated when the TLS policy is created.</p>
+         * <p>The listening port. Valid values: **1** to **65535**.</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
-         * <p>The ID of the TLS policy.</p>
+         * <p>The listening protocol. Valid values:</p>
+         * <br>
+         * <p>*   **TCP**</p>
+         * <p>*   **UDP**</p>
+         * <p>*   **HTTP**</p>
+         * <p>*   **HTTPS**</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The name of the TLS policy.</p>
+         * <p>The list of associated listeners.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The list of associated listeners.</p>
+         * <p>Specifies whether to return the information about the associated listeners. Valid values:</p>
+         * <br>
+         * <p>*   **true**: returns the information about the associated listeners.</p>
+         * <p>*   **false** (default): does not return the information about the associated listeners.</p>
          */
         @NameInMap("RelateListeners")
         public java.util.List<ListTLSCipherPoliciesResponseBodyTLSCipherPoliciesRelateListeners> relateListeners;
 
         /**
-         * <p>The status of the TLS policy. Valid values:</p>
+         * <p>Indicates whether the current page is the last page. Valid values:</p>
          * <br>
-         * <p>*   **configuring**: The TLS policy is being configured.</p>
-         * <p>*   **normal**: The TLS policy works as expected.</p>
+         * <p>*   **true**: The current page is the last page.</p>
+         * <p>*   **false**: The current page is not the last page.</p>
          */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The version of the TLS protocol.</p>
-         */
         @NameInMap("TLSVersions")
         public java.util.List<String> TLSVersions;
 

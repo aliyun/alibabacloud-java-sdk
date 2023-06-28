@@ -3,16 +3,16 @@ package com.aliyun.slb20140515.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteRulesResponseBody extends TeaModel {
+public class MoveResourceGroupResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DeleteRulesResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteRulesResponseBody self = new DeleteRulesResponseBody();
+    public static MoveResourceGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        MoveResourceGroupResponseBody self = new MoveResourceGroupResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteRulesResponseBody setRequestId(String requestId) {
+    public MoveResourceGroupResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

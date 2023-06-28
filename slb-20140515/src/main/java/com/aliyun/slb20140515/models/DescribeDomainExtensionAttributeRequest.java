@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainExtensionAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the additional certificate.</p>
+     * <p>The domain name.</p>
      */
     @NameInMap("DomainExtensionId")
     public String domainExtensionId;
@@ -17,7 +17,7 @@ public class DescribeDomainExtensionAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the Server Load Balancer (SLB) instance is deployed.</p>
+     * <p>The ID of the additional certificate.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

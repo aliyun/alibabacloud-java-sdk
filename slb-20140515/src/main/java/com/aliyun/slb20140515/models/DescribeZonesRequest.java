@@ -11,7 +11,7 @@ public class DescribeZonesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the Classic Load Balancer (CLB) instance is deployed.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

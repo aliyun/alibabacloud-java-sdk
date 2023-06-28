@@ -4,53 +4,32 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
-    /**
-     * <p>The list of ACL entries.</p>
-     */
     @NameInMap("AclEntrys")
     public DescribeAccessControlListAttributeResponseBodyAclEntrys aclEntrys;
 
-    /**
-     * <p>The ID of the network ACL.</p>
-     */
     @NameInMap("AclId")
     public String aclId;
 
-    /**
-     * <p>The name of the network ACL.</p>
-     */
     @NameInMap("AclName")
     public String aclName;
 
-    /**
-     * <p>The IP version of the instance with which the network ACL is associated.</p>
-     */
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
 
-    /**
-     * <p>The time when the network ACL was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.</p>
-     */
     @NameInMap("CreateTime")
     public String createTime;
 
-    /**
-     * <p>The list of listeners with which the network ACL is associated.</p>
-     */
     @NameInMap("RelatedListeners")
     public DescribeAccessControlListAttributeResponseBodyRelatedListeners relatedListeners;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The ID of the resource group.</p>
-     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
+
+    @NameInMap("Tags")
+    public DescribeAccessControlListAttributeResponseBodyTags tags;
 
     @NameInMap("TotalAclEntry")
     public Integer totalAclEntry;
@@ -124,6 +103,14 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
         return this.resourceGroupId;
     }
 
+    public DescribeAccessControlListAttributeResponseBody setTags(DescribeAccessControlListAttributeResponseBodyTags tags) {
+        this.tags = tags;
+        return this;
+    }
+    public DescribeAccessControlListAttributeResponseBodyTags getTags() {
+        return this.tags;
+    }
+
     public DescribeAccessControlListAttributeResponseBody setTotalAclEntry(Integer totalAclEntry) {
         this.totalAclEntry = totalAclEntry;
         return this;
@@ -133,15 +120,9 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeAccessControlListAttributeResponseBodyAclEntrysAclEntry extends TeaModel {
-        /**
-         * <p>The description of the ACL entry.</p>
-         */
         @NameInMap("AclEntryComment")
         public String aclEntryComment;
 
-        /**
-         * <p>The IP address specified in the network ACL entry.</p>
-         */
         @NameInMap("AclEntryIP")
         public String aclEntryIP;
 
@@ -188,30 +169,15 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeAccessControlListAttributeResponseBodyRelatedListenersRelatedListener extends TeaModel {
-        /**
-         * <p>The type of network ACL. Valid values:</p>
-         * <br>
-         * <p>- **black**: blacklist</p>
-         * <p>- **white**: whitelist</p>
-         */
         @NameInMap("AclType")
         public String aclType;
 
-        /**
-         * <p>The frontend port of the listener with which the network ACL is associated.</p>
-         */
         @NameInMap("ListenerPort")
         public Integer listenerPort;
 
-        /**
-         * <p>The ID of the Classic Load Balancer (CLB) instance.</p>
-         */
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
-        /**
-         * <p>The type of protocol that the associated listener uses.</p>
-         */
         @NameInMap("Protocol")
         public String protocol;
 
@@ -269,6 +235,55 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
         }
         public java.util.List<DescribeAccessControlListAttributeResponseBodyRelatedListenersRelatedListener> getRelatedListener() {
             return this.relatedListener;
+        }
+
+    }
+
+    public static class DescribeAccessControlListAttributeResponseBodyTagsTag extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static DescribeAccessControlListAttributeResponseBodyTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAccessControlListAttributeResponseBodyTagsTag self = new DescribeAccessControlListAttributeResponseBodyTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAccessControlListAttributeResponseBodyTagsTag setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeAccessControlListAttributeResponseBodyTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
+    public static class DescribeAccessControlListAttributeResponseBodyTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeAccessControlListAttributeResponseBodyTagsTag> tag;
+
+        public static DescribeAccessControlListAttributeResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAccessControlListAttributeResponseBodyTags self = new DescribeAccessControlListAttributeResponseBodyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAccessControlListAttributeResponseBodyTags setTag(java.util.List<DescribeAccessControlListAttributeResponseBodyTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeAccessControlListAttributeResponseBodyTagsTag> getTag() {
+            return this.tag;
         }
 
     }

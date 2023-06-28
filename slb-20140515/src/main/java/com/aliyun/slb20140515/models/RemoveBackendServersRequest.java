@@ -5,24 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveBackendServersRequest extends TeaModel {
     /**
-     * <p>The backend servers to be removed.</p>
-     * <br>
-     * <p>*   **ServerId**: The IDs of the backend servers. Set the value to a string. This parameter is required.</p>
-     * <br>
-     * <p>*   **Type**: The type of the backend server. Valid values:</p>
-     * <br>
-     * <p>    *   **ecs** (default): an Elastic Compute Service (ECS) instance</p>
-     * <br>
-     * <p>    <!----></p>
-     * <br>
-     * <p>    *   **eni**: an elastic network interface (ENI)</p>
-     * <br>
-     * <p>*   **Weight**: the weight of the backend server. Valid values: **0** to **100**. Set the value to an integer.</p>
-     * <br>
-     * <p>You can remove at most 20 backend servers in each call. Examples:</p>
-     * <br>
-     * <p>*   Remove an ECS instance: `[{"ServerId":"i-bp1fq61enf4loa5i****", "Type": "ecs","Weight":"100"}]`</p>
-     * <p>*   Remove an ENI: `[{"ServerId":"eni-2ze1sdp5****","Type": "eni","Weight":"100"}]`</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("BackendServers")
     public String backendServers;
@@ -40,7 +23,7 @@ public class RemoveBackendServersRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the CLB instance is deployed.</p>
+     * <p>The ID of the CLB instance.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
