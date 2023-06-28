@@ -4,101 +4,45 @@ package com.aliyun.ddosbgp20171120.models;
 import com.aliyun.tea.*;
 
 public class DescribeResourcePackUsageResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Interval")
+    @NameInMap("statusCode")
     @Validation(required = true)
-    public Long interval;
+    public Integer statusCode;
 
-    @NameInMap("StartTime")
+    @NameInMap("body")
     @Validation(required = true)
-    public Long startTime;
-
-    @NameInMap("EndTime")
-    @Validation(required = true)
-    public Long endTime;
-
-    @NameInMap("PackUsages")
-    @Validation(required = true)
-    public java.util.List<DescribeResourcePackUsageResponsePackUsages> packUsages;
+    public DescribeResourcePackUsageResponseBody body;
 
     public static DescribeResourcePackUsageResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeResourcePackUsageResponse self = new DescribeResourcePackUsageResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeResourcePackUsageResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeResourcePackUsageResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeResourcePackUsageResponse setInterval(Long interval) {
-        this.interval = interval;
+    public DescribeResourcePackUsageResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
         return this;
     }
-    public Long getInterval() {
-        return this.interval;
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
-    public DescribeResourcePackUsageResponse setStartTime(Long startTime) {
-        this.startTime = startTime;
+    public DescribeResourcePackUsageResponse setBody(DescribeResourcePackUsageResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Long getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeResourcePackUsageResponse setEndTime(Long endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public Long getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeResourcePackUsageResponse setPackUsages(java.util.List<DescribeResourcePackUsageResponsePackUsages> packUsages) {
-        this.packUsages = packUsages;
-        return this;
-    }
-    public java.util.List<DescribeResourcePackUsageResponsePackUsages> getPackUsages() {
-        return this.packUsages;
-    }
-
-    public static class DescribeResourcePackUsageResponsePackUsages extends TeaModel {
-        @NameInMap("Traffic")
-        @Validation(required = true)
-        public Float traffic;
-
-        @NameInMap("Time")
-        @Validation(required = true)
-        public Long time;
-
-        public static DescribeResourcePackUsageResponsePackUsages build(java.util.Map<String, ?> map) throws Exception {
-            DescribeResourcePackUsageResponsePackUsages self = new DescribeResourcePackUsageResponsePackUsages();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeResourcePackUsageResponsePackUsages setTraffic(Float traffic) {
-            this.traffic = traffic;
-            return this;
-        }
-        public Float getTraffic() {
-            return this.traffic;
-        }
-
-        public DescribeResourcePackUsageResponsePackUsages setTime(Long time) {
-            this.time = time;
-            return this;
-        }
-        public Long getTime() {
-            return this.time;
-        }
-
+    public DescribeResourcePackUsageResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -4,42 +4,24 @@ package com.aliyun.ddosbgp20171120.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceListRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
+    @NameInMap("InstanceIdList")
+    public String instanceIdList;
 
     @NameInMap("PackIdList")
     public String packIdList;
 
-    @NameInMap("InstanceIdList")
-    public String instanceIdList;
-
     @NameInMap("PageNo")
-    @Validation(required = true)
     public Integer pageNo;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
+
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     public static DescribeInstanceListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceListRequest self = new DescribeInstanceListRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeInstanceListRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public DescribeInstanceListRequest setPackIdList(String packIdList) {
-        this.packIdList = packIdList;
-        return this;
-    }
-    public String getPackIdList() {
-        return this.packIdList;
     }
 
     public DescribeInstanceListRequest setInstanceIdList(String instanceIdList) {
@@ -48,6 +30,14 @@ public class DescribeInstanceListRequest extends TeaModel {
     }
     public String getInstanceIdList() {
         return this.instanceIdList;
+    }
+
+    public DescribeInstanceListRequest setPackIdList(String packIdList) {
+        this.packIdList = packIdList;
+        return this;
+    }
+    public String getPackIdList() {
+        return this.packIdList;
     }
 
     public DescribeInstanceListRequest setPageNo(Integer pageNo) {
@@ -64,6 +54,14 @@ public class DescribeInstanceListRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeInstanceListRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
 }

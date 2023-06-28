@@ -4,28 +4,18 @@ package com.aliyun.ddosbgp20171120.models;
 import com.aliyun.tea.*;
 
 public class AddProductRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("PackId")
-    @Validation(required = true)
     public String packId;
 
     @NameInMap("Product")
-    @Validation(required = true)
     public String product;
+
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     public static AddProductRequest build(java.util.Map<String, ?> map) throws Exception {
         AddProductRequest self = new AddProductRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddProductRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public AddProductRequest setPackId(String packId) {
@@ -42,6 +32,14 @@ public class AddProductRequest extends TeaModel {
     }
     public String getProduct() {
         return this.product;
+    }
+
+    public AddProductRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
 }

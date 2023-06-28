@@ -4,28 +4,26 @@ package com.aliyun.ddosbgp20171120.models;
 import com.aliyun.tea.*;
 
 public class DescribeResourcePackInstancesRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
-    @NameInMap("CurrentPage")
-    @Validation(required = true)
-    public Integer currentPage;
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     public static DescribeResourcePackInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeResourcePackInstancesRequest self = new DescribeResourcePackInstancesRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeResourcePackInstancesRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public DescribeResourcePackInstancesRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
+    public Integer getCurrentPage() {
+        return this.currentPage;
     }
 
     public DescribeResourcePackInstancesRequest setPageSize(Integer pageSize) {
@@ -36,12 +34,12 @@ public class DescribeResourcePackInstancesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeResourcePackInstancesRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
+    public DescribeResourcePackInstancesRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
         return this;
     }
-    public Integer getCurrentPage() {
-        return this.currentPage;
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
 }

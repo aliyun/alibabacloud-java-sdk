@@ -4,14 +4,23 @@ package com.aliyun.ddosbgp20171120.models;
 import com.aliyun.tea.*;
 
 public class DescribeOnDemandInstanceRequest extends TeaModel {
+    /**
+     * <p>The page number of the page to return.</p>
+     */
     @NameInMap("PageNo")
-    @Validation(required = true)
     public Integer pageNo;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: **50**.</p>
+     */
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
+    /**
+     * <p>The region ID of the on-demand instance that you want to query. </p>
+     * <br>
+     * <p>>  You can call the [DescribeRegions](https://www.alibabacloud.com/help/en/ddos-protection/latest/instances-describeregions) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

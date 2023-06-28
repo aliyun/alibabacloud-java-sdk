@@ -4,24 +4,15 @@ package com.aliyun.ddosbgp20171120.models;
 import com.aliyun.tea.*;
 
 public class DescribePackRequest extends TeaModel {
+    @NameInMap("PackId")
+    public String packId;
+
     @NameInMap("SourceIp")
     public String sourceIp;
-
-    @NameInMap("PackId")
-    @Validation(required = true)
-    public String packId;
 
     public static DescribePackRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePackRequest self = new DescribePackRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribePackRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public DescribePackRequest setPackId(String packId) {
@@ -30,6 +21,14 @@ public class DescribePackRequest extends TeaModel {
     }
     public String getPackId() {
         return this.packId;
+    }
+
+    public DescribePackRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
 }
