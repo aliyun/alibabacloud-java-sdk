@@ -4,12 +4,21 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class AddDataLevelPermissionRuleUsersResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The execution result of the interface. Valid values:\n\n*   true: The request was successful.\n*   false: The request failed.\n</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:\n\n*   true: The request was successful.\n*   false: The request failed.\n</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
