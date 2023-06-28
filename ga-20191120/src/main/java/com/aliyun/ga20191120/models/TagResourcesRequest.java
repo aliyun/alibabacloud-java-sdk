@@ -9,7 +9,7 @@ public class TagResourcesRequest extends TeaModel {
      * <br>
      * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
      * <br>
-     * <p>> If you do not specify this parameter, the system automatically uses the value of **RequestId**as the value of **ClientToken**. The value of **RequestId** for each API request may be different.</p>
+     * <p>> If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The value of **RequestId** for each API request may be different.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -25,8 +25,9 @@ public class TagResourcesRequest extends TeaModel {
      * <br>
      * <p>*   If you set the **ResourceType** parameter to **accelerator**, set the value of ResourceId to the ID of a standard GA instance.</p>
      * <p>*   If you set the **ResourceType** parameter to **basicaccelerator**, set the value of ResourceId to the ID of a basic GA instance.</p>
-     * <p>*   If you set the **ResourceType** parameter to**bandwidthpackage**, set the value of ResourceId to the ID of a bandwidth plan.</p>
+     * <p>*   If you set the **ResourceType** parameter to **bandwidthpackage**, set the value of ResourceId to the ID of a bandwidth plan.</p>
      * <p>*   If you set the **ResourceType** parameter to **acl**, set the value of ResourceId to the ID of an ACL.</p>
+     * <p>*   If you set the **ResourceType** parameter to **endpointgroup**, set the value of ResourceId to the ID of an EndpointGroup.</p>
      * <br>
      * <p>You can specify 1 to 50 GA resource IDs.</p>
      */
@@ -40,6 +41,7 @@ public class TagResourcesRequest extends TeaModel {
      * <p>*   **basicaccelerator:** a basic GA instance.</p>
      * <p>*   **bandwidthpackage:** a bandwidth plan.</p>
      * <p>*   **acl:** an access control list (ACL).</p>
+     * <p>*   **endpointgroup:** an endpoint group (EndpointGroup).</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

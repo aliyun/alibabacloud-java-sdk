@@ -13,9 +13,9 @@ public class CreateBasicEndpointGroupRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     * <p>> If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -29,7 +29,7 @@ public class CreateBasicEndpointGroupRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The address of the endpoint.</p>
+     * <p>The endpoint address.</p>
      */
     @NameInMap("EndpointAddress")
     public String endpointAddress;
@@ -45,20 +45,20 @@ public class CreateBasicEndpointGroupRequest extends TeaModel {
     /**
      * <p>The secondary address of the endpoint.</p>
      * <br>
-     * <p>This parameter is required when the accelerated IP address is associated with the secondary private IP address of an ECS instance or an ENI.</p>
+     * <p>You must specify this parameter when the accelerated IP address is associated with the secondary private IP address of an Elastic Compute Service (ECS) instance or an elastic network interface (ENI).</p>
      * <br>
-     * <p>*   If the endpoint type is **ECS**, you can set the **EndpointSubAddress** parameter to the secondary private IP address of the primary ENI. If the parameter is left empty, the primary private IP address of the primary ENI is used.</p>
-     * <p>*   If the endpoint type is **ENI**, you can set the **EndpointSubAddress** parameter to the secondary private IP address of the secondary ENI. If the parameter is left empty, the primary private IP address of the secondary ENI is used.</p>
+     * <p>*   When the endpoint type is **ECS**, you can set **EndpointSubAddress** to the secondary private IP address of the primary ENI. If the parameter is left empty, the primary private IP address of the primary ENI is used.</p>
+     * <p>*   If the endpoint type is **ENI**, you can set **EndpointSubAddress** to the secondary private IP address of the secondary ENI. If the parameter is left empty, the primary private IP address of the secondary ENI is used.</p>
      */
     @NameInMap("EndpointSubAddress")
     public String endpointSubAddress;
 
     /**
-     * <p>The type of endpoint. Valid values:</p>
+     * <p>The type of the endpoint. Valid values:</p>
      * <br>
-     * <p>*   **ENI**: elastic network interface (ENI)</p>
-     * <p>*   **SLB**: Classic Load Balancer (CLB) instance</p>
-     * <p>*   **ECS**: Elastic Compute Service (ECS) instance</p>
+     * <p>*   **ENI**</p>
+     * <p>*   **SLB**</p>
+     * <p>*   **ECS**</p>
      */
     @NameInMap("EndpointType")
     public String endpointType;
@@ -72,7 +72,7 @@ public class CreateBasicEndpointGroupRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the region where the basic GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The region ID of the GA instance. Set the value to **cn-hangzhou**.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

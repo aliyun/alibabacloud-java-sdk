@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateCustomRoutingEndpointGroupDestinationsResponseBody extends TeaModel {
     /**
-     * <p>The IDs of the mapping configurations.</p>
+     * <p>The IDs of the endpoint group mappings.</p>
      */
     @NameInMap("DestinationIds")
     public java.util.List<String> destinationIds;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The IDs of the endpoint group mappings.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

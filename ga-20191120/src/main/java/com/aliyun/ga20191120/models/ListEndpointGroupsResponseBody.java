@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEndpointGroupsResponseBody extends TeaModel {
     /**
-     * <p>The configurations of the endpoint group.</p>
+     * <p>Configurations of endpoint groups.</p>
      */
     @NameInMap("EndpointGroups")
     public java.util.List<ListEndpointGroupsResponseBodyEndpointGroups> endpointGroups;
@@ -17,7 +17,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries returned on each page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -29,7 +29,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The number of returned entries.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -83,8 +83,8 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the client IP address preservation feature is enabled. Valid values:</p>
          * <br>
-         * <p>*   **true**: The client IP address preservation feature is enabled.</p>
-         * <p>*   **false**: The client IP address preservation feature is disabled.</p>
+         * <p>*   **true:** The client IP address preservation feature is enabled.</p>
+         * <p>*   **false:** The client IP address preservation feature is disabled.</p>
          */
         @NameInMap("EnableClientIPPreservation")
         public Boolean enableClientIPPreservation;
@@ -110,8 +110,8 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         /**
          * <p>The protocol that is used to monitor latency. Valid values:</p>
          * <br>
-         * <p>*   **icmp**: ICMP</p>
-         * <p>*   **tcp**: TCP</p>
+         * <p>*   **icmp:** ICMP.</p>
+         * <p>*   **tcp:** TCP.</p>
          */
         @NameInMap("ProbeProtocol")
         public String probeProtocol;
@@ -119,13 +119,13 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         /**
          * <p>The type of the endpoint. Valid values:</p>
          * <br>
-         * <p>*   **Domain**: a custom domain name</p>
-         * <p>*   **Ip**: a custom IP address</p>
-         * <p>*   **PublicIp**: a public IP address provided by Alibaba Cloud</p>
-         * <p>*   **ECS**: an Elastic Compute Service (ECS) instance</p>
-         * <p>*   **SLB**: a Server Load Balancer (SLB) instance</p>
-         * <p>*   **ALB**: an Application Load Balancer (ALB) instance</p>
-         * <p>*   **OSS**: an Object Storage Service (OSS) bucket</p>
+         * <p>*   **Domain:** a custom domain name.</p>
+         * <p>*   **Ip:** a custom IP address.</p>
+         * <p>*   **PublicIp:** a public IP address provided by Alibaba Cloud.</p>
+         * <p>*   **ECS:** an Elastic Compute Service (ECS) instance.</p>
+         * <p>*   **SLB:** a Server Load Balancer (SLB) instance.</p>
+         * <p>*   **ALB:** an Application Load Balancer (ALB) instance.</p>
+         * <p>*   **OSS:** an Object Storage Service (OSS) bucket.</p>
          */
         @NameInMap("Type")
         public String type;
@@ -207,7 +207,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         public Integer endpointPort;
 
         /**
-         * <p>The listener port.</p>
+         * <p>The listening port.</p>
          */
         @NameInMap("ListenerPort")
         public Integer listenerPort;
@@ -236,9 +236,15 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
     }
 
     public static class ListEndpointGroupsResponseBodyEndpointGroupsTags extends TeaModel {
+        /**
+         * <p>The tag key of the GA instance.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value of the GA instance.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -279,13 +285,13 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The configurations of the endpoint.</p>
+         * <p>Configurations of Endpoints.</p>
          */
         @NameInMap("EndpointConfigurations")
         public java.util.List<ListEndpointGroupsResponseBodyEndpointGroupsEndpointConfigurations> endpointConfigurations;
 
         /**
-         * <p>The ID of an endpoint group.</p>
+         * <p>The ID of the endpoint group.</p>
          */
         @NameInMap("EndpointGroupId")
         public String endpointGroupId;
@@ -305,14 +311,14 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         /**
          * <p>The type of the endpoint group. Valid values:</p>
          * <br>
-         * <p>*   **default**: a default endpoint group</p>
-         * <p>*   **virtual**: a virtual endpoint group</p>
+         * <p>*   **default:** a default endpoint group.</p>
+         * <p>*   **virtual:** a virtual endpoint group.</p>
          */
         @NameInMap("EndpointGroupType")
         public String endpointGroupType;
 
         /**
-         * <p>The endpoint group IP addresses to be confirmed after the GA instance is upgraded.</p>
+         * <p>The list of endpoint group IP addresses to be confirmed after the GA instance is upgraded.</p>
          */
         @NameInMap("EndpointGroupUnconfirmedIpList")
         public java.util.List<String> endpointGroupUnconfirmedIpList;
@@ -320,14 +326,14 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         /**
          * <p>The protocol that is used by the backend service. Valid values:</p>
          * <br>
-         * <p>*   **HTTP**: HTTP</p>
-         * <p>*   **HTTPS**: HTTPS</p>
+         * <p>*   **HTTP:** HTTP.</p>
+         * <p>*   **HTTPS:** HTTPS.</p>
          */
         @NameInMap("EndpointRequestProtocol")
         public String endpointRequestProtocol;
 
         /**
-         * <p>The ID of the forwarding rule that is associated with the endpoint group.</p>
+         * <p>IDs of forwarding rules that are associated with endpoint groups.</p>
          */
         @NameInMap("ForwardingRuleIds")
         public java.util.List<String> forwardingRuleIds;
@@ -335,8 +341,8 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the health check feature is enabled. Valid values:</p>
          * <br>
-         * <p>*   **true**: The health check feature is enabled.</p>
-         * <p>*   **false**: The health check feature is disabled.</p>
+         * <p>*   **true:** The health check feature is enabled.</p>
+         * <p>*   **false:** The health check feature is disabled.</p>
          */
         @NameInMap("HealthCheckEnabled")
         public Boolean healthCheckEnabled;
@@ -348,7 +354,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         public Integer healthCheckIntervalSeconds;
 
         /**
-         * <p>The path to which health check requests are sent.</p>
+         * <p>The path to which health check probes are sent.</p>
          */
         @NameInMap("HealthCheckPath")
         public String healthCheckPath;
@@ -360,11 +366,11 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         public Integer healthCheckPort;
 
         /**
-         * <p>The protocol over which health check requests are sent. Valid values:</p>
+         * <p>The protocol over which health check probes are sent. Valid values:</p>
          * <br>
-         * <p>*   **tcp**: TCP</p>
-         * <p>*   **http**: HTTP</p>
-         * <p>*   **https**: HTTPS</p>
+         * <p>*   **tcp:** TCP.</p>
+         * <p>*   **http:** HTTP.</p>
+         * <p>*   **https:** HTTPS.</p>
          */
         @NameInMap("HealthCheckProtocol")
         public String healthCheckProtocol;
@@ -382,7 +388,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The mappings between ports.</p>
+         * <p>Mappings between ports.</p>
          */
         @NameInMap("PortOverrides")
         public java.util.List<ListEndpointGroupsResponseBodyEndpointGroupsPortOverrides> portOverrides;
@@ -390,14 +396,17 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         /**
          * <p>The state of the endpoint group. Valid values:</p>
          * <br>
-         * <p>*   **init**: The endpoint group is being initialized.</p>
-         * <p>*   **active**: The endpoint group is running normally.</p>
-         * <p>*   **updating**:The endpoint group is being updated.</p>
-         * <p>*   **deleteing**: The endpoint group is being deleted.</p>
+         * <p>*   **init:** The endpoint group is being initialized.</p>
+         * <p>*   **active:** The endpoint group is running as expected.</p>
+         * <p>*   **updating:**The endpoint group is being updated.</p>
+         * <p>*   **deleteing:** The endpoint group is being deleted.</p>
          */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>Tags of GA instances.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListEndpointGroupsResponseBodyEndpointGroupsTags> tags;
 

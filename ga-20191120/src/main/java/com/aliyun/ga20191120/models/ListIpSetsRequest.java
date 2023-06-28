@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIpSetsRequest extends TeaModel {
     /**
-     * <p>The ID of the GA instance that you want to query.</p>
+     * <p>The ID of the GA instance.</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
@@ -23,7 +23,7 @@ public class ListIpSetsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the Global Accelerator (GA) instance that you want to query is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

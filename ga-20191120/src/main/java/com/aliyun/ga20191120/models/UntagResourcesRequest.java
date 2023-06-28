@@ -36,6 +36,7 @@ public class UntagResourcesRequest extends TeaModel {
      * <p>*   If **ResourceType** is set to **basicaccelerator**, set the value of ResourceId to the ID of a basic GA instance.</p>
      * <p>*   If **ResourceType** is set to **bandwidthpackage**, set the value of ResourceId to the ID of a bandwidth plan.</p>
      * <p>*   If **ResourceType** is set to **acl**, set the value of ResourceId to the ID of an ACL.</p>
+     * <p>*   If **ResourceType** is set to **endpointgroup**, set the value of ResourceId to the ID of an EndpointGroup.</p>
      * <br>
      * <p>You can enter up to 50 resource IDs.</p>
      */
@@ -49,6 +50,7 @@ public class UntagResourcesRequest extends TeaModel {
      * <p>*   **basicaccelerator**: a basic GA instance.</p>
      * <p>*   **bandwidthpackage**: a bandwidth plan.</p>
      * <p>*   **acl**: an access control list (ACL).</p>
+     * <p>*   **endpointgroup**: an endpoint group (EndpointGroup).</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

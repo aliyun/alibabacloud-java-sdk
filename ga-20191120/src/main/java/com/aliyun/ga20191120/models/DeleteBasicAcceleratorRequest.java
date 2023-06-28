@@ -11,7 +11,7 @@ public class DeleteBasicAcceleratorRequest extends TeaModel {
     public String acceleratorId;
 
     /**
-     * <p>The ID of the region where the basic GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the region to which the basic GA instance belongs. Set the value to **cn-hangzhou**.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

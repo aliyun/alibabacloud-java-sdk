@@ -4,9 +4,15 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class UpdateListenerRequest extends TeaModel {
+    /**
+     * <p>The range of ports that are used by backend servers to receive requests.</p>
+     */
     @NameInMap("BackendPorts")
     public java.util.List<UpdateListenerRequestBackendPorts> backendPorts;
 
+    /**
+     * <p>The SSL certificate.</p>
+     */
     @NameInMap("Certificates")
     public java.util.List<UpdateListenerRequestCertificates> certificates;
 
@@ -22,17 +28,15 @@ public class UpdateListenerRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The description of the listener.</p>
-     * <br>
-     * <p>The description can be at most 200 characters in length.</p>
+     * <p>The description of the listener. The description can be at most 200 characters in length.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -51,6 +55,13 @@ public class UpdateListenerRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The listener ports that are used to receive requests and forward the requests to endpoints.</p>
+     * <br>
+     * <p>Valid values: **1** to **65499**.</p>
+     * <br>
+     * <p>The maximum number of ports that can be configured varies based on the routing type and protocol of the listener. For more information, see [Listener overview](~~153216~~).</p>
+     */
     @NameInMap("PortRanges")
     public java.util.List<UpdateListenerRequestPortRanges> portRanges;
 
@@ -68,10 +79,10 @@ public class UpdateListenerRequest extends TeaModel {
     /**
      * <p>Specifies whether to reserve client IP addresses. Default value: false. Valid values:</p>
      * <br>
-     * <p>*   **true**: reserves client IP addresses. After client IP addresses are reserved, you can view the source IP addresses of clients over the backend service.</p>
-     * <p>*   **false**: does not reserve client IP addresses.</p>
+     * <p>*   **true**: enables client IP preservation. After client IP addresses are reserved, you can view client IP addresses on the endpoints.</p>
+     * <p>*   **false** (default): disables client IP preservation.</p>
      * <br>
-     * <p>>  This parameter will be discontinued in the API operations that are used to configure listeners. We recommend that you set this parameter when you call API operations to configure endpoint groups. For more information about the **ProxyProtocol** parameter, see [CreateEndpointGroup](~~153259~~) and [UpdateEndpointGroup](~~153262~~).</p>
+     * <p>> This parameter will be deprecated in the API operations that are used to configure listeners. We recommend that you set this parameter when you call API operations to configure endpoint groups. For more information about the **ProxyProtocol** parameter, see [CreateEndpointGroup](~~153259~~) and [UpdateEndpointGroup](~~153262~~).</p>
      */
     @NameInMap("ProxyProtocol")
     public String proxyProtocol;
@@ -88,17 +99,17 @@ public class UpdateListenerRequest extends TeaModel {
      * <p>*   **tls_cipher_policy\_1\_0**</p>
      * <br>
      * <p>    *   Supported Transport Layer Security (TLS) versions: TLS 1.0, TLS 1.1, and TLS 1.2</p>
-     * <p>    *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA.</p>
+     * <p>    *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA</p>
      * <br>
      * <p>*   **tls_cipher_policy\_1\_1**</p>
      * <br>
      * <p>    *   Supported TLS versions: TLS 1.1 and TLS 1.2</p>
-     * <p>    *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA.</p>
+     * <p>    *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA</p>
      * <br>
      * <p>*   **tls_cipher_policy\_1\_2**</p>
      * <br>
      * <p>    *   Supported TLS version: TLS 1.2</p>
-     * <p>    *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA.</p>
+     * <p>    *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA</p>
      * <br>
      * <p>*   **tls_cipher_policy\_1\_2\_strict**</p>
      * <br>
@@ -110,13 +121,13 @@ public class UpdateListenerRequest extends TeaModel {
      * <p>    *   Supported TLS versions: TLS 1.2 and TLS 1.3</p>
      * <p>    *   Supported cipher suites: TLS_AES\_128\_GCM_SHA256, TLS_AES\_256\_GCM_SHA384, TLS_CHACHA20\_POLY1305\_SHA256, TLS_AES\_128\_CCM_SHA256, TLS_AES\_128\_CCM\_8\_SHA256, ECDHE-ECDSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384, ECDHE-ECDSA-AES128-SHA256, ECDHE-ECDSA-AES256-SHA384, ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA, ECDHE-ECDSA-AES256-SHA, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA</p>
      * <br>
-     * <p>>  You can specify this parameter only for HTTPS listeners.</p>
+     * <p>> This parameter is available only when you create an HTTPS listener.</p>
      */
     @NameInMap("SecurityPolicyId")
     public String securityPolicyId;
 
     /**
-     * <p>The configurations of the `XForward` headers.</p>
+     * <p>The `XForward` headers.</p>
      */
     @NameInMap("XForwardedForConfig")
     public UpdateListenerRequestXForwardedForConfig XForwardedForConfig;
@@ -232,17 +243,17 @@ public class UpdateListenerRequest extends TeaModel {
 
     public static class UpdateListenerRequestBackendPorts extends TeaModel {
         /**
-         * <p>The start port in the range of ports used by the backend server to receive requests.</p>
+         * <p>The first port in the range of ports that are used by backend servers to receive requests.</p>
          * <br>
-         * <p>>  This parameter is required only when you configure an HTTPS or HTTP listener and the listener port is different from the port over which the backend server provides services. In this case, the start port that is used to receive requests for the backend server must be the same as the end port.</p>
+         * <p>> This parameter is required only when you configure an HTTPS or HTTP listener and the listener port is different from the service port of the backend servers. In this case, the first port that is used by the backend servers to receive requests must be the same as the last port.</p>
          */
         @NameInMap("FromPort")
         public Integer fromPort;
 
         /**
-         * <p>The end port in the range of ports used by the backend server to receive requests.</p>
+         * <p>The last port in the range of ports that are used by backend servers to receive requests.</p>
          * <br>
-         * <p>>  This parameter is required only when you configure an HTTPS or HTTP listener and the listener port is different from the port over which the backend server provides services. In this case, the start port that is used to receive requests for the backend server must be the same as the end port.</p>
+         * <p>> This parameter is required only when you configure an HTTPS or HTTP listener and the listener port is different from the service port of the backend servers. In this case, the first port that is used by the backend servers to receive requests must be the same as the last port.</p>
          */
         @NameInMap("ToPort")
         public Integer toPort;
@@ -274,7 +285,7 @@ public class UpdateListenerRequest extends TeaModel {
         /**
          * <p>The ID of the SSL certificate.</p>
          * <br>
-         * <p>>  This parameter is required only when you configure an HTTPS listener.</p>
+         * <p>> This parameter is required only when you configure an HTTPS listener.</p>
          */
         @NameInMap("Id")
         public String id;
@@ -296,25 +307,25 @@ public class UpdateListenerRequest extends TeaModel {
 
     public static class UpdateListenerRequestPortRanges extends TeaModel {
         /**
-         * <p>The start port of the listener port range that is used to receive and forward requests to endpoints.</p>
+         * <p>The first port of the listener port range that is used to receive and forward requests to endpoints.</p>
          * <br>
          * <p>Valid values: **1** to **65499**. The **FromPort** value must be smaller than or equal to the **ToPort** value.</p>
          * <br>
-         * <p>The maximum number of ports that can be configured is subject to the routing type and protocol of the listener. For more information, see [Listener overview](~~153216~~).</p>
+         * <p>The maximum number of ports that can be configured varies based on the routing type and protocol of the listener. For more information, see [Listener overview](~~153216~~).</p>
          * <br>
-         * <p>>  You can configure only one listener port for an HTTP or HTTPS listener. In this case, the start port is the same as the end port.</p>
+         * <p>> You can configure only one listener port for an HTTP or HTTPS listener. In this case, the first port is the same as the last port.</p>
          */
         @NameInMap("FromPort")
         public Integer fromPort;
 
         /**
-         * <p>The end port of the listener port range that is used to receive and forward requests to endpoints.</p>
+         * <p>The last port of the listener port range that is used to receive and forward requests to endpoints.</p>
          * <br>
          * <p>Valid values: **1** to **65499**. The **FromPort** value must be smaller than or equal to the **ToPort** value.</p>
          * <br>
-         * <p>The maximum number of ports that can be configured is subject to the routing type and protocol of the listener. For more information, see [Listener overview](~~153216~~).</p>
+         * <p>The maximum number of ports that can be configured varies based on the routing type and protocol of the listener. For more information, see [Listener overview](~~153216~~).</p>
          * <br>
-         * <p>>  You can configure only one listener port for an HTTP or HTTPS listener. In this case, the start port is the same as the end port.</p>
+         * <p>> You can configure only one listener port for an HTTP or HTTPS listener. In this case, the first port is the same as the last port.</p>
          */
         @NameInMap("ToPort")
         public Integer toPort;
@@ -344,56 +355,56 @@ public class UpdateListenerRequest extends TeaModel {
 
     public static class UpdateListenerRequestXForwardedForConfig extends TeaModel {
         /**
-         * <p>Specifies whether to use the `GA-AP` header to retrieve the information about acceleration regions. Default value: false. Valid values:</p>
+         * <p>Specifies whether to use the `GA-AP` header to retrieve information about acceleration regions. Valid values:</p>
          * <br>
          * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>*   **false** (default): no</p>
          * <br>
-         * <p>>  You can specify this parameter only for HTTP and HTTPS listeners.</p>
+         * <p>> This parameter is available only when you create an HTTPS or HTTP listener.</p>
          */
         @NameInMap("XForwardedForGaApEnabled")
         public Boolean XForwardedForGaApEnabled;
 
         /**
-         * <p>Specifies whether to use the `GA-ID` header to retrieve the ID of the GA instance. Default value: false. Valid values:</p>
+         * <p>Specifies whether to use the `GA-ID` header to retrieve the ID of the GA instance. Valid values:</p>
          * <br>
          * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>*   **false** (default): no</p>
          * <br>
-         * <p>>  You can specify this parameter only for HTTP and HTTPS listeners.</p>
+         * <p>> This parameter is available only when you create an HTTPS or HTTP listener.</p>
          */
         @NameInMap("XForwardedForGaIdEnabled")
         public Boolean XForwardedForGaIdEnabled;
 
         /**
-         * <p>Specifies whether to use the `GA-X-Forward-Port` header to retrieve the listener ports of the GA instance. Default value: false. Valid values:</p>
+         * <p>Specifies whether to use the `GA-X-Forward-Port` header to retrieve the listener ports of the GA instance. Valid values:</p>
          * <br>
          * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>*   **false** (default): no</p>
          * <br>
-         * <p>>  You can specify this parameter only for HTTP and HTTPS listeners.</p>
+         * <p>> This parameter is available only when you create an HTTPS or HTTP listener.</p>
          */
         @NameInMap("XForwardedForPortEnabled")
         public Boolean XForwardedForPortEnabled;
 
         /**
-         * <p>Specifies whether to use the `GA-X-Forward-Proto` header to retrieve the listener protocol of the GA instance. Default value: false. Valid values:</p>
+         * <p>Specifies whether to use the `GA-X-Forward-Proto` header to retrieve the listener protocol of the GA instance. Valid values:</p>
          * <br>
          * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>*   **false** (default): no</p>
          * <br>
-         * <p>>  You can specify this parameter only for HTTP and HTTPS listeners.</p>
+         * <p>> This parameter is available only when you create an HTTPS or HTTP listener.</p>
          */
         @NameInMap("XForwardedForProtoEnabled")
         public Boolean XForwardedForProtoEnabled;
 
         /**
-         * <p>Specifies whether to use the `X-Real-IP` header to retrieve client IP addresses. Default value: false. Valid values:</p>
+         * <p>Specifies whether to use the `X-Real-IP` header to retrieve client IP addresses. Valid values:</p>
          * <br>
          * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>*   **false** (default): no</p>
          * <br>
-         * <p>>  You can specify this parameter only for HTTP and HTTPS listeners.</p>
+         * <p>> This parameter is available only when you create an HTTPS or HTTP listener.</p>
          */
         @NameInMap("XRealIpEnabled")
         public Boolean XRealIpEnabled;

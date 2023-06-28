@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAcceleratorsResponseBody extends TeaModel {
     /**
-     * <p>The information about the GA instances.</p>
+     * <p>The GA instances.</p>
      */
     @NameInMap("Accelerators")
     public java.util.List<ListAcceleratorsResponseBodyAccelerators> accelerators;
@@ -278,6 +278,11 @@ public class ListAcceleratorsResponseBody extends TeaModel {
         @NameInMap("CrossBorderMode")
         public String crossBorderMode;
 
+        /**
+         * <p>Indicates whether cross-border acceleration is enabled.</p>
+         * <p>- **true**: yes</p>
+         * <p>- **false**: no</p>
+         */
         @NameInMap("CrossBorderStatus")
         public Boolean crossBorderStatus;
 
@@ -401,6 +406,15 @@ public class ListAcceleratorsResponseBody extends TeaModel {
          */
         @NameInMap("Type")
         public String type;
+
+        /**
+         * <p>Indicates the upgradable state of the GA instance.</p>
+         * <p>- **notUpgradable**: The GA instance can not be upgraded</p>
+         * <p>- **upgradable**: The GA instance can be upgraded</p>
+         * <p>- **upgradeFailed**: The GA instance has been upgraded and failed</p>
+         */
+        @NameInMap("UpgradableStatus")
+        public String upgradableStatus;
 
         public static ListAcceleratorsResponseBodyAccelerators build(java.util.Map<String, ?> map) throws Exception {
             ListAcceleratorsResponseBodyAccelerators self = new ListAcceleratorsResponseBodyAccelerators();
@@ -589,6 +603,14 @@ public class ListAcceleratorsResponseBody extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+        public ListAcceleratorsResponseBodyAccelerators setUpgradableStatus(String upgradableStatus) {
+            this.upgradableStatus = upgradableStatus;
+            return this;
+        }
+        public String getUpgradableStatus() {
+            return this.upgradableStatus;
         }
 
     }

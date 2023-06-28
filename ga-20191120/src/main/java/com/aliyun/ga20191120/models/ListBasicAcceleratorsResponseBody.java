@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListBasicAcceleratorsResponseBody extends TeaModel {
     /**
-     * <p>The information about basic GA instances.</p>
+     * <p>The basic GA instances.</p>
      */
     @NameInMap("Accelerators")
     public java.util.List<ListBasicAcceleratorsResponseBodyAccelerators> accelerators;
@@ -248,6 +248,13 @@ public class ListBasicAcceleratorsResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>基础全球加速实例是否开启跨境线路功能。取值：</p>
+         * <br>
+         * <p>- **true**：开启跨境线路功能，可以加速跨境线路。</p>
+         * <br>
+         * <p>- **false**：关闭跨境线路功能，不可以加速跨境线路。</p>
+         */
         @NameInMap("CrossBorderStatus")
         public Boolean crossBorderStatus;
 

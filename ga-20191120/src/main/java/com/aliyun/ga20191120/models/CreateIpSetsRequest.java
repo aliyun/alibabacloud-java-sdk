@@ -11,7 +11,7 @@ public class CreateIpSetsRequest extends TeaModel {
     public java.util.List<CreateIpSetsRequestAccelerateRegion> accelerateRegion;
 
     /**
-     * <p>The ID of the GA instance.</p>
+     * <p>The GA instance ID.</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
@@ -19,9 +19,9 @@ public class CreateIpSetsRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     * <p>> If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -71,7 +71,7 @@ public class CreateIpSetsRequest extends TeaModel {
 
     public static class CreateIpSetsRequestAccelerateRegion extends TeaModel {
         /**
-         * <p>The ID of the region that requires acceleration.</p>
+         * <p>The acceleration region IDs.</p>
          * <br>
          * <p>The number of regions that can be added varies based on the specification of the GA instance. For more information, see [Overview](~~153127~~).</p>
          */
@@ -85,7 +85,7 @@ public class CreateIpSetsRequest extends TeaModel {
          * <br>
          * <p>*   Each acceleration region must be allocated a minimum of 2 Mbit/s of bandwidth.</p>
          * <br>
-         * <p>*   The total bandwidth for all acceleration regions cannot exceed the bandwidth limit of your basic bandwidth plan.</p>
+         * <p>*   The total bandwidth for all acceleration regions cannot exceed the maximum bandwidth of the basic bandwidth plan.</p>
          */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
@@ -93,8 +93,8 @@ public class CreateIpSetsRequest extends TeaModel {
         /**
          * <p>The IP version used to connect to the GA instance. Valid values:</p>
          * <br>
-         * <p>*   **IPv4** (default): IPv4</p>
-         * <p>*   **IPv6**: IPv6</p>
+         * <p>*   **IPv4** (default)</p>
+         * <p>*   **IPv6**</p>
          */
         @NameInMap("IpVersion")
         public String ipVersion;
@@ -102,8 +102,8 @@ public class CreateIpSetsRequest extends TeaModel {
         /**
          * <p>The line type of the elastic IP address (EIP) in the acceleration region. Valid values:</p>
          * <br>
-         * <p>*   **BGP**: BGP (Multi-ISP) lines.</p>
-         * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro lines. If the acceleration region is China (Hong Kong) and a basic bandwidth plan whose bandwidth type is Premium is associated with the GA instance, the default value of IspType is BGP_PRO.</p>
+         * <p>*   **BGP**</p>
+         * <p>*   **BGP_PRO** If the acceleration region is China (Hong Kong) and a basic bandwidth plan whose bandwidth type is Premium is associated with the GA instance, the default value of IspType is BGP_PRO.</p>
          * <br>
          * <p>If you are allowed to use single-ISP bandwidth, you can also specify one of the following values:</p>
          * <br>
@@ -114,7 +114,7 @@ public class CreateIpSetsRequest extends TeaModel {
          * <p>*   **ChinaUnicom_L2**: China Unicom \_L2 (single ISP)</p>
          * <p>*   **ChinaMobile_L2**: China Mobile \_L2 (single ISP)</p>
          * <br>
-         * <p>>  The supported single-ISP line types vary based on the acceleration region.</p>
+         * <p>> Different acceleration regions support different single-ISP BGP lines.</p>
          */
         @NameInMap("IspType")
         public String ispType;

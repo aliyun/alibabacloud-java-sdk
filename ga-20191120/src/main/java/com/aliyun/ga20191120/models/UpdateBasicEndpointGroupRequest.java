@@ -34,6 +34,14 @@ public class UpdateBasicEndpointGroupRequest extends TeaModel {
     @NameInMap("EndpointGroupId")
     public String endpointGroupId;
 
+    /**
+     * <p>The secondary address of the endpoint.</p>
+     * <br>
+     * <p>This parameter is required when the accelerated IP address is associated with the secondary private IP address of an ECS instance or an ENI.</p>
+     * <br>
+     * <p>*   If the endpoint type is **ECS**, you can set the **EndpointSubAddress** parameter to the secondary private IP address of the primary ENI. If the parameter is left empty, the primary private IP address of the primary ENI is used.</p>
+     * <p>*   If the endpoint type is **ENI**, you can set the **EndpointSubAddress** parameter to the secondary private IP address of the secondary ENI. If the parameter is left empty, the primary private IP address of the secondary ENI is used.</p>
+     */
     @NameInMap("EndpointSubAddress")
     public String endpointSubAddress;
 

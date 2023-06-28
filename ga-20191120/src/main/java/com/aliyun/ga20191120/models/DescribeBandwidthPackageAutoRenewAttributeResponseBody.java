@@ -14,7 +14,7 @@ public class DescribeBandwidthPackageAutoRenewAttributeResponseBody extends TeaM
     public Boolean autoRenew;
 
     /**
-     * <p>The auto-renewal duration. Unit: months. Valid values: **1** to **12**.</p>
+     * <p>The auto-renewal period. Unit: months. Valid values: **1** to **12**.</p>
      * <br>
      * <p>> : This parameter takes effect only if **AutoRenew** is set to **true**.</p>
      */

@@ -4,6 +4,9 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class AddEntriesToAclRequest extends TeaModel {
+    /**
+     * <p>The ACL entries.</p>
+     */
     @NameInMap("AclEntries")
     public java.util.List<AddEntriesToAclRequestAclEntries> aclEntries;
 
@@ -85,7 +88,7 @@ public class AddEntriesToAclRequest extends TeaModel {
 
     public static class AddEntriesToAclRequestAclEntries extends TeaModel {
         /**
-         * <p>The IP address or CIDR block that you want to add to the network ACL.</p>
+         * <p>The IP address(192.168.XX.XX) or CIDR(10.0.XX.XX/24) block that you want to add to the network ACL.</p>
          * <br>
          * <p>You can add at most 20 entries in each request.</p>
          * <br>

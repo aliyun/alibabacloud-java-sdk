@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateBasicEndpointGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the endpoint group.</p>
+     * <p>The endpoint group ID.</p>
      */
     @NameInMap("EndpointGroupId")
     public String endpointGroupId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

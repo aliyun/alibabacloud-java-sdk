@@ -4,11 +4,14 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class UpdateIpSetsRequest extends TeaModel {
+    /**
+     * <p>The acceleration regions.</p>
+     */
     @NameInMap("IpSets")
     public java.util.List<UpdateIpSetsRequestIpSets> ipSets;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The region ID of the Global Accelerator (GA) instance. Set the value to **cn-hangzhou**.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -36,7 +39,7 @@ public class UpdateIpSetsRequest extends TeaModel {
 
     public static class UpdateIpSetsRequestIpSets extends TeaModel {
         /**
-         * <p>The new bandwidth to be allocated to the acceleration region. Unit: Mbit/s.</p>
+         * <p>The new bandwidth of the acceleration region. Unit: Mbit/s.</p>
          * <br>
          * <p>You can specify the bandwidth for up to 100 acceleration regions.</p>
          */

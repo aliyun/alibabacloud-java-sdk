@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetAclRequest extends TeaModel {
     /**
-     * <p>The ID of the network ACL.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("AclId")
     public String aclId;
 
     /**
-     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the network ACL.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -11,7 +11,7 @@ public class DescribeEndpointGroupRequest extends TeaModel {
     public String endpointGroupId;
 
     /**
-     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the region where your Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

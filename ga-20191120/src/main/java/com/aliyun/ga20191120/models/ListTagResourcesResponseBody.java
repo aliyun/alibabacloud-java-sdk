@@ -82,6 +82,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
          * <p>*   **basicaccelerator:** a basic GA instance.</p>
          * <p>*   **bandwidthpackage:** a bandwidth plan.</p>
          * <p>*   **acl:** an ACL.</p>
+         * <p>*   **endpointgroup:** an EndpointGroup.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteForwardingRulesResponseBody extends TeaModel {
     /**
-     * <p>Details about the forwarding rules.</p>
+     * <p>The forwarding rules.</p>
      */
     @NameInMap("ForwardingRules")
     public java.util.List<DeleteForwardingRulesResponseBodyForwardingRules> forwardingRules;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,7 +39,7 @@ public class DeleteForwardingRulesResponseBody extends TeaModel {
 
     public static class DeleteForwardingRulesResponseBodyForwardingRules extends TeaModel {
         /**
-         * <p>The ID of the forwarding rule.</p>
+         * <p>The forwarding rule ID.</p>
          */
         @NameInMap("ForwardingRuleId")
         public String forwardingRuleId;

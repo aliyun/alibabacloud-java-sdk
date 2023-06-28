@@ -8,20 +8,14 @@ public class RemoveEntriesFromAclRequest extends TeaModel {
     public java.util.List<RemoveEntriesFromAclRequestAclEntries> aclEntries;
 
     /**
-     * <p>The ID of the ACL.</p>
+     * <p>The IP address or CIDR block that you want to delete from the ACL.</p>
+     * <br>
+     * <p>You can delete at most 20 entries in each request.</p>
+     * <br>
+     * <p>>  This parameter is required.</p>
      */
     @NameInMap("AclId")
     public String aclId;
-
-    /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
-     * <p>You can use the client to generate the value, but you must ensure that it is unique among all requests. The client token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
-     */
-    @NameInMap("ClientToken")
-    public String clientToken;
 
     /**
      * <p>Specifies whether to check the request without performing the operation. Valid values:</p>
@@ -29,11 +23,17 @@ public class RemoveEntriesFromAclRequest extends TeaModel {
      * <p>*   **true**: checks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.</p>
      * <p>*   **false** (default): sends the request. If the request passes the check, an HTTP 2xx status code is returned and the operation is performed.</p>
      */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the ACL.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -85,11 +85,11 @@ public class RemoveEntriesFromAclRequest extends TeaModel {
 
     public static class RemoveEntriesFromAclRequestAclEntries extends TeaModel {
         /**
-         * <p>The IP address or CIDR block that you want to delete from the ACL.</p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
          * <br>
-         * <p>You can delete at most 20 entries in each request.</p>
+         * <p>You can use the client to generate the value, but you must ensure that it is unique among all requests. The client token can contain only ASCII characters.</p>
          * <br>
-         * <p>>  This parameter is required.</p>
+         * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
          */
         @NameInMap("Entry")
         public String entry;

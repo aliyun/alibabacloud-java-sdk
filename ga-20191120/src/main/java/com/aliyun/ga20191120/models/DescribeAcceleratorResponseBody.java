@@ -38,13 +38,18 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
     public Long createTime;
 
     /**
-     * <p>The type of cross-border acceleration. This parameter is returned for GA instances whose bandwidth metering method is pay-by-data-transfer.</p>
+     * <p>The type of cross-border acceleration. This parameter is returned for GA instances whose bandwidth metering method is pay-by-data-transfer (CDT).</p>
      * <br>
-     * <p>**bpgPro** is returned, which indicates BGP (Multi-ISP) Pro lines.</p>
+     * <p>Only **bpgPro** may be returned, which indicates BGP (Multi-ISP) Pro lines.</p>
      */
     @NameInMap("CrossBorderMode")
     public String crossBorderMode;
 
+    /**
+     * <p>Indicates whether cross-border acceleration is enabled.</p>
+     * <p>- **true**: yes</p>
+     * <p>- **false**: no</p>
+     */
     @NameInMap("CrossBorderStatus")
     public Boolean crossBorderStatus;
 
@@ -177,6 +182,15 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
      */
     @NameInMap("Tags")
     public java.util.List<DescribeAcceleratorResponseBodyTags> tags;
+
+    /**
+     * <p>Indicates the upgradable state of the GA instance.</p>
+     * <p>- **notUpgradable**: The GA instance can not be upgraded</p>
+     * <p>- **upgradable**: The GA instance can be upgraded</p>
+     * <p>- **upgradeFailed**: The GA instance has been upgraded and failed</p>
+     */
+    @NameInMap("UpgradableStatus")
+    public String upgradableStatus;
 
     public static DescribeAcceleratorResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAcceleratorResponseBody self = new DescribeAcceleratorResponseBody();
@@ -365,6 +379,14 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
     }
     public java.util.List<DescribeAcceleratorResponseBodyTags> getTags() {
         return this.tags;
+    }
+
+    public DescribeAcceleratorResponseBody setUpgradableStatus(String upgradableStatus) {
+        this.upgradableStatus = upgradableStatus;
+        return this;
+    }
+    public String getUpgradableStatus() {
+        return this.upgradableStatus;
     }
 
     public static class DescribeAcceleratorResponseBodyBasicBandwidthPackage extends TeaModel {

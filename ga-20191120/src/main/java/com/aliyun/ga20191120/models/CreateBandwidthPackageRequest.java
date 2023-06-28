@@ -14,10 +14,10 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal for the bandwidth plan. Valid values:</p>
      * <br>
      * <p>*   **true**: enables auto-renewal.</p>
-     * <p>*   **false** (default): disables auto-renewal.</p>
+     * <p>*   **false** (default): does not enable auto-renewal.</p>
      */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
@@ -27,7 +27,7 @@ public class CreateBandwidthPackageRequest extends TeaModel {
      * <br>
      * <p>Valid values: **1** to **12**. Default value: **1**.</p>
      * <br>
-     * <p>>  This parameter takes effect only if **AutoRenew** is set to **true**.</p>
+     * <p>>  This parameter is required only if **AutoRenew** is set to **true**.</p>
      */
     @NameInMap("AutoRenewDuration")
     public Integer autoRenewDuration;
@@ -38,23 +38,25 @@ public class CreateBandwidthPackageRequest extends TeaModel {
      * <p>*   **true**: yes</p>
      * <p>*   **false** (default): no</p>
      * <br>
-     * <p>>  This parameter takes effect only if **AutoPay** is set to **true**.</p>
+     * <p>>  This parameter is required only if **AutoPay** is set to **true**.</p>
      */
     @NameInMap("AutoUseCoupon")
     public String autoUseCoupon;
 
     /**
-     * <p>The bandwidth value of the bandwidth plan. Unit: Mbit/s. Valid values: **2** to **2000**.</p>
+     * <p>The bandwidth of the bandwidth plan. Unit: Mbit/s.</p>
+     * <br>
+     * <p>Valid values: **2** to **2000**.</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
     /**
-     * <p>The type of bandwidth. Valid values:</p>
+     * <p>The type of the bandwidth. Valid values:</p>
      * <br>
-     * <p>*   **Basic**: standard</p>
-     * <p>*   **Enhanced**: enhanced</p>
-     * <p>*   **Advanced**: premium</p>
+     * <p>*   **Basic**: standard bandwidth</p>
+     * <p>*   **Enhanced**: enhanced bandwidth</p>
+     * <p>*   **Advanced**: premium bandwidth</p>
      * <br>
      * <p>If **Type** is set to **Basic**, this parameter is required.</p>
      */
@@ -98,9 +100,9 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among all requests. The ClientToken value contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     * <p>>  If you do not set this parameter, the system sets **ClientToken** to the value of **RequestId**. The value of **RequestId** of each API request may be different.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -108,8 +110,8 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     /**
      * <p>The subscription duration.</p>
      * <br>
-     * <p>*   If the **PricingCycle** parameter is set to **Month**, the valid values of the **Duration** parameter are **1** to **9**.</p>
-     * <p>*   If the **PricingCycle** parameter is set to **Year**, the valid values of the **Duration** parameter are **1** to **3**.</p>
+     * <p>*   If the **PricingCycle** parameter is set to **Month**, the valid values for the **Duration** parameter are **1** to **9**.</p>
+     * <p>*   If the **PricingCycle** parameter is set to **Year**, the valid values for the **Duration** parameter are **1** to **3**.</p>
      * <br>
      * <p>If **ChargeType** is set to **PREPAY**, this parameter is required.</p>
      */
@@ -130,7 +132,7 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     /**
      * <p>The coupon code.</p>
      * <br>
-     * <p>>  This parameter is available only on the international site.</p>
+     * <p>>  This parameter is only available on the international site (alibabacloud.com).</p>
      */
     @NameInMap("PromotionOptionNo")
     public String promotionOptionNo;
@@ -138,19 +140,19 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     /**
      * <p>The percentage of the minimum bandwidth guaranteed if the pay-by-95th-percentile-bandwidth metering method is used. Valid values: **30** to **100**.</p>
      * <br>
-     * <p>>  This parameter takes effect only if **BillingType** is set to **PayBY95**.</p>
+     * <p>>  This parameter is required only if **BillingType** is set to **PayBY95**.</p>
      */
     @NameInMap("Ratio")
     public Integer ratio;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the region where the GA instance is deployed. **cn-hangzhou** is returned.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the bandwidth plan belongs.</p>
+     * <p>The ID of the resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -159,7 +161,7 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     public java.util.List<CreateBandwidthPackageRequestTag> tag;
 
     /**
-     * <p>The type of bandwidth plan. Valid values:</p>
+     * <p>The type of the bandwidth plan. Valid values:</p>
      * <br>
      * <p>*   **Basic**: a basic bandwidth plan</p>
      * <p>*   **CrossDomain**: a cross-region acceleration bandwidth plan</p>
