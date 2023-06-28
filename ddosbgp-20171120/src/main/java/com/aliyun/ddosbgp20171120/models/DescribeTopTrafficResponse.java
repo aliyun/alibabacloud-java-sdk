@@ -4,113 +4,45 @@ package com.aliyun.ddosbgp20171120.models;
 import com.aliyun.tea.*;
 
 public class DescribeTopTrafficResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Total")
+    @NameInMap("statusCode")
     @Validation(required = true)
-    public Long total;
+    public Integer statusCode;
 
-    @NameInMap("TrafficList")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.List<DescribeTopTrafficResponseTrafficList> trafficList;
+    public DescribeTopTrafficResponseBody body;
 
     public static DescribeTopTrafficResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeTopTrafficResponse self = new DescribeTopTrafficResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeTopTrafficResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeTopTrafficResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeTopTrafficResponse setTotal(Long total) {
-        this.total = total;
+    public DescribeTopTrafficResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
         return this;
     }
-    public Long getTotal() {
-        return this.total;
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
-    public DescribeTopTrafficResponse setTrafficList(java.util.List<DescribeTopTrafficResponseTrafficList> trafficList) {
-        this.trafficList = trafficList;
+    public DescribeTopTrafficResponse setBody(DescribeTopTrafficResponseBody body) {
+        this.body = body;
         return this;
     }
-    public java.util.List<DescribeTopTrafficResponseTrafficList> getTrafficList() {
-        return this.trafficList;
-    }
-
-    public static class DescribeTopTrafficResponseTrafficList extends TeaModel {
-        @NameInMap("Pps")
-        @Validation(required = true)
-        public Integer pps;
-
-        @NameInMap("Bps")
-        @Validation(required = true)
-        public Integer bps;
-
-        @NameInMap("AttackBps")
-        @Validation(required = true)
-        public Integer attackBps;
-
-        @NameInMap("AttackPps")
-        @Validation(required = true)
-        public Integer attackPps;
-
-        @NameInMap("Ip")
-        @Validation(required = true)
-        public String ip;
-
-        public static DescribeTopTrafficResponseTrafficList build(java.util.Map<String, ?> map) throws Exception {
-            DescribeTopTrafficResponseTrafficList self = new DescribeTopTrafficResponseTrafficList();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeTopTrafficResponseTrafficList setPps(Integer pps) {
-            this.pps = pps;
-            return this;
-        }
-        public Integer getPps() {
-            return this.pps;
-        }
-
-        public DescribeTopTrafficResponseTrafficList setBps(Integer bps) {
-            this.bps = bps;
-            return this;
-        }
-        public Integer getBps() {
-            return this.bps;
-        }
-
-        public DescribeTopTrafficResponseTrafficList setAttackBps(Integer attackBps) {
-            this.attackBps = attackBps;
-            return this;
-        }
-        public Integer getAttackBps() {
-            return this.attackBps;
-        }
-
-        public DescribeTopTrafficResponseTrafficList setAttackPps(Integer attackPps) {
-            this.attackPps = attackPps;
-            return this;
-        }
-        public Integer getAttackPps() {
-            return this.attackPps;
-        }
-
-        public DescribeTopTrafficResponseTrafficList setIp(String ip) {
-            this.ip = ip;
-            return this;
-        }
-        public String getIp() {
-            return this.ip;
-        }
-
+    public DescribeTopTrafficResponseBody getBody() {
+        return this.body;
     }
 
 }

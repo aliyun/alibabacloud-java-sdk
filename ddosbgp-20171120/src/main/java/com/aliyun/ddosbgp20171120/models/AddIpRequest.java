@@ -4,28 +4,26 @@ package com.aliyun.ddosbgp20171120.models;
 import com.aliyun.tea.*;
 
 public class AddIpRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
+    @NameInMap("IpList")
+    public String ipList;
 
     @NameInMap("PackId")
-    @Validation(required = true)
     public String packId;
 
-    @NameInMap("IpList")
-    @Validation(required = true)
-    public String ipList;
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     public static AddIpRequest build(java.util.Map<String, ?> map) throws Exception {
         AddIpRequest self = new AddIpRequest();
         return TeaModel.build(map, self);
     }
 
-    public AddIpRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public AddIpRequest setIpList(String ipList) {
+        this.ipList = ipList;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
+    public String getIpList() {
+        return this.ipList;
     }
 
     public AddIpRequest setPackId(String packId) {
@@ -36,12 +34,12 @@ public class AddIpRequest extends TeaModel {
         return this.packId;
     }
 
-    public AddIpRequest setIpList(String ipList) {
-        this.ipList = ipList;
+    public AddIpRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
         return this;
     }
-    public String getIpList() {
-        return this.ipList;
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
 }

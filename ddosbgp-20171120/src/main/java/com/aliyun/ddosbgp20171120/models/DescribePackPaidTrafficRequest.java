@@ -4,47 +4,27 @@ package com.aliyun.ddosbgp20171120.models;
 import com.aliyun.tea.*;
 
 public class DescribePackPaidTrafficRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
+
+    @NameInMap("EndTime")
+    public Long endTime;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("CurrentPage")
-    @Validation(required = true)
-    public Integer currentPage;
-
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
-    @NameInMap("StartTime")
-    @Validation(required = true)
-    public Long startTime;
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
-    @NameInMap("EndTime")
-    @Validation(required = true)
-    public Long endTime;
+    @NameInMap("StartTime")
+    public Long startTime;
 
     public static DescribePackPaidTrafficRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePackPaidTrafficRequest self = new DescribePackPaidTrafficRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribePackPaidTrafficRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public DescribePackPaidTrafficRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     public DescribePackPaidTrafficRequest setCurrentPage(Integer currentPage) {
@@ -55,6 +35,22 @@ public class DescribePackPaidTrafficRequest extends TeaModel {
         return this.currentPage;
     }
 
+    public DescribePackPaidTrafficRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribePackPaidTrafficRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
     public DescribePackPaidTrafficRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -63,20 +59,20 @@ public class DescribePackPaidTrafficRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribePackPaidTrafficRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
+    }
+
     public DescribePackPaidTrafficRequest setStartTime(Long startTime) {
         this.startTime = startTime;
         return this;
     }
     public Long getStartTime() {
         return this.startTime;
-    }
-
-    public DescribePackPaidTrafficRequest setEndTime(Long endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public Long getEndTime() {
-        return this.endTime;
     }
 
 }
