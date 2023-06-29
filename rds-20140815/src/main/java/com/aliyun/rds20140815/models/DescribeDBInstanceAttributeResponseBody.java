@@ -733,6 +733,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("MaxIOPS")
         public Integer maxIOPS;
 
+        @NameInMap("PGBouncerEnabled")
+        public String PGBouncerEnabled;
+
         /**
          * <p>The billing method of the instance. Valid values:</p>
          * <br>
@@ -1262,6 +1265,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public Integer getMaxIOPS() {
             return this.maxIOPS;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setPGBouncerEnabled(String PGBouncerEnabled) {
+            this.PGBouncerEnabled = PGBouncerEnabled;
+            return this;
+        }
+        public String getPGBouncerEnabled() {
+            return this.PGBouncerEnabled;
         }
 
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setPayType(String payType) {

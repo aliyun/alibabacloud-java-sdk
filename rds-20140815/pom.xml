@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>rds20140815</artifactId>
-  <version>1.1.7</version>
+  <version>1.1.8</version>
   <packaging>jar</packaging>
   <name>rds20140815</name>
   <description>Alibaba Cloud rds (20140815) SDK for Java
@@ -41,7 +41,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.16</version>
+      <version>0.2.18</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

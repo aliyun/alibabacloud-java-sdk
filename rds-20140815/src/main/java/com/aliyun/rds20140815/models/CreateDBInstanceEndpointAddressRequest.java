@@ -42,6 +42,9 @@ public class CreateDBInstanceEndpointAddressRequest extends TeaModel {
     @NameInMap("Port")
     public String port;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
@@ -96,6 +99,14 @@ public class CreateDBInstanceEndpointAddressRequest extends TeaModel {
     }
     public String getPort() {
         return this.port;
+    }
+
+    public CreateDBInstanceEndpointAddressRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateDBInstanceEndpointAddressRequest setResourceOwnerId(Long resourceOwnerId) {

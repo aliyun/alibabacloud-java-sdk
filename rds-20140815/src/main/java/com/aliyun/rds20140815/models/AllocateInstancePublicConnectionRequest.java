@@ -38,6 +38,9 @@ public class AllocateInstancePublicConnectionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("PGBouncerPort")
+    public String PGBouncerPort;
+
     /**
      * <p>The public port of the instance. Valid values: **1000 to 5999**.</p>
      */
@@ -101,6 +104,14 @@ public class AllocateInstancePublicConnectionRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public AllocateInstancePublicConnectionRequest setPGBouncerPort(String PGBouncerPort) {
+        this.PGBouncerPort = PGBouncerPort;
+        return this;
+    }
+    public String getPGBouncerPort() {
+        return this.PGBouncerPort;
     }
 
     public AllocateInstancePublicConnectionRequest setPort(String port) {

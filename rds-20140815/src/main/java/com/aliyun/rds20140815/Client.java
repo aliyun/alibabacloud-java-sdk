@@ -256,6 +256,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.PGBouncerPort)) {
+            query.put("PGBouncerPort", request.PGBouncerPort);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.port)) {
             query.put("Port", request.port);
         }
@@ -1941,6 +1945,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PrivateIpAddress", request.privateIpAddress);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
@@ -2019,6 +2027,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.port)) {
             query.put("Port", request.port);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
@@ -2215,6 +2227,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
@@ -7218,12 +7234,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * @deprecated : DescribeDBInstancesAsCsv is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.
       * This operation is no longer available. You can call the DescribeDBInstanceAttribute operation to query information about an instance.
       *
       * @param request DescribeDBInstancesAsCsvRequest
       * @param runtime runtime options for this request RuntimeOptions
       * @return DescribeDBInstancesAsCsvResponse
      */
+    // Deprecated
     public DescribeDBInstancesAsCsvResponse describeDBInstancesAsCsvWithOptions(DescribeDBInstancesAsCsvRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7277,11 +7295,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * @deprecated : DescribeDBInstancesAsCsv is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.
       * This operation is no longer available. You can call the DescribeDBInstanceAttribute operation to query information about an instance.
       *
       * @param request DescribeDBInstancesAsCsvRequest
       * @return DescribeDBInstancesAsCsvResponse
      */
+    // Deprecated
     public DescribeDBInstancesAsCsvResponse describeDBInstancesAsCsv(DescribeDBInstancesAsCsvRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDBInstancesAsCsvWithOptions(request, runtime);
@@ -13256,6 +13276,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.PGBouncerPort)) {
+            query.put("PGBouncerPort", request.PGBouncerPort);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.port)) {

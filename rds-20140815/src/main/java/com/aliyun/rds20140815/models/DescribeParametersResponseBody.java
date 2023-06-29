@@ -22,6 +22,9 @@ public class DescribeParametersResponseBody extends TeaModel {
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    /**
+     * <p>Parameter template information.</p>
+     */
     @NameInMap("ParamGroupInfo")
     public DescribeParametersResponseBodyParamGroupInfo paramGroupInfo;
 
@@ -160,15 +163,27 @@ public class DescribeParametersResponseBody extends TeaModel {
     }
 
     public static class DescribeParametersResponseBodyParamGroupInfo extends TeaModel {
+        /**
+         * <p>Parameter template ID.</p>
+         */
         @NameInMap("ParamGroupId")
         public String paramGroupId;
 
+        /**
+         * <p>Parameter template description.</p>
+         */
         @NameInMap("ParameterGroupDesc")
         public String parameterGroupDesc;
 
+        /**
+         * <p>Parameter template name.</p>
+         */
         @NameInMap("ParameterGroupName")
         public String parameterGroupName;
 
+        /**
+         * <p>Parameter template type.</p>
+         */
         @NameInMap("ParameterGroupType")
         public String parameterGroupType;
 
