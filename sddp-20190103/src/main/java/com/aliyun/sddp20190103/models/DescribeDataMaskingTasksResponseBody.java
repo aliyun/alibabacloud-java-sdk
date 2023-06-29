@@ -4,18 +4,33 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataMaskingTasksResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>An array that consists of de-identification tasks.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeDataMaskingTasksResponseBodyItems> items;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,51 +80,106 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeDataMaskingTasksResponseBodyItems extends TeaModel {
+        /**
+         * <p>The destination directory.</p>
+         */
         @NameInMap("DstPath")
         public String dstPath;
 
+        /**
+         * <p>The service to which the data to be de-identified belongs. Valid values: **1**, **2**, **3**, **4**, and **5**. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+         */
         @NameInMap("DstType")
         public Integer dstType;
 
+        /**
+         * <p>The service to which the de-identified data belongs. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**.</p>
+         */
         @NameInMap("DstTypeCode")
         public String dstTypeCode;
 
+        /**
+         * <p>The time when the task was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>Indicates whether the de-identification task is running.</p>
+         */
         @NameInMap("HasUnfinishProcess")
         public Boolean hasUnfinishProcess;
 
+        /**
+         * <p>The ID of the task.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>Indicates whether the source table is de-identified.</p>
+         */
         @NameInMap("OriginalTable")
         public Boolean originalTable;
 
+        /**
+         * <p>The user who created the de-identification task.</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>The number of times that the de-identification task is run.</p>
+         */
         @NameInMap("RunCount")
         public Integer runCount;
 
+        /**
+         * <p>The source path.</p>
+         */
         @NameInMap("SrcPath")
         public String srcPath;
 
+        /**
+         * <p>The code of the service to which the data to be de-identified belongs. Valid values: **1**, **2**, **3**, **4**, and **5**. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+         */
         @NameInMap("SrcType")
         public Integer srcType;
 
+        /**
+         * <p>The service to which the data to be de-identified belongs. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**.</p>
+         */
         @NameInMap("SrcTypeCode")
         public String srcTypeCode;
 
+        /**
+         * <p>The status of the task. Valid values:</p>
+         * <br>
+         * <p>*   **0**: disabled</p>
+         * <p>*   **1**: enabled</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The ID of the task.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The name of the task.</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
+        /**
+         * <p>The mode in which the de-identification task is run. Valid values:</p>
+         * <br>
+         * <p>*   **1**: manual</p>
+         * <p>*   **2**: scheduled</p>
+         * <p>*   **3**: manual and scheduled</p>
+         */
         @NameInMap("TriggerType")
         public Integer triggerType;
 

@@ -4,9 +4,15 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeConfigsResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of common configuration items for alerts.</p>
+     */
     @NameInMap("ConfigList")
     public java.util.List<DescribeConfigsResponseBodyConfigList> configList;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +38,33 @@ public class DescribeConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeConfigsResponseBodyConfigList extends TeaModel {
+        /**
+         * <p>The code of the common configuration item.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The description of the default value for the common configuration item.</p>
+         */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
+        /**
+         * <p>The description of the common configuration item.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The unique ID of the common configuration item.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The value of the common configuration item.</p>
+         */
         @NameInMap("Value")
         public String value;
 

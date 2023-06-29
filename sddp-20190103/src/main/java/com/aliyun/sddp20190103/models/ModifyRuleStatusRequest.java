@@ -4,15 +4,37 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class ModifyRuleStatusRequest extends TeaModel {
+    /**
+     * <p>The ID of the sensitive data detection rule.</p>
+     * <br>
+     * <p>> You can query the ID of the sensitive data detection rule by calling the **DescribeRules** operation.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The ID of the sensitive data detection rule. Separate multiple IDs with commas (,).</p>
+     * <br>
+     * <p>> You can query the ID of the sensitive data detection rule by calling the **DescribeRules** operation.</p>
+     */
     @NameInMap("Ids")
     public String ids;
 
+    /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Specifies whether to enable or disable the sensitive data detection rule. Valid values:</p>
+     * <br>
+     * <p>*   **0**: disables the sensitive data detection rule.</p>
+     * <p>*   **1**: enables the sensitive data detection rule.</p>
+     */
     @NameInMap("Status")
     public Integer status;
 

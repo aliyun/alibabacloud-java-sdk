@@ -4,12 +4,32 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataLimitSetRequest extends TeaModel {
+    /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <br>
+     * <p>*   **zh_cn**: Simplified Chinese (default)</p>
+     * <p>*   **en_us**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The parent asset ID of the data asset.</p>
+     * <br>
+     * <p>You can call the [DescribeDataLimitDetail](~~DescribeDataLimitDetail~~) or [DescribeDataLimits](~~DescribeDataLimits~~) operation to obtain the parent asset ID of the data asset from the value of the **ParentId** parameter.</p>
+     */
     @NameInMap("ParentId")
     public String parentId;
 
+    /**
+     * <p>The type of service to which the data asset belongs. Valid values:</p>
+     * <br>
+     * <p>*   **1**: MaxCompute</p>
+     * <p>*   **2**: OSS</p>
+     * <p>*   **3**: AnalyticDB for MySQL</p>
+     * <p>*   **4**: Tablestore</p>
+     * <p>*   **5**: ApsaraDB RDS</p>
+     */
     @NameInMap("ResourceType")
     public Integer resourceType;
 

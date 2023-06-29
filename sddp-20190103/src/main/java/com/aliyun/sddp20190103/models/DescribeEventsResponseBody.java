@@ -4,18 +4,33 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventsResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>An array that consists of the anomalous events.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeEventsResponseBodyItems> items;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,63 +80,134 @@ public class DescribeEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeEventsResponseBodyItems extends TeaModel {
+        /**
+         * <p>The time when an alert was triggered for the anomalous event. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         */
         @NameInMap("AlertTime")
         public Long alertTime;
 
+        /**
+         * <p>Indicates whether the detection of anomalous events is enhanced. If the detection of anomalous events is enhanced, the detection accuracy and the rate of triggering alerts for anomalous events are improved. Valid values:</p>
+         * <br>
+         * <p>*   true: yes</p>
+         * <p>*   false: no</p>
+         */
         @NameInMap("Backed")
         public Boolean backed;
 
+        /**
+         * <p>The display name of the account that is used to handle the anomalous event.</p>
+         */
         @NameInMap("DealDisplayName")
         public String dealDisplayName;
 
+        /**
+         * <p>The username of the account that is used to handle the anomalous event.</p>
+         */
         @NameInMap("DealLoginName")
         public String dealLoginName;
 
+        /**
+         * <p>The time when the anomalous event was handled. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         */
         @NameInMap("DealTime")
         public Long dealTime;
 
+        /**
+         * <p>The ID of the account that is used to handle the anomalous event.</p>
+         */
         @NameInMap("DealUserId")
         public Long dealUserId;
 
+        /**
+         * <p>The display name of the account that triggered the anomalous event.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The time when the anomalous event occurred. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         */
         @NameInMap("EventTime")
         public Long eventTime;
 
+        /**
+         * <p>The ID of the anomalous event.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The username of the account that triggered the anomalous event.</p>
+         */
         @NameInMap("LoginName")
         public String loginName;
 
+        /**
+         * <p>The name of the service in which the anomalous event was detected.</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
+        /**
+         * <p>The handling status for the anomalous event. Valid values:</p>
+         * <br>
+         * <p>*   0: unhandled</p>
+         * <p>*   1: confirmed</p>
+         * <p>*   2: marked as false positive</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The name of the handling status for the anomalous event.</p>
+         */
         @NameInMap("StatusName")
         public String statusName;
 
+        /**
+         * <p>The code of the anomalous event subtype.</p>
+         */
         @NameInMap("SubTypeCode")
         public String subTypeCode;
 
+        /**
+         * <p>The name of the anomalous event subtype.</p>
+         */
         @NameInMap("SubTypeName")
         public String subTypeName;
 
+        /**
+         * <p>The name of the destination service in an anomalous data flow.</p>
+         */
         @NameInMap("TargetProductCode")
         public String targetProductCode;
 
+        /**
+         * <p>The code of the anomalous event type.</p>
+         */
         @NameInMap("TypeCode")
         public String typeCode;
 
+        /**
+         * <p>The name of the anomalous event type.</p>
+         */
         @NameInMap("TypeName")
         public String typeName;
 
+        /**
+         * <p>The ID of the account that triggered the anomalous event.</p>
+         */
         @NameInMap("UserId")
         public Long userId;
 
+        /**
+         * <p>The severity of the anomalous event.</p>
+         * <br>
+         * <p>*   **1**: low</p>
+         * <p>*   **2**: medium</p>
+         * <p>*   **3**: high</p>
+         */
         @NameInMap("WarnLevel")
         public Integer warnLevel;
 

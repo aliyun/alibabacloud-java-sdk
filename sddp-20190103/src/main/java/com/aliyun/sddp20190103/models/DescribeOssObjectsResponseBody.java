@@ -4,18 +4,33 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeOssObjectsResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>An array that consists of the OSS objects.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeOssObjectsResponseBodyItems> items;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,12 +80,27 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
     }
 
     public static class DescribeOssObjectsResponseBodyItemsRuleList extends TeaModel {
+        /**
+         * <p>The number of times that the rule is hit.</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The search keyword. Fuzzy match is supported.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The sensitivity level of the OSS object. Valid values:</p>
+         * <br>
+         * <p>*   **1**: N/A, which indicates that no sensitive data is detected.</p>
+         * <p>*   **2**: S1, which indicates the low sensitivity level.</p>
+         * <p>*   **3**: S2, which indicates the medium sensitivity level.</p>
+         * <p>*   **4**: S3, which indicates the high sensitivity level.</p>
+         * <p>*   **5**: S4, which indicates the highest sensitivity level.</p>
+         */
         @NameInMap("RiskLevelId")
         public Long riskLevelId;
 
@@ -106,45 +136,93 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
     }
 
     public static class DescribeOssObjectsResponseBodyItems extends TeaModel {
+        /**
+         * <p>The name of the OSS bucket.</p>
+         */
         @NameInMap("BucketName")
         public String bucketName;
 
+        /**
+         * <p>The type ID of the OSS object. Valid values include **900001**, **800015**, or **800005**, which indicates the MP4 file, PDF file, or OSS configuration file, respectively.</p>
+         */
         @NameInMap("Category")
         public Long category;
 
+        /**
+         * <p>The file type of the OSS object.</p>
+         */
         @NameInMap("CategoryName")
         public String categoryName;
 
+        /**
+         * <p>The file ID of the OSS object.</p>
+         */
         @NameInMap("FileId")
         public String fileId;
 
+        /**
+         * <p>The ID of the OSS object.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The ID of the instance to which the OSS object belongs.</p>
+         */
         @NameInMap("InstanceId")
         public Long instanceId;
 
+        /**
+         * <p>The name of the OSS object.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The region ID of the OSS object.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The sensitivity level of the OSS object. Valid values:</p>
+         * <br>
+         * <p>*   **1**: N/A, which indicates that no sensitive data is detected.</p>
+         * <p>*   **2**: S1, which indicates the low sensitivity level.</p>
+         * <p>*   **3**: S2, which indicates the medium sensitivity level.</p>
+         * <p>*   **4**: S3, which indicates the high sensitivity level.</p>
+         * <p>*   **5**: S4, which indicates the highest sensitivity level.</p>
+         */
         @NameInMap("RiskLevelId")
         public Long riskLevelId;
 
+        /**
+         * <p>The name of the sensitivity level for the OSS object.</p>
+         */
         @NameInMap("RiskLevelName")
         public String riskLevelName;
 
+        /**
+         * <p>The number of rules that are hit.</p>
+         */
         @NameInMap("RuleCount")
         public Integer ruleCount;
 
+        /**
+         * <p>An array that consists of the rules.</p>
+         */
         @NameInMap("RuleList")
         public java.util.List<DescribeOssObjectsResponseBodyItemsRuleList> ruleList;
 
+        /**
+         * <p>The number of fields that are hit.</p>
+         */
         @NameInMap("SensitiveCount")
         public Integer sensitiveCount;
 
+        /**
+         * <p>The size of the file. Unit: bytes.</p>
+         */
         @NameInMap("Size")
         public Long size;
 

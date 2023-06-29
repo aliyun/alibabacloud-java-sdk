@@ -4,18 +4,33 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataLimitsResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>An array that consists of the data assets.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeDataLimitsResponseBodyItems> items;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,113 +80,294 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
     }
 
     public static class DescribeDataLimitsResponseBodyItems extends TeaModel {
+        /**
+         * <p>Indicates whether the security audit feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **1**: yes</p>
+         * <p>*   **0**: no</p>
+         */
         @NameInMap("AuditStatus")
         public Integer auditStatus;
 
+        /**
+         * <p>Indicates whether the data asset can be automatically scanned. Valid values:</p>
+         * <br>
+         * <p>*   **0**: no</p>
+         * <p>*   **1**: yes</p>
+         */
         @NameInMap("AutoScan")
         public Integer autoScan;
 
+        /**
+         * <p>The data detection status. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The data detection is ready.</p>
+         * <p>*   **1**: The data detection is running.</p>
+         * <p>*   **2**: The connectivity test is in progress.</p>
+         * <p>*   **3**: The connectivity test passed.</p>
+         * <p>*   **4**: The connectivity test failed.</p>
+         */
         @NameInMap("CheckStatus")
         public Integer checkStatus;
 
+        /**
+         * <p>The name of the data detection status.</p>
+         */
         @NameInMap("CheckStatusName")
         public String checkStatusName;
 
+        /**
+         * <p>Indicates whether DSC has the data de-identification permissions on the data asset. Valid values:</p>
+         * <br>
+         * <p>*   **1**: yes</p>
+         * <p>*   **0**: no</p>
+         */
         @NameInMap("DatamaskStatus")
         public Integer datamaskStatus;
 
+        /**
+         * <p>The database engine version of the instance.</p>
+         */
         @NameInMap("DbVersion")
         public String dbVersion;
 
+        /**
+         * <p>Indicates whether DSC has the data detection permissions on the data asset. Valid values:</p>
+         * <br>
+         * <p>*   **1**: yes</p>
+         * <p>*   **0**: no</p>
+         */
         @NameInMap("Enable")
         public Integer enable;
 
+        /**
+         * <p>The type of the database engine. Valid values include **MySQL**, **SQLServer**, **Oracle**, **PostgreSQL**, and **MongoDB**.</p>
+         */
         @NameInMap("EngineType")
         public String engineType;
 
+        /**
+         * <p>The error code that is returned.</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The reason for the failure.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>Indicates whether the data leak prevention feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **0**: no</p>
+         * <p>*   **1**: yes (default value)</p>
+         */
         @NameInMap("EventStatus")
         public Integer eventStatus;
 
+        /**
+         * <p>The time when the data asset was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>The ID of the data asset.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The description of the instance.</p>
+         */
         @NameInMap("InstanceDescription")
         public String instanceDescription;
 
+        /**
+         * <p>The ID of the instance to which the table belongs.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The time when the last scan was finished.</p>
+         * <br>
+         * <p>*   The value is a UNIX timestamp.</p>
+         * <p>*   Unit: milliseconds.</p>
+         */
         @NameInMap("LastFinishedTime")
         public Long lastFinishedTime;
 
+        /**
+         * <p>The region in which the data asset resides.</p>
+         */
         @NameInMap("LocalName")
         public String localName;
 
+        /**
+         * <p>The retention period of raw logs. Unit: days.</p>
+         */
         @NameInMap("LogStoreDay")
         public Integer logStoreDay;
 
+        /**
+         * <p>The next time when the data asset is scanned. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         */
         @NameInMap("NextStartTime")
         public Long nextStartTime;
 
+        /**
+         * <p>Indicates whether the optical character recognition (OCR) feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **0**: no</p>
+         * <p>*   **1**: yes</p>
+         */
         @NameInMap("OcrStatus")
         public Integer ocrStatus;
 
+        /**
+         * <p>The parent ID of the data asset. Valid values include **bucket, db, and project**.</p>
+         */
         @NameInMap("ParentId")
         public String parentId;
 
+        /**
+         * <p>The port number of the self-managed database.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The status of the data asset scan. Valid values:</p>
+         * <br>
+         * <p>*   **-1**: invalid</p>
+         * <p>*   **0**: waiting</p>
+         * <p>*   **1**: being scanned</p>
+         * <p>*   **2**: suspended</p>
+         * <p>*   **3**: completed</p>
+         */
         @NameInMap("ProcessStatus")
         public Integer processStatus;
 
+        /**
+         * <p>The total number of data tables or files.</p>
+         */
         @NameInMap("ProcessTotalCount")
         public Integer processTotalCount;
 
+        /**
+         * <p>The region in which the data asset resides.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The type of the service to which the data asset belongs. Valid values:</p>
+         * <br>
+         * <p>*   **1**: MaxCompute</p>
+         * <p>*   **2**: OSS</p>
+         * <p>*   **3**: AnalyticDB for MySQL</p>
+         * <p>*   **4**: Tablestore</p>
+         * <p>*   **5**: ApsaraDB RDS</p>
+         * <p>*   **6**: self-managed database</p>
+         */
         @NameInMap("ResourceType")
         public Long resourceType;
 
+        /**
+         * <p>The code of the service to which the data asset belongs. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**.</p>
+         */
         @NameInMap("ResourceTypeCode")
         public String resourceTypeCode;
 
+        /**
+         * <p>The number of sensitive data samples. Valid values: **0**, **5**, and **10**. Unit: data entries.</p>
+         */
         @NameInMap("SamplingSize")
         public Integer samplingSize;
 
+        /**
+         * <p>The array consisting of the IDs of the security groups that are used by PrivateLink when you install the DSC agent.</p>
+         */
+        @NameInMap("SecurityGroupIdList")
+        public java.util.List<String> securityGroupIdList;
+
+        /**
+         * <p>Indicates whether the security audit feature is supported. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("SupportAudit")
         public Boolean supportAudit;
 
+        /**
+         * <p>Indicates whether data de-identification is supported. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("SupportDatamask")
         public Boolean supportDatamask;
 
+        /**
+         * <p>Indicates whether anomalous event detection is supported. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("SupportEvent")
         public Boolean supportEvent;
 
+        /**
+         * <p>Indicates whether OCR is supported. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("SupportOcr")
         public Boolean supportOcr;
 
+        /**
+         * <p>Indicates whether the data asset scan feature is supported. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("SupportScan")
         public Boolean supportScan;
 
+        /**
+         * <p>The alias of the tenant.</p>
+         */
         @NameInMap("TenantName")
         public String tenantName;
 
+        /**
+         * <p>The total number of fields in the table.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
+        /**
+         * <p>The username that is used to access the data asset.</p>
+         */
         @NameInMap("UserName")
         public String userName;
+
+        /**
+         * <p>The array consisting of the IDs of the vSwitches that are used by PrivateLink when you install the DSC agent.</p>
+         */
+        @NameInMap("VSwitchIdList")
+        public java.util.List<String> vSwitchIdList;
+
+        /**
+         * <p>The ID of the virtual private cloud (VPC) to which the data asset belongs.</p>
+         */
+        @NameInMap("VpcId")
+        public String vpcId;
 
         public static DescribeDataLimitsResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeDataLimitsResponseBodyItems self = new DescribeDataLimitsResponseBodyItems();
@@ -402,6 +598,14 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             return this.samplingSize;
         }
 
+        public DescribeDataLimitsResponseBodyItems setSecurityGroupIdList(java.util.List<String> securityGroupIdList) {
+            this.securityGroupIdList = securityGroupIdList;
+            return this;
+        }
+        public java.util.List<String> getSecurityGroupIdList() {
+            return this.securityGroupIdList;
+        }
+
         public DescribeDataLimitsResponseBodyItems setSupportAudit(Boolean supportAudit) {
             this.supportAudit = supportAudit;
             return this;
@@ -464,6 +668,22 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         }
         public String getUserName() {
             return this.userName;
+        }
+
+        public DescribeDataLimitsResponseBodyItems setVSwitchIdList(java.util.List<String> vSwitchIdList) {
+            this.vSwitchIdList = vSwitchIdList;
+            return this;
+        }
+        public java.util.List<String> getVSwitchIdList() {
+            return this.vSwitchIdList;
+        }
+
+        public DescribeDataLimitsResponseBodyItems setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }

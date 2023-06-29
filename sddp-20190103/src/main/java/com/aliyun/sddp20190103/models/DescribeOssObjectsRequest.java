@@ -4,35 +4,84 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeOssObjectsRequest extends TeaModel {
+    /**
+     * <p>The page number of the page to return.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The ID of the instance to which the OSS object belongs.</p>
+     * <br>
+     * <p>> You can call the **DescribeInstances** operation to query the instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The end time of the last scan. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     */
     @NameInMap("LastScanTimeEnd")
     public Long lastScanTimeEnd;
 
+    /**
+     * <p>The start time of the last scan. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     */
     @NameInMap("LastScanTimeStart")
     public Long lastScanTimeStart;
 
+    /**
+     * <p>The search keyword. Fuzzy match is supported.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The sensitivity level of the OSS object. Valid values:</p>
+     * <br>
+     * <p>*   **1**: N/A, which indicates that no sensitive data is detected.</p>
+     * <p>*   **2**: S1, which indicates the low sensitivity level.</p>
+     * <p>*   **3**: S2, which indicates the medium sensitivity level.</p>
+     * <p>*   **4**: S3, which indicates the high sensitivity level.</p>
+     * <p>*   **5**: S4, which indicates the highest sensitivity level.</p>
+     */
     @NameInMap("RiskLevelId")
     public Integer riskLevelId;
 
+    /**
+     * <p>The ID of the sensitive data detection rule that the OSS object hits.</p>
+     * <br>
+     * <p>> You can call the **DescribeRules** operation to query the ID of the sensitive data detection rule.</p>
+     */
     @NameInMap("RuleId")
     public Long ruleId;
 
+    /**
+     * <p>The region in which the data asset resides.</p>
+     */
     @NameInMap("ServiceRegionId")
     public String serviceRegionId;
+
+    /**
+     * <p>The ID of the industry-specific rule template.</p>
+     */
+    @NameInMap("TemplateId")
+    public Long templateId;
 
     public static DescribeOssObjectsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeOssObjectsRequest self = new DescribeOssObjectsRequest();
@@ -117,6 +166,14 @@ public class DescribeOssObjectsRequest extends TeaModel {
     }
     public String getServiceRegionId() {
         return this.serviceRegionId;
+    }
+
+    public DescribeOssObjectsRequest setTemplateId(Long templateId) {
+        this.templateId = templateId;
+        return this;
+    }
+    public Long getTemplateId() {
+        return this.templateId;
     }
 
 }

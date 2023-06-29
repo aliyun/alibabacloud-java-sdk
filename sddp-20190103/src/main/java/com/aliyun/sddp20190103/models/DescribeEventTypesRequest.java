@@ -4,15 +4,37 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventTypesRequest extends TeaModel {
+    /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The type of anomalous event for which you want to query the anomalous events of subtypes. Valid values:</p>
+     * <br>
+     * <p>*   **01**: anomalous permission usage</p>
+     * <p>*   **02**: anomalous data flow</p>
+     * <p>*   **03**: anomalous data operation</p>
+     */
     @NameInMap("ParentTypeId")
     public Long parentTypeId;
 
+    /**
+     * <p>The type of the resource. Valid values include **1**, **2**, **3**, **4**, and **5**. The value 1 indicates MaxCompute. The value 2 indicates Object Storage Service (OSS). The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+     */
     @NameInMap("ResourceId")
     public Integer resourceId;
 
+    /**
+     * <p>The status of the anomalous event. Valid values:</p>
+     * <br>
+     * <p>*   **1**: enabled</p>
+     * <p>*   **2**: disabled</p>
+     */
     @NameInMap("Status")
     public Integer status;
 

@@ -4,9 +4,15 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class CreateRuleResponseBody extends TeaModel {
+    /**
+     * <p>The unique ID of the sensitive data detection rule.</p>
+     */
     @NameInMap("Id")
     public Integer id;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

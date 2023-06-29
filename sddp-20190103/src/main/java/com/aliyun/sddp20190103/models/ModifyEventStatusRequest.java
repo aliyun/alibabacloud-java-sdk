@@ -4,18 +4,44 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class ModifyEventStatusRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enhance the detection of anomalous events. If you enhance the detection of anomalous events, the detection accuracy and the rate of triggering alerts for anomalous events are improved. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     */
     @NameInMap("Backed")
     public Boolean backed;
 
+    /**
+     * <p>The reason why the anomalous event is handled.</p>
+     */
     @NameInMap("DealReason")
     public String dealReason;
 
+    /**
+     * <p>The ID of the anomalous event.</p>
+     * <br>
+     * <p>> You can call the **DescribeEvents** operation to query the ID of the anomalous event.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh_cn**. Valid values:</p>
+     * <br>
+     * <p>*   **zh_cn**: Chinese</p>
+     * <p>*   **en_us**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The method to handle the anomalous event. Valid values:</p>
+     * <br>
+     * <p>*   **1**: marks the anomalous event as a false positive.</p>
+     * <p>*   **2**: confirms and handles the anomalous event.</p>
+     */
     @NameInMap("Status")
     public Integer status;
 
