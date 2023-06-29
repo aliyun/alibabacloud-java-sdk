@@ -4,6 +4,12 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserStatusRequest extends TeaModel {
+    /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <br>
+     * <p>*   **zh_cn**: Simplified Chinese (default)</p>
+     * <p>*   **en_us**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 

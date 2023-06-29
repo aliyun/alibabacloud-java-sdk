@@ -4,18 +4,33 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceSourcesResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>An array that consists of the queried data assets.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeInstanceSourcesResponseBodyItems> items;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,78 +80,177 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceSourcesResponseBodyItems extends TeaModel {
+        /**
+         * <p>Indicates whether the security audit feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **1**: yes</p>
+         * <p>*   **0**: no</p>
+         */
         @NameInMap("AuditStatus")
         public Integer auditStatus;
 
+        /**
+         * <p>Indicates whether the automatic scan feature is enabled to detect sensitive data. Valid values:</p>
+         * <br>
+         * <p>*   **0**: no</p>
+         * <p>*   **1**: yes</p>
+         */
         @NameInMap("AutoScan")
         public Integer autoScan;
 
+        /**
+         * <p>Indicates whether the username and password can be changed. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("CanModifyUserName")
         public Boolean canModifyUserName;
 
+        /**
+         * <p>The data detection status. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The data detection is ready.</p>
+         * <p>*   **1**: The data detection is running.</p>
+         * <p>*   **2**: The connectivity test is in progress.</p>
+         * <p>*   **3**: The connectivity test passed.</p>
+         * <p>*   **4**: The connectivity test failed.</p>
+         */
         @NameInMap("CheckStatus")
         public Integer checkStatus;
 
+        /**
+         * <p>Indicates whether DSC has the data de-identification permissions on the data asset. Valid values:</p>
+         * <br>
+         * <p>*   **1**: yes</p>
+         * <p>*   **0**: no</p>
+         */
         @NameInMap("DatamaskStatus")
         public Integer datamaskStatus;
 
+        /**
+         * <p>The name of the database to which the data asset belongs.</p>
+         */
         @NameInMap("DbName")
         public String dbName;
 
+        /**
+         * <p>Indicates whether sensitive data detection is enabled for the data asset. Valid values:</p>
+         * <br>
+         * <p>*   **1**: yes</p>
+         * <p>*   **0**: no</p>
+         */
         @NameInMap("Enable")
         public Integer enable;
 
+        /**
+         * <p>The type of the database engine. Valid values: **MySQL, MariaDB, Oracle, PostgreSQL, and SQLServer**.</p>
+         */
         @NameInMap("EngineType")
         public String engineType;
 
+        /**
+         * <p>The reason for the failure.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The time when the data asset was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>The unique ID of the data asset.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The description of the instance.</p>
+         */
         @NameInMap("InstanceDescription")
         public String instanceDescription;
 
+        /**
+         * <p>The ID of the instance</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The storage space size of the instance. This parameter is valid only if the value of the ProductId parameter is 2. Unit: bytes.</p>
+         */
         @NameInMap("InstanceSize")
         public Long instanceSize;
 
+        /**
+         * <p>The time when the data asset was last modified. Unit: milliseconds.</p>
+         */
         @NameInMap("LastModifyTime")
         public Long lastModifyTime;
 
+        /**
+         * <p>The ID of the account that is last used to modify the data asset.</p>
+         */
         @NameInMap("LastModifyUserId")
         public String lastModifyUserId;
 
+        /**
+         * <p>The retention period of raw logs. Unit: days.</p>
+         */
         @NameInMap("LogStoreDay")
         public Integer logStoreDay;
 
+        /**
+         * <p>Indicates whether the password is used. Valid values:</p>
+         * <br>
+         * <p>*   **1**: yes</p>
+         * <p>*   **0**: no</p>
+         */
         @NameInMap("PasswordStatus")
         public Integer passwordStatus;
 
+        /**
+         * <p>The ID of the service to which the data asset belongs. Valid values include **1**, **2**, **3**, **4**, and **5**. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+         */
         @NameInMap("ProductId")
         public Long productId;
 
+        /**
+         * <p>The ID of the region where the instance resides.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The name of the region.</p>
+         */
         @NameInMap("RegionName")
         public String regionName;
 
+        /**
+         * <p>The number of sensitive data samples. Valid values: **0**, **5**, and **10**. Unit: data entries.</p>
+         */
         @NameInMap("SamplingSize")
         public Integer samplingSize;
 
+        /**
+         * <p>The ID of the tenant.</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 
+        /**
+         * <p>The name of the tenant.</p>
+         */
         @NameInMap("TenantName")
         public String tenantName;
 
+        /**
+         * <p>The username of the account.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 

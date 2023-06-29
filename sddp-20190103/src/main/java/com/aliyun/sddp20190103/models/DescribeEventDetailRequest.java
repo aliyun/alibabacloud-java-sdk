@@ -4,9 +4,20 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventDetailRequest extends TeaModel {
+    /**
+     * <p>The ID of the anomalous event.</p>
+     * <br>
+     * <p>> You can call the **DescribeEvents** operation to query the ID of the anomalous event.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 

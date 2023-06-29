@@ -4,18 +4,33 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeTablesResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>An array that consists of tables.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeTablesResponseBodyItems> items;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,12 +80,27 @@ public class DescribeTablesResponseBody extends TeaModel {
     }
 
     public static class DescribeTablesResponseBodyItemsRuleList extends TeaModel {
+        /**
+         * <p>The total number of rules.</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The name of the rule.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The sensitivity level of the sensitive data that hits the sensitive data detection rule. Valid values:</p>
+         * <br>
+         * <p>*   **1**: N/A, which indicates that no sensitive data is detected.</p>
+         * <p>*   **2**: S1, which indicates the low sensitivity level.</p>
+         * <p>*   **3**: S2, which indicates the medium sensitivity level.</p>
+         * <p>*   **4**: S3, which indicates the high sensitivity level.</p>
+         * <p>*   **5**: S4, which indicates the highest sensitivity level.</p>
+         */
         @NameInMap("RiskLevelId")
         public Long riskLevelId;
 
@@ -106,54 +136,120 @@ public class DescribeTablesResponseBody extends TeaModel {
     }
 
     public static class DescribeTablesResponseBodyItems extends TeaModel {
+        /**
+         * <p>The point in time when the table was created. Unit: milliseconds.</p>
+         */
         @NameInMap("CreationTime")
         public Long creationTime;
 
+        /**
+         * <p>The ID of the table.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The description of the data asset.</p>
+         */
         @NameInMap("InstanceDescription")
         public String instanceDescription;
 
+        /**
+         * <p>The ID of the data asset to which the table belongs.</p>
+         */
         @NameInMap("InstanceId")
         public Long instanceId;
 
+        /**
+         * <p>The name of the data asset to which the table belongs.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The name of the table.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The Alibaba Cloud account to which the table belongs.</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>The name of the service to which the table belongs. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**. For more information about the types of data assets from which DSC can scan for sensitive data, see [Supported data assets](~~212906~~).</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
+        /**
+         * <p>The ID of the service to which the table belongs.</p>
+         */
         @NameInMap("ProductId")
         public String productId;
 
+        /**
+         * <p>The sensitivity level of the table. Each sensitivity level ID corresponds to a sensitivity level name. Valid values:</p>
+         * <br>
+         * <p>*   **1**: N/A, which indicates that no sensitive data is detected.</p>
+         * <p>*   **2**: S1, which indicates the low sensitivity level.</p>
+         * <p>*   **3**: S2, which indicates the medium sensitivity level.</p>
+         * <p>*   **4**: S3, which indicates the high sensitivity level.</p>
+         * <p>*   **5**: S4, which indicates the highest sensitivity level.</p>
+         */
         @NameInMap("RiskLevelId")
         public Long riskLevelId;
 
+        /**
+         * <p>The name of the sensitivity level for the table. Valid values:</p>
+         * <br>
+         * <p>*   **N/A**: indicates that no sensitive data is detected.</p>
+         * <p>*   **S1**: indicates the low sensitivity level.</p>
+         * <p>*   **S2**: indicates the medium sensitivity level.</p>
+         * <p>*   **S3**: indicates the high sensitivity level.</p>
+         * <p>*   **S4**: indicates the highest sensitivity level.</p>
+         */
         @NameInMap("RiskLevelName")
         public String riskLevelName;
 
+        /**
+         * <p>The information about the sensitive data detection rules that are hit.</p>
+         */
         @NameInMap("RuleList")
         public java.util.List<DescribeTablesResponseBodyItemsRuleList> ruleList;
 
+        /**
+         * <p>Indicates whether the table contains sensitive fields. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("Sensitive")
         public Boolean sensitive;
 
+        /**
+         * <p>The total number of sensitive fields in the table.</p>
+         */
         @NameInMap("SensitiveCount")
         public Integer sensitiveCount;
 
+        /**
+         * <p>The percentage of sensitive fields in the table.</p>
+         */
         @NameInMap("SensitiveRatio")
         public String sensitiveRatio;
 
+        /**
+         * <p>The name of the tenant.</p>
+         */
         @NameInMap("TenantName")
         public String tenantName;
 
+        /**
+         * <p>The total number of fields in the table.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

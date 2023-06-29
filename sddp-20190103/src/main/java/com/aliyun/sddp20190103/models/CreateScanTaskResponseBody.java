@@ -4,9 +4,15 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class CreateScanTaskResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the custom scan task.</p>
+     */
     @NameInMap("Id")
     public Integer id;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

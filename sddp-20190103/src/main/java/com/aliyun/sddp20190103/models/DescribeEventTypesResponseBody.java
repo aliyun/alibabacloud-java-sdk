@@ -4,9 +4,17 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventTypesResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the types of anomalous events.</p>
+     * <br>
+     * <p>> If you leave the ParentTypeId parameter empty, anomalous event types are returned. If you set the ParentTypeId parameter, anomalous event subtypes under the specified anomalous event type are returned.</p>
+     */
     @NameInMap("EventTypeList")
     public java.util.List<DescribeEventTypesResponseBodyEventTypeList> eventTypeList;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,36 +40,75 @@ public class DescribeEventTypesResponseBody extends TeaModel {
     }
 
     public static class DescribeEventTypesResponseBodyEventTypeListSubTypeList extends TeaModel {
+        /**
+         * <p>The service to which the anomalous event detection rule applies. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**.</p>
+         */
         @NameInMap("AdaptedProduct")
         public String adaptedProduct;
 
+        /**
+         * <p>The code of the anomalous event subtype.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The code of the configuration.</p>
+         */
         @NameInMap("ConfigCode")
         public String configCode;
 
+        /**
+         * <p>The content format of anomalous event detection rule. Valid values:</p>
+         * <br>
+         * <p>*   **0**: numeric values such as thresholds</p>
+         * <p>*   **1**: text such as IP addresses</p>
+         */
         @NameInMap("ConfigContentType")
         public Integer configContentType;
 
+        /**
+         * <p>The description of the configuration.</p>
+         */
         @NameInMap("ConfigDescription")
         public String configDescription;
 
+        /**
+         * <p>The value of the configuration.</p>
+         */
         @NameInMap("ConfigValue")
         public String configValue;
 
+        /**
+         * <p>The description of the anomalous event subtype.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The number of times that the anomalous event hits the anomalous event detection rule.</p>
+         */
         @NameInMap("EventHitCount")
         public Integer eventHitCount;
 
+        /**
+         * <p>The ID of the anomalous event subtype.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The name of the anomalous event subtype.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Indicates whether detection is enabled for the anomalous event subtype. Valid values:</p>
+         * <br>
+         * <p>*   **1**: yes</p>
+         * <p>*   **0**: no</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
@@ -161,18 +208,33 @@ public class DescribeEventTypesResponseBody extends TeaModel {
     }
 
     public static class DescribeEventTypesResponseBodyEventTypeList extends TeaModel {
+        /**
+         * <p>The code of the anomalous event type.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The description of the anomalous event type.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the anomalous event type.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The name of the anomalous event type.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>An array that consists of anomalous event subtypes.</p>
+         */
         @NameInMap("SubTypeList")
         public java.util.List<DescribeEventTypesResponseBodyEventTypeListSubTypeList> subTypeList;
 

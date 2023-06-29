@@ -4,9 +4,15 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class CreateDataLimitResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the data asset.</p>
+     */
     @NameInMap("Id")
     public Integer id;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

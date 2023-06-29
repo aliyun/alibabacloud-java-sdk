@@ -4,18 +4,33 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribePackagesResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>An array that consists of the information about the packages.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribePackagesResponseBodyItems> items;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,33 +80,72 @@ public class DescribePackagesResponseBody extends TeaModel {
     }
 
     public static class DescribePackagesResponseBodyItems extends TeaModel {
+        /**
+         * <p>The point in time when the MaxCompute package was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         */
         @NameInMap("CreationTime")
         public Long creationTime;
 
+        /**
+         * <p>The ID of the package.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The ID of the instance to which the package belongs.</p>
+         */
         @NameInMap("InstanceId")
         public Long instanceId;
 
+        /**
+         * <p>The name of the package.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The account of the user that owns the package.</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>The sensitivity level of the package. Valid values:</p>
+         * <br>
+         * <p>*   **1**: N/A, which indicates that no sensitive data is detected.</p>
+         * <p>*   **2**: S1, which indicates the low sensitivity level.</p>
+         * <p>*   **3**: S2, which indicates the medium sensitivity level.</p>
+         * <p>*   **4**: S3, which indicates the high sensitivity level.</p>
+         * <p>*   **5**: S4, which indicates the highest sensitivity level.</p>
+         */
         @NameInMap("RiskLevelId")
         public Long riskLevelId;
 
+        /**
+         * <p>The name of the sensitivity level for the package.</p>
+         */
         @NameInMap("RiskLevelName")
         public String riskLevelName;
 
+        /**
+         * <p>Indicates whether the package contains sensitive data. Valid values:</p>
+         * <br>
+         * <p>*   true: yes</p>
+         * <p>*   false: no</p>
+         */
         @NameInMap("Sensitive")
         public Boolean sensitive;
 
+        /**
+         * <p>The total volume of sensitive data in the package. For example, the value can be the total number of sensitive tables in the MaxCompute package.</p>
+         */
         @NameInMap("SensitiveCount")
         public Integer sensitiveCount;
 
+        /**
+         * <p>The total volume of data in the package. For example, the value can be the total number of tables in the MaxCompute package.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

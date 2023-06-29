@@ -4,27 +4,66 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribePackagesRequest extends TeaModel {
+    /**
+     * <p>The page number of the page to return.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The ID of the instance to which the package belongs.</p>
+     * <br>
+     * <p>> You can call the **DescribeInstances** operation to query the ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public Long instanceId;
 
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh_cn**. Valid values:</p>
+     * <br>
+     * <p>*   **zh_cn**: Chinese</p>
+     * <p>*   **en_us**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The search keyword. Fuzzy match is supported.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the service to which the package belongs.</p>
+     * <br>
+     * <p>> You can call the **DescribeDataAssets** operation to query the ID of the service.</p>
+     */
     @NameInMap("ProductId")
     public Long productId;
 
+    /**
+     * <p>The sensitivity level of the package. Valid values:</p>
+     * <br>
+     * <p>*   **1**: N/A, which indicates that no sensitive data is detected.</p>
+     * <p>*   **2**: S1, which indicates the low sensitivity level.</p>
+     * <p>*   **3**: S2, which indicates the medium sensitivity level.</p>
+     * <p>*   **4**: S3, which indicates the high sensitivity level.</p>
+     * <p>*   **5**: S4, which indicates the highest sensitivity level.</p>
+     */
     @NameInMap("RiskLevelId")
     public Long riskLevelId;
 
+    /**
+     * <p>The ID of the sensitive data detection rule that the package hits.</p>
+     * <br>
+     * <p>> You can call the **DescribeRules** operation to query the ID of the sensitive data detection rule.</p>
+     */
     @NameInMap("RuleId")
     public Long ruleId;
 

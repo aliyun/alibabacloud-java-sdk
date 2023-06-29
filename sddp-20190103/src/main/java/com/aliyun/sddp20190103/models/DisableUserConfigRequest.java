@@ -4,9 +4,18 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DisableUserConfigRequest extends TeaModel {
+    /**
+     * <p>The code of the configuration item. You can call the [DescribeConfigs](~~DescribeConfigs~~) operation to obtain the code of the configuration item.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <br>
+     * <p>*   **zh_cn**: Chinese (default)</p>
+     * <p>*   **en_us**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 

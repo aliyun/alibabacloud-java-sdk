@@ -4,12 +4,29 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataLimitDetailRequest extends TeaModel {
+    /**
+     * <p>The unique ID of the data asset that you want to query.</p>
+     * <br>
+     * <p>> You can call the [DescribeDataLimits](~~DescribeDataLimits~~) operation to query the ID of the data asset.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Simplified Chinese.</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The network type of the data asset that you want to query. Valid values:</p>
+     * <br>
+     * <p>*   **1**: virtual private cloud (VPC)</p>
+     * <p>*   **2**: classic network</p>
+     */
     @NameInMap("NetworkType")
     public Integer networkType;
 

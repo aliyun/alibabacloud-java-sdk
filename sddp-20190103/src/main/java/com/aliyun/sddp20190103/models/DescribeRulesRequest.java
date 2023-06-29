@@ -4,48 +4,134 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeRulesRequest extends TeaModel {
+    /**
+     * <p>The content type of the sensitive data detection rule. Valid values:</p>
+     * <br>
+     * <p>*   **0**: keyword</p>
+     * <p>*   **2**: regular expression</p>
+     */
     @NameInMap("Category")
     public Integer category;
 
+    /**
+     * <p>The type of the content in the sensitive data detection rule. Valid values include **1**, **2**, **3**, **4**, and **5**. The value 1 indicates attempts to exploit SQL injections. The value 2 indicates bypass by using SQL injections. The value 3 indicates abuse of stored procedures. The value 4 indicates buffer overflow. The value 5 indicates SQL injections based on errors.</p>
+     */
     @NameInMap("ContentCategory")
     public Integer contentCategory;
 
+    /**
+     * <p>The page number of the page to return.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The type of the sensitive data detection rule. Valid values:</p>
+     * <br>
+     * <p>*   **0**: built-in rule</p>
+     * <p>*   **1**: custom rule</p>
+     */
     @NameInMap("CustomType")
     public Integer customType;
 
+    /**
+     * <p>The parent group type of the rule.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>Specifies whether to allow earlier versions of request parameters to support keywords that are supported in later versions of request parameters. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     * <br>
+     * <p>> To specify keywords as the content type of the sensitive data detection rule, you can set the Category parameter to 0 for earlier versions of request parameters and set the Category parameter to 5 for later versions of request parameters. You can specify the KeywordCompatible parameter based on your business requirements.</p>
+     */
     @NameInMap("KeywordCompatible")
     public Boolean keywordCompatible;
 
+    /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The match type. Valid values:</p>
+     * <br>
+     * <p>*   1: rule-based match</p>
+     * <p>*   2: dictionary-based match</p>
+     */
+    @NameInMap("MatchType")
+    public Integer matchType;
+
+    /**
+     * <p>The name of the sensitive data detection rule. Fuzzy match is supported.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The name of the service to which the data asset belongs. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**.</p>
+     */
     @NameInMap("ProductCode")
     public Integer productCode;
 
+    /**
+     * <p>The ID of the service to which the sensitive data detection rule is applied. Valid values include **1**, **2**, **3**, **4**, and **5**. The value 1 indicates MaxCompute. The value 2 indicates Object Storage Service (OSS). The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+     */
     @NameInMap("ProductId")
     public Long productId;
 
+    /**
+     * <p>The sensitivity level of the sensitive data that hits the sensitive data detection rule. Valid values:</p>
+     * <br>
+     * <p>*   **1**: N/A, which indicates that no sensitive data is detected.</p>
+     * <p>*   **2**: S1, which indicates the low sensitivity level.</p>
+     * <p>*   **3**: S2, which indicates the medium sensitivity level.</p>
+     * <p>*   **4**: S3, which indicates the high sensitivity level.</p>
+     * <p>*   **5**: S4, which indicates the highest sensitivity level.</p>
+     */
     @NameInMap("RiskLevelId")
     public Long riskLevelId;
 
+    /**
+     * <p>The type of the sensitive data detection rule. Valid values:</p>
+     * <br>
+     * <p>*   **1**: sensitive data detection rule</p>
+     * <p>*   **2**: audit rule</p>
+     * <p>*   **3**: anomalous event detection rule</p>
+     * <p>*   **99**: custom rule</p>
+     */
     @NameInMap("RuleType")
     public Integer ruleType;
 
+    /**
+     * <p>The status of the sensitive data detection rule. Valid values:</p>
+     * <br>
+     * <p>*   **1**: enabled</p>
+     * <p>*   **0**: disabled</p>
+     */
     @NameInMap("Status")
     public Integer status;
 
+    /**
+     * <p>The severity level of the alert. Valid values:</p>
+     * <br>
+     * <p>*   **1**: low</p>
+     * <p>*   **2**: medium</p>
+     * <p>*   **3**: high</p>
+     */
     @NameInMap("WarnLevel")
     public Integer warnLevel;
 
@@ -108,6 +194,14 @@ public class DescribeRulesRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public DescribeRulesRequest setMatchType(Integer matchType) {
+        this.matchType = matchType;
+        return this;
+    }
+    public Integer getMatchType() {
+        return this.matchType;
     }
 
     public DescribeRulesRequest setName(String name) {

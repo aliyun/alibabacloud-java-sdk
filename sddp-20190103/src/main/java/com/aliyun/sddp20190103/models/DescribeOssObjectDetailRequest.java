@@ -4,9 +4,20 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeOssObjectDetailRequest extends TeaModel {
+    /**
+     * <p>The ID of the OSS object.</p>
+     * <br>
+     * <p>> You can call the **DescribeOssObjects** operation to obtain the ID of the OSS object.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh_cn**. Valid values:</p>
+     * <br>
+     * <p>*   **zh_cn**: Chinese</p>
+     * <p>*   **en_us**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 

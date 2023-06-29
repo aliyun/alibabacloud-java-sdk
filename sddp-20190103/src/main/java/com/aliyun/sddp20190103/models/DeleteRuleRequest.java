@@ -4,9 +4,15 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DeleteRuleRequest extends TeaModel {
+    /**
+     * <p>The ID of the sensitive data detection rule.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The language of the content within the request and response. Valid values: **zh** and **en**. The value zh indicates Chinese, and the value en indicates English.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
