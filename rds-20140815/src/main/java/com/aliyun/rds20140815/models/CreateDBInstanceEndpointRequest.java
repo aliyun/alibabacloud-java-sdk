@@ -61,6 +61,9 @@ public class CreateDBInstanceEndpointRequest extends TeaModel {
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
@@ -143,6 +146,14 @@ public class CreateDBInstanceEndpointRequest extends TeaModel {
     }
     public String getPrivateIpAddress() {
         return this.privateIpAddress;
+    }
+
+    public CreateDBInstanceEndpointRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateDBInstanceEndpointRequest setResourceOwnerId(Long resourceOwnerId) {

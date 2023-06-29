@@ -46,6 +46,9 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("PGBouncerPort")
+    public String PGBouncerPort;
+
     /**
      * <p>The port number after the change.</p>
      */
@@ -117,6 +120,14 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifyDBInstanceConnectionStringRequest setPGBouncerPort(String PGBouncerPort) {
+        this.PGBouncerPort = PGBouncerPort;
+        return this;
+    }
+    public String getPGBouncerPort() {
+        return this.PGBouncerPort;
     }
 
     public ModifyDBInstanceConnectionStringRequest setPort(String port) {

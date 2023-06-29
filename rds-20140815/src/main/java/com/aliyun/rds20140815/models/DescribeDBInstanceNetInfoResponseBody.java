@@ -301,6 +301,9 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         @NameInMap("MaxDelayTime")
         public String maxDelayTime;
 
+        @NameInMap("PGBouncerPort")
+        public String PGBouncerPort;
+
         /**
          * <p>The port that is used to connect to the instance.</p>
          */
@@ -411,6 +414,14 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         }
         public String getMaxDelayTime() {
             return this.maxDelayTime;
+        }
+
+        public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo setPGBouncerPort(String PGBouncerPort) {
+            this.PGBouncerPort = PGBouncerPort;
+            return this;
+        }
+        public String getPGBouncerPort() {
+            return this.PGBouncerPort;
         }
 
         public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo setPort(String port) {
