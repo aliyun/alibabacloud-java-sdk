@@ -5,34 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListDBTaskSQLJobDetailRequest extends TeaModel {
     /**
-     * <p>The number of times that the SQL statement was executed.</p>
+     * <p>The ID of the SQL task. You can call the [ListDBTaskSQLJob](~~207049~~) operation to query the SQL task ID.</p>
      */
     @NameInMap("JobId")
     public Long jobId;
 
     /**
-     * <p>The status of the SQL task. Valid values:</p>
-     * <br>
-     * <p>*   **INIT**: The SQL task was initialized.</p>
-     * <p>*   **PENDING**: The SQL task waited to be run.</p>
-     * <p>*   **BE_SCHEDULED**: The SQL task waited to be scheduled.</p>
-     * <p>*   **FAIL**: The SQL task failed.</p>
-     * <p>*   **SUCCESS**: The SQL task was successful.</p>
-     * <p>*   **PAUSE**: The SQL task was paused.</p>
-     * <p>*   **DELETE**: The SQL task was deleted.</p>
-     * <p>*   **RUNNING**: The SQL task was being run.</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The error code that is returned.</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The ID of the physical database.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;

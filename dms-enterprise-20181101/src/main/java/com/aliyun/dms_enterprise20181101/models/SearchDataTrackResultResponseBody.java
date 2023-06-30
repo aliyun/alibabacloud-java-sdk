@@ -4,18 +4,36 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class SearchDataTrackResultResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The parsing result of the data tracking task.</p>
+     */
     @NameInMap("TrackResult")
     public SearchDataTrackResultResponseBodyTrackResult trackResult;
 
@@ -65,24 +83,52 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
     }
 
     public static class SearchDataTrackResultResponseBodyTrackResultEventList extends TeaModel {
+        /**
+         * <p>The data records after you perform data operations in the database.</p>
+         */
         @NameInMap("DataAfter")
         public java.util.List<String> dataAfter;
 
+        /**
+         * <p>The data records before you perform data operations in the database.</p>
+         */
         @NameInMap("DataBefore")
         public java.util.List<String> dataBefore;
 
+        /**
+         * <p>The ID of the event.</p>
+         */
         @NameInMap("EventId")
         public Long eventId;
 
+        /**
+         * <p>The length of the event content. Unit: bytes.</p>
+         */
         @NameInMap("EventLength")
         public Long eventLength;
 
+        /**
+         * <p>The event time.</p>
+         */
         @NameInMap("EventTimestamp")
         public String eventTimestamp;
 
+        /**
+         * <p>The type of the event. Valid values:</p>
+         * <br>
+         * <p>*   **WRITE_ROWS**: indicates an INSERT operation.</p>
+         * <p>*   **UPDATE_ROWS**: indicates an UPDATE operation.</p>
+         * <p>*   **DELETE_ROWS**: indicates a DELETE operation.</p>
+         * <p>*   **EXT_WRITE_ROWS**: indicates an INSERT operation, which is equivalent to WRITE_ROWS.</p>
+         * <p>*   **EXT_UPDATE_ROWS**: indicates an UPDATE operation, which is equivalent to UPDATE_ROWS.</p>
+         * <p>*   **EXT_DELETE_ROWS**: indicates a DELETE operation, which is equivalent to DELETE_ROWS.</p>
+         */
         @NameInMap("EventType")
         public String eventType;
 
+        /**
+         * <p>The SQL statements used to roll back the data change.</p>
+         */
         @NameInMap("RollSQL")
         public String rollSQL;
 
@@ -150,15 +196,30 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
     }
 
     public static class SearchDataTrackResultResponseBodyTrackResultTableInfoListColumns extends TeaModel {
+        /**
+         * <p>The name of the column.</p>
+         */
         @NameInMap("ColumnName")
         public String columnName;
 
+        /**
+         * <p>The position of the column.</p>
+         */
         @NameInMap("ColumnPosition")
         public Integer columnPosition;
 
+        /**
+         * <p>The data type of the column. Examples: BIGINT, INT, and VARCHAR.</p>
+         */
         @NameInMap("ColumnType")
         public String columnType;
 
+        /**
+         * <p>Indicates whether the column is a virtual column. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("Fictive")
         public Boolean fictive;
 
@@ -202,15 +263,27 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
     }
 
     public static class SearchDataTrackResultResponseBodyTrackResultTableInfoList extends TeaModel {
+        /**
+         * <p>The information about columns.</p>
+         */
         @NameInMap("Columns")
         public java.util.List<SearchDataTrackResultResponseBodyTrackResultTableInfoListColumns> columns;
 
+        /**
+         * <p>The description of the column.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("SchemaName")
         public String schemaName;
 
+        /**
+         * <p>The name of the table.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 
@@ -254,12 +327,21 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
     }
 
     public static class SearchDataTrackResultResponseBodyTrackResult extends TeaModel {
+        /**
+         * <p>The details of the event logs.</p>
+         */
         @NameInMap("EventList")
         public java.util.List<SearchDataTrackResultResponseBodyTrackResultEventList> eventList;
 
+        /**
+         * <p>The metadata of tables for which you track data operations.</p>
+         */
         @NameInMap("TableInfoList")
         public java.util.List<SearchDataTrackResultResponseBodyTrackResultTableInfoList> tableInfoList;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 

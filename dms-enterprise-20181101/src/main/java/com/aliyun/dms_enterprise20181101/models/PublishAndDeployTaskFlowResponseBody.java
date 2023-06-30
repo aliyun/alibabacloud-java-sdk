@@ -4,34 +4,35 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class PublishAndDeployTaskFlowResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the deployment record.</p>
+     */
     @NameInMap("DeployId")
     public Long deployId;
 
     /**
-     * <p><PublishAndDeployTaskFlowResponse></p>
-     * <p>    <RequestId>64E26249-B61F-51C6-B6DF-47EFF50128CC</RequestId></p>
-     * <p>    <ErrorCode>UnknownError</ErrorCode></p>
-     * <p>    <ErrorMessage>Unknown server error</ErrorMessage></p>
-     * <p>    <Success>true</Success></p>
-     * <p></PublishAndDeployTaskFlowResponse></p>
+     * <p>The error code returned if the request failed.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>Publishes and deploys a task flow.</p>
+     * <p>The error message returned if the request failed.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>12**</p>
+     * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>WB01220210</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;

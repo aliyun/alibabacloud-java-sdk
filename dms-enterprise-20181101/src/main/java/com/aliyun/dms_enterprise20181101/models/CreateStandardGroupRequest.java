@@ -5,29 +5,25 @@ import com.aliyun.tea.*;
 
 public class CreateStandardGroupRequest extends TeaModel {
     /**
-     * <p>The created security rule set.</p>
+     * <p>The type of the database engine. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).</p>
      */
     @NameInMap("DbType")
     public String dbType;
 
     /**
-     * <p>The type of the database engine. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).</p>
+     * <p>The description of the security rule set.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The control mode. Valid values:</p>
-     * <br>
-     * <p>*   **NONE_CONTROL**: Flexible Management</p>
-     * <p>*   **STABLE**: Stable Change</p>
-     * <p>*   **COMMON**: Security Collaboration</p>
+     * <p>The name of the security rule set.</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
-     * <p>The error code returned if the request fails.</p>
+     * <p>The ID of the tenant.</p>
      */
     @NameInMap("Tid")
     public Long tid;

@@ -11,25 +11,25 @@ public class CreateFreeLockCorrectOrderShrinkRequest extends TeaModel {
     public String attachmentKey;
 
     /**
-     * <p>The stakeholders of the data change. All stakeholders can view the ticket details and assist in the approval process. Irrelevant users other than DMS administrators and database administrators (DBAs) are not allowed to view the ticket details.</p>
+     * <p>The purpose or objective of the data change. This parameter is used to help reduce unnecessary communication.</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
-     * <p>The key of the attachment that contains the SQL statements used to roll back the data change.</p>
+     * <p>The parameters of the ticket.</p>
      */
     @NameInMap("Param")
     public String paramShrink;
 
     /**
-     * <p>The parameters of the ticket.</p>
+     * <p>The stakeholders of the data change. All stakeholders can view the ticket details and assist in the approval process. Irrelevant users other than DMS administrators and database administrators (DBAs) are not allowed to view the ticket details.</p>
      */
     @NameInMap("RelatedUserList")
     public String relatedUserListShrink;
 
     /**
-     * <p>The ID of the ticket.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;

@@ -17,7 +17,9 @@ public class UpdateTaskFlowRelationsRequest extends TeaModel {
     public java.util.List<UpdateTaskFlowRelationsRequestEdges> edges;
 
     /**
-     * <p>The ID of the task flow edge.</p>
+     * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>>  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).</p>
      */
     @NameInMap("Tid")
     public Long tid;
@@ -53,19 +55,19 @@ public class UpdateTaskFlowRelationsRequest extends TeaModel {
 
     public static class UpdateTaskFlowRelationsRequestEdges extends TeaModel {
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The ID of the task flow edge.</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
-         * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+         * <p>The ID of the end node on the edge.</p>
          */
         @NameInMap("NodeEnd")
         public Long nodeEnd;
 
         /**
-         * <p>The operation that you want to perform. Set the value to **UpdateTaskFlowRelations**.</p>
+         * <p>The ID of the start node on the edge.</p>
          */
         @NameInMap("NodeFrom")
         public Long nodeFrom;

@@ -4,29 +4,35 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListTaskFlowEdgesByConditionResponseBody extends TeaModel {
+    /**
+     * <p>The list of task flow edges.</p>
+     */
     @NameInMap("Edges")
     public ListTaskFlowEdgesByConditionResponseBodyEdges edges;
 
     /**
-     * <p>The ID of the end node on the edge.</p>
+     * <p>The error code returned if the request failed.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The ID of the start node on the edge.</p>
+     * <p>The error message returned if the request failed.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The list of task flow edges.</p>
+     * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -77,12 +83,21 @@ public class ListTaskFlowEdgesByConditionResponseBody extends TeaModel {
     }
 
     public static class ListTaskFlowEdgesByConditionResponseBodyEdgesEdge extends TeaModel {
+        /**
+         * <p>The ID of the task flow edge.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The ID of the end node on the edge.</p>
+         */
         @NameInMap("NodeEnd")
         public Long nodeEnd;
 
+        /**
+         * <p>The ID of the start node on the edge.</p>
+         */
         @NameInMap("NodeFrom")
         public Long nodeFrom;
 

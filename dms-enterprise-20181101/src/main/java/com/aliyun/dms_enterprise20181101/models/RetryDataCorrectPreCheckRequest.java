@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class RetryDataCorrectPreCheckRequest extends TeaModel {
     /**
-     * <p>The error code returned.</p>
+     * <p>The ID of the data change ticket. You can call the [ListOrders](~~144643~~) operation to query the ID of the data change ticket.</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;

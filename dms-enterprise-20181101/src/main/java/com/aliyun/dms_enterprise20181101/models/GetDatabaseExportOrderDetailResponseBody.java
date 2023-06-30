@@ -4,18 +4,36 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
+    /**
+     * <p>The details of the database export ticket.</p>
+     */
     @NameInMap("DatabaseExportOrderDetail")
     public GetDatabaseExportOrderDetailResponseBodyDatabaseExportOrderDetail databaseExportOrderDetail;
 
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -122,21 +140,47 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetDatabaseExportOrderDetailResponseBodyDatabaseExportOrderDetailKeyInfoConfig extends TeaModel {
+        /**
+         * <p>The database name.</p>
+         */
         @NameInMap("DbName")
         public String dbName;
 
+        /**
+         * <p>The type of data that was exported. Valid values:</p>
+         * <br>
+         * <p>*   **DATA**: The data of the database was exported.</p>
+         * <p>*   **STRUCT**: The schema of the database was exported.</p>
+         * <p>*   **DATA_STRUCT**: The data and schema of the database were exported.</p>
+         */
         @NameInMap("ExportContent")
         public String exportContent;
 
+        /**
+         * <p>The type of schema that was exported.</p>
+         */
         @NameInMap("ExportTypes")
         public GetDatabaseExportOrderDetailResponseBodyDatabaseExportOrderDetailKeyInfoConfigExportTypes exportTypes;
 
+        /**
+         * <p>The extension options of the SQL script.</p>
+         */
         @NameInMap("SQLExtOption")
         public GetDatabaseExportOrderDetailResponseBodyDatabaseExportOrderDetailKeyInfoConfigSQLExtOption SQLExtOption;
 
+        /**
+         * <p>The tables that were exported from the database.</p>
+         */
         @NameInMap("SelectedTables")
         public GetDatabaseExportOrderDetailResponseBodyDatabaseExportOrderDetailKeyInfoConfigSelectedTables selectedTables;
 
+        /**
+         * <p>The format in which the database was exported. Valid values:</p>
+         * <br>
+         * <p>*   **SQL**</p>
+         * <p>*   **CSV**</p>
+         * <p>*   **XLSX**</p>
+         */
         @NameInMap("TargetOption")
         public String targetOption;
 
@@ -196,15 +240,27 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetDatabaseExportOrderDetailResponseBodyDatabaseExportOrderDetailKeyInfo extends TeaModel {
+        /**
+         * <p>The time when the ticket was submitted.</p>
+         */
         @NameInMap("AuditDate")
         public String auditDate;
 
+        /**
+         * <p>The configuration information about the ticket.</p>
+         */
         @NameInMap("Config")
         public GetDatabaseExportOrderDetailResponseBodyDatabaseExportOrderDetailKeyInfoConfig config;
 
+        /**
+         * <p>The database ID.</p>
+         */
         @NameInMap("DbId")
         public Long dbId;
 
+        /**
+         * <p>The URL that is used to download the export result.</p>
+         */
         @NameInMap("DownloadURL")
         public String downloadURL;
 
@@ -248,30 +304,57 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetDatabaseExportOrderDetailResponseBodyDatabaseExportOrderDetail extends TeaModel {
+        /**
+         * <p>The business background information of the database export ticket.</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <p>The user who submitted the ticket.</p>
+         */
         @NameInMap("Committer")
         public String committer;
 
+        /**
+         * <p>The ID of the user who submitted the ticket. This ID is a user ID and is not the ID of an Alibaba Cloud account.</p>
+         */
         @NameInMap("CommitterId")
         public String committerId;
 
+        /**
+         * <p>The ticket ID.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The key information about the ticket.</p>
+         */
         @NameInMap("KeyInfo")
         public GetDatabaseExportOrderDetailResponseBodyDatabaseExportOrderDetailKeyInfo keyInfo;
 
+        /**
+         * <p>The execution logs.</p>
+         */
         @NameInMap("Log")
         public String log;
 
+        /**
+         * <p>The name that is used to search for the database.</p>
+         */
         @NameInMap("SearchName")
         public String searchName;
 
+        /**
+         * <p>The status description of the ticket.</p>
+         */
         @NameInMap("StatusDesc")
         public String statusDesc;
 
+        /**
+         * <p>The status description of the workflow.</p>
+         */
         @NameInMap("WorkflowStatusDesc")
         public String workflowStatusDesc;
 

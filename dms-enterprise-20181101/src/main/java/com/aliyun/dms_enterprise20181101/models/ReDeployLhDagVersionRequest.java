@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReDeployLhDagVersionRequest extends TeaModel {
     /**
-     * <p>The ID of the deployment record.</p>
+     * <p>The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to obtain the ID of the task flow.</p>
      */
     @NameInMap("DagId")
     public Long dagId;

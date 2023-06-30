@@ -4,78 +4,197 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class UpdateInstanceRequest extends TeaModel {
+    /**
+     * <p>The name of the database link for cross-database queries.</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   This parameter is required if UseDsql is set to 1.</p>
+     * <br>
+     * <p>*   The name can contain only lowercase letters and underscores (\_).</p>
+     * <br>
+     * <p>*   The name must be unique within a tenant.</p>
+     */
     @NameInMap("DataLinkName")
     public String dataLinkName;
 
+    /**
+     * <p>The password that is used to log on to the database.</p>
+     */
     @NameInMap("DatabasePassword")
     public String databasePassword;
 
+    /**
+     * <p>The account that is used to log on to the database.</p>
+     */
     @NameInMap("DatabaseUser")
     public String databaseUser;
 
+    /**
+     * <p>The ID of the user who assumes the database administrator (DBA) role of the database instance. You can call the [ListUsers](~~141938~~) or [GetInstance](~~141567~~) operation to query the user ID.</p>
+     */
     @NameInMap("DbaId")
     public String dbaId;
 
+    /**
+     * <p>Specifies whether to enable the lock-free schema change feature for the database instance. Valid values:</p>
+     * <br>
+     * <p>*   **0:** disables the lock-free schema change feature.</p>
+     * <p>*   **1**: uses the online DDL of MySQL first.</p>
+     * <p>*   **2**: uses the lock-free schema change feature of DMS first.</p>
+     */
     @NameInMap("DdlOnline")
     public Integer ddlOnline;
 
+    /**
+     * <p>The ID of the ECS instance on which the database instance is deployed.</p>
+     * <br>
+     * <p>> This parameter is required if the InstanceSource parameter is set to ECS_OWN.</p>
+     */
     @NameInMap("EcsInstanceId")
     public String ecsInstanceId;
 
+    /**
+     * <p>The ID of the region in which the database instance resides.</p>
+     * <br>
+     * <p>> This parameter is required if InstanceSource is set to RDS, ECS_OWN, and VPC_IDC.</p>
+     */
     @NameInMap("EcsRegion")
     public String ecsRegion;
 
+    /**
+     * <p>*   **Y:** enables the sensitive data protection feature</p>
+     * <p>*   **N:** disables the sensitive data protection feature</p>
+     * <p>*   **NULL or other:** does not update the status of the sensitive data protection feature</p>
+     */
     @NameInMap("EnableSellSitd")
     public String enableSellSitd;
 
+    /**
+     * <p>The type of the environment in which the database instance is deployed. Valid values:</p>
+     * <br>
+     * <p>*   **product:** production environment</p>
+     * <p>*   **dev:** development environment</p>
+     * <p>*   **pre:** pre-release environment</p>
+     * <p>*   **test:** test environment</p>
+     * <p>*   **sit:** system integration testing (SIT) environment</p>
+     * <p>*   **uat:** user acceptance testing (UAT) environment</p>
+     * <p>*   **pet:** stress testing environment</p>
+     * <p>*   **stag:** staging environment</p>
+     */
     @NameInMap("EnvType")
     public String envType;
 
+    /**
+     * <p>The timeout period for exporting data from the database instance.</p>
+     */
     @NameInMap("ExportTimeout")
     public Integer exportTimeout;
 
+    /**
+     * <p>The host address that is used to connect to the database instance.</p>
+     */
     @NameInMap("Host")
     public String host;
 
+    /**
+     * <p>The alias of the database instance. Specify an alias that can help you identify the database instance in DMS.</p>
+     */
     @NameInMap("InstanceAlias")
     public String instanceAlias;
 
+    /**
+     * <p>The ID of the database instance. You can call the [GetInstance](~~141567~~) operation to query the instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The source of the database instance. Valid values:</p>
+     * <br>
+     * <p>*   **PUBLIC_OWN:** a self-managed database instance that is deployed on the Internet</p>
+     * <p>*   **RDS:** an ApsaraDB RDS instance</p>
+     * <p>*   **ECS_OWN:** a self-managed database that is deployed on an Elastic Compute Service (ECS) instance</p>
+     * <p>*   **VPC_IDC:** a self-managed database instance that is deployed in a data center connected over a virtual private cloud (VPC)</p>
+     */
     @NameInMap("InstanceSource")
     public String instanceSource;
 
+    /**
+     * <p>The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <p>The port that is used to connect to the database instance.</p>
+     */
     @NameInMap("Port")
     public Integer port;
 
+    /**
+     * <p>The timeout period for querying data in the database instance.</p>
+     */
     @NameInMap("QueryTimeout")
     public Integer queryTimeout;
 
+    /**
+     * <p>The name of the security rule set (GroupName) for the instance. You can call the [ListStandardGroups](~~417891~~) or [GetInstance](~~141567~~) operation to query the name of the security rule set.</p>
+     */
     @NameInMap("SafeRuleId")
     public String safeRuleId;
 
+    /**
+     * <p>The system ID (SID) of the database instance.</p>
+     * <br>
+     * <p>> This parameter is required if the InstanceType parameter is set to ORACLE.</p>
+     */
     @NameInMap("Sid")
     public String sid;
 
+    /**
+     * <p>Specifies whether to skip the connectivity test. Valid values:</p>
+     * <br>
+     * <p>*   **true:** skips the connectivity test</p>
+     * <p>*   **false:** does not skip the connectivity test</p>
+     */
     @NameInMap("SkipTest")
     public Boolean skipTest;
 
+    /**
+     * <p>The ID of the classification template. You can call the [ListClassificationTemplates](~~460613~~) operation to query the template ID.</p>
+     */
     @NameInMap("TemplateId")
     public Long templateId;
 
+    /**
+     * <p>The type of the classification template. You can call the [ListClassificationTemplates](~~460613~~) operation to query the template type.</p>
+     */
     @NameInMap("TemplateType")
     public String templateType;
 
+    /**
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 
+    /**
+     * <p>Specifies whether to enable the cross-database query feature for the database instance. Valid values:</p>
+     * <br>
+     * <p>*   **0**: disables the cross-database query feature.</p>
+     * <p>*   **1**: enables the cross-database query feature.</p>
+     * <br>
+     * <p>> Supported database types: MySQL, SQL Server, PostgreSQL, PolarDB for PostgreSQL (compatible with Oracle), and ApsaraDB for Redis.</p>
+     */
     @NameInMap("UseDsql")
     public Integer useDsql;
 
+    /**
+     * <p>The ID of the VPC to which the database instance belongs.</p>
+     * <br>
+     * <p>> This parameter is required if the InstanceSource parameter is set to VPC_IDC.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

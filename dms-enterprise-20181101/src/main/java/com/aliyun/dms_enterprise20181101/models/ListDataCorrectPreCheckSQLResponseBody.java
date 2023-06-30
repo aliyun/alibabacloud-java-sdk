@@ -5,34 +5,34 @@ import com.aliyun.tea.*;
 
 public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
     /**
-     * <p>The SQL statement.</p>
+     * <p>The error code returned.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The ID of the data change ticket. You can call the [ListOrders](~~144643~~) operation to query the ID of the data change ticket.</p>
+     * <p>The error message returned.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The ID of the database. The database can be a physical database or a logical database.</p>
-     * <br>
-     * <p>*   To query the ID of a physical database, call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation.</p>
-     * <p>*   To query the ID of a logical database, call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation.</p>
+     * <p>The precheck information about SQL statements.</p>
      */
     @NameInMap("PreCheckSQLList")
     public java.util.List<ListDataCorrectPreCheckSQLResponseBodyPreCheckSQLList> preCheckSQLList;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the database.</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request is successful.</p>
+     * <p>*   **false**: The request fails.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -84,6 +84,30 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
 
     public static class ListDataCorrectPreCheckSQLResponseBodyPreCheckSQLList extends TeaModel {
         /**
+         * <p>The estimated number of affected rows.</p>
+         */
+        @NameInMap("AffectRows")
+        public Long affectRows;
+
+        /**
+         * <p>The SQL statement.</p>
+         */
+        @NameInMap("CheckSQL")
+        public String checkSQL;
+
+        /**
+         * <p>The ID of the database.</p>
+         */
+        @NameInMap("DbId")
+        public Long dbId;
+
+        /**
+         * <p>The key that is used to query the details of optimization suggestions. You can call the [GetSQLReviewOptimizeDetail](~~265977~~) operation to query the details of optimization suggestions based on the key.</p>
+         */
+        @NameInMap("SQLReviewQueryKey")
+        public String SQLReviewQueryKey;
+
+        /**
          * <p>The review status of the SQL statement. Valid values:</p>
          * <br>
          * <p>*   **WAITING**: The SQL statement is pending for review.</p>
@@ -92,33 +116,18 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
          * <p>*   **PASS**: The SQL statement passed the review.</p>
          * <p>*   **BLOCK**: The SQL statement failed the review.</p>
          */
-        @NameInMap("AffectRows")
-        public Long affectRows;
+        @NameInMap("SqlReviewStatus")
+        public String sqlReviewStatus;
 
         /**
-         * <p>The estimated number of affected rows.</p>
+         * <p>The type of the SQL statement, such as DELETE, UPDATE, or ALTER_TABLE.</p>
          */
-        @NameInMap("CheckSQL")
-        public String checkSQL;
+        @NameInMap("SqlType")
+        public String sqlType;
 
         /**
          * <p>The name of the table whose data is changed.</p>
          */
-        @NameInMap("DbId")
-        public Long dbId;
-
-        /**
-         * <p>The ID of the request.</p>
-         */
-        @NameInMap("SQLReviewQueryKey")
-        public String SQLReviewQueryKey;
-
-        @NameInMap("SqlReviewStatus")
-        public String sqlReviewStatus;
-
-        @NameInMap("SqlType")
-        public String sqlType;
-
         @NameInMap("TableNames")
         public String tableNames;
 

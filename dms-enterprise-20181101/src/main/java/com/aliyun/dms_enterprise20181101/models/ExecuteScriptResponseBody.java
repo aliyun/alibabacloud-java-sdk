@@ -4,26 +4,33 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ExecuteScriptResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message about the gateway.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The error message about the gateway.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the database.</p>
-     * <br>
-     * <p>>  This parameter is equivalent to the DatabaseId parameter in the SearchDatabase, ListDatabases, and GetDatabase operations. You can call one of these operations to obtain the required database ID. For more information, see [SearchDatabase](~~141876~~), [ListDatabases](~~141873~~), and [GetDatabase](~~141869~~).</p>
+     * <p>The results of the SQL statements that are executed, in the format of an array. Each entry in the array indicates the result of an SQL statement.</p>
      */
     @NameInMap("Results")
     public java.util.List<ExecuteScriptResponseBodyResults> results;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -80,27 +87,25 @@ public class ExecuteScriptResponseBody extends TeaModel {
         public java.util.List<String> columnNames;
 
         /**
-         * <p>The ID of the tenant.</p>
-         * <br>
-         * <p>>  To obtain the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Tenant information](~~181330~~).</p>
+         * <p>The error message that is returned if the SQL statement fails to be executed. For example, an error message is returned because the SQL statement is invalid.</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The total number of entries that are returned.</p>
          */
         @NameInMap("RowCount")
         public Long rowCount;
 
         /**
-         * <p>The total number of entries that are returned.</p>
+         * <p>The rows that are queried after the SQL statement is executed.</p>
          */
         @NameInMap("Rows")
         public java.util.List<java.util.Map<String, ?>> rows;
 
         /**
-         * <p>The rows that are queried after the SQL statement is executed.</p>
+         * <p>Indicates whether the SQL statement is executed.</p>
          */
         @NameInMap("Success")
         public Boolean success;

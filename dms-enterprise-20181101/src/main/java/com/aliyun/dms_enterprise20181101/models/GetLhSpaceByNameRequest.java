@@ -5,19 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetLhSpaceByNameRequest extends TeaModel {
     /**
-     * <p>Indicates whether the workspace is deleted. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The workspace is deleted.</p>
-     * <p>*   **false**: The workspace is not deleted.</p>
+     * <p>The name of the workspace.</p>
      */
     @NameInMap("SpaceName")
     public String spaceName;
 
     /**
-     * <p>The type of the database. Valid values:</p>
-     * <br>
-     * <p>*   **14**: AnalyticDB for MySQL</p>
-     * <p>*   **18**: AnalyticDB for PostgreSQL</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;

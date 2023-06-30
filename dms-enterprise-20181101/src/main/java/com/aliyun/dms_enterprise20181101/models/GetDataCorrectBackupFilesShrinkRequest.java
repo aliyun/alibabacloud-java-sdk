@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class GetDataCorrectBackupFilesShrinkRequest extends TeaModel {
     /**
-     * <p>The error code.</p>
+     * <p>The parameters that are required to perform the operation. You do not need to specify this parameter.</p>
      */
     @NameInMap("ActionDetail")
     public String actionDetailShrink;
 
     /**
-     * <p>The download URL of the backup file for the ticket.</p>
+     * <p>The ID of the ticket. You can call the [ListOrders](~~144643~~) operation to obtain the ticket ID.</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
-     * <p>The parameters that are required to perform the operation. You do not need to specify this parameter.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;

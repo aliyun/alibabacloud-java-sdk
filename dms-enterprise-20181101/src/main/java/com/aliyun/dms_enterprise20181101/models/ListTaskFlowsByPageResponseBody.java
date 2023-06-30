@@ -4,21 +4,42 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListTaskFlowsByPageResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The details of the returned task flows.</p>
+     */
     @NameInMap("TaskFlowList")
     public ListTaskFlowsByPageResponseBodyTaskFlowList taskFlowList;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -76,35 +97,103 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
     }
 
     public static class ListTaskFlowsByPageResponseBodyTaskFlowListTaskFlow extends TeaModel {
+        /**
+         * <p>The ID of the user who created the task flow.</p>
+         */
         @NameInMap("CreatorId")
         public String creatorId;
 
+        /**
+         * <p>The username of the user who created the task flow.</p>
+         */
         @NameInMap("CreatorNickName")
         public String creatorNickName;
 
+        @NameInMap("CronBeginDate")
+        public String cronBeginDate;
+
+        @NameInMap("CronEndDate")
+        public String cronEndDate;
+
+        @NameInMap("CronStr")
+        public String cronStr;
+
+        @NameInMap("CronSwitch")
+        public Boolean cronSwitch;
+
+        @NameInMap("CronType")
+        public Integer cronType;
+
+        /**
+         * <p>The name of the task flow.</p>
+         */
         @NameInMap("DagName")
         public String dagName;
 
+        @NameInMap("DagOwnerId")
+        public String dagOwnerId;
+
+        /**
+         * <p>The username of the owner of the task flow.</p>
+         */
         @NameInMap("DagOwnerNickName")
         public String dagOwnerNickName;
 
+        /**
+         * <p>The ID of the last deployment record of the task flow.</p>
+         */
         @NameInMap("DeployId")
         public Long deployId;
 
+        /**
+         * <p>The description of the task flow.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the task flow.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The status of the last execution of the task flow. Valid values:</p>
+         * <br>
+         * <p>*   **0**: invalid</p>
+         * <p>*   **1**: scheduling disabled</p>
+         * <p>*   **2**: waiting to be scheduled</p>
+         */
         @NameInMap("LatestInstanceStatus")
         public Integer latestInstanceStatus;
 
+        /**
+         * <p>The time when the last execution record was created.</p>
+         */
         @NameInMap("LatestInstanceTime")
         public String latestInstanceTime;
 
+        @NameInMap("ScenarioId")
+        public String scenarioId;
+
+        @NameInMap("ScheduleParam")
+        public String scheduleParam;
+
+        /**
+         * <p>The status of the task flow. Valid values:</p>
+         * <br>
+         * <p>*   **0**: invalid</p>
+         * <p>*   **1**: scheduling disabled</p>
+         * <p>*   **2**: waiting to be scheduled</p>
+         */
         @NameInMap("Status")
         public Integer status;
+
+        @NameInMap("TimeZoneId")
+        public String timeZoneId;
+
+        @NameInMap("TriggerType")
+        public Integer triggerType;
 
         public static ListTaskFlowsByPageResponseBodyTaskFlowListTaskFlow build(java.util.Map<String, ?> map) throws Exception {
             ListTaskFlowsByPageResponseBodyTaskFlowListTaskFlow self = new ListTaskFlowsByPageResponseBodyTaskFlowListTaskFlow();
@@ -127,12 +216,60 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             return this.creatorNickName;
         }
 
+        public ListTaskFlowsByPageResponseBodyTaskFlowListTaskFlow setCronBeginDate(String cronBeginDate) {
+            this.cronBeginDate = cronBeginDate;
+            return this;
+        }
+        public String getCronBeginDate() {
+            return this.cronBeginDate;
+        }
+
+        public ListTaskFlowsByPageResponseBodyTaskFlowListTaskFlow setCronEndDate(String cronEndDate) {
+            this.cronEndDate = cronEndDate;
+            return this;
+        }
+        public String getCronEndDate() {
+            return this.cronEndDate;
+        }
+
+        public ListTaskFlowsByPageResponseBodyTaskFlowListTaskFlow setCronStr(String cronStr) {
+            this.cronStr = cronStr;
+            return this;
+        }
+        public String getCronStr() {
+            return this.cronStr;
+        }
+
+        public ListTaskFlowsByPageResponseBodyTaskFlowListTaskFlow setCronSwitch(Boolean cronSwitch) {
+            this.cronSwitch = cronSwitch;
+            return this;
+        }
+        public Boolean getCronSwitch() {
+            return this.cronSwitch;
+        }
+
+        public ListTaskFlowsByPageResponseBodyTaskFlowListTaskFlow setCronType(Integer cronType) {
+            this.cronType = cronType;
+            return this;
+        }
+        public Integer getCronType() {
+            return this.cronType;
+        }
+
         public ListTaskFlowsByPageResponseBodyTaskFlowListTaskFlow setDagName(String dagName) {
             this.dagName = dagName;
             return this;
         }
         public String getDagName() {
             return this.dagName;
+        }
+
+        public ListTaskFlowsByPageResponseBodyTaskFlowListTaskFlow setDagOwnerId(String dagOwnerId) {
+            this.dagOwnerId = dagOwnerId;
+            return this;
+        }
+        public String getDagOwnerId() {
+            return this.dagOwnerId;
         }
 
         public ListTaskFlowsByPageResponseBodyTaskFlowListTaskFlow setDagOwnerNickName(String dagOwnerNickName) {
@@ -183,12 +320,44 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             return this.latestInstanceTime;
         }
 
+        public ListTaskFlowsByPageResponseBodyTaskFlowListTaskFlow setScenarioId(String scenarioId) {
+            this.scenarioId = scenarioId;
+            return this;
+        }
+        public String getScenarioId() {
+            return this.scenarioId;
+        }
+
+        public ListTaskFlowsByPageResponseBodyTaskFlowListTaskFlow setScheduleParam(String scheduleParam) {
+            this.scheduleParam = scheduleParam;
+            return this;
+        }
+        public String getScheduleParam() {
+            return this.scheduleParam;
+        }
+
         public ListTaskFlowsByPageResponseBodyTaskFlowListTaskFlow setStatus(Integer status) {
             this.status = status;
             return this;
         }
         public Integer getStatus() {
             return this.status;
+        }
+
+        public ListTaskFlowsByPageResponseBodyTaskFlowListTaskFlow setTimeZoneId(String timeZoneId) {
+            this.timeZoneId = timeZoneId;
+            return this;
+        }
+        public String getTimeZoneId() {
+            return this.timeZoneId;
+        }
+
+        public ListTaskFlowsByPageResponseBodyTaskFlowListTaskFlow setTriggerType(Integer triggerType) {
+            this.triggerType = triggerType;
+            return this;
+        }
+        public Integer getTriggerType() {
+            return this.triggerType;
         }
 
     }

@@ -4,21 +4,49 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListTaskFlowsByPageRequest extends TeaModel {
+    @NameInMap("DagIdList")
+    public java.util.List<Long> dagIdList;
+
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageIndex")
     public Integer pageIndex;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ScenarioId")
+    public Long scenarioId;
+
+    /**
+     * <p>The keyword that is used to search for task flow names.</p>
+     */
     @NameInMap("SearchKey")
     public String searchKey;
 
+    /**
+     * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>> : To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 
     public static ListTaskFlowsByPageRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTaskFlowsByPageRequest self = new ListTaskFlowsByPageRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListTaskFlowsByPageRequest setDagIdList(java.util.List<Long> dagIdList) {
+        this.dagIdList = dagIdList;
+        return this;
+    }
+    public java.util.List<Long> getDagIdList() {
+        return this.dagIdList;
     }
 
     public ListTaskFlowsByPageRequest setPageIndex(Integer pageIndex) {
@@ -35,6 +63,14 @@ public class ListTaskFlowsByPageRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListTaskFlowsByPageRequest setScenarioId(Long scenarioId) {
+        this.scenarioId = scenarioId;
+        return this;
+    }
+    public Long getScenarioId() {
+        return this.scenarioId;
     }
 
     public ListTaskFlowsByPageRequest setSearchKey(String searchKey) {

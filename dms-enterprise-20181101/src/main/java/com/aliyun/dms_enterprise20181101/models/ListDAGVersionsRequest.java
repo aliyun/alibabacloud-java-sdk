@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListDAGVersionsRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to obtain the ID of the task flow.</p>
      */
     @NameInMap("DagId")
     public Long dagId;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("PageIndex")
     public Integer pageIndex;
 
     /**
-     * <p>The error code returned if the request fails.</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the previously published version.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;

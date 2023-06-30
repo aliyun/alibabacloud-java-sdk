@@ -94,6 +94,7 @@ public class GetTableTopologyResponseBody extends TeaModel {
 
         /**
          * <p>The name that is used to search for the database.</p>
+         * <p>> We recommend that you do not use this parameter for business development. The format of the parameter value may be modified in later versions.</p>
          */
         @NameInMap("DbSearchName")
         public String dbSearchName;

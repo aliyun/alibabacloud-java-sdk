@@ -5,21 +5,21 @@ import com.aliyun.tea.*;
 
 public class UpdateSLARulesRequest extends TeaModel {
     /**
-     * <p>The ID of the tenant.</p>
-     * <br>
-     * <p>> :To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).</p>
+     * <p>The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.</p>
      */
     @NameInMap("DagId")
     public Long dagId;
 
     /**
-     * <p>The timeout period. Unit: minutes.</p>
+     * <p>The list of SLA rules.</p>
      */
     @NameInMap("SlaRuleList")
     public java.util.List<UpdateSLARulesRequestSlaRuleList> slaRuleList;
 
     /**
-     * <p>The list of SLA rules.</p>
+     * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>> :To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).</p>
      */
     @NameInMap("Tid")
     public Long tid;
@@ -55,19 +55,19 @@ public class UpdateSLARulesRequest extends TeaModel {
 
     public static class UpdateSLARulesRequestSlaRuleList extends TeaModel {
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The ID of the task flow.</p>
          */
         @NameInMap("DagId")
         public Long dagId;
 
         /**
-         * <p>Updates the service level agreement (SLA) timeout reminder for a task flow.</p>
+         * <p>The timeout period. Unit: minutes.</p>
          */
         @NameInMap("IntervalMinutes")
         public Integer intervalMinutes;
 
         /**
-         * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+         * <p>The ID of the task node.</p>
          */
         @NameInMap("NodeId")
         public Long nodeId;

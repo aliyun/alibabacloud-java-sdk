@@ -168,6 +168,9 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
         @NameInMap("Host")
         public String host;
 
+        @NameInMap("InstanceAlias")
+        public String instanceAlias;
+
         /**
          * <p>The instance ID of the destination database.</p>
          */
@@ -292,6 +295,14 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
         }
         public String getHost() {
             return this.host;
+        }
+
+        public GetPhysicalDatabaseResponseBodyDatabase setInstanceAlias(String instanceAlias) {
+            this.instanceAlias = instanceAlias;
+            return this;
+        }
+        public String getInstanceAlias() {
+            return this.instanceAlias;
         }
 
         public GetPhysicalDatabaseResponseBodyDatabase setInstanceId(String instanceId) {

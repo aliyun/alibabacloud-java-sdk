@@ -5,36 +5,35 @@ import com.aliyun.tea.*;
 
 public class CreateDataCronClearOrderRequest extends TeaModel {
     /**
-     * <p>The ID of the ticket.</p>
+     * <p>The key of the attachment for the ticket. The attachment provides more instructions for this operation.</p>
+     * <br>
+     * <p>You can call the [GetUserUploadFileJob](~~206069~~) operation to query the key of the attachment.</p>
      */
     @NameInMap("AttachmentKey")
     public String attachmentKey;
 
     /**
-     * <p>Indicates whether the database is a logical database. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The database is a logical database.</p>
-     * <p>*   **false**: The database is not a logical database.</p>
+     * <p>The purpose or objective of the data change. This reduces unnecessary communication.</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
-     * <p>The databases for which you want to clear historical data.</p>
+     * <p>The parameters of the ticket.</p>
      */
     @NameInMap("Param")
     public CreateDataCronClearOrderRequestParam param;
 
     /**
-     * <p>The ID of the tenant.</p>
-     * <br>
-     * <p>>  The ID of the tenant is displayed when you move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the [View information about the current tenant](~~181330~~) section of the Manage DMS tenants topic.</p>
+     * <p>The stakeholders of this operation. All stakeholders can view the ticket details and assist in the approval process. Irrelevant users other than Data Management (DMS) administrators and database administrators (DBAs) are not allowed to view the ticket details.</p>
      */
     @NameInMap("RelatedUserList")
     public java.util.List<Long> relatedUserList;
 
     /**
-     * <p>The reason for the data change.</p>
+     * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>>  The ID of the tenant is displayed when you move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the [View information about the current tenant](~~181330~~) section of the Manage DMS tenants topic.</p>
      */
     @NameInMap("Tid")
     public Long tid;
@@ -86,33 +85,34 @@ public class CreateDataCronClearOrderRequest extends TeaModel {
 
     public static class CreateDataCronClearOrderRequestParamCronClearItemList extends TeaModel {
         /**
-         * <p>The amount of time taken to run the task. Unit: hours.</p>
-         * <br>
-         * <p>>  If the **specifyDuration** parameter is set to **true**, this parameter is required.</p>
+         * <p>The name of the field.</p>
          */
         @NameInMap("ColumnName")
         public String columnName;
 
         /**
-         * <p>The retention period of the historical data. Unit: days. For example, if you set the parameter to 7, DMS deletes the data that is retained for more than seven days.</p>
+         * <p>The filter conditions.</p>
          */
         @NameInMap("FilterSQL")
         public String filterSQL;
 
         /**
-         * <p>The crontab expression that you can use to run the task at a specified time. For more information, see [Crontab expression](~~206581~~).</p>
+         * <p>The retention period of the historical data. Unit: days. For example, if you set the parameter to 7, DMS deletes the data that is retained for more than seven days.</p>
          */
         @NameInMap("RemainDays")
         public Long remainDays;
 
         /**
-         * <p>The parameters of the ticket.</p>
+         * <p>The name of the table. You can call the [ListTables](~~141878~~) operation to query the name of the table.</p>
          */
         @NameInMap("TableName")
         public String tableName;
 
         /**
-         * <p>The error message.</p>
+         * <p>The type of time granularity. If the ColumnName parameter specifies a field of a time type, this parameter is required. Valid values:</p>
+         * <br>
+         * <p>*   **MILLISECONDS**: milliseconds</p>
+         * <p>*   **SECONDS**: seconds</p>
          */
         @NameInMap("TimeUnit")
         public String timeUnit;
@@ -166,16 +166,16 @@ public class CreateDataCronClearOrderRequest extends TeaModel {
 
     public static class CreateDataCronClearOrderRequestParamDbItemList extends TeaModel {
         /**
-         * <p>The type of time granularity. If the ColumnName parameter specifies a field of a time type, this parameter is required. Valid values:</p>
-         * <br>
-         * <p>*   **MILLISECONDS**: milliseconds</p>
-         * <p>*   **SECONDS**: seconds</p>
+         * <p>The ID of the database. You can call the [SearchDatabases](~~141876~~) operation to query the ID of the database.</p>
          */
         @NameInMap("DbId")
         public Long dbId;
 
         /**
-         * <p>The tables for which you want to clear historical data.</p>
+         * <p>Indicates whether the database is a logical database. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The database is a logical database.</p>
+         * <p>*   **false**: The database is not a logical database.</p>
          */
         @NameInMap("Logic")
         public Boolean logic;
@@ -205,39 +205,42 @@ public class CreateDataCronClearOrderRequest extends TeaModel {
 
     public static class CreateDataCronClearOrderRequestParam extends TeaModel {
         /**
-         * <p>The purpose or objective of the data change. This reduces unnecessary communication.</p>
+         * <p>The reason for the data change.</p>
          */
         @NameInMap("Classify")
         public String classify;
 
         /**
-         * <p>The stakeholders of this operation. All stakeholders can view the ticket details and assist in the approval process. Irrelevant users other than Data Management (DMS) administrators and database administrators (DBAs) are not allowed to view the ticket details.</p>
+         * <p>The tables for which you want to clear historical data.</p>
          */
         @NameInMap("CronClearItemList")
         public java.util.List<CreateDataCronClearOrderRequestParamCronClearItemList> cronClearItemList;
 
         /**
-         * <p>The name of the field.</p>
+         * <p>The crontab expression that you can use to run the task at a specified time. For more information, see [Crontab expression](~~206581~~).</p>
          */
         @NameInMap("CronFormat")
         public String cronFormat;
 
         /**
-         * <p>The ID of the database. You can call the [SearchDatabases](~~141876~~) operation to query the ID of the database.</p>
+         * <p>The databases for which you want to clear historical data.</p>
          */
         @NameInMap("DbItemList")
         public java.util.List<CreateDataCronClearOrderRequestParamDbItemList> dbItemList;
 
         /**
-         * <p>The key of the attachment for the ticket. The attachment provides more instructions for this operation.</p>
+         * <p>The amount of time taken to run the task. Unit: hours.</p>
          * <br>
-         * <p>You can call the [GetUserUploadFileJob](~~206069~~) operation to query the key of the attachment.</p>
+         * <p>>  If the **specifyDuration** parameter is set to **true**, this parameter is required.</p>
          */
         @NameInMap("DurationHour")
         public Long durationHour;
 
         /**
-         * <p>The name of the table. You can call the [ListTables](~~141878~~) operation to query the name of the table.</p>
+         * <p>Specifies whether to specify an end time for the task. Valid values:</p>
+         * <br>
+         * <p>*   **true**: specifies an end time for the task. The task is automatically suspended after this end time.</p>
+         * <p>*   **false**: does not specify an end time for the task. The task is stopped after the historical data is cleared.</p>
          */
         @NameInMap("specifyDuration")
         public Boolean specifyDuration;

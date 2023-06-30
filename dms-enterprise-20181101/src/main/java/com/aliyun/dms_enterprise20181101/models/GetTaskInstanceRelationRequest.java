@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetTaskInstanceRelationRequest extends TeaModel {
     /**
-     * <p>The ID of the execution record of the task flow. You can call the [ListTaskFlowInstance](~~424689~~) operation to obtain the execution record ID.</p>
+     * <p>The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to obtain the ID of the task flow.</p>
      */
     @NameInMap("DagId")
     public Long dagId;
 
     /**
-     * <p>The business time of the node.</p>
+     * <p>The ID of the execution record of the task flow. You can call the [ListTaskFlowInstance](~~424689~~) operation to obtain the execution record ID.</p>
      */
     @NameInMap("DagInstanceId")
     public Long dagInstanceId;

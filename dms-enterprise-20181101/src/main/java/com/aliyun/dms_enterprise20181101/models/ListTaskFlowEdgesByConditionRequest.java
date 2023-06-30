@@ -5,33 +5,33 @@ import com.aliyun.tea.*;
 
 public class ListTaskFlowEdgesByConditionRequest extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to **ListTaskFlowEdgesByCondition**.</p>
+     * <p>The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.</p>
      */
     @NameInMap("DagId")
     public Long dagId;
 
     /**
-     * <p>The ID of the end node on the edge.</p>
+     * <p>The ID of the task flow edge.</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
-     * <p>The ID of the tenant.</p>
-     * <br>
-     * <p>>  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).</p>
+     * <p>The ID of the end node on the edge.</p>
      */
     @NameInMap("NodeEnd")
     public Long nodeEnd;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The ID of the start node on the edge.</p>
      */
     @NameInMap("NodeFrom")
     public Long nodeFrom;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>>  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).</p>
      */
     @NameInMap("Tid")
     public Long tid;

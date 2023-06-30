@@ -11,13 +11,15 @@ public class PublishAndDeployTaskFlowRequest extends TeaModel {
     public Long dagId;
 
     /**
-     * <p>The response parameters.</p>
+     * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>> To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).</p>
      */
     @NameInMap("Tid")
     public Long tid;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The description of the version.</p>
      */
     @NameInMap("VersionComments")
     public String versionComments;

@@ -5,10 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListClassificationTemplatesRequest extends TeaModel {
     /**
-     * <p>The type of the classification template. Valid values:</p>
+     * <p>The ID of the tenant.</p>
      * <br>
-     * <p>*   **INNER**: built-in template</p>
-     * <p>*   **USER_DEFINE**: custom template</p>
+     * <p>> To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).</p>
      */
     @NameInMap("Tid")
     public Long tid;

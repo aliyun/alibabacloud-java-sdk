@@ -5,18 +5,15 @@ import com.aliyun.tea.*;
 
 public class GetUserUploadFileJobRequest extends TeaModel {
     /**
-     * <p>The method used to upload the file. Valid values:</p>
-     * <br>
-     * <p>*   **URL**</p>
-     * <p>*   **OSS**</p>
+     * <p>The key of the file upload task. The key is returned when you call the [CreateUploadFileJob](~~206059~~) or [CreateUploadOSSFileJob](~~206060~~) operation.</p>
      */
     @NameInMap("JobKey")
     public String jobKey;
 
     /**
-     * <p>The ID of the tenant.</p>
+     * <p>The tenant ID.</p>
      * <br>
-     * <p>>  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.</p>
+     * <p>> To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](~~181330~~).</p>
      */
     @NameInMap("Tid")
     public Long tid;

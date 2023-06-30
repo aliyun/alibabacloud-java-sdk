@@ -5,34 +5,40 @@ import com.aliyun.tea.*;
 
 public class ListInstanceUserPermissionsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the authorization record.</p>
+     * <p>The error code.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The error message.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **ListInstanceUserPermissions**.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>- true: The request is successful.</p>
+     * <p>- false: The request fails.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The nickname of the user.</p>
+     * <p>The total number of returned entries.</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
 
     /**
-     * <p>The error message.</p>
+     * <p>The permissions of the user on the instance.</p>
      */
     @NameInMap("UserPermissions")
     public ListInstanceUserPermissionsResponseBodyUserPermissions userPermissions;
@@ -92,19 +98,28 @@ public class ListInstanceUserPermissionsResponseBody extends TeaModel {
 
     public static class ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermissionPermDetailsPermDetail extends TeaModel {
         /**
-         * <p>Queries the permissions of a user on a specific instance.</p>
+         * <p>The time when the permissions were granted.</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The time when the permissions expire.</p>
          */
         @NameInMap("ExpireDate")
         public String expireDate;
 
+        /**
+         * <p>This parameter is reserved.</p>
+         */
         @NameInMap("ExtraData")
         public String extraData;
+
+        /**
+         * <p>The user who grants the permissions.</p>
+         */
+        @NameInMap("OriginFrom")
+        public String originFrom;
 
         /**
          * <p>The type of the permissions. Valid values:</p>
@@ -112,15 +127,12 @@ public class ListInstanceUserPermissionsResponseBody extends TeaModel {
          * <p>*   LOGIN: the logon permissions</p>
          * <p>*   PERF: the query permissions on the instance</p>
          */
-        @NameInMap("OriginFrom")
-        public String originFrom;
-
-        /**
-         * <p>The time when the permissions were granted.</p>
-         */
         @NameInMap("PermType")
         public String permType;
 
+        /**
+         * <p>The ID of the authorization record.</p>
+         */
         @NameInMap("UserAccessId")
         public String userAccessId;
 
@@ -200,27 +212,25 @@ public class ListInstanceUserPermissionsResponseBody extends TeaModel {
 
     public static class ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermission extends TeaModel {
         /**
-         * <p>The details of permissions.</p>
+         * <p>The ID of the instance.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The details of permissions.</p>
          */
         @NameInMap("PermDetails")
         public ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermissionPermDetails permDetails;
 
         /**
-         * <p>The ID of the tenant.</p>
-         * <br>
-         * <p>>  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.</p>
+         * <p>The ID of the user.</p>
          */
         @NameInMap("UserId")
         public String userId;
 
         /**
-         * <p>The ID of the user.</p>
+         * <p>The nickname of the user.</p>
          */
         @NameInMap("UserNickName")
         public String userNickName;

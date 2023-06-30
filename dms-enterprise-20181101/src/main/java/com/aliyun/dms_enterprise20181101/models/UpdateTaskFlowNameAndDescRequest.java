@@ -5,25 +5,27 @@ import com.aliyun.tea.*;
 
 public class UpdateTaskFlowNameAndDescRequest extends TeaModel {
     /**
-     * <p>The description that you want to specify for the task flow.</p>
+     * <p>The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.</p>
      */
     @NameInMap("DagId")
     public Long dagId;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The new name that you want to specify for the task flow.</p>
      */
     @NameInMap("DagName")
     public String dagName;
 
     /**
-     * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+     * <p>The description that you want to specify for the task flow.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The new name that you want to specify for the task flow.</p>
+     * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>>  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).</p>
      */
     @NameInMap("Tid")
     public Long tid;
