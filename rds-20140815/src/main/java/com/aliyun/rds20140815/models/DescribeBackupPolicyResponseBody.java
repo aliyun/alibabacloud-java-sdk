@@ -51,6 +51,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("BackupMethod")
     public String backupMethod;
 
+    @NameInMap("BackupPriority")
+    public Integer backupPriority;
+
     /**
      * <p>The number of days for which data backup files are retained.</p>
      */
@@ -184,6 +187,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("SupportModifyBackupPriority")
+    public Boolean supportModifyBackupPriority;
+
     /**
      * <p>A reserved parameter.</p>
      */
@@ -252,6 +258,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     }
     public String getBackupMethod() {
         return this.backupMethod;
+    }
+
+    public DescribeBackupPolicyResponseBody setBackupPriority(Integer backupPriority) {
+        this.backupPriority = backupPriority;
+        return this;
+    }
+    public Integer getBackupPriority() {
+        return this.backupPriority;
     }
 
     public DescribeBackupPolicyResponseBody setBackupRetentionPeriod(Integer backupRetentionPeriod) {
@@ -380,6 +394,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeBackupPolicyResponseBody setSupportModifyBackupPriority(Boolean supportModifyBackupPriority) {
+        this.supportModifyBackupPriority = supportModifyBackupPriority;
+        return this;
+    }
+    public Boolean getSupportModifyBackupPriority() {
+        return this.supportModifyBackupPriority;
     }
 
     public DescribeBackupPolicyResponseBody setSupportReleasedKeep(Integer supportReleasedKeep) {

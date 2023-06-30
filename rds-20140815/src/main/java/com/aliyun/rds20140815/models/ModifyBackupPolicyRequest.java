@@ -105,6 +105,9 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     @NameInMap("BackupPolicyMode")
     public String backupPolicyMode;
 
+    @NameInMap("BackupPriority")
+    public Integer backupPriority;
+
     /**
      * <p>The number of days for which you want to retain data backup files. Valid values: **7 to 730**.</p>
      * <br>
@@ -370,6 +373,14 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     }
     public String getBackupPolicyMode() {
         return this.backupPolicyMode;
+    }
+
+    public ModifyBackupPolicyRequest setBackupPriority(Integer backupPriority) {
+        this.backupPriority = backupPriority;
+        return this;
+    }
+    public Integer getBackupPriority() {
+        return this.backupPriority;
     }
 
     public ModifyBackupPolicyRequest setBackupRetentionPeriod(String backupRetentionPeriod) {
