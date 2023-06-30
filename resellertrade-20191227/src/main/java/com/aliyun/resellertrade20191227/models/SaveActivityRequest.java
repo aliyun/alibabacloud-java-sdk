@@ -142,14 +142,17 @@ public class SaveActivityRequest extends TeaModel {
     }
 
     public static class SaveActivityRequestFusionPromotionParamListModuleInfoParamList extends TeaModel {
+        @NameInMap("componentCode")
+        public String componentCode;
+
         @NameInMap("itemCode")
         public String itemCode;
 
-        @NameInMap("moduleCode")
-        public String moduleCode;
-
         @NameInMap("moduleId")
         public Long moduleId;
+
+        @NameInMap("moduleKey")
+        public String moduleKey;
 
         @NameInMap("moduleName")
         public String moduleName;
@@ -165,6 +168,14 @@ public class SaveActivityRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public SaveActivityRequestFusionPromotionParamListModuleInfoParamList setComponentCode(String componentCode) {
+            this.componentCode = componentCode;
+            return this;
+        }
+        public String getComponentCode() {
+            return this.componentCode;
+        }
+
         public SaveActivityRequestFusionPromotionParamListModuleInfoParamList setItemCode(String itemCode) {
             this.itemCode = itemCode;
             return this;
@@ -173,20 +184,20 @@ public class SaveActivityRequest extends TeaModel {
             return this.itemCode;
         }
 
-        public SaveActivityRequestFusionPromotionParamListModuleInfoParamList setModuleCode(String moduleCode) {
-            this.moduleCode = moduleCode;
-            return this;
-        }
-        public String getModuleCode() {
-            return this.moduleCode;
-        }
-
         public SaveActivityRequestFusionPromotionParamListModuleInfoParamList setModuleId(Long moduleId) {
             this.moduleId = moduleId;
             return this;
         }
         public Long getModuleId() {
             return this.moduleId;
+        }
+
+        public SaveActivityRequestFusionPromotionParamListModuleInfoParamList setModuleKey(String moduleKey) {
+            this.moduleKey = moduleKey;
+            return this;
+        }
+        public String getModuleKey() {
+            return this.moduleKey;
         }
 
         public SaveActivityRequestFusionPromotionParamListModuleInfoParamList setModuleName(String moduleName) {
