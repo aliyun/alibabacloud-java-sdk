@@ -12879,6 +12879,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BackupPolicyMode", request.backupPolicyMode);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.backupPriority)) {
+            query.put("BackupPriority", request.backupPriority);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.backupRetentionPeriod)) {
             query.put("BackupRetentionPeriod", request.backupRetentionPeriod);
         }
