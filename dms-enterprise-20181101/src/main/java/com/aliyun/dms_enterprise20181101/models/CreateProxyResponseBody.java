@@ -4,18 +4,36 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateProxyResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the secure access proxy.</p>
+     */
     @NameInMap("ProxyId")
     public Long proxyId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>- **true**: The request was successful.</p>
+     * <p>- **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

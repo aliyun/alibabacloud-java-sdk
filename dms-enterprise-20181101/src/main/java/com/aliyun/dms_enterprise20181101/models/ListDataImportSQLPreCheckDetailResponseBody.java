@@ -4,21 +4,42 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListDataImportSQLPreCheckDetailResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The precheck information of SQL statements.</p>
+     */
     @NameInMap("PreCheckSQLDetailList")
     public java.util.List<ListDataImportSQLPreCheckDetailResponseBodyPreCheckSQLDetailList> preCheckSQLDetailList;
 
+    /**
+     * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The number of SQL statements.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -76,15 +97,36 @@ public class ListDataImportSQLPreCheckDetailResponseBody extends TeaModel {
     }
 
     public static class ListDataImportSQLPreCheckDetailResponseBodyPreCheckSQLDetailList extends TeaModel {
+        /**
+         * <p>Indicates whether the precheck of the SQL statement was skipped. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("Skip")
         public Boolean skip;
 
+        /**
+         * <p>The SQL ID, which indicates the sequence number of the SQL statement. The number starts with 1.</p>
+         */
         @NameInMap("SqlId")
         public Long sqlId;
 
+        /**
+         * <p>The type of the SQL statement, such as DELETE, UPDATE, or ALTER_TABLE.</p>
+         */
         @NameInMap("SqlType")
         public String sqlType;
 
+        /**
+         * <p>The state of the ticket. Valid values:</p>
+         * <br>
+         * <p>*   **INIT**: The ticket was being initialized.</p>
+         * <p>*   **RUNNING**: The ticket was in progress.</p>
+         * <p>*   **SUCCESS**: The ticket was complete.</p>
+         * <p>*   **TIMEOUT**: The ticket was skipped due to timeout.</p>
+         * <p>*   **FAIL**: The ticket failed.</p>
+         */
         @NameInMap("StatusCode")
         public String statusCode;
 

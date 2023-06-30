@@ -5,48 +5,31 @@ import com.aliyun.tea.*;
 
 public class ListUserPermissionsRequest extends TeaModel {
     /**
-     * <p>The keyword used in the query. For example, if you want to query permissions on an instance, you can specify the endpoint of the instance, such as rm-bp144d5ky4l4r****.</p>
+     * <p>The name of the database.</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
 
     /**
-     * <p>The ID of the database.</p>
+     * <p>The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).</p>
      */
     @NameInMap("DbType")
     public String dbType;
 
     /**
-     * <p>The time when the permissions were granted.</p>
+     * <p>The type of the environment to which the database belongs. Valid values:</p>
+     * <br>
+     * <p>*   product: production environment</p>
+     * <p>*   dev: development environment</p>
+     * <p>*   pre: staging environment</p>
+     * <p>*   test: test environment</p>
+     * <p>*   sit: SIT environment</p>
+     * <p>*   uat: user acceptance testing (UAT) environment</p>
+     * <p>*   pet: stress testing environment</p>
+     * <p>*   stag: STAG environment</p>
      */
     @NameInMap("EnvType")
     public String envType;
-
-    /**
-     * <p>The ID of the tenant.</p>
-     * <br>
-     * <p>>  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.</p>
-     */
-    @NameInMap("Logic")
-    public Boolean logic;
-
-    /**
-     * <p>This parameter is reserved.</p>
-     */
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    /**
-     * <p>The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).</p>
-     */
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    /**
-     * <p>The operation that you want to perform. Set the value to **ListUserPermissions**.</p>
-     */
-    @NameInMap("PermType")
-    public String permType;
 
     /**
      * <p>Specifies whether the database is a logical database. Valid values:</p>
@@ -54,17 +37,50 @@ public class ListUserPermissionsRequest extends TeaModel {
      * <p>*   true: The database is a logical database.</p>
      * <p>*   false: The database is a physical database.</p>
      */
+    @NameInMap("Logic")
+    public Boolean logic;
+
+    /**
+     * <p>The number of the page to return.</p>
+     */
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    /**
+     * <p>The permissions on a specific type of resources that you want to query. Valid values:</p>
+     * <br>
+     * <p>*   DATABASE: permissions on databases</p>
+     * <p>*   TABLE: permissions on tables</p>
+     * <p>*   COLUMN: permissions on fields</p>
+     * <p>*   INSTANCE: permissions on instances</p>
+     */
+    @NameInMap("PermType")
+    public String permType;
+
+    /**
+     * <p>The keyword used in the query. For example, if you want to query permissions on an instance, you can specify the endpoint of the instance, such as rm-bp144d5ky4l4r****.</p>
+     */
     @NameInMap("SearchKey")
     public String searchKey;
 
     /**
-     * <p>The nickname of the user.</p>
+     * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>>  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.</p>
      */
     @NameInMap("Tid")
     public Long tid;
 
     /**
-     * <p>The ID of the authorization record.</p>
+     * <p>The ID of the user. You can call the [GetUser](~~147098~~) or [ListUsers](~~141938~~) operation to query the ID of the user.</p>
+     * <br>
+     * <p>>  The user ID is different from the ID of your Alibaba Cloud account.</p>
      */
     @NameInMap("UserId")
     public String userId;

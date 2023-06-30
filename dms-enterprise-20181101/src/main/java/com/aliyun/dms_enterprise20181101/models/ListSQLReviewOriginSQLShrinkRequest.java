@@ -5,26 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListSQLReviewOriginSQLShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the file.</p>
+     * <p>The parameters that are used to filter SQL statements involved in the ticket.</p>
      */
     @NameInMap("OrderActionDetail")
     public String orderActionDetailShrink;
 
     /**
-     * <p>The information about the parsed SQL statements.</p>
+     * <p>The ID of the ticket for the SQL review. You can call the [CreateSQLReviewOrder](~~257777~~) operation to query the ID of the ticket.</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
-     * <p>The optimization suggestion for the SQL statement. Valid values:</p>
-     * <br>
-     * <p>*   **MUST_IMPROVE**: The SQL statement must be improved.</p>
-     * <p>*   **POTENTIAL_ISSUE**: The SQL statement contains potential issues.</p>
-     * <p>*   **SUGGEST_IMPROVE**: We recommend that you improve the SQL statement.</p>
-     * <p>*   **USE_DMS_TOOLKIT**: We recommend that you change schemas without locking tables.</p>
-     * <p>*   **USE_DMS_DML_UNLOCK**: We recommend that you change data without locking tables.</p>
-     * <p>*   **TABLE_INDEX_SUGGEST**: We recommend that you use SQL statements that use indexes.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://www.alibabacloud.com/help/en/data-management-service/latest/getuseractivetenant) or [ListUserTenants](https://www.alibabacloud.com/help/en/data-management-service/latest/listusertenants) operation to query the ID of the tenant.</p>
      */
     @NameInMap("Tid")
     public Long tid;

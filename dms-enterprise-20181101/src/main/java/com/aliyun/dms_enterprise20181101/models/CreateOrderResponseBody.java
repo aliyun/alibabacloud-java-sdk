@@ -5,48 +5,35 @@ import com.aliyun.tea.*;
 
 public class CreateOrderResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the ticket.</p>
      */
     @NameInMap("CreateOrderResult")
     public CreateOrderResponseBodyCreateOrderResult createOrderResult;
 
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>## PluginParam parameter</p>
-     * <br>
-     * <p>```</p>
-     * <br>
-     * <p># Change a schema design.</p>
-     * <p> {</p>
-     * <p>    "title": "test", // The name of the ticket.</p>
-     * <p>    "description": "test", // The description of the ticket.</p>
-     * <p>    "dbId": 11****, // The database to which changes are made.</p>
-     * <p>    "logic": false, // Specifies whether the database is a logical database.</p>
-     * <p>    "relatedIds": [], // The IDs of the stakeholders that are involved in the ticket.</p>
-     * <p>  }</p>
-     * <br>
-     * <p># Export data.</p>
-     * <p> {</p>
-     * <p>  "classify": "Reason", // The purpose of the ticket.</p>
-     * <p>  "dbId": 17****, // The ID of the database from which data is exported.</p>
-     * <p>  "exeSQL": "select 1", // The SQL statement that is executed to export data.</p>
-     * <p>  "logic": false, // Specifies whether the database is a logical database.</p>
-     * <p>  "ignoreAffectRows": false, // Specifies whether to ignore the affected rows.</p>
-     * <p>  "affectRows": 1, // The estimated number of affected rows.</p>
-     * <p>  "ignoreAffectRowsReason": "" // The reason for ignoring the affected rows.</p>
-     * <p> }</p>
-     * <br>
-     * <p>If you need to create more types of tickets, submit a ticket for consultation. </p>
-     * <p>```</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

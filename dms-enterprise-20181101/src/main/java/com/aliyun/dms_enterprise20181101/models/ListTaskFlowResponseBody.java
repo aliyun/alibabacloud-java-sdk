@@ -11,25 +11,28 @@ public class ListTaskFlowResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The ID of the latest deployment record.</p>
+     * <p>The error message.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The ID of the task flow.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **ListTaskFlow**.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The name of the user who creates the task flow.</p>
+     * <p>The information about the task flows returned.</p>
      */
     @NameInMap("TaskFlowList")
     public ListTaskFlowResponseBodyTaskFlowList taskFlowList;
@@ -81,16 +84,50 @@ public class ListTaskFlowResponseBody extends TeaModel {
 
     public static class ListTaskFlowResponseBodyTaskFlowListTaskFlow extends TeaModel {
         /**
-         * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
+         * <p>The ID of the user who creates the task flow.</p>
          */
         @NameInMap("CreatorId")
         public String creatorId;
 
         /**
-         * <p>The ID of the user who creates the task flow.</p>
+         * <p>The name of the user who creates the task flow.</p>
          */
         @NameInMap("CreatorNickName")
         public String creatorNickName;
+
+        /**
+         * <p>The name of the task flow owner.</p>
+         */
+        @NameInMap("DagOwnerNickName")
+        public String dagOwnerNickName;
+
+        /**
+         * <p>The ID of the latest deployment record.</p>
+         */
+        @NameInMap("DeployId")
+        public Long deployId;
+
+        /**
+         * <p>The ID of the task flow.</p>
+         */
+        @NameInMap("Id")
+        public Long id;
+
+        /**
+         * <p>The status of the latest execution. Valid values:</p>
+         * <br>
+         * <p>*   **0**: invalid.</p>
+         * <p>*   **1**: scheduling disabled.</p>
+         * <p>*   **2**: waiting to be scheduled.</p>
+         */
+        @NameInMap("LatestInstanceStatus")
+        public Integer latestInstanceStatus;
+
+        /**
+         * <p>The time when the latest execution record was generated.</p>
+         */
+        @NameInMap("LatestInstanceTime")
+        public String latestInstanceTime;
 
         /**
          * <p>The status of the task flow. Valid values:</p>
@@ -98,30 +135,6 @@ public class ListTaskFlowResponseBody extends TeaModel {
          * <p>*   **0**: The task flow is invalid.</p>
          * <p>*   **1**: Scheduling is disabled for the task flow.</p>
          * <p>*   **2**: The task flow is waiting to be scheduled.</p>
-         */
-        @NameInMap("DagOwnerNickName")
-        public String dagOwnerNickName;
-
-        /**
-         * <p>The ID of the request.</p>
-         */
-        @NameInMap("DeployId")
-        public Long deployId;
-
-        /**
-         * <p>The error message.</p>
-         */
-        @NameInMap("Id")
-        public Long id;
-
-        @NameInMap("LatestInstanceStatus")
-        public Integer latestInstanceStatus;
-
-        @NameInMap("LatestInstanceTime")
-        public String latestInstanceTime;
-
-        /**
-         * <p>The time when the latest execution record was generated.</p>
          */
         @NameInMap("Status")
         public Integer status;

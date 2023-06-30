@@ -4,24 +4,42 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListOrdersResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The time when the ticket was last modified.</p>
+     * <p>The details about the tickets.</p>
      */
     @NameInMap("Orders")
     public ListOrdersResponseBodyOrders orders;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>- **true**: The request was successful.</p>
+     * <p>- **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of entries that are returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -80,19 +98,19 @@ public class ListOrdersResponseBody extends TeaModel {
 
     public static class ListOrdersResponseBodyOrdersOrder extends TeaModel {
         /**
-         * <p>The status description of the ticket.</p>
+         * <p>The remarks of the ticket.</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
-         * <p>The type of the ticket.</p>
+         * <p>The user who submitted the ticket.</p>
          */
         @NameInMap("Committer")
         public String committer;
 
         /**
-         * <p>The ID of the ticket.</p>
+         * <p>The ID of the user who submitted the ticket.</p>
          */
         @NameInMap("CommitterId")
         public Long committerId;
@@ -104,28 +122,40 @@ public class ListOrdersResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The time when the ticket was last modified.</p>
          */
         @NameInMap("LastModifyTime")
         public String lastModifyTime;
 
+        /**
+         * <p>The ID of the ticket.</p>
+         */
         @NameInMap("OrderId")
         public Long orderId;
 
+        /**
+         * <p>The type of the ticket.</p>
+         */
         @NameInMap("PluginType")
         public String pluginType;
 
         /**
-         * <p>The time condition based on which you want to query tickets. Valid values:</p>
+         * <p>The status code of the ticket. Valid values:</p>
          * <br>
-         * <p>*   **CREATE_TIME**: the time when a ticket was created.</p>
-         * <p>*   **MODIFY_TIME**: the time when a ticket was last modified.</p>
+         * <p>*   **fail**: The ticket fails to be executed.</p>
+         * <p>*   **toaudit**: The ticket is waiting for approval.</p>
+         * <p>*   **cancel**: The ticket is cancelled.</p>
+         * <p>*   **processing**: The ticket is being executed.</p>
+         * <p>*   **approved**: The ticket is approved.</p>
+         * <p>*   **reject**: The ticket is rejected.</p>
+         * <p>*   **success**: The ticket is executed.</p>
+         * <p>*   **closed**: The ticket is closed.</p>
          */
         @NameInMap("StatusCode")
         public String statusCode;
 
         /**
-         * <p>Queries tickets in Data Management (DMS).</p>
+         * <p>The status description of the ticket.</p>
          */
         @NameInMap("StatusDesc")
         public String statusDesc;

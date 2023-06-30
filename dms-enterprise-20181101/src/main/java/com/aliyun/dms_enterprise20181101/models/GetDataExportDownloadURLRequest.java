@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDataExportDownloadURLRequest extends TeaModel {
     /**
-     * <p>The details about the download URL of the file that records the export results for the ticket.</p>
+     * <p>The ID of the ticket. You can call the [ListOrders](~~144643~~) operation to obtain the ticket ID.</p>
      */
     @NameInMap("OrderId")
     public Long orderId;

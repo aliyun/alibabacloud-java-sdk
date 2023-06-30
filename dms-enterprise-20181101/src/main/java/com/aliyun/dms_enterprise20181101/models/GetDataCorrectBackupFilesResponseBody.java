@@ -4,15 +4,21 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetDataCorrectBackupFilesResponseBody extends TeaModel {
+    /**
+     * <p>The download URL of the backup file for the ticket.</p>
+     */
     @NameInMap("DataCorrectBackupFiles")
     public GetDataCorrectBackupFilesResponseBodyDataCorrectBackupFiles dataCorrectBackupFiles;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **GetDataCorrectBackupFiles**.</p>
+     * <p>The error code.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
@@ -22,6 +28,9 @@ public class GetDataCorrectBackupFilesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

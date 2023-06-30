@@ -4,30 +4,35 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateFreeLockCorrectOrderResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the ticket.</p>
+     */
     @NameInMap("CreateOrderResult")
     public java.util.List<Long> createOrderResult;
 
+    /**
+     * <p>The error code returned if the request fails.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The error message returned if the request fails.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The execution mode of the ticket after the ticket is approved. Valid values:</p>
-     * <br>
-     * <p>*   **COMMITOR**: The data change is performed by the user who submits the ticket.</p>
-     * <p>*   **AUTO**: The data change is automatically performed after the ticket is approved.</p>
-     * <p>*   **LAST_AUDITOR**: The data change is performed by the last approver of the ticket.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The reason for the data change.</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request is successful.</p>
+     * <p>*   **false**: The request fails.</p>
      */
     @NameInMap("Success")
     public Boolean success;

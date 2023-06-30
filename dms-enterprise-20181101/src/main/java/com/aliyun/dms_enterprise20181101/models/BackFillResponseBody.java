@@ -4,27 +4,53 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class BackFillResponseBody extends TeaModel {
+    @NameInMap("DagInstanceId")
+    public Long dagInstanceId;
+
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the node.</p>
+     */
     @NameInMap("NodeId")
     public Long nodeId;
 
     /**
-     * <p>Backfills data for task orchestration.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
     public static BackFillResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BackFillResponseBody self = new BackFillResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public BackFillResponseBody setDagInstanceId(Long dagInstanceId) {
+        this.dagInstanceId = dagInstanceId;
+        return this;
+    }
+    public Long getDagInstanceId() {
+        return this.dagInstanceId;
     }
 
     public BackFillResponseBody setErrorCode(String errorCode) {

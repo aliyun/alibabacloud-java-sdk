@@ -5,33 +5,35 @@ import com.aliyun.tea.*;
 
 public class BuyPayAsYouGoOrderRequest extends TeaModel {
     /**
-     * <p>The number of database instances that you want to use DMS to manage.</p>
+     * <p>The type of the resource that you want to purchase.</p>
      * <br>
-     * <p>> : A quota can be used for only one database instance.</p>
+     * <p>*   **VersionType**: DMS that supports control modes</p>
+     * <p>*   **SensitiveDataProtection**: DMS that supports sensitive data protection</p>
      */
     @NameInMap("CommodityType")
     public String commodityType;
+
+    /**
+     * <p>The number of database instances that you want to use DMS to manage.</p>
+     * <br>
+     * <p>> A quota can be used for only one database instance.</p>
+     */
+    @NameInMap("InsNum")
+    public Integer insNum;
+
+    /**
+     * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>> To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).</p>
+     */
+    @NameInMap("Tid")
+    public Long tid;
 
     /**
      * <p>The control mode of DMS. Valid values:</p>
      * <br>
      * <p>*   **stand**: Stable Change</p>
      * <p>*   **safety**: Security Collaboration</p>
-     */
-    @NameInMap("InsNum")
-    public Integer insNum;
-
-    /**
-     * <p>The type of the resource that you want to purchase.</p>
-     * <br>
-     * <p>*   **VersionType**: DMS that supports control modes</p>
-     * <p>*   **SensitiveDataProtection**: DMS that supports sensitive data protection</p>
-     */
-    @NameInMap("Tid")
-    public Long tid;
-
-    /**
-     * <p>The error code returned if the request failed.</p>
      */
     @NameInMap("VersionType")
     public String versionType;

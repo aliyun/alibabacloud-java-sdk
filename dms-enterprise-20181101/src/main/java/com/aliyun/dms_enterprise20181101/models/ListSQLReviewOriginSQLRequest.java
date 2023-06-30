@@ -5,26 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListSQLReviewOriginSQLRequest extends TeaModel {
     /**
-     * <p>The ID of the file.</p>
+     * <p>The parameters that are used to filter SQL statements involved in the ticket.</p>
      */
     @NameInMap("OrderActionDetail")
     public ListSQLReviewOriginSQLRequestOrderActionDetail orderActionDetail;
 
     /**
-     * <p>The information about the parsed SQL statements.</p>
+     * <p>The ID of the ticket for the SQL review. You can call the [CreateSQLReviewOrder](~~257777~~) operation to query the ID of the ticket.</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
-     * <p>The optimization suggestion for the SQL statement. Valid values:</p>
-     * <br>
-     * <p>*   **MUST_IMPROVE**: The SQL statement must be improved.</p>
-     * <p>*   **POTENTIAL_ISSUE**: The SQL statement contains potential issues.</p>
-     * <p>*   **SUGGEST_IMPROVE**: We recommend that you improve the SQL statement.</p>
-     * <p>*   **USE_DMS_TOOLKIT**: We recommend that you change schemas without locking tables.</p>
-     * <p>*   **USE_DMS_DML_UNLOCK**: We recommend that you change data without locking tables.</p>
-     * <p>*   **TABLE_INDEX_SUGGEST**: We recommend that you use SQL statements that use indexes.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://www.alibabacloud.com/help/en/data-management-service/latest/getuseractivetenant) or [ListUserTenants](https://www.alibabacloud.com/help/en/data-management-service/latest/listusertenants) operation to query the ID of the tenant.</p>
      */
     @NameInMap("Tid")
     public Long tid;
@@ -60,13 +53,13 @@ public class ListSQLReviewOriginSQLRequest extends TeaModel {
 
     public static class ListSQLReviewOriginSQLRequestOrderActionDetailPage extends TeaModel {
         /**
-         * <p>The ID of the ticket for the SQL review. You can call the [CreateSQLReviewOrder](~~257777~~) operation to query the ID of the ticket.</p>
+         * <p>The number of the page to return.</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The number of entries to return on each page.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
@@ -96,18 +89,6 @@ public class ListSQLReviewOriginSQLRequest extends TeaModel {
 
     public static class ListSQLReviewOriginSQLRequestOrderActionDetail extends TeaModel {
         /**
-         * <p>The operation that you want to perform. Set the value to **ListSQLReviewOriginSQL**.</p>
-         */
-        @NameInMap("CheckStatusResult")
-        public String checkStatusResult;
-
-        /**
-         * <p>The error code returned.</p>
-         */
-        @NameInMap("FileId")
-        public Long fileId;
-
-        /**
          * <p>The review status of the SQL statement. Valid values:</p>
          * <br>
          * <p>*   **new**: The SQL statement is pending for analysis.</p>
@@ -117,11 +98,30 @@ public class ListSQLReviewOriginSQLRequest extends TeaModel {
          * <p>*   **force_pass**: The SQL statement passed the review by manual effort.</p>
          * <p>*   **force_not_pass**: The SQL statement failed the review by manual effort.</p>
          */
+        @NameInMap("CheckStatusResult")
+        public String checkStatusResult;
+
+        /**
+         * <p>The ID of the file.</p>
+         */
+        @NameInMap("FileId")
+        public Long fileId;
+
+        /**
+         * <p>The paging settings.</p>
+         */
         @NameInMap("Page")
         public ListSQLReviewOriginSQLRequestOrderActionDetailPage page;
 
         /**
-         * <p>The paging settings.</p>
+         * <p>The optimization suggestion for the SQL statement. Valid values:</p>
+         * <br>
+         * <p>*   **MUST_IMPROVE**: The SQL statement must be improved.</p>
+         * <p>*   **POTENTIAL_ISSUE**: The SQL statement contains potential issues.</p>
+         * <p>*   **SUGGEST_IMPROVE**: We recommend that you improve the SQL statement.</p>
+         * <p>*   **USE_DMS_TOOLKIT**: We recommend that you change schemas without locking tables.</p>
+         * <p>*   **USE_DMS_DML_UNLOCK**: We recommend that you change data without locking tables.</p>
+         * <p>*   **TABLE_INDEX_SUGGEST**: We recommend that you use SQL statements that use indexes.</p>
          */
         @NameInMap("SQLReviewResult")
         public String SQLReviewResult;

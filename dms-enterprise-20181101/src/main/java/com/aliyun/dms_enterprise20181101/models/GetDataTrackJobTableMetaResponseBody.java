@@ -4,18 +4,36 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The metadata of tables.</p>
+     */
     @NameInMap("TableMetaList")
     public java.util.List<GetDataTrackJobTableMetaResponseBodyTableMetaList> tableMetaList;
 
@@ -65,18 +83,36 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
     }
 
     public static class GetDataTrackJobTableMetaResponseBodyTableMetaListColumns extends TeaModel {
+        /**
+         * <p>The name of the character set.</p>
+         */
         @NameInMap("Charset")
         public String charset;
 
+        /**
+         * <p>The name of the column.</p>
+         */
         @NameInMap("ColumnName")
         public String columnName;
 
+        /**
+         * <p>The position of the column.</p>
+         */
         @NameInMap("ColumnPosition")
         public Integer columnPosition;
 
+        /**
+         * <p>The data type of the column. Examples: BIGINT, INT, and VARCHAR.</p>
+         */
         @NameInMap("ColumnType")
         public String columnType;
 
+        /**
+         * <p>Indicates whether the column is a virtual column. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("Fictive")
         public Boolean fictive;
 
@@ -128,12 +164,21 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
     }
 
     public static class GetDataTrackJobTableMetaResponseBodyTableMetaList extends TeaModel {
+        /**
+         * <p>The information about columns.</p>
+         */
         @NameInMap("Columns")
         public java.util.List<GetDataTrackJobTableMetaResponseBodyTableMetaListColumns> columns;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("SchemaName")
         public String schemaName;
 
+        /**
+         * <p>The name of the table.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 

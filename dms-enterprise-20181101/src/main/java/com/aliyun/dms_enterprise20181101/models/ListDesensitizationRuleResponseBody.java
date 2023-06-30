@@ -11,33 +11,34 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
     public java.util.List<ListDesensitizationRuleResponseBodyDesensitizationRuleList> desensitizationRuleList;
 
     /**
-     * <p>The algorithm used for masking.</p>
+     * <p>The error code returned if the request failed.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The ID of the tenant.</p>
-     * <br>
-     * <p>>  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [View information about the current tenant](~~181330~~).</p>
+     * <p>The error message returned if the request failed.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The name of the user who last modified the masking rule.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The number of times that the masking was used.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The request was successful.</p>
+     * <p>*   false: The request failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The number of entries to return on each page. The maximum value is 100.</p>
+     * <p>The total number of entries returned. By default, this parameter is not returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -97,52 +98,61 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
 
     public static class ListDesensitizationRuleResponseBodyDesensitizationRuleList extends TeaModel {
         /**
-         * <p>The type of the masking algorithm.</p>
+         * <p>The parameter.</p>
          */
         @NameInMap("FuncParams")
         public String funcParams;
 
         /**
-         * <p>The algorithm type.</p>
+         * <p>The example.</p>
          */
         @NameInMap("FuncSample")
         public String funcSample;
 
         /**
-         * <p>The algorithm used for masking.</p>
+         * <p>The algorithm type.</p>
          */
         @NameInMap("FunctionType")
         public String functionType;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The ID of the user who last modified the masking rule.</p>
          */
         @NameInMap("LastModifierId")
         public String lastModifierId;
 
+        /**
+         * <p>The name of the user who last modified the masking rule.</p>
+         */
         @NameInMap("LastModifierName")
         public String lastModifierName;
 
+        /**
+         * <p>The number of times that the masking was used.</p>
+         */
         @NameInMap("ReferenceCount")
         public Integer referenceCount;
 
         /**
-         * <p>The ID of the user who last modified the masking rule.</p>
+         * <p>The description of the rule.</p>
          */
         @NameInMap("RuleDesc")
         public String ruleDesc;
 
+        /**
+         * <p>The ID of the masking rule.</p>
+         */
         @NameInMap("RuleId")
         public Integer ruleId;
 
         /**
-         * <p>The error message returned if the request failed.</p>
+         * <p>The name of the masking rule.</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
-         * <p>The parameter.</p>
+         * <p>The algorithm used for masking.</p>
          */
         @NameInMap("RuleType")
         public String ruleType;

@@ -4,21 +4,42 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListLogicDatabasesResponseBody extends TeaModel {
+    /**
+     * <p>The error code that is returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message that is returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The details of logical databases.</p>
+     */
     @NameInMap("LogicDatabaseList")
     public ListLogicDatabasesResponseBodyLogicDatabaseList logicDatabaseList;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>- **true**: The request is successful.</p>
+     * <p>- **false**: The request fails.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of logical databases.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -133,33 +154,74 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
     }
 
     public static class ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabase extends TeaModel {
+        /**
+         * <p>The alias of the logical database.</p>
+         */
         @NameInMap("Alias")
         public String alias;
 
+        /**
+         * <p>The ID of the logical database.</p>
+         */
         @NameInMap("DatabaseId")
         public String databaseId;
 
+        /**
+         * <p>Logical database sub-ID list.</p>
+         */
         @NameInMap("DatabaseIds")
         public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseDatabaseIds databaseIds;
 
+        /**
+         * <p>The type of the logical database. For more information about the valid values of this parameter, see [DbType parameter](https://www.alibabacloud.com/help/en/data-management-service/latest/dbtype-parameter).</p>
+         */
         @NameInMap("DbType")
         public String dbType;
 
+        /**
+         * <p>The type of the environment to which the logical database belongs. Valid values:</p>
+         * <br>
+         * <p>- **product**: production environment</p>
+         * <p>- **dev**: development environment</p>
+         * <p>- **pre**: staging environment</p>
+         * <p>- **test**: test environment</p>
+         * <p>- **sit**: system integration testing (SIT) environment</p>
+         * <p>- **uat**: user acceptance testing (UAT) environment</p>
+         * <p>- **pet**: stress testing environment</p>
+         * <p>- **stag**: STAG environment</p>
+         */
         @NameInMap("EnvType")
         public String envType;
 
+        /**
+         * <p>Indicates whether the database is a logical database. The return value is true.</p>
+         */
         @NameInMap("Logic")
         public Boolean logic;
 
+        /**
+         * <p>The IDs of the owners of the logical database.</p>
+         */
         @NameInMap("OwnerIdList")
         public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseOwnerIdList ownerIdList;
 
+        /**
+         * <p>The names of the owners of the logical database.</p>
+         */
         @NameInMap("OwnerNameList")
         public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseOwnerNameList ownerNameList;
 
+        /**
+         * <p>The name of the logical database.</p>
+         */
         @NameInMap("SchemaName")
         public String schemaName;
 
+        /**
+         * <p>The name that is used to search for the logical database.</p>
+         * <br>
+         * <p>> We recommend that you do not use this parameter for business development. The format of the parameter value may be modified in later versions.</p>
+         */
         @NameInMap("SearchName")
         public String searchName;
 

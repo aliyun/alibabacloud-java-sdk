@@ -5,26 +5,35 @@ import com.aliyun.tea.*;
 
 public class ModifyDesensitizationStrategyResponseBody extends TeaModel {
     /**
-     * <p>ModifyDesensitizationStrategy</p>
+     * <p>The error code returned if the request failed.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>WB01220505</p>
+     * <p>The error message returned if the request failed.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>Modifies the masking rule bound to a specified field.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

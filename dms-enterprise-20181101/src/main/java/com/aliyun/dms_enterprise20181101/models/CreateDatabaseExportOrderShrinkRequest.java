@@ -4,21 +4,41 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateDatabaseExportOrderShrinkRequest extends TeaModel {
+    /**
+     * <p>The key of the attachment that provides more instructions for the ticket. You can call the [GetUserUploadFileJob](~~206069~~) operation to obtain the attachment key.</p>
+     */
     @NameInMap("AttachmentKey")
     public String attachmentKey;
 
+    /**
+     * <p>The purpose or objective of the ticket. This parameter helps reduce unnecessary communication.</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>The ID of the parent ticket.</p>
+     */
     @NameInMap("ParentId")
     public Long parentId;
 
+    /**
+     * <p>The parameters of the ticket.</p>
+     */
     @NameInMap("PluginParam")
     public String pluginParamShrink;
 
+    /**
+     * <p>The stakeholders involved in this operation.</p>
+     */
     @NameInMap("RelatedUserList")
     public String relatedUserListShrink;
 
+    /**
+     * <p>The tenant ID.</p>
+     * <br>
+     * <p>> To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the [View information about the current tenant](~~181330~~) section of the "Manage DMS tenants" topic.</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 

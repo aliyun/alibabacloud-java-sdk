@@ -5,40 +5,50 @@ import com.aliyun.tea.*;
 
 public class ListSensitiveColumnsDetailRequest extends TeaModel {
     /**
-     * <p>The details of the sensitive field.</p>
+     * <p>The name of the field. You can call the [ListSensitiveColumns](~~188103~~) operation to obtain the name of the field.</p>
+     * <br>
+     * <p>>  You can also call the [ListColumns](~~141870~~) operation to obtain the name of the field.</p>
      */
     @NameInMap("ColumnName")
     public String columnName;
 
     /**
-     * <p>The ID of the database.</p>
+     * <p>The ID of the database. The database can be a physical database or a logical database.</p>
+     * <br>
+     * <p>*   To obtain the ID of a physical database, call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation.</p>
+     * <p>*   To obtain the ID of a logical database, call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation.</p>
      */
     @NameInMap("DbId")
     public Long dbId;
-
-    /**
-     * <p>The name of the field.</p>
-     */
-    @NameInMap("Logic")
-    public Boolean logic;
-
-    /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
-     */
-    @NameInMap("SchemaName")
-    public String schemaName;
-
-    /**
-     * <p>The name of the table.</p>
-     */
-    @NameInMap("TableName")
-    public String tableName;
 
     /**
      * <p>Specifies whether the database is a logical database. Valid values:</p>
      * <br>
      * <p>*   **true**: The database is a logical database.</p>
      * <p>*   **false**: The database is a physical database.</p>
+     */
+    @NameInMap("Logic")
+    public Boolean logic;
+
+    /**
+     * <p>The name of the database. You can call the [ListSensitiveColumns](~~188103~~) operation to obtain the name of the database.</p>
+     * <br>
+     * <p>> * You can also call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation to obtain the name of a physical database.</p>
+     * <p>> * You can also call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation to obtain the name of a logical database.</p>
+     */
+    @NameInMap("SchemaName")
+    public String schemaName;
+
+    /**
+     * <p>The name of the table. You can call the [ListSensitiveColumns](~~188103~~) operation to obtain the name of the table.</p>
+     * <br>
+     * <p>>  You can also call the [ListTables](~~141878~~) operation to obtain the name of the table.</p>
+     */
+    @NameInMap("TableName")
+    public String tableName;
+
+    /**
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;

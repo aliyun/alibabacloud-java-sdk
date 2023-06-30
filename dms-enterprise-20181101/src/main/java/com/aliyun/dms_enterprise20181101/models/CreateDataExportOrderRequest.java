@@ -4,21 +4,41 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateDataExportOrderRequest extends TeaModel {
+    /**
+     * <p>The key of the attachment that provides more instructions for the ticket. You can call the [GetUserUploadFileJob](~~206069~~) operation to obtain the attachment key.</p>
+     */
     @NameInMap("AttachmentKey")
     public String attachmentKey;
 
+    /**
+     * <p>The purpose or objective of the ticket. This parameter helps reduce unnecessary communication.</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>The ID of the parent ticket.</p>
+     */
     @NameInMap("ParentId")
     public Long parentId;
 
+    /**
+     * <p>The parameters of the ticket.</p>
+     */
     @NameInMap("PluginParam")
     public CreateDataExportOrderRequestPluginParam pluginParam;
 
+    /**
+     * <p>The stakeholders involved in this operation.</p>
+     */
     @NameInMap("RelatedUserList")
     public java.util.List<Long> relatedUserList;
 
+    /**
+     * <p>The tenant ID.</p>
+     * <br>
+     * <p>> To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the [View information about the current tenant](~~181330~~) section of the "Manage DMS tenants" topic.</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 
@@ -76,18 +96,33 @@ public class CreateDataExportOrderRequest extends TeaModel {
     }
 
     public static class CreateDataExportOrderRequestPluginParamWatermark extends TeaModel {
+        /**
+         * <p>The field into which the watermark is to be embedded.</p>
+         */
         @NameInMap("ColumnName")
         public String columnName;
 
+        /**
+         * <p>The information to be embedded as a watermark into data.</p>
+         */
         @NameInMap("DataWatermark")
         public String dataWatermark;
 
+        /**
+         * <p>The information to be embedded as a watermark into files.</p>
+         */
         @NameInMap("FileWatermark")
         public String fileWatermark;
 
+        /**
+         * <p>One or more primary keys or unique keys.</p>
+         */
         @NameInMap("Keys")
         public java.util.List<String> keys;
 
+        /**
+         * <p>The methods in which the watermark is embedded.</p>
+         */
         @NameInMap("WatermarkTypes")
         public java.util.List<String> watermarkTypes;
 
@@ -139,30 +174,65 @@ public class CreateDataExportOrderRequest extends TeaModel {
     }
 
     public static class CreateDataExportOrderRequestPluginParam extends TeaModel {
+        /**
+         * <p>The estimated number of data rows to be affected.</p>
+         */
         @NameInMap("AffectRows")
         public Long affectRows;
 
+        /**
+         * <p>The reason for the export ticket.</p>
+         */
         @NameInMap("Classify")
         public String classify;
 
+        /**
+         * <p>The database ID.</p>
+         */
         @NameInMap("DbId")
         public Long dbId;
 
+        /**
+         * <p>The SQL statements that can be executed.</p>
+         */
         @NameInMap("ExeSQL")
         public String exeSQL;
 
+        /**
+         * <p>Specifies whether to skip verification. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("IgnoreAffectRows")
         public Boolean ignoreAffectRows;
 
+        /**
+         * <p>The reason for skipping verification. This parameter is required if you set IgnoreAffectRows to true.</p>
+         */
         @NameInMap("IgnoreAffectRowsReason")
         public String ignoreAffectRowsReason;
 
+        /**
+         * <p>The instance ID.</p>
+         */
         @NameInMap("InstanceId")
         public Long instanceId;
 
+        /**
+         * <p>Specifies whether the database is a logical database. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         * <br>
+         * <p>> If you set this parameter to **true**, the database that you specify must be a logical database.</p>
+         */
         @NameInMap("Logic")
         public Boolean logic;
 
+        /**
+         * <p>The information about the watermarks.</p>
+         */
         @NameInMap("Watermark")
         public CreateDataExportOrderRequestPluginParamWatermark watermark;
 

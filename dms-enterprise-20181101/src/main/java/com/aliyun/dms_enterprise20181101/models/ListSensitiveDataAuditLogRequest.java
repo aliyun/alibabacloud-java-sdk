@@ -4,33 +4,68 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListSensitiveDataAuditLogRequest extends TeaModel {
+    /**
+     * <p>The name of the column that contains sensitive data.</p>
+     */
     @NameInMap("ColumnName")
     public String columnName;
 
+    /**
+     * <p>The name of the database that stores the sensitive data.</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <p>The end of the time range for which you want to query the audit logs for sensitive information. Specify the time in the yyyy-MM-DD HH:mm:ss format.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The function module whose audit logs you want to query for sensitive data. If you do not specify this parameter, all audit logs are queried. Valid values:</p>
+     * <br>
+     * <p>*   **SQL_CONSOLE**: data query</p>
+     * <p>*   **SQL_CONSOLE_EXPORT**: query result export</p>
+     * <p>*   **DATA_CHANGE**: data change</p>
+     * <p>*   **DATA_EXPORT**: data export</p>
+     */
     @NameInMap("ModuleName")
     public String moduleName;
 
+    /**
+     * <p>The username of the requester.</p>
+     */
     @NameInMap("OpUserName")
     public String opUserName;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Example: 100</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The beginning of the time range for which you want to query the audit logs for sensitive information. Specify the time in the yyyy-MM-DD HH:mm:ss format.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The name of the table that stores the sensitive data.</p>
+     */
     @NameInMap("TableName")
     public String tableName;
 
+    /**
+     * <p>The ID of the tenant.</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 

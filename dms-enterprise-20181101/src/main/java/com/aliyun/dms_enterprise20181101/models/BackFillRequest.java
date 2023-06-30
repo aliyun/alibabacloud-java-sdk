@@ -5,68 +5,69 @@ import com.aliyun.tea.*;
 
 public class BackFillRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
-     */
-    @NameInMap("Asc")
-    public Boolean asc;
-
-    /**
-     * <p>The start date of the date range for the data to be backfilled. This parameter is required if you specify a date range for data backfill.</p>
-     */
-    @NameInMap("BackFillDate")
-    public String backFillDate;
-
-    /**
      * <p>The running sequence of task flows for data backfill. Valid values:</p>
      * <br>
      * <p>*   **0**: reverse chronological order.</p>
      * <p>*   **1**: chronological order. This is the default value.</p>
      */
+    @NameInMap("Asc")
+    public Boolean asc;
+
+    /**
+     * <p>The date for the data to be backfilled. This parameter is required if you specify a date for data backfill.</p>
+     */
+    @NameInMap("BackFillDate")
+    public String backFillDate;
+
+    /**
+     * <p>The start date of the date range for the data to be backfilled. This parameter is required if you specify a date range for data backfill.</p>
+     */
     @NameInMap("BackFillDateBegin")
     public String backFillDateBegin;
 
     /**
-     * <p>The ID of the tenant.</p>
-     * <br>
-     * <p>>  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).</p>
+     * <p>The end date of the date range for the data to be backfilled. This parameter is required if you specify a date range for data backfill.</p>
      */
     @NameInMap("BackFillDateEnd")
     public String backFillDateEnd;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **BackFill**.</p>
+     * <p>The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.</p>
      */
     @NameInMap("DagId")
     public Long dagId;
 
+    @NameInMap("FilterNodeIds")
+    public java.util.List<Long> filterNodeIds;
+
     /**
-     * <p>The BackFillDate parameter is required if you specify a date for data backfill.</p>
-     * <br>
-     * <p>The BackFillDateBegin and BackFillDateEnd parameters are required if you specify a date range for data backfill.</p>
+     * <p>The ID of the historical task flow.</p>
      */
     @NameInMap("HistoryDagId")
     public Long historyDagId;
 
     /**
-     * <p>Specifies whether to run descendant nodes. Default value: true.</p>
+     * <p>The interval at which data backfill is performed. Unit: hours. Minimum value: 1. Default value: 24.</p>
      */
     @NameInMap("Interval")
     public Integer interval;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>Specifies whether to run descendant nodes. Default value: true.</p>
      */
     @NameInMap("IsTriggerSubTree")
     public Boolean isTriggerSubTree;
 
     /**
-     * <p>The date for the data to be backfilled. This parameter is required if you specify a date for data backfill.</p>
+     * <p>The number of nodes for which you want to backfill data.</p>
      */
     @NameInMap("StartNodeIds")
     public java.util.List<Long> startNodeIds;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>>  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).</p>
      */
     @NameInMap("Tid")
     public Long tid;
@@ -114,6 +115,14 @@ public class BackFillRequest extends TeaModel {
     }
     public Long getDagId() {
         return this.dagId;
+    }
+
+    public BackFillRequest setFilterNodeIds(java.util.List<Long> filterNodeIds) {
+        this.filterNodeIds = filterNodeIds;
+        return this;
+    }
+    public java.util.List<Long> getFilterNodeIds() {
+        return this.filterNodeIds;
     }
 
     public BackFillRequest setHistoryDagId(Long historyDagId) {

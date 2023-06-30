@@ -11,7 +11,9 @@ public class GetTaskFlowGraphRequest extends TeaModel {
     public Long dagId;
 
     /**
-     * <p>The time variables for the node.</p>
+     * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>>  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).</p>
      */
     @NameInMap("Tid")
     public Long tid;

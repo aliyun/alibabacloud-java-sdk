@@ -5,34 +5,31 @@ import com.aliyun.tea.*;
 
 public class CreateDataCorrectOrderRequest extends TeaModel {
     /**
-     * <p>The ID of the ticket.</p>
+     * <p>The key of the attachment that provides more instructions for the ticket. You can call the [GetUserUploadFileJob](~~206069~~) operation to obtain the attachment key from the value of the AttachmentKey parameter.</p>
      */
     @NameInMap("AttachmentKey")
     public String attachmentKey;
 
     /**
-     * <p>Specifies whether the database is a logical database. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The database is a logical database.</p>
-     * <p>*   **false**: The database is a physical database.</p>
+     * <p>The purpose or objective of the data change. This parameter is used to help reduce unnecessary communication.</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
-     * <p>The databases in which you want to change data.</p>
+     * <p>The parameters of the ticket.</p>
      */
     @NameInMap("Param")
     public CreateDataCorrectOrderRequestParam param;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
+     * <p>The stakeholders of the data change. All stakeholders can view the ticket details and assist in the approval process. Irrelevant users other than DMS administrators and database administrators (DBAs) are not allowed to view the ticket details.</p>
      */
     @NameInMap("RelatedUserList")
     public java.util.List<Long> relatedUserList;
 
     /**
-     * <p>The estimated number of data rows to be affected by the data change.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;
@@ -84,18 +81,19 @@ public class CreateDataCorrectOrderRequest extends TeaModel {
 
     public static class CreateDataCorrectOrderRequestParamDbItemList extends TeaModel {
         /**
-         * <p>The key of the attachment that contains the SQL statements used to change data. You can call the [GetUserUploadFileJob](~~206069~~) operation to obtain the attachment key from the value of the AttachmentKey parameter.</p>
+         * <p>The ID of the database. The database can be a physical database or a logical database.</p>
          * <br>
-         * <p>>  This parameter is required if you set the **SqlType** parameter to **ATTACHMENT**.</p>
+         * <p>*   To obtain the ID of a physical database, call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation.</p>
+         * <p>*   To obtain the ID of a logical database, call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation.</p>
          */
         @NameInMap("DbId")
         public Long dbId;
 
         /**
-         * <p>The SQL statements used to roll back the data change.</p>
+         * <p>Specifies whether the database is a logical database. Valid values:</p>
          * <br>
-         * <p>> </p>
-         * <p>*   This parameter is required if you set the **RollbackSqlType** parameter to **TEXT**.</p>
+         * <p>*   **true**: The database is a logical database.</p>
+         * <p>*   **false**: The database is a physical database.</p>
          */
         @NameInMap("Logic")
         public Boolean logic;
@@ -125,40 +123,30 @@ public class CreateDataCorrectOrderRequest extends TeaModel {
 
     public static class CreateDataCorrectOrderRequestParam extends TeaModel {
         /**
-         * <p>The format of the SQL statements used to change data. Valid values:</p>
+         * <p>The key of the attachment that contains the SQL statements used to change data. You can call the [GetUserUploadFileJob](~~206069~~) operation to obtain the attachment key from the value of the AttachmentKey parameter.</p>
          * <br>
-         * <p>*   **TEXT**: text</p>
-         * <p>*   **ATTACHMENT**: attachment</p>
+         * <p>>  This parameter is required if you set the **SqlType** parameter to **ATTACHMENT**.</p>
          */
         @NameInMap("AttachmentName")
         public String attachmentName;
 
         /**
-         * <p>The purpose or objective of the data change. This parameter is used to help reduce unnecessary communication.</p>
+         * <p>The reason for the data change.</p>
          */
         @NameInMap("Classify")
         public String classify;
 
         /**
-         * <p>The error message returned if the request fails.</p>
+         * <p>The databases in which you want to change data.</p>
          */
         @NameInMap("DbItemList")
         public java.util.List<CreateDataCorrectOrderRequestParamDbItemList> dbItemList;
 
         /**
-         * <p>The ID of the database. The database can be a physical database or a logical database.</p>
-         * <br>
-         * <p>*   To obtain the ID of a physical database, call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation.</p>
-         * <p>*   To obtain the ID of a logical database, call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation.</p>
+         * <p>The estimated number of data rows to be affected by the data change.</p>
          */
         @NameInMap("EstimateAffectRows")
         public Long estimateAffectRows;
-
-        /**
-         * <p>The key of the attachment that provides more instructions for the ticket. You can call the [GetUserUploadFileJob](~~206069~~) operation to obtain the attachment key from the value of the AttachmentKey parameter.</p>
-         */
-        @NameInMap("ExecMode")
-        public String execMode;
 
         /**
          * <p>The execution mode of the ticket after the ticket is approved. Valid values:</p>
@@ -167,17 +155,29 @@ public class CreateDataCorrectOrderRequest extends TeaModel {
          * <p>*   **AUTO**: The data change is automatically performed after the ticket is approved.</p>
          * <p>*   **LAST_AUDITOR**: The data change is performed by the last approver of the ticket.</p>
          */
+        @NameInMap("ExecMode")
+        public String execMode;
+
+        /**
+         * <p>The SQL statements that you want to execute to change data.</p>
+         * <br>
+         * <p>>  This parameter is required if you set the **SqlType** parameter to **TEXT**.</p>
+         */
         @NameInMap("ExecSQL")
         public String execSQL;
 
         /**
-         * <p>The parameters of the ticket.</p>
+         * <p>The key of the attachment that contains the SQL statements used to roll back the data change. You can call the [GetUserUploadFileJob](~~206069~~) operation to the attachment key from the value of the AttachmentKey parameter.</p>
+         * <br>
+         * <p>>  This parameter is required if you set the **RollbackSqlType** parameter to **ATTACHMENT**.</p>
          */
         @NameInMap("RollbackAttachmentName")
         public String rollbackAttachmentName;
 
         /**
-         * <p>The stakeholders of the data change. All stakeholders can view the ticket details and assist in the approval process. Irrelevant users other than DMS administrators and database administrators (DBAs) are not allowed to view the ticket details.</p>
+         * <p>The SQL statements used to roll back the data change.</p>
+         * <br>
+         * <p>> This parameter is required if you set the **RollbackSqlType** parameter to **TEXT**.</p>
          */
         @NameInMap("RollbackSQL")
         public String rollbackSQL;
@@ -192,9 +192,10 @@ public class CreateDataCorrectOrderRequest extends TeaModel {
         public String rollbackSqlType;
 
         /**
-         * <p>The SQL statements that you want to execute to change data.</p>
+         * <p>The format of the SQL statements used to change data. Valid values:</p>
          * <br>
-         * <p>>  This parameter is required if you set the **SqlType** parameter to **TEXT**.</p>
+         * <p>*   **TEXT**: text</p>
+         * <p>*   **ATTACHMENT**: attachment</p>
          */
         @NameInMap("SqlType")
         public String sqlType;

@@ -4,15 +4,27 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateDataTrackOrderRequest extends TeaModel {
+    /**
+     * <p>The purpose or objective of the data tracking ticket. This parameter is used to help reduce unnecessary communication.</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>The parameters of the ticket.</p>
+     */
     @NameInMap("Param")
     public CreateDataTrackOrderRequestParam param;
 
+    /**
+     * <p>The IDs of the operators that are related to the ticket.</p>
+     */
     @NameInMap("RelatedUserList")
     public java.util.List<String> relatedUserList;
 
+    /**
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 
@@ -54,18 +66,35 @@ public class CreateDataTrackOrderRequest extends TeaModel {
     }
 
     public static class CreateDataTrackOrderRequestParam extends TeaModel {
+        /**
+         * <p>The ID of the database. You can call the [SearchDatabases](~~141876~~) operation to query the ID of the database.</p>
+         * <br>
+         * <p>> You can call this operation to create a data tracking ticket for only physical databases. This operation is not applicable to logical databases.</p>
+         */
         @NameInMap("DbId")
         public String dbId;
 
+        /**
+         * <p>The end time of the time range in which you want to track data operations. The time must be in the yyyy-MM-dd HH:mm:ss format.</p>
+         */
         @NameInMap("JobEndTime")
         public String jobEndTime;
 
+        /**
+         * <p>The start time of the time range in which you want to track data operations. The time must be in the yyyy-MM-dd HH:mm:ss format.</p>
+         */
         @NameInMap("JobStartTime")
         public String jobStartTime;
 
+        /**
+         * <p>The names of the tables for which you want to track data operations.</p>
+         */
         @NameInMap("TableNames")
         public java.util.List<String> tableNames;
 
+        /**
+         * <p>The types of data operations that you want to track.</p>
+         */
         @NameInMap("TrackTypes")
         public java.util.List<String> trackTypes;
 

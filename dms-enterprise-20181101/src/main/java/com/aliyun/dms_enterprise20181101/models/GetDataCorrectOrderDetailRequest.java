@@ -5,18 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetDataCorrectOrderDetailRequest extends TeaModel {
     /**
-     * <p>The information about the data change ticket.</p>
+     * <p>The ID of the ticket. You can call the [ListOrders](~~144643~~) operation to obtain the ticket ID.</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
-     * <p>The status of the precheck. Valid values:</p>
-     * <br>
-     * <p>*   **WAITING**: The ticket is pending precheck.</p>
-     * <p>*   **RUNNING**: The ticket is being prechecked.</p>
-     * <p>*   **SUCCESS**: The ticket passes the precheck.</p>
-     * <p>*   **FAIL**: The ticket fails the precheck.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;

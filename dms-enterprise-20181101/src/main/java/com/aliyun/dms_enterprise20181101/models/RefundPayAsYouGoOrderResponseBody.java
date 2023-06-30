@@ -4,9 +4,15 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class RefundPayAsYouGoOrderResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
@@ -17,7 +23,10 @@ public class RefundPayAsYouGoOrderResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Unsubscribes from a pay-as-you-go Data Management (DMS) resource.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;

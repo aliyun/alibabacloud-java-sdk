@@ -4,18 +4,36 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListProxyAccessesResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The information about the users that are authorized to access the database instance by using the secure access proxy feature.</p>
+     */
     @NameInMap("ProxyAccessList")
     public java.util.List<ListProxyAccessesResponseBodyProxyAccessList> proxyAccessList;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>- **true**: The request was successful.</p>
+     * <p>- **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,33 +83,66 @@ public class ListProxyAccessesResponseBody extends TeaModel {
     }
 
     public static class ListProxyAccessesResponseBodyProxyAccessList extends TeaModel {
+        /**
+         * <p>The username of the database account that is authorized to access the database instance by using the secure access proxy feature.</p>
+         */
         @NameInMap("AccessId")
         public String accessId;
 
+        /**
+         * <p>The time when the user is authorized to access the database instance by using the secure access proxy feature.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The username of the independent database account.</p>
+         */
         @NameInMap("IndepAccount")
         public String indepAccount;
 
+        /**
+         * <p>The ID of the database instance.</p>
+         */
         @NameInMap("InstanceId")
         public Long instanceId;
 
+        /**
+         * <p>The method that is used to authorize the user to access the database instance by using the secure access proxy feature. Valid values: </p>
+         * <br>
+         * <p>- **Authorization by the Alibaba Cloud Account ()**: The information in the parentheses () indicates the user ID (UID) of the Alibaba Cloud account.</p>
+         * <p>- **Authorization by submitting the ticket ()**:The information in the parentheses () indicates the number of the ticket that the user submits to apply for permissions.</p>
+         */
         @NameInMap("OriginInfo")
         public String originInfo;
 
+        /**
+         * <p>The ID that DMS generates after the user is authorized to access the database instance by using the secure access proxy feature. The ID is unique in DMS.</p>
+         */
         @NameInMap("ProxyAccessId")
         public Long proxyAccessId;
 
+        /**
+         * <p>The ID of the secure access proxy.</p>
+         */
         @NameInMap("ProxyId")
         public Long proxyId;
 
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("UserId")
         public Long userId;
 
+        /**
+         * <p>The nickname of the user.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
+        /**
+         * <p>The UID of the Alibaba Cloud account.</p>
+         */
         @NameInMap("UserUid")
         public String userUid;
 

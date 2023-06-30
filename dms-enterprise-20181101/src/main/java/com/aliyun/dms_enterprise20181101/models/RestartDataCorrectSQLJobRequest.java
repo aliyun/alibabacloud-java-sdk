@@ -5,27 +5,30 @@ import com.aliyun.tea.*;
 
 public class RestartDataCorrectSQLJobRequest extends TeaModel {
     /**
-     * <p>The error code returned.</p>
+     * <p>The ID of the SQL task. You can call the [GetDataCorrectTaskDetail](~~208481~~) and [ListDBTaskSQLJob](~~207049~~) operations to obtain the value of this parameter.</p>
+     * <br>
+     * <p>If the Type parameter is set to SINGLE, you must pass the value of the JobId parameter to confirm the ID of the SQL task that you want to rerun.</p>
      */
     @NameInMap("JobId")
     public Long jobId;
 
     /**
-     * <p>The ID of the SQL task. You can call the [GetDataCorrectTaskDetail](~~208481~~) and [ListDBTaskSQLJob](~~207049~~) operations to obtain the value of this parameter.</p>
-     * <br>
-     * <p>If the Type parameter is set to SINGLE, you must pass the value of the JobId parameter to confirm the ID of the SQL task that you want to rerun.</p>
+     * <p>The ID of the data change ticket. You can call the [ListOrders](~~144643~~) operation to query the ID of the data change ticket.</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.</p>
+     * <p>The type of the rerun operation. Valid values:</p>
+     * <br>
+     * <p>*   **ALL**: reruns all SQL tasks.</p>
+     * <p>*   **SINGLE**: reruns a single SQL task.</p>
      */
     @NameInMap("Type")
     public String type;

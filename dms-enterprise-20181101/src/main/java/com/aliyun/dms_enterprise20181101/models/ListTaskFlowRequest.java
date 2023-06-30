@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTaskFlowRequest extends TeaModel {
     /**
-     * <p>The information about the task flows returned.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;

@@ -4,15 +4,27 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateDataTrackOrderShrinkRequest extends TeaModel {
+    /**
+     * <p>The purpose or objective of the data tracking ticket. This parameter is used to help reduce unnecessary communication.</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>The parameters of the ticket.</p>
+     */
     @NameInMap("Param")
     public String paramShrink;
 
+    /**
+     * <p>The IDs of the operators that are related to the ticket.</p>
+     */
     @NameInMap("RelatedUserList")
     public String relatedUserListShrink;
 
+    /**
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 

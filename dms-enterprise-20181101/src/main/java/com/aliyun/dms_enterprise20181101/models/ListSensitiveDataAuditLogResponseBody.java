@@ -4,21 +4,42 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The audit logs for sensitive data.</p>
+     */
     @NameInMap("SensitiveDataAuditLogList")
     public java.util.List<ListSensitiveDataAuditLogResponseBodySensitiveDataAuditLogList> sensitiveDataAuditLogList;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -76,18 +97,44 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
     }
 
     public static class ListSensitiveDataAuditLogResponseBodySensitiveDataAuditLogListSensitiveDataLog extends TeaModel {
+        /**
+         * <p>The name of the column that contains sensitive data.</p>
+         */
         @NameInMap("ColumnName")
         public String columnName;
 
+        /**
+         * <p>The permission that the user has on the column. Valid values:</p>
+         * <br>
+         * <p>*   **No permission**</p>
+         * <p>*   **Partial redaction**</p>
+         * <p>*   **Plaintext**</p>
+         * <p>*   **Change**</p>
+         * <p>*   **Enable data masking**</p>
+         * <p>*   **Disable data masking**</p>
+         */
         @NameInMap("ColumnPermissionType")
         public String columnPermissionType;
 
+        /**
+         * <p>The algorithm used for data masking.</p>
+         */
         @NameInMap("DesensitizationRule")
         public String desensitizationRule;
 
+        /**
+         * <p>The sensitivity level of the data. Valid values:</p>
+         * <br>
+         * <p>*   **Low**</p>
+         * <p>*   **Medium**</p>
+         * <p>*   **High**</p>
+         */
         @NameInMap("SecurityLevel")
         public String securityLevel;
 
+        /**
+         * <p>The name of the table that stores the sensitive data.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 
@@ -139,27 +186,54 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
     }
 
     public static class ListSensitiveDataAuditLogResponseBodySensitiveDataAuditLogList extends TeaModel {
+        /**
+         * <p>The name of the database that stores the sensitive data.</p>
+         */
         @NameInMap("DbDisplayName")
         public String dbDisplayName;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public Long instanceId;
 
+        /**
+         * <p>The name of the function module whose audit logs were queried.</p>
+         */
         @NameInMap("ModuleName")
         public String moduleName;
 
+        /**
+         * <p>The time when the operation was performed. The time is in the yyyy-MM-DD HH:mm:ss format.</p>
+         */
         @NameInMap("OpTime")
         public String opTime;
 
+        /**
+         * <p>The logs for sensitive data.</p>
+         */
         @NameInMap("SensitiveDataLog")
         public java.util.List<ListSensitiveDataAuditLogResponseBodySensitiveDataAuditLogListSensitiveDataLog> sensitiveDataLog;
 
+        /**
+         * <p>The details of the object on which the operation was performed. The value of this parameter is in one of the following formats:</p>
+         * <br>
+         * <p>*   Object name - object ID</p>
+         * <p>*   Object name (object ID)</p>
+         */
         @NameInMap("TargetName")
         public String targetName;
 
+        /**
+         * <p>The user ID of the requester.</p>
+         */
         @NameInMap("UserId")
         public Long userId;
 
+        /**
+         * <p>The username of the requester.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 

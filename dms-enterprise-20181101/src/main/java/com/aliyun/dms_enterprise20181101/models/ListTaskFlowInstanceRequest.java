@@ -5,46 +5,55 @@ import com.aliyun.tea.*;
 
 public class ListTaskFlowInstanceRequest extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to **ListTaskFlowInstance**.</p>
+     * <p>The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to obtain the ID of the task flow.</p>
      */
     @NameInMap("DagId")
     public Long dagId;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("PageIndex")
     public Integer pageIndex;
 
     /**
-     * <p>The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to obtain the ID of the task flow.</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The beginning of the time range to query the execution records of the task flow. Specify the time in the yyyy-MM-DD format.</p>
      */
     @NameInMap("StartTimeBegin")
     public String startTimeBegin;
 
     /**
-     * <p>The ID of the task flow.</p>
+     * <p>The end of the time range to query the execution records of the task flow. Specify the time in the yyyy-MM-DD format.</p>
      */
     @NameInMap("StartTimeEnd")
     public String startTimeEnd;
 
+    @NameInMap("Status")
+    public Integer status;
+
     /**
-     * <p>The ID of the execution record.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;
 
     /**
-     * <p>The business time of the task flow. The time is displayed in the yyyy-MM-DD HH:mm:ss format.</p>
+     * <p>The mode in which the task flow is triggered. Valid values:</p>
+     * <br>
+     * <p>*   **0**: The task flow is automatically triggered based on periodic scheduling.</p>
+     * <p>*   **1**: The task flow is manually triggered.</p>
      */
     @NameInMap("TriggerType")
     public Integer triggerType;
+
+    @NameInMap("UseBizDate")
+    public Boolean useBizDate;
 
     public static ListTaskFlowInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTaskFlowInstanceRequest self = new ListTaskFlowInstanceRequest();
@@ -91,6 +100,14 @@ public class ListTaskFlowInstanceRequest extends TeaModel {
         return this.startTimeEnd;
     }
 
+    public ListTaskFlowInstanceRequest setStatus(Integer status) {
+        this.status = status;
+        return this;
+    }
+    public Integer getStatus() {
+        return this.status;
+    }
+
     public ListTaskFlowInstanceRequest setTid(Long tid) {
         this.tid = tid;
         return this;
@@ -105,6 +122,14 @@ public class ListTaskFlowInstanceRequest extends TeaModel {
     }
     public Integer getTriggerType() {
         return this.triggerType;
+    }
+
+    public ListTaskFlowInstanceRequest setUseBizDate(Boolean useBizDate) {
+        this.useBizDate = useBizDate;
+        return this;
+    }
+    public Boolean getUseBizDate() {
+        return this.useBizDate;
     }
 
 }

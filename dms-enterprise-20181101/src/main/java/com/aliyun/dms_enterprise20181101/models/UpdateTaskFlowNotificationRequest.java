@@ -5,31 +5,33 @@ import com.aliyun.tea.*;
 
 public class UpdateTaskFlowNotificationRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable notifications for successful task flows. Notifications are disabled by default. You can enable notifications based on your business requirements.</p>
+     * <p>The unique ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.</p>
      */
     @NameInMap("DagId")
     public Long dagId;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>Specifies whether to enable notifications for failed task flows. Notifications are disabled by default. You can enable notifications based on your business requirements.</p>
      */
     @NameInMap("DagNotificationFail")
     public Boolean dagNotificationFail;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **UpdateTaskFlowNotification**.</p>
+     * <p>Specifies whether to enable SLA global notifications for task flows. Notifications are disabled by default. You can enable notifications based on your business requirements.</p>
      */
     @NameInMap("DagNotificationSla")
     public Boolean dagNotificationSla;
 
     /**
-     * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+     * <p>Specifies whether to enable notifications for successful task flows. Notifications are disabled by default. You can enable notifications based on your business requirements.</p>
      */
     @NameInMap("DagNotificationSuccess")
     public Boolean dagNotificationSuccess;
 
     /**
-     * <p>Specifies whether to enable notifications for failed task flows. Notifications are disabled by default. You can enable notifications based on your business requirements.</p>
+     * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>>  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).</p>
      */
     @NameInMap("Tid")
     public Long tid;

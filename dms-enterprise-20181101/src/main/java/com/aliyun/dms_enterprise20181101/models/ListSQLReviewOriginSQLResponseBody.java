@@ -5,37 +5,37 @@ import com.aliyun.tea.*;
 
 public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
     /**
-     * <p>The MD5 hash value of the SQL statement.</p>
+     * <p>The error code returned.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The description of the review status.</p>
+     * <p>The error message returned.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The parameters that are used to filter SQL statements involved in the ticket.</p>
+     * <p>The information about the parsed SQL statements.</p>
      */
     @NameInMap("OriginSQLList")
     public java.util.List<ListSQLReviewOriginSQLResponseBodyOriginSQLList> originSQLList;
 
     /**
-     * <p>The name of the file.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the SQL statement.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The total number of the SQL statements.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -95,40 +95,57 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
 
     public static class ListSQLReviewOriginSQLResponseBodyOriginSQLList extends TeaModel {
         /**
-         * <p>The ID of the file.</p>
+         * <p>The review status of the SQL statement. Valid values:</p>
+         * <br>
+         * <p>*   **new**: The SQL statement is pending for analysis.</p>
+         * <p>*   **unknown**: The SQL statement failed to be parsed.</p>
+         * <p>*   **check_not_pass**: The SQL statement failed the review.</p>
+         * <p>*   **check_pass**: The SQL statement passed the review.</p>
+         * <p>*   **force_pass**: The SQL statement passed the review by manual effort.</p>
+         * <p>*   **force_not_pass**: The SQL statement failed the review by manual effort.</p>
          */
         @NameInMap("CheckStatus")
         public String checkStatus;
 
         /**
-         * <p>Queries the details of the SQL statements that are involved in an SQL review ticket.</p>
+         * <p>The time when the SQL statement is reviewed.</p>
          */
         @NameInMap("CheckedTime")
         public String checkedTime;
 
         /**
-         * <p>The key that is used to query the details of optimization suggestions. You can call the [GetSQLReviewOptimizeDetail](https://icms.alibaba-inc.com/content/dms/doc?l=1\&m=61777\&n=2712723\&spm) operation to query the details of optimization suggestions based on the key.</p>
+         * <p>The ID of the file.</p>
          */
         @NameInMap("FileId")
         public Long fileId;
 
         /**
-         * <p>The SQL statement.</p>
+         * <p>The name of the file.</p>
          */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <p>The statistics of optimization suggestions for SQL statements. The value is a JSON string. The following optimization suggestions are involved:</p>
+         * <br>
+         * <p>*   **MUST_IMPROVE**: The SQL statement must be improved.</p>
+         * <p>*   **POTENTIAL_ISSUE**: The SQL statement contains potential issues.</p>
+         * <p>*   **SUGGEST_IMPROVE**: We recommend that you improve the SQL statement.</p>
+         * <p>*   **USEDMSTOOLKIT**: We recommend that you change schemas without locking tables.</p>
+         * <p>*   **USEDMSDML_UNLOCK**: We recommend that you change data without locking tables.</p>
+         * <p>*   **TABLEINDEXSUGGEST**: We recommend that you use SQL statements that use indexes.</p>
+         */
         @NameInMap("ReviewSummary")
         public String reviewSummary;
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The SQL statement.</p>
          */
         @NameInMap("SQLContent")
         public String SQLContent;
 
         /**
-         * <p>The time when the SQL statement is reviewed.</p>
+         * <p>The ID of the SQL statement.</p>
          */
         @NameInMap("SQLId")
         public Long SQLId;
@@ -136,14 +153,20 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
         @NameInMap("SQLName")
         public String SQLName;
 
+        /**
+         * <p>The key that is used to query the details of optimization suggestions. You can call the [GetSQLReviewOptimizeDetail](https://icms.alibaba-inc.com/content/dms/doc?l=1\&m=61777\&n=2712723\&spm) operation to query the details of optimization suggestions based on the key.</p>
+         */
         @NameInMap("SQLReviewQueryKey")
         public String SQLReviewQueryKey;
 
+        /**
+         * <p>The MD5 hash value of the SQL statement.</p>
+         */
         @NameInMap("SqlHash")
         public String sqlHash;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The description of the review status.</p>
          */
         @NameInMap("StatusDesc")
         public String statusDesc;

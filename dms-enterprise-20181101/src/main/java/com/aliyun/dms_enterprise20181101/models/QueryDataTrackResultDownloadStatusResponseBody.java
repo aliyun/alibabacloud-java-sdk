@@ -4,18 +4,36 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class QueryDataTrackResultDownloadStatusResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the download progress.</p>
+     */
     @NameInMap("StatusResult")
     public QueryDataTrackResultDownloadStatusResponseBodyStatusResult statusResult;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,15 +83,33 @@ public class QueryDataTrackResultDownloadStatusResponseBody extends TeaModel {
     }
 
     public static class QueryDataTrackResultDownloadStatusResponseBodyStatusResult extends TeaModel {
+        /**
+         * <p>The status of the download task. Valid values:</p>
+         * <br>
+         * <p>*   **INIT**: The download task is being initialized.</p>
+         * <p>*   **LISTING**: The download task is in a transient intermediate state during the initialization.</p>
+         * <p>*   **DOWNLOADING**: The download task is being processed.</p>
+         * <p>*   **DOWNLOAD_SUCCESS**: The download task was successfully processed.</p>
+         * <p>*   **DOWNLOAD_FAIL**: The download task failed.</p>
+         */
         @NameInMap("DownloadStatus")
         public String downloadStatus;
 
+        /**
+         * <p>The URL that is used to download data tracking logs. This parameter is returned only when the value of DownloadStatus is DOWNLOAD_SUCCESS.</p>
+         */
         @NameInMap("DownloadUrl")
         public String downloadUrl;
 
+        /**
+         * <p>The description of the state.</p>
+         */
         @NameInMap("StatusDesc")
         public String statusDesc;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 

@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListDesensitizationRuleRequest extends TeaModel {
     /**
-     * <p>The description of the rule.</p>
+     * <p>The type of the masking algorithm.</p>
      */
     @NameInMap("FuncType")
     public String funcType;
 
     /**
-     * <p>The name of the masking rule.</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The ID of the masking rule.</p>
+     * <p>The number of entries to return on each page. The maximum value is 100.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -29,19 +29,21 @@ public class ListDesensitizationRuleRequest extends TeaModel {
     public Integer ruleId;
 
     /**
-     * <p>The example.</p>
+     * <p>The name of the masking rule.</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The algorithm used for masking.</p>
      */
     @NameInMap("RuleType")
     public String ruleType;
 
     /**
-     * <p>The name of the masking rule.</p>
+     * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>>  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [View information about the current tenant](~~181330~~).</p>
      */
     @NameInMap("Tid")
     public Long tid;

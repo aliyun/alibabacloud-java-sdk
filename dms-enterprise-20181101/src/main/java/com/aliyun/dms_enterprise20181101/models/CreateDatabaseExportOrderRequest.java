@@ -4,21 +4,41 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateDatabaseExportOrderRequest extends TeaModel {
+    /**
+     * <p>The key of the attachment that provides more instructions for the ticket. You can call the [GetUserUploadFileJob](~~206069~~) operation to obtain the attachment key.</p>
+     */
     @NameInMap("AttachmentKey")
     public String attachmentKey;
 
+    /**
+     * <p>The purpose or objective of the ticket. This parameter helps reduce unnecessary communication.</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>The ID of the parent ticket.</p>
+     */
     @NameInMap("ParentId")
     public Long parentId;
 
+    /**
+     * <p>The parameters of the ticket.</p>
+     */
     @NameInMap("PluginParam")
     public CreateDatabaseExportOrderRequestPluginParam pluginParam;
 
+    /**
+     * <p>The stakeholders involved in this operation.</p>
+     */
     @NameInMap("RelatedUserList")
     public java.util.List<Long> relatedUserList;
 
+    /**
+     * <p>The tenant ID.</p>
+     * <br>
+     * <p>> To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the [View information about the current tenant](~~181330~~) section of the "Manage DMS tenants" topic.</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 
@@ -76,24 +96,53 @@ public class CreateDatabaseExportOrderRequest extends TeaModel {
     }
 
     public static class CreateDatabaseExportOrderRequestPluginParamConfig extends TeaModel {
+        /**
+         * <p>The export options for big data. The options are used to filter the big data to be exported. You can leave this parameter empty.</p>
+         */
         @NameInMap("DataOption")
         public java.util.List<String> dataOption;
 
+        /**
+         * <p>The type of data that you want to export. Valid values:</p>
+         * <br>
+         * <p>*   **DATA**: The data of the database is exported.</p>
+         * <p>*   **STRUCT**: The schema of the database is exported.</p>
+         * <p>*   **DATA_STRUCT**: The data and schema of the database are exported.</p>
+         */
         @NameInMap("ExportContent")
         public String exportContent;
 
+        /**
+         * <p>The types of schemas that you want to export.</p>
+         */
         @NameInMap("ExportTypes")
         public java.util.List<String> exportTypes;
 
+        /**
+         * <p>The extension options of the SQL script. You can leave this parameter empty.</p>
+         */
         @NameInMap("SQLExtOption")
         public java.util.List<String> SQLExtOption;
 
+        /**
+         * <p>The tables that you want to export.</p>
+         */
         @NameInMap("SelectedTables")
         public java.util.List<String> selectedTables;
 
+        /**
+         * <p>The conditions used to filter the tables to be exported.</p>
+         */
         @NameInMap("Tables")
         public java.util.Map<String, String> tables;
 
+        /**
+         * <p>The format in which the database is exported. Valid values:</p>
+         * <br>
+         * <p>*   **SQL**</p>
+         * <p>*   **CSV**</p>
+         * <p>*   **XLSX**</p>
+         */
         @NameInMap("TargetOption")
         public String targetOption;
 
@@ -161,21 +210,42 @@ public class CreateDatabaseExportOrderRequest extends TeaModel {
     }
 
     public static class CreateDatabaseExportOrderRequestPluginParam extends TeaModel {
+        /**
+         * <p>The reason for the database export.</p>
+         */
         @NameInMap("Classify")
         public String classify;
 
+        /**
+         * <p>The configurations for database export.</p>
+         */
         @NameInMap("Config")
         public CreateDatabaseExportOrderRequestPluginParamConfig config;
 
+        /**
+         * <p>The database ID.</p>
+         */
         @NameInMap("DbId")
         public Long dbId;
 
+        /**
+         * <p>The instance ID.</p>
+         */
         @NameInMap("InstanceId")
         public Long instanceId;
 
+        /**
+         * <p>Specifies whether the database is a logical database. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("Logic")
         public Boolean logic;
 
+        /**
+         * <p>The name that is used to search for the database.</p>
+         */
         @NameInMap("SearchName")
         public String searchName;
 
