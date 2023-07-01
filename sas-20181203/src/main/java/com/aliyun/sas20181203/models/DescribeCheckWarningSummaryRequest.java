@@ -35,6 +35,11 @@ public class DescribeCheckWarningSummaryRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The ID of the asset group.</p>
+     * <br>
+     * <p>> You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of asset groups.</p>
+     */
     @NameInMap("GroupId")
     public Long groupId;
 

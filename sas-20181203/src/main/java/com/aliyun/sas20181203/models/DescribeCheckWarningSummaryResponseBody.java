@@ -109,6 +109,12 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
         @NameInMap("CheckExploit")
         public Boolean checkExploit;
 
+        /**
+         * <p>Indicates  whether the risk item is a container runtime risk item. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("ContainerRisk")
         public Boolean containerRisk;
 

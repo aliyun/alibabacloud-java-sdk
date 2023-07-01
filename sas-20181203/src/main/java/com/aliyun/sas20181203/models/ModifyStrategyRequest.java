@@ -38,7 +38,8 @@ public class ModifyStrategyRequest extends TeaModel {
     public String cycleStartTime;
 
     /**
-     * <p>The time when the baseline check based on the baseline check policy ends.</p>
+     * <p>The time when the baseline check based on the baseline check policy ends. </p>
+     * <p>Format is hh:mm:ss.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -89,7 +90,7 @@ public class ModifyStrategyRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The time when the baseline check based on the baseline check policy starts.</p>
+     * <p>The time when the baseline check based on the baseline check policy starts. Format is hh:mm:ss.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

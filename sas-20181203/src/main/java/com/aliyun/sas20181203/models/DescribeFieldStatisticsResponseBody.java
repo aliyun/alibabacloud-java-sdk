@@ -50,6 +50,9 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         @NameInMap("AwsInstanceCount")
         public Integer awsInstanceCount;
 
+        /**
+         * <p>The number of third-party cloud servers.</p>
+         */
         @NameInMap("AzureInstanceCount")
         public Integer azureInstanceCount;
 

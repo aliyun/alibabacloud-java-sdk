@@ -25,7 +25,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     /**
      * <p>The quota for the application whitelist feature.</p>
      * <br>
-     * <p>> The quantity of servers that are allowed by the quota is deducted by one each time you apply an application whitelist to a server. After you enable the application whitelist feature, the quota is 20 by default.</p>
+     * <p>>  The quantity of servers that are allowed by the quota is deducted by one each time you apply an application whitelist to a server. After you enable the application whitelist feature, the quota is 20 by default.</p>
      */
     @NameInMap("AppWhiteListAuthCount")
     public Long appWhiteListAuthCount;
@@ -46,7 +46,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
      * <p>*   **7**: Ultimate edition</p>
      * <p>*   **10**: Value-added Plan edition</p>
      * <br>
-     * <p>> If you purchase the Multi-version edition of Security Center, the value indicates the most advanced edition that is used in the Multi-version edition. If you do not purchase the Multi-version edition of Security Center, the value indicates the edition of Security Center.</p>
+     * <p>>  If you purchase the Multi-version edition of Security Center, the value indicates the most advanced edition that is used in the Multi-version edition. If you do not purchase the Multi-version edition of Security Center, the value indicates the edition of Security Center.</p>
      */
     @NameInMap("HighestVersion")
     public Integer highestVersion;
@@ -79,10 +79,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     public Boolean isNewContainerVersion;
 
     /**
-     * <p>Indicates whether Security Center runs the latest version of the Multi-version edition.</p>
+     * <p>Indicates whether Security Center runs the latest version of the Multi-version edition. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("IsNewMultiVersion")
     public Boolean isNewMultiVersion;
@@ -132,19 +132,19 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     /**
      * <p>The timestamp when Security Center is released. Unit: milliseconds. The value of this parameter is seven days after Security Center expires.</p>
      * <br>
-     * <p>> If you do not renew the subscription within seven days after the expiration date, the Value-added Plan, Anti-virus, Advanced, or Enterprise edition is downgraded to the Basic edition. In this case, you can no longer view the existing configurations or statistics such as DDoS alerts. You must purchase the Anti-virus, Advanced, or Enterprise edition to continue using relevant features. For more information, see [Purchase Security Center](~~42308~~).</p>
+     * <p>> If you do not renew the subscription within seven days after the expiration date, the Value-added Plan, Basic Anti-Virus, Advanced, or Enterprise edition is downgraded to the Basic edition. In this case, you can no longer view the existing configurations or statistics such as DDoS alerts. You must purchase the Anti-virus, Advanced, or Enterprise edition to continue using relevant features. For more information, see [Purchase Security Center](~~42308~~).</p>
      */
     @NameInMap("ReleaseTime")
     public Long releaseTime;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the log analysis feature is purchased. Valid values:</p>
+     * <p>Indicates whether log analysis is purchased. Valid values:</p>
      * <br>
      * <p>*   **0**: no</p>
      * <p>*   **1**: yes</p>
@@ -174,7 +174,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     public Long threatAnalysisCapacity;
 
     /**
-     * <p>Indicates whether the custom alerting feature is enabled. Valid values:</p>
+     * <p>Indicates whether the custom alert feature is enabled. Valid values:</p>
      * <br>
      * <p>*   **0**: no</p>
      * <p>*   **2**: yes</p>
@@ -212,9 +212,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     public Integer webLock;
 
     /**
-     * <p>The quota for the web tamper proofing feature. The quantity of servers that are allowed by the quota is deducted by one each time you enable the web tamper proofing feature for a server. Valid values: 0 to N.</p>
+     * <p>The quota for the web tamper proofing feature. The quantity of servers that are allowed by the quota is deducted by one each time a server is protected by the web tamper proofing feature. Valid values: 0 to N.</p>
      * <br>
-     * <p>> N indicates the number of servers that you own.</p>
+     * <p>>  N indicates the number of servers that you own.</p>
      */
     @NameInMap("WebLockAuthCount")
     public Long webLockAuthCount;

@@ -52,7 +52,7 @@ public class AddPrivateRegistryRequest extends TeaModel {
     /**
      * <p>The ID of the region.</p>
      * <br>
-     * <p>> You can call the [ListImageRegistryRegions](~~ListImageRegistryRegions~~) operation to query the IDs of supported regions.</p>
+     * <p>> You can call the [ListImageRegistryRegion](~~ListImageRegistryRegion~~) operation to query the IDs of supported regions.</p>
      */
     @NameInMap("RegistryRegionId")
     public String registryRegionId;

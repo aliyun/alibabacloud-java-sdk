@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVulDetailsResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the details about the vulnerability.</p>
+     * <p>The details of the vulnerability.</p>
      */
     @NameInMap("Cves")
     public java.util.List<DescribeVulDetailsResponseBodyCves> cves;
@@ -95,7 +95,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         public String classify;
 
         /**
-         * <p>An array that consists of vulnerability types.</p>
+         * <p>The vulnerability types.</p>
          */
         @NameInMap("Classifys")
         public java.util.List<DescribeVulDetailsResponseBodyCvesClassifys> classifys;
@@ -141,19 +141,25 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         public String cvssVector;
 
         /**
-         * <p>The name of the server.</p>
+         * <p>The instance name of the server.</p>
+         * <br>
+         * <p>> This parameter is deprecated. You can call the [DescribeVulList](~~DescribeVulList~~) operation to query the instances that are affected by vulnerabilities.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The public IP address of the server.</p>
+         * <br>
+         * <p>> This parameter is deprecated. You can call the [DescribeVulList](~~DescribeVulList~~) operation to query the instances that are affected by vulnerabilities.</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The private IP address of the server.</p>
+         * <br>
+         * <p>> This parameter is deprecated. You can call the [DescribeVulList](~~DescribeVulList~~) operation to query the instances that are affected by vulnerabilities.</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
