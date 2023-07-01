@@ -146,9 +146,15 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         @NameInMap("Bind")
         public Boolean bind;
 
+        /**
+         * <p>The ID of the container.</p>
+         */
         @NameInMap("ContainerId")
         public String containerId;
 
+        /**
+         * <p>The name of the container.</p>
+         */
         @NameInMap("ContainerName")
         public String containerName;
 
@@ -204,9 +210,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The status of the check item.</p>
-         * <br>
-         * <p>> Valid values:</p>
+         * <p>The status of the check item. Valid values:</p>
          * <br>
          * <p>*   1: failed</p>
          * <br>

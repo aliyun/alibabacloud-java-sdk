@@ -4,6 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageCriteriaRequest extends TeaModel {
+    /**
+     * <p>The keyword that you specify for fuzzy search when you query the image.</p>
+     * <br>
+     * <p>> The value of this parameter can be an image ID, image tag, image instance ID, image repository name, image repository ID, image repository namespace, image region, image digest, or image repository type.</p>
+     */
     @NameInMap("Value")
     public String value;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the images returned.</p>
+     * <p>The timestamp when the last baseline check was performed. Unit: milliseconds.</p>
      */
     @NameInMap("ImageInfos")
     public java.util.List<DescribeImageListWithBaselineNameResponseBodyImageInfos> imageInfos;
@@ -118,15 +118,27 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The instance name of the server.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The public IP address of the server.</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <p>The private IP address of the server.</p>
+         */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        /**
+         * <p>The timestamp when the last baseline check was performed. Unit: milliseconds.</p>
+         */
         @NameInMap("LastScanTime")
         public Long lastScanTime;
 
@@ -205,12 +217,24 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
         @NameInMap("Tag")
         public String tag;
 
+        /**
+         * <p>The ID of the asset on which the baseline check is performed.</p>
+         */
         @NameInMap("TargetId")
         public String targetId;
 
+        /**
+         * <p>The name of the asset on which the baseline check is performed.</p>
+         */
         @NameInMap("TargetName")
         public String targetName;
 
+        /**
+         * <p>The type of the asset on which the baseline check is performed. Valid values:</p>
+         * <br>
+         * <p>- ECS_IMAGE: image</p>
+         * <p>- ECS_SNAPSHOT: snapshot</p>
+         */
         @NameInMap("TargetType")
         public String targetType;
 

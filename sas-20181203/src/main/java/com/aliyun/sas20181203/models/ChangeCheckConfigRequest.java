@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ChangeCheckConfigRequest extends TeaModel {
+    @NameInMap("CycleDays")
+    public java.util.List<Integer> cycleDays;
+
     /**
      * <p>The end time of the check. The value specifies a point in time in a day. The time period that is specified by the start time and end time must be one of the following time periods:</p>
      * <br>
@@ -38,6 +41,14 @@ public class ChangeCheckConfigRequest extends TeaModel {
     public static ChangeCheckConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ChangeCheckConfigRequest self = new ChangeCheckConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ChangeCheckConfigRequest setCycleDays(java.util.List<Integer> cycleDays) {
+        this.cycleDays = cycleDays;
+        return this;
+    }
+    public java.util.List<Integer> getCycleDays() {
+        return this.cycleDays;
     }
 
     public ChangeCheckConfigRequest setEndTime(Integer endTime) {

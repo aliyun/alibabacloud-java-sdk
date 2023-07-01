@@ -97,6 +97,12 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
+        @NameInMap("Exposed")
+        public Integer exposed;
+
+        @NameInMap("ExposedDetail")
+        public String exposedDetail;
+
         /**
          * <p>The number of baseline risks.</p>
          */
@@ -297,6 +303,22 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
         }
         public Long getCreateTimestamp() {
             return this.createTimestamp;
+        }
+
+        public DescribeContainerInstancesResponseBodyContainerInstanceList setExposed(Integer exposed) {
+            this.exposed = exposed;
+            return this;
+        }
+        public Integer getExposed() {
+            return this.exposed;
+        }
+
+        public DescribeContainerInstancesResponseBodyContainerInstanceList setExposedDetail(String exposedDetail) {
+            this.exposedDetail = exposedDetail;
+            return this;
+        }
+        public String getExposedDetail() {
+            return this.exposedDetail;
         }
 
         public DescribeContainerInstancesResponseBodyContainerInstanceList setHcCount(Integer hcCount) {

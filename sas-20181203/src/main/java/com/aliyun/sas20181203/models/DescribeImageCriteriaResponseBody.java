@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageCriteriaResponseBody extends TeaModel {
+    /**
+     * <p>The list of the search conditions.</p>
+     */
     @NameInMap("CriteriaList")
     public java.util.List<DescribeImageCriteriaResponseBodyCriteriaList> criteriaList;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,30 @@ public class DescribeImageCriteriaResponseBody extends TeaModel {
     }
 
     public static class DescribeImageCriteriaResponseBodyCriteriaList extends TeaModel {
+        /**
+         * <p>The name of the search condition.</p>
+         * <p>- **tag**: the tag of the image</p>
+         * <p>- **digest**: the digest of the image</p>
+         * <p>- **vulStatus**: the status of the vulnerability</p>
+         * <p>- **alarmStatus**: the status of the alert</p>
+         * <p>- **riskStatus**: the status of the risk</p>
+         * <p>- **registryType**: the type of the image repository</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The type of the search condition. Valid values:</p>
+         * <p>- **input**: The search condition needs to be specified.</p>
+         * <p>- **select**: The search condition is an option that can be selected from the drop-down list.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The values of the search condition. This parameter is returned only if the value of Type is select.</p>
+         * <p>> If the value of **Type** is **input**, the value of this parameter is an empty string.</p>
+         */
         @NameInMap("Values")
         public String values;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVulDetailsRequest extends TeaModel {
     /**
-     * <p>The name in the **vulnerability introduction**.</p>
+     * <p>The vulnerability announcement.</p>
      */
     @NameInMap("AliasName")
     public String aliasName;
@@ -21,6 +21,8 @@ public class DescribeVulDetailsRequest extends TeaModel {
 
     /**
      * <p>The name of the vulnerability.</p>
+     * <br>
+     * <p>> You can call the [DescribeGroupedVul](~~DescribeGroupedVul~~) or [DescribeVulList](~~DescribeVulList~~) operation to query the names of vulnerabilities.</p>
      */
     @NameInMap("Name")
     public String name;

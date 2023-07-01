@@ -16,7 +16,7 @@ public class DescribeImageInstancesRequest extends TeaModel {
      * <p>    *   **OR**: The search conditions use a logical **OR**.</p>
      * <p>    *   **AND**: The search conditions use a logical **AND**.</p>
      * <br>
-     * <p>> You can call the [DescribeImageCriteria](~~DescribeImageCriteria~~) operation to query the supported search conditions.</p>
+     * <p>> You can call the [DescribeImageCriteria](~~471822~~) operation to query the supported search conditions.</p>
      */
     @NameInMap("Criteria")
     public String criteria;

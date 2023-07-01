@@ -66,9 +66,7 @@ public class ListCheckItemWarningMachineRequest extends TeaModel {
     public String riskType;
 
     /**
-     * <p>The status of the check item.</p>
-     * <br>
-     * <p>> Valid values:</p>
+     * <p>The status of the check item. Valid values:</p>
      * <br>
      * <p>*   1: failed</p>
      * <br>

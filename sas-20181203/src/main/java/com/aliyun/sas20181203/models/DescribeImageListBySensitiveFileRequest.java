@@ -35,7 +35,7 @@ public class DescribeImageListBySensitiveFileRequest extends TeaModel {
     /**
      * <p>The ID of the container image.</p>
      * <br>
-     * <p>> You can call the [ListRepository](~~ListRepository~~) operation to query the IDs of container images from the value of the InstanceId response parameter.</p>
+     * <p>> You can call the [ListRepository](~~451339~~) operation to query the IDs of container images from the value of the InstanceId response parameter.</p>
      */
     @NameInMap("RepoInstanceId")
     public String repoInstanceId;
