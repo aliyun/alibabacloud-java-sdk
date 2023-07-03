@@ -3,7 +3,7 @@ package com.aliyun.nlp_automl20191111.models;
 
 import com.aliyun.tea.*;
 
-public class RunPreTrainServiceResponseBody extends TeaModel {
+public class RunPreTrainServiceNewResponseBody extends TeaModel {
     @NameInMap("BillingCount")
     public Integer billingCount;
 
@@ -13,12 +13,12 @@ public class RunPreTrainServiceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static RunPreTrainServiceResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        RunPreTrainServiceResponseBody self = new RunPreTrainServiceResponseBody();
+    public static RunPreTrainServiceNewResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        RunPreTrainServiceNewResponseBody self = new RunPreTrainServiceNewResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public RunPreTrainServiceResponseBody setBillingCount(Integer billingCount) {
+    public RunPreTrainServiceNewResponseBody setBillingCount(Integer billingCount) {
         this.billingCount = billingCount;
         return this;
     }
@@ -26,7 +26,7 @@ public class RunPreTrainServiceResponseBody extends TeaModel {
         return this.billingCount;
     }
 
-    public RunPreTrainServiceResponseBody setPredictResult(String predictResult) {
+    public RunPreTrainServiceNewResponseBody setPredictResult(String predictResult) {
         this.predictResult = predictResult;
         return this;
     }
@@ -34,7 +34,7 @@ public class RunPreTrainServiceResponseBody extends TeaModel {
         return this.predictResult;
     }
 
-    public RunPreTrainServiceResponseBody setRequestId(String requestId) {
+    public RunPreTrainServiceNewResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
