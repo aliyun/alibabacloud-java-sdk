@@ -141,6 +141,9 @@ public class DescribePriceShrinkRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("ServerlessConfig")
+    public String serverlessConfigShrink;
+
     /**
      * <p>The unit that is used to calculate the subscription duration of the instance. If you set the **CommodityCode** parameter to **RDS**, **rds_rordspre_public_cn**, **rds_intl**, or **rds_rordspre_public_intl**, you must also specify this parameter. Valid values:</p>
      * <br>
@@ -316,6 +319,14 @@ public class DescribePriceShrinkRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DescribePriceShrinkRequest setServerlessConfigShrink(String serverlessConfigShrink) {
+        this.serverlessConfigShrink = serverlessConfigShrink;
+        return this;
+    }
+    public String getServerlessConfigShrink() {
+        return this.serverlessConfigShrink;
     }
 
     public DescribePriceShrinkRequest setTimeType(String timeType) {
