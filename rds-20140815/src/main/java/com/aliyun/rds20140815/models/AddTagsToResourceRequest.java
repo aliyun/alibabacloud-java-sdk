@@ -21,6 +21,9 @@ public class AddTagsToResourceRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The logon name of the RAM user.</p>
+     */
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 

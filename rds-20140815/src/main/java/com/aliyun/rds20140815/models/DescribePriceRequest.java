@@ -141,6 +141,9 @@ public class DescribePriceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("ServerlessConfig")
+    public DescribePriceRequestServerlessConfig serverlessConfig;
+
     /**
      * <p>The unit that is used to calculate the subscription duration of the instance. If you set the **CommodityCode** parameter to **RDS**, **rds_rordspre_public_cn**, **rds_intl**, or **rds_rordspre_public_intl**, you must also specify this parameter. Valid values:</p>
      * <br>
@@ -318,6 +321,14 @@ public class DescribePriceRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public DescribePriceRequest setServerlessConfig(DescribePriceRequestServerlessConfig serverlessConfig) {
+        this.serverlessConfig = serverlessConfig;
+        return this;
+    }
+    public DescribePriceRequestServerlessConfig getServerlessConfig() {
+        return this.serverlessConfig;
+    }
+
     public DescribePriceRequest setTimeType(String timeType) {
         this.timeType = timeType;
         return this;
@@ -374,6 +385,36 @@ public class DescribePriceRequest extends TeaModel {
         }
         public String getZoneId() {
             return this.zoneId;
+        }
+
+    }
+
+    public static class DescribePriceRequestServerlessConfig extends TeaModel {
+        @NameInMap("MaxCapacity")
+        public Double maxCapacity;
+
+        @NameInMap("MinCapacity")
+        public Double minCapacity;
+
+        public static DescribePriceRequestServerlessConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribePriceRequestServerlessConfig self = new DescribePriceRequestServerlessConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePriceRequestServerlessConfig setMaxCapacity(Double maxCapacity) {
+            this.maxCapacity = maxCapacity;
+            return this;
+        }
+        public Double getMaxCapacity() {
+            return this.maxCapacity;
+        }
+
+        public DescribePriceRequestServerlessConfig setMinCapacity(Double minCapacity) {
+            this.minCapacity = minCapacity;
+            return this;
+        }
+        public Double getMinCapacity() {
+            return this.minCapacity;
         }
 
     }

@@ -25,6 +25,12 @@ public class DescribePriceResponseBody extends TeaModel {
     @NameInMap("ShowDiscount")
     public Boolean showDiscount;
 
+    @NameInMap("TradeMaxRCUAmount")
+    public Float tradeMaxRCUAmount;
+
+    @NameInMap("TradeMinRCUAmount")
+    public Float tradeMinRCUAmount;
+
     public static DescribePriceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePriceResponseBody self = new DescribePriceResponseBody();
         return TeaModel.build(map, self);
@@ -60,6 +66,22 @@ public class DescribePriceResponseBody extends TeaModel {
     }
     public Boolean getShowDiscount() {
         return this.showDiscount;
+    }
+
+    public DescribePriceResponseBody setTradeMaxRCUAmount(Float tradeMaxRCUAmount) {
+        this.tradeMaxRCUAmount = tradeMaxRCUAmount;
+        return this;
+    }
+    public Float getTradeMaxRCUAmount() {
+        return this.tradeMaxRCUAmount;
+    }
+
+    public DescribePriceResponseBody setTradeMinRCUAmount(Float tradeMinRCUAmount) {
+        this.tradeMinRCUAmount = tradeMinRCUAmount;
+        return this;
+    }
+    public Float getTradeMinRCUAmount() {
+        return this.tradeMinRCUAmount;
     }
 
     public static class DescribePriceResponseBodyPriceInfoActivityInfo extends TeaModel {
