@@ -10,6 +10,9 @@ public class ImportNumberShrinkRequest extends TeaModel {
     @NameInMap("FailReturn")
     public Long failReturn;
 
+    @NameInMap("OutId")
+    public String outId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -41,6 +44,14 @@ public class ImportNumberShrinkRequest extends TeaModel {
     }
     public Long getFailReturn() {
         return this.failReturn;
+    }
+
+    public ImportNumberShrinkRequest setOutId(String outId) {
+        this.outId = outId;
+        return this;
+    }
+    public String getOutId() {
+        return this.outId;
     }
 
     public ImportNumberShrinkRequest setOwnerId(Long ownerId) {
