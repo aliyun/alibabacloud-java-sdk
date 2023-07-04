@@ -39,6 +39,9 @@ public class ListListenersRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("Tag")
+    public java.util.List<ListListenersRequestTag> tag;
+
     public static ListListenersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListListenersRequest self = new ListListenersRequest();
         return TeaModel.build(map, self);
@@ -90,6 +93,44 @@ public class ListListenersRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListListenersRequest setTag(java.util.List<ListListenersRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListListenersRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class ListListenersRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListListenersRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListListenersRequestTag self = new ListListenersRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListListenersRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListListenersRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

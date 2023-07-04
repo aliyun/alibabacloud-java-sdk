@@ -4,6 +4,9 @@ package com.aliyun.nlb20220430.models;
 import com.aliyun.tea.*;
 
 public class ListListenerCertificatesRequest extends TeaModel {
+    @NameInMap("CertType")
+    public String certType;
+
     @NameInMap("ListenerId")
     public String listenerId;
 
@@ -19,6 +22,14 @@ public class ListListenerCertificatesRequest extends TeaModel {
     public static ListListenerCertificatesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListListenerCertificatesRequest self = new ListListenerCertificatesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListListenerCertificatesRequest setCertType(String certType) {
+        this.certType = certType;
+        return this;
+    }
+    public String getCertType() {
+        return this.certType;
     }
 
     public ListListenerCertificatesRequest setListenerId(String listenerId) {

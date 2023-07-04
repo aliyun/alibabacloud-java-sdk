@@ -95,6 +95,9 @@ public class CreateLoadBalancerRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateLoadBalancerRequestTag> tag;
+
     /**
      * <p>The ID of the VPC where the NLB instance is deployed.</p>
      */
@@ -206,6 +209,14 @@ public class CreateLoadBalancerRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public CreateLoadBalancerRequest setTag(java.util.List<CreateLoadBalancerRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateLoadBalancerRequestTag> getTag() {
+        return this.tag;
     }
 
     public CreateLoadBalancerRequest setVpcId(String vpcId) {
@@ -326,6 +337,36 @@ public class CreateLoadBalancerRequest extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+    }
+
+    public static class CreateLoadBalancerRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateLoadBalancerRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateLoadBalancerRequestTag self = new CreateLoadBalancerRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateLoadBalancerRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateLoadBalancerRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

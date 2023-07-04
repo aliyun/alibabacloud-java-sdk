@@ -161,6 +161,9 @@ public class CreateListenerRequest extends TeaModel {
     @NameInMap("StartPort")
     public Integer startPort;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateListenerRequestTag> tag;
+
     public static CreateListenerRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateListenerRequest self = new CreateListenerRequest();
         return TeaModel.build(map, self);
@@ -332,6 +335,44 @@ public class CreateListenerRequest extends TeaModel {
     }
     public Integer getStartPort() {
         return this.startPort;
+    }
+
+    public CreateListenerRequest setTag(java.util.List<CreateListenerRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateListenerRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class CreateListenerRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateListenerRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateListenerRequestTag self = new CreateListenerRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateListenerRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateListenerRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
