@@ -266,6 +266,12 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("DisasterRecoveryInternetIp")
+        public String disasterRecoveryInternetIp;
+
+        @NameInMap("DisasterRecoveryVSwitchId")
+        public String disasterRecoveryVSwitchId;
+
         /**
          * <p>The information about the pending orders. </p>
          * <br>
@@ -339,6 +345,9 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
          */
         @NameInMap("SslVpn")
         public String sslVpn;
+
+        @NameInMap("SslVpnInternetIp")
+        public String sslVpnInternetIp;
 
         /**
          * <p>The ID of the VPN gateway.</p>
@@ -459,6 +468,22 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             return this.description;
         }
 
+        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setDisasterRecoveryInternetIp(String disasterRecoveryInternetIp) {
+            this.disasterRecoveryInternetIp = disasterRecoveryInternetIp;
+            return this;
+        }
+        public String getDisasterRecoveryInternetIp() {
+            return this.disasterRecoveryInternetIp;
+        }
+
+        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setDisasterRecoveryVSwitchId(String disasterRecoveryVSwitchId) {
+            this.disasterRecoveryVSwitchId = disasterRecoveryVSwitchId;
+            return this;
+        }
+        public String getDisasterRecoveryVSwitchId() {
+            return this.disasterRecoveryVSwitchId;
+        }
+
         public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setEnableBgp(Boolean enableBgp) {
             this.enableBgp = enableBgp;
             return this;
@@ -537,6 +562,14 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         }
         public String getSslVpn() {
             return this.sslVpn;
+        }
+
+        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setSslVpnInternetIp(String sslVpnInternetIp) {
+            this.sslVpnInternetIp = sslVpnInternetIp;
+            return this;
+        }
+        public String getSslVpnInternetIp() {
+            return this.sslVpnInternetIp;
         }
 
         public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setStatus(String status) {

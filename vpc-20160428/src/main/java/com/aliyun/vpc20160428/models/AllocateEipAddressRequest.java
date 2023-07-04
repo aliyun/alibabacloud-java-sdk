@@ -72,6 +72,9 @@ public class AllocateEipAddressRequest extends TeaModel {
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     /**
      * <p>The name of the EIP.</p>
      * <br>
@@ -81,6 +84,9 @@ public class AllocateEipAddressRequest extends TeaModel {
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
+
+    @NameInMap("IpAddress")
+    public String ipAddress;
 
     /**
      * <p>The ID of the IP address pool.</p>
@@ -232,12 +238,28 @@ public class AllocateEipAddressRequest extends TeaModel {
         return this.instanceChargeType;
     }
 
+    public AllocateEipAddressRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
     public AllocateEipAddressRequest setInternetChargeType(String internetChargeType) {
         this.internetChargeType = internetChargeType;
         return this;
     }
     public String getInternetChargeType() {
         return this.internetChargeType;
+    }
+
+    public AllocateEipAddressRequest setIpAddress(String ipAddress) {
+        this.ipAddress = ipAddress;
+        return this;
+    }
+    public String getIpAddress() {
+        return this.ipAddress;
     }
 
     public AllocateEipAddressRequest setName(String name) {

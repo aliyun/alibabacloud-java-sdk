@@ -39,12 +39,6 @@ public class CreateNatIpRequest extends TeaModel {
     public String natIpCidr;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **CreateNatIp**.</p>
-     */
-    @NameInMap("NatIpCidrId")
-    public String natIpCidrId;
-
-    /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
      * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
@@ -126,14 +120,6 @@ public class CreateNatIpRequest extends TeaModel {
     }
     public String getNatIpCidr() {
         return this.natIpCidr;
-    }
-
-    public CreateNatIpRequest setNatIpCidrId(String natIpCidrId) {
-        this.natIpCidrId = natIpCidrId;
-        return this;
-    }
-    public String getNatIpCidrId() {
-        return this.natIpCidrId;
     }
 
     public CreateNatIpRequest setNatIpDescription(String natIpDescription) {

@@ -28,6 +28,9 @@ public class CreateVpnGatewayRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("DisasterRecoveryVSwitchId")
+    public String disasterRecoveryVSwitchId;
+
     /**
      * <p>The maximum number of clients that can be connected at the same time. Valid values: **5** (default), **10**, **20**, **50**, **100**, **200**, **500**, and **1000**.</p>
      */
@@ -150,6 +153,14 @@ public class CreateVpnGatewayRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateVpnGatewayRequest setDisasterRecoveryVSwitchId(String disasterRecoveryVSwitchId) {
+        this.disasterRecoveryVSwitchId = disasterRecoveryVSwitchId;
+        return this;
+    }
+    public String getDisasterRecoveryVSwitchId() {
+        return this.disasterRecoveryVSwitchId;
     }
 
     public CreateVpnGatewayRequest setEnableIpsec(Boolean enableIpsec) {

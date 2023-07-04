@@ -76,6 +76,9 @@ public class DescribeCommonBandwidthPackagesRequest extends TeaModel {
     @NameInMap("SecurityProtectionEnabled")
     public Boolean securityProtectionEnabled;
 
+    @NameInMap("Tag")
+    public java.util.List<DescribeCommonBandwidthPackagesRequestTag> tag;
+
     public static DescribeCommonBandwidthPackagesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCommonBandwidthPackagesRequest self = new DescribeCommonBandwidthPackagesRequest();
         return TeaModel.build(map, self);
@@ -183,6 +186,44 @@ public class DescribeCommonBandwidthPackagesRequest extends TeaModel {
     }
     public Boolean getSecurityProtectionEnabled() {
         return this.securityProtectionEnabled;
+    }
+
+    public DescribeCommonBandwidthPackagesRequest setTag(java.util.List<DescribeCommonBandwidthPackagesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeCommonBandwidthPackagesRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class DescribeCommonBandwidthPackagesRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeCommonBandwidthPackagesRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCommonBandwidthPackagesRequestTag self = new DescribeCommonBandwidthPackagesRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCommonBandwidthPackagesRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeCommonBandwidthPackagesRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

@@ -94,6 +94,9 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
         @NameInMap("NextHop")
         public String nextHop;
 
+        @NameInMap("NextHopTunnelId")
+        public String nextHopTunnelId;
+
         /**
          * <p>The priority of the policy-based route.</p>
          * <br>
@@ -157,6 +160,14 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
         }
         public String getNextHop() {
             return this.nextHop;
+        }
+
+        public DescribeVpnPbrRouteEntriesResponseBodyVpnPbrRouteEntriesVpnPbrRouteEntry setNextHopTunnelId(String nextHopTunnelId) {
+            this.nextHopTunnelId = nextHopTunnelId;
+            return this;
+        }
+        public String getNextHopTunnelId() {
+            return this.nextHopTunnelId;
         }
 
         public DescribeVpnPbrRouteEntriesResponseBodyVpnPbrRouteEntriesVpnPbrRouteEntry setPriority(Integer priority) {
