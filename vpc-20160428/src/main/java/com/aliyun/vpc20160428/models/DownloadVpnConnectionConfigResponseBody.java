@@ -235,6 +235,258 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
 
     }
 
+    public static class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIkeConfig extends TeaModel {
+        @NameInMap("IkeAuthAlg")
+        public String ikeAuthAlg;
+
+        @NameInMap("IkeEncAlg")
+        public String ikeEncAlg;
+
+        @NameInMap("IkeLifetime")
+        public Long ikeLifetime;
+
+        @NameInMap("IkeMode")
+        public String ikeMode;
+
+        @NameInMap("IkePfs")
+        public String ikePfs;
+
+        @NameInMap("IkeVersion")
+        public String ikeVersion;
+
+        @NameInMap("LocalId")
+        public String localId;
+
+        @NameInMap("Psk")
+        public String psk;
+
+        @NameInMap("RemoteId")
+        public String remoteId;
+
+        public static DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIkeConfig build(java.util.Map<String, ?> map) throws Exception {
+            DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIkeConfig self = new DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIkeConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIkeConfig setIkeAuthAlg(String ikeAuthAlg) {
+            this.ikeAuthAlg = ikeAuthAlg;
+            return this;
+        }
+        public String getIkeAuthAlg() {
+            return this.ikeAuthAlg;
+        }
+
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIkeConfig setIkeEncAlg(String ikeEncAlg) {
+            this.ikeEncAlg = ikeEncAlg;
+            return this;
+        }
+        public String getIkeEncAlg() {
+            return this.ikeEncAlg;
+        }
+
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIkeConfig setIkeLifetime(Long ikeLifetime) {
+            this.ikeLifetime = ikeLifetime;
+            return this;
+        }
+        public Long getIkeLifetime() {
+            return this.ikeLifetime;
+        }
+
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIkeConfig setIkeMode(String ikeMode) {
+            this.ikeMode = ikeMode;
+            return this;
+        }
+        public String getIkeMode() {
+            return this.ikeMode;
+        }
+
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIkeConfig setIkePfs(String ikePfs) {
+            this.ikePfs = ikePfs;
+            return this;
+        }
+        public String getIkePfs() {
+            return this.ikePfs;
+        }
+
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIkeConfig setIkeVersion(String ikeVersion) {
+            this.ikeVersion = ikeVersion;
+            return this;
+        }
+        public String getIkeVersion() {
+            return this.ikeVersion;
+        }
+
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIkeConfig setLocalId(String localId) {
+            this.localId = localId;
+            return this;
+        }
+        public String getLocalId() {
+            return this.localId;
+        }
+
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIkeConfig setPsk(String psk) {
+            this.psk = psk;
+            return this;
+        }
+        public String getPsk() {
+            return this.psk;
+        }
+
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIkeConfig setRemoteId(String remoteId) {
+            this.remoteId = remoteId;
+            return this;
+        }
+        public String getRemoteId() {
+            return this.remoteId;
+        }
+
+    }
+
+    public static class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIpsecConfig extends TeaModel {
+        @NameInMap("IpsecAuthAlg")
+        public String ipsecAuthAlg;
+
+        @NameInMap("IpsecEncAlg")
+        public String ipsecEncAlg;
+
+        @NameInMap("IpsecLifetime")
+        public Long ipsecLifetime;
+
+        @NameInMap("IpsecPfs")
+        public String ipsecPfs;
+
+        public static DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIpsecConfig build(java.util.Map<String, ?> map) throws Exception {
+            DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIpsecConfig self = new DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIpsecConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIpsecConfig setIpsecAuthAlg(String ipsecAuthAlg) {
+            this.ipsecAuthAlg = ipsecAuthAlg;
+            return this;
+        }
+        public String getIpsecAuthAlg() {
+            return this.ipsecAuthAlg;
+        }
+
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIpsecConfig setIpsecEncAlg(String ipsecEncAlg) {
+            this.ipsecEncAlg = ipsecEncAlg;
+            return this;
+        }
+        public String getIpsecEncAlg() {
+            return this.ipsecEncAlg;
+        }
+
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIpsecConfig setIpsecLifetime(Long ipsecLifetime) {
+            this.ipsecLifetime = ipsecLifetime;
+            return this;
+        }
+        public Long getIpsecLifetime() {
+            return this.ipsecLifetime;
+        }
+
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIpsecConfig setIpsecPfs(String ipsecPfs) {
+            this.ipsecPfs = ipsecPfs;
+            return this;
+        }
+        public String getIpsecPfs() {
+            return this.ipsecPfs;
+        }
+
+    }
+
+    public static class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfig extends TeaModel {
+        @NameInMap("IkeConfig")
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIkeConfig ikeConfig;
+
+        @NameInMap("IpsecConfig")
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIpsecConfig ipsecConfig;
+
+        @NameInMap("Local")
+        public String local;
+
+        @NameInMap("Remote")
+        public String remote;
+
+        @NameInMap("RightCaCert")
+        public String rightCaCert;
+
+        @NameInMap("TunnelId")
+        public String tunnelId;
+
+        public static DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfig build(java.util.Map<String, ?> map) throws Exception {
+            DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfig self = new DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfig setIkeConfig(DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIkeConfig ikeConfig) {
+            this.ikeConfig = ikeConfig;
+            return this;
+        }
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIkeConfig getIkeConfig() {
+            return this.ikeConfig;
+        }
+
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfig setIpsecConfig(DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIpsecConfig ipsecConfig) {
+            this.ipsecConfig = ipsecConfig;
+            return this;
+        }
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIpsecConfig getIpsecConfig() {
+            return this.ipsecConfig;
+        }
+
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfig setLocal(String local) {
+            this.local = local;
+            return this;
+        }
+        public String getLocal() {
+            return this.local;
+        }
+
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfig setRemote(String remote) {
+            this.remote = remote;
+            return this;
+        }
+        public String getRemote() {
+            return this.remote;
+        }
+
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfig setRightCaCert(String rightCaCert) {
+            this.rightCaCert = rightCaCert;
+            return this;
+        }
+        public String getRightCaCert() {
+            return this.rightCaCert;
+        }
+
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfig setTunnelId(String tunnelId) {
+            this.tunnelId = tunnelId;
+            return this;
+        }
+        public String getTunnelId() {
+            return this.tunnelId;
+        }
+
+    }
+
+    public static class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfig extends TeaModel {
+        @NameInMap("TunnelConfig")
+        public java.util.List<DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfig> tunnelConfig;
+
+        public static DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfig build(java.util.Map<String, ?> map) throws Exception {
+            DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfig self = new DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfig setTunnelConfig(java.util.List<DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfig> tunnelConfig) {
+            this.tunnelConfig = tunnelConfig;
+            return this;
+        }
+        public java.util.List<DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfig> getTunnelConfig() {
+            return this.tunnelConfig;
+        }
+
+    }
+
     public static class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfig extends TeaModel {
         /**
          * <p>The IKE configuration.</p>
@@ -271,6 +523,9 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
          */
         @NameInMap("RemoteSubnet")
         public String remoteSubnet;
+
+        @NameInMap("TunnelsConfig")
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfig tunnelsConfig;
 
         public static DownloadVpnConnectionConfigResponseBodyVpnConnectionConfig build(java.util.Map<String, ?> map) throws Exception {
             DownloadVpnConnectionConfigResponseBodyVpnConnectionConfig self = new DownloadVpnConnectionConfigResponseBodyVpnConnectionConfig();
@@ -323,6 +578,14 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         }
         public String getRemoteSubnet() {
             return this.remoteSubnet;
+        }
+
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfig setTunnelsConfig(DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfig tunnelsConfig) {
+            this.tunnelsConfig = tunnelsConfig;
+            return this;
+        }
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfig getTunnelsConfig() {
+            return this.tunnelsConfig;
         }
 
     }

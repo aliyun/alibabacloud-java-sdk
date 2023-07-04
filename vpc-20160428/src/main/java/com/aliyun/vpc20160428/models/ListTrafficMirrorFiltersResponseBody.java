@@ -4,6 +4,12 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
+    @NameInMap("Count")
+    public Integer count;
+
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
     /**
      * <p>The token that is used for the next query. Valid values:</p>
      * <br>
@@ -34,6 +40,22 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
     public static ListTrafficMirrorFiltersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTrafficMirrorFiltersResponseBody self = new ListTrafficMirrorFiltersResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListTrafficMirrorFiltersResponseBody setCount(Integer count) {
+        this.count = count;
+        return this;
+    }
+    public Integer getCount() {
+        return this.count;
+    }
+
+    public ListTrafficMirrorFiltersResponseBody setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     public ListTrafficMirrorFiltersResponseBody setNextToken(String nextToken) {

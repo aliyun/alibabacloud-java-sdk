@@ -4,12 +4,30 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateDefaultVpcRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <br>
+     * <p>> If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Specifies whether to enable IPv6. Valid values:</p>
+     * <br>
+     * <p>*   **false** (default)</p>
+     * <p>*   **true**</p>
+     */
     @NameInMap("EnableIpv6")
     public Boolean enableIpv6;
 
+    /**
+     * <p>The IPv6 CIDR block of the default VPC.</p>
+     * <br>
+     * <p>> When **EnableIpv6** is set to **true**, this parameter is required.</p>
+     */
     @NameInMap("Ipv6CidrBlock")
     public String ipv6CidrBlock;
 
@@ -19,9 +37,17 @@ public class CreateDefaultVpcRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region to which the default VPC belongs.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

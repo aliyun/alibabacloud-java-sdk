@@ -4,15 +4,27 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateDefaultVpcResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The route table ID that is automatically created by the system after you create a default VPC.</p>
+     */
     @NameInMap("RouteTableId")
     public String routeTableId;
 
+    /**
+     * <p>The vRouter ID that is automatically created by the system after you create a default VPC.</p>
+     */
     @NameInMap("VRouterId")
     public String VRouterId;
 
+    /**
+     * <p>The ID of the default VPC.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

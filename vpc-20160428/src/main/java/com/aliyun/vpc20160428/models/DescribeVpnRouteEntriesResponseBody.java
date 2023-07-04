@@ -104,6 +104,9 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         @NameInMap("NextHop")
         public String nextHop;
 
+        @NameInMap("NextHopTunnelId")
+        public String nextHopTunnelId;
+
         /**
          * <p>The destination CIDR block of the route entry.</p>
          */
@@ -184,6 +187,14 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         }
         public String getNextHop() {
             return this.nextHop;
+        }
+
+        public DescribeVpnRouteEntriesResponseBodyVpnRouteEntriesVpnRouteEntry setNextHopTunnelId(String nextHopTunnelId) {
+            this.nextHopTunnelId = nextHopTunnelId;
+            return this;
+        }
+        public String getNextHopTunnelId() {
+            return this.nextHopTunnelId;
         }
 
         public DescribeVpnRouteEntriesResponseBodyVpnRouteEntriesVpnRouteEntry setRouteDest(String routeDest) {

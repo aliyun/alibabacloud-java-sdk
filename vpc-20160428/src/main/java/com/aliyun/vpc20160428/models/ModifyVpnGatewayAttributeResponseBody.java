@@ -36,6 +36,12 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("DisasterRecoveryInternetIp")
+    public String disasterRecoveryInternetIp;
+
+    @NameInMap("DisasterRecoveryVSwitchId")
+    public String disasterRecoveryVSwitchId;
+
     /**
      * <p>The BGP status of the VPN gateway. Valid values:</p>
      * <br>
@@ -82,6 +88,9 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
      */
     @NameInMap("Spec")
     public String spec;
+
+    @NameInMap("SslVpnInternetIp")
+    public String sslVpnInternetIp;
 
     /**
      * <p>The status of the VPN gateway. Valid values:</p>
@@ -150,6 +159,22 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         return this.description;
     }
 
+    public ModifyVpnGatewayAttributeResponseBody setDisasterRecoveryInternetIp(String disasterRecoveryInternetIp) {
+        this.disasterRecoveryInternetIp = disasterRecoveryInternetIp;
+        return this;
+    }
+    public String getDisasterRecoveryInternetIp() {
+        return this.disasterRecoveryInternetIp;
+    }
+
+    public ModifyVpnGatewayAttributeResponseBody setDisasterRecoveryVSwitchId(String disasterRecoveryVSwitchId) {
+        this.disasterRecoveryVSwitchId = disasterRecoveryVSwitchId;
+        return this;
+    }
+    public String getDisasterRecoveryVSwitchId() {
+        return this.disasterRecoveryVSwitchId;
+    }
+
     public ModifyVpnGatewayAttributeResponseBody setEnableBgp(Boolean enableBgp) {
         this.enableBgp = enableBgp;
         return this;
@@ -204,6 +229,14 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
     }
     public String getSpec() {
         return this.spec;
+    }
+
+    public ModifyVpnGatewayAttributeResponseBody setSslVpnInternetIp(String sslVpnInternetIp) {
+        this.sslVpnInternetIp = sslVpnInternetIp;
+        return this;
+    }
+    public String getSslVpnInternetIp() {
+        return this.sslVpnInternetIp;
     }
 
     public ModifyVpnGatewayAttributeResponseBody setStatus(String status) {

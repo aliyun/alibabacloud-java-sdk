@@ -4,11 +4,11 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class OpenTrafficMirrorServiceResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the order.</p>
-     */
-    @NameInMap("OrderId")
-    public String orderId;
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Message")
+    public String message;
 
     /**
      * <p>The ID of the request.</p>
@@ -21,12 +21,20 @@ public class OpenTrafficMirrorServiceResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public OpenTrafficMirrorServiceResponseBody setOrderId(String orderId) {
-        this.orderId = orderId;
+    public OpenTrafficMirrorServiceResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public String getOrderId() {
-        return this.orderId;
+    public String getCode() {
+        return this.code;
+    }
+
+    public OpenTrafficMirrorServiceResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public OpenTrafficMirrorServiceResponseBody setRequestId(String requestId) {

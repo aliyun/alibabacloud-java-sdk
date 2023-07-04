@@ -66,6 +66,9 @@ public class ModifyVpnConnectionAttributeRequest extends TeaModel {
     @NameInMap("EnableNatTraversal")
     public Boolean enableNatTraversal;
 
+    @NameInMap("EnableTunnelsBgp")
+    public Boolean enableTunnelsBgp;
+
     /**
      * <p>The health check configurations:</p>
      * <br>
@@ -180,6 +183,9 @@ public class ModifyVpnConnectionAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("TunnelOptionsSpecification")
+    public java.util.List<ModifyVpnConnectionAttributeRequestTunnelOptionsSpecification> tunnelOptionsSpecification;
+
     /**
      * <p>The ID of the IPsec-VPN connection.</p>
      */
@@ -237,6 +243,14 @@ public class ModifyVpnConnectionAttributeRequest extends TeaModel {
     }
     public Boolean getEnableNatTraversal() {
         return this.enableNatTraversal;
+    }
+
+    public ModifyVpnConnectionAttributeRequest setEnableTunnelsBgp(Boolean enableTunnelsBgp) {
+        this.enableTunnelsBgp = enableTunnelsBgp;
+        return this;
+    }
+    public Boolean getEnableTunnelsBgp() {
+        return this.enableTunnelsBgp;
     }
 
     public ModifyVpnConnectionAttributeRequest setHealthCheckConfig(String healthCheckConfig) {
@@ -335,12 +349,305 @@ public class ModifyVpnConnectionAttributeRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public ModifyVpnConnectionAttributeRequest setTunnelOptionsSpecification(java.util.List<ModifyVpnConnectionAttributeRequestTunnelOptionsSpecification> tunnelOptionsSpecification) {
+        this.tunnelOptionsSpecification = tunnelOptionsSpecification;
+        return this;
+    }
+    public java.util.List<ModifyVpnConnectionAttributeRequestTunnelOptionsSpecification> getTunnelOptionsSpecification() {
+        return this.tunnelOptionsSpecification;
+    }
+
     public ModifyVpnConnectionAttributeRequest setVpnConnectionId(String vpnConnectionId) {
         this.vpnConnectionId = vpnConnectionId;
         return this;
     }
     public String getVpnConnectionId() {
         return this.vpnConnectionId;
+    }
+
+    public static class ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelBgpConfig extends TeaModel {
+        @NameInMap("LocalAsn")
+        public Long localAsn;
+
+        @NameInMap("LocalBgpIp")
+        public String localBgpIp;
+
+        @NameInMap("TunnelCidr")
+        public String tunnelCidr;
+
+        public static ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelBgpConfig build(java.util.Map<String, ?> map) throws Exception {
+            ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelBgpConfig self = new ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelBgpConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelBgpConfig setLocalAsn(Long localAsn) {
+            this.localAsn = localAsn;
+            return this;
+        }
+        public Long getLocalAsn() {
+            return this.localAsn;
+        }
+
+        public ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelBgpConfig setLocalBgpIp(String localBgpIp) {
+            this.localBgpIp = localBgpIp;
+            return this;
+        }
+        public String getLocalBgpIp() {
+            return this.localBgpIp;
+        }
+
+        public ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelBgpConfig setTunnelCidr(String tunnelCidr) {
+            this.tunnelCidr = tunnelCidr;
+            return this;
+        }
+        public String getTunnelCidr() {
+            return this.tunnelCidr;
+        }
+
+    }
+
+    public static class ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelIkeConfig extends TeaModel {
+        @NameInMap("IkeAuthAlg")
+        public String ikeAuthAlg;
+
+        @NameInMap("IkeEncAlg")
+        public String ikeEncAlg;
+
+        @NameInMap("IkeLifetime")
+        public Long ikeLifetime;
+
+        @NameInMap("IkeMode")
+        public String ikeMode;
+
+        @NameInMap("IkePfs")
+        public String ikePfs;
+
+        @NameInMap("IkeVersion")
+        public String ikeVersion;
+
+        @NameInMap("LocalId")
+        public String localId;
+
+        @NameInMap("Psk")
+        public String psk;
+
+        @NameInMap("RemoteId")
+        public String remoteId;
+
+        public static ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelIkeConfig build(java.util.Map<String, ?> map) throws Exception {
+            ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelIkeConfig self = new ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelIkeConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelIkeConfig setIkeAuthAlg(String ikeAuthAlg) {
+            this.ikeAuthAlg = ikeAuthAlg;
+            return this;
+        }
+        public String getIkeAuthAlg() {
+            return this.ikeAuthAlg;
+        }
+
+        public ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelIkeConfig setIkeEncAlg(String ikeEncAlg) {
+            this.ikeEncAlg = ikeEncAlg;
+            return this;
+        }
+        public String getIkeEncAlg() {
+            return this.ikeEncAlg;
+        }
+
+        public ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelIkeConfig setIkeLifetime(Long ikeLifetime) {
+            this.ikeLifetime = ikeLifetime;
+            return this;
+        }
+        public Long getIkeLifetime() {
+            return this.ikeLifetime;
+        }
+
+        public ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelIkeConfig setIkeMode(String ikeMode) {
+            this.ikeMode = ikeMode;
+            return this;
+        }
+        public String getIkeMode() {
+            return this.ikeMode;
+        }
+
+        public ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelIkeConfig setIkePfs(String ikePfs) {
+            this.ikePfs = ikePfs;
+            return this;
+        }
+        public String getIkePfs() {
+            return this.ikePfs;
+        }
+
+        public ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelIkeConfig setIkeVersion(String ikeVersion) {
+            this.ikeVersion = ikeVersion;
+            return this;
+        }
+        public String getIkeVersion() {
+            return this.ikeVersion;
+        }
+
+        public ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelIkeConfig setLocalId(String localId) {
+            this.localId = localId;
+            return this;
+        }
+        public String getLocalId() {
+            return this.localId;
+        }
+
+        public ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelIkeConfig setPsk(String psk) {
+            this.psk = psk;
+            return this;
+        }
+        public String getPsk() {
+            return this.psk;
+        }
+
+        public ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelIkeConfig setRemoteId(String remoteId) {
+            this.remoteId = remoteId;
+            return this;
+        }
+        public String getRemoteId() {
+            return this.remoteId;
+        }
+
+    }
+
+    public static class ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelIpsecConfig extends TeaModel {
+        @NameInMap("IpsecAuthAlg")
+        public String ipsecAuthAlg;
+
+        @NameInMap("IpsecEncAlg")
+        public String ipsecEncAlg;
+
+        @NameInMap("IpsecLifetime")
+        public Integer ipsecLifetime;
+
+        @NameInMap("IpsecPfs")
+        public String ipsecPfs;
+
+        public static ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelIpsecConfig build(java.util.Map<String, ?> map) throws Exception {
+            ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelIpsecConfig self = new ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelIpsecConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelIpsecConfig setIpsecAuthAlg(String ipsecAuthAlg) {
+            this.ipsecAuthAlg = ipsecAuthAlg;
+            return this;
+        }
+        public String getIpsecAuthAlg() {
+            return this.ipsecAuthAlg;
+        }
+
+        public ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelIpsecConfig setIpsecEncAlg(String ipsecEncAlg) {
+            this.ipsecEncAlg = ipsecEncAlg;
+            return this;
+        }
+        public String getIpsecEncAlg() {
+            return this.ipsecEncAlg;
+        }
+
+        public ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelIpsecConfig setIpsecLifetime(Integer ipsecLifetime) {
+            this.ipsecLifetime = ipsecLifetime;
+            return this;
+        }
+        public Integer getIpsecLifetime() {
+            return this.ipsecLifetime;
+        }
+
+        public ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelIpsecConfig setIpsecPfs(String ipsecPfs) {
+            this.ipsecPfs = ipsecPfs;
+            return this;
+        }
+        public String getIpsecPfs() {
+            return this.ipsecPfs;
+        }
+
+    }
+
+    public static class ModifyVpnConnectionAttributeRequestTunnelOptionsSpecification extends TeaModel {
+        @NameInMap("EnableDpd")
+        public Boolean enableDpd;
+
+        @NameInMap("EnableNatTraversal")
+        public Boolean enableNatTraversal;
+
+        @NameInMap("RemoteCaCertificate")
+        public String remoteCaCertificate;
+
+        @NameInMap("TunnelBgpConfig")
+        public ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelBgpConfig tunnelBgpConfig;
+
+        @NameInMap("TunnelId")
+        public String tunnelId;
+
+        @NameInMap("TunnelIkeConfig")
+        public ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelIkeConfig tunnelIkeConfig;
+
+        @NameInMap("TunnelIpsecConfig")
+        public ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelIpsecConfig tunnelIpsecConfig;
+
+        public static ModifyVpnConnectionAttributeRequestTunnelOptionsSpecification build(java.util.Map<String, ?> map) throws Exception {
+            ModifyVpnConnectionAttributeRequestTunnelOptionsSpecification self = new ModifyVpnConnectionAttributeRequestTunnelOptionsSpecification();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyVpnConnectionAttributeRequestTunnelOptionsSpecification setEnableDpd(Boolean enableDpd) {
+            this.enableDpd = enableDpd;
+            return this;
+        }
+        public Boolean getEnableDpd() {
+            return this.enableDpd;
+        }
+
+        public ModifyVpnConnectionAttributeRequestTunnelOptionsSpecification setEnableNatTraversal(Boolean enableNatTraversal) {
+            this.enableNatTraversal = enableNatTraversal;
+            return this;
+        }
+        public Boolean getEnableNatTraversal() {
+            return this.enableNatTraversal;
+        }
+
+        public ModifyVpnConnectionAttributeRequestTunnelOptionsSpecification setRemoteCaCertificate(String remoteCaCertificate) {
+            this.remoteCaCertificate = remoteCaCertificate;
+            return this;
+        }
+        public String getRemoteCaCertificate() {
+            return this.remoteCaCertificate;
+        }
+
+        public ModifyVpnConnectionAttributeRequestTunnelOptionsSpecification setTunnelBgpConfig(ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelBgpConfig tunnelBgpConfig) {
+            this.tunnelBgpConfig = tunnelBgpConfig;
+            return this;
+        }
+        public ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelBgpConfig getTunnelBgpConfig() {
+            return this.tunnelBgpConfig;
+        }
+
+        public ModifyVpnConnectionAttributeRequestTunnelOptionsSpecification setTunnelId(String tunnelId) {
+            this.tunnelId = tunnelId;
+            return this;
+        }
+        public String getTunnelId() {
+            return this.tunnelId;
+        }
+
+        public ModifyVpnConnectionAttributeRequestTunnelOptionsSpecification setTunnelIkeConfig(ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelIkeConfig tunnelIkeConfig) {
+            this.tunnelIkeConfig = tunnelIkeConfig;
+            return this;
+        }
+        public ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelIkeConfig getTunnelIkeConfig() {
+            return this.tunnelIkeConfig;
+        }
+
+        public ModifyVpnConnectionAttributeRequestTunnelOptionsSpecification setTunnelIpsecConfig(ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelIpsecConfig tunnelIpsecConfig) {
+            this.tunnelIpsecConfig = tunnelIpsecConfig;
+            return this;
+        }
+        public ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelIpsecConfig getTunnelIpsecConfig() {
+            return this.tunnelIpsecConfig;
+        }
+
     }
 
 }

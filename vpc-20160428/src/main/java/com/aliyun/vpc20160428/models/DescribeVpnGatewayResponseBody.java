@@ -45,6 +45,12 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("DisasterRecoveryInternetIp")
+    public String disasterRecoveryInternetIp;
+
+    @NameInMap("DisasterRecoveryVSwitchId")
+    public String disasterRecoveryVSwitchId;
+
     /**
      * <p>The payment status of the VPN gateway. Valid values:</p>
      * <br>
@@ -119,6 +125,9 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
      */
     @NameInMap("SslVpn")
     public String sslVpn;
+
+    @NameInMap("SslVpnInternetIp")
+    public String sslVpnInternetIp;
 
     /**
      * <p>The ID of the virtual private cloud (VPC) to which the VPN gateway belongs.</p>
@@ -240,6 +249,22 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         return this.description;
     }
 
+    public DescribeVpnGatewayResponseBody setDisasterRecoveryInternetIp(String disasterRecoveryInternetIp) {
+        this.disasterRecoveryInternetIp = disasterRecoveryInternetIp;
+        return this;
+    }
+    public String getDisasterRecoveryInternetIp() {
+        return this.disasterRecoveryInternetIp;
+    }
+
+    public DescribeVpnGatewayResponseBody setDisasterRecoveryVSwitchId(String disasterRecoveryVSwitchId) {
+        this.disasterRecoveryVSwitchId = disasterRecoveryVSwitchId;
+        return this;
+    }
+    public String getDisasterRecoveryVSwitchId() {
+        return this.disasterRecoveryVSwitchId;
+    }
+
     public DescribeVpnGatewayResponseBody setEnableBgp(Boolean enableBgp) {
         this.enableBgp = enableBgp;
         return this;
@@ -326,6 +351,14 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
     }
     public String getSslVpn() {
         return this.sslVpn;
+    }
+
+    public DescribeVpnGatewayResponseBody setSslVpnInternetIp(String sslVpnInternetIp) {
+        this.sslVpnInternetIp = sslVpnInternetIp;
+        return this;
+    }
+    public String getSslVpnInternetIp() {
+        return this.sslVpnInternetIp;
     }
 
     public DescribeVpnGatewayResponseBody setStatus(String status) {

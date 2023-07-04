@@ -471,6 +471,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.addGlobalAccelerationInstanceIpWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request AddIPv6TranslatorAclListEntryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AddIPv6TranslatorAclListEntryResponse
+     */
+    // Deprecated
     public AddIPv6TranslatorAclListEntryResponse addIPv6TranslatorAclListEntryWithOptions(AddIPv6TranslatorAclListEntryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -523,6 +531,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddIPv6TranslatorAclListEntryResponse());
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request AddIPv6TranslatorAclListEntryRequest
+      * @return AddIPv6TranslatorAclListEntryResponse
+     */
+    // Deprecated
     public AddIPv6TranslatorAclListEntryResponse addIPv6TranslatorAclListEntry(AddIPv6TranslatorAclListEntryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addIPv6TranslatorAclListEntryWithOptions(request, runtime);
@@ -728,8 +743,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceChargeType", request.instanceChargeType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.internetChargeType)) {
             query.put("InternetChargeType", request.internetChargeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipAddress)) {
+            query.put("IpAddress", request.ipAddress);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
@@ -3352,6 +3375,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createDefaultVSwitchWithOptions(request, runtime);
     }
 
+    /**
+      * ## Usage notes
+      * When you call this operation, take note of the following items:
+      * *   After you create a default VPC, you cannot change its CIDR block. However, you can add secondary IPv4 CIDR blocks to it.
+      * *   In each default VPC, cloud services can use a maximum of 60,000 private IP addresses. You cannot increase the quota.
+      * *   After you create a default VPC, a vRouter and a route table are automatically created for the VPC.
+      * *   At most three user CIDR blocks can be added to a VPC. If a user CIDR block includes another user CIDR block, the one with the shorter subnet mask takes effect. For example, if 10.0.0.0/8 and 10.1.0.0/16 are specified, only 10.0.0.0/8 takes effect.
+      * *   **CreateDefaultVpc** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVpcAttribute](~~94565~~) operation to query the status of the task:
+      *     *   If the default VPC is in the **Pending** state, the VPC is being configured.
+      *     *   If the default VPC is in the **Available** state, the VPC is available.
+      * *   You cannot repeatedly call the **CreateDefaultVpc** operation within a specific time period.
+      * *   You can create only one default VPC in each region.
+      *
+      * @param request CreateDefaultVpcRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateDefaultVpcResponse
+     */
     public CreateDefaultVpcResponse createDefaultVpcWithOptions(CreateDefaultVpcRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3408,6 +3448,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDefaultVpcResponse());
     }
 
+    /**
+      * ## Usage notes
+      * When you call this operation, take note of the following items:
+      * *   After you create a default VPC, you cannot change its CIDR block. However, you can add secondary IPv4 CIDR blocks to it.
+      * *   In each default VPC, cloud services can use a maximum of 60,000 private IP addresses. You cannot increase the quota.
+      * *   After you create a default VPC, a vRouter and a route table are automatically created for the VPC.
+      * *   At most three user CIDR blocks can be added to a VPC. If a user CIDR block includes another user CIDR block, the one with the shorter subnet mask takes effect. For example, if 10.0.0.0/8 and 10.1.0.0/16 are specified, only 10.0.0.0/8 takes effect.
+      * *   **CreateDefaultVpc** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVpcAttribute](~~94565~~) operation to query the status of the task:
+      *     *   If the default VPC is in the **Pending** state, the VPC is being configured.
+      *     *   If the default VPC is in the **Available** state, the VPC is available.
+      * *   You cannot repeatedly call the **CreateDefaultVpc** operation within a specific time period.
+      * *   You can create only one default VPC in each region.
+      *
+      * @param request CreateDefaultVpcRequest
+      * @return CreateDefaultVpcResponse
+     */
     public CreateDefaultVpcResponse createDefaultVpc(CreateDefaultVpcRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDefaultVpcWithOptions(request, runtime);
@@ -4053,6 +4109,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createHaVipWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request CreateIPv6TranslatorRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateIPv6TranslatorResponse
+     */
+    // Deprecated
     public CreateIPv6TranslatorResponse createIPv6TranslatorWithOptions(CreateIPv6TranslatorRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4125,11 +4189,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateIPv6TranslatorResponse());
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request CreateIPv6TranslatorRequest
+      * @return CreateIPv6TranslatorResponse
+     */
+    // Deprecated
     public CreateIPv6TranslatorResponse createIPv6Translator(CreateIPv6TranslatorRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createIPv6TranslatorWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request CreateIPv6TranslatorAclListRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateIPv6TranslatorAclListResponse
+     */
+    // Deprecated
     public CreateIPv6TranslatorAclListResponse createIPv6TranslatorAclListWithOptions(CreateIPv6TranslatorAclListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4178,11 +4257,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateIPv6TranslatorAclListResponse());
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request CreateIPv6TranslatorAclListRequest
+      * @return CreateIPv6TranslatorAclListResponse
+     */
+    // Deprecated
     public CreateIPv6TranslatorAclListResponse createIPv6TranslatorAclList(CreateIPv6TranslatorAclListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createIPv6TranslatorAclListWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request CreateIPv6TranslatorEntryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateIPv6TranslatorEntryResponse
+     */
+    // Deprecated
     public CreateIPv6TranslatorEntryResponse createIPv6TranslatorEntryWithOptions(CreateIPv6TranslatorEntryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4267,6 +4361,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateIPv6TranslatorEntryResponse());
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request CreateIPv6TranslatorEntryRequest
+      * @return CreateIPv6TranslatorEntryResponse
+     */
+    // Deprecated
     public CreateIPv6TranslatorEntryResponse createIPv6TranslatorEntry(CreateIPv6TranslatorEntryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createIPv6TranslatorEntryWithOptions(request, runtime);
@@ -4806,10 +4907,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.natIpCidr)) {
             query.put("NatIpCidr", request.natIpCidr);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.natIpCidrId)) {
-            query.put("NatIpCidrId", request.natIpCidrId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.natIpDescription)) {
@@ -7325,6 +7422,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EnableNatTraversal", request.enableNatTraversal);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableTunnelsBgp)) {
+            query.put("EnableTunnelsBgp", request.enableTunnelsBgp);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.healthCheckConfig)) {
             query.put("HealthCheckConfig", request.healthCheckConfig);
         }
@@ -7381,8 +7482,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("VpnGatewayId", request.vpnGatewayId);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tunnelOptionsSpecification)) {
+            bodyFlat.put("TunnelOptionsSpecification", request.tunnelOptionsSpecification);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateVpnConnection"),
@@ -7432,6 +7544,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.disasterRecoveryVSwitchId)) {
+            query.put("DisasterRecoveryVSwitchId", request.disasterRecoveryVSwitchId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableIpsec)) {
@@ -8612,6 +8728,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteIPv6TranslatorWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request DeleteIPv6TranslatorAclListRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteIPv6TranslatorAclListResponse
+     */
+    // Deprecated
     public DeleteIPv6TranslatorAclListResponse deleteIPv6TranslatorAclListWithOptions(DeleteIPv6TranslatorAclListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8660,11 +8784,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteIPv6TranslatorAclListResponse());
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request DeleteIPv6TranslatorAclListRequest
+      * @return DeleteIPv6TranslatorAclListResponse
+     */
+    // Deprecated
     public DeleteIPv6TranslatorAclListResponse deleteIPv6TranslatorAclList(DeleteIPv6TranslatorAclListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteIPv6TranslatorAclListWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request DeleteIPv6TranslatorEntryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteIPv6TranslatorEntryResponse
+     */
+    // Deprecated
     public DeleteIPv6TranslatorEntryResponse deleteIPv6TranslatorEntryWithOptions(DeleteIPv6TranslatorEntryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8717,6 +8856,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteIPv6TranslatorEntryResponse());
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request DeleteIPv6TranslatorEntryRequest
+      * @return DeleteIPv6TranslatorEntryResponse
+     */
+    // Deprecated
     public DeleteIPv6TranslatorEntryResponse deleteIPv6TranslatorEntry(DeleteIPv6TranslatorEntryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteIPv6TranslatorEntryWithOptions(request, runtime);
@@ -9219,9 +9365,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Specifies whether only to precheck this request. Valid values:
-      * *   **true**: sends the precheck request but does delete the NAT CIDR block. The system checks your AccessKey pair, the RAM user permissions, and the required parameters. If the request fails the precheck, an error code is returned. If the request passes the check, the `DryRunOperation` error code is returned.
-      * *   **false**: sends the API request. This is the default value. If the request passes the precheck, a 2XX HTTP status code is returned and the NAT CIDR block is deleted.
+      * You cannot repeatedly call the **DeleteNatIpCidr** operation to delete a NAT CIDR block within the specified period of time.
       *
       * @param request DeleteNatIpCidrRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -9288,9 +9432,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Specifies whether only to precheck this request. Valid values:
-      * *   **true**: sends the precheck request but does delete the NAT CIDR block. The system checks your AccessKey pair, the RAM user permissions, and the required parameters. If the request fails the precheck, an error code is returned. If the request passes the check, the `DryRunOperation` error code is returned.
-      * *   **false**: sends the API request. This is the default value. If the request passes the precheck, a 2XX HTTP status code is returned and the NAT CIDR block is deleted.
+      * You cannot repeatedly call the **DeleteNatIpCidr** operation to delete a NAT CIDR block within the specified period of time.
       *
       * @param request DeleteNatIpCidrRequest
       * @return DeleteNatIpCidrResponse
@@ -9891,7 +10033,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The operation that you want to perform. Set the value to **DeleteSnatEntry**.
+      * DeleteSnatEntry is an asynchronous operation. After you make a request, the ID of the request is returned but the specified SNAT entry is not deleted. The system deletes the SNAT entry in the background. You can call the [DescribeSnatTableEntries](~~42677~~) operation to query the status of SNAT entries.
+      * *   If the SNAT entries are in the **Deleting** state, the system is deleting the SNAT entries. In this case, you can only query the status of the SNAT entries, and cannot perform other operations.
+      * *   If no SNAT entry is returned in the response, the SNAT entry is deleted.
+      * If some SNAT entries are in the **Pending** state, you cannot delete these SNAT entries.
       *
       * @param request DeleteSnatEntryRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -9950,7 +10095,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The operation that you want to perform. Set the value to **DeleteSnatEntry**.
+      * DeleteSnatEntry is an asynchronous operation. After you make a request, the ID of the request is returned but the specified SNAT entry is not deleted. The system deletes the SNAT entry in the background. You can call the [DescribeSnatTableEntries](~~42677~~) operation to query the status of SNAT entries.
+      * *   If the SNAT entries are in the **Deleting** state, the system is deleting the SNAT entries. In this case, you can only query the status of the SNAT entries, and cannot perform other operations.
+      * *   If no SNAT entry is returned in the response, the SNAT entry is deleted.
+      * If some SNAT entries are in the **Pending** state, you cannot delete these SNAT entries.
       *
       * @param request DeleteSnatEntryRequest
       * @return DeleteSnatEntryResponse
@@ -11579,6 +11727,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SecurityProtectionEnabled", request.securityProtectionEnabled);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -12606,6 +12758,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeIPv6TranslatorAclListAttributesWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request DescribeIPv6TranslatorAclListsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeIPv6TranslatorAclListsResponse
+     */
+    // Deprecated
     public DescribeIPv6TranslatorAclListsResponse describeIPv6TranslatorAclListsWithOptions(DescribeIPv6TranslatorAclListsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -12662,11 +12822,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeIPv6TranslatorAclListsResponse());
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request DescribeIPv6TranslatorAclListsRequest
+      * @return DescribeIPv6TranslatorAclListsResponse
+     */
+    // Deprecated
     public DescribeIPv6TranslatorAclListsResponse describeIPv6TranslatorAclLists(DescribeIPv6TranslatorAclListsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeIPv6TranslatorAclListsWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request DescribeIPv6TranslatorEntriesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeIPv6TranslatorEntriesResponse
+     */
+    // Deprecated
     public DescribeIPv6TranslatorEntriesResponse describeIPv6TranslatorEntriesWithOptions(DescribeIPv6TranslatorEntriesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -12763,11 +12938,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeIPv6TranslatorEntriesResponse());
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request DescribeIPv6TranslatorEntriesRequest
+      * @return DescribeIPv6TranslatorEntriesResponse
+     */
+    // Deprecated
     public DescribeIPv6TranslatorEntriesResponse describeIPv6TranslatorEntries(DescribeIPv6TranslatorEntriesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeIPv6TranslatorEntriesWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request DescribeIPv6TranslatorsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeIPv6TranslatorsResponse
+     */
+    // Deprecated
     public DescribeIPv6TranslatorsResponse describeIPv6TranslatorsWithOptions(DescribeIPv6TranslatorsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -12848,6 +13038,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeIPv6TranslatorsResponse());
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request DescribeIPv6TranslatorsRequest
+      * @return DescribeIPv6TranslatorsResponse
+     */
+    // Deprecated
     public DescribeIPv6TranslatorsResponse describeIPv6Translators(DescribeIPv6TranslatorsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeIPv6TranslatorsWithOptions(request, runtime);
@@ -13158,7 +13355,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The operation that you want to perform. Set the value to **DescribeNatGateways**.
+      * You can call this operation to query both Virtual Private Cloud (VPC) NAT gateways and Internet NAT gateways. NAT gateways in this topic refer to both VPC NAT gateways and Internet NAT gateways.
       *
       * @param request DescribeNatGatewaysRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -13261,7 +13458,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The operation that you want to perform. Set the value to **DescribeNatGateways**.
+      * You can call this operation to query both Virtual Private Cloud (VPC) NAT gateways and Internet NAT gateways. NAT gateways in this topic refer to both VPC NAT gateways and Internet NAT gateways.
       *
       * @param request DescribeNatGatewaysRequest
       * @return DescribeNatGatewaysResponse
@@ -14294,6 +14491,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeSslVpnClientCertsWithOptions(request, runtime);
     }
 
+    public DescribeSslVpnClientsResponse describeSslVpnClientsWithOptions(DescribeSslVpnClientsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpnGatewayId)) {
+            query.put("VpnGatewayId", request.vpnGatewayId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeSslVpnClients"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSslVpnClientsResponse());
+    }
+
+    public DescribeSslVpnClientsResponse describeSslVpnClients(DescribeSslVpnClientsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeSslVpnClientsWithOptions(request, runtime);
+    }
+
     public DescribeSslVpnServersResponse describeSslVpnServersWithOptions(DescribeSslVpnServersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -15297,6 +15551,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.to)) {
             query.put("To", request.to);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tunnelId)) {
+            query.put("TunnelId", request.tunnelId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.vpnConnectionId)) {
@@ -16875,8 +17133,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetTrafficMirrorServiceStatusResponse getTrafficMirrorServiceStatusWithOptions(GetTrafficMirrorServiceStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -17434,9 +17716,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the region that you want to query.
-      * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
-      * In this example, zones that support NAT gateways in the UAE (Dubai) region are queried.
+      * You can call this operation to query zones that support NAT gateways, including Internet NAT gateways and Virtual Private Cloud (VPC) NAT gateways.
       *
       * @param request ListEnhanhcedNatGatewayAvailableZonesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -17491,9 +17771,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the region that you want to query.
-      * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
-      * In this example, zones that support NAT gateways in the UAE (Dubai) region are queried.
+      * You can call this operation to query zones that support NAT gateways, including Internet NAT gateways and Virtual Private Cloud (VPC) NAT gateways.
       *
       * @param request ListEnhanhcedNatGatewayAvailableZonesRequest
       * @return ListEnhanhcedNatGatewayAvailableZonesResponse
@@ -19950,6 +20228,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyHaVipAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request ModifyIPv6TranslatorAclAttributeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyIPv6TranslatorAclAttributeResponse
+     */
+    // Deprecated
     public ModifyIPv6TranslatorAclAttributeResponse modifyIPv6TranslatorAclAttributeWithOptions(ModifyIPv6TranslatorAclAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -20002,6 +20288,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyIPv6TranslatorAclAttributeResponse());
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request ModifyIPv6TranslatorAclAttributeRequest
+      * @return ModifyIPv6TranslatorAclAttributeResponse
+     */
+    // Deprecated
     public ModifyIPv6TranslatorAclAttributeResponse modifyIPv6TranslatorAclAttribute(ModifyIPv6TranslatorAclAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyIPv6TranslatorAclAttributeWithOptions(request, runtime);
@@ -20186,6 +20479,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyIPv6TranslatorBandwidthWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request ModifyIPv6TranslatorEntryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyIPv6TranslatorEntryResponse
+     */
+    // Deprecated
     public ModifyIPv6TranslatorEntryResponse modifyIPv6TranslatorEntryWithOptions(ModifyIPv6TranslatorEntryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -20270,6 +20571,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyIPv6TranslatorEntryResponse());
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request ModifyIPv6TranslatorEntryRequest
+      * @return ModifyIPv6TranslatorEntryResponse
+     */
+    // Deprecated
     public ModifyIPv6TranslatorEntryResponse modifyIPv6TranslatorEntry(ModifyIPv6TranslatorEntryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyIPv6TranslatorEntryWithOptions(request, runtime);
@@ -22334,6 +22642,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EnableNatTraversal", request.enableNatTraversal);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableTunnelsBgp)) {
+            query.put("EnableTunnelsBgp", request.enableTunnelsBgp);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.healthCheckConfig)) {
             query.put("HealthCheckConfig", request.healthCheckConfig);
         }
@@ -22386,8 +22698,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("VpnConnectionId", request.vpnConnectionId);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tunnelOptionsSpecification)) {
+            bodyFlat.put("TunnelOptionsSpecification", request.tunnelOptionsSpecification);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ModifyVpnConnectionAttribute"),
@@ -23077,8 +23400,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public OpenTrafficMirrorServiceResponse openTrafficMirrorServiceWithOptions(OpenTrafficMirrorServiceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

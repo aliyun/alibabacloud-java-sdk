@@ -60,6 +60,9 @@ public class DescribeVpnConnectionLogsRequest extends TeaModel {
     @NameInMap("To")
     public Integer to;
 
+    @NameInMap("TunnelId")
+    public String tunnelId;
+
     /**
      * <p>The ID of the IPsec-VPN connection.</p>
      */
@@ -149,6 +152,14 @@ public class DescribeVpnConnectionLogsRequest extends TeaModel {
     }
     public Integer getTo() {
         return this.to;
+    }
+
+    public DescribeVpnConnectionLogsRequest setTunnelId(String tunnelId) {
+        this.tunnelId = tunnelId;
+        return this;
+    }
+    public String getTunnelId() {
+        return this.tunnelId;
     }
 
     public DescribeVpnConnectionLogsRequest setVpnConnectionId(String vpnConnectionId) {
