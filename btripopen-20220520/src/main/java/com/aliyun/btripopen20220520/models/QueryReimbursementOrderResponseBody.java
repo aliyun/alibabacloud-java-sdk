@@ -85,6 +85,9 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         @NameInMap("bill_settlement_id")
         public Long billSettlementId;
 
+        @NameInMap("capital_direction")
+        public String capitalDirection;
+
         @NameInMap("fee_type")
         public String feeType;
 
@@ -114,6 +117,14 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         }
         public Long getBillSettlementId() {
             return this.billSettlementId;
+        }
+
+        public QueryReimbursementOrderResponseBodyModuleExpensesExpenseCompositions setCapitalDirection(String capitalDirection) {
+            this.capitalDirection = capitalDirection;
+            return this;
+        }
+        public String getCapitalDirection() {
+            return this.capitalDirection;
         }
 
         public QueryReimbursementOrderResponseBodyModuleExpensesExpenseCompositions setFeeType(String feeType) {
