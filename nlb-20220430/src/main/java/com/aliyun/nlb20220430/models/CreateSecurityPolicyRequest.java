@@ -48,6 +48,9 @@ public class CreateSecurityPolicyRequest extends TeaModel {
     @NameInMap("SecurityPolicyName")
     public String securityPolicyName;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateSecurityPolicyRequestTag> tag;
+
     @NameInMap("TlsVersions")
     public java.util.List<String> tlsVersions;
 
@@ -104,12 +107,50 @@ public class CreateSecurityPolicyRequest extends TeaModel {
         return this.securityPolicyName;
     }
 
+    public CreateSecurityPolicyRequest setTag(java.util.List<CreateSecurityPolicyRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateSecurityPolicyRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateSecurityPolicyRequest setTlsVersions(java.util.List<String> tlsVersions) {
         this.tlsVersions = tlsVersions;
         return this;
     }
     public java.util.List<String> getTlsVersions() {
         return this.tlsVersions;
+    }
+
+    public static class CreateSecurityPolicyRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateSecurityPolicyRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateSecurityPolicyRequestTag self = new CreateSecurityPolicyRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateSecurityPolicyRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateSecurityPolicyRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

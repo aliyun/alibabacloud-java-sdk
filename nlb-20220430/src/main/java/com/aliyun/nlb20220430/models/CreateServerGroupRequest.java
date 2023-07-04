@@ -123,6 +123,9 @@ public class CreateServerGroupRequest extends TeaModel {
     @NameInMap("ServerGroupType")
     public String serverGroupType;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateServerGroupRequestTag> tag;
+
     /**
      * <p>The ID of the VPC to which the server group belongs.</p>
      * <br>
@@ -246,6 +249,14 @@ public class CreateServerGroupRequest extends TeaModel {
     }
     public String getServerGroupType() {
         return this.serverGroupType;
+    }
+
+    public CreateServerGroupRequest setTag(java.util.List<CreateServerGroupRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateServerGroupRequestTag> getTag() {
+        return this.tag;
     }
 
     public CreateServerGroupRequest setVpcId(String vpcId) {
@@ -445,6 +456,36 @@ public class CreateServerGroupRequest extends TeaModel {
         }
         public Integer getUnhealthyThreshold() {
             return this.unhealthyThreshold;
+        }
+
+    }
+
+    public static class CreateServerGroupRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateServerGroupRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateServerGroupRequestTag self = new CreateServerGroupRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateServerGroupRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateServerGroupRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

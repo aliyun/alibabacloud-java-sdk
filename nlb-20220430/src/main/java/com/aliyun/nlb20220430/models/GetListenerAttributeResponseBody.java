@@ -174,6 +174,9 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     @NameInMap("StartPort")
     public String startPort;
 
+    @NameInMap("Tags")
+    public java.util.List<GetListenerAttributeResponseBodyTags> tags;
+
     public static GetListenerAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetListenerAttributeResponseBody self = new GetListenerAttributeResponseBody();
         return TeaModel.build(map, self);
@@ -353,6 +356,44 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     }
     public String getStartPort() {
         return this.startPort;
+    }
+
+    public GetListenerAttributeResponseBody setTags(java.util.List<GetListenerAttributeResponseBodyTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<GetListenerAttributeResponseBodyTags> getTags() {
+        return this.tags;
+    }
+
+    public static class GetListenerAttributeResponseBodyTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static GetListenerAttributeResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
+            GetListenerAttributeResponseBodyTags self = new GetListenerAttributeResponseBodyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetListenerAttributeResponseBodyTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public GetListenerAttributeResponseBodyTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
     }
 
 }

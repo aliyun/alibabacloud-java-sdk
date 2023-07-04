@@ -7,6 +7,9 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
     @NameInMap("CertificateIds")
     public java.util.List<String> certificateIds;
 
+    @NameInMap("Certificates")
+    public java.util.List<ListListenerCertificatesResponseBodyCertificates> certificates;
+
     @NameInMap("MaxResults")
     public Integer maxResults;
 
@@ -30,6 +33,14 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
     }
     public java.util.List<String> getCertificateIds() {
         return this.certificateIds;
+    }
+
+    public ListListenerCertificatesResponseBody setCertificates(java.util.List<ListListenerCertificatesResponseBodyCertificates> certificates) {
+        this.certificates = certificates;
+        return this;
+    }
+    public java.util.List<ListListenerCertificatesResponseBodyCertificates> getCertificates() {
+        return this.certificates;
     }
 
     public ListListenerCertificatesResponseBody setMaxResults(Integer maxResults) {
@@ -62,6 +73,58 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
     }
     public Integer getTotalCount() {
         return this.totalCount;
+    }
+
+    public static class ListListenerCertificatesResponseBodyCertificates extends TeaModel {
+        @NameInMap("CertificateId")
+        public String certificateId;
+
+        @NameInMap("CertificateType")
+        public String certificateType;
+
+        @NameInMap("IsDefault")
+        public Boolean isDefault;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static ListListenerCertificatesResponseBodyCertificates build(java.util.Map<String, ?> map) throws Exception {
+            ListListenerCertificatesResponseBodyCertificates self = new ListListenerCertificatesResponseBodyCertificates();
+            return TeaModel.build(map, self);
+        }
+
+        public ListListenerCertificatesResponseBodyCertificates setCertificateId(String certificateId) {
+            this.certificateId = certificateId;
+            return this;
+        }
+        public String getCertificateId() {
+            return this.certificateId;
+        }
+
+        public ListListenerCertificatesResponseBodyCertificates setCertificateType(String certificateType) {
+            this.certificateType = certificateType;
+            return this;
+        }
+        public String getCertificateType() {
+            return this.certificateType;
+        }
+
+        public ListListenerCertificatesResponseBodyCertificates setIsDefault(Boolean isDefault) {
+            this.isDefault = isDefault;
+            return this;
+        }
+        public Boolean getIsDefault() {
+            return this.isDefault;
+        }
+
+        public ListListenerCertificatesResponseBodyCertificates setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
     }
 
 }

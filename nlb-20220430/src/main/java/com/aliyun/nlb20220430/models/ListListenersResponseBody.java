@@ -82,6 +82,36 @@ public class ListListenersResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListListenersResponseBodyListenersTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListListenersResponseBodyListenersTags build(java.util.Map<String, ?> map) throws Exception {
+            ListListenersResponseBodyListenersTags self = new ListListenersResponseBodyListenersTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListListenersResponseBodyListenersTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListListenersResponseBodyListenersTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListListenersResponseBodyListeners extends TeaModel {
         /**
          * <p>Indicates whether Application-Layer Protocol Negotiation (ALPN) is enabled. Valid values:</p>
@@ -244,6 +274,9 @@ public class ListListenersResponseBody extends TeaModel {
          */
         @NameInMap("StartPort")
         public String startPort;
+
+        @NameInMap("Tags")
+        public java.util.List<ListListenersResponseBodyListenersTags> tags;
 
         public static ListListenersResponseBodyListeners build(java.util.Map<String, ?> map) throws Exception {
             ListListenersResponseBodyListeners self = new ListListenersResponseBodyListeners();
@@ -416,6 +449,14 @@ public class ListListenersResponseBody extends TeaModel {
         }
         public String getStartPort() {
             return this.startPort;
+        }
+
+        public ListListenersResponseBodyListeners setTags(java.util.List<ListListenersResponseBodyListenersTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListListenersResponseBodyListenersTags> getTags() {
+            return this.tags;
         }
 
     }
