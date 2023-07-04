@@ -87,6 +87,9 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>入侵防御事件的名称。</p>
+     */
     @NameInMap("EventName")
     public String eventName;
 
@@ -118,7 +121,7 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     public String noLocation;
 
     /**
-     * <p>The order in which you want to sort the query results. Valid values:</p>
+     * <p>The order in which you want to sort the results. Valid values:</p>
      * <br>
      * <p>*   **asc**: the ascending order.</p>
      * <p>*   **desc**: the descending order. This is the default value.</p>
