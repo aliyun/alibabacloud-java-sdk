@@ -7,8 +7,20 @@ public class SubmitTextTo3DAvatarVideoTaskShrinkRequest extends TeaModel {
     @NameInMap("App")
     public String appShrink;
 
+    @NameInMap("AudioInfo")
+    public String audioInfoShrink;
+
     @NameInMap("AvatarInfo")
     public String avatarInfoShrink;
+
+    @NameInMap("Callback")
+    public Boolean callback;
+
+    @NameInMap("CallbackParams")
+    public String callbackParams;
+
+    @NameInMap("ExtParams")
+    public String extParams;
 
     @NameInMap("TenantId")
     public Long tenantId;
@@ -35,12 +47,44 @@ public class SubmitTextTo3DAvatarVideoTaskShrinkRequest extends TeaModel {
         return this.appShrink;
     }
 
+    public SubmitTextTo3DAvatarVideoTaskShrinkRequest setAudioInfoShrink(String audioInfoShrink) {
+        this.audioInfoShrink = audioInfoShrink;
+        return this;
+    }
+    public String getAudioInfoShrink() {
+        return this.audioInfoShrink;
+    }
+
     public SubmitTextTo3DAvatarVideoTaskShrinkRequest setAvatarInfoShrink(String avatarInfoShrink) {
         this.avatarInfoShrink = avatarInfoShrink;
         return this;
     }
     public String getAvatarInfoShrink() {
         return this.avatarInfoShrink;
+    }
+
+    public SubmitTextTo3DAvatarVideoTaskShrinkRequest setCallback(Boolean callback) {
+        this.callback = callback;
+        return this;
+    }
+    public Boolean getCallback() {
+        return this.callback;
+    }
+
+    public SubmitTextTo3DAvatarVideoTaskShrinkRequest setCallbackParams(String callbackParams) {
+        this.callbackParams = callbackParams;
+        return this;
+    }
+    public String getCallbackParams() {
+        return this.callbackParams;
+    }
+
+    public SubmitTextTo3DAvatarVideoTaskShrinkRequest setExtParams(String extParams) {
+        this.extParams = extParams;
+        return this;
+    }
+    public String getExtParams() {
+        return this.extParams;
     }
 
     public SubmitTextTo3DAvatarVideoTaskShrinkRequest setTenantId(Long tenantId) {
