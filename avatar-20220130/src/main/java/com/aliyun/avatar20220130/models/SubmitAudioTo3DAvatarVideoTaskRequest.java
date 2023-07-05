@@ -134,6 +134,9 @@ public class SubmitAudioTo3DAvatarVideoTaskRequest extends TeaModel {
         @NameInMap("Code")
         public String code;
 
+        @NameInMap("IndustryCode")
+        public String industryCode;
+
         @NameInMap("Locate")
         public Integer locate;
 
@@ -156,6 +159,14 @@ public class SubmitAudioTo3DAvatarVideoTaskRequest extends TeaModel {
         }
         public String getCode() {
             return this.code;
+        }
+
+        public SubmitAudioTo3DAvatarVideoTaskRequestAvatarInfo setIndustryCode(String industryCode) {
+            this.industryCode = industryCode;
+            return this;
+        }
+        public String getIndustryCode() {
+            return this.industryCode;
         }
 
         public SubmitAudioTo3DAvatarVideoTaskRequestAvatarInfo setLocate(Integer locate) {

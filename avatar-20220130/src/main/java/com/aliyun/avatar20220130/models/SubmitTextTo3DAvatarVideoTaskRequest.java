@@ -7,8 +7,20 @@ public class SubmitTextTo3DAvatarVideoTaskRequest extends TeaModel {
     @NameInMap("App")
     public SubmitTextTo3DAvatarVideoTaskRequestApp app;
 
+    @NameInMap("AudioInfo")
+    public SubmitTextTo3DAvatarVideoTaskRequestAudioInfo audioInfo;
+
     @NameInMap("AvatarInfo")
     public SubmitTextTo3DAvatarVideoTaskRequestAvatarInfo avatarInfo;
+
+    @NameInMap("Callback")
+    public Boolean callback;
+
+    @NameInMap("CallbackParams")
+    public String callbackParams;
+
+    @NameInMap("ExtParams")
+    public String extParams;
 
     @NameInMap("TenantId")
     public Long tenantId;
@@ -35,12 +47,44 @@ public class SubmitTextTo3DAvatarVideoTaskRequest extends TeaModel {
         return this.app;
     }
 
+    public SubmitTextTo3DAvatarVideoTaskRequest setAudioInfo(SubmitTextTo3DAvatarVideoTaskRequestAudioInfo audioInfo) {
+        this.audioInfo = audioInfo;
+        return this;
+    }
+    public SubmitTextTo3DAvatarVideoTaskRequestAudioInfo getAudioInfo() {
+        return this.audioInfo;
+    }
+
     public SubmitTextTo3DAvatarVideoTaskRequest setAvatarInfo(SubmitTextTo3DAvatarVideoTaskRequestAvatarInfo avatarInfo) {
         this.avatarInfo = avatarInfo;
         return this;
     }
     public SubmitTextTo3DAvatarVideoTaskRequestAvatarInfo getAvatarInfo() {
         return this.avatarInfo;
+    }
+
+    public SubmitTextTo3DAvatarVideoTaskRequest setCallback(Boolean callback) {
+        this.callback = callback;
+        return this;
+    }
+    public Boolean getCallback() {
+        return this.callback;
+    }
+
+    public SubmitTextTo3DAvatarVideoTaskRequest setCallbackParams(String callbackParams) {
+        this.callbackParams = callbackParams;
+        return this;
+    }
+    public String getCallbackParams() {
+        return this.callbackParams;
+    }
+
+    public SubmitTextTo3DAvatarVideoTaskRequest setExtParams(String extParams) {
+        this.extParams = extParams;
+        return this;
+    }
+    public String getExtParams() {
+        return this.extParams;
     }
 
     public SubmitTextTo3DAvatarVideoTaskRequest setTenantId(Long tenantId) {
@@ -94,12 +138,67 @@ public class SubmitTextTo3DAvatarVideoTaskRequest extends TeaModel {
 
     }
 
+    public static class SubmitTextTo3DAvatarVideoTaskRequestAudioInfo extends TeaModel {
+        @NameInMap("PitchRate")
+        public Integer pitchRate;
+
+        @NameInMap("SpeechRate")
+        public Integer speechRate;
+
+        @NameInMap("Voice")
+        public String voice;
+
+        @NameInMap("Volume")
+        public Integer volume;
+
+        public static SubmitTextTo3DAvatarVideoTaskRequestAudioInfo build(java.util.Map<String, ?> map) throws Exception {
+            SubmitTextTo3DAvatarVideoTaskRequestAudioInfo self = new SubmitTextTo3DAvatarVideoTaskRequestAudioInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitTextTo3DAvatarVideoTaskRequestAudioInfo setPitchRate(Integer pitchRate) {
+            this.pitchRate = pitchRate;
+            return this;
+        }
+        public Integer getPitchRate() {
+            return this.pitchRate;
+        }
+
+        public SubmitTextTo3DAvatarVideoTaskRequestAudioInfo setSpeechRate(Integer speechRate) {
+            this.speechRate = speechRate;
+            return this;
+        }
+        public Integer getSpeechRate() {
+            return this.speechRate;
+        }
+
+        public SubmitTextTo3DAvatarVideoTaskRequestAudioInfo setVoice(String voice) {
+            this.voice = voice;
+            return this;
+        }
+        public String getVoice() {
+            return this.voice;
+        }
+
+        public SubmitTextTo3DAvatarVideoTaskRequestAudioInfo setVolume(Integer volume) {
+            this.volume = volume;
+            return this;
+        }
+        public Integer getVolume() {
+            return this.volume;
+        }
+
+    }
+
     public static class SubmitTextTo3DAvatarVideoTaskRequestAvatarInfo extends TeaModel {
         @NameInMap("Angle")
         public Integer angle;
 
         @NameInMap("Code")
         public String code;
+
+        @NameInMap("IndustryCode")
+        public String industryCode;
 
         @NameInMap("Locate")
         public Integer locate;
@@ -123,6 +222,14 @@ public class SubmitTextTo3DAvatarVideoTaskRequest extends TeaModel {
         }
         public String getCode() {
             return this.code;
+        }
+
+        public SubmitTextTo3DAvatarVideoTaskRequestAvatarInfo setIndustryCode(String industryCode) {
+            this.industryCode = industryCode;
+            return this;
+        }
+        public String getIndustryCode() {
+            return this.industryCode;
         }
 
         public SubmitTextTo3DAvatarVideoTaskRequestAvatarInfo setLocate(Integer locate) {
