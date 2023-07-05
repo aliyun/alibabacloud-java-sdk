@@ -4,20 +4,20 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class CreateCustomDomainRequest extends TeaModel {
-    @NameInMap("request")
-    public CreateCustomDomainInput request;
+    @NameInMap("body")
+    public CreateCustomDomainInput body;
 
     public static CreateCustomDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCustomDomainRequest self = new CreateCustomDomainRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateCustomDomainRequest setRequest(CreateCustomDomainInput request) {
-        this.request = request;
+    public CreateCustomDomainRequest setBody(CreateCustomDomainInput body) {
+        this.body = body;
         return this;
     }
-    public CreateCustomDomainInput getRequest() {
-        return this.request;
+    public CreateCustomDomainInput getBody() {
+        return this.body;
     }
 
 }

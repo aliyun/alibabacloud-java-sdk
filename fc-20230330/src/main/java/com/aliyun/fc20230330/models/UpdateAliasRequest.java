@@ -4,20 +4,20 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class UpdateAliasRequest extends TeaModel {
-    @NameInMap("request")
-    public UpdateAliasInput request;
+    @NameInMap("body")
+    public UpdateAliasInput body;
 
     public static UpdateAliasRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAliasRequest self = new UpdateAliasRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateAliasRequest setRequest(UpdateAliasInput request) {
-        this.request = request;
+    public UpdateAliasRequest setBody(UpdateAliasInput body) {
+        this.body = body;
         return this;
     }
-    public UpdateAliasInput getRequest() {
-        return this.request;
+    public UpdateAliasInput getBody() {
+        return this.body;
     }
 
 }
