@@ -4,6 +4,9 @@ package com.aliyun.cloudauth_intl20220809.models;
 import com.aliyun.tea.*;
 
 public class InitializeRequest extends TeaModel {
+    @NameInMap("Authorize")
+    public String authorize;
+
     @NameInMap("Crop")
     public String crop;
 
@@ -64,6 +67,14 @@ public class InitializeRequest extends TeaModel {
     public static InitializeRequest build(java.util.Map<String, ?> map) throws Exception {
         InitializeRequest self = new InitializeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public InitializeRequest setAuthorize(String authorize) {
+        this.authorize = authorize;
+        return this;
+    }
+    public String getAuthorize() {
+        return this.authorize;
     }
 
     public InitializeRequest setCrop(String crop) {
