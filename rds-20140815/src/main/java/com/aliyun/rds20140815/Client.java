@@ -8318,6 +8318,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * @deprecated
       * > This operation is no longer maintained. You can use the [DescribeDiagnosticReportList](~~443006~~) operation of Database Autonomy Service (DAS) to query a list of diagnostic reports.
       * *   The returned diagnosis reports include data collection time, data generation time, and download URLs. The system retains the reports for 15 days.
       * *   This operation is not suitable for instances that run SQL Server 2017 on RDS Cluster Edition.
@@ -8326,6 +8327,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return DescribeDiagnosticReportListResponse
      */
+    // Deprecated
     public DescribeDiagnosticReportListResponse describeDiagnosticReportListWithOptions(DescribeDiagnosticReportListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8355,6 +8357,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * @deprecated
       * > This operation is no longer maintained. You can use the [DescribeDiagnosticReportList](~~443006~~) operation of Database Autonomy Service (DAS) to query a list of diagnostic reports.
       * *   The returned diagnosis reports include data collection time, data generation time, and download URLs. The system retains the reports for 15 days.
       * *   This operation is not suitable for instances that run SQL Server 2017 on RDS Cluster Edition.
@@ -8362,6 +8365,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request DescribeDiagnosticReportListRequest
       * @return DescribeDiagnosticReportListResponse
      */
+    // Deprecated
     public DescribeDiagnosticReportListResponse describeDiagnosticReportList(DescribeDiagnosticReportListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDiagnosticReportListWithOptions(request, runtime);
@@ -14391,6 +14395,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoUseCoupon)) {
+            query.put("AutoUseCoupon", request.autoUseCoupon);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.burstingEnabled)) {
             query.put("BurstingEnabled", request.burstingEnabled);
         }
