@@ -3,7 +3,7 @@ package com.aliyun.privatelink20200415.models;
 
 import com.aliyun.tea.*;
 
-public class GetEndpointAttributeByNsiAndServiceIdResponse extends TeaModel {
+public class ChangeResourceGroupResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class GetEndpointAttributeByNsiAndServiceIdResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetEndpointAttributeByNsiAndServiceIdResponseBody body;
+    public ChangeResourceGroupResponseBody body;
 
-    public static GetEndpointAttributeByNsiAndServiceIdResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetEndpointAttributeByNsiAndServiceIdResponse self = new GetEndpointAttributeByNsiAndServiceIdResponse();
+    public static ChangeResourceGroupResponse build(java.util.Map<String, ?> map) throws Exception {
+        ChangeResourceGroupResponse self = new ChangeResourceGroupResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetEndpointAttributeByNsiAndServiceIdResponse setHeaders(java.util.Map<String, String> headers) {
+    public ChangeResourceGroupResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class GetEndpointAttributeByNsiAndServiceIdResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetEndpointAttributeByNsiAndServiceIdResponse setStatusCode(Integer statusCode) {
+    public ChangeResourceGroupResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class GetEndpointAttributeByNsiAndServiceIdResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetEndpointAttributeByNsiAndServiceIdResponse setBody(GetEndpointAttributeByNsiAndServiceIdResponseBody body) {
+    public ChangeResourceGroupResponse setBody(ChangeResourceGroupResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetEndpointAttributeByNsiAndServiceIdResponseBody getBody() {
+    public ChangeResourceGroupResponseBody getBody() {
         return this.body;
     }
 

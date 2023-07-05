@@ -4,7 +4,6 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class AddZoneToVpcEndpointResponseBody extends TeaModel {
-    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

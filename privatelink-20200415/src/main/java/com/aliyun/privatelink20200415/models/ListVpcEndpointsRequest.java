@@ -4,71 +4,39 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class ListVpcEndpointsRequest extends TeaModel {
-    // The status of the endpoint connection. Valid values:
-    // 
-    // *   **Pending**: being modified
-    // *   **Connecting**: connecting
-    // *   **Connected**: connected
-    // *   **Disconnecting**: disconnecting
-    // *   **Disconnected**: disconnected
-    // *   **Deleting**: being deleted
-    // *   **ServiceDeleted**: The corresponding service is deleted.
     @NameInMap("ConnectionStatus")
     public String connectionStatus;
 
-    // The ID of the endpoint that you want to query.
     @NameInMap("EndpointId")
     public String endpointId;
 
-    // The name of the endpoint.
     @NameInMap("EndpointName")
     public String endpointName;
 
-    // The status of the endpoint. Valid values:
-    // 
-    // *   **Creating**: being created
-    // *   **Active**: available
-    // *   **Pending**: being modified
-    // *   **Deleting**: being deleted
     @NameInMap("EndpointStatus")
     public String endpointStatus;
 
-    // The type of the endpoint.
-    // 
-    // Set the value to **Interface**, which specifies **slb** for the **ServiceId** parameter. The value slb specifies the Classic Load Balancer (CLB) endpoint type.
     @NameInMap("EndpointType")
     public String endpointType;
 
-    // The number of entries to return on each page. Valid values: **1** to **50**. Default value: **50**.
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The token that is used for the next query. Valid values:
-    // 
-    // *   If this is your first query or no next query is to be sent, ignore this parameter.
-    // *   If a next query is to be sent, set the value to the value of NextToken that is returned from the last call.
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The region ID of the endpoints.
-    // 
-    // You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
-    // Specifies the ID of the resource group.
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    // The name of the endpoint service that is associated with the endpoint to be queried.
     @NameInMap("ServiceName")
     public String serviceName;
 
-    // The tags of the instances you want to query. You can specify up to 20 tags.
     @NameInMap("Tag")
     public java.util.List<ListVpcEndpointsRequestTag> tag;
 
-    // The virtual private cloud (VPC) to which the endpoint belongs.
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -174,11 +142,9 @@ public class ListVpcEndpointsRequest extends TeaModel {
     }
 
     public static class ListVpcEndpointsRequestTag extends TeaModel {
-        // The key of the tag.
         @NameInMap("Key")
         public String key;
 
-        // The value of the tag.
         @NameInMap("Value")
         public String value;
 

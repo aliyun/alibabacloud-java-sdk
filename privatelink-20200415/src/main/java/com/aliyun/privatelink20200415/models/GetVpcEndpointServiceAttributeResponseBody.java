@@ -4,108 +4,149 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
-    // Indicates whether endpoint connection requests are automatically accepted. Valid values:
-    // 
-    // *   **true**: automatically accepts endpoint connection requests.
-    // *   **false**: does not automatically accept endpoint connection requests.
+    /**
+     * <p>Indicates whether endpoint connection requests are automatically accepted. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("AutoAcceptEnabled")
     public Boolean autoAcceptEnabled;
 
-    // The default maximum bandwidth of the endpoint connection. Unit: Mbit/s. Valid values: **100** to 10240.
+    /**
+     * <p>The default bandwidth of the endpoint connection. Valid values: **100** to 10240. Unit: Mbit/s.</p>
+     */
     @NameInMap("ConnectBandwidth")
     public Integer connectBandwidth;
 
-    // The time when the endpoint service was created.
+    /**
+     * <p>The time when the endpoint service was created.</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
-    // The maximum bandwidth of the endpoint connection. Unit: Mbit/s.
+    /**
+     * <p>The maximum bandwidth of the endpoint connection. Unit: Mbit/s.</p>
+     */
     @NameInMap("MaxBandwidth")
     public Integer maxBandwidth;
 
-    // The minimum bandwidth of the endpoint connection. Unit: Mbit/s.
+    /**
+     * <p>The minimum bandwidth of the endpoint connection. Unit: Mbit/s.</p>
+     */
     @NameInMap("MinBandwidth")
     public Integer minBandwidth;
 
-    // The payer of the endpoint service. Valid values:
-    // 
-    // *   **Endpoint**: the service consumer.
-    // *   **EndpointService**: the service provider.
+    /**
+     * <p>The payer of the endpoint service. Valid values:</p>
+     * <br>
+     * <p>*   **Endpoint**: the service consumer.</p>
+     * <p>*   **EndpointService**: the service provider.</p>
+     */
     @NameInMap("Payer")
     public String payer;
 
-    // The region to which the endpoint service belongs.
+    /**
+     * <p>The region ID of the endpoint service.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The ID of the request.
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Specifies the ID of the resource group.
+    /**
+     * <p>The resource group ID.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    // The business status of the endpoint service. Valid values:
-    // 
-    // *   **Normal**: The endpoint service runs as expected.
-    // *   **FinacialLocked**: The endpoint service is locked due to overdue payments.
+    /**
+     * <p>The service state of the endpoint service. Valid values:</p>
+     * <br>
+     * <p>*   **Normal**: The endpoint service runs as expected.</p>
+     * <p>*   **FinacialLocked**: The endpoint service is locked due to overdue payments.</p>
+     */
     @NameInMap("ServiceBusinessStatus")
     public String serviceBusinessStatus;
 
-    // The description of the endpoint service.
+    /**
+     * <p>The description of the endpoint service.</p>
+     */
     @NameInMap("ServiceDescription")
     public String serviceDescription;
 
-    // The domain name of the endpoint service.
+    /**
+     * <p>The domain name of the endpoint service.</p>
+     */
     @NameInMap("ServiceDomain")
     public String serviceDomain;
 
-    // The ID of the endpoint service.
+    /**
+     * <p>The endpoint service ID.</p>
+     */
     @NameInMap("ServiceId")
     public String serviceId;
 
-    // The name of the endpoint service.
+    /**
+     * <p>The name of the endpoint service.</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 
-    // The type of the service resource.
-    // 
-    // The value is set to **slb**, which indicates CLB.
+    /**
+     * <p>The type of the service resource. Valid values:</p>
+     * <br>
+     * <p>*   **slb**: a CLB instance.</p>
+     * <p>*   **alb**: an ALB instance.</p>
+     */
     @NameInMap("ServiceResourceType")
     public String serviceResourceType;
 
-    // The state of the endpoint service. Valid values:
-    // 
-    // *   **Creating**: The endpoint service is being created.
-    // *   **Pending**: The endpoint service is being modified.
-    // *   **Active**: The endpoint service is available.
-    // *   **Deleting**: The endpoint service is being deleted.
-    // *   **Inactive**: The endpoint service is unavailable.
+    /**
+     * <p>The state of the endpoint service. Valid values:</p>
+     * <br>
+     * <p>*   **Creating**: The endpoint service is being created.</p>
+     * <p>*   **Pending**: The endpoint service is being modified.</p>
+     * <p>*   **Active**: The endpoint service is available.</p>
+     * <p>*   **Deleting**: The endpoint service is being deleted.</p>
+     * <p>*   **Inactive**: The endpoint service is unavailable.</p>
+     */
     @NameInMap("ServiceStatus")
     public String serviceStatus;
 
-    // Indicates whether the endpoint service supports IPv6. Valid values:
-    // 
-    // *   **true**: The endpoint service supports IPv6.
-    // *   **false**: The endpoint service does not support IPv6. This is the default value.
+    /**
+     * <p>Indicates whether IPv6 is enabled for the endpoint service. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false** (default)</p>
+     */
     @NameInMap("ServiceSupportIPv6")
     public Boolean serviceSupportIPv6;
 
-    // The type of the endpoint service.
-    // 
-    // The value is set to **Interface**. This value is used when **ServiceResourceType** is set to **slb**. The value indicates the Classic Load Balancer (CLB) type.
+    /**
+     * <p>The type of the endpoint.</p>
+     * <br>
+     * <p>Only **Interface** is returned. The value indicates the interface endpoint. Then, you can specify ALB and CLB instances as service resources for the endpoint service.</p>
+     */
     @NameInMap("ServiceType")
     public String serviceType;
 
-    // Specifies whether to enable zone affinity. Valid values:
-    // 
-    // *   **true**: enables zone affinity.
-    // *   **false**: disables zone affinity.
+    /**
+     * <p>Indicates whether zone affinity is enabled. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("ZoneAffinityEnabled")
     public Boolean zoneAffinityEnabled;
 
-    // The zones to which the service resource belongs.
+    /**
+     * <p>The zones to which the service resources belong.</p>
+     */
     @NameInMap("Zones")
     public java.util.List<String> zones;
 

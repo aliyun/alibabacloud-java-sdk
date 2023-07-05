@@ -3,19 +3,16 @@ package com.aliyun.privatelink20200415.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteVpcEndpointResponseBody extends TeaModel {
-    /**
-     * <p>The request ID.</p>
-     */
+public class ChangeResourceGroupResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DeleteVpcEndpointResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteVpcEndpointResponseBody self = new DeleteVpcEndpointResponseBody();
+    public static ChangeResourceGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ChangeResourceGroupResponseBody self = new ChangeResourceGroupResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteVpcEndpointResponseBody setRequestId(String requestId) {
+    public ChangeResourceGroupResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

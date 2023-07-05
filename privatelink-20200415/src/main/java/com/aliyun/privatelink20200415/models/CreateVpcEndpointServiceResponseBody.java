@@ -4,69 +4,39 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class CreateVpcEndpointServiceResponseBody extends TeaModel {
-    // Indicates whether endpoint connection requests are automatically accepted. Valid values:
-    // 
-    // *   **true**: Endpoint connection requests are automatically accepted.
-    // *   **false**: Endpoint connection requests are not automatically accepted.
     @NameInMap("AutoAcceptEnabled")
     public Boolean autoAcceptEnabled;
 
-    // The time when the endpoint service was created.
     @NameInMap("CreateTime")
     public String createTime;
 
-    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
-    // The ID of the resource group.
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    // The status of the endpoint service feature. Valid values:
-    // 
-    // *   **Normal**: The feature is normal.
-    // *   **FinacialLocked**: The feature is locked due to overdue payments.
     @NameInMap("ServiceBusinessStatus")
     public String serviceBusinessStatus;
 
-    // The description of the endpoint service.
     @NameInMap("ServiceDescription")
     public String serviceDescription;
 
-    // The domain name of the endpoint service.
     @NameInMap("ServiceDomain")
     public String serviceDomain;
 
-    // The ID of the endpoint service.
     @NameInMap("ServiceId")
     public String serviceId;
 
-    // The name of the endpoint service.
     @NameInMap("ServiceName")
     public String serviceName;
 
-    // The status of the endpoint service. Valid values:
-    // 
-    // *   **Creating**: The endpoint service is being created.
-    // *   **Pending**: The endpoint service is being modified.
-    // *   **Active**: The endpoint service is available.
-    // *   **Deleting**: The endpoint service is being deleted.
-    // *   **Inactive**: The endpoint service is unavailable.
     @NameInMap("ServiceStatus")
     public String serviceStatus;
 
-    // Indicates whether the endpoint service supports IPv6. Valid values:
-    // 
-    // *   **true**: The endpoint service supports IPv6.
-    // *   **false**: The endpoint service does not support IPv6.
     @NameInMap("ServiceSupportIPv6")
     public Boolean serviceSupportIPv6;
 
-    // Indicates whether zone affinity is enabled. Valid values:
-    // 
-    // *   **true**: Zone affinity is enabled.
-    // *   **false**: Zone affinity is disabled.
     @NameInMap("ZoneAffinityEnabled")
     public Boolean zoneAffinityEnabled;
 

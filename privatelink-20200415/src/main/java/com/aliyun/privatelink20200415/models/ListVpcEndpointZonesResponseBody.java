@@ -4,22 +4,30 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class ListVpcEndpointZonesResponseBody extends TeaModel {
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned on each page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The token that is used for the next query. Valid values:
-    // 
-    // *   If **NextToken** is empty, it indicates that no next query is to be sent.
-    // *   If a value of **NextToken** is returned, the value is the token that is used for the next query.
+    /**
+     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <br>
+     * <p>*   If no value is returned for **NextToken**, no next requests are performed.</p>
+     * <p>*   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The ID of the request.
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The information about the zones.
+    /**
+     * <p>The zones.</p>
+     */
     @NameInMap("Zones")
     public java.util.List<ListVpcEndpointZonesResponseBodyZones> zones;
 
@@ -61,57 +69,75 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
     }
 
     public static class ListVpcEndpointZonesResponseBodyZones extends TeaModel {
-        // The ID of the endpoint ENI.
+        /**
+         * <p>The endpoint ENI ID.</p>
+         */
         @NameInMap("EniId")
         public String eniId;
 
-        // The IP address of the endpoint ENI.
+        /**
+         * <p>The IP address of the endpoint ENI.</p>
+         */
         @NameInMap("EniIp")
         public String eniIp;
 
-        // The ID of the region to which the endpoint belongs.
+        /**
+         * <p>The region ID of the endpoint.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
-        // The status of the endpoint service. Valid values:
-        // 
-        // *   **Creating**: The endpoint service is being created.
-        // *   **Pending**: The endpoint service is being modified.
-        // *   **Active**: The endpoint service is available.
-        // *   **Deleting**: The endpoint service is being deleted.
+        /**
+         * <p>The state of the endpoint service. Valid values:</p>
+         * <br>
+         * <p>*   **Creating**: The endpoint service is being created.</p>
+         * <p>*   **Pending**: The endpoint service is being modified.</p>
+         * <p>*   **Active**: The endpoint service is available.</p>
+         * <p>*   **Deleting**: The endpoint service is being deleted.</p>
+         */
         @NameInMap("ServiceStatus")
         public String serviceStatus;
 
-        // The vSwitch of the zone. The system automatically creates an endpoint elastic network interface (ENI) in the vSwitch.
+        /**
+         * <p>The ID of the vSwitch in the zone. The system automatically creates an endpoint elastic network interface (ENI) in the vSwitch.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
-        // The domain name of the zone.
-        // 
-        // After an endpoint is connected to an endpoint service, you can access the service resources in the endpoint service by using the domain name of the zone.
+        /**
+         * <p>The domain name of the zone.</p>
+         * <br>
+         * <p>After the endpoint is connected to the endpoint service, you can access the service resources in the endpoint service by using the domain name of the zone.</p>
+         */
         @NameInMap("ZoneDomain")
         public String zoneDomain;
 
-        // The ID of the zone.
+        /**
+         * <p>The zone ID.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
-        // Indicates whether the endpoint service supports IPv6. Valid values:
-        // 
-        // *   **true**: The endpoint supports IPv6.
-        // *   **false**: The endpoint does not support IPv6. This is the default value.
+        /**
+         * <p>Indicates whether IPv6 is enabled for the endpoint service. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false** (default)</p>
+         */
         @NameInMap("ZoneIpv6Address")
         public String zoneIpv6Address;
 
-        // The status of the zone. Valid values:
-        // 
-        // *   **Creating**: The zone is being created.
-        // *   **Wait**: The zone is to be connected.
-        // *   **Connected**: The zone is connected.
-        // *   **Deleting**: The zone is being deleted.
-        // *   **Disconnecting**: The zone is being disconnected.
-        // *   **Disconnected**: The zone is disconnected.
-        // *   **Connecting**: The zone is being connected.
+        /**
+         * <p>The state of the zone. Valid values:</p>
+         * <br>
+         * <p>*   **Creating**: The zone is being created.</p>
+         * <p>*   **Wait**: The zone is to be connected.</p>
+         * <p>*   **Connected**: The zone is connected.</p>
+         * <p>*   **Deleting**: The zone is being deleted.</p>
+         * <p>*   **Disconnecting**: The zone is being disconnected.</p>
+         * <p>*   **Disconnected**: The zone is disconnected.</p>
+         * <p>*   **Connecting**: The zone is being connected.</p>
+         */
         @NameInMap("ZoneStatus")
         public String zoneStatus;
 

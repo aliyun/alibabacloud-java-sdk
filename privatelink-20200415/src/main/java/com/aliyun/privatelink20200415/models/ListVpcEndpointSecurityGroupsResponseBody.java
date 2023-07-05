@@ -4,19 +4,30 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class ListVpcEndpointSecurityGroupsResponseBody extends TeaModel {
-    // The number of entries to return on each page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The token required by the next query. If the NextToken parameter is empty, this indicates that no subsequent query will be sent.
+    /**
+     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <br>
+     * <p>*   If no value is returned for **NextToken**, no next requests are performed.</p>
+     * <p>*   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The ID of the request.
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The information about the security group.
+    /**
+     * <p>The security groups that are associated with the endpoint.</p>
+     */
     @NameInMap("SecurityGroups")
     public java.util.List<ListVpcEndpointSecurityGroupsResponseBodySecurityGroups> securityGroups;
 
@@ -58,7 +69,9 @@ public class ListVpcEndpointSecurityGroupsResponseBody extends TeaModel {
     }
 
     public static class ListVpcEndpointSecurityGroupsResponseBodySecurityGroups extends TeaModel {
-        // The ID of the security group that is associated with the endpoint.
+        /**
+         * <p>The ID of the security group that is associated with the endpoint.</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 

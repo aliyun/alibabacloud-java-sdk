@@ -4,109 +4,143 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class GetVpcEndpointAttributeResponseBody extends TeaModel {
-    // The bandwidth of the endpoint connection. Unit: Mbit/s.
+    /**
+     * <p>The description of the endpoint.</p>
+     */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
-    // The status of the endpoint connection. Valid values:
-    // 
-    // *   **Pending**: being modified
-    // *   **Connecting**: connecting
-    // *   **Connected**: connected
-    // *   **Disconnecting**: disconnecting
-    // *   **Disconnected**: disconnected
-    // *   **Deleting**: being deleted
+    /**
+     * <p>The ID of the endpoint.</p>
+     */
     @NameInMap("ConnectionStatus")
     public String connectionStatus;
 
-    // The time when the endpoint was created.
+    /**
+     * <p>The ID of the endpoint service with which the endpoint is associated.</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
-    // The business status of the endpoint. Valid values:
-    // 
-    // *   **Normal**: normal
-    // *   **FinacialLocked**: locked due to overdue payments
+    /**
+     * <p>The business status of the endpoint. Valid values:</p>
+     * <br>
+     * <p>*   **Normal**: normal</p>
+     * <p>*   **FinacialLocked**: locked due to overdue payments</p>
+     */
     @NameInMap("EndpointBusinessStatus")
     public String endpointBusinessStatus;
 
-    // The description of the endpoint.
+    /**
+     * <p>The name of the endpoint.</p>
+     */
     @NameInMap("EndpointDescription")
     public String endpointDescription;
 
-    // The domain name of the endpoint.
+    /**
+     * <p>The ID of the virtual private cloud (VPC) to which the endpoint belongs.</p>
+     */
     @NameInMap("EndpointDomain")
     public String endpointDomain;
 
-    // The ID of the endpoint.
+    /**
+     * <p>The bandwidth of the endpoint connection. Unit: Mbit/s.</p>
+     */
     @NameInMap("EndpointId")
     public String endpointId;
 
-    // The name of the endpoint.
+    /**
+     * <p>The time when the endpoint was created.</p>
+     */
     @NameInMap("EndpointName")
     public String endpointName;
 
-    // The status of the endpoint. Valid values:
-    // 
-    // *   **Creating**: being created
-    // *   **Active**: available
-    // *   **Pending**: being modified
-    // *   **Deleting**: being deleted
+    /**
+     * <p>The operation that you want to perform. Set the value to **GetVpcEndpointAttribute**.</p>
+     */
     @NameInMap("EndpointStatus")
     public String endpointStatus;
 
-    // The type of the endpoint.
-    // 
-    // The value is set to **Interface**, which indicates that the resource type of **ServiceId** is Classic Load Balancer (CLB).
+    /**
+     * <p>The payer. Valid values:</p>
+     * <br>
+     * <p>*   **Endpoint**: the service consumer</p>
+     * <p>*   **EndpointService**: the service provider</p>
+     */
     @NameInMap("EndpointType")
     public String endpointType;
 
-    // The payer. Valid values:
-    // 
-    // *   **Endpoint**: the service consumer
-    // *   **EndpointService**: the service provider
+    /**
+     * <p>The name of the endpoint service that is associated with the endpoint.</p>
+     */
     @NameInMap("Payer")
     public String payer;
 
-    // The region ID of the endpoint.
+    /**
+     * <p>The number of private IP addresses that can be used by an elastic network interface (ENI) in each zone. The value is set to **1**.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The ID of the request.
+    /**
+     * <p>The type of the endpoint.</p>
+     * <br>
+     * <p>The value is set to **Interface**, which indicates that the resource type of **ServiceId** is Classic Load Balancer (CLB).</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The ID of the resource group.
+    /**
+     * <p>Queries the details about a specified endpoint.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    // Indicates whether the endpoint and the endpoint service belong to the same Alibaba Cloud account. Valid values:
-    // 
-    // *   **true**: yes
-    // *   **false**: no
+    /**
+     * <p>The region ID of the endpoint.</p>
+     */
     @NameInMap("ResourceOwner")
     public Boolean resourceOwner;
 
-    // The ID of the endpoint service with which the endpoint is associated.
+    /**
+     * <p>Indicates whether zone affinity is enabled. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     */
     @NameInMap("ServiceId")
     public String serviceId;
 
-    // The name of the endpoint service that is associated with the endpoint.
+    /**
+     * <p>The status of the endpoint connection. Valid values:</p>
+     * <br>
+     * <p>*   **Pending**: being modified</p>
+     * <p>*   **Connecting**: connecting</p>
+     * <p>*   **Connected**: connected</p>
+     * <p>*   **Disconnecting**: disconnecting</p>
+     * <p>*   **Disconnected**: disconnected</p>
+     * <p>*   **Deleting**: being deleted</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 
-    // The ID of the virtual private cloud (VPC) to which the endpoint belongs.
+    /**
+     * <p>The domain name of the endpoint.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
-    // Indicates whether zone affinity is enabled. Valid values:
-    // 
-    // *   **true**: yes
-    // *   **false**: no
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("ZoneAffinityEnabled")
     public Boolean zoneAffinityEnabled;
 
-    // The number of private IP addresses that can be used by an elastic network interface (ENI) in each zone. The value is set to **1**.
+    /**
+     * <p>The region ID of the endpoint.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("ZonePrivateIpAddressCount")
     public Long zonePrivateIpAddressCount;
 
