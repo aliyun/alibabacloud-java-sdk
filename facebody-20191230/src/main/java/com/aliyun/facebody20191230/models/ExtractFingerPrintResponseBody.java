@@ -33,18 +33,18 @@ public class ExtractFingerPrintResponseBody extends TeaModel {
 
     public static class ExtractFingerPrintResponseBodyData extends TeaModel {
         @NameInMap("FingerPrint")
-        public byte[] fingerPrint;
+        public String fingerPrint;
 
         public static ExtractFingerPrintResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ExtractFingerPrintResponseBodyData self = new ExtractFingerPrintResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public ExtractFingerPrintResponseBodyData setFingerPrint(byte[] fingerPrint) {
+        public ExtractFingerPrintResponseBodyData setFingerPrint(String fingerPrint) {
             this.fingerPrint = fingerPrint;
             return this;
         }
-        public byte[] getFingerPrint() {
+        public String getFingerPrint() {
             return this.fingerPrint;
         }
 
