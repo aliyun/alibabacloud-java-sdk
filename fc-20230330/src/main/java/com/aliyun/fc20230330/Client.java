@@ -38,7 +38,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateAlias"),
@@ -78,7 +78,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateCustomDomain"),
@@ -118,7 +118,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateFunction"),
@@ -158,7 +158,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateLayerVersion"),
@@ -198,7 +198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateTrigger"),
@@ -1040,8 +1040,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", request.request),
-            new TeaPair("stream", request.request)
+            new TeaPair("body", request.body),
+            new TeaPair("stream", request.body)
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "InvokeFunction"),
@@ -1730,7 +1730,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PublishFunctionVersion"),
@@ -1776,7 +1776,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutAsyncInvokeConfig"),
@@ -1816,7 +1816,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutConcurrencyConfig"),
@@ -1907,7 +1907,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutProvisionConfig"),
@@ -1947,7 +1947,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "TagResource"),
@@ -2040,7 +2040,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UpdateAlias"),
@@ -2080,7 +2080,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UpdateCustomDomain"),
@@ -2120,7 +2120,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UpdateFunction"),
@@ -2160,7 +2160,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UpdateTrigger"),

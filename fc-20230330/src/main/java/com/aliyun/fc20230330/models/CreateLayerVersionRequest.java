@@ -4,20 +4,20 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class CreateLayerVersionRequest extends TeaModel {
-    @NameInMap("request")
-    public CreateLayerVersionInput request;
+    @NameInMap("body")
+    public CreateLayerVersionInput body;
 
     public static CreateLayerVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateLayerVersionRequest self = new CreateLayerVersionRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateLayerVersionRequest setRequest(CreateLayerVersionInput request) {
-        this.request = request;
+    public CreateLayerVersionRequest setBody(CreateLayerVersionInput body) {
+        this.body = body;
         return this;
     }
-    public CreateLayerVersionInput getRequest() {
-        return this.request;
+    public CreateLayerVersionInput getBody() {
+        return this.body;
     }
 
 }

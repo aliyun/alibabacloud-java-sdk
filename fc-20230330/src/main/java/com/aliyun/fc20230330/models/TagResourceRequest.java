@@ -4,20 +4,20 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class TagResourceRequest extends TeaModel {
-    @NameInMap("request")
-    public TagResourceInput request;
+    @NameInMap("body")
+    public TagResourceInput body;
 
     public static TagResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         TagResourceRequest self = new TagResourceRequest();
         return TeaModel.build(map, self);
     }
 
-    public TagResourceRequest setRequest(TagResourceInput request) {
-        this.request = request;
+    public TagResourceRequest setBody(TagResourceInput body) {
+        this.body = body;
         return this;
     }
-    public TagResourceInput getRequest() {
-        return this.request;
+    public TagResourceInput getBody() {
+        return this.body;
     }
 
 }

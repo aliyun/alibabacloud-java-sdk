@@ -4,20 +4,20 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class CreateTriggerRequest extends TeaModel {
-    @NameInMap("request")
-    public CreateTriggerInput request;
+    @NameInMap("body")
+    public CreateTriggerInput body;
 
     public static CreateTriggerRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTriggerRequest self = new CreateTriggerRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateTriggerRequest setRequest(CreateTriggerInput request) {
-        this.request = request;
+    public CreateTriggerRequest setBody(CreateTriggerInput body) {
+        this.body = body;
         return this;
     }
-    public CreateTriggerInput getRequest() {
-        return this.request;
+    public CreateTriggerInput getBody() {
+        return this.body;
     }
 
 }

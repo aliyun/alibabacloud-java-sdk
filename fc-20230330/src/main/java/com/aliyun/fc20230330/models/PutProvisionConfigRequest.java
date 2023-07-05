@@ -4,15 +4,23 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class PutProvisionConfigRequest extends TeaModel {
+    @NameInMap("body")
+    public PutProvisionConfigInput body;
+
     @NameInMap("qualifier")
     public String qualifier;
-
-    @NameInMap("request")
-    public PutProvisionConfigInput request;
 
     public static PutProvisionConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         PutProvisionConfigRequest self = new PutProvisionConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public PutProvisionConfigRequest setBody(PutProvisionConfigInput body) {
+        this.body = body;
+        return this;
+    }
+    public PutProvisionConfigInput getBody() {
+        return this.body;
     }
 
     public PutProvisionConfigRequest setQualifier(String qualifier) {
@@ -21,14 +29,6 @@ public class PutProvisionConfigRequest extends TeaModel {
     }
     public String getQualifier() {
         return this.qualifier;
-    }
-
-    public PutProvisionConfigRequest setRequest(PutProvisionConfigInput request) {
-        this.request = request;
-        return this;
-    }
-    public PutProvisionConfigInput getRequest() {
-        return this.request;
     }
 
 }

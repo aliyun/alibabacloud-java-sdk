@@ -4,15 +4,23 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class InvokeFunctionRequest extends TeaModel {
+    @NameInMap("body")
+    public java.io.InputStream body;
+
     @NameInMap("qualifier")
     public String qualifier;
-
-    @NameInMap("request")
-    public java.io.InputStream request;
 
     public static InvokeFunctionRequest build(java.util.Map<String, ?> map) throws Exception {
         InvokeFunctionRequest self = new InvokeFunctionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public InvokeFunctionRequest setBody(java.io.InputStream body) {
+        this.body = body;
+        return this;
+    }
+    public java.io.InputStream getBody() {
+        return this.body;
     }
 
     public InvokeFunctionRequest setQualifier(String qualifier) {
@@ -21,14 +29,6 @@ public class InvokeFunctionRequest extends TeaModel {
     }
     public String getQualifier() {
         return this.qualifier;
-    }
-
-    public InvokeFunctionRequest setRequest(java.io.InputStream request) {
-        this.request = request;
-        return this;
-    }
-    public java.io.InputStream getRequest() {
-        return this.request;
     }
 
 }

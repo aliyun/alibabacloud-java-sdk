@@ -4,20 +4,20 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class PutConcurrencyConfigRequest extends TeaModel {
-    @NameInMap("request")
-    public PutConcurrencyInput request;
+    @NameInMap("body")
+    public PutConcurrencyInput body;
 
     public static PutConcurrencyConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         PutConcurrencyConfigRequest self = new PutConcurrencyConfigRequest();
         return TeaModel.build(map, self);
     }
 
-    public PutConcurrencyConfigRequest setRequest(PutConcurrencyInput request) {
-        this.request = request;
+    public PutConcurrencyConfigRequest setBody(PutConcurrencyInput body) {
+        this.body = body;
         return this;
     }
-    public PutConcurrencyInput getRequest() {
-        return this.request;
+    public PutConcurrencyInput getBody() {
+        return this.body;
     }
 
 }

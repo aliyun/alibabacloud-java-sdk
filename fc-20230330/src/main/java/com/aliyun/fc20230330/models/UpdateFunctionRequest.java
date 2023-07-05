@@ -4,20 +4,20 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class UpdateFunctionRequest extends TeaModel {
-    @NameInMap("request")
-    public UpdateFunctionInput request;
+    @NameInMap("body")
+    public UpdateFunctionInput body;
 
     public static UpdateFunctionRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateFunctionRequest self = new UpdateFunctionRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateFunctionRequest setRequest(UpdateFunctionInput request) {
-        this.request = request;
+    public UpdateFunctionRequest setBody(UpdateFunctionInput body) {
+        this.body = body;
         return this;
     }
-    public UpdateFunctionInput getRequest() {
-        return this.request;
+    public UpdateFunctionInput getBody() {
+        return this.body;
     }
 
 }
