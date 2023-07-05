@@ -4,7 +4,9 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class DescribeZonesRequest extends TeaModel {
-    // The ID of the region where you want to query zones. You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the zone. You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

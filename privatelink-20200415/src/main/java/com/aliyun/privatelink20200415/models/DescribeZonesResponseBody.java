@@ -4,11 +4,15 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class DescribeZonesResponseBody extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The zones that are returned.
+    /**
+     * <p>The returned zones.</p>
+     */
     @NameInMap("Zones")
     public DescribeZonesResponseBodyZones zones;
 
@@ -34,11 +38,15 @@ public class DescribeZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeZonesResponseBodyZonesZone extends TeaModel {
-        // The name of the zone.
+        /**
+         * <p>The name of the zone.</p>
+         */
         @NameInMap("LocalName")
         public String localName;
 
-        // The ID of the zone.
+        /**
+         * <p>The zone ID.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

@@ -4,26 +4,34 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class ListVpcEndpointZonesRequest extends TeaModel {
-    // The ID of the endpoint for which you want to query zones.
-    // 
-    // After you specify an endpoint ID, the system queries the zones of the specified endpoint.
+    /**
+     * <p>The ID of the endpoint for which you want to query zones.</p>
+     * <br>
+     * <p>After you specify an endpoint ID, the system queries the zones of the specified endpoint.</p>
+     */
     @NameInMap("EndpointId")
     public String endpointId;
 
-    // The number of entries to return on each page. Valid values: **1** to **50**. Default value: **50**.
+    /**
+     * <p>The number of entries to return on each page. Valid values: **1** to **50**. Default value: **50**.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The token that is used for the next query. Valid values:
-    // 
-    // *   If this is your first query or no next query is to be sent, ignore this parameter.
-    // *   If a next query is to be sent, set the value to the value of **NextToken** that is returned from the last call.
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <br>
+     * <p>*   If this is your first request and no next requests are to be performed, you do not need to specify this parameter.</p>
+     * <p>*   If a next request is to be performed, set the parameter to the value of **NextToken** that is returned from the last call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The ID of the region in which you want to query the zones of an endpoint.
-    // 
-    // You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the endpoint.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

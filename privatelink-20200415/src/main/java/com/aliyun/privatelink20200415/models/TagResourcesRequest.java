@@ -4,44 +4,48 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
-    // The client token that is used to ensure the idempotence of the request.
-    // 
-    // You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters and cannot exceed 64 characters in length.
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <br>
+     * <p>> If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // Specifies whether to only precheck this request. Valid values:
-    // 
-    // *   **true**: only prechecks the API request without performing the operation. The system checks whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user is authorized, and whether required parameters are set. If the request fails to pass the precheck, an error code is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
-    // *   **false** (default): sends the request. If the request passes the precheck, a 2xx HTTP status code is returned and the service resource is modified.
+    /**
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <br>
+     * <p>*   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // The ID of the region where the endpoint service is created.
-    // 
-    // You can call the [DescribeRegions](~~120468~~) operation to query the available regions.
+    /**
+     * <p>The region ID of the PrivateLink instance.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The resource IDs.
+    /**
+     * <p>The resource IDs. You can specify up to 20 resource IDs.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
-    // The type of the service resource. Valid values:
-    // 
-    // *   **NLB**: specifies that the service resource is an NLB instance.
-    // 
-    // *   **CLB**: specifies that the service resource is a CLB instance.
-    // 
-    // *   **ALB**: specifies that the service resource is an ALB instance.
-    // 
-    // 
-    // 
-    //     >  The feature that allows you to specify an ALB instance or an NLB instance as the PrivateLink service resource is not supported by default. If you need this feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/crea).
+    /**
+     * <p>The type of the resource.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
-    // The list of tags. You can specify a maximum of 20 tags.
+    /**
+     * <p>The tags that you want to add to the resource.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
 
@@ -99,15 +103,19 @@ public class TagResourcesRequest extends TeaModel {
     }
 
     public static class TagResourcesRequestTag extends TeaModel {
-        // The key of the tag that is attached to the resource.
-        // 
-        // The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+        /**
+         * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The tag key must be 1 to 64 characters in length and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The value of the tag that is attached to the resource.
-        // 
-        // The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+        /**
+         * <p>The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <br>
+         * <p>The tag value must be 1 to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

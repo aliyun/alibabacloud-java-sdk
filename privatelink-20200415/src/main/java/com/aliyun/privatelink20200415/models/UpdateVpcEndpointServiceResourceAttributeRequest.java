@@ -4,39 +4,54 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class UpdateVpcEndpointServiceResourceAttributeRequest extends TeaModel {
-    // Specifies whether to allow automatic resource allocation. Valid values:
-    // 
-    // *   **true**: yes
-    // *   **false**: no
+    /**
+     * <p>Specifies whether to enable automatic resource allocation. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("AutoAllocatedEnabled")
     public Boolean autoAllocatedEnabled;
 
-    // The client token that is used to ensure the idempotence of the request.
-    // 
-    // You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // Specifies whether to only precheck this request. Valid values:
-    // 
-    // *   **true**: only prechecks the API request without performing the operation. The system checks whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user is authorized, and whether required parameters are set. If the request fails to pass the precheck, an error code is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
-    // *   **false** (default): sends the request. If the request passes the precheck, a 2xx HTTP status code is returned and the service resource is modified.
+    /**
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <br>
+     * <p>*   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false**: performs a dry run and sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed. This is the default value.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // The ID of the region where the service resource that you want to modify is deployed.
-    // 
-    // You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
+    /**
+     * <p>The ID of the region where the service resource is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The ID of the service resource.
+    /**
+     * <p>The service resource ID.</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
-    // The ID of the endpoint service.
+    /**
+     * <p>The endpoint service ID.</p>
+     */
     @NameInMap("ServiceId")
     public String serviceId;
+
+    @NameInMap("ZoneId")
+    public String zoneId;
 
     public static UpdateVpcEndpointServiceResourceAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateVpcEndpointServiceResourceAttributeRequest self = new UpdateVpcEndpointServiceResourceAttributeRequest();
@@ -89,6 +104,14 @@ public class UpdateVpcEndpointServiceResourceAttributeRequest extends TeaModel {
     }
     public String getServiceId() {
         return this.serviceId;
+    }
+
+    public UpdateVpcEndpointServiceResourceAttributeRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public String getZoneId() {
+        return this.zoneId;
     }
 
 }

@@ -4,13 +4,17 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class CheckProductOpenResponseBody extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether PrivateLink is activated.
-    // 
-    // Only **true** is returned, which indicates that PrivateLink is activated.
+    /**
+     * <p>Indicates whether PrivateLink is activated.</p>
+     * <br>
+     * <p>Only **true** is returned. The value indicates that PrivateLink is activated.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

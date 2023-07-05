@@ -4,25 +4,39 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class ListVpcEndpointServiceUsersResponseBody extends TeaModel {
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned on each page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The token that is used for the next query. Valid values:
-    // 
-    // *   If **NextToken** is empty, it indicates that no next query is to be sent.
-    // *   If a value of **NextToken** is returned, the value is the token that is used for the next query.
+    /**
+     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <br>
+     * <p>*   If no value is returned for **NextToken**, no next requests are performed.</p>
+     * <p>*   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The ID of the request.
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TotalCount")
+    public String totalCount;
+
+    /**
+     * <p>The whitelists in the format of Aliyun Resource Name (ARN).</p>
+     */
     @NameInMap("UserARNs")
     public java.util.List<ListVpcEndpointServiceUsersResponseBodyUserARNs> userARNs;
 
-    // The Alibaba Cloud accounts in the whitelist of the endpoint service.
+    /**
+     * <p>The Alibaba Cloud accounts in the whitelist of the endpoint service.</p>
+     */
     @NameInMap("Users")
     public java.util.List<ListVpcEndpointServiceUsersResponseBodyUsers> users;
 
@@ -55,6 +69,14 @@ public class ListVpcEndpointServiceUsersResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public ListVpcEndpointServiceUsersResponseBody setTotalCount(String totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public String getTotalCount() {
+        return this.totalCount;
+    }
+
     public ListVpcEndpointServiceUsersResponseBody setUserARNs(java.util.List<ListVpcEndpointServiceUsersResponseBodyUserARNs> userARNs) {
         this.userARNs = userARNs;
         return this;
@@ -72,6 +94,9 @@ public class ListVpcEndpointServiceUsersResponseBody extends TeaModel {
     }
 
     public static class ListVpcEndpointServiceUsersResponseBodyUserARNs extends TeaModel {
+        /**
+         * <p>The whitelist in the format of ARN.</p>
+         */
         @NameInMap("UserARN")
         public String userARN;
 
@@ -91,7 +116,9 @@ public class ListVpcEndpointServiceUsersResponseBody extends TeaModel {
     }
 
     public static class ListVpcEndpointServiceUsersResponseBodyUsers extends TeaModel {
-        // The ID of the Alibaba Cloud account in the whitelist of the endpoint service.
+        /**
+         * <p>The ID of the Alibaba Cloud account in the whitelist of the endpoint service.</p>
+         */
         @NameInMap("UserId")
         public Long userId;
 

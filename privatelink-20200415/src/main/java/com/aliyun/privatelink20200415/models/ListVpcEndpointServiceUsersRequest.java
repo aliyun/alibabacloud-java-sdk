@@ -4,31 +4,44 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class ListVpcEndpointServiceUsersRequest extends TeaModel {
-    // The number of entries to return on each page. Valid values: **1 to 50**. Default value: **50**.
+    /**
+     * <p>The number of entries to return on each page. Valid values: **1 to 50**. Default value: **50**.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The token that is used for the next query. Valid values:
-    // 
-    // *   If this is your first query or no next query is to be sent, ignore this parameter.
-    // *   If a next query is to be sent, set the value to the value of **NextToken** that is returned from the last call.
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <br>
+     * <p>*   If this is your first request and no next requests are to be performed, you do not need to specify this parameter.</p>
+     * <p>*   If a next request is to be performed, set the value to the value of **NextToken** that is returned from the last call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The ID of the region in which the endpoint service that you want to query resides.
-    // 
-    // You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the endpoint service that you want to query.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The ID of the endpoint service.
+    /**
+     * <p>The endpoint service ID.</p>
+     */
     @NameInMap("ServiceId")
     public String serviceId;
 
-    // The ID of the Alibaba Cloud account in the whitelist of the endpoint service.
+    /**
+     * <p>The ID of the Alibaba Cloud account in the whitelist of the endpoint service.</p>
+     */
     @NameInMap("UserId")
     public Long userId;
 
+    /**
+     * <p>The type of the user list in the whitelist of the endpoint service.</p>
+     */
     @NameInMap("UserListType")
     public String userListType;
 

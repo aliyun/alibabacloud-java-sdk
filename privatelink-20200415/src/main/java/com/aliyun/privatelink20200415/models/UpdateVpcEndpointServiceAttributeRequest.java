@@ -4,55 +4,73 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class UpdateVpcEndpointServiceAttributeRequest extends TeaModel {
-    // Specifies whether to automatically accept endpoint connection requests. Valid values:
-    // 
-    // *   **true**: automatically accepts endpoint connection requests.
-    // *   **false**: does not automatically accept endpoint connection requests.
+    /**
+     * <p>Specifies whether to automatically accept endpoint connection requests. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("AutoAcceptEnabled")
     public Boolean autoAcceptEnabled;
 
-    // The client token that is used to ensure the idempotence of the request.
-    // 
-    // You can use the client to generate a value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters.
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // The default bandwidth of the endpoint connection. Valid values: **100** to **10240**. Unit: Mbit/s.
+    /**
+     * <p>The default bandwidth of the endpoint connection. Valid values: **100** to **10240**. Unit: Mbit/s.</p>
+     */
     @NameInMap("ConnectBandwidth")
     public Integer connectBandwidth;
 
-    // Specifies whether to check the request without performing the operation. Valid values:
-    // 
-    // *   **true**: sends a request for check purposes only. If you select this option, the attributes of the endpoint service are not modified after the request passes the check. The system checks the required parameters, request syntax, and limits. If the request fails to pass the check, the corresponding error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
-    // *   **false**: sends a common request. If the request passes the check, a 2xx HTTP status code is returned, and the operation is performed. This is the default value.
+    /**
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <br>
+     * <p>*   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // The region ID of the endpoint service.
-    // 
-    // You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the endpoint service.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The description of the endpoint service.
+    /**
+     * <p>The description of the endpoint service.</p>
+     */
     @NameInMap("ServiceDescription")
     public String serviceDescription;
 
-    // The ID of the endpoint service.
+    /**
+     * <p>The endpoint service ID.</p>
+     */
     @NameInMap("ServiceId")
     public String serviceId;
 
-    // Specifies whether to enable IPv6. Valid values:
-    // 
-    // *   **true**: enables IPv6.
-    // *   **false**: disables IPv6. This is the default value.
+    /**
+     * <p>Specifies whether to enable IPv6. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false** (default)</p>
+     */
     @NameInMap("ServiceSupportIPv6")
     public Boolean serviceSupportIPv6;
 
-    // Specifies whether to enable zone affinity. Valid values:
-    // 
-    // *   **true**: enables zone affinity.
-    // *   **false**: disables zone affinity. This is the default value.
+    /**
+     * <p>Specifies whether to enable zone affinity. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false** (default)</p>
+     */
     @NameInMap("ZoneAffinityEnabled")
     public Boolean zoneAffinityEnabled;
 

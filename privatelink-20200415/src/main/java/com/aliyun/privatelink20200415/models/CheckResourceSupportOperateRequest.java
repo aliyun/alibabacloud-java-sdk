@@ -4,21 +4,27 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class CheckResourceSupportOperateRequest extends TeaModel {
-    // The ID of the resource.
+    /**
+     * <p>The resource ID.</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
-    // The type of the service resource. Valid values:
-    // 
-    // *   **NLB**: Network Load Balancer.
-    // *   **CLB**: Classic Load Balancer.
-    // *   **ALB**: Application Load Balancer.
+    /**
+     * <p>The type of the service resource. Valid values:</p>
+     * <br>
+     * <p>*   **NLB**: a Network Load Balancer (NLB) instance</p>
+     * <p>*   **CLB**: a Classic Load Balancer (CLB) instance</p>
+     * <p>*   **ALB**: an Application Load Balancer (ALB) instance</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
-    // The ID of the zone.
-    // 
-    // You can call the [DescribeZones](~~120502~~) operation to query the most recent zone list.
+    /**
+     * <p>The ID of the zone where the service resource is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeZones](~~120502~~) operation to obtain the zone ID.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

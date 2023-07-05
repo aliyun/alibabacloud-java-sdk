@@ -4,32 +4,44 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class AddUserToVpcEndpointServiceRequest extends TeaModel {
-    // The client token that is used to ensure the idempotence of the request.
-    // 
-    // You can use the client to generate a value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters.
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // Specifies whether to check the request without performing the operation. Valid values:
-    // 
-    // *   **true**: sends a request for check purposes only. If you select this option, the account ID is not added to the whitelist after the request passes the check. The system checks the required parameters, request syntax, and limits. If the request fails to pass the check, the corresponding error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
-    // *   **false**: sends a common request. If the request passes the check, a 2xx HTTP status code is returned, and the operation is performed. This is the default value.
+    /**
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <br>
+     * <p>*   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // The ID of the region where the endpoint service is deployed. You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the endpoint service. You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The ID of the endpoint service.
+    /**
+     * <p>The endpoint service ID.</p>
+     */
     @NameInMap("ServiceId")
     public String serviceId;
 
-    // The whitelist in the format of Aliyun Resource Name (ARN).
+    /**
+     * <p>The whitelist in the format of Aliyun Resource Name (ARN).</p>
+     */
     @NameInMap("UserARN")
     public String userARN;
 
-    // The account ID that you want to add to the whitelist.
+    /**
+     * <p>The account ID that you want to add to the whitelist.</p>
+     */
     @NameInMap("UserId")
     public Long userId;
 

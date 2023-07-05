@@ -4,42 +4,27 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class ListVpcEndpointServicesByEndUserRequest extends TeaModel {
-    // The number of entries to return on each page. Valid values: **1** to **50**. Default value: **50**.
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The token that is used for the next query. Valid values:
-    // 
-    // *   If this is your first query or no next query is to be sent, ignore this parameter.
-    // *   If a next query is to be sent, set the value to the value of **NextToken** that is returned from the last call.
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The region ID of the endpoint service that you want to query.
-    // 
-    // You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
-    // Specifies the ID of the resource group.
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    // The ID of the endpoint service that you want to query.
     @NameInMap("ServiceId")
     public String serviceId;
 
-    // The name of the endpoint service that you want to query.
     @NameInMap("ServiceName")
     public String serviceName;
 
-    // The type of the endpoint service.
-    // 
-    // Set the value to **Interface**, which specifies **slb** for the **ServiceResourceType** parameter. The value slb specifies the Classic Load Balancer (CLB) endpoint type.
     @NameInMap("ServiceType")
     public String serviceType;
 
-    // The list of tags. You can specify a maximum of 20 tags.
     @NameInMap("Tag")
     public java.util.List<ListVpcEndpointServicesByEndUserRequestTag> tag;
 
@@ -113,11 +98,9 @@ public class ListVpcEndpointServicesByEndUserRequest extends TeaModel {
     }
 
     public static class ListVpcEndpointServicesByEndUserRequestTag extends TeaModel {
-        // The key of the tag.
         @NameInMap("Key")
         public String key;
 
-        // The value of the tag.
         @NameInMap("Value")
         public String value;
 

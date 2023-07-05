@@ -4,19 +4,32 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class ListVpcEndpointSecurityGroupsRequest extends TeaModel {
-    // The ID of the endpoint.
+    /**
+     * <p>The ID of the endpoint that you want to query.</p>
+     */
     @NameInMap("EndpointId")
     public String endpointId;
 
-    // The number of entries to return on each page. Valid values:**1** to **50**. Default value: **50**.
+    /**
+     * <p>The number of entries to return on each page. Valid values:**1** to **50**. Default value: **50**.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The query token. Set this parameter to the NextToken parameter value that is returned in the last API call. If no subsequent queries are to be sent, you can leave the parameter empty.
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <br>
+     * <p>*   If this is your first request and no next requests are to be performed, you do not need to specify this parameter.</p>
+     * <p>*   If a next request is to be performed, set the parameter to the value of **NextToken** that is returned from the last call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The ID of the region where the endpoint is created. You can call the [DescribeRegions](~~120468~~) operation to query region IDs.
+    /**
+     * <p>The region ID of the endpoint that you want to query.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
