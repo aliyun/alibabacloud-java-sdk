@@ -4,6 +4,9 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class AccountFlowListResponseBody extends TeaModel {
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("data")
     public AccountFlowListResponseBodyData data;
 
@@ -16,9 +19,6 @@ public class AccountFlowListResponseBody extends TeaModel {
     @NameInMap("error_msg")
     public String errorMsg;
 
-    @NameInMap("request_id")
-    public String requestId;
-
     @NameInMap("status")
     public Integer status;
 
@@ -28,6 +28,14 @@ public class AccountFlowListResponseBody extends TeaModel {
     public static AccountFlowListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AccountFlowListResponseBody self = new AccountFlowListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public AccountFlowListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public AccountFlowListResponseBody setData(AccountFlowListResponseBodyData data) {
@@ -62,14 +70,6 @@ public class AccountFlowListResponseBody extends TeaModel {
         return this.errorMsg;
     }
 
-    public AccountFlowListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public AccountFlowListResponseBody setStatus(Integer status) {
         this.status = status;
         return this;
@@ -93,6 +93,9 @@ public class AccountFlowListResponseBody extends TeaModel {
         @NameInMap("before_available_amount")
         public Double beforeAvailableAmount;
 
+        @NameInMap("change_order_num")
+        public Long changeOrderNum;
+
         @NameInMap("flow_id")
         public Long flowId;
 
@@ -107,6 +110,15 @@ public class AccountFlowListResponseBody extends TeaModel {
 
         @NameInMap("op_type")
         public Integer opType;
+
+        @NameInMap("order_num")
+        public Long orderNum;
+
+        @NameInMap("order_type")
+        public Integer orderType;
+
+        @NameInMap("refund_order_num")
+        public Long refundOrderNum;
 
         public static AccountFlowListResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             AccountFlowListResponseBodyDataList self = new AccountFlowListResponseBodyDataList();
@@ -127,6 +139,14 @@ public class AccountFlowListResponseBody extends TeaModel {
         }
         public Double getBeforeAvailableAmount() {
             return this.beforeAvailableAmount;
+        }
+
+        public AccountFlowListResponseBodyDataList setChangeOrderNum(Long changeOrderNum) {
+            this.changeOrderNum = changeOrderNum;
+            return this;
+        }
+        public Long getChangeOrderNum() {
+            return this.changeOrderNum;
         }
 
         public AccountFlowListResponseBodyDataList setFlowId(Long flowId) {
@@ -167,6 +187,30 @@ public class AccountFlowListResponseBody extends TeaModel {
         }
         public Integer getOpType() {
             return this.opType;
+        }
+
+        public AccountFlowListResponseBodyDataList setOrderNum(Long orderNum) {
+            this.orderNum = orderNum;
+            return this;
+        }
+        public Long getOrderNum() {
+            return this.orderNum;
+        }
+
+        public AccountFlowListResponseBodyDataList setOrderType(Integer orderType) {
+            this.orderType = orderType;
+            return this;
+        }
+        public Integer getOrderType() {
+            return this.orderType;
+        }
+
+        public AccountFlowListResponseBodyDataList setRefundOrderNum(Long refundOrderNum) {
+            this.refundOrderNum = refundOrderNum;
+            return this;
+        }
+        public Long getRefundOrderNum() {
+            return this.refundOrderNum;
         }
 
     }
