@@ -178,6 +178,9 @@ public class GetDatabaseResponseBody extends TeaModel {
         @NameInMap("Host")
         public String host;
 
+        /**
+         * <p>The alias of the instance.</p>
+         */
         @NameInMap("InstanceAlias")
         public String instanceAlias;
 

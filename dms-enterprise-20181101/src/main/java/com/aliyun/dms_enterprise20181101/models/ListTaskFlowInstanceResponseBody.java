@@ -115,6 +115,9 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
         @NameInMap("DagName")
         public String dagName;
 
+        /**
+         * <p>The version of the task flow.</p>
+         */
         @NameInMap("DagVersion")
         public String dagVersion;
 
@@ -170,6 +173,9 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
         @NameInMap("TriggerType")
         public Integer triggerType;
 
+        /**
+         * <p>The time when the execution of the task flow was start. The time is displayed in the yyyy-MM-DD HH:mm:ss format.</p>
+         */
         @NameInMap("startTime")
         public String startTime;
 

@@ -102,7 +102,7 @@ public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
         public String nickName;
 
         /**
-         * <p>用户ID。</p>
+         * <p>userId.</p>
          */
         @NameInMap("UserId")
         public String userId;

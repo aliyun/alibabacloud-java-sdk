@@ -4,6 +4,9 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class AddDesensitizationRuleRequest extends TeaModel {
+    /**
+     * <p>Algorithm parameters.</p>
+     */
     @NameInMap("FunctionParams")
     public java.util.List<java.util.Map<String, String>> functionParams;
 

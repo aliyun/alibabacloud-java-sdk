@@ -4,6 +4,9 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListTaskFlowsByPageRequest extends TeaModel {
+    /**
+     * <p>Filter condition, task flow ID list.</p>
+     */
     @NameInMap("DagIdList")
     public java.util.List<Long> dagIdList;
 
@@ -19,6 +22,9 @@ public class ListTaskFlowsByPageRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Filter condition, application scenario ID.</p>
+     */
     @NameInMap("ScenarioId")
     public Long scenarioId;
 

@@ -4,6 +4,9 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetOpLogRequest extends TeaModel {
+    /**
+     * <p>DatabaseName.</p>
+     */
     @NameInMap("DatabaseName")
     public String databaseName;
 
@@ -72,6 +75,9 @@ public class GetOpLogRequest extends TeaModel {
     @NameInMap("Tid")
     public Long tid;
 
+    /**
+     * <p>UserNick.</p>
+     */
     @NameInMap("UserNick")
     public String userNick;
 

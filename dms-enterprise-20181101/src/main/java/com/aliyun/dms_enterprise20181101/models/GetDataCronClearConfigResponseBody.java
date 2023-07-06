@@ -4,9 +4,15 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetDataCronClearConfigResponseBody extends TeaModel {
+    /**
+     * <p>Data configuration.</p>
+     */
     @NameInMap("DataCronClearConfig")
     public GetDataCronClearConfigResponseBodyDataCronClearConfig dataCronClearConfig;
 
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 

@@ -17,14 +17,16 @@ public class DeleteUserResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>*   **true**: The account was deleted.</p>
-     * <p>*   **false**: The account failed to be deleted.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;

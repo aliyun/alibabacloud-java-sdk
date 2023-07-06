@@ -929,6 +929,9 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         @NameInMap("PageSize")
         public Long pageSize;
 
+        @NameInMap("TempTableNameMap")
+        public java.util.Map<String, ?> tempTableNameMap;
+
         public static GetDataArchiveOrderDetailResponseBodyDataArchiveOrderDetailPluginExtraData build(java.util.Map<String, ?> map) throws Exception {
             GetDataArchiveOrderDetailResponseBodyDataArchiveOrderDetailPluginExtraData self = new GetDataArchiveOrderDetailResponseBodyDataArchiveOrderDetailPluginExtraData();
             return TeaModel.build(map, self);
@@ -988,6 +991,14 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         }
         public Long getPageSize() {
             return this.pageSize;
+        }
+
+        public GetDataArchiveOrderDetailResponseBodyDataArchiveOrderDetailPluginExtraData setTempTableNameMap(java.util.Map<String, ?> tempTableNameMap) {
+            this.tempTableNameMap = tempTableNameMap;
+            return this;
+        }
+        public java.util.Map<String, ?> getTempTableNameMap() {
+            return this.tempTableNameMap;
         }
 
     }

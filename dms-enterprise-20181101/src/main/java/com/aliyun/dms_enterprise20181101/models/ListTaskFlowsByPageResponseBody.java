@@ -109,18 +109,37 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
         @NameInMap("CreatorNickName")
         public String creatorNickName;
 
+        /**
+         * <p>The start time of scheduled scheduling. The task flow is not scheduled before this point in time.</p>
+         */
         @NameInMap("CronBeginDate")
         public String cronBeginDate;
 
+        /**
+         * <p>The end time of scheduled scheduling. The task flow is not scheduled after this point in time.</p>
+         */
         @NameInMap("CronEndDate")
         public String cronEndDate;
 
+        /**
+         * <p>Scheduled Cron.</p>
+         */
         @NameInMap("CronStr")
         public String cronStr;
 
+        /**
+         * <p>Whether to enable scheduled scheduling.</p>
+         */
         @NameInMap("CronSwitch")
         public Boolean cronSwitch;
 
+        /**
+         * <p>Scheduling cycle type. Valid values:</p>
+         * <p>- **2**: Hourly scheduling</p>
+         * <p>- **3**: Daily scheduling</p>
+         * <p>- **4**: Weekly scheduling</p>
+         * <p>- **5**: Monthly scheduling</p>
+         */
         @NameInMap("CronType")
         public Integer cronType;
 
@@ -130,6 +149,9 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
         @NameInMap("DagName")
         public String dagName;
 
+        /**
+         * <p>The user ID of the task flow owner.</p>
+         */
         @NameInMap("DagOwnerId")
         public String dagOwnerId;
 
@@ -173,9 +195,15 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
         @NameInMap("LatestInstanceTime")
         public String latestInstanceTime;
 
+        /**
+         * <p>The ID of the application scenario.</p>
+         */
         @NameInMap("ScenarioId")
         public String scenarioId;
 
+        /**
+         * <p>Event scheduling configuration, JSON string format.</p>
+         */
         @NameInMap("ScheduleParam")
         public String scheduleParam;
 
@@ -189,9 +217,17 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>Time zone setting. Default value: East 8(Asia/Shanghai).</p>
+         */
         @NameInMap("TimeZoneId")
         public String timeZoneId;
 
+        /**
+         * <p>The trigger type. Valid values:</p>
+         * <p>- **0**: Periodic scheduling</p>
+         * <p>- **1**: Run manually</p>
+         */
         @NameInMap("TriggerType")
         public Integer triggerType;
 

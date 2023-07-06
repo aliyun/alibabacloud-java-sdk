@@ -34,6 +34,21 @@ public class ListTaskFlowInstanceRequest extends TeaModel {
     @NameInMap("StartTimeEnd")
     public String startTimeEnd;
 
+    /**
+     * <p>The running status of the task node. Valid values:</p>
+     * <br>
+     * <p>- **0**: Waiting for scheduling</p>
+     * <br>
+     * <p>- **1**: Running</p>
+     * <br>
+     * <p>- **2**: Suspend</p>
+     * <br>
+     * <p>- **3**: Failed to run</p>
+     * <br>
+     * <p>- **4**: Run successfully</p>
+     * <br>
+     * <p>- **5**: Completed</p>
+     */
     @NameInMap("Status")
     public Integer status;
 
@@ -52,6 +67,13 @@ public class ListTaskFlowInstanceRequest extends TeaModel {
     @NameInMap("TriggerType")
     public Integer triggerType;
 
+    /**
+     * <p>Adjust filter conditions:</p>
+     * <br>
+     * <p>- true: StartTimeBegin and StartTimeEnd are the time range for filtering services.</p>
+     * <br>
+     * <p>- false: StartTimeBegin and StartTimeEnd are the time range for the task to run.</p>
+     */
     @NameInMap("UseBizDate")
     public Boolean useBizDate;
 
