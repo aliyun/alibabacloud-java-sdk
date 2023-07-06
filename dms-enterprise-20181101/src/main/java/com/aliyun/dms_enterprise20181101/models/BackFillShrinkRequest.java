@@ -37,6 +37,9 @@ public class BackFillShrinkRequest extends TeaModel {
     @NameInMap("DagId")
     public Long dagId;
 
+    /**
+     * <p>Filter condition, which specifies the list of node IDs in the task flow that do not need to supplement data.</p>
+     */
     @NameInMap("FilterNodeIds")
     public String filterNodeIdsShrink;
 

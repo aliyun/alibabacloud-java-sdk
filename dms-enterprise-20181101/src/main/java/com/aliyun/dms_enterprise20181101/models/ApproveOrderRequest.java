@@ -4,6 +4,12 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ApproveOrderRequest extends TeaModel {
+    @NameInMap("ApprovalNodeId")
+    public Long approvalNodeId;
+
+    @NameInMap("ApprovalNodePos")
+    public String approvalNodePos;
+
     /**
      * <p>The action that you want to perform on the ticket. Valid values:</p>
      * <br>
@@ -19,6 +25,12 @@ public class ApproveOrderRequest extends TeaModel {
      */
     @NameInMap("Comment")
     public String comment;
+
+    @NameInMap("NewApprover")
+    public Long newApprover;
+
+    @NameInMap("OldApprover")
+    public Long oldApprover;
 
     /**
      * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.</p>
@@ -37,6 +49,22 @@ public class ApproveOrderRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ApproveOrderRequest setApprovalNodeId(Long approvalNodeId) {
+        this.approvalNodeId = approvalNodeId;
+        return this;
+    }
+    public Long getApprovalNodeId() {
+        return this.approvalNodeId;
+    }
+
+    public ApproveOrderRequest setApprovalNodePos(String approvalNodePos) {
+        this.approvalNodePos = approvalNodePos;
+        return this;
+    }
+    public String getApprovalNodePos() {
+        return this.approvalNodePos;
+    }
+
     public ApproveOrderRequest setApprovalType(String approvalType) {
         this.approvalType = approvalType;
         return this;
@@ -51,6 +79,22 @@ public class ApproveOrderRequest extends TeaModel {
     }
     public String getComment() {
         return this.comment;
+    }
+
+    public ApproveOrderRequest setNewApprover(Long newApprover) {
+        this.newApprover = newApprover;
+        return this;
+    }
+    public Long getNewApprover() {
+        return this.newApprover;
+    }
+
+    public ApproveOrderRequest setOldApprover(Long oldApprover) {
+        this.oldApprover = oldApprover;
+        return this;
+    }
+    public Long getOldApprover() {
+        return this.oldApprover;
     }
 
     public ApproveOrderRequest setTid(Long tid) {

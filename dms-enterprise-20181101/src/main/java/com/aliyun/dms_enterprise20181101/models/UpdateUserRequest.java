@@ -23,7 +23,7 @@ public class UpdateUserRequest extends TeaModel {
     public String mobile;
 
     /**
-     * <p>The roles that the user assumes. For more information about the valid values, see the Request parameters section in the [RegisterUser](~~141565~~) topic.</p>
+     * <p>The roles that the user assumes. For more information about the valid values, see the Request parameters section in the [UpdateUser](~~465812~~) topic.</p>
      */
     @NameInMap("RoleNames")
     public String roleNames;

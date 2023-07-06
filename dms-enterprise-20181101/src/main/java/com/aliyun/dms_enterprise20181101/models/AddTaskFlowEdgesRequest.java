@@ -55,13 +55,13 @@ public class AddTaskFlowEdgesRequest extends TeaModel {
 
     public static class AddTaskFlowEdgesRequestEdges extends TeaModel {
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The ID of the node where the end node of the edge is located.</p>
          */
         @NameInMap("NodeEnd")
         public Long nodeEnd;
 
         /**
-         * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+         * <p>The ID of the node where the start node of the edge is located.</p>
          */
         @NameInMap("NodeFrom")
         public Long nodeFrom;

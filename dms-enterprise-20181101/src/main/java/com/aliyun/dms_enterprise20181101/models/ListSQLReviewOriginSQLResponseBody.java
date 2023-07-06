@@ -150,6 +150,9 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
         @NameInMap("SQLId")
         public Long SQLId;
 
+        /**
+         * <p>SQLName.</p>
+         */
         @NameInMap("SQLName")
         public String SQLName;
 

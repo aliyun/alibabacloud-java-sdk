@@ -290,6 +290,13 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("SafeRuleId")
         public String safeRuleId;
 
+        /**
+         * <p>Whether sensitive data protection is enabled.  Valid values:</p>
+         * <br>
+         * <p>- **true**: Enable.</p>
+         * <br>
+         * <p>- **false**: Close.</p>
+         */
         @NameInMap("SellSitd")
         public String sellSitd;
 
