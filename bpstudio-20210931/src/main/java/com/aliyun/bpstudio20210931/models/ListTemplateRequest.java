@@ -23,10 +23,13 @@ public class ListTemplateRequest extends TeaModel {
     public Integer nextToken;
 
     /**
-     * <p>The criterion by which the templates are sorted. Valid values:</p>
+     * <p>The criterion by which the returned templates are sorted. Valid values:</p>
      * <br>
-     * <p>*   1: modification time</p>
-     * <p>*   2: creation time</p>
+     * <p>*   1: The templates are sorted by the time when they are updated.</p>
+     * <p>*   2: The templates are sorted by the time when they are created.</p>
+     * <p>*   3: The templates are sorted by the system.</p>
+     * <p>*   4: The templates are sorted by the number of times that they are used.</p>
+     * <p>*   If you specify an integer other than 1, 2, 3, and 4 or do not specify any value, the templates are sorted by the system.</p>
      */
     @NameInMap("OrderType")
     public Long orderType;
@@ -38,13 +41,13 @@ public class ListTemplateRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The tag of the template.</p>
+     * <p>The tag that you want to use to query templates.</p>
      */
     @NameInMap("TagList")
     public Integer tagList;
 
     /**
-     * <p>The type of the template.</p>
+     * <p>The type of the templates to be returned. Valid values: public and private</p>
      */
     @NameInMap("Type")
     public String type;

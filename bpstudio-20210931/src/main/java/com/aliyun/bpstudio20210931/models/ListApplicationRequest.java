@@ -25,6 +25,9 @@ public class ListApplicationRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The status of the applications to be returned.</p>
+     */
     @NameInMap("Status")
     public String status;
 

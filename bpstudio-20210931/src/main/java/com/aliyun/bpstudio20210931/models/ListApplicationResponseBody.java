@@ -7,6 +7,9 @@ public class ListApplicationResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The information about the applications.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListApplicationResponseBodyData> data;
 
@@ -91,6 +94,9 @@ public class ListApplicationResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The status of the application.</p>
+         */
         @NameInMap("Status")
         public String status;
 

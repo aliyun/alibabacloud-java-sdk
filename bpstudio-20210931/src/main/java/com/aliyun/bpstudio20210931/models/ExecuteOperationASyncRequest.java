@@ -14,7 +14,7 @@ public class ExecuteOperationASyncRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The HTTP status code. A value of 200 indicates that the request is successful, and other values indicate that the request fails.</p>
+     * <p>The type of the service. If you want to perform operations on an Elastic Compute Service (ECS) instance, set ServiceType to ecs.</p>
      */
     @NameInMap("ServiceType")
     public String serviceType;
