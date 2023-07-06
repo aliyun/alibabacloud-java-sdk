@@ -22,8 +22,14 @@ public class DescribeGlobalDesktopsRequest extends TeaModel {
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    /**
+     * <p>关键字。支持模糊搜索桌面ID、云桌面名称和终端用户自定义的桌面名称。</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
+
+    @NameInMap("LoginRegionId")
+    public String loginRegionId;
 
     @NameInMap("LoginToken")
     public String loginToken;
@@ -117,6 +123,14 @@ public class DescribeGlobalDesktopsRequest extends TeaModel {
     }
     public String getKeyword() {
         return this.keyword;
+    }
+
+    public DescribeGlobalDesktopsRequest setLoginRegionId(String loginRegionId) {
+        this.loginRegionId = loginRegionId;
+        return this;
+    }
+    public String getLoginRegionId() {
+        return this.loginRegionId;
     }
 
     public DescribeGlobalDesktopsRequest setLoginToken(String loginToken) {

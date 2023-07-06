@@ -16,6 +16,9 @@ public class StartRecordContentRequest extends TeaModel {
     @NameInMap("DesktopId")
     public String desktopId;
 
+    @NameInMap("FilePath")
+    public String filePath;
+
     @NameInMap("LoginToken")
     public String loginToken;
 
@@ -60,6 +63,14 @@ public class StartRecordContentRequest extends TeaModel {
     }
     public String getDesktopId() {
         return this.desktopId;
+    }
+
+    public StartRecordContentRequest setFilePath(String filePath) {
+        this.filePath = filePath;
+        return this;
+    }
+    public String getFilePath() {
+        return this.filePath;
     }
 
     public StartRecordContentRequest setLoginToken(String loginToken) {

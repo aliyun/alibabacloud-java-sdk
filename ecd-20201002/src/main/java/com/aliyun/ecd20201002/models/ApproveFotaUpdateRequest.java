@@ -22,6 +22,9 @@ public class ApproveFotaUpdateRequest extends TeaModel {
     @NameInMap("SessionId")
     public String sessionId;
 
+    @NameInMap("Uuid")
+    public String uuid;
+
     public static ApproveFotaUpdateRequest build(java.util.Map<String, ?> map) throws Exception {
         ApproveFotaUpdateRequest self = new ApproveFotaUpdateRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class ApproveFotaUpdateRequest extends TeaModel {
     }
     public String getSessionId() {
         return this.sessionId;
+    }
+
+    public ApproveFotaUpdateRequest setUuid(String uuid) {
+        this.uuid = uuid;
+        return this;
+    }
+    public String getUuid() {
+        return this.uuid;
     }
 
 }

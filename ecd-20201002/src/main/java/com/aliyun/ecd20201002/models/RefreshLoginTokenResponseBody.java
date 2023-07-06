@@ -4,15 +4,9 @@ package com.aliyun.ecd20201002.models;
 import com.aliyun.tea.*;
 
 public class RefreshLoginTokenResponseBody extends TeaModel {
-    /**
-     * <p>The logon token.</p>
-     */
     @NameInMap("LoginToken")
     public String loginToken;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
