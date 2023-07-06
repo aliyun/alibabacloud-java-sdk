@@ -8,7 +8,7 @@ public class DescribePhoneNumberAnalysisResponseBody extends TeaModel {
     public String code;
 
     @NameInMap("Data")
-    public java.util.List<DescribePhoneNumberAnalysisResponseBodyData> data;
+    public DescribePhoneNumberAnalysisResponseBodyData data;
 
     @NameInMap("Message")
     public String message;
@@ -29,11 +29,11 @@ public class DescribePhoneNumberAnalysisResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DescribePhoneNumberAnalysisResponseBody setData(java.util.List<DescribePhoneNumberAnalysisResponseBodyData> data) {
+    public DescribePhoneNumberAnalysisResponseBody setData(DescribePhoneNumberAnalysisResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public java.util.List<DescribePhoneNumberAnalysisResponseBodyData> getData() {
+    public DescribePhoneNumberAnalysisResponseBodyData getData() {
         return this.data;
     }
 
@@ -53,19 +53,19 @@ public class DescribePhoneNumberAnalysisResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class DescribePhoneNumberAnalysisResponseBodyData extends TeaModel {
+    public static class DescribePhoneNumberAnalysisResponseBodyDataList extends TeaModel {
         @NameInMap("Code")
         public String code;
 
         @NameInMap("Number")
         public String number;
 
-        public static DescribePhoneNumberAnalysisResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            DescribePhoneNumberAnalysisResponseBodyData self = new DescribePhoneNumberAnalysisResponseBodyData();
+        public static DescribePhoneNumberAnalysisResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
+            DescribePhoneNumberAnalysisResponseBodyDataList self = new DescribePhoneNumberAnalysisResponseBodyDataList();
             return TeaModel.build(map, self);
         }
 
-        public DescribePhoneNumberAnalysisResponseBodyData setCode(String code) {
+        public DescribePhoneNumberAnalysisResponseBodyDataList setCode(String code) {
             this.code = code;
             return this;
         }
@@ -73,12 +73,31 @@ public class DescribePhoneNumberAnalysisResponseBody extends TeaModel {
             return this.code;
         }
 
-        public DescribePhoneNumberAnalysisResponseBodyData setNumber(String number) {
+        public DescribePhoneNumberAnalysisResponseBodyDataList setNumber(String number) {
             this.number = number;
             return this;
         }
         public String getNumber() {
             return this.number;
+        }
+
+    }
+
+    public static class DescribePhoneNumberAnalysisResponseBodyData extends TeaModel {
+        @NameInMap("List")
+        public java.util.List<DescribePhoneNumberAnalysisResponseBodyDataList> list;
+
+        public static DescribePhoneNumberAnalysisResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            DescribePhoneNumberAnalysisResponseBodyData self = new DescribePhoneNumberAnalysisResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePhoneNumberAnalysisResponseBodyData setList(java.util.List<DescribePhoneNumberAnalysisResponseBodyDataList> list) {
+            this.list = list;
+            return this;
+        }
+        public java.util.List<DescribePhoneNumberAnalysisResponseBodyDataList> getList() {
+            return this.list;
         }
 
     }
