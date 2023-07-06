@@ -14,7 +14,7 @@ public class DescribePhoneNumberAnalysisRequest extends TeaModel {
     public String mask;
 
     @NameInMap("NumberType")
-    public Integer numberType;
+    public Long numberType;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -57,11 +57,11 @@ public class DescribePhoneNumberAnalysisRequest extends TeaModel {
         return this.mask;
     }
 
-    public DescribePhoneNumberAnalysisRequest setNumberType(Integer numberType) {
+    public DescribePhoneNumberAnalysisRequest setNumberType(Long numberType) {
         this.numberType = numberType;
         return this;
     }
-    public Integer getNumberType() {
+    public Long getNumberType() {
         return this.numberType;
     }
 
