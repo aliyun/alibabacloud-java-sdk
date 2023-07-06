@@ -11,7 +11,7 @@ public class GetExecuteOperationResultResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The details of the operation.</p>
+     * <p>The detailed result of the queried operation.</p>
      */
     @NameInMap("Data")
     public GetExecuteOperationResultResponseBodyData data;

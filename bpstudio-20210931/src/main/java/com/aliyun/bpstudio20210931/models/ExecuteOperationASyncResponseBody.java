@@ -7,6 +7,9 @@ public class ExecuteOperationASyncResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The ID of the operation.</p>
+     */
     @NameInMap("Data")
     public String data;
 

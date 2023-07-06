@@ -7,6 +7,9 @@ public class GetTemplateResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The details of the template.</p>
+     */
     @NameInMap("Data")
     public GetTemplateResponseBodyData data;
 
@@ -54,27 +57,15 @@ public class GetTemplateResponseBody extends TeaModel {
     }
 
     public static class GetTemplateResponseBodyDataVariables extends TeaModel {
-        /**
-         * <p>变量名</p>
-         */
         @NameInMap("Attribute")
         public String attribute;
 
-        /**
-         * <p>变量类型</p>
-         */
         @NameInMap("DataType")
         public String dataType;
 
-        /**
-         * <p>默认值</p>
-         */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
-        /**
-         * <p>变量值</p>
-         */
         @NameInMap("Variable")
         public String variable;
 

@@ -8,10 +8,10 @@ public class GetApplicationResponseBody extends TeaModel {
      * <p>The deployment result.</p>
      */
     @NameInMap("Code")
-    public Integer code;
+    public String code;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The details of the application.</p>
      */
     @NameInMap("Data")
     public GetApplicationResponseBodyData data;
@@ -58,11 +58,11 @@ public class GetApplicationResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetApplicationResponseBody setCode(Integer code) {
+    public GetApplicationResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
-    public Integer getCode() {
+    public String getCode() {
         return this.code;
     }
 
@@ -270,10 +270,18 @@ public class GetApplicationResponseBody extends TeaModel {
         public String resourceCode;
 
         /**
-         * <p>The total price.</p>
+         * <p>The instance type. This parameter indicates the information about the instance type. For example, 192.168.0.0/16 may be returned for a virtual private cloud (VPC), ecs.g5.large may be returned for an Elastic Compute Service (ECS) instance, and slb.s1.small may be returned for a Server Load Balancer (SLB) instance. If the resource does not have a specific type, an empty value is returned.</p>
          */
         @NameInMap("Specification")
         public String specification;
+
+        /**
+         * <p>创建类型：</p>
+         * <p></br>新建-1</p>
+         * <p></br>导入-2</p>
+         */
+        @NameInMap("type")
+        public String type;
 
         public static GetApplicationResponseBodyDataPriceList build(java.util.Map<String, ?> map) throws Exception {
             GetApplicationResponseBodyDataPriceList self = new GetApplicationResponseBodyDataPriceList();
@@ -382,6 +390,14 @@ public class GetApplicationResponseBody extends TeaModel {
         }
         public String getSpecification() {
             return this.specification;
+        }
+
+        public GetApplicationResponseBodyDataPriceList setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }
@@ -538,7 +554,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String error;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The URL of the image in the database.</p>
          */
         @NameInMap("ImageURL")
         public String imageURL;
@@ -550,7 +566,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the template associated with the application.</p>
+         * <p>The billing results.</p>
          */
         @NameInMap("PriceList")
         public java.util.List<GetApplicationResponseBodyDataPriceList> priceList;

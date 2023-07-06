@@ -73,7 +73,7 @@ public class GetTokenResponseBody extends TeaModel {
         public String accessKeyId;
 
         /**
-         * <p>The AccessKey secret that is used to access OSS.</p>
+         * <p>The AccessKey secret used to access OSS.</p>
          */
         @NameInMap("AccessKeySecret")
         public String accessKeySecret;
