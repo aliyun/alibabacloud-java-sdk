@@ -43,9 +43,25 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
     }
 
     public static class DescribeGlobalDesktopsResponseBodyDesktopsClients extends TeaModel {
+        /**
+         * <p>客户端类型，取值：</p>
+         * <br>
+         * <p>- macos：Mac客户端</p>
+         * <p>- ios：IOS客户端</p>
+         * <p>- android：Android客户端</p>
+         * <p>- html5：Web客户端</p>
+         * <p>- windows：Windows客户端</p>
+         * <p>- linux：Linux客户端</p>
+         */
         @NameInMap("ClientType")
         public String clientType;
 
+        /**
+         * <p>客户端状态，取值：</p>
+         * <br>
+         * <p>- ON：允许登录</p>
+         * <p>- OFF：不允许登录</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -73,14 +89,23 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
     }
 
     public static class DescribeGlobalDesktopsResponseBodyDesktopsDesktopTimers extends TeaModel {
+        @NameInMap("AllowClientSetting")
+        public Boolean allowClientSetting;
+
         @NameInMap("CronExpression")
         public String cronExpression;
 
         @NameInMap("Enforce")
         public Boolean enforce;
 
+        @NameInMap("ExecutionTime")
+        public String executionTime;
+
         @NameInMap("Interval")
         public Integer interval;
+
+        @NameInMap("OperationType")
+        public String operationType;
 
         @NameInMap("ResetType")
         public String resetType;
@@ -91,6 +116,14 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         public static DescribeGlobalDesktopsResponseBodyDesktopsDesktopTimers build(java.util.Map<String, ?> map) throws Exception {
             DescribeGlobalDesktopsResponseBodyDesktopsDesktopTimers self = new DescribeGlobalDesktopsResponseBodyDesktopsDesktopTimers();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeGlobalDesktopsResponseBodyDesktopsDesktopTimers setAllowClientSetting(Boolean allowClientSetting) {
+            this.allowClientSetting = allowClientSetting;
+            return this;
+        }
+        public Boolean getAllowClientSetting() {
+            return this.allowClientSetting;
         }
 
         public DescribeGlobalDesktopsResponseBodyDesktopsDesktopTimers setCronExpression(String cronExpression) {
@@ -109,12 +142,28 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             return this.enforce;
         }
 
+        public DescribeGlobalDesktopsResponseBodyDesktopsDesktopTimers setExecutionTime(String executionTime) {
+            this.executionTime = executionTime;
+            return this;
+        }
+        public String getExecutionTime() {
+            return this.executionTime;
+        }
+
         public DescribeGlobalDesktopsResponseBodyDesktopsDesktopTimers setInterval(Integer interval) {
             this.interval = interval;
             return this;
         }
         public Integer getInterval() {
             return this.interval;
+        }
+
+        public DescribeGlobalDesktopsResponseBodyDesktopsDesktopTimers setOperationType(String operationType) {
+            this.operationType = operationType;
+            return this;
+        }
+        public String getOperationType() {
+            return this.operationType;
         }
 
         public DescribeGlobalDesktopsResponseBodyDesktopsDesktopTimers setResetType(String resetType) {
@@ -295,6 +344,9 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <p>支持的客户端信息</p>
+         */
         @NameInMap("Clients")
         public java.util.List<DescribeGlobalDesktopsResponseBodyDesktopsClients> clients;
 
@@ -346,6 +398,9 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         @NameInMap("GpuMemory")
         public Integer gpuMemory;
 
+        @NameInMap("HibernationBeta")
+        public Boolean hibernationBeta;
+
         @NameInMap("HostName")
         public String hostName;
 
@@ -385,8 +440,14 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("SessionType")
+        public String sessionType;
+
         @NameInMap("Sessions")
         public java.util.List<DescribeGlobalDesktopsResponseBodyDesktopsSessions> sessions;
+
+        @NameInMap("SupportHibernation")
+        public Boolean supportHibernation;
 
         @NameInMap("UserCustomName")
         public String userCustomName;
@@ -540,6 +601,14 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             return this.gpuMemory;
         }
 
+        public DescribeGlobalDesktopsResponseBodyDesktops setHibernationBeta(Boolean hibernationBeta) {
+            this.hibernationBeta = hibernationBeta;
+            return this;
+        }
+        public Boolean getHibernationBeta() {
+            return this.hibernationBeta;
+        }
+
         public DescribeGlobalDesktopsResponseBodyDesktops setHostName(String hostName) {
             this.hostName = hostName;
             return this;
@@ -644,12 +713,28 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public DescribeGlobalDesktopsResponseBodyDesktops setSessionType(String sessionType) {
+            this.sessionType = sessionType;
+            return this;
+        }
+        public String getSessionType() {
+            return this.sessionType;
+        }
+
         public DescribeGlobalDesktopsResponseBodyDesktops setSessions(java.util.List<DescribeGlobalDesktopsResponseBodyDesktopsSessions> sessions) {
             this.sessions = sessions;
             return this;
         }
         public java.util.List<DescribeGlobalDesktopsResponseBodyDesktopsSessions> getSessions() {
             return this.sessions;
+        }
+
+        public DescribeGlobalDesktopsResponseBodyDesktops setSupportHibernation(Boolean supportHibernation) {
+            this.supportHibernation = supportHibernation;
+            return this;
+        }
+        public Boolean getSupportHibernation() {
+            return this.supportHibernation;
         }
 
         public DescribeGlobalDesktopsResponseBodyDesktops setUserCustomName(String userCustomName) {

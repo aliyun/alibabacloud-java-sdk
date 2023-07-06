@@ -5,52 +5,49 @@ import com.aliyun.tea.*;
 
 public class StopDesktopsRequest extends TeaModel {
     /**
-     * <p>The ID of the client.</p>
+     * <p>The logon credential.</p>
      */
     @NameInMap("ClientId")
     public String clientId;
 
     /**
-     * <p>The OS used by the client.</p>
+     * <p>The ID of cloud desktop N. You can specify one or more IDs of cloud desktops. Valid values of N: 1 to 20.</p>
      */
     @NameInMap("ClientOS")
     public String clientOS;
 
-    /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request](~~25693~~).</p>
-     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The version of the client.</p>
+     * <p>The OS used by the client.</p>
      */
     @NameInMap("ClientVersion")
     public String clientVersion;
 
-    /**
-     * <p>The IDs of cloud desktops. You can specify most at 20 IDs of cloud desktops.</p>
-     */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
     /**
-     * <p>The logon credential.</p>
+     * <p>The operation that you want to perform. Set the value to StopDesktops.</p>
      */
     @NameInMap("LoginToken")
     public String loginToken;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The ID of the session.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the session.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("SessionId")
     public String sessionId;
+
+    @NameInMap("SessionToken")
+    public String sessionToken;
 
     public static StopDesktopsRequest build(java.util.Map<String, ?> map) throws Exception {
         StopDesktopsRequest self = new StopDesktopsRequest();
@@ -119,6 +116,14 @@ public class StopDesktopsRequest extends TeaModel {
     }
     public String getSessionId() {
         return this.sessionId;
+    }
+
+    public StopDesktopsRequest setSessionToken(String sessionToken) {
+        this.sessionToken = sessionToken;
+        return this;
+    }
+    public String getSessionToken() {
+        return this.sessionToken;
     }
 
 }

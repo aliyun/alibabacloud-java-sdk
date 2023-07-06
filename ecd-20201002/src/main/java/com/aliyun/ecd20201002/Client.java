@@ -54,6 +54,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SessionId", request.sessionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.uuid)) {
+            query.put("Uuid", request.uuid);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -289,6 +293,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
             query.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.loginRegionId)) {
+            query.put("LoginRegionId", request.loginRegionId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.loginToken)) {
@@ -751,6 +759,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SessionId", request.sessionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionToken)) {
+            query.put("SessionToken", request.sessionToken);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -773,13 +785,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.rebootDesktopsWithOptions(request, runtime);
     }
 
-    /**
-      * The validity period of a logon token is 15 minutes. If an end user does not exit a client in 15 minutes, the logon token for the client must be refreshed. You can call this operation to refresh the client token.
-      *
-      * @param request RefreshLoginTokenRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return RefreshLoginTokenResponse
-     */
     public RefreshLoginTokenResponse refreshLoginTokenWithOptions(RefreshLoginTokenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -828,12 +833,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RefreshLoginTokenResponse());
     }
 
-    /**
-      * The validity period of a logon token is 15 minutes. If an end user does not exit a client in 15 minutes, the logon token for the client must be refreshed. You can call this operation to refresh the client token.
-      *
-      * @param request RefreshLoginTokenRequest
-      * @return RefreshLoginTokenResponse
-     */
     public RefreshLoginTokenResponse refreshLoginToken(RefreshLoginTokenRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.refreshLoginTokenWithOptions(request, runtime);
@@ -1162,8 +1161,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Description
-      * If the call is successful, the cloud desktops enter the Running state.
+      * The ID of the client.
       *
       * @param request StartDesktopsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1222,8 +1220,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Description
-      * If the call is successful, the cloud desktops enter the Running state.
+      * The ID of the client.
       *
       * @param request StartDesktopsRequest
       * @return StartDesktopsResponse
@@ -1250,6 +1247,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.desktopId)) {
             query.put("DesktopId", request.desktopId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filePath)) {
+            query.put("FilePath", request.filePath);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.loginToken)) {
@@ -1287,8 +1288,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Description
-      * The cloud desktops that you want to stop by calling this operation must be in the Running state. If the call is successful, the cloud desktops enter the Stopped state.
+      * The ID of the region.
       *
       * @param request StopDesktopsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1329,6 +1329,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SessionId", request.sessionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionToken)) {
+            query.put("SessionToken", request.sessionToken);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1347,8 +1351,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Description
-      * The cloud desktops that you want to stop by calling this operation must be in the Running state. If the call is successful, the cloud desktops enter the Stopped state.
+      * The ID of the region.
       *
       * @param request StopDesktopsRequest
       * @return StopDesktopsResponse
