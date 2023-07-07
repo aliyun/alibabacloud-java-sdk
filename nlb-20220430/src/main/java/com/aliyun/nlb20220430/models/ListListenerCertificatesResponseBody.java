@@ -4,21 +4,39 @@ package com.aliyun.nlb20220430.models;
 import com.aliyun.tea.*;
 
 public class ListListenerCertificatesResponseBody extends TeaModel {
+    /**
+     * <p>The server certificates.</p>
+     */
     @NameInMap("CertificateIds")
     public java.util.List<String> certificateIds;
 
     @NameInMap("Certificates")
     public java.util.List<ListListenerCertificatesResponseBodyCertificates> certificates;
 
+    /**
+     * <p>The number of entries returned per page. Valid values: **1** to **100**. Default value: **20**.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <br>
+     * <p>*   You do not need to specify this parameter for the first request.</p>
+     * <p>*   You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

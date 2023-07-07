@@ -1535,14 +1535,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("NextToken", request.nextToken);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
-            body.put("Page", request.page);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            body.put("PageSize", request.pageSize);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             body.put("RegionId", request.regionId);
         }
@@ -2212,6 +2204,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateLoadBalancerAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call the [GetLoadBalancerAttribute](~~445873~~) operation to query the details of deletion protection and the configuration read-only mode.
+      *
+      * @param request UpdateLoadBalancerProtectionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateLoadBalancerProtectionResponse
+     */
     public UpdateLoadBalancerProtectionResponse updateLoadBalancerProtectionWithOptions(UpdateLoadBalancerProtectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2264,6 +2263,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateLoadBalancerProtectionResponse());
     }
 
+    /**
+      * >  You can call the [GetLoadBalancerAttribute](~~445873~~) operation to query the details of deletion protection and the configuration read-only mode.
+      *
+      * @param request UpdateLoadBalancerProtectionRequest
+      * @return UpdateLoadBalancerProtectionResponse
+     */
     public UpdateLoadBalancerProtectionResponse updateLoadBalancerProtection(UpdateLoadBalancerProtectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateLoadBalancerProtectionWithOptions(request, runtime);
