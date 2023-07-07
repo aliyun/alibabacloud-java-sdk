@@ -3,16 +3,16 @@ package com.aliyun.domain20180208.models;
 
 import com.aliyun.tea.*;
 
-public class CheckDomainStatusRequest extends TeaModel {
+public class CheckSelectedDomainStatusRequest extends TeaModel {
     @NameInMap("Domain")
     public String domain;
 
-    public static CheckDomainStatusRequest build(java.util.Map<String, ?> map) throws Exception {
-        CheckDomainStatusRequest self = new CheckDomainStatusRequest();
+    public static CheckSelectedDomainStatusRequest build(java.util.Map<String, ?> map) throws Exception {
+        CheckSelectedDomainStatusRequest self = new CheckSelectedDomainStatusRequest();
         return TeaModel.build(map, self);
     }
 
-    public CheckDomainStatusRequest setDomain(String domain) {
+    public CheckSelectedDomainStatusRequest setDomain(String domain) {
         this.domain = domain;
         return this;
     }

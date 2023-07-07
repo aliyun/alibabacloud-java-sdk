@@ -3,7 +3,7 @@ package com.aliyun.domain20180208.models;
 
 import com.aliyun.tea.*;
 
-public class CreateFixedPriceDemandOrderResponseBody extends TeaModel {
+public class CreateFixedPriceSelectedOrderResponseBody extends TeaModel {
     @NameInMap("ErrorCode")
     public String errorCode;
 
@@ -11,7 +11,7 @@ public class CreateFixedPriceDemandOrderResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     @NameInMap("Module")
-    public CreateFixedPriceDemandOrderResponseBodyModule module;
+    public CreateFixedPriceSelectedOrderResponseBodyModule module;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -19,12 +19,12 @@ public class CreateFixedPriceDemandOrderResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static CreateFixedPriceDemandOrderResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CreateFixedPriceDemandOrderResponseBody self = new CreateFixedPriceDemandOrderResponseBody();
+    public static CreateFixedPriceSelectedOrderResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        CreateFixedPriceSelectedOrderResponseBody self = new CreateFixedPriceSelectedOrderResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateFixedPriceDemandOrderResponseBody setErrorCode(String errorCode) {
+    public CreateFixedPriceSelectedOrderResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -32,7 +32,7 @@ public class CreateFixedPriceDemandOrderResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public CreateFixedPriceDemandOrderResponseBody setHttpStatusCode(Integer httpStatusCode) {
+    public CreateFixedPriceSelectedOrderResponseBody setHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
     }
@@ -40,15 +40,15 @@ public class CreateFixedPriceDemandOrderResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public CreateFixedPriceDemandOrderResponseBody setModule(CreateFixedPriceDemandOrderResponseBodyModule module) {
+    public CreateFixedPriceSelectedOrderResponseBody setModule(CreateFixedPriceSelectedOrderResponseBodyModule module) {
         this.module = module;
         return this;
     }
-    public CreateFixedPriceDemandOrderResponseBodyModule getModule() {
+    public CreateFixedPriceSelectedOrderResponseBodyModule getModule() {
         return this.module;
     }
 
-    public CreateFixedPriceDemandOrderResponseBody setRequestId(String requestId) {
+    public CreateFixedPriceSelectedOrderResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -56,7 +56,7 @@ public class CreateFixedPriceDemandOrderResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateFixedPriceDemandOrderResponseBody setSuccess(Boolean success) {
+    public CreateFixedPriceSelectedOrderResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -64,7 +64,7 @@ public class CreateFixedPriceDemandOrderResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class CreateFixedPriceDemandOrderResponseBodyModule extends TeaModel {
+    public static class CreateFixedPriceSelectedOrderResponseBodyModule extends TeaModel {
         @NameInMap("Domain")
         public String domain;
 
@@ -74,12 +74,12 @@ public class CreateFixedPriceDemandOrderResponseBody extends TeaModel {
         @NameInMap("Price")
         public Long price;
 
-        public static CreateFixedPriceDemandOrderResponseBodyModule build(java.util.Map<String, ?> map) throws Exception {
-            CreateFixedPriceDemandOrderResponseBodyModule self = new CreateFixedPriceDemandOrderResponseBodyModule();
+        public static CreateFixedPriceSelectedOrderResponseBodyModule build(java.util.Map<String, ?> map) throws Exception {
+            CreateFixedPriceSelectedOrderResponseBodyModule self = new CreateFixedPriceSelectedOrderResponseBodyModule();
             return TeaModel.build(map, self);
         }
 
-        public CreateFixedPriceDemandOrderResponseBodyModule setDomain(String domain) {
+        public CreateFixedPriceSelectedOrderResponseBodyModule setDomain(String domain) {
             this.domain = domain;
             return this;
         }
@@ -87,7 +87,7 @@ public class CreateFixedPriceDemandOrderResponseBody extends TeaModel {
             return this.domain;
         }
 
-        public CreateFixedPriceDemandOrderResponseBodyModule setOrderNo(String orderNo) {
+        public CreateFixedPriceSelectedOrderResponseBodyModule setOrderNo(String orderNo) {
             this.orderNo = orderNo;
             return this;
         }
@@ -95,7 +95,7 @@ public class CreateFixedPriceDemandOrderResponseBody extends TeaModel {
             return this.orderNo;
         }
 
-        public CreateFixedPriceDemandOrderResponseBodyModule setPrice(Long price) {
+        public CreateFixedPriceSelectedOrderResponseBodyModule setPrice(Long price) {
             this.price = price;
             return this;
         }

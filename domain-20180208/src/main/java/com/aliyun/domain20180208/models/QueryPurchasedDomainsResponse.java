@@ -3,7 +3,7 @@ package com.aliyun.domain20180208.models;
 
 import com.aliyun.tea.*;
 
-public class RefuseDemandResponse extends TeaModel {
+public class QueryPurchasedDomainsResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class RefuseDemandResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public RefuseDemandResponseBody body;
+    public QueryPurchasedDomainsResponseBody body;
 
-    public static RefuseDemandResponse build(java.util.Map<String, ?> map) throws Exception {
-        RefuseDemandResponse self = new RefuseDemandResponse();
+    public static QueryPurchasedDomainsResponse build(java.util.Map<String, ?> map) throws Exception {
+        QueryPurchasedDomainsResponse self = new QueryPurchasedDomainsResponse();
         return TeaModel.build(map, self);
     }
 
-    public RefuseDemandResponse setHeaders(java.util.Map<String, String> headers) {
+    public QueryPurchasedDomainsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class RefuseDemandResponse extends TeaModel {
         return this.headers;
     }
 
-    public RefuseDemandResponse setStatusCode(Integer statusCode) {
+    public QueryPurchasedDomainsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class RefuseDemandResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public RefuseDemandResponse setBody(RefuseDemandResponseBody body) {
+    public QueryPurchasedDomainsResponse setBody(QueryPurchasedDomainsResponseBody body) {
         this.body = body;
         return this;
     }
-    public RefuseDemandResponseBody getBody() {
+    public QueryPurchasedDomainsResponseBody getBody() {
         return this.body;
     }
 
