@@ -3,7 +3,7 @@ package com.aliyun.domain20180208.models;
 
 import com.aliyun.tea.*;
 
-public class CheckDomainStatusResponseBody extends TeaModel {
+public class CheckSelectedDomainStatusResponseBody extends TeaModel {
     @NameInMap("ErrorCode")
     public String errorCode;
 
@@ -11,7 +11,7 @@ public class CheckDomainStatusResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     @NameInMap("Module")
-    public CheckDomainStatusResponseBodyModule module;
+    public CheckSelectedDomainStatusResponseBodyModule module;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -19,12 +19,12 @@ public class CheckDomainStatusResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static CheckDomainStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CheckDomainStatusResponseBody self = new CheckDomainStatusResponseBody();
+    public static CheckSelectedDomainStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        CheckSelectedDomainStatusResponseBody self = new CheckSelectedDomainStatusResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CheckDomainStatusResponseBody setErrorCode(String errorCode) {
+    public CheckSelectedDomainStatusResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -32,7 +32,7 @@ public class CheckDomainStatusResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public CheckDomainStatusResponseBody setHttpStatusCode(Integer httpStatusCode) {
+    public CheckSelectedDomainStatusResponseBody setHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
     }
@@ -40,15 +40,15 @@ public class CheckDomainStatusResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public CheckDomainStatusResponseBody setModule(CheckDomainStatusResponseBodyModule module) {
+    public CheckSelectedDomainStatusResponseBody setModule(CheckSelectedDomainStatusResponseBodyModule module) {
         this.module = module;
         return this;
     }
-    public CheckDomainStatusResponseBodyModule getModule() {
+    public CheckSelectedDomainStatusResponseBodyModule getModule() {
         return this.module;
     }
 
-    public CheckDomainStatusResponseBody setRequestId(String requestId) {
+    public CheckSelectedDomainStatusResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -56,7 +56,7 @@ public class CheckDomainStatusResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CheckDomainStatusResponseBody setSuccess(Boolean success) {
+    public CheckSelectedDomainStatusResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -64,7 +64,7 @@ public class CheckDomainStatusResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class CheckDomainStatusResponseBodyModule extends TeaModel {
+    public static class CheckSelectedDomainStatusResponseBodyModule extends TeaModel {
         @NameInMap("DeadDate")
         public Long deadDate;
 
@@ -75,17 +75,17 @@ public class CheckDomainStatusResponseBody extends TeaModel {
         public Long endTime;
 
         @NameInMap("Price")
-        public Float price;
+        public Double price;
 
         @NameInMap("RegDate")
         public Long regDate;
 
-        public static CheckDomainStatusResponseBodyModule build(java.util.Map<String, ?> map) throws Exception {
-            CheckDomainStatusResponseBodyModule self = new CheckDomainStatusResponseBodyModule();
+        public static CheckSelectedDomainStatusResponseBodyModule build(java.util.Map<String, ?> map) throws Exception {
+            CheckSelectedDomainStatusResponseBodyModule self = new CheckSelectedDomainStatusResponseBodyModule();
             return TeaModel.build(map, self);
         }
 
-        public CheckDomainStatusResponseBodyModule setDeadDate(Long deadDate) {
+        public CheckSelectedDomainStatusResponseBodyModule setDeadDate(Long deadDate) {
             this.deadDate = deadDate;
             return this;
         }
@@ -93,7 +93,7 @@ public class CheckDomainStatusResponseBody extends TeaModel {
             return this.deadDate;
         }
 
-        public CheckDomainStatusResponseBodyModule setDomain(String domain) {
+        public CheckSelectedDomainStatusResponseBodyModule setDomain(String domain) {
             this.domain = domain;
             return this;
         }
@@ -101,7 +101,7 @@ public class CheckDomainStatusResponseBody extends TeaModel {
             return this.domain;
         }
 
-        public CheckDomainStatusResponseBodyModule setEndTime(Long endTime) {
+        public CheckSelectedDomainStatusResponseBodyModule setEndTime(Long endTime) {
             this.endTime = endTime;
             return this;
         }
@@ -109,15 +109,15 @@ public class CheckDomainStatusResponseBody extends TeaModel {
             return this.endTime;
         }
 
-        public CheckDomainStatusResponseBodyModule setPrice(Float price) {
+        public CheckSelectedDomainStatusResponseBodyModule setPrice(Double price) {
             this.price = price;
             return this;
         }
-        public Float getPrice() {
+        public Double getPrice() {
             return this.price;
         }
 
-        public CheckDomainStatusResponseBodyModule setRegDate(Long regDate) {
+        public CheckSelectedDomainStatusResponseBodyModule setRegDate(Long regDate) {
             this.regDate = regDate;
             return this;
         }

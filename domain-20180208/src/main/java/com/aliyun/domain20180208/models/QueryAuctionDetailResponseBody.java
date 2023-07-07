@@ -61,6 +61,9 @@ public class QueryAuctionDetailResponseBody extends TeaModel {
     @NameInMap("ReserveMet")
     public Boolean reserveMet;
 
+    @NameInMap("ReservePrice")
+    public Float reservePrice;
+
     @NameInMap("Status")
     public String status;
 
@@ -228,6 +231,14 @@ public class QueryAuctionDetailResponseBody extends TeaModel {
     }
     public Boolean getReserveMet() {
         return this.reserveMet;
+    }
+
+    public QueryAuctionDetailResponseBody setReservePrice(Float reservePrice) {
+        this.reservePrice = reservePrice;
+        return this;
+    }
+    public Float getReservePrice() {
+        return this.reservePrice;
     }
 
     public QueryAuctionDetailResponseBody setStatus(String status) {

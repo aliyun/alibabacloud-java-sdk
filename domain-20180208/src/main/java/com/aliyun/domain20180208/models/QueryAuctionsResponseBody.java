@@ -136,6 +136,9 @@ public class QueryAuctionsResponseBody extends TeaModel {
         @NameInMap("ReserveMin")
         public Long reserveMin;
 
+        @NameInMap("ReservePrice")
+        public Long reservePrice;
+
         @NameInMap("Status")
         public String status;
 
@@ -311,6 +314,14 @@ public class QueryAuctionsResponseBody extends TeaModel {
         }
         public Long getReserveMin() {
             return this.reserveMin;
+        }
+
+        public QueryAuctionsResponseBodyData setReservePrice(Long reservePrice) {
+            this.reservePrice = reservePrice;
+            return this;
+        }
+        public Long getReservePrice() {
+            return this.reservePrice;
         }
 
         public QueryAuctionsResponseBodyData setStatus(String status) {

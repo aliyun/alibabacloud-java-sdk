@@ -103,6 +103,9 @@ public class QueryBrokerDemandResponseBody extends TeaModel {
         @NameInMap("OrderType")
         public Integer orderType;
 
+        @NameInMap("PartnerDomain")
+        public String partnerDomain;
+
         @NameInMap("PayDomain")
         public String payDomain;
 
@@ -117,6 +120,9 @@ public class QueryBrokerDemandResponseBody extends TeaModel {
 
         @NameInMap("PublishTime")
         public Long publishTime;
+
+        @NameInMap("PurchaseStatus")
+        public Integer purchaseStatus;
 
         @NameInMap("ServicePayPrice")
         public Float servicePayPrice;
@@ -201,6 +207,14 @@ public class QueryBrokerDemandResponseBody extends TeaModel {
             return this.orderType;
         }
 
+        public QueryBrokerDemandResponseBodyData setPartnerDomain(String partnerDomain) {
+            this.partnerDomain = partnerDomain;
+            return this;
+        }
+        public String getPartnerDomain() {
+            return this.partnerDomain;
+        }
+
         public QueryBrokerDemandResponseBodyData setPayDomain(String payDomain) {
             this.payDomain = payDomain;
             return this;
@@ -239,6 +253,14 @@ public class QueryBrokerDemandResponseBody extends TeaModel {
         }
         public Long getPublishTime() {
             return this.publishTime;
+        }
+
+        public QueryBrokerDemandResponseBodyData setPurchaseStatus(Integer purchaseStatus) {
+            this.purchaseStatus = purchaseStatus;
+            return this;
+        }
+        public Integer getPurchaseStatus() {
+            return this.purchaseStatus;
         }
 
         public QueryBrokerDemandResponseBodyData setServicePayPrice(Float servicePayPrice) {
