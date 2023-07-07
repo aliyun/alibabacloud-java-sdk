@@ -10,12 +10,6 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    @NameInMap("Page")
-    public Integer page;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
     @NameInMap("RegionId")
     public String regionId;
 
@@ -47,22 +41,6 @@ public class ListTagResourcesRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
-    }
-
-    public ListTagResourcesRequest setPage(Integer page) {
-        this.page = page;
-        return this;
-    }
-    public Integer getPage() {
-        return this.page;
-    }
-
-    public ListTagResourcesRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
     public ListTagResourcesRequest setRegionId(String regionId) {
