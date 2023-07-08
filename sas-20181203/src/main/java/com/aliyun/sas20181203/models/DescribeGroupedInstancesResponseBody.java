@@ -84,6 +84,9 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceCount")
         public String instanceCount;
 
+        @NameInMap("Os")
+        public String os;
+
         /**
          * <p>The number of assets that are at risk.</p>
          */
@@ -139,6 +142,14 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
         }
         public String getInstanceCount() {
             return this.instanceCount;
+        }
+
+        public DescribeGroupedInstancesResponseBodyInstances setOs(String os) {
+            this.os = os;
+            return this;
+        }
+        public String getOs() {
+            return this.os;
         }
 
         public DescribeGroupedInstancesResponseBodyInstances setRiskInstanceCount(String riskInstanceCount) {

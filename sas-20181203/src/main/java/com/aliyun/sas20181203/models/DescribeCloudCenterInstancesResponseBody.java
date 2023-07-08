@@ -859,6 +859,9 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        @NameInMap("NextToken")
+        public String nextToken;
+
         /**
          * <p>The number of entries returned per page. Default value: **20**.</p>
          */
@@ -890,6 +893,14 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         }
         public Integer getCurrentPage() {
             return this.currentPage;
+        }
+
+        public DescribeCloudCenterInstancesResponseBodyPageInfo setNextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+        public String getNextToken() {
+            return this.nextToken;
         }
 
         public DescribeCloudCenterInstancesResponseBodyPageInfo setPageSize(Integer pageSize) {

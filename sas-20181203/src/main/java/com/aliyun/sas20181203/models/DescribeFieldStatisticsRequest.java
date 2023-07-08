@@ -5,16 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeFieldStatisticsRequest extends TeaModel {
     /**
-     * <p>The type of the asset to query. If no asset types are specified, all types of assets are returned. Valid values:</p>
-     * <br>
-     * <p>*   **ecs**: server</p>
-     * <p>*   **cloud_product**: Alibaba Cloud service</p>
+     * <p>The total number of cloud services that are protected by Security Center.</p>
      */
     @NameInMap("MachineTypes")
     public String machineTypes;
 
     /**
-     * <p>The ID of the region in which the asset resides.</p>
+     * <p>The number of regions to which the servers belong.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
