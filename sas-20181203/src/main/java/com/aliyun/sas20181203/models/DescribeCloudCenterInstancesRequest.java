@@ -55,6 +55,9 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
     @NameInMap("MachineTypes")
     public String machineTypes;
 
+    @NameInMap("NextToken")
+    public String nextToken;
+
     /**
      * <p>Specifies whether to internationalize the name of the **default** group. Default value: **false**. Valid values:</p>
      * <br>
@@ -75,6 +78,9 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("UseNextToken")
+    public Boolean useNextToken;
 
     public static DescribeCloudCenterInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCloudCenterInstancesRequest self = new DescribeCloudCenterInstancesRequest();
@@ -129,6 +135,14 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
         return this.machineTypes;
     }
 
+    public DescribeCloudCenterInstancesRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
     public DescribeCloudCenterInstancesRequest setNoGroupTrace(Boolean noGroupTrace) {
         this.noGroupTrace = noGroupTrace;
         return this;
@@ -151,6 +165,14 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeCloudCenterInstancesRequest setUseNextToken(Boolean useNextToken) {
+        this.useNextToken = useNextToken;
+        return this;
+    }
+    public Boolean getUseNextToken() {
+        return this.useNextToken;
     }
 
 }

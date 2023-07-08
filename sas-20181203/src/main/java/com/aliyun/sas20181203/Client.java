@@ -4473,6 +4473,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("MachineTypes", request.machineTypes);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.noGroupTrace)) {
             query.put("NoGroupTrace", request.noGroupTrace);
         }
@@ -4483,6 +4487,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.useNextToken)) {
+            query.put("UseNextToken", request.useNextToken);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

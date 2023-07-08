@@ -16,6 +16,9 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("VulCount")
+    public Integer vulCount;
+
     public static DescribeUuidsByVulNamesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeUuidsByVulNamesResponseBody self = new DescribeUuidsByVulNamesResponseBody();
         return TeaModel.build(map, self);
@@ -35,6 +38,14 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeUuidsByVulNamesResponseBody setVulCount(Integer vulCount) {
+        this.vulCount = vulCount;
+        return this;
+    }
+    public Integer getVulCount() {
+        return this.vulCount;
     }
 
     public static class DescribeUuidsByVulNamesResponseBodyMachineInfoStatistics extends TeaModel {

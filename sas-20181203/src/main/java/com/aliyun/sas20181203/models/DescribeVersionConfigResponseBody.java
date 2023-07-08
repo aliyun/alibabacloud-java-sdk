@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeVersionConfigResponseBody extends TeaModel {
+    @NameInMap("AgentlessCapacity")
+    public Long agentlessCapacity;
+
     /**
      * <p>Indicates whether the pay-as-you-go billing method is supported.</p>
      * <br>
@@ -35,6 +38,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
      */
     @NameInMap("AssetLevel")
     public Integer assetLevel;
+
+    @NameInMap("CspmCapacity")
+    public Long cspmCapacity;
 
     /**
      * <p>The most advanced edition that is used. Valid values:</p>
@@ -129,6 +135,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @NameInMap("OpenTime")
     public Long openTime;
 
+    @NameInMap("RaspCapacity")
+    public Long raspCapacity;
+
     /**
      * <p>The timestamp when Security Center is released. Unit: milliseconds. The value of this parameter is seven days after Security Center expires.</p>
      * <br>
@@ -202,6 +211,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @NameInMap("VmCores")
     public Integer vmCores;
 
+    @NameInMap("VulFixCapacity")
+    public Long vulFixCapacity;
+
     /**
      * <p>Indicates whether the web tamper proofing feature is enabled. Valid values:</p>
      * <br>
@@ -222,6 +234,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     public static DescribeVersionConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVersionConfigResponseBody self = new DescribeVersionConfigResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeVersionConfigResponseBody setAgentlessCapacity(Long agentlessCapacity) {
+        this.agentlessCapacity = agentlessCapacity;
+        return this;
+    }
+    public Long getAgentlessCapacity() {
+        return this.agentlessCapacity;
     }
 
     public DescribeVersionConfigResponseBody setAllowPartialBuy(Integer allowPartialBuy) {
@@ -254,6 +274,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     }
     public Integer getAssetLevel() {
         return this.assetLevel;
+    }
+
+    public DescribeVersionConfigResponseBody setCspmCapacity(Long cspmCapacity) {
+        this.cspmCapacity = cspmCapacity;
+        return this;
+    }
+    public Long getCspmCapacity() {
+        return this.cspmCapacity;
     }
 
     public DescribeVersionConfigResponseBody setHighestVersion(Integer highestVersion) {
@@ -352,6 +380,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         return this.openTime;
     }
 
+    public DescribeVersionConfigResponseBody setRaspCapacity(Long raspCapacity) {
+        this.raspCapacity = raspCapacity;
+        return this;
+    }
+    public Long getRaspCapacity() {
+        return this.raspCapacity;
+    }
+
     public DescribeVersionConfigResponseBody setReleaseTime(Long releaseTime) {
         this.releaseTime = releaseTime;
         return this;
@@ -422,6 +458,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     }
     public Integer getVmCores() {
         return this.vmCores;
+    }
+
+    public DescribeVersionConfigResponseBody setVulFixCapacity(Long vulFixCapacity) {
+        this.vulFixCapacity = vulFixCapacity;
+        return this;
+    }
+    public Long getVulFixCapacity() {
+        return this.vulFixCapacity;
     }
 
     public DescribeVersionConfigResponseBody setWebLock(Integer webLock) {
