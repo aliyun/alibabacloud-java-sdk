@@ -4,12 +4,21 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterNodeResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The information of nodes.</p>
+     */
     @NameInMap("Nodes")
     public java.util.List<DescribeDBClusterNodeResponseBodyNodes> nodes;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,6 +52,9 @@ public class DescribeDBClusterNodeResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterNodeResponseBodyNodes extends TeaModel {
+        /**
+         * <p>The name of the node.</p>
+         */
         @NameInMap("Name")
         public String name;
 

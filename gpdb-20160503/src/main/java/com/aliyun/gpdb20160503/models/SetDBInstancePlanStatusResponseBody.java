@@ -4,15 +4,31 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class SetDBInstancePlanStatusResponseBody extends TeaModel {
+    /**
+     * <p>The error message returned.</p>
+     * <br>
+     * <p>This parameter is returned only when the operation fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the plan.</p>
+     */
     @NameInMap("PlanId")
     public String planId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The state of the operation.</p>
+     * <br>
+     * <p>If the operation is successful, **success** is returned. If the operation fails, this parameter is not returned.</p>
+     */
     @NameInMap("Status")
     public String status;
 

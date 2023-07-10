@@ -4,12 +4,24 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
+    /**
+     * <p>The connection information of the instance.</p>
+     */
     @NameInMap("DBInstanceNetInfos")
     public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfos DBInstanceNetInfos;
 
+    /**
+     * <p>The network type of the instance. </p>
+     * <br>
+     * <p>*   **VPC**: a virtual private cloud (VPC)</p>
+     * <p>*   **Classic**: classic network</p>
+     */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,28 +55,54 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo extends TeaModel {
+        /**
+         * <p>The IP address type of the instance.</p>
+         */
         @NameInMap("AddressType")
         public String addressType;
 
+        /**
+         * <p>The endpoint used to connect to the instance.</p>
+         */
         @NameInMap("ConnectionString")
         public String connectionString;
 
+        /**
+         * <p>The IP address of the instance.</p>
+         */
         @NameInMap("IPAddress")
         public String IPAddress;
 
+        /**
+         * <p>The type of IP address.</p>
+         * <br>
+         * <p>*   Valid values for instances in the classic network: Inner and Public</p>
+         * <p>*   Valid values for instances in a virtual private cloud (VPC): Private and Public</p>
+         */
         @NameInMap("IPType")
         public String IPType;
 
+        /**
+         * <p>The port number used to connect to the instance.</p>
+         */
         @NameInMap("Port")
         public String port;
 
-        // VPC ID。
+        /**
+         * <p>The ID of the VPC.</p>
+         */
         @NameInMap("VPCId")
         public String VPCId;
 
+        /**
+         * <p>The ID of the vSwitch. Multiple IDs are separated by commas (,).</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The ID of the VPC.</p>
+         */
         @NameInMap("VpcInstanceId")
         public String vpcInstanceId;
 

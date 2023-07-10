@@ -4,42 +4,84 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
+    /**
+     * <p>The name of the database.</p>
+     */
     @NameInMap("Database")
     public String database;
 
+    /**
+     * <p>The execution duration of the query. Unit: seconds.</p>
+     */
     @NameInMap("Duration")
     public Integer duration;
 
+    /**
+     * <p>The maximum number of output rows.</p>
+     */
     @NameInMap("MaxOutputRows")
     public String maxOutputRows;
 
+    /**
+     * <p>The ID of the query.</p>
+     */
     @NameInMap("QueryID")
     public String queryID;
 
+    /**
+     * <p>The information of the operator.</p>
+     */
     @NameInMap("QueryPlan")
     public String queryPlan;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The SQL statement.</p>
+     */
     @NameInMap("SQLStmt")
     public String SQLStmt;
 
+    /**
+     * <p>The ID of the session that contains the query.</p>
+     */
     @NameInMap("SessionID")
     public String sessionID;
 
+    /**
+     * <p>The sequence of metrics.</p>
+     */
     @NameInMap("SortedMetrics")
     public String sortedMetrics;
 
+    /**
+     * <p>The start time of the query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
+    /**
+     * <p>The execution state of the query. Valid values:</p>
+     * <br>
+     * <p>*   **running**: The query is being executed.</p>
+     * <p>*   **finished**: The query execution is complete.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The information of the execution plan.</p>
+     */
     @NameInMap("TextPlan")
     public String textPlan;
 
+    /**
+     * <p>The name of the database account.</p>
+     */
     @NameInMap("User")
     public String user;
 

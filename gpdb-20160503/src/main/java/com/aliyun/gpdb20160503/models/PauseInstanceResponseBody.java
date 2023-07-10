@@ -4,15 +4,32 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class PauseInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The error message returned.</p>
+     * <br>
+     * <p>This parameter is returned only if **false** is returned for the **Status** parameter.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **false**: The request failed.</p>
+     * <p>*   **true**: The request was successful.</p>
+     */
     @NameInMap("Status")
     public Boolean status;
 

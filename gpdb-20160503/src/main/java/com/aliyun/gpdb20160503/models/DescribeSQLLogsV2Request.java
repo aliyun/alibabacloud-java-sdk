@@ -4,54 +4,124 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeSQLLogsV2Request extends TeaModel {
+    /**
+     * <p>The ID of instance.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBInstances](~~86911~~) operation to query details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The name of the database.</p>
+     */
     @NameInMap("Database")
     public String database;
 
+    /**
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mmZ* format. The time must be in UTC.</p>
+     * <br>
+     * <p>>  The end time must be later than the start time. The interval cannot be more than 24 hours.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The execution duration of the query. Unit: seconds.</p>
+     */
     @NameInMap("ExecuteCost")
     public String executeCost;
 
+    /**
+     * <p>The execution state of the query. Valid values:</p>
+     * <br>
+     * <p>*   **success**</p>
+     * <p>*   **fail**</p>
+     */
     @NameInMap("ExecuteState")
     public String executeState;
 
+    /**
+     * <p>The maximum amount of time consumed by a slow query. Minimum value: 0. Unit: seconds.</p>
+     */
     @NameInMap("MaxExecuteCost")
     public String maxExecuteCost;
 
+    /**
+     * <p>The minimum amount of time consumed by a slow query. Minimum value: 0. Unit: seconds.</p>
+     */
     @NameInMap("MinExecuteCost")
     public String minExecuteCost;
 
+    /**
+     * <p>The type of the query language. Valid values:</p>
+     * <br>
+     * <p>*   **DQL**</p>
+     * <p>*   **DML**</p>
+     * <p>*   **DDL**</p>
+     * <p>*   **DCL**</p>
+     * <p>*   **TCL**</p>
+     */
     @NameInMap("OperationClass")
     public String operationClass;
 
+    /**
+     * <p>The type of the SQL statement.</p>
+     * <br>
+     * <p>> *   If the **OperationClass** parameter is specified, the **OperationType** value must belong to the corresponding query language. For example, if the **OperationClass** value is **DQL**, the **OperationType** value must be a **DQL** SQL statement such as **SELECT**.</p>
+     * <p>>*   If the **OperationClass** parameter is not specified, the **OperationType** value can be an SQL statement of all query languages.</p>
+     * <p>>*   If neither of the **OperationClass** and **OperationType** parameters is specified, all types of SQL statements are returned.</p>
+     */
     @NameInMap("OperationType")
     public String operationType;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The number of the page to return. The maximum value is 200.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The keywords of the SQL statement.</p>
+     */
     @NameInMap("QueryKeywords")
     public String queryKeywords;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     * <br>
+     * <p>>  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the instance belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The source IP address.</p>
+     */
     @NameInMap("SourceIP")
     public String sourceIP;
 
+    /**
+     * <p>The beginning of the time range. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mmZ* format. The time must be in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The name of the database account.</p>
+     */
     @NameInMap("User")
     public String user;
 

@@ -4,18 +4,39 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class AllocateInstancePublicConnectionRequest extends TeaModel {
+    /**
+     * <p>The network type of the endpoint. Valid values:</p>
+     * <br>
+     * <p>*   **primary**: primary endpoint</p>
+     * <p>*   **cluster**: instance endpoint. This value is supported only for an instance that contains multiple coordinator nodes.</p>
+     * <br>
+     * <p>>  The default value is primary.</p>
+     */
     @NameInMap("AddressType")
     public String addressType;
 
+    /**
+     * <p>The prefix of the endpoint.</p>
+     * <br>
+     * <p>Specify a prefix for the endpoint. Example: `gp-bp12ga6v69h86****`. In this example, the endpoint is `gp-bp12ga6v69h86****.gpdb.rds.aliyuncs.com`.</p>
+     */
     @NameInMap("ConnectionStringPrefix")
     public String connectionStringPrefix;
 
+    /**
+     * <p>The ID of the instance.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The port number. Example: 5432.</p>
+     */
     @NameInMap("Port")
     public String port;
 

@@ -4,18 +4,33 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataShareInstancesResponseBody extends TeaModel {
+    /**
+     * <p>Details of the instances.</p>
+     */
     @NameInMap("Items")
     public DescribeDataShareInstancesResponseBodyItems items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -65,21 +80,48 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeDataShareInstancesResponseBodyItemsDBInstance extends TeaModel {
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <p>The resource type of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **Serverless**: Serverless mode</p>
+         * <p>*   **StorageElasic**: elastic storage mode</p>
+         * <p>*   **Classic**: reserved storage mode</p>
+         */
         @NameInMap("DBInstanceMode")
         public String DBInstanceMode;
 
+        /**
+         * <p>The state of data sharing. Valid values:</p>
+         * <br>
+         * <p>*   **opening**: Data sharing is being enabled.</p>
+         * <p>*   **opened**: Data sharing is enabled.</p>
+         * <p>*   **closing**: Data sharing is being disabled.</p>
+         * <p>*   **closed**: Data sharing is disabled.</p>
+         */
         @NameInMap("DataShareStatus")
         public String dataShareStatus;
 
+        /**
+         * <p>The description of the instance.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The region ID of the instance.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The zone ID of the instance.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

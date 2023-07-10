@@ -10,9 +10,17 @@ public class DescribeRdsVpcsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region.</p>
+     * <br>
+     * <p>>  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the instance belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -25,6 +33,9 @@ public class DescribeRdsVpcsRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The ID of the zone.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

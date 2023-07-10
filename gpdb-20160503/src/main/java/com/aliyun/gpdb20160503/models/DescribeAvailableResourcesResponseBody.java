@@ -4,12 +4,21 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Details of the available resources.</p>
+     */
     @NameInMap("Resources")
     public java.util.List<DescribeAvailableResourcesResponseBodyResources> resources;
 
@@ -43,12 +52,23 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClassesNodeCount extends TeaModel {
+        /**
+         * <p>The maximum number of compute nodes.</p>
+         */
         @NameInMap("MaxCount")
         public String maxCount;
 
+        /**
+         * <p>The minimum number of compute nodes.</p>
+         */
         @NameInMap("MinCount")
         public String minCount;
 
+        /**
+         * <p>The step size for adding compute nodes.</p>
+         * <br>
+         * <p>For example, if the value of this parameter is 4, compute nodes must be added by multiples of 4.</p>
+         */
         @NameInMap("Step")
         public String step;
 
@@ -84,12 +104,21 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClassesStorageSize extends TeaModel {
+        /**
+         * <p>The maximum storage capacity of each compute node.</p>
+         */
         @NameInMap("MaxCount")
         public String maxCount;
 
+        /**
+         * <p>The minimum storage capacity of each compute node.</p>
+         */
         @NameInMap("MinCount")
         public String minCount;
 
+        /**
+         * <p>The step size for adding storage capacity for compute nodes.</p>
+         */
         @NameInMap("Step")
         public String step;
 
@@ -125,24 +154,52 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClasses extends TeaModel {
+        /**
+         * <p>The instance edition. Valid values:</p>
+         * <br>
+         * <p>*   **HighAvailability**: High-availability Edition</p>
+         * <p>*   **Basic**: Basic Edition</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The description of compute node specifications.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The specifications of each compute node.</p>
+         */
         @NameInMap("DisplayClass")
         public String displayClass;
 
+        /**
+         * <p>The specifications of each compute node.</p>
+         */
         @NameInMap("InstanceClass")
         public String instanceClass;
 
+        /**
+         * <p>Details about the compute nodes.</p>
+         */
         @NameInMap("NodeCount")
         public DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClassesNodeCount nodeCount;
 
+        /**
+         * <p>Details about the storage capacity of compute nodes.</p>
+         */
         @NameInMap("StorageSize")
         public DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClassesStorageSize storageSize;
 
+        /**
+         * <p>The storage type. Valid values:</p>
+         * <br>
+         * <p>*   **cloud_essd**: enhanced SSD (ESSD)</p>
+         * <p>*   **cloud_efficiency**: ultra disk</p>
+         * <p>*   **oss**: Object Storage Service (OSS)</p>
+         */
         @NameInMap("StorageType")
         public String storageType;
 
@@ -210,12 +267,24 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourcesResponseBodyResourcesSupportedEngines extends TeaModel {
+        /**
+         * <p>The instance resource type. Valid values:</p>
+         * <br>
+         * <p>*   **ecs**: elastic storage mode</p>
+         * <p>*   **serverless**: Serverless mode</p>
+         */
         @NameInMap("Mode")
         public String mode;
 
+        /**
+         * <p>The available engine version.</p>
+         */
         @NameInMap("SupportedEngineVersion")
         public String supportedEngineVersion;
 
+        /**
+         * <p>The available specifications.</p>
+         */
         @NameInMap("SupportedInstanceClasses")
         public java.util.List<DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClasses> supportedInstanceClasses;
 
@@ -251,9 +320,15 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourcesResponseBodyResources extends TeaModel {
+        /**
+         * <p>The available engine version and specifications.</p>
+         */
         @NameInMap("SupportedEngines")
         public java.util.List<DescribeAvailableResourcesResponseBodyResourcesSupportedEngines> supportedEngines;
 
+        /**
+         * <p>The ID of the zone.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

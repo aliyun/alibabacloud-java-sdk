@@ -4,12 +4,21 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
+    /**
+     * <p>The name of the database.</p>
+     */
     @NameInMap("Databases")
     public java.util.List<String> databases;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The name of the database account.</p>
+     */
     @NameInMap("UserNames")
     public java.util.List<String> userNames;
 

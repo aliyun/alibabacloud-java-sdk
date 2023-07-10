@@ -4,21 +4,39 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
+    /**
+     * <p>Details of instance nodes.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeDBInstanceDiagnosisSummaryResponseBodyItems> items;
 
+    /**
+     * <p>State statistics of the coordinator node.</p>
+     */
     @NameInMap("MasterStatusInfo")
     public DescribeDBInstanceDiagnosisSummaryResponseBodyMasterStatusInfo masterStatusInfo;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>State statistics of compute nodes.</p>
+     */
     @NameInMap("SegmentStatusInfo")
     public DescribeDBInstanceDiagnosisSummaryResponseBodySegmentStatusInfo segmentStatusInfo;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -76,36 +94,88 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceDiagnosisSummaryResponseBodyItems extends TeaModel {
+        /**
+         * <p>The name of the node.</p>
+         */
         @NameInMap("Hostname")
         public String hostname;
 
+        /**
+         * <p>The IP address of the node.</p>
+         */
         @NameInMap("NodeAddress")
         public String nodeAddress;
 
+        /**
+         * <p>The ID of the node group.</p>
+         */
         @NameInMap("NodeCID")
         public String nodeCID;
 
+        /**
+         * <p>The ID of the node.</p>
+         */
         @NameInMap("NodeID")
         public String nodeID;
 
+        /**
+         * <p>The name of the host where the node resides.</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <p>The port number of the node.</p>
+         */
         @NameInMap("NodePort")
         public String nodePort;
 
+        /**
+         * <p>The initial role of the node. Valid values:</p>
+         * <br>
+         * <p>*   **primary**: primary node</p>
+         * <p>*   **mirror**: secondary node</p>
+         * <br>
+         * <p>If the value of this parameter is the same as that of **NodeRole**, no primary/secondary switchover occurs. If the value of this parameter is not the same as that of **NodeRole**, a primary/secondary switchover occurs.</p>
+         */
         @NameInMap("NodePreferredRole")
         public String nodePreferredRole;
 
+        /**
+         * <p>The data synchronization state of the node. Valid values:</p>
+         * <br>
+         * <p>*   **Synced**: The node data is synchronized.</p>
+         * <p>*   **Not Syncing**: The node data is not synchronized.</p>
+         * <p>*   **No sync required**: Data synchronization is not required. This value may be returned only for the coordinator node.</p>
+         */
         @NameInMap("NodeReplicationMode")
         public String nodeReplicationMode;
 
+        /**
+         * <p>The current role of the node. Valid values:</p>
+         * <br>
+         * <p>*   **primary**: primary node</p>
+         * <p>*   **mirror**: secondary node</p>
+         */
         @NameInMap("NodeRole")
         public String nodeRole;
 
+        /**
+         * <p>The running state of the node. Valid values:</p>
+         * <br>
+         * <p>*   **UP**: The node is running.</p>
+         * <p>*   **DOWN**: The node is faulty.</p>
+         */
         @NameInMap("NodeStatus")
         public String nodeStatus;
 
+        /**
+         * <p>The type of the node. Valid values:</p>
+         * <br>
+         * <p>*   **master**: primary coordinator node</p>
+         * <p>*   **slave**: standby coordinator node</p>
+         * <p>*   **segment**: compute node</p>
+         */
         @NameInMap("NodeType")
         public String nodeType;
 
@@ -205,21 +275,39 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceDiagnosisSummaryResponseBodyMasterStatusInfo extends TeaModel {
+        /**
+         * <p>The number of abnormal nodes.</p>
+         */
         @NameInMap("ExceptionNodeNum")
         public Integer exceptionNodeNum;
 
+        /**
+         * <p>The number of normal nodes.</p>
+         */
         @NameInMap("NormalNodeNum")
         public Integer normalNodeNum;
 
+        /**
+         * <p>The number of nodes whose roles are reversed.</p>
+         */
         @NameInMap("NotPreferredNodeNum")
         public Integer notPreferredNodeNum;
 
+        /**
+         * <p>The number of unsynchronized nodes.</p>
+         */
         @NameInMap("NotSyncingNodeNum")
         public Integer notSyncingNodeNum;
 
+        /**
+         * <p>The number of nodes whose roles are normal.</p>
+         */
         @NameInMap("PreferredNodeNum")
         public Integer preferredNodeNum;
 
+        /**
+         * <p>The number of synchronized nodes.</p>
+         */
         @NameInMap("SyncedNodeNum")
         public Integer syncedNodeNum;
 
@@ -279,21 +367,39 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceDiagnosisSummaryResponseBodySegmentStatusInfo extends TeaModel {
+        /**
+         * <p>The number of abnormal nodes.</p>
+         */
         @NameInMap("ExceptionNodeNum")
         public Integer exceptionNodeNum;
 
+        /**
+         * <p>The number of normal nodes.</p>
+         */
         @NameInMap("NormalNodeNum")
         public Integer normalNodeNum;
 
+        /**
+         * <p>The number of nodes whose roles are reversed.</p>
+         */
         @NameInMap("NotPreferredNodeNum")
         public Integer notPreferredNodeNum;
 
+        /**
+         * <p>The number of unsynchronized nodes.</p>
+         */
         @NameInMap("NotSyncingNodeNum")
         public Integer notSyncingNodeNum;
 
+        /**
+         * <p>The number of nodes whose roles are normal.</p>
+         */
         @NameInMap("PreferredNodeNum")
         public Integer preferredNodeNum;
 
+        /**
+         * <p>The number of synchronized nodes.</p>
+         */
         @NameInMap("SyncedNodeNum")
         public Integer syncedNodeNum;
 

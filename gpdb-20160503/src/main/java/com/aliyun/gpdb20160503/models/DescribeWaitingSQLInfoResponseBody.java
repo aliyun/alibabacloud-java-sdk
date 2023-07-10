@@ -4,12 +4,21 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeWaitingSQLInfoResponseBody extends TeaModel {
+    /**
+     * <p>The name of the database.</p>
+     */
     @NameInMap("Database")
     public String database;
 
+    /**
+     * <p>Details of the lock-waiting query.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeWaitingSQLInfoResponseBodyItems> items;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,33 +52,63 @@ public class DescribeWaitingSQLInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeWaitingSQLInfoResponseBodyItems extends TeaModel {
+        /**
+         * <p>The application that sent the query.</p>
+         */
         @NameInMap("Application")
         public String application;
 
+        /**
+         * <p>The application that sent the blocking query.</p>
+         */
         @NameInMap("BlockedByApplication")
         public String blockedByApplication;
 
+        /**
+         * <p>The process ID of the blocking query.</p>
+         */
         @NameInMap("BlockedByPID")
         public String blockedByPID;
 
+        /**
+         * <p>The SQL statement of the blocking query.</p>
+         */
         @NameInMap("BlockedBySQLStmt")
         public String blockedBySQLStmt;
 
+        /**
+         * <p>The database account that is used to perform the blocking query.</p>
+         */
         @NameInMap("BlockedByUser")
         public String blockedByUser;
 
+        /**
+         * <p>The authorized locks.</p>
+         */
         @NameInMap("GrantLocks")
         public String grantLocks;
 
+        /**
+         * <p>The unauthorized locks.</p>
+         */
         @NameInMap("NotGrantLocks")
         public String notGrantLocks;
 
+        /**
+         * <p>The ID of the process that uniquely identifies the query.</p>
+         */
         @NameInMap("PID")
         public String PID;
 
+        /**
+         * <p>The SQL statement of the query.</p>
+         */
         @NameInMap("SQLStmt")
         public String SQLStmt;
 
+        /**
+         * <p>The database account that is used to perform the query.</p>
+         */
         @NameInMap("User")
         public String user;
 

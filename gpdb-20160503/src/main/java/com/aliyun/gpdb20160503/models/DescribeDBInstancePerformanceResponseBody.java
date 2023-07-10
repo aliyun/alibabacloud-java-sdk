@@ -4,21 +4,39 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The end time of the query.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The database engine of the instance.</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <p>Details of the performance metrics. Format: {perf1, perf2, perf3, …}.</p>
+     */
     @NameInMap("PerformanceKeys")
     public java.util.List<String> performanceKeys;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The start time of the query.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

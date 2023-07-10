@@ -4,9 +4,15 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeRdsVpcsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Details of the VPCs.</p>
+     */
     @NameInMap("Vpcs")
     public DescribeRdsVpcsResponseBodyVpcs vpcs;
 
@@ -32,28 +38,54 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
     }
 
     public static class DescribeRdsVpcsResponseBodyVpcsVpcVSwitchs extends TeaModel {
+        /**
+         * <p>The CIDR block of the vSwitch.</p>
+         */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
+        /**
+         * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>Indicates whether the vSwitch is the default vSwitch. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
+        /**
+         * <p>The ID of the zone to which the vSwitch belongs.</p>
+         */
         @NameInMap("IzNo")
         public String izNo;
 
+        /**
+         * <p>The state of the vSwitch. If **Available** is returned, the vSwitch is available.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // vSwitch ID。
+        /**
+         * <p>The ID of the vSwitch.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The name of the vSwitch.</p>
+         */
         @NameInMap("VSwitchName")
         public String vSwitchName;
 
@@ -129,37 +161,72 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
     }
 
     public static class DescribeRdsVpcsResponseBodyVpcsVpc extends TeaModel {
+        /**
+         * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+         */
         @NameInMap("AliUid")
         public String aliUid;
 
+        /**
+         * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+         */
         @NameInMap("Bid")
         public String bid;
 
+        /**
+         * <p>The CIDR block of the VPC.</p>
+         */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
+        /**
+         * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>Indicates whether the VPC is the default VPC. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionNo")
         public String regionNo;
 
+        /**
+         * <p>The state of the VPC. If **Available** is returned, the VPC is available.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>Details of the vSwitches.</p>
+         */
         @NameInMap("VSwitchs")
         public java.util.List<DescribeRdsVpcsResponseBodyVpcsVpcVSwitchs> vSwitchs;
 
-        // VPC ID。
+        /**
+         * <p>The ID of VPC.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The name of the VPC.</p>
+         */
         @NameInMap("VpcName")
         public String vpcName;
 
@@ -259,6 +326,9 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
     }
 
     public static class DescribeRdsVpcsResponseBodyVpcs extends TeaModel {
+        /**
+         * <p>Details of the VPC.</p>
+         */
         @NameInMap("Vpc")
         public java.util.List<DescribeRdsVpcsResponseBodyVpcsVpc> vpc;
 

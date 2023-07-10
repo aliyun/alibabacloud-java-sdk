@@ -4,15 +4,27 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
+    /**
+     * <p>Details of SQL queries.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeDiagnosisRecordsResponseBodyItems> items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -54,33 +66,69 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeDiagnosisRecordsResponseBodyItems extends TeaModel {
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("Database")
         public String database;
 
+        /**
+         * <p>The execution duration of the query. Unit: seconds.</p>
+         */
         @NameInMap("Duration")
         public Integer duration;
 
+        /**
+         * <p>The ID of the query. It is a unique identifier of the query.</p>
+         */
         @NameInMap("QueryID")
         public String queryID;
 
+        /**
+         * <p>The SQL statement.</p>
+         */
         @NameInMap("SQLStmt")
         public String SQLStmt;
 
+        /**
+         * <p>Indicates whether the SQL statement needs to be truncated. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The SQL statement needs to be truncated.</p>
+         * <p>*   **false**: The SQL statement does not need to be truncated.</p>
+         */
         @NameInMap("SQLTruncated")
         public Boolean SQLTruncated;
 
+        /**
+         * <p>The threshold used to determine whether an SQL statement must be truncated. The value is the number of characters.</p>
+         */
         @NameInMap("SQLTruncatedThreshold")
         public Integer SQLTruncatedThreshold;
 
+        /**
+         * <p>The ID of the session that contains the query.</p>
+         */
         @NameInMap("SessionID")
         public String sessionID;
 
+        /**
+         * <p>The start time of the query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>The execution state of the query. Valid values:</p>
+         * <br>
+         * <p>*   **running**: The query is being executed.</p>
+         * <p>*   **finished**: The query is complete.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The name of the database account.</p>
+         */
         @NameInMap("User")
         public String user;
 

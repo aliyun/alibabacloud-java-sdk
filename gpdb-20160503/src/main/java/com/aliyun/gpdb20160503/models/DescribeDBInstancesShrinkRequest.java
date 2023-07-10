@@ -4,42 +4,101 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancesShrinkRequest extends TeaModel {
+    /**
+     * <p>The edition of the instance. Separate multiple values with commas (,). Valid values:</p>
+     * <br>
+     * <p>*   **basic**: Basic Edition</p>
+     * <p>*   **highavailability**: High-availability Edition</p>
+     * <p>*   **finance**: Enterprise Edition</p>
+     */
     @NameInMap("DBInstanceCategories")
     public String DBInstanceCategoriesShrink;
 
+    /**
+     * <p>The description of the instance.</p>
+     */
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
 
+    /**
+     * <p>The ID of the instance. Separate multiple IDs with commas (,).</p>
+     */
     @NameInMap("DBInstanceIds")
     public String DBInstanceIds;
 
+    /**
+     * <p>The resource type of the instance. Separate multiple values with commas (,). Valid values:</p>
+     * <br>
+     * <p>*   **serverless**: Serverless mode</p>
+     * <p>*   **storageelastic**: elastic storage mode</p>
+     * <p>*   **classic**: reserved storage mode</p>
+     */
     @NameInMap("DBInstanceModes")
     public String DBInstanceModesShrink;
 
+    /**
+     * <p>The state of the instance. Separate multiple values with commas (,). For more information, see [Instance statuses](~~86944~~).</p>
+     * <br>
+     * <p>>  The value of this parameter must be in lowercase.</p>
+     */
     @NameInMap("DBInstanceStatuses")
     public String DBInstanceStatusesShrink;
 
+    /**
+     * <p>This parameter is no longer used.</p>
+     */
     @NameInMap("InstanceDeployTypes")
     public String instanceDeployTypesShrink;
 
+    /**
+     * <p>The network type of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **VPC**</p>
+     * <p>*   **Classic**</p>
+     * <br>
+     * <p>>  If you do not specify this parameter, instances of both network types are returned.</p>
+     */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values:</p>
+     * <br>
+     * <p>*   **30**</p>
+     * <p>*   **50**</p>
+     * <p>*   **100**</p>
+     * <br>
+     * <p>Default value: **30**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     * <br>
+     * <p>>  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the instance belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The list of tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeDBInstancesShrinkRequestTag> tag;
 
@@ -153,9 +212,15 @@ public class DescribeDBInstancesShrinkRequest extends TeaModel {
     }
 
     public static class DescribeDBInstancesShrinkRequestTag extends TeaModel {
+        /**
+         * <p>The key of tag N.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N.</p>
+         */
         @NameInMap("Value")
         public String value;
 

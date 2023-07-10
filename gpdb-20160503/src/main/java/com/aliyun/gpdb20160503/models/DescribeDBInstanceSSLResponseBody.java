@@ -4,21 +4,39 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceSSLResponseBody extends TeaModel {
+    /**
+     * <p>The name of the SSL certificate.</p>
+     */
     @NameInMap("CertCommonName")
     public String certCommonName;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The name of the instance.</p>
+     */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether SSL encryption is enabled.</p>
+     */
     @NameInMap("SSLEnabled")
     public Boolean SSLEnabled;
 
+    /**
+     * <p>The expiration time of the SSL certificate.</p>
+     */
     @NameInMap("SSLExpiredTime")
     public String SSLExpiredTime;
 

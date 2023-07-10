@@ -4,21 +4,39 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogBackupsResponseBody extends TeaModel {
+    /**
+     * <p>Details of the backup sets.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeLogBackupsResponseBodyItems> items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of backup sets on the current page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The total size of logs in the time range. Unit: bytes.</p>
+     */
     @NameInMap("TotalLogSize")
     public Long totalLogSize;
 
@@ -76,21 +94,39 @@ public class DescribeLogBackupsResponseBody extends TeaModel {
     }
 
     public static class DescribeLogBackupsResponseBodyItems extends TeaModel {
+        /**
+         * <p>The ID of the backup set.</p>
+         */
         @NameInMap("BackupId")
         public String backupId;
 
+        /**
+         * <p>The ID of the coordinator node.</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <p>The name of the log backup set that is stored in Object Storage Service (OSS).</p>
+         */
         @NameInMap("LogFileName")
         public String logFileName;
 
+        /**
+         * <p>The size of the log backup set. Unit: bytes.</p>
+         */
         @NameInMap("LogFileSize")
         public Long logFileSize;
 
+        /**
+         * <p>The timestamp of the log.</p>
+         */
         @NameInMap("LogTime")
         public String logTime;
 
+        /**
+         * <p>The name of the compute node.</p>
+         */
         @NameInMap("SegmentName")
         public String segmentName;
 

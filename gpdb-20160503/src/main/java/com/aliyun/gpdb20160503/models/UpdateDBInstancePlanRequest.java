@@ -4,27 +4,56 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class UpdateDBInstancePlanRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The execution information of the plan. Specify the parameter in the JSON format. The parameter value varies based on the values of **PlanType** and **PlanScheduleType**. The following section describes the PlanConfig parameter.</p>
+     */
     @NameInMap("PlanConfig")
     public String planConfig;
 
+    /**
+     * <p>The description of the plan.</p>
+     */
     @NameInMap("PlanDesc")
     public String planDesc;
 
+    /**
+     * <p>The end time of the plan. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC. The end time must be later than the start time.</p>
+     * <br>
+     * <p>>  This parameter is required only for **periodically executed** plans.</p>
+     */
     @NameInMap("PlanEndDate")
     public String planEndDate;
 
+    /**
+     * <p>The ID of the plan.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBInstancePlans](~~449398~~) operation to query the details of plans, including plan IDs.</p>
+     */
     @NameInMap("PlanId")
     public String planId;
 
+    /**
+     * <p>The name of the plan.</p>
+     */
     @NameInMap("PlanName")
     public String planName;
 
+    /**
+     * <p>The start time of the plan. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.</p>
+     * <br>
+     * <p>>  This parameter is required only for **periodically executed** plans.</p>
+     */
     @NameInMap("PlanStartDate")
     public String planStartDate;
 

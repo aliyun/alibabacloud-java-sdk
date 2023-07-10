@@ -4,18 +4,33 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeSQLLogCountResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The end time of the query.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>Details of the audit logs of the instance.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeSQLLogCountResponseBodyItems> items;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The start time of the query.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -65,6 +80,9 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
     }
 
     public static class DescribeSQLLogCountResponseBodyItemsSeriesValues extends TeaModel {
+        /**
+         * <p>The time when the audit logs were generated and the number of the audit logs.</p>
+         */
         @NameInMap("Point")
         public java.util.List<String> point;
 
@@ -84,6 +102,9 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
     }
 
     public static class DescribeSQLLogCountResponseBodyItemsSeries extends TeaModel {
+        /**
+         * <p>Details of the audit logs.</p>
+         */
         @NameInMap("Values")
         public java.util.List<DescribeSQLLogCountResponseBodyItemsSeriesValues> values;
 
@@ -103,9 +124,15 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
     }
 
     public static class DescribeSQLLogCountResponseBodyItems extends TeaModel {
+        /**
+         * <p>The name of the table.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Details of the audit logs.</p>
+         */
         @NameInMap("Series")
         public java.util.List<DescribeSQLLogCountResponseBodyItemsSeries> series;
 
