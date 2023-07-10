@@ -4,9 +4,15 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeModifyParameterLogResponseBody extends TeaModel {
+    /**
+     * <p>Details about the parameter reconfiguration logs.</p>
+     */
     @NameInMap("Changelogs")
     public java.util.List<DescribeModifyParameterLogResponseBodyChangelogs> changelogs;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +38,33 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
     }
 
     public static class DescribeModifyParameterLogResponseBodyChangelogs extends TeaModel {
+        /**
+         * <p>The time when the configuration change takes effect.</p>
+         */
         @NameInMap("EffectTime")
         public String effectTime;
 
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("ParameterName")
         public String parameterName;
 
+        /**
+         * <p>Indicates whether the configuration change takes effect.</p>
+         */
         @NameInMap("ParameterValid")
         public String parameterValid;
 
+        /**
+         * <p>The original value of the parameter.</p>
+         */
         @NameInMap("ParameterValueAfter")
         public String parameterValueAfter;
 
+        /**
+         * <p>The new value of the parameter.</p>
+         */
         @NameInMap("ParameterValueBefore")
         public String parameterValueBefore;
 

@@ -4,9 +4,15 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
+    /**
+     * <p>Details about the KMS keys.</p>
+     */
     @NameInMap("KmsKeys")
     public java.util.List<DescribeUserEncryptionKeyListResponseBodyKmsKeys> kmsKeys;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +38,9 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
     }
 
     public static class DescribeUserEncryptionKeyListResponseBodyKmsKeys extends TeaModel {
+        /**
+         * <p>The ID of the KMS key.</p>
+         */
         @NameInMap("KeyId")
         public String keyId;
 

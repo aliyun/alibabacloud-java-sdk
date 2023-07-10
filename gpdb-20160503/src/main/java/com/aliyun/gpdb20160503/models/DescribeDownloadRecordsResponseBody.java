@@ -4,9 +4,15 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDownloadRecordsResponseBody extends TeaModel {
+    /**
+     * <p>Details of the download records.</p>
+     */
     @NameInMap("Records")
     public java.util.List<DescribeDownloadRecordsResponseBodyRecords> records;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +38,37 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeDownloadRecordsResponseBodyRecords extends TeaModel {
+        /**
+         * <p>The ID of the download record.</p>
+         */
         @NameInMap("DownloadId")
         public Long downloadId;
 
+        /**
+         * <p>The URL that can be used to download the file.</p>
+         */
         @NameInMap("DownloadUrl")
         public String downloadUrl;
 
+        /**
+         * <p>The error message returned.</p>
+         */
         @NameInMap("ExceptionMsg")
         public String exceptionMsg;
 
+        /**
+         * <p>The name of the file.</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <p>The state of the upload task. After you call the DownloadDiagnosisRecords operation, query diagnostic information is first uploaded to Object Storage Service (OSS). After the upload task is complete, the query diagnostic information can be downloaded. Valid values:</p>
+         * <br>
+         * <p>*   **running**: uploading</p>
+         * <p>*   **finished**: uploaded</p>
+         * <p>*   **failed**: failed</p>
+         */
         @NameInMap("Status")
         public String status;
 

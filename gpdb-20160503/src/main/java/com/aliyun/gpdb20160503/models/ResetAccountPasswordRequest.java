@@ -4,12 +4,24 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class ResetAccountPasswordRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <p>The name of the account.</p>
+     */
     @NameInMap("AccountPassword")
     public String accountPassword;
 
+    /**
+     * <p>Before you call this operation, make sure that the following requirements are met:</p>
+     * <br>
+     * <p>*   The instance is in the running state.</p>
+     * <p>*   The instance is not locked.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 

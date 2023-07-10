@@ -4,15 +4,30 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeSampleDataResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The error message returned if an error occurs. This message does not affect the execution of the operation.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>Indicates whether a sample dataset is loaded to the instance. Valid values:</p>
+     * <br>
+     * <p>*   **true**: A sample dataset is loaded.</p>
+     * <p>*   **false**: No sample dataset is loaded.</p>
+     */
     @NameInMap("HasSampleData")
     public Boolean hasSampleData;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

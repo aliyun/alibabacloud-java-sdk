@@ -4,9 +4,15 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
+    /**
+     * <p>Details of the IP address whitelists.</p>
+     */
     @NameInMap("Items")
     public DescribeDBInstanceIPArrayListResponseBodyItems items;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,25 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceIPArrayListResponseBodyItemsDBInstanceIPArray extends TeaModel {
+        /**
+         * <p>The attribute of the IP address whitelist. By default, this parameter is empty. A whitelist with the `hidden` attribute does not appear in the console.</p>
+         */
         @NameInMap("DBInstanceIPArrayAttribute")
         public String DBInstanceIPArrayAttribute;
 
+        /**
+         * <p>The name of the IP address whitelist.</p>
+         */
         @NameInMap("DBInstanceIPArrayName")
         public String DBInstanceIPArrayName;
 
+        /**
+         * <p>The IP addresses listed in the whitelist. You can add up to 1,000 IP addresses to the whitelist. Separate multiple IP addresses with commas (,). The IP addresses must use one of the following formats:</p>
+         * <br>
+         * <p>*   0.0.0.0/0</p>
+         * <p>*   10.23.12.24. This is a standard IP address.</p>
+         * <p>*   10.23.12.24/24. This is a CIDR block. The value `/24` indicates that the prefix of the CIDR block is 24-bit long. You can replace 24 with a value in the range of `1 to 32`.</p>
+         */
         @NameInMap("SecurityIPList")
         public String securityIPList;
 

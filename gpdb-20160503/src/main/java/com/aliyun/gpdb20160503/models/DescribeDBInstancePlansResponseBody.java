@@ -4,24 +4,49 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancePlansResponseBody extends TeaModel {
+    /**
+     * <p>The error message returned.</p>
+     * <br>
+     * <p>This parameter is returned only when the operation fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>Details of the plans.</p>
+     */
     @NameInMap("Items")
     public DescribeDBInstancePlansResponseBodyItems items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned on the current page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The state of the operation.</p>
+     * <br>
+     * <p>If the operation is successful, **success** is returned. If the operation fails, this parameter is not returned.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The total number of entries.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -87,33 +112,78 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancePlansResponseBodyItemsPlanList extends TeaModel {
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <p>The execution information of the plan.</p>
+         */
         @NameInMap("PlanConfig")
         public String planConfig;
 
+        /**
+         * <p>The description of the plan.</p>
+         */
         @NameInMap("PlanDesc")
         public String planDesc;
 
+        /**
+         * <p>The end time of the plan. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.</p>
+         * <br>
+         * <p>>  This parameter is returned only for periodically executed plans.</p>
+         */
         @NameInMap("PlanEndDate")
         public String planEndDate;
 
+        /**
+         * <p>The ID of the plan.</p>
+         */
         @NameInMap("PlanId")
         public String planId;
 
+        /**
+         * <p>The name of the plan.</p>
+         */
         @NameInMap("PlanName")
         public String planName;
 
+        /**
+         * <p>The execution mode of the plan. Valid values:</p>
+         * <br>
+         * <p>*   **Postpone**: The plan is executed later.</p>
+         * <p>*   **Regular**: The plan is executed periodically.</p>
+         */
         @NameInMap("PlanScheduleType")
         public String planScheduleType;
 
+        /**
+         * <p>The start time of the plan. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.</p>
+         * <br>
+         * <p>>  This parameter is returned only for periodically executed plans.</p>
+         */
         @NameInMap("PlanStartDate")
         public String planStartDate;
 
+        /**
+         * <p>The state of the plan. Valid values:</p>
+         * <br>
+         * <p>*   **active**: The plan is running.</p>
+         * <p>*   **cancel**: The plan is canceled.</p>
+         * <p>*   **deleted**: The plan is deleted.</p>
+         * <p>*   **finished**: The plan execution is complete.</p>
+         */
         @NameInMap("PlanStatus")
         public String planStatus;
 
+        /**
+         * <p>The type of the plan. Valid values:</p>
+         * <br>
+         * <p>*   **PauseResume**: pauses and resumes an instance.</p>
+         * <p>*   **Resize**: scales an instance.</p>
+         */
         @NameInMap("PlanType")
         public String planType;
 

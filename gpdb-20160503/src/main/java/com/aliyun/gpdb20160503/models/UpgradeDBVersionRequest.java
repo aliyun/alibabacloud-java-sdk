@@ -4,24 +4,42 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class UpgradeDBVersionRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The major version of the instance.</p>
+     */
     @NameInMap("MajorVersion")
     public String majorVersion;
 
+    /**
+     * <p>The minor version of the instance.</p>
+     */
     @NameInMap("MinorVersion")
     public String minorVersion;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The upgrade time.</p>
+     */
     @NameInMap("SwitchTime")
     public String switchTime;
 
+    /**
+     * <p>The upgrade method.</p>
+     */
     @NameInMap("SwitchTimeMode")
     public String switchTimeMode;
 

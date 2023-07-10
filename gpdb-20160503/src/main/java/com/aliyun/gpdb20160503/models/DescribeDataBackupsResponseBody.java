@@ -4,18 +4,33 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataBackupsResponseBody extends TeaModel {
+    /**
+     * <p>Details about the backup sets.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeDataBackupsResponseBodyItems> items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of backup sets on the page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,39 +80,93 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
     }
 
     public static class DescribeDataBackupsResponseBodyItems extends TeaModel {
+        /**
+         * <p>The UTC time when the backup ended. The time is in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("BackupEndTime")
         public String backupEndTime;
 
+        /**
+         * <p>The local time when the backup ended. The time is in the yyyy-MM-dd HH:mm:ss format. The time is your local time.</p>
+         */
         @NameInMap("BackupEndTimeLocal")
         public String backupEndTimeLocal;
 
+        /**
+         * <p>The backup mode.</p>
+         * <br>
+         * <p>Valid values for full backup:</p>
+         * <br>
+         * <p>*   Automated: automatic backup</p>
+         * <p>*   Manual: manual backup</p>
+         * <br>
+         * <p>Valid values for point-in-time backup:</p>
+         * <br>
+         * <p>*   Automated: point-in-time backup after full backup</p>
+         * <p>*   Manual: manual point-in-time backup</p>
+         * <p>*   Period: point-in-time backup that is triggered by a backup policy</p>
+         */
         @NameInMap("BackupMode")
         public String backupMode;
 
+        /**
+         * <p>The ID of the backup set.</p>
+         */
         @NameInMap("BackupSetId")
         public String backupSetId;
 
+        /**
+         * <p>The size of the backup file. Unit: bytes.</p>
+         */
         @NameInMap("BackupSize")
         public Long backupSize;
 
+        /**
+         * <p>The UTC time when the backup started. The time is in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("BackupStartTime")
         public String backupStartTime;
 
+        /**
+         * <p>The local time when the backup started. The time is in the yyyy-MM-dd HH:mm:ss format. The time is your local time.</p>
+         */
         @NameInMap("BackupStartTimeLocal")
         public String backupStartTimeLocal;
 
+        /**
+         * <p>The status of the backup set. Valid values:</p>
+         * <br>
+         * <p>*   Success</p>
+         * <p>*   Failure</p>
+         */
         @NameInMap("BackupStatus")
         public String backupStatus;
 
+        /**
+         * <p>The name of a point-in-time backup set or the full backup set.</p>
+         */
         @NameInMap("BaksetName")
         public String baksetName;
 
+        /**
+         * <p>*   For full backup, this parameter indicates the point in time at which the data in the data backup file is consistent.</p>
+         * <p>*   For point-in-time backup, this parameter indicates that the returned point in time is a timestamp.</p>
+         */
         @NameInMap("ConsistentTime")
         public Long consistentTime;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <p>The type of the backup. Valid values:</p>
+         * <br>
+         * <p>*   DATA: full backup</p>
+         * <p>*   RESTOREPOI: point-in-time backup</p>
+         */
         @NameInMap("DataType")
         public String dataType;
 

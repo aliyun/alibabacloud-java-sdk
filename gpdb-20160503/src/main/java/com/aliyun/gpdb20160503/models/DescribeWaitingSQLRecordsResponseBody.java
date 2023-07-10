@@ -4,15 +4,27 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeWaitingSQLRecordsResponseBody extends TeaModel {
+    /**
+     * <p>The list of lock diagnostics records.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeWaitingSQLRecordsResponseBodyItems> items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -54,27 +66,54 @@ public class DescribeWaitingSQLRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeWaitingSQLRecordsResponseBodyItems extends TeaModel {
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("Database")
         public String database;
 
+        /**
+         * <p>The ID of the process that uniquely identifies the query.</p>
+         */
         @NameInMap("PID")
         public String PID;
 
+        /**
+         * <p>The SQL statement of the query.</p>
+         */
         @NameInMap("SQLStmt")
         public String SQLStmt;
 
+        /**
+         * <p>The ID of the session that contains the query.</p>
+         */
         @NameInMap("SessionID")
         public String sessionID;
 
+        /**
+         * <p>The start time of the query. This value is in the timestamp format. Unit: milliseconds.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>The waiting state of the query. Valid values:</p>
+         * <br>
+         * <p>*   **LockWaiting**</p>
+         * <p>*   **ResourceWaiting**</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The database account that is used to perform the query.</p>
+         */
         @NameInMap("User")
         public String user;
 
+        /**
+         * <p>The waiting period of the query. Unit: milliseconds.</p>
+         */
         @NameInMap("WaitingTime")
         public Long waitingTime;
 

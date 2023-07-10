@@ -4,15 +4,27 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceErrorLogResponseBody extends TeaModel {
+    /**
+     * <p>Details of the error logs.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeDBInstanceErrorLogResponseBodyItems> items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -54,21 +66,39 @@ public class DescribeDBInstanceErrorLogResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceErrorLogResponseBodyItems extends TeaModel {
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("Database")
         public String database;
 
+        /**
+         * <p>This parameter is not supported.</p>
+         */
         @NameInMap("Host")
         public String host;
 
+        /**
+         * <p>The content of the error log.</p>
+         */
         @NameInMap("LogContext")
         public String logContext;
 
+        /**
+         * <p>The level of the queried log.</p>
+         */
         @NameInMap("LogLevel")
         public String logLevel;
 
+        /**
+         * <p>The time when the log was generated. The time is displayed in UTC.</p>
+         */
         @NameInMap("Time")
         public Long time;
 
+        /**
+         * <p>The name of the database account.</p>
+         */
         @NameInMap("User")
         public String user;
 

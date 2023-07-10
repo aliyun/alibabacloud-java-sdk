@@ -4,18 +4,33 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancesResponseBody extends TeaModel {
+    /**
+     * <p>Details of the instance.</p>
+     */
     @NameInMap("Items")
     public DescribeDBInstancesResponseBodyItems items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned on the current page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -65,9 +80,15 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancesResponseBodyItemsDBInstanceTagsTag extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -114,86 +135,207 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancesResponseBodyItemsDBInstance extends TeaModel {
+        /**
+         * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+         * <br>
+         * <p>You can call the [DescribeDBInstanceAttribute](~~86910~~) operation to query the access mode of an instance.</p>
+         */
         @NameInMap("ConnectionMode")
         public String connectionMode;
 
+        /**
+         * <p>The time when the instance was created. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The edition of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **Basic**: Basic Edition</p>
+         * <p>*   **HighAvailability**: High-availability Edition</p>
+         * <p>*   **Finance**: Enterprise Edition</p>
+         */
         @NameInMap("DBInstanceCategory")
         public String DBInstanceCategory;
 
+        /**
+         * <p>The description of the instance.</p>
+         */
         @NameInMap("DBInstanceDescription")
         public String DBInstanceDescription;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <p>The resource type of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **Serverless**: Serverless mode</p>
+         * <p>*   **StorageElastic**: elastic storage mode</p>
+         * <p>*   **Classic**: reserved storage mode</p>
+         */
         @NameInMap("DBInstanceMode")
         public String DBInstanceMode;
 
+        /**
+         * <p>The type of the network interface card (NIC) that is used by the instance. Valid values:</p>
+         * <br>
+         * <p>*   **0**: Internet</p>
+         * <p>*   **1**: internal network</p>
+         * <p>*   **2**: VPC</p>
+         */
         @NameInMap("DBInstanceNetType")
         public String DBInstanceNetType;
 
+        /**
+         * <p>The state of the instance. For more information, see [Instance statuses](~~86944~~).</p>
+         */
         @NameInMap("DBInstanceStatus")
         public String DBInstanceStatus;
 
+        /**
+         * <p>The database engine that the instance runs.</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <p>The version of the database engine.</p>
+         */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
+        /**
+         * <p>The expiration time of the instance. The time is displayed in UTC.</p>
+         * <br>
+         * <p>>  For pay-as-you-go instances, `2999-09-08T16:00:00Z` is returned.</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <p>The resource type of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **cluster**: elastic storage mode or Serverless mode</p>
+         * <p>*   **replicaSet**: reserved storage mode</p>
+         */
         @NameInMap("InstanceDeployType")
         public String instanceDeployType;
 
+        /**
+         * <p>The network type of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **Classic**</p>
+         * <p>*   **VPC**</p>
+         */
         @NameInMap("InstanceNetworkType")
         public String instanceNetworkType;
 
+        /**
+         * <p>The lock mode of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **Unlock**: The instance is not locked.</p>
+         * <p>*   **ManualLock**: The instance is manually locked.</p>
+         * <p>*   **LockByExpiration**: The instance is automatically locked due to instance expiration.</p>
+         * <p>*   **LockByRestoration**: The instance is automatically locked due to instance restoration.</p>
+         * <p>*   **LockByDiskQuota**: The instance is automatically locked due to exhausted storage.</p>
+         * <p>*   **LockReadInstanceByDiskQuota**: The instance is a read-only instance and is automatically locked due to exhausted storage.</p>
+         */
         @NameInMap("LockMode")
         public String lockMode;
 
+        /**
+         * <p>The reason why the cluster is locked.</p>
+         * <br>
+         * <p>>  This parameter is returned only when the cluster is locked. The value is **instance_expire**.</p>
+         */
         @NameInMap("LockReason")
         public String lockReason;
 
+        /**
+         * <p>The number of coordinator nodes.</p>
+         */
         @NameInMap("MasterNodeNum")
         public Integer masterNodeNum;
 
+        /**
+         * <p>The billing method of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **Postpaid**: pay-as-you-go</p>
+         * <p>*   **Prepaid**: subscription</p>
+         */
         @NameInMap("PayType")
         public String payType;
 
+        /**
+         * <p>The region ID of the instance.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The number of compute nodes.</p>
+         */
         @NameInMap("SegNodeNum")
         public String segNodeNum;
 
+        /**
+         * <p>The type of the Serverless mode. Valid values:</p>
+         * <br>
+         * <p>*   **Manual**: manual scheduling</p>
+         * <p>*   **Auto**: automatic scheduling</p>
+         * <br>
+         * <p>>  This parameter is returned only for instances in Serverless mode.</p>
+         */
         @NameInMap("ServerlessMode")
         public String serverlessMode;
 
+        /**
+         * <p>The storage capacity. Unit: GB.</p>
+         */
         @NameInMap("StorageSize")
         public String storageSize;
 
+        /**
+         * <p>The storage type of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **cloud_essd**: enhanced SSD (ESSD)</p>
+         * <p>*   **cloud_efficiency**: ultra disk</p>
+         */
         @NameInMap("StorageType")
         public String storageType;
 
+        /**
+         * <p>The tags of the instance. Each tag is a key-value pair.</p>
+         */
         @NameInMap("Tags")
         public DescribeDBInstancesResponseBodyItemsDBInstanceTags tags;
 
-        // vSwitch ID。
+        /**
+         * <p>The ID of the vSwitch.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
-        // VPC ID。
+        /**
+         * <p>The ID of virtual private cloud (VPC).</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The zone ID of the instance.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

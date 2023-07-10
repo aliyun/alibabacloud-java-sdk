@@ -4,18 +4,33 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataSharePerformanceResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The end time of the query.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>Details of data sharing performance metrics.</p>
+     */
     @NameInMap("PerformanceKeys")
     public java.util.List<DescribeDataSharePerformanceResponseBodyPerformanceKeys> performanceKeys;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The start time of the query.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -65,6 +80,9 @@ public class DescribeDataSharePerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDataSharePerformanceResponseBodyPerformanceKeysSeriesValues extends TeaModel {
+        /**
+         * <p>The value of the performance metric at a point in time.</p>
+         */
         @NameInMap("Point")
         public java.util.List<String> point;
 
@@ -84,9 +102,15 @@ public class DescribeDataSharePerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDataSharePerformanceResponseBodyPerformanceKeysSeries extends TeaModel {
+        /**
+         * <p>The name of the performance metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>One or more values of the performance metric.</p>
+         */
         @NameInMap("Values")
         public java.util.List<DescribeDataSharePerformanceResponseBodyPerformanceKeysSeriesValues> values;
 
@@ -114,12 +138,21 @@ public class DescribeDataSharePerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDataSharePerformanceResponseBodyPerformanceKeys extends TeaModel {
+        /**
+         * <p>The name of the performance metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Details of the performance metric.</p>
+         */
         @NameInMap("Series")
         public java.util.List<DescribeDataSharePerformanceResponseBodyPerformanceKeysSeries> series;
 
+        /**
+         * <p>The unit of the performance metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 

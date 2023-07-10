@@ -4,9 +4,18 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class ModifySQLCollectorPolicyRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>Specifies whether to enable or disable SQL collection.</p>
+     * <br>
+     * <p>*   Enable: enables SQL collection.</p>
+     * <p>*   Disabled: disables SQL collection.</p>
+     */
     @NameInMap("SQLCollectorStatus")
     public String SQLCollectorStatus;
 

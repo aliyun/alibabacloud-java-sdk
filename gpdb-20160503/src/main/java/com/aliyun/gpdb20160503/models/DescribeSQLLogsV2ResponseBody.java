@@ -4,15 +4,27 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeSQLLogsV2ResponseBody extends TeaModel {
+    /**
+     * <p>Details of the SQL logs.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeSQLLogsV2ResponseBodyItems> items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,42 +66,84 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
     }
 
     public static class DescribeSQLLogsV2ResponseBodyItems extends TeaModel {
+        /**
+         * <p>The database account that executes the SQL statement.</p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("DBName")
         public String DBName;
 
+        /**
+         * <p>The role of the database.</p>
+         */
         @NameInMap("DBRole")
         public String DBRole;
 
+        /**
+         * <p>The execution duration of the query.</p>
+         */
         @NameInMap("ExecuteCost")
         public Float executeCost;
 
+        /**
+         * <p>The execution state of the query. Valid values:</p>
+         * <br>
+         * <p>*   **success**</p>
+         * <p>*   **fail**</p>
+         */
         @NameInMap("ExecuteState")
         public String executeState;
 
+        /**
+         * <p>The type of the query language.</p>
+         */
         @NameInMap("OperationClass")
         public String operationClass;
 
+        /**
+         * <p>The time when the SQL statement was executed.</p>
+         */
         @NameInMap("OperationExecuteTime")
         public String operationExecuteTime;
 
+        /**
+         * <p>The type of the SQL statement.</p>
+         */
         @NameInMap("OperationType")
         public String operationType;
 
+        /**
+         * <p>The number of entries returned.</p>
+         */
         @NameInMap("ReturnRowCounts")
         public Long returnRowCounts;
 
+        /**
+         * <p>The SQL statement.</p>
+         */
         @NameInMap("SQLText")
         public String SQLText;
 
+        /**
+         * <p>The number of entries scanned.</p>
+         */
         @NameInMap("ScanRowCounts")
         public Long scanRowCounts;
 
+        /**
+         * <p>The source IP address.</p>
+         */
         @NameInMap("SourceIP")
         public String sourceIP;
 
+        /**
+         * <p>The number of the source port.</p>
+         */
         @NameInMap("SourcePort")
         public Integer sourcePort;
 

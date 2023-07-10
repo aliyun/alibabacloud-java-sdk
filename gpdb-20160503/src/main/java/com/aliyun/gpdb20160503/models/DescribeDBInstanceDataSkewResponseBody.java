@@ -4,15 +4,27 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceDataSkewResponseBody extends TeaModel {
+    /**
+     * <p>Details about data skew.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeDBInstanceDataSkewResponseBodyItems> items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -54,30 +66,57 @@ public class DescribeDBInstanceDataSkewResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceDataSkewResponseBodyItems extends TeaModel {
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("DatabaseName")
         public String databaseName;
 
+        /**
+         * <p>The distribution key of the table.</p>
+         */
         @NameInMap("DistributeKey")
         public String distributeKey;
 
+        /**
+         * <p>The owner of the table.</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>The name of the schema.</p>
+         */
         @NameInMap("SchemaName")
         public String schemaName;
 
+        /**
+         * <p>The sequence number of the data skew case. All data skew cases are sorted by severity in descending order.</p>
+         */
         @NameInMap("Sequence")
         public Integer sequence;
 
+        /**
+         * <p>The name of the table.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 
+        /**
+         * <p>The total number of rows in the table.</p>
+         */
         @NameInMap("TableSize")
         public String tableSize;
 
+        /**
+         * <p>The skew ratio of the table. Valid values: 0 to 100. Unit: %. A greater value indicates that the table is more severely skewed. A smaller value indicates less impact on query performance. A value of 0 indicates no data skew.</p>
+         */
         @NameInMap("TableSkew")
         public String tableSkew;
 
+        /**
+         * <p>The time when the table was last deleted, inserted, or updated.</p>
+         */
         @NameInMap("TimeLastUpdated")
         public String timeLastUpdated;
 

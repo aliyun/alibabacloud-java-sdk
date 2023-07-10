@@ -4,9 +4,15 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeParametersResponseBody extends TeaModel {
+    /**
+     * <p>Details of the parameters.</p>
+     */
     @NameInMap("Parameters")
     public java.util.List<DescribeParametersResponseBodyParameters> parameters;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +38,51 @@ public class DescribeParametersResponseBody extends TeaModel {
     }
 
     public static class DescribeParametersResponseBodyParameters extends TeaModel {
+        /**
+         * <p>The current value of the parameter.</p>
+         */
         @NameInMap("CurrentValue")
         public String currentValue;
 
+        /**
+         * <p>Indicates whether a restart is required for parameter modifications to take effect. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("ForceRestartInstance")
         public String forceRestartInstance;
 
+        /**
+         * <p>Indicates whether the parameter can be modified. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("IsChangeableConfig")
         public String isChangeableConfig;
 
+        /**
+         * <p>The valid values of the parameter.</p>
+         */
         @NameInMap("OptionalRange")
         public String optionalRange;
 
+        /**
+         * <p>The description of the parameter.</p>
+         */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("ParameterName")
         public String parameterName;
 
+        /**
+         * <p>The default value of the parameter.</p>
+         */
         @NameInMap("ParameterValue")
         public String parameterValue;
 

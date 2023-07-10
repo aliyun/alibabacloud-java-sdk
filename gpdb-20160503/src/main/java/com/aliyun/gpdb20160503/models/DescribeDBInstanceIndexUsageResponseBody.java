@@ -4,15 +4,27 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
+    /**
+     * <p>Details of index usage.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeDBInstanceIndexUsageResponseBodyItems> items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -54,33 +66,66 @@ public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceIndexUsageResponseBodyItems extends TeaModel {
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("DatabaseName")
         public String databaseName;
 
+        /**
+         * <p>The definition of the index.</p>
+         */
         @NameInMap("IndexDef")
         public String indexDef;
 
+        /**
+         * <p>The name of the index.</p>
+         */
         @NameInMap("IndexName")
         public String indexName;
 
+        /**
+         * <p>The number of index scans.</p>
+         */
         @NameInMap("IndexScanTimes")
         public Integer indexScanTimes;
 
+        /**
+         * <p>The size of the index. Unit: bytes.</p>
+         */
         @NameInMap("IndexSize")
         public String indexSize;
 
+        /**
+         * <p>Indicates whether the table is a partitioned table. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The table is a partitioned table.</p>
+         * <p>*   **false**: The table is not a partitioned table.</p>
+         */
         @NameInMap("IsPartitionTable")
         public Boolean isPartitionTable;
 
+        /**
+         * <p>The name of the parent table.</p>
+         */
         @NameInMap("ParentTableName")
         public String parentTableName;
 
+        /**
+         * <p>The name of the schema.</p>
+         */
         @NameInMap("SchemaName")
         public String schemaName;
 
+        /**
+         * <p>The name of the table.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 
+        /**
+         * <p>The time when the table was last deleted, inserted, or updated.</p>
+         */
         @NameInMap("TimeLastUpdated")
         public String timeLastUpdated;
 

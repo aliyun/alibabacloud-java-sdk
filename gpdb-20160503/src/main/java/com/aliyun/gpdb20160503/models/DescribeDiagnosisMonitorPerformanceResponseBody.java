@@ -4,15 +4,30 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
+    /**
+     * <p>Details of query execution.</p>
+     */
     @NameInMap("Performances")
     public java.util.List<DescribeDiagnosisMonitorPerformanceResponseBodyPerformances> performances;
 
+    /**
+     * <p>The threshold for the number of queries.</p>
+     */
     @NameInMap("PerformancesThreshold")
     public Integer performancesThreshold;
 
+    /**
+     * <p>Indicates whether the queries are truncated when the number of queries exceeds the threshold. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The queries are truncated.</p>
+     * <p>*   **false**: The queries are not truncated.</p>
+     */
     @NameInMap("PerformancesTruncated")
     public Boolean performancesTruncated;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,21 +69,42 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDiagnosisMonitorPerformanceResponseBodyPerformances extends TeaModel {
+        /**
+         * <p>The execution duration of the query. Unit: milliseconds.</p>
+         */
         @NameInMap("Cost")
         public Integer cost;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("Database")
         public String database;
 
+        /**
+         * <p>The ID of the query. It is a unique identifier of the query.</p>
+         */
         @NameInMap("QueryID")
         public String queryID;
 
+        /**
+         * <p>The start time of the query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>The execution state of the query. Valid values:</p>
+         * <br>
+         * <p>*   **running**: The query is being executed.</p>
+         * <p>*   **finished**: The query is complete.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The name of the database account.</p>
+         */
         @NameInMap("User")
         public String user;
 

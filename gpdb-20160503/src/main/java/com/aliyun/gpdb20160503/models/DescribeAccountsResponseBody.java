@@ -4,9 +4,15 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccountsResponseBody extends TeaModel {
+    /**
+     * <p>Details of the account.</p>
+     */
     @NameInMap("Accounts")
     public DescribeAccountsResponseBodyAccounts accounts;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,31 @@ public class DescribeAccountsResponseBody extends TeaModel {
     }
 
     public static class DescribeAccountsResponseBodyAccountsDBInstanceAccount extends TeaModel {
+        /**
+         * <p>The description of the account.</p>
+         */
         @NameInMap("AccountDescription")
         public String accountDescription;
 
+        /**
+         * <p>The name of the account.</p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <p>The state of the account.</p>
+         * <br>
+         * <p>*   **0**: The account is being created.</p>
+         * <p>*   **1**: The account is in use.</p>
+         * <p>*   **3**: The account is being deleted.</p>
+         */
         @NameInMap("AccountStatus")
         public String accountStatus;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 

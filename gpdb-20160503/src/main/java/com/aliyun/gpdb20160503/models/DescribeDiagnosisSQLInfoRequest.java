@@ -4,12 +4,25 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiagnosisSQLInfoRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The name of the database.</p>
+     */
     @NameInMap("Database")
     public String database;
 
+    /**
+     * <p>The ID of the query. It is a unique identifier of the query.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDiagnosisRecords](~~450511~~) operation to query the query ID.</p>
+     */
     @NameInMap("QueryID")
     public String queryID;
 

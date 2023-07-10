@@ -4,9 +4,15 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeRdsVSwitchsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Details of the vSwitches.</p>
+     */
     @NameInMap("VSwitches")
     public DescribeRdsVSwitchsResponseBodyVSwitches vSwitches;
 
@@ -32,37 +38,72 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
     }
 
     public static class DescribeRdsVSwitchsResponseBodyVSwitchesVSwitch extends TeaModel {
+        /**
+         * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+         */
         @NameInMap("AliUid")
         public String aliUid;
 
+        /**
+         * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+         */
         @NameInMap("Bid")
         public String bid;
 
+        /**
+         * <p>The CIDR block of the vSwitch.</p>
+         */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
+        /**
+         * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>Indicates whether the vSwitch is the default vSwitch. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
+        /**
+         * <p>The ID of the zone.</p>
+         */
         @NameInMap("IzNo")
         public String izNo;
 
+        /**
+         * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+         */
         @NameInMap("RegionNo")
         public String regionNo;
 
+        /**
+         * <p>The state of the vSwitch. If **Available** is returned, the vSwitch is available.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // vSwitch ID。
+        /**
+         * <p>The ID of the vSwitch.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The name of the vSwitch.</p>
+         */
         @NameInMap("VSwitchName")
         public String vSwitchName;
 
@@ -162,6 +203,9 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
     }
 
     public static class DescribeRdsVSwitchsResponseBodyVSwitches extends TeaModel {
+        /**
+         * <p>Details of the vSwitch.</p>
+         */
         @NameInMap("VSwitch")
         public java.util.List<DescribeRdsVSwitchsResponseBodyVSwitchesVSwitch> vSwitch;
 
