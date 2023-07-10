@@ -477,6 +477,12 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
 
     public static class GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfig extends TeaModel {
         /**
+         * <p>assertion是否签名</p>
+         */
+        @NameInMap("AssertionSigned")
+        public Boolean assertionSigned;
+
+        /**
          * <p>The additional user attributes in the SAML assertion.</p>
          */
         @NameInMap("AttributeStatements")
@@ -506,6 +512,12 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public String nameIdValueExpression;
 
         /**
+         * <p>response是否签名</p>
+         */
+        @NameInMap("ResponseSigned")
+        public Boolean responseSigned;
+
+        /**
          * <p>The algorithm that is used to calculate the signature for the SAML assertion.</p>
          */
         @NameInMap("SignatureAlgorithm")
@@ -526,6 +538,14 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public static GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfig build(java.util.Map<String, ?> map) throws Exception {
             GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfig self = new GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfig();
             return TeaModel.build(map, self);
+        }
+
+        public GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfig setAssertionSigned(Boolean assertionSigned) {
+            this.assertionSigned = assertionSigned;
+            return this;
+        }
+        public Boolean getAssertionSigned() {
+            return this.assertionSigned;
         }
 
         public GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfig setAttributeStatements(java.util.List<GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfigAttributeStatements> attributeStatements) {
@@ -558,6 +578,14 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         }
         public String getNameIdValueExpression() {
             return this.nameIdValueExpression;
+        }
+
+        public GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfig setResponseSigned(Boolean responseSigned) {
+            this.responseSigned = responseSigned;
+            return this;
+        }
+        public Boolean getResponseSigned() {
+            return this.responseSigned;
         }
 
         public GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfig setSignatureAlgorithm(String signatureAlgorithm) {

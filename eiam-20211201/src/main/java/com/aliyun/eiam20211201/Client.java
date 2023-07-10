@@ -380,6 +380,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createInstanceWithOptions(request, runtime);
     }
 
+    public CreateNetworkAccessEndpointResponse createNetworkAccessEndpointWithOptions(CreateNetworkAccessEndpointRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkAccessEndpointName)) {
+            query.put("NetworkAccessEndpointName", request.networkAccessEndpointName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchIds)) {
+            query.put("VSwitchIds", request.vSwitchIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcRegionId)) {
+            query.put("VpcRegionId", request.vpcRegionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateNetworkAccessEndpoint"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateNetworkAccessEndpointResponse());
+    }
+
+    public CreateNetworkAccessEndpointResponse createNetworkAccessEndpoint(CreateNetworkAccessEndpointRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createNetworkAccessEndpointWithOptions(request, runtime);
+    }
+
     public CreateOrganizationalUnitResponse createOrganizationalUnitWithOptions(CreateOrganizationalUnitRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -666,6 +715,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteInstanceResponse deleteInstance(DeleteInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteInstanceWithOptions(request, runtime);
+    }
+
+    public DeleteNetworkAccessEndpointResponse deleteNetworkAccessEndpointWithOptions(DeleteNetworkAccessEndpointRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkAccessEndpointId)) {
+            query.put("NetworkAccessEndpointId", request.networkAccessEndpointId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteNetworkAccessEndpoint"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteNetworkAccessEndpointResponse());
+    }
+
+    public DeleteNetworkAccessEndpointResponse deleteNetworkAccessEndpoint(DeleteNetworkAccessEndpointRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteNetworkAccessEndpointWithOptions(request, runtime);
     }
 
     public DeleteOrganizationalUnitResponse deleteOrganizationalUnitWithOptions(DeleteOrganizationalUnitRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1312,6 +1394,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getInstanceWithOptions(request, runtime);
     }
 
+    public GetNetworkAccessEndpointResponse getNetworkAccessEndpointWithOptions(GetNetworkAccessEndpointRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkAccessEndpointId)) {
+            query.put("NetworkAccessEndpointId", request.networkAccessEndpointId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetNetworkAccessEndpoint"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetNetworkAccessEndpointResponse());
+    }
+
+    public GetNetworkAccessEndpointResponse getNetworkAccessEndpoint(GetNetworkAccessEndpointRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getNetworkAccessEndpointWithOptions(request, runtime);
+    }
+
     public GetOrganizationalUnitResponse getOrganizationalUnitWithOptions(GetOrganizationalUnitRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1894,6 +2009,142 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListInstancesResponse listInstances(ListInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listInstancesWithOptions(request, runtime);
+    }
+
+    public ListNetworkAccessEndpointAvailableRegionsResponse listNetworkAccessEndpointAvailableRegionsWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListNetworkAccessEndpointAvailableRegions"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListNetworkAccessEndpointAvailableRegionsResponse());
+    }
+
+    public ListNetworkAccessEndpointAvailableRegionsResponse listNetworkAccessEndpointAvailableRegions() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listNetworkAccessEndpointAvailableRegionsWithOptions(runtime);
+    }
+
+    public ListNetworkAccessEndpointAvailableZonesResponse listNetworkAccessEndpointAvailableZonesWithOptions(ListNetworkAccessEndpointAvailableZonesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.naeRegionId)) {
+            query.put("NaeRegionId", request.naeRegionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListNetworkAccessEndpointAvailableZones"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListNetworkAccessEndpointAvailableZonesResponse());
+    }
+
+    public ListNetworkAccessEndpointAvailableZonesResponse listNetworkAccessEndpointAvailableZones(ListNetworkAccessEndpointAvailableZonesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listNetworkAccessEndpointAvailableZonesWithOptions(request, runtime);
+    }
+
+    public ListNetworkAccessEndpointsResponse listNetworkAccessEndpointsWithOptions(ListNetworkAccessEndpointsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkAccessEndpointStatus)) {
+            query.put("NetworkAccessEndpointStatus", request.networkAccessEndpointStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkAccessEndpointType)) {
+            query.put("NetworkAccessEndpointType", request.networkAccessEndpointType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcRegionId)) {
+            query.put("VpcRegionId", request.vpcRegionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListNetworkAccessEndpoints"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListNetworkAccessEndpointsResponse());
+    }
+
+    public ListNetworkAccessEndpointsResponse listNetworkAccessEndpoints(ListNetworkAccessEndpointsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listNetworkAccessEndpointsWithOptions(request, runtime);
+    }
+
+    public ListNetworkAccessPathsResponse listNetworkAccessPathsWithOptions(ListNetworkAccessPathsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkAccessEndpointId)) {
+            query.put("NetworkAccessEndpointId", request.networkAccessEndpointId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListNetworkAccessPaths"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListNetworkAccessPathsResponse());
+    }
+
+    public ListNetworkAccessPathsResponse listNetworkAccessPaths(ListNetworkAccessPathsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listNetworkAccessPathsWithOptions(request, runtime);
     }
 
     public ListOrganizationalUnitParentsResponse listOrganizationalUnitParentsWithOptions(ListOrganizationalUnitParentsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3055,6 +3306,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateInstanceDescriptionResponse updateInstanceDescription(UpdateInstanceDescriptionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateInstanceDescriptionWithOptions(request, runtime);
+    }
+
+    public UpdateNetworkAccessEndpointNameResponse updateNetworkAccessEndpointNameWithOptions(UpdateNetworkAccessEndpointNameRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkAccessEndpointId)) {
+            query.put("NetworkAccessEndpointId", request.networkAccessEndpointId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkAccessEndpointName)) {
+            query.put("NetworkAccessEndpointName", request.networkAccessEndpointName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateNetworkAccessEndpointName"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateNetworkAccessEndpointNameResponse());
+    }
+
+    public UpdateNetworkAccessEndpointNameResponse updateNetworkAccessEndpointName(UpdateNetworkAccessEndpointNameRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateNetworkAccessEndpointNameWithOptions(request, runtime);
     }
 
     public UpdateOrganizationalUnitResponse updateOrganizationalUnitWithOptions(UpdateOrganizationalUnitRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
