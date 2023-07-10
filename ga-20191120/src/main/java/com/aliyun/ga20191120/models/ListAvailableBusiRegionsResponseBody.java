@@ -38,6 +38,9 @@ public class ListAvailableBusiRegionsResponseBody extends TeaModel {
     }
 
     public static class ListAvailableBusiRegionsResponseBodyRegions extends TeaModel {
+        @NameInMap("ChinaMainland")
+        public Boolean chinaMainland;
+
         /**
          * <p>The name of the region.</p>
          */
@@ -62,6 +65,14 @@ public class ListAvailableBusiRegionsResponseBody extends TeaModel {
         public static ListAvailableBusiRegionsResponseBodyRegions build(java.util.Map<String, ?> map) throws Exception {
             ListAvailableBusiRegionsResponseBodyRegions self = new ListAvailableBusiRegionsResponseBodyRegions();
             return TeaModel.build(map, self);
+        }
+
+        public ListAvailableBusiRegionsResponseBodyRegions setChinaMainland(Boolean chinaMainland) {
+            this.chinaMainland = chinaMainland;
+            return this;
+        }
+        public Boolean getChinaMainland() {
+            return this.chinaMainland;
         }
 
         public ListAvailableBusiRegionsResponseBodyRegions setLocalName(String localName) {

@@ -38,6 +38,12 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
     }
 
     public static class ListAvailableAccelerateAreasResponseBodyAreasRegionList extends TeaModel {
+        @NameInMap("ChinaMainland")
+        public Boolean chinaMainland;
+
+        @NameInMap("IspTypeList")
+        public java.util.List<String> ispTypeList;
+
         /**
          * <p>The name of the acceleration region.</p>
          */
@@ -50,9 +56,28 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("SupportIpv6")
+        public Boolean supportIpv6;
+
         public static ListAvailableAccelerateAreasResponseBodyAreasRegionList build(java.util.Map<String, ?> map) throws Exception {
             ListAvailableAccelerateAreasResponseBodyAreasRegionList self = new ListAvailableAccelerateAreasResponseBodyAreasRegionList();
             return TeaModel.build(map, self);
+        }
+
+        public ListAvailableAccelerateAreasResponseBodyAreasRegionList setChinaMainland(Boolean chinaMainland) {
+            this.chinaMainland = chinaMainland;
+            return this;
+        }
+        public Boolean getChinaMainland() {
+            return this.chinaMainland;
+        }
+
+        public ListAvailableAccelerateAreasResponseBodyAreasRegionList setIspTypeList(java.util.List<String> ispTypeList) {
+            this.ispTypeList = ispTypeList;
+            return this;
+        }
+        public java.util.List<String> getIspTypeList() {
+            return this.ispTypeList;
         }
 
         public ListAvailableAccelerateAreasResponseBodyAreasRegionList setLocalName(String localName) {
@@ -69,6 +94,14 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public ListAvailableAccelerateAreasResponseBodyAreasRegionList setSupportIpv6(Boolean supportIpv6) {
+            this.supportIpv6 = supportIpv6;
+            return this;
+        }
+        public Boolean getSupportIpv6() {
+            return this.supportIpv6;
         }
 
     }
