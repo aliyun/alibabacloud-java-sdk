@@ -13,6 +13,9 @@ public class CreateCacheAnalysisJobRequest extends TeaModel {
     @NameInMap("NodeId")
     public String nodeId;
 
+    @NameInMap("Separators")
+    public String separators;
+
     public static CreateCacheAnalysisJobRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCacheAnalysisJobRequest self = new CreateCacheAnalysisJobRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class CreateCacheAnalysisJobRequest extends TeaModel {
     }
     public String getNodeId() {
         return this.nodeId;
+    }
+
+    public CreateCacheAnalysisJobRequest setSeparators(String separators) {
+        this.separators = separators;
+        return this;
+    }
+    public String getSeparators() {
+        return this.separators;
     }
 
 }
