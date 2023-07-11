@@ -54,6 +54,9 @@ public class QueryRoomControlDevicesResponseBody extends TeaModel {
     }
 
     public static class QueryRoomControlDevicesResponseBodyResultDevices extends TeaModel {
+        @NameInMap("ConnectType")
+        public String connectType;
+
         @NameInMap("DeviceName")
         public String deviceName;
 
@@ -66,6 +69,14 @@ public class QueryRoomControlDevicesResponseBody extends TeaModel {
         public static QueryRoomControlDevicesResponseBodyResultDevices build(java.util.Map<String, ?> map) throws Exception {
             QueryRoomControlDevicesResponseBodyResultDevices self = new QueryRoomControlDevicesResponseBodyResultDevices();
             return TeaModel.build(map, self);
+        }
+
+        public QueryRoomControlDevicesResponseBodyResultDevices setConnectType(String connectType) {
+            this.connectType = connectType;
+            return this;
+        }
+        public String getConnectType() {
+            return this.connectType;
         }
 
         public QueryRoomControlDevicesResponseBodyResultDevices setDeviceName(String deviceName) {
