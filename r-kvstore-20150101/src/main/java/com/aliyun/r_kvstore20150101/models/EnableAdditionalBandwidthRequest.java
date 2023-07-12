@@ -40,6 +40,12 @@ public class EnableAdditionalBandwidthRequest extends TeaModel {
     @NameInMap("Bandwidth")
     public String bandwidth;
 
+    /**
+     * <p>The billing method of the bandwidth instance. Default value: PostPaid. Valid values:</p>
+     * <br>
+     * <p>- PrePaid: subscription</p>
+     * <p>- PostPaid: pay-as-you-go</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 

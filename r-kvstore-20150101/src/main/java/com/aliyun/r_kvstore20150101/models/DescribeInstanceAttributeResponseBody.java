@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceAttributeResponseBody extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeInstanceAttribute**.</p>
+     * <p>Details of the instances.</p>
      */
     @NameInMap("Instances")
     public DescribeInstanceAttributeResponseBodyInstances instances;
 
     /**
-     * <p>The maximum number of connections supported by the instance.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,13 +39,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
 
     public static class DescribeInstanceAttributeResponseBodyInstancesDBInstanceAttributeTagsTag extends TeaModel {
         /**
-         * <p>Queries the details of an ApsaraDB for Redis instance.</p>
+         * <p>The key of the tag.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>DescribeInstanceAttribute</p>
+         * <p>The value of the tag.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -94,274 +94,151 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
 
     public static class DescribeInstanceAttributeResponseBodyInstancesDBInstanceAttribute extends TeaModel {
         /**
-         * <p>The node type. Valid values:</p>
+         * <p>The architecture of the instance. Valid values:</p>
          * <br>
-         * <p>*   **double**: The instance contains a master node and a replica node.</p>
-         * <p>*   **single**: The instance contains only a master node. This node type is phrased out.</p>
+         * <p>*   **cluster**: cluster architecture</p>
+         * <p>*   **standard**: standard architecture</p>
+         * <p>*   **rwsplit**: read/write splitting architecture</p>
          */
         @NameInMap("ArchitectureType")
         public String architectureType;
 
         /**
-         * <p>The ID of the replica node.</p>
+         * <p>The retention period of audit logs. Unit: days. A value of 0 indicates that the audit log feature is disabled. For more information about how to enable the audit log feature, see [Enable the new audit log feature](~~102015~~).</p>
          */
         @NameInMap("AuditLogRetention")
         public String auditLogRetention;
 
         /**
-         * <p>The ID of the instance</p>
+         * <p>The availability metric of the current month.</p>
          */
         @NameInMap("AvailabilityValue")
         public String availabilityValue;
 
         /**
-         * <p>Indicates whether the release protection feature is enabled for the instance. Valid values:</p>
+         * <p>The earliest point in time to which you can restore data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>> </p>
+         * <br>
+         * <p>*   This parameter is returned only when the data flashback feature is enabled for the instance. For more information, see [Use data flashback to restore data by point in time](~~148479~~).</p>
+         * <br>
+         * <p>*   When you call the [RestoreInstance](~~61083~~) operation to implement data flashback, you can obtain the earliest point in time for data flashback from the return value of this parameter and set the **RestoreTime** parameter to this point in time.</p>
          */
         @NameInMap("BackupLogStartTime")
         public String backupLogStartTime;
 
         /**
-         * <p>Details of the tags.</p>
+         * <p>The bandwidth of the instance. Unit: Mbit/s.</p>
          */
         @NameInMap("Bandwidth")
         public Long bandwidth;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The storage capacity of the instance. Unit: MB.</p>
          */
         @NameInMap("Capacity")
         public Long capacity;
 
         /**
-         * <p>The service port of the instance.</p>
+         * <p>The billing method of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **PrePaid**: subscription</p>
+         * <p>*   **PostPaid**: pay-as-you-go</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>This parameter is returned only when the instance is in a cloud box.</p>
          */
         @NameInMap("CloudType")
         public String cloudType;
 
         /**
-         * <p>The architecture of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **cluster**: The instance is a cluster instance.</p>
-         * <p>*   **standard**: The instance is a standard instance.</p>
-         * <p>*   **rwsplit**: The instance is a read/write splitting instance.</p>
+         * <p>The parameter settings of the instance in the JSON format. For more information, see [Modify the parameters of an ApsaraDB for Redis instance](~~43885~~).</p>
          */
         @NameInMap("Config")
         public String config;
 
         /**
-         * <p>The time when the subscription instance expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The internal endpoint of the instance.</p>
          */
         @NameInMap("ConnectionDomain")
         public String connectionDomain;
 
         /**
-         * <p>The ID of the resource group to which the instance belongs.</p>
+         * <p>The maximum number of connections supported by the instance.</p>
          */
         @NameInMap("Connections")
         public Long connections;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <p>The time when the instance was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The ID of the instance that is deployed in the VPC.</p>
+         * <p>The time when the subscription instance expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The database engine of the instance. The return value is **Redis**.</p>
          */
         @NameInMap("Engine")
         public String engine;
 
         /**
-         * <p>The edition of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **Tair**</p>
-         * <p>*   **Redis**</p>
-         * <p>*   **Memcache**</p>
+         * <p>The database engine version of the instance. Valid values: **2.8**, **4.0**, **5.0**, and **6.0**.</p>
          */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
         /**
-         * <p>Indicates whether your Alibaba Cloud account has pending orders for renewal and configuration change. Valid values:</p>
+         * <p>The ID of the distributed instance to which the instance belongs.</p>
          * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>> This parameter is returned only when the instance is a child instance of a distributed instance.</p>
          */
         @NameInMap("GlobalInstanceId")
         public String globalInstanceId;
 
         /**
-         * <p>The number of shards. This parameter is available only for ApsaraDB for Redis instances that are purchased on the China site (aliyun.com).</p>
+         * <p>Indicates whether your Alibaba Cloud account has pending orders for renewal and configuration change. Valid values:</p>
+         * <br>
+         * <p>*   **true**: Your Alibaba Cloud account has pending orders.</p>
+         * <p>*   **false**: Your Alibaba Cloud account does not have pending orders.</p>
          */
         @NameInMap("HasRenewChangeOrder")
         public String hasRenewChangeOrder;
 
         /**
-         * <p>The deployment type of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **singlezone**: The instance is deployed in a single zone.</p>
-         * <p>*   **doublezone**: The instance is deployed in two zones in the same region.</p>
+         * <p>The instance type of the instance. For more information, see [Instance types](~~107984~~).</p>
          */
         @NameInMap("InstanceClass")
         public String instanceClass;
 
         /**
-         * <p>The ID of the secondary zone.</p>
-         * <br>
-         * <p>>  This parameter is returned only if the instance is deployed in two zones.</p>
+         * <p>The ID of the instance.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The bandwidth of the instance. Unit: Mbit/s.</p>
+         * <p>The name of the instance.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>The end time of the maintenance window. The time is in the *HH:mmZ* format. The time is displayed in UTC.</p>
+         * <p>Indicates whether the release protection feature is enabled for the instance. Valid values:</p>
+         * <br>
+         * <p>*   **true**: Release protection is enabled.</p>
+         * <p>*   **false**: Release protection is disabled.</p>
          */
         @NameInMap("InstanceReleaseProtection")
         public Boolean instanceReleaseProtection;
-
-        /**
-         * <p>If the instance is a cloud-disk cluster instance, this parameter indicates the instance type of shards. The InstanceClass parameter indicates a virtual instance type.</p>
-         * <br>
-         * <p>>  To query the instance fees of this instance type, you can call the [DescribePrice](~~95612~~) operation and specify the return value of this parameter.</p>
-         */
-        @NameInMap("InstanceStatus")
-        public String instanceStatus;
-
-        /**
-         * <p>The earliest point in time to which you can restore data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
-         * <br>
-         * <p>> </p>
-         * <p>*   This parameter is returned only if the [data flashback](~~148479~~) feature is enabled for the instance.</p>
-         * <p>*   When you call the [RestoreInstance](~~61083~~) operation to implement data flashback, you can obtain the earliest point in time for data flashback from the return value of this parameter and set the **RestoreTime** parameter to this point in time.</p>
-         */
-        @NameInMap("InstanceType")
-        public String instanceType;
-
-        /**
-         * <p>实例订单是否完成，用于判断变配订单是否到达终态，返回值：</p>
-         * <p>* **true**：变配已完成，或进行未变配。</p>
-         * <p>* **false**：变配中。</p>
-         */
-        @NameInMap("IsOrderCompleted")
-        public Boolean isOrderCompleted;
-
-        /**
-         * <p>The database engine of the instance. The return value is **Redis**.</p>
-         */
-        @NameInMap("IsRds")
-        public Boolean isRds;
-
-        /**
-         * <p>实例是否支持开启透明数据加密TDE（Transparent Data Encryption）功能，返回值：</p>
-         * <p>* **true**：支持，仅本地盘版[内存型](~~443827~~)实例支持。</p>
-         * <p>* **false**：不支持。</p>
-         */
-        @NameInMap("IsSupportTDE")
-        public Boolean isSupportTDE;
-
-        /**
-         * <p>The IP address whitelist of the instance.</p>
-         */
-        @NameInMap("MaintainEndTime")
-        public String maintainEndTime;
-
-        /**
-         * <p>Details of the instance.</p>
-         */
-        @NameInMap("MaintainStartTime")
-        public String maintainStartTime;
-
-        /**
-         * <p>The database engine version of the instance. Valid values: **2.8**, **4.0**, and **5.0**.</p>
-         */
-        @NameInMap("NetworkType")
-        public String networkType;
-
-        /**
-         * <p>Indicates whether the instance is managed by ApsaraDB RDS. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
-         */
-        @NameInMap("NodeType")
-        public String nodeType;
-
-        /**
-         * <p>The region ID of the instance.</p>
-         */
-        @NameInMap("PackageType")
-        public String packageType;
-
-        /**
-         * <p>The parameter configurations of the instance in the JSON format. For more information, see [Modify the parameters of an ApsaraDB for Redis instance](~~43885~~).</p>
-         */
-        @NameInMap("Port")
-        public Long port;
-
-        /**
-         * <p>The private IP address of the instance.</p>
-         * <br>
-         * <p>>  This parameter is not returned if the instance is deployed in the classic network.</p>
-         */
-        @NameInMap("PrivateIp")
-        public String privateIp;
-
-        /**
-         * <p>The zone ID of the instance.</p>
-         */
-        @NameInMap("QPS")
-        public Long QPS;
-
-        /**
-         * <p>The ID of the distributed instance to which the instance belongs.</p>
-         * <br>
-         * <p>>  This parameter is returned only if the instance is a child instance of the distributed instance.</p>
-         */
-        @NameInMap("ReadOnlyCount")
-        public Integer readOnlyCount;
-
-        /**
-         * <p>The plan type of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **standard**: standard plan.</p>
-         * <p>*   **customized**: custom plan. This plan type is phased out.</p>
-         */
-        @NameInMap("RealInstanceClass")
-        public String realInstanceClass;
-
-        /**
-         * <p>This parameter is returned only if the instance is in a cloud box.</p>
-         */
-        @NameInMap("RegionId")
-        public String regionId;
-
-        /**
-         * <p>The retention period of audit logs. Unit: days. A value of 0 indicates that the audit log feature is disabled. For more information about how to enable the audit log feature, see [Enable the new audit log feature](~~102015~~).</p>
-         */
-        @NameInMap("ReplicaId")
-        public String replicaId;
 
         /**
          * <p>The state of the instance. Valid values:</p>
@@ -380,51 +257,181 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
          * <p>*   **MinorVersionUpgrading**: The minor version of the instance is being updated.</p>
          * <p>*   **NetworkModifying**: The network type of the instance is being changed.</p>
          * <p>*   **SSLModifying**: The SSL certificate of the instance is being changed.</p>
-         * <p>*   **MajorVersionUpgrading**: The major version of the instance is being upgraded. The instance remains available during the upgrade.</p>
+         * <p>*   **MajorVersionUpgrading**: The major version of the instance is being upgraded. The instance remains accessible during the upgrade.</p>
          * <br>
-         * <p>>  For more information about instance states, see [Instance states and impacts](~~200740~~).</p>
+         * <p>> For more information about instance states, see [Instance states and impacts](~~200740~~).</p>
          */
-        @NameInMap("ReplicationMode")
-        public String replicationMode;
+        @NameInMap("InstanceStatus")
+        public String instanceStatus;
 
         /**
-         * <p>The storage capacity of the instance. Unit: MB.</p>
-         */
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
-
-        /**
-         * <p>The key of the tag.</p>
-         */
-        @NameInMap("SecondaryZoneId")
-        public String secondaryZoneId;
-
-        /**
-         * <p>The instance type of the instance. For more information, see [Instance types](~~107984~~).</p>
-         */
-        @NameInMap("SecurityIPList")
-        public String securityIPList;
-
-        /**
-         * <p>The name of the instance.</p>
-         */
-        @NameInMap("ShardCount")
-        public Integer shardCount;
-
-        /**
-         * <p>The billing method of the instance. Valid values:</p>
+         * <p>The database engine of the instance. Valid values:</p>
          * <br>
-         * <p>*   **PrePaid**: subscription</p>
-         * <p>*   **PostPaid**: pay-as-you-go</p>
+         * <p>*   **Tair**</p>
+         * <p>*   **Redis**</p>
+         * <p>*   **Memcache**</p>
          */
-        @NameInMap("Tags")
-        public DescribeInstanceAttributeResponseBodyInstancesDBInstanceAttributeTags tags;
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        /**
+         * <p>Whether the instance order has been completed is used to determine whether the modify instance specifications order has reached its final state. The return value is:</p>
+         * <br>
+         * <p>* **true**: The modify instance specifications operation has been completed or has not been made.</p>
+         * <br>
+         * <p>* **false**: Changing specifications, the order is not yet completed.</p>
+         */
+        @NameInMap("IsOrderCompleted")
+        public Boolean isOrderCompleted;
+
+        /**
+         * <p>Indicates whether the instance is managed by ApsaraDB RDS. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The instance is managed by ApsaraDB RDS.</p>
+         * <p>*   **false**: The instance is not managed by ApsaraDB RDS.</p>
+         */
+        @NameInMap("IsRds")
+        public Boolean isRds;
+
+        /**
+         * <p>Does the instance support enabling transparent data encryption (TDE) function? Return value:</p>
+         * <br>
+         * <p>* **true**: Supported, only supported for local disk, memory type Tair instance version. </p>
+         * <p>* **false**: Not Supported.</p>
+         */
+        @NameInMap("IsSupportTDE")
+        public Boolean isSupportTDE;
+
+        /**
+         * <p>The end time of the maintenance window. The time is in the *HH:mmZ* format. The time is displayed in UTC.</p>
+         */
+        @NameInMap("MaintainEndTime")
+        public String maintainEndTime;
+
+        /**
+         * <p>The start time of the maintenance window. The time is in the *HH:mmZ* format. The time is displayed in UTC.</p>
+         */
+        @NameInMap("MaintainStartTime")
+        public String maintainStartTime;
 
         /**
          * <p>The network type of the instance. Valid values:</p>
          * <br>
          * <p>*   **CLASSIC**: classic network</p>
          * <p>*   **VPC**: VPC</p>
+         */
+        @NameInMap("NetworkType")
+        public String networkType;
+
+        /**
+         * <p>The node type. Valid values:</p>
+         * <br>
+         * <p>*   **double**: The instance contains a master node and a replica node.</p>
+         * <p>*   **single**: The instance contains only a master node. This node type is phrased out.</p>
+         */
+        @NameInMap("NodeType")
+        public String nodeType;
+
+        /**
+         * <p>The plan type of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **standard**: standard plan.</p>
+         * <p>*   **customized**: custom plan. This plan type is phased out.</p>
+         */
+        @NameInMap("PackageType")
+        public String packageType;
+
+        /**
+         * <p>The port number of the instance.</p>
+         */
+        @NameInMap("Port")
+        public Long port;
+
+        /**
+         * <p>The private IP address of the instance.</p>
+         * <br>
+         * <p>> This parameter is not returned when the instance is deployed in the classic network.</p>
+         */
+        @NameInMap("PrivateIp")
+        public String privateIp;
+
+        /**
+         * <p>The expected maximum queries per second (QPS).</p>
+         */
+        @NameInMap("QPS")
+        public Long QPS;
+
+        /**
+         * <p>The number of read-only nodes. This parameter is available only for read/write splitting instances that use cloud disks.</p>
+         */
+        @NameInMap("ReadOnlyCount")
+        public Integer readOnlyCount;
+
+        /**
+         * <p>If the instance is a cluster instance that uses cloud disks, this parameter indicates the instance type of each shard. In this case, the InstanceClass parameter indicates a virtual instance type.</p>
+         * <br>
+         * <p>> To query the costs of this instance type, specify the returned instance type for this parameter for the [DescribePrice](~~95612~~) operation and call the operation.</p>
+         */
+        @NameInMap("RealInstanceClass")
+        public String realInstanceClass;
+
+        /**
+         * <p>The region ID of the instance.</p>
+         */
+        @NameInMap("RegionId")
+        public String regionId;
+
+        /**
+         * <p>The ID of the node.</p>
+         */
+        @NameInMap("ReplicaId")
+        public String replicaId;
+
+        /**
+         * <p>The architecture of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **master-slave**: standard master-replica architecture.</p>
+         * <p>*   **cluster**: cluster architecture, which includes read/write splitting instances and cluster instances.</p>
+         */
+        @NameInMap("ReplicationMode")
+        public String replicationMode;
+
+        /**
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
+         * <p>The ID of the secondary zone.</p>
+         * <br>
+         * <p>> This parameter is returned only when the instance has a secondary zone ID.</p>
+         */
+        @NameInMap("SecondaryZoneId")
+        public String secondaryZoneId;
+
+        /**
+         * <p>The IP addresses contained in a whitelist of the instance.</p>
+         */
+        @NameInMap("SecurityIPList")
+        public String securityIPList;
+
+        /**
+         * <p>The number of shards. This parameter is available only for instances that are purchased on the China site (aliyun.com).</p>
+         * <br>
+         * <p>This parameter is returned only when the instance is a [cluster instance](~~52228~~) that uses cloud disks.</p>
+         */
+        @NameInMap("ShardCount")
+        public Integer shardCount;
+
+        /**
+         * <p>Details of the tags.</p>
+         */
+        @NameInMap("Tags")
+        public DescribeInstanceAttributeResponseBodyInstancesDBInstanceAttributeTags tags;
+
+        /**
+         * <p>The ID of the vSwitch.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
@@ -439,28 +446,28 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String vpcAuthMode;
 
         /**
-         * <p>The ID of the vSwitch to which the instance is connected.</p>
+         * <p>The ID of the VPC.</p>
          */
         @NameInMap("VpcCloudInstanceId")
         public String vpcCloudInstanceId;
 
         /**
-         * <p>The internal endpoint of the instance.</p>
+         * <p>The ID of the virtual private cloud (VPC).</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
-         * <p>The architecture of the instance replica. Valid values:</p>
-         * <br>
-         * <p>*   **master-slave**: standard master-replica architecture.</p>
-         * <p>*   **cluster**: cluster architecture, which includes the read/write splitting instances and cluster instances.</p>
+         * <p>The zone ID of the instance.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
 
         /**
-         * <p>The time when the instance was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The deployment type of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **singlezone**: The instance is deployed in a single zone.</p>
+         * <p>*   **doublezone**: The instance is deployed in two zones of the same region.</p>
          */
         @NameInMap("ZoneType")
         public String zoneType;

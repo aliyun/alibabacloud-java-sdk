@@ -4,12 +4,21 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class CreateInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The IDs of instances that were created.</p>
+     */
     @NameInMap("InstanceIds")
     public CreateInstancesResponseBodyInstanceIds instanceIds;
 
+    /**
+     * <p>The ID of the order.</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
