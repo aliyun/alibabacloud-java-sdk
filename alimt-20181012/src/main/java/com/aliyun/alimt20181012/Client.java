@@ -873,6 +873,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return translateCertificateResp;
     }
 
+    /**
+      * @deprecated : TranslateECommerce is deprecated, please use alimt::2018-10-12::Translate instead.
+      *
+      * @param request TranslateECommerceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return TranslateECommerceResponse
+     */
+    // Deprecated
     public TranslateECommerceResponse translateECommerceWithOptions(TranslateECommerceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -919,6 +927,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TranslateECommerceResponse());
     }
 
+    /**
+      * @deprecated : TranslateECommerce is deprecated, please use alimt::2018-10-12::Translate instead.
+      *
+      * @param request TranslateECommerceRequest
+      * @return TranslateECommerceResponse
+     */
+    // Deprecated
     public TranslateECommerceResponse translateECommerce(TranslateECommerceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.translateECommerceWithOptions(request, runtime);

@@ -54,6 +54,9 @@ public class TranslateGeneralResponseBody extends TeaModel {
     }
 
     public static class TranslateGeneralResponseBodyData extends TeaModel {
+        @NameInMap("DetectedLanguage")
+        public String detectedLanguage;
+
         @NameInMap("Translated")
         public String translated;
 
@@ -63,6 +66,14 @@ public class TranslateGeneralResponseBody extends TeaModel {
         public static TranslateGeneralResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             TranslateGeneralResponseBodyData self = new TranslateGeneralResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public TranslateGeneralResponseBodyData setDetectedLanguage(String detectedLanguage) {
+            this.detectedLanguage = detectedLanguage;
+            return this;
+        }
+        public String getDetectedLanguage() {
+            return this.detectedLanguage;
         }
 
         public TranslateGeneralResponseBodyData setTranslated(String translated) {
