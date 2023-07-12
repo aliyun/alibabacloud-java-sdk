@@ -3,12 +3,9 @@ package com.aliyun.eais20190624.models;
 
 import com.aliyun.tea.*;
 
-public class CreateEaiRequest extends TeaModel {
+public class CreateEaisEiRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
-
-    @NameInMap("Image")
-    public String image;
 
     @NameInMap("InstanceName")
     public String instanceName;
@@ -28,12 +25,12 @@ public class CreateEaiRequest extends TeaModel {
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
-    public static CreateEaiRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateEaiRequest self = new CreateEaiRequest();
+    public static CreateEaisEiRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateEaisEiRequest self = new CreateEaisEiRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateEaiRequest setClientToken(String clientToken) {
+    public CreateEaisEiRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -41,15 +38,7 @@ public class CreateEaiRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public CreateEaiRequest setImage(String image) {
-        this.image = image;
-        return this;
-    }
-    public String getImage() {
-        return this.image;
-    }
-
-    public CreateEaiRequest setInstanceName(String instanceName) {
+    public CreateEaisEiRequest setInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
     }
@@ -57,7 +46,7 @@ public class CreateEaiRequest extends TeaModel {
         return this.instanceName;
     }
 
-    public CreateEaiRequest setInstanceType(String instanceType) {
+    public CreateEaisEiRequest setInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
     }
@@ -65,7 +54,7 @@ public class CreateEaiRequest extends TeaModel {
         return this.instanceType;
     }
 
-    public CreateEaiRequest setRegionId(String regionId) {
+    public CreateEaisEiRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -73,7 +62,7 @@ public class CreateEaiRequest extends TeaModel {
         return this.regionId;
     }
 
-    public CreateEaiRequest setResourceGroupId(String resourceGroupId) {
+    public CreateEaisEiRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
@@ -81,7 +70,7 @@ public class CreateEaiRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public CreateEaiRequest setSecurityGroupId(String securityGroupId) {
+    public CreateEaisEiRequest setSecurityGroupId(String securityGroupId) {
         this.securityGroupId = securityGroupId;
         return this;
     }
@@ -89,7 +78,7 @@ public class CreateEaiRequest extends TeaModel {
         return this.securityGroupId;
     }
 
-    public CreateEaiRequest setVSwitchId(String vSwitchId) {
+    public CreateEaisEiRequest setVSwitchId(String vSwitchId) {
         this.vSwitchId = vSwitchId;
         return this;
     }

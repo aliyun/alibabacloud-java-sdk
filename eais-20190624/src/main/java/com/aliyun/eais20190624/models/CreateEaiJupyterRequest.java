@@ -7,6 +7,9 @@ public class CreateEaiJupyterRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("EaisName")
+    public String eaisName;
+
     @NameInMap("EaisType")
     public String eaisType;
 
@@ -36,6 +39,14 @@ public class CreateEaiJupyterRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateEaiJupyterRequest setEaisName(String eaisName) {
+        this.eaisName = eaisName;
+        return this;
+    }
+    public String getEaisName() {
+        return this.eaisName;
     }
 
     public CreateEaiJupyterRequest setEaisType(String eaisType) {
