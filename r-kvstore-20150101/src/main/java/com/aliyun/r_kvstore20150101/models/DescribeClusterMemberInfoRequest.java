@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterMemberInfoRequest extends TeaModel {
     /**
-     * <p>The ID of the replica set on the node.</p>
+     * <p>The ID of the ApsaraDB for Redis instance. You can call the [DescribeInstances](~~60933~~) operation to query instance IDs.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -15,6 +15,12 @@ public class DescribeClusterMemberInfoRequest extends TeaModel {
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -52,6 +58,22 @@ public class DescribeClusterMemberInfoRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeClusterMemberInfoRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeClusterMemberInfoRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeClusterMemberInfoRequest setResourceOwnerAccount(String resourceOwnerAccount) {

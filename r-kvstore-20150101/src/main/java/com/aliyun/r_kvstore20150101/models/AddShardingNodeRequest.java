@@ -27,6 +27,9 @@ public class AddShardingNodeRequest extends TeaModel {
     @NameInMap("CouponNo")
     public String couponNo;
 
+    @NameInMap("ForceTrans")
+    public Boolean forceTrans;
+
     /**
      * <p>The ID of the instance.</p>
      */
@@ -91,6 +94,14 @@ public class AddShardingNodeRequest extends TeaModel {
     }
     public String getCouponNo() {
         return this.couponNo;
+    }
+
+    public AddShardingNodeRequest setForceTrans(Boolean forceTrans) {
+        this.forceTrans = forceTrans;
+        return this;
+    }
+    public Boolean getForceTrans() {
+        return this.forceTrans;
     }
 
     public AddShardingNodeRequest setInstanceId(String instanceId) {

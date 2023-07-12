@@ -5,18 +5,20 @@ import com.aliyun.tea.*;
 
 public class DescribeIntranetAttributeResponseBody extends TeaModel {
     /**
-     * <p>The internal bandwidth of the instance. Unit: MB/s.</p>
-     */
-    @NameInMap("AutoRenewal")
-    public Boolean autoRenewal;
-
-    /**
      * <p>Indicates whether auto-renewal is enabled for the extra internal bandwidth that you purchased. Valid values:</p>
      * <br>
      * <p>*   **true**: Auto-renewal is enabled.</p>
      * <p>*   **false**: Auto-renewal is disabled.</p>
      * <br>
-     * <p>>  If no extra internal bandwidth is purchased, this parameter is not returned.</p>
+     * <p>> If no extra internal bandwidth is purchased, this parameter is not returned.</p>
+     */
+    @NameInMap("AutoRenewal")
+    public Boolean autoRenewal;
+
+    /**
+     * <p>The time when the extra internal bandwidth that you purchased expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+     * <br>
+     * <p>> If no extra internal bandwidth is purchased, this parameter is not returned.</p>
      */
     @NameInMap("BandwidthExpireTime")
     public String bandwidthExpireTime;
@@ -25,14 +27,24 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
     public String bandwidthPrePaid;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeIntranetAttribute**.</p>
+     * <p>The time when the extra internal bandwidth that you purchased for temporary use expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+     * <br>
+     * <p>> If no extra internal bandwidth for temporary use is purchased or the extra internal bandwidth that you purchased for temporary use has expired, **0** is returned for this parameter.</p>
      */
     @NameInMap("ExpireTime")
     public String expireTime;
 
+    /**
+     * <p>Does the instance have unexpired prepaid bandwidth package, value:</p>
+     * <p>- true</p>
+     * <p>- false</p>
+     */
     @NameInMap("HasPrePaidBandWidthOrderRunning")
     public Boolean hasPrePaidBandWidthOrderRunning;
 
+    /**
+     * <p>The current internal bandwidth of the instance. Unit: Mbit/s.</p>
+     */
     @NameInMap("IntranetBandwidth")
     public Integer intranetBandwidth;
 

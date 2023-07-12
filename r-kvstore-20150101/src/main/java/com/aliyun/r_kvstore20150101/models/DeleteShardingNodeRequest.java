@@ -4,6 +4,9 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DeleteShardingNodeRequest extends TeaModel {
+    @NameInMap("ForceTrans")
+    public Boolean forceTrans;
+
     /**
      * <p>The ID of the instance.</p>
      */
@@ -45,6 +48,14 @@ public class DeleteShardingNodeRequest extends TeaModel {
     public static DeleteShardingNodeRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteShardingNodeRequest self = new DeleteShardingNodeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteShardingNodeRequest setForceTrans(Boolean forceTrans) {
+        this.forceTrans = forceTrans;
+        return this;
+    }
+    public Boolean getForceTrans() {
+        return this.forceTrans;
     }
 
     public DeleteShardingNodeRequest setInstanceId(String instanceId) {

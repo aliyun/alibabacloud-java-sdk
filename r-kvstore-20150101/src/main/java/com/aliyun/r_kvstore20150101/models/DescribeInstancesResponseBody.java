@@ -5,37 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeInstancesResponseBody extends TeaModel {
     /**
-     * <p>The network type of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **CLASSIC**: classic network</p>
-     * <p>*   **VPC**: Virtual Private Cloud (VPC)</p>
+     * <p>Details of the instances.</p>
      */
     @NameInMap("Instances")
     public DescribeInstancesResponseBodyInstances instances;
 
     /**
-     * <p>Indicates whether your Alibaba Cloud account has pending orders for renewal and configuration change. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The zone ID of the instance.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The total number of instances that were queried.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The time when the instance was created.</p>
+     * <p>The total number of instances.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -86,9 +80,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesKVStoreInstanceTagsTag extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -136,92 +136,27 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     public static class DescribeInstancesResponseBodyInstancesKVStoreInstance extends TeaModel {
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The architecture of the instance. Default value: NULL. Valid values:</p>
+         * <br>
+         * <p>*   **cluster**: The instance is a cluster instance.</p>
+         * <p>*   **standard**: The instance is a standard instance.</p>
+         * <p>*   **rwsplit**: The instance is a read/write splitting instance.</p>
+         * <p>*   **NULL**: The instance can be a cluster, standard, or read/write splitting instance.</p>
          */
         @NameInMap("ArchitectureType")
         public String architectureType;
 
         /**
-         * <p>The zone ID of the instance.</p>
+         * <p>The bandwidth of the instance. Unit: Mbit/s.</p>
          */
         @NameInMap("Bandwidth")
         public Long bandwidth;
 
         /**
-         * <p>The value of tag N of the instance.</p>
+         * <p>The storage capacity of the instance. Unit: MB.</p>
          */
         @NameInMap("Capacity")
         public Long capacity;
-
-        /**
-         * <p>The time when the instance was deleted.</p>
-         */
-        @NameInMap("ChargeType")
-        public String chargeType;
-
-        @NameInMap("CloudType")
-        public String cloudType;
-
-        /**
-         * <p>The ID of the vSwitch to which the instance is connected.</p>
-         */
-        @NameInMap("Config")
-        public String config;
-
-        /**
-         * <p>The number of data shards in the instance.</p>
-         * <br>
-         * <p>>  This parameter is returned only if the instance is a cluster instance that uses cloud disks.</p>
-         */
-        @NameInMap("ConnectionDomain")
-        public String connectionDomain;
-
-        /**
-         * <p>The network type of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **CLASSIC**: classic network</p>
-         * <p>*   **VPC**: VPC</p>
-         */
-        @NameInMap("ConnectionMode")
-        public String connectionMode;
-
-        @NameInMap("Connections")
-        public Long connections;
-
-        /**
-         * <p>The ID of the secondary zone.</p>
-         * <br>
-         * <p>>  If multiple zones are returned for **ZoneId** such as cn-hangzhou-MAZ10(h,i), this parameter is ignored.</p>
-         */
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        @NameInMap("DestroyTime")
-        public String destroyTime;
-
-        @NameInMap("EditionType")
-        public String editionType;
-
-        @NameInMap("EndTime")
-        public String endTime;
-
-        /**
-         * <p>Indicates whether the instance is managed by ApsaraDB RDS. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
-         */
-        @NameInMap("EngineVersion")
-        public String engineVersion;
-
-        /**
-         * <p>The value of the tag.</p>
-         */
-        @NameInMap("GlobalInstanceId")
-        public String globalInstanceId;
-
-        @NameInMap("HasRenewChangeOrder")
-        public Boolean hasRenewChangeOrder;
 
         /**
          * <p>The billing method of the instance. Valid values:</p>
@@ -229,23 +164,109 @@ public class DescribeInstancesResponseBody extends TeaModel {
          * <p>*   **PrePaid**: subscription</p>
          * <p>*   **PostPaid**: pay-as-you-go</p>
          */
+        @NameInMap("ChargeType")
+        public String chargeType;
+
+        /**
+         * <p>This parameter is returned only when the instance is in a cloud box.</p>
+         */
+        @NameInMap("CloudType")
+        public String cloudType;
+
+        /**
+         * <p>The parameter configurations of the instance. For more information, see [Modify parameters of an instance](~~43885~~).</p>
+         */
+        @NameInMap("Config")
+        public String config;
+
+        /**
+         * <p>The internal endpoint of the instance.</p>
+         */
+        @NameInMap("ConnectionDomain")
+        public String connectionDomain;
+
+        /**
+         * <p>The connection mode of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **Standard**: standard mode</p>
+         * <p>*   **Safe**: proxy mode</p>
+         */
+        @NameInMap("ConnectionMode")
+        public String connectionMode;
+
+        /**
+         * <p>The maximum number of connections supported by the instance.</p>
+         */
+        @NameInMap("Connections")
+        public Long connections;
+
+        /**
+         * <p>The time when the instance was created.</p>
+         */
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        /**
+         * <p>The time when the instance was deleted.</p>
+         */
+        @NameInMap("DestroyTime")
+        public String destroyTime;
+
+        /**
+         * <p>The edition of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **Community**: Community Edition</p>
+         * <p>*   **Enterprise**: Enhance Edition (Tair)</p>
+         */
+        @NameInMap("EditionType")
+        public String editionType;
+
+        /**
+         * <p>The time when the subscription instance expires.</p>
+         */
+        @NameInMap("EndTime")
+        public String endTime;
+
+        /**
+         * <p>The database engine version of the instance. Valid values: **2.8**, **4.0**, **5.0**, and **6.0**.</p>
+         */
+        @NameInMap("EngineVersion")
+        public String engineVersion;
+
+        /**
+         * <p>The ID of the distributed instance.</p>
+         * <br>
+         * <p>> This parameter is returned only when the instance is a child instance of a distributed instance.</p>
+         */
+        @NameInMap("GlobalInstanceId")
+        public String globalInstanceId;
+
+        /**
+         * <p>Indicates whether your Alibaba Cloud account has pending orders for renewal and configuration change. Valid values:</p>
+         * <br>
+         * <p>*   **true**: Your Alibaba Cloud account has pending orders for renewal and configuration change.</p>
+         * <p>*   **false**: Your Alibaba Cloud account does not have pending orders for renewal and configuration change.</p>
+         */
+        @NameInMap("HasRenewChangeOrder")
+        public Boolean hasRenewChangeOrder;
+
+        /**
+         * <p>The instance class of the instance.</p>
+         */
         @NameInMap("InstanceClass")
         public String instanceClass;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The storage capacity of the instance. Unit: MB.</p>
+         * <p>The name of the instance.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
-
-        @NameInMap("InstanceStatus")
-        public String instanceStatus;
-
-        @NameInMap("InstanceType")
-        public String instanceType;
 
         /**
          * <p>The state of the instance. Valid values:</p>
@@ -256,7 +277,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
          * <p>*   **Inactive**: The instance is disabled.</p>
          * <p>*   **Flushing**: The instance is being released.</p>
          * <p>*   **Released**: The instance is released.</p>
-         * <p>*   **Transforming**: The billing method of the instance is changing.</p>
+         * <p>*   **Transforming**: The billing method of the instance is being changed.</p>
          * <p>*   **Unavailable**: The instance is suspended.</p>
          * <p>*   **Error**: The instance failed to be created.</p>
          * <p>*   **Migrating**: The instance is being migrated.</p>
@@ -264,101 +285,144 @@ public class DescribeInstancesResponseBody extends TeaModel {
          * <p>*   **MinorVersionUpgrading**: The minor version of the instance is being updated.</p>
          * <p>*   **NetworkModifying**: The network type of the instance is being changed.</p>
          * <p>*   **SSLModifying**: The SSL certificate of the instance is being changed.</p>
-         * <p>*   **MajorVersionUpgrading**: The major version of the instance is being upgraded. The instance remains available during the upgrade.</p>
+         * <p>*   **MajorVersionUpgrading**: The major version of the instance is being upgraded. The instance remains accessible during the upgrade.</p>
+         */
+        @NameInMap("InstanceStatus")
+        public String instanceStatus;
+
+        /**
+         * <p>The database engine of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **Tair**</p>
+         * <p>*   **Redis**</p>
+         * <p>*   **Memcache**</p>
+         */
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        /**
+         * <p>Indicates whether the instance is managed by ApsaraDB RDS. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The instance is managed by ApsaraDB RDS.</p>
+         * <p>*   **false**: The instance is not managed by ApsaraDB RDS.</p>
          */
         @NameInMap("IsRds")
         public Boolean isRds;
 
         /**
-         * <p>This parameter is returned only if the instance is in a cloud box.</p>
+         * <p>The network type of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **CLASSIC**: classic network</p>
+         * <p>*   **VPC**: VPC</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
 
+        /**
+         * <p>The node type. Valid values:</p>
+         * <br>
+         * <p>*   **double**: The instance contains a master node and a replica node.</p>
+         * <p>*   **single**: The instance contains only a master node. This node type is phrased out.</p>
+         */
         @NameInMap("NodeType")
         public String nodeType;
 
         /**
-         * <p>The ID of the resource group to which the instance belongs.</p>
+         * <p>The plan type of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **standard**: standard plan</p>
+         * <p>*   **customized**: custom plan</p>
          */
         @NameInMap("PackageType")
         public String packageType;
 
         /**
-         * <p>The instance type. For more information, see [Instance types](~~107984~~).</p>
+         * <p>The port number of the instance.</p>
          */
         @NameInMap("Port")
         public Long port;
 
         /**
-         * <p>The plan type. Valid values:</p>
+         * <p>The private IP address of the instance.</p>
          * <br>
-         * <p>*   **standard**: standard plan</p>
-         * <p>*   **customized**: custom plan</p>
+         * <p>> This parameter is not returned when the instance is deployed in the classic network.</p>
          */
         @NameInMap("PrivateIp")
         public String privateIp;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The expected maximum queries per second (QPS).</p>
          */
         @NameInMap("QPS")
         public Long QPS;
 
+        /**
+         * <p>The region ID of the instance.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The architecture of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **cluster**: cluster architecture</p>
-         * <p>*   **standard**: standard architecture</p>
-         * <p>*   **rwsplit**: read/write splitting architecture</p>
+         * <p>The logical ID of the replica instance.</p>
          */
         @NameInMap("ReplacateId")
         public String replacateId;
 
+        /**
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>Specifies whether to return the child instances of distributed instances. Valid values:</p>
+         * <p>The ID of the secondary zone.</p>
          * <br>
-         * <p>*   **true**: Only child instances are returned.</p>
-         * <p>*   **false**: Child instances are not returned.</p>
+         * <p>> If multiple zones are returned for **ZoneId** such as cn-hangzhou-MAZ10(h,i), this parameter is ignored.</p>
          */
         @NameInMap("SecondaryZoneId")
         public String secondaryZoneId;
 
+        /**
+         * <p>The shard class for the instance.</p>
+         */
         @NameInMap("ShardClass")
         public String shardClass;
 
         /**
-         * <p>The ID of the resource group to which the instance belongs.</p>
+         * <p>The number of data shards in the instance.</p>
          * <br>
-         * <p>>  You can query resource group IDs by using the ApsaraDB for Redis console or by calling the [ListResourceGroups](~~158855~~) operation. For more information, see [View basic information of a resource group](~~151181~~).</p>
+         * <p>> This parameter is returned only when the instance is a cluster instance that uses cloud disks.</p>
          */
         @NameInMap("ShardCount")
         public Integer shardCount;
 
+        /**
+         * <p>Details of the tags.</p>
+         */
         @NameInMap("Tags")
         public DescribeInstancesResponseBodyInstancesKVStoreInstanceTags tags;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The username that is used to connect to the instance. By default, the username that is named after the instance ID is returned.</p>
          */
         @NameInMap("UserName")
         public String userName;
 
+        /**
+         * <p>The ID of the vSwitch.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
-         * <p>The database engine version of the instance. Valid values: **2.8**, **4.0**, and **5.0**.</p>
+         * <p>The ID of the VPC.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The zone ID of the instance.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

@@ -19,6 +19,9 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
+    @NameInMap("ForceTrans")
+    public Boolean forceTrans;
+
     @NameInMap("ForceUpgrade")
     public Boolean forceUpgrade;
 
@@ -110,6 +113,14 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     }
     public String getEffectiveTime() {
         return this.effectiveTime;
+    }
+
+    public ModifyInstanceSpecRequest setForceTrans(Boolean forceTrans) {
+        this.forceTrans = forceTrans;
+        return this;
+    }
+    public Boolean getForceTrans() {
+        return this.forceTrans;
     }
 
     public ModifyInstanceSpecRequest setForceUpgrade(Boolean forceUpgrade) {

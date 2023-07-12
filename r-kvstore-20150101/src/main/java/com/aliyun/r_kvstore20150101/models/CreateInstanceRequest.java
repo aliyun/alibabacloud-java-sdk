@@ -70,6 +70,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("ChargeType")
     public String chargeType;
 
+    @NameInMap("ConnectionStringPrefix")
+    public String connectionStringPrefix;
+
     /**
      * <p>The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.</p>
      */
@@ -120,6 +123,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("GlobalInstanceId")
     public String globalInstanceId;
 
+    /**
+     * <p>The global IP whitelist template for the instance. Multiple IP whitelist templates should be separated by English commas (,) and cannot be duplicated.</p>
+     */
     @NameInMap("GlobalSecurityGroupIds")
     public String globalSecurityGroupIds;
 
@@ -340,6 +346,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    public CreateInstanceRequest setConnectionStringPrefix(String connectionStringPrefix) {
+        this.connectionStringPrefix = connectionStringPrefix;
+        return this;
+    }
+    public String getConnectionStringPrefix() {
+        return this.connectionStringPrefix;
     }
 
     public CreateInstanceRequest setCouponNo(String couponNo) {

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterMemberInfoResponseBody extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeClusterMemberInfo**.</p>
+     * <p>Details of nodes in the cluster instance.</p>
      */
     @NameInMap("ClusterChildren")
     public java.util.List<DescribeClusterMemberInfoResponseBodyClusterChildren> clusterChildren;
 
     /**
-     * <p>The type of workload. The return value is **ALIYUN**.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,19 +39,21 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
 
     public static class DescribeClusterMemberInfoResponseBodyClusterChildren extends TeaModel {
         /**
-         * <p>The major version of the node.</p>
+         * <p>The maximum bandwidth of the node. Unit: MB/s.</p>
+         * <br>
+         * <p>> This parameter is returned only if the return value of **Service** is **redis**, which indicates a data node.</p>
          */
         @NameInMap("BandWidth")
         public Long bandWidth;
 
         /**
-         * <p>The maximum number of connections supported by the data node.</p>
+         * <p>The retention period of binlogs.</p>
          */
         @NameInMap("BinlogRetentionDays")
         public Integer binlogRetentionDays;
 
         /**
-         * <p>The data nodes in the cluster instance.</p>
+         * <p>The type of workload. The return value is **ALIYUN**.</p>
          */
         @NameInMap("BizType")
         public String bizType;
@@ -59,66 +61,80 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
         /**
          * <p>The maximum memory capacity per data node. Unit: MB.</p>
          * <br>
-         * <p>>  This parameter is returned only if the return value of the **Service** parameter is **redis**, which indicates a data node.</p>
+         * <p>> This parameter is returned only if the return value of **Service** is **redis**, which indicates a data node.</p>
          */
         @NameInMap("Capacity")
         public Long capacity;
 
         /**
-         * <p>The name of the node.</p>
+         * <p>The specifications of the data node. For more information, see [Community Edition instances that use cloud disks](~~164477~~).</p>
          */
         @NameInMap("ClassCode")
         public String classCode;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The maximum number of connections supported by the data node.</p>
          */
         @NameInMap("Connections")
         public Long connections;
 
         /**
-         * <p>The maximum bandwidth of the data node. Unit: MB/s.</p>
+         * <p>The current bandwidth of the node, which consists of the default bandwidth and the increased bandwidth. Unit: MB/s.</p>
          * <br>
-         * <p>>  This parameter is returned only if the return value of the **Service** parameter is **redis**, which indicates a data node.</p>
+         * <p>> This parameter is returned only if the instance is created in a dedicated cluster.</p>
          */
         @NameInMap("CurrentBandWidth")
         public Long currentBandWidth;
 
         /**
-         * <p>The retention period of binlogs.</p>
+         * <p>The storage capacity of the [enhanced SSD (ESSD)](~~122389~~) that is used by the data node. Unit: MB.</p>
+         * <br>
+         * <p>> The ESSD is used only to store system operating data, such as Persistent Memory (PMEM). It is not used as a medium to write and read data.</p>
          */
         @NameInMap("DiskSizeMB")
         public Integer diskSizeMB;
 
+        /**
+         * <p>The ID of the replica set in the node.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The name of the data node.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The number of replica nodes.</p>
+         */
         @NameInMap("ReplicaSize")
         public Integer replicaSize;
 
         /**
-         * <p>The type of the node. Valid values:</p>
-         * <br>
-         * <p>*   **redis**: indicates a data node.</p>
-         * <p>*   **configServer**: indicates the ConfigServer node.</p>
+         * <p>The name of the resource group to which the node belongs.</p>
          */
         @NameInMap("ResourceGroupName")
         public String resourceGroupName;
 
         /**
-         * <p>The name of the resource group to which the node belongs.</p>
+         * <p>The node type. Valid values:</p>
+         * <br>
+         * <p>*   **redis**: data node</p>
+         * <p>*   **redis_cs**: config server</p>
          */
         @NameInMap("Service")
         public String service;
 
+        /**
+         * <p>The major version of the node.</p>
+         */
         @NameInMap("ServiceVersion")
         public String serviceVersion;
 
         /**
-         * <p>The ID of the ApsaraDB for Redis instance. You can call the [DescribeInstances](~~60933~~) operation to query instance IDs.</p>
+         * <p>The ID of the user.</p>
          */
         @NameInMap("UserId")
         public String userId;

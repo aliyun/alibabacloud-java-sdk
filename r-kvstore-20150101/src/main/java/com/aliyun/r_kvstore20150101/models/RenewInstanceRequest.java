@@ -5,51 +5,58 @@ import com.aliyun.tea.*;
 
 public class RenewInstanceRequest extends TeaModel {
     /**
-     * <p>The end time of the order.</p>
+     * <p>Specifies whether to enable automatic payment. Default value: true. Valid values:</p>
+     * <br>
+     * <p>*   **true**: enables automatic payment.</p>
+     * <p>*   **false**: disables automatic payment.</p>
+     * <br>
+     * <p>If you select false, you must choose **Expenses** > **Renewal Management** in the top navigation bar. In the left-side navigation pane, click **Orders**. Find the specified order and pay for it.</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the promotional event or business information.</p>
      */
     @NameInMap("BusinessInfo")
     public String businessInfo;
 
     /**
-     * <p>The ID of the event or the business information.</p>
+     * <p>The storage capacity of the instance. Unit: MB. When you renew the instance, you can specify this parameter to change specifications of the instance.</p>
+     * <br>
+     * <p>> To change the specifications when you renew the instance, you must specify at least one of the `Capacity` and `InstanceClass` parameters.</p>
      */
     @NameInMap("Capacity")
     public String capacity;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token is case-sensitive. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The renewal period of the instance. Unit: months. Valid values: **1**, **2**, **3**, **4**, **5**, **6**, **7**, **8**, **9**, **12**, **24**, and **36**.</p>
+     * <p>The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.</p>
      */
     @NameInMap("CouponNo")
     public String couponNo;
 
     /**
-     * <p>Specifies the request source. The default value is **OpenAPI** and cannot be changed.</p>
+     * <p>The source of the request. The default value is **OpenAPI** and cannot be changed.</p>
      */
     @NameInMap("FromApp")
     public String fromApp;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **RenewInstance**.</p>
+     * <p>The instance type code. For more information, see [Instance specifications overview](~~26350~~). When you renew the instance, you can specify this parameter to change specifications of the instance.</p>
+     * <br>
+     * <p>> To change the specifications when you renew the instance, you must specify at least one of the `Capacity` and `InstanceClass` parameters.</p>
      */
     @NameInMap("InstanceClass")
     public String instanceClass;
 
     /**
-     * <p>The instance type code. For more information, see [Instance specifications overview](~~26350~~). You can set this parameter to change specifications of an instance when you renew the instance.</p>
-     * <br>
-     * <p>>  To change the specifications when you renew the instance, you must set at least one of the following parameters: `Capacity` and `InstanceClass`.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -61,12 +68,7 @@ public class RenewInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Specifies whether to enable automatic payment for the instance. Valid values:</p>
-     * <br>
-     * <p>*   **true**: enables automatic payment. This is the default value.</p>
-     * <p>*   **false**: disables automatic payment.</p>
-     * <br>
-     * <p>If you select false, you must choose **Expenses** > **Renewal Management** in the top navigation bar. In the left-side navigation pane, click **Orders**. Find the specified order and pay for it.</p>
+     * <p>The renewal period. Valid values: **1**, 2, 3, 4, 5, 6, 7, 8, **9**, **12**, **24**, and **36**. Unit: months.</p>
      */
     @NameInMap("Period")
     public Long period;

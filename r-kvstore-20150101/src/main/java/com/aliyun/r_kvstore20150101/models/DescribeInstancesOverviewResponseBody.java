@@ -188,6 +188,10 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>Instance\"s secondary zone id.</p>
+         * <p>> This parameter is only returned when the instance has a secondary zone ID.</p>
+         */
         @NameInMap("SecondaryZoneId")
         public String secondaryZoneId;
 
