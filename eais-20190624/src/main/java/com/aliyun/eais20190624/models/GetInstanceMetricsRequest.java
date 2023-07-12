@@ -13,6 +13,9 @@ public class GetInstanceMetricsRequest extends TeaModel {
     @NameInMap("MetricType")
     public String metricType;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("StartTime")
     public String startTime;
 
@@ -46,6 +49,14 @@ public class GetInstanceMetricsRequest extends TeaModel {
     }
     public String getMetricType() {
         return this.metricType;
+    }
+
+    public GetInstanceMetricsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public GetInstanceMetricsRequest setStartTime(String startTime) {

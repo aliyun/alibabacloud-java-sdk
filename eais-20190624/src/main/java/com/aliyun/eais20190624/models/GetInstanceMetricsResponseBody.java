@@ -76,7 +76,9 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
         @NameInMap("Metrics")
         public java.util.List<GetInstanceMetricsResponseBodyPodMetricsMetrics> metrics;
 
-        // Pod ID。
+        /**
+         * <p>Pod ID。</p>
+         */
         @NameInMap("PodId")
         public String podId;
 
