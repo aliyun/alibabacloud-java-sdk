@@ -672,6 +672,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createAuthorityTemplateWithOptions(request, runtime);
     }
 
+    public CreateDataArchiveOrderResponse createDataArchiveOrderWithOptions(CreateDataArchiveOrderRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateDataArchiveOrderShrinkRequest request = new CreateDataArchiveOrderShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.param)) {
+            request.paramShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.param, "Param", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.relatedUserList)) {
+            request.relatedUserListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.relatedUserList, "RelatedUserList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.comment)) {
+            query.put("Comment", request.comment);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paramShrink)) {
+            query.put("Param", request.paramShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentId)) {
+            query.put("ParentId", request.parentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pluginType)) {
+            query.put("PluginType", request.pluginType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.relatedUserListShrink)) {
+            query.put("RelatedUserList", request.relatedUserListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
+            query.put("Tid", request.tid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDataArchiveOrder"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDataArchiveOrderResponse());
+    }
+
+    public CreateDataArchiveOrderResponse createDataArchiveOrder(CreateDataArchiveOrderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDataArchiveOrderWithOptions(request, runtime);
+    }
+
     /**
       * For more information about the Normal Data Modify feature, see [Change regular data](~~58419~~).
       *
@@ -2988,6 +3047,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetDBTopologyResponse getDBTopology(GetDBTopologyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getDBTopologyWithOptions(request, runtime);
+    }
+
+    public GetDataArchiveCountResponse getDataArchiveCountWithOptions(GetDataArchiveCountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.orderResultType)) {
+            query.put("OrderResultType", request.orderResultType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pluginType)) {
+            query.put("PluginType", request.pluginType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchDateType)) {
+            query.put("SearchDateType", request.searchDateType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
+            query.put("Tid", request.tid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDataArchiveCount"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDataArchiveCountResponse());
+    }
+
+    public GetDataArchiveCountResponse getDataArchiveCount(GetDataArchiveCountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDataArchiveCountWithOptions(request, runtime);
     }
 
     public GetDataArchiveOrderDetailResponse getDataArchiveOrderDetailWithOptions(GetDataArchiveOrderDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
