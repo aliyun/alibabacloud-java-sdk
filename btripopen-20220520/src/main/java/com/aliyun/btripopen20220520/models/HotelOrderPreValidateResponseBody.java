@@ -384,6 +384,9 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         @NameInMap("latest_check_out_time")
         public String latestCheckOutTime;
 
+        @NameInMap("max_booking_num")
+        public Integer maxBookingNum;
+
         @NameInMap("max_occupancy_num")
         public Integer maxOccupancyNum;
 
@@ -437,6 +440,14 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         }
         public String getLatestCheckOutTime() {
             return this.latestCheckOutTime;
+        }
+
+        public HotelOrderPreValidateResponseBodyModuleRatePlanInfo setMaxBookingNum(Integer maxBookingNum) {
+            this.maxBookingNum = maxBookingNum;
+            return this;
+        }
+        public Integer getMaxBookingNum() {
+            return this.maxBookingNum;
         }
 
         public HotelOrderPreValidateResponseBodyModuleRatePlanInfo setMaxOccupancyNum(Integer maxOccupancyNum) {
