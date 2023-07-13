@@ -4,6 +4,9 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class ImportRoomControlDevicesShrinkRequest extends TeaModel {
+    @NameInMap("EnableInfraredDeviceImport")
+    public String enableInfraredDeviceImport;
+
     @NameInMap("HotelId")
     public String hotelId;
 
@@ -16,6 +19,14 @@ public class ImportRoomControlDevicesShrinkRequest extends TeaModel {
     public static ImportRoomControlDevicesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ImportRoomControlDevicesShrinkRequest self = new ImportRoomControlDevicesShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ImportRoomControlDevicesShrinkRequest setEnableInfraredDeviceImport(String enableInfraredDeviceImport) {
+        this.enableInfraredDeviceImport = enableInfraredDeviceImport;
+        return this;
+    }
+    public String getEnableInfraredDeviceImport() {
+        return this.enableInfraredDeviceImport;
     }
 
     public ImportRoomControlDevicesShrinkRequest setHotelId(String hotelId) {

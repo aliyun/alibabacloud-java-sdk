@@ -2259,8 +2259,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ImportHotelConfigShrinkRequest request = new ImportHotelConfigShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.importHotelConfigRequest)) {
-            request.importHotelConfigRequestShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.importHotelConfigRequest, "ImportHotelConfigRequest", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.importHotelConfig)) {
+            request.importHotelConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.importHotelConfig, "ImportHotelConfig", "json");
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2268,8 +2268,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("HotelId", request.hotelId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.importHotelConfigRequestShrink)) {
-            body.put("ImportHotelConfigRequest", request.importHotelConfigRequestShrink);
+        if (!com.aliyun.teautil.Common.isUnset(request.importHotelConfigShrink)) {
+            body.put("ImportHotelConfig", request.importHotelConfigShrink);
         }
 
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
@@ -2318,6 +2318,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enableInfraredDeviceImport)) {
+            body.put("EnableInfraredDeviceImport", request.enableInfraredDeviceImport);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.hotelId)) {
             body.put("HotelId", request.hotelId);
         }
@@ -2473,6 +2477,87 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         InvokeRobotPushHeaders headers = new InvokeRobotPushHeaders();
         return this.invokeRobotPushWithOptions(request, headers, runtime);
+    }
+
+    public ListAllProvincesResponse listAllProvincesWithOptions(ListAllProvincesHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAligenieAccessToken)) {
+            realHeaders.put("x-acs-aligenie-access-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsAligenieAccessToken));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAllProvinces"),
+            new TeaPair("version", "ip_1.0"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1.0/ip/listAllProvinces"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAllProvincesResponse());
+    }
+
+    public ListAllProvincesResponse listAllProvinces() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        ListAllProvincesHeaders headers = new ListAllProvincesHeaders();
+        return this.listAllProvincesWithOptions(headers, runtime);
+    }
+
+    public ListCitiesByProvinceResponse listCitiesByProvinceWithOptions(ListCitiesByProvinceRequest request, ListCitiesByProvinceHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.province)) {
+            body.put("Province", request.province);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAligenieAccessToken)) {
+            realHeaders.put("x-acs-aligenie-access-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsAligenieAccessToken));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCitiesByProvince"),
+            new TeaPair("version", "ip_1.0"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1.0/ip/listCitiesByProvince"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCitiesByProvinceResponse());
+    }
+
+    public ListCitiesByProvinceResponse listCitiesByProvince(ListCitiesByProvinceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        ListCitiesByProvinceHeaders headers = new ListCitiesByProvinceHeaders();
+        return this.listCitiesByProvinceWithOptions(request, headers, runtime);
     }
 
     public ListCustomQAResponse listCustomQAWithOptions(ListCustomQARequest tmpReq, ListCustomQAHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3135,6 +3220,166 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         ListHotelsHeaders headers = new ListHotelsHeaders();
         return this.listHotelsWithOptions(request, headers, runtime);
+    }
+
+    public ListInfraredDeviceBrandsResponse listInfraredDeviceBrandsWithOptions(ListInfraredDeviceBrandsRequest request, ListInfraredDeviceBrandsHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.category)) {
+            body.put("Category", request.category);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceProvider)) {
+            body.put("ServiceProvider", request.serviceProvider);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAligenieAccessToken)) {
+            realHeaders.put("x-acs-aligenie-access-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsAligenieAccessToken));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListInfraredDeviceBrands"),
+            new TeaPair("version", "ip_1.0"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1.0/ip/listInfraredDeviceBrands"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListInfraredDeviceBrandsResponse());
+    }
+
+    public ListInfraredDeviceBrandsResponse listInfraredDeviceBrands(ListInfraredDeviceBrandsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        ListInfraredDeviceBrandsHeaders headers = new ListInfraredDeviceBrandsHeaders();
+        return this.listInfraredDeviceBrandsWithOptions(request, headers, runtime);
+    }
+
+    public ListInfraredRemoteControllersResponse listInfraredRemoteControllersWithOptions(ListInfraredRemoteControllersRequest request, ListInfraredRemoteControllersHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.brand)) {
+            body.put("Brand", request.brand);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.category)) {
+            body.put("Category", request.category);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.city)) {
+            body.put("City", request.city);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hotelId)) {
+            body.put("HotelId", request.hotelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.province)) {
+            body.put("Province", request.province);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceProvider)) {
+            body.put("ServiceProvider", request.serviceProvider);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAligenieAccessToken)) {
+            realHeaders.put("x-acs-aligenie-access-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsAligenieAccessToken));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListInfraredRemoteControllers"),
+            new TeaPair("version", "ip_1.0"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1.0/ip/listInfraredRemoteControllers"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListInfraredRemoteControllersResponse());
+    }
+
+    public ListInfraredRemoteControllersResponse listInfraredRemoteControllers(ListInfraredRemoteControllersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        ListInfraredRemoteControllersHeaders headers = new ListInfraredRemoteControllersHeaders();
+        return this.listInfraredRemoteControllersWithOptions(request, headers, runtime);
+    }
+
+    public ListSTBServiceProvidersResponse listSTBServiceProvidersWithOptions(ListSTBServiceProvidersRequest request, ListSTBServiceProvidersHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.city)) {
+            body.put("City", request.city);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.province)) {
+            body.put("Province", request.province);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAligenieAccessToken)) {
+            realHeaders.put("x-acs-aligenie-access-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsAligenieAccessToken));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListSTBServiceProviders"),
+            new TeaPair("version", "ip_1.0"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1.0/ip/listSTBServiceProviders"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSTBServiceProvidersResponse());
+    }
+
+    public ListSTBServiceProvidersResponse listSTBServiceProviders(ListSTBServiceProvidersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        ListSTBServiceProvidersHeaders headers = new ListSTBServiceProvidersHeaders();
+        return this.listSTBServiceProvidersWithOptions(request, headers, runtime);
     }
 
     public ListSceneCategoryResponse listSceneCategoryWithOptions(ListSceneCategoryRequest request, ListSceneCategoryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {

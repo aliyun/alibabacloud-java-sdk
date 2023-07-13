@@ -7,8 +7,8 @@ public class ImportHotelConfigRequest extends TeaModel {
     @NameInMap("HotelId")
     public String hotelId;
 
-    @NameInMap("ImportHotelConfigRequest")
-    public ImportHotelConfigRequestImportHotelConfigRequest importHotelConfigRequest;
+    @NameInMap("ImportHotelConfig")
+    public ImportHotelConfigRequestImportHotelConfig importHotelConfig;
 
     public static ImportHotelConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ImportHotelConfigRequest self = new ImportHotelConfigRequest();
@@ -23,15 +23,15 @@ public class ImportHotelConfigRequest extends TeaModel {
         return this.hotelId;
     }
 
-    public ImportHotelConfigRequest setImportHotelConfigRequest(ImportHotelConfigRequestImportHotelConfigRequest importHotelConfigRequest) {
-        this.importHotelConfigRequest = importHotelConfigRequest;
+    public ImportHotelConfigRequest setImportHotelConfig(ImportHotelConfigRequestImportHotelConfig importHotelConfig) {
+        this.importHotelConfig = importHotelConfig;
         return this;
     }
-    public ImportHotelConfigRequestImportHotelConfigRequest getImportHotelConfigRequest() {
-        return this.importHotelConfigRequest;
+    public ImportHotelConfigRequestImportHotelConfig getImportHotelConfig() {
+        return this.importHotelConfig;
     }
 
-    public static class ImportHotelConfigRequestImportHotelConfigRequestRcuCustomScenes extends TeaModel {
+    public static class ImportHotelConfigRequestImportHotelConfigRcuCustomScenes extends TeaModel {
         @NameInMap("CorpusList")
         public java.util.List<String> corpusList;
 
@@ -47,12 +47,12 @@ public class ImportHotelConfigRequest extends TeaModel {
         @NameInMap("SceneId")
         public String sceneId;
 
-        public static ImportHotelConfigRequestImportHotelConfigRequestRcuCustomScenes build(java.util.Map<String, ?> map) throws Exception {
-            ImportHotelConfigRequestImportHotelConfigRequestRcuCustomScenes self = new ImportHotelConfigRequestImportHotelConfigRequestRcuCustomScenes();
+        public static ImportHotelConfigRequestImportHotelConfigRcuCustomScenes build(java.util.Map<String, ?> map) throws Exception {
+            ImportHotelConfigRequestImportHotelConfigRcuCustomScenes self = new ImportHotelConfigRequestImportHotelConfigRcuCustomScenes();
             return TeaModel.build(map, self);
         }
 
-        public ImportHotelConfigRequestImportHotelConfigRequestRcuCustomScenes setCorpusList(java.util.List<String> corpusList) {
+        public ImportHotelConfigRequestImportHotelConfigRcuCustomScenes setCorpusList(java.util.List<String> corpusList) {
             this.corpusList = corpusList;
             return this;
         }
@@ -60,7 +60,7 @@ public class ImportHotelConfigRequest extends TeaModel {
             return this.corpusList;
         }
 
-        public ImportHotelConfigRequestImportHotelConfigRequestRcuCustomScenes setDescription(String description) {
+        public ImportHotelConfigRequestImportHotelConfigRcuCustomScenes setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -68,7 +68,7 @@ public class ImportHotelConfigRequest extends TeaModel {
             return this.description;
         }
 
-        public ImportHotelConfigRequestImportHotelConfigRequestRcuCustomScenes setIcon(String icon) {
+        public ImportHotelConfigRequestImportHotelConfigRcuCustomScenes setIcon(String icon) {
             this.icon = icon;
             return this;
         }
@@ -76,7 +76,7 @@ public class ImportHotelConfigRequest extends TeaModel {
             return this.icon;
         }
 
-        public ImportHotelConfigRequestImportHotelConfigRequestRcuCustomScenes setName(String name) {
+        public ImportHotelConfigRequestImportHotelConfigRcuCustomScenes setName(String name) {
             this.name = name;
             return this;
         }
@@ -84,7 +84,7 @@ public class ImportHotelConfigRequest extends TeaModel {
             return this.name;
         }
 
-        public ImportHotelConfigRequestImportHotelConfigRequestRcuCustomScenes setSceneId(String sceneId) {
+        public ImportHotelConfigRequestImportHotelConfigRcuCustomScenes setSceneId(String sceneId) {
             this.sceneId = sceneId;
             return this;
         }
@@ -94,20 +94,20 @@ public class ImportHotelConfigRequest extends TeaModel {
 
     }
 
-    public static class ImportHotelConfigRequestImportHotelConfigRequest extends TeaModel {
+    public static class ImportHotelConfigRequestImportHotelConfig extends TeaModel {
         @NameInMap("RcuCustomScenes")
-        public java.util.List<ImportHotelConfigRequestImportHotelConfigRequestRcuCustomScenes> rcuCustomScenes;
+        public java.util.List<ImportHotelConfigRequestImportHotelConfigRcuCustomScenes> rcuCustomScenes;
 
-        public static ImportHotelConfigRequestImportHotelConfigRequest build(java.util.Map<String, ?> map) throws Exception {
-            ImportHotelConfigRequestImportHotelConfigRequest self = new ImportHotelConfigRequestImportHotelConfigRequest();
+        public static ImportHotelConfigRequestImportHotelConfig build(java.util.Map<String, ?> map) throws Exception {
+            ImportHotelConfigRequestImportHotelConfig self = new ImportHotelConfigRequestImportHotelConfig();
             return TeaModel.build(map, self);
         }
 
-        public ImportHotelConfigRequestImportHotelConfigRequest setRcuCustomScenes(java.util.List<ImportHotelConfigRequestImportHotelConfigRequestRcuCustomScenes> rcuCustomScenes) {
+        public ImportHotelConfigRequestImportHotelConfig setRcuCustomScenes(java.util.List<ImportHotelConfigRequestImportHotelConfigRcuCustomScenes> rcuCustomScenes) {
             this.rcuCustomScenes = rcuCustomScenes;
             return this;
         }
-        public java.util.List<ImportHotelConfigRequestImportHotelConfigRequestRcuCustomScenes> getRcuCustomScenes() {
+        public java.util.List<ImportHotelConfigRequestImportHotelConfigRcuCustomScenes> getRcuCustomScenes() {
             return this.rcuCustomScenes;
         }
 

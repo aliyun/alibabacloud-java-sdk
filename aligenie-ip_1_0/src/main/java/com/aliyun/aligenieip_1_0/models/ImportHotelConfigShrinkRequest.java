@@ -7,8 +7,8 @@ public class ImportHotelConfigShrinkRequest extends TeaModel {
     @NameInMap("HotelId")
     public String hotelId;
 
-    @NameInMap("ImportHotelConfigRequest")
-    public String importHotelConfigRequestShrink;
+    @NameInMap("ImportHotelConfig")
+    public String importHotelConfigShrink;
 
     public static ImportHotelConfigShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ImportHotelConfigShrinkRequest self = new ImportHotelConfigShrinkRequest();
@@ -23,12 +23,12 @@ public class ImportHotelConfigShrinkRequest extends TeaModel {
         return this.hotelId;
     }
 
-    public ImportHotelConfigShrinkRequest setImportHotelConfigRequestShrink(String importHotelConfigRequestShrink) {
-        this.importHotelConfigRequestShrink = importHotelConfigRequestShrink;
+    public ImportHotelConfigShrinkRequest setImportHotelConfigShrink(String importHotelConfigShrink) {
+        this.importHotelConfigShrink = importHotelConfigShrink;
         return this;
     }
-    public String getImportHotelConfigRequestShrink() {
-        return this.importHotelConfigRequestShrink;
+    public String getImportHotelConfigShrink() {
+        return this.importHotelConfigShrink;
     }
 
 }

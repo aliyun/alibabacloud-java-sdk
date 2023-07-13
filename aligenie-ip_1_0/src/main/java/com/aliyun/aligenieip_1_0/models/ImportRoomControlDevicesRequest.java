@@ -4,6 +4,9 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class ImportRoomControlDevicesRequest extends TeaModel {
+    @NameInMap("EnableInfraredDeviceImport")
+    public String enableInfraredDeviceImport;
+
     @NameInMap("HotelId")
     public String hotelId;
 
@@ -16,6 +19,14 @@ public class ImportRoomControlDevicesRequest extends TeaModel {
     public static ImportRoomControlDevicesRequest build(java.util.Map<String, ?> map) throws Exception {
         ImportRoomControlDevicesRequest self = new ImportRoomControlDevicesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ImportRoomControlDevicesRequest setEnableInfraredDeviceImport(String enableInfraredDeviceImport) {
+        this.enableInfraredDeviceImport = enableInfraredDeviceImport;
+        return this;
+    }
+    public String getEnableInfraredDeviceImport() {
+        return this.enableInfraredDeviceImport;
     }
 
     public ImportRoomControlDevicesRequest setHotelId(String hotelId) {
@@ -43,8 +54,26 @@ public class ImportRoomControlDevicesRequest extends TeaModel {
     }
 
     public static class ImportRoomControlDevicesRequestLocationDevicesDevices extends TeaModel {
+        @NameInMap("Brand")
+        public String brand;
+
+        @NameInMap("City")
+        public String city;
+
+        @NameInMap("ConnectType")
+        public String connectType;
+
         @NameInMap("DeviceName")
         public String deviceName;
+
+        @NameInMap("InfraredId")
+        public String infraredId;
+
+        @NameInMap("InfraredIndex")
+        public String infraredIndex;
+
+        @NameInMap("InfraredVersion")
+        public String infraredVersion;
 
         @NameInMap("Name")
         public String name;
@@ -52,9 +81,39 @@ public class ImportRoomControlDevicesRequest extends TeaModel {
         @NameInMap("Number")
         public String number;
 
+        @NameInMap("Province")
+        public String province;
+
+        @NameInMap("ServiceProvider")
+        public String serviceProvider;
+
         public static ImportRoomControlDevicesRequestLocationDevicesDevices build(java.util.Map<String, ?> map) throws Exception {
             ImportRoomControlDevicesRequestLocationDevicesDevices self = new ImportRoomControlDevicesRequestLocationDevicesDevices();
             return TeaModel.build(map, self);
+        }
+
+        public ImportRoomControlDevicesRequestLocationDevicesDevices setBrand(String brand) {
+            this.brand = brand;
+            return this;
+        }
+        public String getBrand() {
+            return this.brand;
+        }
+
+        public ImportRoomControlDevicesRequestLocationDevicesDevices setCity(String city) {
+            this.city = city;
+            return this;
+        }
+        public String getCity() {
+            return this.city;
+        }
+
+        public ImportRoomControlDevicesRequestLocationDevicesDevices setConnectType(String connectType) {
+            this.connectType = connectType;
+            return this;
+        }
+        public String getConnectType() {
+            return this.connectType;
         }
 
         public ImportRoomControlDevicesRequestLocationDevicesDevices setDeviceName(String deviceName) {
@@ -63,6 +122,30 @@ public class ImportRoomControlDevicesRequest extends TeaModel {
         }
         public String getDeviceName() {
             return this.deviceName;
+        }
+
+        public ImportRoomControlDevicesRequestLocationDevicesDevices setInfraredId(String infraredId) {
+            this.infraredId = infraredId;
+            return this;
+        }
+        public String getInfraredId() {
+            return this.infraredId;
+        }
+
+        public ImportRoomControlDevicesRequestLocationDevicesDevices setInfraredIndex(String infraredIndex) {
+            this.infraredIndex = infraredIndex;
+            return this;
+        }
+        public String getInfraredIndex() {
+            return this.infraredIndex;
+        }
+
+        public ImportRoomControlDevicesRequestLocationDevicesDevices setInfraredVersion(String infraredVersion) {
+            this.infraredVersion = infraredVersion;
+            return this;
+        }
+        public String getInfraredVersion() {
+            return this.infraredVersion;
         }
 
         public ImportRoomControlDevicesRequestLocationDevicesDevices setName(String name) {
@@ -79,6 +162,22 @@ public class ImportRoomControlDevicesRequest extends TeaModel {
         }
         public String getNumber() {
             return this.number;
+        }
+
+        public ImportRoomControlDevicesRequestLocationDevicesDevices setProvince(String province) {
+            this.province = province;
+            return this;
+        }
+        public String getProvince() {
+            return this.province;
+        }
+
+        public ImportRoomControlDevicesRequestLocationDevicesDevices setServiceProvider(String serviceProvider) {
+            this.serviceProvider = serviceProvider;
+            return this;
+        }
+        public String getServiceProvider() {
+            return this.serviceProvider;
         }
 
     }
