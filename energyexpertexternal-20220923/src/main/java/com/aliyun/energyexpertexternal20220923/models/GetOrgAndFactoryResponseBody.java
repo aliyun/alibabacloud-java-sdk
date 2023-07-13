@@ -7,18 +7,12 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
     @NameInMap("code")
     public String code;
 
-    /**
-     * <p>data</p>
-     */
     @NameInMap("data")
     public java.util.List<GetOrgAndFactoryResponseBodyData> data;
 
     @NameInMap("httpCode")
     public Integer httpCode;
 
-    /**
-     * <p>Id of the request</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -107,6 +101,9 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
         @NameInMap("factoryList")
         public java.util.List<GetOrgAndFactoryResponseBodyDataFactoryList> factoryList;
 
+        @NameInMap("organizationId")
+        public String organizationId;
+
         @NameInMap("organizationName")
         public String organizationName;
 
@@ -129,6 +126,14 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
         }
         public java.util.List<GetOrgAndFactoryResponseBodyDataFactoryList> getFactoryList() {
             return this.factoryList;
+        }
+
+        public GetOrgAndFactoryResponseBodyData setOrganizationId(String organizationId) {
+            this.organizationId = organizationId;
+            return this;
+        }
+        public String getOrganizationId() {
+            return this.organizationId;
         }
 
         public GetOrgAndFactoryResponseBodyData setOrganizationName(String organizationName) {

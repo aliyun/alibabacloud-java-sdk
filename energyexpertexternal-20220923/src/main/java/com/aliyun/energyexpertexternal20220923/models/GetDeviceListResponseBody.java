@@ -4,18 +4,32 @@ package com.aliyun.energyexpertexternal20220923.models;
 import com.aliyun.tea.*;
 
 public class GetDeviceListResponseBody extends TeaModel {
+    @NameInMap("code")
+    public String code;
+
     @NameInMap("data")
     public GetDeviceListResponseBodyData data;
 
-    /**
-     * <p>Id of the request</p>
-     */
+    @NameInMap("httpCode")
+    public Integer httpCode;
+
     @NameInMap("requestId")
     public String requestId;
+
+    @NameInMap("success")
+    public Boolean success;
 
     public static GetDeviceListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetDeviceListResponseBody self = new GetDeviceListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetDeviceListResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public GetDeviceListResponseBody setData(GetDeviceListResponseBodyData data) {
@@ -26,12 +40,28 @@ public class GetDeviceListResponseBody extends TeaModel {
         return this.data;
     }
 
+    public GetDeviceListResponseBody setHttpCode(Integer httpCode) {
+        this.httpCode = httpCode;
+        return this;
+    }
+    public Integer getHttpCode() {
+        return this.httpCode;
+    }
+
     public GetDeviceListResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetDeviceListResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class GetDeviceListResponseBodyDataDeviceListInfo extends TeaModel {

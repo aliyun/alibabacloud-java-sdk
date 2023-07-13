@@ -13,9 +13,6 @@ public class GetDeviceInfoResponseBody extends TeaModel {
     @NameInMap("httpCode")
     public Integer httpCode;
 
-    /**
-     * <p>Id of the request</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
