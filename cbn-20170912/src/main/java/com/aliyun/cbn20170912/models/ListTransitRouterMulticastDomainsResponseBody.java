@@ -123,6 +123,12 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
     }
 
     public static class ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomains extends TeaModel {
+        @NameInMap("CenId")
+        public String cenId;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
         /**
          * <p>WB656982</p>
          */
@@ -167,6 +173,22 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         public static ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomains build(java.util.Map<String, ?> map) throws Exception {
             ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomains self = new ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomains();
             return TeaModel.build(map, self);
+        }
+
+        public ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomains setCenId(String cenId) {
+            this.cenId = cenId;
+            return this;
+        }
+        public String getCenId() {
+            return this.cenId;
+        }
+
+        public ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomains setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomains setStatus(String status) {

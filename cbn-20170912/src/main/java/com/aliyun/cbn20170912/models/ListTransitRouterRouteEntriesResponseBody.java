@@ -82,6 +82,80 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
         return this.transitRouterRouteEntries;
     }
 
+    public static class ListTransitRouterRouteEntriesResponseBodyTransitRouterRouteEntriesPathAttributes extends TeaModel {
+        @NameInMap("AsPaths")
+        public java.util.List<String> asPaths;
+
+        @NameInMap("Communities")
+        public java.util.List<String> communities;
+
+        @NameInMap("OriginInstanceId")
+        public String originInstanceId;
+
+        @NameInMap("OriginInstanceType")
+        public String originInstanceType;
+
+        @NameInMap("OriginRouteType")
+        public String originRouteType;
+
+        @NameInMap("Preference")
+        public Integer preference;
+
+        public static ListTransitRouterRouteEntriesResponseBodyTransitRouterRouteEntriesPathAttributes build(java.util.Map<String, ?> map) throws Exception {
+            ListTransitRouterRouteEntriesResponseBodyTransitRouterRouteEntriesPathAttributes self = new ListTransitRouterRouteEntriesResponseBodyTransitRouterRouteEntriesPathAttributes();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTransitRouterRouteEntriesResponseBodyTransitRouterRouteEntriesPathAttributes setAsPaths(java.util.List<String> asPaths) {
+            this.asPaths = asPaths;
+            return this;
+        }
+        public java.util.List<String> getAsPaths() {
+            return this.asPaths;
+        }
+
+        public ListTransitRouterRouteEntriesResponseBodyTransitRouterRouteEntriesPathAttributes setCommunities(java.util.List<String> communities) {
+            this.communities = communities;
+            return this;
+        }
+        public java.util.List<String> getCommunities() {
+            return this.communities;
+        }
+
+        public ListTransitRouterRouteEntriesResponseBodyTransitRouterRouteEntriesPathAttributes setOriginInstanceId(String originInstanceId) {
+            this.originInstanceId = originInstanceId;
+            return this;
+        }
+        public String getOriginInstanceId() {
+            return this.originInstanceId;
+        }
+
+        public ListTransitRouterRouteEntriesResponseBodyTransitRouterRouteEntriesPathAttributes setOriginInstanceType(String originInstanceType) {
+            this.originInstanceType = originInstanceType;
+            return this;
+        }
+        public String getOriginInstanceType() {
+            return this.originInstanceType;
+        }
+
+        public ListTransitRouterRouteEntriesResponseBodyTransitRouterRouteEntriesPathAttributes setOriginRouteType(String originRouteType) {
+            this.originRouteType = originRouteType;
+            return this;
+        }
+        public String getOriginRouteType() {
+            return this.originRouteType;
+        }
+
+        public ListTransitRouterRouteEntriesResponseBodyTransitRouterRouteEntriesPathAttributes setPreference(Integer preference) {
+            this.preference = preference;
+            return this;
+        }
+        public Integer getPreference() {
+            return this.preference;
+        }
+
+    }
+
     public static class ListTransitRouterRouteEntriesResponseBodyTransitRouterRouteEntries extends TeaModel {
         /**
          * <p>The time when the route was created.</p>
@@ -101,6 +175,9 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
          */
         @NameInMap("OperationalMode")
         public Boolean operationalMode;
+
+        @NameInMap("PathAttributes")
+        public ListTransitRouterRouteEntriesResponseBodyTransitRouterRouteEntriesPathAttributes pathAttributes;
 
         @NameInMap("PrefixListId")
         public String prefixListId;
@@ -210,6 +287,14 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
         }
         public Boolean getOperationalMode() {
             return this.operationalMode;
+        }
+
+        public ListTransitRouterRouteEntriesResponseBodyTransitRouterRouteEntries setPathAttributes(ListTransitRouterRouteEntriesResponseBodyTransitRouterRouteEntriesPathAttributes pathAttributes) {
+            this.pathAttributes = pathAttributes;
+            return this;
+        }
+        public ListTransitRouterRouteEntriesResponseBodyTransitRouterRouteEntriesPathAttributes getPathAttributes() {
+            return this.pathAttributes;
         }
 
         public ListTransitRouterRouteEntriesResponseBodyTransitRouterRouteEntries setPrefixListId(String prefixListId) {

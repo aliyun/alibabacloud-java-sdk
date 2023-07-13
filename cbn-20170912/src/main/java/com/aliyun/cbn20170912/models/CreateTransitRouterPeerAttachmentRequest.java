@@ -5,53 +5,57 @@ import com.aliyun.tea.*;
 
 public class CreateTransitRouterPeerAttachmentRequest extends TeaModel {
     /**
-     * <p>The tags.</p>
+     * <p>Specifies whether to enable the local Enterprise Edition transit router to automatically advertise the routes of the inter-region connection to the peer transit router. Valid values:</p>
+     * <br>
+     * <p>*   **false** (default): no</p>
+     * <p>*   **true**: yes</p>
      */
     @NameInMap("AutoPublishRouteEnabled")
     public Boolean autoPublishRouteEnabled;
 
     /**
-     * <p>The tag keys of the resources. </p>
-     * <br>
-     * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.  </p>
-     * <br>
-     * <p>You can specify at most 20 tag keys.</p>
+     * <p>The maximum bandwidth value of the inter-region connection. Unit: Mbit/s.</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The method that is used to allocate bandwidth to the inter-region connection. Valid values:</p>
+     * <br>
+     * <p>**BandwidthPackage**: allocates bandwidth from a bandwidth plan.</p>
      */
     @NameInMap("BandwidthType")
     public String bandwidthType;
 
     /**
-     * <p>The tag values of the resources. </p>
+     * <p>The ID of the bandwidth plan that is used to allocate bandwidth to the inter-region connection.</p>
      * <br>
-     * <p>The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.  </p>
-     * <br>
-     * <p>Each tag key has a unique tag value. You can specify at most 20 tag values in each call.</p>
+     * <p>If this parameter is not set, the system allocates bandwidth that is used for testing purposes to the inter-region connection. The default bandwidth for testing purpose is 1 Kbit/s. You can use the bandwidth to test the connectivity of IPv4 networks.</p>
      */
     @NameInMap("CenBandwidthPackageId")
     public String cenBandwidthPackageId;
 
     /**
-     * <p>The ID of the peer transit router.</p>
+     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
-     * <p>The description of the inter-region connection.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The ID of the inter-region connection.</p>
+     * <p>Specifies whether to perform a dry run. Default values:</p>
+     * <br>
+     * <p>*   **false** (default): performs a dry run and sends the request.</p>
+     * <p>*   **true**: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -63,29 +67,21 @@ public class CreateTransitRouterPeerAttachmentRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Specifies whether to check the request but not perform the operation. The system checks the permissions and the status of the specified instances. Valid values:</p>
-     * <br>
-     * <p>*   **false** (default): checks the request. If the request passes the check, the inter-region connection is created.</p>
-     * <p>*   **true**: checks the request but does not perform the operation. The inter-region connection is not created after the request passes the check. If you use this value, the system checks the required parameters and the request syntax. If the request fails to pass the precheck, an error message is returned. If the request passes the check, the system returns the ID of the request.</p>
+     * <p>The ID of the peer transit router.</p>
      */
     @NameInMap("PeerTransitRouterId")
     public String peerTransitRouterId;
 
     /**
-     * <p>The method that is used to allocate bandwidth to the inter-region connection. Valid values:</p>
-     * <br>
-     * <p>**BandwidthPackage**: allocates bandwidth from a bandwidth plan.</p>
-     * <br>
-     * <p>**DataTransfer**: uses pay-by-data-transfer bandwidth.</p>
+     * <p>The ID of the region where the peer transit router is deployed.</p>
      */
     @NameInMap("PeerTransitRouterRegionId")
     public String peerTransitRouterRegionId;
 
     /**
-     * <p>Specifies whether to enable the local Enterprise Edition transit router to automatically advertise the routes of the inter-region connection to the peer transit router. Valid values:</p>
+     * <p>The ID of the region where the local Enterprise Edition transit router is deployed.</p>
      * <br>
-     * <p>*   **false** (default): no.</p>
-     * <p>*   **true**: yes.</p>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -97,33 +93,31 @@ public class CreateTransitRouterPeerAttachmentRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>614519</p>
+     * <p>The information about the tags.</p>
+     * <br>
+     * <p>You can specify at most 20 tags in each call.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateTransitRouterPeerAttachmentRequestTag> tag;
 
     /**
-     * <p>The ID of the bandwidth plan that is used to allocate bandwidth to the inter-region connection.</p>
+     * <p>The description of the inter-region connection.</p>
      * <br>
-     * <p>>  If you set **BandwidthType** to **DataTransfer**, you do not need to set this parameter.</p>
+     * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("TransitRouterAttachmentDescription")
     public String transitRouterAttachmentDescription;
 
     /**
-     * <p>The bandwidth value of the inter-region connection. Unit: Mbit/s.</p>
+     * <p>The name of the inter-region connection.</p>
      * <br>
-     * <p>*   If you set **BandwidthType** to **BandwidthPackage**, this parameter specifies the bandwidth that is available for the inter-region connection.</p>
-     * <br>
-     * <p><!----></p>
-     * <br>
-     * <p>*   If you set **BandwidthType** to **DataTransfer**, this parameter specifies the bandwidth limit of the inter-region connection.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
      */
     @NameInMap("TransitRouterAttachmentName")
     public String transitRouterAttachmentName;
 
     /**
-     * <p>The ID of the region where the peer transit router is deployed.</p>
+     * <p>The ID of the local Enterprise Edition transit router.</p>
      */
     @NameInMap("TransitRouterId")
     public String transitRouterId;
@@ -279,29 +273,21 @@ public class CreateTransitRouterPeerAttachmentRequest extends TeaModel {
 
     public static class CreateTransitRouterPeerAttachmentRequestTag extends TeaModel {
         /**
-         * <p>master</p>
+         * <p>The tag key.</p>
+         * <br>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <br>
+         * <p>You can specify at most 20 tag keys.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>## Background information</p>
+         * <p>The tag value.</p>
          * <br>
-         * <p>By default, 1 Kbit/s of bandwidth is provided for inter-region communication between transit routers. This allows you to test the connectivity of inter-region IPv4 networks. To allow services that are deployed in different regions to communicate with each other, you must create an inter-region connection and allocate bandwidth resources to the connection.  </p>
+         * <p>The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
          * <br>
-         * <p>Enterprise Edition transit routers allow you to allocate bandwidth resources to inter-region connections by using the following methods: </p>
-         * <br>
-         * <p>- **Allocate bandwidth resources from a bandwidth plan**:  You must purchase a bandwidth plan, and then allocate bandwidth resources from the bandwidth plan to inter-region connections. For more information, see [CreateCenBandwidthPackage](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/createcenbandwidthpackage).</p>
-         * <br>
-         * <p>- **Use pay-by-data-transfer bandwidth resources**:  You can set a maximum bandwidth value for an inter-region connection. Then, you are charged for the amount of data transfer over the connection. For more information, see [Cross-region data transfers](https://www.alibabacloud.com/help/en/cloud-data-transmission/latest/cross-region-data-transfers).</p>
-         * <br>
-         * <br>
-         * <p>## Usage notes</p>
-         * <br>
-         * <p>**CreateTransitRouterPeerAttachment** is an asynchronous operation. After you send a request, the system returns the inter-region connection ID but the operation is still being performed in the system background. You can call **ListTransitRouterPeerAttachments** to query the status of an inter-region connection.  </p>
-         * <br>
-         * <p>- If an inter-region connection is in the **Attaching** state, the inter-region connection is being created. You can query the inter-region connection but cannot perform other regions.</p>
-         * <p>- If an inter-region connection is in the **Attached** state, the inter-region connection is created.</p>
+         * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
          */
         @NameInMap("Value")
         public String value;
