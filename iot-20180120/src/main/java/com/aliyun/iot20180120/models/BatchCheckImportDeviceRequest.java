@@ -7,9 +7,19 @@ public class BatchCheckImportDeviceRequest extends TeaModel {
     @NameInMap("DeviceList")
     public java.util.List<BatchCheckImportDeviceRequestDeviceList> deviceList;
 
+    /**
+     * <p>The instance ID. You can view the **ID** of the instance on the **Overview** page in the IoT Platform console.</p>
+     * <br>
+     * <p>>  If your instance has an ID, you must specify this parameter. Otherwise, the request fails. If no Overview page exists or no instance ID is displayed, you do not need to specify this parameter.</p>
+     * <br>
+     * <p>For more information, see the [Overview](~~356505~~) topic of IoT instances.</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>The **ProductKey** of the gateway product to which the devices belong.</p>
+     */
     @NameInMap("ProductKey")
     public String productKey;
 

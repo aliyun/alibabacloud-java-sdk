@@ -4,18 +4,36 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QuerySpeechLicenseDeviceListResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the request fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The result of the request.</p>
+     */
     @NameInMap("Data")
     public QuerySpeechLicenseDeviceListResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the request fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,27 +83,61 @@ public class QuerySpeechLicenseDeviceListResponseBody extends TeaModel {
     }
 
     public static class QuerySpeechLicenseDeviceListResponseBodyDataDeviceListItem extends TeaModel {
+        /**
+         * <p>The DeviceName of the device.</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <p>The status of the device.</p>
+         * <br>
+         * <p>*   **ONLINE**: The device is online.</p>
+         * <p>*   **OFFLINE**: The device is offline.</p>
+         * <p>*   **UNACTIVE**: The device is not activated.</p>
+         * <p>*   **DISABLE**: The device is disabled.</p>
+         * <p>*   **DELETE**: The device is deleted.</p>
+         */
         @NameInMap("DeviceStatus")
         public String deviceStatus;
 
+        /**
+         * <p>The expiration time of the license.</p>
+         */
         @NameInMap("ExpiryTime")
         public Long expiryTime;
 
+        /**
+         * <p>Indicates whether the device belongs to the specified device group.</p>
+         */
         @NameInMap("InSpecifiedGroup")
         public Boolean inSpecifiedGroup;
 
+        /**
+         * <p>The ID of the device. The ID is the unique identifier that is issued by IoT Platform to the device.</p>
+         */
         @NameInMap("IotId")
         public String iotId;
 
+        /**
+         * <p>The license status.</p>
+         * <br>
+         * <p>*   **NORMAL**: The license is valid.</p>
+         * <p>*   **EXPIRE**: The license is expired.</p>
+         * <p>*   **EXPIRING**: The license is about to expire.</p>
+         */
         @NameInMap("LicenseStatus")
         public String licenseStatus;
 
+        /**
+         * <p>The **ProductKey** of the product to which the device belongs.</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 
+        /**
+         * <p>The ProductName of the product to which the device belongs.</p>
+         */
         @NameInMap("ProductName")
         public String productName;
 
@@ -180,15 +232,27 @@ public class QuerySpeechLicenseDeviceListResponseBody extends TeaModel {
     }
 
     public static class QuerySpeechLicenseDeviceListResponseBodyData extends TeaModel {
+        /**
+         * <p>The information about devices.</p>
+         */
         @NameInMap("DeviceList")
         public QuerySpeechLicenseDeviceListResponseBodyDataDeviceList deviceList;
 
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("PageId")
         public Integer pageId;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

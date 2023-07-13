@@ -4,18 +4,36 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class PageQuerySharedSpeechOpenResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the request fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The result returned if the request was successful.</p>
+     */
     @NameInMap("Data")
     public PageQuerySharedSpeechOpenResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the request fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,27 +83,55 @@ public class PageQuerySharedSpeechOpenResponseBody extends TeaModel {
     }
 
     public static class PageQuerySharedSpeechOpenResponseBodyDataResultDataData extends TeaModel {
+        /**
+         * <p>The audio format. Valid values: **wav**, **mp3**, and **amr**.</p>
+         */
         @NameInMap("AudioFormat")
         public String audioFormat;
 
+        /**
+         * <p>The unique identifier of the speech in the project.</p>
+         */
         @NameInMap("BizCode")
         public String bizCode;
 
+        /**
+         * <p>The unique identifier of the template.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The broadcasting speed. Valid values: -500 to 500.</p>
+         */
         @NameInMap("SpeechRate")
         public Integer speechRate;
 
+        /**
+         * <p>The status of the speeches. Valid values:</p>
+         * <br>
+         * <p>*   **1**: The speeches are pending approval.</p>
+         * <p>*   **2**: The speeches are approved.</p>
+         * <p>*   **3**: The speeches are rejected.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The content of the speech.</p>
+         */
         @NameInMap("Text")
         public String text;
 
+        /**
+         * <p>The sound effect that is used to broadcast speeches.</p>
+         */
         @NameInMap("Voice")
         public String voice;
 
+        /**
+         * <p>The volume. Valid values: 0 to 100.</p>
+         */
         @NameInMap("Volume")
         public Integer volume;
 
@@ -180,15 +226,27 @@ public class PageQuerySharedSpeechOpenResponseBody extends TeaModel {
     }
 
     public static class PageQuerySharedSpeechOpenResponseBodyData extends TeaModel {
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("PageId")
         public Integer pageId;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The information about shared speeches.</p>
+         */
         @NameInMap("ResultData")
         public PageQuerySharedSpeechOpenResponseBodyDataResultData resultData;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

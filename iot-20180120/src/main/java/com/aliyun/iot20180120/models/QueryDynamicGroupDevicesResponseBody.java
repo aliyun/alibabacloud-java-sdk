@@ -4,33 +4,68 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDynamicGroupDevicesResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the request fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The devices returned after the request succeeds. The information is included in the **SimpleDeviceInfo** field.</p>
+     */
     @NameInMap("Data")
     public QueryDynamicGroupDevicesResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the request fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * <br>
+     * <p>If NextToken is empty, no next page exists.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("Page")
     public Integer page;
 
+    /**
+     * <p>The total number of pages returned.</p>
+     */
     @NameInMap("PageCount")
     public Integer pageCount;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of devices.</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -120,39 +155,85 @@ public class QueryDynamicGroupDevicesResponseBody extends TeaModel {
     }
 
     public static class QueryDynamicGroupDevicesResponseBodyDataSimpleDeviceInfo extends TeaModel {
+        /**
+         * <p>The time when the device was activated.</p>
+         */
         @NameInMap("ActiveTime")
         public String activeTime;
 
+        /**
+         * <p>The identifier of the category to which the product belongs.</p>
+         * <br>
+         * <p>This parameter is returned if the product uses the Thing Specification Language (TSL) model of a standard category that is pre-defined by IoT Platform.</p>
+         */
         @NameInMap("CategoryKey")
         public String categoryKey;
 
+        /**
+         * <p>The DeviceName of the device.</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <p>The ID of the device. The ID is a unique identifier that is issued by IoT Platform to the device.</p>
+         */
         @NameInMap("IotId")
         public String iotId;
 
+        /**
+         * <p>The last time when the device went online.</p>
+         */
         @NameInMap("LastOnlineTime")
         public String lastOnlineTime;
 
+        /**
+         * <p>The alias of the device.</p>
+         */
         @NameInMap("Nickname")
         public String nickname;
 
+        /**
+         * <p>The node type of the product. Valid values:</p>
+         * <br>
+         * <p>*   **0**: device. A device can connect to IoT Platform directly, or be attached to a gateway as a sub-device and then connect to IoT Platform. Sub-devices cannot be attached to a device.</p>
+         * <p>*   **1**: gateway. Sub-devices can be attached to a gateway. A gateway can manage sub-devices, maintain topological relationships with sub-devices, and synchronize topological relationships to IoT Platform.</p>
+         */
         @NameInMap("NodeType")
         public Integer nodeType;
 
+        /**
+         * <p>The **ProductKey** of the product to which the device belongs.</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 
+        /**
+         * <p>The ProductName of the product to which the device belongs.</p>
+         */
         @NameInMap("ProductName")
         public String productName;
 
+        /**
+         * <p>The device status. Valid values:</p>
+         * <br>
+         * <p>*   **ONLINE**: The device is online.</p>
+         * <p>*   **OFFLINE**: The device is offline.</p>
+         * <p>*   **UNACTIVE**: The device is not activated.</p>
+         * <p>*   **DISABLE**: The device is deactivated.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The time when the device was activated. The time is in the UTC format.</p>
+         */
         @NameInMap("UtcActiveTime")
         public String utcActiveTime;
 
+        /**
+         * <p>The last time when the device went online. The time is in the UTC format.</p>
+         */
         @NameInMap("UtcLastOnlineTime")
         public String utcLastOnlineTime;
 

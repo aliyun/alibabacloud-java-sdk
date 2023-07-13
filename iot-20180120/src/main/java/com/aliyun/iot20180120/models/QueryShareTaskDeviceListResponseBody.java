@@ -4,18 +4,36 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryShareTaskDeviceListResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the request fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The result of the request.</p>
+     */
     @NameInMap("Data")
     public QueryShareTaskDeviceListResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the request fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,15 +83,27 @@ public class QueryShareTaskDeviceListResponseBody extends TeaModel {
     }
 
     public static class QueryShareTaskDeviceListResponseBodyDataDeviceListItems extends TeaModel {
+        /**
+         * <p>The DeviceName of the device.</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <p>The time when the device was added to the sharing task.</p>
+         */
         @NameInMap("GmtAdded")
         public Long gmtAdded;
 
+        /**
+         * <p>The ID of the device. The ID is the unique identifier that is issued by IoT Platform to the device.</p>
+         */
         @NameInMap("IotId")
         public String iotId;
 
+        /**
+         * <p>The **ProductKey** of the product to which the device belongs.</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 
@@ -136,15 +166,27 @@ public class QueryShareTaskDeviceListResponseBody extends TeaModel {
     }
 
     public static class QueryShareTaskDeviceListResponseBodyData extends TeaModel {
+        /**
+         * <p>The devices in the sharing task.</p>
+         */
         @NameInMap("DeviceList")
         public QueryShareTaskDeviceListResponseBodyDataDeviceList deviceList;
 
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("PageId")
         public Integer pageId;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

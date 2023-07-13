@@ -4,27 +4,54 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ListDataSourceItemResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the request fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The information about the topics that are returned.</p>
+     */
     @NameInMap("DataSourceItems")
     public ListDataSourceItemResponseBodyDataSourceItems dataSourceItems;
 
+    /**
+     * <p>The error message returned if the request fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("Page")
     public Integer page;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -98,6 +125,9 @@ public class ListDataSourceItemResponseBody extends TeaModel {
     }
 
     public static class ListDataSourceItemResponseBodyDataSourceItemsDataSourceItem extends TeaModel {
+        /**
+         * <p>The ID of the topic of the data source.</p>
+         */
         @NameInMap("DataSourceItemId")
         public Long dataSourceItemId;
 
@@ -110,6 +140,9 @@ public class ListDataSourceItemResponseBody extends TeaModel {
         @NameInMap("ScopeType")
         public String scopeType;
 
+        /**
+         * <p>The name of the topic of the data source.</p>
+         */
         @NameInMap("Topic")
         public String topic;
 

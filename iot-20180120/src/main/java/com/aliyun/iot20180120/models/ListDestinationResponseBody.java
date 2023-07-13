@@ -4,27 +4,54 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ListDestinationResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the request fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data destinations.</p>
+     */
     @NameInMap("Destinations")
     public ListDestinationResponseBodyDestinations destinations;
 
+    /**
+     * <p>The error message returned if the request fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("Page")
     public Integer page;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -98,27 +125,53 @@ public class ListDestinationResponseBody extends TeaModel {
     }
 
     public static class ListDestinationResponseBodyDestinationsDestinations extends TeaModel {
+        /**
+         * <p>The configuration data of the data destination.</p>
+         */
         @NameInMap("Configuration")
         public String configuration;
 
+        /**
+         * <p>The description of the data destination.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the data destination.</p>
+         */
         @NameInMap("DestinationId")
         public Long destinationId;
 
+        /**
+         * <p>Indicates whether the data destination is configured to receive error operation data. Error operation data is the data that failed to be forwarded for two consecutive times.</p>
+         * <br>
+         * <p>*   **true**: The data destination is configured to receive error operation data.</p>
+         * <p>*   **false**: The data destination is configured to receive regular data instead of error operation data.</p>
+         * <br>
+         * <p>Default value: **false**.</p>
+         */
         @NameInMap("IsFailover")
         public Boolean isFailover;
 
+        /**
+         * <p>The name of the data destination.</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The action of forwarding data to the data destination.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The time when the data destination was created. The time is displayed in UTC. The time follows the ISO 8601 standard in the `yyyy-MM-dd\"T\"HH:mm:ss.SSS\"Z\"` format.</p>
+         */
         @NameInMap("UtcCreated")
         public String utcCreated;
 

@@ -4,18 +4,36 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ImportDeviceResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the request fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The device information returned if the request is successful.</p>
+     */
     @NameInMap("Data")
     public ImportDeviceResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the request fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,21 +83,49 @@ public class ImportDeviceResponseBody extends TeaModel {
     }
 
     public static class ImportDeviceResponseBodyData extends TeaModel {
+        /**
+         * <p>The DeviceName of the device.</p>
+         * <br>
+         * <p>>  Keep the information confidential.</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <p>The DeviceSecret of the device.</p>
+         * <br>
+         * <p>>  Keep the information confidential.</p>
+         */
         @NameInMap("DeviceSecret")
         public String deviceSecret;
 
+        /**
+         * <p>The ID of the device. The ID is a unique identifier that is issued by IoT Platform to the device.</p>
+         * <br>
+         * <p>>  Keep the information confidential.</p>
+         */
         @NameInMap("IotId")
         public String iotId;
 
+        /**
+         * <p>The alias of the device.</p>
+         * <br>
+         * <p>> If you did not specify an alias for the device, the response parameter is empty.</p>
+         */
         @NameInMap("Nickname")
         public String nickname;
 
+        /**
+         * <p>The **ProductKey** of the product to which the device belongs.</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 
+        /**
+         * <p>The SN of the device.</p>
+         * <br>
+         * <p>> If you did not specify an SN for the device, the response parameter is empty.</p>
+         */
         @NameInMap("Sn")
         public String sn;
 

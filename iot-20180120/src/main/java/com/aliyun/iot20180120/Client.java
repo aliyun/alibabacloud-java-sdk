@@ -112,6 +112,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.addDataForApiSourceWithOptions(request, runtime);
     }
 
+    public AddDeviceToSharePromotionResponse addDeviceToSharePromotionWithOptions(AddDeviceToSharePromotionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceSimpleInfoList)) {
+            body.put("DeviceSimpleInfoList", request.deviceSimpleInfoList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sharePromotionActivityId)) {
+            body.put("SharePromotionActivityId", request.sharePromotionActivityId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shareTaskCode)) {
+            body.put("ShareTaskCode", request.shareTaskCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddDeviceToSharePromotion"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddDeviceToSharePromotionResponse());
+    }
+
+    public AddDeviceToSharePromotionResponse addDeviceToSharePromotion(AddDeviceToSharePromotionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addDeviceToSharePromotionWithOptions(request, runtime);
+    }
+
     public AddShareTaskDeviceResponse addShareTaskDeviceWithOptions(AddShareTaskDeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -645,6 +686,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.batchCheckDeviceNamesWithOptions(request, runtime);
     }
 
+    /**
+      * ## QPS limits
+      * You can call this operation up to 100 times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request BatchCheckImportDeviceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BatchCheckImportDeviceResponse
+     */
     public BatchCheckImportDeviceResponse batchCheckImportDeviceWithOptions(BatchCheckImportDeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -679,6 +729,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BatchCheckImportDeviceResponse());
     }
 
+    /**
+      * ## QPS limits
+      * You can call this operation up to 100 times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request BatchCheckImportDeviceRequest
+      * @return BatchCheckImportDeviceResponse
+     */
     public BatchCheckImportDeviceResponse batchCheckImportDevice(BatchCheckImportDeviceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchCheckImportDeviceWithOptions(request, runtime);
@@ -1378,6 +1436,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.batchGrayMigrationDeviceWithOptions(request, runtime);
     }
 
+    /**
+      * ## Usage notes
+      * Before you call this operation, make sure that an MQTT gateway and the related product are created and the **ProductKey** of the product is obtained. For more information, see [Create an MQTT gateway](~~433804~~).
+      * ## QPS limits
+      * You can call this API operation up to 10 times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request BatchImportDeviceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BatchImportDeviceResponse
+     */
     public BatchImportDeviceResponse batchImportDeviceWithOptions(BatchImportDeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1412,6 +1481,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BatchImportDeviceResponse());
     }
 
+    /**
+      * ## Usage notes
+      * Before you call this operation, make sure that an MQTT gateway and the related product are created and the **ProductKey** of the product is obtained. For more information, see [Create an MQTT gateway](~~433804~~).
+      * ## QPS limits
+      * You can call this API operation up to 10 times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request BatchImportDeviceRequest
+      * @return BatchImportDeviceResponse
+     */
     public BatchImportDeviceResponse batchImportDevice(BatchImportDeviceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchImportDeviceWithOptions(request, runtime);
@@ -2164,6 +2243,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.bindGatewayToEdgeInstanceWithOptions(request, runtime);
     }
 
+    /**
+      * ## Usage notes
+      * Before you call this operation, make sure that the following steps are complete:
+      * 1.  A license is purchased. For more information, see [Purchase a license](~~427935~~).
+      * 2.  The license is bound to a product. The devices to which you want to bind the license belong to the product. For more information, see [BindLicenseProduct](~~427956~~) or [Bind a license to a product](~~427937~~).
+      * ## QPS limits
+      * You can call this API operation up to 10 times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request BindLicenseDeviceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BindLicenseDeviceResponse
+     */
     public BindLicenseDeviceResponse bindLicenseDeviceWithOptions(BindLicenseDeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2206,6 +2298,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BindLicenseDeviceResponse());
     }
 
+    /**
+      * ## Usage notes
+      * Before you call this operation, make sure that the following steps are complete:
+      * 1.  A license is purchased. For more information, see [Purchase a license](~~427935~~).
+      * 2.  The license is bound to a product. The devices to which you want to bind the license belong to the product. For more information, see [BindLicenseProduct](~~427956~~) or [Bind a license to a product](~~427937~~).
+      * ## QPS limits
+      * You can call this API operation up to 10 times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request BindLicenseDeviceRequest
+      * @return BindLicenseDeviceResponse
+     */
     public BindLicenseDeviceResponse bindLicenseDevice(BindLicenseDeviceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.bindLicenseDeviceWithOptions(request, runtime);
@@ -2965,6 +3069,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.copyThingModelWithOptions(request, runtime);
     }
 
+    /**
+      * ## Usage notes
+      * You can call this operation to query the shared speeches that were broadcasted six hours ago. For example, if a speech was broadcasted at 07:15, you can query the speech after 13:15.
+      * ## QPS limits
+      * You can call this API operation up to 100 times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CountSpeechBroadcastHourRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CountSpeechBroadcastHourResponse
+     */
     public CountSpeechBroadcastHourResponse countSpeechBroadcastHourWithOptions(CountSpeechBroadcastHourRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2999,6 +3114,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CountSpeechBroadcastHourResponse());
     }
 
+    /**
+      * ## Usage notes
+      * You can call this operation to query the shared speeches that were broadcasted six hours ago. For example, if a speech was broadcasted at 07:15, you can query the speech after 13:15.
+      * ## QPS limits
+      * You can call this API operation up to 100 times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CountSpeechBroadcastHourRequest
+      * @return CountSpeechBroadcastHourResponse
+     */
     public CountSpeechBroadcastHourResponse countSpeechBroadcastHour(CountSpeechBroadcastHourRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.countSpeechBroadcastHourWithOptions(request, runtime);
@@ -3173,6 +3298,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createDataAPIServiceWithOptions(request, runtime);
     }
 
+    /**
+      * ## Usage notes
+      * Before you call this operation, perform the following steps: First, create a data source. For information about how to create a data source, see Step 1 to Step 6 in the [Create a data source](~~270932~~) topic. Second, go to the **Data Source** tab on the **Message Forwarding** page of the instance that you want to manage in the IoT Platform console. Then, view and record the ID of the **data source** that you created.
+      * >  If you set Topic to a custom topic for a product or device that uses the open source Message Queuing Telemetry Transport (MQTT) protocol, you must specify ScopeType and ProductKey. If ScopeType is set to DEVICE, you must also specify DeviceName.
+      * ## QPS limits
+      * You can call this API operation up to 10 times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateDataSourceItemRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateDataSourceItemResponse
+     */
     public CreateDataSourceItemResponse createDataSourceItemWithOptions(CreateDataSourceItemRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3217,6 +3354,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDataSourceItemResponse());
     }
 
+    /**
+      * ## Usage notes
+      * Before you call this operation, perform the following steps: First, create a data source. For information about how to create a data source, see Step 1 to Step 6 in the [Create a data source](~~270932~~) topic. Second, go to the **Data Source** tab on the **Message Forwarding** page of the instance that you want to manage in the IoT Platform console. Then, view and record the ID of the **data source** that you created.
+      * >  If you set Topic to a custom topic for a product or device that uses the open source Message Queuing Telemetry Transport (MQTT) protocol, you must specify ScopeType and ProductKey. If ScopeType is set to DEVICE, you must also specify DeviceName.
+      * ## QPS limits
+      * You can call this API operation up to 10 times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateDataSourceItemRequest
+      * @return CreateDataSourceItemResponse
+     */
     public CreateDataSourceItemResponse createDataSourceItem(CreateDataSourceItemRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDataSourceItemWithOptions(request, runtime);
@@ -4083,6 +4231,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createJobWithOptions(request, runtime);
     }
 
+    /**
+      * ## Usage notes
+      * You can call this operation to create up to 500 devices.
+      * ## QPS limits
+      * You can call this API operation up to 50 times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateLoRaNodesTaskRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateLoRaNodesTaskResponse
+     */
     public CreateLoRaNodesTaskResponse createLoRaNodesTaskWithOptions(CreateLoRaNodesTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4115,6 +4274,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateLoRaNodesTaskResponse());
     }
 
+    /**
+      * ## Usage notes
+      * You can call this operation to create up to 500 devices.
+      * ## QPS limits
+      * You can call this API operation up to 50 times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request CreateLoRaNodesTaskRequest
+      * @return CreateLoRaNodesTaskResponse
+     */
     public CreateLoRaNodesTaskResponse createLoRaNodesTask(CreateLoRaNodesTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createLoRaNodesTaskWithOptions(request, runtime);
@@ -5252,6 +5421,112 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateSchedulePeriodResponse createSchedulePeriod(CreateSchedulePeriodRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createSchedulePeriodWithOptions(request, runtime);
+    }
+
+    public CreateSharePromotionActivityResponse createSharePromotionActivityWithOptions(CreateSharePromotionActivityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            body.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sharePromotionActivityName)) {
+            body.put("SharePromotionActivityName", request.sharePromotionActivityName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            body.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSharePromotionActivity"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSharePromotionActivityResponse());
+    }
+
+    public CreateSharePromotionActivityResponse createSharePromotionActivity(CreateSharePromotionActivityRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createSharePromotionActivityWithOptions(request, runtime);
+    }
+
+    public CreateSharePromotionSpeechModelResponse createSharePromotionSpeechModelWithOptions(CreateSharePromotionSpeechModelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.audioFormat)) {
+            body.put("AudioFormat", request.audioFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizCode)) {
+            body.put("BizCode", request.bizCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sharePromotionActivityId)) {
+            body.put("SharePromotionActivityId", request.sharePromotionActivityId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shareTaskCode)) {
+            body.put("ShareTaskCode", request.shareTaskCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.speechModelType)) {
+            body.put("SpeechModelType", request.speechModelType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.speechRate)) {
+            body.put("SpeechRate", request.speechRate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.text)) {
+            body.put("Text", request.text);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.voice)) {
+            body.put("Voice", request.voice);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.volume)) {
+            body.put("Volume", request.volume);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSharePromotionSpeechModel"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSharePromotionSpeechModelResponse());
+    }
+
+    public CreateSharePromotionSpeechModelResponse createSharePromotionSpeechModel(CreateSharePromotionSpeechModelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createSharePromotionSpeechModelWithOptions(request, runtime);
     }
 
     public CreateSoundCodeResponse createSoundCodeWithOptions(CreateSoundCodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -8820,6 +9095,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getGatewayBySubDeviceWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * You can call this API operation up to 50 times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request GetLoraNodesTaskRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetLoraNodesTaskResponse
+     */
     public GetLoraNodesTaskResponse getLoraNodesTaskWithOptions(GetLoraNodesTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8848,6 +9132,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetLoraNodesTaskResponse());
     }
 
+    /**
+      * ## Limits
+      * You can call this API operation up to 50 times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request GetLoraNodesTaskRequest
+      * @return GetLoraNodesTaskResponse
+     */
     public GetLoraNodesTaskResponse getLoraNodesTask(GetLoraNodesTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getLoraNodesTaskWithOptions(request, runtime);
@@ -9225,6 +9517,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getSpeechDeviceDetailWithOptions(request, runtime);
     }
 
+    /**
+      * ## QPS limits
+      * You can call this API operation up to three times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request GetSpeechLicenseDeviceStatisticsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetSpeechLicenseDeviceStatisticsResponse
+     */
     public GetSpeechLicenseDeviceStatisticsResponse getSpeechLicenseDeviceStatisticsWithOptions(GetSpeechLicenseDeviceStatisticsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -9249,6 +9550,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetSpeechLicenseDeviceStatisticsResponse());
     }
 
+    /**
+      * ## QPS limits
+      * You can call this API operation up to three times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request GetSpeechLicenseDeviceStatisticsRequest
+      * @return GetSpeechLicenseDeviceStatisticsResponse
+     */
     public GetSpeechLicenseDeviceStatisticsResponse getSpeechLicenseDeviceStatistics(GetSpeechLicenseDeviceStatisticsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getSpeechLicenseDeviceStatisticsWithOptions(request, runtime);
@@ -9731,6 +10040,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.importDTDataWithOptions(request, runtime);
     }
 
+    /**
+      * ## Usage notes
+      * Before you call this operation, make sure that an MQTT gateway and the related product are created and the **ProductKey** of the product is obtained. For more information, see [Create an MQTT gateway](~~433804~~).
+      * ## QPS limits
+      * You can call this API operation up to 50 times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ImportDeviceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ImportDeviceResponse
+     */
     public ImportDeviceResponse importDeviceWithOptions(ImportDeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -9775,6 +10095,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ImportDeviceResponse());
     }
 
+    /**
+      * ## Usage notes
+      * Before you call this operation, make sure that an MQTT gateway and the related product are created and the **ProductKey** of the product is obtained. For more information, see [Create an MQTT gateway](~~433804~~).
+      * ## QPS limits
+      * You can call this API operation up to 50 times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ImportDeviceRequest
+      * @return ImportDeviceResponse
+     */
     public ImportDeviceResponse importDevice(ImportDeviceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.importDeviceWithOptions(request, runtime);
@@ -10140,6 +10470,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listAnalyticsDataWithOptions(request, runtime);
     }
 
+    /**
+      * ## QPS limits
+      * You can call this API operation up to 10 times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ListDataSourceItemRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListDataSourceItemResponse
+     */
     public ListDataSourceItemResponse listDataSourceItemWithOptions(ListDataSourceItemRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -10180,6 +10519,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListDataSourceItemResponse());
     }
 
+    /**
+      * ## QPS limits
+      * You can call this API operation up to 10 times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ListDataSourceItemRequest
+      * @return ListDataSourceItemResponse
+     */
     public ListDataSourceItemResponse listDataSourceItem(ListDataSourceItemRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDataSourceItemWithOptions(request, runtime);
@@ -11403,6 +11750,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listThingTemplatesWithOptions(request, runtime);
     }
 
+    public ModifyOTAFirmwareResponse modifyOTAFirmwareWithOptions(ModifyOTAFirmwareRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.firmwareDesc)) {
+            query.put("FirmwareDesc", request.firmwareDesc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.firmwareId)) {
+            query.put("FirmwareId", request.firmwareId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.firmwareName)) {
+            query.put("FirmwareName", request.firmwareName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.firmwareUdi)) {
+            query.put("FirmwareUdi", request.firmwareUdi);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            query.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productKey)) {
+            query.put("ProductKey", request.productKey);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyOTAFirmware"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyOTAFirmwareResponse());
+    }
+
+    public ModifyOTAFirmwareResponse modifyOTAFirmware(ModifyOTAFirmwareRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyOTAFirmwareWithOptions(request, runtime);
+    }
+
     /**
       * A successful response indicates that the command to add topological relationships is sent to the gateway. It does not indicate that the topological relationships are added.
       * When you develop the gateway, you must subscribe to the topic that is used to send notifications when you add topological relationships. For more information about the topic and message format, see [Manage topological relationships](~~89299~~).
@@ -11531,6 +11927,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.packageSoundCodeLabelBatchAudioWithOptions(request, runtime);
     }
 
+    /**
+      * ## QPS limits
+      * You can call this operation up to 100 times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request PageQuerySharedSpeechOpenRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return PageQuerySharedSpeechOpenResponse
+     */
     public PageQuerySharedSpeechOpenResponse pageQuerySharedSpeechOpenWithOptions(PageQuerySharedSpeechOpenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -11583,11 +11988,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PageQuerySharedSpeechOpenResponse());
     }
 
+    /**
+      * ## QPS limits
+      * You can call this operation up to 100 times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request PageQuerySharedSpeechOpenRequest
+      * @return PageQuerySharedSpeechOpenResponse
+     */
     public PageQuerySharedSpeechOpenResponse pageQuerySharedSpeechOpen(PageQuerySharedSpeechOpenRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.pageQuerySharedSpeechOpenWithOptions(request, runtime);
     }
 
+    /**
+      * ## Usage notes
+      * You can call this operation to query only shared speech broadcasting data six hours ago. For example, if a shared speech was broadcasted at 07:15, you can query the speech after 13:15.
+      * ## QPS limits
+      * You can call this operation up to 100 times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request PageQuerySpeechBroadcastHourRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return PageQuerySpeechBroadcastHourResponse
+     */
     public PageQuerySpeechBroadcastHourResponse pageQuerySpeechBroadcastHourWithOptions(PageQuerySpeechBroadcastHourRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -11630,11 +12054,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PageQuerySpeechBroadcastHourResponse());
     }
 
+    /**
+      * ## Usage notes
+      * You can call this operation to query only shared speech broadcasting data six hours ago. For example, if a shared speech was broadcasted at 07:15, you can query the speech after 13:15.
+      * ## QPS limits
+      * You can call this operation up to 100 times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request PageQuerySpeechBroadcastHourRequest
+      * @return PageQuerySpeechBroadcastHourResponse
+     */
     public PageQuerySpeechBroadcastHourResponse pageQuerySpeechBroadcastHour(PageQuerySpeechBroadcastHourRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.pageQuerySpeechBroadcastHourWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Before you call this operation, a receipt template must be available in the Letter Sending Service console. Otherwise, the request fails.
+      * ## QPS limits
+      * You can call this API operation up to 50 times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request PrintByTemplateRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return PrintByTemplateResponse
+     */
     public PrintByTemplateResponse printByTemplateWithOptions(PrintByTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -11683,6 +12128,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PrintByTemplateResponse());
     }
 
+    /**
+      * ## Limits
+      * Before you call this operation, a receipt template must be available in the Letter Sending Service console. Otherwise, the request fails.
+      * ## QPS limits
+      * You can call this API operation up to 50 times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request PrintByTemplateRequest
+      * @return PrintByTemplateResponse
+     */
     public PrintByTemplateResponse printByTemplate(PrintByTemplateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.printByTemplateWithOptions(request, runtime);
@@ -12101,6 +12556,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryBatchRegisterDeviceStatusWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * You can call this API operation up to 10 times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryCertUrlByApplyIdRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryCertUrlByApplyIdResponse
+     */
     public QueryCertUrlByApplyIdResponse queryCertUrlByApplyIdWithOptions(QueryCertUrlByApplyIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -12129,6 +12593,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryCertUrlByApplyIdResponse());
     }
 
+    /**
+      * ## Limits
+      * You can call this API operation up to 10 times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryCertUrlByApplyIdRequest
+      * @return QueryCertUrlByApplyIdResponse
+     */
     public QueryCertUrlByApplyIdResponse queryCertUrlByApplyId(QueryCertUrlByApplyIdRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryCertUrlByApplyIdWithOptions(request, runtime);
@@ -14583,6 +15055,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryDevicesHotStorageDataStatusWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * *   The dynamic group feature is available for public instances and Enterprise Edition instances in the China (Shanghai) region. For more information, see [Manage instances](~~147356~~).
+      * *   Each Alibaba Cloud account can run up to 50 queries per second (QPS).
+      *     **
+      *     **Note**The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDynamicGroupDevicesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryDynamicGroupDevicesResponse
+     */
     public QueryDynamicGroupDevicesResponse queryDynamicGroupDevicesWithOptions(QueryDynamicGroupDevicesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -14639,6 +15122,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDynamicGroupDevicesResponse());
     }
 
+    /**
+      * ## Limits
+      * *   The dynamic group feature is available for public instances and Enterprise Edition instances in the China (Shanghai) region. For more information, see [Manage instances](~~147356~~).
+      * *   Each Alibaba Cloud account can run up to 50 queries per second (QPS).
+      *     **
+      *     **Note**The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryDynamicGroupDevicesRequest
+      * @return QueryDynamicGroupDevicesResponse
+     */
     public QueryDynamicGroupDevicesResponse queryDynamicGroupDevices(QueryDynamicGroupDevicesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryDynamicGroupDevicesWithOptions(request, runtime);
@@ -15238,6 +15731,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryEdgeInstanceSceneRuleWithOptions(request, runtime);
     }
 
+    /**
+      * ## QPS limits
+      * You can call this API operation up to 50 times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryImportedDeviceByApplyIdRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryImportedDeviceByApplyIdResponse
+     */
     public QueryImportedDeviceByApplyIdResponse queryImportedDeviceByApplyIdWithOptions(QueryImportedDeviceByApplyIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -15274,6 +15776,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryImportedDeviceByApplyIdResponse());
     }
 
+    /**
+      * ## QPS limits
+      * You can call this API operation up to 50 times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryImportedDeviceByApplyIdRequest
+      * @return QueryImportedDeviceByApplyIdResponse
+     */
     public QueryImportedDeviceByApplyIdResponse queryImportedDeviceByApplyId(QueryImportedDeviceByApplyIdRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryImportedDeviceByApplyIdWithOptions(request, runtime);
@@ -15337,6 +15847,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryJobStatisticsWithOptions(request, runtime);
     }
 
+    /**
+      * ## QPS limits
+      * You can call this API operation up to 10 times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryLicenseDeviceListRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryLicenseDeviceListResponse
+     */
     public QueryLicenseDeviceListResponse queryLicenseDeviceListWithOptions(QueryLicenseDeviceListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -15389,6 +15908,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryLicenseDeviceListResponse());
     }
 
+    /**
+      * ## QPS limits
+      * You can call this API operation up to 10 times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryLicenseDeviceListRequest
+      * @return QueryLicenseDeviceListResponse
+     */
     public QueryLicenseDeviceListResponse queryLicenseDeviceList(QueryLicenseDeviceListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryLicenseDeviceListWithOptions(request, runtime);
@@ -15666,6 +16193,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryProductWithOptions(request, runtime);
     }
 
+    /**
+      * ## QPS limits
+      * You can call this API operation up to 30 times per second per account.
+      * >The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryProductCertInfoRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryProductCertInfoResponse
+     */
     public QueryProductCertInfoResponse queryProductCertInfoWithOptions(QueryProductCertInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -15694,6 +16230,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryProductCertInfoResponse());
     }
 
+    /**
+      * ## QPS limits
+      * You can call this API operation up to 30 times per second per account.
+      * >The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryProductCertInfoRequest
+      * @return QueryProductCertInfoResponse
+     */
     public QueryProductCertInfoResponse queryProductCertInfo(QueryProductCertInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryProductCertInfoWithOptions(request, runtime);
@@ -15815,6 +16359,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryProductTopicWithOptions(request, runtime);
     }
 
+    /**
+      * ## QPS limits
+      * You can call this API operation up to three times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryProjectShareDeviceListRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryProjectShareDeviceListResponse
+     */
     public QueryProjectShareDeviceListResponse queryProjectShareDeviceListWithOptions(QueryProjectShareDeviceListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -15855,6 +16408,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryProjectShareDeviceListResponse());
     }
 
+    /**
+      * ## QPS limits
+      * You can call this API operation up to three times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryProjectShareDeviceListRequest
+      * @return QueryProjectShareDeviceListResponse
+     */
     public QueryProjectShareDeviceListResponse queryProjectShareDeviceList(QueryProjectShareDeviceListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryProjectShareDeviceListWithOptions(request, runtime);
@@ -15942,6 +16503,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.querySchedulePeriodListWithOptions(request, runtime);
     }
 
+    public QuerySharePromotionActivityAuditResultResponse querySharePromotionActivityAuditResultWithOptions(QuerySharePromotionActivityAuditResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sharePromotionActivityId)) {
+            body.put("SharePromotionActivityId", request.sharePromotionActivityId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shareTaskCode)) {
+            body.put("ShareTaskCode", request.shareTaskCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QuerySharePromotionActivityAuditResult"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QuerySharePromotionActivityAuditResultResponse());
+    }
+
+    public QuerySharePromotionActivityAuditResultResponse querySharePromotionActivityAuditResult(QuerySharePromotionActivityAuditResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.querySharePromotionActivityAuditResultWithOptions(request, runtime);
+    }
+
+    /**
+      * ## QPS limits
+      * You can call this API operation up to three times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryShareTaskDeviceListRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryShareTaskDeviceListResponse
+     */
     public QueryShareTaskDeviceListResponse queryShareTaskDeviceListWithOptions(QueryShareTaskDeviceListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -15982,6 +16589,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryShareTaskDeviceListResponse());
     }
 
+    /**
+      * ## QPS limits
+      * You can call this API operation up to three times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QueryShareTaskDeviceListRequest
+      * @return QueryShareTaskDeviceListResponse
+     */
     public QueryShareTaskDeviceListResponse queryShareTaskDeviceList(QueryShareTaskDeviceListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryShareTaskDeviceListWithOptions(request, runtime);
@@ -16336,6 +16951,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.querySpeechLicenseAvailableQuotaWithOptions(request, runtime);
     }
 
+    /**
+      * ## QPS limits
+      * You can call this API operation up to three times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QuerySpeechLicenseDeviceListRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QuerySpeechLicenseDeviceListResponse
+     */
     public QuerySpeechLicenseDeviceListResponse querySpeechLicenseDeviceListWithOptions(QuerySpeechLicenseDeviceListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -16386,6 +17010,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QuerySpeechLicenseDeviceListResponse());
     }
 
+    /**
+      * ## QPS limits
+      * You can call this API operation up to three times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request QuerySpeechLicenseDeviceListRequest
+      * @return QuerySpeechLicenseDeviceListResponse
+     */
     public QuerySpeechLicenseDeviceListResponse querySpeechLicenseDeviceList(QuerySpeechLicenseDeviceListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.querySpeechLicenseDeviceListWithOptions(request, runtime);
@@ -17460,6 +18092,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.rRpcWithOptions(request, runtime);
     }
 
+    /**
+      * ## QPS limits
+      * You can call this API operation up to five times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ReBindLicenseDeviceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ReBindLicenseDeviceResponse
+     */
     public ReBindLicenseDeviceResponse reBindLicenseDeviceWithOptions(ReBindLicenseDeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -17498,6 +18139,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ReBindLicenseDeviceResponse());
     }
 
+    /**
+      * ## QPS limits
+      * You can call this API operation up to five times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ReBindLicenseDeviceRequest
+      * @return ReBindLicenseDeviceResponse
+     */
     public ReBindLicenseDeviceResponse reBindLicenseDevice(ReBindLicenseDeviceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.reBindLicenseDeviceWithOptions(request, runtime);
@@ -18549,6 +19198,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.setEdgeInstanceDriverConfigsWithOptions(request, runtime);
     }
 
+    /**
+      * ## QPS limits
+      * You can call this API operation up to 30 times per second per account.
+      * >The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request SetProductCertInfoRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SetProductCertInfoResponse
+     */
     public SetProductCertInfoResponse setProductCertInfoWithOptions(SetProductCertInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -18581,6 +19239,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SetProductCertInfoResponse());
     }
 
+    /**
+      * ## QPS limits
+      * You can call this API operation up to 30 times per second per account.
+      * >The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request SetProductCertInfoRequest
+      * @return SetProductCertInfoResponse
+     */
     public SetProductCertInfoResponse setProductCertInfo(SetProductCertInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setProductCertInfoWithOptions(request, runtime);
@@ -18660,6 +19326,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.setupStudioAppAuthModeOpenWithOptions(request, runtime);
     }
 
+    /**
+      * ## QPS limits
+      * You can call this API operation up to 50 times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ShareSpeechByCombinationRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ShareSpeechByCombinationResponse
+     */
     public ShareSpeechByCombinationResponse shareSpeechByCombinationWithOptions(ShareSpeechByCombinationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -18708,6 +19383,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ShareSpeechByCombinationResponse());
     }
 
+    /**
+      * ## QPS limits
+      * You can call this API operation up to 50 times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request ShareSpeechByCombinationRequest
+      * @return ShareSpeechByCombinationResponse
+     */
     public ShareSpeechByCombinationResponse shareSpeechByCombination(ShareSpeechByCombinationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.shareSpeechByCombinationWithOptions(request, runtime);
@@ -19414,6 +20097,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.unbindDriverFromEdgeInstanceWithOptions(request, runtime);
     }
 
+    /**
+      * ## Usage notes
+      * A license is bound with a product. For more information, see [BindLicenseProduct](~~427956~~) or [Bind a license to a product](~~427937~~).
+      * ## QPS limits
+      * You can call this API operation up to 10 times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request UnbindLicenseProductRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UnbindLicenseProductResponse
+     */
     public UnbindLicenseProductResponse unbindLicenseProductWithOptions(UnbindLicenseProductRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -19446,6 +20140,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UnbindLicenseProductResponse());
     }
 
+    /**
+      * ## Usage notes
+      * A license is bound with a product. For more information, see [BindLicenseProduct](~~427956~~) or [Bind a license to a product](~~427937~~).
+      * ## QPS limits
+      * You can call this API operation up to 10 times per second per account.
+      * > The RAM users of an Alibaba Cloud account share the quota of the account.
+      *
+      * @param request UnbindLicenseProductRequest
+      * @return UnbindLicenseProductResponse
+     */
     public UnbindLicenseProductResponse unbindLicenseProduct(UnbindLicenseProductRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.unbindLicenseProductWithOptions(request, runtime);
@@ -21137,6 +21841,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateThingScriptWithOptions(request, runtime);
     }
 
+    /**
+      *
+      * @param request UpdateTopicConfigRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateTopicConfigResponse
+     */
     public UpdateTopicConfigResponse updateTopicConfigWithOptions(UpdateTopicConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -21189,6 +21899,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateTopicConfigResponse());
     }
 
+    /**
+      *
+      * @param request UpdateTopicConfigRequest
+      * @return UpdateTopicConfigResponse
+     */
     public UpdateTopicConfigResponse updateTopicConfig(UpdateTopicConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateTopicConfigWithOptions(request, runtime);

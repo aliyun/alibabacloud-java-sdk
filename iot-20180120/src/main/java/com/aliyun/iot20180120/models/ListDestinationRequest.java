@@ -16,6 +16,17 @@ public class ListDestinationRequest extends TeaModel {
     @NameInMap("SearchName")
     public String searchName;
 
+    /**
+     * <p>The actions of forwarding data to data destinations. Data is processed by using a parser script before the data is forwarded. Valid values:</p>
+     * <br>
+     * <p>*   **REPUBLISH**: forwards topic data to an IoT Platform communication topic.</p>
+     * <p>*   **AMQP**: forwards topic data to an Advanced Message Queuing Protocol (AMQP) consumer group.</p>
+     * <p>*   **DATAHUB**: forwards topic data to Alibaba Cloud DataHub for stream data processing.</p>
+     * <p>*   **ONS**: forwards topic data to Message Queue for Apache RocketMQ for message distribution.</p>
+     * <p>*   **MNS**: forwards topic data to Message Service (MNS) for message transmission.</p>
+     * <p>*   **FC**: forwards topic data to Function Compute for event computing.</p>
+     * <p>*   **OTS**: forwards topic data to Tablestore for NoSQL data storage.</p>
+     */
     @NameInMap("Types")
     public java.util.List<String> types;
 

@@ -4,18 +4,36 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryProjectShareDeviceListResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the request fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The result of the request.</p>
+     */
     @NameInMap("Data")
     public QueryProjectShareDeviceListResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the request fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,15 +83,30 @@ public class QueryProjectShareDeviceListResponseBody extends TeaModel {
     }
 
     public static class QueryProjectShareDeviceListResponseBodyDataDeviceListItems extends TeaModel {
+        /**
+         * <p>The DeviceName of the device.</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <p>The ID of the device. The ID is the unique identifier that is issued by IoT Platform to the device.</p>
+         */
         @NameInMap("IotId")
         public String iotId;
 
+        /**
+         * <p>The **ProductKey** of the product to which the device belongs.</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 
+        /**
+         * <p>Indicates whether the project was shared to the device.</p>
+         * <br>
+         * <p>*   **1**: The project was shared.</p>
+         * <p>*   **0**: The project failed to be shared.</p>
+         */
         @NameInMap("Sharable")
         public Long sharable;
 
@@ -136,15 +169,27 @@ public class QueryProjectShareDeviceListResponseBody extends TeaModel {
     }
 
     public static class QueryProjectShareDeviceListResponseBodyData extends TeaModel {
+        /**
+         * <p>The information about devices that you queried.</p>
+         */
         @NameInMap("DeviceList")
         public QueryProjectShareDeviceListResponseBodyDataDeviceList deviceList;
 
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("PageId")
         public Integer pageId;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("Total")
         public Integer total;
 
