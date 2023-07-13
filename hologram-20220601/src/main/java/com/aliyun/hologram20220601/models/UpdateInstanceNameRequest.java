@@ -4,6 +4,9 @@ package com.aliyun.hologram20220601.models;
 import com.aliyun.tea.*;
 
 public class UpdateInstanceNameRequest extends TeaModel {
+    /**
+     * <p>The new name of the instance.</p>
+     */
     @NameInMap("instanceName")
     public String instanceName;
 
